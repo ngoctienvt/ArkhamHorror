@@ -18,7 +18,10 @@ STORY_SEGMENT = re.compile(
     r"^(intro|prologue|epilogue|interlude|resolutions?|flavor(Text)?|story|narrative)", re.I
 )
 # ...and none of its segments names rules or UI text.
-SKIP_SEGMENTS = {"setup", "label", "labels", "tokens", "xp", "campaignlog", "title", "heading", "standalone"}
+SKIP_SEGMENTS = {
+    "setup", "label", "labels", "tokens", "xp", "campaignlog", "title", "heading", "headings",
+    "standalone", "slay", "checkenemies",
+}
 
 # Paragraphs that are bookkeeping instructions even when written as prose.
 INSTRUCTION_START = re.compile(
@@ -27,9 +30,14 @@ INSTRUCTION_START = re.compile(
     r"check (your )?campaign log|choose one|otherwise,|continue to|"
     r"read (intro|resolution|interlude|epilogue|prologue)|then read|"
     r"add (\d|one|two) |search each investigator|any one investigator|"
-    r"the investigators must|check the |if .{0,120}\b(proceed|skip) to\b)",
+    r"the investigators must|check the |if .{0,120}\b(proceed|skip) to\b|"
+    r"read the (rules|relevant|following)|the lead investigator must|if neither|"
+    r"proceed as normal|[\w ’'.-]{1,40}\b(votes|abstains|remains eerily silent)\b)",
     re.I,
 )
+# Short stand-alone lines that are section titles, such as "The Foundation" or
+# "Dossier #14-C", not sentences. Real story sentences end in punctuation.
+TITLE_LINE_MAX_WORDS = 4
 # Rules text that can trail a story paragraph in the same <p>.
 RULES_ANYWHERE = re.compile(
     r"chaos bag|campaign log|'\}|encounter set|\bproceed to (resolution|intro|interlude|epilogue)\b",
@@ -95,8 +103,14 @@ def _is_scrambled(p: str) -> bool:
     return len(words) > 8 and sum(len(w) for w in words) / len(words) < 2.5
 
 
-def story_paragraphs(raw: str) -> list[str]:
-    """The narrative paragraphs of one locale string, as plain text."""
+def _is_title_line(p: str) -> bool:
+    return len(p.split()) <= TITLE_LINE_MAX_WORDS and not re.search(r"[.!?…”\"'’)]$", p)
+
+
+def story_paragraphs(raw: str, drop_titles: bool = False) -> list[str]:
+    """The narrative paragraphs of one locale string, as plain text.
+    drop_titles also removes short title lines (used for interlude titles only,
+    so letter datelines and sign-offs in other campaigns are left as they were)."""
     text = _strip_lists(raw)
     text = re.sub(r"<h\d[^>]*>.*?</h\d>", " ", text, flags=re.S)  # headings are titles, not story
     parts = re.split(r"<p[^>]*>|</p>|<br\s*/?>|</div>", text)
@@ -118,6 +132,7 @@ def story_paragraphs(raw: str) -> list[str]:
             and not RULES_ANYWHERE.search(p)
             and not SPEAKER_NAME.match(p)
             and not _is_scrambled(p)
+            and not (drop_titles and _is_title_line(p))
         ):
             paragraphs.append(p)
     return paragraphs
@@ -131,7 +146,7 @@ def collect_story(locale_root: Path, campaign: str) -> dict[str, list[str]]:
         for key, value in flatten(data, prefix).items():
             if not is_story_key(key):
                 continue
-            paragraphs = story_paragraphs(value)
+            paragraphs = story_paragraphs(value, drop_titles="interludes" in key.split("."))
             if paragraphs:
                 story[key] = paragraphs
     return story

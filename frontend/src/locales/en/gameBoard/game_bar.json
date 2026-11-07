@@ -104,7 +104,7 @@
         "drawSpotlightEvery": "Every draw",
         "narration": {
             "title": "Story Narration",
-            "description": "Reads scenario intros and resolutions aloud as they appear. Everyone at the table hears it together, each in their own narration language. Setup steps and campaign-log bookkeeping are not read.",
+            "description": "Reads scenario intros and resolutions aloud as they appear. Everyone at the table hears it together, each in their own narration language. Setup steps and campaign-log bookkeeping are not read. Vietnamese voices for some campaigns: VieNeu-TTS by pnnbao-ump (CC BY-NC 4.0).",
             "language": "Narration language",
             "en": "English",
             "vi": "Tiếng Việt",

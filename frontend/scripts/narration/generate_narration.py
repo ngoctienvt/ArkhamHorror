@@ -61,10 +61,30 @@ def load_manifest() -> dict:
     return {"version": 1, "languages": {}}
 
 
-def text_hash(text: str, lang: str) -> str:
-    """Changes whenever anything that shapes the sound changes, so a re-run re-renders it."""
+DEFAULT_VIENEU_VOICE = "Mỹ Duyên"
+_vieneu_model = None  # loaded once, on first VieNeu paragraph
+_vieneu_voices: dict = {}
+
+
+def text_hash(text: str, lang: str, engine: str = "edge", voice: str = "") -> str:
+    """Changes whenever anything that shapes the sound changes, so a re-run re-renders it.
+    Edge keeps the original hash input so existing files are not re-rendered."""
     v = VOICES[lang]
-    return hashlib.sha1(f"{v}|{DARK_FX}|{PARAGRAPH_PAUSE}|{LEAD_IN}|{text}".encode("utf-8")).hexdigest()[:12]
+    engine_part = "" if engine == "edge" else f"|{engine}|{voice}"
+    return hashlib.sha1(
+        f"{v}|{DARK_FX}|{PARAGRAPH_PAUSE}|{LEAD_IN}{engine_part}|{text}".encode("utf-8")
+    ).hexdigest()[:12]
+
+
+def vieneu_speak(text: str, voice_name: str, out: Path) -> None:
+    """One paragraph through VieNeu-TTS, synchronously; the model is loaded once and reused."""
+    global _vieneu_model
+    if _vieneu_model is None:
+        from vieneu import Vieneu  # imported here so Edge-only runs need no vieneu package
+        _vieneu_model = Vieneu()
+    if voice_name not in _vieneu_voices:
+        _vieneu_voices[voice_name] = _vieneu_model.get_preset_voice(voice_name)
+    _vieneu_model.save(_vieneu_model.infer(text=text, voice=_vieneu_voices[voice_name]), str(out))
 
 
 async def speak(text: str, lang: str, out: Path) -> None:
@@ -93,7 +113,8 @@ class NarratorUnavailable(RuntimeError):
 def master(parts: list[Path], out: Path) -> None:
     """Join the paragraphs with pauses and apply the dark narrator chain."""
     inputs = [arg for p in parts for arg in ("-i", str(p))]
-    pads = "".join(f"[{i}:a]apad=pad_dur={PARAGRAPH_PAUSE}[p{i}];" for i in range(len(parts)))
+    # aresample: VieNeu writes 48 kHz, Edge 24 kHz (a no-op for Edge).
+    pads = "".join(f"[{i}:a]aresample=24000,apad=pad_dur={PARAGRAPH_PAUSE}[p{i}];" for i in range(len(parts)))
     joined = "".join(f"[p{i}]" for i in range(len(parts)))
     graph = f"{pads}{joined}concat=n={len(parts)}:v=0:a=1,adelay={int(LEAD_IN * 1000)},{DARK_FX}[out]"
     subprocess.run(
@@ -103,19 +124,24 @@ def master(parts: list[Path], out: Path) -> None:
     )
 
 
-async def render(text: str, lang: str, out: Path) -> None:
+async def render(text: str, lang: str, out: Path, engine: str = "edge", voice: str = "") -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
     paragraphs = [p for p in text.split("\n\n") if p.strip()]
     with tempfile.TemporaryDirectory() as tmp:
         parts = []
         for i, paragraph in enumerate(paragraphs):
-            part = Path(tmp) / f"{i:03}.mp3"
-            await speak(paragraph, lang, part)
+            if engine == "vieneu":
+                part = Path(tmp) / f"{i:03}.wav"
+                vieneu_speak(paragraph, voice, part)  # sync, no retries or throttle pause
+            else:
+                part = Path(tmp) / f"{i:03}.mp3"
+                await speak(paragraph, lang, part)
             parts.append(part)
         staged = out.with_suffix(".part")
         master(parts, staged)
         staged.replace(out)
-    await asyncio.sleep(PAUSE_BETWEEN_KEYS)
+    if engine == "edge":
+        await asyncio.sleep(PAUSE_BETWEEN_KEYS)
 
 
 def texts_for(lang: str, story: dict[str, list[str]], vi: Translations | None) -> dict[str, str]:
@@ -142,8 +168,14 @@ async def main() -> int:
     ap.add_argument("--lang", default="en,vi", help="comma list of en,vi")
     ap.add_argument("--vi-po", type=Path, action="append", default=[],
                     help="folder or .po file with the Vietnamese campaign text (repeatable)")
+    ap.add_argument("--vi-engine", choices=["edge", "vieneu"], default="edge",
+                    help="Vietnamese voice engine; vieneu runs locally on the CPU")
+    ap.add_argument("--vi-voice", default=None,
+                    help=f"VieNeu preset voice name (default for vieneu: {DEFAULT_VIENEU_VOICE!r})")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
+    if args.vi_voice is None:
+        args.vi_voice = DEFAULT_VIENEU_VOICE if args.vi_engine == "vieneu" else ""
 
     story = collect_story(LOCALE_EN, args.campaign)
     if args.scenario:
@@ -163,8 +195,9 @@ async def main() -> int:
             print("[vi] skipped: pass --vi-po with the arkham-cards-data translations")
             continue
         entries = manifest["languages"].setdefault(lang, {})
+        engine, voice = (args.vi_engine, args.vi_voice) if lang == "vi" else ("edge", "")
         for key, text in texts_for(lang, story, vi).items():
-            h = text_hash(text, lang)
+            h = text_hash(text, lang, engine, voice)
             out = OUT_ROOT / lang / f"{key}.mp3"
             if args.dry_run:
                 print(f"\n=== [{lang}] {key}\n{text}")
@@ -173,7 +206,7 @@ async def main() -> int:
                 continue
             print(f"[{lang}] {key} ({len(text)} chars)")
             try:
-                await render(text, lang, out)
+                await render(text, lang, out, engine, voice)
             except NarratorUnavailable as e:
                 # Keep whatever file was there; the stale hash makes the next run retry it.
                 print(f"  skipped: {e}")
