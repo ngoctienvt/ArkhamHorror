@@ -1420,7 +1420,7 @@ section {
 }
 
 button {
-  transition: all 0.3s ease-in;
+  transition: background-color var(--motion-fast) var(--ease-out), color var(--motion-fast) var(--ease-out), filter var(--motion-fast) var(--ease-out);
   border: 0;
   padding: 10px;
   background-color: var(--button-2);
@@ -1586,7 +1586,7 @@ h2 {
     button {
       text-align: center;
       font-size: 1.2em;
-      transition: all 0.3s ease-in;
+      transition: background-color var(--motion-fast) var(--ease-out), color var(--motion-fast) var(--ease-out), filter var(--motion-fast) var(--ease-out);
       border: 0;
       padding: 10px;
       background-color: var(--button-2);
@@ -1840,7 +1840,7 @@ h2 {
 }
 
 .choices button:not(.amount-submit) {
-  transition: all 0.3s ease-in;
+  transition: background-color var(--motion-fast) var(--ease-out), color var(--motion-fast) var(--ease-out), filter var(--motion-fast) var(--ease-out);
   border: 0;
   padding: 10px;
   text-transform: uppercase;

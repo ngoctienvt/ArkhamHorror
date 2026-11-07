@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { heldCount } from '@/arkham/motion/tokenHolds'
 import { computed } from 'vue'
 import type { Game } from '@/arkham/types/Game'
 import type { Location } from '@/arkham/types/Location'
@@ -54,7 +55,8 @@ const figures = computed<Fig[]>(() => {
       id, kind: 'investigator', tone: (i.class ?? 'Neutral').toLowerCase(), name: nameOf(i.cardCode), src, art: cardImage(art), you: id === mine, exhausted: false, note: null,
       moveName: investigatorMovementName(i, l.id), cardId: undefined, cardImage: cardImage(art),
       health: meter(i.health, i.tokens[TokenType.Damage] ?? 0), sanity: meter(i.sanity, i.tokens[TokenType.Horror] ?? 0),
-      resources: i.tokens[TokenType.Resource] ?? 0, clues: i.tokens[TokenType.Clue] ?? 0,
+      resources: heldCount(`investigator-${id}`, 'resource', i.tokens[TokenType.Resource] ?? 0),
+      clues: heldCount(`investigator-${id}`, 'clue', i.tokens[TokenType.Clue] ?? 0),
     }]
   })
   const monsters = props.enemiesAt(l).slice(0, 4).flatMap((id): Fig[] => {

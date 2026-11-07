@@ -161,14 +161,14 @@ footer {
  * without the stylesheet knowing their ids. Browsers without class support fall
  * back to the generic `::view-transition-group(*)` timing in components.css. */
 ::view-transition-group(.card-flight) {
-  animation-duration: 460ms;
-  animation-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+  animation-duration: var(--motion-travel);
+  animation-timing-function: var(--ease-land);
 }
 
 ::view-transition-old(.card-flight),
 ::view-transition-new(.card-flight) {
-  animation-duration: 460ms;
-  animation-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+  animation-duration: var(--motion-travel);
+  animation-timing-function: var(--ease-land);
   mix-blend-mode: normal;
 }
 

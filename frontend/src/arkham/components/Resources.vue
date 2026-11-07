@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { heldCount } from '@/arkham/motion/tokenHolds'
 import { computed } from 'vue'
 import { TokenType } from '@/arkham/types/Token'
 import { keyToId } from '@/arkham/types/Key'
@@ -83,8 +84,9 @@ const clueProhibitionText = computed(() => clueProhibitionTitle(clueProhibitions
 
 const keys = computed(() => props.investigator.keys)
 const seals = computed(() => props.investigator.seals)
-const clues = computed(() => props.investigator.tokens[TokenType.Clue] || 0)
-const resources = computed(() => props.investigator.tokens[TokenType.Resource] || 0)
+// While a clue or resource is flying in or out, show the count it had before.
+const clues = computed(() => heldCount(`investigator-${props.investigator.id}`, 'clue', props.investigator.tokens[TokenType.Clue] || 0))
+const resources = computed(() => heldCount(`investigator-${props.investigator.id}`, 'resource', props.investigator.tokens[TokenType.Resource] || 0))
 const horror = computed(() => (props.investigator.tokens[TokenType.Horror] || 0) + props.investigator.assignedSanityDamage - props.investigator.assignedSanityHeal)
 const damage = computed(() => (props.investigator.tokens[TokenType.Damage] || 0) + props.investigator.assignedHealthDamage - props.investigator.assignedHealthHeal)
 const otherTokens = computed(() => {

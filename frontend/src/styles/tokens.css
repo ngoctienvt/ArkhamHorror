@@ -3,6 +3,18 @@
 
   --nav-height: 36px;
 
+  /* Motion. Mirrored in arkham/motion/motionTokens.ts, which timers read so a
+     CSS animation and the code waiting on it agree. `--motion-scale` is set by
+     the settings store from the player's speed choice. */
+  --motion-scale: 1;
+  --motion-fast: calc(160ms * var(--motion-scale));
+  --motion-base: calc(280ms * var(--motion-scale));
+  --motion-travel: calc(440ms * var(--motion-scale));
+  --motion-linger: calc(1000ms * var(--motion-scale));
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-land: cubic-bezier(0.32, 0.72, 0, 1);
+
   --willpower: #2c7fc0;
   --intellect: #7c3c85;
   --combat: #ae4236;
@@ -104,8 +116,8 @@
   --button-1-muted: color-mix(in srgb, var(--button-1) 45%, var(--background-dark));
   --button-1-muted-highlight: color-mix(in srgb, var(--button-1) 60%, var(--background-dark));
 
-  --button-2: #532e61;
-  --button-2-highlight: #4d2b61;
+  --button-2: #6b4f1f;
+  --button-2-highlight: #7d5d26;
 
   --card-width: min(calc(2.5vw + 20px), 60px);
   --card-height: min(calc(3.545vw + 28.36px), 85.08px);
@@ -116,10 +128,12 @@
 
   --card-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 
-  --select: #ff00ff;
-  --select-dark: #d400d4;
-  --select-dark-20: #cc00cc;
-  --select-dark-30: #b200b2;
+  /* Antique brass: "the game wants a choice from you". The darker steps sit
+     behind light button text, so they stay deep enough to keep it readable. */
+  --select: #d8b26e;
+  --select-dark: #a9823f;
+  --select-dark-20: #8f6c30;
+  --select-dark-30: #6f5222;
 
   --highlight: #2dd4bf;
 

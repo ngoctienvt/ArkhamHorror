@@ -174,7 +174,8 @@ function tileClick(l: Location, event: MouseEvent) {
         :data-id="l.id" @pointerdown="startNodeDrag(l, $event)" @click.stop="cutaway ? undefined : tileClick(l, $event)">
         <img v-if="!cutaway && !illustratedBoard" class="art" :src="locationImage(l)" alt="" loading="lazy" />
         <LocationStandees v-if="cutaway" :game="game" :playerId="playerId" :location="l" :enemiesAt="enemiesAt" />
-        <LocationMarkerPlate v-if="!roomPlates?.[l.id]" :info="infoOf(l)" :size="compact ? 'compact' : 'full'"
+        <LocationMarkerPlate v-if="!roomPlates?.[l.id]" :info="infoOf(l)" :size="compact ? 'compact' : 'full'" :game="game" :locationId="l.id"
+          :data-fx-target="`location-${l.id}`"
           :[CARD_FLIGHT_ATTR]="l.cardId" :style="cardFlightStyle(flightState, l.cardId)"
           :data-image="locationImage(l)" :data-card-code="l.cardCode"
           @inspect="emit('inspect', l, $event)" @choose="emit('choose', $event)" />
@@ -192,7 +193,8 @@ function tileClick(l: Location, event: MouseEvent) {
       <template v-for="l in locations" :key="'plate-' + l.id">
         <div v-if="roomPlates?.[l.id]" class="room-plate" :class="{ selected: l.id === selectedId }" :data-id="l.id"
           :style="{ left: roomPlates[l.id].x + '%', top: roomPlates[l.id].y + '%', width: roomPlates[l.id].width + '%' }">
-          <LocationMarkerPlate :info="infoOf(l)" size="room" :showText="plateText"
+          <LocationMarkerPlate :info="infoOf(l)" size="room" :showText="plateText" :game="game" :locationId="l.id"
+            :data-fx-target="`location-${l.id}`"
             :[CARD_FLIGHT_ATTR]="l.cardId" :style="cardFlightStyle(flightState, l.cardId)"
             :data-image="locationImage(l)" :data-card-code="l.cardCode" @inspect="emit('inspect', l, $event)" @choose="emit('choose', $event)" />
         </div>

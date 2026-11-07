@@ -113,7 +113,7 @@ const overrideValue = computed(() => props.override ?? DEFAULT)
 
 .toggle-row--highlighted {
   border-color: var(--select);
-  box-shadow: 0 0 0 1px var(--select), 0 0 12px rgba(255, 0, 255, 0.6);
+  box-shadow: 0 0 0 1px var(--select), 0 0 12px rgba(216, 178, 110, 0.6);
 }
 
 .toggle-text {

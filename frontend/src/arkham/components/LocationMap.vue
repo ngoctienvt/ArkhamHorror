@@ -33,10 +33,11 @@ const props = defineProps<{
   /** The scenario shows things only the card board can draw (barriers, enemies standing as locations, ...). */
   boardOnlyContent: boolean
   decksShown: boolean
+  chaosBagShown: boolean
   /** The scenario reference card, shown next to the act and agenda. */
   referenceImage?: string
 }>()
-const emit = defineEmits<{ (e: 'choose', index: number): void; (e: 'toggleDecks'): void }>()
+const emit = defineEmits<{ (e: 'choose', index: number): void; (e: 'toggleDecks'): void; (e: 'toggleChaosBag'): void }>()
 
 const { t } = useI18n()
 const nameOf = useCardNames()
@@ -160,6 +161,8 @@ const buildInfo = useLocationInfo(() => props.game, () => props.playerId, () => 
 // Built once per update, so every plate, the scene and the card read the same snapshot.
 const infos = computed(() => new Map(locations.value.map((l) => [l.id, buildInfo(l)])))
 const infoOf = (l: Location) => infos.value.get(l.id) ?? buildInfo(l)
+// The action panel describes where you stand (or the selected location when you stand nowhere).
+const panelLocation = computed<Location | null>(() => props.game.locations[myLocation.value ?? ''] ?? selected.value ?? null)
 
 // --- the info card: looking at a location never sends a choice, picking one is a separate click ---
 const inspectedId = ref<string | null>(null)
@@ -234,6 +237,8 @@ const views: LocationView[] = ['map', 'cards']
       </span>
       <span v-if="boardOnlyContent" class="board-note">{{ t('locationMap.boardOnly') }}</span>
       <button class="view" :class="{ active: panelOpen }" @click="panelOpen = !panelOpen">{{ t('locationMap.actions') }}</button>
+      <button class="view" :class="{ active: chaosBagShown }" :aria-pressed="chaosBagShown"
+        @click="emit('toggleChaosBag')">{{ t('gameBar.chaosBag') }}</button>
       <button v-if="showOverview && roomPlates" class="view" :class="{ active: plateText }" :aria-pressed="plateText"
         @click="plateText = !plateText">{{ plateText ? t('locationMap.marker.collapseAll') : t('locationMap.marker.expandAll') }}</button>
       <button v-if="hasMapOffsets(game.id)" class="view" @click="resetMapOffsets(game.id)">{{ t('locationMap.resetLayout') }}</button>
@@ -248,7 +253,7 @@ const views: LocationView[] = ['map', 'cards']
         :enemiesAt="enemiesShownAt" :infoOf="infoOf" :width="canvasSize.width" :height="canvasSize.height"
         @inspect="inspect" @choose="emit('choose', $event)" />
       <LocationActionPanel v-if="panelOpen" class="action-overlay" :game="game" :playerId="playerId"
-        :location="game.locations[myLocation ?? ''] ?? selected" @choose="emit('choose', $event)" @close="panelOpen = false" />
+        :location="panelLocation" :info="panelLocation ? infoOf(panelLocation) : null" @choose="emit('choose', $event)" @close="panelOpen = false" />
       <LocationInfoCard v-if="inspected" :game="game" :playerId="playerId" :location="inspected" :info="infoOf(inspected)"
         :connections="inspectedConnections" :rightGap="panelOpen ? 300 : 0" @choose="emit('choose', $event)"
         @inspect="inspectById" @close="closeCard" />

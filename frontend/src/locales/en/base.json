@@ -601,7 +601,6 @@
         "ChooseUpToN": "You may choose up to {count}."
       },
       "actionsLeft": "{count} action(s) left",
-      "windowCondition": "Use the Actions panel, a card in hand, or a location to move. When out of actions or done, press End turn.",
       "kind": {
         "default": "You need to make a choice.",
         "ChooseOne": "Choose 1 option.",
@@ -697,6 +696,19 @@
         "flood": "Flood: {value}",
         "brazier": "Brazier: {value}",
         "breaches": "Breaches"
+      }
+    },
+    "about": {
+      "title": "About this location",
+      "noText": "This location has no printed effect.",
+      "attached": "Lying here",
+      "kind": {
+        "forced": "Forced",
+        "action": "Action",
+        "reaction": "Reaction",
+        "fast": "Fast",
+        "objective": "Objective",
+        "constant": "Always on"
       }
     },
     "legend": {

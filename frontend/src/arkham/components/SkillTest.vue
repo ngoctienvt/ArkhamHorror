@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import AbilityButton from '@/arkham/components/AbilityButton.vue'
+import AbilityTextRow from '@/arkham/components/AbilityTextRow.vue'
 import Question from '@/arkham/components/Question.vue';
 import { useDebug } from '@/arkham/debug'
 import { computed } from 'vue';
@@ -19,17 +20,16 @@ import CommittedSkills from '@/arkham/components/CommittedSkills.vue';
 import { MessageType, StartSkillTestButton } from '@/arkham/types/Message';
 import * as ArkhamGame from '@/arkham/types/Game';
 import { imgsrc, formatContent } from '@/arkham/helpers';
-import { cardArt, portraitImage, sourceCardCode } from '@/arkham/cardImages';
+import { cardArt, cardImage, portraitImage, sourceCardCode } from '@/arkham/cardImages';
 import ChaosBagView from '@/arkham/components/ChaosBag.vue';
 import Token from '@/arkham/components/Token.vue';
 import { useI18n } from 'vue-i18n';
-import { useMenu } from '@/composable/menu';
-import { useSettingsFocus } from '@/composable/settingsFocus';
+import { chanceOfSuccess } from '@/arkham/chaosBagOdds';
+import { useAbilityCardText } from '@/arkham/composables/useAbilityCardText';
+import { sourceEntityId, kindOf, type AbilityKind } from '@/arkham/locationChoices';
 
 const debug = useDebug()
 const { t } = useI18n()
-const { menuItems } = useMenu()
-const { focusSetting } = useSettingsFocus()
 const props = defineProps<{
   game: Game
   skillTest: SkillTest
@@ -106,19 +106,6 @@ const collectionSearch = computed(() => isCollectionSearch(props.game, props.pla
 
 const skipTriggersAction = computed(() => choices.value.findIndex((c) => c.tag === MessageType.SKIP_TRIGGERS_BUTTON))
 
-const currentInvestigator = computed(() =>
-  Object.values(props.game.investigators).find((i) => i.playerId === props.playerId)
-)
-
-const skipTriggersEnabled = computed(() =>
-  Boolean(currentInvestigator.value?.settings?.globalSettings?.ignoreUnrelatedSkillTestTriggers)
-)
-
-const openSettings = () => {
-  focusSetting('skipTriggers')
-  const entry = menuItems.value?.find((e) => e.id === 'viewSettings')
-  if (entry) entry.action()
-}
 const investigatorPortrait = computed(() => {
   const choice = choices.value.find((c): c is StartSkillTestButton => c.tag === MessageType.START_SKILL_TEST_BUTTON)
   if (choice) {
@@ -162,6 +149,46 @@ const abilities = computed<AbilityMessage[]>(() => {
     , [])
 })
 
+
+/* Every other ability the player may use right now (Higher Education, fast
+ * cards in play, reactions...), listed in the panel with its card's name and
+ * printed line so the player can follow what is available during the test
+ * without looking at the side panel. Skill-test-sourced ones are shown above. */
+const { lookup, attachText } = useAbilityCardText(() => props.game)
+
+type TriggerRow = { index: number; contents: AbilityLabel; name: string | null; sourceId: string | null; kind: AbilityKind | null; text: string | null }
+
+const triggers = computed<TriggerRow[]>(() => {
+  const shown = new Set(abilities.value.map((a) => a.index))
+  const rows = choices.value.flatMap((choice, index): TriggerRow[] => {
+    if (choice.tag !== MessageType.ABILITY_LABEL || shown.has(index) || choice.ability.basic) return []
+    const sourceId = sourceEntityId(choice.ability.source)
+    if (sourceId && (props.game.acts[sourceId] || props.game.agendas[sourceId])) return []
+    const name = sourceId ? lookup(sourceId)?.name ?? null : null
+    return [{ index, contents: choice, name, sourceId, kind: kindOf(choice), text: null }]
+  })
+  return attachText(rows)
+})
+
+/* Cards in this player's hand the game offers to commit right now, so they can
+ * be picked from the panel instead of the hand row. Each player sees only the
+ * cards their own choices offer, so in multiplayer every investigator allowed
+ * to help commits from their own panel. */
+const committableCards = computed(() => {
+  if (props.skillTest.step !== 'CommitCardsFromHandToSkillTestStep') return []
+  const me = Object.values(props.game.investigators).find((i) => i.playerId === props.playerId)
+  if (!me) return []
+  const hand = new Map(me.hand.map((card) => [Cards.toCardContents(card).id, Cards.toCardContents(card)]))
+  // A card already picked shows in the "to be committed" row below (where clicking it uncommits),
+  // so it is dropped here instead of appearing twice.
+  const committed = new Set(committedCards.value.map((card) => Cards.toCardContents(card).id))
+  return choices.value.flatMap((choice, index) => {
+    if (choice.tag !== MessageType.TARGET_LABEL) return []
+    if (typeof choice.target.contents === 'string' && committed.has(choice.target.contents)) return []
+    const card = typeof choice.target.contents === 'string' ? hand.get(choice.target.contents) : undefined
+    return card ? [{ index, id: card.id, image: cardImage(card.cardCode) }] : []
+  })
+})
 
 async function choose(idx: number) {
   emit('choose', idx)
@@ -351,6 +378,33 @@ const tokenEffects = computed(() => {
     })
 })
 
+/* The eight printed skill test steps plus the two player windows, in order.
+ * `label` is the short chip text; fast windows show the {fast} glyph instead. */
+const testSteps = [
+  { step: 'DetermineSkillOfTestStep', label: '1', key: 'skillTest.determineSkillOfTestStep' },
+  { step: 'SkillTestFastWindow1', label: null, key: 'skillTest.fastWindowBeforeCommit' },
+  { step: 'CommitCardsFromHandToSkillTestStep', label: '2', key: 'skillTest.commitCardsFromHandToSkillTestStep' },
+  { step: 'SkillTestFastWindow2', label: null, key: 'skillTest.fastWindowBeforeReveal' },
+  { step: 'RevealChaosTokenStep', label: '3', key: 'skillTest.revealChaosTokenStep' },
+  { step: 'ResolveChaosSymbolEffectsStep', label: '4', key: 'skillTest.resolveChaosSymbolEffectsStep' },
+  { step: 'DetermineInvestigatorsModifiedSkillValueStep', label: '5', key: 'skillTest.determineInvestigatorsModifiedSkillValueStep' },
+  { step: 'DetermineSuccessOrFailureOfSkillTestStep', label: '6', key: 'skillTest.determineSuccessOrFailureOfSkillTestStep' },
+  { step: 'ApplySkillTestResultsStep', label: '7', key: 'skillTest.applySkillTestResultsStep' },
+  { step: 'SkillTestEndsStep', label: '8', key: 'skillTest.skillTestEndsStep' },
+] as const
+
+const currentStepIndex = computed(() => testSteps.findIndex((s) => s.step === props.skillTest.step))
+const currentStep = computed(() => testSteps[currentStepIndex.value] ?? null)
+
+
+/* Chance to win against what is left in the bag, shown beside the title until
+ * the test has a result. */
+const winOdds = computed(() => {
+  const b = props.skillTest.valueBreakdown
+  if (!b || skillTestResults.value) return null
+  return Math.round(chanceOfSuccess(b, b.skillValue, b.difficulty) * 100)
+})
+
 const createModifier = (target: {tag: string, contents: string}, modifier: {tag: string, contents: unknown}) =>
   debug.skillTestModifier(props.game.id, props.skillTest.id, target, modifier)
 
@@ -365,27 +419,38 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
 
 <template>
   <Draggable
+    width="min(720px, calc(100vw - 32px))"
     avoid-selector=".concealed-card--can-interact, .location-cell--can-interact, .location-cell--can-interact .location-wrapper, .location-cell--can-interact .card-frame"
   >
     <template #handle>
-      <h2>{{ $t('skillTestTitle') }}</h2>
+      <h2 class="skill-test-title">
+        {{ $t('skillTestTitle') }}
+        <span
+          v-if="winOdds !== null"
+          class="win-odds"
+          v-tooltip="$t('skillTest.winOddsHint')"
+        >{{ $t('skillTest.winOdds', { n: winOdds }) }}</span>
+      </h2>
     </template>
     <div class="skill-test">
       <div class="steps">
-        <div v-tooltip="$t('skillTest.determineSkillOfTestStep')" class="step" :class="{ active: skillTest.step === 'DetermineSkillOfTestStep' }">ST.1</div>
-        <div v-tooltip="{content: formatContent($t('skillTest.fastPlayerWindow')), html: true }" class="step" :class="{ active: skillTest.step === 'SkillTestFastWindow1' }" v-html="formatContent('{fast}')" />
-        <div v-tooltip="$t('skillTest.commitCardsFromHandToSkillTestStep')" class="step" :class="{ active: skillTest.step === 'CommitCardsFromHandToSkillTestStep' }">ST.2</div>
-        <div v-tooltip="{content: formatContent($t('skillTest.fastPlayerWindow')), html: true}" class="step" :class="{ active: skillTest.step === 'SkillTestFastWindow2' }" v-html="formatContent('{fast}')" />
-        <div v-tooltip="$t('skillTest.revealChaosTokenStep')" class="step" :class="{ active: skillTest.step === 'RevealChaosTokenStep' }">ST.3</div>
-        <div v-tooltip="$t('skillTest.resolveChaosSymbolEffectsStep')" class="step" :class="{ active: skillTest.step === 'ResolveChaosSymbolEffectsStep' }">ST.4</div>
-        <div v-tooltip="$t('skillTest.determineInvestigatorsModifiedSkillValueStep')" class="step" :class="{ active: skillTest.step === 'DetermineInvestigatorsModifiedSkillValueStep' }">ST.5</div>
-        <div v-tooltip="$t('skillTest.determineSuccessOrFailureOfSkillTestStep')" class="step" :class="{ active: skillTest.step === 'DetermineSuccessOrFailureOfSkillTestStep' }">ST.6</div>
-        <div v-tooltip="$t('skillTest.applySkillTestResultsStep')" class="step" :class="{ active: skillTest.step === 'ApplySkillTestResultsStep' }">ST.7</div>
-        <div v-tooltip="$t('skillTest.skillTestEndsStep')" class="step" :class="{ active: skillTest.step === 'SkillTestEndsStep' }">ST.8</div>
+        <div
+          v-for="(s, i) in testSteps"
+          :key="s.step"
+          v-tooltip="{ content: formatContent($t(s.key)), html: true }"
+          class="step"
+          :class="{ active: i === currentStepIndex, done: currentStepIndex !== -1 && i < currentStepIndex, fast: s.label === null }"
+        >
+          <span v-if="s.label">{{ s.label }}</span>
+          <span v-else v-html="formatContent('{fast}')" />
+        </div>
       </div>
-      <div v-if="skipTriggersEnabled" class="skip-triggers-notice">
-        <span class="skip-triggers-notice__text">{{ $t('skillTest.skipTriggersActiveNotice') }}</span>
-        <button type="button" class="skip-triggers-notice__button" @click="openSettings">{{ $t('skillTest.skipTriggersAdjust') }}</button>
+      <div v-if="currentStep" class="step-caption">
+        <span class="step-caption__badge">
+          <template v-if="currentStep.label">{{ $t('skillTest.stepOf', { n: currentStep.label, total: 8 }) }}</template>
+          <span v-else v-html="formatContent('{fast}')" />
+        </span>
+        <span class="step-caption__text" v-html="formatContent($t(currentStep.key))" />
       </div>
       <div class="skill-test-contents">
         <div v-if="swarmEnemy || deckCardEnemy" class="target-card swarming">
@@ -411,20 +476,23 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
           :data-image="imgsrc('mini-cards/concealed-card.jpg')"
         />
         <div class="test-status">
-          <div class="test-difficulty">
-            <button
-                v-if="debug.active"
-                type="button"
-                class="debug-stepper-button"
-                @click="createModifier({tag: 'SkillTestTarget', contents: skillTest.id}, {tag: 'Difficulty', contents: -1})"
-            >-</button>
-            <span class="difficulty">{{skillTest.modifiedDifficulty}}</span>
-            <button
-                v-if="debug.active"
-                type="button"
-                class="debug-stepper-button"
-                @click="createModifier({tag: 'SkillTestTarget', contents: skillTest.id}, {tag: 'Difficulty', contents: 1})"
-            >+</button>
+          <div class="test-difficulty stat">
+            <div class="stat__value">
+              <button
+                  v-if="debug.active"
+                  type="button"
+                  class="debug-stepper-button"
+                  @click="createModifier({tag: 'SkillTestTarget', contents: skillTest.id}, {tag: 'Difficulty', contents: -1})"
+              >-</button>
+              <span class="difficulty">{{skillTest.modifiedDifficulty}}</span>
+              <button
+                  v-if="debug.active"
+                  type="button"
+                  class="debug-stepper-button"
+                  @click="createModifier({tag: 'SkillTestTarget', contents: skillTest.id}, {tag: 'Difficulty', contents: 1})"
+              >+</button>
+            </div>
+            <span class="stat__label">{{ $t('skillTest.difficultyLabel') }}</span>
           </div>
           <div class="vs">
             <div v-if="skills.length > 0" class="skills">
@@ -435,22 +503,25 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
             <div v-else-if="skillTest.baseValue.tag === 'HalfResourcesOf'" class="half-resources">
               <img :src="imgsrc(`tokens/resource.png`)" /> / 2
             </div>
-            <span>VS</span>
+            <span class="vs__text">VS</span>
           </div>
-          <div class="modified-skill">
-            <button
-                v-if="debug.active"
-                type="button"
-                class="debug-stepper-button"
-                @click="adjustDebugSkillValue($event, -1)"
-            >-</button>
-            <span class="skill">{{skillValue}}</span>
-            <button
-                v-if="debug.active"
-                type="button"
-                class="debug-stepper-button"
-                @click="adjustDebugSkillValue($event, 1)"
-            >+</button>
+          <div class="modified-skill stat">
+            <div class="stat__value">
+              <button
+                  v-if="debug.active"
+                  type="button"
+                  class="debug-stepper-button"
+                  @click="adjustDebugSkillValue($event, -1)"
+              >-</button>
+              <span class="skill">{{skillValue}}</span>
+              <button
+                  v-if="debug.active"
+                  type="button"
+                  class="debug-stepper-button"
+                  @click="adjustDebugSkillValue($event, 1)"
+              >+</button>
+            </div>
+            <span class="stat__label">{{ $t('skillTest.skillValueLabel') }}</span>
           </div>
         </div>
         <div class="test-source">
@@ -501,6 +572,19 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
       <div v-if="debug.active && skillTest.result?.tag == 'Unrun' && !['SkillTestFastWindow1', 'SkillTestFastWindow2'].includes(skillTest.step)">
         <button @click="debug.send(game.id, {tag: 'SkillTestMessage', contents: {tag: 'PassSkillTest_'}})">{{ $t('skillTestActions.passSkillTest') }}</button>
         <button @click="debug.send(game.id, {tag: 'SkillTestMessage', contents: {tag: 'FailSkillTest_'}})">{{ $t('skillTestActions.failSkillTest') }}</button>
+      </div>
+      <div v-if="committableCards.length > 0" class="committable">
+        <h3 class="triggers__title">{{ $t('skillTest.committableCards') }}</h3>
+        <div class="committable__row">
+          <button
+            v-for="card in committableCards"
+            :key="card.id"
+            type="button"
+            class="committable__card"
+            :data-image="card.image"
+            @click="choose(card.index)"
+          ><img :src="card.image" :alt="''" /></button>
+        </div>
       </div>
       <div v-if="committedCards.length > 0" class="committed-skills" key="committed-skills">
         <template v-if="skillTest.step === 'CommitCardsFromHandToSkillTestStep'">
@@ -613,12 +697,21 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
         @click="choose(ability.index)"
         />
 
+      <div v-if="triggers.length > 0" class="triggers">
+        <h3 class="triggers__title">{{ $t('skillTest.availableTriggers') }}</h3>
+        <div v-for="trigger in triggers" :key="trigger.index" class="trigger" @click="choose(trigger.index)">
+          <span v-if="trigger.name" class="trigger__name">{{ trigger.name }}</span>
+          <AbilityTextRow v-if="trigger.text" class="trigger__line" :kind="trigger.kind" :html="trigger.text" @choose="choose(trigger.index)" @click.stop />
+          <AbilityButton v-else class="trigger__button" :game="game" :ability="trigger.contents" @choose="choose(trigger.index)" @click.stop />
+        </div>
+      </div>
+
       <div v-if="skillTestResults" class="skill-test-results" :class="{ success: skillTestResults.skillTestResultsSuccess, failure: !skillTestResults.skillTestResultsSuccess}">
         <span v-if="skillTestResults.skillTestResultsSuccess">
-          {{ $t('succeededBy', { amount: (testResult ?? 0) + (skillTestResults.skillTestResultsResultModifiers || 0) }) }}
+          {{ $t('succeededBy', { amount: Math.abs((testResult ?? 0) + (skillTestResults.skillTestResultsResultModifiers || 0)) }) }}
         </span>
         <span v-else-if="testResult !== null">
-          {{ $t('failedBy', { amount: testResult - (skillTestResults.skillTestResultsResultModifiers || 0) }) }}
+          {{ $t('failedBy', { amount: Math.abs(testResult - (skillTestResults.skillTestResultsResultModifiers || 0)) }) }}
         </span>
       </div>
 
@@ -661,15 +754,153 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   }
 }
 
+.skill-test {
+  font-size: 16px;
+}
+
+.committable {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+
+.committable__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Beats the panel-wide full-width button rule: a card is its own size. */
+.committable .committable__card {
+  width: calc(var(--card-width) * 1.4);
+  padding: 0;
+  background: transparent;
+  border: 2px solid rgba(216, 178, 110, 0.5);
+  border-radius: 7px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    background: transparent;
+    transform: translateY(-4px);
+    border-color: var(--select);
+    box-shadow: 0 0 12px rgba(216, 178, 110, 0.7);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.triggers {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+
+.triggers__title {
+  margin: 0;
+  font-size: 0.8em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #d9c08a;
+}
+
+.trigger {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 10px;
+  background: rgba(23, 38, 31, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-left: 3px solid #c9a45c;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    background: rgba(33, 53, 41, 0.95);
+    border-color: #e6c584;
+  }
+
+  .trigger__button, .trigger__button:hover:not(:disabled) {
+    width: 100%;
+    padding: 2px 0;
+    background: transparent !important;
+    border: 0 !important;
+    text-align: left;
+    justify-content: flex-start;
+  }
+}
+
+/* The panel-wide button rule would make it uppercase on a purple fill. */
+.trigger .trigger__line, .trigger .trigger__line:hover {
+  padding: 2px 0;
+  background: transparent;
+  color: #dfe5d8;
+  font-size: 0.9em;
+  text-align: left;
+  text-transform: none;
+}
+
+.trigger__name {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #e0a595;
+}
+
+.trigger__text {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 0.85em;
+  line-height: 1.4;
+  color: #c9d0c3;
+
+  :deep(img) {
+    height: 1.1em;
+    vertical-align: -0.15em;
+  }
+}
+
+.skill-test-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.win-odds {
+  padding: 1px 10px;
+  border-radius: 999px;
+  background: rgba(40, 160, 80, 0.3);
+  border: 1px solid rgba(110, 210, 140, 0.55);
+  color: #c9f2d5;
+  font-size: 0.8em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
 .skill-test-contents {
-  padding: 10px;
+  padding: 16px 14px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   justify-items: center;
-  gap: 5px;
+  gap: 10px;
   color: white;
-  background-color: rgb(0, 0, 0, 0.6);
+  background:
+    radial-gradient(ellipse at center, rgba(90, 70, 35, 0.3), transparent 70%),
+    rgb(0, 0, 0, 0.62);
   backdrop-filter: blur(80px);
   -webkit-backdrop-filter: blur(80px); /* Safari support */
 }
@@ -679,49 +910,57 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: min(30px, 2vw);
-  padding: 0 min(30px, 2vw);
+  gap: min(28px, 3vw);
+  padding: 0 min(20px, 2vw);
   text-transform: uppercase;
 }
 
-.test-difficulty {
+/* A big numbered medallion with its meaning written under it. */
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat__value {
   display: flex;
   flex-direction: row;
-  gap: 5px;
   align-items: center;
+  gap: 5px;
+}
+
+.stat__label {
+  font-size: 0.72em;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+}
+
+.difficulty, .skill {
+  flex-shrink: 0;
+  color: white;
+  font-weight: 800;
+  font-size: 2em;
+  font-variant-numeric: tabular-nums;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1em;
+  height: 2.1em;
+  border-radius: 50%;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+  border: 3px solid rgba(255, 255, 255, 0.35);
 }
 
 .difficulty {
-  flex-shrink: 0;
-  background-color: darkred;
-  color: white;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--pool-token-width);
-  height: var(--pool-token-width);
-  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #d0423f, #6e0d0d 75%);
+  box-shadow: 0 0 14px rgba(200, 40, 40, 0.45), inset 0 -4px 8px rgba(0, 0, 0, 0.35);
 }
 
 .skill {
-  flex-shrink: 0;
-  background-color: darkgreen;
-  color: white;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--pool-token-width);
-  height: var(--pool-token-width);
-  border-radius: 50%;
-}
-
-.modified-skill {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
+  background: radial-gradient(circle at 35% 30%, #43b26a, #0d4f22 75%);
+  box-shadow: 0 0 14px rgba(40, 180, 90, 0.45), inset 0 -4px 8px rgba(0, 0, 0, 0.35);
 }
 
 .portrait {
@@ -739,10 +978,14 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   background: rgba(0, 0, 0, 0.6);
 
   h2 {
-    background: #111;
-    color: #666;
+    background: rgba(24, 20, 14, 0.9);
+    color: #d9c9a3;
+    font-size: 0.85em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    margin: 0
+    padding: 6px 10px;
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
 }
 
@@ -761,8 +1004,22 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
 }
 
 .skill-test-results {
-  padding: 10px;
-  text-align: left;
+  animation: skill-test-result-in var(--motion-travel) var(--ease-land) both;
+  padding: 12px 14px;
+  font-size: 1.35em;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* The verdict lands with a beat, so the outcome reads before the buttons do. */
+@keyframes skill-test-result-in {
+  0% { opacity: 0; transform: scale(0.7); letter-spacing: 0.3em; }
+  60% { opacity: 1; transform: scale(1.08); }
+  100% { opacity: 1; transform: none; letter-spacing: 0.1em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .skill-test-results { animation: none; }
 }
 
 .skill-test-results-break {
@@ -775,7 +1032,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   border: 0;
   text-align: center;
   text-transform: uppercase;
-  transition: all 0.3s ease-in;
+  transition: background-color var(--motion-fast) var(--ease-out), color var(--motion-fast) var(--ease-out), filter var(--motion-fast) var(--ease-out);
   border: 0;
   padding: 10px;
   background-color: var(--button-2);
@@ -787,7 +1044,7 @@ button:where(:not(.debug-stepper-button)) {
   border: 0;
   text-align: center;
   text-transform: uppercase;
-  transition: all 0.2s ease-in;
+  transition: background-color var(--motion-fast) var(--ease-out), color var(--motion-fast) var(--ease-out), filter var(--motion-fast) var(--ease-out);
   border: 0;
   padding: 10px;
   background-color: var(--select-dark-30);
@@ -798,14 +1055,14 @@ button:where(:not(.debug-stepper-button)) {
 }
 
 .success {
-  background-color: darkgreen;
+  background: linear-gradient(90deg, #0b3d1c, #1f8a45 50%, #0b3d1c);
   text-transform: uppercase;
   text-align: center;
   color: white;
 }
 
 .failure {
-  background-color: darkred;
+  background: linear-gradient(90deg, #3d0b0b, #a82424 50%, #3d0b0b);
   text-transform: uppercase;
   text-align: center;
   color: white;
@@ -917,7 +1174,7 @@ i.iconSkillAgility {
     border: 0;
     text-align: left;
     text-transform: uppercase;
-    transition: all 0.2s ease-in;
+    transition: background-color var(--motion-fast) var(--ease-out), color var(--motion-fast) var(--ease-out), filter var(--motion-fast) var(--ease-out);
     border: 0;
     padding: 10px;
     margin: 0 !important;
@@ -939,36 +1196,88 @@ i.iconSkillAgility {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
 }
 
+.vs__text {
+  font-size: 1.1em;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* Progress track: past steps tinted, current step glows, future steps muted. */
 .steps {
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   width: 100%;
+  gap: 3px;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.55);
+  box-sizing: border-box;
 
   .step {
     flex: 1;
-    text-align: center;
-    @media (max-width: 800px) and (orientation: portrait) {
-      font-size:0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 700;
+    font-size: 0.95em;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+    &.fast {
+      flex: 0.6;
     }
   }
 
-  .step:nth-child(odd) {
-    background: rgba(0, 0, 0, 0.4);
-    color: white;
-  }
-
-  .step:nth-child(even) {
-    background: rgba(0, 0, 0, 0.2);
-    color: white;
+  .step.done {
+    background: rgba(216, 178, 110, 0.18);
+    color: rgba(240, 228, 200, 0.85);
   }
 
   .step.active {
-    background: rgba(255, 0, 255, 0.5);
+    background: linear-gradient(180deg, #d8b26e, #8f6c30);
+    color: white;
+    box-shadow: 0 0 10px rgba(216, 178, 110, 0.65);
+    transform: scale(1.06);
   }
+}
 
+.step-caption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: rgba(32, 26, 16, 0.88);
+  color: #f3ead6;
+  text-align: left;
+  font-size: 0.95em;
+  line-height: 1.35;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  :deep(img) {
+    height: 1.1em;
+    vertical-align: -0.15em;
+  }
+}
+
+.step-caption__badge {
+  flex-shrink: 0;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(216, 178, 110, 0.25);
+  border: 1px solid rgba(216, 178, 110, 0.6);
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .willpower-skill {
@@ -992,11 +1301,12 @@ i.iconSkillAgility {
 }
 
 .willpower-skill, .intellect-skill, .combat-skill, .agility-skill {
-  font-size: 1.5em;
-  width:1.2em;
-  height:1.2em;
-  line-height: 1.2em;
+  font-size: 2em;
+  width: 1.3em;
+  height: 1.3em;
+  line-height: 1.3em;
   border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .willpower-skill span, .intellect-skill span, .combat-skill span, .agility-skill span {
@@ -1049,8 +1359,10 @@ i.iconSkillAgility {
   border: none;
   color: var(--title);
   display: flex;
-  gap: 4px;
-  padding: 2px 10px;
+  gap: 6px;
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.95em;
   text-align: center;
   user-select: none;
   text-decoration: none;
@@ -1061,7 +1373,7 @@ i.iconSkillAgility {
   }
 
   img {
-    height: 15px;
+    height: 18px;
   }
 
   i {
@@ -1099,7 +1411,7 @@ i.iconSkillAgility {
 
 .token-effect {
   display: grid;
-  grid-template-columns: 58px 1fr;
+  grid-template-columns: 66px 1fr;
   align-items: stretch;
   background: rgba(10, 11, 15, 0.66);
 
@@ -1116,8 +1428,8 @@ i.iconSkillAgility {
   border-right: 1px solid rgba(255, 255, 255, 0.09);
 
   img {
-    width: 34px;
-    height: 34px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
   }
@@ -1133,7 +1445,7 @@ i.iconSkillAgility {
   text-align: left;
   color: #dbe0e7;
   font-family: 'Noto Sans', Avenir, Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5;
 
   :deep(img) {
@@ -1155,7 +1467,7 @@ i.iconSkillAgility {
   border-top: 1px solid rgba(255, 255, 255, 0.09);
   color: #dbe0e7;
   font-family: 'Noto Sans', Avenir, Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -1212,63 +1524,5 @@ i.iconSkillAgility {
   align-items: flex-start;
 }
 
-.skip-triggers-notice {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 8px 14px;
-  background: rgba(45, 25, 55, 0.75);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  color: #e8dff0;
-  font-size: 0.85em;
-  text-align: left;
-  letter-spacing: 0.02em;
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-}
-
-.skip-triggers-notice__text {
-  flex: 1;
-  line-height: 1.35;
-}
-
-.skip-triggers-notice__button {
-  flex-shrink: 0;
-  width: auto;
-  padding: 5px 14px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 999px;
-  color: #f4ecf8;
-  font-family: Teutonic, serif;
-  font-size: 0.85em;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-}
-
-.skip-triggers-notice__button:hover {
-  background: rgba(255, 255, 255, 0.18);
-  border-color: rgba(255, 255, 255, 0.45);
-  color: #ffffff;
-}
-
-.skip-triggers-notice__button:active {
-  background: rgba(255, 255, 255, 0.28);
-}
-
-@media (max-width: 600px) {
-  .skip-triggers-notice {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 6px;
-    text-align: center;
-  }
-  .skip-triggers-notice__button {
-    align-self: center;
-  }
-}
 
 </style>

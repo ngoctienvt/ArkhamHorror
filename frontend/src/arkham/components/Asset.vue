@@ -400,6 +400,7 @@ function startDrag(event: DragEvent) {
       v-else
       class="asset"
       :data-index="asset.cardId"
+      :data-fx-target="`asset-${asset.id}`"
       :[CARD_FLIGHT_ATTR]="asset.cardId"
       :style="cardFlightStyle"
     >

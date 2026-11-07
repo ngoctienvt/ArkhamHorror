@@ -51,6 +51,24 @@ const boards = new Map([
   ['09681', 'the-scarlet-keys/without-a-trace'],
   ['09694', 'the-scarlet-keys/congress-of-the-keys'],
 
+  // The Path to Carcosa & Return to The Path to Carcosa
+  ['03043', 'the-path-to-carcosa/curtain-call'],
+  ['52014', 'the-path-to-carcosa/curtain-call'],
+  ['03061', 'the-path-to-carcosa/the-last-king'],
+  ['52021', 'the-path-to-carcosa/the-last-king'],
+  ['03120', 'the-path-to-carcosa/echoes-of-the-past'],
+  ['52028', 'the-path-to-carcosa/echoes-of-the-past'],
+  ['03159', 'the-path-to-carcosa/the-unspeakable-oath'],
+  ['52034', 'the-path-to-carcosa/the-unspeakable-oath'],
+  ['03200', 'the-path-to-carcosa/a-phantom-of-truth'],
+  ['52040', 'the-path-to-carcosa/a-phantom-of-truth'],
+  ['03240', 'the-path-to-carcosa/the-pallid-mask'],
+  ['52048', 'the-path-to-carcosa/the-pallid-mask'],
+  ['03274', 'the-path-to-carcosa/black-stars-rise'],
+  ['52054', 'the-path-to-carcosa/black-stars-rise'],
+  ['03316', 'the-path-to-carcosa/dim-carcosa'],
+  ['52059', 'the-path-to-carcosa/dim-carcosa'],
+
   // The Drowned City
   ['11501', 'the-drowned-city/one-last-job'],
   ['11517', 'the-drowned-city/the-western-wall'],

@@ -14,14 +14,14 @@
 }
 
 ::view-transition-group(*) {
-  animation-duration: 420ms;
-  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-duration: var(--motion-travel);
+  animation-timing-function: var(--ease-out);
 }
 
 ::view-transition-old(*),
 ::view-transition-new(*) {
-  animation-duration: 420ms;
-  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-duration: var(--motion-travel);
+  animation-timing-function: var(--ease-out);
 }
 
 .card--flipping {
@@ -490,4 +490,32 @@ h2.title {
   flex-direction: column;
   gap: 0.3rem;
   padding: 0.5rem 0.6rem;
+}
+
+/* The option the player just picked, while its answer is on the way to the
+   server (arkham/motion/pendingChoice.ts). Outline and opacity only, so it
+   never moves an element that is positioned by its own transform/translate. */
+.choice-pending {
+  outline: 2px solid var(--important);
+  outline-offset: 2px;
+  border-radius: 6px;
+  animation: choice-pending-pulse calc(900ms * var(--motion-scale)) var(--ease-in-out) infinite alternate;
+}
+
+/* A card in hand lifts out of the fan, so it is clear which one is being played. */
+.hand .choice-pending,
+.hand-card .choice-pending,
+.hand-card.choice-pending {
+  transform: translateY(-10px);
+  transition: transform var(--motion-fast) var(--ease-out);
+}
+
+@keyframes choice-pending-pulse {
+  from { outline-color: var(--important); }
+  to { outline-color: rgba(212, 165, 10, 0.35); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .choice-pending { animation: none; }
+  .hand .choice-pending, .hand-card .choice-pending, .hand-card.choice-pending { transform: none; }
 }

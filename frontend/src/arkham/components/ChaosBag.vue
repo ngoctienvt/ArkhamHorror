@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { computed, ref, watch } from 'vue';
+import { computed } from 'vue';
 import { useDebug } from '@/arkham/debug';
 import { Game } from '@/arkham/types/Game';
 import { formatContent } from '@/arkham/helpers';
 import * as ArkhamGame from '@/arkham/types/Game';
-import { ChaosTokenFaceEffect, ChaosTokenValueEntry, SkillTest, chaosTokenEffectDetail } from '@/arkham/types/SkillTest';
+import { ChaosTokenFaceEffect, SkillTest, chaosTokenEffectDetail } from '@/arkham/types/SkillTest';
 import { MessageType } from '@/arkham/types/Message';
 import { ChaosBag } from '@/arkham/types/ChaosBag';
 import Token from '@/arkham/components/Token.vue';
@@ -12,8 +12,6 @@ import ChaosBagChoice from '@/arkham/components/ChaosBagChoice.vue';
 import SkillTestDraw from '@/arkham/components/debug/SkillTestDraw.vue';
 import { chaosTokenEffectKey } from '@/arkham/types/Scenario';
 import { useI18n } from 'vue-i18n';
-import { Dropdown } from 'floating-vue';
-import { chanceOfSuccess } from '@/arkham/chaosBagOdds';
 import { chaosTokenImage, compareTokenFaces, numericTokenFaces } from '@/arkham/types/ChaosToken';
 import { beginSealDrag, endCardDrag } from '@/arkham/debugCardDrop';
 
@@ -49,7 +47,6 @@ const { t } = useI18n()
 const allTokens = computed(() =>
   [...props.chaosBag.chaosTokens].sort((a, b) => compareTokenFaces(a.face, b.face))
 )
-const allTokenFaces = computed(() => allTokens.value.map(t => t.face))
 
 // What one card does to a face, as one line: "-1 If you fail, discard a card..."
 function effectDetail(effect: ChaosTokenFaceEffect) {
@@ -81,65 +78,12 @@ function tokenTooltip(tokenFace: string) {
   return { content: lines.join('<br>'), html: true }
 }
 
-// Only supplied while a skill test is running; absent means no values and no stats bar.
+// Only supplied while a skill test is running; carries each face's value and card effects.
 const breakdown = computed(() => props.game.skillTest?.valueBreakdown ?? null)
 
-// Odds belong to the test being taken, so the bar is skill-test-window only. The
-// chaos bag window still gets the per-token value pills.
-const showStatsBar = computed(() => !!breakdown.value && props.skillTest !== null)
-
-const whatIfSkill = ref(0)
-const whatIfDifficulty = ref(0)
-
-const seedWhatIf = () => {
-  const b = breakdown.value
-  if (!b) return
-  whatIfSkill.value = b.skillValue
-  whatIfDifficulty.value = b.difficulty
-}
-
-watch(breakdown, seedWhatIf, { immediate: true })
-
-const isModified = computed(() => {
-  const b = breakdown.value
-  return !!b && (whatIfSkill.value !== b.skillValue || whatIfDifficulty.value !== b.difficulty)
-})
-
-// Opt-in per skill test: seeing the odds should be a deliberate act, so this
-// resets whenever a new test starts.
-const showOdds = ref(false)
-
-// The token grid is collapsed during a skill test until the player asks for it;
-// debug tools (force draw, sealing) need it open. Resets with each new test.
-const bagOpen = ref(false)
-const showTokenGrid = computed(() => props.skillTest === null || bagOpen.value || debug.active)
-
-watch(() => props.game.skillTest?.id, () => { showOdds.value = false; bagOpen.value = false })
-
-const oddsPercent = computed(() => {
-  const b = breakdown.value
-  return b ? Math.round(chanceOfSuccess(b, whatIfSkill.value, whatIfDifficulty.value) * 100) : null
-})
-
-const breakdownRows = computed(() =>
-  [...(breakdown.value?.tokens ?? [])].sort((a, b) => compareTokenFaces(a.face, b.face))
-)
-
-// A face that has already been drawn still carries its effects, but it is no longer in
-// the bag, so it is left out of the counted grid.
-const bagRows = computed(() => breakdownRows.value.filter((entry) => entry.count > 0))
-
-// Every card effect on every face, flattened for the popover. Kept out of the token
-// grid above so the two-column layout there stays intact.
-const breakdownEffects = computed(() =>
-  breakdownRows.value.flatMap((entry) =>
-    entry.effects.map((effect) => ({
-      face: entry.face,
-      name: effect.name,
-      detail: effectDetail(effect),
-    }))
-  )
-)
+// During a skill test the bag is checked from its own window (the Chaos Bag
+// button), so the token grid only shows here for debug tools (force draw, sealing).
+const showTokenGrid = computed(() => props.skillTest === null || debug.active)
 
 const canForceDraw = computed(() => debug.active && tokenAction.value !== -1)
 
@@ -158,20 +102,25 @@ function faceValueLabel(tokenFace: string) {
   return entry.value > 0 ? `+${entry.value}` : `${entry.value}`
 }
 
-function entryValueLabel(entry: ChaosTokenValueEntry) {
-  if (entry.autoFail) return t('gameBar.chaosBagStats.autoFail')
-  if (entry.autoSuccess) return t('gameBar.chaosBagStats.autoSuccess')
-  if (entry.value === null) return '?'
-  return entry.value > 0 ? `+${entry.value}` : `${entry.value}`
-}
-
 const choose = (idx: number) => emit('choose', idx)
 </script>
 
 <template>
   <div class="chaos-bag">
     <div class="chaos-bag-contents">
-      <Token v-for="revealedToken in revealedChaosTokens" :key="revealedToken.id" :token="revealedToken" :playerId="playerId" :game="game" @choose="choose" />
+      <!-- Each token comes out of the bag in turn: it rises, turns face up and settles.
+           A token cancelled or returned shrinks away rather than blinking out. -->
+      <TransitionGroup name="chaos-reveal">
+        <Token
+          v-for="(revealedToken, i) in revealedChaosTokens"
+          :key="revealedToken.id"
+          :token="revealedToken"
+          :playerId="playerId"
+          :game="game"
+          :style="{ '--reveal-index': i }"
+          @choose="choose"
+        />
+      </TransitionGroup>
       <button
         v-if="tokenAction !== -1"
         type="button"
@@ -201,73 +150,8 @@ const choose = (idx: number) => emit('choose', idx)
       </div>
     </div>
 
-    <div v-if="showStatsBar || (debug.active && skillTest)" class="bag-toolbar">
-      <SkillTestDraw v-if="debug.active && skillTest" :gameId="game.id" :skillTest="skillTest" :chaosBag="chaosBag" />
-      <Dropdown
-        v-if="showStatsBar"
-        class="stats-bar-anchor"
-        placement="top"
-        :distance="6"
-        theme="chaos-bag-stats-popover"
-      >
-        <div class="stats-bar" role="button" tabindex="0">
-          <span class="stats-bar__count stats-bar__toggle" :aria-expanded="showTokenGrid" @click.stop="bagOpen = !bagOpen">
-            {{ $t('gameBar.chaosBagStats.tokens', { count: allTokenFaces.length }) }}
-            <span class="stats-bar__chevron" aria-hidden="true">{{ showTokenGrid ? '▾' : '▸' }}</span>
-          </span>
-          <span v-if="showOdds" class="stats-bar__odds" :class="{ 'stats-bar__odds--whatif': isModified }">{{ oddsPercent }}%</span>
-          <button v-else type="button" class="stats-bar__reveal" @click.stop="showOdds = true">
-            {{ $t('gameBar.chaosBagStats.showOdds') }}
-          </button>
-          <span class="stats-bar__caret" aria-hidden="true">&#9652;</span>
-        </div>
-
-        <template #popper>
-          <div class="stats">
-            <div class="stats__headline">
-              <template v-if="showOdds">
-                <span class="stats__percent">{{ oddsPercent }}%</span>
-                <span class="stats__label">{{ $t('gameBar.chaosBagStats.chanceOfSuccess') }}</span>
-              </template>
-              <button v-else type="button" class="stats__reveal" @click="showOdds = true">
-                {{ $t('gameBar.chaosBagStats.showOdds') }}
-              </button>
-            </div>
-
-            <div class="stats__whatif">
-              <label>
-                {{ $t('gameBar.chaosBagStats.skill') }}
-                <input v-model.number="whatIfSkill" type="number" />
-              </label>
-              <label>
-                {{ $t('gameBar.chaosBagStats.difficulty') }}
-                <input v-model.number="whatIfDifficulty" type="number" />
-              </label>
-              <button v-if="isModified" type="button" class="stats__reset" @click="seedWhatIf">
-                {{ $t('gameBar.chaosBagStats.reset') }}
-              </button>
-            </div>
-
-            <div class="stats__table">
-              <div v-for="entry in bagRows" :key="entry.face" class="stats__row">
-                <img class="stats__token" :src="chaosTokenImage(entry.face)" />
-                <span class="stats__multiplier">&times;{{ entry.count }}</span>
-                <span class="stats__value">{{ entryValueLabel(entry) }}</span>
-              </div>
-            </div>
-
-            <div v-if="breakdownEffects.length" class="stats__effects">
-              <div v-for="(effect, idx) in breakdownEffects" :key="`${effect.face}${idx}`" class="stats__effect">
-                <img class="stats__effect-token" :src="chaosTokenImage(effect.face)" />
-                <span v-if="effect.name" class="stats__effect-name">{{ effect.name }}</span>
-                <span class="stats__effect-detail" v-html="effect.detail"></span>
-              </div>
-            </div>
-
-            <p class="stats__caveat">{{ $t('gameBar.chaosBagStats.caveat') }}</p>
-          </div>
-        </template>
-      </Dropdown>
+    <div v-if="debug.active && skillTest" class="bag-toolbar">
+      <SkillTestDraw :gameId="game.id" :skillTest="skillTest" :chaosBag="chaosBag" />
     </div>
   </div>
 </template>
@@ -286,13 +170,36 @@ const choose = (idx: number) => emit('choose', idx)
   &:hover { filter: brightness(1.15); }
 }
 
-.stats-bar__toggle {
-  cursor: pointer;
+
+
+.chaos-reveal-enter-active {
+  animation: chaos-token-reveal var(--motion-travel) var(--ease-land) both;
+  animation-delay: calc(var(--reveal-index, 0) * 120ms * var(--motion-scale));
+}
+.chaos-reveal-leave-active {
+  animation: chaos-token-return var(--motion-base) var(--ease-in-out) both;
+}
+.chaos-reveal-move {
+  transition: transform var(--motion-base) var(--ease-out);
 }
 
-.stats-bar__chevron {
-  opacity: 0.7;
-  margin-left: 4px;
+@keyframes chaos-token-reveal {
+  0% { opacity: 0; transform: translateY(36px) scale(0.55) rotateY(180deg); }
+  55% { opacity: 1; transform: translateY(-10px) scale(1.12) rotateY(0deg); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes chaos-token-return {
+  to { opacity: 0; transform: translateY(24px) scale(0.6); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chaos-reveal-enter-active { animation-name: chaos-token-fade; animation-delay: 0s; }
+  .chaos-reveal-leave-active { animation-name: chaos-token-fade; animation-direction: reverse; }
+  .chaos-reveal-move { transition: none; }
+}
+@keyframes chaos-token-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .token {
@@ -389,204 +296,30 @@ const choose = (idx: number) => emit('choose', idx)
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(0, 0, 0, 0.35);
 }
-.stats-bar-anchor {
-  flex: 1;
-  min-width: 0;
-}
 
-.stats-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 5px 10px;
-  color: rgba(255, 255, 255, 0.7);
-  font-family: sans-serif;
-  font-size: 11px;
-  line-height: 16px;
-  cursor: pointer;
-  user-select: none;
-  &:hover {
-    background: rgba(0, 0, 0, 0.55);
-    color: rgba(255, 255, 255, 0.95);
-  }
-}
 
-.stats-bar__count {
-  flex: 1;
-}
 
-.stats-bar__odds {
-  font-variant-numeric: tabular-nums;
-  font-weight: 600;
-}
 
-.stats-bar__odds--whatif {
-  color: var(--important);
-  font-style: italic;
-}
 
-.stats-bar__reveal {
-  padding: 0 6px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 999px;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  line-height: 14px;
-  cursor: pointer;
-  &:hover {
-    border-color: rgba(255, 255, 255, 0.5);
-  }
-}
 
-.stats-bar__caret {
-  opacity: 0.6;
-  font-size: 9px;
-}
 
-.stats {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 12px;
-  max-width: min(320px, 85vw);
-  font-family: sans-serif;
-  font-size: 12px;
-}
 
-.stats__headline {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-}
 
-.stats__percent {
-  font-size: 22px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-}
 
-.stats__label {
-  color: rgba(255, 255, 255, 0.7);
-}
 
-.stats__reveal {
-  padding: 4px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 999px;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.9);
-  font: inherit;
-  cursor: pointer;
-  &:hover {
-    border-color: rgba(255, 255, 255, 0.5);
-  }
-}
 
-.stats__whatif {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 
-  label {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    color: rgba(255, 255, 255, 0.7);
-  }
 
-  input {
-    width: 46px;
-    padding: 2px 4px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    font-variant-numeric: tabular-nums;
-  }
-}
 
-.stats__reset {
-  padding: 2px 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 999px;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
-}
 
-.stats__table {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4px 14px;
-}
 
-.stats__row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
 
-.stats__token {
-  width: 22px;
-  height: auto;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
 
-.stats__multiplier {
-  color: rgba(255, 255, 255, 0.5);
-  font-variant-numeric: tabular-nums;
-}
 
-.stats__value {
-  margin-left: auto;
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-}
 
-.stats__effects {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding-top: 6px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-}
 
-.stats__effect {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 11px;
-  line-height: 1.3;
-}
 
-.stats__effect-token {
-  width: 16px;
-  height: auto;
-  flex-shrink: 0;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
 
-.stats__effect-name {
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.stats__effect-detail {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.stats__caveat {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 10px;
-  line-height: 1.4;
-}
 
 .token-slot {
   display: flex;

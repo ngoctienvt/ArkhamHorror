@@ -294,8 +294,11 @@ p { margin: 0; font-size: 0.74rem; line-height: 1.3; }
 .doom { display: flex; flex-direction: column; gap: 2px; font-size: 0.7rem; color: #f0d9a8; }
 .doom .doom-bar { display: block; height: 6px; background: #5a4a40; border-radius: 3px; overflow: hidden; }
 .doom-pips { display: flex; flex-wrap: wrap; gap: 3px; }
-.pip { font-style: normal; display: inline-grid; place-items: center; width: 18px; height: 18px; font-size: 0.8rem; line-height: 1; }
-.pip :deep(.game-icon) { width: 18px; height: 18px; opacity: 0.3; filter: grayscale(1) brightness(0.7); }
+/* Every slot gets a ring so the track length reads at a glance: empty slots show a pale outline
+   on a lighter well (the dark doom glyph alone vanished into the dark strip), filled ones a red ring. */
+.pip { font-style: normal; display: inline-grid; place-items: center; width: 18px; height: 18px; font-size: 0.8rem; line-height: 1; border-radius: 50%; box-sizing: border-box; border: 1.5px solid #c6a87399; background: #f0d9a81a; }
+.pip :deep(.game-icon) { width: 14px; height: 14px; opacity: 0.35; filter: grayscale(1) brightness(1.3); }
+.pip.filled { border-color: #ff7a64; background: #5a1a14aa; box-shadow: 0 0 4px #ff5a4a88; }
 .pip.filled :deep(.game-icon) { opacity: 1; filter: drop-shadow(0 1px 1.5px #000a); }
 .doom-left { color: #b9a88a; }
 .doom-alert { font-weight: 700; color: #ff9b86; }

@@ -483,6 +483,7 @@ const chooseFromStoryCollection = (choice: number) => {
         <div class="act-main">
           <div
             class="card-container"
+            :data-fx-target="`act-${id}`"
             :class="{
               'act--objective': hasObjective,
               'objective-ring': hasObjective,

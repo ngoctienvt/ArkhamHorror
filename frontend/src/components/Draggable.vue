@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { runViewTransition } from '@/arkham/motion/viewTransitionGuard'
 import { nextTick, ref, onMounted, onUpdated, onBeforeUnmount, useId } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useSettings } from '@/stores/settings'
@@ -314,14 +315,7 @@ function minimize() {
     }
   }
 
-  if (!document.startViewTransition) {
-    doMinimize()
-    return
-  }
-
-  const transition = document.startViewTransition(() => doMinimize())
-  void transition.ready.catch(() => {})
-  void transition.finished.catch(() => {})
+  void runViewTransition(() => doMinimize())
 }
 
 onMounted(async () => {

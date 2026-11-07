@@ -1,4 +1,5 @@
 {
+  "phaseBanner": "Phase {phase}",
   "playerWindow": "PLAYER WINDOW",
   "mythosPhase": "Mythos",
   "mythosPhaseBeginsStep": "Vòng bắt đầu. Mythos phase bắt đầu.",
@@ -21,7 +22,7 @@
   "upkeepPhaseBeginsStep": "Upkeep phase bắt đầu.",
   "resetActionsStep": "Đặt lại action.",
   "readyExhaustedStep": "Ready mọi lá bài exhausted.",
-  "drawCardAndGainResourceStep": "Mỗi điều tra viên rút 1 lá bài và nhận 1 resource.",
+  "drawCardAndGainResourceStep": "Mỗi điều tra viên rút 1 lá bài và nhận 1 tài nguyên.",
   "checkHandSizeStep": "Mỗi điều tra viên kiểm tra số lá trên tay.",
   "upkeepPhaseEndsStep": "Upkeep phase kết thúc. Vòng kết thúc."
 }

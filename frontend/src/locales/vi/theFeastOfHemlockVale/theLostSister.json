@@ -89,7 +89,7 @@
     },
     "lobstrosity": {
       "title": "{'{'}codex{'}'} Codex Σ: The Lobstrosity",
-      "reconciled": "<h3>@:theFeastOfHemlockVale.theLostSister.codex.lobstrosity.title </h3><p>_If Theo reconciled with Helen:_</p><p>Một mùi hôi thối, nồng nặc của cá ươn và nấm mốc tràn ngập hang động. Theo nhìn các chị em của mình chạy trốn khỏi hang, rõ ràng là đang giằng xé, trước khi quay sang bạn, nét mặt kiên định. Cậu đứng sát cánh cùng bạn khi sinh vật quái dị kia phát ra một tiếng gầm gừ ùng ục. “Tôi khá chắc là thứ đó đã ăn thịt con chó của Lizzie,” cậu nói, rút ra một con dao. “Cái này là cho Bruce!”</p><p class='basic right'>Di chuyển 1 damage từ Theo Peters sang kẻ địch Limulus Hybrid.</p>",
+      "reconciled": "<h3>@:theFeastOfHemlockVale.theLostSister.codex.lobstrosity.title </h3><p>_If Theo reconciled with Helen:_</p><p>Một mùi hôi thối, nồng nặc của cá ươn và nấm mốc tràn ngập hang động. Theo nhìn các chị em của mình chạy trốn khỏi hang, rõ ràng là đang giằng xé, trước khi quay sang bạn, nét mặt kiên định. Cậu đứng sát cánh cùng bạn khi sinh vật quái dị kia phát ra một tiếng gầm gừ ùng ục. “Tôi khá chắc là thứ đó đã ăn thịt con chó của Lizzie,” cậu nói, rút ra một con dao. “Cái này là cho Bruce!”</p><p class='basic right'>Di chuyển 1 tổn thương thể chất từ Theo Peters sang kẻ địch Limulus Hybrid.</p>",
       "otherwise": "<p>_Otherwise:_</p><p>Theo nhìn các chị em của mình chạy trốn khỏi hang, rõ ràng là đang giằng xé. Hang động đầy rêu bốc mùi nấm mốc và thối rữa. Chàng trai trẻ lùi lại khi sinh vật quái dị kia phát ra một tiếng gầm gừ ùng ục. “Tôi để quên thứ gì đó trong xe tải. Tôi sẽ quay lại ngay!” cậu nói khi bỏ chạy khỏi hiện trường.</p><p class='basic right'>Loại bỏ Theo Peters khỏi trò chơi.</p>"
     },
     "drRosaMarquez": {
@@ -132,13 +132,13 @@
   "tokens": {
     "easyStandard": {
       "skull": "-X. X bằng một nửa số địa điểm _Cave_ đã lật đang in play (làm tròn lên).",
-      "cultist": "-1. Nếu bạn thành công, chữa 1 horror.",
+      "cultist": "-1. Nếu bạn thành công, chữa 1 tổn thương tinh thần.",
       "tablet": "-2. Nếu bạn đang ở một địa điểm _Cave_, thay vào đó hãy coi chỉ số của token này là -4.",
       "elderThing": "-2. Nếu có một kẻ địch _Abomination_ tại địa điểm của bạn, lật thêm một token khác."
     },
     "hardExpert": {
       "skull": "-X. X bằng số địa điểm _Cave_ đã lật đang in play.",
-      "cultist": "-1. Nếu bạn thành công từ 2 trở lên, chữa 1 horror.",
+      "cultist": "-1. Nếu bạn thành công từ 2 trở lên, chữa 1 tổn thương tinh thần.",
       "tablet": "-4. Nếu bạn đang ở một địa điểm _Cave_, thay vào đó hãy coi chỉ số của token này là -6.",
       "elderThing": "-3. Nếu có một kẻ địch _Abomination_ tại địa điểm của bạn, thay vào đó bài kiểm tra này tự động thất bại."
     }

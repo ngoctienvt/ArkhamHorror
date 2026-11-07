@@ -2,15 +2,15 @@
   "specialRules": [
     {
       "title": "Barriers",
-      "body": "<p class='basic'>Một số khả năng bài cho phép các điều tra viên dựng barrier xung quanh nông trại. Các barrier chặn sự di chuyển của kẻ địch.</p><ul><li>Để dựng một barrier, đặt 1 resource token <i>(từ token pool)</i> giữa vị trí của bạn và một vị trí được kết nối, làm một barrier. Nếu một hiệu ứng bài hướng dẫn bạn đặt một barrier “tại” vị trí của bạn, hãy chọn một vị trí liền kề và đặt barrier giữa vị trí của bạn và vị trí đã chọn. Barrier này được coi là “tại” cả hai vị trí đối với các hiệu ứng bài.</li><li>Không có giới hạn về số lượng barrier giữa các vị trí.</li><li>Khi một kẻ địch đáng lẽ di chuyển thông qua một keyword <i>(ví dụ: hunter hoặc patrol)</i> và có một hoặc nhiều barrier giữa vị trí của nó và vị trí nó đang di chuyển tới, loại bỏ <b>một</b> trong số các barrier đó, sau đó thay vào đó hủy bỏ các hiệu ứng của việc di chuyển.</li><li>Những kẻ địch bỏ qua barrier không thực hiện bất kỳ hiệu ứng nào ở trên <i>(bao gồm cả việc loại bỏ barrier)</i>.</li></ul>"
+      "body": "<p class='basic'>Một số khả năng bài cho phép các điều tra viên dựng barrier xung quanh nông trại. Các barrier chặn sự di chuyển của kẻ địch.</p><ul><li>Để dựng một barrier, đặt 1 tài nguyên token <i>(từ token pool)</i> giữa vị trí của bạn và một vị trí được kết nối, làm một barrier. Nếu một hiệu ứng bài hướng dẫn bạn đặt một barrier “tại” vị trí của bạn, hãy chọn một vị trí liền kề và đặt barrier giữa vị trí của bạn và vị trí đã chọn. Barrier này được coi là “tại” cả hai vị trí đối với các hiệu ứng bài.</li><li>Không có giới hạn về số lượng barrier giữa các vị trí.</li><li>Khi một kẻ địch đáng lẽ di chuyển thông qua một keyword <i>(ví dụ: hunter hoặc patrol)</i> và có một hoặc nhiều barrier giữa vị trí của nó và vị trí nó đang di chuyển tới, loại bỏ <b>một</b> trong số các barrier đó, sau đó thay vào đó hủy bỏ các hiệu ứng của việc di chuyển.</li><li>Những kẻ địch bỏ qua barrier không thực hiện bất kỳ hiệu ứng nào ở trên <i>(bao gồm cả việc loại bỏ barrier)</i>.</li></ul>"
     },
     {
       "title": "Mồi nhử",
-      "body": "<p class='basic'>Một số khả năng bài đặt mồi nhử quanh nông trại để cầm chân kẻ địch.</p><ul><li>Để đặt một mồi nhử, đặt 1 horror token <i>(từ token pool)</i> tại vị trí của bạn, làm mồi nhử. <b>Giới hạn 1 mồi nhử mỗi vị trí.</b></li><li>Khi một kẻ địch tiến vào một vị trí có mồi nhử, loại bỏ mồi nhử đó, gây 1 damage cho kẻ địch đó, disengage nó khỏi tất cả các điều tra viên, và exhaust nó. Kẻ địch đó không thể ready trong phần còn lại của round.</li><li>Những kẻ địch bỏ qua mồi nhử không thực hiện bất kỳ hiệu ứng nào ở trên <i>(bao gồm cả việc loại bỏ mồi nhử)</i>.</li></ul>"
+      "body": "<p class='basic'>Một số khả năng bài đặt mồi nhử quanh nông trại để cầm chân kẻ địch.</p><ul><li>Để đặt một mồi nhử, đặt 1 tổn thương tinh thần token <i>(từ token pool)</i> tại vị trí của bạn, làm mồi nhử. <b>Giới hạn 1 mồi nhử mỗi vị trí.</b></li><li>Khi một kẻ địch tiến vào một vị trí có mồi nhử, loại bỏ mồi nhử đó, gây 1 tổn thương thể chất cho kẻ địch đó, disengage nó khỏi tất cả các điều tra viên, và exhaust nó. Kẻ địch đó không thể ready trong phần còn lại của round.</li><li>Những kẻ địch bỏ qua mồi nhử không thực hiện bất kỳ hiệu ứng nào ở trên <i>(bao gồm cả việc loại bỏ mồi nhử)</i>.</li></ul>"
     },
     {
       "title": "Cạm bẫy",
-      "body": "<p class='basic'>Một số khả năng bài đặt bẫy quanh nông trại để kẻ địch rơi vào.</p><ul><li>Để đặt một bẫy, đặt 1 damage token <i>(từ token pool)</i> tại vị trí của bạn, làm bẫy. <b>Giới hạn 1 bẫy mỗi vị trí.</b></li><li>Khi một kẻ địch tiến vào một vị trí có bẫy, loại bỏ bẫy đó và gây 2 damage cho kẻ địch đó.</li><li>Những kẻ địch bỏ qua bẫy không thực hiện bất kỳ hiệu ứng nào ở trên <i>(bao gồm cả việc loại bỏ bẫy)</i>.</li></ul>"
+      "body": "<p class='basic'>Một số khả năng bài đặt bẫy quanh nông trại để kẻ địch rơi vào.</p><ul><li>Để đặt một bẫy, đặt 1 tổn thương thể chất token <i>(từ token pool)</i> tại vị trí của bạn, làm bẫy. <b>Giới hạn 1 bẫy mỗi vị trí.</b></li><li>Khi một kẻ địch tiến vào một vị trí có bẫy, loại bỏ bẫy đó và gây 2 tổn thương thể chất cho kẻ địch đó.</li><li>Những kẻ địch bỏ qua bẫy không thực hiện bất kỳ hiệu ứng nào ở trên <i>(bao gồm cả việc loại bỏ bẫy)</i>.</li></ul>"
     },
     {
       "title": "Chồng bài Kẻ thù",
@@ -79,15 +79,15 @@
   },
   "barriers": {
     "title": "Barriers",
-    "body": "<h3>Barriers</h3><p class='basic'>Một số khả năng bài cho phép các điều tra viên dựng barrier xung quanh nông trại. Các barrier chặn sự di chuyển của kẻ địch.</p><ul><li>Để dựng một barrier, đặt 1 resource token <i>(từ token pool)</i> giữa vị trí của bạn và một vị trí được kết nối, làm một barrier. Nếu một hiệu ứng bài hướng dẫn bạn đặt một barrier “tại” vị trí của bạn, hãy chọn một vị trí liền kề và đặt barrier giữa vị trí của bạn và vị trí đã chọn. Barrier này được coi là “tại” cả hai vị trí đối với các hiệu ứng bài.</li><li>Không có giới hạn về số lượng barrier giữa các vị trí.</li><li>Khi một kẻ địch đáng lẽ di chuyển thông qua một keyword <i>(ví dụ: hunter hoặc patrol)</i> và có một hoặc nhiều barrier giữa vị trí của nó và vị trí nó đang di chuyển tới, loại bỏ <b>một</b> trong số các barrier đó, sau đó thay vào đó hủy bỏ các hiệu ứng của việc di chuyển.</li><li>Những kẻ địch bỏ qua barrier không thực hiện bất kỳ hiệu ứng nào ở trên <i>(bao gồm cả việc loại bỏ barrier)</i>.</li></ul>"
+    "body": "<h3>Barriers</h3><p class='basic'>Một số khả năng bài cho phép các điều tra viên dựng barrier xung quanh nông trại. Các barrier chặn sự di chuyển của kẻ địch.</p><ul><li>Để dựng một barrier, đặt 1 tài nguyên token <i>(từ token pool)</i> giữa vị trí của bạn và một vị trí được kết nối, làm một barrier. Nếu một hiệu ứng bài hướng dẫn bạn đặt một barrier “tại” vị trí của bạn, hãy chọn một vị trí liền kề và đặt barrier giữa vị trí của bạn và vị trí đã chọn. Barrier này được coi là “tại” cả hai vị trí đối với các hiệu ứng bài.</li><li>Không có giới hạn về số lượng barrier giữa các vị trí.</li><li>Khi một kẻ địch đáng lẽ di chuyển thông qua một keyword <i>(ví dụ: hunter hoặc patrol)</i> và có một hoặc nhiều barrier giữa vị trí của nó và vị trí nó đang di chuyển tới, loại bỏ <b>một</b> trong số các barrier đó, sau đó thay vào đó hủy bỏ các hiệu ứng của việc di chuyển.</li><li>Những kẻ địch bỏ qua barrier không thực hiện bất kỳ hiệu ứng nào ở trên <i>(bao gồm cả việc loại bỏ barrier)</i>.</li></ul>"
   },
   "decoys": {
     "title": "Mồi nhử",
-    "body": "<h3>Mồi nhử</h3><p class='basic'>Một số khả năng bài đặt mồi nhử quanh nông trại để cầm chân kẻ địch.</p><ul><li>Để đặt một mồi nhử, đặt 1 horror token <i>(từ token pool)</i> tại vị trí của bạn, làm mồi nhử. <b>Giới hạn 1 mồi nhử mỗi vị trí.</b></li><li>Khi một kẻ địch tiến vào một vị trí có mồi nhử, loại bỏ mồi nhử đó, gây 1 damage cho kẻ địch đó, disengage nó khỏi tất cả các điều tra viên, và exhaust nó. Kẻ địch đó không thể ready trong phần còn lại của round.</li><li>Những kẻ địch bỏ qua mồi nhử không thực hiện bất kỳ hiệu ứng nào ở trên <i>(bao gồm cả việc loại bỏ mồi nhử)</i>.</li></ul>"
+    "body": "<h3>Mồi nhử</h3><p class='basic'>Một số khả năng bài đặt mồi nhử quanh nông trại để cầm chân kẻ địch.</p><ul><li>Để đặt một mồi nhử, đặt 1 tổn thương tinh thần token <i>(từ token pool)</i> tại vị trí của bạn, làm mồi nhử. <b>Giới hạn 1 mồi nhử mỗi vị trí.</b></li><li>Khi một kẻ địch tiến vào một vị trí có mồi nhử, loại bỏ mồi nhử đó, gây 1 tổn thương thể chất cho kẻ địch đó, disengage nó khỏi tất cả các điều tra viên, và exhaust nó. Kẻ địch đó không thể ready trong phần còn lại của round.</li><li>Những kẻ địch bỏ qua mồi nhử không thực hiện bất kỳ hiệu ứng nào ở trên <i>(bao gồm cả việc loại bỏ mồi nhử)</i>.</li></ul>"
   },
   "traps": {
     "title": "Cạm bẫy",
-    "body": "<h3>Cạm bẫy</h3><p class='basic'>Một số khả năng bài đặt bẫy quanh nông trại để kẻ địch rơi vào.</p><ul><li>Để đặt một bẫy, đặt 1 damage token <i>(từ token pool)</i> tại vị trí của bạn, làm bẫy. <b>Giới hạn 1 bẫy mỗi vị trí.</b></li><li>Khi một kẻ địch tiến vào một vị trí có bẫy, loại bỏ bẫy đó và gây 2 damage cho kẻ địch đó.</li><li>Những kẻ địch bỏ qua bẫy không thực hiện bất kỳ hiệu ứng nào ở trên <i>(bao gồm cả việc loại bỏ bẫy)</i>.</li></ul>"
+    "body": "<h3>Cạm bẫy</h3><p class='basic'>Một số khả năng bài đặt bẫy quanh nông trại để kẻ địch rơi vào.</p><ul><li>Để đặt một bẫy, đặt 1 tổn thương thể chất token <i>(từ token pool)</i> tại vị trí của bạn, làm bẫy. <b>Giới hạn 1 bẫy mỗi vị trí.</b></li><li>Khi một kẻ địch tiến vào một vị trí có bẫy, loại bỏ bẫy đó và gây 2 tổn thương thể chất cho kẻ địch đó.</li><li>Những kẻ địch bỏ qua bẫy không thực hiện bất kỳ hiệu ứng nào ở trên <i>(bao gồm cả việc loại bỏ bẫy)</i>.</li></ul>"
   },
   "label": {
     "placeBarrier": "Đặt một barrier",
@@ -100,13 +100,13 @@
     "removeDecoy": "Loại bỏ một decoy",
     "removeTrap": "Loại bỏ một trap",
     "endlessNight": {
-      "damageCaptives": "Gây 2 damage cho story asset The Captives"
+      "damageCaptives": "Gây 2 tổn thương thể chất cho story asset The Captives"
     }
   },
   "codex": {
     "leahAtwood": {
       "title": "{'{'}codex{'}'} Codex 2: Leah Atwood",
-      "body": "<h3>@:theFeastOfHemlockVale.theLongestNight.codex.leahAtwood.title </h3><p>Một bóng dáng giống sói với hàm răng sắc nhọn, sáng bóng lao về phía bạn, cười như một con linh cẩu. Leah bước ra chắn trước mặt bạn và giáng chiếc xẻng xuống đầu sinh vật đó. “Mày đừng có hòng!” cô ấy hét vào mặt nó.</p><p class='basic right'>Trong Ghi chú của Leah Atwood, ghi lại <i>Leah đã sát cánh bên bạn</i>. Gây 3 damage cho kẻ địch gần nhất.</p>"
+      "body": "<h3>@:theFeastOfHemlockVale.theLongestNight.codex.leahAtwood.title </h3><p>Một bóng dáng giống sói với hàm răng sắc nhọn, sáng bóng lao về phía bạn, cười như một con linh cẩu. Leah bước ra chắn trước mặt bạn và giáng chiếc xẻng xuống đầu sinh vật đó. “Mày đừng có hòng!” cô ấy hét vào mặt nó.</p><p class='basic right'>Trong Ghi chú của Leah Atwood, ghi lại <i>Leah đã sát cánh bên bạn</i>. Gây 3 tổn thương thể chất cho kẻ địch gần nhất.</p>"
     },
     "simeonAtwood": {
       "title": "{'{'}codex{'}'} Codex 3: Simeon Atwood",

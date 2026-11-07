@@ -51,9 +51,9 @@
   },
   "tooltips": {
     "fateOfTheValeV3": {
-      "placeKindling": "{'{'}action{'}'} Tiêu X {'{'}perPlayer{'}'} clue: Đặt X resource lên địa điểm của bạn, như kindling (bạn có thể tiêu 5 resource hoặc bỏ một asset _Item_ bạn kiểm soát để đặt thêm 1 kindling).",
+      "placeKindling": "{'{'}action{'}'} Tiêu X {'{'}perPlayer{'}'} clue: Đặt X resource lên địa điểm của bạn, như kindling (bạn có thể tiêu 5 tài nguyên hoặc bỏ một asset _Item_ bạn kiểm soát để đặt thêm 1 kindling).",
       "drawFire": "{'{'}action{'}'} Nếu địa điểm của bạn có kindling bằng hoặc lớn hơn giá trị shroud của nó, loại bỏ toàn bộ kindling khỏi nó: Rút 1 lá treachery Fire! đang để riêng. (Giới hạn nhóm một lần mỗi địa điểm.)",
-      "placeKindlingMiners": "{'{'}action{'}'} Tiêu X clue: Đặt X resource lên địa điểm của bạn, như kindling (bạn có thể tiêu 5 resource hoặc bỏ một asset _Item_ bạn kiểm soát để đặt thêm 1 kindling).",
+      "placeKindlingMiners": "{'{'}action{'}'} Tiêu X clue: Đặt X resource lên địa điểm của bạn, như kindling (bạn có thể tiêu 5 tài nguyên hoặc bỏ một asset _Item_ bạn kiểm soát để đặt thêm 1 kindling).",
       "drawFireMiners": "{'{'}fast{'}'} Nếu địa điểm của bạn có 1 {'{'}perPlayer{'}'} kindling, loại bỏ toàn bộ kindling khỏi nó: Rút 1 lá treachery Fire! đang để riêng. (Giới hạn nhóm một lần mỗi địa điểm.)"
     }
   },
@@ -85,7 +85,7 @@
       "doItOurselves": "Tự mình làm lấy"
     },
     "fateOfTheValeV3": {
-      "spendResourcesForKindling": "Tiêu 5 resource để đặt thêm 1 kindling"
+      "spendResourcesForKindling": "Tiêu 5 tài nguyên để đặt thêm 1 kindling"
     },
     "shatteredMemories": {
       "doNotTakeControl": "Không nhận quyền kiểm soát cư dân nào"
@@ -164,10 +164,10 @@
     "leahAtwood": {
       "title": "{'{'}codex{'}'} Codex 2: Leah Atwood",
       "act2": "<h3>@:theFeastOfHemlockVale.fateOfTheVale.codex.leahAtwood.title </h3><p>_If it is Act 2:_</p><p>“Cái quái gì vậy?” Leah thở hắt ra đầy kinh ngạc và giơ một tay lên trước ánh sáng, như thể đang áp nó vào một tấm kính. “Thật không thể tin được.”</p><p class='basic right'>Tìm kiếm tất cả các khu vực out-of-play để lấy một asset _Item_ và rút nó. Một điều tra viên có thể kích hoạt codex này một lần nữa trong một act khác.</p>",
-      "act3": "<p>_Otherwise:_</p><p>“Đây từng là nhà của chúng ta,” Leah khóc. “Rachel, cô đã nghĩ gì vậy? Tất cả là lỗi của tôi. Tôi đã đứng nhìn và để chuyện này xảy ra.”</p><p class='basic right'>Mỗi điều tra viên có thể rút 2 lá bài hoặc hồi 1 horror.</p>",
+      "act3": "<p>_Otherwise:_</p><p>“Đây từng là nhà của chúng ta,” Leah khóc. “Rachel, cô đã nghĩ gì vậy? Tất cả là lỗi của tôi. Tôi đã đứng nhìn và để chuyện này xảy ra.”</p><p class='basic right'>Mỗi điều tra viên có thể rút 2 lá bài hoặc hồi 1 tổn thương tinh thần.</p>",
       "label": {
         "drawTwo": "Rút 2 lá bài",
-        "healHorror": "Chữa 1 horror",
+        "healHorror": "Chữa 1 tổn thương tinh thần",
         "doNotExtend": "Không mở rộng cuộc tìm kiếm",
         "drawItem": "Rút một asset Item, hoặc mở rộng cuộc tìm kiếm sang một deck"
       }
@@ -175,11 +175,11 @@
     "simeonAtwood": {
       "title": "{'{'}codex{'}'} Codex 3: Simeon Atwood",
       "act2": "<h3>@:theFeastOfHemlockVale.fateOfTheVale.codex.simeonAtwood.title </h3><p>_If it is Act 2:_</p><p>Simeon mở to mắt nhìn ánh sáng chói lóa. “Thứ này còn đẹp hơn bất kỳ màn pháo hoa nào,” cậu nói, bị mê hoặc.</p><p class='basic right'>Tự động evade mỗi kẻ địch Cosmic Emissary đang trong khu vực chơi. Một điều tra viên có thể kích hoạt codex này một lần nữa trong một act khác.</p>",
-      "act3": "<p><b>Nếu đang là Act 3a: Fate of the Vale (v.III):</b></p><p>Simeon nhảy lên trên một kiện cỏ khô đang bốc khói, cười khanh khách. “Thật tuyệt vời! Nhận lấy này, dì Rachel!” Cậu ta ném một quả pháo.</p><p class='basic right'>Chọn một địa điểm và đặt 3 resource lên đó, làm mồi lửa.</p>",
-      "otherwise": "<p>_Otherwise:_</p><p>“Mọi người có thấy Digby không?” Simeon nhìn quanh, có vẻ lạc lõng.</p><p class='basic right'>Mỗi điều tra viên có thể rút 1 lá bài hoặc nhận 2 resource.</p>",
+      "act3": "<p><b>Nếu đang là Act 3a: Fate of the Vale (v.III):</b></p><p>Simeon nhảy lên trên một kiện cỏ khô đang bốc khói, cười khanh khách. “Thật tuyệt vời! Nhận lấy này, dì Rachel!” Cậu ta ném một quả pháo.</p><p class='basic right'>Chọn một địa điểm và đặt 3 tài nguyên lên đó, làm mồi lửa.</p>",
+      "otherwise": "<p>_Otherwise:_</p><p>“Mọi người có thấy Digby không?” Simeon nhìn quanh, có vẻ lạc lõng.</p><p class='basic right'>Mỗi điều tra viên có thể rút 1 lá bài hoặc nhận 2 tài nguyên.</p>",
       "label": {
         "drawOne": "Rút 1 lá bài",
-        "gainResources": "Nhận 2 resource"
+        "gainResources": "Nhận 2 tài nguyên"
       }
     },
     "williamHemlock": {
@@ -197,7 +197,7 @@
       "title": "{'{'}codex{'}'} Codex 5: River Hawthorne",
       "act2": "<h3>@:theFeastOfHemlockVale.fateOfTheVale.codex.riverHawthorne.title </h3><p>_If it is Act 2:_</p><p>“Ôi, trời đất ơi—” River nhìn chằm chằm vào nỗi kinh hoàng lấp lánh ở giữa căn phòng. Hiếm hoi lắm họ mới không thốt nên lời.</p><p class='basic right'>Bạn có thể play một lá bài _Item_ từ trên tay, bỏ qua mọi cost. Một điều tra viên có thể kích hoạt codex này một lần nữa trong một act khác.</p>",
       "act3": "<p><b>Nếu đang là Act 3a: Fate of the Vale (v.II):</b></p><p>“Nhanh lên. Bạn còn chậm hơn cả một buổi tối với đại gia đình của tôi,” River lùa một người dân địa phương về phía bạn. “Đây, dẫn người này theo đi!”</p><p class='basic right'>Rút một lá bài _Resident_ bên dưới bất kỳ địa điểm nào và đưa nó vào khu vực chơi tại địa điểm đó, ở trạng thái exhausted, ngửa mặt kẻ địch lên.</p>",
-      "otherwise": "<p>_Otherwise:_</p><p>“Chà, toàn bộ chuyện này đúng là công cốc.” River nhìn bạn ủ rũ. “Nhưng tôi cho rằng hòn đảo đá khốn khổ này vốn dĩ đã vô phương cứu chữa.” Biểu cảm của họ trở nên tinh quái. “Ít nhất thì gia tài Hemlock đã ở đúng nơi nó thuộc về.”</p><p class='basic right'>Nhận 4 resource.</p>"
+      "otherwise": "<p>_Otherwise:_</p><p>“Chà, toàn bộ chuyện này đúng là công cốc.” River nhìn bạn ủ rũ. “Nhưng tôi cho rằng hòn đảo đá khốn khổ này vốn dĩ đã vô phương cứu chữa.” Biểu cảm của họ trở nên tinh quái. “Ít nhất thì gia tài Hemlock đã ở đúng nơi nó thuộc về.”</p><p class='basic right'>Nhận 4 tài nguyên.</p>"
     },
     "gideonMizrah": {
       "title": "{'{'}codex{'}'} Codex 6: Gideon Mizrah",
