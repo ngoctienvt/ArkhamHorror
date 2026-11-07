@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { runViewTransition } from '@/arkham/motion/viewTransitionGuard'
 import { computed, ref, nextTick, onUnmounted } from 'vue'
 import PoolItem from '@/arkham/components/PoolItem.vue'
 import { customTokenSlug, type Token, type Tokens } from '@/arkham/types/Token'
@@ -268,16 +269,7 @@ let pointerMoveHandler: ((e: PointerEvent) => void) | null = null
 // copy) appears to glide into position. The in-flow tokens are hidden while
 // expanded so the names aren't duplicated.
 function setExpanded(open: boolean) {
-  const startViewTransition = (document as Document & {
-    startViewTransition?: (cb: () => Promise<void> | void) => { ready: Promise<void>; finished: Promise<void> }
-  }).startViewTransition
-  if (typeof startViewTransition === 'function') {
-    const transition = startViewTransition.call(document, async () => { expanded.value = open; await nextTick() })
-    void transition.ready.catch(() => {})
-    void transition.finished.catch(() => {})
-  } else {
-    expanded.value = open
-  }
+  void runViewTransition(async () => { expanded.value = open; await nextTick() })
 }
 
 function rectContains(r: DOMRect | undefined, x: number, y: number, pad = 6) {

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { heldCount } from '@/arkham/motion/tokenHolds'
 import { useI18n } from 'vue-i18n'
 import { onBeforeUnmount, ComputedRef, ref, computed, watch, nextTick } from 'vue'
 import { useDebug } from '@/arkham/debug'
@@ -503,7 +504,8 @@ const removeAttrs = (token: string, count: number) =>
 const inFlight = (token: string, count: number) =>
   draggedOff(locationTarget(props.location.id), token, count)
 const displayedClues = computed(() => {
-  const count = clues.value ?? 0
+  // A clue on its way to an investigator still shows here until it leaves.
+  const count = heldCount(`location-${props.location.id}`, 'clue', clues.value ?? 0)
   return Math.max(0, count - inFlight('Clue', count))
 })
 const displayedBreaches = computed(() =>
@@ -678,6 +680,7 @@ const hasAnyLocationVehicleAssets = computed(() =>
             :style="[{ '--ui-rotation': `${uiRotation}deg` }, cardFlightStyle]"
             :data-rotation="uiRotation || undefined"
             :[CARD_FLIGHT_ATTR]="location.cardId"
+            :data-fx-target="`location-${location.id}`"
           >
             <Story
               v-if="locationStory"

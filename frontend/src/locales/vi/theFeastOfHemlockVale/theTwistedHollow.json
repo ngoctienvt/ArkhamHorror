@@ -16,15 +16,15 @@
   "tokens": {
     "easyStandard": {
       "skull": "-X. X bằng mức darkness hiện tại.",
-      "cultist": "-1. Chữa 1 damage cho điều tra viên của bạn.",
+      "cultist": "-1. Chữa 1 tổn thương thể chất cho điều tra viên của bạn.",
       "tablet": "-3. Nếu bạn thất bại, tìm kẻ địch đang truy đuổi có chỉ số evade cao nhất. Cho nó spawn tại địa điểm của bạn.",
-      "elderThing": "-4. Nếu bạn thất bại, nhận 1 horror."
+      "elderThing": "-4. Nếu bạn thất bại, nhận 1 tổn thương tinh thần."
     },
     "hardExpert": {
       "skull": "-X. X bằng hai lần mức darkness hiện tại.",
-      "cultist": "-3. Nếu bạn thành công, chữa 1 damage cho điều tra viên của bạn.",
+      "cultist": "-3. Nếu bạn thành công, chữa 1 tổn thương thể chất cho điều tra viên của bạn.",
       "tablet": "-4. Tìm kẻ địch đang truy đuổi có chỉ số evade cao nhất. Cho nó spawn tại địa điểm của bạn.",
-      "elderThing": "-5. Nhận 1 horror."
+      "elderThing": "-5. Nhận 1 tổn thương tinh thần."
     }
   },
   "intro": {
@@ -66,16 +66,16 @@
     "bertieMusgrave": "Để riêng Bertie Musgrave, out of play.",
     "rest": "Loại bỏ phần còn lại của tập bài encounter <i>Residents</i> khỏi trò chơi.",
     "backToTheVale": "Để riêng agenda đặc biệt: Back to the Vale!",
-    "darknessLevel": "Đặt 1 resource lên lá bài scenario reference, dưới “Darkness Level.” Trong phần còn lại của kịch bản, số lượng resource dưới “Darkness Level” biểu thị sự trôi qua của thời gian."
+    "darknessLevel": "Đặt 1 tài nguyên lên lá bài scenario reference, dưới “Darkness Level.” Trong phần còn lại của kịch bản, số lượng resource dưới “Darkness Level” biểu thị sự trôi qua của thời gian."
   },
   "codex": {
     "judithPark": {
       "title": "{'{'}codex{'}'} Codex 7: Judith Park",
-      "body": "<h3>@:theFeastOfHemlockVale.theTwistedHollow.codex.judithPark.title </h3><p>“Ăn đạn đi, đồ khốn!” Một giọng nói quen thuộc vang lên từ trong bóng tối. Vài phát súng găm vào cơ thể mềm nhũn, đang lột xác của con gấu. Con gấu nhìn sang phải ngay khi một phát súng khác làm nứt sọ nó. Rít lên đau đớn, nó lao vào bụi rậm về phía âm thanh. Thêm nhiều tiếng súng vang lên. Sau một khoảng thời gian tưởng chừng như vô tận, Judith Park bước ra từ khu rừng, ôm chặt cánh tay đang chảy máu. Bạn vội vàng chạy đến băng bó vết thương, nhưng cô ấy xua tay. “Tôi ổn. Chỉ mừng là bạn không sao.” Judith mỉm cười đắc ý. “Mother Rachel nói bạn có thể cần giúp đỡ. Bà ấy cũng trả tôi hai mươi đô để ra đây.”</p><p class='basic right'>Gây 2 damage cho Judith Park.</p><p class='basic right'>Trong Judith Park’s Notes, ghi lại <i>Judith đã cứu mạng bạn</i>.</p><p class='basic right'>Tiếp tục đến _{'{'}codex{'}'} Codex Σ: The Bear 3_</p>"
+      "body": "<h3>@:theFeastOfHemlockVale.theTwistedHollow.codex.judithPark.title </h3><p>“Ăn đạn đi, đồ khốn!” Một giọng nói quen thuộc vang lên từ trong bóng tối. Vài phát súng găm vào cơ thể mềm nhũn, đang lột xác của con gấu. Con gấu nhìn sang phải ngay khi một phát súng khác làm nứt sọ nó. Rít lên đau đớn, nó lao vào bụi rậm về phía âm thanh. Thêm nhiều tiếng súng vang lên. Sau một khoảng thời gian tưởng chừng như vô tận, Judith Park bước ra từ khu rừng, ôm chặt cánh tay đang chảy máu. Bạn vội vàng chạy đến băng bó vết thương, nhưng cô ấy xua tay. “Tôi ổn. Chỉ mừng là bạn không sao.” Judith mỉm cười đắc ý. “Mother Rachel nói bạn có thể cần giúp đỡ. Bà ấy cũng trả tôi hai mươi đô để ra đây.”</p><p class='basic right'>Gây 2 tổn thương thể chất cho Judith Park.</p><p class='basic right'>Trong Judith Park’s Notes, ghi lại <i>Judith đã cứu mạng bạn</i>.</p><p class='basic right'>Tiếp tục đến _{'{'}codex{'}'} Codex Σ: The Bear 3_</p>"
     },
     "theoPeters": {
       "title": "{'{'}codex{'}'} Codex 8: Theo Peters",
-      "body": "<h3>@:theFeastOfHemlockVale.theTwistedHollow.codex.theoPeters.title </h3><p>Một loạt pháo nổ bay ra từ trong bóng tối. “Cẩn thận!” một giọng nói quen thuộc hét lên. Con gấu lảo đảo lùi lại bằng hai chân sau khi thêm nhiều pháo nổ tiếp tục bay tới. Theo bước ra từ bóng tối, nắm lấy tay bạn, và chạy vụt khỏi hiện trường. Con gấu gầm rống đâu đó trong bóng tối. “Mother Rachel nói bạn đang tìm Billy trong Western Woods,” Theo nói trong hơi thở gấp gáp. “Và ừ thì, tôi không thể để bạn đi một mình. Nên tôi đã mượn một ít pháo hoa của Simeon.” Bạn đang quá đỗi nhẹ nhõm nên không buồn đính chính với cậu ấy rằng đó là “Bertie” chứ không phải “Billy.”</p><p class='basic right'>Gây 2 horror cho Theo Peters.</p><p class='basic right'>Trong Theo Peters’ Notes, ghi lại <i>Theo đã đánh lạc hướng con Gấu</i>.</p><p class='basic right'>Tiếp tục đến _{'{'}codex{'}'} Codex Σ: The Bear 3_</p>"
+      "body": "<h3>@:theFeastOfHemlockVale.theTwistedHollow.codex.theoPeters.title </h3><p>Một loạt pháo nổ bay ra từ trong bóng tối. “Cẩn thận!” một giọng nói quen thuộc hét lên. Con gấu lảo đảo lùi lại bằng hai chân sau khi thêm nhiều pháo nổ tiếp tục bay tới. Theo bước ra từ bóng tối, nắm lấy tay bạn, và chạy vụt khỏi hiện trường. Con gấu gầm rống đâu đó trong bóng tối. “Mother Rachel nói bạn đang tìm Billy trong Western Woods,” Theo nói trong hơi thở gấp gáp. “Và ừ thì, tôi không thể để bạn đi một mình. Nên tôi đã mượn một ít pháo hoa của Simeon.” Bạn đang quá đỗi nhẹ nhõm nên không buồn đính chính với cậu ấy rằng đó là “Bertie” chứ không phải “Billy.”</p><p class='basic right'>Gây 2 tổn thương tinh thần cho Theo Peters.</p><p class='basic right'>Trong Theo Peters’ Notes, ghi lại <i>Theo đã đánh lạc hướng con Gấu</i>.</p><p class='basic right'>Tiếp tục đến _{'{'}codex{'}'} Codex Σ: The Bear 3_</p>"
     },
     "drRosaMarquez": {
       "label": {
@@ -101,7 +101,7 @@
       "body": "<p><b>Chọn điều tra viên dũng cảm nhất để đọc đoạn sau:</b></p>",
       "theBear1": "<h3>@:theFeastOfHemlockVale.theTwistedHollow.codex.sigma.title </h3><p>_The Bear 1_: Bạn tìm thấy một mảnh vải tweed rách vướng trên một cành cây, chắc chắn là của Bertie. Một tiếng ho khò khè, khốn khổ vang lên phía sau bạn, kèm theo mùi thối rữa. Bạn quay lại. Một con gấu to lớn phát sáng như lửa ma trơi trong bóng tối. Một cụm nấm lấp lánh trên lưng sinh vật này thắp sáng sự u ám bằng một thứ ánh sáng kỳ quái. Sinh vật đó gầm lên, rồi lao tới.</p><p class='basic'>Kiểm tra các lá bài để riêng.<p><ul><li>Nếu Judith Park hoặc Theo Peters đang được để riêng, chọn một trong hai người để đưa vào chơi dưới quyền kiểm soát của bạn và giải quyết ngay mục codex của họ.</li><li>Nếu không, tiếp tục đến _The Bear 2_.</li></ul>",
       "theBear2": "<h3>@:theFeastOfHemlockVale.theTwistedHollow.codex.sigma.title </h3><p>_The Bear 2_: Trước khi bạn kịp phản ứng, con gấu vung những móng vuốt sắc như dao cạo tát bạn. Hơi thở hôi thối, khò khè của nó tràn ngập các giác quan khi nó đè một bàn chân khổng lồ lên ngực bạn. Tầm nhìn của bạn bắt đầu mờ đi khi sức nặng của thứ đó đe dọa bẻ gãy lồng ngực bạn.</p><p class='basic'>Bạn phải (*chọn một*), rồi đọc tiếp:</p><ul><li>Chịu 1 physical trauma và nhận 1 direct damage.</li><li>Chịu 1 mental trauma và nhận 1 direct horror.</li></ul><p>Đột nhiên, một tiếng súng vang lên, làm nứt hộp sọ lộ ra của con gấu. Nó rên rỉ đau đớn khi hai phát súng nữa găm vào cơ thể mềm nhũn, đang lột xác của nó. Sinh vật đó phát ra một tiếng gầm gừ thảm hại, rồi tan biến vào bóng tối. Bạn nghe thấy giọng nói của Mother Rachel từ đâu đó gần đây: “Chạy đi!”</p><p class='basic right'>Trong Mother Rachel’s Notes, ghi lại <i>Mother Rachel đã can thiệp</i>.</p><p class='basic right'>Tiếp tục đến _The Bear 3_.</p>",
-      "theBear3": "<h3>@:theFeastOfHemlockVale.theTwistedHollow.codex.sigma.title </h3><p>_The Bear 3_: Bạn chạy trốn khỏi hiện trường vào một lùm cây đang chết khô và giơ chiếc đèn lồng lên, chờ đợi nhìn thấy đôi mắt xanh lam ma quái của con gấu phản chiếu lại trong bóng tối. Khu rừng tĩnh lặng như tờ khi bạn cố gắng định hướng lại.</p><ul><li>Di chuyển mỗi kẻ địch unengaged vào pursuit area.</li><li>Spawn kẻ địch Ursine Hybrid tại vị trí của bạn, exhausted, và gây 1 damage cho nó.</li><li>Nếu nó không nằm dưới quyền kiểm soát của một điều tra viên, chọn một điều tra viên để nắm quyền kiểm soát Vale Lantern.</li><li>Để riêng mỗi vị trí _Dark_ trống để tạo lại chồng bài Woods. Để làm điều này, thực hiện các bước sau:<ul><li>Xào vị trí Twisted Hollow được để riêng cùng với 3 vị trí Western Woods ngẫu nhiên với nhau để tạo thành 4 vị trí dưới cùng của chồng bài Woods, mặt Western Woods ngửa lên.</li><li>Sau đó, đặt tất cả các vị trí Western Woods khác lên trên theo một thứ tự ngẫu nhiên. Tất cả các lá bài trong chồng bài Woods chỉ nên hiển thị mặt Western Woods, để các điều tra viên không biết lá nào là lá nào.</li></ul></li><li>Đặt các vị trí từ trên cùng của chồng bài Woods vào chơi ở phía trên, phía dưới, và bên trái, bên phải vị trí của các điều tra viên.</li></ul>"
+      "theBear3": "<h3>@:theFeastOfHemlockVale.theTwistedHollow.codex.sigma.title </h3><p>_The Bear 3_: Bạn chạy trốn khỏi hiện trường vào một lùm cây đang chết khô và giơ chiếc đèn lồng lên, chờ đợi nhìn thấy đôi mắt xanh lam ma quái của con gấu phản chiếu lại trong bóng tối. Khu rừng tĩnh lặng như tờ khi bạn cố gắng định hướng lại.</p><ul><li>Di chuyển mỗi kẻ địch unengaged vào pursuit area.</li><li>Spawn kẻ địch Ursine Hybrid tại vị trí của bạn, exhausted, và gây 1 tổn thương thể chất cho nó.</li><li>Nếu nó không nằm dưới quyền kiểm soát của một điều tra viên, chọn một điều tra viên để nắm quyền kiểm soát Vale Lantern.</li><li>Để riêng mỗi vị trí _Dark_ trống để tạo lại chồng bài Woods. Để làm điều này, thực hiện các bước sau:<ul><li>Xào vị trí Twisted Hollow được để riêng cùng với 3 vị trí Western Woods ngẫu nhiên với nhau để tạo thành 4 vị trí dưới cùng của chồng bài Woods, mặt Western Woods ngửa lên.</li><li>Sau đó, đặt tất cả các vị trí Western Woods khác lên trên theo một thứ tự ngẫu nhiên. Tất cả các lá bài trong chồng bài Woods chỉ nên hiển thị mặt Western Woods, để các điều tra viên không biết lá nào là lá nào.</li></ul></li><li>Đặt các vị trí từ trên cùng của chồng bài Woods vào chơi ở phía trên, phía dưới, và bên trái, bên phải vị trí của các điều tra viên.</li></ul>"
     }
   },
   "label": {
@@ -148,7 +148,7 @@
   },
   "poisonedMarsh": {
     "label": {
-      "assets": "Gây 1 damage cho mỗi asset của bạn"
+      "assets": "Gây 1 tổn thương thể chất cho mỗi asset của bạn"
     }
   }
 }

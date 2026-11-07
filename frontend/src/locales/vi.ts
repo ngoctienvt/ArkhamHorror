@@ -5,4 +5,11 @@ import gameBoard from '@/locales/vi/gameBoard/gameBoard'
 import theFeastOfHemlockVale from '@/locales/vi/theFeastOfHemlockVale'
 
 // Partial translation: anything missing falls back to English (fallbackLocale in main.ts).
-export default { ...base, ...label, ...gameBoard, log, theFeastOfHemlockVale }
+export default {
+  ...base,
+  ...label,
+  label: { ...label },
+  ...gameBoard,
+  log,
+  theFeastOfHemlockVale
+}

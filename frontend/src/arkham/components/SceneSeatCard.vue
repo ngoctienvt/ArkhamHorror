@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { heldCount } from '@/arkham/motion/tokenHolds'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Game } from '@/arkham/types/Game'
@@ -35,7 +36,13 @@ const inv = computed(() => props.investigator)
 const cls = computed(() => inv.value.class)
 const portrait = computed(() => portraitImage(inv.value.cardCode))
 const crown = computed(() => imgsrc('tokens/lead-investigator.png'))
-const tok = (type: keyof typeof inv.value.tokens) => inv.value.tokens[type] ?? 0
+/* Clues and resources keep their old count while tokens are still flying. */
+const tok = (type: keyof typeof inv.value.tokens) => {
+  const real = inv.value.tokens[type] ?? 0
+  if (type === 'Clue') return heldCount(`investigator-${inv.value.id}`, 'clue', real)
+  if (type === 'Resource') return heldCount(`investigator-${inv.value.id}`, 'resource', real)
+  return real
+}
 const meter = (max: number, taken: number) => ({ max, left: Math.max(0, max - taken), pct: max > 0 ? (100 * Math.max(0, max - taken)) / max : 0 })
 // The skills with every modifier on the investigator applied, as the scene's figures show them.
 const skills = computed(() => ([

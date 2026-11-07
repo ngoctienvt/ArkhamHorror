@@ -463,6 +463,36 @@ onBeforeUnmount(() => {
 
           <div class="toggle-row">
             <div class="toggle-text">
+              <div class="toggle-name">{{$t('gameBar.viewSettingMotionSpeedTitle')}}</div>
+              <div class="toggle-desc">{{$t('gameBar.viewSettingMotionSpeed')}}</div>
+              <div class="toggle-scope">{{$t('gameBar.settings.scope.you')}}</div>
+            </div>
+            <div class="segmented toggle-control">
+              <input type="radio" id="opt-motionSpeed-normal" name="opt-motionSpeed" :checked="settings.motionSpeed === 'normal'" @change="settings.setMotionSpeed('normal')" />
+              <label for="opt-motionSpeed-normal">{{ $t('gameBar.motionSpeedNormal') }}</label>
+              <input type="radio" id="opt-motionSpeed-fast" name="opt-motionSpeed" :checked="settings.motionSpeed === 'fast'" @change="settings.setMotionSpeed('fast')" />
+              <label for="opt-motionSpeed-fast">{{ $t('gameBar.motionSpeedFast') }}</label>
+              <input type="radio" id="opt-motionSpeed-off" name="opt-motionSpeed" :checked="settings.motionSpeed === 'off'" @change="settings.setMotionSpeed('off')" />
+              <label for="opt-motionSpeed-off">{{ $t('Off') }}</label>
+            </div>
+          </div>
+
+          <div class="toggle-row">
+            <div class="toggle-text">
+              <div class="toggle-name">{{$t('gameBar.viewSettingPhaseBannerTitle')}}</div>
+              <div class="toggle-desc">{{$t('gameBar.viewSettingPhaseBanner')}}</div>
+              <div class="toggle-scope">{{$t('gameBar.settings.scope.you')}}</div>
+            </div>
+            <div class="segmented toggle-control">
+              <input type="radio" id="opt-phaseBanner-on" name="opt-phaseBanner" :checked="settings.phaseBanner" @change="settings.setPhaseBanner(true)" />
+              <label for="opt-phaseBanner-on">{{ $t('On') }}</label>
+              <input type="radio" id="opt-phaseBanner-off" name="opt-phaseBanner" :checked="!settings.phaseBanner" @change="settings.setPhaseBanner(false)" />
+              <label for="opt-phaseBanner-off">{{ $t('Off') }}</label>
+            </div>
+          </div>
+
+          <div class="toggle-row">
+            <div class="toggle-text">
               <div class="toggle-name">{{$t('gameBar.viewSettingConfirmCardPlaysTitle')}}</div>
               <div class="toggle-desc">{{$t('gameBar.viewSettingConfirmCardPlays')}}</div>
               <div class="toggle-scope">{{$t('gameBar.settings.scope.you')}}</div>
@@ -825,14 +855,14 @@ onBeforeUnmount(() => {
 
 .toggle-row--highlighted {
   border-color: var(--select);
-  box-shadow: 0 0 0 1px var(--select), 0 0 12px rgba(255, 0, 255, 0.6);
+  box-shadow: 0 0 0 1px var(--select), 0 0 12px rgba(216, 178, 110, 0.6);
   animation: settingsFocusPulse 1.2s ease-out 2;
 }
 
 @keyframes settingsFocusPulse {
-  0% { box-shadow: 0 0 0 1px var(--select), 0 0 4px rgba(255, 0, 255, 0.3); }
-  50% { box-shadow: 0 0 0 1px var(--select), 0 0 18px rgba(255, 0, 255, 0.85); }
-  100% { box-shadow: 0 0 0 1px var(--select), 0 0 4px rgba(255, 0, 255, 0.3); }
+  0% { box-shadow: 0 0 0 1px var(--select), 0 0 4px rgba(216, 178, 110, 0.3); }
+  50% { box-shadow: 0 0 0 1px var(--select), 0 0 18px rgba(216, 178, 110, 0.85); }
+  100% { box-shadow: 0 0 0 1px var(--select), 0 0 4px rgba(216, 178, 110, 0.3); }
 }
 
 .toggle-text {

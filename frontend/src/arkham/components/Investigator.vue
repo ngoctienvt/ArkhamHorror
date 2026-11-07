@@ -569,6 +569,7 @@ const spadeInjury = computed(() => {
             :class="{ 'investigator--can-interact': investigatorAction !== -1, 'ability-target': isHighlighted || isAttackTarget }"
             class="card card--sideways"
             :src="image"
+            :data-fx-fallback="`investigator-${investigator.id}`"
             @click="clicked"
           />
           <span v-if="isBlanked" class="blanked-badge" :data-image-id="blankedCardCode"><font-awesome-icon icon="ban" /></span>
@@ -642,7 +643,9 @@ const spadeInjury = computed(() => {
               :game="game"
               @click="$emit('choose', ability.index)"
               />
+            <!-- On the map view, End Turn lives in the action list panel instead; the classic card view has no such list, so it keeps the button here. -->
             <button
+            v-if="settingsStore.locationView === 'cards'"
             :class="{ active: endTurnAction !== -1 && investigator.remainingActions <= blockedActions }"
             :disabled="endTurnAction == -1"
             :data-game-actionable="endTurnAction !== -1 || undefined"

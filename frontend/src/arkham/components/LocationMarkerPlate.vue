@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { heldCount } from '@/arkham/motion/tokenHolds'
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
@@ -7,7 +8,11 @@ import { replaceText } from '@/arkham/cardTextFormat'
 /* The name plate a location wears on the map: its name, whether it is revealed, and the numbers that
  * matter at a glance. Clicking it picks the location when a choice asks for one, otherwise opens its
  * info card; the ⓘ button only ever opens the card, so a target can be looked at before it is picked. */
-const props = withDefaults(defineProps<{ info: MapLocationInfo; size?: 'full' | 'compact' | 'room'; showText?: boolean }>(), { size: 'full', showText: false })
+const props = withDefaults(defineProps<{ info: MapLocationInfo; size?: 'full' | 'compact' | 'room'; showText?: boolean; game?: Game; locationId?: string }>(), { size: 'full', showText: false })
+/* Clues still here on screen while they fly off to the investigator who found them. */
+const cluesLeft = computed(() =>
+  props.locationId ? heldCount(`location-${props.locationId}`, 'clue', props.info.clues.left) : props.info.clues.left,
+)
 const emit = defineEmits<{ (e: 'inspect', anchor: HTMLElement): void; (e: 'choose', index: number): void }>()
 
 const { t } = useI18n()
@@ -53,6 +58,8 @@ function onMain(event: Event) {
   else emit('inspect', anchorOf(event))
 }
 import GameIcon from '@/arkham/components/GameIcon.vue'
+import AttachmentChips from '@/arkham/components/AttachmentChips.vue'
+import type { Game } from '@/arkham/types/Game'
 </script>
 
 <template>
@@ -82,10 +89,12 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
         <span v-if="info.shroud" class="chip shroud" :class="{ modified: info.shroud.current !== info.shroud.printed }"
           :title="t('locationMap.marker.shroud') + (info.shroud.current !== info.shroud.printed ? ' · ' + t('locationMap.marker.printed', { n: info.shroud.printed }) : '')">
           🔍 {{ info.shroud.x ? 'X' : info.shroud.current }}</span>
-        <span class="chip clue" :class="{ empty: !info.clues.left }" :title="t('locationMap.clues')"><GameIcon type="clue" /> {{ info.clues.left }}<template v-if="info.clues.printed !== null">/{{ info.clues.printed }}</template></span>
+        <span class="chip clue" :class="{ empty: !info.clues.left }" :title="t('locationMap.clues')"><GameIcon type="clue" /> {{ cluesLeft }}<template v-if="info.clues.printed !== null">/{{ info.clues.printed }}</template></span>
         <span v-if="info.doom" class="chip doom" :title="t('locationMap.doom')"><GameIcon type="doom" /> {{ info.doom }}</span>
       </template>
     </div>
+    <!-- Cards lying on this location (Obscuring Fog, Locked Door…): hover a chip for its effect and the card. -->
+    <AttachmentChips v-if="game && locationId && size !== 'compact'" :game="game" host="location" :hostId="locationId" placement="down" :max="4" />
     <!-- Card text comes from the bundled ArkhamDB card list, formatted the way the card overlay formats it. -->
     <div v-if="textHtml || flavorHtml" class="lore">
       <p v-if="textHtml" class="text" v-html="textHtml"></p>
@@ -93,7 +102,7 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
     </div>
     <button v-if="size !== 'compact' && info.actions.move" class="go" type="button" @click.stop="emit('choose', info.actions.move.index)">
       ↔ {{ t('locationMap.marker.moveHere') }}</button>
-    <span v-else-if="size === 'compact' && info.clues.left" class="mini-clue"><GameIcon type="clue" />{{ info.clues.left }}</span>
+    <span v-else-if="size === 'compact' && info.clues.left" class="mini-clue"><GameIcon type="clue" />{{ cluesLeft }}</span>
   </div>
 </template>
 

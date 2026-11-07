@@ -105,6 +105,10 @@ import {
   cardFlightTransitionName,
 } from '@/arkham/cardFlight'
 import { PENDING_DRAWS, pendingDraws, type PendingDraw } from '@/arkham/pendingDraws'
+import { runViewTransition } from '@/arkham/motion/viewTransitionGuard'
+import { clearPendingChoice, markPendingChoice, recentPress, trackChoicePresses } from '@/arkham/motion/pendingChoice'
+import { allowsTravel } from '@/arkham/motion/motionTokens'
+import { cardMoves, snapshotOf } from '@/arkham/gameDeltaFx'
 import { customCardDef, isCustomCardCode } from '@/arkham/customCards'
 import * as Message from '@/arkham/types/Message'
 import type { Phase } from '@/arkham/types/Phase'
@@ -594,10 +598,6 @@ function showDrawSpotlight(entry: DrawSpotlightEntry): boolean {
   return true
 }
 
-type TransitionDocument = Document & {
-  startViewTransition?: (callback: () => Promise<void>) => { ready: Promise<void>; finished: Promise<void> }
-}
-
 /* The on-screen element a card would fly to, or null if it has none.
  *
  * Asked of the DOM rather than of game state: the precondition for a view
@@ -707,9 +707,8 @@ function flyThenDismiss(cards: Card[], hide: () => void) {
     settle()
   }
 
-  const transitionDocument = document as TransitionDocument
   const flying = cardsWithADestination(cards)
-  if (!transitionDocument.startViewTransition || settings.prefersReducedMotion || !flying.length) {
+  if (!allowsTravel(settings.motionLevel) || !flying.length) {
     release()
     return
   }
@@ -718,25 +717,17 @@ function flyThenDismiss(cards: Card[], hide: () => void) {
   // laid out and unpromoted.
   const placeholders = measureDestinations(flying)
 
-  try {
-    const transition = transitionDocument.startViewTransition(async () => {
-      // `hide` clears the overlay, which clears `previewedCardIds` and so
-      // un-hides the board copy -- it has to be visible in this new state or it
-      // captures an empty snapshot and flies as nothing. Naming it in the same
-      // render is what makes it the other end of the flight.
-      flyingCardIds.value = new Set(flying)
-      flightPlaceholders.value = placeholders
-      hide()
-      await nextTick()
-    })
-    // `finished` rejects when the transition is skipped. Either way the overlay
-    // is already gone and the lock has to come off, or the board stays frozen.
-    void transition.ready.catch(() => {})
-    transition.finished.then(settle, settle)
-  } catch (e) {
-    console.error(e)
-    release()
-  }
+  // `hide` clears the overlay, which clears `previewedCardIds` and so un-hides
+  // the board copy -- it has to be visible in this new state or it captures an
+  // empty snapshot and flies as nothing. Naming it in the same render is what
+  // makes it the other end of the flight. If another transition owns the
+  // document, the guard applies this directly and the lock still comes off.
+  void runViewTransition(async () => {
+    flyingCardIds.value = new Set(flying)
+    flightPlaceholders.value = placeholders
+    hide()
+    await nextTick()
+  }).then(settle, settle)
 }
 
 /* Whatever an overlay is currently showing. Derived rather than set at each call
@@ -1343,32 +1334,56 @@ function entitiesMoved(previous: Arkham.Game, current: Arkham.Game) {
     || placementChanged(previous.enemies, current.enemies)
 }
 
+/* Bumped by every update so a deferred apply can tell it has been overtaken.
+ * An animated update waits a frame before it lands; a newer update that arrived
+ * meanwhile must not be overwritten by the older one landing late. */
+let applySeq = 0
+
+/* Cards changing zone on the table (played from hand, discarded, attached) whose
+ * starting element is on screen right now, so a view transition has both ends.
+ * Not while an overlay owns the flight state: its own flight takes precedence. */
+function cardsChangingZone(previous: Arkham.Game, current: Arkham.Game): string[] {
+  if (flyingCardIds.value.size > 0 || previewedCardIds.value.size > 0) return []
+  return cardMoves(snapshotOf(previous), snapshotOf(current)).filter((id) => laidOutDestination(id))
+}
+
 function applyGameUpdate(updatedGame: Arkham.Game, locked: boolean) {
   const nextGame = locked ? { ...updatedGame, question: {} } : updatedGame
   const previousGame = game.value
+  const seq = ++applySeq
   /* Read before the blanking: a draw lives in the question, and the board needs
    * it precisely while an overlay has the question hidden -- that is when the
    * card flying out of the overlay needs a slot laid out to land in. */
   const draws = pendingDraws(updatedGame, playerId.value ?? '')
   if (!soundsDisabled.value) playSfx(sfxForUpdate(previousGame, updatedGame))
   const apply = async () => {
+    if (seq !== applySeq) return
+    clearPendingChoice()
     game.value = nextGame
     heldPendingDraws.value = draws
     storyAnswerPending.value = false
     await nextTick()
   }
-  const transitionDocument = document as Document & {
-    startViewTransition?: (callback: () => Promise<void>) => { ready: Promise<void>; finished: Promise<void> }
+
+  const travel = allowsTravel(settings.motionLevel)
+  const moving = previousGame && travel ? cardsChangingZone(previousGame, nextGame) : []
+  const moved = previousGame && travel && entitiesMoved(previousGame, nextGame)
+  if (!moved && moving.length === 0) {
+    void apply()
+    return
   }
 
-  if (previousGame && entitiesMoved(previousGame, nextGame) && transitionDocument.startViewTransition) {
-    const transition = transitionDocument.startViewTransition(apply)
-    // A skipped animation must not reject an otherwise successful game update.
-    void transition.ready.catch(() => {})
-    void transition.finished.catch(() => {})
-  } else {
-    void apply()
-  }
+  void (async () => {
+    if (moving.length) {
+      // Named before the old state is captured, so the card leaving its slot is
+      // one end of the flight; the slot it lands in takes the name in the new
+      // state through the same set.
+      flyingCardIds.value = new Set(moving)
+      await nextTick()
+    }
+    await runViewTransition(apply)
+    if (moving.length) flyingCardIds.value = new Set()
+  })()
 }
 
 /* `queued` says whether the caller already put this update on the replay queue,
@@ -2408,7 +2423,7 @@ async function undo() {
 }
 
 // A card play or provoking action waiting on the player's yes (see `choose`).
-const pendingConfirm = ref<{ index: number; step: number | undefined; request: ActionConfirmRequest } | null>(null)
+const pendingConfirm = ref<{ index: number; step: number | undefined; request: ActionConfirmRequest; pressed: HTMLElement | null } | null>(null)
 
 /* Answers the questions that have nothing to decide (a lone "draw encounter",
  * "apply results", a forced single choice) so the phases run on by themselves.
@@ -2673,6 +2688,7 @@ function confirmPendingChoice() {
   // The question moved on while the dialog was open (another seat acted): the
   // index no longer names the same choice, so drop it rather than send it.
   if (!pending || game.value?.scenarioSteps !== pending.step) return
+  markPendingChoice(pending.pressed)
   void submitChoice(pending.index)
 }
 
@@ -2681,9 +2697,10 @@ async function choose(idx: number) {
   if (processing.value || pendingConfirm.value) return
   const request = idx === -1 ? null : confirmRequestFor(idx)
   if (request) {
-    pendingConfirm.value = { index: idx, step: game.value?.scenarioSteps, request }
+    pendingConfirm.value = { index: idx, step: game.value?.scenarioSteps, request, pressed: recentPress() }
     return
   }
+  if (idx !== -1 && !props.spectate) markPendingChoice()
   await submitChoice(idx)
 }
 
@@ -2951,7 +2968,9 @@ const onPlayabilityResult = (result: any) => {
 }
 emitter.on('playabilityResult', onPlayabilityResult)
 
+let stopTrackingPresses: (() => void) | null = null
 onMounted(() => {
+  stopTrackingPresses = trackChoicePresses()
   flashlightX.value = window.innerWidth / 2
   flashlightY.value = window.innerHeight / 2
   ;(window as any).sendDebug = async (msg: any) => {
@@ -3013,6 +3032,8 @@ onMounted(() => {
 
 onBeforeRouteLeave(() => close())
 onUnmounted(() => {
+  stopTrackingPresses?.()
+  clearPendingChoice()
   document.removeEventListener('keydown', handleKeyPress)
   document.removeEventListener('mousemove', onMove)
   focusLightObserver?.disconnect()

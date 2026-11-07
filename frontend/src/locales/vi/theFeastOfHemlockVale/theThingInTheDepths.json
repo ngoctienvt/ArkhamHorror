@@ -57,7 +57,7 @@
   },
   "label": {
     "groundDisturbance": {
-      "placeSinkhole": "Đặt 1 damage lên địa điểm _Bog_ gần nhất, như một sinkhole"
+      "placeSinkhole": "Đặt 1 tổn thương thể chất lên địa điểm _Bog_ gần nhất, như một sinkhole"
     },
     "removeSinkhole": "Loại bỏ 1 sinkhole khỏi địa điểm _Bog_ gần nhất",
     "doNotRemoveSinkhole": "Không loại bỏ sinkhole"
@@ -85,13 +85,13 @@
     "easyStandard": {
       "skull": "-X. X bằng một nửa số địa điểm Sunken đang in play (làm tròn lên).",
       "cultist": "-1. Bạn có thể loại bỏ 1 sinkhole khỏi địa điểm Bog gần nhất.",
-      "tablet": "-3. Nếu bạn thất bại, đặt 1 damage lên địa điểm Bog gần nhất, như một sinkhole.",
+      "tablet": "-3. Nếu bạn thất bại, đặt 1 tổn thương thể chất lên địa điểm Bog gần nhất, như một sinkhole.",
       "elderThing": "-4. Nếu bạn thất bại, tìm trong encounter deck và discard pile một kẻ địch Grasping Tendril và rút nó, bỏ qua keyword surge của nó."
     },
     "hardExpert": {
       "skull": "-X. X bằng số địa điểm Sunken đang in play (làm tròn lên).",
       "cultist": "-3. Nếu bạn thành công, bạn có thể loại bỏ 1 sinkhole khỏi địa điểm Bog gần nhất.",
-      "tablet": "-5. Đặt 1 damage lên địa điểm Bog gần nhất, như một sinkhole.",
+      "tablet": "-5. Đặt 1 tổn thương thể chất lên địa điểm Bog gần nhất, như một sinkhole.",
       "elderThing": "-5. Tìm trong encounter deck và discard pile một kẻ địch Grasping Tendril và rút nó, bỏ qua keyword surge của nó."
     }
   },

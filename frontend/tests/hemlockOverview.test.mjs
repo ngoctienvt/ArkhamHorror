@@ -101,6 +101,28 @@ test('The Scarlet Keys scenarios select their overview boards', () => {
   assert.equal(hemlockOverview('c09694', 'c09694')?.image, 'img/scenes/the-scarlet-keys/congress-of-the-keys.webp')
 })
 
+test('The Path to Carcosa scenarios select their overview boards', () => {
+  // Base
+  assert.equal(hemlockOverview('c03043', 'c03043')?.image, 'img/scenes/the-path-to-carcosa/curtain-call.webp')
+  assert.equal(hemlockOverview('c03061', 'c03061')?.image, 'img/scenes/the-path-to-carcosa/the-last-king.webp')
+  assert.equal(hemlockOverview('c03120', 'c03120')?.image, 'img/scenes/the-path-to-carcosa/echoes-of-the-past.webp')
+  assert.equal(hemlockOverview('c03159', 'c03159')?.image, 'img/scenes/the-path-to-carcosa/the-unspeakable-oath.webp')
+  assert.equal(hemlockOverview('c03200', 'c03200')?.image, 'img/scenes/the-path-to-carcosa/a-phantom-of-truth.webp')
+  assert.equal(hemlockOverview('c03240', 'c03240')?.image, 'img/scenes/the-path-to-carcosa/the-pallid-mask.webp')
+  assert.equal(hemlockOverview('c03274', 'c03274')?.image, 'img/scenes/the-path-to-carcosa/black-stars-rise.webp')
+  assert.equal(hemlockOverview('c03316', 'c03316')?.image, 'img/scenes/the-path-to-carcosa/dim-carcosa.webp')
+
+  // Return to
+  assert.equal(hemlockOverview('c52014', 'c52014')?.image, 'img/scenes/the-path-to-carcosa/curtain-call.webp')
+  assert.equal(hemlockOverview('c52021', 'c52021')?.image, 'img/scenes/the-path-to-carcosa/the-last-king.webp')
+  assert.equal(hemlockOverview('c52028', 'c52028')?.image, 'img/scenes/the-path-to-carcosa/echoes-of-the-past.webp')
+  assert.equal(hemlockOverview('c52034', 'c52034')?.image, 'img/scenes/the-path-to-carcosa/the-unspeakable-oath.webp')
+  assert.equal(hemlockOverview('c52040', 'c52040')?.image, 'img/scenes/the-path-to-carcosa/a-phantom-of-truth.webp')
+  assert.equal(hemlockOverview('c52048', 'c52048')?.image, 'img/scenes/the-path-to-carcosa/the-pallid-mask.webp')
+  assert.equal(hemlockOverview('c52054', 'c52054')?.image, 'img/scenes/the-path-to-carcosa/black-stars-rise.webp')
+  assert.equal(hemlockOverview('c52059', 'c52059')?.image, 'img/scenes/the-path-to-carcosa/dim-carcosa.webp')
+})
+
 test('The Drowned City scenarios select their overview boards', () => {
   assert.equal(hemlockOverview('c11501', 'c11501')?.image, 'img/scenes/the-drowned-city/one-last-job.webp')
   assert.equal(hemlockOverview('c11517', 'c11517')?.image, 'img/scenes/the-drowned-city/the-western-wall.webp')

@@ -72,7 +72,15 @@ export function attachmentsOf(game: Game, kind: HostKind, id: string): Attachmen
   return result
 }
 
-/** The card an id belongs to, searched across every kind that can grant a modifier. */
+/** One effect line as a short sentence in the player's language, e.g. "Shroud +2". */
+export function effectLabel(line: EffectLine, t: (key: string, params?: Record<string, unknown>) => string): string {
+  if (line.kind === 'flag') return t(`locationMap.flag.${line.flag}`)
+  const name = t(`locationMap.stat.${line.stat}`)
+  if (line.mode === 'add') return `${name} ${line.delta > 0 ? '+' : ''}${line.delta}`
+  return t(line.mode === 'base' ? 'locationMap.stat.baseIs' : 'locationMap.stat.setTo', { name, value: line.delta })
+}
+
+/** The card an id belongs to,searched across every kind that can grant a modifier. */
 export function cardCodeOfEntity(game: Game, id: string): string | null {
   return game.treacheries[id]?.cardCode ?? game.assets[id]?.cardCode ?? game.events[id]?.cardCode
     ?? game.enemies[id]?.cardCode ?? game.locations[id]?.cardCode ?? game.investigators[id]?.cardCode

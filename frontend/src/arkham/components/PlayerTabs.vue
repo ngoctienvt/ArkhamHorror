@@ -17,6 +17,8 @@ import { IsMobile } from '@/arkham/isMobile';
 import { useDbCardStore } from '@/stores/dbCards'
 import { useSettings } from '@/stores/settings'
 import SceneSeatCard from '@/arkham/components/SceneSeatCard.vue'
+import GameIcon from '@/arkham/components/GameIcon.vue'
+import { TokenType } from '@/arkham/types/Token'
 
 export interface Props {
   game: Game
@@ -511,6 +513,9 @@ watch(
         <span v-if="sceneMode" class="tab-meta" :title="$t('locationMap.skillsAndActions')">
           <b class="sk will">{{ investigator.willpower }}</b><b class="sk int">{{ investigator.intellect }}</b><b class="sk com">{{ investigator.combat }}</b><b class="sk agi">{{ investigator.agility }}</b>
           <span class="pips" :aria-label="$t('locationMap.actionsLeft', { count: investigator.remainingActions })"><i v-for="n in investigator.remainingActions" :key="n" class="pip"></i><i v-if="investigator.remainingActions === 0" class="pip none"></i></span>
+          <!-- Resources and clues held, kept in the always-visible tab: the panel under the card scrolls out of view. -->
+          <span class="tok" :title="$t('locationMap.resources')"><GameIcon type="resource" /><b>{{ investigator.tokens[TokenType.Resource] || 0 }}</b></span>
+          <span class="tok" :title="$t('locationMap.clues')"><GameIcon type="clue" /><b>{{ investigator.tokens[TokenType.Clue] || 0 }}</b></span>
         </span>
         <button
           v-if="solo"
@@ -602,6 +607,8 @@ watch(
 .tab-meta { display: inline-flex; align-items: center; gap: 3px; padding: 0 8px 0 0; }
 .tab-meta .sk { min-width: 17px; padding: 1px 3px; text-align: center; font: 700 0.7rem/1.2 system-ui, sans-serif; border-radius: 3px; color: #fff; }
 .sk.will { background: #3b6fb0; } .sk.int { background: #7b4aa8; } .sk.com { background: #b23a3a; } .sk.agi { background: #3d8a4d; }
+.tab-meta .tok { display: inline-flex; align-items: center; gap: 2px; margin-left: 6px; padding: 0 6px 0 2px; border-radius: 999px; background: #0007; font: 700 0.75rem/1.2 system-ui, sans-serif; color: #fff4df; }
+.tab-meta .tok :deep(.game-icon) { width: 16px; height: 16px; }
 .tab-meta .pips { display: inline-flex !important; gap: 2px; margin-left: 5px; padding: 0 !important; }
 .pip { display: block; width: 9px; height: 9px; border-radius: 50%; background: #ffe9a0; box-shadow: 0 0 4px #ffe9a0aa; }
 .pip.none { background: #55534c; box-shadow: none; }

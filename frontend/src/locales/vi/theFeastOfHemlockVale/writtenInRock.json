@@ -17,15 +17,15 @@
     "tokens": {
       "easyStandard": {
         "skull": "-X. X là số cột tại vị trí của bạn.",
-        "cultist": "-1. Đặt 1 resource lên lá bài này, như một scrap.",
+        "cultist": "-1. Đặt 1 tài nguyên lên lá bài này, như một scrap.",
         "tablet": "-2. Nếu bạn thất bại, loại bỏ 1 scrap khỏi lá bài này.",
-        "elderThing": "-3. Nếu bạn thất bại, nhận 1 damage."
+        "elderThing": "-3. Nếu bạn thất bại, nhận 1 tổn thương thể chất."
       },
       "hardExpert": {
         "skull": "-X. X bằng gấp đôi số cột tại vị trí của bạn.",
-        "cultist": "-3. Nếu bạn thành công, đặt 1 resource lên lá bài này, như một scrap.",
+        "cultist": "-3. Nếu bạn thành công, đặt 1 tài nguyên lên lá bài này, như một scrap.",
         "tablet": "-4. Loại bỏ 1 scrap khỏi lá bài này.",
-        "elderThing": "-5. Nhận 1 damage."
+        "elderThing": "-5. Nhận 1 tổn thương thể chất."
       }
     }
   },
@@ -33,13 +33,13 @@
     "tokens": {
       "easyStandard": {
         "skull": "-X. X là số cột tại vị trí của bạn.",
-        "cultist": "-2. Đặt 1 resource lên lá bài này, như một switch.",
+        "cultist": "-2. Đặt 1 tài nguyên lên lá bài này, như một switch.",
         "tablet": "-3. Nếu bạn thất bại, di chuyển Mine Cart một lần.",
         "elderThing": "-4. Nếu bạn thất bại, loại bỏ 1 switch khỏi lá bài này."
       },
       "hardExpert": {
         "skull": "-X. X bằng gấp đôi số cột tại vị trí của bạn.",
-        "cultist": "-3. Nếu bạn thành công, đặt 1 resource lên lá bài này, như một switch.",
+        "cultist": "-3. Nếu bạn thành công, đặt 1 tài nguyên lên lá bài này, như một switch.",
         "tablet": "-4. Di chuyển Mine Cart một lần.",
         "elderThing": "-5. Loại bỏ 1 switch khỏi lá bài này."
       }
@@ -76,7 +76,7 @@
     "currentDayMarker": "Kiểm tra Nhật ký Chiến dịch của bạn để biết ngày và giờ hiện tại. Đưa lá Time Marker vào chơi ở mặt tương ứng (_Day {'{'}day{'}'}_) hoặc (_Night {'{'}night{'}'}_).",
     "caves": "Tập hợp 6 địa điểm _Cave_ và loại bỏ ngẫu nhiên 2 địa điểm khỏi trò chơi. Đặt số còn lại như trong sơ đồ Location Placement ở trang 11 (xem _Location Adjacency_ ở trang 3).",
     "otherLocations": "Tập hợp mỗi vị trí từ chồng bài encounter <i>Written in Rock</i>. Đặt vị trí Control Station vào khu vực chơi như hình minh họa. Để riêng 15 vị trí _Rail_ còn lại sang một bên, ngoài khu vực chơi.",
-    "scrap": "Đặt 1 resource lên mỗi vị trí, như một scrap. <i>(Gợi ý: Các scrap thu thập được trong Act 1 sẽ giúp ích cho các điều tra viên trong Act 2)</i>.",
+    "scrap": "Đặt 1 tài nguyên lên mỗi vị trí, như một scrap. <i>(Gợi ý: Các scrap thu thập được trong Act 1 sẽ giúp ích cho các điều tra viên trong Act 2)</i>.",
     "startAt": "Các điều tra viên bắt đầu chơi tại vị trí ngoài cùng bên trái.",
     "residents": "Nếu đang là (_Day {'{'}day{'}'}_), tập hợp mỗi story asset từ chồng bài encounter *Residents*. Chồng bài này được đánh dấu bằng biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/residents.png' /></section>",
     "riverHawthorne": "Nếu đang là _Day 1_, đặt River Hawthorne tại địa điểm ở cột 3.",
@@ -90,11 +90,11 @@
   "codex": {
     "leahAtwood": {
       "title": "{'{'}codex{'}'} Codex 2: Leah Atwood",
-      "body": "<h3>@:theFeastOfHemlockVale.writtenInRock.codex.leahAtwood.title </h3><p><b>Nếu Leah Atwood không nằm dưới quyền kiểm soát của một điều tra viên:</b></p><p>Bạn tìm thấy Leah đang nhìn chằm chằm xuống một vũng chất lỏng phát sáng, đục như sữa. Cô ấy gạt nước mắt khi bạn đến gần, và chống cự khi bạn yêu cầu cô ấy rời đi. “Đây là nơi tôi muốn ở,” cô ấy nói. Bạn mô tả vụ sập hang ở lối vào, và mối nguy hiểm hiện tại. “Không có gì quan trọng cả,” cô ấy nói một cách lạnh lùng, nhưng cuối cùng cũng nhượng bộ. Khi bạn dẫn cô ấy đến chiếc xe goòng, bạn quay lại và nhìn thấy một hình dáng giống người, tròn trịa in bóng trên vũng chất lỏng rực sáng. Nó bay vụt qua và nấp sau một tảng đá.</p><p class='basic right'>Chọn một điều tra viên để nhận quyền kiểm soát Leah Atwood. Một điều tra viên có thể kích hoạt codex này lần nữa.</p><hr><p>_Otherwise:_</p><p>Leah phá vỡ sự im lặng để chộp lấy cần gạt bị gãy của chiếc xe goòng. “Không phải trái! Phải!” Chiếc xe goòng lắc lư trên đường ray, rồi tự thăng bằng lại. Bạn chia sẻ ánh mắt nhẹ nhõm với người đầu bếp của Vale khi chiếc xe lao về phía trước.</p><p class='basic right'>Đặt 1 resource lên lá bài scenario reference để làm một công tắc.</p>"
+      "body": "<h3>@:theFeastOfHemlockVale.writtenInRock.codex.leahAtwood.title </h3><p><b>Nếu Leah Atwood không nằm dưới quyền kiểm soát của một điều tra viên:</b></p><p>Bạn tìm thấy Leah đang nhìn chằm chằm xuống một vũng chất lỏng phát sáng, đục như sữa. Cô ấy gạt nước mắt khi bạn đến gần, và chống cự khi bạn yêu cầu cô ấy rời đi. “Đây là nơi tôi muốn ở,” cô ấy nói. Bạn mô tả vụ sập hang ở lối vào, và mối nguy hiểm hiện tại. “Không có gì quan trọng cả,” cô ấy nói một cách lạnh lùng, nhưng cuối cùng cũng nhượng bộ. Khi bạn dẫn cô ấy đến chiếc xe goòng, bạn quay lại và nhìn thấy một hình dáng giống người, tròn trịa in bóng trên vũng chất lỏng rực sáng. Nó bay vụt qua và nấp sau một tảng đá.</p><p class='basic right'>Chọn một điều tra viên để nhận quyền kiểm soát Leah Atwood. Một điều tra viên có thể kích hoạt codex này lần nữa.</p><hr><p>_Otherwise:_</p><p>Leah phá vỡ sự im lặng để chộp lấy cần gạt bị gãy của chiếc xe goòng. “Không phải trái! Phải!” Chiếc xe goòng lắc lư trên đường ray, rồi tự thăng bằng lại. Bạn chia sẻ ánh mắt nhẹ nhõm với người đầu bếp của Vale khi chiếc xe lao về phía trước.</p><p class='basic right'>Đặt 1 tài nguyên lên lá bài scenario reference để làm một công tắc.</p>"
     },
     "simeonAtwood": {
       "title": "{'{'}codex{'}'} Codex 3: Simeon Atwood",
-      "body": "<h3>@:theFeastOfHemlockVale.writtenInRock.codex.simeonAtwood.title </h3><p><b>Nếu Simeon Atwood không nằm dưới quyền kiểm soát của một điều tra viên:</b></p><p>Khi chiếc xe goòng rung lắc qua một cây cầu ọp ẹp, bạn nhận ra một dáng người nhỏ bé đang lủng lẳng bên rìa vách đá. Hành động theo bản năng, bạn nhoài người xuống mép xe goòng và tóm lấy cẳng tay của người đó khi bạn lao vút qua. Khi kéo anh ta vào xe, bạn nhận ra đó là Simeon, kẻ đầu sỏ gây rối của Vale. Anh ta phủi bụi trên người, đôi má trắng bệch như tờ giấy. “Tôi đang tìm chỗ giấu đồ của mình. Tất cả đều nằm trong kế—” anh ta thở khò khè, rồi bỏ cuộc. “Cảm ơn vì đã cứu tôi. Tôi không biết mình sẽ làm gì nếu không có bạn.”</p><p class='basic right'>Chọn một điều tra viên để nắm quyền điều khiển Simeon Atwood. Một điều tra viên có thể kích hoạt codex này một lần nữa.</p><hr><p>_Otherwise:_</p><p>“Không, không, đừng làm thế.” Simeon kéo cần gạt trên xe. “Sao bạn vẫn còn sống vậy? Tôi ngạc nhiên là bạn thậm chí còn tìm thấy tôi.” Anh ta đập vào một công tắc bên hông đường hầm và cười ranh mãnh. “Phải làm như thế này chứ.”</p><p class='basic right'>Đặt 2 resource lên scenario reference card, làm các công tắc.</p>"
+      "body": "<h3>@:theFeastOfHemlockVale.writtenInRock.codex.simeonAtwood.title </h3><p><b>Nếu Simeon Atwood không nằm dưới quyền kiểm soát của một điều tra viên:</b></p><p>Khi chiếc xe goòng rung lắc qua một cây cầu ọp ẹp, bạn nhận ra một dáng người nhỏ bé đang lủng lẳng bên rìa vách đá. Hành động theo bản năng, bạn nhoài người xuống mép xe goòng và tóm lấy cẳng tay của người đó khi bạn lao vút qua. Khi kéo anh ta vào xe, bạn nhận ra đó là Simeon, kẻ đầu sỏ gây rối của Vale. Anh ta phủi bụi trên người, đôi má trắng bệch như tờ giấy. “Tôi đang tìm chỗ giấu đồ của mình. Tất cả đều nằm trong kế—” anh ta thở khò khè, rồi bỏ cuộc. “Cảm ơn vì đã cứu tôi. Tôi không biết mình sẽ làm gì nếu không có bạn.”</p><p class='basic right'>Chọn một điều tra viên để nắm quyền điều khiển Simeon Atwood. Một điều tra viên có thể kích hoạt codex này một lần nữa.</p><hr><p>_Otherwise:_</p><p>“Không, không, đừng làm thế.” Simeon kéo cần gạt trên xe. “Sao bạn vẫn còn sống vậy? Tôi ngạc nhiên là bạn thậm chí còn tìm thấy tôi.” Anh ta đập vào một công tắc bên hông đường hầm và cười ranh mãnh. “Phải làm như thế này chứ.”</p><p class='basic right'>Đặt 2 tài nguyên lên scenario reference card, làm các công tắc.</p>"
     },
     "riverHawthorne": {
       "title": "{'{'}codex{'}'} Codex 5: River Hawthorne",
@@ -102,7 +102,7 @@
     },
     "drRosaMarquez": {
       "title": "{'{'}codex{'}'} Codex Θ: Dr. Rosa Marquez",
-      "body": "<h3>@:theFeastOfHemlockVale.writtenInRock.codex.drRosaMarquez.title </h3><p>_If it is Act 1:_</p><p>“Tôi tự hỏi Simeon đang ở đâu. Đêm qua Leah có vẻ rất lo lắng,” Dr. Marquez nói một cách lơ đãng khi bà giơ lên một mẫu tinh thể màu trắng và xanh lam. “Những cấu trúc này không tự nhiên. Tôi không phải là nhà địa chất, nhưng cấu trúc này bị... biến dạng. Một số trong chúng thiếu đi sự đối xứng cơ bản.”</p><p class='basic right'>Đặt 1 resource lên scenario reference card, dưới dạng một scrap. Một điều tra viên có thể kích hoạt codex này lần nữa trong một act khác.</p><hr><p>_If it is Act 2:_</p><p>“Tôi quá già cho việc này rồi!” Dr. Marquez hét lên khi bà giữ chặt chiếc mũ của mình. Những thanh xà mục nát rít qua trên đầu khi chiếc xe goòng lao về phía trước. Vị giáo sư dùng cây gậy của mình gạt một công tắc gần đó khi bạn lao vút qua bóng tối. Đâu đó sâu hơn trong khu mỏ, có thứ gì đó đang chuyển động.</p><p class='basic right'>Hoán đổi 2 vị trí liền kề.</p>"
+      "body": "<h3>@:theFeastOfHemlockVale.writtenInRock.codex.drRosaMarquez.title </h3><p>_If it is Act 1:_</p><p>“Tôi tự hỏi Simeon đang ở đâu. Đêm qua Leah có vẻ rất lo lắng,” Dr. Marquez nói một cách lơ đãng khi bà giơ lên một mẫu tinh thể màu trắng và xanh lam. “Những cấu trúc này không tự nhiên. Tôi không phải là nhà địa chất, nhưng cấu trúc này bị... biến dạng. Một số trong chúng thiếu đi sự đối xứng cơ bản.”</p><p class='basic right'>Đặt 1 tài nguyên lên scenario reference card, dưới dạng một scrap. Một điều tra viên có thể kích hoạt codex này lần nữa trong một act khác.</p><hr><p>_If it is Act 2:_</p><p>“Tôi quá già cho việc này rồi!” Dr. Marquez hét lên khi bà giữ chặt chiếc mũ của mình. Những thanh xà mục nát rít qua trên đầu khi chiếc xe goòng lao về phía trước. Vị giáo sư dùng cây gậy của mình gạt một công tắc gần đó khi bạn lao vút qua bóng tối. Đâu đó sâu hơn trong khu mỏ, có thứ gì đó đang chuyển động.</p><p class='basic right'>Hoán đổi 2 vị trí liền kề.</p>"
     }
   },
   "resolutions": {
@@ -155,7 +155,7 @@
   "skipToTheCaveIn3": "Nếu không, chuyển đến _The Cave-In 3_.",
   "theCaveIn2": "<p>_The Cave-In 2_: Căn lán này từng là trạm điều khiển đường sắt được cải tạo thành một căn cứ. Những tấm bản đồ và biểu đồ vẽ tay phủ kín các bức tường và trần nhà; chúng có vẻ là nét chữ của một người trẻ tuổi. Nếu gần đây có ai đó ở đây, có thể họ hiện cũng đang bị mắc kẹt trong khu mỏ cùng với bạn.</p><p class='basic right'>Chuyển đến _The Cave-In 4_.</p>",
   "theCaveIn3": "<p>_The Cave-In 3_: Một tiếng rít chói tai vang vọng khắp hang động, theo sau là một tiếng lách cách ghê tởm. Dưới một đường hầm nối tiếp, một cái mõm đen ngòm nằm giữa những xúc tu đang quằn quại tiến tới. Tim bạn gần như ngừng đập khi con quái vật phát ra một tràng âm thanh the thé ngắt quãng khác và lao về phía bạn.</p><p class='basic right'>Tiếp tục đến _The Cave-In 4_.</p>",
-  "theCaveIn4": "<p>_The Cave-In 4_: Với lối vào đã sập, cách duy nhất để thoát khỏi khu mỏ là đi xuyên qua nó. Bạn dùng hết sức bình sinh đẩy chiếc xe goòng về phía trước và nhảy vào trong, hy vọng những đường ray rỉ sét vẫn còn trụ vững.</p><ul><li>Tập hợp tất cả 15 địa điểm _Rail_ đang để riêng.<ul><li>Đặt Rail Exit và 7 địa điểm Rail Tunnel được hiển thị như trong sơ đồ Sắp xếp Địa điểm.</li><li>Xào các địa điểm _Rail_ còn lại và đặt 1 địa điểm vào mỗi ô được đánh dấu “?” trên sơ đồ Sắp xếp Địa điểm.</li></ul></li><li>Đặt 1 resource lên lá bài scenario reference để làm một công tắc.</li><li>Đặt asset Mine Cart đang để riêng tại Control Station và chọn hướng mà nó đang quay về (*xem* _Sliding and Swapping Locations_ *và* _The Mine Cart_ *ở trang 11*).<ul><li>Đặt mini-card của mỗi điều tra viên vào Mine Cart.</li><li>Nếu Simeon Atwood hoặc Leah Atwood đang được để riêng, đặt họ tại vị trí trên cùng ở cột 2.</li><li>Đặt asset Prismatic Shard đang để riêng tại địa điểm dưới cùng ở cột 4.</li></ul></li><li>Nếu đang là (_Night {'{'}night{'}'}_), đặt kẻ địch Subterranean Beast đang để riêng tại Control Station, trong trạng thái exhausted.</li><li>Xào các lá bài encounter <i>Written in Rock</i> đang để riêng còn lại và encounter discard pile vào encounter deck.</li><li>Tiếp tục chơi.</li></ul>",
+  "theCaveIn4": "<p>_The Cave-In 4_: Với lối vào đã sập, cách duy nhất để thoát khỏi khu mỏ là đi xuyên qua nó. Bạn dùng hết sức bình sinh đẩy chiếc xe goòng về phía trước và nhảy vào trong, hy vọng những đường ray rỉ sét vẫn còn trụ vững.</p><ul><li>Tập hợp tất cả 15 địa điểm _Rail_ đang để riêng.<ul><li>Đặt Rail Exit và 7 địa điểm Rail Tunnel được hiển thị như trong sơ đồ Sắp xếp Địa điểm.</li><li>Xào các địa điểm _Rail_ còn lại và đặt 1 địa điểm vào mỗi ô được đánh dấu “?” trên sơ đồ Sắp xếp Địa điểm.</li></ul></li><li>Đặt 1 tài nguyên lên lá bài scenario reference để làm một công tắc.</li><li>Đặt asset Mine Cart đang để riêng tại Control Station và chọn hướng mà nó đang quay về (*xem* _Sliding and Swapping Locations_ *và* _The Mine Cart_ *ở trang 11*).<ul><li>Đặt mini-card của mỗi điều tra viên vào Mine Cart.</li><li>Nếu Simeon Atwood hoặc Leah Atwood đang được để riêng, đặt họ tại vị trí trên cùng ở cột 2.</li><li>Đặt asset Prismatic Shard đang để riêng tại địa điểm dưới cùng ở cột 4.</li></ul></li><li>Nếu đang là (_Night {'{'}night{'}'}_), đặt kẻ địch Subterranean Beast đang để riêng tại Control Station, trong trạng thái exhausted.</li><li>Xào các lá bài encounter <i>Written in Rock</i> đang để riêng còn lại và encounter discard pile vào encounter deck.</li><li>Tiếp tục chơi.</li></ul>",
   "slidingAndSwappingLocations": {
     "title": "Trượt và Hoán Đổi Vị Trí",
     "body": "<h3>Trượt và Hoán Đổi Vị Trí</h3><p class='basic'>Trượt và hoán đổi các vị trí cho phép các điều tra viên tạo ra một con đường tới Rail Exit bằng cách làm thẳng hàng rail line.</p><p class='basic'>Để trượt một vị trí, chọn một vị trí có một khoảng trống liền kề với nó. Di chuyển vị trí đó (và tất cả các lá bài tại vị trí đó) vào khoảng trống đó.</p><p class='basic'>Để hoán đổi 2 vị trí, đồng thời di chuyển mỗi vị trí đó (và tất cả các lá bài tại đó) tới khoảng trống mà vị trí kia đang chiếm giữ.</p><ul><li><b>Các vị trí có story asset không thể bị trượt hoặc hoán đổi.</b></li></ul>"

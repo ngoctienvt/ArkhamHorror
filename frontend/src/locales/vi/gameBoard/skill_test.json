@@ -10,7 +10,16 @@
   "determineSuccessOrFailureOfSkillTestStep": "Xác định thành công/thất bại của skill test.",
   "applySkillTestResultsStep": "Áp dụng kết quả skill test.",
   "skillTestEndsStep": "Skill test kết thúc.",
-  "skipTriggersActiveNotice": "Skip Triggers đang bật — các trigger fast không liên quan đến bài thử này đang bị ẩn.",
+  "skipTriggersActiveNotice": "Bỏ qua việc kích hoạt đang bật — các trigger fast không liên quan đến bài thử này đang bị ẩn.",
   "skipTriggersAdjust": "Điều chỉnh",
-  "confirm": "Xác nhận"
+  "confirm": "Xác nhận",
+  "stepOf": "Bước {n}/{total}",
+  "fastWindowBeforeCommit": "Cửa sổ {'{'}fast{'}'}: dùng bài hoặc khả năng fast trước khi commit bài.",
+  "fastWindowBeforeReveal": "Cửa sổ {'{'}fast{'}'}: cơ hội cuối dùng hiệu ứng fast trước khi lật chaos token.",
+  "difficultyLabel": "Độ khó",
+  "skillValueLabel": "Chỉ số của bạn",
+  "winOdds": "Thắng {n}%",
+  "winOddsHint": "Tỉ lệ thành công với các token còn trong túi hỗn mang. Chỉ là ước tính: hiệu ứng lật thêm token chưa được tính đầy đủ.",
+  "availableTriggers": "Có thể dùng lúc này",
+  "committableCards": "Bài có thể commit"
 }

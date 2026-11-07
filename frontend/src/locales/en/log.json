@@ -192,5 +192,6 @@
   "undoToHere": "Undo back to here",
   "undoToHereConfirm": "Undo everything from this point on? The game goes back to just before \"{entry}\".",
   "undoToHereConfirmPlain": "Undo everything from this point on?",
-  "usesAbility": "{investigator} uses {source}"
+  "usesAbility": "{investigator} uses {source}",
+  "noFurtherEffects": "No other effects were recorded"
 }

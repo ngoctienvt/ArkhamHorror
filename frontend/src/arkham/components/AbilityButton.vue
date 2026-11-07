@@ -712,8 +712,14 @@ const classObject = computed(() => {
   }
 }
 
+/* A fast ability button only exists when the trigger can be used right now, so it gets
+   the same green "usable" look as agenda/act actions instead of the grey default,
+   which read as disabled. */
 .fast-ability-button {
-  background-color: var(--button);
+  background-color: #1f7a3d;
+  box-shadow: inset 0 0 0 1px #5fd88a, 0 0 8px #3ddc7a55;
+  color: #f1fff4;
+  &:hover { background-color: #279a4c; }
   &:before {
     font-family: "arkham";
     content: "\0075";

@@ -62,6 +62,7 @@ import Connections from '@/arkham/components/Connections.vue';
 import RainOverlay from '@/arkham/components/RainOverlay.vue';
 import SmokePuffLayer from '@/arkham/components/SmokePuffLayer.vue';
 import FxLayer from '@/arkham/components/FxLayer.vue';
+import PhaseBanner from '@/arkham/components/PhaseBanner.vue';
 import { supportsHtmlInCanvas } from '@/arkham/droplets';
 import { createRainAudio, type RainAudioInstance } from '@/arkham/rainAudio';
 import { useSoundsDisabled } from '@/composable/useSoundsDisabled';
@@ -1851,8 +1852,6 @@ const damage = computed(() => props.scenario.tokens[TokenType.Damage])
 const targets = computed(() => props.scenario.tokens[TokenType.Target])
 const hasPool = computed(() => resources.value && resources.value > 0 || damage.value && damage.value > 0)
 const tarotCards = computed(() => props.scenario.tarotCards.filter((c) => c.scope.tag === 'GlobalTarot'))
-const phase = computed(() => props.game.phase)
-const phaseStep = computed(() => props.game.phaseStep)
 const currentDepth = computed(() => props.scenario.counts["CurrentDepth"])
 const civiliansSlain = computed(() => props.scenario.counts["CiviliansSlain"])
 const scraps = computed(() => props.scenario.tokens[TokenType.Scrap])
@@ -2438,6 +2437,7 @@ async function addChaosToken(face: any){
   <div v-else-if="!gameOver" id="scenario" class="scenario" :data-scenario="scenario.id">
     <SmokePuffLayer />
     <FxLayer :game="game" />
+    <PhaseBanner :game="game" />
     <div class="scenario-body" :class="{'split-view': splitView, 'scenario-body--notifier-overlays': showScenarioNotifierBar, 'scenario-body--map': settingsStore.locationView !== 'cards' && !splitView }">
       <Draggable v-if="showOutOfPlay || forcedShowOutOfPlay">
         <template #handle><header><h2>{{ $t('gameBar.outOfPlay') }}</h2></header></template>
@@ -3137,8 +3137,10 @@ async function addChaosToken(face: any){
         :playerId="playerId"
         :boardOnlyContent="boardOnlyContent"
         :decksShown="decksShown"
+        :chaosBagShown="showChaosBag"
         :referenceImage="scenarioGuide"
         @toggleDecks="decksShown = !decksShown"
+        @toggleChaosBag="showChaosBag = !showChaosBag"
         @choose="choose"
       />
       <template v-else>
@@ -3411,54 +3413,6 @@ async function addChaosToken(face: any){
           <PoolItem v-if="bloodTokens > 0" type="chaos-tokens/ct-blood" :amount="bloodTokens" />
           <PoolItem v-for="t in homebrewTotals" :key="t.face" type="custom-token" :image="t.image" :amount="t.count" :tooltip="t.tooltip" />
         </div>
-      </div>
-    </div>
-    <div class="phases">
-      <div class="phase phase-mythos" :class="{ 'active-phase': phase == 'MythosPhase' }">
-        <div class="subphases">
-          <div v-tooltip.left="$t('phase.mythosPhaseBeginsStep')" :class="{'current': phaseStep?.contents === 'MythosPhaseBeginsStep' }">1.1</div>
-          <div v-tooltip.left="$t('phase.placeDoomOnAgendaStep')" :class="{'current': phaseStep?.contents === 'PlaceDoomOnAgendaStep'}">1.2</div>
-          <div v-tooltip.left="$t('phase.checkDoomThresholdStep')" :class="{'current': phaseStep?.contents === 'CheckDoomThresholdStep'}">1.3</div>
-          <div v-tooltip.left="$t('phase.eachInvestigatorDrawsEncounterCardStep')" :class="{'current': phaseStep?.contents === 'EachInvestigatorDrawsEncounterCardStep'}">1.4</div>
-          <div v-tooltip.left="$t('phase.playerWindow')" :class="{'current': phaseStep?.contents === 'MythosPhaseWindow'}"><i class="fast-icon" /></div>
-          <div v-tooltip.left="$t('phase.mythosPhaseEndsStep')" :class="{'current': phaseStep?.contents === 'MythosPhaseEndsStep'}">1.5</div>
-        </div>
-        <div>{{$t('phase.mythosPhase')}}</div>
-      </div>
-      <div class="phase phase-investigation" :class="{ 'active-phase': phase == 'InvestigationPhase' }">
-        <div class="subphases">
-          <div v-tooltip.left="$t('phase.investigationPhaseBeginsStep')" :class="{'current': phaseStep?.contents === 'InvestigationPhaseBeginsStep'}">2.1</div>
-          <div v-tooltip.left="$t('phase.playerWindow')" :class="{'current': phaseStep?.contents === 'InvestigationPhaseBeginsWindow'}"><i class="fast-icon" /></div>
-          <div v-tooltip.left="$t('phase.nextInvestigatorsTurnBeginsStep')" :class="{'current': phaseStep?.contents === 'NextInvestigatorsTurnBeginsStep'}">2.2</div>
-          <div v-tooltip.left="$t('phase.playerWindow')" :class="{'current': phaseStep?.contents === 'NextInvestigatorsTurnBeginsWindow'}"><i class="fast-icon" /></div>
-          <div v-tooltip.left="$t('phase.investigatorTakesActionStep')" :class="{'current': phaseStep?.contents === 'InvestigatorTakesActionStep'}">2.2.1</div>
-          <div v-tooltip.left="$t('phase.investigatorsTurnEndsStep')" :class="{'current': phaseStep?.contents === 'InvestigatorsTurnEndsStep'}">2.2.2</div>
-          <div v-tooltip.left="$t('phase.investigationPhaseEndsStep')" :class="{'current': phaseStep?.contents === 'InvestigationPhaseEndsStep'}">2.3</div>
-        </div>
-        <div>{{$t('phase.investigationPhase')}}</div>
-      </div>
-      <div class="phase phase-enemy" :class="{ 'active-phase': phase == 'EnemyPhase' }">
-        <div class="subphases">
-          <div v-tooltip.left="$t('phase.enemyPhaseBeginsStep')" :class="{'current': phaseStep?.contents === 'EnemyPhaseBeginsStep'}">3.1</div>
-          <div v-tooltip.left="$t('phase.hunterEnemiesMoveStep')" :class="{'current': phaseStep?.contents === 'HunterEnemiesMoveStep'}">3.2 <span v-if="phaseStep?.contents === 'HunterEnemiesMoveStep'">{{$t('phase.hunterEnemiesMoveStep')}}</span></div>
-          <div v-tooltip.left="$t('phase.playerWindow')" :class="{'current': phaseStep?.contents === 'ResolveAttacksWindow'}"><i class="fast-icon" /></div>
-          <div v-tooltip.left="$t('phase.resolveAttacksStep')" :class="{'current': phaseStep?.contents === 'ResolveAttacksStep'}">3.3</div>
-          <div v-tooltip.left="$t('phase.playerWindow')" :class="{'current': phaseStep?.contents === 'AfterResolveAttacksWindow'}"><i class="fast-icon" /></div>
-          <div v-tooltip.left="$t('phase.enemyPhaseEndsStep')" :class="{'current': phaseStep?.contents === 'EnemyPhaseEndsStep'}">3.4</div>
-        </div>  
-        <div>{{$t('phase.enemyPhase')}}</div>
-      </div>
-      <div class="phase phase-upkeep" :class="{ 'active-phase': phase == 'UpkeepPhase' }">
-        <div class="subphases">
-          <div v-tooltip.left="$t('phase.upkeepPhaseBeginsStep')" :class="{'current': phaseStep?.contents === 'UpkeepPhaseBeginsStep'}">4.1</div>
-          <div v-tooltip.left="$t('phase.playerWindow')" :class="{'current': phaseStep?.contents === 'UpkeepPhaseBeginsWindow'}"><i class="fast-icon" /></div>
-          <div v-tooltip.left="$t('phase.resetActionsStep')" :class="{'current': phaseStep?.contents === 'ResetActionsStep'}">4.2</div>
-          <div v-tooltip.left="$t('phase.readyExhaustedStep')" :class="{'current': phaseStep?.contents === 'ReadyExhaustedStep'}">4.3</div>
-          <div v-tooltip.left="$t('phase.drawCardAndGainResourceStep')" :class="{'current': phaseStep?.contents === 'DrawCardAndGainResourceStep'}">4.4</div>
-          <div v-tooltip.left="$t('phase.checkHandSizeStep')" :class="{'current': phaseStep?.contents === 'CheckHandSizeStep'}">4.5</div>
-          <div v-tooltip.left="$t('phase.upkeepPhaseEndsStep')" :class="{'current': phaseStep?.contents === 'UpkeepPhaseEndsStep'}">4.6</div>
-        </div>
-        <div>{{$t('phase.upkeepPhase')}}</div>
       </div>
     </div>
   </div>
@@ -3735,8 +3689,8 @@ async function addChaosToken(face: any){
 }
 
 .location-cards-container {
-  --hidden-location-action-glow: rgba(255, 0, 255, 0.32);
-  --hidden-location-action-soft: rgba(255, 0, 255, 0.12);
+  --hidden-location-action-glow: rgba(216, 178, 110, 0.32);
+  --hidden-location-action-soft: rgba(216, 178, 110, 0.12);
   --hidden-location-action-top: transparent;
   --hidden-location-action-right: transparent;
   --hidden-location-action-bottom: transparent;
@@ -3952,83 +3906,6 @@ async function addChaosToken(face: any){
   padding: 5px 15px;
 }
 
-.phases {
-  display: flex;
-  align-items: flex-end;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  justify-content: space-around;
-  background-color: #b8c1c6;
-  text-transform: uppercase;
-  font-family: Arial;
-  > div {
-    flex: 1;
-    text-align: center;
-  }
-
-  @media (max-width: 768px) and (orientation: portrait) {
-    display: none;
-  }
-}
-
-.phase {
-  display: flex;
-  overflow: visible;
-  flex-direction: column;
-  width: 100%;
-}
-
-.subphases {
-  position: relative;
-  overflow: visible;
-  font-size: 0.7em;
-  flex: 1;
-  writing-mode: lr-tb;
-  text-orientation: revert;
-  display: flex;
-  min-width: min-content;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-around;
-  color: #b8c1c6;
-  background: #484E51;
-  text-transform: uppercase;
-  font-family: Arial;
-  .current {
-    background: rgba(0, 0, 0, 0.5) !important;
-    position: relative;
-    span {
-      position: absolute;
-      right: 100%;
-      z-index: var(--z-index-100000);
-      background: var(--neutral-extra-dark);
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-inline: 10px;
-      pointer-events: none;
-    }
-  }
-  > div {
-    width: 100%;
-    padding: 0 5px;
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    align-items: center;
-    &:hover {
-      background: rgba(0, 0, 0, 0.5);
-    }
-  }
-  > div:nth-of-type(2n) {
-    background: #5a6062;
-    &:hover {
-      background: rgba(0, 0, 0, 0.5);
-    }
-  }
-}
-
 .scenario {
   display: flex;
   user-select: none;
@@ -4036,73 +3913,6 @@ async function addChaosToken(face: any){
   height: 100%;
   flex: 1;
 }
-
-.active-phase {
-  font-weight: bold;
-  background-color: #8e9ca4;
-
-  > div:last-child {
-    color: #fff;
-    background: var(--phase-tint);
-    border: 0;
-    border-radius: 0;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-  }
-
-  .subphases {
-    background: color-mix(in srgb, var(--phase-tint) 52%, #282d30);
-    color: #f4ecd8;
-
-    > div:nth-of-type(odd) {
-      background: color-mix(in srgb, var(--phase-tint) 30%, #484e51);
-    }
-
-    > div:nth-of-type(even) {
-      background: color-mix(in srgb, var(--phase-tint) 48%, #5a6062);
-    }
-
-    .current {
-      background: var(--phase-tint) !important;
-      color: white;
-      box-shadow: inset 0 0 12px color-mix(in srgb, var(--phase-tint) 72%, transparent);
-
-      &::after {
-        content: '';
-        position: absolute;
-        right: -3px;
-        top: 50%;
-        width: 6px;
-        height: 6px;
-        transform: translateY(-50%);
-        background: color-mix(in srgb, var(--phase-tint) 35%, #f4ecd8);
-        border: 1px solid color-mix(in srgb, var(--phase-tint) 55%, #f4ecd8);
-        border-radius: 50%;
-        box-shadow: 0 0 7px color-mix(in srgb, var(--phase-tint) 85%, transparent);
-        z-index: 10;
-      }
-    }
-  }
-}
-
-.active-phase .subphases > div.current::after {
-  content: '';
-  position: absolute;
-  right: -3px;
-  top: 50%;
-  width: 6px;
-  height: 6px;
-  transform: translateY(-50%);
-  background: color-mix(in srgb, var(--phase-tint) 35%, #f4ecd8);
-  border: 1px solid color-mix(in srgb, var(--phase-tint) 55%, #f4ecd8);
-  border-radius: 50%;
-  box-shadow: 0 0 7px color-mix(in srgb, var(--phase-tint) 85%, transparent);
-  z-index: 10;
-}
-
-.phase-mythos { --phase-tint: #7b4b91; }
-.phase-investigation { --phase-tint: #a87532; }
-.phase-enemy { --phase-tint: #9f2929; }
-.phase-upkeep { --phase-tint: #315b70; }
 
 .scenario-guide {
   display: flex;

@@ -51,7 +51,25 @@ const bandStats = computed(() =>
   band.value && band.value.body.length > 1 ? band.value.body[band.value.body.length - 1] : null,
 )
 
-const hasDetail = computed(() => props.group.members.length > 0)
+/* What the test led to: every line the block gained after its result landed --
+   clues discovered, damage dealt, and whatever committed cards gave on success
+   or failure (a card drawn, resources gained). The server files anything said
+   while the test is still open into its block, so these arrive as members after
+   the summary. Shown under the band even when the block is folded, since that
+   is what a reader scanning the log wants to know. Nested blocks stay in the
+   detail. */
+const outcomes = computed<LogEntry[]>(() => {
+  const resultSeq = band.value?.seq
+  if (resultSeq == null) return []
+  return props.group.members.flatMap((m) => (m.kind === 'entry' && m.entry.seq > resultSeq ? [m.entry] : []))
+})
+
+const detailMembers = computed(() => {
+  const shown = new Set(outcomes.value)
+  return props.group.members.filter((m) => m.kind !== 'entry' || !shown.has(m.entry))
+})
+
+const hasDetail = computed(() => detailMembers.value.length > 0)
 const open = computed(() => hasDetail.value && props.isOpen(props.path))
 
 const undoStep = computed(() =>
@@ -93,7 +111,7 @@ function requestUndo() {
     </component>
 
     <ul v-if="open" class="log-group__detail">
-      <template v-for="(member, i) in group.members" :key="member.kind === 'group' ? `g${member.id}` : `e${i}`">
+      <template v-for="(member, i) in detailMembers" :key="member.kind === 'group' ? `g${member.id}` : `e${i}`">
         <!-- A block inside a block: the skill test a multi-step action starts.
              It draws itself, so it recurses rather than going through
              GameLogEntry. -->
@@ -147,6 +165,15 @@ function requestUndo() {
            result, so it reads better as its own row. -->
       <span v-if="bandStats" class="log-group__stats"><LogPart :part="bandStats" /></span>
     </component>
+
+    <ul v-if="band" class="log-group__outcomes">
+      <li v-for="entry in outcomes" :key="entry.seq" class="log-group__outcome">
+        <LogPart v-for="(part, i) in entry.body" :key="i" :part="part" />
+      </li>
+      <!-- Said outright, so an empty result reads as "nothing came of it" (an
+           investigation where no clue was left to find) rather than as missing. -->
+      <li v-if="outcomes.length === 0" class="log-group__outcome log-group__outcome--none">{{ $t('log.noFurtherEffects') }}</li>
+    </ul>
 
     <button
       v-if="undoStep !== null"
@@ -279,6 +306,39 @@ button.log-group__band:focus-visible {
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.02em;
   color: #cfd6e2;
+}
+
+/* The test's consequences, one per line, under the arithmetic. */
+.log-group__outcomes {
+  margin: 0;
+  padding: 5px 10px 6px 25px;
+  list-style: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.log-group__outcome {
+  position: relative;
+  line-height: 1.45;
+}
+
+.log-group__outcome::before {
+  content: '→';
+  position: absolute;
+  left: -14px;
+  color: var(--tone);
+}
+
+.log-group__outcome--none {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+.log-group__outcome--none::before {
+  content: '·';
 }
 
 .log-caret {

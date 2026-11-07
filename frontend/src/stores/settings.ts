@@ -11,6 +11,12 @@ import {
   readNarrationLanguage,
   type NarrationLanguage,
 } from '@/arkham/narration'
+import {
+  isMotionSpeed,
+  motionLevelOf,
+  SPEED_FACTOR,
+  type MotionSpeed,
+} from '@/arkham/motion/motionTokens'
 
 // Spoken story narration (pre-rendered intro/resolution audio). A browser
 // preference, so global: on unless explicitly turned off.
@@ -57,6 +63,10 @@ const HIDE_INERT_CARDS_KEY = 'arkhamHideInertCards'
 // a forced single choice) automatically. On unless explicitly turned off.
 const AUTOPILOT_KEY = 'arkhamAutopilot'
 const COMBAT_FX_KEY = 'arkhamCombatFx'
+// How fast board animations run: normal, fast, or off. A browser preference.
+const MOTION_SPEED_KEY = 'arkhamMotionSpeed'
+// A short banner when the round or phase changes. On unless turned off.
+const PHASE_BANNER_KEY = 'arkhamPhaseBanner'
 
 // Ask before playing a card from hand, and warn before an action that may
 // provoke an attack of opportunity. Both on unless explicitly turned off.
@@ -326,6 +336,38 @@ export const useSettings = defineStore("settings", () => {
     localStorage.setItem(COMBAT_FX_KEY, String(enabled))
   }
 
+  const storedSpeed = localStorage.getItem(MOTION_SPEED_KEY)
+  const motionSpeed = ref<MotionSpeed>(isMotionSpeed(storedSpeed) ? storedSpeed : 'normal')
+
+  // Published on <html> so every stylesheet's `--motion-*` duration follows it.
+  function applyMotionScale() {
+    if (typeof document === 'undefined') return
+    document.documentElement.style.setProperty('--motion-scale', String(SPEED_FACTOR[motionSpeed.value]))
+  }
+  applyMotionScale()
+
+  function setMotionSpeed(speed: MotionSpeed) {
+    motionSpeed.value = speed
+    localStorage.setItem(MOTION_SPEED_KEY, speed)
+    applyMotionScale()
+  }
+
+  /* The single gate every board effect asks. See MotionLevel. */
+  const motionLevel = computed(() =>
+    motionLevelOf({
+      speed: motionSpeed.value,
+      prefersReducedMotion: prefersReducedMotion.value,
+      extraAnimations: extraAnimations.value,
+    }),
+  )
+
+  const phaseBanner = ref(localStorage.getItem(PHASE_BANNER_KEY) !== 'false')
+
+  function setPhaseBanner(enabled: boolean) {
+    phaseBanner.value = enabled
+    localStorage.setItem(PHASE_BANNER_KEY, String(enabled))
+  }
+
   const autopilot = ref(localStorage.getItem(AUTOPILOT_KEY) !== 'false')
 
   function setAutopilot(enabled: boolean) {
@@ -376,6 +418,11 @@ export const useSettings = defineStore("settings", () => {
     setAutopilot,
     combatFx,
     setCombatFx,
+    motionSpeed,
+    setMotionSpeed,
+    motionLevel,
+    phaseBanner,
+    setPhaseBanner,
     confirmCardPlays,
     setConfirmCardPlays,
     warnAttacksOfOpportunity,

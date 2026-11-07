@@ -18,6 +18,7 @@ import * as DebugMove from '@/arkham/debugCardMove';
 import { cardDropInFlight } from '@/arkham/debugCardDrop';
 import * as DebugInPlay from '@/arkham/debugInPlay';
 import DeckDebugWindow from '@/arkham/components/debug/DeckDebugWindow.vue';
+import { CARD_FLIGHT_PILE_ATTR, cardFlightPileStyle, useCardFlightState } from '@/arkham/cardFlight';
 
 const { t } = useI18n();
 
@@ -319,6 +320,15 @@ function onDragLeaveDeck(event: DragEvent) {
 
 const discards = computed<ArkhamCard.Card[]>(() => props.investigator.discard.map(c => { return { tag: 'PlayerCard', contents: c }}))
 const discardPopoverShown = ref(false)
+// The discard is a pile a card can fly into: only its top card is drawn, so it
+// is matched on every id it holds (see CARD_FLIGHT_PILE_ATTR).
+const discardIds = computed(() => props.investigator.discard.map((c) => c.id))
+const cardFlightState = useCardFlightState()
+const discardFlightStyle = computed(() => cardFlightPileStyle(cardFlightState, discardIds.value))
+// The deck is the pile a drawn card flies out of: its top is named while the
+// card leaves, and the hand slot the card lands in takes the same name.
+const deckIds = computed(() => props.investigator.deck.map((c) => c.id))
+const deckFlightStyle = computed(() => cardFlightPileStyle(cardFlightState, deckIds.value))
 
 watch(choices, async (newChoices) => {
   const actionableChoices = newChoices.filter(choice => choice.tag !== 'SkipTriggersButton')
@@ -338,6 +348,8 @@ watch(choices, async (newChoices) => {
     @dragleave="onDragLeaveDiscard($event)"
     @dragend="discardDraggedOver = false"
     @dragenter.prevent
+    :[CARD_FLIGHT_PILE_ATTR]="discardIds.join(' ')"
+    :style="discardFlightStyle"
   >
     <Card v-if="topOfDiscard" :game="game" :card="topOfDiscard" :playerId="playerId" :allowAbilityButtons="false" :allowInteractions="false" />
     <CardsUnderIndicator
@@ -386,6 +398,8 @@ watch(choices, async (newChoices) => {
         v-else
         :class="{ 'deck--can-draw': drawCardsAction !== -1, 'card': topOfDeckRevealed }"
         class="deck"
+        :[CARD_FLIGHT_PILE_ATTR]="deckIds.join(' ')"
+        :style="deckFlightStyle"
         :src="topOfDeck"
         :data-customizations="topOfDeckCard ? JSON.stringify(topOfDeckCard.customizations) : undefined"
         :data-chained="topOfDeckCard?.chained || undefined"

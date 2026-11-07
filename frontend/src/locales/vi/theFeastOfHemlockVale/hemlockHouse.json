@@ -7,7 +7,7 @@
   ],
   "label": {
     "parlor": {
-      "testForAdditionalDamage": "Kiểm tra {'{'}intellect{'}'} (4) để gây thêm 1 damage"
+      "testForAdditionalDamage": "Kiểm tra {'{'}intellect{'}'} (4) để gây thêm 1 tổn thương thể chất"
     }
   },
   "cost": {
@@ -17,13 +17,13 @@
     "easyStandard": {
       "skull": "-X. X bằng số tầng hiện tại của bạn (tối thiểu là 1).",
       "cultist": "-1. Nếu địa điểm của bạn là một kẻ địch, hãy exhaust nó.",
-      "tablet": "-3. Nếu bạn thất bại, chữa 1 damage cho enemy-location gần nhất.",
+      "tablet": "-3. Nếu bạn thất bại, chữa 1 tổn thương thể chất cho enemy-location gần nhất.",
       "elderThing": "-4. Nếu bạn thất bại, và đang là agenda 2a hoặc 3a, sau khi bài kiểm tra này được giải quyết, loại bỏ token này khỏi chaos bag và thêm nó vào predation bag."
     },
     "hardExpert": {
       "skull": "-X. X bằng hai lần số tầng hiện tại của bạn (tối thiểu là 2).",
       "cultist": "-2. Nếu bạn thành công và địa điểm của bạn là một kẻ địch, hãy exhaust nó.",
-      "tablet": "-4. Nếu bạn thất bại, chữa 1 damage cho enemy-location gần nhất.",
+      "tablet": "-4. Nếu bạn thất bại, chữa 1 tổn thương thể chất cho enemy-location gần nhất.",
       "elderThing": "-5. Nếu đang là agenda 2a hoặc 3a, sau khi bài kiểm tra này được giải quyết, loại bỏ token này khỏi chaos bag và thêm nó vào predation bag."
     }
   },
@@ -145,7 +145,7 @@
     },
     "marquez": {
       "title": "{'{'}codex{'}'} Codex Θ: Dr. Rosa Marquez",
-      "body": "<p>\"Tôi ghét tất cả những thứ này,\" Dr. Marquez kiểm tra một giá sách. \"Lúc nãy, tôi ở trong thư viện và nó đã sống lại. Có thứ gì đó gần như... đang hồi sinh những khúc gỗ chết. Tôi định nói điều đó là bất khả thi, nhưng giờ chẳng có gì là bất khả thi nữa,\" cô cười một cách trống rỗng.</p><p class='basic right'>Rút 3 lá bài. Chọn một enemy-location đang in play và gây cho nó 1 damage.</p>"
+      "body": "<p>\"Tôi ghét tất cả những thứ này,\" Dr. Marquez kiểm tra một giá sách. \"Lúc nãy, tôi ở trong thư viện và nó đã sống lại. Có thứ gì đó gần như... đang hồi sinh những khúc gỗ chết. Tôi định nói điều đó là bất khả thi, nhưng giờ chẳng có gì là bất khả thi nữa,\" cô cười một cách trống rỗng.</p><p class='basic right'>Rút 3 lá bài. Chọn một enemy-location đang in play và gây cho nó 1 tổn thương thể chất.</p>"
     },
     "argument1": {
       "title": "{'{'}codex{'}'} Codex Σ: The Argument",

@@ -11,7 +11,7 @@
     "enemiesDrawn": "Kẻ địch đã rút",
     "enemiesDefeated": "Kẻ địch bị đánh bại",
     "enemiesAttackedBy": "Bị kẻ địch tấn công",
-    "dealtDamageTo": "Gây damage cho",
+    "dealtDamageTo": "Gây tổn thương thể chất cho",
     "locationsInvestigated": "Địa điểm đã điều tra",
     "cluesDiscovered": "Clue đã discover",
     "skillTests": "Skill test"
@@ -21,7 +21,7 @@
     "actionsSpent": "Action đã tiêu",
     "moved": "Đã di chuyển",
     "cardsDrawn": "Bài đã rút",
-    "resourcesGained": "Resource đã nhận",
+    "resourcesGained": "Tài nguyên đã nhận",
     "attacksOfOpportunity": "Attack of opportunity",
     "successfulAttacks": "Đòn tấn công thành công",
     "successfulEvasions": "Evade thành công",
@@ -31,12 +31,12 @@
   "playedCard": {
     "at": "Tại {location}",
     "target": "Mục tiêu: {target}",
-    "paid": "Đã trả {n} resource"
+    "paid": "Đã trả {n} tài nguyên"
   },
   "skillResult": {
     "unrun": "Chưa chạy",
-    "succeededBy": "Thành công, chênh lệch {n}",
-    "failedBy": "Thất bại, chênh lệch {n}"
+    "succeededBy": "Thành công (dư {n})",
+    "failedBy": "Thất bại (thiếu {n})"
   },
   "enemy": {
     "health": "Health: {n}",

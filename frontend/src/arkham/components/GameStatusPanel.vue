@@ -63,8 +63,26 @@ const doing = computed<string | null>(() => {
     const names = [...new Set(g.enemyAttackTargets.map((a) => entityName(a.enemy)).filter(Boolean))]
     return t('locationMap.status.attacking', { names: names.join(', ') })
   }
-  const step = g.phaseStep ? `locationMap.status.step.${g.phaseStep.contents}` : null
-  return step && te(step) ? t(step) : null
+  return null
+})
+
+// Rules-reference number of each phase step; the fast windows between steps have none.
+const STEP_NO: Record<string, string> = {
+  MythosPhaseBeginsStep: '1.1', PlaceDoomOnAgendaStep: '1.2', CheckDoomThresholdStep: '1.3',
+  EachInvestigatorDrawsEncounterCardStep: '1.4', MythosPhaseEndsStep: '1.5',
+  InvestigationPhaseBeginsStep: '2.1', NextInvestigatorsTurnBeginsStep: '2.2', InvestigatorTakesActionStep: '2.2.1',
+  InvestigatorsTurnEndsStep: '2.2.2', InvestigationPhaseEndsStep: '2.3',
+  EnemyPhaseBeginsStep: '3.1', HunterEnemiesMoveStep: '3.2', ResolveAttacksStep: '3.3', EnemyPhaseEndsStep: '3.4',
+  UpkeepPhaseBeginsStep: '4.1', ResetActionsStep: '4.2', ReadyExhaustedStep: '4.3',
+  DrawCardAndGainResourceStep: '4.4', CheckHandSizeStep: '4.5', UpkeepPhaseEndsStep: '4.6',
+}
+
+// Where in the round the game is: the step number and what happens in it.
+const stepLine = computed<string | null>(() => {
+  const step = props.game.phaseStep?.contents
+  const key = step ? `locationMap.status.step.${step}` : null
+  if (!step || !key || !te(key)) return null
+  return [STEP_NO[step], t(key)].filter(Boolean).join(' · ')
 })
 
 const phase = computed(() => t(`locationMap.status.phase.${props.game.phase}`))
@@ -87,7 +105,7 @@ const rows = computed<Row[]>(() => {
       return [{
         id: inv.id, mine, who,
         text: t('locationMap.status.windowNow', { who }),
-        detail: [actions, mine ? t('locationMap.status.windowCondition') : null].filter(Boolean).join(' · ') || null,
+        detail: actions,
       }]
     }
     const tooltip = ArkhamGame.choicesTooltip(g, inv.playerId)
@@ -112,6 +130,7 @@ const idleText = computed(() => over.value ? t('locationMap.status.over') : t('l
       <span class="phase">{{ phase }}</span>
       <span v-if="turnOf" class="turn-of">{{ turnOf }}</span>
     </header>
+    <p v-if="stepLine && !over" class="step">{{ stepLine }}</p>
     <p v-if="doing && !over" class="doing"><b>{{ t('locationMap.status.doing') }}</b> {{ doing }}</p>
     <p v-if="over || rows.length === 0" class="idle">{{ idleText }}</p>
     <ul v-else class="rows">
@@ -128,6 +147,7 @@ const idleText = computed(() => over.value ? t('locationMap.status.over') : t('l
 .bar { display: flex; align-items: baseline; gap: 8px; padding: 6px 10px; background: #1d2e24; }
 .phase { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #e6c584; }
 .turn-of { font-size: 0.74rem; color: #c9d0c3; }
+.step { margin: 0; padding: 6px 10px 0; font-size: 0.74rem; color: #e6c584; }
 .doing, .idle { margin: 0; padding: 6px 10px 0; font-size: 0.74rem; color: #c9d0c3; }
 .doing b { color: #98a38f; font-weight: 600; margin-right: 4px; }
 .idle { padding-bottom: 6px; }

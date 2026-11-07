@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { computed, inject, Ref, ref, ComputedRef, reactive, watch, onMounted, onBeforeUnmount } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useSettings } from '@/stores/settings';
+import { MOTION_MS, scaledMs } from '@/arkham/motion/motionTokens';
 import { useDebug } from '@/arkham/debug'
 import * as DebugMove from '@/arkham/debugCardMove';
 import { discardRandomMessage } from '@/arkham/debugPlayer';
@@ -857,9 +858,26 @@ const rectMap = new Map<string, DOMRect>()
 
 function isHtmlElement(el: Element): el is HTMLElement { return el instanceof HTMLElement }
 
+/* A card the game-level view transition is already flying (played, discarded,
+ * attached) must not also be animated here: the clone and the leaving copy would
+ * put a second element under its transition name and the whole flight would be
+ * skipped. */
+/* gsap takes seconds; the base motion token at the player's speed, and no
+ * animation at all when motion is off or the OS asked for less. */
+const motionSeconds = () =>
+  settings.motionLevel === 'off' || settings.motionLevel === 'static'
+    ? 0
+    : scaledMs(MOTION_MS.base, settings.motionSpeed) / 1000
+
+const flyingElsewhere = (el: HTMLElement) => {
+  const idx = el.dataset.index
+  return !!idx && flightState.flying.value.has(idx)
+}
+
 function onBeforeEnter(el: Element) {
   if (!isHtmlElement(el)) return
   if (el.hasAttribute('data-card-movement')) return
+  if (flyingElsewhere(el)) return
   if (el.classList.contains('committed-skills')) return
   const idx = el.dataset.index
   if (!idx || !rectMap.has(idx)) return
@@ -870,6 +888,7 @@ function onBeforeEnter(el: Element) {
 function onEnter(el: Element, done: () => void) {
   if (!isHtmlElement(el)) return
   if (el.hasAttribute('data-card-movement')) { done(); return }
+  if (flyingElsewhere(el)) { rectMap.delete(el.dataset.index ?? ''); done(); return }
   if (el.classList.contains('committed-skills')) { el.removeAttribute('style'); done(); return }
 
   const idx = el.dataset.index
@@ -877,7 +896,7 @@ function onEnter(el: Element, done: () => void) {
 
   if (!idx) {
     const width = window.getComputedStyle(el).width
-    gsap.to(el, { opacity: 1, width, onComplete: () => { el.removeAttribute('style'); done() } })
+    gsap.to(el, { opacity: 1, width, duration: motionSeconds(), onComplete: () => { el.removeAttribute('style'); done() } })
     return
   }
 
@@ -898,10 +917,10 @@ function onEnter(el: Element, done: () => void) {
 
   gsap.timeline()
     .add('start')
-    .to(el, { startAt: { opacity: 0, width: 0 }, width: rect.width, clearProps: 'width', duration: 0.3 }, 'start')
+    .to(el, { startAt: { opacity: 0, width: 0 }, width: rect.width, clearProps: 'width', duration: motionSeconds() }, 'start')
     .to(c, {
       startAt: { x: startX, y: startY, opacity: 1 },
-      x: finalX, y: 0, duration: 0.3,
+      x: finalX, y: 0, duration: motionSeconds(), ease: 'power3.out',
       onComplete: () => { c.remove(); el.style.opacity = '1'; done() }
     }, 'start')
 }
@@ -909,11 +928,12 @@ function onEnter(el: Element, done: () => void) {
 function onLeave(el: Element, done: () => void) {
   if (!isHtmlElement(el)) return
   if (el.hasAttribute('data-card-movement')) { done(); return }
+  if (flyingElsewhere(el)) { done(); return }
   if (el.classList.contains('committed-skills')) { done(); return }
   const idx = el.dataset.index
   if (!idx) { done(); return }
   rectMap.set(idx, el.getBoundingClientRect())
-  gsap.to(el, { startAt: { opacity: 0 }, width: 0, margin: 0, duration: 0.3, onComplete: done })
+  gsap.to(el, { startAt: { opacity: 0 }, width: 0, margin: 0, duration: motionSeconds(), onComplete: done })
 }
 
 const realityAcid = ref('89005')

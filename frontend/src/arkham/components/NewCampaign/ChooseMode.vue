@@ -631,7 +631,7 @@ input[type='radio']:checked + label {
 /* placeholder tile is actionable: magenta --select per the color-role convention */
 .campaign-box-placeholder:hover,
 .campaign-box-placeholder.selected-campaign {
-  border-color: var(--select, magenta);
+  border-color: var(--select, #d8b26e);
   color: var(--title, #fff);
 }
 
