@@ -61,9 +61,12 @@ import PlayerTabs from '@/arkham/components/PlayerTabs.vue';
 import Connections from '@/arkham/components/Connections.vue';
 import RainOverlay from '@/arkham/components/RainOverlay.vue';
 import SmokePuffLayer from '@/arkham/components/SmokePuffLayer.vue';
+import FxLayer from '@/arkham/components/FxLayer.vue';
 import { supportsHtmlInCanvas } from '@/arkham/droplets';
 import { createRainAudio, type RainAudioInstance } from '@/arkham/rainAudio';
 import { useSoundsDisabled } from '@/composable/useSoundsDisabled';
+import { createHorrorAmbience, type HorrorAmbienceInstance } from '@/arkham/horrorAmbience';
+import { useNarrationControls } from '@/arkham/composables/useNarration';
 import PoolItem from '@/arkham/components/PoolItem.vue';
 import { chaosTokenImage } from '@/arkham/types/ChaosToken';
 import { homebrewNamespaceOf, homebrewTotalsTokens } from '@/arkham/homebrewData';
@@ -74,6 +77,7 @@ import SkillTest from '@/arkham/components/SkillTest.vue';
 import ScenarioDeck from '@/arkham/components/ScenarioDeck.vue';
 import CthulhuBoard from '@/arkham/components/TheDrownedCity/CthulhuBoard.vue';
 import LocationCell from '@/arkham/components/LocationCell.vue';
+import LocationMap from '@/arkham/components/LocationMap.vue';
 import { isCthulhuBoardEnemyInPlay } from '@/arkham/components/TheDrownedCity/cthulhuBoard';
 import ScenarioDebug from '@/arkham/components/ScenarioDebug.vue';
 import CardsUnderIndicator from '@/arkham/components/CardsUnderIndicator.vue';
@@ -172,6 +176,28 @@ watch(rainAudioWanted, (wanted) => {
 onBeforeUnmount(() => {
   rainAudio?.destroy()
   rainAudio = null
+})
+
+// Horror ambience for as long as a scenario is on screen, under the global
+// Sounds switch, ducking whenever the story narration speaks.
+const narrationControls = useNarrationControls()
+const musicWanted = computed(() => settingsStore.music && !soundsDisabled.value)
+let ambience: HorrorAmbienceInstance | null = null
+
+watch(musicWanted, (wanted) => {
+  if (!wanted) {
+    ambience?.stop()
+    return
+  }
+  ambience ??= createHorrorAmbience(settingsStore.musicVolume)
+  ambience?.start()
+}, { immediate: true })
+watch(() => settingsStore.musicVolume, (v) => ambience?.setVolume(v))
+watch(narrationControls.playing, (speaking) => ambience?.duck(speaking), { immediate: true })
+
+onBeforeUnmount(() => {
+  ambience?.destroy()
+  ambience = null
 })
 
 // From the canvasui playground: slow, thin, sparse. Note this sits at the
@@ -1495,6 +1521,10 @@ const scenarioDeckStyles = computed(() => {
 })
 const players = computed(() => props.game.investigators)
 const playerOrder = computed(() => props.game.playerOrder)
+// What only the card board can draw; the map says so rather than silently leaving it out.
+const boardOnlyContent = computed(() =>
+  Boolean(barriers.value) || enemiesAsLocations.value.length > 0 || gridStories.value.length > 0 ||
+  gridConcealed.value.length > 0 || playerLocationZones.value.length > 0)
 const discards = computed<Card[]>(() => props.scenario.discard.map(c => ({ tag: 'EncounterCard', contents: c })))
 const playerLocationZones = computed(() => props.game.playerOrder.flatMap((investigatorId) => {
   const investigator = props.game.investigators[investigatorId]
@@ -1733,6 +1763,7 @@ const cardsUnderScenarioReference = computed(() =>
 )
 /* Tokens sealed on the scenario reference card itself (Traces to Nowhere's codex entries). */
 const scenarioSealedChaosTokens = computed(() => props.scenario.sealedChaosTokens)
+const decksShown = ref(false)
 const cardsUnderAgenda = computed(() => props.scenario.cardsUnderAgendaDeck)
 const cardsUnderAct = computed(() => props.scenario.cardsUnderActDeck)
 const cardsNextToAct = computed(() => props.scenario.cardsNextToActDeck)
@@ -2406,7 +2437,8 @@ async function addChaosToken(face: any){
   </div>
   <div v-else-if="!gameOver" id="scenario" class="scenario" :data-scenario="scenario.id">
     <SmokePuffLayer />
-    <div class="scenario-body" :class="{'split-view': splitView, 'scenario-body--notifier-overlays': showScenarioNotifierBar }">
+    <FxLayer :game="game" />
+    <div class="scenario-body" :class="{'split-view': splitView, 'scenario-body--notifier-overlays': showScenarioNotifierBar, 'scenario-body--map': settingsStore.locationView !== 'cards' && !splitView }">
       <Draggable v-if="showOutOfPlay || forcedShowOutOfPlay">
         <template #handle><header><h2>{{ $t('gameBar.outOfPlay') }}</h2></header></template>
         <div class="card-row-cards">
@@ -2559,7 +2591,7 @@ async function addChaosToken(face: any){
         @choose="choose"
         @close="hideCards"
       />
-      <div class="scenario-cards" :class="{ 'scenario-cards--has-badges': showScenarioNotifierBar }">
+      <div v-show="settingsStore.locationView === 'cards' || decksShown" class="scenario-cards" :class="{ 'scenario-cards--has-badges': showScenarioNotifierBar }">
         <div v-if="anyInTheShadowLocations || inTheShadows.length > 0 || inTheShadowsInvestigators.length > 0" class="in-the-shadows">
           <template v-if="anyInTheShadowLocations">
             <Location
@@ -3097,6 +3129,20 @@ async function addChaosToken(face: any){
         ></div>
       </div>
 
+      <LocationMap
+        v-if="settingsStore.locationView !== 'cards'"
+        :view="settingsStore.locationView"
+        :game="game"
+        :scenario="scenario"
+        :playerId="playerId"
+        :boardOnlyContent="boardOnlyContent"
+        :decksShown="decksShown"
+        :referenceImage="scenarioGuide"
+        @toggleDecks="decksShown = !decksShown"
+        @choose="choose"
+      />
+      <template v-else>
+      <button class="location-view-switch" @click="settingsStore.setLocationView('map')">{{ $t('locationMap.showMap') }}</button>
       <RainOverlay :enabled="showRain" :options="rainOptions">
       <div
         ref="locationCardsContainer"
@@ -3310,8 +3356,9 @@ async function addChaosToken(face: any){
         </div>
       </div>
       </RainOverlay>
+      </template>
 
-      <div id="player-zone" :class="{ 'player-zone--fullscreen': locationsFullscreen }">
+      <div id="player-zone" :class="{ 'player-zone--fullscreen': locationsFullscreen, 'player-zone--scene': settingsStore.locationView !== 'cards' }">
         <PlayerTabs
           :game="game"
           :playerId="playerId"
@@ -3321,7 +3368,7 @@ async function addChaosToken(face: any){
           :tarotCards="props.scenario.tarotCards"
           @choose="choose"
         >
-          <div v-if="!splitView" class="zoom-control">
+          <div v-if="!splitView && settingsStore.locationView === 'cards'" class="zoom-control">
             <DebugTokenPanel v-if="debug.active" :game-id="game.id" />
             <button class="zoom-btn" @pointerdown.stop="startHold(decreaseZoom)" @pointerup="stopHold" @pointerleave="stopHold">−</button>
             <input v-model.number="locationsZoom" type="range" min="0.25" max="6" step="0.05" class="zoom-slider" />
@@ -3466,6 +3513,13 @@ async function addChaosToken(face: any){
   -webkit-text-stroke: 1px black;
 }
 
+.location-view-switch {
+  align-self: flex-start;
+  margin: 4px 8px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+}
+
 .scenario-cards {
   display: flex;
   align-self: center;
@@ -3534,6 +3588,13 @@ async function addChaosToken(face: any){
 
   &.scenario-body--notifier-overlays {
     z-index: auto;
+  }
+
+  /* Map views: the map fills the window; the player area sits below it and is reached by scrolling. */
+  &.scenario-body--map {
+    grid-template-rows: auto auto;
+    align-content: start;
+    overflow-y: auto;
   }
 
   &.split-view {
@@ -3739,6 +3800,10 @@ async function addChaosToken(face: any){
 
 /* Keep the player zone (hand + in-play assets) usable while the board is a
    fixed fullscreen overlay: pin it to the viewport bottom above the overlay. */
+/* Location views: the fixed hand sits under the player area, so keep the area clear of it. */
+.player-zone--scene { padding-bottom: var(--hand-h, 0px); }
+.player-zone--scene #totals { display: none; }
+
 .player-zone--fullscreen {
   position: fixed;
   left: 0;

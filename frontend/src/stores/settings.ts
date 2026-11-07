@@ -6,6 +6,36 @@ import {
   setGameLocalStorageItem,
 } from '@/arkham/localStorage'
 import { isDevBuild } from '@/arkham/displayRules'
+import {
+  defaultNarrationLanguage,
+  readNarrationLanguage,
+  type NarrationLanguage,
+} from '@/arkham/narration'
+
+// Spoken story narration (pre-rendered intro/resolution audio). A browser
+// preference, so global: on unless explicitly turned off.
+const NARRATION_KEY = 'arkhamNarration'
+const NARRATION_LANGUAGE_KEY = 'arkhamNarrationLanguage'
+const NARRATION_VOLUME_KEY = 'arkhamNarrationVolume'
+// Synthesised horror ambience under a scenario (arkham/horrorAmbience.ts). Also
+// silenced by the global Sounds switch.
+const MUSIC_KEY = 'arkhamHorrorMusic'
+const MUSIC_VOLUME_KEY = 'arkhamHorrorMusicVolume'
+
+const LOCATION_SCALE_KEY = 'arkhamLocationScale'
+const FIGURE_SCALE_KEY = 'arkhamFigureScale'
+export const MIN_SCALE = 0.6
+export const MAX_SCALE = 1.6
+
+function readScale(value: string | null): number {
+  const n = value === null ? NaN : Number(value)
+  return Number.isFinite(n) ? Math.min(MAX_SCALE, Math.max(MIN_SCALE, n)) : 1
+}
+
+function readVolume(value: string | null, fallback = 0.8): number {
+  const n = value === null ? NaN : Number(value)
+  return Number.isFinite(n) ? Math.min(1, Math.max(0, n)) : fallback
+}
 
 const EPIC_MULTIPLAYER_KEY = 'epicMultiplayerEnabled'
 
@@ -22,6 +52,16 @@ const EXTRA_ANIMATIONS_SETTING = 'extraAnimations'
 // `setup-only` card tags) into a stack beside the play area once setup is over.
 // Off by default: they are still real cards, and some players want to see them.
 const HIDE_INERT_CARDS_KEY = 'arkhamHideInertCards'
+
+// Answer the engine's non-questions (a lone "draw encounter", "apply results",
+// a forced single choice) automatically. On unless explicitly turned off.
+const AUTOPILOT_KEY = 'arkhamAutopilot'
+const COMBAT_FX_KEY = 'arkhamCombatFx'
+
+// Ask before playing a card from hand, and warn before an action that may
+// provoke an attack of opportunity. Both on unless explicitly turned off.
+const CONFIRM_CARD_PLAYS_KEY = 'arkhamConfirmCardPlays'
+const WARN_ATTACKS_OF_OPPORTUNITY_KEY = 'arkhamWarnAttacksOfOpportunity'
 
 /* Show the cards you draw from your own deck, enlarged, the way an encounter
  * card is shown when it is drawn.
@@ -46,6 +86,12 @@ const DRAW_SPOTLIGHT_SETTING = 'drawSpotlight'
 const CUSTOM_CARDS_KEY = 'arkhamCustomCardsEnabled'
 const INLINE_MODALS_KEY = 'arkhamInlineModals'
 
+/* How a scenario draws its locations: 'scene' is the room you stand in with a small map beside it, 'map' the
+ * full node map, 'cards' the original board of location cards. Anything stored that is not 'map' or 'cards'
+ * means scene, so the scene is the default. */
+const LOCATION_VIEW_KEY = 'arkhamLocationView'
+export type LocationView = 'map' | 'cards'
+
 /* Never trust what comes back out of localStorage: it survives a rename, and a
  * value this store does not understand would otherwise gate the overlay on a
  * string comparison that can never be true. */
@@ -54,6 +100,10 @@ const DRAW_SPOTLIGHT_MODES: DrawSpotlightMode[] = ['off', 'upkeep', 'every']
 
 function readDrawSpotlightMode(value: string | null): DrawSpotlightMode | null {
   return DRAW_SPOTLIGHT_MODES.find((m) => m === value) ?? null
+}
+
+function readLocationView(value: string | null): LocationView {
+  return value === 'cards' ? 'cards' : 'map'
 }
 
 function loadVariants(): string[] {
@@ -86,6 +136,13 @@ export const useSettings = defineStore("settings", () => {
   // is global because it is a browser/UI preference, not game state.
   const inlineModals = ref(localStorage.getItem(INLINE_MODALS_KEY) === 'true')
 
+  const locationView = ref<LocationView>(readLocationView(localStorage.getItem(LOCATION_VIEW_KEY)))
+
+  function setLocationView(view: LocationView) {
+    locationView.value = view
+    localStorage.setItem(LOCATION_VIEW_KEY, view)
+  }
+
   function setInlineModals(enabled: boolean) {
     inlineModals.value = enabled
     localStorage.setItem(INLINE_MODALS_KEY, String(enabled))
@@ -103,6 +160,69 @@ export const useSettings = defineStore("settings", () => {
 
   function toggleEpicMultiplayer() {
     setEpicMultiplayerEnabled(!epicMultiplayerStored.value)
+  }
+
+  const narration = ref(localStorage.getItem(NARRATION_KEY) !== 'false')
+  const narrationLanguage = ref<NarrationLanguage>(
+    readNarrationLanguage(
+      localStorage.getItem(NARRATION_LANGUAGE_KEY),
+      defaultNarrationLanguage(typeof navigator === 'undefined' ? [] : navigator.languages ?? []),
+    ),
+  )
+  const narrationVolume = ref(readVolume(localStorage.getItem(NARRATION_VOLUME_KEY)))
+
+  function setNarration(enabled: boolean) {
+    narration.value = enabled
+    localStorage.setItem(NARRATION_KEY, String(enabled))
+  }
+
+  function setNarrationLanguage(language: NarrationLanguage) {
+    narrationLanguage.value = language
+    localStorage.setItem(NARRATION_LANGUAGE_KEY, language)
+  }
+
+  function setNarrationVolume(volume: number) {
+    narrationVolume.value = readVolume(String(volume))
+    localStorage.setItem(NARRATION_VOLUME_KEY, String(narrationVolume.value))
+  }
+
+  // Off unless explicitly turned on (narration/TTS stays on by default).
+  const music = ref(localStorage.getItem(MUSIC_KEY) === 'true')
+  const musicVolume = ref(readVolume(localStorage.getItem(MUSIC_VOLUME_KEY), 0.45))
+
+  function setMusic(enabled: boolean) {
+    music.value = enabled
+    localStorage.setItem(MUSIC_KEY, String(enabled))
+  }
+
+  function setMusicVolume(volume: number) {
+    musicVolume.value = readVolume(String(volume), 0.45)
+    localStorage.setItem(MUSIC_VOLUME_KEY, String(musicVolume.value))
+  }
+
+  // Size of the location buttons/plates and of the character figures on the map and
+  // in the scene. Multipliers published as CSS variables on <html> so any
+  // stylesheet can use `var(--location-scale)` / `var(--figure-scale)`.
+  const locationScale = ref(readScale(localStorage.getItem(LOCATION_SCALE_KEY)))
+  const figureScale = ref(readScale(localStorage.getItem(FIGURE_SCALE_KEY)))
+
+  function applyScales() {
+    if (typeof document === 'undefined') return
+    document.documentElement.style.setProperty('--location-scale', String(locationScale.value))
+    document.documentElement.style.setProperty('--figure-scale', String(figureScale.value))
+  }
+  applyScales()
+
+  function setLocationScale(scale: number) {
+    locationScale.value = readScale(String(scale))
+    localStorage.setItem(LOCATION_SCALE_KEY, String(locationScale.value))
+    applyScales()
+  }
+
+  function setFigureScale(scale: number) {
+    figureScale.value = readScale(String(scale))
+    localStorage.setItem(FIGURE_SCALE_KEY, String(figureScale.value))
+    applyScales()
   }
 
   // Global player preference, on unless explicitly turned off.
@@ -199,6 +319,34 @@ export const useSettings = defineStore("settings", () => {
     localStorage.setItem(HIDE_INERT_CARDS_KEY, String(enabled))
   }
 
+  const combatFx = ref(localStorage.getItem(COMBAT_FX_KEY) !== 'false')
+
+  function setCombatFx(enabled: boolean) {
+    combatFx.value = enabled
+    localStorage.setItem(COMBAT_FX_KEY, String(enabled))
+  }
+
+  const autopilot = ref(localStorage.getItem(AUTOPILOT_KEY) !== 'false')
+
+  function setAutopilot(enabled: boolean) {
+    autopilot.value = enabled
+    localStorage.setItem(AUTOPILOT_KEY, String(enabled))
+  }
+
+  const confirmCardPlays = ref(localStorage.getItem(CONFIRM_CARD_PLAYS_KEY) !== 'false')
+
+  function setConfirmCardPlays(enabled: boolean) {
+    confirmCardPlays.value = enabled
+    localStorage.setItem(CONFIRM_CARD_PLAYS_KEY, String(enabled))
+  }
+
+  const warnAttacksOfOpportunity = ref(localStorage.getItem(WARN_ATTACKS_OF_OPPORTUNITY_KEY) !== 'false')
+
+  function setWarnAttacksOfOpportunity(enabled: boolean) {
+    warnAttacksOfOpportunity.value = enabled
+    localStorage.setItem(WARN_ATTACKS_OF_OPPORTUNITY_KEY, String(enabled))
+  }
+
   const showBonded = ref(false)
 
   function toggleShowBonded() {
@@ -224,14 +372,38 @@ export const useSettings = defineStore("settings", () => {
     setExtraAnimationsOverride,
     hideInertCards,
     setHideInertCards,
+    autopilot,
+    setAutopilot,
+    combatFx,
+    setCombatFx,
+    confirmCardPlays,
+    setConfirmCardPlays,
+    warnAttacksOfOpportunity,
+    setWarnAttacksOfOpportunity,
     customCardsEnabled,
     setCustomCardsEnabled,
     inlineModals,
     setInlineModals,
+    locationView,
+    setLocationView,
     drawSpotlight,
     drawSpotlightGlobal,
     drawSpotlightOverride,
     setDrawSpotlightGlobal,
     setDrawSpotlightOverride,
+    narration,
+    setNarration,
+    narrationLanguage,
+    setNarrationLanguage,
+    narrationVolume,
+    setNarrationVolume,
+    music,
+    setMusic,
+    musicVolume,
+    setMusicVolume,
+    locationScale,
+    setLocationScale,
+    figureScale,
+    setFigureScale,
   }
 })

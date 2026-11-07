@@ -28,6 +28,9 @@ import CardChoicePicker from '@/arkham/components/CardChoicePicker.vue';
 import { cardPoolForLabelKey } from '@/arkham/cardPools';
 import { putBackInAnyOrderPicks } from '@/arkham/putBackInAnyOrder';
 import PutBackInAnyOrder from '@/arkham/components/PutBackInAnyOrder.vue';
+import NarrationToggle from '@/arkham/components/NarrationToggle.vue';
+import MulliganPanel from '@/arkham/components/MulliganPanel.vue';
+import { mulliganQuestion } from '@/arkham/mulligan';
 
 export interface Props {
   game: Game
@@ -56,6 +59,8 @@ function zoneToLabel(s: string) {
 }
 const inSkillTest = computed(() => props.game.skillTest !== null)
 const choices = computed(() => ArkhamGame.choices(props.game, props.playerId))
+// The mulligan gets its own panel: pick every card to replace, then confirm once.
+const mulliganActive = computed(() => !props.isSkillTest && mulliganQuestion(props.game, props.playerId) !== null)
 const toChoiceEntry = (c: Message, idx: number): [Message, number] => [c, idx]
 const questionChoices = computed(() => {
   if (props.game.question[props.playerId]?.tag === QuestionType.CHOOSE_ONE_WIZARD) return []
@@ -881,6 +886,8 @@ const useCardPicker = computed(() => cardLabels.value.every(({ choice }) => !cho
 
 <template>
   <div class='question-wrapper' data-game-actionable="true">
+    <MulliganPanel v-if="mulliganActive" :game="game" :playerId="playerId" @choose="choose" />
+    <template v-else>
     <template v-if="wizardFlavorText">
       <div class="intro-text">
         <div class="intro-text-body">
@@ -936,6 +943,7 @@ const useCardPicker = computed(() => cardLabels.value.every(({ choice }) => !cho
     </div>
 
     <div class="intro-text" v-if="question && question.tag === QuestionType.READ && !suppressReadInSkillTest">
+      <NarrationToggle />
       <div v-if="readCards.length > 0" class="story-with-card">
         <img :src="cardCodeImage(cardCode)" v-for="cardCode in readCards" :key="cardCode" class="card no-overlay" />
         <div>
@@ -1189,6 +1197,7 @@ const useCardPicker = computed(() => cardLabels.value.every(({ choice }) => !cho
     <div v-if="doneLabel && doneIsFooter" class="done-choice">
       <button class="done" @click="$emit('choose', doneLabel.index)" v-html="label(doneLabel.label)"></button>
     </div>
+    </template>
   </div>
 </template>
 
@@ -2015,6 +2024,7 @@ h2 {
 }
 
 .intro-text {
+  position: relative;
   max-height: 60vh;
   > *:first-child {
     padding-top: 30px;
