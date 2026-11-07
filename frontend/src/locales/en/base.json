@@ -762,6 +762,8 @@
     "hand": "Hand · {count}",
     "agenda": "Agenda",
     "doomCount": "Doom {count} / {max}",
+    "clueCount": "Clue {count} / {max}",
+    "advanceAct": "Advance Act",
     "actionUnavailable": "Can't be used right now",
     "doomLeft": "{n} more doom to advance",
     "doomImminent": "1 more doom — the agenda advances next Mythos phase!",

@@ -8,7 +8,7 @@ import { TokenType } from '@/arkham/types/Token'
 import { cardImage, portraitImage } from '@/arkham/cardImages'
 import { imgsrc } from '@/arkham/helpers'
 import { useCardNames } from '@/arkham/composables/useCardNames'
-import { computeStat } from '@/arkham/statModel'
+import { computeStat, formatStat } from '@/arkham/statModel'
 
 /* One seat of the team overlay. Purely presentational: it shows the investigator's state and
  * reports clicks; choosing a seat is done by PlayerTabs, which owns the selected tab. */
@@ -47,7 +47,10 @@ const meter = (max: number, taken: number) => ({ max, left: Math.max(0, max - ta
 // The skills with every modifier on the investigator applied, as the scene's figures show them.
 const skills = computed(() => ([
   ['willpower', inv.value.willpower], ['intellect', inv.value.intellect], ['combat', inv.value.combat], ['agility', inv.value.agility],
-] as const).map(([k, printed]) => [k, computeStat(k, printed, inv.value.modifiers).current] as const))
+] as const).map(([k, printed]) => {
+  const stat = computeStat(k, printed, inv.value.modifiers)
+  return [k, formatStat(stat.current, stat.printed)] as const
+}))
 const hp = computed(() => meter(computeStat('health', inv.value.health, inv.value.modifiers).current, tok(TokenType.Damage)))
 const sanity = computed(() => meter(computeStat('sanity', inv.value.sanity, inv.value.modifiers).current, tok(TokenType.Horror)))
 import GameIcon from '@/arkham/components/GameIcon.vue'

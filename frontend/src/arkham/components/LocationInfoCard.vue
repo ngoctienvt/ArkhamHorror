@@ -7,6 +7,7 @@ import { cardImage } from '@/arkham/cardImages'
 import { replaceText } from '@/arkham/cardTextFormat'
 import { useCardNames } from '@/arkham/composables/useCardNames'
 import { ownInvestigator } from '@/arkham/ownInvestigator'
+import { computeStat, formatStat } from '@/arkham/statModel'
 import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
 import AbilityButton from '@/arkham/components/AbilityButton.vue'
 
@@ -30,6 +31,12 @@ const nameOf = useCardNames()
 const card = ref<HTMLElement | null>(null)
 
 const me = computed(() => ownInvestigator(props.game, props.playerId))
+// Your intellect with lasting modifiers applied (a Death XIII in play), shown as `5(4+1)` when changed.
+const myIntellect = computed(() => {
+  if (!me.value) return null
+  const stat = computeStat('intellect', me.value.intellect, me.value.modifiers)
+  return { value: stat.current, label: formatStat(stat.current, stat.printed) }
+})
 const textHtml = computed(() => props.info.face.text ? replaceText(props.info.face.text) : null)
 const flavorHtml = computed(() => props.info.face.flavor ? replaceText(props.info.face.flavor) : null)
 
@@ -74,8 +81,8 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
       <span :title="t('locationMap.clues')"><GameIcon type="clue" /> <b>{{ info.clues.left }}<template v-if="info.clues.printed !== null">/{{ info.clues.printed }}</template></b></span>
       <span v-if="info.doom" class="doom" :title="t('locationMap.doom')"><GameIcon type="doom" /> <b>{{ info.doom }}</b></span>
       <span v-if="info.victory" :title="t('locationMap.info.victory')">VP <b>{{ info.victory }}</b></span>
-      <span v-if="info.shroud && !info.shroud.x && me" class="compare" :title="t('locationMap.info.investigateCompare', { intellect: me.intellect, shroud: info.shroud.current })">
-        <span class="intellect-icon" aria-hidden="true"></span> {{ me.intellect }} vs {{ info.shroud.current }}</span>
+      <span v-if="info.shroud && !info.shroud.x && me" class="compare" :title="t('locationMap.info.investigateCompare', { intellect: myIntellect?.value, shroud: info.shroud.current })">
+        <span class="intellect-icon" aria-hidden="true"></span> {{ myIntellect?.label }} vs {{ info.shroud.current }}</span>
     </section>
 
     <!-- Card text comes from the bundled ArkhamDB card list, formatted the way the card overlay formats it. -->

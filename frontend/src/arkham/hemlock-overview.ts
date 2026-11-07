@@ -135,6 +135,37 @@ const villageAnchors: Record<string, Point> = {
   ':dark-matter:103': [41, 61], // Schröd Generators
   ':dark-matter:099': [76, 63], // Landing Craft
   ':dark-matter:100': [36, 85], // Main Facility
+  // Dark Matter — Scenario 4: In the Shadow of Earth (Nostalgia II cutaway rooms)
+  ':dark-matter:122': [26, 36], // Airlocks
+  ':dark-matter:126': [42, 36], // Hydroponics
+  ':dark-matter:127': [60, 36], // Infirmary
+  ':dark-matter:128': [45, 52], // Ship Mainframe
+  ':dark-matter:125': [78, 52], // Flight Deck
+  ':dark-matter:123': [49, 68], // Crew Quarters
+  ':dark-matter:129': [66, 68], // Telecoms
+  ':dark-matter:124': [28, 68], // Engine Room
+  // Dark Matter — Scenario 5: Strange Moons (Mi-Go Saturn moon facility)
+  ':dark-matter:166': [17, 46], // Dream Diagnostics
+  ':dark-matter:169': [60, 38], // Reality Simulator
+  ':dark-matter:170': [60, 38], // A Hiding Place (Simulation)
+  ':dark-matter:171': [60, 38], // A Mutiny (Simulation)
+  ':dark-matter:172': [60, 38], // Adrift in Space (Simulation)
+  ':dark-matter:173': [60, 38], // An Accident (Simulation)
+  ':dark-matter:174': [60, 38], // City of Cats (Simulation)
+  ':dark-matter:175': [60, 38], // Fever Dream (Simulation)
+  ':dark-matter:168': [87, 46], // Memory Scanner
+  ':dark-matter:165': [38, 36], // Communicator
+  ':dark-matter:164': [60, 66], // Brain Storage
+  ':dark-matter:167': [50, 88], // Entrance Tunnel
+  // Dark Matter — Scenario 7: Fragment of Carcosa (Asteroid & Carcosa ruins cutaway)
+  ':dark-matter:217': [30, 22], // Surface of Fragment
+  ':dark-matter:216': [67, 16], // Abandoned Lander
+  ':dark-matter:220': [36, 40], // Hidden Passage / Palace Gates
+  ':dark-matter:218': [50, 50], // Bottomless Pit / Spiral Staircase
+  ':dark-matter:223': [22, 68], // Stalagmite Forest / Labyrinths of Tasylock
+  ':dark-matter:219': [62, 65], // Cyclopean Caverns / Grand Ballroom
+  ':dark-matter:221': [83, 72], // Ice Cavity / Gardens of Thothut
+  ':dark-matter:222': [51, 88], // Impassable Ravine / The Yellow Throne
 }
 
 export function hemlockVillagePosition(code: string): Point | undefined {

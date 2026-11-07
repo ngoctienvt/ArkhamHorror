@@ -19,6 +19,7 @@ import { useSettings } from '@/stores/settings'
 import SceneSeatCard from '@/arkham/components/SceneSeatCard.vue'
 import GameIcon from '@/arkham/components/GameIcon.vue'
 import { TokenType } from '@/arkham/types/Token'
+import { computeStat, formatStat } from '@/arkham/statModel'
 
 export interface Props {
   game: Game
@@ -52,6 +53,13 @@ const store = useDbCardStore()
 const sceneMode = computed(() => useSettings().locationView !== 'cards')
 // Teammates only: your own investigator stays in the player area under the map.
 const seats = computed(() => [...investigators.value, ...inactiveInvestigators.value].filter((i) => i.playerId !== props.playerId))
+
+/* A skill with every lasting modifier applied, shown as `5(4+1)` when it differs from the printed value. */
+type SkillKey = 'willpower' | 'intellect' | 'combat' | 'agility'
+function skillLabel(investigator: Investigator, key: SkillKey): string {
+  const stat = computeStat(key, investigator[key], investigator.modifiers)
+  return formatStat(stat.current, stat.printed)
+}
 
 function tabClass(investigator: Investigator) {
   const pid = investigator.playerId
@@ -511,7 +519,7 @@ watch(
         <span v-if="isMobile">{{ getInvestigatorName(investigator.name.title).split(' ')[0] }}</span>
         <span v-else>{{ getInvestigatorName(investigator.name.title) }}</span>
         <span v-if="sceneMode" class="tab-meta" :title="$t('locationMap.skillsAndActions')">
-          <b class="sk will">{{ investigator.willpower }}</b><b class="sk int">{{ investigator.intellect }}</b><b class="sk com">{{ investigator.combat }}</b><b class="sk agi">{{ investigator.agility }}</b>
+          <b class="sk will">{{ skillLabel(investigator, 'willpower') }}</b><b class="sk int">{{ skillLabel(investigator, 'intellect') }}</b><b class="sk com">{{ skillLabel(investigator, 'combat') }}</b><b class="sk agi">{{ skillLabel(investigator, 'agility') }}</b>
           <span class="pips" :aria-label="$t('locationMap.actionsLeft', { count: investigator.remainingActions })"><i v-for="n in investigator.remainingActions" :key="n" class="pip"></i><i v-if="investigator.remainingActions === 0" class="pip none"></i></span>
           <!-- Resources and clues held, kept in the always-visible tab: the panel under the card scrolls out of view. -->
           <span class="tok" :title="$t('locationMap.resources')"><GameIcon type="resource" /><b>{{ investigator.tokens[TokenType.Resource] || 0 }}</b></span>

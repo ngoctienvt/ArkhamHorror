@@ -6,7 +6,7 @@ import ts from 'typescript'
 // statModel.ts is import-free on purpose so it can be loaded here without the Vue toolchain.
 const source = readFileSync(new URL('../src/arkham/statModel.ts', import.meta.url), 'utf8')
 const js = ts.transpile(source, { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 })
-const { computeStat, effectsOfSource, blocksEntry, sourceEntityId } = await import(
+const { computeStat, formatStat, effectsOfSource, blocksEntry, sourceEntityId } = await import(
   'data:text/javascript;base64,' + Buffer.from(js).toString('base64')
 )
 
@@ -99,4 +99,13 @@ test('investigator stats count lasting asset bonuses but not ones an effect hand
 
 test('an enemy keeps counting effect modifiers, since they really change the enemy', () => {
   assert.equal(computeStat('fight', 3, [{ ...m('EnemyFight', 1), effect: 'e1' }]).current, 4)
+})
+
+test('a modified stat reads as its final value with the printed value and the change beside it', () => {
+  assert.equal(formatStat(5, 4), '5(4+1)')
+  assert.equal(formatStat(2, 4), '2(4-2)')
+  assert.equal(formatStat(4, 4), '4')
+  const deathXiii = skill('SkillModifier', 'SkillIntellect', 1, 'death')
+  const s = computeStat('intellect', 4, [deathXiii])
+  assert.equal(formatStat(s.current, s.printed), '5(4+1)')
 })

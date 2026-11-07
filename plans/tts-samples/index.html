@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>So sánh giọng đọc</title>
+<style>
+  :root { --bg: #f6f4ef; --fg: #1d1b18; --muted: #6b665d; --card: #fff; --line: #e3ded4; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #151412; --fg: #ece8e0; --muted: #9a948a; --card: #1f1d1a; --line: #33302b; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  p.note { color: var(--muted); margin: 0 0 24px; }
+  h2 { font-size: 16px; margin: 28px 0 10px; }
+  .row { display: grid; grid-template-columns: 150px 1fr; gap: 12px; align-items: center;
+         background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; }
+  .row.current { border-style: dashed; }
+  .name { font-weight: 600; } .name small { display: block; font-weight: 400; color: var(--muted); }
+  audio { width: 100%; }
+  @media (max-width: 520px) { .row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>So sánh giọng đọc tiếng Việt</h1>
+  <p class="note">VieNeu-TTS v3 Turbo chạy trên máy, cùng hiệu ứng giọng tối như trong game. Mỗi bản VieNeu chỉ có tối đa 3 đoạn đầu; bản NamMinh là file hiện có trong game.</p>
+  <div id="list"></div>
+</main>
+<script>
+  const passages = [
+    ["prologue.body", "Hemlock Vale — Prologue"],
+    ["writtenInRock.resolutions.resolution6.body", "Written in Rock — Resolution 6"],
+  ];
+  const voices = [
+    ["namminh", "NamMinh", "Edge, hiện tại"],
+    ["Thiện Minh", "Thiện Minh", "Nam · Bắc · kể chuyện"],
+    ["Thiền Tâm Đức", "Thiền Tâm Đức", "Nam · Bắc · kể chuyện"],
+    ["Thanh Bình", "Thanh Bình", "Nam · Bắc · kể chuyện"],
+    ["Đức Trí", "Đức Trí", "Nam · Nam · đọc truyện"],
+  ];
+  const list = document.getElementById("list");
+  for (const [key, title] of passages) {
+    const h = document.createElement("h2"); h.textContent = title; list.append(h);
+    for (const [file, name, desc] of voices) {
+      const row = document.createElement("div");
+      row.className = "row" + (file === "namminh" ? " current" : "");
+      row.innerHTML = `<div class="name">${name}<small>${desc}</small></div>`;
+      const a = document.createElement("audio");
+      a.controls = true; a.preload = "none"; a.src = encodeURIComponent(`${key}.${file}.mp3`);
+      a.addEventListener("play", () => document.querySelectorAll("audio").forEach(o => o !== a && o.pause()));
+      row.append(a); list.append(row);
+    }
+  }
+</script>
+</body>
+</html>

@@ -28,6 +28,7 @@ import useHighlighter from '@/composable/useHighlighter';
 import Resources from '@/arkham/components/Resources.vue';
 import Draw from '@/arkham/components/Draw.vue';
 import { IsMobile } from '@/arkham/isMobile';
+import { formatStat } from '@/arkham/statModel';
 const { t } = useI18n();
 
 export interface Props {
@@ -551,10 +552,10 @@ const spadeInjury = computed(() => {
     <div class="player-area">
       <div class="player-card">
         <div v-if="!sceneMode" class="stats">
-          <div class="willpower willpower-icon">{{willpower}}</div>
-          <div class="intellect intellect-icon">{{intellect}}</div>
-          <div class="combat combat-icon">{{combat}}</div>
-          <div class="agility agility-icon">{{agility}}</div>
+          <div class="willpower willpower-icon">{{ formatStat(willpower, investigator.willpower) }}</div>
+          <div class="intellect intellect-icon">{{ formatStat(intellect, investigator.intellect) }}</div>
+          <div class="combat combat-icon">{{ formatStat(combat, investigator.combat) }}</div>
+          <div class="agility agility-icon">{{ formatStat(agility, investigator.agility) }}</div>
         </div>
         <div
           v-if="!sceneMode || investigator.sealedChaosTokens.length > 0"

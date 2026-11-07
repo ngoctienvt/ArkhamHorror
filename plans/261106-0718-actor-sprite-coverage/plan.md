@@ -35,5 +35,5 @@ Mỗi investigator và enemy có thể xuất hiện trong Location Scene của 
 - Đợt ưu tiên đã đủ 112 mã investigator và 55 mã enemy của The Feast of Hemlock Vale trong roster runtime. Thêm 57 sprite sơn dầu theo mẫu thành phố ban đêm, gồm 54 investigator và ba enemy Hemlock Vale. Giữ các sprite đã tích hợp từ những đợt trước.
 - [Roster runtime](./runtime-roster.csv) ghi mã và đường dẫn sprite. Các enemy thuộc những campaign khác vẫn được theo dõi trong kế hoạch tổng.
 
-Khi mở lô mới, đối chiếu vùng minh họa giữa các bản in trước khi gửi tạo. Chỉ dùng chung sprite nếu hình và hình dạng trùng nhau, kể cả khi mã hoặc thông số thẻ khác. Với artwork bán thân, dùng một sprite toàn thân làm mẫu khung hình và dùng lá bài đúng mã để giữ nhận dạng. Kiểm tra ảnh đầu ra thấy trọn hình người từ đầu đến chân hoặc toàn bộ hình dạng của quái trước khi tích hợp.
+Từ The Dream-Eaters, tạo một sprite riêng cho mỗi mã thẻ còn thiếu. Dùng lá bài đúng mã để giữ nhận dạng và mẫu thành phố ban đêm cho phong cách sơn dầu. Với tranh bán thân, yêu cầu khung rộng và dựng phần cơ thể bị khuất. Kiểm tra ảnh đầu ra thấy trọn hình người từ đầu đến chân hoặc toàn bộ hình dạng của quái trước khi tích hợp.
 

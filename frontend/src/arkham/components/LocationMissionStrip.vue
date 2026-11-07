@@ -4,6 +4,8 @@ import { useI18n } from 'vue-i18n'
 import type { Game } from '@/arkham/types/Game'
 import type { Scenario } from '@/arkham/types/Scenario'
 import type { GameValue } from '@/arkham/types/Location'
+import { MessageType } from '@/arkham/types/Message'
+import type { ArkhamDBCard } from '@/stores/dbCards'
 import { cardImage } from '@/arkham/cardImages'
 import { useCardInfo } from '@/arkham/composables/useCardNames'
 import { useGameChoices } from '@/arkham/composables/useGameChoices'
@@ -31,7 +33,9 @@ const plain = (text: string | undefined) => (text ?? '')
 
 type Panel = {
   key: string; kind: 'act' | 'agenda'; code: string; image: string; step: number; total: number
-  title: string; flavor: string; textHtml: string; doom: number | null; doomMax: number | null
+  title: string; flavor: string; textHtml: string
+  doom: number | null; doomMax: number | null
+  clues: number | null; clueMax: number | null; advanceIndex: number | null
   choices: EntityChoice[]; actions: ActionRow[]; attached: Attached[]
 }
 
@@ -45,6 +49,48 @@ function doomLimit(threshold: GameValue | null | undefined, fallback: number | n
   if (threshold?.tag === 'Static') return threshold.contents
   if (threshold?.tag === 'PerPlayer') return threshold.contents * Math.max(1, Object.keys(props.game.investigators).length)
   return fallback
+}
+
+function costClueValue(cost: unknown): GameValue | null {
+  if (!cost || typeof cost !== 'object') return null
+  const c = cost as { tag?: string; contents?: unknown }
+  switch (c.tag) {
+    case 'ClueCost':
+    case 'PlaceClueOnLocationCost':
+      return (c.contents as GameValue) ?? null
+    case 'GroupClueCost':
+    case 'SameLocationGroupClueCost':
+    case 'GroupPlaceClueOnLocationCost':
+      return Array.isArray(c.contents) ? (c.contents[0] as GameValue) ?? null : null
+    case 'Costs':
+      if (Array.isArray(c.contents)) {
+        for (const sub of c.contents) {
+          const found = costClueValue(sub)
+          if (found) return found
+        }
+      }
+      return null
+    default:
+      return null
+  }
+}
+
+function clueLimit(advanceCost: unknown, offered: EntityChoice[], card: ArkhamDBCard | null): number | null {
+  const players = Math.max(1, Object.keys(props.game.investigators).length)
+  let gv = costClueValue(advanceCost)
+  if (!gv) {
+    for (const c of offered) {
+      if (kindOf(c.contents) === 'objective' && 'ability' in c.contents && c.contents.ability.type.tag === 'Objective') {
+        const inner = c.contents.ability.type.abilityType as { cost?: unknown }
+        gv = costClueValue(inner.cost)
+        if (gv) break
+      }
+    }
+  }
+  if (gv?.tag === 'Static') return gv.contents
+  if (gv?.tag === 'PerPlayer') return gv.contents * players
+  if (card?.clues && card.clues > 0) return card.clues_fixed ? card.clues : card.clues * players
+  return null
 }
 
 /* An act or agenda's printed action / fast lines are always listed. A line is green when the server
@@ -90,12 +136,16 @@ const firstDeck = computed(() => ({
   agenda: Math.min(...Object.values(props.game.agendas).map((a) => a.deckId)),
 }))
 
-function describe(kind: 'act' | 'agenda', id: string, deckId: number, step: number, flipped: boolean, doom: number | null, threshold?: GameValue | null): Panel {
+function describe(kind: 'act' | 'agenda', id: string, deckId: number, step: number, flipped: boolean, doom: number | null, threshold?: GameValue | null, advanceCost?: unknown): Panel {
   const card = cardInfo(id)
   const stack = kind === 'act'
     ? [props.scenario.actStack[deckId], props.scenario.completedActStack[deckId]]
     : [props.scenario.agendaStack[deckId], props.scenario.completedAgendaStack[deckId]]
   const total = Math.max(step, step + (stack[0]?.length ?? 0) + (stack[1]?.length ?? 0))
+  const entityChoices = choicesFor(choices.value, id)
+  const objectiveChoice = entityChoices.find((c) => kindOf(c.contents) === 'objective')
+  const targetIndex = choices.value.findIndex((c) => c.tag === MessageType.TARGET_LABEL && c.target.contents === id)
+  const advanceIndex = objectiveChoice?.index ?? (targetIndex !== -1 ? targetIndex : null)
   return {
     key: `${kind}${deckId}`, kind, code: id, image: cardImage(id, flipped ? 'b' : ''), step, total,
     title: (flipped ? card?.back_name : card?.name) ?? card?.name ?? id,
@@ -103,29 +153,32 @@ function describe(kind: 'act' | 'agenda', id: string, deckId: number, step: numb
     // The action / fast lines are shown inside their own action box, so they are left out of the body text.
     textHtml: replaceText(
       ((flipped ? card?.back_text : card?.text) ?? '').split(/(\n|<br\s*\/?>)/i)
-        .filter((line) => !LINE_KIND.some(([re, kind]) => (kind === 'action' || kind === 'fast') && re.test(line)))
+        .filter((line) => !LINE_KIND.some(([re, k]) => (k === 'action' || k === 'fast') && re.test(line)))
         .join(''),
     ),
     doom, doomMax: kind === 'agenda' ? doomLimit(threshold, card?.doom ?? null) : null,
-    choices: choicesFor(choices.value, id).filter((c) => !['action', 'fast'].includes(kindOf(c.contents) ?? '')),
-    actions: actionRows((flipped ? card?.back_text : card?.text) ?? '', choicesFor(choices.value, id), id),
+    clues: kind === 'act' ? props.game.totalClues : null,
+    clueMax: kind === 'act' ? clueLimit(advanceCost, entityChoices, card) : null,
+    advanceIndex,
+    choices: entityChoices.filter((c) => !['action', 'fast'].includes(kindOf(c.contents) ?? '') && c.index !== objectiveChoice?.index),
+    actions: actionRows((flipped ? card?.back_text : card?.text) ?? '', entityChoices, id),
     attached: attachedTo(kind, id, deckId === firstDeck.value[kind]),
   }
 }
 
 const panels = computed<Panel[]>(() => [
   ...Object.values(props.game.acts).sort((a, b) => a.deckId - b.deckId)
-    .map((a) => describe('act', a.id, a.deckId, a.sequence.number, false, null)),
+    .map((a) => describe('act', a.id, a.deckId, a.sequence.number, /[bdfh]/i.test(a.sequence.side), null, null, a.advanceCost)),
   ...Object.values(props.game.agendas).sort((a, b) => a.deckId - b.deckId)
     .map((a) => describe('agenda', a.id, a.deckId, a.sequence.step, a.flipped, a.doom, a.doomThreshold)),
 ])
 
-/* When an agenda's doom changes, the pips between the old and new count animate for a moment so the
- * player sees where the doom landed (or came off). Keyed by panel; cleared after the animation. */
+/* When an agenda's doom or act's clues change, the pips between the old and new count animate for a moment
+ * so the player sees the change. Keyed by panel; cleared after the animation. */
 const doomChange = ref<Record<string, { from: number; to: number }>>({})
 const timers = new Map<string, ReturnType<typeof setTimeout>>()
 watch(
-  () => panels.value.filter((p) => p.kind === 'agenda').map((p) => [p.key, p.doom ?? 0] as const),
+  () => panels.value.map((p) => [p.key, (p.kind === 'agenda' ? p.doom : p.clues) ?? 0] as const),
   (now, before) => {
     for (const [key, doom] of now) {
       const prev = before?.find(([k]) => k === key)?.[1]
@@ -219,7 +272,37 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
           <span v-if="p.doomMax && p.doomMax - p.doom <= 0" class="doom-alert">{{ t('locationMap.doomAdvancing') }}</span>
           <span v-else-if="p.doomMax && p.doomMax - p.doom === 1" class="doom-alert">{{ t('locationMap.doomImminent') }}</span>
         </div>
-        <div v-if="p.kind === 'act'" class="total clue-total" :title="t('locationMap.totalClues')"><GameIcon type="clue" /> {{ t('locationMap.totalClues') }} <b>{{ game.totalClues }}</b></div>
+        <div
+          v-if="p.clues !== null"
+          class="clues"
+          :class="{ 'clues--changed': !!doomChange[p.key], 'clues--ready': p.clueMax !== null && p.clues >= p.clueMax }"
+        >
+          <div class="clue-row">
+            <div v-if="p.clueMax && p.clueMax <= 14" class="doom-pips clue-pips" role="img" :aria-label="t('locationMap.clueCount', { count: p.clues, max: p.clueMax })">
+              <i
+                v-for="n in p.clueMax"
+                :key="n"
+                class="pip pip--clue"
+                :class="{ filled: n <= p.clues!, 'pip--clue-gain': pipChanged(p.key, n) && n <= p.clues!, 'pip--loss': pipChanged(p.key, n) && n > p.clues! }"
+              ><GameIcon type="clue" /></i>
+              <span v-if="doomChange[p.key] && doomChange[p.key].to !== doomChange[p.key].from" :key="doomChange[p.key].to" class="doom-delta clue-delta" :class="{ 'doom-delta--loss': doomChange[p.key].to < doomChange[p.key].from }">
+                {{ doomChange[p.key].to > doomChange[p.key].from ? '+' : '−' }}{{ Math.abs(doomChange[p.key].to - doomChange[p.key].from) }}
+              </span>
+            </div>
+            <i v-else-if="p.clueMax" class="clue-bar"><b :style="{ width: Math.min(100, (100 * p.clues) / p.clueMax) + '%' }"></b></i>
+            <div class="total clue-total" :title="t('locationMap.clueCount', { count: p.clues, max: p.clueMax ?? '—' })">
+              <GameIcon type="clue" /> {{ t('locationMap.clueCount', { count: p.clues, max: p.clueMax ?? '—' }) }}
+            </div>
+            <button
+              type="button"
+              class="advance-btn"
+              :class="p.advanceIndex !== null ? 'advance-btn--ready' : 'advance-btn--disabled'"
+              :disabled="p.advanceIndex === null"
+              :title="p.advanceIndex !== null ? t('locationMap.advanceAct') : t('locationMap.actionUnavailable')"
+              @click="p.advanceIndex !== null && emit('choose', p.advanceIndex)"
+            >{{ t('locationMap.advanceAct') }}</button>
+          </div>
+        </div>
           </div>
         </div>
         <p v-if="p.flavor" class="flavor" :title="p.flavor">{{ p.flavor }}</p>
@@ -300,6 +383,27 @@ p { margin: 0; font-size: 0.74rem; line-height: 1.3; }
 .pip :deep(.game-icon) { width: 14px; height: 14px; opacity: 0.35; filter: grayscale(1) brightness(1.3); }
 .pip.filled { border-color: #ff7a64; background: #5a1a14aa; box-shadow: 0 0 4px #ff5a4a88; }
 .pip.filled :deep(.game-icon) { opacity: 1; filter: drop-shadow(0 1px 1.5px #000a); }
+.pip--clue { border-color: #7ab8cc99; background: #9fd3e61a; }
+.pip--clue.filled { border-color: #6ce0a3; background: #144932cc; box-shadow: 0 0 5px #45d98888; }
+.clues { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; font-size: 0.7rem; color: #9fd3e6; }
+.clue-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px; }
+.clue-bar { display: block; width: 72px; height: 6px; background: #27424c; border-radius: 3px; overflow: hidden; }
+.clue-bar b { display: block; height: 100%; background: #5fd88a; }
+.clues--ready .clue-total { border-color: #5fd88acc; color: #c7f9d8; }
+.clues--changed { animation: clue-flash 1.4s ease-out; }
+.pip--clue-gain { animation: pip-clue-gain 1.1s cubic-bezier(.2,1.6,.4,1) both; }
+.clue-delta { color: #7ef0a8; text-shadow: 0 0 8px #3ddc7a; }
+.advance-btn { padding: 2px 9px; border-radius: 999px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; border: 1px solid #4a5550; background: #232c27; color: #7f8c84; transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.1s; }
+.advance-btn--disabled { cursor: not-allowed; opacity: 0.65; }
+.advance-btn--ready { cursor: pointer; background: linear-gradient(180deg, #279a4c, #1b6e35); border-color: #7ef0a8; color: #f4fff7; box-shadow: 0 0 8px #3ddc7a88; animation: advance-pulse 1.5s ease-in-out infinite; }
+.advance-btn--ready:hover { background: linear-gradient(180deg, #2fb359, #218340); transform: translateY(-1px); }
+@keyframes advance-pulse { 50% { box-shadow: 0 0 12px 2px #5fd88acc; } }
+@keyframes pip-clue-gain {
+  0% { transform: scale(2.4); box-shadow: 0 0 0 0 #45d988cc; filter: brightness(2); }
+  50% { transform: scale(1.35); box-shadow: 0 0 14px 6px #45d98899; }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 #45d98800; filter: none; }
+}
+@keyframes clue-flash { 0% { background: #3ddc7a44; } 100% { background: transparent; } }
 .doom-left { color: #b9a88a; }
 .doom-alert { font-weight: 700; color: #ff9b86; }
 .doom--warn .pip.filled :deep(.game-icon) { filter: drop-shadow(0 0 3px #f0b070); }

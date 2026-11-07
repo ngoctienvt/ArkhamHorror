@@ -191,6 +191,8 @@
     "hand": "Tay · {count}",
     "agenda": "Agenda",
     "doomCount": "Doom {count} / {max}",
+    "clueCount": "Clue {count} / {max}",
+    "advanceAct": "Advance Act",
     "actionUnavailable": "Hiện chưa dùng được",
     "doomLeft": "Còn {n} doom nữa là advance",
     "doomImminent": "Chỉ còn 1 doom — agenda sẽ advance ở Mythos tới!",

@@ -151,6 +151,14 @@ export function computeStat(key: StatKey, printed: number, modifiers: readonly M
   return { key, printed, current: value, parts, ...trendOf(key, printed, value) }
 }
 
+/** A stat as a label: the final value alone, or `5(4+1)` when modifiers moved it off the printed value,
+ * so the player sees at a glance that the number is not the one on the card. */
+export function formatStat(current: number, printed: number): string {
+  if (current === printed) return String(current)
+  const delta = current - printed
+  return `${current}(${printed}${delta > 0 ? '+' : ''}${delta})`
+}
+
 /** A modifier that is not a number: something the holder can no longer do, or can no longer be done to it. */
 const FLAGS = new Set([
   'CannotEnter', 'CannotBeEnteredBy', 'Blank', 'BlankExceptForcedAbilities', 'CannotDiscoverCluesAt',
