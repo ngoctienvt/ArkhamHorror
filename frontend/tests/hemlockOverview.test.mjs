@@ -136,3 +136,14 @@ test('The Drowned City scenarios select their overview boards', () => {
   assert.equal(hemlockOverview('c11688a', 'c11688a')?.image, 'img/scenes/the-drowned-city/the-doom-of-arkham-part-2.webp')
   assert.equal(hemlockOverview('c11688b', 'c11688b')?.image, 'img/scenes/the-drowned-city/the-doom-of-arkham-part-2.webp')
 })
+
+test('Dark Matter scenarios select their overview boards', () => {
+  assert.equal(hemlockOverview(':dark-matter:014', ':dark-matter:014')?.image, 'img/scenes/dark-matter/the-tatterdemalion.webp')
+  assert.equal(hemlockOverview(':dark-matter:054', ':dark-matter:054')?.image, 'img/scenes/dark-matter/electric-nightmare.webp')
+  assert.equal(hemlockOverview(':dark-matter:089', ':dark-matter:089')?.image, 'img/scenes/dark-matter/lost-quantum.webp')
+  assert.equal(hemlockOverview(':dark-matter:112', ':dark-matter:112')?.image, 'img/scenes/dark-matter/in-the-shadow-of-earth.webp')
+  assert.equal(hemlockOverview(':dark-matter:153', ':dark-matter:153')?.image, 'img/scenes/dark-matter/strange-moons.webp')
+  assert.equal(hemlockOverview(':dark-matter:190', ':dark-matter:190')?.image, 'img/scenes/dark-matter/the-machine-in-yellow.webp')
+  assert.equal(hemlockOverview(':dark-matter:209', ':dark-matter:209')?.image, 'img/scenes/dark-matter/fragment-of-carcosa.webp')
+  assert.equal(hemlockOverview(':dark-matter:243', ':dark-matter:243')?.image, 'img/scenes/dark-matter/starfall.webp')
+})

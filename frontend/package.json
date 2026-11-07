@@ -21,6 +21,7 @@
     "import-fr-cards": "node ./scripts/import-card-translations.cjs --source-locale fr --output-lang fr --slim",
     "import-zh-cn-cards": "node ./scripts/import-card-translations.cjs --source-locale zh-cn --output-lang zh-cn --slim",
     "slim-cards": "node ./scripts/slim-cards.cjs",
+    "import-homebrew-cards": "node ./scripts/import-arkham-build-homebrew.cjs",
     "check:locale-markup": "node ./scripts/check-locale-markup.cjs"
   },
   "dependencies": {

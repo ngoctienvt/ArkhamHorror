@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { homebrewCampaignOf, loadHomebrewCampaignCards } from '@/arkham/homebrewCardData'
 
 export interface ArkhamDBCard {
   code: string
@@ -55,7 +56,16 @@ export interface DbCardsState {
   // without this a missing or malformed cards_<lang>.json is re-requested for
   // the rest of the session.
   failedLangs: Set<string>
+  // Fan-made campaign cards (see homebrewCardData.ts), kept out of `dbCards` so
+  // name searches over the ArkhamDB list never pick up a homebrew namesake.
+  homebrewIndex: Map<string, ArkhamDBCard>
 }
+
+/* The language `homebrewIndex` holds and each campaign's fetch in it. Kept out of
+ * the reactive state: lookups run inside computeds, and recording a request there
+ * must not re-trigger them. */
+let homebrewLang: string | null = null
+let homebrewRequested = new Map<string, Promise<void>>()
 
 /* A card's `b` face has no record of its own unless ArkhamDB stores one, so a record
  * lends the face its own entry -- the overlay then reads the `back_*` fields. Alias in
@@ -89,7 +99,8 @@ export const useDbCardStore = defineStore("dbCards", {
     dbCardsByRealName: new Map(),
     lang: 'en',
     loadingLang: null,
-    failedLangs: new Set<string>()
+    failedLangs: new Set<string>(),
+    homebrewIndex: new Map()
   } as DbCardsState),
 
   actions: {
@@ -100,7 +111,42 @@ export const useDbCardStore = defineStore("dbCards", {
 
       // ArkhamDB stores some split-card fronts with an "a" suffix, while the
       // game runtime refers to the same front using the unsuffixed code.
-      return this.dbCardsIndex.get(code) ?? this.dbCardsIndex.get(`${code}a`) ?? null
+      const official = this.dbCardsIndex.get(code) ?? this.dbCardsIndex.get(`${code}a`)
+      if (official) return official
+
+      const campaign = homebrewCampaignOf(code)
+      if (!campaign) return null
+      void this.loadHomebrewCampaign(campaign)
+      const bare = code.replace(/^c(?=:)/, '')
+      return this.homebrewIndex.get(bare) ?? this.homebrewIndex.get(`${bare}a`) ?? null
+    },
+
+    /* A homebrew campaign's records, fetched the first time one of its cards is
+     * looked up (in the player's language, English when it has none), and again
+     * after the language changes. */
+    loadHomebrewCampaign(campaign: string): Promise<void> {
+      const lang = globalThis.localStorage?.getItem('language') || 'en'
+      if (homebrewLang !== lang) {
+        homebrewLang = lang
+        homebrewRequested = new Map()
+        if (this.homebrewIndex.size > 0) this.homebrewIndex = new Map()
+      }
+
+      // A second ask shares the first one's fetch.
+      const pending = homebrewRequested.get(campaign)
+      if (pending) return pending
+
+      const load = (async () => {
+        try {
+          const cards = await loadHomebrewCampaignCards(campaign, lang)
+          if (homebrewLang !== lang) return
+          this.homebrewIndex = new Map([...this.homebrewIndex, ...buildCardIndex(cards)])
+        } catch (e) {
+          console.error(`Failed to load homebrew card data for ${campaign}`, e)
+        }
+      })()
+      homebrewRequested.set(campaign, load)
+      return load
     },
 
     /* The engine codes some faces ArkhamDB does not record separately -- the five

@@ -14,7 +14,8 @@
   "activeGames": "Ván đang chơi",
   "continue": "Tiếp tục",
   "mulligan": {
-    "title": "Đổi bài: chọn các lá muốn thay",
+    "heading": "Mulligan: đổi bài đầu ván",
+    "title": "Mulligan: chọn các lá muốn đổi",
     "hint": "Chọn tất cả các lá muốn đổi rồi bấm xác nhận.",
     "keep": "Giữ bài này",
     "confirm": "Đổi {count} lá | Đổi {count} lá",
@@ -480,5 +481,35 @@
     "takeDamageAndHorror": "Nhận {damage} tổn thương thể chất và {horror} tổn thương tinh thần",
     "loseActions": "Mất 1 hành động | Mất {count} hành động",
     "loseResources": "Mất 1 tài nguyên | Mất {count} tài nguyên"
+  },
+  "scarletKeys": {
+    "dossierHeader": "Bạn có thể đọc hồ sơ này bất cứ lúc nào",
+    "youAreCurrentlyHere": "Bạn hiện đang ở đây.",
+    "travelHere": "Di chuyển đến đây",
+    "travelTime": "Thời gian di chuyển",
+    "sideStoryLocation": "Đây là một địa điểm ngoại truyện (side-story).",
+    "sideStoryDescription": "Nếu bạn muốn thêm một ngoại truyện vào chiến dịch này, bạn có thể di chuyển đến địa điểm này và tốn thêm thời gian bằng với số kinh nghiệm thông thường để chơi ngoại truyện đó.",
+    "travelWithExpeditedTicket": "Di chuyển bằng Vé Tốc Hành (1 time)",
+    "travelWithoutStopping": "Đi ngang qua đây mà không dừng lại",
+    "locationLocked": "Địa điểm này hiện đang bị khóa."
+  },
+  "keysStatus": {
+    "keys": "Chìa khóa",
+    "nameOfArtifact": "Tên Cổ Vật Đa Chiều",
+    "bearer": "Người mang"
+  },
+  "calendar": {
+    "timePassed": "Thời gian trôi qua"
+  },
+  "worldMap": {
+    "toggleFullscreen": "Bật/tắt toàn màn hình"
+  },
+  "deckRestrictions": {
+    "scarletKeys": {
+      "redGlovedMan": {
+        "description": "Không thể đưa The Red-Gloved Man vào bộ bài.",
+        "error": "Chiến dịch The Scarlet Keys không cho phép đưa The Red-Gloved Man vào bộ bài."
+      }
+    }
   }
 }

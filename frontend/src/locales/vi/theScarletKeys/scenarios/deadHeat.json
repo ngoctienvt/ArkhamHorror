@@ -1,0 +1,124 @@
+{
+  "xp": {
+    "rescuedCivilians": "Thường dân được giải cứu"
+  },
+  "heading": "Hồ sơ #11-B",
+  "rules": {
+    "civilians": {
+      "title": "Civilians",
+      "body": "<p class='basic'>Trong màn chơi này, các resource trên các địa điểm đại diện cho những thường dân (civilian) vô tội của Marrakesh, những người đang gặp nguy hiểm nghiêm trọng.</p><ul><li>Đối với mục đích di chuyển và tấn công của kẻ địch, kẻ địch coi các civilian như thể họ là điều tra viên. (Kẻ địch không engage với civilian, nhưng có thể tấn công các civilian tại địa điểm của chúng như thể họ đang bị engage.) Nếu một civilian bị tấn công, họ tự động bị tiêu diệt (slain).</li><li>Các civilian vẫn hiện diện tại một địa điểm khi địa điểm đó được lật mở.</li><li>Khi một civilian bị slain, đặt token đó lên scenario reference card để theo dõi số lượng civilian đã bị slain.</li></ul>"
+    },
+    "choosingARandomLocation": {
+      "title": "Chọn một Địa điểm Ngẫu nhiên",
+      "body": "<p class='basic'>Trong màn chơi này, bạn sẽ thường xuyên được hướng dẫn chọn một địa điểm ngẫu nhiên. Việc này được thực hiện bằng cách xào chung 5 địa điểm hiện không ở trong khu vực chơi (các phiên bản hiện không được sử dụng của mỗi địa điểm đang trong khu vực chơi) và rút ngẫu nhiên 1 địa điểm.</p>"
+    },
+    "replacingLocations": {
+      "title": "Thay thế các Địa điểm",
+      "body": "<p class='basic'>Xuyên suốt màn chơi này, bạn có thể được hướng dẫn hoán đổi các địa điểm để riêng với các địa điểm hiện có. Khi một địa điểm được hoán đổi với một địa điểm đã ở trong khu vực chơi, nó sẽ thế chỗ địa điểm đó. Tất cả các token, attachment, điều tra viên, kẻ địch và các lá bài khác tại địa điểm cũ được coi là hiện đang ở tại địa điểm mới (ví dụ: các lá bài đính kèm vẫn tiếp tục được đính kèm). Không có thành phần trò chơi nào được coi là đã di chuyển trong quá trình hoán đổi như vậy.</p>"
+    }
+  },
+  "specialRules": [
+    {
+      "title": "@:theScarletKeys.deadHeat.rules.civilians.title",
+      "body": "@:theScarletKeys.deadHeat.rules.civilians.body"
+    },
+    {
+      "title": "@:theScarletKeys.deadHeat.rules.choosingARandomLocation.title",
+      "body": "@:theScarletKeys.deadHeat.rules.choosingARandomLocation.body"
+    },
+    {
+      "title": "@:theScarletKeys.deadHeat.rules.replacingLocations.title",
+      "body": "@:theScarletKeys.deadHeat.rules.replacingLocations.body"
+    }
+  ],
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 với mỗi 1 {'{'}perPlayer{'}'} civilian bị slain.",
+      "cultist": "-4. Nếu bạn thất bại, chọn một kẻ địch không phải _Elite_ tại địa điểm của bạn. Kẻ địch đó ready và tấn công bạn.",
+      "tablet": "-1. Bạn có thể nhận 1 damage. Nếu không làm vậy, một civilian tại địa điểm của bạn bị slain.",
+      "elderThing": "-3. Nếu bạn thất bại, chọn và loại bỏ 1 lá bài từ trên tay bạn."
+    },
+    "hardExpert": {
+      "skull": "-2 với mỗi 1 {'{'}perPlayer{'}'} civilian bị slain.",
+      "cultist": "-6. Chọn một kẻ địch không phải _Elite_ tại địa điểm của bạn. Kẻ địch đó ready và tấn công bạn.",
+      "tablet": "-2. Nhận 1 damage. Một civilian tại địa điểm của bạn bị slain.",
+      "elderThing": "-4. Nếu bạn thất bại, loại bỏ ngẫu nhiên 1 lá bài từ trên tay bạn."
+    }
+  },
+  "label": {
+    "gnashingTeeth": {
+      "heal": "Hồi 2 damage cho mỗi kẻ địch Elite đang in play.",
+      "slain": "1 civilian tại địa điểm của bạn bị slain."
+    },
+    "tablet": {
+      "doNotTakeDamage": "Không nhận damage (một civilian tại địa điểm của bạn, nếu có, sẽ bị slain)"
+    },
+    "cornered": {
+      "slain": "1 civilian tại địa điểm của bạn bị slain."
+    }
+  },
+  "tooltips": {
+    "marrakeshRailwayStation": {
+      "resign": "Bạn chạy trốn khỏi thành phố. (Lưu ý: Nếu không còn điều tra viên nào in play, tất cả các civilian còn lại in play sẽ bị slain.)"
+    },
+    "marrakeshRailwayStationAbandoned": {
+      "resign": "Bạn chạy trối chết. (Lưu ý: Nếu không còn điều tra viên nào in play, tất cả các civilian còn lại in play sẽ bị slain.)"
+    }
+  },
+  "intro": {
+    "title": "Hồ sơ #11–B: Sức Nóng Chết Chóc",
+    "lessThan15": "Nếu có ít hơn 15 time đã trôi qua, tiếp tục đến Intro 2.",
+    "between15And24": "Nếu có từ 15 đến 24 time đã trôi qua, chuyển đến Intro 3.",
+    "moreThan24": "Nếu có từ 25 time trở lên đã trôi qua, chuyển đến Intro 4.",
+    "intro1": "<p class='file'>_Intro 1_: Bạn giật mình tỉnh giấc bởi tiếng rít của bánh xe khi đoàn tàu rung lên rồi dừng lại. Dù mới chỉ sáng sớm, sức nóng từ mặt trời đã bốc lên thành những làn sóng lung linh từ mặt đường oi bức, bao phủ Marrakesh trong một thứ ánh sáng mờ ảo kỳ bí. Đầu bạn đau như búa bổ. Thành phố chập chờn như một ảo ảnh giữa sa mạc Ma-rốc.</p><p class='basic'>Kiểm tra xem có bao nhiêu time đã trôi qua trong Nhật ký Chiến dịch.</p>",
+    "intro2": "<p class='file'>_Intro 2_: Bạn gặp người liên lạc của mình trên sân thượng một quán cà phê nhỏ không xa nhà ga xe lửa. Dáng người trẻ trung của ông ta tương phản với bộ râu xám được cắt tỉa gọn gàng che đi những nếp nhăn sâu do cười. “Chắc hẳn các bạn là người của Foundation,” ông ta đưa tay ra bắt. “Tôi là Latif. Xin mời ngồi. Chắc các bạn đang đói.”</p><p>Chiếc bàn đầy ắp những bát đĩa chất đầy trứng, ô liu và phô mai béo ngậy ăn kèm bánh mì dẹt cùng trà atay nóng. Trong khi bạn ăn, Latif trải một xấp báo lên bàn giữa hai bên. “Tôi không muốn làm hỏng khẩu vị của các bạn, những người bạn của tôi, nhưng có một mục đích xấu xa đang diễn ra trong thành phố.” Ông ta chỉ vào ba tiêu đề khác nhau:</p><p class='typewriter center'>VỤ TRỘM LĂNG MỘ BÍ ẨN<br />DỊCH BỆNH ĐỘT NGỘT TÀN PHÁ VƯỜN Ô LIU<br />HÀNG CHỤC NGƯỜI MẤT TÍCH Ở MEDINA</p><p>Một cơn gió ấm áp, nồng nặc thổi qua người bạn, làm xào xạc tờ báo. Latif thì thầm đầy âm mưu, “Tôi cho rằng các bạn đã đọc hồ sơ. Người tự gọi mình là Amaranth đã được nhìn thấy ở đây, và tôi tin rằng cô ta là kẻ chịu trách nhiệm.” Nhìn qua vai mình, người đàn ông trung niên lấy ra một bức ảnh sắc nét về một phụ nữ xinh đẹp tầm 20 tuổi trong chiếc váy đen và đôi găng tay đồng bộ, một bông hoa sặc sỡ cài sau tai.</p><p>“Ngay tối qua, tôi đã cử người liên lạc của mình đi thu thập bất kỳ thông tin nào có thể về nơi ở của cô ta. Anh ta vẫn chưa trở lại. Tôi e là điều tồi tệ nhất đã xảy ra,” Latif nói, vẻ mặt buồn bã. “Nhưng tôi cho rằng đó là lý do các bạn ở đây! Ủy viên luôn cử những người như…” ông ta nhìn bạn như thể đang cân nhắc lời nói của mình. “Những người độc nhất vô nhị.”</p><p>Bạn trấn an Latif rằng dù bạn có thể là người mới tại Foundation, nhưng bạn thừa khả năng để xử lý tình huống này.</p><p>“Tôi thực sự hy vọng vậy,” Latif nói, uống một ngụm lớn trà bạc hà nóng. “Có điều gì đó kỳ lạ đang xảy ra ở đây. Anh trai tôi kể rằng ông ấy thấy người ông quá cố của chúng tôi đi bộ trên phố trong bộ liệm chôn cất. Tôi bảo anh ấy chắc là anh ấy nằm mơ, nhưng tôi đã nghe những câu chuyện tương tự. Đi dạo trên phố vào ban đêm không còn an toàn nữa. Tôi tin rằng có một loại ma thuật khủng khiếp nào đó đang tác động. Một ảnh hưởng phi tự nhiên. Giá như Foundation không biên tập lại các bức thư của chính họ!”</p><p>Bạn dành phần còn lại của buổi sáng để xem xét xấp báo và những bản viết tay mà Latif đã thu thập. “Vụ trộm lăng mộ” đầu tiên được báo cáo trong chuỗi sự kiện gần đây là của Razin Farhi, một triết gia và nhà toán học thế kỷ 16. “Có tin đồn rằng ông ấy là một trong những thành viên sáng lập của Red Coterie,” Latif nói với bạn. Tâm trí bạn chạy đua khi cố gắng ghép các thông tin lại với nhau: liệu Amaranth có đang săn lùng một chiếc Key khác?</p><p>“Dù chuyện gì đang xảy ra, chúng ta không thể ngồi chờ đợi một cách nhàn rỗi,” Latif nói.</p><p class='basic right'>Tiếp tục đến _Setup_.</p>",
+    "intro3": "<p class='file'>_Intro 3_: Không có chiếc taxi nào để gọi bên ngoài nhà ga, vì vậy bạn đi bộ đến gặp người liên lạc của mình trên sân thượng của một quán cà phê gần như trống rỗng. Người đàn ông chào đón bạn có vóc dáng trẻ trung, bù lại bằng một bộ râu được cắt tỉa gọn gàng che đi những nếp nhăn sâu nơi khóe miệng. Tuy nhiên, anh ta không cười. “Bạn đến muộn,” anh ta nói một cách nghiêm trọng. “Tôi đã gửi một bức điện tín cho Foundation yêu cầu hỗ trợ. Chúng ta đang ở trong tình cảnh vô cùng khó khăn, như bạn nói.”</p><p>Bạn xin lỗi và nói với anh ta rằng bạn đã làm hết sức có thể, và anh ta lo lắng xoa trán. “Tôi xin lỗi. Thật tốt khi bạn ở đây, nhưng tôi e rằng mọi thứ đã bắt đầu rồi. Những thứ mà chúng ta không còn thời gian hay sức mạnh để ngăn chặn nữa.” Anh ta ra hiệu cho bạn ngồi. “Tôi là Latif. Xin mời. Bạn sẽ muốn ngồi xuống để nghe chuyện này đấy.”</p><p>Một loạt các món ngon địa phương hấp dẫn đã được bày ra trên bàn, nhưng đánh giá từ những phần còn sót lại ít ỏi, Latif đã ăn hầu hết chúng do căng thẳng. Anh ta lần lượt cho bạn xem vài tờ báo với các tiêu đề chi tiết về những ngôi mộ bị mạo phạm, mùa màng chết héo, và vô số báo cáo về người mất tích. Khi anh ta thuật lại những sự kiện đáng lo ngại này cho bạn, bạn ngửi thấy một mùi hôi thối thoảng trong gió. Nhìn ra khắp thành phố, bạn thấy một mạng lưới những dây leo đen như mực chạy dọc theo mặt tiền các tòa nhà. Nhìn từ xa, chúng trông giống như những đường gân nổi lên trên một cơ thể đang hấp hối.</p><p>“Bạn của tôi?” Giọng của Latif phá vỡ dòng suy nghĩ của bạn. Bạn xin lỗi, và hỏi anh ta về những dây leo. Người đàn ông trung niên thở dài. “Có vẻ như lại là một bí ẩn khác. Đêm qua, có một sự náo động lớn bên ngoài Bahia Palace. Tiếng la hét và nghiến răng. Tôi đã cử một trong những người cung cấp thông tin của mình đi điều tra và anh ta không bao giờ trở lại. Ngay sau đó, những bông hoa đen kỳ lạ xuất hiện, mọc trên mọi bức tường và bề mặt. Chúng bốc mùi thối rữa và mọc ra những cái gai sắc nhọn, khủng khiếp. Tôi không dám chạm vào chúng đâu.”</p><p>“Trước khi chuyện kỳ lạ này bắt đầu, anh trai tôi nói với tôi rằng anh ấy đã nhìn thấy người ông quá cố của chúng tôi đi bộ trên phố trong tấm vải liệm. Tôi hẳn đã gạt bỏ chuyện đó nếu không có hàng tá câu chuyện tương tự. Bây giờ có những đám đông người di chuyển chậm chạp, im lặng đi bộ trên đường phố. Ánh mắt của họ trống rỗng, mặc dù bụng của họ thì không,” Latif nói một cách cay đắng, rồi uống cạn phần còn lại trong tách trà của mình.</p><p>“Tôi tin rằng người tự xưng là Amaranth phải chịu trách nhiệm. Bạn có thể nhận ra cô ta từ hồ sơ của Foundation. Thật ‘hữu ích’ làm sao khi họ bôi đen những chi tiết quan trọng nhất trong chính những bức thư của mình!” Latif đưa ra một bức ảnh sắc nét của một người phụ nữ xinh đẹp ngoài 20 tuổi trong chiếc váy đen và đôi găng tay đồng bộ, một bông hoa sặc sỡ cài sau tai.</p><p>“Một người cung cấp thông tin khác của tôi nói rằng anh ta đã nhìn thấy ‘Amaranth’ này tại Bahia Palace Gardens. Một số việc kỳ lạ đang diễn ra, và cô ta là trung tâm của nó. Tôi nói chúng ta hãy đến cung điện và chấm dứt bất cứ kế hoạch tồi tệ nào mà cô ta đang thực hiện, nhưng hãy sẵn sàng cho mọi thứ.”</p><p>Bạn ngửi thấy một mùi thối rữa giờ đã quen thuộc thoảng trong gió, và nhìn xuống mép sân thượng của quán cà phê. Một tua cuốn đơn độc, màu đen đã bò lên bên hông tòa nhà. Ở cuối dây leo, một quả thể màu đen, phình to đã bắt đầu phát triển. Bạn không chắc liệu đó có phải là ảo giác do ánh nắng cuối buổi sáng hay không, hay có một quá trình kỳ lạ nào khác đang diễn ra, nhưng bạn có thể thề rằng mình đã thấy một tia sáng xanh lục phát quang lấp lánh dọc theo quả thể đó, và một chuyển động rõ rệt, mặc dù không có gió.</p><p class='basic right'>Tiếp tục đến _Setup_.</p>",
+    "intro4": "<p class='file'>_Intro 4_: Một mùi khói và sự thối rữa chào đón bạn khi bạn bước xuống tàu. Bạn là một trong số ít những người xuất hiện trên sân ga trống trải của nhà ga. Những dây leo màu đen, khô héo leo lên các mặt của những tòa nhà xung quanh và kết thúc bằng những bông hoa màu đỏ rực rỡ. Một sự im lặng kỳ quái bao trùm lên mọi thứ.</p><p>Trên đường đi gặp người liên lạc của mình, bạn đi ngang qua một vài người rải rác bước đi với dáng vẻ ngập ngừng, vụng về. Vài người trong số họ vươn tay về phía bạn khi bạn giữ một khoảng cách an toàn, và bạn thấy da họ vàng vọt và khô khốc, còn đôi mắt họ có một cái nhìn trống rỗng, vô hồn. Một đám ruồi bay theo sau họ, kêu vo ve không ngớt. Bạn hầu như không ngạc nhiên khi thấy cánh cửa quán cà phê nơi bạn dự định gặp một người tên “Latif” đã bị đóng ván kín mít.</p><p>Cái chết đen ngòm nở rộ trên các bức tường và mặt tiền cửa hàng, tất cả đều được rào chắn vội vã. Những ánh mắt sợ hãi nhìn bạn từ giữa những tấm ván ghép. Marrakesh đang trong tình trạng hoàn toàn hoang tàn. Sau khi đi lang thang quanh thành phố, bạn phát hiện ra tâm điểm của những dây leo đen kỳ lạ nằm trong tàn tích bị nghiền nát của Bahia Palace. Trong những khu vườn mọc um tùm, bạn tìm thấy tàn dư của một nghi lễ kỳ lạ, nhưng không có dấu vết của những kẻ đã thực hiện nó.</p><p class='basic right'>Chuyển đến _Resolution 5_.</p>"
+  },
+  "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các bộ bài encounter sau: *Dead Heat*, *Scarlet Sorcery*, *Spreading Corruption*, *Ghouls*, và *Striking Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/dead-heat.png' /><img src='{setImgPath}/scarlet-sorcery.png' /><img src='{setImgPath}/spreading-corruption.png' /><img src='{setImgPath}/ghouls.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
+    "placeLocations": "Đặt tất cả 5 địa điểm _Marrakesh_ vào chơi, chỉ sử dụng các phiên bản không phải _Abandoned_ của chúng. Để riêng phiên bản _Abandoned_ của mỗi địa điểm.",
+    "beginPlay": "Mỗi điều tra viên bắt đầu chơi tại Marrakesh Railway Station.",
+    "civilians": "Đối với mỗi địa điểm đang trong trò chơi, đặt số resource lên đó bằng số lượng điều tra viên cộng thêm một, dưới dạng civilians (*xem “Civilians,” bên dưới*). Sau đó, kiểm tra Nhật ký Chiến dịch:",
+    "tenOrFewerTime": "Nếu có từ 10 _time_ trở xuống đã trôi qua, không có thay đổi nào được thực hiện.",
+    "elevenToSeventeenTime": "Nếu 11–17 _time_ đã trôi qua, chọn 1 {'{'}perPlayer{'}'} civilian đồng đều nhất có thể giữa tất cả các địa điểm đang trong trò chơi. Những civilian đó bị slain.",
+    "eighteentoTwentyFourTime": "Nếu 18–24 _time_ đã trôi qua, chọn 2 {'{'}perPlayer{'}'} civilian đồng đều nhất có thể giữa tất cả các địa điểm đang trong trò chơi. Những civilian đó bị slain.",
+    "setOutOfPlay": "Đặt các lá bài sau sang một bên, out of play: kẻ địch Amaranth hai mặt, kẻ địch Razin Farhi, kẻ địch Khalid, cả hai bản sao của kẻ địch Ancient Raider, chìa khóa The Last Blossom, và lá bài story “Save the Civilians / Aftermath” hai mặt.",
+    "decks": "Kiểm tra Nhật ký Chiến dịch và xây dựng chồng bài act và/hoặc agenda tương ứng.",
+    "fewerThanFifteenTime": " Nếu ít hơn 15 _time_ đã trôi qua, không có thay đổi nào được thực hiện.",
+    "fifteenToTwentyFourTime": "Nếu từ 15 đến 24 _time_ đã trôi qua, loại bỏ act 1 khỏi trò chơi. Trò chơi bắt đầu tại act 2a. Đặt doom bằng với số lượng người chơi lên agenda 1. Spawn Amaranth (*Lurking Corruption*) tại Bahia Palace Garden, và đính kèm The Last Blossom vào cô ta. Đặt lá bài story Save the Civilians đã để riêng vào chơi. Xào kẻ địch Khalid vào encounter deck."
+  },
+  "resolutions": {
+    "xp": {
+      "bonus": "Giúp những người sống sót của thành phố tái thiết"
+    },
+    "noResolution": {
+      "title": "Không có Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Bạn kinh hoàng chứng kiến những tàn tích của thành phố bị xâm chiếm bởi những dây leo quỷ quyệt. Những thường dân còn lại bị nuốt chửng bởi tay sai của Amaranth. Khi chứng kiến cảnh tượng tàn phá phơi bày trước mắt, bạn ước mình có thể làm được nhiều hơn.</p>",
+      "slay": "Mỗi civilian còn lại trong trò chơi bị tiêu diệt. Nếu vẫn đang là Act 1, rút lá bài story Save the Civilians đã để riêng và giải quyết mặt Aftermath.",
+      "checkEnemies": "Kiểm tra xem những kẻ địch nào đang trong trò chơi.",
+      "razin": "Nếu Razin Farhi đang in play, chuyển đến _Resolution 1_.",
+      "noRazin": "Nếu điều trên không đúng, chuyển đến _Resolution 2_."
+    },
+    "resolution1": {
+      "title": "Resolution 1",
+      "body": "<p>_Resolution 1_: Nhận thức được tình cảnh nguy hiểm của mình, bạn tiến về vùng ngoại ô thị trấn và gõ mọi cánh cửa mà bạn nhìn thấy. Van nài để được sống, bạn đưa tiền hoặc bất cứ thứ gì mình có trong tay, nhưng đều bị từ chối ở mọi nơi. Cuối cùng, một bà lão nhăn nheo thương tình và cho bạn vào nhà. Bạn trải qua một đêm run rẩy trong nỗi sợ hãi và lo âu, và khi bạn bước ra ngoài vào sáng hôm sau, thành phố đã trở thành đống đổ nát. Những dây leo đen đúa khủng khiếp bao trùm mọi thứ. Sự tàn phá này dường như là một cái giá xứng đáng để đánh đổi lấy tình yêu đích thực.</p><ul><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị Victory X của mỗi lá bài trong victory display.</li><li>Amaranth là người mang The Last Blossom. Cập nhật Nhật ký Chiến dịch tương ứng.</li><li>Trong Nhật ký Chiến dịch của bạn, ghi lại *những người yêu nhau đã đoàn tụ*.</li><li>Đánh dấu 1 _time_ vào Nhật ký Chiến dịch của bạn. Bạn có thể _embark_.</li></ul>"
+    },
+    "resolution2": {
+      "title": "Resolution 2",
+      "body": "<p>_Resolution 2_: Nhận thức được tình cảnh nguy hiểm của mình, bạn tiến về vùng ngoại ô thị trấn và gõ mọi cánh cửa mà bạn nhìn thấy. Van nài để được sống, bạn đưa tiền hoặc bất cứ thứ gì mình có trong tay, nhưng đều bị từ chối ở mọi nơi. Cuối cùng, một bà lão nhăn nheo thương tình và cho bạn vào nhà. Bạn trải qua một đêm run rẩy trong nỗi sợ hãi và lo âu, và khi bạn bước ra ngoài vào sáng hôm sau, thành phố đã trở thành đống đổ nát. Những dây leo đen đúa khủng khiếp bao trùm mọi thứ. Bạn tự hỏi điều gì lại quan trọng với Amaranth đến mức khiến cô ta gây ra thảm cảnh tàn phá như vậy.</p><ul><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị Victory X của mỗi lá bài trong victory display.</li><li>Amaranth là người mang The Last Blossom. Cập nhật Nhật ký Chiến dịch tương ứng.</li><li>Trong Nhật ký Chiến dịch của bạn, ghi lại *bạn vẫn chưa thấy lần cuối của Amaranth*.</li><li>Đánh dấu 1 _time_ vào Nhật ký Chiến dịch của bạn. Bạn có thể _embark_.</li></ul>"
+    },
+    "resolution3": {
+      "title": "Resolution 3",
+      "body": "<p>_Resolution 3_: Nhìn xuống người phụ nữ tự xưng là Amaranth, bạn gọi cô bằng tên thật. “Eryn… Cochwyn?” Cô đưa tay lên đôi má đang ửng hồng. Bạn thấy đồng tử của cô giãn ra khi cô bắt đầu nhớ lại cuộc sống trước đây của mình. Khi ánh mắt cô lướt qua Last Blossom đang vặn vẹo trong tay bạn, cô thốt lên một tiếng kêu kinh hoàng. “Tôi đã có một giấc mơ vô cùng khủng khiếp,” cô nói. “Tôi mơ thấy mình là một nữ hoàng vĩ đại và đáng sợ, và tôi cai trị một vương quốc của những thần dân câm lặng.” Khi nhận ra những gì mình đã làm, sự thay đổi trong thái độ của Eryn thật đáng kinh ngạc. Người phụ nữ dường như vô tâm và tàn nhẫn giờ đây đang nằm khóc lóc trước mặt bạn.</p><p>Bạn nhận ra rõ ràng rằng những hành động của Eryn không phải là chủ ý của cô. Bạn an ủi và dẫn cô đến nơi an toàn cùng với những người sống sót còn lại, nói với cô rằng bạn sẽ giữ an toàn cho bông hoa và ngăn chặn ‘Amaranth’ chiếm lấy một vật chủ khác thêm bất kỳ lần nào nữa. “Không bao giờ nữa,” cô lặp lại lời bạn. “Không bao giờ nữa.” Khi bạn rời đi, bông hoa co lại rồi nở ra, như thể đang tìm kiếm một vật chủ khác.</p><ul><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị Victory X của mỗi lá bài trong victory display.</li><li>Chọn một điều tra viên làm người sở hữu The Last Blossom và cập nhật Nhật ký Chiến dịch tương ứng.</li><li>Trong Nhật ký Chiến dịch của bạn, ghi lại *Amaranth đã rời khỏi Coterie*.</li><li>Đánh dấu 2 _time_ vào Nhật ký Chiến dịch của bạn. Bạn có thể _embark_.</li></ul>"
+    },
+    "resolution4": {
+      "title": "Resolution 4",
+      "body": "<p>_Resolution 4_: Khi bạn cầm Last Blossom trong tay, Amaranth co giật trên mặt đất trước mặt bạn. Khạc ra thứ dịch đen, người phụ nữ trẻ xinh đẹp cào cấu bạn như một con thú hoảng sợ, rồi lao vụt đi dọc theo một con phố hẹp. Mặc dù cố gắng đuổi theo, cuối cùng bạn vẫn mất dấu cô ta trong sự hỗn loạn của những thường dân đang bỏ chạy và những thảm thực vật đang héo rũ.</p><ul><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị Victory X của mỗi lá bài trong victory display.</li><li>Chọn một điều tra viên làm người sở hữu The Last Blossom và cập nhật Nhật ký Chiến dịch tương ứng.</li><li>Trong Nhật ký Chiến dịch của bạn, ghi lại *bạn vẫn chưa thấy lần cuối của Amaranth*.</li><li>Đánh dấu 1 _time_ vào Nhật ký Chiến dịch của bạn. Bạn có thể _embark_.</li></ul>"
+    },
+    "resolution5": {
+      "title": "Resolution 5",
+      "body": "<p>_Resolution 5_: Bạn tìm thấy nhiều người tên “Latif” được liệt kê trong số vô vàn người chết khi thành phố đối mặt với những mất mát của mình. Thay vì cố gắng tìm người liên lạc, bạn đánh giá tình hình và đọc qua hồ sơ. Bạn không mảy may nghi ngờ rằng đây là do Coterie gây ra. Những gì Amaranth đã làm ở đây đã cướp đi sinh mạng của hàng nghìn người và tàn phá ở một quy mô mà bạn khó có thể lường trước được. Bất kể lý do của cô ta là gì, cô ta rõ ràng có khả năng mang lại tai họa ở quy mô tận thế.</p><p>Khi người dân Marrakesh thực hiện công việc thống kê nghiệt ngã số người sống sót, bạn sử dụng khoảng thời gian mình có để giúp dân thường tái thiết. Trong suốt nhiều ngày, những dây leo khủng khiếp khô héo và bay đi như tro bụi, và những người chết được tắm rửa và khâm liệm để chôn cất. Bất chấp sự tàn phá, vẫn có hy vọng thành phố sẽ trở lại như xưa, thậm chí còn tốt hơn. Với một trái tim trĩu nặng, bạn chuẩn bị rời đi.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại *bạn vẫn chưa thấy lần cuối của Amaranth*.</li><li>Mỗi điều tra viên chịu 1 chấn thương tinh thần (mental trauma) khi họ khảo sát tàn tích của Marrakesh.</li><li>Mỗi điều tra viên nhận 3 kinh nghiệm thưởng khi họ giúp những người sống sót của thành phố tái thiết.</li><li>Amaranth là người mang The Last Blossom. Cập nhật Nhật ký Chiến dịch tương ứng.</li><li>Đánh dấu 1 _time_ vào Nhật ký Chiến dịch của bạn. Bạn có thể _embark_.</li></ul>"
+    }
+  }
+}

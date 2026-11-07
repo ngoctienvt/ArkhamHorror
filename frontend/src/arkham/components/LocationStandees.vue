@@ -50,7 +50,9 @@ const figures = computed<Fig[]>(() => {
     const i = props.game.investigators[id]
     if (!i) return []
     const art = investigatorCardArt(i)
-    const src = spriteFor(art) ?? (i.form.tag === 'RegularForm' ? portraitImage(i.cardCode) : null)
+    const src = spriteFor(art) ?? (i.form.tag === 'RegularForm'
+      ? spriteFor(i.art) ?? portraitImage(i.cardCode)
+      : null)
     return [{
       id, kind: 'investigator', tone: (i.class ?? 'Neutral').toLowerCase(), name: nameOf(i.cardCode), src, art: cardImage(art), you: id === mine, exhausted: false, note: null,
       moveName: investigatorMovementName(i, l.id), cardId: undefined, cardImage: cardImage(art),

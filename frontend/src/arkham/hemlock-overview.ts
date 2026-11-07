@@ -81,6 +81,16 @@ const boards = new Map([
   ['11682', 'the-drowned-city/the-doom-of-arkham-part-1'],
   ['11688a', 'the-drowned-city/the-doom-of-arkham-part-2'],
   ['11688b', 'the-drowned-city/the-doom-of-arkham-part-2'],
+
+  // Dark Matter (Homebrew)
+  [':dark-matter:014', 'dark-matter/the-tatterdemalion'],
+  [':dark-matter:054', 'dark-matter/electric-nightmare'],
+  [':dark-matter:089', 'dark-matter/lost-quantum'],
+  [':dark-matter:112', 'dark-matter/in-the-shadow-of-earth'],
+  [':dark-matter:153', 'dark-matter/strange-moons'],
+  [':dark-matter:190', 'dark-matter/the-machine-in-yellow'],
+  [':dark-matter:209', 'dark-matter/fragment-of-carcosa'],
+  [':dark-matter:243', 'dark-matter/starfall'],
 ])
 
 // Places to stand in front of the painted buildings, shared by the day and night plates.
@@ -107,6 +117,24 @@ const villageAnchors: Record<string, Point> = {
   '01126': [50, 82], // Southside (Historical Society)
   '01127': [50, 82], // Southside (Ma's Boarding House)
   '01124': [82, 82], // Your House
+  // Dark Matter — Scenario 1: The Tatterdemalion (ship cutaway rooms)
+  ':dark-matter:025': [35, 28], // Escape Pod Bay
+  ':dark-matter:026': [60, 28], // Infirmary
+  ':dark-matter:041': [81, 31], // Ventilation Shaft
+  ':dark-matter:022': [35, 50], // Cargo Hold
+  ':dark-matter:027': [60, 50], // Mess Hall
+  ':dark-matter:028': [83, 50], // Ship's Bridge
+  ':dark-matter:024': [35, 72], // Engine Room
+  ':dark-matter:023': [60, 72], // Cryosleep Quarters
+  // Dark Matter — Scenario 3: Lost Quantum (Elbrus Station landmarks)
+  ':dark-matter:098': [13, 24], // Ice Spires
+  ':dark-matter:097': [36, 26], // Crystal Peak
+  ':dark-matter:096': [62, 38], // Cold Wastes
+  ':dark-matter:101': [87, 26], // Omni-Transmitters
+  ':dark-matter:102': [15, 65], // Q-Crystal Mines
+  ':dark-matter:103': [41, 61], // Schröd Generators
+  ':dark-matter:099': [76, 63], // Landing Craft
+  ':dark-matter:100': [36, 85], // Main Facility
 }
 
 export function hemlockVillagePosition(code: string): Point | undefined {

@@ -32,5 +32,8 @@ Mỗi investigator và enemy có thể xuất hiện trong Location Scene của 
 
 - Lô đầu đã tích hợp 32 WebP tạo từ mặt thẻ đúng mã, gồm Core Set và năm investigator Dunwich. Core Set còn dùng hai sprite demo Roland và Swarm of Rats đã đối chiếu. Ghoul Priest, Umôrdhoth và Hunting Nightgaunt có sprite mới theo thẻ.
 - [Danh sách reference và SHA-256](./generated-references.csv) ghi nguồn của từng ảnh tạo. Những phần cơ thể nằm ngoài khung tranh gốc được dựng thêm để tạo standee toàn thân.
-- Coverage hiện tại tính trên mã in trong metadata cho hai nhóm trên. Các bản in khác, các enemy Dunwich, các campaign còn lại, dạng nội bộ và homebrew vẫn cần kiểm kê và tạo ảnh theo roster runtime.
+- Đợt ưu tiên đã đủ 112 mã investigator và 55 mã enemy của The Feast of Hemlock Vale trong roster runtime. Thêm 57 sprite sơn dầu theo mẫu thành phố ban đêm, gồm 54 investigator và ba enemy Hemlock Vale. Giữ các sprite đã tích hợp từ những đợt trước.
+- [Roster runtime](./runtime-roster.csv) ghi mã và đường dẫn sprite. Các enemy thuộc những campaign khác vẫn được theo dõi trong kế hoạch tổng.
+
+Khi mở lô mới, đối chiếu vùng minh họa giữa các bản in trước khi gửi tạo. Chỉ dùng chung sprite nếu hình và hình dạng trùng nhau, kể cả khi mã hoặc thông số thẻ khác. Với artwork bán thân, dùng một sprite toàn thân làm mẫu khung hình và dùng lá bài đúng mã để giữ nhận dạng. Kiểm tra ảnh đầu ra thấy trọn hình người từ đầu đến chân hoặc toàn bộ hình dạng của quái trước khi tích hợp.
 

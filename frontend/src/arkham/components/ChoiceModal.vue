@@ -16,6 +16,7 @@ import Question from '@/arkham/components/Question.vue';
 import DrawSpotlight from '@/arkham/components/DrawSpotlight.vue';
 import { abilityNeedsGhostModal } from '@/arkham/ghostAbility';
 import { putBackInAnyOrderPicks } from '@/arkham/putBackInAnyOrder';
+import { mulliganQuestion } from '@/arkham/mulligan';
 import { storyCardRead as findStoryCardRead, storyCardChoiceRead as findStoryCardChoiceRead } from '@/arkham/storyCardRead';
 
 export interface Props {
@@ -270,6 +271,11 @@ const body = computed(() => {
 const title = computed(() => {
   if (skillTestResults.value) {
     return t("Results")
+  }
+
+  // The opening-hand redraw says what it is by its rules name, so players know what is happening.
+  if (mulliganQuestion(props.game, props.playerId)) {
+    return t("mulligan.heading")
   }
 
   // The put-back panel is wordless by design, so the instruction lives here.

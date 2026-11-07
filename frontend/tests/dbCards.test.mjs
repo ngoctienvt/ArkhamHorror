@@ -108,3 +108,35 @@ test('a name more than one card answers to resolves to nothing', async (t) => {
 
   assert.equal(store.getDbCardByRealName('Legs of Atlach-Nacha'), null)
 })
+
+/* ArkhamDB has no fan-made cards; their records come from the campaign's own
+ * homebrew/<campaign>/cards_<lang>.json, so a homebrew location shows its name
+ * on the map rather than its raw `:dark-matter:027` code. */
+// A loaded ArkhamDB list, so lookups do not try to fetch one of their own.
+const ROLAND = [{ code: '01001', name: 'Roland Banks', real_name: 'Roland Banks' }]
+
+test('homebrew cards resolve from their campaign file', async (t) => {
+  const store = await withStore(t, ROLAND)
+
+  await store.loadHomebrewCampaign('dark-matter')
+
+  assert.equal(store.getDbCard(':dark-matter:027')?.name, 'Mess Hall')
+  // The engine's own `c`-prefixed codes resolve too.
+  assert.equal(store.getDbCard('c:dark-matter:018')?.name, 'Event Horizon')
+  // The b side is the same record, read through its back_* fields.
+  assert.equal(store.getDbCard(':dark-matter:018b')?.back_name, 'Systems Online')
+  // Homebrew records never join the ArkhamDB list that name searches walk.
+  assert.equal(store.dbCards.some((c) => c.code.startsWith(':')), false)
+})
+
+test('a homebrew lookup fetches only its own campaign, on demand', async (t) => {
+  const store = await withStore(t, ROLAND)
+
+  assert.equal(store.getDbCard(':the-invisible-man:002'), null)
+  await store.loadHomebrewCampaign('the-invisible-man') // the fetch that lookup started
+
+  assert.equal(store.getDbCard(':the-invisible-man:002')?.name, 'Seen by the Unseen')
+  assert.equal(store.getDbCard('01001')?.name, 'Roland Banks')
+  // Nothing from a campaign nobody looked at.
+  assert.equal([...store.homebrewIndex.keys()].some((code) => code.startsWith(':dark-matter:')), false)
+})

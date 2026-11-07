@@ -56,7 +56,7 @@ import {
   eventTimeUp,
 } from '@/arkham/api'
 import * as Api from '@/arkham/api'
-import { advanceMulligan } from '@/arkham/mulligan'
+import { advanceMulligan, mulliganRunning } from '@/arkham/mulligan'
 import { useCardStore } from '@/stores/cards'
 import { useSettings } from '@/stores/settings'
 import { useUserStore } from '@/stores/user'
@@ -859,8 +859,6 @@ addEntry({
   icon: AdjustmentsHorizontalIcon,
   content: t('gameBar.viewSettings'),
   binding: 'viewSettings',
-  nested: 'view',
-  section: 'preferences',
   action: () => (showSettings.value = !showSettings.value),
 })
 
@@ -2764,8 +2762,11 @@ function sendMulliganChoice(idx: number) {
   )
 }
 
+/* Also fires when the player confirms the selection: the question has not changed
+ * yet at that point, so without this the first answer would never be sent and the
+ * panel would sit on "working" forever. */
 watch(
-  () => game.value?.question,
+  [() => game.value?.question, mulliganRunning],
   () => {
     if (game.value && playerId.value) advanceMulligan(game.value, playerId.value, sendMulliganChoice)
   },

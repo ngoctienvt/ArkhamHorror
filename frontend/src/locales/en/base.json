@@ -264,6 +264,7 @@
   "fromInvestigatorDiscard": "From {name}'s Discard",
   "searchThisDeck": "Search this deck (it will be shuffled)",
   "mulligan": {
+    "heading": "Mulligan: opening hand",
     "title": "Mulligan: choose the cards to replace",
     "hint": "Select every card you want to replace, then confirm.",
     "keep": "Keep this hand",
