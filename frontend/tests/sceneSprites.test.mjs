@@ -27,7 +27,7 @@ test('generated sprites resolve by exact card code and load from public assets',
 })
 
 test('an unregistered card or back falls through to its own card art', () => {
-  for (const code of ['01002b', 'xpolyp', 'constructor']) {
+  for (const code of ['01002b', 'unregistered-enemy', 'constructor']) {
     assert.equal(spriteFor(code), null)
   }
 })

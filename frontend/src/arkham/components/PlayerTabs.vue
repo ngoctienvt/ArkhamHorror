@@ -48,6 +48,33 @@ const investigators = computed(() =>
 )
 const inactiveInvestigators = computed(() => props.playerOrder.filter(iid => props.game.investigators[iid]?.eliminated ?? false).map(iid => props.players[iid]))
 const lead = computed(() => `url('${imgsrc(`tokens/lead-investigator.png`)}')`)
+
+/* Actions the investigator can still take: the regular ones plus every unspent additional action (Leo De Luca,
+ * card effects ...). The server keeps those additional actions in their own list, and drops one once it is spent. */
+const actionsLeft = (i: Investigator) => i.remainingActions + (i.additionalActions?.length ?? 0)
+
+/* The tab shows every action of the turn, spent ones greyed out, so the row keeps its length. The server only
+ * sends what is left, so the turn's total is tracked here: it starts at what is left (at least the usual 3),
+ * grows when an extra action is gained mid-turn, and restarts when a new turn begins (the investigator's
+ * ended-turn flag clears, or the count refills from zero). */
+const actionTotals = ref<Record<string, number>>({})
+watch(
+  () => Object.values(props.game.investigators).map((i) => [i.id, actionsLeft(i), i.endedTurn] as const),
+  (now, before) => {
+    const next = { ...actionTotals.value }
+    for (const [id, left, ended] of now) {
+      const prev = before?.find(([pid]) => pid === id)
+      const total = next[id]
+      // A refill from nothing left is the next turn too (in case the ended-turn flag was never seen set).
+      if (total === undefined || !prev || (prev[2] && !ended) || (prev[1] === 0 && left > 0)) next[id] = Math.max(3, left)
+      else if (left > prev[1]) next[id] = total + (left - prev[1])
+      else next[id] = Math.max(total, left)
+    }
+    actionTotals.value = next
+  },
+  { immediate: true },
+)
+const actionTotal = (i: Investigator) => Math.max(actionTotals.value[i.id] ?? 3, actionsLeft(i))
 const { isMobile } = IsMobile();
 const store = useDbCardStore()
 const sceneMode = computed(() => useSettings().locationView !== 'cards')
@@ -520,7 +547,7 @@ watch(
         <span v-else>{{ getInvestigatorName(investigator.name.title) }}</span>
         <span v-if="sceneMode" class="tab-meta" :title="$t('locationMap.skillsAndActions')">
           <b class="sk will">{{ skillLabel(investigator, 'willpower') }}</b><b class="sk int">{{ skillLabel(investigator, 'intellect') }}</b><b class="sk com">{{ skillLabel(investigator, 'combat') }}</b><b class="sk agi">{{ skillLabel(investigator, 'agility') }}</b>
-          <span class="pips" :aria-label="$t('locationMap.actionsLeft', { count: investigator.remainingActions })"><i v-for="n in investigator.remainingActions" :key="n" class="pip"></i><i v-if="investigator.remainingActions === 0" class="pip none"></i></span>
+          <span class="pips" :aria-label="$t('locationMap.actionsLeft', { count: actionsLeft(investigator) })"><i v-for="n in actionTotal(investigator)" :key="n" class="pip" :class="{ none: n > actionsLeft(investigator) }"></i></span>
           <!-- Resources and clues held, kept in the always-visible tab: the panel under the card scrolls out of view. -->
           <span class="tok" :title="$t('locationMap.resources')"><GameIcon type="resource" /><b>{{ investigator.tokens[TokenType.Resource] || 0 }}</b></span>
           <span class="tok" :title="$t('locationMap.clues')"><GameIcon type="clue" /><b>{{ investigator.tokens[TokenType.Clue] || 0 }}</b></span>
@@ -706,29 +733,18 @@ ul.tabs__header > li.tab--has-actions {
   background-color: var(--neutral-dark);
 }
 
-.tab--active-player {
+/* The lead investigator token sits at the start of the tab, before the name (it used to float above the tab). */
+.tab--lead-player {
   &:before {
-    font-weight: normal;
-    font-family: "Arkham";
-    content: "\0058" / "Active Player";
+    content: "" / "Lead Investigator";
+    flex: none;
+    width: 22px;
+    height: 22px;
     margin-left: 5px;
     align-self: center;
-  }
-}
-
-
-.tab--lead-player {
-  &:after {
-    position: absolute;
-    content: "";
-    inset: 0;
-    top: -5px;
-    margin-inline: auto;
-    transform: translateY(-100%);
-    width: 25px;
-    height: 25px;
     background-image: v-bind(lead);
     background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 

@@ -30,4 +30,6 @@ const ENTRIES: [string, string][] = [
 .panel { position: absolute; top: calc(100% + 6px); right: 0; z-index: 90; width: 270px; display: grid; gap: 3px; padding: 10px 12px; background: #101913f5; border: 1px solid #c6a873; border-radius: 8px; box-shadow: 0 10px 30px #000c; font-size: 0.78rem; color: #e9e3d0; }
 .row { display: flex; gap: 8px; align-items: baseline; }
 .row b { width: 18px; text-align: center; color: #e6c584; }
+.location-map[data-input='touch'] .view { min-height: var(--tap-min); padding: 0 16px; font-size: 0.8rem; }
+.location-map[data-input='touch'] .panel { font-size: 0.9rem; gap: 6px; }
 </style>

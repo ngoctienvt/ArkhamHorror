@@ -77,7 +77,6 @@ const iconOf = (kind: LineKind) => (kind === 'action' || kind === 'fast' || kind
           <span class="meta">
             <b class="nm">{{ a.tone === 'harm' ? '⚠' : '▣' }} {{ a.name }}</b>
             <span v-for="(line, i) in a.effectLines" :key="i" class="fx">{{ line }}</span>
-            <span v-if="!a.effectLines.length" class="fx quiet">{{ t('locationMap.attach.readCard') }}</span>
           </span>
         </li>
         <li v-for="x in info.extras" :key="x" class="extra">✧ {{ extraLabel(x) }}</li>
@@ -106,7 +105,7 @@ const iconOf = (kind: LineKind) => (kind === 'action' || kind === 'fast' || kind
 .line.objective .badge { color: #cdb8f0; }
 .body :deep(img) { height: 1.1em; vertical-align: -0.15em; }
 .none { margin: 0; color: #98a38f; font-style: italic; }
-.flavor { margin: 0; font-style: italic; color: #c9bf9f; }
+.flavor { margin: 0; white-space: pre-line; font-style: italic; color: #c9bf9f; }
 .attached h5 { margin: 0 0 2px; font-size: 0.7rem; color: #c6d6b4; font-weight: 600; }
 .attached ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; color: #d8c79f; }
 .card-row { display: flex; gap: 8px; align-items: center; padding: 4px 6px; border: 1px solid #c6a87344; border-radius: 6px; background: #ffffff08; cursor: help; }
@@ -118,6 +117,5 @@ const iconOf = (kind: LineKind) => (kind === 'action' || kind === 'fast' || kind
 .nm { color: #e9e2c6; font-weight: 600; }
 .threat .nm { color: #f0a090; }
 .fx { color: #f5d9a0; font-size: 0.72rem; }
-.fx.quiet { color: #98a38f; font-style: italic; }
 .extra { padding-left: 2px; }
 </style>

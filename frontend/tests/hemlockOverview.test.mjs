@@ -135,6 +135,26 @@ test('The Drowned City scenarios select their overview boards', () => {
   assert.equal(hemlockOverview('c11682', 'c11682')?.image, 'img/scenes/the-drowned-city/the-doom-of-arkham-part-1.webp')
   assert.equal(hemlockOverview('c11688a', 'c11688a')?.image, 'img/scenes/the-drowned-city/the-doom-of-arkham-part-2.webp')
   assert.equal(hemlockOverview('c11688b', 'c11688b')?.image, 'img/scenes/the-drowned-city/the-doom-of-arkham-part-2.webp')
+
+  // Verify village anchors for key TDC locations
+  // One Last Job follows its scenario grid: Tillinghast left of Miskatonic, Miskatonic left of Rivertown.
+  const oneLastJob = hemlockOverview('c11501', 'c11501').anchors
+  const tillinghast = hemlockVillagePosition('c11509', oneLastJob)
+  const miskatonic = hemlockVillagePosition('c01129', oneLastJob)
+  const rivertown = hemlockVillagePosition('c01125', oneLastJob)
+  assert.ok(tillinghast[0] < miskatonic[0] && miskatonic[0] < rivertown[0])
+  assert.deepEqual(hemlockVillagePosition('c01134', oneLastJob), [18, 43]) // Northside directly above Tillinghast
+  assert.deepEqual(tillinghast, [15, 74])
+  // Midnight Masks keeps its own Arkham grid, untouched by the One Last Job layout.
+  const midnightMasks = hemlockOverview('c01120', 'c01120').anchors
+  assert.equal(midnightMasks, undefined)
+  assert.deepEqual(hemlockVillagePosition('c01129', midnightMasks), [18, 50]) // Miskatonic University
+  assert.deepEqual(hemlockVillagePosition('c01125', midnightMasks), [50, 50]) // Rivertown
+  assert.deepEqual(hemlockVillagePosition('c01134', midnightMasks), [18, 18]) // Northside
+  assert.deepEqual(hemlockVillagePosition('11540'), [50, 52]) // Barrier Core
+  assert.deepEqual(hemlockVillagePosition('11572'), [50, 86]) // Central Chamber (Apiary)
+  assert.deepEqual(hemlockVillagePosition('11595'), [50, 52]) // Core of the Vault
+  assert.deepEqual(hemlockVillagePosition('11676'), [50, 52]) // Dreamer's Rest (Sepulchre)
 })
 
 test('Dark Matter scenarios select their overview boards', () => {
@@ -147,3 +167,122 @@ test('Dark Matter scenarios select their overview boards', () => {
   assert.equal(hemlockOverview(':dark-matter:209', ':dark-matter:209')?.image, 'img/scenes/dark-matter/fragment-of-carcosa.webp')
   assert.equal(hemlockOverview(':dark-matter:243', ':dark-matter:243')?.image, 'img/scenes/dark-matter/starfall.webp')
 })
+
+test('Ages Unwound scenarios select their overview boards', () => {
+  assert.equal(hemlockOverview(':ages-unwound:001', ':ages-unwound:001')?.image, 'img/scenes/ages-unwound/night-of-fire.webp')
+  assert.equal(hemlockOverview(':ages-unwound:023', ':ages-unwound:023')?.image, 'img/scenes/ages-unwound/the-myriad-gentleman.webp')
+  assert.equal(hemlockOverview(':ages-unwound:048', ':ages-unwound:048')?.image, 'img/scenes/ages-unwound/a-world-torn-down.webp')
+  assert.equal(hemlockOverview(':ages-unwound:062', ':ages-unwound:062')?.image, 'img/scenes/ages-unwound/unstuck.webp')
+  assert.equal(hemlockOverview(':ages-unwound:105', ':ages-unwound:105')?.image, 'img/scenes/ages-unwound/a-year-to-plan.webp')
+  assert.equal(hemlockOverview(':ages-unwound:155', ':ages-unwound:155')?.image, 'img/scenes/ages-unwound/a-world-torn-down-again.webp')
+  assert.equal(hemlockOverview(':ages-unwound:182', ':ages-unwound:182')?.image, 'img/scenes/ages-unwound/time-runs-out.webp')
+})
+
+test('The Forgotten Age scenarios select their overview boards', () => {
+  assert.equal(hemlockOverview('c04043', 'c04043')?.image, 'img/scenes/the-forgotten-age/the-untamed-wilds.webp')
+  assert.equal(hemlockOverview('c04054', 'c04054')?.image, 'img/scenes/the-forgotten-age/the-doom-of-eztli.webp')
+  assert.equal(hemlockOverview('c04113', 'c04113')?.image, 'img/scenes/the-forgotten-age/threads-of-fate.webp')
+  assert.equal(hemlockOverview('c04161', 'c04161')?.image, 'img/scenes/the-forgotten-age/the-boundary-beyond.webp')
+  assert.equal(hemlockOverview('c04205a', 'c04205a')?.image, 'img/scenes/the-forgotten-age/heart-of-the-elders-part-1.webp')
+  assert.equal(hemlockOverview('c04205b', 'c04205b')?.image, 'img/scenes/the-forgotten-age/heart-of-the-elders-part-2.webp')
+  assert.equal(hemlockOverview('c04237', 'c04237')?.image, 'img/scenes/the-forgotten-age/the-city-of-archives.webp')
+  assert.equal(hemlockOverview('c04277', 'c04277')?.image, 'img/scenes/the-forgotten-age/the-depths-of-yoth.webp')
+  assert.equal(hemlockOverview('c04314', 'c04314')?.image, 'img/scenes/the-forgotten-age/shattered-aeons.webp')
+  assert.equal(hemlockOverview('c04344', 'c04344')?.image, 'img/scenes/the-forgotten-age/turn-back-time.webp')
+
+  // Verify village anchors for key TFA locations
+  assert.deepEqual(hemlockVillagePosition('04050'), [73, 27]) // Expedition Camp
+  assert.deepEqual(hemlockVillagePosition('04053'), [38, 80]) // Ruins of Eztli
+  assert.deepEqual(hemlockVillagePosition('04068'), [50, 84]) // Chamber of Time
+  assert.deepEqual(hemlockVillagePosition('04251'), [45, 82]) // Great Library (Pnakotus)
+  assert.deepEqual(hemlockVillagePosition('04324'), [40, 52]) // Nexus of N'kai
+
+  // Threads of Fate overrides Arkham anchors with its own wide layout
+  const threadsOfFate = hemlockOverview('c04113', 'c04113')?.anchors
+  assert.ok(threadsOfFate)
+  assert.deepEqual(hemlockVillagePosition('c04128', threadsOfFate), [30, 20]) // Train Tracks
+  assert.deepEqual(hemlockVillagePosition('c04141', threadsOfFate), [88, 50]) // Velma's Diner
+})
+
+test('The Circle Undone scenarios select their overview boards', () => {
+  assert.equal(hemlockOverview('c05043', 'c05043')?.image, 'img/scenes/the-circle-undone/disappearance-at-the-twilight-estate.webp')
+  assert.equal(hemlockOverview('c05050', 'c05050')?.image, 'img/scenes/the-circle-undone/the-witching-hour.webp')
+  assert.equal(hemlockOverview('c05065', 'c05065')?.image, 'img/scenes/the-circle-undone/at-deaths-doorstep.webp')
+  assert.equal(hemlockOverview('c05120', 'c05120')?.image, 'img/scenes/the-circle-undone/the-secret-name.webp')
+  assert.equal(hemlockOverview('c05161', 'c05161')?.image, 'img/scenes/the-circle-undone/the-wages-of-sin.webp')
+  assert.equal(hemlockOverview('c05197', 'c05197')?.image, 'img/scenes/the-circle-undone/for-the-greater-good.webp')
+  assert.equal(hemlockOverview('c05238', 'c05238')?.image, 'img/scenes/the-circle-undone/union-and-disillusion.webp')
+  assert.equal(hemlockOverview('c05284', 'c05284')?.image, 'img/scenes/the-circle-undone/in-the-clutches-of-chaos.webp')
+  assert.equal(hemlockOverview('c05325', 'c05325')?.image, 'img/scenes/the-circle-undone/before-the-black-throne.webp')
+
+  // Verify village anchors for key TCU locations
+  assert.deepEqual(hemlockVillagePosition('05077'), [30, 22]) // Office (Twilight Estate)
+  assert.deepEqual(hemlockVillagePosition('05084'), [30, 22]) // Office Spectral
+  assert.deepEqual(hemlockVillagePosition('05055'), [50, 60]) // Witches' Circle
+  assert.deepEqual(hemlockVillagePosition('05169'), [58, 16]) // The Gallows
+  assert.deepEqual(hemlockVillagePosition('05216'), [88, 75]) // Inner Sanctum (Silver Twilight)
+  assert.deepEqual(hemlockVillagePosition('05257'), [68, 75]) // The Geist-Trap
+  assert.deepEqual(hemlockVillagePosition('05333'), [73, 26]) // Hideous Palace (Azathoth)
+
+  // In the Clutches of Chaos has its own Arkham anchors
+  const chaos = hemlockOverview('c05284', 'c05284')?.anchors
+  assert.ok(chaos)
+  assert.deepEqual(hemlockVillagePosition('c05302', chaos), [13, 28]) // Hangman's Hill
+  assert.deepEqual(hemlockVillagePosition('c05298', chaos), [20, 80]) // South Church
+})
+
+test('The Innsmouth Conspiracy scenarios select their overview boards', () => {
+  assert.equal(hemlockOverview('c07041', 'c07041')?.image, 'img/scenes/the-innsmouth-conspiracy/the-pit-of-despair.webp')
+  assert.equal(hemlockOverview('c07056', 'c07056')?.image, 'img/scenes/the-innsmouth-conspiracy/the-vanishing-of-elina-harper.webp')
+  assert.equal(hemlockOverview('c07123', 'c07123')?.image, 'img/scenes/the-innsmouth-conspiracy/in-too-deep.webp')
+  assert.equal(hemlockOverview('c07163', 'c07163')?.image, 'img/scenes/the-innsmouth-conspiracy/devil-reef.webp')
+  assert.equal(hemlockOverview('c07198', 'c07198')?.image, 'img/scenes/the-innsmouth-conspiracy/horror-in-high-gear.webp')
+  assert.equal(hemlockOverview('c07231', 'c07231')?.image, 'img/scenes/the-innsmouth-conspiracy/a-light-in-the-fog.webp')
+  assert.equal(hemlockOverview('c07274', 'c07274')?.image, 'img/scenes/the-innsmouth-conspiracy/the-lair-of-dagon.webp')
+  assert.equal(hemlockOverview('c07311', 'c07311')?.image, 'img/scenes/the-innsmouth-conspiracy/into-the-maelstrom.webp')
+
+  // Verify village anchors for key TIC locations
+  assert.deepEqual(hemlockVillagePosition('07047'), [50, 52]) // Unfamiliar Chamber
+  assert.deepEqual(hemlockVillagePosition('07052'), [77, 16]) // Sealed Exit
+  assert.deepEqual(hemlockVillagePosition('07065'), [47, 52]) // Innsmouth Square
+  assert.deepEqual(hemlockVillagePosition('07068'), [67, 52]) // Fish Street Bridge
+  assert.deepEqual(hemlockVillagePosition('07168'), [50, 52]) // Churning Waters
+  assert.deepEqual(hemlockVillagePosition('07171'), [78, 38]) // Waveworn Island
+  assert.deepEqual(hemlockVillagePosition('07203'), [76, 12]) // Falcon Point Approach
+  assert.deepEqual(hemlockVillagePosition('07241'), [48, 12]) // Lantern Room (Lighthouse)
+  assert.deepEqual(hemlockVillagePosition('07247'), [68, 76]) // Shrine to Hydra
+  assert.deepEqual(hemlockVillagePosition('07289'), [50, 18]) // Hall of Silence
+  assert.deepEqual(hemlockVillagePosition('07283'), [50, 68]) // Grand Entryway
+  assert.deepEqual(hemlockVillagePosition('07320'), [50, 50]) // Gateway to Y'ha-nthlei
+  assert.deepEqual(hemlockVillagePosition('07328'), [24, 25]) // Lair of Dagon (Sanctuary)
+})
+
+test('Edge of the Earth overview maps and location positions', () => {
+  // Scenario boards
+  assert.equal(hemlockOverview('08501a', '08501')?.image, 'img/scenes/the-edge-of-the-earth/ice-and-death-part-1.webp')
+  assert.equal(hemlockOverview('08501b', '08501')?.image, 'img/scenes/the-edge-of-the-earth/ice-and-death-part-2.webp')
+  assert.equal(hemlockOverview('08501c', '08501')?.image, 'img/scenes/the-edge-of-the-earth/ice-and-death-part-3.webp')
+  assert.equal(hemlockOverview('08549', '08549')?.image, 'img/scenes/the-edge-of-the-earth/fatal-mirage.webp')
+  assert.equal(hemlockOverview('08596', '08596')?.image, 'img/scenes/the-edge-of-the-earth/to-the-forbidden-peaks.webp')
+  assert.equal(hemlockOverview('08621', '08621')?.image, 'img/scenes/the-edge-of-the-earth/city-of-the-elder-things.webp')
+  assert.equal(hemlockOverview('08648a', '08648')?.image, 'img/scenes/the-edge-of-the-earth/the-heart-of-madness-part-1.webp')
+  assert.equal(hemlockOverview('08648b', '08648')?.image, 'img/scenes/the-edge-of-the-earth/the-heart-of-madness-part-2.webp')
+
+  // Sample location anchors across all scenarios
+  assert.deepEqual(hemlockVillagePosition('08502'), [50, 58]) // Crash Site
+  assert.deepEqual(hemlockVillagePosition('08509'), [15, 88]) // Snow Graves
+  assert.deepEqual(hemlockVillagePosition('08512'), [52, 24]) // Barrier Camp
+  assert.deepEqual(hemlockVillagePosition('08514'), [76, 38]) // Crystalline Cavern
+  assert.deepEqual(hemlockVillagePosition('08556'), [50, 52]) // Prison of Memories
+  assert.deepEqual(hemlockVillagePosition('08560'), [20, 80]) // Hedge Maze
+  assert.deepEqual(hemlockVillagePosition('08564'), [91, 52]) // Riverview Theatre
+  assert.deepEqual(hemlockVillagePosition('08600'), [8, 92])  // Deep Drifts
+  assert.deepEqual(hemlockVillagePosition('08607'), [78, 14]) // The Summit
+  assert.deepEqual(hemlockVillagePosition('08630'), [50, 86]) // Hidden Tunnel: Entrance to the Depths
+  assert.deepEqual(hemlockVillagePosition('08632'), [52, 45]) // Stone Bridge
+  assert.deepEqual(hemlockVillagePosition('08640'), [74, 20]) // Temple of the Elder Things
+  assert.deepEqual(hemlockVillagePosition('08649'), [50, 52]) // The Gate of Y'quaa: Primordial Seal
+  assert.deepEqual(hemlockVillagePosition('08676'), [50, 22]) // Mist-Pylon (North)
+  assert.deepEqual(hemlockVillagePosition('08686'), [50, 96]) // Hidden Tunnel: A Way Out
+})
+

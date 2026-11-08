@@ -3,6 +3,8 @@
     "viewLog": "View Log",
 
     "campaign": "Campaign",
+    "fitScreen": "Fit to screen",
+    "exitFitScreen": "Exit fit to screen",
     "viewRemovedFromPlay": "Removed from Play",
     "sectionPanels": "Panels",
     "sectionLayout": "Layout",

@@ -21,8 +21,13 @@ import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
  * does: basic actions, what the location and scenario offer, enemies and cards in play. Moving, playing
  * cards, and act/agenda abilities are left out: those are taken from the location, the hand, and the strip.
  * It only arranges the current choices; each row sends the index its choice already had. */
-const props = defineProps<{ game: Game; playerId: string; location: Location | null; info?: MapLocationInfo | null }>()
-const emit = defineEmits<{ (e: 'choose', index: number): void; (e: 'close'): void }>()
+const props = defineProps<{
+  game: Game; playerId: string; location: Location | null; info?: MapLocationInfo | null
+  /** Drawn as a bottom sheet (tablet held upright): a grab bar on top folds and unfolds it. */
+  sheet?: boolean
+  expanded?: boolean
+}>()
+const emit = defineEmits<{ (e: 'choose', index: number): void; (e: 'close'): void; (e: 'toggleSheet'): void }>()
 
 const { t } = useI18n()
 const nameOf = useCardNames()
@@ -99,7 +104,8 @@ const sections = computed(() => {
 </script>
 
 <template>
-  <aside class="panel" :aria-label="t('locationMap.actions')">
+  <aside class="panel" :class="{ sheet, expanded }" :aria-label="t('locationMap.actions')">
+    <button v-if="sheet" class="grab" type="button" :aria-expanded="expanded" :aria-label="t('locationMap.sheetHandle')" @click="emit('toggleSheet')"><span aria-hidden="true"></span></button>
     <header>
       <h3>{{ location ? nameOf(location.cardCode) : t('locationMap.actions') }}</h3>
       <button class="close" :aria-label="t('locationMap.close')" @click="emit('close')">✕</button>
@@ -136,4 +142,17 @@ h5 { margin: 4px 0 0; font-size: 0.7rem; color: #e0a595; font-weight: 600; }
 .choice :deep(button), .choice :deep(button:hover:not(:disabled)) { border: 0 !important; background: transparent !important; }
 .choice .text-row { font-size: 0.78rem; color: #e5e2d4 !important; }
 .empty { margin: 0; font-size: 0.8rem; color: #98a38f; }
+/* Bottom sheet: full width, folded to a peek until the grab bar is pressed. */
+.panel.sheet { width: auto; max-height: var(--sheet-peek, 30dvh); border-radius: 12px 12px 0 0; padding-top: 4px; transition: max-height 0.2s; }
+.panel.sheet.expanded { max-height: var(--sheet-max, 56dvh); }
+.grab { flex: none; align-self: center; width: 100%; min-height: var(--tap-min, 0px); display: grid; place-items: center; background: transparent; border: 0; cursor: pointer; }
+.grab span { width: 44px; height: 5px; border-radius: 3px; background: #c6a873aa; }
+@media (prefers-reduced-motion: reduce) { .panel.sheet { transition: none; } }
+/* Fingers: rows and the close button reach 44px, with room between them. */
+.location-map[data-input='touch'] .close { min-width: var(--tap-min); min-height: var(--tap-min); font-size: 1.1rem; }
+.location-map[data-input='touch'] .section { gap: var(--tap-gap); }
+.location-map[data-input='touch'] .row,
+.location-map[data-input='touch'] .section :deep(button) { min-height: var(--tap-min); font-size: 0.9rem; }
+.location-map[data-input='touch'] .choice { min-height: var(--tap-min); }
+.location-map[data-input='touch'] .choice .text-row { font-size: 0.9rem; }
 </style>

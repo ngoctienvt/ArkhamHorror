@@ -3546,7 +3546,8 @@ async function addChaosToken(face: any){
 
   /* Map views: the map fills the window; the player area sits below it and is reached by scrolling. */
   &.scenario-body--map {
-    grid-template-rows: auto auto;
+    /* max-content: a phone's map grows with the action list under it instead of spilling past a fixed row. */
+    grid-template-rows: max-content max-content;
     align-content: start;
     overflow-y: auto;
   }

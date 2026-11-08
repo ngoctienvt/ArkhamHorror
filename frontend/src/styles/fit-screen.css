@@ -1,0 +1,109 @@
+/*
+ * "Fit to screen" (see useFitScreen.ts): html.fit-screen is set while a game is open and the
+ * player asked for it. The site nav, the game bar and the footer go away and the board is
+ * sized to the window, so agenda, map and player area are all in view without scrolling.
+ *
+ * Deliberately NOT in a cascade layer: Vue scoped component styles are unlayered and would
+ * always beat a layered rule, and the rules below have to override them. Specificity is padded
+ * (doubled class) where the scoped rule being overridden is itself nested.
+ */
+html.fit-screen #nav,
+html.fit-screen .game-bar,
+html.fit-screen #app > footer {
+  display: none;
+}
+
+/* Game.vue sizes the board as 100vh minus the nav + game bar + footer (80px). */
+html.fit-screen #game .game-main {
+  height: calc(100dvh - var(--epic-bar-height, 0px));
+}
+
+/* Map views: the map normally gets a full window of its own and the player area is reached by
+   scrolling. Here the board is a column: the player area keeps its natural height and the map
+   takes everything that is left. (A grid with a fixed row list cannot do this: which child sits
+   in which row depends on whether the optional decks strip is showing.) */
+html.fit-screen .scenario-body.scenario-body--map {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+html.fit-screen .scenario-body--map > .location-map {
+  flex: 1 1 0;
+  height: auto;
+  min-height: 180px;
+}
+
+html.fit-screen .scenario-body--map > #player-zone,
+html.fit-screen .scenario-body--map > .scenario-cards {
+  flex: none;
+}
+
+html.fit-screen .scenario-body--map .location-map .map-layout {
+  flex: 1 1 0;
+  min-height: 0;
+}
+
+/* The act / agenda / reference strip above the map: smaller type and art, no flavour text, so it
+   leaves the room to the map. A box that still has too much text scrolls inside itself. */
+html.fit-screen .location-map .mission-strip {
+  padding: 3px 6px;
+  gap: 4px;
+}
+
+html.fit-screen .location-map .mission-strip .mission {
+  font-size: 11.5px;
+  line-height: 1.25;
+  gap: 6px;
+  padding: 3px 6px;
+  max-height: 112px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+/* The strip sizes its headings and paragraphs in rem, so they ignore the font-size above. */
+html.fit-screen .location-map .mission-strip .mission h3 {
+  font-size: 12.5px;
+}
+
+html.fit-screen .location-map .mission-strip .mission p {
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+html.fit-screen .location-map .mission-strip .flavor {
+  display: none;
+}
+
+html.fit-screen .location-map .mission-strip .thumb--landscape {
+  width: 64px;
+}
+
+html.fit-screen .location-map .mission-strip .thumb--portrait {
+  width: 40px;
+}
+
+/* The way back: the bar that holds the toggle is hidden, so a small floating control stays. */
+.fit-screen-exit {
+  position: fixed;
+  top: 6px;
+  right: 6px;
+  z-index: var(--z-index-200, 200);
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  opacity: 0.45;
+  transition: opacity 120ms ease;
+}
+
+.fit-screen-exit:hover,
+.fit-screen-exit:focus-visible {
+  opacity: 1;
+}
+
+.fit-screen-exit svg {
+  width: 16px;
+  height: 16px;
+}

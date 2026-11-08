@@ -25,6 +25,7 @@ const idleText = computed(() => over.value ? t('locationMap.status.over') : t('l
     <p v-if="over || rows.length === 0" class="idle">{{ idleText }}</p>
     <ul v-else class="rows">
       <li v-for="r in rows" :key="r.id" :class="{ mine: r.mine }">
+        <span v-if="r.effect" class="effect">{{ r.effect }}</span>
         <span class="text"><b v-if="r.mine" class="you">{{ t('locationMap.status.you') }}</b> {{ r.text }}</span>
         <span v-if="r.detail" class="detail">{{ r.detail }}</span>
       </li>
@@ -47,4 +48,5 @@ const idleText = computed(() => over.value ? t('locationMap.status.over') : t('l
 .text { font-weight: 600; }
 .you { color: #6fcf8a; margin-right: 2px; }
 .detail { font-size: 0.72rem; color: #b4bdab; }
+.effect { font-size: 0.72rem; font-style: italic; line-height: 1.35; color: #d9c9a3; padding: 3px 6px; margin-bottom: 2px; background: #c6a87314; border-radius: 4px; }
 </style>

@@ -24,6 +24,7 @@ import Asset from '@/arkham/components/Asset.vue';
 import EventView from '@/arkham/components/Event.vue';
 import Skill from '@/arkham/components/Skill.vue';
 import HandCard from '@/arkham/components/HandCard.vue';
+import { useSortedHand } from '@/arkham/composables/useSortedHand';
 import ProhibitedBadge from '@/arkham/components/ProhibitedBadge.vue';
 import CardRow from '@/arkham/components/CardRow.vue';
 import CardsUnderIndicator from '@/arkham/components/CardsUnderIndicator.vue';
@@ -514,7 +515,7 @@ const hideCards = () => {
 
 const committedIdSet = computed(() => new Set((props.game.skillTest?.committedCards ?? []).map(c => toCardContents(c).id)))
 
-const playerHand = computed(() =>
+const playerHand = useSortedHand(() =>
   props.investigator.hand.filter(card => !committedIdSet.value.has(toCardContents(card).id))
 )
 const handCardIdSet = computed(() => new Set(playerHand.value.map(card => toCardContents(card).id)))
@@ -1675,6 +1676,15 @@ function closeHand() {
 .player-cards--scene .player :deep(.player-container), .player-cards--scene .player :deep(.player-area) { display: block; }
 .player-cards--scene .player :deep(.button-group) { display: flex; flex-direction: column; align-items: stretch; gap: 4px; }
 .player-cards--scene .player :deep(.deck) { max-height: 76px; width: auto; }
+/* Phone: the deck/turn column sits above a full-width play area instead of squeezing it to nothing. */
+@media (max-width: 800px) {
+  .player-cards--scene { flex-direction: column; }
+  .player-cards--scene > .in-play-toggle { display: none; }
+  .player-cards--scene > .player { order: 0; align-self: stretch; flex-direction: row; justify-content: center; }
+  .player-cards--scene > .in-play-row { order: 1; flex: none; width: 100%; }
+  .player-cards--scene .player :deep(.investigator-and-deck) { width: auto; }
+  .player-cards--scene .in-play { min-height: 110px; }
+}
 /* The threat area is parked at the right edge, on the same row as the play area. */
 .threat-group { display: contents; }
 .player-cards--scene .threat-group { display: flex; order: 2; margin-left: auto; align-items: stretch; gap: inherit; padding-left: 10px; }

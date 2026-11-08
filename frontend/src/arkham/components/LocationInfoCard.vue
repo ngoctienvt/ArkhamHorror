@@ -77,9 +77,9 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
     <section v-if="info.shroud || info.revealed" class="stats">
       <span v-if="info.shroud" :class="{ modified: info.shroud.current !== info.shroud.printed }"
         :title="t('locationMap.marker.shroud') + (info.shroud.current !== info.shroud.printed ? ' · ' + t('locationMap.marker.printed', { n: info.shroud.printed }) : '')">
-        🔍 <b>{{ info.shroud.x ? 'X' : info.shroud.current }}</b></span>
-      <span :title="t('locationMap.clues')"><GameIcon type="clue" /> <b>{{ info.clues.left }}<template v-if="info.clues.printed !== null">/{{ info.clues.printed }}</template></b></span>
-      <span v-if="info.doom" class="doom" :title="t('locationMap.doom')"><GameIcon type="doom" /> <b>{{ info.doom }}</b></span>
+        🔍 <b>{{ info.shroud.x ? 'X' : info.shroud.current }}</b><small class="lbl">{{ t('locationMap.marker.shroud') }}<template v-if="info.shroud.current !== info.shroud.printed"> · {{ t('locationMap.marker.printed', { n: info.shroud.printed }) }}</template></small></span>
+      <span :title="t('locationMap.clues')"><GameIcon type="clue" /> <b>{{ info.clues.left }}<template v-if="info.clues.printed !== null">/{{ info.clues.printed }}</template></b><small class="lbl">{{ t('locationMap.clues') }}</small></span>
+      <span v-if="info.doom" class="doom" :title="t('locationMap.doom')"><GameIcon type="doom" /> <b>{{ info.doom }}</b><small class="lbl">{{ t('locationMap.doom') }}</small></span>
       <span v-if="info.victory" :title="t('locationMap.info.victory')">VP <b>{{ info.victory }}</b></span>
       <span v-if="info.shroud && !info.shroud.x && me" class="compare" :title="t('locationMap.info.investigateCompare', { intellect: myIntellect?.value, shroud: info.shroud.current })">
         <span class="intellect-icon" aria-hidden="true"></span> {{ myIntellect?.label }} vs {{ info.shroud.current }}</span>
@@ -126,8 +126,8 @@ h3 { margin: 0; display: flex; gap: 6px; align-items: baseline; font: 600 1.05re
 .stats .modified b { color: #f5b26b; }
 .stats .doom b { color: #e0a595; }
 .stats .compare { margin-left: auto; color: #9fd3e6; }
-.text { margin: 0; line-height: 1.4; }
-.flavor { margin: 0; font-style: italic; color: #c9bf9f; line-height: 1.4; }
+.text { margin: 0; line-height: 1.4; white-space: pre-line; }
+.flavor { margin: 0; white-space: pre-line; font-style: italic; color: #c9bf9f; line-height: 1.4; }
 .attached { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 4px 10px; color: #d8c79f; }
 .link-row { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
 .arrow { color: #b9a678; }
@@ -141,7 +141,24 @@ h3 { margin: 0; display: flex; gap: 6px; align-items: baseline; font: 600 1.05re
 .act.move { border-color: #9fc3a0; }
 .act.investigate { border-color: #9fd3e6; }
 button:focus-visible { outline: 2px solid #ffe9a0; outline-offset: 2px; }
+/* A tablet held upright: the card is a bottom sheet above the hand, as on a phone. */
+.location-map[data-layout='tablet-portrait'] .info-card { position: fixed; top: auto; left: 0; right: 0; bottom: var(--hand-h, 0px); width: auto; max-height: var(--sheet-max, 56dvh); border-radius: 12px 12px 0 0; z-index: 200; }
+/* No hover on a finger, so the words a tooltip would show are written next to the numbers. */
+.lbl { display: none; margin-left: 4px; color: #c9bf9f; font-size: 0.78em; }
+.location-map[data-input='touch'] .lbl { display: inline; }
+/* Fingers: every button reaches 44px and the card text grows a little. */
+.location-map[data-input='touch'] .info-card { font-size: 0.92rem; }
+.location-map[data-input='touch'] .close { min-width: var(--tap-min); min-height: var(--tap-min); font-size: 1.2rem; }
+.location-map[data-input='touch'] .link-row { gap: var(--tap-gap); }
+.location-map[data-input='touch'] .link-chip { min-height: var(--tap-min); padding: 0 14px; border-radius: 22px; }
+.location-map[data-input='touch'] .actions { gap: var(--tap-gap); }
+.location-map[data-input='touch'] .act { min-height: var(--tap-min); }
 @media (max-width: 800px) {
-  .info-card { position: fixed; top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: 50dvh; border-radius: 12px 12px 0 0; z-index: 200; }
+  /* Phone: a dimmed modal in the middle of the screen, above the hand, so it can be read in full. */
+  .info-card { position: fixed; top: 50%; left: 12px; right: 12px; bottom: auto; width: auto; transform: translateY(-50%); max-height: 82dvh; border-radius: 12px; z-index: 1000; font-size: 1rem; padding: 14px; background: #101913; box-shadow: 0 0 0 100vmax #000a, 0 8px 32px #000; }
+  header { grid-template-columns: 64px 1fr auto; }
+  .thumb { width: 64px; }
+  h3 { font-size: 1.25rem; }
+  .text, .flavor { line-height: 1.5; }
 }
 </style>

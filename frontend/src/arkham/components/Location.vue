@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { isTriggerWindow } from '@/arkham/triggerWindow'
 import { heldCount } from '@/arkham/motion/tokenHolds'
 import { useI18n } from 'vue-i18n'
 import { onBeforeUnmount, ComputedRef, ref, computed, watch, nextTick } from 'vue'
@@ -143,6 +144,7 @@ const unknownConcealed = computed(() => concealed.value.filter((c) => !c.known))
 const knownConcealed = computed(() => concealed.value.filter((c) => c.known))
 const cardAction = computed(() => choices.value.findIndex(isCardAction))
 const canInteract = computed(() => abilities.value.length > 0 || cardAction.value !== -1)
+const triggerReady = computed(() => canInteract.value && isTriggerWindow(choices.value))
 let clickTimeout: number | null = null
 // clickCount is used to determine if the user clicked once or twice
 let clickCount = 0
@@ -699,7 +701,7 @@ const hasAnyLocationVehicleAssets = computed(() =>
                 :data-id="id"
                 class="card card--locations"
                 :src="displayedImage"
-                :class="{ 'location--can-interact': canInteract && !hasObjective && !blocked, 'location--can-interact-cursor': canInteract, 'source-highlight': sourceHighlighted }"
+                :class="{ 'trigger-ready': triggerReady, 'location--can-interact': canInteract && !hasObjective && !blocked, 'location--can-interact-cursor': canInteract, 'source-highlight': sourceHighlighted }"
                 draggable="false"
               />
             </template>

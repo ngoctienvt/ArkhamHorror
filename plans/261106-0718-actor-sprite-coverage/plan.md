@@ -30,10 +30,14 @@ Mỗi investigator và enemy có thể xuất hiện trong Location Scene của 
 
 ## Tiến độ sản xuất
 
+- Phạm vi hiện tại gồm các campaign chính thức của Chapter 1 và Chapter 2, các bản Return to có trong game, sau đó đến hai campaign homebrew Dark Matter và Ages Unwound.
+
 - Lô đầu đã tích hợp 32 WebP tạo từ mặt thẻ đúng mã, gồm Core Set và năm investigator Dunwich. Core Set còn dùng hai sprite demo Roland và Swarm of Rats đã đối chiếu. Ghoul Priest, Umôrdhoth và Hunting Nightgaunt có sprite mới theo thẻ.
 - [Danh sách reference và SHA-256](./generated-references.csv) ghi nguồn của từng ảnh tạo. Những phần cơ thể nằm ngoài khung tranh gốc được dựng thêm để tạo standee toàn thân.
 - Đợt ưu tiên đã đủ 112 mã investigator và 55 mã enemy của The Feast of Hemlock Vale trong roster runtime. Thêm 57 sprite sơn dầu theo mẫu thành phố ban đêm, gồm 54 investigator và ba enemy Hemlock Vale. Giữ các sprite đã tích hợp từ những đợt trước.
 - [Roster runtime](./runtime-roster.csv) ghi mã và đường dẫn sprite. Các enemy thuộc những campaign khác vẫn được theo dõi trong kế hoạch tổng.
 
 Từ The Dream-Eaters, tạo một sprite riêng cho mỗi mã thẻ còn thiếu. Dùng lá bài đúng mã để giữ nhận dạng và mẫu thành phố ban đêm cho phong cách sơn dầu. Với tranh bán thân, yêu cầu khung rộng và dựng phần cơ thể bị khuất. Kiểm tra ảnh đầu ra thấy trọn hình người từ đầu đến chân hoặc toàn bộ hình dạng của quái trước khi tích hợp.
+
+Đã kiểm tra đủ 527/527 mã enemy thuộc các campaign chính thức trong phạm vi, gồm Return to và bốn mã enemy đặc biệt. Dark Matter có 27/42 mã và Ages Unwound có 29/37 mã. Còn 23 mã homebrew theo roster. Công cụ tạo ảnh báo mở lại hạn mức lúc 13:53 ngày 9/11/2026, giờ Việt Nam.
 

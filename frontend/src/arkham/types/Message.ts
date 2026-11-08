@@ -389,6 +389,8 @@ export const skillTestApplyResultsButtonDecoder = JsonDecoder.object<SkillTestAp
   }, 'SkillTestApplyResultsButton')
 
 type MessageCommon = {
+  // The engine messages this answer will run, kept undecoded; read by engine-message-actions.ts.
+  messages?: unknown[]
   label?: string
   target?: Target
   component?: Component
@@ -550,7 +552,7 @@ export const effectActionButtonDecoder = JsonDecoder.object<EffectActionButton>(
     tooltip: JsonDecoder.string()
   }, 'EffectActionButton')
 
-export const messageDecoder = JsonDecoder.oneOf<Message>(
+const messageVariantDecoder = JsonDecoder.oneOf<Message>(
   [
     labelDecoder,
     costLabelDecoder,
@@ -588,6 +590,15 @@ export const messageDecoder = JsonDecoder.oneOf<Message>(
   ],
   'Message',
 );
+
+// Every answer button carries the engine messages it will run; the per-variant decoders drop unknown keys,
+// so pick `messages` off the raw JSON here once for all of them.
+export const messageDecoder: JsonDecoder.Decoder<Message> = JsonDecoder.succeed().flatMap((json: unknown) =>
+  messageVariantDecoder.map((decoded) => {
+    if (decoded.messages !== undefined) return decoded
+    const raw = typeof json === 'object' && json !== null ? (json as { messages?: unknown }).messages : undefined
+    return Array.isArray(raw) ? { ...decoded, messages: raw } : decoded
+  }))
 
 export function choiceRequiresModal(c: Message) {
   switch (c.tag) {

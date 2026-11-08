@@ -82,16 +82,17 @@ export default defineConfig({
     }
   },
   server: {
+    host: true,
     port: 8080,
     proxy: {
       "^/api": {
-        target: "http://127.0.0.1:3002",
+        target: process.env.VITE_API_TARGET ?? "http://127.0.0.1:3002",
         changeOrigin: true,
         secure: false,
         ws: true
       },
       "^/health": {
-        target: "http://127.0.0.1:3002",
+        target: process.env.VITE_API_TARGET ?? "http://127.0.0.1:3002",
         changeOrigin: true,
         secure: false,
         ws: false

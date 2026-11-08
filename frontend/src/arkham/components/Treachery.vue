@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { isTriggerWindow } from '@/arkham/triggerWindow'
 import { computed, ref, watch } from 'vue';
 import MissingCardBadge from '@/arkham/components/MissingCardBadge.vue';
 import { CARD_FLIGHT_ATTR, useCardFlight } from '@/arkham/cardFlight'
@@ -103,6 +104,7 @@ const abilities = computed(() => {
 const tokenOverrides = { Damage: { type: 'damage' } }
 const cardAction = computed(() => choices.value.findIndex(canInteract))
 const canUseMobileAbilityMenu = computed(() => isMobile && props.isInHand && abilities.value.length > 0)
+const triggerReady = computed(() => (cardAction.value !== -1 || abilities.value.length > 0) && isTriggerWindow(choices.value))
 const canHighlight = computed(() => cardAction.value !== -1 || canUseMobileAbilityMenu.value)
 
 function handleCardClick() {
@@ -163,7 +165,7 @@ const attachedTreacheries = computed(() =>
         ref="cardFrame"
         :src="image"
         class="card"
-        :class="{ 'treachery--can-interact': canHighlight, attached, 'in-hand': isInHand }"
+        :class="{ 'treachery--can-interact': canHighlight, 'trigger-ready': triggerReady, attached, 'in-hand': isInHand }"
         :draggable="tuckable || undefined"
         @dragstart="startDrag"
         @click="handleCardClick"

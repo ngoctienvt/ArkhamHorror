@@ -120,6 +120,8 @@ const image = computed(() => {
 .health--can-interact, .sanity--can-interact {
   pointer-events: auto;
   cursor: pointer;
+  position: relative;
+  z-index: 3;
   > span {
     padding: 0px;
     cursor: pointer;
@@ -141,21 +143,23 @@ const image = computed(() => {
 @keyframes token-attention-pulse {
   from {
     filter:
-      drop-shadow(1px 0 0 var(--select))
-      drop-shadow(-1px 0 0 var(--select))
-      drop-shadow(0 1px 0 var(--select))
-      drop-shadow(0 -1px 0 var(--select));
+      drop-shadow(2px 0 0 var(--select))
+      drop-shadow(-2px 0 0 var(--select))
+      drop-shadow(0 2px 0 var(--select))
+      drop-shadow(0 -2px 0 var(--select))
+      drop-shadow(0 0 4px var(--select));
     transform: scale(1);
   }
   to {
     filter:
-      drop-shadow(1px 0 0 var(--select))
-      drop-shadow(-1px 0 0 var(--select))
-      drop-shadow(0 1px 0 var(--select))
-      drop-shadow(0 -1px 0 var(--select))
-      drop-shadow(0 0 5px var(--select))
-      brightness(1.35);
-    transform: scale(1.1);
+      drop-shadow(2px 0 0 #fff)
+      drop-shadow(-2px 0 0 #fff)
+      drop-shadow(0 2px 0 #fff)
+      drop-shadow(0 -2px 0 #fff)
+      drop-shadow(0 0 12px var(--select))
+      drop-shadow(0 0 20px var(--select))
+      brightness(1.4);
+    transform: scale(1.3);
   }
 }
 

@@ -419,7 +419,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
 
 <template>
   <Draggable
-    width="min(720px, calc(100vw - 32px))"
+    width="min(560px, calc(100vw - 32px))"
     avoid-selector=".concealed-card--can-interact, .location-cell--can-interact, .location-cell--can-interact .location-wrapper, .location-cell--can-interact .card-frame"
   >
     <template #handle>
@@ -602,6 +602,9 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
           />
         </div>
       </div>
+      <!-- Bonuses already in force on this test (a weapon's +1 combat / +1 damage…), not commit options:
+           labelled so they don't read as part of the commit row, and hovering one shows its source card. -->
+      <h3 v-if="modifiers.length > 0" class="triggers__title modifiers__title" :title="$t('skillTest.activeModifiersHint')">{{ $t('skillTest.activeModifiers') }}</h3>
       <div v-if="modifiers.length > 0" class="modifiers">
         <div v-for="(modifier, idx) in modifiers" :key="idx" class="modifier" :class="{ 'sideways': modifier.source.tag === 'InvestigatorSource' }" :data-image-id="modifierSource(modifier)">
           <template v-if="modifier.type.tag === 'CannotCommitCards'">
@@ -755,7 +758,13 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
 }
 
 .skill-test {
-  font-size: 16px;
+  font-size: 14px;
+}
+
+/* Revealed chaos tokens: smaller inside the skill test panel only. */
+.skill-test :deep(.token-container),
+.skill-test :deep(.token-container .token) {
+  width: min(68px, 16vw);
 }
 
 .committable {
@@ -775,7 +784,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
 
 /* Beats the panel-wide full-width button rule: a card is its own size. */
 .committable .committable__card {
-  width: calc(var(--card-width) * 1.4);
+  width: calc(var(--card-width) * 1.1);
   padding: 0;
   background: transparent;
   border: 2px solid rgba(216, 178, 110, 0.5);
@@ -807,6 +816,8 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   background: rgba(0, 0, 0, 0.6);
   text-align: left;
 }
+
+.modifiers__title { align-self: flex-start; padding: 0 10px; cursor: help; }
 
 .triggers__title {
   margin: 0;
@@ -891,7 +902,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
 }
 
 .skill-test-contents {
-  padding: 16px 14px;
+  padding: 10px 12px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -941,7 +952,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   flex-shrink: 0;
   color: white;
   font-weight: 800;
-  font-size: 2em;
+  font-size: 1.6em;
   font-variant-numeric: tabular-nums;
   display: inline-flex;
   align-items: center;
@@ -1223,7 +1234,7 @@ i.iconSkillAgility {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 28px;
+    min-height: 22px;
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.06);
     color: rgba(255, 255, 255, 0.55);
@@ -1428,8 +1439,8 @@ i.iconSkillAgility {
   border-right: 1px solid rgba(255, 255, 255, 0.09);
 
   img {
-    width: 42px;
-    height: 42px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
   }
@@ -1445,7 +1456,7 @@ i.iconSkillAgility {
   text-align: left;
   color: #dbe0e7;
   font-family: 'Noto Sans', Avenir, Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.5;
 
   :deep(img) {
@@ -1467,7 +1478,7 @@ i.iconSkillAgility {
   border-top: 1px solid rgba(255, 255, 255, 0.09);
   color: #dbe0e7;
   font-family: 'Noto Sans', Avenir, Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
@@ -1498,7 +1509,7 @@ i.iconSkillAgility {
 .token-addon__value {
   font-variant-numeric: tabular-nums;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   color: #f4ecf8;
   min-width: 2.2em;
   text-align: right;

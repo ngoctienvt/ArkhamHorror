@@ -17,9 +17,12 @@ import { useNarrative } from '@/arkham/composables/useNarrative'
 import { useNarration } from '@/arkham/composables/useNarration'
 import confetti from '@/effects/confetti'
 import { useWebSocket, useResizeObserver } from '@vueuse/core'
+import { useFitScreen } from '@/arkham/composables/useFitScreen'
 import { MenuItem } from '@headlessui/vue'
 import {
   AdjustmentsHorizontalIcon,
+  ArrowsPointingInIcon,
+  ArrowsPointingOutIcon,
   ArrowPathIcon,
   ArrowUturnLeftIcon,
   BackwardIcon,
@@ -140,6 +143,8 @@ import EventActAdvanceBarrier from '@/arkham/components/EventActAdvanceBarrier.v
 import StandaloneScenario from '@/arkham/components/StandaloneScenario.vue'
 import StoryQuestion from '@/arkham/components/StoryQuestion.vue'
 import AchievementToast from '@/arkham/components/AchievementToast.vue'
+import AdvanceReader from '@/arkham/components/AdvanceReader.vue'
+import { advancesBetween, type AdvanceReading } from '@/arkham/advanceReading'
 import { achievementEntryScope } from '@/arkham/achievements'
 import DrawSpotlight from '@/arkham/components/DrawSpotlight.vue'
 import Draggable from '@/components/Draggable.vue'
@@ -324,6 +329,9 @@ watch(hasEventBar, (present) => {
   if (!present) epicBarHeight.value = 0
 })
 
+// Fit to screen: hide the nav and game bar so the whole board is in view (styles/fit-screen.css).
+const { fitScreen, toggle: toggleFitScreen } = useFitScreen()
+
 const preloaded = new Set<string>()
 const preloading = new Set<string>()
 let mouseX = 0
@@ -473,6 +481,47 @@ const isCthulhuDeckReveal = computed(() => {
   return focusedCard !== null && cthulhuDeckCardCodes.has(toCardContents(focusedCard.card).cardCode.replace(/^c/, ''))
 })
 const showTheSilenceModal = ref(false)
+/* Act / agenda advances waiting to be read. The first one is on screen; the game
+   stays held (uiLock, so the next question is not restored and the autopilot
+   cannot answer) until each is accepted. `advanceOwnsLock` records that this
+   queue took the lock itself, so accepting releases it and never another
+   overlay's. */
+const advanceQueue = ref<AdvanceReading[]>([])
+let advanceOwnsLock = false
+let lastAdvanceKey: string | null = null
+/* Cards whose back was already read at the turn-over; their advance only needs the next card. */
+const backsRead = new Set<string>()
+
+function queueAdvances(previous: Arkham.Game | null | undefined, next: Arkham.Game) {
+  if (props.spectate) return
+  const fresh = advancesBetween(previous, next, backsRead).filter((a) => a.key !== lastAdvanceKey)
+  if (fresh.length === 0) return
+  lastAdvanceKey = fresh[fresh.length - 1].key
+  for (const a of fresh) if (a.toCode === null) backsRead.add(a.fromCode)
+  advanceQueue.value = [...advanceQueue.value, ...fresh]
+  if (!uiLock.value) {
+    uiLock.value = true
+    advanceOwnsLock = true
+  }
+}
+
+function releaseAdvanceLock() {
+  if (!advanceOwnsLock) return
+  advanceOwnsLock = false
+  uiLock.value = false
+}
+
+function acceptAdvance() {
+  advanceQueue.value = advanceQueue.value.slice(1)
+  if (advanceQueue.value.length === 0) releaseAdvanceLock()
+}
+
+function resetAdvances() {
+  advanceQueue.value = []
+  lastAdvanceKey = null
+  backsRead.clear()
+  advanceOwnsLock = false
+}
 const playabilityInfo = ref<PlayabilityInfo | null>(null)
 /* Append-only. Replaced wholesale only when a full game payload arrives; the
    socket appends. The previous shape copied and froze the entire history on
@@ -1403,6 +1452,7 @@ function scheduleApplyUpdate(payload: string, queued: boolean) {
   Arkham.gameDecoder
     .decodePromise(payload)
     .then((updatedGame) => {
+      queueAdvances(game.value, updatedGame)
       const locked = uiLock.value
       if (locked && !queued) qPush({ tag: 'GameUpdate', contents: payload })
       // Behind a revelation: refresh the board but keep the question hidden so the
@@ -2401,6 +2451,7 @@ async function runUndo(call: (gameId: string) => Promise<void>) {
   const oldQuestion = game.value?.question
   if (game.value) setGameQuestion({})
   resultQueue.value = []
+  resetAdvances()
   gameCard.value = null
   tarotCards.value = []
   clearDrawSpotlight()
@@ -2440,6 +2491,7 @@ const autopilot = useAutopilot({
       storyAnswerPending.value ||
       skipAllInProgress.value ||
       gameCard.value !== null ||
+      advanceQueue.value.length > 0 ||
       tarotCards.value.length > 0 ||
       drawSpotlight.value !== null ||
       pendingConfirm.value !== null ||
@@ -3263,6 +3315,16 @@ onUnmounted(() => {
       <!-- frontend/src/locales/en/gameBoard/base.json -->
       <p>{{ $t('outOfSyncHint') }}</p>
     </div>
+    <!-- The way out of fit-to-screen: the game bar that holds the toggle is hidden in that mode. -->
+    <button
+      v-if="fitScreen"
+      class="fit-screen-exit"
+      :title="$t('gameBar.exitFitScreen')"
+      :aria-label="$t('gameBar.exitFitScreen')"
+      @click="toggleFitScreen"
+    >
+      <ArrowsPointingOutIcon aria-hidden="true" />
+    </button>
     <div class="game-bar">
       <!-- The campaign screen. Not a menu and not a panel: it replaces the
            board, so it is drawn as a mode you are in (active while open) and
@@ -3406,6 +3468,11 @@ onUnmounted(() => {
             </div>
           </template>
         </Menu>
+      </div>
+      <div>
+        <button :aria-pressed="fitScreen" @click="toggleFitScreen">
+          <ArrowsPointingInIcon aria-hidden="true" /> {{ $t('gameBar.fitScreen') }}
+        </button>
       </div>
       <div>
         <button @click="filingBug = true">
@@ -3559,6 +3626,12 @@ onUnmounted(() => {
             </div>
           </div>
         </div>
+        <AdvanceReader
+          v-if="advanceQueue.length > 0"
+          :reading="advanceQueue[0]"
+          :remaining="advanceQueue.length - 1"
+          @accept="acceptAdvance"
+        />
         <Teleport to="body">
           <div
             v-for="p in flightPlaceholders"

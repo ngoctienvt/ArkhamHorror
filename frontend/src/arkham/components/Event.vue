@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { isTriggerWindow } from '@/arkham/triggerWindow'
 import { computed, ComputedRef, ref } from 'vue';
 import { useDebug } from '@/arkham/debug';
 import * as DebugInPlay from '@/arkham/debugInPlay';
@@ -51,6 +52,7 @@ function canInteract(c: Message): boolean {
 }
 
 const cardAction = computed(() => choices.value.findIndex(canInteract))
+const triggerReady = computed(() => (cardAction.value !== -1 || abilities.value.length > 0) && isTriggerWindow(choices.value))
 
 const exhausted = computed(() => props.event.exhausted)
 
@@ -130,7 +132,7 @@ const choose = (index: number) => emits('choose', index)
     <MissingCardBadge :card-code="cardCode" />
     <img
       :src="image"
-      :class="{ 'event--can-interact': cardAction !== -1, exhausted, attached }"
+      :class="{ 'event--can-interact': cardAction !== -1, 'trigger-ready': triggerReady, exhausted, attached }"
       class="card event"
       :draggable="debug.active"
       @dragstart="startDrag"

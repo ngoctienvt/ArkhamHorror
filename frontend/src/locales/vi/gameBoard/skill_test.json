@@ -21,5 +21,7 @@
   "winOdds": "Thắng {n}%",
   "winOddsHint": "Tỉ lệ thành công với các token còn trong túi hỗn mang. Chỉ là ước tính: hiệu ứng lật thêm token chưa được tính đầy đủ.",
   "availableTriggers": "Có thể dùng lúc này",
-  "committableCards": "Bài có thể commit"
+  "committableCards": "Bài có thể commit",
+  "activeModifiers": "Hiệu ứng đang áp dụng",
+  "activeModifiersHint": "Các bonus mà bài và khả năng của bạn đang cộng vào bài thử này (rê chuột vào để xem lá bài nguồn). Đây không phải bài để commit."
 }

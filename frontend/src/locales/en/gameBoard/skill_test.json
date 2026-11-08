@@ -21,5 +21,7 @@
   "winOdds": "Win {n}%",
   "winOddsHint": "Chance to succeed with the tokens left in the chaos bag. An estimate: effects that reveal extra tokens are not fully modeled.",
   "availableTriggers": "Usable now",
-  "committableCards": "Cards you can commit"
+  "committableCards": "Cards you can commit",
+  "activeModifiers": "Active effects on this test",
+  "activeModifiersHint": "Bonuses already applied to this test by your cards and abilities (hover one to see its source card). They are not cards to commit."
 }

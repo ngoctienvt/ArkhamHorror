@@ -103,3 +103,12 @@ skills-lock.json
 # Local homebrew working data (guide transcriptions, codegen maps); the
 # checked-in guide is docs/homebrew.md
 docs/homebrew/
+
+# Python & scripts cache
+__pycache__/
+*.py[cod]
+scripts/cache/
+scripts/patch_*.png
+scripts/cleaned_patch_*.png
+frontend/tfa_*.txt
+

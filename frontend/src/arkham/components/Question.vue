@@ -422,6 +422,44 @@ const focusedCardGroups = computed<SearchedCardGroup[]>(() => {
 
 const cardIds = (cards: ArkhamCard[]) => cards.map((card) => toCardContents(card).id)
 
+// Ids of cards the current choices can actually pick (a TargetLabel on the
+// card, or an ability whose source is the card).
+const choosableCardIds = computed(() => {
+  const ids = new Set<string>()
+  for (const choice of choices.value) {
+    if (choice.tag === MessageType.TARGET_LABEL) {
+      if (typeof choice.target.contents === 'string') ids.add(choice.target.contents)
+    } else if (choice.tag === MessageType.ABILITY_LABEL) {
+      const { source } = choice.ability
+      if (source.sourceTag === 'ProxySource' && 'contents' in source.source && typeof source.source.contents === 'string') {
+        ids.add(source.source.contents)
+      } else if ('contents' in source && typeof source.contents === 'string') {
+        ids.add(source.contents)
+      }
+    }
+  }
+  return ids
+})
+
+// A deck/discard search lists every card it looked at, but often only a few
+// can be picked. Show just those. Fall back to the full list when nothing is
+// pickable (a look-only reveal) and for the summit deck, where the order of the
+// whole set is the point.
+const filterGroups = (groups: SearchedCardGroup[]): SearchedCardGroup[] => {
+  if (isSummitDeckView.value) return groups
+  const allCards = groups.flatMap((group) => group.cards)
+  // Nothing pickable across the whole list: leave it as a plain reveal.
+  if (!allCards.some((card) => choosableCardIds.value.has(toCardContents(card).id))) return groups
+  return groups.flatMap((group) => {
+    if (group.extendIndex !== undefined) return [group]
+    const cards = group.cards.filter((card) => choosableCardIds.value.has(toCardContents(card).id))
+    return cards.length > 0 ? [{ ...group, cards }] : []
+  })
+}
+
+const visibleSearchedCards = computed(() => filterGroups(searchedCards.value))
+const visibleFocusedCardGroups = computed(() => filterGroups(focusedCardGroups.value))
+
 const cardChoiceHandledElsewhereIds = computed(() => {
   const scenario = props.game.scenario
 
@@ -1035,7 +1073,7 @@ const useCardPicker = computed(() => cardLabels.value.every(({ choice }) => !cho
           />
           <div v-else-if="focusedCardGroups.length > 0 && choices.length > 0" class="modal">
             <div class="modal-contents searched-cards focused-cards">
-              <div v-for="group in focusedCardGroups" :key="group.key" class="group">
+              <div v-for="group in visibleFocusedCardGroups" :key="group.key" class="group">
                 <h2>{{ group.label }}</h2>
                 <div class="group-cards">
                   <div
@@ -1057,7 +1095,7 @@ const useCardPicker = computed(() => cardLabels.value.every(({ choice }) => !cho
           </div>
           <div v-if="searchedCards.length > 0 && choices.length > 0 && !cardPoolActive && !putBackActive" class="modal">
             <div class="modal-contents searched-cards">
-              <div v-for="group in searchedCards" :key="group.key" class="group">
+              <div v-for="group in visibleSearchedCards" :key="group.key" class="group">
                 <h2>{{ group.label }}</h2>
                 <div v-if="group.extendIndex !== undefined" class="group-cards">
                   <button class="extend-search" @click="choose(group.extendIndex)">
@@ -1118,7 +1156,7 @@ const useCardPicker = computed(() => cardLabels.value.every(({ choice }) => !cho
           </div>
           <div v-if="amountsLabel" class="modal amount-modal">
             <div v-if="searchedCards.length > 0" class="modal-contents searched-cards">
-              <div v-for="group in searchedCards" :key="group.key" class="group">
+              <div v-for="group in visibleSearchedCards" :key="group.key" class="group">
                 <h2>{{ group.label }}</h2>
                 <div class="group-cards">
                   <div

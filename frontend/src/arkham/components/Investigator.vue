@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { isTriggerWindow } from '@/arkham/triggerWindow'
 import { useSettings } from '@/stores/settings';
 import { storeToRefs } from 'pinia';
 import { onUnmounted, onMounted, computed, inject, ref, watch } from 'vue'
@@ -134,6 +135,8 @@ const investigatorAction = computed(() => {
 })
 
 const choices = computed(() => props.choices)
+// The investigator card's own [reaction] / [fast] ability is usable in this trigger window.
+const triggerReady = computed(() => isTriggerWindow(choices.value) && (investigatorAction.value !== -1 || abilities.value.length > 0))
 
 function isAbility(v: Message): v is AbilityLabel {
   if (v.tag !== MessageType.ABILITY_LABEL) {
@@ -567,7 +570,7 @@ const spadeInjury = computed(() => {
         >
           <img
             v-if="!sceneMode"
-            :class="{ 'investigator--can-interact': investigatorAction !== -1, 'ability-target': isHighlighted || isAttackTarget }"
+            :class="{ 'investigator--can-interact': investigatorAction !== -1, 'trigger-ready': triggerReady, 'ability-target': isHighlighted || isAttackTarget }"
             class="card card--sideways"
             :src="image"
             :data-fx-fallback="`investigator-${investigator.id}`"

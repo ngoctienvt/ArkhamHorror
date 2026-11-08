@@ -519,3 +519,79 @@ h2.title {
   .choice-pending { animation: none; }
   .hand .choice-pending, .hand-card .choice-pending, .hand-card.choice-pending { transform: none; }
 }
+
+/*
+ * Selectable cards: the per-component rules draw a thin brass border, which
+ * sinks into the board. This adds a bright, softly pulsing glow on top so a
+ * card the game is waiting on stands out. `filter` is used (not box-shadow)
+ * because cards already set their own box-shadow and the glow follows the
+ * card's rounded outline.
+ */
+:is(
+  .card--can-interact,
+  .asset--can-interact,
+  .event--can-interact,
+  .skill--can-interact,
+  .treachery--can-interact,
+  .enemy--can-interact,
+  .story--can-interact,
+  .act--can-interact,
+  .scarletKey--can-interact,
+  .investigator--can-interact,
+  .investigator--can-interact--portrait,
+  .concealed-card--can-interact,
+  .location--can-interact,
+  .can-interact
+) {
+  --selectable-glow: #ffd45e;
+  filter: drop-shadow(0 0 3px var(--selectable-glow)) drop-shadow(0 0 8px var(--selectable-glow));
+  animation: selectable-pulse 1.4s ease-in-out infinite;
+}
+
+.asset--can-interact img {
+  filter: drop-shadow(0 0 3px #ffd45e) drop-shadow(0 0 8px #ffd45e);
+  animation: selectable-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes selectable-pulse {
+  0%, 100% { filter: drop-shadow(0 0 3px #ffd45e) drop-shadow(0 0 6px rgba(255, 212, 94, 0.7)); }
+  50% { filter: drop-shadow(0 0 5px #ffe28a) drop-shadow(0 0 14px #ffd45e); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(.card--can-interact, .asset--can-interact, .asset--can-interact img, .event--can-interact, .skill--can-interact,
+    .treachery--can-interact, .enemy--can-interact, .story--can-interact, .act--can-interact,
+    .scarletKey--can-interact, .investigator--can-interact, .investigator--can-interact--portrait,
+    .concealed-card--can-interact, .location--can-interact, .can-interact) {
+    animation: none;
+  }
+}
+
+/* Reaction / trigger window (see arkham/triggerWindow.ts): the cards that can be used right now.
+ * Distinct from the everyday gold "can interact" glow, which also covers every playable card during
+ * a normal turn: a thick bright-orange ring that pulses hard.
+ * !important because component scoped styles (unlayered) otherwise win over this layered rule. */
+.trigger-ready {
+  --trigger-ready: #ff7a1a;
+  outline: 3px solid var(--trigger-ready) !important;
+  outline-offset: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+  animation: trigger-ready-pulse 0.75s ease-in-out infinite alternate !important;
+}
+
+@keyframes trigger-ready-pulse {
+  from {
+    outline-color: var(--trigger-ready, #ff7a1a);
+    filter: drop-shadow(0 0 4px #ff7a1a) drop-shadow(0 0 10px #ff7a1a);
+  }
+  to {
+    outline-color: #fff3c4;
+    filter: drop-shadow(0 0 8px #ffd27a) drop-shadow(0 0 22px #ff7a1a) brightness(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trigger-ready { animation: none !important; }
+  .trigger-ready { filter: drop-shadow(0 0 6px #ff7a1a) drop-shadow(0 0 14px #ff7a1a); }
+}

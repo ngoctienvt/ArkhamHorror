@@ -17,6 +17,7 @@ import DrawSpotlight from '@/arkham/components/DrawSpotlight.vue';
 import { abilityNeedsGhostModal } from '@/arkham/ghostAbility';
 import { putBackInAnyOrderPicks } from '@/arkham/putBackInAnyOrder';
 import { mulliganQuestion } from '@/arkham/mulligan';
+import { useChoiceContext } from '@/arkham/composables/useChoiceContext';
 import { storyCardRead as findStoryCardRead, storyCardChoiceRead as findStoryCardChoiceRead } from '@/arkham/storyCardRead';
 
 export interface Props {
@@ -240,6 +241,10 @@ const requiresModal = computed(() => {
 
 const question = computed(() => props.game.question[props.playerId])
 
+// For a prompt the engine left unlabelled: the card that asked, its rule text, and what answering does.
+const { promptContext: findPromptContext } = useChoiceContext(() => props.game)
+const promptContext = computed(() => findPromptContext(props.playerId))
+
 const amountsLabel = computed(() => {
   if (question.value?.tag === QuestionType.CHOOSE_AMOUNTS) {
     return question.value.label
@@ -421,12 +426,33 @@ const title = computed(() => {
     <template #handle><h1 v-html="collectionSearch ? t('questionFilter.collectionTitle') : label(title)"></h1></template>
     <div class="choice-modal-wrapper" :class="{ 'choice-modal-wrapper--processing': isProcessing }">
       <p class="body" v-if="body" v-html="label(body)"></p>
+      <div v-else-if="promptContext" class="prompt-context">
+        <span v-if="promptContext.from" class="prompt-context__from">{{ promptContext.from }}</span>
+        <span v-if="promptContext.effect" class="prompt-context__effect">{{ promptContext.effect }}</span>
+        <span v-if="promptContext.intent" class="prompt-context__intent">{{ promptContext.intent }}</span>
+      </div>
       <Question v-if="question" :game="game" :playerId="playerId" @choose="choose" />
     </div>
   </Draggable>
 </template>
 
 <style scoped>
+.prompt-context {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #e5e2d4;
+  background: rgba(0, 0, 0, 0.45);
+  border-left: 3px solid #c6a873;
+}
+.prompt-context__from { font-weight: 700; color: #e6c584; }
+.prompt-context__effect { font-style: italic; color: #d9c9a3; }
+.prompt-context__intent { font-weight: 600; }
 .cthulhu-enact {
   position: fixed;
   inset: 0;

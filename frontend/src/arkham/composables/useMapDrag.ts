@@ -1,3 +1,4 @@
+import { ref } from 'vue'
 import { useStorage } from '@vueuse/core'
 
 /* Player-chosen display offsets for location plates and figures on the map. They only change where
@@ -16,7 +17,12 @@ export function resetMapOffsets(gameId: string) {
   offsets.value = Object.fromEntries(Object.entries(offsets.value).filter(([k]) => !k.startsWith(gameId + ':')))
 }
 
+/** Arrange mode (the "Arrange" button on a touch screen): off, a finger never drags a plate, figure or arrow, so swiping scrolls and taps stay taps. */
+export const arrangeMode = ref(false)
+
 const THRESHOLD = 5
+// A finger wobbles more than a mouse does.
+const TOUCH_THRESHOLD = 10
 
 /**
  * Begin a possible drag on pointerdown. Nothing moves until the pointer travels a few pixels, so
@@ -25,6 +31,8 @@ const THRESHOLD = 5
  */
 export function beginDrag(event: PointerEvent, key: string, unit: 'pct' | 'px', stage: HTMLElement | null) {
   if (event.button !== 0 || !event.isPrimary) return
+  if (event.pointerType === 'touch' && !arrangeMode.value) return
+  const threshold = event.pointerType === 'touch' ? TOUCH_THRESHOLD : THRESHOLD
   const target = event.currentTarget as HTMLElement
   const start: Offset = [...offsetOf(key)]
   const x0 = event.clientX
@@ -38,7 +46,7 @@ export function beginDrag(event: PointerEvent, key: string, unit: 'pct' | 'px', 
     const dx = e.clientX - x0
     const dy = e.clientY - y0
     if (!dragging) {
-      if (Math.hypot(dx, dy) < THRESHOLD) return
+      if (Math.hypot(dx, dy) < threshold) return
       dragging = true
     }
     offsets.value = {

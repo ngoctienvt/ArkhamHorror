@@ -322,8 +322,14 @@ const onPointerDown = (e: PointerEvent) => {
     if (!el) return
     pressTimer = clearTimer(pressTimer)
     pressTimer = window.setTimeout(() => queueHover(el), 200) // long press
+    // A plain tap enlarges a card that has nothing of its own to do on a tap (agenda, act, deck, cards in play).
+    tapCard = isTapInert(el) ? el : null
   }
 }
+
+let tapCard: HTMLElement | null = null
+const isTapInert = (el: HTMLElement) =>
+  !el.matches('.card--can-interact,[data-target]') && !el.closest('button,a,[role="button"],.draggable,.no-overlay')
 
 const onPointerMove = (e: PointerEvent) => {
   endDragIfIdle(e)
@@ -334,10 +340,21 @@ const onPointerMove = (e: PointerEvent) => {
       hoveredElement.value = null
     }
     pressTimer = clearTimer(pressTimer)
+    tapCard = null
   }
 }
 
 const onPointerUp = (e: PointerEvent) => {
+  if (e.pointerType === 'touch' && tapCard && hoveredElement.value === null) {
+    const el = tapCard
+    tapCard = null
+    pressTimer = clearTimer(pressTimer)
+    const probe = getImage(el)
+    if (probe) loadAR(probe)
+    hoveredElement.value = el
+    canDisablePress = false // the next tap anywhere closes it
+    return
+  }
   // A control layered on top of a card can change which face that card shows (the
   // act/agenda stack popover's flip button). Clicking it must leave the overlay up,
   // otherwise every click after the first dismisses it.

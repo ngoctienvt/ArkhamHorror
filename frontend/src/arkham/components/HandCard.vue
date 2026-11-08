@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { isTriggerWindow } from '@/arkham/triggerWindow'
 import { computed, inject, onMounted, Ref, ref, watch } from 'vue'
 import { CardContents, type Card } from '@/arkham/types/Card'
 import type { Game } from '@/arkham/types/Game'
@@ -136,20 +137,33 @@ const prohibited = computed(
   () => !onOffer.value && isProhibited(cardProhibition(props.game, props.ownerId, id.value)),
 )
 
+// In a reaction window, a card that can be played or used right now stands out from the rest of the hand.
+const triggerReady = computed(() => isTriggerWindow(choices.value) && (cardAction.value !== -1 || abilities.value.length > 0))
+
 const classObject = computed(() => {
   return {
     'card--can-interact': cardAction.value !== -1 || (isMobile.value && abilities.value.length > 0),
     'card--prohibited': prohibited.value,
+    'trigger-ready': triggerReady.value,
   }
 })
 
+// On a touch screen a tap enlarges the card with a Play button (and its abilities), so nothing is played by accident.
+const showPreview = ref(false)
+const canPlay = computed(() => cardAction.value !== -1)
+
 function handleCardClick() {
-  if (isMobile.value && abilities.value.length > 0) {
-    showAbilities.value = true
+  if (isMobile.value) {
+    showPreview.value = true
     return
   }
 
   emit('choose', cardAction.value)
+}
+
+function chooseFromPreview(index: number) {
+  showPreview.value = false
+  emit('choose', index)
 }
 
 const emit = defineEmits<{ choose: [value: number] }>()
@@ -337,16 +351,26 @@ function oilPaintEffect(canvas, radius, intensity) {
       @click="$emit('choose', ability.index)"
     />
 
-    <AbilitiesMenu
-      v-if="isMobile && abilities.length > 0"
-      v-model="showAbilities"
-      :game="game"
-      :abilities="abilities"
-      :frame="cardFrame"
-      :play-action="cardAction !== -1 ? cardAction : undefined"
-      position="top"
-      @choose="$emit('choose', $event)"
-    />
+    <Teleport v-if="isMobile && showPreview" to="body">
+      <div class="card-preview" role="dialog" @click.self="showPreview = false">
+        <img class="card-preview__img" :src="image" alt="" />
+        <div class="card-preview__actions">
+          <button v-if="canPlay" type="button" class="card-preview__play" @click="chooseFromPreview(cardAction)">
+            {{ $t('locationMap.play') }}
+          </button>
+          <AbilityButton
+            v-for="ability in abilities"
+            :key="ability.index"
+            :ability="ability.contents"
+            :game="game"
+            @click="chooseFromPreview(ability.index)"
+          />
+          <button type="button" class="card-preview__close" @click="showPreview = false">
+            {{ $t('locationMap.close') }}
+          </button>
+        </div>
+      </div>
+    </Teleport>
   </div>
   <div class="card-container" v-else>
     <img class="card in-hand" :src="cardBack" />
@@ -360,9 +384,11 @@ function oilPaintEffect(canvas, radius, intensity) {
   border-radius: 6px;
 }
 
+/* Hand cards are always playable-looking; no highlight, just the pointer. */
 .card--can-interact {
-  border: 2px solid var(--select);
   cursor: pointer;
+  filter: none;
+  animation: none;
 }
 
 /* Readable at a glance without hiding the card: the art stays identifiable, it
@@ -376,6 +402,13 @@ function oilPaintEffect(canvas, radius, intensity) {
   flex-direction: column;
   position: relative;
 }
+
+.card-preview { position: fixed; inset: 0; z-index: 1100; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 16px; background: #000c; box-sizing: border-box; }
+.card-preview__img { max-height: 68dvh; max-width: 92vw; width: auto; border-radius: 12px; box-shadow: 0 8px 32px #000; }
+.card-preview__actions { display: flex; flex-direction: column; gap: 8px; width: min(92vw, 360px); }
+.card-preview__play, .card-preview__close { min-height: 48px; border-radius: 8px; border: 1px solid #c6a873; font: 650 1rem var(--ui-serif, serif); cursor: pointer; }
+.card-preview__play { background: #c6a873; color: #191c16; }
+.card-preview__close { background: #1d2a21; color: #e9e3d0; }
 
 .debug-customize {
   position: absolute;

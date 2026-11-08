@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { heldCount } from '@/arkham/motion/tokenHolds'
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
+import { useTouchMode } from '@/arkham/composables/useTouchMode'
 import { useI18n } from 'vue-i18n'
 import type { Game } from '@/arkham/types/Game'
 import type { Investigator } from '@/arkham/types/Investigator'
@@ -32,6 +33,13 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 const nameOf = useCardNames()
+const { isTouch } = useTouchMode()
+// No hover on a finger: tapping the selected seat again opens or folds its detail card.
+const detailOpen = ref(false)
+function onSeatTap() {
+  if (isTouch.value) detailOpen.value = props.selected ? !detailOpen.value : true
+  emit('select')
+}
 const inv = computed(() => props.investigator)
 const cls = computed(() => inv.value.class)
 const portrait = computed(() => portraitImage(inv.value.cardCode))
@@ -57,8 +65,8 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
 </script>
 
 <template>
-  <div class="seat" :class="[`class-${cls}`, { selected, active, eliminated }]" role="button" tabindex="0"
-    :aria-pressed="selected" @click="emit('select')" @keydown.enter.prevent="emit('select')">
+  <div class="seat" :class="[`class-${cls}`, { selected, active, eliminated, open: detailOpen && selected }]" role="button" tabindex="0"
+    :aria-pressed="selected" :aria-expanded="detailOpen && selected" @click="onSeatTap" @keydown.enter.prevent="emit('select')">
     <span class="face" :data-image="cardImage(inv.cardCode)" :data-card-code="inv.cardCode">
       <img :src="portrait" :alt="nameOf(inv.cardCode)" />
       <img v-if="lead" class="crown" :src="crown" :alt="t('locationMap.lead')" />
@@ -114,10 +122,13 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
 .eye { position: absolute; right: 4px; top: 4px; background: #0008; border: 0; border-radius: 4px; color: #aaa; font-size: 0.7rem; cursor: pointer; }
 .eye.glow { color: #ffe9a0; }
 .detail { display: none; position: absolute; left: 100%; top: 0; z-index: 5; margin-left: 8px; min-width: 190px; padding: 8px 10px; gap: 3px; background: #0f1813f5; border: 1px solid #c6a873aa; border-radius: 8px; box-shadow: 0 6px 20px #000a; font: 500 0.72rem/1.3 system-ui, sans-serif; }
-.seat:hover .detail { display: grid; }
+@media (hover: hover) { .seat:hover .detail { display: grid; } }
+.seat.open .detail { display: grid; }
 .detail b { font: 0.9rem var(--ui-serif); }
 .detail .skills { display: flex; gap: 8px; text-transform: uppercase; white-space: nowrap; color: #d6d0b6; }
 .detail .skills i { font-style: normal; }
+.location-map[data-input='touch'] .seat { min-height: var(--tap-min); }
+.location-map[data-input='touch'] .eye { right: 0; top: 0; min-width: var(--tap-min); min-height: var(--tap-min); font-size: 1rem; }
 @keyframes blink { to { opacity: 0.35; } }
 @keyframes spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .pulse, .waiting { animation: none; } }

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { isTriggerWindow } from '@/arkham/triggerWindow'
 import { computed, onMounted, ref, watch } from 'vue'
 import { Dropdown } from 'floating-vue'
 import { BugAntIcon } from '@heroicons/vue/20/solid'
@@ -131,6 +132,7 @@ function isCardAction(c: Message): boolean {
 
 const cardAction = computed(() => choices.value.findIndex(isCardAction))
 const canInteract = computed(() => abilities.value.length > 0 || cardAction.value !== -1)
+const triggerReady = computed(() => canInteract.value && isTriggerWindow(choices.value))
 
 const inVoid = computed(() => props.enemy.placement.tag === 'OutOfPlay' && props.enemy.placement.contents === 'VoidZone')
 const global = computed(() => props.enemy.placement.tag === 'OtherPlacement' && props.enemy.placement.contents === 'Global')
@@ -440,7 +442,7 @@ function onDrop(event: DragEvent) {
             <img v-if="isTrueForm" :src="displayedImage"
               class="card enemy"
               v-tooltip="sourceTooltip"
-              :class="{ dragging, 'enemy--can-interact': canInteract && !hasObjective, 'enemy--can-interact-cursor': canInteract, attached, 'source-highlight': isHighlighted || isAttacking, 'card--flipping': flipping }"
+              :class="{ dragging, 'trigger-ready': triggerReady, 'enemy--can-interact': canInteract && !hasObjective, 'enemy--can-interact-cursor': canInteract, attached, 'source-highlight': isHighlighted || isAttacking, 'card--flipping': flipping }"
               :data-id="id"
               :data-card-code="enemy.cardCode"
               :data-game-id="game.id"
@@ -462,7 +464,7 @@ function onDrop(event: DragEvent) {
               :src="showsPlayerBack ? imgsrc('backs/back_player.jpg') : displayedImage"
               class="card enemy"
               v-tooltip="sourceTooltip"
-              :class="{ 'enemy--can-interact': canInteract && !hasObjective, 'enemy--can-interact-cursor': canInteract, attached, 'source-highlight': isHighlighted || isAttacking, 'card--flipping': flipping }"
+              :class="{ 'trigger-ready': triggerReady, 'enemy--can-interact': canInteract && !hasObjective, 'enemy--can-interact-cursor': canInteract, attached, 'source-highlight': isHighlighted || isAttacking, 'card--flipping': flipping }"
               :data-id="id"
               :data-card-code="enemy.cardCode"
               :data-game-id="game.id"

@@ -128,12 +128,12 @@ function label(event: FxEvent): string {
   const n = Math.abs(event.amount)
   const sign = event.amount > 0 ? '+' : '-'
   switch (event.kind) {
-    case 'damage': return `-${n} ♥`
-    case 'horror': return `-${n} ◆`
+    case 'damage': return `-${n} dmg`
+    case 'horror': return `-${n} horror`
     case 'enemyDamage': return `${event.amount > 0 ? '-' : '+'}${n}`
     case 'doom': return `${sign}${n} doom`
     case 'clue': return `${sign}${n} clue`
-    case 'resource': return `${sign}${n} $`
+    case 'resource': return `${sign}${n} resource`
     case 'uses': return `${sign}${n}`
     default: return ''
   }

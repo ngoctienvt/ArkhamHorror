@@ -5,6 +5,7 @@ import type { Game } from '@/arkham/types/Game'
 import { attachmentsOf, type HostKind } from '@/arkham/attachments'
 import { cardImage } from '@/arkham/cardImages'
 import { useCardNames } from '@/arkham/composables/useCardNames'
+import GameIcon from '@/arkham/components/GameIcon.vue'
 
 /* The cards attached to a location, enemy or investigator, drawn as small round chips on the host rather
  * than as cards. A chip shows the card's art and any counters; hovering it shows the full card through the
@@ -25,8 +26,6 @@ const expanded = ref(false)
 const all = computed(() => attachmentsOf(props.game, props.host, props.hostId))
 const shown = computed(() => expanded.value ? all.value : all.value.slice(0, props.max))
 const hidden = computed(() => Math.max(0, all.value.length - props.max))
-
-const COUNTER_ICON = { doom: '☠', clue: '◇', resource: '$', damage: '♥', horror: '◆' } as const
 </script>
 
 <template>
@@ -34,7 +33,7 @@ const COUNTER_ICON = { doom: '☠', clue: '◇', resource: '$', damage: '♥', h
     <span v-for="a in shown" :key="a.id" class="chip" :class="[a.tone, { exhausted: a.exhausted }]" tabindex="0" :aria-label="nameOf(a.cardCode)"
       :data-image="cardImage(a.cardCode)" :data-card-code="a.cardCode">
       <span class="art" :style="{ backgroundImage: `url(${cardImage(a.cardCode)})` }"></span>
-      <b v-for="c in a.counters" :key="c.token" class="counter" :class="c.token">{{ COUNTER_ICON[c.token] }}{{ c.count }}</b>
+      <b v-for="c in a.counters" :key="c.token" class="counter" :class="c.token"><GameIcon :type="c.token" />{{ c.count }}</b>
     </span>
     <button v-if="hidden && !expanded" type="button" class="more" :title="t('locationMap.attach.more', { n: hidden })" @click="expanded = true">+{{ hidden }}</button>
     <button v-else-if="hidden" type="button" class="more" :title="t('locationMap.attach.less')" @click="expanded = false">−</button>
@@ -49,9 +48,10 @@ const COUNTER_ICON = { doom: '☠', clue: '◇', resource: '$', damage: '♥', h
 .chip.exhausted { opacity: 0.6; }
 .chip:focus-visible { outline: 2px solid #ffe9a0; }
 .art { position: absolute; inset: 0; border-radius: 50%; background-size: 240% auto; background-position: 50% 22%; background-repeat: no-repeat; }
-.counter { position: absolute; right: -6px; bottom: -5px; min-width: 14px; padding: 0 3px; border-radius: 7px; background: #0b100d; border: 1px solid #ffffff44; color: #ffe9a0; font: 700 9px/13px system-ui, sans-serif; text-align: center; }
+.counter { position: absolute; right: -8px; bottom: -6px; display: inline-flex; align-items: center; gap: 1px; min-width: 14px; height: 15px; padding: 0 4px 0 2px; border-radius: 8px; background: #0b100d; border: 1px solid #ffffff44; color: #ffe9a0; font: 700 9px/13px system-ui, sans-serif; text-align: center; }
 .counter.doom { color: #ff9b87; }
-.counter + .counter { right: auto; left: -6px; }
+.counter :deep(.game-icon) { width: 12px; height: 12px; vertical-align: 0; }
+.counter + .counter { right: auto; left: -8px; }
 .more { width: 26px; height: 26px; padding: 0; border-radius: 50%; border: 1px solid #c6a873aa; background: #101a15e6; color: #f1e6c1; font: 700 10px/1 system-ui, sans-serif; cursor: pointer; }
 .more:hover { background: #26352bf0; }
 </style>

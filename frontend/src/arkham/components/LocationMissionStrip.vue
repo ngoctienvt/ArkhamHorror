@@ -152,9 +152,9 @@ function describe(kind: 'act' | 'agenda', id: string, deckId: number, step: numb
     flavor: plain(flipped ? card?.back_flavor : card?.flavor),
     // The action / fast lines are shown inside their own action box, so they are left out of the body text.
     textHtml: replaceText(
-      ((flipped ? card?.back_text : card?.text) ?? '').split(/(\n|<br\s*\/?>)/i)
-        .filter((line) => !LINE_KIND.some(([re, k]) => (k === 'action' || k === 'fast') && re.test(line)))
-        .join(''),
+      ((flipped ? card?.back_text : card?.text) ?? '').split(/\n|<br\s*\/?>/i)
+        .filter((line) => line.trim() && !LINE_KIND.some(([re, k]) => (k === 'action' || k === 'fast') && re.test(line)))
+        .join('\n'),
     ),
     doom, doomMax: kind === 'agenda' ? doomLimit(threshold, card?.doom ?? null) : null,
     clues: kind === 'act' ? props.game.totalClues : null,
@@ -166,11 +166,16 @@ function describe(kind: 'act' | 'agenda', id: string, deckId: number, step: numb
   }
 }
 
+// Agenda first (the clock), then the act (the goal); the reference card follows in the template.
+/* The pips show the doom on the agenda card itself, but an agenda advances on all the doom in play (on enemies,
+ * locations, assets ... too), so the warning counts that total: how much is left before the threshold. */
+const doomLeft = (p: Panel) => p.doomMax === null ? null : p.doomMax - props.game.totalDoom
+
 const panels = computed<Panel[]>(() => [
-  ...Object.values(props.game.acts).sort((a, b) => a.deckId - b.deckId)
-    .map((a) => describe('act', a.id, a.deckId, a.sequence.number, /[bdfh]/i.test(a.sequence.side), null, null, a.advanceCost)),
   ...Object.values(props.game.agendas).sort((a, b) => a.deckId - b.deckId)
     .map((a) => describe('agenda', a.id, a.deckId, a.sequence.step, a.flipped, a.doom, a.doomThreshold)),
+  ...Object.values(props.game.acts).sort((a, b) => a.deckId - b.deckId)
+    .map((a) => describe('act', a.id, a.deckId, a.sequence.number, /[bdfh]/i.test(a.sequence.side), null, null, a.advanceCost)),
 ])
 
 /* When an agenda's doom or act's clues change, the pips between the old and new count animate for a moment
@@ -243,8 +248,8 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
 <template>
   <div v-if="panels.length" class="mission-strip">
     <article v-for="p in panels" :key="p.key" class="mission" :class="p.kind">
-      <img class="thumb" :class="p.kind === 'act' || p.kind === 'agenda' ? 'thumb--landscape' : ''" :src="p.image" :data-image="p.image" :data-card-code="p.code" :alt="p.title" loading="lazy" />
       <div class="body">
+        <img class="thumb thumb--landscape" :src="p.image" :data-image="p.image" :data-card-code="p.code" :alt="p.title" loading="lazy" />
         <div class="head">
           <div class="head-main">
         <span class="eyebrow">{{ t(`locationMap.${p.kind}`) }} {{ p.step }} / {{ p.total }}</span>
@@ -254,7 +259,7 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
         <div
           v-if="p.doom !== null"
           class="doom"
-          :class="{ 'doom--changed': !!doomChange[p.key], 'doom--warn': p.doomMax && p.doomMax - p.doom === 2, 'doom--critical': p.doomMax && p.doomMax - p.doom <= 1 }"
+          :class="{ 'doom--changed': !!doomChange[p.key], 'doom--critical': doomLeft(p) !== null && doomLeft(p)! <= 1 }"
         >
           <span v-if="!p.doomMax">{{ t('locationMap.doomCount', { count: p.doom, max: '?' }) }}</span>
           <div v-if="p.doomMax && p.doomMax <= 14" class="doom-pips" role="img" :aria-label="t('locationMap.doomCount', { count: p.doom, max: p.doomMax })">
@@ -269,8 +274,8 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
             </span>
           </div>
           <i v-else-if="p.doomMax" class="doom-bar"><b :style="{ width: Math.min(100, (100 * p.doom) / p.doomMax) + '%' }"></b></i>
-          <span v-if="p.doomMax && p.doomMax - p.doom <= 0" class="doom-alert">{{ t('locationMap.doomAdvancing') }}</span>
-          <span v-else-if="p.doomMax && p.doomMax - p.doom === 1" class="doom-alert">{{ t('locationMap.doomImminent') }}</span>
+          <span v-if="doomLeft(p) !== null && doomLeft(p)! <= 0" class="doom-alert">{{ t('locationMap.doomAdvancing') }}</span>
+          <span v-else-if="doomLeft(p) === 1" class="doom-alert">{{ t('locationMap.doomImminent') }}</span>
         </div>
         <div
           v-if="p.clues !== null"
@@ -324,11 +329,11 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
       </div>
     </article>
     <article v-if="referenceImage" class="mission reference">
-      <img class="thumb thumb--portrait" :src="referenceImage" :data-image="referenceImage" :alt="t('locationMap.reference')" loading="lazy" />
       <div class="body">
+        <img class="thumb thumb--portrait" :src="referenceImage" :data-image="referenceImage" :alt="t('locationMap.reference')" loading="lazy" />
         <div class="head">
           <div class="head-main">
-            <span class="eyebrow">{{ t('locationMap.reference') }}</span>
+            <span class="eyebrow">{{ t('locationMap.reference') }}<template v-if="referenceInfo?.heading"> · {{ referenceInfo.heading }}</template></span>
             <h3>{{ scenario.name?.title ?? '' }}</h3>
           </div>
           <div class="head-aside">
@@ -343,7 +348,6 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
           <span v-for="c in referenceCounters" :key="c.name" class="counter">{{ c.label }} <b>{{ c.n }}</b></span>
         </div>
         <template v-if="referenceInfo">
-          <span v-if="referenceInfo.heading" class="ref-heading">{{ referenceInfo.heading }}</span>
           <ul class="ref-tokens">
             <li v-for="l in referenceInfo.lines" :key="l.key"><span class="ref-token"><ChaosTokenIcon :token="l.token" /></span><span class="ref-effect" v-html="l.html"></span></li>
           </ul>
@@ -355,24 +359,30 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
 
 <style scoped>
 .mission-strip { display: flex; flex-wrap: wrap; align-items: stretch; gap: 6px; padding: 4px 8px; background: #101a14; border-bottom: 1px solid #a68b5540; }
-.mission { flex: 1 1 320px; display: flex; gap: 8px; padding: 4px 8px; background: #16221b; border: 1px solid #c6a87366; border-radius: 6px; color: #e5e2d4; min-width: 0; }
-.mission.reference { flex: 1.3 1 360px; border-color: #8fb4a066; }
+.mission { flex: 1 1 320px; display: flex; padding: 5px 8px; background: #16221b; border: 1px solid #c6a87366; border-radius: 6px; color: #e5e2d4; min-width: 0; }
+/* The reference card's token lines are short, so it takes less width and leaves it to the agenda / act text. */
+.mission.reference { flex: 0.8 1 300px; border-color: #8fb4a066; }
 .day-total { color: #f0d9a8; border: 1px solid #c6a87388; white-space: nowrap; }
 .mission.agenda { border-color: #c9887a88; }
-.thumb { flex: none; align-self: flex-start; height: auto; object-fit: contain; border-radius: 5px; border: 1px solid #0006; box-shadow: 0 2px 8px #0008; }
-.thumb--landscape { width: 84px; aspect-ratio: 1.4; }
-.thumb--portrait { width: 52px; aspect-ratio: 0.72; }
+/* The card art floats top-right: the title row and text run to its left, then take the full width below it. */
+.thumb { float: right; margin: 1px 0 4px 10px; height: auto; object-fit: cover; border-radius: 5px; border: 1px solid #c6a87355; box-shadow: 0 2px 8px #0008; }
+.thumb--landscape { width: 92px; aspect-ratio: 1.4; }
+.thumb--portrait { width: 50px; aspect-ratio: 0.72; }
 .head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
-.head-main { display: flex; flex-direction: column; min-width: 0; }
+/* "AGENDA 2 / 4" and the card name share one line (wrapping only when the panel is too narrow). */
+.head-main { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 8px; min-width: 0; }
+.head-main .eyebrow { flex: none; }
 .head-aside { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; flex: none; }
 .head-aside .total { margin-top: 0; }
-.body { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; }
+.body { display: flow-root; min-width: 0; flex: 1; }
+.body > * + * { margin-top: 3px; }
+.body > .thumb + * { margin-top: 0; }
 .eyebrow { text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.6rem; color: #c6a873; }
 .agenda .eyebrow { color: #d99e8e; }
 h3 { margin: 0; font: 0.9rem var(--ui-serif); }
 p { margin: 0; font-size: 0.74rem; line-height: 1.3; }
 .flavor { color: #b9c2ad; font-style: italic; max-height: 5.2em; overflow-y: auto; padding-right: 4px; scrollbar-width: thin; }
-.text { color: #e9e3cc; }
+.text { color: #e9e3cc; white-space: pre-line; }
 .thumb { cursor: zoom-in; }
 .doom { display: flex; flex-direction: column; gap: 2px; font-size: 0.7rem; color: #f0d9a8; }
 .doom .doom-bar { display: block; height: 6px; background: #5a4a40; border-radius: 3px; overflow: hidden; }
@@ -406,7 +416,6 @@ p { margin: 0; font-size: 0.74rem; line-height: 1.3; }
 @keyframes clue-flash { 0% { background: #3ddc7a44; } 100% { background: transparent; } }
 .doom-left { color: #b9a88a; }
 .doom-alert { font-weight: 700; color: #ff9b86; }
-.doom--warn .pip.filled :deep(.game-icon) { filter: drop-shadow(0 0 3px #f0b070); }
 .doom--critical { padding: 3px 6px; border-radius: 6px; background: #5a1a1466; box-shadow: 0 0 0 1px #ff5a4a99; animation: doom-pulse 1.2s ease-in-out infinite; }
 .doom--critical .pip.filled :deep(.game-icon) { filter: drop-shadow(0 0 4px #ff5a4a); }
 @keyframes doom-pulse { 50% { box-shadow: 0 0 10px 2px #ff5a4acc; } }
@@ -443,8 +452,7 @@ p { margin: 0; font-size: 0.74rem; line-height: 1.3; }
 .counters { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0; }
 .counter { padding: 2px 10px; border-radius: 999px; font-size: 0.78rem; color: #f0d9a8; background: #0006; border: 1px solid #c6a87388; }
 .counter b { color: #fff4df; font-size: 0.95rem; }
-.ref-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8fb4a0; }
-.ref-tokens { list-style: none; margin: 1px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2px 6px; }
+.ref-tokens { list-style: none; margin: 1px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 2px 6px; }
 .ref-tokens li { display: flex; align-items: flex-start; gap: 6px; padding: 1px 4px; border-radius: 4px; background: #0003; font-size: 0.7rem; line-height: 1.25; }
 .ref-token { flex: none; width: 26px; height: 26px; }
 .ref-effect { min-width: 0; color: #e9e3cc; }

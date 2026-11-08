@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { isTriggerWindow } from '@/arkham/triggerWindow'
 import { computed, watch, ref } from 'vue';
 import { Dropdown } from 'floating-vue';
 import useHighlighter from '@/composable/useHighlighter';
@@ -185,6 +186,8 @@ function canAdjustSanity(c: Message): boolean {
 
 const cardAction = computed(() => choices.value.findIndex(isCardAction))
 const canInteract = computed(() => abilities.value.length > 0 || cardAction.value !== -1)
+// In a reaction window the usable asset gets the strong trigger highlight.
+const triggerReady = computed(() => canInteract.value && isTriggerWindow(choices.value))
 const showDiscardMark = computed(() => props.discardToMakeRoom && cardAction.value !== -1)
 const healthAction = computed(() => choices.value.findIndex(canAdjustHealth))
 const sanityAction = computed(() => choices.value.findIndex(canAdjustSanity))
@@ -482,7 +485,7 @@ function startDrag(event: DragEvent) {
             :data-is-spirit="isSpirit || undefined"
             :src="displayedImage"
             class="card"
-            :class="{ exhausted, 'ability-target': isHighlighted || isAttackTarget, 'source-highlight': highlighter.sourceHighlighted.value === asset.id, 'card--flipping': flipping }"
+            :class="{ exhausted, 'trigger-ready': triggerReady, 'ability-target': isHighlighted || isAttackTarget, 'source-highlight': highlighter.sourceHighlighted.value === asset.id, 'card--flipping': flipping }"
             :style="{ '--ui-rotation': `${uiRotation}deg` }"
             :data-rotation="uiRotation || undefined"
             :draggable="debug.active || canTuck"
