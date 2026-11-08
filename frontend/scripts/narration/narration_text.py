@@ -155,7 +155,13 @@ def collect_story(locale_root: Path, campaign: str) -> dict[str, list[str]]:
 # ---------- Vietnamese wording from .po files ----------
 
 def _po_unquote(lines: list[str]) -> str:
-    return "".join(json.loads(l) for l in lines)
+    def unquote_one(l: str) -> str:
+        try:
+            return json.loads(l)
+        except json.JSONDecodeError:
+            fixed = l.replace(r"\v", r"\u000b").replace(r"\'", "'")
+            return json.loads(fixed)
+    return "".join(unquote_one(l) for l in lines)
 
 
 def parse_po(path: Path) -> dict[str, str]:
