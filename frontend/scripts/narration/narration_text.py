@@ -15,7 +15,7 @@ from pathlib import Path
 
 # A key is narration when one of its path segments names a story section...
 STORY_SEGMENT = re.compile(
-    r"^(intro|prologue|epilogue|interlude|resolutions?|flavor(Text)?|story|narrative)", re.I
+    r"^(intro|prologue|epilogue|interlude|resolutions?|flavor(Text)?|story|narrative|missionBriefing|heirToCarcosa|theSearchForFragment)", re.I
 )
 # ...and none of its segments names rules or UI text.
 SKIP_SEGMENTS = {
@@ -59,6 +59,15 @@ def locale_files(locale_root: Path, campaign: str) -> list[tuple[str, Path]]:
     scenarios/<name>.json and, in campaigns that keep them flat, <name>.json at
     the campaign root, both under <campaign>.<name>)."""
     root = locale_root / campaign
+    if not root.exists():
+        # Check homebrew campaigns (e.g. frontend/homebrew/dark-matter/locales/en)
+        kebab = re.sub(r"(?<!^)(?=[A-Z])", "-", campaign).lower()
+        homebrew_root = locale_root.parents[2] / "homebrew" / kebab / "locales" / "en"
+        if not homebrew_root.exists():
+            homebrew_root = locale_root.parents[2] / "homebrew" / campaign / "locales" / "en"
+        if homebrew_root.exists():
+            return [(campaign, f) for f in sorted(homebrew_root.glob("*.json"))]
+        return []
     files = [(campaign, root / "base.json")] if (root / "base.json").exists() else []
     scenario_files = list((root / "scenarios").glob("*.json"))
     scenario_files += [f for f in root.glob("*.json") if f.name != "base.json"]
