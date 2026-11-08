@@ -604,8 +604,8 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
       </div>
       <!-- Bonuses already in force on this test (a weapon's +1 combat / +1 damage…), not commit options:
            labelled so they don't read as part of the commit row, and hovering one shows its source card. -->
-      <h3 v-if="modifiers.length > 0" class="triggers__title modifiers__title" :title="$t('skillTest.activeModifiersHint')">{{ $t('skillTest.activeModifiers') }}</h3>
       <div v-if="modifiers.length > 0" class="modifiers">
+        <h3 class="triggers__title modifiers__title" :title="$t('skillTest.activeModifiersHint')">{{ $t('skillTest.activeModifiers') }}</h3>
         <div v-for="(modifier, idx) in modifiers" :key="idx" class="modifier" :class="{ 'sideways': modifier.source.tag === 'InvestigatorSource' }" :data-image-id="modifierSource(modifier)">
           <template v-if="modifier.type.tag === 'CannotCommitCards'">
             <span>{{cannotCommitCardsToWords(modifier.type)}}</span>
@@ -817,7 +817,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   text-align: left;
 }
 
-.modifiers__title { align-self: flex-start; padding: 0 10px; cursor: help; }
+.modifiers__title { flex-basis: 100%; text-align: left; cursor: help; }
 
 .triggers__title {
   margin: 0;
