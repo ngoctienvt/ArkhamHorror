@@ -893,6 +893,127 @@ const villageAnchors: Record<string, Point> = {
 // Boards that reuse cards from another scenario (e.g. the Midnight Masks Arkham districts)
 // but arrange them differently, so the shared anchors would contradict the real connections.
 const boardAnchors: Record<string, Record<string, Point>> = {
+  // Curtain Call: Arkham Theatre (Lobby, Auditorium, Balcony, Backstage, Doorways)
+  'the-path-to-carcosa/curtain-call': {
+    lobbyDoorway1: [8, 20],
+    lobbyDoorway3: [8, 48],
+    lobbyDoorway2: [8, 80],
+    lobby: [19, 70],
+    balcony: [38, 42],
+    theatre: [57, 66],
+    backstage: [82, 74],
+    backstageDoorway1: [91, 20],
+    backstageDoorway3: [91, 52],
+    backstageDoorway2: [91, 82],
+    '03048': [57, 66], // Theatre
+    '03049': [19, 70], // Lobby
+    '03050': [38, 42], // Balcony
+    '03051': [82, 74], // Backstage
+  },
+  // The Last King: Ward Family Manor (Dining Room, Gallery, Courtyard, Ballroom, Living Room, Foyer)
+  'the-path-to-carcosa/the-last-king': {
+    diningRoom: [22, 22],
+    gallery: [82, 18],
+    courtyard: [58, 36],
+    ballroom: [24, 66],
+    livingRoom: [78, 62],
+    foyer: [50, 84],
+    '03066': [50, 84], // Foyer
+    '03067': [58, 36], // Courtyard
+    '03068': [78, 62], // Living Room
+    '03069': [24, 66], // Ballroom
+    '03070': [22, 22], // Dining Room
+    '03071': [82, 18], // Gallery
+  },
+  // Echoes of the Past: Georgian manor 3-floor architectural cutaway
+  // 3rd Floor (Attic/Offices), 2nd Floor (Quiet Halls mezzanine/Library), Ground Floor (Entry Hall foyer/Exhibits)
+  'the-path-to-carcosa/echoes-of-the-past': {
+    groundFloor1: [15, 80],
+    entryHall: [42, 80],
+    groundFloor2: [70, 80],
+    secondFloor1: [15, 52],
+    quietHalls1: [41, 52],
+    secondFloor2: [64, 52],
+    hiddenLibrary: [77, 52],
+    thirdFloor1: [16, 28],
+    quietHalls2: [39, 28],
+    thirdFloor2: [64, 28],
+    '03127': [42, 80], // Entry Hall
+    '03131': [41, 52], // Quiet Halls (2nd Floor)
+    '03135': [39, 28], // Quiet Halls (3rd Floor)
+    '03139': [77, 52], // Hidden Library
+  },
+  // The Unspeakable Oath: Arkham Asylum (Courtyard/Garden, Facilities, Subterranean Confinement)
+  'the-path-to-carcosa/the-unspeakable-oath': {
+    garden: [38, 25],
+    yard: [62, 25],
+    kitchen: [10, 52],
+    messHall: [32, 52],
+    asylumHallsWesternPatientWing: [52, 52],
+    asylumHallsEasternPatientWing: [69, 52],
+    infirmary: [88, 52],
+    basementHall: [12, 84],
+    patientConfinement1: [35, 84],
+    patientConfinement3: [52, 84],
+    patientConfinement4: [68, 84],
+    patientConfinement2: [84, 84],
+    '03170': [10, 52], // Kitchen
+    '03171': [32, 52], // Mess Hall
+    '03172': [88, 52], // Infirmary
+    '03173': [62, 25], // Yard
+    '03174': [38, 25], // Garden
+    '03175': [12, 84], // Basement Hall
+    '03168': [52, 52], // Western Wing
+    '03169': [69, 52], // Eastern Wing
+  },
+  // A Phantom of Truth: 1920s Paris (West-to-East Topology)
+  'the-path-to-carcosa/a-phantom-of-truth': {
+    grandGuignol: [10, 16],
+    opéraGarnier: [21, 41],
+    gareDOrsay: [12, 74],
+    montmartre: [38, 18],
+    gardensOfLuxembourg: [52, 57],
+    montparnasse: [42, 88],
+    canalSaintMartin: [68, 16],
+    leMarais: [68, 38],
+    notreDame: [74, 71],
+    pèreLachaiseCemetery: [88, 22],
+    '03206': [10, 16], // Grand Guignol
+    '03207': [21, 41], // Opéra Garnier
+    '03208': [12, 74], // Gare d'Orsay
+    '03209': [38, 18], // Montmartre
+    '03210': [68, 38], // Le Marais
+    '03211': [74, 71], // Notre-Dame
+    '03212': [52, 57], // Gardens of Luxembourg
+    '03213': [68, 16], // Canal Saint-Martin
+    '03214': [88, 22], // Père Lachaise Cemetery
+    '03215': [42, 88], // Montparnasse
+  },
+  // Black Stars Rise: Mont Saint-Michel Fortress & Abbey
+  'the-path-to-carcosa/black-stars-rise': {
+    cloister: [28, 16],
+    knightsHall: [20, 25],
+    abbeyChurch: [47, 25],
+    northTower: [60, 22],
+    brokenSteps: [49, 56],
+    outerWall: [82, 46],
+    chapelOfStAubert: [17, 54],
+    chœurGothique: [34, 50],
+    grandRue: [70, 62],
+    abbeyTower: [31, 82],
+    porteDeLAvancée: [76, 84],
+    '03284': [28, 16], // Cloister
+    '03285': [20, 25], // Knights' Hall
+    '03286': [60, 22], // North Tower
+    '03287': [47, 25], // Abbey Church
+    '03288': [82, 46], // Outer Wall
+    '03289': [17, 54], // Chapel of St. Aubert
+    '03290': [49, 56], // Broken Steps
+    '03291': [34, 50], // Chœur Gothique
+    '03292': [70, 62], // Grand Rue
+    '03293': [31, 82], // Abbey Tower
+    '03294': [76, 84], // Porte de l'Avancée
+  },
   // One Last Job mirrors the scenario's 3x3 card grid exactly, so the map reads like the table:
   //   .            La Bella Luna   Hibb's Roadhouse
   //   Northside    Downtown        Easttown
@@ -1052,9 +1173,9 @@ const boardAnchors: Record<string, Record<string, Point>> = {
   },
 }
 
-export function hemlockVillagePosition(code: string, anchors?: Record<string, Point>): Point | undefined {
+export function hemlockVillagePosition(code: string, anchors?: Record<string, Point>, label?: string): Point | undefined {
   const key = code.replace(/^c/, '').replace(/[ab]$/, '')
-  return anchors?.[key] ?? villageAnchors[key]
+  return (label ? anchors?.[label] : undefined) ?? anchors?.[key] ?? villageAnchors[key]
 }
 
 const houseRows: Record<string, number> = {

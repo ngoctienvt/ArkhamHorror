@@ -4,12 +4,13 @@
 # server (see vite.remote.config.mjs), so friends use accounts on arkhamhorror.app.
 #
 # Usage (from anywhere):
-#   powershell -ExecutionPolicy Bypass -File scripts\share-radmin.ps1 start     # build if needed, then serve
-#   powershell -ExecutionPolicy Bypass -File scripts\share-radmin.ps1 rebuild   # force rebuild, then serve
+#   powershell -ExecutionPolicy Bypass -File scripts\share-radmin.ps1 rebuild   # rebuild (default), then serve
+#   powershell -ExecutionPolicy Bypass -File scripts\share-radmin.ps1 start     # rebuild, then serve
+#   powershell -ExecutionPolicy Bypass -File scripts\share-radmin.ps1 serve     # serve existing build without rebuilding
 #   powershell -ExecutionPolicy Bypass -File scripts\share-radmin.ps1 stop
 #   powershell -ExecutionPolicy Bypass -File scripts\share-radmin.ps1 status
 param(
-  [ValidateSet('start', 'rebuild', 'stop', 'status')][string]$Action = 'start',
+  [ValidateSet('rebuild', 'start', 'serve', 'stop', 'status')][string]$Action = 'rebuild',
   [int]$Port = 8090
 )
 
@@ -50,7 +51,7 @@ if (-not $ip) { throw 'Radmin VPN adapter not found. Start Radmin VPN and join y
 
 if (Get-ServerPid) { Write-Host "Port $Port already in use; restarting."; Stop-Server; Start-Sleep -Seconds 1 }
 
-if ($Action -eq 'rebuild' -or -not (Test-Path 'dist/index.html') -or -not (Test-Path 'dist/cards')) {
+if ($Action -in @('rebuild', 'start') -or -not (Test-Path 'dist/index.html') -or -not (Test-Path 'dist/cards')) {
   Write-Host 'Building frontend...'
   node scripts/slim-cards.cjs | Out-Null
   npx vite build --config vite.remote.config.mjs

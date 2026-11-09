@@ -101,7 +101,7 @@ const positions = computed<Record<string, Point>>(() => {
   if (!board?.village && !board?.house) return fallback
   return Object.fromEntries(locations.value.map((location) => [
     location.id,
-    (board.house ? hemlockHousePosition(location.label) : hemlockVillagePosition(location.cardCode, board.anchors)) ?? fallback[location.id],
+    (board.house ? hemlockHousePosition(location.label) : hemlockVillagePosition(location.cardCode, board.anchors, location.label)) ?? fallback[location.id],
   ]))
 })
 const links = computed(() => locationLinks(graph.value))
@@ -116,7 +116,7 @@ const gridSpots = computed(() => {
   return Object.entries(spots)
     .filter(([label]) => !used.has(label) && gridSlotIndex(choices.value, label) !== -1)
     .map(([label, [x, y]]) => {
-      const anchor = illustratedBoard.value?.house ? hemlockHousePosition(label) : undefined
+      const anchor = (illustratedBoard.value?.house ? hemlockHousePosition(label) : undefined) ?? illustratedBoard.value?.anchors?.[label]
       return { label, x: anchor?.[0] ?? x, y: anchor?.[1] ?? (squeeze ? y * 0.8 : y), index: gridSlotIndex(choices.value, label) }
     })
 })

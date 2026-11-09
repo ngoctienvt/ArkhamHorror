@@ -121,6 +121,77 @@ test('The Path to Carcosa scenarios select their overview boards', () => {
   assert.equal(hemlockOverview('c52048', 'c52048')?.image, 'img/scenes/the-path-to-carcosa/the-pallid-mask.webp')
   assert.equal(hemlockOverview('c52054', 'c52054')?.image, 'img/scenes/the-path-to-carcosa/black-stars-rise.webp')
   assert.equal(hemlockOverview('c52059', 'c52059')?.image, 'img/scenes/the-path-to-carcosa/dim-carcosa.webp')
+
+  // Curtain Call: Arkham Theatre anchors
+  const curtainCall = hemlockOverview('c03043', 'c03043').anchors
+  assert.deepEqual(hemlockVillagePosition('03048', curtainCall), [57, 66]) // Theatre
+  assert.deepEqual(hemlockVillagePosition('03049', curtainCall), [19, 70]) // Lobby
+  assert.deepEqual(hemlockVillagePosition('03050', curtainCall), [38, 42]) // Balcony
+  assert.deepEqual(hemlockVillagePosition('03051', curtainCall), [82, 74]) // Backstage
+  assert.deepEqual(hemlockVillagePosition('', curtainCall, 'lobbyDoorway1'), [8, 20])
+  assert.deepEqual(hemlockVillagePosition('', curtainCall, 'backstageDoorway1'), [91, 20])
+
+  // The Last King: Ward Family Manor anchors
+  const theLastKing = hemlockOverview('c03061', 'c03061').anchors
+  assert.deepEqual(hemlockVillagePosition('03066', theLastKing), [50, 84]) // Foyer
+  assert.deepEqual(hemlockVillagePosition('03067', theLastKing), [58, 36]) // Courtyard
+  assert.deepEqual(hemlockVillagePosition('03068', theLastKing), [78, 62]) // Living Room
+  assert.deepEqual(hemlockVillagePosition('03069', theLastKing), [24, 66]) // Ballroom
+  assert.deepEqual(hemlockVillagePosition('03070', theLastKing), [22, 22]) // Dining Room
+  assert.deepEqual(hemlockVillagePosition('03071', theLastKing), [82, 18]) // Gallery
+
+  // Echoes of the Past: 3-floor Georgian manor cutaway anchors
+  const echoes = hemlockOverview('c03120', 'c03120').anchors
+  assert.deepEqual(hemlockVillagePosition('03127', echoes), [42, 80]) // Entry Hall
+  assert.deepEqual(hemlockVillagePosition('03131', echoes), [41, 52]) // Quiet Halls (2nd Floor)
+  assert.deepEqual(hemlockVillagePosition('03135', echoes), [39, 28]) // Quiet Halls (3rd Floor)
+  assert.deepEqual(hemlockVillagePosition('03139', echoes), [77, 52]) // Hidden Library
+  assert.deepEqual(hemlockVillagePosition('', echoes, 'groundFloor1'), [15, 80])
+  assert.deepEqual(hemlockVillagePosition('', echoes, 'groundFloor2'), [70, 80])
+  assert.deepEqual(hemlockVillagePosition('', echoes, 'secondFloor1'), [15, 52])
+  assert.deepEqual(hemlockVillagePosition('', echoes, 'secondFloor2'), [64, 52])
+  assert.deepEqual(hemlockVillagePosition('', echoes, 'thirdFloor1'), [16, 28])
+  assert.deepEqual(hemlockVillagePosition('', echoes, 'thirdFloor2'), [64, 28])
+
+  // The Unspeakable Oath: Arkham Asylum cutaway anchors
+  const asylum = hemlockOverview('c03159', 'c03159').anchors
+  assert.deepEqual(hemlockVillagePosition('03170', asylum), [10, 52]) // Kitchen
+  assert.deepEqual(hemlockVillagePosition('03171', asylum), [32, 52]) // Mess Hall
+  assert.deepEqual(hemlockVillagePosition('03172', asylum), [88, 52]) // Infirmary
+  assert.deepEqual(hemlockVillagePosition('03173', asylum), [62, 25]) // Yard
+  assert.deepEqual(hemlockVillagePosition('03174', asylum), [38, 25]) // Garden
+  assert.deepEqual(hemlockVillagePosition('03175', asylum), [12, 84]) // Basement Hall
+  assert.deepEqual(hemlockVillagePosition('', asylum, 'patientConfinement1'), [35, 84])
+  assert.deepEqual(hemlockVillagePosition('', asylum, 'patientConfinement3'), [52, 84])
+  assert.deepEqual(hemlockVillagePosition('', asylum, 'patientConfinement4'), [68, 84])
+  assert.deepEqual(hemlockVillagePosition('', asylum, 'patientConfinement2'), [84, 84])
+
+  // A Phantom of Truth: Paris anchors
+  const paris = hemlockOverview('c03200', 'c03200').anchors
+  assert.deepEqual(hemlockVillagePosition('03206', paris), [10, 16]) // Grand Guignol
+  assert.deepEqual(hemlockVillagePosition('03207', paris), [21, 41]) // Opéra Garnier
+  assert.deepEqual(hemlockVillagePosition('03208', paris), [12, 74]) // Gare d'Orsay
+  assert.deepEqual(hemlockVillagePosition('03209', paris), [38, 18]) // Montmartre
+  assert.deepEqual(hemlockVillagePosition('03210', paris), [68, 38]) // Le Marais
+  assert.deepEqual(hemlockVillagePosition('03211', paris), [74, 71]) // Notre-Dame
+  assert.deepEqual(hemlockVillagePosition('03212', paris), [52, 57]) // Gardens of Luxembourg
+  assert.deepEqual(hemlockVillagePosition('03213', paris), [68, 16]) // Canal Saint-Martin
+  assert.deepEqual(hemlockVillagePosition('03214', paris), [88, 22]) // Père Lachaise Cemetery
+  assert.deepEqual(hemlockVillagePosition('03215', paris), [42, 88]) // Montparnasse
+
+  // Black Stars Rise: Mont Saint-Michel anchors
+  const montSaintMichel = hemlockOverview('c03274', 'c03274').anchors
+  assert.deepEqual(hemlockVillagePosition('03284', montSaintMichel), [28, 16]) // Cloister
+  assert.deepEqual(hemlockVillagePosition('03285', montSaintMichel), [20, 25]) // Knights' Hall
+  assert.deepEqual(hemlockVillagePosition('03286', montSaintMichel), [60, 22]) // North Tower
+  assert.deepEqual(hemlockVillagePosition('03287', montSaintMichel), [47, 25]) // Abbey Church
+  assert.deepEqual(hemlockVillagePosition('03288', montSaintMichel), [82, 46]) // Outer Wall
+  assert.deepEqual(hemlockVillagePosition('03289', montSaintMichel), [17, 54]) // Chapel of St. Aubert
+  assert.deepEqual(hemlockVillagePosition('03290', montSaintMichel), [49, 56]) // Broken Steps
+  assert.deepEqual(hemlockVillagePosition('03291', montSaintMichel), [34, 50]) // Chœur Gothique
+  assert.deepEqual(hemlockVillagePosition('03292', montSaintMichel), [70, 62]) // Grand Rue
+  assert.deepEqual(hemlockVillagePosition('03293', montSaintMichel), [31, 82]) // Abbey Tower
+  assert.deepEqual(hemlockVillagePosition('03294', montSaintMichel), [76, 84]) // Porte de l'Avancée
 })
 
 test('The Drowned City scenarios select their overview boards', () => {
