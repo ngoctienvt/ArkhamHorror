@@ -51,6 +51,14 @@ async function bootstrap() {
   // Lets CSS (`:root:lang(vi)`) pick fonts that carry the stacked Vietnamese diacritics.
   watchEffect(() => { document.documentElement.lang = String(i18n.global.locale.value) })
 
+  /* Keep <html lang> on the chosen locale. It is what tells the browser which
+   * font and shaping rules to use -- Vietnamese stacks its diacritics (ế, ề,
+   * ộ) and a face chosen for English draws them detached -- and what a screen
+   * reader uses to pick a voice. */
+  watchEffect(() => {
+    document.documentElement.lang = String(i18n.global.locale.value)
+  })
+
   const pinia = createPinia()
   const vfm = createVfm()
   const emitter = mitt()

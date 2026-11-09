@@ -1,32 +1,6 @@
 {
-  "heading": "Hồ sơ #59–Z (Màn cuối)",
-  "tokens": {
-    "easyStandard": {
-      "skull": "-X. X là số thứ tự act hiện tại.",
-      "cultist": "-5. Bạn có thể lật một key _Stable_ bạn kiểm soát sang mặt _Unstable_ của nó để coi hệ số điều chỉnh của token này là -2.",
-      "tablet": "-2. Nếu đây là một đòn tấn công nhắm vào một kẻ địch _Outsider_ đang ready, thay vào đó bạn tự động thất bại.",
-      "elderThing": "-3. Hủy các hiệu ứng và biểu tượng của mỗi lá bài được đóng góp cho phép thử này và đặt mỗi lá bài đó sang một bên, out of play, dưới dạng các hollow."
-    },
-    "hardExpert": {
-      "skull": "-X. X bằng 1 cộng với số thứ tự act hiện tại.",
-      "cultist": "-7. Bạn có thể lật một key _Stable_ bạn kiểm soát sang mặt _Unstable_ của nó để coi hệ số điều chỉnh của token này là -4.",
-      "tablet": "-2. Nếu có một kẻ địch _Outsider_ đang ready tại địa điểm của bạn, thay vào đó bạn tự động thất bại.",
-      "elderThing": "-4. Hủy các hiệu ứng và biểu tượng của mỗi lá bài được đóng góp cho phép thử này và đặt mỗi lá bài đó sang một bên, out of play, dưới dạng các hollow."
-    }
-  },
-  "label": {
-    "cultist": {
-      "easyStandard": "Lật một key _Stable_ bạn kiểm soát sang mặt _Unstable_ của nó để coi hệ số điều chỉnh của token này là -2",
-      "hardExpert": "Lật một key _Stable_ bạn kiểm soát sang mặt _Unstable_ của nó để coi hệ số điều chỉnh của token này là -4"
-    },
-    "theWorldUnbidden": {
-      "unstable": "Shift một key _Unstable_ họ kiểm soát mà không lật nó sang mặt Stable để hủy toàn bộ damage và horror vừa gây ra cho họ bởi hiệu ứng trên.",
-      "stable": "Lật bất kỳ số lượng key _Stable_ nào họ kiểm soát sang mặt _Unstable_ của chúng để hủy lượng damage/horror tương ứng vừa gây ra cho họ bởi hiệu ứng trên.",
-      "damage": "Hủy 1 damage",
-      "horror": "Hủy 1 horror"
-    }
-  },
   "intro": {
+    "body": "<p class='basic file'>Tùy thuộc vào cách bạn đến được đây…</p>",
     "label": {
       "deemedALiability": "Tiếp tục đến _The Trial 2_.",
       "overthrow": "Tiếp tục đến _The Trial 3_.",
@@ -34,7 +8,6 @@
       "deemedAnAsset": "Tiếp tục đến _The Trial 5_."
     },
     "title": "Hồ sơ #59–Z (Màn cuối): Congress of the Keys",
-    "body": "<p class='basic file'>Tùy thuộc vào cách bạn đến được đây…</p>",
     "option1": "Nếu bạn đã đến màn kết này do một báo cáo tình hình (vì đã hết thời gian), tiếp tục đến _Intro 1_.",
     "option2": "Nếu bạn tự mình đi đến Tunguska, chuyển đến Intro 2.",
     "intro1": "<p class='file'>_Intro 1_: Bạn tỉnh dậy trong bóng tối. Một chiếc bao tải được gỡ khỏi đầu bạn và ném sang một bên, má bạn bị bóp chặt và tát một hai cái như để bồi thêm. “Tỉnh dậy đi,” một giọng nói nham hiểm ra lệnh. Bạn chớp mắt xua đi cơn mê và nhận ra, với đôi chút hoảng loạn, rằng bạn và các cộng sự của mình đang bị trói vào ghế. Một chiếc giẻ nhét miệng ngăn bạn tạo ra bất kỳ tiếng động nào lớn hơn một tiếng kêu nghẹn ngào.</p><p>Khi mắt bạn quen dần với ánh sáng lờ mờ, bạn nhận ra mình hẳn đang ở dưới lòng đất. Căn phòng lớn, không có cửa sổ được xây bằng đá đẽo sạch sẽ, thắp sáng mờ ảo bởi những ngọn đèn hơi thủy ngân. Những tấm thảm đỏ tươi treo dọc các bức tường, cùng với một vài tủ kính và kệ chứa những di vật cũ và đồ tạo tác lịch sử. Nổi bật giữa căn phòng là một chiếc bàn trung tâm khổng lồ, một hoa văn phức tạp gồm các đường nét và vòng tròn được chạm khắc tỉ mỉ trên bề mặt của nó. Đứng quanh chiếc bàn trung tâm này là một nhóm người, một số quen thuộc với bạn, số khác thì không thể nhận ra. Tất cả bọn họ đều mang trên mình sắc đỏ. Tim bạn đập thình thịch trong cổ họng. “Các người được đưa đến đây để đền tội cho những tội ác của mình nhằm vào the Coterie,” giọng nói tuyên bố, “hoặc để được tuyên dương, nếu the Congress muốn vậy. Bây giờ chúng tôi sẽ lắng nghe bất kỳ ai muốn lên tiếng thay mặt các người, hoặc chống lại các người.”</p><p class='basic right'>Tiếp tục đến _The Trial 1_.</p>",
@@ -99,62 +72,62 @@
   "version1": {
     "setup": {
       "title": "Chuẩn bị (v. I)",
+      "startAt": "Mỗi điều tra viên bắt đầu chơi tại Scarlet Halls.",
+      "actDeck": "Xây dựng chồng bài Act chỉ sử dụng Act 1a—”Secrets and Lies (v. I).” Loại bỏ tất cả các phiên bản khác của Act 1a khỏi trò chơi.",
+      "yeaNote": "*Lưu ý rằng các nhân vật sau có thể bỏ phiếu “yea,” nhưng không có lá bài kẻ địch trong encounter set này: Tuwile Masai, Abarran Arrigorriagakoa, và Razin Farhi.*",
+      "nay": "Với mỗi thành viên của Coterie đã bỏ phiếu “nay,” tìm phiên bản story asset Conspirator của họ và đưa chúng vào chơi dưới quyền kiểm soát của bất kỳ điều tra viên nào. *(Lưu ý: Các story asset này nằm rải rác trong nhiều encounter set khác nhau. Một số nằm ở mặt sau của các lá bài kẻ địch.)*",
+      "otherworldDeck": "Tìm 9 vị trí City of Remnants từ chồng bài encounter Beyond the Beyond. Xào các vị trí này lại với nhau, với mặt chưa lật ngửa lên, để tạo thành một chồng bài. Chồng bài này được gọi là Otherworld deck. Đặt chồng bài này gần lá bài scenario reference.",
+      "shuffleRemainder": "Xáo trộn các lá bài encounter còn lại từ các tập hợp này lại với nhau để tạo thành một encounter deck thứ hai. Tạm thời để riêng deck này, ngoài cuộc chơi.",
+      "decoys": "Tập hợp mỗi mini-card decoy và mỗi mini-card sau: City of Remnants (L, M, và R), Mimetic Nemesis, và The Red-Gloved Man. Để riêng chúng, ngoài cuộc chơi.",
       "gatherSets": "Tập hợp tất cả lá bài từ các chồng bài encounter sau: *Congress of the Keys*, *Red Coterie*, *Scarlet Sorcery*, *Spatial Anomaly*, *Spreading Corruption*, *Locked Doors*. Các chồng bài này được đánh dấu bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/congress-of-the-keys.png'><img src='{setImgPath}/red-coterie.png'><img src='{setImgPath}/scarlet-sorcery.png'><img src='{setImgPath}/spatial-anomaly.png'><img src='{setImgPath}/spreading-corruption.png'><img src='{setImgPath}/locked-doors.png'></section>",
       "placeLocations": "Đặt các phiên bản _Lair_ của Scarlet Halls và ba địa điểm Coterie Sanctuary vào chơi.",
       "removeSanctum": "Loại bỏ các phiên bản _Sanctum_ của những địa điểm này khỏi trò chơi.",
-      "startAt": "Mỗi điều tra viên bắt đầu chơi tại Scarlet Halls.",
-      "actDeck": "Xây dựng chồng bài act chỉ sử dụng Act 1a—”Secrets and Lies (v. I).” Loại bỏ tất cả các phiên bản khác của Act 1a khỏi trò chơi.",
       "yea": "Tìm từng kẻ địch _Coterie_ từ chồng bài encounter *Red Coterie* đã bỏ phiếu “thuận,” cùng với The Red-Gloved Man. Chồng bài này được đánh dấu bằng biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/red-coterie.png'></section>",
       "doNotGatherNay": "Không tập hợp bất kỳ kẻ địch _Coterie_ nào từ chồng bài này đã bỏ phiếu “chống,” bỏ phiếu trắng, hoặc im lặng đến rợn người (*không tính The Red-Gloved Man*).",
       "theRedGlovedMan": "Trưởng nhóm spawn The Red-Gloved Man vào in the shadows và giải quyết keyword concealed của nó (*được cấp bởi act 1a*).",
       "drawCoterie": "Xào phần còn lại của các kẻ địch _Coterie_ đã tập hợp. Lần lượt từng người, theo thứ tự người chơi, mỗi điều tra viên ngoại trừ trưởng nhóm rút 1 trong số chúng, spawn chúng như bình thường.",
       "shuffleRemainingCoterie": "Xào phần còn lại của các kẻ địch _Coterie_ đã tập hợp (những lá chưa được rút ở bước trước) vào encounter deck.",
-      "yeaNote": "*Lưu ý rằng các nhân vật sau có thể bỏ phiếu “thuận,” nhưng không có lá bài kẻ địch trong chồng bài encounter này: Tuwile Masai, Abarran Arrigorriagakoa, và Razin Farhi.*",
-      "nay": "Với mỗi thành viên của Coterie đã bỏ phiếu “chống,” tìm phiên bản story asset _Conspirator_ của họ và đưa chúng vào chơi dưới quyền kiểm soát của bất kỳ điều tra viên nào. (*Lưu ý: Các story asset này nằm rải rác trong nhiều chồng bài encounter khác nhau. Một số nằm ở mặt sau của các lá bài kẻ địch.*)",
       "nayNote": "*Lưu ý rằng Tuwile Masai có thể bỏ phiếu “chống,” nhưng không có story asset _Conspirator_.*",
       "setOutOfPlay": "Để riêng 3 địa điểm _Otherworld_ từ chồng bài encounter Congress of the Keys và kẻ địch Mimetic Nemesis sang một bên, out of play.",
       "secondEncounterDeck": "Bây giờ tạo encounter deck thứ hai như sau. Tập hợp tất cả lá bài từ các chồng bài encounter sau: *Agents of the Outside*, *Beyond the Beyond*, *Outsiders*, *Secret War*, *Ancient Evils*, và *Striking Fear*. Các chồng bài này được đánh dấu bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/agents-of-the-outside.png'><img src='{setImgPath}/beyond-the-beyond.png'><img src='{setImgPath}/outsiders.png'><img src='{setImgPath}/secret-war.png'><img src='{setImgPath}/ancient-evils.png'><img src='{setImgPath}/striking-fear.png'></section>Khi tập hợp chồng bài encounter Striking Fear, chỉ tập hợp các lá bài sau (2x Frozen in Fear và 2x Dissonant Voices). Không tập hợp 3x Rotting Remains từ chồng bài đó.",
-      "otherworldDeck": "Tìm 9 địa điểm City of Remnants từ chồng bài encounter *Beyond the Beyond*. Xào các địa điểm này lại với nhau, với mặt chưa lật ngửa lên, để tạo thành một chồng bài. Chồng bài này được gọi là chồng bài Otherworld. Đặt chồng bài này gần scenario reference card.",
-      "shuffleRemainder": "Xào các lá bài encounter còn lại từ các tập hợp này lại với nhau để tạo thành một encounter deck thứ hai. Tạm thời để riêng deck này, out of play.",
-      "decoys": "Tập hợp mỗi mini-card decoy và mỗi mini-card sau: City of Remnants (L, M, và R), Mimetic Nemesis, và The Red-Gloved Man. Để riêng chúng, out of play.",
       "locationAdjacency": "Các quy tắc cho “Sự Liền Kề Của Các Địa Điểm Trong Realm of the Outsiders” và “Các Địa Điểm Trong Bóng Tối” có thể được tìm thấy ở trang 57. Hãy đảm bảo đọc (hoặc ôn lại) các quy tắc này trước khi chơi scenario này."
     }
   },
   "version2": {
     "setup": {
       "title": "Chuẩn bị (v. II)",
-      "gatherSets": "Tập hợp tất cả lá bài từ các chồng bài encounter sau: *Congress of the Keys*, *Agents of the Outside*, *Beyond the Beyond*, *Outsiders*, *Red Coterie*, *Secret War*, *Spreading Corruption*, *Ancient Evils*, và *Striking Fear*. Các chồng bài này được đánh dấu bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/congress-of-the-keys.png'><img src='{setImgPath}/agents-of-the-outside.png'><img src='{setImgPath}/beyond-the-beyond.png'><img src='{setImgPath}/outsiders.png'><img src='{setImgPath}/red-coterie.png'><img src='{setImgPath}/secret-war.png'><img src='{setImgPath}/spreading-corruption.png'><img src='{setImgPath}/ancient-evils.png'><img src='{setImgPath}/striking-fear.png'></section> Khi tập hợp chồng bài encounter Striking Fear, chỉ tập hợp các lá bài sau (2x Frozen in Fear và 2x Dissonant Voices). Không tập hợp 3x Rotting Remains từ chồng bài đó.",
-      "otherworldDeck": "Tìm 9 địa điểm City of Remnants từ chồng bài encounter *Beyond the Beyond*. Xào các địa điểm này lại với nhau, với mặt chưa lật ngửa lên, để tạo thành một chồng bài. Chồng bài này được gọi là chồng bài Otherworld. Đặt chồng bài này gần scenario reference card.",
-      "placeLocations": "Đặt các phiên bản _Sanctum_ của Scarlet Halls và 3 địa điểm Coterie Sanctuary vào chơi.",
-      "removeLair": "Loại bỏ các phiên bản _Lair_ của những địa điểm này khỏi trò chơi.",
+      "otherworldDeck": "Tìm 9 vị trí City of Remnants từ chồng bài encounter Beyond the Beyond. Xào các vị trí này lại với nhau, với mặt chưa lật ngửa lên, để tạo thành một chồng bài. Chồng bài này được gọi là Otherworld deck. Đặt chồng bài này gần lá bài scenario reference.",
       "startAt": "Mỗi điều tra viên bắt đầu chơi tại Scarlet Halls.",
       "actDeck": "Xây dựng chồng bài act chỉ sử dụng Act 1a—”Secrets and Lies (v. II).” Loại bỏ mọi phiên bản khác của Act 1a khỏi trò chơi.",
+      "yeaNote": "*Lưu ý rằng các nhân vật sau có thể bỏ phiếu “yea,” nhưng không có lá bài kẻ địch trong encounter set này: Tuwile Masai, Abarran Arrigorriagakoa, và Razin Farhi.*",
+      "nay": "Với mỗi thành viên của Coterie đã bỏ phiếu “nay,” tìm phiên bản story asset Conspirator của họ và đưa chúng vào chơi dưới quyền kiểm soát của bất kỳ điều tra viên nào. *(Lưu ý: Các story asset này nằm rải rác trong nhiều encounter set khác nhau. Một số nằm ở mặt sau của các lá bài kẻ địch.)*",
+      "decoys": "Tập hợp mỗi mini-card decoy và mỗi mini-card sau: City of Remnants (L, M, và R) và Mimetic Nemesis. Để riêng chúng, ngoài cuộc chơi.",
+      "gatherSets": "Tập hợp tất cả lá bài từ các chồng bài encounter sau: *Congress of the Keys*, *Agents of the Outside*, *Beyond the Beyond*, *Outsiders*, *Red Coterie*, *Secret War*, *Spreading Corruption*, *Ancient Evils*, và *Striking Fear*. Các chồng bài này được đánh dấu bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/congress-of-the-keys.png'><img src='{setImgPath}/agents-of-the-outside.png'><img src='{setImgPath}/beyond-the-beyond.png'><img src='{setImgPath}/outsiders.png'><img src='{setImgPath}/red-coterie.png'><img src='{setImgPath}/secret-war.png'><img src='{setImgPath}/spreading-corruption.png'><img src='{setImgPath}/ancient-evils.png'><img src='{setImgPath}/striking-fear.png'></section> Khi tập hợp chồng bài encounter Striking Fear, chỉ tập hợp các lá bài sau (2x Frozen in Fear và 2x Dissonant Voices). Không tập hợp 3x Rotting Remains từ chồng bài đó.",
+      "placeLocations": "Đặt các phiên bản _Sanctum_ của Scarlet Halls và 3 địa điểm Coterie Sanctuary vào chơi.",
+      "removeLair": "Loại bỏ các phiên bản _Lair_ của những địa điểm này khỏi trò chơi.",
       "yea": "Tìm mỗi kẻ địch _Coterie_ từ chồng bài encounter *Red Coterie* đã bỏ phiếu “thuận,” cùng với The Red-Gloved Man, và đặt mỗi kẻ địch đó sang một bên, out of play. Chồng bài này được đánh dấu bằng biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/red-coterie.png'></section>",
       "removeOtherCoterie": "Loại bỏ tất cả các kẻ địch _Coterie_ khác khỏi trò chơi.",
-      "yeaNote": "*Lưu ý rằng các nhân vật sau có thể bỏ phiếu “thuận,” nhưng không có lá bài kẻ địch trong chồng bài encounter này: Tuwile Masai, Abarran Arrigorriagakoa, và Razin Farhi.*",
-      "nay": "Với mỗi thành viên của Coterie đã bỏ phiếu “chống,” tìm phiên bản story asset _Conspirator_ của họ và đưa chúng vào chơi dưới quyền kiểm soát của bất kỳ điều tra viên nào. (*Lưu ý: Các story asset này nằm rải rác trong nhiều chồng bài encounter khác nhau. Một số nằm ở mặt sau của các lá bài kẻ địch.*)",
       "nayNote": "*Lưu ý rằng Tuwile Masai có thể bỏ phiếu “chống,” nhưng không có story asset _Conspirator_.*",
       "setOutOfPlay": "Để riêng 3 địa điểm _Otherworld_ từ chồng bài encounter *Congress of the Keys* và kẻ địch Mimetic Nemesis sang một bên, out of play.",
-      "decoys": "Tập hợp mỗi mini-card decoy và mỗi mini-card sau: City of Remnants (L, M, và R) và Mimetic Nemesis. Để riêng chúng, out of play.",
       "locationAdjacency": "Các quy tắc cho “Sự Liền Kề Của Các Địa Điểm Trong Realm of the Outsiders” và “Các Địa Điểm Trong Bóng Tối” có thể được tìm thấy ở trang 57. Hãy đảm bảo đọc (hoặc ôn lại) các quy tắc này trước khi chơi scenario này."
     }
   },
   "version3": {
     "setup": {
       "title": "Chuẩn bị (v. III)",
-      "gatherSets": "Tập hợp tất cả lá bài từ các chồng bài encounter sau: *Congress of the Keys*, *Agents of the Outside*, *Beyond the Beyond*, *Outsiders*, *Red Coterie*, *Secret War*, *Spreading Corruption*, *Ancient Evils*, và *Striking Fear*. Các chồng bài này được đánh dấu bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/congress-of-the-keys.png'><img src='{setImgPath}/agents-of-the-outside.png'><img src='{setImgPath}/beyond-the-beyond.png'><img src='{setImgPath}/outsiders.png'><img src='{setImgPath}/red-coterie.png'><img src='{setImgPath}/secret-war.png'><img src='{setImgPath}/spreading-corruption.png'><img src='{setImgPath}/ancient-evils.png'><img src='{setImgPath}/striking-fear.png'></section> Khi tập hợp chồng bài encounter Striking Fear, chỉ tập hợp các lá bài sau (2x Frozen in Fear và 2x Dissonant Voices). Không tập hợp 3x Rotting Remains từ chồng bài đó.",
-      "otherworldDeck": "Tìm 9 địa điểm City of Remnants từ chồng bài encounter *Beyond the Beyond*. Xào các địa điểm này lại với nhau, với mặt chưa lật ngửa lên, để tạo thành một chồng bài. Chồng bài này được gọi là chồng bài Otherworld. Đặt chồng bài này gần scenario reference card.",
-      "placeLocations": "Đặt các phiên bản _Sanctum_ của Scarlet Halls và 3 địa điểm Coterie Sanctuary vào chơi.",
-      "removeLair": "Loại bỏ các phiên bản _Lair_ của những địa điểm này khỏi trò chơi.",
+      "otherworldDeck": "Tìm 9 vị trí City of Remnants từ chồng bài encounter Beyond the Beyond. Xào các vị trí này lại với nhau, với mặt chưa lật ngửa lên, để tạo thành một chồng bài. Chồng bài này được gọi là Otherworld deck. Đặt chồng bài này gần lá bài scenario reference.",
       "startAt": "Mỗi điều tra viên bắt đầu chơi tại Scarlet Halls.",
       "actDeck": "Xây dựng chồng bài act chỉ sử dụng Act 1a—”Secrets and Lies (v. III).” Loại bỏ mọi phiên bản khác của Act 1a khỏi trò chơi.",
+      "ignoreUnique": "Trong phần còn lại của scenario này, bỏ qua biểu tượng unique trên cả hai phiên bản của The Red-Gloved Man. *(Nếu The Red-Gloved Man là người mang bất kỳ key nào, chỉ gắn chúng vào phiên bản kẻ địch của hắn.)*",
+      "gatherSets": "Tập hợp tất cả lá bài từ các chồng bài encounter sau: *Congress of the Keys*, *Agents of the Outside*, *Beyond the Beyond*, *Outsiders*, *Red Coterie*, *Secret War*, *Spreading Corruption*, *Ancient Evils*, và *Striking Fear*. Các chồng bài này được đánh dấu bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/congress-of-the-keys.png'><img src='{setImgPath}/agents-of-the-outside.png'><img src='{setImgPath}/beyond-the-beyond.png'><img src='{setImgPath}/outsiders.png'><img src='{setImgPath}/red-coterie.png'><img src='{setImgPath}/secret-war.png'><img src='{setImgPath}/spreading-corruption.png'><img src='{setImgPath}/ancient-evils.png'><img src='{setImgPath}/striking-fear.png'></section> Khi tập hợp chồng bài encounter Striking Fear, chỉ tập hợp các lá bài sau (2x Frozen in Fear và 2x Dissonant Voices). Không tập hợp 3x Rotting Remains từ chồng bài đó.",
+      "placeLocations": "Đặt các phiên bản _Sanctum_ của Scarlet Halls và 3 địa điểm Coterie Sanctuary vào chơi.",
+      "removeLair": "Loại bỏ các phiên bản _Lair_ của những địa điểm này khỏi trò chơi.",
       "eerilySilent": "Tìm mỗi kẻ địch _Coterie_ từ chồng bài encounter *Red Coterie* đã im lặng đến rợn người. Chồng bài này được đánh dấu bằng biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/red-coterie.png'></section>",
       "doNotGatherRest": "Không tập hợp bất kỳ kẻ địch _Coterie_ nào từ chồng bài này đã bỏ phiếu “thuận,” “chống,” hoặc bỏ phiếu trắng.",
       "theRedGlovedMan": "Trưởng nhóm spawn The Red-Gloved Man vào in the shadows và giải quyết keyword concealed của nó (*được cấp bởi act 1a*).",
       "drawCoterie": "Xào phần còn lại của các kẻ địch _Coterie_ đã tập hợp. Lần lượt từng người, theo thứ tự người chơi, mỗi điều tra viên ngoại trừ trưởng nhóm rút 1 trong số chúng, spawn chúng như bình thường.",
       "shuffleRemainingCoterie": "Xào phần còn lại của các kẻ địch _Coterie_ đã tập hợp (những lá chưa được rút ở bước trước) vào encounter deck.",
       "theRedCoterieSparedTheCell": "Kiểm tra Nhật ký Chiến dịch. *Nếu Red Coterie đã tha mạng cho nhóm*, tìm phiên bản story asset _Conspirator_ của The Red-Gloved Man, cùng với mỗi thành viên khác của Coterie mà không được tập hợp trong bước trên. Đặt mỗi lá bài đó vào chơi dưới quyền kiểm soát của bất kỳ điều tra viên nào. (*Lưu ý: Những story asset này nằm rải rác trong nhiều chồng bài encounter khác nhau. Một số nằm ở mặt sau của các lá bài kẻ địch.*)",
-      "ignoreUnique": "Trong phần còn lại của scenario này, bỏ qua biểu tượng unique trên cả hai phiên bản của The Red-Gloved Man. (*Nếu The Red-Gloved Man là bearer của bất kỳ key nào, chỉ gắn chúng vào phiên bản kẻ địch của hắn.*)",
       "conspiratorNote": "*Lưu ý: Danh sách các story asset _Conspirator_ có thể có như sau: The Claret Knight, Ece Şahin, Thorne, Aliki Zoni Uperetria, Desiderio Delgado Álvarez, La Chica Roja, và The Red-Gloved Man.*",
       "setOutOfPlay": "Để riêng 3 địa điểm _Otherworld_ từ chồng bài encounter *Congress of the Keys* và kẻ địch Mimetic Nemesis sang một bên, out of play.",
       "decoys": "Tập hợp mỗi mini-card decoy và mỗi mini-card sau: City of Remnants (L, M, và R), Mimetic Nemesis, và The Red-Gloved Man. Để riêng chúng, out of play.",
@@ -162,20 +135,47 @@
     }
   },
   "resolutions": {
-    "xp": {
-      "bonus": "Đã cứu chiều không gian của họ khỏi một số phận tồi tệ."
-    },
     "defeated": {
-      "title": "Điều Tra Viên Bị Đánh Bại",
+      "title": "Điều tra viên bị hạ gục",
       "body": "<p class='basic'>_Trước khi giải quyết bất kỳ resolution nào khác, nếu có ít nhất 1 điều tra viên bị đánh bại_: Các điều tra viên bị đánh bại đọc _Điều Tra Viên Bị Đánh Bại_ trước.</p><p>_Điều Tra Viên Bị Đánh Bại_: Khi không còn chiều không gian nào để cơ thể bạn tồn tại, từng phần trong bản thể của bạn bị xé toạc. Ký ức và suy nghĩ của bạn rỉ rả rơi vào cõi quên lãng vô tận từ nay cho đến tận cùng của vạn vật. Nhưng ý thức của bạn, sự nhận thức của bạn, vẫn còn đó. Một nhà tù của sự hư vô vô hạn, vĩnh hằng.</p><ul><li>Mỗi điều tra viên bị đánh bại sẽ trở nên _insane_ và không bao giờ được nhìn thấy hay nghe tin tức gì nữa. Mọi ký ức về sự tồn tại của họ bị xóa sổ khỏi thực tại.</li><li>Nếu đạt được một resolution khác, các điều tra viên còn lại tiếp tục đến resolution đó.</li><li>Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại): Đi đến _Resolution 2_.</li></ul>"
     },
     "resolution1": {
-      "title": "Resolution 1",
+      "title": "Kết thúc thứ nhất",
       "body": "<p>_Resolution 1_: Cảm giác bị quăng quật qua các thế giới không dừng lại cho đến khi bạn rơi mạnh xuống mặt đất vững chãi. Mặc dù cơ thể mệt mỏi đang biểu tình, bạn vẫn vội vã đứng dậy và quét mắt nhìn xung quanh, sẵn sàng cho bất cứ điều gì. Nhưng khi nhận ra mình đang ở đâu, bạn bị sốc khi thấy…</p><ul><li>Trải bản đồ thế giới lên một bề mặt phẳng. Mỗi điều tra viên tung một đồng xu hoặc chaos token lên bản đồ. Nó rơi xuống đâu, đó là nơi điều tra viên đó dừng chân. (Nếu nó rơi xuống đại dương, họ tình cờ dạt lên một chiếc thuyền ngẫu nhiên.)</li></ul><p>Phải mất vài tuần để bạn liên lạc với các thành viên khác trong nhóm của mình, những người đã sống sót sau sự sụp đổ của cõi Outsiders. Có vẻ như, ít nhất là lúc này, âm mưu của chúng đã bị đập tan. Có lẽ một kỳ nghỉ dài xứng đáng là điều cần thiết, nhưng trước tiên có một việc cuối cùng cần giải quyết…</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *những Outsider đã bị ngăn chặn*.</li><li>Mỗi điều tra viên chịu 2 physical trauma và 2 mental trauma, vì họ có thể không bao giờ thực sự hồi phục sau thử thách đa chiều của mình.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị Victory X của mỗi lá bài trong victory display. Mỗi điều tra viên nhận 5 kinh nghiệm thưởng, vì đã cứu chiều không gian của họ khỏi một số phận tồi tệ.</li><li>_Các điều tra viên chiến thắng chiến dịch!_</li><li>Tiếp tục đến _Epilogue_.</li></ul>"
     },
     "resolution2": {
-      "title": "Resolution 2",
+      "title": "Kết thúc thứ hai",
       "body": "<p>_Resolution 2_: “Xong, đây là cái cuối cùng,” Đặc vụ Hudson nói khi anh ta đập mạnh con dấu xuống bản báo cáo chi phí. “Tôi hiểu sự cần thiết của việc giữ bí mật, nhưng tôi phải một lần nữa yêu cầu chúng ta thuê trợ lý cho công việc thư ký này, Ủy viên.” Anh ta đưa xấp tài liệu cho Taylor, người đang ngồi sau chiếc bàn đen trống trải của mình, mang vẻ mặt nghiêm trọng.</p><p>“Thêm người dòm ngó nghĩa là thêm rò rỉ. Chúng ta giữ đội ngũ này kín kẽ là có lý do, Hudson. Đừng quên mất điều gì mới là quan trọng.” Cô lật qua các tài liệu một lúc, cau mày. “Báo cáo về nhóm của tài sản 32–J đâu?”</p><p>“32–J?” người đàn ông rút một cuốn sổ nhỏ từ túi quần sau và lật đến một trang ở gần giữa. “Không có mã định danh nào như vậy tồn tại.”</p><p>Taylor nhăn mặt. “Không, không đúng. Rõ ràng là có…chúng ta đã gặp họ ở London. Anh cũng ở đó mà…” Sau một lúc, cô lắc đầu trong sự bối rối tột độ. “Hm. Lạ thật. Tôi không nhớ họ là ai.”</p><p>“Cô đã làm việc quá sức rồi,” đặc vụ đáp lại với một nụ cười mỉm. “Hãy nghỉ ngơi một thời gian đi, Ủy viên. Chúng tôi có thể lo liệu mọi việc mà không có cô trong khoảng một tuần.”</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại *nhóm đã bị hollowed*.</li><li>_Các điều tra viên thua chiến dịch_.</li></ul>"
+    },
+    "xp": {
+      "bonus": "Đã cứu chiều không gian của họ khỏi một số phận tồi tệ."
+    }
+  },
+  "heading": "Hồ sơ #59–Z (Màn cuối)",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X là số thứ tự act hiện tại.",
+      "cultist": "-5. Bạn có thể lật một key _Stable_ bạn kiểm soát sang mặt _Unstable_ của nó để coi hệ số điều chỉnh của token này là -2.",
+      "tablet": "-2. Nếu đây là một đòn tấn công nhắm vào một kẻ địch _Outsider_ đang ready, thay vào đó bạn tự động thất bại.",
+      "elderThing": "-3. Hủy các hiệu ứng và biểu tượng của mỗi lá bài được đóng góp cho phép thử này và đặt mỗi lá bài đó sang một bên, out of play, dưới dạng các hollow."
+    },
+    "hardExpert": {
+      "skull": "-X. X bằng 1 cộng với số thứ tự act hiện tại.",
+      "cultist": "-7. Bạn có thể lật một key _Stable_ bạn kiểm soát sang mặt _Unstable_ của nó để coi hệ số điều chỉnh của token này là -4.",
+      "tablet": "-2. Nếu có một kẻ địch _Outsider_ đang ready tại địa điểm của bạn, thay vào đó bạn tự động thất bại.",
+      "elderThing": "-4. Hủy các hiệu ứng và biểu tượng của mỗi lá bài được đóng góp cho phép thử này và đặt mỗi lá bài đó sang một bên, out of play, dưới dạng các hollow."
+    }
+  },
+  "label": {
+    "cultist": {
+      "easyStandard": "Lật một key _Stable_ bạn kiểm soát sang mặt _Unstable_ của nó để coi hệ số điều chỉnh của token này là -2",
+      "hardExpert": "Lật một key _Stable_ bạn kiểm soát sang mặt _Unstable_ của nó để coi hệ số điều chỉnh của token này là -4"
+    },
+    "theWorldUnbidden": {
+      "unstable": "Shift một key _Unstable_ họ kiểm soát mà không lật nó sang mặt Stable để hủy toàn bộ damage và horror vừa gây ra cho họ bởi hiệu ứng trên.",
+      "stable": "Lật bất kỳ số lượng key _Stable_ nào họ kiểm soát sang mặt _Unstable_ của chúng để hủy lượng damage/horror tương ứng vừa gây ra cho họ bởi hiệu ứng trên.",
+      "damage": "Hủy 1 damage",
+      "horror": "Hủy 1 horror"
     }
   }
 }

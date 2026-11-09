@@ -41,13 +41,13 @@
     "locations": "Đặt các địa điểm sau vào chơi: Crystal Grove, Pearl Estate Ruins và Ashen Slope. Dùng sơ đồ trên trang này để tham khảo.",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Pearl Estate Ruins.",
     "setAside": "Đặt mỗi lá sau sang một bên, ngoài cuộc chơi: kẻ thù Brood Queen, cả hai bản sao của kẻ thù Crystal Parasite, và các địa điểm một mặt Salt Chamber, Larval Tunnel, và Crystal Nursery.",
-    "crystalRemains": "Xáo trộn 3 lá bài story asset Crystal Remains úp xuống <i>(để bạn không biết lá nào là lá nào)</i> và đặt chúng sang một bên, ngoài cuộc chơi.",
-    "horrorsInTheRock": "Chọn ngẫu nhiên 3 địa điểm từ tập encounter <i>Horrors in the Rock</i> và đặt chúng sang một bên mà không nhìn vào mặt được lật của chúng. Loại bỏ các địa điểm <i>Horrors in the Rock</i> còn lại khỏi trò chơi.",
+    "crystalRemains": "Xáo trộn 3 lá bài story asset Crystal Remains úp xuống *(để bạn không biết lá nào là lá nào)* và đặt chúng sang một bên, ngoài cuộc chơi.",
+    "horrorsInTheRock": "Chọn ngẫu nhiên 3 địa điểm từ tập encounter *Horrors in the Rock* và đặt chúng sang một bên mà không nhìn vào mặt được lật của chúng. Loại bỏ các địa điểm *Horrors in the Rock* còn lại khỏi trò chơi.",
     "residents": "Nếu đang là (_Day {'{'}day{'}'}_), tập hợp mỗi story asset từ chồng bài encounter *Residents*. Chồng bài này được đánh dấu bằng biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/residents.png' /></section>",
     "leahAtwood": "Nếu đang là _Day 1_, đặt Leah Atwood tại địa điểm Pearl Estate Ruins.",
     "drRosaMarquez": "Nếu đang là _Day 2_, đặt Dr. Rosa Marquez tại địa điểm Crystal Grove.",
     "motherRachel": "Nếu đang là _Day 3_, đặt Mother Rachel tại địa điểm Ashen Slope.",
-    "removeResidents": "Loại bỏ phần còn lại của tập bài encounter <i>Residents</i> khỏi trò chơi."
+    "removeResidents": "Loại bỏ phần còn lại của tập bài encounter *Residents* khỏi trò chơi."
   },
   "tokens": {
     "easyStandard": {
@@ -70,7 +70,7 @@
     },
     "leahAtwood": {
       "title": "{'{'}codex{'}'} Codex 2: Leah Atwood",
-      "body": "<h3>@:theFeastOfHemlockVale.theSilentHeath.codex.leahAtwood.title </h3><p>“Trước đây, chỗ này gần như là nơi duy nhất trên đảo mà người ta có thể trồng trọt được bất cứ thứ gì. Thực tế là, người ta không thể ngăn mọi thứ phát triển. Gia tộc Pearl đã có cả một cơ ngơi: những vườn cây ăn quả và vườn nho, chưa kể đến việc khai mỏ và săn bắt cá voi. Rồi, hai mươi năm trước, gần như chính xác vào ngày này, một chuyện đã xảy ra. Các người có tin được là chị gái tôi lại nói về chuyện đó như thể nó là một phép màu nào đó không?” cô ta chế nhạo.</p><p class='basic right'>Trong Ghi chú của Leah Atwood, ghi lại <i>Leah đã tìm kiếm ở Pearl Ruins</i>. Mỗi điều tra viên nhận 1 clue (từ token pool).</p>"
+      "body": "<h3>@:theFeastOfHemlockVale.theSilentHeath.codex.leahAtwood.title </h3><p>“Trước đây, chỗ này gần như là nơi duy nhất trên đảo mà người ta có thể trồng trọt được bất cứ thứ gì. Thực tế là, người ta không thể ngăn mọi thứ phát triển. Gia tộc Pearl đã có cả một cơ ngơi: những vườn cây ăn quả và vườn nho, chưa kể đến việc khai mỏ và săn bắt cá voi. Rồi, hai mươi năm trước, gần như chính xác vào ngày này, một chuyện đã xảy ra. Các người có tin được là chị gái tôi lại nói về chuyện đó như thể nó là một phép màu nào đó không?” cô ta chế nhạo.</p><p class='basic right'>Trong Ghi chú của Leah Atwood, ghi lại *Leah đã tìm kiếm ở Pearl Ruins*. Mỗi điều tra viên nhận 1 clue (từ token pool).</p>"
     },
     "drRosaMarquez": {
       "title": "{'{'}codex{'}'} Codex Θ: Dr. Rosa Marquez",
@@ -119,7 +119,7 @@
     },
     "resolution4": {
       "title": "Resolution 4",
-      "body": "<p>_Resolution 4_: “Khảo sát Miskatonic, tháng 6 năm 1926. Các thành viên Marquez, Musgrave, và cộng sự. Đã khảo sát Pearl Ridge. Những ngọn đồi phía bắc đã bị tàn phá trong một sự kiện không xác định. Sự ô nhiễm dai dẳng đã dẫn đến quá trình khoáng hóa và tinh thể hóa của các sinh vật hữu cơ. Các hang động trong khu vực bị tràn ngập bởi một đàn côn trùng khổng lồ. Côn trùng thể hiện các hành vi và đặc điểm sinh lý của loài ong bắp cày và mối. Cần nghiên cứu thêm.”</p><ul><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị Victory X của mỗi lá bài trong victory display. <b>Mỗi điều tra viên bây giờ có thể tiêu kinh nghiệm được ghi dưới mục “Unspent Experience” trong Nhật ký Chiến dịch của bạn.</b></li><li>Trong phần “Areas Surveyed” của Nhật ký Chiến dịch, đánh dấu <i>Pearl Ridge</i>.</li><li>Kiểm tra Nhật ký Chiến dịch của bạn.<ul><li>Nếu đang là Day 1, lật đến _Prelude: The First Evening_ (*trang 31*).</li><li>Nếu đang là Night 1, lật đến _Prelude: Dawn of the Second Day_ (*trang 39*).</li><li>Nếu đang là Day 2, lật đến _Prelude: The Second Evening_ (*trang 43*).</li><li>Nếu đang là Night 2, lật đến _Prelude: Dawn of the Final Day_ (*trang 51*).</li><li>Nếu đang là Day 3, lật đến _Prelude: The Final Evening_ (*trang 55*).</li></ul></li></ul>"
+      "body": "<p>_Resolution 4_: “Khảo sát Miskatonic, tháng 6 năm 1926. Các thành viên Marquez, Musgrave, và cộng sự. Đã khảo sát Pearl Ridge. Những ngọn đồi phía bắc đã bị tàn phá trong một sự kiện không xác định. Sự ô nhiễm dai dẳng đã dẫn đến quá trình khoáng hóa và tinh thể hóa của các sinh vật hữu cơ. Các hang động trong khu vực bị tràn ngập bởi một đàn côn trùng khổng lồ. Côn trùng thể hiện các hành vi và đặc điểm sinh lý của loài ong bắp cày và mối. Cần nghiên cứu thêm.”</p><ul><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị Victory X của mỗi lá bài trong victory display. _Mỗi điều tra viên bây giờ có thể tiêu kinh nghiệm được ghi dưới mục “Unspent Experience” trong Nhật ký Chiến dịch của bạn._</li><li>Trong phần “Areas Surveyed” của Nhật ký Chiến dịch, đánh dấu *Pearl Ridge*.</li><li>Kiểm tra Nhật ký Chiến dịch của bạn.<ul><li>Nếu đang là Day 1, lật đến _Prelude: The First Evening_ (*trang 31*).</li><li>Nếu đang là Night 1, lật đến _Prelude: Dawn of the Second Day_ (*trang 39*).</li><li>Nếu đang là Day 2, lật đến _Prelude: The Second Evening_ (*trang 43*).</li><li>Nếu đang là Night 2, lật đến _Prelude: Dawn of the Final Day_ (*trang 51*).</li><li>Nếu đang là Day 3, lật đến _Prelude: The Final Evening_ (*trang 55*).</li></ul></li></ul>"
     }
   }
 }

@@ -6,5 +6,7 @@ import historyPanel from '@/locales/vi/gameBoard/history_panel.json'
 import investigator from '@/locales/vi/gameBoard/investigator.json'
 import scenario from '@/locales/vi/gameBoard/scenario.json'
 import card from '@/locales/vi/gameBoard/card.json'
+import create from '@/locales/vi/gameBoard/create.json'
+import achievements from '@/locales/vi/gameBoard/achievements.json'
 
-export default { ...base, phase, skillTest, gameBar, historyPanel, investigator, scenario, card }
+export default { ...base, phase, skillTest, gameBar, historyPanel, investigator, scenario, card, create, achievements }
