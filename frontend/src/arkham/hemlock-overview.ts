@@ -125,6 +125,29 @@ const boards = new Map([
   ['08648a', 'the-edge-of-the-earth/the-heart-of-madness-part-1'],
   ['08648b', 'the-edge-of-the-earth/the-heart-of-madness-part-2'],
 
+  // Brethren of Ash (Chapter 2, Campaign 12)
+  ['12105', 'brethren-of-ash/spreading-flames'],
+  ['12133', 'brethren-of-ash/smoke-and-mirrors'],
+  ['12168', 'brethren-of-ash/queen-of-ash'],
+
+  // Children of Blood (Chapter 2, Campaign 13)
+  ['13001', 'children-of-blood/river-of-blood'],
+  ['13031', 'children-of-blood/new-horizons'],
+  ['13068', 'children-of-blood/blood-money'],
+
+  // Side Stories / Standalones
+  ['81001', 'side-stories/curse-of-the-rougarou'],
+  ['82001', 'side-stories/carnevale-of-horrors'],
+  ['84001', 'side-stories/murder-at-the-excelsior-hotel'],
+  ['85001', 'side-stories/the-blob-that-ate-everything'],
+  ['86001', 'side-stories/war-of-the-outer-gods'],
+  ['87001', 'side-stories/machinations-through-time'],
+  ['88001', 'side-stories/fortune-and-folly'],
+  ['70001', 'side-stories/the-labyrinths-of-lunacy'],
+  ['71001', 'side-stories/the-midwinter-gala'],
+  ['72001', 'side-stories/film-fatale'],
+  ['73001', 'side-stories/traces-to-nowhere'],
+
   // Dark Matter (Homebrew)
   [':dark-matter:014', 'dark-matter/the-tatterdemalion'],
   [':dark-matter:054', 'dark-matter/electric-nightmare'],
@@ -518,6 +541,100 @@ const villageAnchors: Record<string, Point> = {
   '08685': [50, 94], // Titanic Ramp 4
   '08686': [50, 96], // Hidden Tunnel: A Way Out
 
+  // Brethren of Ash — Scenario 1: Spreading Flames
+  '12116': [50, 52], // Miskatonic Quad
+  '12118': [52, 22], // Orne Library
+  '12120': [52, 22], // Orne Library (Alt)
+  '12117': [24, 42], // Dormitories
+  '12113': [16, 74], // Your Friend's Room
+  '12119': [80, 48], // Warren Observatory
+  '12114': [50, 80], // Science Hall
+  '12115': [50, 80], // Science Hall (Alt)
+
+  // Brethren of Ash — Scenario 2: Smoke and Mirrors
+  '12149': [18, 22], // Northside
+  '12145': [50, 20], // Downtown (First Bank of Arkham)
+  '12146': [50, 20], // Downtown (Arkham Sanatorium)
+  '12150': [84, 22], // Easttown
+  '12155': [22, 50], // Miskatonic University (In Flames)
+  '12156': [22, 50], // Miskatonic University (Quiet Campus)
+  '12151': [50, 48], // Merchant District
+  '12152': [78, 50], // Waterfront District
+  '12147': [18, 80], // Uptown: St. Mary's Hospital
+  '12148': [18, 80], // Uptown: Ye Olde Magick Shoppe
+  '12153': [50, 80], // Southside
+  '12154': [82, 80], // French Hill
+
+  // Brethren of Ash — Scenario 3: Queen of Ash
+  '12175': [50, 16], // Sluice Control
+  '12174': [50, 36], // Underground Cistern
+  '12182': [50, 84], // Sewer Culvert
+  '12183': [12, 56], // Sewer Tunnels (Infested Pipes)
+  '12184': [32, 56], // Sewer Tunnels (Overgrown Tunnels)
+  '12185': [50, 56], // Sewer Tunnels (Flooded Crypt)
+  '12186': [68, 56], // Sewer Tunnels (Smuggler's Cache)
+  '12187': [88, 56], // Sewer Tunnels (Toxic Waste Pit)
+
+  // Children of Blood — Scenario 1: River of Blood
+  '13016': [54, 48], // Erwin Bridge (Dawn)
+  '13017': [54, 48], // Erwin Bridge (Dusk)
+  '13012': [52, 70], // River Docks (Dawn)
+  '13013': [52, 70], // River Docks (Dusk)
+  '13008': [20, 68], // Water Street (Dawn)
+  '13009': [20, 68], // Water Street (Dusk)
+  '13010': [80, 68], // Garrison Street (Dawn)
+  '13011': [80, 68], // Garrison Street (Dusk)
+  '13014': [52, 28], // Main Street (Dawn)
+  '13015': [52, 28], // Main Street (Dusk)
+  '13022': [28, 48], // Back Alley (Dawn)
+  '13023': [28, 48], // Back Alley (Dusk)
+  '13020': [80, 34], // Waterfront Warehouse (Dawn)
+  '13021': [80, 34], // Waterfront Warehouse (Dusk)
+  '13018': [24, 28], // Unvisited Isle (Dawn)
+  '13019': [24, 28], // Unvisited Isle (Dusk)
+
+  // Children of Blood — Scenario 2: New Horizons
+  '13039': [22, 30], // Factory Floor: West (Day)
+  '13044': [22, 30], // Factory Floor: West (Night)
+  '13040': [78, 30], // Factory Floor: East (Day)
+  '13045': [78, 30], // Factory Floor: East (Night)
+  '13042': [50, 20], // Loading Dock (Day)
+  '13047': [50, 20], // Loading Dock (Night)
+  '13041': [36, 26], // Manager's Office (Day)
+  '13046': [36, 26], // Manager's Office (Night)
+  '13043': [64, 26], // Storage (Day)
+  '13048': [64, 26], // Storage (Night)
+  '13049': [35, 52], // Cavern Entrance: Shallow Tunnels
+  '13050': [65, 52], // Cavern Entrance: Darkest Depths
+  '13051': [50, 68], // Descending Tunnel
+  '13054': [20, 80], // Side Chamber: Shallow Tunnels
+  '13057': [80, 80], // Side Chamber: Darkest Depths
+  '13052': [32, 76], // Hidden Laboratory: Shallow Tunnels
+  '13055': [32, 76], // Hidden Laboratory: Darkest Depths
+  '13053': [68, 76], // Locked Chamber: Shallow Tunnels
+  '13056': [68, 76], // Locked Chamber: Darkest Depths
+
+  // Children of Blood — Scenario 3: Blood Money
+  '13076': [50, 52], // Foyer (Boring Party)
+  '13077': [24, 46], // Dining Hall
+  '13078': [78, 46], // Study
+
+  // Side Stories — Traces to Nowhere
+  '73008': [60, 48], // Steer's Office
+  '73009': [46, 52], // Merchant District
+  '73010': [78, 14], // French Hill
+  '73011': [36, 60], // South Church
+  '73012': [74, 51], // Historical Society
+  '73027': [88, 59], // Arkham Advertiser
+  '73028': [20, 31], // Train Station
+  '73029': [17, 82], // Tick Tock Club
+  '73030': [55, 75], // Duterte Funeral Home (After Hours)
+  '73031': [55, 75], // Duterte Funeral Home (Something in the Basement)
+  '73032': [92, 13], // Meiger Estate (Under New Ownership)
+  '73033': [92, 13], // Meiger Estate (Beyond the Black Door)
+  '73050': [46, 88], // The Portal (Otherworld)
+  '73051': [57, 88], // Ethereal Perch (Otherworld)
+  '73052': [68, 84], // Bone Pit (Otherworld)
   // Dark Matter — Scenario 1: The Tatterdemalion (ship cutaway rooms)
   ':dark-matter:025': [35, 28], // Escape Pod Bay
   ':dark-matter:026': [60, 28], // Infirmary
@@ -812,6 +929,115 @@ const boardAnchors: Record<string, Record<string, Point>> = {
     '05291': [62, 82], // French Hill
     '05303': [90, 40], // Silver Twilight Lodge
     '05305': [90, 40], // Silver Twilight Lodge
+  },
+      'side-stories/curse-of-the-rougarou': {
+    '81008': [80, 24], // Garden District (New Orleans)
+    '81018': [20, 26], // Overgrown Cairns (Unhallowed Land)
+    '81016': [50, 48], // Foul Swamp (Bayou)
+    '81010': [50, 48], // Brackish Waters
+    '81007': [20, 26], // Cursed Shores
+    '81013': [50, 48], // Forgotten Marsh
+    '81012': [15, 74], // Faubourg Marigny (Riverside)
+    '81014': [84, 76], // Trapper's Cabin (Wilderness)
+  },
+  'side-stories/carnevale-of-horrors': {
+    '82008': [51, 23], // 1. San Marco Basilica
+    '82013': [75, 20], // 2. Bridge of Sighs
+    '82010': [86, 38], // 3. Streets of Venice
+    '82014': [84, 75], // 4. Flooded Square
+    '82012': [50, 90], // 5. Venetian Garden
+    '82009': [18, 76], // 6. Canal-side
+    '82015': [24, 45], // 7. Accademia Bridge
+    '82011': [20, 26], // 8. Rialto Bridge
+    '82016': [86, 38], // The Guardian
+    '82006': [50, 52], // Gondola / Cnidathqua
+  },
+  'side-stories/fortune-and-folly': {
+    '88010': [32, 65], // Poker Table
+    '88011': [48, 65], // Roulette Wheel
+    '88012': [64, 65], // Baccarat Table
+    '88013': [88, 58], // Slot Machines
+    '88014': [80, 26], // Casino Lounge
+    '88015': [80, 26], // High Rollers Table
+    '88016': [68, 86], // Staff Access Hallway
+    '88018': [68, 86], // Guard Room
+    '88020': [68, 86], // Counting Room
+    '88021': [78, 86], // Vault Door
+    '88022': [92, 86], // Relic Room (Sanctum of Fortune)
+  },
+  'side-stories/machinations-through-time': {
+    '87007': [18, 30], // Arkham Gazette (1890s)
+    '87008': [22, 54], // O'Malley's Watch Shop (1890s)
+    '87009': [12, 75], // River Docks Past (1890s)
+    '87010': [20, 42], // Miskatonic U Past (1890s)
+    '87016': [52, 28], // Arkham Advertiser Present (1920s)
+    '87017': [50, 52], // Tick-Tock Club Present (1920s)
+    '87018': [48, 76], // River Docks Present (1920s)
+    '87019': [50, 40], // Miskatonic U Present (1920s)
+    '87020': [62, 52], // Ye Olde Magick Shoppe
+    '87025': [82, 54], // Arkham Advertiser Future (2890s)
+    '87027': [84, 76], // River Docks Future (2890s)
+    '87028': [80, 42], // Miskatonic U Future (2890s)
+    '87029': [84, 30], // Corrigan Industries (2890s)
+  },
+  'side-stories/war-of-the-outer-gods': {
+    '86014': [54, 76], // Arkham Crossroads
+    '86015': [66, 42], // Streets of Providence
+    '86016': [66, 42], // Athenaeum of the Empty Sky
+    '86017': [85, 45], // The Arcade
+    '86018': [93, 76], // Streets of Montreal
+    '86019': [93, 76], // Chateau Ramezay
+    '86020': [93, 76], // Shrine of Magh'an Ark'at
+    '86021': [20, 30], // Streets of New York
+    '86022': [29, 65], // The Burning Pit
+    '86023': [8, 70],  // The Penthouse
+    '86024': [72, 10], // Hub Dimension (Eclipse)
+  },
+  'side-stories/the-midwinter-gala': {
+    '71007': [50, 72], // Lobby
+    '71008': [22, 74], // Lantern Chamber
+    '71009': [25, 36], // Art Gallery
+    '71010': [78, 74], // Ballroom
+    '71011': [78, 84], // Barroom
+    '71012': [76, 36], // Bedroom / Library
+  },
+  'side-stories/film-fatale': {
+    '72009': [48, 28], // Space Set (Soundstage)
+    '72010': [78, 62], // Jungle Set
+    '72011': [16, 52], // Gothic Set
+    '72039': [16, 38], // Western Ridge
+    '72041': [84, 38], // Eastern Ridge
+    '72042': [78, 75], // Jungle River
+  },
+  'side-stories/the-labyrinths-of-lunacy': {
+    '70032': [50, 18], // Abandoned Warehouse
+    '70023': [22, 54], // Chamber of Night
+    '70028': [22, 68], // Chamber of Hunger
+    '70021': [22, 80], // Chamber of Sorrows
+    '70029': [78, 54], // Chamber of Decay
+    '70030': [78, 68], // Chamber of Rot
+    '70031': [78, 80], // Chamber of Poison
+    '70024': [50, 36], // Chamber of Regret
+    '70019': [50, 44], // Chamber of Rain
+    '70026': [50, 54], // Labyrinthine Halls
+    '70016': [50, 84], // Chamber of Secrets
+  },
+  'side-stories/traces-to-nowhere': {
+    '73008': [60, 48], // Steer's Office
+    '73009': [46, 52], // Merchant District
+    '73010': [78, 14], // French Hill
+    '73011': [36, 60], // South Church
+    '73012': [74, 51], // Historical Society
+    '73027': [88, 59], // Arkham Advertiser
+    '73028': [20, 31], // Train Station
+    '73029': [17, 82], // Tick Tock Club
+    '73030': [55, 75], // Duterte Funeral Home (After Hours)
+    '73031': [55, 75], // Duterte Funeral Home (Something in the Basement)
+    '73032': [92, 13], // Meiger Estate (Under New Ownership)
+    '73033': [92, 13], // Meiger Estate (Beyond the Black Door)
+    '73050': [46, 88], // The Portal
+    '73051': [57, 88], // Ethereal Perch
+    '73052': [68, 84], // Bone Pit
   },
   'the-drowned-city/one-last-job': {
     '11505': [51, 19], // La Bella Luna (Italian restaurant with red awnings)

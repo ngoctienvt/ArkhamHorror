@@ -635,21 +635,21 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
             <span>+</span>
             <i
                :class="`${normalizeSkill(modifier.type.contents)}-icon`"
-               :style="{ color: `var(--${normalizeSkill(modifier.type.contents)})` }"
+               class="skill-badge" :style="{ '--skill': `var(--${normalizeSkill(modifier.type.contents)})` }"
             ></i>
           </template>
           <template v-if="modifier.type.tag === 'SkillModifier'">
-            <span>+ {{modifier.type.value}}</span>
+            <span>+{{modifier.type.value}}</span>
             <i
                :class="`${normalizeSkill(modifier.type.skillType)}-icon`"
-               :style="{ color: `var(--${normalizeSkill(modifier.type.skillType)})` }"
+               class="skill-badge" :style="{ '--skill': `var(--${normalizeSkill(modifier.type.skillType)})` }"
             ></i>
           </template>
           <template v-if="modifier.type.tag === 'ActionSkillModifier'">
-            <span>+ {{modifier.type.value}}</span>
+            <span>+{{modifier.type.value}}</span>
             <i
                :class="`${normalizeSkill(modifier.type.skillType)}-icon`"
-               :style="{ color: `var(--${normalizeSkill(modifier.type.skillType)})` }"
+               class="skill-badge" :style="{ '--skill': `var(--${normalizeSkill(modifier.type.skillType)})` }"
             ></i>
           </template>
           <template v-if="modifier.type.tag === 'AnySkillValue'">
@@ -1389,6 +1389,23 @@ i.iconSkillAgility {
 
   i {
     align-self: flex-end;
+  }
+
+  /* A skill icon as printed on the cards: the white glyph on a tile of that skill's colour. */
+  i.skill-badge {
+    align-self: center;
+    display: inline-grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background: var(--skill);
+    box-shadow: inset 0 0 0 1px #ffffff40, 0 1px 2px #000a;
+    color: #fff;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1;
+    &::before { line-height: 1; }
   }
 
   .text {

@@ -286,3 +286,64 @@ test('Edge of the Earth overview maps and location positions', () => {
   assert.deepEqual(hemlockVillagePosition('08686'), [50, 96]) // Hidden Tunnel: A Way Out
 })
 
+test('Chapter 2 overview maps and location positions', () => {
+  // Brethren of Ash
+  assert.equal(hemlockOverview('12105', '12105')?.image, 'img/scenes/brethren-of-ash/spreading-flames.webp')
+  assert.equal(hemlockOverview('12133', '12133')?.image, 'img/scenes/brethren-of-ash/smoke-and-mirrors.webp')
+  assert.equal(hemlockOverview('12168', '12168')?.image, 'img/scenes/brethren-of-ash/queen-of-ash.webp')
+
+  // Children of Blood
+  assert.equal(hemlockOverview('13001', '13001')?.image, 'img/scenes/children-of-blood/river-of-blood.webp')
+  assert.equal(hemlockOverview('13031', '13031')?.image, 'img/scenes/children-of-blood/new-horizons.webp')
+  assert.equal(hemlockOverview('13068', '13068')?.image, 'img/scenes/children-of-blood/blood-money.webp')
+
+  // Side Story: Traces to Nowhere
+  assert.equal(hemlockOverview('73001', '73001')?.image, 'img/scenes/side-stories/traces-to-nowhere.webp')
+
+  // Locations
+  assert.deepEqual(hemlockVillagePosition('12116'), [50, 52]) // Miskatonic Quad
+  assert.deepEqual(hemlockVillagePosition('12113'), [16, 74]) // Your Friend's Room
+  assert.deepEqual(hemlockVillagePosition('12149'), [18, 22]) // Northside
+  assert.deepEqual(hemlockVillagePosition('12151'), [50, 48]) // Merchant District
+  assert.deepEqual(hemlockVillagePosition('12175'), [50, 16]) // Sluice Control
+  assert.deepEqual(hemlockVillagePosition('12182'), [50, 84]) // Sewer Culvert
+  assert.deepEqual(hemlockVillagePosition('13016'), [54, 48]) // Erwin Bridge
+  assert.deepEqual(hemlockVillagePosition('13012'), [52, 70]) // River Docks
+  assert.deepEqual(hemlockVillagePosition('13039'), [22, 30]) // Factory Floor: West
+  assert.deepEqual(hemlockVillagePosition('13051'), [50, 68]) // Descending Tunnel
+  assert.deepEqual(hemlockVillagePosition('13077'), [24, 46]) // Dining Hall
+  assert.deepEqual(hemlockVillagePosition('73008'), [60, 48]) // Steer's Office
+  assert.deepEqual(hemlockVillagePosition('73028'), [20, 31]) // Train Station
+  assert.deepEqual(hemlockVillagePosition('73027'), [88, 59]) // Arkham Advertiser
+})
+
+test('Standalone / Side Stories select their overview boards and location positions', () => {
+  const standalones = [
+    { id: '81001', img: 'img/scenes/side-stories/curse-of-the-rougarou.webp' },
+    { id: '82001', img: 'img/scenes/side-stories/carnevale-of-horrors.webp' },
+    { id: '88001', img: 'img/scenes/side-stories/fortune-and-folly.webp' },
+    { id: '87001', img: 'img/scenes/side-stories/machinations-through-time.webp' },
+    { id: '86001', img: 'img/scenes/side-stories/war-of-the-outer-gods.webp' },
+    { id: '71001', img: 'img/scenes/side-stories/the-midwinter-gala.webp' },
+    { id: '72001', img: 'img/scenes/side-stories/film-fatale.webp' },
+    { id: '70001', img: 'img/scenes/side-stories/the-labyrinths-of-lunacy.webp' },
+    { id: '73001', img: 'img/scenes/side-stories/traces-to-nowhere.webp' },
+  ]
+
+  for (const scen of standalones) {
+    const overview = hemlockOverview(scen.id, 'reference')
+    assert.ok(overview, `overview exists for ${scen.id}`)
+    assert.equal(overview.image, scen.img)
+    assert.equal(overview.village, true)
+  }
+
+  // Anchor checks
+  const rougarou = hemlockOverview('81001', 'reference')
+  assert.deepEqual(hemlockVillagePosition('81008', rougarou?.anchors), [80, 24])
+
+  const carnevale = hemlockOverview('82001', 'reference')
+  assert.deepEqual(hemlockVillagePosition('82011', carnevale?.anchors), [20, 26])
+
+  const fortune = hemlockOverview('88001', 'reference')
+  assert.deepEqual(hemlockVillagePosition('88011', fortune?.anchors), [48, 65])
+})

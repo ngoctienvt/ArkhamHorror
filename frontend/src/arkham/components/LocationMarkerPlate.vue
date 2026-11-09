@@ -87,12 +87,13 @@ import type { Game } from '@/arkham/types/Game'
       </button>
       <span v-if="showStats && showClues" class="chip clue" :class="{ empty: !cluesLeft }" :title="t('locationMap.clues')"><GameIcon type="clue" />{{ cluesLeft }}<small v-if="info.clues.printed">/{{ info.clues.printed }}</small></span>
       <span v-if="showStats && info.doom" class="chip doom" :title="t('locationMap.doom')"><GameIcon type="doom" />{{ info.doom }}</span>
-      <!-- Cards lying on this location (Obscuring Fog, Locked Door…) ride the same line; hover a chip for its effect and the card. -->
-      <AttachmentChips v-if="game && locationId && size !== 'compact'" :game="game" host="location" :hostId="locationId" placement="down" :max="4" />
       <button v-if="size !== 'compact'" class="info" type="button" :aria-label="t('locationMap.marker.details', { name: info.face.name })"
         data-no-card-overlay @mouseenter="showPreview" @mouseleave="hidePreview" @focus="showPreview" @blur="hidePreview"
         @click.stop="hidePreview(); emit('inspect', anchorOf($event))"><span aria-hidden="true">ⓘ</span></button>
     </div>
+    <!-- Cards lying on this location (Obscuring Fog, Locked Door…) get their own row so several stay readable;
+         hover a chip for its effect and the card. -->
+    <AttachmentChips v-if="game && locationId && size !== 'compact'" :game="game" host="location" :hostId="locationId" placement="down" :max="4" />
     <Teleport to="body">
       <div v-if="preview && (previewTextHtml || previewFlavorHtml || info.face.traits)" class="info-preview" role="tooltip"
         :style="{ left: preview.left + 'px', top: preview.top + 'px', width: PREVIEW_WIDTH + 'px' }">
@@ -129,8 +130,9 @@ import type { Game } from '@/arkham/types/Game'
 @keyframes beckon { 50% { box-shadow: 0 0 0 2px #f2d27a, 0 0 18px #f2d27aaa; } }
 @media (prefers-reduced-motion: reduce) { .plate.targetable { animation: none; box-shadow: 0 0 0 2px #f2d27a; } }
 .head { display: flex; align-items: center; gap: 5px; }
-.head :deep(.chips) { flex: none; flex-wrap: nowrap; gap: 4px; margin: -3px 2px -3px 0; }
-.head :deep(.chips .chip) { width: 22px; height: 22px; }
+/* Attachment row: left-aligned under the name, with room below for the chips' counter badges. */
+.plate > :deep(.chips) { justify-self: start; justify-content: flex-start; max-width: 100%; gap: 6px; padding: 0 6px 4px 0; }
+.plate > :deep(.chips .chip) { width: 22px; height: 22px; }
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 .main { display: flex; align-items: center; gap: 5px; flex: 1; min-width: 0; min-height: 22px; }
 .main:focus-visible, .info:focus-visible, .go:focus-visible { outline: 2px solid #ffe9a0; outline-offset: 2px; border-radius: 3px; }
