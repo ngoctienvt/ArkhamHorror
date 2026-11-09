@@ -39,5 +39,7 @@ Mỗi investigator và enemy có thể xuất hiện trong Location Scene của 
 
 Từ The Dream-Eaters, tạo một sprite riêng cho mỗi mã thẻ còn thiếu. Dùng lá bài đúng mã để giữ nhận dạng và mẫu thành phố ban đêm cho phong cách sơn dầu. Với tranh bán thân, yêu cầu khung rộng và dựng phần cơ thể bị khuất. Kiểm tra ảnh đầu ra thấy trọn hình người từ đầu đến chân hoặc toàn bộ hình dạng của quái trước khi tích hợp.
 
-Đã kiểm tra đủ 527/527 mã enemy thuộc các campaign chính thức trong phạm vi, gồm Return to và bốn mã enemy đặc biệt. Dark Matter có 27/42 mã và Ages Unwound có 29/37 mã. Còn 23 mã homebrew theo roster. Công cụ tạo ảnh báo mở lại hạn mức lúc 13:53 ngày 9/11/2026, giờ Việt Nam.
+Đã kiểm tra đủ 606/606 mã enemy trong phạm vi. Các campaign chính thức có 527 mã, Dark Matter có 42 mã và Ages Unwound có 37 mã. Cả 23 sprite của lô cuối đều có nền trong suốt và nguồn tham chiếu ghi theo mã.
+
+Thẻ Roman Soldier dùng hình giữ chỗ. Sprite của mã này dựng một lính bộ binh riêng, dùng thẻ Determined General cùng campaign làm mẫu trang phục. Sprite Irregulars thể hiện đủ bốn người trong tranh gốc.
 
