@@ -21,18 +21,20 @@ STORY_SEGMENT = re.compile(
 SKIP_SEGMENTS = {
     "setup", "label", "labels", "tokens", "xp", "campaignlog", "title", "heading", "headings",
     "standalone", "slay", "checkenemies", "expeditionleader", "additionalrulesandclarifications",
+    "recommended", "failedeffect",
 }
 
 # Paragraphs that are bookkeeping instructions even when written as prose.
 INSTRUCTION_START = re.compile(
-    r"^(in your campaign log|record (that|in)|each investigator (earns|suffers|must)|"
+    r"^(in your campaign log|record\b|each investigator (earns|suffers|must)|"
     r"the lead investigator (earns|suffers)|proceed to|skip to|go to|if this is|"
     r"check (your )?campaign log|choose one|otherwise,|continue to|"
     r"read (intro|resolution|interlude|epilogue|prologue)|then read|"
     r"add (\d|one|two) |search each investigator|any one investigator|"
     r"the investigators must|check the |if .{0,120}\b(proceed|skip) to\b|"
     r"read the (rules|relevant|following)|the lead investigator must|if neither|"
-    r"cross (off|out)|if there are any other non-story cards|"
+    r"cross (off|out)|if there are (any other non-story|\d+ or more progress)|"
+    r"permanently remove|find the set-aside|"
     r"advance the (act|agenda)|in order to set up|spawn the |you are now ready to proceed|"
     r"proceed as normal|[\w ’'.-]{1,40}\b(votes|abstains|remains eerily silent)\b)",
     re.I,
@@ -51,6 +53,7 @@ CHOICE_SEGMENT = re.compile(
     r"^(proceedTo|done[A-Z]|sentencedTo|remove[A-Z]|put[A-Z]|move[A-Z]|flip[A-Z]|"
     r"advance[A-Z]|spawn[A-Z]|readyToProceed$|finalActAndAgenda$|resumePlaying$|"
     r"isThereADifference$|noSay$|crossOut[A-Z]|nonStoryVictory$|"
+    r"record[A-Z]|fiveOrMoreProgress$|task\d+[A-Z]|failedEffect$|"
     r"if[A-Z]|xp\d+$)"
 )
 # Speaker tags and bare names, not narration.
