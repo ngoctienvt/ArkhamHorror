@@ -590,5 +590,6 @@
   "doneMovingScientists": "Hoàn tất di chuyển nhà khoa học",
   "doneEngagingEnemies": "Hoàn tất giao chiến kẻ địch",
   "doneDiscoveringClues": "Hoàn tất khám phá manh mối",
-  "afterSkillTestOption": "{name}"
+  "afterSkillTestOption": "{name}",
+  "readyEnemy": "Ready kẻ địch đang exhaust gần nhất"
 }

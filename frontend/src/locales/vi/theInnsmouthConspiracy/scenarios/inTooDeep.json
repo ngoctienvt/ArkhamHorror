@@ -1,49 +1,97 @@
 {
   "heading": "Màn III",
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *In Too Deep*, *Creatures of the Deep*, *Rising Tide*, *Syzygy*, *The Locals*, and *Agents of Cthulhu*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/in-too-deep.png' /><img src='{setImgPath}/undersea-creatures.png' /><img src='{setImgPath}/rising-tide.png' /><img src='{setImgPath}/syzygy.png' /><img src='{setImgPath}/locals.png' /><img src='{setImgPath}/agents-of-cthulhu.png' /></section>",
     "placeLocations": "Đặt tất cả 15 vị trí vào chơi.",
     "barriers": "Đặt 24 rào chắn (sử dụng token tài nguyên) giữa các vị trí này, như hình.",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Desolate Coastline (bờ biển hoang vắng).",
     "placeKeys": "Đặt mỗi chìa khoá như sau:",
+    "blackKey": "Check the “Possible Hideouts” section of the Campaign Log for the location that is circled. Place the black key on that location. (If no location is circled, skip this step.)",
     "otherKeys": "Đặt mỗi chìa khóa khác sang một bên, úp mặt xuống. Xáo trộn chúng để bạn không phân biệt được.",
+    "outForBlood": "Kiểm tra Nhật ký Chiến dịch cho từng kẻ địch [[Suspect]] hết máu và kích hoạt từng khả năng revelation của chúng mà không đặt manh mối lên chúng.",
     "setAsideCards": "Đặt các lá bài sau một bên, nằm ngoài khu vực chơi: 2 bản sao của Ravager from the Deep, 2 bản sao của Young Deep One, Joe Sargent, Teachings of the Order và kẻ địch Innsmouth Shoggoth.",
     "angryMob": "Tìm trong bộ sưu tập lá bài Angry Mob *(The Innsmouth Conspiracy card #62b)* và đặt nó một bên, ngoài khu vực chơi. (Lá bài này là mặt bên kia của lá bài \"Finding Agent Harper\".)",
     "floodTokens": "Thêm token lũ lụt vào kho chứa token.",
-    "increaseFloodLevel": "Tăng mực nước lũ ở từng địa điểm sau: The House on Water Street, Innsmouth Harbour và Desolate Coastline.",
-    "outForBlood": "Kiểm tra Nhật ký Chiến dịch cho từng kẻ địch [[Suspect]] hết máu và kích hoạt từng khả năng revelation của chúng mà không đặt manh mối lên chúng."
-  },
-  "label": {
-    "removeCultist": "Loại bỏ {'{'}cultist{'}'}",
-    "removeTablet": "Loại bỏ {'{'}tablet{'}'}",
-    "removeElderThing": "Loại bỏ {'{'}elderThing{'}'}"
-  },
-  "intro": {
-    "title": "Màn III: Tiến Vào Sâu",
-    "body": "<p>Biển dâng liên tục khi bạn đi dọc theo bờ biển về phía thị trấn Innsmouth. Mặt trời và mặt trăng thẳng hàng trên đường chân trời xa xôi, đe dọa một tương lai ảm đạm, không chắc chắn.</p><p>Bạn nhớ cách bố trí của thị trấn và một số khuôn mặt lạ mà bạn đã gặp trong vài ngày đầu tiên ở đó, nhưng không có gì xảy ra từ đó đến khi thức dậy trong cái hố ngập nước đó. Đặc vụ Harper đã cố gắng lấp đầy trí nhớ của bạn, nhưng với rất nhiều khoảng trống trong trí nhớ của bạn, mỗi lời giải thích chỉ khiến bạn bối rối hơn nữa.</p><p>\"Kể từ khi cậu đến Innsmouth, mọi thứ chỉ trở nên tồi tệ hơn. Nó bắt đầu với người dân địa phương. Mỗi ngày, họ trở nên ồn ào và thù địch hơn, đặc biệt là với những người ngoài như cậu và tôi. Cậu có nhớ một số người trong số họ trông buồn nôn như thế nào không? Da nhầy nhụa, xám xịt? Môi rộng, mắt lồi, đại loại như vậy?\"</p><p>Bạn gật đầu. Bây giờ bạn đã nhớ, bạn gần như ước mình không nhớ còn hơn. Đó cũng không chỉ là vẻ ngoài của họ. Giọng nói khàn khàn của họ kêu lên những âm tiết gần như không giống với lời nói của con người, và họ có mùi cá thối rữa.</p><p>\"Họ là những người đã khuấy động rắc rối gần đây. Và đó không phải là tất cả. Có những sinh vật khác lượn lờ xung quanh thị trấn Innsmouth gần đây. Tôi chắc rằng cậu cũng đã nhìn thấy chúng.\" Cô rùng mình. \"Có một mối liên hệ nào đó giữa Dòng Dagon bí truyền và những... thứ đó. Chưa chắc chắn là điều gì, nhưng chúng ta sẽ đi đến tận cùng của nó nếu...\"</p><p>Giọng nói của đặc vụ Harper vang lên khi cô leo lên đỉnh mũi đất. Bất cứ điều gì khiến cô ấy nhìn chằm chằm không thể là điều tốt. Bạn lên đến đỉnh, kéo mình qua sườn núi và trông thấy sự tàn phá mà cô ấy cũng đang thấy.</p><p>Thị trấn Innsmouth đã bị xâm chiếm. Những sinh vật tương tự mà bạn gặp phải trong cái hố hiến tế đó lảng vảng trên đường phố - những thứ hôi thối từ đáy biển, hoặc có lẽ xa hơn thế. Chúng tuần tra các con hẻm và ngã tư, tìm kiếm một cái gì đó. Săn lùng. Các rào chắn tạm thời chặn các con đường khác nhau qua thị trấn khi nước từ sông Manuxet tràn ra đường phố.</p><p>\"Không, chuyện này không thể nào...\" Đặc vụ Harper nói nhỏ. Một khoảnh khắc u ám im lặng treo lơ lửng giữa các bạn. Một khoảnh khắc im lặng u ám treo lơ lửng giữa hai người. Rõ ràng là thị trấn Innsmouth không còn an toàn. Bạn thông báo cho Đặc vụ Harper rằng Đặc vụ Dawson đã để xe của anh ta gần xe của cô, tại nhà ga xe lửa bỏ hoang ở rìa phía tây của thị trấn Innsmouth. Cô gật đầu, hiểu rõ. \"Đúng vậy. Chúng ta phải nhanh chóng đến phía bên kia của thị trấn.\"</p><p>Bầu trời phía trên bạn được tắm trong màu đỏ thẫm dữ dội. Nếu may mắn, sẽ không còn màu đó bị đổ ngày hôm nay.</p>"
-  },
-  "flashback5": {
-    "title": "Hồi tưởng V"
-  },
-  "flashback6": {
-    "title": "Hồi tưởng VI"
-  },
-  "flashback7": {
-    "title": "Hồi tưởng VII"
-  },
-  "flashback8": {
-    "title": "Hồi tưởng VIII"
-  },
-  "resolutions": {
-    "resolution1": {
-      "title": "Kết thúc thứ nhất"
-    }
+    "increaseFloodLevel": "Tăng mực nước lũ ở từng địa điểm sau: The House on Water Street, Innsmouth Harbour và Desolate Coastline."
   },
   "specialRules": [
     {
-      "title": "Rào chắn"
+      "title": "Rào chắn",
+      "body": "<p class='basic'>Trong màn chơi này, các rào chắn đã được dựng lên xung quanh các con đường khác nhau của thị trấn Innsmouth. Mỗi rào chắn được thể hiện bằng token tài nguyên được đặt giữa hai vị trí. Rào chắn cản trở sự di chuyển của các điều tra viên dọc theo con đường đó.</p><ul><li>Nếu có 1 hoặc nhiều rào chắn được đặt trực tiếp giữa hai vị trí, điều tra viên không thể di chuyển từ vị trí này sang vị trí kia, ngay cả khi chúng được kết nối.</li><li>Các rào chắn có thể được loại bỏ bằng cách sử dụng một số khả năng trên vị trí hoặc khả năng trên act 1a. Càng nhiều rào chắn được đặt giữa hai vị trí thì càng dọn nhiều lần để mở được đường.</li><li>Khi kẻ thù là thợ săn (hunter) di chuyển, sau khi xác định được điều tra viên mà nó hướng tới, nó sẽ đi theo con đường ngắn nhất mà không bị cản trở bởi các rào chắn. Nếu không có con đường như vậy tồn tại, nó sẽ bỏ qua các rào chắn. Tất cả các kẻ thù khác di chuyển thì chúng bỏ qua rào chắn.</li></ul>"
     },
     {
-      "title": "Chìa khóa"
+      "title": "Chìa khóa",
+      "body": "<div class='red bordered'><p class='basic'>During this scenario, keys represent the following:</p><ul><li>Đỏ/Xanh biển/Xanh lá/Vàng/Tím/Trắng: Thông tin từ những công dân vẫn còn là con người của thị trấn Innsmouth về tình trạng của thị trấn.</li><li>Đen: Thông tin liên quan đến nghi phạm đã bắt cóc Đặc vụ Harper.</li></ul></div>"
     }
-  ]
+  ],
+  "label": {
+    "doNotTakeTeachings": "Do not take Teachings of the Order",
+    "removeCultist": "Loại bỏ {'{'}cultist{'}'}",
+    "removeTablet": "Loại bỏ {'{'}tablet{'}'}",
+    "removeElderThing": "Loại bỏ {'{'}elderThing{'}'}",
+    "teachingsOfTheOrder": {
+      "removeAllCurseTokensFromTheChaosBag": "Remove all {'{'}curse{'}'} tokens from the chaos bag.",
+      "removeAFloodTokenFromANon_sanctum_Location": "Remove a flood token from a non-_Sanctum_ location.",
+      "defeatANon_elite_EnemyAtYourLocation": "Defeat a non-_Elite_ enemy at your location."
+    }
+  },
+  "intro": {
+    "title": "Màn III: Tiến Vào Sâu",
+    "body": "<p>Biển dâng liên tục khi bạn đi dọc theo bờ biển về phía thị trấn Innsmouth. Mặt trời và mặt trăng thẳng hàng trên đường chân trời xa xôi, đe dọa một tương lai ảm đạm, không chắc chắn.</p><p>Bạn nhớ cách bố trí của thị trấn và một số khuôn mặt lạ mà bạn đã gặp trong vài ngày đầu tiên ở đó, nhưng không có gì xảy ra từ đó đến khi thức dậy trong cái hố ngập nước đó. Đặc vụ Harper đã cố gắng lấp đầy trí nhớ của bạn, nhưng với rất nhiều khoảng trống trong trí nhớ của bạn, mỗi lời giải thích chỉ khiến bạn bối rối hơn nữa.</p><p>\"Kể từ khi cậu đến Innsmouth, mọi thứ chỉ trở nên tồi tệ hơn. Nó bắt đầu với người dân địa phương. Mỗi ngày, họ trở nên ồn ào và thù địch hơn, đặc biệt là với những người ngoài như cậu và tôi. Cậu có nhớ một số người trong số họ trông buồn nôn như thế nào không? Da nhầy nhụa, xám xịt? Môi rộng, mắt lồi, đại loại như vậy?\"</p><p>Bạn gật đầu. Bây giờ bạn đã nhớ, bạn gần như ước mình không nhớ còn hơn. Đó cũng không chỉ là vẻ ngoài của họ. Giọng nói khàn khàn của họ kêu lên những âm tiết gần như không giống với lời nói của con người, và họ có mùi cá thối rữa.</p><p>\"Họ là những người đã khuấy động rắc rối gần đây. Và đó không phải là tất cả. Có những sinh vật khác lượn lờ xung quanh thị trấn Innsmouth gần đây. Tôi chắc rằng cậu cũng đã nhìn thấy chúng.\" Cô rùng mình. \"Có một mối liên hệ nào đó giữa Dòng Dagon bí truyền và những... thứ đó. Chưa chắc chắn là điều gì, nhưng chúng ta sẽ đi đến tận cùng của nó nếu...\"</p><p>Giọng nói của đặc vụ Harper vang lên khi cô leo lên đỉnh mũi đất. Bất cứ điều gì khiến cô ấy nhìn chằm chằm không thể là điều tốt. Bạn lên đến đỉnh, kéo mình qua sườn núi và trông thấy sự tàn phá mà cô ấy cũng đang thấy.</p><p>Innsmouth has been invaded. The same creatures you encountered in that sacrificial pit prowl the streets—foul things from the depths of the sea, or perhaps beyond. They patrol the alleys and intersections, searching for something. Hunting. Makeshift barricades block the various pathways through the town as water from the Manuxet River spills out onto the streets.</p><p>\"Không, chuyện này không thể nào...\" Đặc vụ Harper nói nhỏ. Một khoảnh khắc u ám im lặng treo lơ lửng giữa các bạn. Một khoảnh khắc im lặng u ám treo lơ lửng giữa hai người. Rõ ràng là thị trấn Innsmouth không còn an toàn. Bạn thông báo cho Đặc vụ Harper rằng Đặc vụ Dawson đã để xe của anh ta gần xe của cô, tại nhà ga xe lửa bỏ hoang ở rìa phía tây của thị trấn Innsmouth. Cô gật đầu, hiểu rõ. \"Đúng vậy. Chúng ta phải nhanh chóng đến phía bên kia của thị trấn.\"</p><p>Bầu trời phía trên bạn được tắm trong màu đỏ thẫm dữ dội. Nếu may mắn, sẽ không còn màu đó bị đổ ngày hôm nay.</p>"
+  },
+  "flashback5": {
+    "title": "Hồi tưởng V",
+    "body": "<div class='blue'><h1>Flashback V</h1><p>Bạn đang giữa cuộc nói chuyện với Joe Sargent, tài xế xe buýt, nhưng chắc phải là vài tuần trước đó. Đường phố vẫn chưa bị ngập, và tất cả những tòa nhà đổ nát, xiêu vẹo vẫn đứng vững, bất chấp hiện trạng. “Tôi đã bảo rồi, người ngoại lai,” ông Sargent nói, “Ngày hôm nay không có xe buýt nào ra khỏi thị trấn Innsmouth cả.” Nhưng bạn không tìm kiếm một chiếc xe buýt ra khỏi Innsmouth. Bạn giải thích rằng bạn có một đề xuất dành cho ông Sargent. Ông ấy nhìn ngó đường phố để tìm những kẻ nghe trộm trước khi trả lời. \"Đề xuất gì?\"</p><p>Bạn biết rằng bạn sẽ không thuyết phục được ông Sargent bằng lời lẽ đạo đức, vì vậy, thay vào đó, bạn kêu gọi những ham muốn vật chất của ông ấy, đưa ra một khoản tiền khá lớn để đổi lấy sự giúp đỡ của ông ấy. Sau khi trở về từ Rạn San Hô Ma Quỷ (Devil Reef), bạn nhận thấy thị trấn Innsmouth thậm chí còn kém hiếu khách hơn bình thường. Bạn bị theo dõi ở mọi nơi bạn đến. Chỉ cần đi bộ là bạn sẽ gặp nguy hiểm.</p><p>\"Vậy là cậu chỉ cần tôi chở cậu đi khắp nơi như một tài xế, phải không?\" Ông Sargent cân nhắc các lựa chọn của mình trong giây lát rồi bắt tay bạn. \"Tôi có thể làm điều đó.\"</p><hr /><p class='basic'>In your Campaign Log, under “Memories Recovered,” record *a deal with Joe Sargent.*</p><p class='basic'>Đưa lá bài Joe Sargent vào sử dụng dưới sự kiểm soát của một điều tra viên tại Innsmouth Square.</p></div>"
+  },
+  "flashback6": {
+    "title": "Hồi tưởng VI",
+    "body": "<div class='blue'><h1>Flashback VI</h1><p>Chiếc chuông ở lối vào Little Bookshop vang lên khi bạn giật mạnh để mở cánh cửa ra. Đúng như dự đoán, bên trong tối om. Kể từ tuần đầu tiên bạn đến thị trấn, cửa hàng đã đóng cửa. Có vẻ như Joyce Little không chỉ là chủ sở hữu mà còn là nhân viên duy nhất của nó. May mắn thay, việc mở khóa không quá khó khăn. Bạn lẻn vào giữa những chiếc kệ tối tăm, bụi bặm khi tìm kiếm bất cứ thứ gì bạn có thể tìm thấy về Dòng Dagon bí truyền.</p><p>Cửa tiệm yên tĩnh, những cái đuôi của bạn cũng không theo bạn đến đây. Bạn dành chút thời gian xem xét những dãy kệ hẹp, tối tăm cho đến khi gặp một tầng hầm có cánh cửa khóa bằng dây xích. Bạn không thể nào mở được cánh cửa đó, nhưng câu trả lời bạn tìm kiếm phải nằm trong đó. Bằng cách nào đó bạn phải vào được đó. Đúng lúc đó, tia đèn pin chiếu qua cửa sổ phía trước cửa hàng. Những cái đuôi của bạn đang theo dấu bạn. Bạn chạy ra cửa sau, hi vọng lần khác quay lại…</p><p>… và hồi tưởng kết thúc. Bạn trở lại hiện tại, đứng trong những gì còn sót lại của hiệu sách. Nước lũ đã phá hủy các giá sách và khiến hầu hết cuốn sách không còn đọc được. Tuy nhiên, từ khóe mắt, bạn nhận thấy cánh cửa tầng hầm từng bị khóa giờ đã hé mở. Bạn lao xuống bậc thang, nước bắn tung tóe đến đầu gối. Những gì bạn tìm thấy là một loạt các cuộn giấy và tập sách, nhiều cuốn được viết bằng cổ ngữ, xa lạ nhưng lại quen thuộc một cách kỳ lạ. Dù kho tàng kiến thức này là gì thì nó cũng phải liên quan đến Dòng Dagon bí truyền. Bạn lấy càng nhiều càng tốt trước khi trốn thoát trở lại những con phố ngập lụt.</p><hr /><p class='basic'>In your Campaign Log, under “Memories Recovered,” record *a followed lead.*</p><p class='basic'>Any one investigator at <span data-image-id='07135b'>The Little Bookshop</span> may choose to add <span data-image-id='07151'>Teachings of the Order</span> to their deck, immediately putting it into play under their control.</p></div>"
+  },
+  "flashback7": {
+    "title": "Hồi tưởng VII",
+    "body": "<div class='blue'><h1>Flashback VII</h1><p>Bạn đang trên đường vào thị trấn lần đầu tiên thì bạn đi ngang qua một bà cụ già yếu ớt đang nói những điều hoàn toàn vô nghĩa: \"Iä-Y'ha-nthlei… ph'nglui mglw'nafh Pth'thya-l'yi… Hydra fhtagn… mglw'nafh Pth'thya-l'yi…” Bạn sắp đi ngang qua bà ấy thì bà ấy đột nhiên đưa tay ra và nắm lấy cẳng tay bạn với một sức mạnh mà bạn không ngờ tới. \"Pth'thya-l'yi!\" bà ấy lặp lại. \"Cô ta ẩn mình trong vực sâu! Trong thành phố của Deep One (người cá)!\" Cái nhìn của bà ấy dường như khoan vào phía sau hộp sọ của bạn.</p><p>Bạn nắm lấy tay bà ấy và lịch sự gỡ nó ra khỏi cánh tay của bạn. Có vẻ như bạn thậm chí không thể đi bộ xuống phố trong thị trấn này mà không bị một kẻ lập dị nào đó bắt gặp — tuy nhiên, có điều gì đó về cái nhìn đau buồn trong đôi mắt trắng đục của bà ấy khiến bạn phải dừng lại. Bất cứ điều gì người phụ nữ này nói, bà ấy đều tin tưởng tuyệt đối. Thở dài, bạn bèn hỏi bà ấy đang nói về điều gì.</p><p>“Ch-chúng đang trên đường tới,” bà ấy lắp bắp. “Đầu tiên là sự thẳng hàng. Kế tiếp là thủy triều. Sau đó là dòng dõi của Mẹ Hydra.” Đôi mắt mù và nhợt nhạt của bà ấy nhìn bạn chăm chú. Tuy nhiên, những lời lảm nhảm ngớ ngẩn của bà ấy chẳng có ích gì với bạn. Bạn chuẩn bị rời đi thì bà ấy chạm bàn tay của bạn và ấn thứ gì đó vào lòng bàn tay bạn. \"Cầm lấy nó!\" bà ấy nói. Bạn đưa nó lại cho bà ấy và gạt bà ấy đi. Bạn không muốn tham gia vào sự ngu xuẩn này; Nhiệm vụ của bạn là tìm Đặc vụ Harper chứ không phải thu thập những món đồ kỳ quái. Vẻ mặt bà ấy trở nên chua chát khi bạn quay người rời đi.</p><p>Khi quay trở lại hiện tại, bạn đang đứng trước xác chết bị xé nát của người phụ nữ. Bất cứ điều gì \"vô nghĩa\" mà bà ấy đang nói ra thực chất là một lời cảnh báo thực sự. Nắm chặt trong bàn tay cứng đơ của bà ấy là đồng tiền vàng kỳ lạ mà bà ấy đã đưa cho bạn vài tuần trước. Lần này, bạn mang nó theo bạn.</p><hr /><p class='basic'>In your Campaign Log, under “Memories Recovered,” record *an intervention.*</p><p class='basic'>Thêm một token +1 vào chaos bag trong phần còn lại của campaign.</p></div>"
+  },
+  "flashback8": {
+    "title": "Hồi tưởng VIII",
+    "body": "<div class='blue'><h1>Flashback VIII</h1><p>Bạn đứng trước cai ngục của Innsmouth, một người đàn ông trung niên cơ bắp, da thịt nhăn nheo dính đầy dầu. Mùi hôi thối của anh ta gần như tệ hơn mùi hôi thối của nhà tù. \"Cậu tự đi nhìn đi,\" người cai ngục nói, chỉ xuống hành lang ẩm ướt. Bạn đến đây để gặp thủ phạm đã bắt cóc đặc vụ Harper, chỉ để được người quản giáo thông báo rằng nghi phạm đã trốn thoát vào đêm hôm trước.</p><p>Bạn hối hả đi xuống hành lang, nắm tay siết chặt. Không đời nào họ có thể tự mình trốn thoát được. Chắc hẳn họ đã có sự giúp đỡ, và nó có thể đến từ bất kỳ ai. Thậm chí có thể chính là người cai ngục. Với cách người dân thị trấn luôn cản trở cuộc điều tra của bạn, có vẻ như toàn bộ thị trấn đang chống lại bạn.</p><p>Bạn đi vòng qua góc ngục và đối mặt với phòng giam cũ của kẻ bắt cóc. Nó không chỉ trống rỗng mà các thanh chắn của nó còn được uốn cong ra ngoài từ giữa—đủ để nhét một con người xuyên qua, hoặc có lẽ là thứ gì đó thậm chí còn lớn hơn. Bạn kiểm tra các thanh chắn và thấy chúng là thép đặc, dày đến mức không con người nào có thể uốn cong được.</p><p>Làm sao họ có thể thoát ra được…</p><hr /><p class='basic'>In your Campaign Log, under “Memories Recovered,” record *a jailbreak.*</p><p class='basic'>Chọn và loại bỏ một trong các token hỗn mang sau khỏi túi hỗn mang trong phần còn lại của chiến dịch ([cultist], [tablet] hoặc [elder_thing])</p></div>"
+  },
+  "resolutions": {
+    "xp": {
+      "vehicles": "Made it safely to their vehicles"
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Chuyến bay của bạn từ thị trấn Innsmouth đầy rẫy nguy hiểm. Không nơi nào an toàn. Những sinh vật khủng khiếp tuần tra trên mọi con phố, đôi mắt không chớp của chúng quét tìm bất kỳ dấu hiệu nào của sự sống con người. Sự im lặng kỳ lạ chỉ bị phá vỡ bởi những tiếng la hét thỉnh thoảng của những người không may bị bắt bởi những thứ hôi hám. Bạn di chuyển qua thành phố nhanh nhất có thể, nhưng chúng đang áp sát xung quanh bạn. Theo dõi từng bước đi của bạn. Chẳng bao lâu nữa, nếu bạn không tìm được nơi ẩn náu, chúng sẽ bắt được bạn. Và khi điều đó xảy ra, tiếng kêu đau đớn của bạn chắc chắn sẽ hòa cùng với những tiếng kêu đau đớn khác.</p><p>Bạn không còn lựa chọn nào khác. Bạn đột nhập vào tòa nhà gần nhất—một toà nhà xiêu vẹo sắp đổ—và trốn. Bạn nghe thấy tiếng bước chân ướt át bên ngoài ngôi nhà. Từng giây chuyển thành phút. Từng phút chuyển từng giờ. Mặt trời lặn, nhuộm bầu trời bên ngoài một màu đỏ thẫm. Từng chút một, ánh sáng mờ dần.</p><p>Dưới sự bao phủ của bóng tối, bạn thực hiện hành động của mình. Lũ lụt bây giờ nghiêm trọng đến mức thật khó tin nếu bạn thậm chí có thể lê bước qua phía bên kia thành phố, nhưng bằng cách nào đó, bạn đã làm được. Khi nhìn thấy nhà ga, bạn bắt đầu chạy lẹ.</p>"
+    },
+    "resolution1": {
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Bạn lao đến nơi an toàn, vui mừng vì thoát khỏi thử thách địa ngục này. Nhưng khi bạn đến chỗ các phương tiện di chuyển, sự bất an hiện lên trong tâm trí bạn. Khi bạn quay mặt về phía Đặc vụ Harper, cô ấy sẽ nhận ra ngay biểu cảm của bạn.</p><p>Bây giờ bạn hiểu rằng bạn được thuê để giải cứu cô ấy và có điều gì đó không ổn. Bạn và Đặc vụ Dawson đã bị bắt, và anh ấy đã bị hiến tế cho… thứ đó trong hang thủy triều. Bây giờ bạn và đặc vụ Harper đã an toàn và tự do trở về Boston. Nhưng mà…</p><p>“We can’t just leave,” Harper says aloud what you are thinking. Her brows are knit in frustration. “I mean, look at all this. This devastation. These… these creatures.” She motions to what remains of the flooded town of Innsmouth. “We have to figure out what’s really going on here, or…” she trails off.</p><p>You understand her meaning. If the tide is rising this quickly here, it could be happening all along the eastern seaboard. Arkham, Boston, no city is safe. Worse yet, nobody would believe such a tall tale until it was too late.</p><p>Dù những sinh vật này là gì thì chúng cũng đang âm mưu điều gì đó có thể khiến cả thế giới gặp nguy hiểm. Bạn không thể cho phép điều đó xảy ra.</p><p>\"Cậu có chìa khóa của Dawson phải không?\" Harper hỏi. Bạn không nghĩ là bạn có, nhưng khi kiểm tra đồ đạc của mình, bạn tìm thấy một chiếc chìa khóa bạc bóng loáng trong số đó. Dawson chắc chắn đã đưa nó cho bạn trước khi anh ấy qua đời. Bạn thử chìa khóa trên cửa ô tô bên phía người lái và nó quay với một tiếng tách có thể nghe được. “Ồ, được kìa.”</p><p>Háo hức muốn đi xa, cô khởi động xe. Khi động cơ rung lên, tâm trí bạn quay cuồng với cơn đau đột ngột. Một điểm sáng, giống như mặt trời nóng sáng, lóe lên trong tầm mắt bạn. “Được rồi, vậy… đi đâu bây giờ?” cô ấy hỏi, nhưng bạn hầu như không thể ghi nhớ được lời nói của cô ấy. Ngọn lửa chói mắt ngày càng lớn hơn và sáng hơn. Tiếng ầm ầm của động cơ át đi mọi âm thanh khác. Thế giới quay tròn. Bạn ngã xuống đất, ôm lấy thái dương. Toàn bộ đầu của bạn đang bốc cháy. Bạn có thể nghe thấy Harper gọi mình, nhưng giọng cô ấy nhỏ đi, như thể cô ấy đang ở sâu dưới nước. Hoặc có lẽ là bạn.</p><p>Tầm nhìn của bạn mờ dần. Tất cả những gì còn lại là tiếng gầm rú của động cơ và tiếng sóng biển ầm ầm, và sau đó—</p>"
+    }
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 for each location to the east of your location (on the same row).",
+      "cultist": "-2. Nếu bạn thất bại, move to the connecting location to the east, ignoring all barriers.",
+      "tablet": "-3. Nếu bạn thất bại, choose a connecting location with no barriers between it and your location. Place 1 barrier between the two locations.",
+      "elderThing": "-X. X is the number of barriers between your location and all connecting locations."
+    },
+    "hardExpert": {
+      "skull": "-2 for each location to the east of your location (on the same row).",
+      "cultist": "-4. Nếu bạn thất bại, move to the connecting location to the east, ignoring all barriers.",
+      "tablet": "-5. Nếu bạn thất bại, choose a connecting location with no barriers between it and your location. Place 1 barrier between the two locations.",
+      "elderThing": "-X. X is twice the number of barriers between your location and all connecting locations."
+    }
+  },
+  "teachingsOfTheOrder": {
+    "label": {
+      "removeCurseTokens": "Remove all {'{'}curse{'}'} tokens from the chaos bag.",
+      "removeFlood": "Remove a flood token from a non-_Sanctum_ location.",
+      "defeatEnemy": "Defeat a non-_Elite_ enemy at your location."
+    }
+  },
+  "tooltips": {
+    "railroadStation": {
+      "resign": "You escape the submerged town"
+    }
+  }
 }

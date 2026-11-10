@@ -1,20 +1,71 @@
 {
-  "setup": {
-    "startAt": "Mỗi điều tra viên bắt đầu chơi tại Arkham Police Station.",
-    "rolandClue": "Roland Banks bắt đầu trò chơi với 1 manh mối (từ token pool)."
+  "tooltips": {
+    "arkhamPoliceStation": {
+      "moveToConnecting": "{'{'}fast{'}'}: Move to a connecting location.",
+      "captureCultist": "{'{'}fast{'}'} Choose a non-weakness _Cultist_ enemy at this location and spend clues equal to its remaining health: Parley. Add that enemy to the victory display."
+    },
+    "captureTheConspirators": {
+      "flipConspirator": "{'{'}fast{'}'} The investigators spend 1 {'{'}perPlayer{'}'} clues, as a group: Flip over a facedown conspirator at your location and put it into play engaged with you.",
+      "exhaustCultist": "{'{'}fast{'}'} Spend 1 resource: Exhaust a _Cultist_ enemy engaged with you (*it remains engaged*). Only Roland Banks may trigger this ability."
+    }
   },
-  "resolutions": {
-    "resolution1": {
-      "title": "Kết thúc thứ nhất"
+  "specialRules": "Each location in play has a Cultist enemy facedown beneath it, as a conspirator. The act allows the investigators to spend clues as a group to flip a conspirator at their location faceup and put it into play, and conspirators can be captured at the Arkham Police Station by spending clues equal to their remaining health.",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the number of _Cultist_ enemies in the victory display, to a maximum of 5.",
+      "cultist": "-2. If a _Cultist_ enemy is engaged with you, reveal an additional chaos token.",
+      "tablet": "-3. Ready each _Cultist_ enemy engaged with you.",
+      "elderThing": "-4. Nếu bạn thất bại, Roland Banks takes 1 damage."
     },
-    "resolution2": {
-      "title": "Kết thúc thứ hai"
-    },
-    "label": {
-      "removeChaosToken": "Chọn và loại bỏ bất kỳ token không có biểu tượng nào khỏi chaos bag, trong phần còn lại của campaign."
+    "hardExpert": {
+      "skull": "-X. X is 1 plus the number of _Cultist_ enemies in the victory display.",
+      "cultist": "-3. If a _Cultist_ enemy is engaged with you, reveal an additional chaos token.",
+      "tablet": "-4. Ready each _Cultist_ enemy engaged with you.",
+      "elderThing": "-5. Nếu bạn thất bại, Roland Banks takes 1 damage."
     }
   },
   "intro": {
+    "title": "Challenge Scenario: By the Book",
     "body": "<p>Thủ tục hành chính thật ngột ngạt. Kể từ khi bạn đến Arkham, các vụ án của bạn ngày càng trở nên khó giải quyết hơn. Bạn từng nghĩ rằng mình sẽ truy lùng những kẻ buôn lậu và bọn xã hội đen, chứ không phải những con quái vật tưởng tượng. Nhưng những vụ án vô lý của bạn càng kéo dài, bạn càng bắt đầu nghĩ rằng có lẽ chúng không hề vô lý chút nào. Và có lẽ điều đó có nghĩa là những con quái vật cũng không phải là tưởng tượng.\\r</p><p>Cục Điều tra có vô số hướng dẫn để xử lý mọi loại vụ án, nhưng lại im lặng một cách đáng sợ về vấn đề hiến tế con người. Vì vậy, khi được báo về những thi thể được tìm thấy bên trong Black Cave, bạn không chắc phải bắt đầu từ đâu. Việc thẩm vấn người dân địa phương và người thân của những người đã khuất không mang lại thông tin gì có giá trị. Những bằng chứng để lại trong hang động nói giảm nói tránh thì chẳng giúp ích gì—những vật hiến tế và các bài viết tuyên bố những sự hiến tế đó là những món quà, cùng với những hình vẽ về một cái cây quái dị. Vì vậy, bạn đã làm điều mà mình giỏi nhất: bạn bám sát dấu vết và tìm ra sợi dây liên kết tất cả những cái chết này.\\r</p><p>Một người đàn ông nằm ở trung tâm của tất cả các nạn nhân: Mr. Damien Grey. Vị nghị sĩ này không đến từ Arkham, không có người thân hay người yêu thương nào trong khu vực, và không tham gia bất kỳ ủy ban nào đòi hỏi sự hiện diện của ông ta trong thị trấn. Vậy mà, ông ta đã ở lại Arkham trong vài tháng qua, với mục đích không rõ ràng. Và ông ta có liên hệ với từng nạn nhân qua không quá hai mức độ quan hệ, điều này khiến bạn cảm thấy có mùi mờ ám. Mờ ám hơn nữa là đội cảnh sát hộ tống theo sát Mr. Grey quanh thị trấn 24/7, bất chấp thực tế là không có mối đe dọa nào đối với sự an toàn của vị nghị sĩ.\\r</p><p>Bạn phải đi đến tận cùng của bí ẩn này, và phải nhanh lên. Bây giờ bạn nhìn thấy cái cây chết tiệt đó ở khắp mọi nơi. Ngày càng có nhiều người mất tích, và một số người thậm chí còn khẳng định đã nhìn thấy những con quái vật giống dê lảng vảng trong các con hẻm. Nhưng nếu Mr. Grey thực sự đứng sau chuyện này, bạn sẽ phải cẩn thận. Việc buộc tội sai một chính trị gia chắc chắn sẽ đặt dấu chấm hết cho sự nghiệp của bạn. Đã đến lúc làm những gì bạn đến đây để làm: đào bới bằng chứng, khám phá sự thật và đưa những kẻ có tội về thẩm vấn. Mọi chi tiết đều phải được xem xét tỉ mỉ.</p>"
+  },
+  "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: <i>By the Book</i>, <i>The Midnight Masks</i>, <i>Agents of Shub-Niggurath</i>, <i>Cult of Umôrdhoth</i>, <i>Chilling Cold</i>, <i>Dark Cult</i>, <i>Nightgaunts</i>, and <i>Striking Fear</i>. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/by-the-book.png' /><img src='{setImgPath}/midnight-masks.png' /><img src='{setImgPath}/agents-of-shub.png' /><img src='{setImgPath}/cult-of-umordhoth.png' /><img src='{setImgPath}/chilling-cold.png' /><img src='{setImgPath}/dark-cult.png' /><img src='{setImgPath}/nightgaunts.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
+    "removeCards": "Remove the original scenario reference card, act deck, and agenda deck from <i>The Midnight Masks</i> encounter set from the game, along with the Your House location and both copies of the Mysterious Chanting treachery. Use the new scenario reference, act, and agenda cards provided in the <i>By the Book</i> encounter set.",
+    "chooseLocations": "Chọn ngẫu nhiên một trong hai vị trí Downtown (trung tâm thành phố) và một trong hai vị trí Southside (khu vực phía Nam) đưa chúng vào bàn chơi. Loại bỏ các phiên bản khác của Downtown và Southside khỏi màn chơi. Sau đó, đưa các địa điểm Northside (khu vực phía Bắc), Easttown, Rivertown, St. Mary Hospital (bệnh viện St. Mary), Graveyard (nghĩa trang), Miskatonic University (đại học Miskatonic) và Your House (ngôi nhà của bạn) vào bàn chơi.",
+    "placeLocations": "Chọn ngẫu nhiên một trong hai vị trí Downtown và một trong hai vị trí Southside và đặt chúng vào chơi. Loại bỏ các phiên bản khác của Downtown và Southside khỏi trò chơi. Sau đó, đặt các vị trí Northside, Easttown, Rivertown, St. Mary’s Hospital, Graveyard, Miskatonic University, và Arkham Police Station vào chơi.",
+    "startAt": "Mỗi điều tra viên bắt đầu chơi tại Arkham Police Station.",
+    "conspirators": "Xáo trộn 9 kẻ địch [[Cultist]] từ các tập bài encounter <i>the Cult of Umôrdhoth</i> và <i>Dark Cult</i> lại với nhau, sau đó đặt một trong số những kẻ địch đó úp xuống bên dưới mỗi vị trí đang chơi, như một kẻ âm mưu.",
+    "returnToConspirators": "Bạn có thể tùy chọn tập hợp các lá bài có trong chồng bài encounter <i>Return to the Cult of Umôrdhoth</i>, nếu bộ sưu tập của bạn có chúng.",
+    "rolandClue": "Roland Banks bắt đầu trò chơi với 1 manh mối (từ token pool)."
+  },
+  "label": {
+    "returnTo": {
+      "include": "Include the _Return to the Cult of Umôrdhoth_ encounter set",
+      "exclude": "Do not include the _Return to the Cult of Umôrdhoth_ encounter set"
+    }
+  },
+  "timeHasRunOut": {
+    "title": "Time Has Run Out",
+    "body": "<p>\"It's not enough,\" your superior scolds you. \"I'm sorry, but it's just too contrived for me to believe. And if I don't believe it, the courts won't, either. I mean, honestly. Cults? Human sacrifices?\"</p><p>You grit your teeth and slam your hand down on the myriad documents and evidence you've collected. It's all there, you insist.</p><p>\"It's been weeks and you don't have a real case here. Just a lot of circumstantial mumbo-jumbo,\" he deflects. \"And besides, Mr. Grey is a cornerstone of this community. That you would disparage him with these accusations...\" The hint of derision towards you in his voice gives him away. Is he on Grey's payroll? Or worse? Either way, it's clear arguing won't get you anywhere. You know better than to make a fuss. You'll have to keep your head down and do things your own way if you want to make a difference in Arkham.</p><p>Remove a _Cultist_ enemy in the victory display from the game (Mr. Grey, if able).</p>"
+  },
+  "resolutions": {
+    "resolution1": {
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>Với bằng chứng đã được trình bày và vụ án khép lại, bạn trở về với công việc thường ngày là điều tra những kẻ buôn lậu rượu và tội phạm thông thường. Những kẻ chịu trách nhiệm cho các vụ giết người—ít nhất là những kẻ bạn có thể bắt được—đã an toàn sau song sắt. Với bằng chứng bạn thu thập được, ngay cả sức ảnh hưởng rộng lớn của Mr. Grey cũng không thể ân xá cho tội ác của chúng.</p><p>Nhưng việc trở lại với các vụ án thông thường của bạn đã trở nên khó khăn. Những nỗi lo lắng dai dẳng cứ bám lấy tâm trí bạn. Thứ gì đó đã xúi giục Mr. Grey và những kẻ khác phạm phải những tội ác ghê tởm này. Hy sinh mạng sống con người để theo đuổi một mục đích đen tối, nham hiểm nào đó.</p><p>Một sự mục nát nằm bên dưới bề mặt của thị trấn này giống như nấm mốc ẩn náu trong nền móng của một ngôi nhà cũ kỹ, đang thối rữa. Với quá nhiều điều chưa được biết đến, làm sao bạn có thể chắc chắn rằng các quy tắc của Cục có thể giải thích cho những gì bạn đã thấy? Nếu lần tới, bạn phải phá vỡ các quy tắc để tìm ra sự thật thì sao? Lúc đó bạn sẽ làm gì?</p><ul><li>Roland Banks earns {rolandXp} experience, equal to the combined Victory X value of each enemy in the victory display.</li><li>Each other investigator earns {otherXp} experience, equal to the combined Victory X value of each location in the victory display.</li><li>Roland Banks bắt đầu scenario tiếp theo với thêm 1 lá bài trên tay.</li><li>Roland Banks có thể nâng cấp Roland's .38 Special lên phiên bản nâng cao của nó, hoặc hạ cấp phiên bản nâng cao của Cover Up xuống phiên bản gốc của nó.</li></ul>"
+    },
+    "resolution2": {
+      "title": "Kết thúc thứ hai",
+      "body": "<p>Không có bất kỳ quy trình hay khóa huấn luyện nào có thể chuẩn bị cho bạn đối phó với những con quái vật xuất hiện trong cuộc điều tra của bạn—cả quái vật đội lốt người lẫn quái vật thực sự. Bất chấp những nỗ lực hết mình, bạn đã buộc phải khép lại vụ án và ẩn mình. Bất kỳ sự can thiệp nào thêm nữa có thể sẽ là dấu chấm hết cho bạn. Mr. Grey và bọn tay sai của hắn có thể sẽ không bao giờ phải đối mặt với những hậu quả thích đáng cho những hành động ghê tởm của chúng. Nhưng ít nhất bây giờ bạn đã biết về sự mục nát thực sự nằm bên dưới bề mặt của thị trấn này. Bạn sẽ chuẩn bị tốt hơn cho lần tới. Bất kể có quy tắc hay không.</p><ul><li>Roland Banks earns {rolandXp} experience, equal to the combined Victory X value of each enemy in the victory display.</li><li>Each other investigator earns {otherXp} experience, equal to the combined Victory X value of each location in the victory display.</li><li>Roland Banks must either upgrade Cover Up to its advanced version, or downgrade the advanced version of Roland's .38 Special to its original version.</li></ul>"
+    },
+    "label": {
+      "removeChaosToken": "Chọn và loại bỏ bất kỳ token không có biểu tượng nào khỏi chaos bag, trong phần còn lại của campaign.",
+      "advancedReward": "Roland Banks có thể nâng cấp Roland's .38 Special lên phiên bản nâng cao của nó, hoặc hạ cấp phiên bản nâng cao của Cover Up xuống phiên bản gốc của nó.",
+      "doNotSwap": "Do not swap any cards",
+      "upgradeRolands38Special": "Roland Banks có thể nâng cấp Roland's .38 Special lên phiên bản nâng cao của nó, hoặc hạ cấp phiên bản nâng cao của Cover Up xuống phiên bản gốc của nó."
+    },
+    "advancedPenalty": "Roland Banks must either upgrade Cover Up to its advanced version, or downgrade the advanced version of Roland's .38 Special to its original version",
+    "downgradeCoverUp": "Roland Banks có thể nâng cấp Roland's .38 Special lên phiên bản nâng cao của nó, hoặc hạ cấp phiên bản nâng cao của Cover Up xuống phiên bản gốc của nó.",
+    "upgradeCoverUp": "Upgrade Cover Up to its advanced version",
+    "downgradeRolands38Special": "Roland Banks hoặc nâng cấp Cover Up lên phiên bản nâng cao của nó, hoặc hạ cấp phiên bản nâng cao của Roland's .38 Special xuống phiên bản gốc của nó."
   }
 }

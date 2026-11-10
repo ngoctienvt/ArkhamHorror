@@ -53,7 +53,7 @@
   "ui": {
     "northShore": "North Shore",
     "startingLocation": "Địa điểm khởi đầu",
-    "cranberryBog": "Cranberry Bog"
+    "cranberryBog": "Cranberry\nBog"
   },
   "label": {
     "groundDisturbance": {
@@ -69,7 +69,7 @@
       "controlled": "<h3>@:theFeastOfHemlockVale.theThingInTheDepths.codex.riverHawthorne.title </h3><p>_Nếu bạn đang kiểm soát River Hawthorne và đang ở địa điểm Cranberry Bog (xem sơ đồ Location Placement ở trang 28):_</p><p>“Cảm ơn. Có lẽ tôi có thể tự làm việc này, nhưng tôi ghi nhận thiện ý đó,” River nói, gom lại một bó hoa nam việt quất. “Ai lại muốn hoa nam việt quất chứ? Mother Rachel. Tôi cho rằng bà ta gửi những người bà ta không thích ra đây với hy vọng họ sẽ ‘biến mất.’ Tôi đã cố gắng hết sức để lấy lòng con lửng già đó. Một khi tôi lấy lại hòn đảo này từ nhà Atwood, bà ta sẽ là người đầu tiên phải ra đi.”</p><p class='basic right'>Tăng Relationship Level của River Hawthorne. Mỗi điều tra viên nhận 1 điểm kinh nghiệm thưởng. Loại bỏ River Hawthorne khỏi trò chơi.</p>"
     },
     "judithPark": {
-      "title": "{'{'}codex{'}'} Codex 7: Judith Park",
+      "title": "[codex] Codex 7: Judith Park",
       "grudge": "<h3>@:theFeastOfHemlockVale.theThingInTheDepths.codex.judithPark.title </h3><p>_If Judith shared a grudge:_</p><p>“Nằm xuống!” Judith hét lên. Bạn cúi người xuống khi người phụ nữ nhỏ nhắn nâng súng trường lên, ngắm bắn và nã đạn vào ngay vị trí đầu bạn vừa ở đó. Một tiếng rít vang lên, tiếp theo là một tiếng tõm lớn. Judith kéo bạn đứng dậy với một nụ cười nửa miệng. “Tốt nhất là bạn nên giúp tôi giết thứ dưới đáy sâu kia. Ngay hôm nay.”</p><p class='basic right'>Chọn một kẻ địch không phải Elite đang in play. Đánh bại kẻ địch đó. Nhận quyền kiểm soát Judith Park.</p>",
       "noGrudge": "<h3>@:theFeastOfHemlockVale.theThingInTheDepths.codex.judithPark.title </h3><p>_Otherwise:_</p><p>Judith bám vào một cành cây để giữ thăng bằng. “Cả cái đầm lầy này đang chìm dần. Trước đây nó không tệ đến mức này. Cảm giác như có thứ gì đó đã dịch chuyển dưới đáy sâu. Thứ gì đó rất lớn. Tôi đoán chúng ta nên đi cùng nhau. Biết đâu đấy. Để tôi có thể bảo vệ bạn,” cô ấy nở một nụ cười.</p><p class='basic right'>Giành quyền điều khiển Judith Park.</p>"
     },

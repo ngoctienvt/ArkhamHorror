@@ -67,7 +67,38 @@
       "figureTitle": "Cỡ nhân vật",
       "figureDescription": "Phóng to hoặc thu nhỏ hình nhà điều tra và quái vật trên bản đồ và trong cảnh.",
       "reset": "Đặt lại"
-    }
+    },
+    "customWeaknessTitle": "Điểm yếu cơ bản (basic weakness) tùy chỉnh",
+    "customWeaknessDescription": "Bao gồm các điểm yếu cơ bản từ các bộ custom đã chọn trong quá trình rút ngẫu nhiên và chuẩn bị bộ bài.",
+    "customWeaknessSets": "Các bộ bài được bao gồm",
+    "customWeaknessUnsorted": "Các lá bài custom chưa phân loại",
+    "customWeaknessEmpty": "Thư viện của bạn không có basic weakness custom nào.",
+    "customWeaknessSelect": "Chọn các bộ bài để thêm điểm yếu cơ bản của chúng vào kho.",
+    "customWeaknessSaveFailed": "Không thể lưu kho weakness. Vui lòng thử lại.",
+    "customWeaknessLoadFailed": "Không thể tải các bộ weakness custom. Mở lại cài đặt để thử lại.",
+    "scopeLabel": "Áp dụng cho",
+    "scopeEverywhere": "Mọi nơi",
+    "scopeThisGame": "Ván chơi này",
+    "hideInertCardsTitle": "Ẩn các lá bài không còn hiệu ứng duy trì",
+    "hideInertCards": "Sau khi setup xong, thu gọn các lá bài permanent mà văn bản chỉ áp dụng khi tạo bộ bài hoặc setup — In the Thick of It, Adaptable, Observed — vào một chồng cạnh khu vực chơi.",
+    "keybindingsTitle": "Phím tắt bàn phím",
+    "keybindings": "Sử dụng các phím tắt theo kiểu Tabletop Simulator. Lưu ý rằng một số phím chỉ hoạt động trong chế độ debug.",
+    "keybindingProfile": {
+      "default": "Mặc định",
+      "tts": "Tabletop Simulator"
+    },
+    "inlineModalsTitle": "Hộp thoại nội dòng (inline modals)",
+    "inlineModals": "Hiển thị hộp thoại ở đầu màn hình trò chơi thay vì đè lên bàn cờ. Khu vực hộp thoại có thể cuộn, thuận tiện hơn trên điện thoại.",
+    "extraAnimationsReducedMotion": "Hiện đang tắt do thiết bị này yêu cầu giảm chuyển động (reduced motion).",
+    "cosmicEmissaryTitle": "Bật hiệu ứng Cosmic Emissary",
+    "cosmicEmissary": "Hiển thị các hiệu ứng kết nối động Cosmic Emissary cho Fate of the Vale.",
+    "asIfRulingTitle": "Phán quyết \"As If\"",
+    "asIfRuling": "Hoán đổi giữa cách xử lý Chapter 1 và Chapter 2 cho các hiệu ứng \"as if\" trong các lần kiểm tra thời điểm lồng nhau. Thiết lập này ảnh hưởng đến mọi người trong ván.",
+    "drawSpotlightTitle": "Tiêu điểm rút bài",
+    "drawSpotlight": "Hiển thị phóng to các lá bài bạn rút từ bộ bài của mình, giống như cách hiển thị lá bài encounter.",
+    "drawSpotlightOff": "Tắt",
+    "drawSpotlightUpkeep": "Chỉ khi Upkeep",
+    "drawSpotlightEvery": "Mỗi lần rút bài"
   },
   "viewChaosBag": "Túi hỗn mang",
   "chaosBag": "Túi hỗn mang",
@@ -132,8 +163,26 @@
   "motionSpeedFast": "Nhanh",
   "viewSettingPhaseBannerTitle": "Thông báo đổi phase",
   "viewSettingPhaseBanner": "Hiện một dải thông báo ngắn khi bắt đầu round hoặc phase mới.",
-  "chaosBagStats": "Thống kê Túi hỗn mang",
-  "exportLogFormat": "Định dạng văn bản thuần hoặc Markdown",
-  "exportLogFormatHint": "Chọn định dạng phù hợp để lưu trữ hoặc chia sẻ",
+  "chaosBagStats": {
+    "tokens": "{count} token",
+    "chanceOfSuccess": "tỷ lệ thành công",
+    "showOdds": "Hiện tỷ lệ",
+    "skill": "Kỹ năng (Skill)",
+    "difficulty": "Độ khó (Difficulty)",
+    "reset": "Đặt lại",
+    "autoFail": "tự động thất bại (auto-fail)",
+    "autoSuccess": "tự động thành công (auto-succeed)",
+    "caveat": "Giả định rút một lần, tính thêm việc rút thêm mà bless, curse và frost kích hoạt. Các hiệu ứng bài rút thêm một token, hai frost auto-fail, và các hiệu ứng rút nhiều chọn một không được mô phỏng."
+  },
+  "exportLogFormat": {
+    "transcript": "Bản ghi (.txt)",
+    "json": "Dữ liệu nhật ký (.json)",
+    "trace": "Dấu vết (.txt)"
+  },
+  "exportLogFormatHint": {
+    "transcript": "Nhật ký như bạn đọc, bằng ngôn ngữ của bạn.",
+    "json": "Mọi mục như máy chủ lưu trữ.",
+    "trace": "Các khóa chưa dịch, dành cho báo cáo lỗi."
+  },
   "watching": "Đang theo dõi"
 }

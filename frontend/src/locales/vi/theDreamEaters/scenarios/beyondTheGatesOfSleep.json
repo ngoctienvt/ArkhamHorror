@@ -1,9 +1,10 @@
 {
   "heading": "Màn I-A",
   "setup": {
-    "doubleSidedNote": "<div class='columns' style='overflow: none;padding-bottom: 40px;'><div style='flex-basis: 20%;'>*Chú ý: Lá bài Nasht và Kaman-Thah có 2 mặt và có câu chuyện ở mặt còn lại. Để trải nghiệm được tốt nhất, đừng nhìn vào mặt còn lại trừ khi có hiệu ứng hướng dẫn bạn làm vậy.*</div><div style='flex:1; margin-top: 30px;' class='fan'><img src='{setImgPath}/../cards/06057.avif' /><img src='{setImgPath}/../cards/06058.avif' /></div></div>",
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Beyond the Gates of Sleep*, *Agents of Nyarlathotep*, *Zoogs*, *Dreamer’s Curse*, *Dreamlands*, and *Chilling Cold*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/beyond-the-gates-of-sleep.png' /><img src='{setImgPath}/agents-of-nyarlathotep.png' /><img src='{setImgPath}/zoogs.png' /><img src='{setImgPath}/dreamers-curse.png' /><img src='{setImgPath}/dreamlands.png' /><img src='{setImgPath}/chilling-cold.png' /></section>",
     "putLocations": "Đặt vị trí Seventy Steps *(Of Lighter Slumber)* và The Cavern of Flame vào màn chơi. Mỗi điều tra viên bắt đầu chơi tại vị trí Seventy Steps *(Of Lighter Slumber)*.",
     "setCardsAside": "Đặt những lá bài sau một bên, ngoài khu vực chơi, Randolph Carter *(Expert Dreamer)*, kẻ địch Laboring Gug, các lá bài kẻ địch 2 mặt (Nasht and Kaman-Thah), và mỗi lá vị trí còn lại.",
+    "doubleSidedNote": "<div class='columns' style='overflow: none;padding-bottom: 40px;'><div style='flex-basis: 20%;'>*Chú ý: Lá bài Nasht và Kaman-Thah có 2 mặt và có câu chuyện ở mặt còn lại. Để trải nghiệm được tốt nhất, đừng nhìn vào mặt còn lại trừ khi có hiệu ứng hướng dẫn bạn làm vậy.*</div><div style='flex:1; margin-top: 30px;' class='fan'><img src='{setImgPath}/../cards/06057.avif' /><img src='{setImgPath}/../cards/06058.avif' /></div></div>",
     "setEncounterCardsAside": "Màn chơi này không bắt đầu chơi với chồng bài encounter. Đặt tất cả lá bài encounter còn lại sang một bên, thành một chồng. Chúng sẽ được xào vào một thời điểm sau này để tạo thành chồng bài encounter. (Xem phần “Các bậc thang của Giấc ngủ”)"
   },
   "rules": {
@@ -12,32 +13,139 @@
       "body": "<p class='basic'>Khi bắt đầu màn chơi này sẽ không có chồng bài encounter. Điều này có nghĩa là điều tra viên không thể sử dụng các khả năng tương tác với chồng bài encounter. *Ví dụ, các hiệu ứng kêu tìm trong chồng bài encounter, rút bài từ chồng bài encounter, hay nhìn vào các lá bài trong chồng bài encounter đều không thể thực hiện.)* Thêm nữa, act 1a có ghi: \"Không rút bài trong chồng bài encounter trong giai đoạn mythos.\" Ở một thời điểm của màn chơi, các điều tra viên sẽ được hướng dẫn tạo chồng bài encounter, và dòng chữ của act 1a sẽ không còn hoạt động. Từ thời điểm đó, các điều tra viên có thể tương tác với chồng bài encounter như bình thường.</p>"
     }
   },
+  "specialRules": [
+    {
+      "title": "@:theDreamEaters.beyondTheGatesOfSleep.rules.stepsOfSlumber.title",
+      "body": "@:theDreamEaters.beyondTheGatesOfSleep.rules.stepsOfSlumber.body"
+    }
+  ],
+  "thePath": {
+    "label": {
+      "stepBack": "Step back and watch this surreal scene play out.",
+      "interrupt": "Interrupt the scarred cat and handle this yourself."
+    }
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is half the number of cards in your hand (rounded up).",
+      "cultist": "-X. X is the number of revealed Enchanted Woods locations.",
+      "tablet": "-2. If you fail and this is an attack or evasion attempt against a swarming enemy, add 1 swarm card to it."
+    },
+    "hardExpert": {
+      "skull": "-X. X is the number of cards in your hand.",
+      "cultist": "-X. X is the number of revealed _Woods_ locations.",
+      "tablet": "-2. If this is an attack or evasion attempt against a swarming enemy, add 1 swarm card to it."
+    }
+  },
+  "label": {
+    "doNotReplace": "Do not replace",
+    "doNotTakeAny": "Do not take any",
+    "replaceWeaknessQuestion": "Replace basic weakness with random and take 1 trauma of your choice?",
+    "chooseUpToTacticSupply": "Choose up to {count} Tactic and/or Supply cards and begin this scenario with them as additional cards in your opening hand.",
+    "chooseThisDream": "Choose this dream",
+    "chooseAnotherDream": "Choose another dream",
+    "options": {
+      "guardian": "Giấc mơ của Guardian [guardian]",
+      "seeker": "Giấc mơ của Seeker [seeker]",
+      "rogue": "Giấc mơ của Rogue [rogue]",
+      "mystic": "Giấc mơ của Mystic [mystic]",
+      "survivor": "Giấc mơ của Survivor [survivor]",
+      "criminal": "Giấc mơ của [[Criminal]] (Tội phạm)",
+      "drifter": "Giấc mơ của [[Drifter]] (Người lang thang)",
+      "hunter": "Giấc mơ của [[Hunter]] (Thợ săn)",
+      "medicOrAssistant": "Giấc mơ của [[Medic]] (Bác sĩ) hoặc [[Assistant]] (Trợ lý)",
+      "miskatonicOrScholar": "Giấc mơ của [[Miskatonic]] hoặc [[Scholar]] (Học giả)",
+      "veteran": "Giấc mơ của [[Veteran]] (Cựu binh)",
+      "wayfarer": "Giấc mơ của [[Wayfarer]] (Người đi bộ)",
+      "neutral1": "Giấc mơ trung lập (1)",
+      "neutral2": "Giấc mơ trung lập (2)"
+    }
+  },
+  "enchantedWoodsTheMoonTree": {
+    "label": {
+      "loseAllActions": "Lose all remaining actions"
+    }
+  },
+  "journeyThroughTheGates": {
+    "label": {
+      "testWillpower": "Test {'{'}willpower{'}'} (3) to remember that this is all a dream",
+      "doNotTest": "Do not test"
+    }
+  },
   "dreamSelection": {
-    "title": "Màn I-A: Beyond the Gates of Sleep"
+    "title": "Màn I-A: Beyond the Gates of Sleep",
+    "body": "Theo thứ tự của người chơi, mỗi điều tra viên chọn và đọc to một trong những giấc mơ dưới đây để áp dụng cho điều tra viên đó. Bất kỳ điều tra viên nào cũng có thể chọn những giấc mơ “trung lập”. Mỗi điều tra viên phải chọn một giấc mơ khác nhau, nếu có thể."
   },
   "dreams": {
+    "guardian": {
+      "body": "<p>Bạn đi vòng quanh một ngọn đồi ủ rũ bị bao phủ bởi bóng tối và chìm trong màn sương mù dường như nuốt chửng mọi âm thanh. Bạn không biết thứ gì nằm trong ngọn đồi, nhưng nó có cảm giác già cỗi hơn thế giới này và có vẻ như nó đang theo dõi bạn. Bạn không dám quay mặt về phía chiếc xe cút kít, nhưng bạn biết rằng bạn không thể rời bỏ nó, vì vậy thay vào đó bạn không ngừng trông chừng nó. Trong các hàng rào xung quanh, bạn thoáng thấy những cái bóng vặn vẹo chạy tới chạy lui, nhưng bất cứ khi nào bạn chiếu đuốc vào chúng, chúng biến mất. Bạn bắt đầu bỏ chạy nhưng bị đóng băng bởi một tiếng gõ lớn từ phía sau bạn. Khi bạn quay đầu lại, sương mù tan đi, và cuối cùng bạn cũng nhìn thấy chân đồi, nơi có một cánh cửa nặng nề bằng đá phiến bị phong hóa mời gọi bạn.</p>",
+      "effect": "Tìm trong chồng bài của bạn 1 lá bài [guardian] và chơi nó <i>(trả phí của nó)</i>."
+    },
+    "seeker": {
+      "body": "<p>Bạn vội vã đi qua các sảnh của một trường đại học mà bạn hầu như không nhận ra, ôm một vài cuốn sách giáo khoa trong tay trong khi bạn lướt qua các sinh viên và giảng viên khác. Bạn không biết làm thế nào mà bạn có thể quên ngày thi, nhưng nếu bạn không đến sớm, bạn biết mình ở lại lớp. Bằng cách nào đó, bạn thậm chí không nhớ chủ đề của môn học hoặc chương trình giảng dạy của nó, mặc dù bạn biết rằng đã đến cuối học kỳ. Nó không giống như bạn trốn học hoặc quên học. Bạn có thể nghe thấy những sinh viên khác cười khúc khích khi bạn đi qua. Khi bạn đi đến cuối hành lang, cánh cửa lớp hiện ra lờ mờ trước mặt bạn.</p>",
+      "effect": "Tìm trong chồng bài của bạn 1 lá bài [seeker] và chơi nó <i>(trả phí của nó)</i>."
+    },
+    "rogue": {
+      "body": "<p>Bạn che giấu một nụ cười toe toét khi kiểm tra các quân bài của mình. Các quân J rô, đầm bích cho sảnh lớn nhất. Chồng chip của bạn ngày càng lớn hơn qua mỗi ván bài và điều này sẽ không có gì thay đổi. Tiền cược bay đi bay lại cho đến khi chỉ còn bạn và người đàn ông mặc vest trắng đối diện. Hắn ta chế nhạo, nâng níu những ngón tay của hắn, \"Cậu có chắc chưa?\" Bạn đẩy tất cả chip của mình vào giữa và để lộ sảnh lớn của bạn. Hắn ta chặc lưỡi, để lộ hai đôi, \"Thật đáng tiếc. Có vẻ như cậu đã thua sạch.” Bạn phản đối, chỉ vào tay bài siêu mạnh của mình, nhưng khi bạn kiểm tra lại thì nó đã thay đổi. Các hình vẽ trên các lá bài giờ là những hình thù quái dị, không có mắt, nhiều miệng và các cánh tay có xúc tu. Các lá bài là, “9♥-10♣-D♦-C♠-N[auto_fail],” Bạn há hốc mồm kinh ngạc khi được mang ra khỏi bàn và dẫn ra khỏi cửa.</p>",
+      "effect": "Tìm trong chồng bài của bạn 1 lá bài [rogue] và chơi nó <i>(trả phí của nó)</i>."
+    },
+    "mystic": {
+      "body": "<p>Bạn đi qua một con đường đầy mê hoặc với đủ loại màu sắc và rung động. Những đốm sáng lơ lửng trong không trung, nhấp nhô lên xuống khi bạn đến gần. Với mỗi bước bạn đi, hệ thực vật dọc theo con đường trở nên héo hon, không tuân theo quy luật tự nhiên nào. Những bông hoa đã từng nở rộ trong sự thức tỉnh của bạn; bây giờ chúng héo lại khi bạn đi qua. Các dây leo khô héo và chết đi. Các đốm sáng chế giễu sự thiếu hiểu biết của bạn, nhưng điều đó không làm chậm tốc độ của bạn. Khi bạn nhìn vào những cái cây xinh đẹp, lá của chúng bắt đầu rụng. Cỏ xanh một thời giờ đã khô, nâu và nứt nẻ. Nhưng ngay cả khi cả khu rừng chết đi, thì việc đến được phía bên kia cũng xứng đáng. Khi bạn đến phía bên kia, con đường đột ngột kết thúc tại một cánh cửa gỗ trang trí công phu được chạm khắc vào thân cây gỗ đỏ lớn.</p>",
+      "effect": "Tìm trong chồng bài của bạn 1 lá bài [mystic] và chơi nó <i>(trả phí của nó)</i>."
+    },
+    "survivor": {
+      "body": "<p>Bạn đang chạy trốn qua một hành lang tối tăm, chật chội bằng gỗ phủ đầy dây leo. Một cái gì đó không thể giải thích đuổi theo bạn trong bóng tối. Bạn quá sợ hãi để quay lại và nhìn vào kẻ theo đuổi mình, nhưng dù sao bạn cũng biết rằng nếu nó bắt được bạn, điều đó đồng nghĩa với việc bạn sẽ kết thúc cuộc đời mình. Nó sẽ xuyên qua trái tim, hút cạn máu của bạn và nuốt chửng bạn vào trong nó. Chính suy nghĩ này đã thúc đẩy bạn tiến lên phía trước, nhanh hơn bất cứ khi nào bạn từng chạy trước đây. Bạn không thể để nó đuổi kịp và ăn thịt bạn. Đột nhiên, bạn phát hiện ra lối thoát của mình: một cánh cửa gỗ chắc chắn được bao quanh bởi một bức tường đầy dây leo.</p>",
+      "effect": "Tìm trong chồng bài của bạn 1 lá bài [survivor] và chơi nó <i>(trả phí của nó)</i>."
+    },
+    "criminal": {
+      "body": "<p>Tiếng còi báo động vang vọng khắp các con phố phía sau bạn. Họ đang đi tới trên bạn. Họ luôn theo sát bạn, và bạn luôn đi trước một bước… cho đến bây giờ. Bạn chạy xuống một con hẻm, và một ánh sáng đỏ chói theo sau bạn. Họ sẽ bắt được bạn. Họ sẽ nhốt bạn vào lồng và ném chìa khóa đi. Tự do của bạn, lối sống của bạn, mọi thứ bạn là, mọi thứ bạn yêu thích: họ sẽ lấy đi tất cả. Và tại sao? Chỉ vì bạn không chơi theo luật của họ? Đã bao giờ họ làm đúng mọi thứ chưa? Bạn rẽ vào một góc ngay khi những tên đó sắp đuổi kịp bạn và phát hiện ra lối vào một tòa nhà làm bằng gạch.</p>",
+      "effect": "Tìm trong chồng bài của bạn 1 lá bài [[Criminal]] hoặc [[Illicit]] và chơi nó <i>(trả phí của nó)</i>."
+    },
     "drifter": {
+      "body": "<p>Bạn dạo bước qua cánh đồng hoa, gió xuân ấm áp nâng niu bước chân bạn về phía trước. Một đường ray xe lửa chia đôi cánh đồng, và khi bạn gặp những đường thẳng song song của nó, tiếng xình xịch của hơi nước và những thanh sắt tiến về phía bạn. Khi đoàn tàu chạy qua, bạn bám vào một chiếc thang treo trên một trong các toa tàu bị rỉ sét do thời tiết. So với hình thức bên ngoài, nội thất của đoàn tàu đầy sang trọng và phong phú ngoài sức tưởng tượng: Những tấm thảm Ba Tư được treo làm vật trang trí, những cầu thang bằng đá cẩm thạch uốn lượn đến độ cao chóng mặt, và một chiếc đèn chùm pha lê lấp lánh căn phòng với vẻ rực rỡ hình lăng trụ. Dưới chiếc đèn chùm là một ô cửa trang trí công phu, những tấm lưới mạ vàng của nó tạo thành hình ảnh một con cáo trong một khu rừng.</p>",
       "effect": "Bạn có thể thay thế điểm yếu cơ bản trong chồng bài của bạn với một điểm yếu cơ bản ngẫu nhiên. Nếu bạn làm vậy, nhận 1 sang chấn do bạn lựa chọn."
     },
+    "hunter": {
+      "body": "<p>Bạn theo dõi con mồi của mình qua một ngôi nhà đổ nát, hành lang của nó có mùi mốc và đầy bụi. Sinh vật mà bạn săn lùng là một sinh vật ghê tởm đến từ một thế giới khác lạ. Nó đe dọa sự tồn tại của nhân loại với sự hiện diện của nó. Bạn bắt gặp hình dạng kỳ lạ của nó khi bước vào một trong những ô cửa trên lầu. Nó không thể trốn thoát bây giờ - nó là của bạn. Nhưng khi bạn bước vào hang ổ của nó, bạn chỉ thấy một tấm gương bẩn thỉu, nứt nẻ và khuôn mặt mệt mỏi, phiền muộn của chính bạn phản chiếu trong tấm kính. Con quái vật có thể đã đi đâu? Bạn chắc chắn rằng đây là nơi nó ẩn trốn, tuy nhiên… bạn quay lại lối vào và ngạc nhiên khi thấy một cánh cửa mà trước đó không có ở đó.</p>",
+      "effect": "Tìm trong chồng bài của bạn 1 lá bài [[Weapon]] và chơi nó <i>(trả phí của nó)</i>."
+    },
     "medicOrAssistant": {
+      "body": "<p>Bạn đứng trước một chiếc quan tài đóng kín. Những người đưa tang mặc đồ đen đứng thành một hàng bên cạnh bạn, chờ bạn nói những lời cuối cùng. Bạn rưng rưng nước mắt đặt tay lên quan tài. Quan tài làm bằng gỗ cứng, lạnh ngắt dưới lòng bàn tay của bạn. Họ đã giao phó cho bạn. Họ đã trông cậy vào bạn. Và trong thời điểm họ cần nhất, bạn đã làm họ thất vọng. Tất cả những điều này—chiếc quan tài lạnh lẽo, những người bạn bạn và người trong gia đình đang để tang—tất cả là do bạn. Nhưng khi bạn mở quan tài ra, bên trong không có thi thể nào: chỉ có một lối đi bằng đá dài dẫn sâu vào lòng đất. Đột nhiên, một trong những người đưa tang đẩy bạn về phía trước, và bạn ngã qua mép quan tài và rơi xuống hố bên dưới, hạ cánh một cách đau đớn. Khi bạn đứng dậy, bạn tìm thấy lối thoát duy nhất của mình: một cổng tò vò bằng đá dẫn đến một nơi hoàn toàn khác…</p>",
       "effect": "Chọn một điều tra viên khác. Người đó bắt đầu màn chơi với nhiều hơn 2 tài nguyên và 1 lá bài trên tay ban đầu."
     },
+    "miskatonicOrScholar": {
+      "body": "<p>Bạn đang ở trong một thư viện cũ, bị lãng quên, được bao quanh bởi kiến thức cổ xưa. Hàng trăm ngàn cuốn sách xếp dọc theo các kệ xung quanh bạn, tăng dần vào một khoảng trống phía trên. Hành lang mờ có mùi của những trang giấy mốc và sáp chảy. Lấy một trong những cuốn sách dày trên kệ sách gần đó, bạn bắt đầu đọc. Mặc dù bạn dường như không thể đọc bất kỳ từ nào, nhưng bạn hoàn toàn bị cuốn hút bởi câu chuyện mà các trang dệt nên. Không gian xung quanh bạn trở nên không còn quan trọng khi thời gian trôi qua. Không có gì quan trọng ngoài hình dạng của mực đỏ thẫm; tất cả những thứ khác là vô nghĩa khi đối mặt với những sự thật phũ phàng như vậy. Xung quanh bạn, thư viện bị cháy đến tận nền móng. Ngay khi ngọn lửa chạm đến bạn, một cánh cửa ra khỏi thư viện gọi bạn. Bằng cách nào đó, nó đứng đó và không bị thiêu cháy giữa những ngọn lửa.</p>",
+      "effect": "Tìm trong chồng bài của bạn 1 lá bài [[Tome]] và chơi nó <i>(trả phí của nó)</i>."
+    },
+    "veteran": {
+      "body": "<p>Bạn đang ở trong một mương rãnh lầy lội, đầy bồ hóng. Xung quanh bạn, tiếng sấm rền của chiến tranh vẫn tiếp diễn, không bao giờ kết thúc. Người chết rải đầy chiến hào: những người bạn và những người đồng đội đã bỏ mạng chẳng vì gì cả, ở một vùng đất xa quê hương. Bạn nhìn qua mép rãnh và vào một vùng đất không người, một vùng nông thôn hoang tàn, cháy thành than cằn cỗi, nơi chắc chắn sẽ có cái chết. Và ở đó, bạn thấy nó: một cánh cửa gỗ đơn độc đứng giữa đống đổ nát và bụi bẩn. Bạn biết đó là lối thoát duy nhất của bạn. Nắm chặt khẩu súng trường của mình, bạn vượt lên trên và đâm đầu vào một loạt đạn chết người, những vụ nổ làm rung chuyển mặt đất xung quanh bạn.</p>",
+      "effect": "Tìm trong chồng bài của bạn cho đến 2 lá bài [[Tactic]] và/hoặc [[Supply]] và bắt đầu màn chơi cùng với những lá bài bổ sung này trong tay."
+    },
+    "wayfarer": {
+      "body": "<p>Bạn lê bước sâu đến ngực qua một đầm lầy nước lợ. Những cây sậy lớn không thể tưởng tượng nổi ở phía trên bạn, và những đám mây côn trùng kỳ lạ, óng ánh nhiều màu bay lượn trong không khí hôi thối. Với mỗi bước đi, bàn chân của bạn lún sâu hơn vào lớp bùn mềm, đe dọa sẽ kéo bạn xuống dưới. Bạn cảm thấy có thứ gì đó trơn và lạnh lướt qua chân mình, và bạn lao thẳng tới vùng đất khô cằn—nhưng càng vùng vẫy, bạn càng chìm sâu. Trong chớp mắt, bạn bị nuốt chửng trong vũng bùn, nhưng bạn vẫn đang rơi xuống mãi. Cuối cùng, bạn được đặt trên một sàn đá cùng với một trận lở đất nhỏ. Bạn thấy mình đang ở trong một căn phòng kín, được thắp sáng bởi ánh sáng lấp lánh màu xanh nhạt của những chữ tượng hình kỳ lạ. Các biểu tượng xếp thành một cánh cửa vàng phức tạp: cánh cửa dẫn đến hầm mộ mà bạn đang tìm kiếm.</p>",
+      "effect": "Tìm trong chồng bài của bạn 1 lá bài [[Wayfarer]] hoặc [[Relic]] và chơi nó <i>(trả phí của nó)</i>."
+    },
     "neutral1": {
+      "body": "<p>Bạn trằn trọc nhưng không ngủ, dù chỉ là một lúc. Tâm trí bạn tràn ngập sự khó chịu và những suy nghĩ đen tối: suy nghĩ về sự thất bại, về sự kém cỏi, về sự mất mát. Trán của bạn đầy mồ hôi. Cho dù bạn nằm như thế nào, giường của bạn quá nóng hoặc quá lạnh. Cuối cùng, phát ngán vì chẳng đi đến đâu, bạn đứng dậy và đi đến bồn rửa mặt để vẩy một ít nước lên mặt. Đó là khi bạn nhận ra cách bố trí căn phòng của mình không còn như trước nữa—và cánh cửa phòng tắm của bạn đã được thay thế bằng một cánh cổng lớn bằng mã não và đá cẩm thạch.</p>",
       "effect": "Bạn bắt đầu màn chơi này với thêm 2 tài nguyên."
     },
     "neutral2": {
+      "body": "<p>Bạn ngồi trên hiên sau của nơi có vẻ giống như ngôi nhà thời thơ ấu của mình, nhưng có điều gì đó không ổn. Bạn không nhận ra gia đình của mình…cây cối ở sân sau được sắp xếp khác đi…và bầu trời là một mảnh ghép của những xác chết đang thối rữa, mưa xuống những bộ phận cơ thể bị chặt thành từng mảnh trên phong cảnh. Những người không phải là gia đình của bạn bình tĩnh quan sát lượng xác chết này, thảo luận về thời tiết như thể đó là một chuyện tầm thường. Điều này vẫn tiếp tục ngay cả khi tiếng đập liên hồi của những bàn tay và bàn chân lên mái nhà của bạn mạnh dần lên thành một dòng chảy các bộ phận tàn tật khiến trần nhà bị võng xuống. Bạn chạy ra ngoài, len lỏi qua cơn mưa chết chóc, và lao đầu về phía rìa đất đai của cha mẹ bạn theo bản năng. Khi bạn nghe thấy tiếng đổ sập của ngôi nhà sau lưng, bạn gạt đi những bộ phận người gãy đổ chất đống trên đỉnh một địa điểm quen thuộc cũ kỹ và cảm thấy nhẹ nhõm khi tìm thấy cánh cửa hầm rượu bị hư hỏng do thời tiết.</p>",
       "effect": "Bạn bắt đầu màn chơi này với thêm 1 lá bài trên tay."
-    },
-    "veteran": {
-      "effect": "Tìm trong chồng bài của bạn cho đến 2 lá bài [[Tactic]] và/hoặc [[Supply]] và bắt đầu màn chơi cùng với những lá bài bổ sung này trong tay."
     }
   },
   "resolutions": {
+    "noResolution": {
+      "title": "No resolution",
+      "body": "<p class='basic'>_If no resolution was reached because each investigator was defeated:_</p><p>Bạn bị một con mèo già, đầy sẹo đánh thức. \"Xin chào. Cậu ổn chứ, con người?”</p><p>Tôi đang nằm mơ, bạn nhớ vậy, và vì thế con mèo biết nói không có vẻ gì là kỳ lạ cả. Kiệt sức, bạn cố gắng đứng dậy, phủi bụi đất đóng kết trên quần áo. Một giọng nói của con người gọi bạn, “Cậu thật may mắn khi không bị hại trước khi chúng tôi đến.” Nó thuộc về một người đàn ông tóc vàng mặc áo khoác du lịch màu nâu, người đang dựa vào một cái cây gần đó. “Những khu rừng này không tha thứ cho những trái tim yếu đuối.” Con mèo có sẹo đi đến bên người đàn ông, và người đàn ông cúi xuống vuốt ve lưng nó.</p><p>Bạn hỏi người đàn ông bạn đang ở đâu và làm thế nào anh ta đến nơi này, nhưng anh ta cắt ngang bạn. “Tôi sẽ giải thích vào lúc thích hợp. Hiện tại, chúng ta phải đi theo con đường đến thị trấn Ulthar. Đó là một nơi an toàn, một cách tương đối. Ở đó cậu có thể hồi phục sau những thử thách của mình.\" Anh ta quay sang con mèo và thốt ra một từ bằng một ngôn ngữ kỳ lạ - bạn nghi ngờ là một loại mật khẩu nào đó - nhưng con mèo chỉ đơn giản là đi thơ thẩn về phía hàng rào, nơi bạn thấy một số con mèo khác đang quây quần bên nhau. Nó trả lời, “Tự làm đi.”</p><p>Người đàn ông khẽ nói với bạn khi lũ mèo rời đi, “Đừng bận tâm lũ mèo. Họ là những đồng minh hữu ích, nhưng cũng là những sinh vật độc lập không cần cậu hay tôi. Khi chúng ta đến Ulthar, cậu có thể có cơ hội gặp gỡ những người khác cùng loại với họ. Nhưng điều trước tiên là về đó đã.\" Cùng nhau, bạn rời khỏi và để lại khu rừng bị phù phép phía sau.</p><ul><li>các điều tra viên được cứu bởi Randolph Carter.</li><li>Một điều tra viên bất kỳ có thể chọn thêm lá bài Randolph Carter <i>(Expert Dreamer)</i> (<i>The Dream-Eaters</i> card #59) vào chồng bài của mình. Lá bài này không tính vào giới hạn bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Nếu bạn đang chơi The Dream-Quest như một chiến dịch gồm 4 phần:</li><li>If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…<ul><li>…and you have not yet played _Scenario 1–B: Waking Nightmare_, proceed to that scenario.</li><li>…and you have already played _Scenario 1–B: Waking Nightmare_, proceed instead to _Interlude I: The Black Cat_.</li></ul></li></ul>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>Các sinh vật trò chuyện với nhau, và sau một lúc, hàng chục con rút lui về phía cái cây lớn bên kia con đường bị đập nát. Chúng quay lại ngay sau đó mang theo nhiều loại gà gô, chim cút và gà lôi trong miệng. Bây giờ bạn gần như chắc chắn rằng bạn sắp điên rồi. Chưa hết, cảnh tượng vẫn tiếp tục. Các sinh vật rụt rè thả các con chim “cống nạp” của chúng trước mặt lũ mèo rồi lặng lẽ ra đi. Người đàn ông nói khi tiến lại gần, “Tôi xin thay mặt Zoogs xin lỗi. Chúng là những sinh vật hiếu kỳ, và thường không quá… kích động. Thật tốt khi chúng tôi đã xuất hiện khi chúng tôi đã làm.\" Con đầu đàn nhảy lên một gốc cây và nói thêm, “Đúng, đúng. Bọn Zoogs hèn hạ đã hoàn thành phần việc của mình, giờ hãy làm phần việc của chúng ta và rời khỏi nơi bị bỏ hoang này. Cậu nghĩ sao?”</p><p>Bạn không thể chứa đựng sự phấn khích của bạn. Zoogs, mèo biết nói - mọi thứ bạn đã đọc đều có thật. Bạn bắt đầu hỏi người đàn ông nhiều hơn về thế giới này, nhưng anh ta cắt lời bạn. “Tôi sẽ giải thích vào lúc thích hợp. Hiện tại, chúng ta phải đi theo con đường đến thị trấn Ulthar. Đó là một nơi an toàn, một cách tương đối. Ở đó cậu có thể phục hồi sau chuyến hành trình của mình. Anh ta quay sang con mèo già, đầy sẹo và thốt ra một từ bằng một thứ ngôn ngữ kỳ lạ - bạn nghi ngờ là một loại mật khẩu nào đó - và con mèo đáp lại bằng một cái gật đầu nhanh chóng. Những con mèo còn lại, với cống nạp trong miệng, tạo thành đội hình vòng tròn bảo vệ xung quanh bạn, và bạn cùng chúng trốn thoát khỏi khu rừng bị phù phép.</p><ul><li>In your Campaign Log, record *the cats collected their tribute from the Zoogs*.</li><li>Một điều tra viên bất kỳ có thể chọn thêm lá bài Randolph Carter <i>(Expert Dreamer)</i> (<i>The Dream-Eaters</i> card #59) vào chồng bài của mình. Lá bài này không tính vào giới hạn bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Nếu bạn đang chơi The Dream-Quest như một chiến dịch gồm 4 phần:</li><li>If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…<ul><li>…and you have not yet played _Scenario 1–B: Waking Nightmare_, proceed to that scenario.</li><li>…and you have already played _Scenario 1–B: Waking Nightmare_, proceed instead to _Interlude I: The Black Cat_.</li></ul></li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>Bạn giơ tay chào những vị khách mới, tin rằng bạn có thể tự mình xoa dịu tình huống này. Nếu bạn biết những sinh vật giống như loài gặm nhấm này rất thông minh, bạn có thể đã cố gắng giao tiếp với chúng sớm hơn nhiều. Bạn thông báo với chúng rằng bạn chỉ là khách du lịch ở vùng đất xa xôi này và bạn chỉ muốn đi qua một cách bình yên. Các sinh vật trò chuyện với nhau trong giây lát: “Họ là người tốt bụng! Dù gì thì họ không cùng bọn với con mèo đen!” “Triệu tập Hội đồng Hiền nhân!” Sau một thời gian ngắn, một số con khác xuất hiện, mỗi con có bộ lông xám khô héo và thân hình ốm yếu. Con lớn nhất nhìn ra phía sau bạn và nói rằng chúng sẽ hỗ trợ bạn nếu bạn khiến lũ mèo rời đi.</p><p>Bằng cách nào đó, bạn kiềm chế sự hoài nghi của mình và lịch sự yêu cầu những con mèo quay lại vào lúc khác. “Được rồi,” con mèo sẹo trả lời, “nhưng đây không phải lần cuối cậu thấy chúng tôi đâu.” Những con mèo rút lui vào bìa rừng, mặc dù người con người đồng hành với chúng vẫn ở lại với bạn. Khi lũ mèo ở ngoài tầm nghe, một trong những con lớn tuổi đưa cho bạn một bầu đựng nước có vẻ như là nhựa cây lên men, bạn vui vẻ chấp nhận.</p><p>Người đàn ông phía sau bạn bước về phía trước, lặng lẽ giải thích, “Đó là rượu của cây mặt trăng, Zoogs không dễ dàng tặng những món quà như vậy. Chúng là những sinh vật hiếu kỳ, nhưng không phải không có trí tuệ. Bây giờ bạn có thể nói chuyện thoải mái với những con lớn tuổi hơn, hãy thử hỏi chúng một câu hỏi. Chúng biết nhiều về các giao dịch của vùng đất này hơn cậu nghĩ.\"</p><p>Bạn mô tả nhà văn Virgil Gray và hỏi Zoogs xem họ có nhìn thấy một người đàn ông phù hợp với mô tả đó đi qua khu rừng này không. Bạn nói thêm rằng anh ấy đã đi qua con đường này nhiều lần. Một sự im lặng bao trùm Zoogs, và một số trong số chúng ngay lập tức lao vào tán lá sâu. Một trong những con lớn tuổi trả lời với một tiếng rung chỉ lớn hơn tiếng thì thầm một chút, “Chúng tôi đã gặp con người này. Anh ta thường đi lối này. Anh ta tốt bụng nhưng khờ khạo. Đi đường đến Ulthar. Anh có thể gặp anh ấy.” Sau đó, nó gầm gừ thêm: “…nhưng hãy cẩn thận con mèo đi theo anh ta. Tất cả những con mèo đều là kẻ nói dối, đặc biệt là con mèo đen.” Bạn cảm ơn Zoog cổ xưa vì sự khôn ngoan của nó và khởi hành, dẫn đầu là người đàn ông tóc vàng và chú mèo hộ tống của anh ta. Những con mèo nhìn bạn một cách nghi ngờ sau cuộc thảo luận của bạn với Zoogs. Người đàn ông phá vỡ sự căng thẳng. “Nếu cậu đang đến Ulthar để tìm người bạn này của mình, hãy để tôi hướng dẫn cậu đến đó. Đó là một nơi an toàn, một cách tương đối. Ở đó cậu có thể phục hồi sau chuyến du hành của mình.\"</p><p>Loài Zoog. Mèo biết nói. Tất cả điều này không thể là tưởng tượng của bạn. Bằng cách nào đó, bạn có thể nhìn thấy một lớp sự thật bên dưới tất cả sự phi lý này. Dù tốt hay xấu, hội đồng Zoog đã xác nhận sự thật về tình huống của bạn: Vùng đất giấc mơ là có thật và Virgil Gray đang ở đây.</p><ul><li>In your Campaign Log, record *the investigators parleyed with the Zoogs*.</li><li>Một điều tra viên bất kỳ có thể chọn thêm lá bài Randolph Carter <i>(Expert Dreamer)</i> (<i>The Dream-Eaters</i> card #59) vào chồng bài của mình. Lá bài này không tính vào giới hạn bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Nếu bạn đang chơi The Dream-Quest như một chiến dịch gồm 4 phần:</li><li>If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…<ul><li>…and you have not yet played _Scenario 1–B: Waking Nightmare_, proceed to that scenario.</li><li>…and you have already played _Scenario 1–B: Waking Nightmare_, proceed instead to _Interlude I: The Black Cat_.</li></ul></li></ul>"
     }
   }
 }

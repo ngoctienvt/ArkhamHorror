@@ -1,55 +1,158 @@
 {
   "heading": "Màn VI",
+  "label": {
+    "lightTheBrazier": "Light the brazier",
+    "unlightTheBrazier": "Unlight the brazier",
+    "leaveBrazierAlone": "Leave brazier alone",
+    "unvisitedIsleMistyClearing": {
+      "doom": "Place 1 doom on this location"
+    },
+    "unvisitedIsleForsakenWoods": {
+      "search": "Search the encounter deck and discard pile for a Whippoorwill and spawn it at this location",
+      "attack": "The nearest Whippoorwill attacks you"
+    },
+    "spectralRaven": {
+      "haunted": "Resolve each haunted ability on your location",
+      "modify": "Spectral Raven gets +2 fight and +2 evade until the end of the investigation phase"
+    },
+    "watchersGaze": {
+      "yourLocation": "Resolve the Haunted ability on your location",
+      "watchersLocations": "Resolve the Haunted ability on The Spectral Watcher's location"
+    }
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-2. If this is a skill test during a _circle_ action, reveal another token.",
+      "cultist": "-3. If you have no damage on you, chịu 1 damage. If you have no horror on you, chịu 1 horror.",
+      "tablet": "-3. Nếu bạn thất bại, a _Spectral_ enemy at your location attacks you (even if it is exhausted).",
+      "elderThing": "-3. If this is a skill test during a _circle_ action and you fail, resolve each haunted ability on your location."
+    },
+    "hardExpert": {
+      "skull": "-3. If this is a skill test during a _circle_ action, reveal another token.",
+      "cultist": "-4. If you have no damage on you, chịu 1 damage. If you have no horror on you, chịu 1 horror.",
+      "tablet": "-4. Nếu bạn thất bại, a _Spectral_ enemy at your location attacks you (even if it is exhausted).",
+      "elderThing": "-4. If this is a skill test during a _circle_ action and you fail, resolve each haunted ability on your location."
+    }
+  },
+  "tooltips": {
+    "miskatonicRiver": {
+      "resign": "You take your rowboat back to the shore of the Miskatonic River, leaving the mysterious island behind."
+    },
+    "forbiddingShore": {
+      "haunted": "You must either lose 1 action or lose 2 resources"
+    },
+    "unvisitedIsleStandingStones": {
+      "haunted": "Until the end of the round, increase the difficulty of each skill test during a _circle_ action by 2."
+    },
+    "unvisitedIsleMistyClearing": {
+      "haunted": "You must either place 1 doom on this location, or take 1 damage and 1 horror"
+    },
+    "unvisitedIsleForsakenWoods": {
+      "haunted": "You must either search the encounter deck and discard pile for a Whippoorwill and spawn it at this location, or the nearest Whippoorwill attack you."
+    },
+    "unvisitedIsleMossCoveredSteps": {
+      "haunted": "Your next move action this round costs 1 additional action"
+    },
+    "unvisitedIsleHauntedSpring": {
+      "haunted": "You must either discard an asset you control, or take 1 damage"
+    },
+    "unvisitedIsleDecayedWillow": {
+      "haunted": "Choose and discard 1 card from your hand."
+    }
+  },
   "intro": {
     "title": "Màn VI: Hợp nhất và Tỉnh ngộ",
+    "body": "<p>Hòn Đảo Không Người Ghé Thăm nằm giữa sông Miskatonic, giữa hai trong số những cây cầu bắc qua sông và kết nối các khu vực lân cận Downtown và Rivertown của thị trấn Arkham. Phát triển dày đặc dây leo, gai và bụi rậm một cách bất thường, hòn đảo không có cư dân và rất ít loài động vật. Những hàng cột đá bí ẩn sừng sững khắp hòn đảo, vươn cao trên những ngọn cây. Mặc dù có rất nhiều giả thuyết, nhưng không ai biết chắc chắn những cột đá này phục vụ cho mục đích gì, hoặc ai đã xây dựng chúng. Rất ít người dám mạo hiểm lên bờ của hòn đảo bí ẩn, và những người trở về kể những câu chuyện kỳ lạ: các đống lửa đốt trong rừng vào những giờ tối tăm nhất của đêm —các bàn thờ bằng đá với những hình khắc không thể phiên dịch được — những khu rừng trống rỗng không có sự sống, ngoại trừ những con quạ đen và những con chim đớp muỗi đậu trên cành cây và quan sát những kẻ xâm phạm với ánh mắt háo hức. Thật không may cho bạn, mối nguy quá lớn để bạn chú ý đến những cảnh báo này.</p><p>Đường phố thị trấn Arkham vắng vẻ và yên tĩnh hơn những gì bạn từng thấy trước đây. Một làn sương xám quen thuộc đã bao trùm khắp thị trấn. Mây mù càng ngày càng dày đặc khi bạn đến gần con sông. Bạn di chuyển một cách vội vàng, không muốn gặp phải bất kỳ người nào khác trên đường đến địa điểm của nghi lễ, cho dù là người sống hay đã chết. Bạn tìm thấy một số chiếc thuyền chèo được neo ở bến tàu và leo lên một trong số chúng. Với vùng nước tĩnh lặng một cách bất thường và hầu như không có dòng chảy nào đẩy con thuyền đi, việc chèo thuyền về phía hòn đảo chỉ là một nỗ lực đơn giản. Dù vậy, sương mù dày đặc cũng khiến bạn khó định hướng. Chẳng bao lâu, bạn hoàn toàn bị bao phủ bởi màn sương xám, không thể nhìn thấy bờ sông hay bờ biển của hòn đảo. Các hình thù hiện ra từ màn sương mù. Trên mặt nước xuất hiện những gợn sóng. Ánh mắt của watcher đang hướng về bạn.</p><p>Ngay sau đó, một cột năng lượng ma quái bay thẳng lên bầu trời, rõ ràng như ban ngày dù là nhìn qua màn sương mù. Tất cả các hình thù đều hướng sự chú ý của chúng đến đèn hiệu này và bạn cảm thấy ánh nhìn của watcher đang trôi qua linh hồn bạn. Nghi thức đã bắt đầu. Bạn chèo nhanh hơn, sử dụng ánh sáng để dẫn đường cho bạn. Đã đến lúc phải quyết định một lần và mãi mãi tại sao bạn lại đến — bạn ở đây để hỗ trợ Silver Twilight Lodge? Hay để cản trở họ?</p><p class='basic'>Đây là điểm không thể quay lại — bạn sẽ không có cơ hội thay đổi quyết định sau này. Điều tra viên phải quyết định (chọn một):</p><ul><li>Việc hoàn thành nghi lễ sẽ trói buộc Spectral Watcher và ngăn nó gây hại thêm.<ul><li>In your Campaign Log, record that *the investigators sided with the Lodge*.</li><li>Tiếp tục đến <b>Setup</b></li></ul></li><li>Làm gián đoạn nghi lễ sẽ giải phóng sợi dây trói buộc Spectral Watcher xuống cõi trần.<ul><li>In your Campaign Log, record that *the investigators sided with the coven.*</li><li>Tiếp tục đến <b>Setup</b></li></ul></li></ul>",
+    "additionalIntro": "<p>_Additional Intro_: Erynn considers your words carefully as you tell her that you intend to side with her coven and help them stop the Lodge’s ritual despite what you have learned about her high priestess. “I don’t know,” she admits. “Is this truly what you want?” She sighs, looking more exhausted and troubled than ever before. “All right. If this is what you intend to do, so be it. But I hope you understand what you are doing…”</p>",
     "label": {
       "complete": "*\"Chúng ta phải giúp Lodge hoàn thành nghi lễ.\"*",
       "stop": "*\"Chúng ta phải dừng nghi lễ của Lodge lại.\"*"
     }
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Union and Disillusion*, *Inexorable Fate*, *Realm of Death*, *Spectral Predators*, *Ancient Evils*, and *Chilling Cold*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/union-and-disillusion.png' /><img src='{setImgPath}/inexorable-fate.png' /><img src='{setImgPath}/realm-of-death.png' /><img src='{setImgPath}/spectral-predators.png' /><img src='{setImgPath}/ancient-evils.png' /><img src='{setImgPath}/chilling-cold.png' /></section>",
+    "setSetsAside": "Set the following encounter sets aside, out of play: *Anette’s Coven*, *Silver Twilight Lodge*, and *The Watcher*. These sets are indicated by the following icons:<section class='encounter-sets'><img src='{setImgPath}/anettes-coven.png' /><img src='{setImgPath}/silver-twilight-lodge.png' /><img src='{setImgPath}/the-watcher.png' /></section>",
     "placeLocations": "Đặt vị trí Miskatonic River và Forbidding Shore vào chơi. Mỗi điều tra viên bắt đầu chơi tại vị trí Miskatonic River. Sau đó, xào 6 vị trí Unvisited Isle và chọn ngẫu nhiên 2 vị trí đặt vào chơi. Đặt phần còn lại sang một bên, ngoài khu vực chơi.",
+    "sidedWithTheCoven": "Các lò than tại Forbidding Shore và cả hai địa điểm Unvisited Isle đã được thắp lửa. Đặt 1 token tài nguyên trên mỗi vị trí này để biểu thị điều này. <i>(Xem “Vòng tròn / Lò than”)</i>",
     "setAside": "Đặt vị trí The Geist-Trap và treachery Watcher’s Gaze một bên, ngoài khu vực chơi.",
     "setEnemiesAside": "Tìm trong bộ sưu tập Anette Mason (The Circle Undone #57) và Josef Meiger (The Circle Undone #85) và đặt sang một bên, ngoài khu vực chơi.",
+    "missingPersons": "Kiểm tra phần \"Người Mất Tích\" trong Nhật ký Chiến dịch. Dựa trên nhân vật nào bị gạch bỏ và nhân vật nào không bị, hãy thực hiện như sau:",
+    "gavriella": "Đặt lá bài tài sản câu chuyện Gavriella Mizrah sang một bên và đặt lá bài câu chuyện Gavriella’s Fate bên dưới lá bài scenario reference.",
+    "penny": "Đặt lá bài tài sản câu chuyện Penny White sang một bên và đặt lá bài câu chuyện Penny’s Fate bên dưới lá bài scenario reference.",
+    "jerome": "Đặt lá bài tài sản câu chuyện Jerome Davids sang một bên và đặt lá bài câu chuyện Jerome’s Fate bên dưới lá bài scenario reference.",
+    "valentino": "Đặt lá bài tài sản câu chuyện Valentino Rivas sang một bên và đặt lá bài câu chuyện Valentino’s Fate bên dưới lá bài scenario reference.",
+    "removeRemainder": "Remove the remainder of the story assets and story cards from the *Union and Disillusion* encounter set from the game.",
     "acts": "Tùy thuộc vào các trường hợp sau, một phiên bản khác của Act 3 và 4 sẽ được sử dụng trong màn chơi này. Mỗi phiên bản khác của Act 3 hoặc 4 đều bị loại bỏ khỏi màn chơi.",
-    "missingPersons": "Kiểm tra phần \"Người Mất Tích\" trong Nhật ký Chiến dịch. Dựa trên nhân vật nào bị gạch bỏ và nhân vật nào không bị, hãy thực hiện như sau:"
+    "v1": "Sử dụng Act 3—“Beyond the Mist (v. I)” và Act 4—“The Binding Rite.”",
+    "v2": "các điều tra viên đã được bổ nhiệm vào Inner Circle.",
+    "v3": "các điều tra viên đã che giấu điều họ biết về nhóm phù thủy.",
+    "v4": "Sử dụng Act 3—“Beyond the Mist (v. IV)” và Act 4—“The Broken Rite.”",
+    "heretics": "Check Campaign Log. For each *heretic that was unleashed unto Arkham*, place 1 doom on agenda 1a.",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to Union and Disillusion*, *Unspeakable Fate*, *Unstable Realm*, *Impending Evils*, and *Chilling Mists*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-union-and-disillusion.png' /><img src='{setImgPath}/unspeakable-fate.png' /><img src='{setImgPath}/unstable-realm.png' /><img src='{setImgPath}/impending-evils.png' /><img src='{setImgPath}/chilling-mists.png' /></section>*Unspeakable Fate* replaces *Inexorable Fate*, *Unstable Realm* replaces *Realm of Death*, *Impending Evils* replaces *Ancient Evils*, and *Chilling Mists* replaces *Chilling Cold*. Remove the replaced sets from the game.",
+      "acts": "Add the following bullet point above all the others: if *the investigators sided with the Lodge* and *Erynn joined the investigators*, use the new Act 3—*Beyond the Mist (v. V)* and Act 4—*The Binding Rite*.",
+      "additionalRule": "For the duration of this scenario, the following additional rule applies: while resolving The Watcher’s Grasp treachery, The Spectral Watcher does not exhaust after it attacks."
+    }
   },
   "resolutions": {
+    "label": {
+      "accept": "Step forward and accept Keziah’s offering.",
+      "flee": "Flee with Sanford and the Lodge."
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Bạn hầu như không nhớ mình đã chạy nước rút thế nào để trở lại bờ và lên thuyền. Nó giống như thể bạn đã bị chiếm hữu - bởi một cơn điên loạn hoặc bởi một ý chí chỉ muốn sống sót, bạn không phân biệt được. Bạn bị rung lắc về lại với các giác quan của mình bởi một cơn gió mạnh quét qua con sông, gần như lật úp thuyền của bạn. Cột trụ ma quái đánh dấu địa điểm tổ chức nghi lễ của Lodge đột nhiên nổ tung ra bên ngoài. Hàng chục bóng ma và hình dạng ma quái bay qua các ngọn cây và lướt trên mặt nước. Bạn sẽ không bao giờ quên tiếng thét của chúng, giống như hàng trăm tiếng kêu tử thần vang lên cùng một lúc.</p><ul><li>Skip to _Resolution 5_.</li></ul>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>Hồn ma quằn quại trong đau khổ, không thể thoát khỏi mối liên hệ của nó với cõi ma đang bị xé nát. Carl Sanford bước tới, mở một cuốn sách dày bằng da và ký ức của con ma — cùng với phần hình dạng còn lại của nó— được kéo vào các trang của cuốn sách một cách lạnh lùng.</p><p>Anette hét lên, \"Ngươi đã làm gì?!\" Một số thành viên trong nhóm phù thủy bao quanh cô ấy. Họ dàn quân chuẩn bị chiến đấu, bạn không nghi ngờ gì về việc họ sẵn lòng hy sinh mạng sống của mình để bảo vệ nữ tư tế tối cao của họ khỏi bị tổn hại.</p><p>Sanford đáp lại với một nụ cười nham hiểm, “Ta đã làm gì sao? Ta đã lừa Con Quỷ.\" Bạn nhận thấy những từ ngữ trong cuốn sách của ông ta giờ đang phát sáng với một bức xạ ma quái. Ông ta bắt đầu đọc các trang sách trong khi giải thích thêm, “Keziah đã ký vào Cuốn sách hắc ám của Azathoth để tìm hiểu những bí mật của vũ trụ. Theo đánh giá của ta thì đó là một sai lầm chết người vì nó đã đặt bà ta vào nanh vuốt của một kẻ mạnh hơn bà ta rất nhiều. Bà ta phải trả giá, còn ta thì sẽ được lợi từ đó.\"</p><p>Anette siết chặt hàm và quay về phía bạn. Cô ta hỏi, “Cậu thậm chí không hiểu được những bí mật mà con quái vật này hiện đang sở hữu. Cậu có thực sự tin rằng hắn ta sẽ sử dụng sức mạnh này cho mục đích tốt không?”.</p><p class='basic'>Các điều tra viên phải quyết định <i>(chọn một)</i>:</p><ul><li>các điều tra viên đã được bổ nhiệm vào Inner Circle.</li><li>*“No.”* Skip to _Resolution 3_.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2:_ You stand tall and declare your loyalty proudly. The other members of the Order nod in affirmation. Carl Sanford will lead mankind to an era of peace, and protect them from the threats of the cosmos. It may take time for society to adjust, but humanity can only survive if these secrets are in the hands of the Order.</p><p>Bạn đứng thẳng và tuyên bố lòng trung thành của bạn một cách tự hào. Các thành viên khác của Order gật đầu xác nhận. Carl Sanford sẽ dẫn dắt nhân loại đến một kỷ nguyên hòa bình, và bảo vệ họ khỏi những mối đe dọa từ vũ trụ. Có thể phải mất thời gian để xã hội điều chỉnh, nhưng nhân loại chỉ có thể tồn tại nếu những bí mật này nằm trong tay của Order. Các phù thủy rút lui vào rừng, và bạn chỉ còn lại một mình với các anh chị em của Inner Circle. Bạn tập trung xung quanh nhà lãnh đạo của mình, và khi ông ta đọc Tín điều mới của Silver Twilight Order, ông ta thông báo cho bạn về kế hoạch của mình: về những sinh vật cao hơn của vũ trụ, về sự tiến lên của nhân loại, về sự sống và cái chết của các Đại Cổ Thần, của Azathoth và Sự kết thúc của Vạn vật. Từng bước, Order lập kế hoạch cho tương lai của Trái đất, và bạn sẽ trở thành công cụ trong trật tự thế giới mới.</p><ul><li>công việc thực sự của Silver Twilight Lodge đã bắt đầu.</li><li>Silver Twilight Lodge chiến thắng chiến dịch. (Các điều tra viên thực sự trung thành với Lodge giành chiến thắng trong chiến dịch.)</li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>Anette nói đúng. Sanford đã lừa bạn. Đây là điều ông ta đã luôn theo đuổi. Có lẽ ông ta coi điều này là “bảo vệ nhân loại”, nhưng sự thật là ông ta đã hết lần này đến lần khác gây nguy hiểm đến tính mạng của người khác để phục vụ cho lòng tham và ham muốn quyền lực của chính mình. Bạn lắc đầu.</p><p>Ông Sanford phàn nàn, \"Thật đáng tiếc. Tôi nghĩ rằng cậu thông minh hơn thế này.\" Bạn lùi lại vài bước, lui về nơi các phù thủy tập trung. Sanford quay sang các thành viên khác trong Order của mình và chỉ vào bạn. Ông ta ra lệnh, “Giết chúng.”</p><p>Anette quát lên với nữ phù thủy tóc đỏ bên cạnh, \"Erynn, yểm trợ cho chúng tôi!\" Nữ phù thủy gật đầu đáp lại và vẫy một que gỗ trước mặt cô ấy, tạo ra một đám sương mù che khuất sự hiện diện của bạn. Anette hét lên, “Chúng ta phải ra khỏi đây. Đi ngay!\"</p><p>Cuộc trốn chạy của bạn khá mờ mịt. Các thành viên của giáo phái Silver Twilight theo đuổi bạn không ngừng trong suốt khu rừng bị lãng quên. Bạn chỉ vừa kịp quay trở lại bờ trước khi họ đuổi kịp bạn. Bạn đề nghị Anette và những người khác tham gia cùng bạn, nhưng cô ấy lắc đầu. \"Chúng ta sẽ sớm gặp lại nhau.\" Các mép áo choàng của phù thủy chảy vào bầu trời đêm, và với một vòng xoáy bóng tối, họ biến mất từng người một.</p><ul><li>Carl Sanford sở hữu những bí mật của vũ trụ.</li><li>Skip to _Resolution 8_.</li></ul>"
     },
     "resolution4": {
-      "title": "Kết thúc thứ 4"
+      "title": "Kết thúc thứ 4",
+      "body": "<p>Anette tiếp cận, đối mặt với lớp vỏ bồng bềnh của hồn ma. \"Chị! Tụi em là những người đã gọi chị đến đây từ cõi bên kia.” Hồn ma đang bị tiêu tán chuyển sự chú ý sang Anette, và những phù thủy còn lại đang nhìn một cách mong đợi.</p><p>Carl Sanford hét lên, “Ngươi đã làm gì vậy, đồ ngu? Linh hồn này không phải là phù thủy đơn thuần!” Nhưng đã quá muộn. Anette phớt lờ ông Sanford, tiếp tục nói chuyện với hồn ma đang hiện diện. “Trong nhiều năm, tụi em đã phải chịu bất công này đến bất công khác. Chia sẻ với em những bí mật của chị nhé. Cùng nhau, như là một tâm trí, cơ thể và linh hồn, chúng ta có thể bắt đầu lại một lần nữa. \"</p><p>Con ma đưa cánh tay dài và không xương đến với cô. Các chị em của Anette thở hổn hển khi nữ thượng tế của họ bước tới và quỳ gối trước sinh vật, tự hiến dâng bản thân. Với một luồng năng lượng đột ngột, linh hồn của con ma được hút vào bên trong Anette. Cô gục xuống đất, quay cuồng vì tác động linh hồn này. Cơ thể cô quằn quại trong đau khổ, nhưng không một phù thủy nào khác bước tới giúp đỡ, thay vào đó là nhìn xem với vẻ mặt vừa kinh hãi vừa mê hoặc. Cuối cùng, Anette đứng dậy, đôi mắt rực sáng với sức mạnh thần bí. Khi cô ấy nói chuyện, đó không phải là giọng của cô ấy. Keziah nói, \"Các chị em. Hãy vui mừng, vì ta đã được tái sinh.”</p><p>Carl Sanford dùng gậy đánh bạn. Bạn đã bị kinh hãi bởi những sự kiện xảy ra trước mặt bạn đến nỗi bạn đã không nhận thấy rằng các thành viên của Lodge đang lẩn về phía các cạnh của khu đất trống. Một trong những thành viên inner circle của Lodge giơ súng lục và cố gắng bắn, nhưng nữ thượng tế chỉ nhìn chằm chằm vào anh ta, và cánh tay của anh ta khô héo và thối rữa trước mắt bạn. Súng của anh ta rớt xuống đất và anh ta kêu một tiếng cuối cùng trước khi anh ta không còn gì khác ngoài một cái trấu mục nát trên mặt đất. Sanford nói một cách nghiêm nghị, “Chúng ta phải rời khỏi nơi này ngay lập tức. Thực thể này sở hữu sức mạnh của sự sống và cái chết. Nó sẽ không cho phép sự hiện diện của chúng ta nữa. ”</p><p>Anette — không, Keziah — chuyển sự chú ý sang bạn, và mắt bà ta sáng lên. “Con trông quen lắm, con ạ. Đi đi. Đừng sợ. Con không có gì phải sợ ta đâu”. Bà ta cười nham hiểm. Giọng nói của bà ta như những nhát dao đâm vào tâm hồn bạn. Bạn ghét phải thừa nhận điều đó, nhưng Sanford đã đúng. Bạn quay đầu và chạy trốn cùng những người còn lại của Lodge, hy vọng bạn đủ nhanh để thoát khỏi ma thuật của phù thủy.</p><p>Cuộc trốn chạy của bạn khá mờ mịt. Các phù thủy và linh hồn đuổi theo bạn không ngừng trong suốt khu rừng bị lãng quên. Bạn chỉ vừa kịp quay trở lại bờ trước khi họ đuổi kịp bạn. Các thành viên khác của Lodge có lẽ không may mắn như vậy. Bị phân tán theo nhiều hướng, bạn không chắc có bao nhiêu người trong số họ trốn thoát và bạn không thấy Carl Sanford ở đâu, mặc dù bạn nghi ngờ ông ta đã có kế hoạch cho kết cục này.</p><ul><li>In your Campaign Log, record *Anette Mason is possessed by evil*.</li><li>Skip to _Resolution 8_.</li></ul>"
     },
     "returnToResolution4": {
-      "title": "Kết thúc thứ 4"
+      "title": "Kết thúc thứ 4",
+      "body": "<p>_Resolution 4_: Anette tiếp cận, đối mặt với lớp vỏ bồng bềnh của hồn ma. \"Chị! Tụi em là những người đã gọi chị đến đây từ cõi bên kia.” Hồn ma đang bị tiêu tán chuyển sự chú ý sang Anette, và những phù thủy còn lại đang nhìn một cách mong đợi.</p><p>“What are you doing, you fool? This spirit is no mere witch!” Carl Sanford yells out. But it is too late. Anette ignores Sanford, continuing to speak to the spectral presence. “For years we have suffered injustice after injustice. Share with me your secrets, sister. Together, as one mind, body, and soul, we can begin anew.”</p><p>Con ma đưa cánh tay dài và không xương đến với cô. Các chị em của Anette thở hổn hển khi nữ thượng tế của họ bước tới và quỳ gối trước sinh vật, tự hiến dâng bản thân. Với một luồng năng lượng đột ngột, linh hồn của con ma được hút vào bên trong Anette. Cô gục xuống đất, quay cuồng vì tác động linh hồn này. Cơ thể cô quằn quại trong đau khổ, nhưng không một phù thủy nào khác bước tới giúp đỡ, thay vào đó là nhìn xem với vẻ mặt vừa kinh hãi vừa mê hoặc. Cuối cùng, Anette đứng dậy, đôi mắt rực sáng với sức mạnh thần bí. Khi cô ấy nói chuyện, đó không phải là giọng của cô ấy. Keziah nói, \"Các chị em. Hãy vui mừng, vì ta đã được tái sinh.”</p><p>Carl Sanford dùng gậy đánh bạn. Bạn đã bị kinh hãi bởi những sự kiện xảy ra trước mặt bạn đến nỗi bạn đã không nhận thấy rằng các thành viên của Lodge đang lẩn về phía các cạnh của khu đất trống. Một trong những thành viên inner circle của Lodge giơ súng lục và cố gắng bắn, nhưng nữ thượng tế chỉ nhìn chằm chằm vào anh ta, và cánh tay của anh ta khô héo và thối rữa trước mắt bạn. Súng của anh ta rớt xuống đất và anh ta kêu một tiếng cuối cùng trước khi anh ta không còn gì khác ngoài một cái trấu mục nát trên mặt đất. Sanford nói một cách nghiêm nghị, “Chúng ta phải rời khỏi nơi này ngay lập tức. Thực thể này sở hữu sức mạnh của sự sống và cái chết. Nó sẽ không cho phép sự hiện diện của chúng ta nữa. ”</p><p>Anette—no, Keziah—turns her attention to you, and her eyes brighten. “You look familiar, child. Come, come. Do not be afraid. You have nothing to fear from me.” She grins wickedly. Her voice is like knives driving into your soul…but perhaps this is the chance you have been waiting for?</p><ul><li>*Step forward and accept Keziah’s offering*. Skip to _Resolution 9_. You may choose this option only if an investigator has the Black Book in their deck and *Erynn joined the investigators*.</li><li>*Flee with Sanford and the Lodge*. Skip to _Resolution 10_.</li></ul>"
     },
     "resolution5": {
       "title": "Giải pháp thứ 5",
+      "body": "<p class='basic'>_Resolution 5:_ Check Campaign Log. Compare the following two columns to see which has the most true statements.</p>",
       "spellBroken": "bùa phép của các phù thủy đã bị phá vỡ.",
+      "rescued": "<i>Các điều tra viên đã giải cứu Josef</i> / <i>Josef còn sống và khỏe mạnh.</i>",
+      "fewerHeretics": "<i>1 hoặc ít hơn heretics đã thả vào thị trấn Arkham. </i>",
       "spellCast": "bùa phép của các phù thủy đã được thực hiện.",
-      "disappeared": "Josef bị biến mất trong màn sương."
+      "disappeared": "Josef bị biến mất trong màn sương.",
+      "moreHeretics": "<i>2 hoặc nhiều heretics hơn đã được thả vào thị trấn Arkham.</i>",
+      "continue": "<p class='basic'>If the left column has more true statements than the right column, proceed to _Resolution 6_. If the right column has more true statements than the left column, proceed to _Resolution 7_.</p>"
     },
     "resolution6": {
-      "title": "Kết quả 6"
+      "title": "Kết quả 6",
+      "body": "<p>Anette hét lên, \"Ngươi đã làm gì?!\" Một số thành viên trong nhóm phù thủy bao quanh cô ấy. Họ dàn quân chuẩn bị chiến đấu, bạn không nghi ngờ gì về việc họ sẵn lòng hy sinh mạng sống của mình để bảo vệ nữ tư tế tối cao của họ khỏi bị tổn hại.</p><p>Sanford đáp lại với một nụ cười nham hiểm, “Ta đã làm gì sao? Ta đã lừa Con Quỷ.\" Bạn nhận thấy những từ ngữ trong cuốn sách của ông ta giờ đang phát sáng với một bức xạ ma quái. Ông ta bắt đầu đọc các trang sách trong khi giải thích thêm, “Keziah đã ký vào Cuốn sách hắc ám của Azathoth để tìm hiểu những bí mật của vũ trụ. Theo đánh giá của ta thì đó là một sai lầm chết người vì nó đã đặt bà ta vào nanh vuốt của một kẻ mạnh hơn bà ta rất nhiều. Bà ta phải trả giá, còn ta thì sẽ được lợi từ đó.\"</p><p>Anette siết chặt quai hàm và quay về phía bạn. \"Lắng nghe tôi. Bạn thậm chí không thể bắt đầu hiểu những bí mật mà con quái vật này hiện đang sở hữu. Bạn phải ngăn chặn anh ta, bất kể giá nào ”.</p><p>Bạn giữ yên lặng, nhưng trong thâm tâm, bạn nghi ngờ Anette nói đúng. Sanford đã lừa bạn. Đây là những gì ông ta đã theo đuổi từ đầu. Có lẽ ông ta coi điều này là “bảo vệ nhân loại”, nhưng sự thật là anh ta đã hết lần này đến lần khác gây nguy hiểm đến tính mạng của người khác để phục vụ cho lòng tham và ham muốn quyền lực của chính mình. Tuy nhiên, trước khi bạn có thể đối đầu với Sanford, ông ta quay sang các thành viên khác trong Order của mình và chỉ vào bạn. Ông ta nói, “Tên này không còn hữu dụng nữa. Giết hết tụi nó.\"</p><p>Anette quát lên với nữ phù thủy tóc đỏ bên cạnh, \"Erynn, yểm trợ cho chúng tôi!\" Nữ phù thủy gật đầu đáp lại và vẫy một que gỗ trước mặt cô ấy, tạo ra một đám sương mù che khuất sự hiện diện của bạn. Anette hét lên, “Chúng ta phải ra khỏi đây. Đi ngay!\"</p><p>Cuộc trốn chạy của bạn khá mờ mịt. Các thành viên của giáo phái Silver Twilight theo đuổi bạn không ngừng trong suốt khu rừng bị lãng quên. Bạn chỉ vừa kịp quay trở lại bờ trước khi họ đuổi kịp bạn. Bạn đề nghị Anette và những người khác tham gia cùng bạn, nhưng cô ấy lắc đầu. \"Chúng ta sẽ sớm gặp lại nhau.\" Các mép áo choàng của phù thủy chảy vào bầu trời đêm, và với một vòng xoáy bóng tối, họ biến mất từng người một.</p><ul><li>Carl Sanford sở hữu những bí mật của vũ trụ.</li><li>Skip to _Resolution 8_.</li></ul>"
     },
     "resolution7": {
-      "title": "Kết cục 7"
+      "title": "Kết cục 7",
+      "body": "<p>_Resolution 7_: Khi bạn định thần lại, gió đã giảm bớt và màn sương đen tan biến. Sau khi nghi lễ kết thúc, hòn đảo dường như đã trở lại bình thường - nhưng liệu nghi lễ đã thành công hay nó đã thất bại? Bạn đi đến trung tâm của hòn đảo để tìm hiểu những gì đã xảy ra. Khi bạn đến nơi, bạn thấy Carl Sanford và các thành viên khác trong Order của ông ta bị thương nặng, còn Anette và nhóm của cô ấy chiến thắng. Anette đứng ở trung tâm của khoảng đất trống, đôi mắt sáng rực lên với sức mạnh thần bí. Khi cô ta nói chuyện, đó không phải là giọng của cô ấy. Keziah nói, \"Các chị em. Hãy vui mừng, vì ta đã được tái sinh.”</p><p>Carl Sanford dùng gậy đánh bạn. Bạn đã bị kinh hãi bởi những sự kiện xảy ra trước mặt bạn đến nỗi bạn đã không nhận thấy rằng các thành viên của Lodge đang lẩn về phía các cạnh của khu đất trống. Một trong những thành viên inner circle của Lodge giơ súng lục và cố gắng bắn, nhưng nữ thượng tế chỉ nhìn chằm chằm vào anh ta, và cánh tay của anh ta khô héo và thối rữa trước mắt bạn. Súng của anh ta rớt xuống đất và anh ta kêu một tiếng cuối cùng trước khi anh ta không còn gì khác ngoài một cái trấu mục nát trên mặt đất. Sanford nói một cách nghiêm nghị, “Chúng ta phải rời khỏi nơi này ngay lập tức. Thực thể này sở hữu sức mạnh của sự sống và cái chết. Nó sẽ không cho phép sự hiện diện của chúng ta nữa. ”</p><p>Anette — không, Keziah — chuyển sự chú ý sang bạn, và mắt bà ta sáng lên. “Con trông quen lắm, con ạ. Đi đi. Đừng sợ. Con không có gì phải sợ ta đâu”. Bà ta cười nham hiểm. Giọng nói của bà ta như những nhát dao đâm vào tâm hồn bạn. Bạn ghét phải thừa nhận điều đó, nhưng Sanford đã đúng. Bạn quay đầu và chạy trốn cùng những người còn lại của Lodge, hy vọng bạn đủ nhanh để thoát khỏi ma thuật của phù thủy.</p><p>Cuộc trốn chạy của bạn khá mờ mịt. Các phù thủy và linh hồn đuổi theo bạn không ngừng trong suốt khu rừng bị lãng quên. Bạn chỉ vừa kịp quay trở lại bờ trước khi họ đuổi kịp bạn. Các thành viên khác của Lodge có lẽ không may mắn như vậy. Bị phân tán theo nhiều hướng, bạn không chắc có bao nhiêu người trong số họ trốn thoát và bạn không thấy Carl Sanford ở đâu, mặc dù bạn nghi ngờ ông ta đã có kế hoạch cho kết cục này.</p><ul><li>In your Campaign Log, record *Anette Mason is possessed by evil*.</li><li>Proceed to _Resolution 8_.</li></ul>"
     },
     "resolution8": {
-      "title": "Giải pháp thứ 8"
+      "title": "Giải pháp thứ 8",
+      "body": "<p>Cuối cùng khi bạn quay trở lại bờ sông Miskatonic, bạn ngẫm nghĩ lại chuyện đã xảy ra…</p><ul><li>Nếu bộ bài của một điều tra viên có lá bài Puzzle Box, loại bỏ nó khỏi bộ bài của điều tra viên đó.</li><li>Kiểm tra phần \"Người Mất Tích\" trong Nhật ký Chiến dịch.<ul><li>*If Gavriella is alive*, any one investigator may choose to add the Gavriella Mizrah asset to his or her deck. She does not count toward that investigator’s deck size. Otherwise, next to Gavriella Mizrah’s profile, record *Gavriella is dead*.</li><li>*If Jerome is alive*, any one investigator may choose to add the Jerome Davids asset to his or her deck. He does not count toward that investigator’s deck size. Otherwise, next to Jerome Davids’s profile, record *Jerome is dead*.</li><li>*If Penny is alive*, any one investigator may choose to add the Penny White asset to his or her deck. She does not count toward that investigator’s deck size. Otherwise, next to Penny White’s profile, record *Penny is dead*.</li><li>*If Valentino is alive*, any one investigator may choose to add the Valentino Rivas asset to his or her deck. He does not count toward that investigator’s deck size. Otherwise, next to Valentino Rivas’s profile, record *Valentino is dead*.</li></ul></li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
     },
     "resolution9": {
-      "title": "Kết cục 9"
+      "title": "Kết cục 9",
+      "body": "<p>_Resolution 9:_ You step forward and meet Keziah’s gaze. This is what you have prepared for. All your research, all the mysteries you have uncovered, it has all led you here. To power. To immortality. Keziah nods knowingly. A sinister smirk frolics on her lips. “Come, sisters. Now is the time to reap the reward for your loyalty.”</p><p>Outmatched, Carl Sanford and the Lodge members flee into the woods, leaving you and the coven alone. One by one, you and your new allies each sign the Black Book of Azathoth. Keziah grants you each a shred of her knowledge, of her power, and then she tells you what your loyalty has bought. She speaks of the Great Old Ones, of immortality, of the Messenger and their daemonic wisdom. From henceforth, you are forever changed...</p><ul><li>In your Campaign Log, record *the coven of Keziah holds the world in its grasp*.</li><li>The coven wins the campaign. (Investigators who are truly loyal to the coven win the campaign.)</li></ul>"
     },
     "resolution10": {
-      "title": "Kết cục 10"
+      "title": "Kết cục 10",
+      "body": "<p>_Resolution 10:_ You hate to admit it, but Sanford is right. You cannot play a part in this folly. But the moment such thoughts cross your mind, Keziah’s expression turns to ice. “So be it.” She stretches out her hand. In terror, you flee with the rest of the Lodge, hoping you are fast enough to escape the witch’s magic.</p><p>Your escape is a blur. Witches and spirits chase you relentlessly through the forsaken woods. You are only barely able to make it back to the shore before they catch up to you. Other members of the Lodge are perhaps not so fortunate. Having scattered in many directions, you’re not sure how many of them escaped, and you don’t see Carl Sanford anywhere. Still, you suspect he had a plan for this outcome.</p><ul><li>In your Campaign Log, record *Anette Mason is possessed by evil*.</li><li>Proceed to _Resolution 8_.</li></ul>"
     }
   }
 }

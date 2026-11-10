@@ -1,10 +1,31 @@
 {
+  "intro": {
+    "title": "The Labyrinths of Lunacy",
+    "chooseGroup": "<p class='basic'>Khi chơi dưới dạng một mini-campaign, hãy chơi ba game liên tiếp — một game cho mỗi nhóm — theo thứ tự bạn chọn. Không giống như một campaign bình thường, các luật sau được áp dụng:</p><ul class='level-2'><li>Khi xây dựng bộ bài cho màn chơi <i>The Labyrinths of Lunacy</i>, sử dụng luật chơi trong chế độ standalone ở trang 19 của cuốn Rules Reference. Bạn không nhất thiết phải bắt đầu với 0 kinh nghiệm.</li><li>Người chơi có thể hoán đổi điều tra viên và/hoặc bộ bài giữa mỗi màn chơi, để đại diện cho các nhóm điều tra viên khác nhau đã bị mắc kẹt bên trong Mê Cung.</li> <li>Không được nhận hay dùng kinh nghiệm giữa các màn chơi trong campaign này.</li> <li>Không có Nhật ký Chiến dịch cho campaign này. Trong campaign này, điều tra viên không nhận sang chấn, và điều tra viên bị <b>giết</b> hoặc trở nên <b>điên loạn</b> có thể được sử dụng ở màn chơi khác.</li></ul><p class='basic'>Which group is trapped in this part of the labyrinth?</p>",
+    "chooseGroupSingle": "<p class='basic'>Khi chơi dưới dạng một màn chơi độc lập, bạn có thể chơi ở Nhóm A, B hoặc C. Sử dụng hướng dẫn chuẩn bị màn chơi cho nhóm được chọn để chuẩn bị màn chơi.</p><p class='basic'>Which group is trapped in this part of the labyrinth?</p>",
+    "groupA": "<p>Bạn tỉnh dậy và nhận thấy rằng mình đang ở một nơi xa lạ, không có ký ức về việc mình đã đến đây bằng cách nào. Cơ bắp của bạn yếu ớt và không cử động như ý muốn. Tầm nhìn thì mờ đi. Chỉ việc nhấc chân dậy cũng đòi hỏi một nỗ lực rất lớn. Đôi chân của bạn run run và hầu như không thể nâng đỡ trọng lượng cơ thể.</p><p>Bạn tỉnh dậy và nhận thấy rằng mình đang ở một nơi xa lạ, không có ký ức về việc mình đã đến đây bằng cách nào. Cơ bắp của bạn yếu ớt và không cử động như ý muốn. Tầm nhìn thì mờ đi. Chỉ việc nhấc chân dậy cũng đòi hỏi một nỗ lực rất lớn. Đôi chân của bạn run run và hầu như không thể nâng đỡ trọng lượng cơ thể.\nLần đầu tiên kể từ khi tỉnh dậy, bạn xem xét không gian xung quanh mình. Bạn đã bị nhốt kín trong một căn phòng không có cửa sổ, chứa đầy các ống bằng đồng. Tiếng khẽ rít của các luồng gió thoát ra bao bọc xung quanh bạn. Bạn trở thành một tù nhân ở nơi này và không có cách nào để thoát ra. Có một tờ giấy nằm trên mặt đất gần đó. Nó viết:\n<fancy>Xin chào.</fancy>\n<fancy>Tôi đã tập hợp bạn ở đây để tiến hành một thí nghiệm. Hãy xem đây là một bài kiểm tra về ý chí của con người. Bạn sẽ sống sót. Hoặc bạn sẽ chết.</fancy><fancy> Bạn không đơn độc. Hai nhóm khác chia sẻ chung số phận với bạn. Bạn sẽ mạo hiểm tính mạng của mình để hỗ trợ họ chứ? Hay bạn sẽ tìm thấy tự do đằng sau xác chết của họ?</fancy>\n<fancy>Tôi sẽ cho phép bạn trốn thoát, nếu bạn chứng tỏ được ý chí mạnh mẽ và sự lanh lợi. Nếu không, nỗi đau và thống khổ của bạn sẽ như một lời nhắc nhở rằng nhân loại không phải là người thừa hưởng Trái đất.</fancy></p>",
+    "groupB": "<p>Bạn tỉnh dậy và nhận thấy rằng mình đang ở một nơi xa lạ, không có ký ức về việc mình đã đến đây bằng cách nào. Cơ bắp của bạn yếu ớt và không cử động như ý muốn. Tầm nhìn thì mờ đi. Chỉ việc nhấc chân dậy cũng đòi hỏi một nỗ lực rất lớn. Đôi chân của bạn run run và hầu như không thể nâng đỡ trọng lượng cơ thể.</p><p>Bạn tỉnh dậy và nhận thấy rằng mình đang ở một nơi xa lạ, không có ký ức về việc mình đã đến đây bằng cách nào. Cơ bắp của bạn yếu ớt và không cử động như ý muốn. Tầm nhìn thì mờ đi. Chỉ việc nhấc chân dậy cũng đòi hỏi một nỗ lực rất lớn. Đôi chân của bạn run run và hầu như không thể nâng đỡ trọng lượng cơ thể.\nLần đầu tiên kể từ khi tỉnh dậy, bạn xem xét không gian xung quanh mình. Bạn đã bị nhốt kín trong một cái bể cao làm bằng kính, và nước tràn vào bể cao đến mắt cá chân của bạn. Bên ngoài lớp kính mờ, bạn có thể thấy nhiều cái bể khác giống như của bạn được bao phủ bởi một lớp sương mù. Bạn trở thành một tù nhân ở nơi này và không có cách nào để thoát ra. Có một tờ giấy nằm trên mặt đất gần đó. Nó viết:\n<fancy>Xin chào.</fancy>\n<fancy>Tôi đã tập hợp bạn ở đây để tiến hành một thí nghiệm. Hãy xem đây là một bài kiểm tra về ý chí của con người. Bạn sẽ sống sót. Hoặc bạn sẽ chết.</fancy><fancy> Bạn không đơn độc. Hai nhóm khác chia sẻ chung số phận với bạn. Bạn sẽ mạo hiểm tính mạng của mình để hỗ trợ họ chứ? Hay bạn sẽ tìm thấy tự do đằng sau xác chết của họ?</fancy>\n<fancy>Tôi sẽ cho phép bạn trốn thoát, nếu bạn chứng tỏ được ý chí mạnh mẽ và sự lanh lợi. Nếu không, nỗi đau và thống khổ của bạn sẽ như một lời nhắc nhở rằng nhân loại không phải là người thừa hưởng Trái đất.</fancy></p>",
+    "groupC": "<p>Bạn tỉnh dậy và nhận thấy rằng mình đang ở một nơi xa lạ, không có ký ức về việc mình đã đến đây bằng cách nào. Cơ bắp của bạn yếu ớt và không cử động như ý muốn. Tầm nhìn thì mờ đi. Chỉ việc nhấc chân dậy cũng đòi hỏi một nỗ lực rất lớn. Đôi chân của bạn run run và hầu như không thể nâng đỡ trọng lượng cơ thể.</p><p>Bạn tỉnh dậy và nhận thấy rằng mình đang ở một nơi xa lạ, không có ký ức về việc mình đã đến đây bằng cách nào. Cơ bắp của bạn yếu ớt và không cử động như ý muốn. Tầm nhìn thì mờ đi. Chỉ việc nhấc chân dậy cũng đòi hỏi một nỗ lực rất lớn. Đôi chân của bạn run run và hầu như không thể nâng đỡ trọng lượng cơ thể.\nLần đầu tiên kể từ khi tỉnh dậy, bạn xem xét không gian xung quanh mình. Bạn đang ở trong một căn phòng tối, được thắp sáng chỉ bằng một vài ngọn nến. Những chiếc thùng tròn, thùng thưa và kệ chứa đồ mục nát lấp đầy căn phòng chật chội. Bạn không thấy bất kỳ cửa sổ hay cánh cửa nào để ra ngoài. Bạn trở thành một tù nhân ở nơi này và không có cách nào để thoát ra. Có một tờ giấy nằm trên mặt đất gần đó. Nó viết:\n<fancy>Xin chào.</fancy>\n<fancy>Tôi đã tập hợp bạn ở đây để tiến hành một thí nghiệm. Hãy xem đây là một bài kiểm tra về ý chí của con người. Bạn sẽ sống sót. Hoặc bạn sẽ chết.</fancy><fancy> Bạn không đơn độc. Hai nhóm khác chia sẻ chung số phận với bạn. Bạn sẽ mạo hiểm tính mạng của mình để hỗ trợ họ chứ? Hay bạn sẽ tìm thấy tự do đằng sau xác chết của họ?</fancy>\n<fancy>Tôi sẽ cho phép bạn trốn thoát, nếu bạn chứng tỏ được ý chí mạnh mẽ và sự lanh lợi. Nếu không, nỗi đau và thống khổ của bạn sẽ như một lời nhắc nhở rằng nhân loại không phải là người thừa hưởng Trái đất.</fancy></p>",
+    "note": "Bạn tỉnh dậy và nhận thấy rằng mình đang ở một nơi xa lạ, không có ký ức về việc mình đã đến đây bằng cách nào. Cơ bắp của bạn yếu ớt và không cử động như ý muốn. Tầm nhìn thì mờ đi. Chỉ việc nhấc chân dậy cũng đòi hỏi một nỗ lực rất lớn. Đôi chân của bạn run run và hầu như không thể nâng đỡ trọng lượng cơ thể.\nLần đầu tiên kể từ khi tỉnh dậy, bạn xem xét không gian xung quanh mình. Bạn đã bị nhốt kín trong một căn phòng không có cửa sổ, chứa đầy các ống bằng đồng. Tiếng khẽ rít của các luồng gió thoát ra bao bọc xung quanh bạn. Bạn trở thành một tù nhân ở nơi này và không có cách nào để thoát ra. Có một tờ giấy nằm trên mặt đất gần đó. Nó viết:\n<fancy>Xin chào.</fancy>\n<fancy>Tôi đã tập hợp bạn ở đây để tiến hành một thí nghiệm. Hãy xem đây là một bài kiểm tra về ý chí của con người. Bạn sẽ sống sót. Hoặc bạn sẽ chết.</fancy><fancy> Bạn không đơn độc. Hai nhóm khác chia sẻ chung số phận với bạn. Bạn sẽ mạo hiểm tính mạng của mình để hỗ trợ họ chứ? Hay bạn sẽ tìm thấy tự do đằng sau xác chết của họ?</fancy>\n<fancy>Tôi sẽ cho phép bạn trốn thoát, nếu bạn chứng tỏ được ý chí mạnh mẽ và sự lanh lợi. Nếu không, nỗi đau và thống khổ của bạn sẽ như một lời nhắc nhở rằng nhân loại không phải là người thừa hưởng Trái đất.</fancy>"
+  },
   "label": {
+    "decayDiagram": {
+      "cluesToFlip": "Clues to flip"
+    },
+    "satisfyDoomThreshold": "Add doom to the current agenda until its doom threshold is satisfied.",
     "groupA": "Nhóm A",
     "groupB": "Nhóm B",
     "groupC": "Nhóm C"
   },
+  "remembered": {
+    "pulledTheLeftLever": "{name} pulled the left lever",
+    "pulledTheMiddleLever": "{name} pulled the middle lever",
+    "pulledTheRightLever": "{name} pulled the right lever",
+    "beenInjected": "{name} has been injected"
+  },
   "setup": {
+    "gatherSets": "Gather all cards from <i>The Labyrinths of Lunacy</i> encounter set. This set is indicated by this icon:<section class='encounter-sets'><img src='{setImgPath}/in-the-labyrinths-of-lunacy.png'></section>",
+    "singleGroup": "Bởi vì bạn đang chơi chế độ <i>Single Group</i>, tập hợp tất cả lá bài ở trong bộ encounter <i>Single Group</i>.",
     "actDeckGroupA": "Xây dựng bộ bài Act chỉ bằng các phiên bản Nhóm A của Act 1 và 2. Loại bỏ các phiên bản Act khác khỏi màn chơi.",
     "actDeckGroupB": "Xây dựng bộ bài Act chỉ bằng các phiên bản Nhóm B của Act 1 và 2. Loại bỏ các phiên bản Act khác khỏi màn chơi.",
     "actDeckGroupC": "Xây dựng bộ bài Act chỉ bằng các phiên bản Nhóm C của Act 1 và 2. Loại bỏ các phiên bản Act khác khỏi màn chơi.",
@@ -12,39 +33,115 @@
     "chamberOfRainAndSorrows": "Đặt vị trí Chamber of Rain và Chamber of Sorrows vào màn chơi. Ngẫu nhiên chọn một điều tra viên bắt đầu màn chơi tại Chamber of Rain. Các điều tra viên khác bắt đầu màn chơi tại Chamber of Sorrows.",
     "chamberOfNightAndRegret": "Đặt vị trí Chamber of Night và Chamber of Regret vào màn chơi. Mỗi điều tra viên bắt đầu màn chơi tại vị trí Chamber of Night",
     "setAside": "Đặt các lá bài sau sang một bên, ngoài khu vực chơi: Key of Mysteries, Mysterious Syringe, Eixodolon, Eixodolon’s Pet, Rot Diagram, Hunger Diagram, Decay Diagram, 2 bản sao của Faceless Abductor, và mỗi vị trí khác.",
-    "eixodolonsNote": "Trưởng nhóm có quyền kiểm soát Eixodolon’s Note.",
     "keyOfMysteries": "Bởi vì bạn đang chơi chế độ <i>Single Group</i>, đặt lá bài Key of Mysteries được để một bên hồi đầu vào chơi tại vị trí Chamber of Secrets.",
-    "hiddenChamberOfSecrets": "Bởi vì bạn đang chơi chế độ <i>Single Group</i>, ngẫu nhiên chọn 1 trong 3 lá bài Chamber of Secrets và đặt nó bên dưới lá bài scenario reference, mà không nhìn vào mặt để lộ của nó."
+    "hiddenChamberOfSecrets": "Bởi vì bạn đang chơi chế độ <i>Single Group</i>, ngẫu nhiên chọn 1 trong 3 lá bài Chamber of Secrets và đặt nó bên dưới lá bài scenario reference, mà không nhìn vào mặt để lộ của nó.",
+    "eixodolonsNote": "Trưởng nhóm có quyền kiểm soát Eixodolon’s Note.",
+    "addTokens": "Add 2 of this group's chaos tokens to the chaos bag (Group A: Elder Thing, Group B: Tablet, Group C: Cultist)."
   },
   "skull": {
+    "takeDamage": "Take 1 damage",
     "takeHorror": "Nhận 1 horror."
+  },
+  "chamberOfSorrows": {
+    "takeClue": "Take control of 1 clue on an investigator in either Chamber of Sorrows or Chamber of Rain (or from that location if you are the only investigator in the game)."
+  },
+  "chamberOfRegret": {
+    "label": {
+      "whichLever": "You pull one of the 3 levers (choose one): left, middle, or right. As soon as you do, the gate slams shut behind you. You cannot leave the Chamber of Regret for the remainder of the current act.",
+      "left": "Pull the left lever",
+      "middle": "Pull the middle lever",
+      "right": "Pull the right lever"
+    }
+  },
+  "labyrinthineHalls": {
+    "chooseDrawCards": "You find an old lockbox in a pile of refuse, and decide to leave something behind. Choose an investigator to draw 2 cards.",
+    "chooseGainResources": "You find the corpse of someone you think you once knew, and wish you could have saved them. Choose an investigator to gain 4 resources.",
+    "chooseAdditionalActions": "You peer through an overgrown mirror and see an unfamiliar reflection. Choose an investigator to take 2 additional actions during their next turn.",
+    "additionalActions": "Labyrinthine Halls"
+  },
+  "torturedVictim": {
+    "label": {
+      "discardRandomCard": "Discard a random card from your hand",
+      "takeAttack": "Tortured Victim makes an immediate attack against you"
+    }
+  },
+  "unnaturalWeariness": {
+    "loseResources": "Lose 3 resources",
+    "loseAction": "Lose 1 action",
+    "discardRandomCard": "Discard a random card from your hand"
   },
   "act2Setup": {
     "title": "Chuẩn bị Act 2",
     "shuffleEncounterDeck": "Xào mỗi lá bài Faceless Abductor để một bên hồi đầu và chồng bài encounter bỏ vào chồng bài encounter.",
     "labyrinthineHalls": "Đặt 3 vị trí Labyrinthine Halls để một bên hồi đầu vào màn chơi.",
     "chamberOfDecay": "Đặt vị trí Chamber of Decay để một bên hồi đầu vào màn chơi.",
+    "chambersOfRotAndPoison": "Put the set-aside Chamber of Rot and Chamber of Poison into play.",
     "chamberOfHunger": "Đặt vị trí Chamber of Hunger để một bên hồi đầu vào màn chơi",
-    "eixodolonsPet": "Đặt lá bài Eixodolon’s Pet để một bên hồi đầu vào màn chơi, gần vị trí Chamber of Hunger, nhưng không ở một vị trí cụ thể. Trong khi không ở một vị trí cụ thể, lá bài này được xem là \"bị khóa\"."
+    "eixodolonsPet": "Đặt lá bài Eixodolon’s Pet để một bên hồi đầu vào màn chơi, gần vị trí Chamber of Hunger, nhưng không ở một vị trí cụ thể. Trong khi không ở một vị trí cụ thể, lá bài này được xem là \"bị khóa\".",
+    "removeDoom": "Remove all doom from play and proceed to act 2a and agenda 2a."
   },
   "act3Setup": {
     "title": "Chuẩn bị Act 3",
     "abandonedWarehouse": "Đặt vị trí Abandoned Warehouse để một bên hồi đầu vào màn chơi.",
     "moveInvestigators": "Tách rời tất cả kẻ địch đang đeo bám và di chuyển mỗi điều tra viên còn sống đến vị trí Abandoned Warehouse.",
-    "eixodolon": "Đặt kẻ địch Eixodolon để một bên hồi đầu vào chơi tại vị trí Abandoned Warehouse."
+    "eixodolon": "Đặt kẻ địch Eixodolon để một bên hồi đầu vào chơi tại vị trí Abandoned Warehouse.",
+    "removeDoom": "Remove all doom from play and proceed to act 3a and agenda 3a."
+  },
+  "theLevers": {
+    "title": "Which Lever?",
+    "match": "<p>The investigator who pulled the lever examines the Chamber of Secrets underneath the scenario reference card. It matches! The gate ascends, and the door in the Chamber of Night opens. Resolve <b>Act 2 Setup</b>.</p>",
+    "noMatch": "<p>The investigator who pulled the lever examines the Chamber of Secrets underneath the scenario reference card. It does not match. Rows of razor-sharp blades emerge from the walls of the chamber, dissecting you with horrifying precision. You are killed. Resolve <b>Act 2 Setup</b>.</p>",
+    "noLever": "<p><i>Time is up. You rush to the levers, but you are too late. Rows of razor-sharp blades emerge from the walls of the chamber, dissecting you with horrifying precision.</i></p><p>The investigator nearest to the Chamber of Regret is killed. <i>(In the event of a tie, the investigators decide.)</i> Resolve <b>Act 2 Setup</b>.</p>"
+  },
+  "seepingDeath": {
+    "title": "The Pit of Poison",
+    "injected": "<p>You have \"been injected\"—the sludge is disgusting but harmless. Resolve <b>Act 3 Setup</b>.</p>",
+    "notInjected": "<p>You have not \"been injected\"—the poison seeps through your skin, devouring your organs from inside. You are killed. Resolve <b>Act 3 Setup</b>.</p>",
+    "noValve": "<p><i>The floors and walls of the entire labyrinth shift and turn, and you lose your balance. Sliding along the floor as gravity twists, you are knocked into the poisonous pit.</i></p><p>Move each investigator to the Chamber of Poison. Each investigator in this group who has not \"been injected\" is killed. Resolve <b>Act 3 Setup</b>.</p>"
+  },
+  "thePet": {
+    "title": "Endless Hunger",
+    "victory": "<p><i>You breathe a sigh of relief as the creature crumples lifelessly to the ground.</i></p><p>Resolve <b>Act 3 Setup</b>.</p>",
+    "breaksFree": "<p><i>The creature smashes through the glass of its terrarium and lashes out hungrily at anyone nearby.</i></p><p>Move Eixodolon's Pet to Chamber of Hunger. It attacks each investigator in the Chamber of Hunger, in player order. Resolve <b>Act 3 Setup</b>.</p>"
   },
   "resolutions": {
+    "label": {
+      "endScenario": "End the scenario here",
+      "playAnotherGroup": "Continue the mini-campaign as another group"
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_If no resolution was reached (each investigator was defeated)_: Go to _Resolution 1_.</p>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Trong tay kẻ xấu, nỗi thống khổ của bạn là một vũ khí lợi hại. Máu của bạn cung cấp năng lượng cho biểu tượng huyền bí được chạm khắc trên nền xi măng ở lõi mê cung. Đối với kẻ chủ mưu tàn ác đã bẫy bạn ở đây, đó là một khoảnh khắc đắc thắng và chứng minh hắn đã đúng. Cả thế giới sẽ cảm thấy nỗi đau này. Nỗi sợ hãi này. Sự tuyệt vọng này.</p><ul><li>Các điều tra viên thất bại.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Kẻ chủ mưu khuỵu xuống, mặt nạ nứt toác. Máu chảy ra từ vết thương hở lên trên nền xi măng. Hắn ta thở khò khè, \"Bọn ngươi thực sự nghĩ rằng bọn ngươi có thể trốn thoát?\" Giọng nói méo mó của hắn ta đầy đau đớn nhưng cũng đầy đắc thắng. “Bọn ngươi thực sự nghĩ rằng… ta sẽ để bọn ngươi rời khỏi nơi này sao?” Cơ thể tắn ta gục xuống đất. Thấy có cơ hội tẩu thoát, bạn lao vào cửa sắt khóa bạn lại trong nhà kho. Với một nỗ lực liều lĩnh, cuối cùng bạn cũng có thể phá móc khóa và mở những cánh cửa nặng nề.</p><p>Một luồng không khí lạnh buổi tối bất chợt thổi qua người bạn. Bạn ngạc nhiên khi nhìn thấy những bến tàu bằng gỗ ở bên sông Miskatonic. Một vài con vịt ngạc nhiên và bơi khỏi bến tàu gần nhất. Nước ập vào bờ. Bạn nghe thấy những người thợ đóng tàu nói về công việc kinh doanh của họ, ngày làm việc của họ gần như kết thúc khi mặt trời lặn xuống ở phía trái bạn. Đi được vài bước thì bạn ngã quỵ xuống đất. Bạn đã quá kiệt sức và bị thương nặng để đi tiếp. Một người thợ đóng tàu kêu lên \"Ai đó?\" “Có người bị thương — nhanh lên, đưa họ đến bệnh viện St. Mary’s!” Bạn bất tỉnh nhân sự ngay khi một người đàn ông vạm vỡ nâng bạn vào vòng tay của anh ấy.</p><p>Bạn tỉnh dậy và nhận thấy rằng mình đang ở một nơi xa lạ, không có ký ức về việc mình đã đến đây bằng cách nào. Cơ bắp của bạn yếu ớt và không cử động như ý muốn. Tầm nhìn thì mờ đi. Chỉ việc nhấc chân dậy cũng đòi hỏi một nỗ lực rất lớn. Đôi chân của bạn run run và hầu như không thể nâng đỡ trọng lượng cơ thể. Một tờ giấy trên mặt đất gần đó viết:</p><blockquote><i>Greetings. I have gathered you here as an experiment. Think of this as a test of human will. You will survive. Or you will die…</i></blockquote><ul><li>Các điều tra viên sống sót, nhưng trong một dòng thời gian khác, mê cung có một vị khách mới.</li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Kẻ chủ mưu khuỵu xuống, mặt nạ nứt toác. Máu chảy ra từ vết thương hở lên trên nền xi măng. Hắn ta thở khò khè, \"Bọn ngươi nghĩ bọn ngươi có thể giết ta?\" Giọng nói của hắn ta méo mó trong đau đớn nhưng đầy kiêu ngạo. Ta ở khắp mọi nơi mọi lúc. Vật chứa này là chỉ là một trong đó. Còn rất nhiều vật chứa khác. Và nếu chỉ cần một trong chúng được chứng minh là đúng, ta sẽ không bao giờ thật sự chết đi.\" Cơ thể hắn ta ngã rũ xuống nền đất. Thấy có cơ hội tẩu thoát, bạn lao vào cửa sắt khóa bạn lại trong nhà kho. Với một nỗ lực liều lĩnh, cuối cùng bạn cũng có thể phá móc khóa và mở những cánh cửa nặng nề.</p><p>Một luồng không khí lạnh buổi tối bất chợt thổi qua người bạn. Bạn ngạc nhiên khi nhìn thấy những bến tàu bằng gỗ ở bên sông Miskatonic. Một vài con vịt kêu quang quác và bơi khỏi bến tàu gần nhất. Nước ập vào bờ. Bạn nghe thấy những người thợ đóng tàu nói về công việc kinh doanh của họ, ngày làm việc của họ gần như kết thúc khi mặt trời lặn xuống ở phía trái bạn. Đi được vài bước thì bạn ngã quỵ xuống đất. Bạn đã quá kiệt sức và bị thương nặng để đi tiếp. Một người thợ đóng tàu kêu lên \"Ai đó?\" “Có người bị thương — nhanh lên, đưa họ đến bệnh viện St. Mary’s!” Một người đàn ông vạm vỡ nhấc bạn lên, và đưa bạn đến bệnh viện.</p><p>Bằng cách nào đó, bạn đã thoát ra khỏi mê cung địa ngục của kẻ bắt giữ mình, nhưng những lời hấp hối của hắn ám ảnh suy nghĩ của bạn. Ý hắn là gì khi nói \"những vật chứa khác?\" Bạn nhớ lại những cảnh tượng kỳ lạ mà bạn đã thấy trong mê cung của hắn ta, và một ý nghĩ khủng khiếp ngấm vào tâm trí bạn. Kẻ bắt cóc đã đề cập đến các nhóm khác, nhưng bạn chưa bao giờ tìm thấy họ, và bạn không biết liệu họ có thoát được không. Bạn nói với cảnh sát rằng có những người khác và nài nỉ họ khám xét bến tàu, nhưng không có dấu vết của nhà kho mà bạn đã trốn thoát, cũng như của kẻ chủ mưu đã bẫy bạn ở đó…</p><ul><li>Các điều tra viên sống sót, nhưng Eixodolon vẫn tiếp tục tồn tại.</li></ul>"
     },
     "resolution4": {
-      "title": "Kết thúc thứ 4"
+      "title": "Kết thúc thứ 4",
+      "body": "<p>_Resolution 4_: Kẻ chủ mưu khuỵu xuống, mặt nạ nứt toác. Máu chảy ra từ vết thương hở lên trên nền xi măng. Đường nét cơ thể hắn ta vặn vẹo và mờ dần đi, giống như một nếp nhăn trong kết cấu của không gian và thời gian. \"Vậy là, nghi lễ đã thất bại!\" Tiếng cười cay đắng của hắn trở thành một tiếng thét đau đớn. “Có lẽ rốt cuộc nhân loại cũng có cơ hội. Cơn thống khổ, đau đớn này! Sức mạnh như vậy không dành cho con người sử dụng. Nó dành cho những người siêu việt hơn! ” Hắn ta thở hổn hển và khò khè, ngã quỵ xuống đất. Hắn ta khẩn cầu, “Đừng đi theo con đường mà tôi đã theo. Nó chỉ dẫn đến… tuyệt vọng.” Hơi thở của hắn ngừng lại.</p><p>Bạn đã bằng cách nào đó đánh bại kẻ bắt giữ mình, nhưng vẫn còn nhiều thắc mắc. Quyết định khám phá thêm mê cung, bạn tìm cách phá cánh cửa sắt dẫn vào các phần khác của khu phức hợp. Trước sự ngạc nhiên của bạn, bạn không tìm thấy nạn nhân nào khác bị mắc kẹt trong mê cung — chỉ có dấu hiệu của cuộc đấu tranh và dấu vết sinh tồn của họ.</p><p>Chỉ cần một cú đánh mạnh mẽ là có thể mở được ổ khóa niêm phong cửa sắt nhà kho. Âm thanh kim loại đập vào kim loại tăng gấp ba lần âm lượng của nó. Bạn không tin rằng kẻ bắt cóc bạn có ý định để bạn rời đi, nhưng bằng cách nào đó bạn đã bất chấp những rủi ro chồng chất chống lại bạn. Bạn tự hỏi liệu những người khác có đang mở những cánh cửa nặng nề này cũng vào chính thời điểm này không.</p><p>Một luồng không khí lạnh buổi tối bất chợt thổi qua người bạn. Bạn ngạc nhiên khi nhìn thấy những bến tàu bằng gỗ ở bên sông Miskatonic. Một vài con vịt ngạc nhiên và bơi ra khỏi bến tàu gần nhất. Nước ập vào bờ. Bạn nghe thấy những người thợ đóng tàu nói về công việc kinh doanh của họ, ngày làm việc của họ gần như kết thúc khi mặt trời lặn xuống phía trái bạn. Bạn nhìn mặt trời khuất dần dưới đường chân trời, và những người khác cũng thế.</p><ul><li>Các điều tra viên thành công!</li></ul>"
+    }
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1. Rút thêm một token khác.",
+      "cultist": "[skull]: -X. X là Cthulhu's Rage.\r\n[cultist]: -3. Nếu bạn thất bại và địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -3. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -1. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của Cthulhu deck. (Tối đa rút một lá mỗi round.)",
+      "tablet": "-4. Nếu bạn thất bại, lose 2 resources.",
+      "elderThing": "-4. Nếu bạn thất bại, discard a random card from your hand."
+    },
+    "hardExpert": {
+      "skull": "-1. Rút thêm một token khác. Nếu bạn thất bại, you must either chịu 1 damage or 1 horror.",
+      "cultist": "-3. Đặt 1 manh mối của bạn lên địa điểm của bạn.",
+      "tablet": "-4. Lose 2 resources.",
+      "elderThing": "-4. Discard a random card from your hand."
     }
   }
 }

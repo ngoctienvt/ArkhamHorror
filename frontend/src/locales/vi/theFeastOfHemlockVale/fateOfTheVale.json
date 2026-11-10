@@ -207,12 +207,12 @@
       "otherwise": "<p>_Otherwise:_</p><p>\"Nếu tôi không thể thoát khỏi đây, hãy tìm cháu gái tôi và đưa cho con bé thứ này. Con bé là tất cả những gì tôi còn lại,\" Gideon nói, đưa cho bạn một cuốn nhật ký hoen ố vì muối biển.</p><p class='basic right'>Loại bỏ 1 doom khỏi agenda hiện tại.</p>"
     },
     "judithPark": {
-      "title": "{'{'}codex{'}'} Codex 7: Judith Park",
+      "title": "[codex] Codex 7: Judith Park",
       "act2": "<h3>@:theFeastOfHemlockVale.fateOfTheVale.codex.judithPark.title </h3><p>_If it is Act 2:_</p><p>Judith bắn vào hư không phát sáng, rồi hạ súng trường xuống và nhìn chằm chằm vào những vòng xoáy ánh sáng và màu sắc. \"Thứ quái quỷ gì thế này?\"</p><p class='basic right'>Chọn một kẻ địch ở bất kỳ địa điểm nào và tự động evade nó. Một điều tra viên có thể kích hoạt codex này một lần nữa trong một act khác.</p>",
       "act3": "<p>_Otherwise:_</p><p>“Nếu chúng ta sống sót ra khỏi đây, bạn phải mời tôi một ly. Có một quán rượu lậu ở Boston pha loại rượu ngon nhất.” Cô ấy nhìn thẳng vào mắt bạn. “Và không, tôi không chấp nhận lời từ chối đâu.”</p><p class='basic right'>Tìm trong deck, trên tay, và discard pile của bạn một lá bài _Weapon_ và play nó, bỏ qua mọi cost.</p>"
     },
     "theoPeters": {
-      "title": "{'{'}codex{'}'} Codex 8: Theo Peters",
+      "title": "[codex] Codex 8: Theo Peters",
       "act2": "<h3>@:theFeastOfHemlockVale.fateOfTheVale.codex.theoPeters.title </h3><p>_If it is Act 2:_</p><p>“Nó thật đẹp,” Theo nhìn lên ánh sáng lung linh và đưa một tay ra, như thể muốn chạm vào nó. “Đẹp bằng ít nhất năm buổi hoàng hôn cộng lại. Tôi ước Lizzie có thể nhìn thấy cảnh này.” Anh dừng lại. “Thực ra, tôi mừng vì cô ấy không thể.”</p><p class='basic right'>Bạn có thể tìm một địa điểm trong The Abyss, đưa nó vào khu vực chơi, và ngay lập tức di chuyển đến đó. Một điều tra viên có thể kích hoạt codex này một lần nữa trong một act khác.</p>",
       "otherwise": "<p>_Otherwise:_</p><p>“Chị tôi đã đúng,” Theo trầm ngâm nói. “Chị ấy đã đúng về mọi thứ. Tôi chỉ hy vọng mình sẽ được gặp lại chị ấy.”</p><p class='basic right'>Disengage khỏi mọi kẻ địch và di chuyển đến bất kỳ địa điểm nào.</p>"
     },

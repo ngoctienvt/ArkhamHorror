@@ -1,44 +1,92 @@
 {
   "heading": "Màn VI",
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *A Light in the Fog*, *Creatures of the Deep*, *Flooded Caverns*, *Rising Tide*, *Syzygy*, and *Striking Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/a-light-in-the-fog.png' /><img src='{setImgPath}/undersea-creatures.png' /><img src='{setImgPath}/flooded-caves.png' /><img src='{setImgPath}/rising-tide.png' /><img src='{setImgPath}/syzygy.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
+    "placeLocations": "Đặt Falcon Point Gatehouse, Falcon Point Cliffside, Lighthouse Stairwell và Lighthouse Keeper's Cottage vào chơi cùng một hàng. Đặt Lantern Room vào chơi ngay phía trên Lighthouse Stairwell. <i>(Xem phần Vị trí sắp xếp (Act 1))</i> .",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Falcon Point Gatehouse.",
     "removeUndergroundRivers": "Trong số các vị trí Tidal Tunnel, hãy loại bỏ 2 vị trí Underground River khỏi màn chơi.",
     "setAsideOtherLocations": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
     "placeKeys": "Đặt từng chìa khóa sang một bên, như sau:",
+    "faceupKeys": "Đặt các chìa khóa trắng, đen, xanh biển, vàng và đỏ sang một bên, ngửa lên.",
     "facedownKeys": "Đặt các chìa khóa tím và xanh lá sang một bên, úp xuống. Xáo trộn chúng để bạn không biết cái nào là cái nào.",
-    "setAsideCards": "Đặt những lá bài sau đây sang một bên: kẻ địch Oceiros Marsh, cả 2 lá bài treachery Worth His Salt, và cả 2 lá bài treachery Taken Captive.",
-    "floodTokens": "Thêm token lũ lụt vào kho chứa token.",
     "captured": "Đặt lá bài “Captured!” vào chơi bên cạnh lá bài tham chiếu của màn chơi, với mặt câu chuyện của nó được ngửa lên. (Lá bài này là mặt còn lại của vị trí Holding Cell.) Các dòng chữ trên nó đang được hoạt động.",
+    "setAsideCards": "Đặt những lá bài sau đây sang một bên: kẻ địch Oceiros Marsh, cả 2 lá bài treachery Worth His Salt, và cả 2 lá bài treachery Taken Captive.",
     "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch.",
-    "checkCampaignLogDoom": "Kiểm tra Nhật ký Chiến dịch."
+    "wavewornIdol": "Tìm trong bộ sưu tập lá bài Waveworn Idol và đặt nó sang một bên, ngoài khu vực chơi.",
+    "awakenedMantle": "Tìm trong bộ sưu tập lá bài Awakened Mantle và đặt nó sang một bên, ngoài khu vực chơi.",
+    "headdressOfYhaNthlei": "Tìm trong bộ sưu tập lá bàiHeaddress of Y'ha-nthlei và đặt nó sang một bên, ngoài khu vực chơi.",
+    "checkCampaignLogDoom": "Kiểm tra Nhật ký Chiến dịch.",
+    "afterSunrise": "Nếu <i>các điều tra viên đến Falcon Point sau khi mặt trời mọc</i>:",
+    "tideHasGrownStronger": "If _the tide has grown stronger_, place 1 doom on agenda 1.",
+    "floodTokens": "Thêm token lũ lụt vào kho chứa token."
   },
+  "specialRules": [
+    {
+      "title": "Chìa khóa",
+      "body": "<div class='red bordered'><p class='basic'>During this scenario, keys represent the following:</p><ul><li>Đỏ: Một chiếc chìa khóa mạ vàng làm bằng san hô và được bao phủ bởi những chữ rune phát sáng kỳ lạ. Từ \"Y'ha-nthlei\" được khắc trên tay cầm.</li><li>Xanh biển: Một chiếc chìa khóa được chạm khắc hình mắt cá căng đầy.</li><li>Màu xanh lá cây: Một cục đá Peridot thô có kích thước bằng nắm tay, rung và phát một thứ ánh sáng không tự nhiên.</li><li>Vàng: Một vòng sắt nặng chứa đầy chìa khóa phòng giam.</li><li>Tím: Ấu trùng đã chết của một con cá dị dạng.</li><li>Đen: Bản đồ độ sâu bên dưới Rạn San Hô Quỷ.</li><li>Trắng: Kính viễn vọng bỏ túi.</li></ul></div>"
+    }
+  ],
   "intro": {
     "title": "Màn chơi VI: Ánh đèn trong sương mù",
     "body": "<p>Sương mù màu đỏ thẫm bao phủ bầu trời khi bạn đến cổng của Falcon Point. Trên đỉnh những vách đá phía trên bạn, ngọn hải đăng chiếu sáng xuyên qua màn sương mù. Xem xét tình trạng của thị trấn Innsmouth, bạn tự hỏi mục đích của tín hiệu này là gì. Bạn nghi ngờ không có con tàu nào ngoài biển do thời tiết xấu.</p><p>Đâu đó bên trong chỗ này là bằng chứng bạn tìm thấy vài tuần trước. Bạn nghi ngờ rằng Oceiros—kẻ đã bắt bạn và bỏ mặc bạn trong cái hố đó cho đến chết—cũng cư trú bên trong. \"Cậu đã sẵn sàng chưa?\" Đặc vụ Harper hỏi. \"Chúng ta không có lối thoát thực sự ở đây, nếu mọi chuyện đi theo chiều hướng xấu. Hãy chuẩn bị cho bất cứ gì có thể xảy ra.\"</p><p>Bạn gật đầu. Bây giờ đã quá muộn để quay lại. Một cách kiên định, bạn tiến về phía vách đá. Bằng cách nào đi chăng nữa, chuyện này sẽ kết thúc vào ngày hôm nay.</p>"
   },
   "flashback12": {
-    "title": "Hồi tưởng XII"
+    "title": "Hồi tưởng XII",
+    "body": "<div class='blue'><h1>Flashback XII</h1><p>You peer up at Falcon Point lighthouse, but from much farther below. You are aboard Mr. Moore’s fishing vessel, during your voyage to Devil Reef several weeks earlier. The ship sways back and forth as angry waves thrash against its hull. “’Fraid it’s gon’ be a bit rocky,” the ship captain shouts over the crashing of the tumultuous sea. “Weather’s been awful wild of late. Strange tides an’ stranger winds.”</p><p>Nhưng bạn vẫn nhìn chằm chằm ngọn hải đăng đáng ngại, đèn hiệu của nó là đèn dẫn đường, dấu hiệu cảnh báo, hoặc cả hai. Tò mò về những điều mà ông ấy có lẽ biết, bạn hỏi ông Moore về ngọn hải đăng. \"Ngọn hải đăng cũ đó à? Đã ở đó lâu hơn cả thị trấn Innsmouth. Gia đình Marsh đã duy trì nó hoạt động từ khi tôi biết tới. Oceiros hiện là người trông giữ. Anh bạn kỳ lạ, Oceiros đó. Người ta nói nơi duy nhất trong thị trấn mà anh ta ghé thăm là sảnh đường của Dòng Dagon của New Church Green.\" Ông ấy lắc đầu.</p><p>You wonder if there are more secrets inside that lighthouse than meets the eye. Mr. Moore seems to note your curiosity. “I’ve heard them Marshes’ve carved out caverns beneath the lighthouse goin’ all the way down to sea level an’ beyond,” he claims. “Dunno if that’s true, but sometimes when I’m out ta sea I’ve seen groups of ‘em up by the cliffside, all wavin’ an’ kneelin’ like they’re prayin’ or something. Never really paid it much mind, but...” his voice grows quieter. “Jus’ thought you oughta know.”</p><p>Bạn gật đầu và cảm ơn ông ấy. Nếu những gì ông ấy nói là đúng thì có lẽ bạn nên ghé thăm ngọn hải đăng này. Bạn ghi nhớ để nghiên cứu thêm về Falcon Point một khi quay trở lại thị trấn.</p><p>Khi tâm trí bạn quay trở lại hiện tại, bạn nhớ lại công việc bạn đã làm sau chuyến thám hiểm tới Rạn San Hô Quỷ và thông tin bạn tìm thấy trên mạng lưới đường hầm rộng lớn bên dưới ngọn hải đăng…</p><hr /><p class='basic'>In your Campaign Log, under “Memories Recovered,” record *a conversation with Mr. Moore.*</p><p class='basic'>Chọn và loại bỏ một trong các token hỗn mang sau khỏi túi hỗn mang trong phần còn lại của chiến dịch ([cultist], [tablet] hoặc [elder_thing])</p><p class='basic'>The lead investigator gains 1 {'{'}perPlayer{'}'} clues from the token pool.</p></div>"
   },
   "flashback13": {
-    "title": "Hồi tưởng XIII"
+    "title": "Hồi tưởng XIII",
+    "body": "<div class='blue'><h1>Flashback XIII</h1><p>Bạn nói chuyện với một trong số rất nhiều thủy thủ thường lui tới quán rượu xiêu vẹo cạnh bến tàu Innsmouth, nằm đâu đó trong khu ổ chuột phía đông nam của cảng biển đổ nát. Bạn tìm thấy ông ta đang ở một góc nhỏ của quán rượu để giấu mình và đắm chìm trong rượu. Thế thì càng tốt—bạn muốn giữ kín cuộc điều tra của mình.</p><p>You jot down notes as the drunken man rambles on about the creatures he’s seen swimming off the coast and prowling around the reefs. “Deep Ones,” he names them. “Caught one in my net once,” he blabbers through slurred speech. “She an’ her eggs—tha’s right!—’er eggs, bigger’n your fist, an’ squirmin’ an’ wrigglin’, too!”</p><p>Say mê với việc kể câu chuyện cho những người thủy thủ của mình, ông giải thích thêm: \"Nó ôm một số chúng trong tay. Con quỷ nhỏ bé, với đôi mắt lồi ra đầy căm thù. Không thể chịu đựng được cảnh tượng đó. Tôi đã ném chiếc lưới ngay khi tôi nhận ra mình đã đánh bắt được thứ gì và quay lại ngay. Nếu có thể tôi sẽ không bao giờ ra khơi nữa.\"</p><p>Bạn nghiền ngẫm thông tin mới này trong đầu. Nếu người đàn ông này nói thật thì những sinh vật này dường như có vòng đời tương tự như loài cá. Nhưng sau đó, mục đích của những sinh vật lai kỳ lạ mà bạn thấy lẩn trốn trong thị trấn là gì? Có phải chúng chỉ là sự tưởng tượng của trí tưởng tượng đầy sợ hãi của bạn? Hay có phần nào nguy hiểm hơn nhiều trong vòng đời này mà bạn đang bỏ lỡ?</p><hr /><p class='basic'>In your Campaign Log, under “Memories Recovered,” record *the lifecycle of a “Deep One.”*</p><p class='basic'>Chọn và loại bỏ một trong các token hỗn mang sau khỏi túi hỗn mang trong phần còn lại của chiến dịch ([cultist], [tablet] hoặc [elder_thing])</p></div>"
   },
   "resolutions": {
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Kiệt sức, bạn ném mình lên bờ đá. Sóng vỗ vào mắt cá chân của bạn khi bạn nhìn lên bầu trời. Đằng sau những đám mây, màu đỏ thẫm báo hiệu một kết cục đáng ngại cho toàn nhân loại. Hộp sọ của bạn đau đớn khi bạn cố gắng nhớ tại sao. Mặt trăng và mặt trời thẳng hàng nhau. Một tiếng sấm sét vang lên ở phía xa. Những đám mây đen cuộn xoáy và sôi sục trên đại dương đầy hận thù. Tất cả nó có nghĩa gì? Sự thật đằng sau Dòng Dagon bí truyền là gì? Sự thật ẩn giấu trong Rạn San Hô Quỷ là gì? Bóng tối lại xâm chiếm các giác quan của bạn một lần nữa.</p>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Sự kiệt sức và tuyệt vọng ăn mòn cơ bắp của bạn khi bạn trốn vào khu rừng tối tăm xung quanh Falcon Point. Bạn biết rằng việc ngừng di chuyển là quá nguy hiểm nhưng bạn khó có thể đứng vững. Bạn dựa mình vào một cái cây gần đó và nhìn lên bầu trời. Đằng sau những đám mây, màu đỏ thẫm báo hiệu một kết cục đáng ngại cho toàn nhân loại. Hộp sọ của bạn đập mạnh khi bạn cố gắng nhớ lý do tại sao. Mặt trăng và mặt trời thẳng thành một hàng. Một tiếng sấm sét vang lên ở phía xa. Những đám mây đen cuộn xoáy và sôi sục trên đại dương đầy thù hận. Tất cả nó có nghĩa gì? Sự thật đằng sau Dòng Dagon bí truyền là gì? Sự thật ẩn giấu trong Rạn San Hô Quỷ là gì? Bóng tối lại xâm chiếm các giác quan của bạn một lần nữa.</p>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Bạn hoảng sợ khi mực nước dâng cao tới tận trần hang. Không còn không khí để thở. Bạn cảm thấy những dòng nước kéo bạn ngày càng mạnh hơn bên dưới bề mặt, nơi đôi mắt lồi, rực sáng của Deep Ones đang chờ đợi. Tuyệt vọng, bạn bơi đến cửa hầm của ngọn hải đăng. Hy vọng duy nhất của bạn là mở nó ra và bò lên các tòa nhà phía trên, nơi oxy ngọt ngào đang chờ đợi. Bạn xô đẩy bằng tất cả sức lực của mình, tất cả niềm hy vọng, trí tưởng tượng, lòng cầu nguyện rằng bất cứ lúc nào sức mạnh của bạn sẽ mở được nắp cửa. Phổi của bạn sắp nổ tung rồi. KHÔNG! Đây không thể là kết thúc! Bạn vùng vẫy và chiến đấu để sinh tồn nhưng ổ khóa không hề nhúc nhích. Khao khát không khí, phổi của bạn không ngừng trao đổi. Cổ họng bạn đầy nước muối lạnh. Cảm giác mắt cá chân bị một bàn tay có màng nắm chặt là điều cuối cùng bạn cảm nhận được.</p>"
     },
     "resolution4": {
-      "title": "Kết thúc thứ 4"
+      "title": "Kết thúc thứ 4",
+      "body": "<p>_Resolution 4_: Coming here was a terrible mistake. Falcon Point is no simple lighthouse, but a headquarters for the Order of Dagon, even more hostile and deadly than the town of Innsmouth you left behind. With danger at every turn and the hateful lighthouse keeper hot on your tail, you leave the secrets of the lighthouse behind and flee into the dark woods.</p><p>Khi bạn đã đi quá sâu vào hàng cây để có thể nhìn thấy ngọn hải đăng, bạn đã hoàn toàn kiệt sức. Bạn biết rằng việc ngừng di chuyển là quá nguy hiểm nhưng bạn thậm chí còn khó có thể đứng vững. Bạn dựa mình vào một cái cây gần đó và nhìn lên bầu trời. Đằng sau những đám mây, màu đỏ thẫm báo hiệu một kết cục đáng ngại cho toàn nhân loại. Hộp sọ của bạn đập mạnh khi bạn cố gắng nhớ lý do tại sao. Mặt trăng và mặt trời thẳng thành một hàng. Một tiếng sấm sét vang lên ở phía xa. Những đám mây đen cuộn xoáy và sôi sục trên đại dương đầy thù hận. Tất cả nó có nghĩa gì? Sự thật đằng sau Dòng Dagon bí truyền là gì? Sự thật ẩn giấu trong Rạn San Hô Quỷ là gì? Bóng tối lại chiếm hữu bạn một lần nữa.</p>"
     }
   },
-  "specialRules": [
-    {
-      "title": "Chìa khóa"
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1. If your location is flooded, reveal an additional chaos token.",
+      "cultist": "-2. Nếu bạn thất bại, after this test ends, increase the flood level of your location.",
+      "tablet": "-3. If you fail this test and your location is flooded, chịu 1 damage.",
+      "elderThing": "-4. Nếu bạn thất bại, move the nearest ready unengaged enemy once toward your location. It loses aloof during this movement."
+    },
+    "hardExpert": {
+      "skull": "-2. If your location is flooded, reveal an additional chaos token.",
+      "cultist": "-2. Nếu bạn thất bại, after this test ends, increase the flood level of your location (if you cannot, chịu 1 horror instead).",
+      "tablet": "-3. If you fail this test and your location is flooded, chịu 2 damage.",
+      "elderThing": "-4. Move the nearest unengaged enemy once toward your location. It loses aloof during this movement."
     }
-  ]
+  },
+  "pumpRoom": {
+    "label": {
+      "decreaseFlood": "Choose location to decrease flood level",
+      "increaseFlood": "Choose location to increase flood level"
+    }
+  },
+  "tooltips": {
+    "theMoonRoom": {
+      "resign": "You don one of the the empty diving suits and dive into the reflecting pool"
+    },
+    "falconPointGatehouse": {
+      "resign": "You head back into the woods, leaving the lighthouse and its mysteries behind."
+    }
+  },
+  "worshippersOfTheDeep": {
+    "label": {
+      "moveBelow": "Move to the location directly below their location"
+    }
+  }
 }

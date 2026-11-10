@@ -1,33 +1,86 @@
 {
   "heading": "Màn II",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 (-3 instead if Hunting Horror is at your location.)",
+      "cultist": "-1. Nếu bạn thất bại, search the encounter deck, discard pile, and the void for Hunting Horror and spawn it at your location, if able.",
+      "tablet": "-2. Return 1 of your clues to your current location.",
+      "elderThing": "-3. Nếu bạn thất bại, discard an asset you control."
+    },
+    "hardExpert": {
+      "skull": "-2 (-4 instead if Hunting Horror is at your location.)",
+      "cultist": "-3. Nếu bạn thất bại, search the encounter deck, discard pile, and the void for Hunting Horror and spawn it at your location, if able.",
+      "tablet": "-4. If Hunting Horror is at your location, it immediately attacks you.",
+      "elderThing": "-5. Nếu bạn thất bại, discard an asset you control."
+    }
+  },
   "intro": {
     "title": "Màn II: Viện bảo tàng Miskatonic",
+    "body": "<p>Vài tháng trước, Armitage và các đồng nghiệp đã ngăn chặn cơn kinh hoàng đang hoành hành xé toạc Dunwich, một ngôi làng tách biệt cách thị trấn Arkham vài giờ về phía tây bắc. Lúc đầu, bạn tưởng tượng con thú này là một con gấu bị dại, hoặc có thể tệ hơn thế, nhưng mô tả của giáo sư về sinh vật này thì lại hoàn toàn khác.</p><p>Mọi chuyện bắt đầu khi một người tên là Wilbur Whateley bước vào Thư viện Orne để tìm bản dịch tiếng Latin của Olaus Wormius cho cuốn sách có tên Necronomicon. Wilbur đã sở hữu một bản dịch sang tiếng Anh của tiến sĩ John Dee, nhưng nó không đủ cho mục đích của anh ta. Armitage từ chối anh ta, lo sợ rằng không biết người đàn ông lạ mặt này muốn dùng cuốn sách để làm gì. Whateley trở lại trong bí mật, hy vọng lấy cắp được cuốn sách, nhưng bị tấn công bởi con chó săn bảo vệ trường đại học. Armitage, Rice và Morgan sau đó đã phát hiện ra xác của Whateley. Mô tả về cái xác chết kinh tởm này là nó phần nào giống hình người và phủ đầy lông, với lớp da dày cùng những xúc tu màu xanh lục - khiến bạn tự hỏi liệu Whateley có thực sự là con người hay không.</p>",
+    "proceedToPart1": "<div class='basic right'><p>Check Campaign Log. If *Dr. Henry Armitage was kidnapped*:</p><p>Proceed to _Part 1_</p></div>",
+    "proceedToPart2": "<div class='basic right'><p>If *the investigators rescued Dr. Henry Armitage*:</p><p>Skip to _Part 2_.</p></div>",
     "part1": {
-      "title": "Màn II: Viện bảo tàng Miskatonic"
+      "title": "Màn II: Viện bảo tàng Miskatonic",
+      "body": "<p>_Part 1_: Các ghi chú được viết bởi tiến sĩ Armitage trong nhật ký nhấn mạnh mong muốn của Whateley có được cuốn sách Necronomicon cho một số mục đích khủng khiếp. Khi bạn đọc tiếp, có vẻ như tiến sĩ Armitage đã mang bản sao cuốn sách của trường đại học cho Harold Walsted - người phụ trách viện bảo tàng Miskatonic - để bảo quản an toàn trong Restricted Hall (khu vực hạn chế) của viện bảo tàng. Mặc dù bạn thấy lo lắng cho người cố vấn của mình, nhưng bạn cũng lo lắng không kém rằng những kẻ bắt cóc tiến sĩ Armitage có thể lấy được cuốn sách Necronomicon này. Bạn quyết định đi đến viện bảo tàng để ngăn cản chúng có được nó.</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
     },
     "part2": {
-      "title": "Màn II: Viện bảo tàng Miskatonic"
-    },
-    "body": "<p>Vài tháng trước, Armitage và các đồng nghiệp đã ngăn chặn cơn kinh hoàng đang hoành hành xé toạc Dunwich, một ngôi làng tách biệt cách thị trấn Arkham vài giờ về phía tây bắc. Lúc đầu, bạn tưởng tượng con thú này là một con gấu bị dại, hoặc có thể tệ hơn thế, nhưng mô tả của giáo sư về sinh vật này thì lại hoàn toàn khác.</p><p>Mọi chuyện bắt đầu khi một người tên là Wilbur Whateley bước vào Thư viện Orne để tìm bản dịch tiếng Latin của Olaus Wormius cho cuốn sách có tên Necronomicon. Wilbur đã sở hữu một bản dịch sang tiếng Anh của tiến sĩ John Dee, nhưng nó không đủ cho mục đích của anh ta. Armitage từ chối anh ta, lo sợ rằng không biết người đàn ông lạ mặt này muốn dùng cuốn sách để làm gì. Whateley trở lại trong bí mật, hy vọng lấy cắp được cuốn sách, nhưng bị tấn công bởi con chó săn bảo vệ trường đại học. Armitage, Rice và Morgan sau đó đã phát hiện ra xác của Whateley. Mô tả về cái xác chết kinh tởm này là nó phần nào giống hình người và phủ đầy lông, với lớp da dày cùng những xúc tu màu xanh lục - khiến bạn tự hỏi liệu Whateley có thực sự là con người hay không.</p>"
+      "title": "Màn II: Viện bảo tàng Miskatonic",
+      "body": "<p>_Part 2_: Armitage thở dài và nói, “Tôi và các đồng nghiệp đã nhanh chóng thực hiện thử thách phía sau,”. “Nhưng có vẻ như mọi thứ vẫn chưa được giải quyết hoàn toàn. Tôi sẽ nói với cậu phần còn lại sau, nhưng hiện tại, chúng ta bắt buộc phải có được bản sao của cuốn sách Necronomicon đó. Nếu trực giác của tôi chính xác thì những kẻ tấn công cậu gặp phải đang tìm kiếm nó. Sau tất cả những gì đã diễn ra, tôi không cảm thấy an toàn khi giữ nó ở thư viện, vì vậy tôi đã đưa nó cho người bạn tốt của mình, Harold Walsted. Ông là người phụ trách hiện tại của viện bảo tàng Miskatonic. Tôi nghĩ rằng nó sẽ an toàn trong Restricted Hall (khu vực hạn chế) của viện bảo tàng, nhưng bây giờ thì tôi không chắc lắm. Cậu phải lấy lại nó bằng mọi giá! Tôi vô cùng lo sợ những gì bọn họ có thể làm với các nghi thức có trong các trang sách… ”</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
+    }
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Miskatonic Museum*, *Bad Luck*, *Sorcery*, *The Beyond*, *Chilling Cold*, and *Locked Doors*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-miskatonic-museum.png' /><img src='{setImgPath}/bad-luck.png' /><img src='{setImgPath}/sorcery.png' /><img src='{setImgPath}/the-beyond.png' /><img src='{setImgPath}/chilling-cold.png' /><img src='{setImgPath}/locked-doors.png' /></section>",
     "placeLocations": "Đặt ngẫu nhiên một trong hai vị trí Administration Office và một trong hai vị trí Security Office vào màn chơi. Loại bỏ các bản sao của 2 vị trí trên khỏi màn chơi. Sau đó, đặt vị trí Museum Entrance and Museum Halls vào màn chơi. Các điều tra viên bắt đầu màn chơi tại vị trí Museum Entrance.",
     "exhibitDeck": {
       "instructions": "Đặt 6 lá vị trí “Exhibit Hall” sang một bên để tạo thành chồng bài “Exhibit”. Để tạo chồng bài, làm theo các bước sau:",
       "bottom": "Xào lá bài Exhibit Hall (Restricted Hall) và 2 lá Exhibit Hall ngẫu nhiên vào nhau để tạo thành 3 lá bài cuối cùng của chồng bài Exhibit, mặt chưa để lộ ngửa lên.",
       "top": "Sau đó, đặt 3 lá vị trí Exhibit Hall còn lại lên đầu theo thứ tự ngẫu nhiên. Tất cả 6 lá bài Exhibit Hall cần để mặt chưa để lộ lên trên, để người chơi không biết đâu là lá Exhibit Hall *(Restricted Hall)*."
     },
-    "setAside": "Đặt những lá bài sau sang một bên, ngoài màn chơi: Harold Walsted, Adam Lynch, The Necronomicon *(Olaus Wormius Translation)*, và Shadow-spawned."
+    "setAside": "Đặt những lá bài sau sang một bên, ngoài màn chơi: Harold Walsted, Adam Lynch, The Necronomicon *(Olaus Wormius Translation)*, và Shadow-spawned.",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to The Miskatonic Museum*, *Beyond the Threshold*, *Creeping Cold*, and *Secret Doors*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-miskatonic-museum.png' /><img src='{setImgPath}/beyond-the-threshold.png' /><img src='{setImgPath}/creeping-cold.png' /><img src='{setImgPath}/secret-doors.png' /></section>*Beyond the Threshold* replaces *The Beyond*, *Creeping Cold* replaces *Chilling Cold*, and *Secret Doors* replaces *Locked Doors*. Remove the replaced sets from the game.",
+      "exhibitDeck": "Before creating the Exhibit Deck, add the 2 new Exhibit Hall locations to the original 6 Exhibit Hall locations. Set Exhibit Hall (*Restricted Hall*) aside and randomly remove 2 Exhibit Hall locations from the game. Then continue creating the Exhibit Deck as normal.",
+      "additionalRule": "For the duration of this scenario, the following additional rule applies: while an investigator is resolving the text on agenda 1b and agenda 2b, the _Forced_ ability on the next agenda in the agenda deck is considered to be active."
+    }
   },
   "theVoid": {
+    "title": "Hư Không",
     "body": "Một số lá bài trong màn này ám chỉ đến một khu vực chơi được gọi là “the void” (hư không). Hư không là một khu vực ngoài vùng chơi và nằm bên cạnh chồng bài act và agenda để kẻ địch Hunting Horror có thể tiến vào hay rời đi thông qua hiệu ứng của các lá bài. Trong khi Hunting Horror đang ở trong vùng hư không, nó được xem là rời khỏi màn chơi và không thể bị ảnh hưởng bởi các lá bài của người chơi hoặc hành động của điều tra viên."
   },
+  "specialRules": [
+    {
+      "title": "@:theDunwichLegacy.theMiskatonicMuseum.theVoid.title",
+      "body": "@:theDunwichLegacy.theMiskatonicMuseum.theVoid.body"
+    }
+  ],
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<div class='resolution'><p>Dù sinh vật trong bảo tàng là gì đi nữa thì bạn cũng không có đủ ý chí và công cụ cần thiết để tiêu diệt nó. Có vẻ như bạn phải từ bỏ mọi hy vọng lấy lại cuốn sách Necronomicon. Mặc dù vậy, vẫn có những người khác đang trông đợi vào bạn. Thu hết can đảm, bạn chuẩn bị cho nhiệm vụ tiếp theo của mình.</p><ul><li>các điều tra viên thất bại trong việc lấy lại cuốn sách Necronomicon.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p>Miễn là bản dịch cuốn sách Necronomicon này còn tồn tại, sẽ có những phù thủy và những tay sai xấu xa khác như Whateley tìm kiếm nó. Cuối cùng, bạn biết mình phải làm gì để bảo vệ nhân loại khỏi những mối đe dọa mà bạn đã chứng kiến. Bạn tìm một thùng rác và chất đầy nó với sách và tài liệu, ném cuốn Necronomicon lên trên. Tốn một vài que diêm để đốt cháy các tài liệu trong thùng rác. Căn phòng tràn ngập sức nóng của ngọn lửa và những cái bóng ghê rợn rút lui khỏi ánh sáng của ngọn lửa. Bạn quan sát cuốn sách cháy trong một khoảng thời gian, các trang sách biến thành tro bụi. Bạn chỉ có thể hy vọng mình đã đưa ra quyết định đúng đắn.</p><ul><li>In your Campaign Log, record that *the investigators destroyed the Necronomicon.*</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>Necronomicon không chỉ là một cuốn sách; nó là một công cụ. Trong các trang của nó là vô số thông tin về các lực lượng và sinh vật bạn đã gặp phải. Biết nó có thể hữu ích như thế nào trong tay, làm thế nào bạn có thể tự mình phá hủy nó? Bên cạnh đó, chừng nào bạn còn giữ cuốn sách một cách an toàn, bạn vẫn sẽ chặn đứng những kẻ muốn sử dụng nó cho các mục đích bất chính.</p><ul><li>các điều tra viên tạm giữ cuốn sách Necronomicon.</li><li>Các điều tra viên nhận được lá bài The Necronomicon <i>(Olaus Wormius Translation)</i>. Một điều tra viên bất kỳ có thể chọn thêm lá bài he Necronomicon <i>(Olaus Wormius Translation)</i> này vào bộ bài củaa mình. Lá bài này không tính vào giới hạn bộ bài của điều tra viên đó.</li><li>Bạn đã đầu hàng trước sự cám dỗ của quyền lực. Thêm 1 token [elder_thing] vào túi hỗn mang cho phần còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
+    }
+  },
+  "label": {
+    "takeControlOfHaroldWalsted": "Choose investigator to take control of Harold Walsted.",
+    "r1": "It's too dangerous to keep around. We have to destroy it. (-> R1)",
+    "r2": "It's too valuable to destroy. We have to keep it safe. (-> R2)",
+    "passageIntoTheVeil": {
+      "damage": "Take 1 direct damage and deal 1 damage to each of your Ally assets"
+    }
+  },
+  "tooltips": {
+    "museumEntrance": {
+      "resign": "\"Eh. How important can a book really be, anyway?\""
+    },
+    "museumHalls": {
+      "action": "{'{'}action{'}'}: Test {'{'}combat{'}'} (5) to attempt to break down the door to the museum. If you are successful, immediately advance to Act 1b"
     }
   }
 }

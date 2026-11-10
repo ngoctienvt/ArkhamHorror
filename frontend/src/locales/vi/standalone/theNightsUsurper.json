@@ -1,21 +1,76 @@
 {
-  "setup": {
-    "placeLocations": "Đặt Expedition Camp vào khu vực chơi. Mỗi điều tra viên bắt đầu màn chơi tại Expedition Camp.",
-    "explorationDeck": "Tạo exploration deck. Việc này được thực hiện bằng cách xào chung 7 địa điểm một mặt còn lại, cùng với 1 bản sao của mỗi lá bài treachery sau: Abyssal Reach, The Black Wind, Terror Under the Pyramids, và Swarm of Locusts.",
-    "setAside": "Để riêng các lá bài sau sang một bên, ngoài khu vực chơi: Khopesh of the Abyss, Summoned Nightgaunt, địa điểm Eldritch Gate một mặt, kẻ thù Xzharah hai mặt, mỗi địa điểm trong số 5 địa điểm [[Otherworld]] hai mặt, và cả hai bản sao của Dreaded Shantak. Xzharah và các địa điểm [[Otherworld]] có các story card ở mặt sau. Để có trải nghiệm tốt nhất, đừng nhìn vào các story card ở mặt sau của chúng (xem “Story Cards”)."
-  },
-  "resolutions": {
-    "resolution1": {
-      "title": "Kết thúc thứ nhất"
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the strength of the abyss.",
+      "cultist": "Rút thêm một token khác. If you fail and the strength of the abyss is 3 or lower, add 1 strength to the abyss.",
+      "tablet": "-1. For this skill test, ignore all bonuses to your skill value.",
+      "elderThing": "-4. If you succeed and the strength of the abyss is 4 or more, remove 1 strength from the abyss."
     },
-    "resolution2": {
-      "title": "Kết thúc thứ hai"
-    },
-    "resolution3": {
-      "title": "Kết thúc thứ ba"
+    "hardExpert": {
+      "skull": "-X. X is 1 more than the strength of the abyss.",
+      "cultist": "Rút thêm một token khác. If you fail and the strength of the abyss is 5 or lower, add 1 strength to the abyss.",
+      "tablet": "-3. For this skill test, ignore all bonuses to your skill value.",
+      "elderThing": "-5. If you succeed and the strength of the abyss is 4 or more, remove 1 strength from the abyss."
     }
   },
+  "remembered": {
+    "freedTheNightgaunts": "Freed the nightgaunts",
+    "executedTheNightgaunts": "Executed the nightgaunts",
+    "warnedTheDenizensOfSarkomand": "Warned the denizens of Sarkomand",
+    "cutOffAllEscape": "Cut off all escape",
+    "pledForHelp": "Pled for help",
+    "affrontedTheRulerOfThisRealm": "Affronted the ruler of this realm"
+  },
   "intro": {
-    "body": "<p>Winlock mân mê hàng ria mép một lúc trong khi cân nhắc những lời bạn nói. Là trưởng đoàn thám hiểm hiện đang lùng sục khắp Dashur, quyết định có cho phép bạn tham gia đoàn thám hiểm hay không là tùy thuộc vào ông ta. “Nghe này, tôi đã đọc qua những bằng chứng mà bạn thu thập được. Tôi biết về những gì đã xảy ra ở Cairo. Tôi tin câu chuyện của bạn. Nhưng, dù vậy…” Ông ta thở dài thườn thượt. “Tôi chỉ không biết làm thế nào để thuyết phục những người còn lại trong đoàn thám hiểm. Những ngôi đền cổ là một chuyện, nhưng một cánh cổng dẫn đến chiều không gian khác? Cái gã ‘Xzharah’ này? Không có chuyện nào trong số này có thể là thật, đúng không?”\\r</p><p>Nghiên cứu và kinh nghiệm của bạn lại cho thấy điều ngược lại. Mối đe dọa là có thật. Có một tổ chức bí mật đang hoạt động tại Ai Cập—The Brotherhood of the Beast—và nếu chúng không bị ngăn chặn, “Chosen One” mới được tìm thấy của chúng sẽ bắt đầu một chiến dịch hủy diệt kết thúc bằng sự diệt vong của Trái Đất.\\r</p><p>Bạn khăng khăng yêu cầu một lần cuối để được phép tiếp cận các nguồn tài nguyên của đoàn thám hiểm. “Được rồi, được rồi,” Winlock nhượng bộ. “Tôi không biết bạn đang tìm kiếm thứ gì ngoài kia trên sa mạc, nhưng tôi hy vọng bạn sẽ tìm thấy nó.” Bạn lắc đầu đáp lại. Bạn thà trở về tay trắng còn hơn.</p>"
-  }
+    "title": "The Night's Usurper",
+    "body": "<p>Winlock mân mê hàng ria mép một lúc trong khi cân nhắc những lời bạn nói. Là trưởng đoàn thám hiểm hiện đang lùng sục khắp Dashur, quyết định có cho phép bạn tham gia đoàn thám hiểm hay không là tùy thuộc vào ông ta. “Nghe này, tôi đã đọc qua những bằng chứng mà bạn thu thập được. Tôi biết về những gì đã xảy ra ở Cairo. Tôi tin câu chuyện của bạn. Nhưng, dù vậy…” Ông ta thở dài thườn thượt. “Tôi chỉ không biết làm thế nào để thuyết phục những người còn lại trong đoàn thám hiểm. Những ngôi đền cổ là một chuyện, nhưng một cánh cổng dẫn đến chiều không gian khác? Cái gã ‘Xzharah’ này? Không có chuyện nào trong số này có thể là thật, đúng không?”</p><p>Nghiên cứu và kinh nghiệm của bạn lại cho thấy điều ngược lại. Mối đe dọa là có thật. Có một tổ chức bí mật đang hoạt động tại Ai Cập—The Brotherhood of the Beast—và nếu chúng không bị ngăn chặn, “Chosen One” mới được tìm thấy của chúng sẽ bắt đầu một chiến dịch hủy diệt kết thúc bằng sự diệt vong của Trái Đất.</p><p>Bạn khăng khăng yêu cầu một lần cuối để được phép tiếp cận các nguồn tài nguyên của đoàn thám hiểm. “Được rồi, được rồi,” Winlock nhượng bộ. “Tôi không biết bạn đang tìm kiếm thứ gì ngoài kia trên sa mạc, nhưng tôi hy vọng bạn sẽ tìm thấy nó.” Bạn lắc đầu đáp lại. Bạn thà trở về tay trắng còn hơn.</p>"
+  },
+  "setup": {
+    "gatherSets": "Gather the following encounter sets: *The Night's Usurper*, *Sands of Egypt*, *Brotherhood of the Beast*, and *Abyssal Gifts*. These sets are indicated by the following icons, respectively: <section class='encounter-sets'><img src='{setImgPath}/nights-usurper.png' /><img src='{setImgPath}/sands-of-egypt.png' /><img src='{setImgPath}/brotherhood-of-the-beast.png' /><img src='{setImgPath}/abyssal-gifts.png' /></section>",
+    "placeLocations": "Đặt Expedition Camp vào khu vực chơi. Mỗi điều tra viên bắt đầu màn chơi tại Expedition Camp.",
+    "setAside": "Để riêng các lá bài sau sang một bên, ngoài khu vực chơi: Khopesh of the Abyss, Summoned Nightgaunt, địa điểm Eldritch Gate một mặt, kẻ thù Xzharah hai mặt, mỗi địa điểm trong số 5 địa điểm [[Otherworld]] hai mặt, và cả hai bản sao của Dreaded Shantak. Xzharah và các địa điểm [[Otherworld]] có các story card ở mặt sau. Để có trải nghiệm tốt nhất, đừng nhìn vào các story card ở mặt sau của chúng (xem “Story Cards”).",
+    "explorationDeck": "Tạo exploration deck. Việc này được thực hiện bằng cách xào chung 7 địa điểm một mặt còn lại, cùng với 1 bản sao của mỗi lá bài treachery sau: Abyssal Reach, The Black Wind, Terror Under the Pyramids, và Swarm of Locusts.",
+    "brotherhood": "Find the 6 double-sided _Brotherhood_ enemies. These enemies have story cards on their reverse sides. Some of these enemies are placed beneath the scenario reference card, as follows. The rest are removed from the game.",
+    "brotherhoodCampaign": "Đặt từng kẻ địch được liệt kê bên cạnh <i>“Brotherhood Agents Who Escaped”</i> trong Nhật ký Chiến dịch của bạn xuống dưới lá bài scenario reference.",
+    "brotherhoodStandalone": "If you are playing in Standalone mode, shuffle these 6 enemies together and place 3 of them beneath the scenario reference card without looking at them.",
+    "strengthOfTheAbyss": "Đặt một số lượng token resource lên lá bài scenario reference (bên dưới “Strength of the Abyss”), như sau. <i>(xem “Strength of the Abyss”)</i>",
+    "strengthCampaign": "Đặt số lượng resource bằng với con số được liệt kê trong ngoặc đơn bên cạnh <i>“dreamers in the abyss”</i> trong Nhật ký Chiến dịch của bạn.",
+    "strengthStandalone": "If you are playing in Standalone Mode, place 1 resource for each investigator in the game."
+  },
+  "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_If no resolution was reached (each investigator resigned or was defeated)_: Go to _Resolution 1_.</p>"
+    },
+    "resolution1": {
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: \"It's just an arch. Why're you so worked up, boss?\" Winlock crossed his arms. Something about all of this felt wrong. He was sure that this was the place those folks from Arkham were looking for—a delicately patterned archway that led nowhere at all—and yet, Winlock was certain there was something on the other side. \"It's not Egyptian,\" he noted, staring at the thing with narrow eyes. \"It doesn't even look… human.\"</p><p>\"You believed those loons? Look boss, it's nothing!\" one of his men laughed.</p><p>\"Is it?\" Winlock snapped, eyes wide. \"Is it?\"</p><ul><li>In your Campaign Log, record that *the Day of Reckoning is coming*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
+    },
+    "resolution2": {
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Sinh khí phai nhạt dần khỏi cơ thể Xzharah. Những đám mây sương mù cuồn cuộn bao quanh hắn và buộc hắn phải quỳ xuống. Những sinh vật của vực thẳm xuất hiện không một tiếng động bên cạnh bạn, bao vây Xzharah bằng một sự căm ghét thầm lặng, vô cảm. Thanh kiếm của Xzharah phản bội hắn và tuột khỏi tay hắn, lưỡi kiếm vỡ vụn khi rơi loảng xoảng xuống đất. “…Lời tiên tri phải được hoàn thành…” Đó là tiếng thì thầm đê tiện cuối cùng của hắn. Thể xác của hắn biến mất vào làn sương mù hư ảo của cõi này, và tất cả chìm vào im lặng trong Great Abyss.</p><ul><li>Trong Nhật ký Chiến dịch, hãy ghi lại rằng <i>the Abyss đã được cứu</i>. Gạch bỏ tất cả các ghi chú <i>“(tên lá bài) đã bị the abyss lấy đi”</i> trong Nhật ký Chiến dịch của bạn.</li><li>Any one investigator may choose to add Summoned Nightgaunt to his or her deck. This card does not count toward that investigator's deck size.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
+    },
+    "resolution3": {
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Xzharah đặt một bàn tay lạnh như băng lên vai bạn khi bạn quỳ trước mặt hắn. “Ngươi đã chứng minh được lòng trung thành của mình,” hắn phán. Những sinh vật của vực thẳm bao quanh bạn, cúi đầu tôn kính vị chủ nhân mới của chúng. Không còn ai để chống lại hắn. “Hiếm kẻ nào trong giống loài của ngươi có đủ trí tuệ hay ý chí để nhìn xa hơn hiện tại. Để thấy lời tiên tri của chúng ta được hoàn thành. Nhưng ngươi đủ xứng đáng để được mở mắt. Xứng đáng hơn nhiều so với những kẻ ngu ngốc mà ta đã tin tưởng trong quá khứ.” Hắn bảo bạn đứng lên, và đặt chuôi thanh kiếm đẫm máu của hắn vào tay bạn. “Bây giờ hãy trỗi dậy, Servant of the Beast, và nhận lấy vị trí của ngươi giữa chúng ta.”</p><ul><li>In your Campaign Log, record that *you joined forces with Xzharah*.</li><li>Any one investigator may choose to add the Khopesh of the Abyss to his or her deck. It does not count toward that investigator's deck size.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
+    }
+  },
+  "specialRules": [
+    {
+      "title": "@:standalone.guardiansOfTheAbyss.rules.storyCards.title",
+      "body": "@:standalone.guardiansOfTheAbyss.rules.storyCards.body"
+    },
+    {
+      "title": "@:standalone.guardiansOfTheAbyss.rules.strengthOfTheAbyss.title",
+      "body": "@:standalone.guardiansOfTheAbyss.rules.strengthOfTheAbyss.body"
+    },
+    {
+      "title": "@:standalone.guardiansOfTheAbyss.rules.takenByTheAbyss.title",
+      "body": "@:standalone.guardiansOfTheAbyss.rules.takenByTheAbyss.body"
+    },
+    {
+      "title": "Explore",
+      "body": "<p class='basic'>Một số khả năng trong <i>Guardians of the Abyss</i> được xác định bằng một chỉ định hành động <b>Explore</b>. Những khả năng này thường được sử dụng để tìm các vị trí mới để đưa vào chơi, và được thực hiện thông qua hành động “activate”.</p><p class='basic'>Các khả năng <b>Explore</b> hướng dẫn bạn rút lá bài trên cùng của “exploration deck”, đây là một chồng bài riêng biệt sẽ được tạo ra trong scenario này. Chồng bài này bao gồm một số vị trí một mặt và các lá bài treachery.</p><ul><li>Mỗi khả năng <b>Explore</b> biểu thị một loại vị trí cụ thể bạn muốn rút được. <b>Nếu một vị trí của loại đó được rút, nó được đặt vào chơi, và bạn di chuyển đến vị trí đó.</b> Đây được xem là khám phá “thành công”.</li><li>Nếu bất kỳ vị trí nào khác được rút, đặt nó kế bên chồng bài khám phá, và bạn rút lá bài tiếp theo trong chồng bài khám phá. Lặp lại bước này cho đến khi một vị trí thuộc loại đó được rút, hoặc một lá bài treachery được rút. Sau khi hành động này kết thúc, xào mỗi vị trí kế bên chồng bài khám phá vào lại chồng bài khám phá.</li><li>Nếu một lá bài treachery được rút ra, nó được xử lý như bình thường. Nếu nó bị discard, đặt nó vào trong chồng bài encounter bỏ như bình thường. Không có chồng bài bỏ riêng cho chồng bài khám phá. Đây được xem là khám phá “thất bại”.</li><li>Khi một vị trí một mặt được đặt vào chơi từ chồng bài khám phá, đặt manh mối vào vị trí đó tương ứng giá trị manh mối của nó.</li></ul>"
+    }
+  ]
 }

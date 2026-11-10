@@ -1,5 +1,34 @@
 {
+  "specialRules": [
+    {
+      "title": "Challenge Scenario",
+      "body": "<p class='basic'>Challenge scenarios are special print-and-play scenarios that utilize existing products in the Arkham Horror: The Card Game collection, along with additional print-and-play cards, to create new content. These scenarios are designed with certain prerequisites in mind, in order to craft a challenging puzzle-like experience.</p><p class='basic'><i>Relics of the Past</i> centers around the investigator Monterey Jack, and therefore has the following prerequisite: Monterey Jack must be chosen as one of the investigators when playing this scenario.</p>"
+    },
+    {
+      "title": "Explore",
+      "body": "<p class='basic'>Một số ability trong scenario này được nhận diện bằng chỉ định hành động <b>Explore</b>. Những ability như vậy thường được sử dụng để tìm các địa điểm mới để đưa vào bàn chơi, và được khởi xướng bằng hành động “activate”.</p><ul><li>When resolving <b>Explore</b> abilities found in this challenge scenario, follow all of the rules as outlined on page 3 of <i>The Forgotten Age</i> campaign guide, with the following exceptions:</li><li>Nếu một kẻ địch được rút từ exploration deck, nó sẽ được giải quyết như bình thường. Nếu nó bị discard, hãy đặt nó vào encounter discard pile như bình thường. Điều này được coi là một lần khám phá “không thành công”.</li><li>Nếu một story asset được rút từ exploration deck, hãy giải quyết hiệu ứng revelation của nó. Điều này được coi là một lần khám phá “thành công”.</li></ul>"
+    },
+    {
+      "title": "Vật Tư Dự Trữ",
+      "body": "<p class='basic'><i>Relics of the Past</i> sử dụng một danh sách supplies dành riêng cho scenario này. Supplies không có hiệu ứng vốn có, nhưng có thể được tham chiếu bởi các ability của lá bài. Mỗi điều tra viên có thể chọn một trong các supplies được liệt kê bên dưới để mang theo cho chuyến thám hiểm (nếu chỉ có một điều tra viên, thay vào đó họ có thể chọn hai supplies).</p><ul><li><b>Chalk:</b> <i>Dùng để viết lên các bề mặt đá.</i></li><li><b>Compass:</b> <i>Có thể giúp bạn xác định phương hướng.</i></li><li><b>Journal:</b> <i>Để ghi chép lại các sự kiện của chuyến thám hiểm.</i></li><li><b>Satchel:</b> <i>Một nơi an toàn để cất giữ bất cứ thứ gì bạn tìm thấy trong hầm mộ.</i></li><li><b>Torches:</b> <i>Có thể thắp sáng các khu vực tối tăm, hoặc châm lửa các giá cắm đuốc.</i></li></ul><p class='basic'>Nếu chơi <i>Relics of the Past</i> như một side-story trong một campaign lớn hơn, các supplies từ <i>Relics of the Past</i> sẽ không được mang sang các scenario tiếp theo.</p>"
+    }
+  ],
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the number of locations with 1 or more doom on them.",
+      "cultist": "-1. If you are poisoned, reveal another token.",
+      "tablet": "-3. Nếu bạn thất bại, đặt 1 doom lên your location.",
+      "elderThing": "-3. Nếu bạn thất bại, the nearest ready unengaged _Serpent_ enemy moves once toward your location."
+    },
+    "hardExpert": {
+      "skull": "-X. X is 1 more than the number of locations with 1 or more doom on them.",
+      "cultist": "-2. If you are poisoned, reveal another token.",
+      "tablet": "-4. Place 1 doom on your location.",
+      "elderThing": "-5. After this test resolves, the nearest ready unengaged _Serpent_ enemy moves once toward your location."
+    }
+  },
   "intro": {
+    "title": "Challenge Scenario: Relics of the Past",
     "body": "<p>*Để hiểu rõ hơn về tương lai của chúng ta, trước tiên chúng ta phải hiểu về quá khứ. Không mất nhiều thời gian để những báo cáo về chuyến thám hiểm thất bại của Miskatonic University tới những khu rừng rậm ở Mexico lọt vào tai bạn. Những câu chuyện về các kim tự tháp bậc thang, tộc người rắn thần thoại và các cổ vật dị thường ở những nơi trước đây được cho là không có người ở đã khơi dậy sự hứng thú của bạn. Bạn không mất nhiều thời gian để thu dọn hành lý và lên kế hoạch tự mình đến đó để điều tra. Chuyến thám hiểm của Miskatonic University đã tiến vào khu di tích nhưng gặp khó khăn trong việc tạo ra bất kỳ bước tiến nào. Tim bạn đập thình thịch khi bắt đầu nghĩ đến những kho báu bị lãng quên nào khác vẫn chưa được khám phá ở trung tâm của lăng mộ.*</p>",
     "supplies": {
       "title": "Vật Tư Dự Trữ",
@@ -8,18 +37,40 @@
   },
   "label": {
     "supplies": {
+      "question": "Choose a supply to bring for the expedition",
       "chalk": "_Chalk:_ *Dùng để viết lên các bề mặt đá.*",
       "compass": "_Compass:_ *Có thể giúp bạn xác định phương hướng.*",
       "journal": "_Journal:_ *Để ghi chép lại các sự kiện của chuyến thám hiểm.*",
       "satchel": "_Satchel:_ *Một nơi an toàn để cất giữ bất cứ thứ gì bạn tìm thấy trong hầm mộ.*",
       "torches": "_Torches:_ *Có thể thắp sáng các khu vực tối tăm, hoặc châm lửa các giá cắm đuốc.*"
     },
+    "placeDoomOnYourLocation": "Place 1 doom on your location",
+    "nearestEnemyAttacksYou": "The nearest enemy attacks you",
+    "vengeantPast": {
+      "question": "{name}: choose one",
+      "dealDamage": "Deal 1 damage to that asset's controller",
+      "dealHorror": "Deal 1 horror to that asset's controller",
+      "shuffleAsset": "Shuffle that asset into the exploration deck"
+    },
+    "innerChamber": {
+      "doNotDrawAnother": "Do not draw an additional card"
+    },
+    "ancientHall": {
+      "question": "Any investigator at Ancient Hall may spend 3 resources to cancel this effect",
+      "doNotCancel": "Shuffle the top card of the encounter deck into the exploration deck"
+    },
     "swap": {
       "question": "Monterey Jack có thể nâng cấp Trusty Bullwhip lên phiên bản advanced, hoặc hạ cấp phiên bản advanced của Buried Secrets xuống phiên bản gốc.",
-      "questionMust": "Monterey Jack phải nâng cấp Buried Secrets lên phiên bản advanced, hoặc hạ cấp phiên bản advanced của Trusty Bullwhip về phiên bản gốc."
+      "questionMust": "Monterey Jack phải nâng cấp Buried Secrets lên phiên bản advanced, hoặc hạ cấp phiên bản advanced của Trusty Bullwhip về phiên bản gốc.",
+      "upgradeTrustyBullwhip": "Monterey Jack có thể nâng cấp Trusty Bullwhip lên phiên bản advanced, hoặc hạ cấp phiên bản advanced của Buried Secrets xuống phiên bản gốc.",
+      "downgradeBuriedSecrets": "Downgrade Buried Secrets to its original version",
+      "upgradeBuriedSecrets": "Upgrade Buried Secrets to its advanced version",
+      "downgradeTrustyBullwhip": "Downgrade Trusty Bullwhip to its original version",
+      "doNotSwap": "Do not swap"
     }
   },
   "supplies": {
+    "question": "Choose a supply to bring for the expedition",
     "chalk": "_Chalk:_ *Dùng để viết lên các bề mặt đá.*",
     "compass": "_Compass:_ *Có thể giúp bạn xác định phương hướng.*",
     "journal": "_Journal:_ *Để ghi chép lại các sự kiện của chuyến thám hiểm.*",
@@ -27,22 +78,24 @@
     "torches": "_Torches:_ *Có thể thắp sáng các khu vực tối tăm, hoặc châm lửa các giá cắm đuốc.*"
   },
   "setup": {
+    "gatherSets": "Khi tập hợp bộ bài gặp gỡ <i>The Midnight Masks</i>, chỉ tập hợp 5 lá bài phản trắc (2x False Lead và 3x Hunting Shadow). Không tập hợp các lá bài địa điểm, hành động, âm mưu và lá bài tham chiếu kịch bản từ bộ bài đó.",
+    "removeCards": "Remove the original scenario reference card, acts, and agendas from *The Doom of Eztli* encounter set from the game. Use the new scenario reference card, acts, and agendas provided in the *Relics of the Past* encounter set. Additionally, remove the following cards from *The Doom of Eztli* encounter set from the game: the Relic of Ages asset, the Harbinger of Valusia enemy, and the Secret Passage, Ancient Hall, and Chamber of Time locations.",
+    "explorationDeck": "Xây dựng exploration deck. Việc này được thực hiện bằng cách lấy 5 địa điểm một mặt và xào chúng cùng với các lá bài sau: một bản sao cho mỗi treachery Deep Dark và Final Mistake, cùng 3 bản sao của Pit Viper.",
+    "setAside": "Set the following cards aside, out of play: the Vengeant Past treachery, the Inner Chamber location, the three Brood of Yig enemies, and each of the four _*Ancient*_ story assets.",
     "placeEntryway": "Đặt vị trí Entryway vào chơi. Mỗi điều viên bắt đầu chơi tại vị trí Entryway.",
     "poisoned": "Đặt mỗi điểm yếu Poisonsed đang không ở trong chồng bài của một điều tra sang một bên."
   },
   "resolutions": {
+    "xp": {
+      "journal": "The investigator with the journal resigned"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Với một cú quất roi, bạn đu qua khoảng trống cuối cùng, và một vòng lộn nhào nhanh nhẹn đưa bạn lọt qua dưới cánh cửa đá đang đóng lại trước khi nó niêm phong phía sau bạn. Bạn đứng dậy, nhìn ra khu rừng rậm trước mặt, hít thở bầu không khí ẩm ướt một lần nữa. Kiểm tra lại trang bị của mình lần cuối, bạn thấy một kẻ bám đuôi có vảy, giống rắn đã tìm được đường chui vào túi của bạn. Tóm lấy phần sau đầu nó, bạn nhẹ nhàng ném nó vào bãi cỏ và nhìn nó trườn đi cùng một tiếng rít.</p><p>Bạn sẽ phải hài lòng với những gì mình đã học được, và những gì mình đã tìm thấy, trong Ruins of Eztli. Đã đến lúc bỏ lại khu rừng rậm phía sau.</p><ul><li>Monterey Jack nhận experience bằng tổng giá trị Victory X của các story asset [[Ancient]] trong victory display.<ul><li>_Experience_: {montereyXp}</li></ul></li><li>Mỗi điều tra viên khác nhận được experience bằng tổng giá trị Victory X của các kẻ địch và địa điểm trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Kiểm tra supplies của mỗi điều tra viên đã rút lui.</li><li>Monterey Jack có thể nâng cấp Trusty Bullwhip lên phiên bản advanced, hoặc hạ cấp phiên bản advanced của Buried Secrets xuống phiên bản gốc.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Bạn chạy thục mạng dọc theo hành lang đổ nát, tiếng rít của những con quái vật rắn đang truy đuổi vang vọng trên những bức tường đá phía sau bạn. Con đường dẫn bạn đến một cái hố sâu, và bạn phải đối mặt với một lựa chọn: cố gắng vượt qua khoảng trống, hoặc quay lại đối mặt với những kẻ truy đuổi. Bạn thò tay xuống thắt lưng và lấy ra chiếc roi da của mình, quyết định sử dụng nó để vượt qua vực thẳm. Bạn quất roi vào một rễ cây lộ ra gần trần nhà, và bắt đầu đu người.</p><p>Với một tiếng rắc điếng người, cái rễ cây gãy gập dưới sức nặng của bạn và bạn lao thẳng xuống vực thẳm. Bạn nảy bật khỏi những tảng đá sắc nhọn khi lăn xuống, cuối cùng rơi tõm xuống một dòng suối cạn ở dưới đáy. Bạn khạc ra máu, rồi ngước nhìn lên và thấy những đôi mắt của serpent-people đang nhìn chằm chằm xuống bạn từ tít trên cao, trước khi chúng rút lui theo con đường chúng đã đến.</p><p>Bạn chật vật đứng dậy, và quan sát dòng suối dưới chân mình. Bạn loạng choạng bước đi, men theo dòng chảy của nó, hy vọng cuối cùng nó sẽ dẫn bạn ra ngoài.</p><ul><li>Mỗi điều tra viên nhận kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Monterey Jack phải nâng cấp Buried Secrets lên phiên bản advanced, hoặc hạ cấp phiên bản advanced của Trusty Bullwhip về phiên bản gốc.</li></ul>"
     }
-  },
-  "specialRules": [
-    {},
-    {},
-    {
-      "title": "Vật Tư Dự Trữ"
-    }
-  ]
+  }
 }

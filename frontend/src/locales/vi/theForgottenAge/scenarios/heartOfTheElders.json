@@ -1,49 +1,118 @@
 {
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 (-3 instead if you are in a _Cave_ location).",
+      "cultist": "-2. Nếu bạn thất bại, đặt 1 doom lên your location.",
+      "tablet": "-2. If you are poisoned, this test automatically fails instead.",
+      "elderThing": "-3. Nếu bạn thất bại, chịu 1 horror."
+    },
+    "hardExpert": {
+      "skull": "-2 (-4 instead if you are in a _Cave_ location).",
+      "cultist": "-3. Nếu bạn thất bại, đặt 1 doom lên your location.",
+      "tablet": "-3. If you are poisoned, this test automatically fails instead. If you are not poisoned and you fail, put a set-aside Poisoned weakness into play in your threat area.",
+      "elderThing": "-4. Nếu bạn thất bại, chịu 1 horror."
+    }
+  },
+  "label": {
+    "pitfall": {
+      "jumpTheGap": "Test {'{'}agility{'}'} (3) to attempt to jump the gap. For each point you fail by, take 1 damage.",
+      "shuffle": "Shuffle Pitfall into the exploration deck. You cannot choose this option if Pitfall was drawn from the exploration deck."
+    },
+    "descentToYoth": {
+      "placeDoom": "Place 1 doom on Descent to Yoth",
+      "draw": "Draw the top 2 cards of the encounter deck"
+    }
+  },
+  "tooltips": {
+    "mouthOfKnYanTheCavernsMaw": {
+      "resign": "\"Let's make camp and solve this puzzle tomorrow.\""
+    },
+    "featheredSerpent": {
+      "evade": "Check your supplies. If you have a mysterious scepter, you automatically evade the serpent and command it to deal its damage to another enemy at its location."
+    }
+  },
   "part1": {
+    "standalone": {
+      "label": {
+        "paths": "The investigators may choose how many paths are known to you (choose a number between 0 and 5). The more paths are known to you, the quicker and easier the scenario will be."
+      }
+    },
     "intro": {
       "title": "Kịch bản V–A: Heart of the Elders, Part 1",
+      "intro1": "<p>_Intro 1_: Đã vài ngày kể từ khi nhóm của bạn mạo hiểm vào KHU rừng nhiệt đới một lần nữa, và mỗi ngày, những mối nguy hiểm mà bạn phải đối mặt ngày càng nguy hiểm và thường xuyên hơn. Đảm bảo đủ lương thực và nhu yếu phẩm cho cuộc hành trình là một cuộc vật vã không ngừng nghỉ, và bạn luôn bị dân bản địa sống trong rừng quấy rối mọi lúc mọi nơi. May mắn thay, bạn chưa thấy dấu hiệu nào của những người rắn đã tấn công bạn trong chuyến thám hiểm trước đó, nhưng bạn khẳng định rằng họ đang ở ngoài đó. Quan sát. Chờ đợi.</p><p>Vào sáng ngày thứ sáu, bạn tìm thấy lối vào. Đó là một cửa hang lớn, bị cây cối, bụi rậm và dây leo che khuất một phần. Bạn gần như đã bỏ lỡ miệng hang lớn này, bất chấp sự khổng lồ của nó. Bao quanh lối vào hang động là sáu cột đá, mỗi cột được bao phủ bởi những đường rãnh và chạm khắc kỳ lạ phát sáng với màu đỏ mờ. Có lẽ một trong những người hướng dẫn của bạn sẽ hiểu điều này có nghĩa là gì?</p><ul><li>Các điều tra viên phải quyết định <i>(chọn một)</i>:<ul><li>*Let’s consult with Ichtaca*. Choose this option only if Ichtaca is in an investigator’s deck. Proceed to _Intro 2_.</li><li>*Let’s consult with Alejandro*. Choose this option only if Alejandro Vela is in an investigator’s deck. Proceed to _Intro 3_.</li><li>*Let’s consult the expedition journal*. Choose this option only if the Expedition Journal is in an investigator’s deck. Skip to _Intro 4_.</li><li>*I wish we knew more about this...* Skip to _Setup_.</li></ul></li>",
       "label": {
         "ichtaca": "*Hãy tham khảo ý kiến của Ichtaca.*",
         "alejandro": "*Hãy tham khảo ý kiến của Alejandro.*",
         "expeditionJournal": "*Hãy tham khảo cuốn nhật ký thám hiểm.*",
         "else": "*Tôi ước chúng ta biết nhiều hơn về điều này…*"
-      }
+      },
+      "intro2": "<p>_Intro 2_: “Lối vào được bảo vệ chống lại những kẻ xâm nhập,” Ichtaca nói một cách khó hiểu, mắt cô nhắm lại như thể đang thăm dò hang động bằng các giác quan khác thường. “Những cột trụ này là chìa khóa. Mỗi cái đều là một thử thách về trí tuệ và ý chí”. Cô ấy bước về phía một trong số chúng và chạm vào bằng lòng bàn tay, và ánh sáng của nó sáng lên. Bây giờ, bạn nhận thấy rằng các rãnh dọc theo móng của cây cột thể hiện một khuôn mẫu mà bạn đã thấy ở đâu đó trước đây. Nếu Ichtaca tin rằng nơi này đã được bảo vệ, bạn hãy tin tưởng ý kiến của cô ấy — phải có cách nào đó để phá vỡ những cột trụ bảo vệ này…</p><p class='basic right'>Begin this scenario with Ichtaca in play. Skip to _Setup_.</p>",
+      "intro3": "<p>_Intro 3_: Alejandro chăm chú xem xét từng cây cột. “Đó là một loại khóa nào đó. Nhìn đây, thấy không? Các rãnh không thẳng hàng một cách hoàn hảo.” Ông ta vặn một trong những cột cột, và bạn có thể thấy hoa văn dọc theo mặt bên của nó dịch chuyển. “Tôi cá là nếu chúng ta vào hang, chúng ta sẽ không đi được xa nếu không có những cây cột này được sắp xếp đúng. Đây chỉ là linh cảm thôi… Nhưng tôi nghĩ chúng ta nên kiểm tra khu vực này kỹ hơn trước khi tiếp tục.” Bây giờ bạn đã biết Alejandro đủ rõ để biết rằng linh cảm của ông ấy thường đúng.</p><p class='basic right'>Begin this scenario with Alejandro Vela in play. Skip to _Setup_.</p>",
+      "intro4": "<p>_Intro 4_: Nhật ký của chuyến thám hiểm trước không có tất cả các câu trả lời, nhưng khi lướt qua các trang của nó, bạn sẽ thấy một sơ đồ quen thuộc—một sơ đồ được vẽ bởi Lorenzo, một thành viên của đoàn thám hiểm chưa bao giờ quay trở lại Arkham. Đó là sự tái tạo tinh tế của một hình chạm khắc trên tường của một trong những tàn tích Eztli. Nhiều mẫu và chữ tượng hình mà bạn nhìn thấy trong bản vẽ này được thể hiện trong những cột trụ này. Nó không thể chỉ đơn giản là một sự trùng hợp ngẫu nhiên. Những cột trụ này chắc chắn là chìa khóa để tìm đường đến N'kai…</p><p class='basic right'>Bắt đầu màn chơi này với Expedition Journal được đưa vào chơi.</p>"
     },
     "setup": {
-      "insightIntoHowToEnterKnYan": "Kiểm tra nhật ký chiến dịch. Hành trình vượt qua ranh giới thời gian của bạn đã cho bạn cái nhìn sâu sắc về cách tiến vào K'n-yan. Đối với mỗi con đường mà bạn biết, hãy đặt 1 tài nguyên trên Mouth of K'n-yan, đại diện cho token của cột trụ.",
-      "poisoned": "Đặt mỗi điểm yếu Poisonsed đang không ở trong chồng bài của một điều tra sang một bên.",
+      "pathsKnownToYou": "Nếu bạn đã biết 6 con đường, hãy bỏ qua màn chơi này và chuyển ngay sang <b>Resolution 1</b>.",
+      "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Pillars of Judgment*, *Heart of the Elders*, *Rainforest*, *Serpents*, *Expedition*, and *Poison*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/pillars-of-judgement.png' /><img src='{setImgPath}/heart-of-the-elders.png' /><img src='{setImgPath}/rainforest.png' /><img src='{setImgPath}/serpents.png' /><img src='{setImgPath}/expedition.png' /><img src='{setImgPath}/poison.png' /></section>",
       "placeLocations": "Đặt Mouth of K’n-yan vào chơi, mặt *(The Cavern’s Maw)* lật lên. Mỗi điều tra viên bắt đầu chơi tại vị trí Mouth of K’n-yan *(The Cavern’s Maw)*.",
+      "insightIntoHowToEnterKnYan": "Kiểm tra nhật ký chiến dịch. Hành trình vượt qua ranh giới thời gian của bạn đã cho bạn cái nhìn sâu sắc về cách tiến vào K'n-yan. Đối với mỗi con đường mà bạn biết, hãy đặt 1 tài nguyên trên Mouth of K'n-yan, đại diện cho token của cột trụ.",
+      "playedBefore": "If you have played this scenario before during this campaign and have reached act 2 before, flip act 1a over and place it in the Mouth of K’n-yan.",
       "explorationDeck": "Tạo chồng bài khám phá. Điều này được thực hiện bằng cách lấy 6 lá vị trí [[Jungle]] một mặt và xào chúng vào với nhau, cùng với 1 bản sao của mỗi lá bài encounter sau: Pitfall, Ants!, Lost in the Wilds, và Low on Supplies.",
-      "chooseLocations": "Chọn ngẫu nhiên 1 trong 3 địa điểm [[Ruins]] sau: Overgrown Ruins, Temple of the Fang, và Stone Altar. Xào vị trí ngẫu nhiên được chọn vào chồng bài khám phá. Loại bỏ 2 vị trí còn lại khỏi màn chơi."
+      "chooseLocations": "Chọn ngẫu nhiên 1 trong 3 địa điểm [[Ruins]] sau: Overgrown Ruins, Temple of the Fang, và Stone Altar. Xào vị trí ngẫu nhiên được chọn vào chồng bài khám phá. Loại bỏ 2 vị trí còn lại khỏi màn chơi.",
+      "mappedOutTheWayForward": "Check Campaign Log. *If the investigators mapped out the way forward*, instead of shuffling the randomly chosen location into the exploration deck, put it into play.",
+      "poisoned": "Đặt mỗi điểm yếu Poisonsed đang không ở trong chồng bài của một điều tra sang một bên.",
+      "returnTo": {
+        "gatherSets": "Also gather all cards from the following encounter sets: *Return to Heart of the Elders*, *Return to Pillars of Judgement*, *Return to the Rainforest*, and *Doomed Expedition*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-heart-of-the-elders.png' /><img src='{setImgPath}/return-to-pillars-of-judgement.png' /><img src='{setImgPath}/return-to-the-rainforest.png' /><img src='{setImgPath}/doomed-expedition.png' /></section>*Doomed Expedition* replaces *Expedition*. Remove the replaced set from the game.",
+        "actDeck": "Remove Act 1a—*Search for the Pattern* from the game and replace it with the new Act 1a—*A Familiar Pattern*.",
+        "explorationDeck": "When building the exploration deck, include only 1 of the 2 locations with each of the following connection symbols, chosen at random: Purple Moon, Blue Triangle, Red Square, Orange Heart. Remove the other 4 _Jungle_ locations from the game without looking at them. Do not include any of the other encounter cards listed in the original setup instructions. (There should be a total of 6 cards.)",
+        "additionalRule": "For the duration of this scenario, the following additional rules apply: the “check your supplies” ability on the Mouth of K’n-yan can be used from any location; and _Forced_ – After a successful exploration ends: Shuffle the top card of the encounter deck into the exploration deck."
+      }
     },
     "resolutions": {
-      "resolution1": {
-        "title": "Kết thúc thứ nhất"
-      },
-      "resolution2": {
-        "title": "Kết thúc thứ hai"
-      },
       "noResolution": {
         "label": {
+          "replay": "Replay _Scenario V-A: Heart of the Elders, Part 1_",
           "resolution2": "Chuyển tới _Resolution 2_."
-        }
+        },
+        "title": "No Resolution",
+        "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Những mối nguy hiểm của khu rừng rậm quá nguy hiểm để bạn tiếp tục khám phá. Nếu bạn ở lại lâu hơn, những cây cột kỳ lạ này sẽ là đánh dấu cho mồ chôn của bạn. Bạn quyết định chạy trốn ngay bây giờ, quay trở lại một bãi đất trống quen thuộc cách đó vài dặm, nơi bạn có thể hồi phục sức khỏe. Bạn biết rằng cuối cùng bạn phải quay trở lại các cột trụ và tìm ra khuôn mẫu mở ra con đường phía trước… nhưng hiện tại, ít nhất bạn vẫn an toàn.</p><ul><li>Nếu có nhiều token cột trụ ở Mouth of K’nyan khi màn chơi bắt đầu, trong Nhật ký Chiến dịch, gạch bỏ số con đường tương ứng bạn đã biết. Sau đó, ghi lại X con đường bạn đã biết. X là số token cột trụ ở trên Mouth of K'n-yan.</li><li>Các điều tra viên phải chơi lại <b>Màn V-A: Heart of the Elders, Part 1</b>. Thiết lập lại màn chơi ở bước <b>Setup</b>. Không ghi chép lại bất cứ điều gì trong Campaign Log, ngoại trừ chấn thương phải chịu từ ván chơi trước của bạn. Không nhận được điểm kinh nghiệm nào từ ván chơi trước. Bất kỳ người chơi nào có điều tra viên bị giết hoặc bị <b>điên loạn</b> phải chọn 1 điều tra viên mới để chơi như bình thường.</li></ul>"
+      },
+      "resolution1": {
+        "title": "Kết thúc thứ nhất",
+        "body": "<p>_Resolution 1_: Nuốt trôi nỗi sợ hãi, bạn bước vào hang động…</p><ul><li>Trong Nhật ký Chiến dịch của bạn, hãy ghi lại rằng <i>khu rừng đang theo dõi</i>. Bên cạnh đó, trong ngoặc đơn, ghi lại tên của từng lá bài có Vengeance X trong khu vực trưng bày thành tích. Không ghi lại bất kỳ điểm kiểm đếm nào trong phần \"Cơn giận dữ của Yig.\"</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Các điều tra viên có thể không dùng kinh nghiệm hoặc thay đổi bộ bài của mình giữa Màn chơi V-A và V-B.</li></ul>"
+      },
+      "resolution2": {
+        "title": "Kết thúc thứ hai",
+        "body": "<p>_Resolution 2_: You haven’t yet completed the puzzle of the six pillars that serve as the entrance to K’n-yan, but you don’t wish to tarry any further in this hostile jungle. You decide to enter the cavern anyway, hoping that whatever “wards” the pillars represent are nothing but ancient superstition…</p><ul><li>You have trespassed in a hostile land. Place pillar tokens on the Mouth of K’n-yan until there are exactly 6 pillar tokens. Then, for every pillar token added in this way, record two tally marks under “Yig’s Fury” in your Campaign Log.</li><li>As you pass by the pillars, intense pain wrenches its way through your body, and you are afflicted with a terrible curse. Each investigator who is poisoned takes 1 mental trauma. Each investigator who is not poisoned adds a set‑aside Poisoned weakness to their deck.</li><li>Tiến tới <b>Resolution 1</b>.</li></ul>"
       }
     }
   },
   "part2": {
     "setup": {
+      "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *K’n-yan*, *Heart of the Elders*, *Agents of Yig*, *Yig’s Venom*, *Forgotten Ruins*, *Deadly Traps*, and *Poison*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/knyan.png' /><img src='{setImgPath}/heart-of-the-elders.png' /><img src='{setImgPath}/agents-of-yig.png' /><img src='{setImgPath}/yigs-venom.png' /><img src='{setImgPath}/forgotten-ruins.png' /><img src='{setImgPath}/deadly-traps.png' /><img src='{setImgPath}/poison.png' /></section>",
+      "placeLocations": "Đặt vị trí Mouth of K’n-yan vào chơi, mặt *(The Depths Beneath)* được lật lên. Mỗi điều tra viên bắt đầu chơi tại Mouth of K’n-yan *(The Depths Beneath)*.",
       "theJungleWatches": "Tìm trong bộ sưu tập mỗi lá bài được liệt kê trong ngoặc đơn cạnh phần \"khu rừng đang theo dõi\" trong Nhật ký Chiến dịch. Thêm những lá bài đó vào khu vực trưng bày thành tích.",
       "setAside": "Đặt vị trí Descent to Yoth sang một bên, ngoài khu vực chơi.",
       "explorationDeck": "Tạo chồng bài khám phá. Điều này được thực hiện bằng cách lấy 5 vị trí một mặt còn lại từ chồng bài encounter *K'n-yan* và xào chúng lại với nhau, cùng với 1 bản sao cho mỗi lá bài encounter sau: Pitfall, No Turning Back, Deep Dark, và Final Mistake.",
       "poisoned": "Đặt mỗi điểm yếu Poisonsed đang không ở trong chồng bài của một điều tra sang một bên.",
-      "placeLocations": "Đặt vị trí Mouth of K’n-yan vào chơi, mặt *(The Depths Beneath)* được lật lên. Mỗi điều tra viên bắt đầu chơi tại Mouth of K’n-yan *(The Depths Beneath)*."
+      "returnTo": {
+        "gatherSets": "Also gather all cards from the following encounter sets: *Return to Heart of the Elders*, *Return to K’n-yan*, and *Venomous Hate*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-heart-of-the-elders.png' /><img src='{setImgPath}/return-to-knyan.png' /><img src='{setImgPath}/venomous-hate.png' /></section>*Venomous Hate* replaces *Yig’s Venom*. Remove the replaced set from the game.",
+        "harbinger": "After setup, search the collection for the new Harbinger of Valusia (*The Sleeper Returns*) and set it aside, out of play. If the Harbinger of Valusia would enter play during this scenario, use this version instead of the original one.",
+        "explorationDeck": "When building the exploration deck, include only 1 of the 2 locations with each of the following connection symbols, chosen at random: Purple Moon, Blue Triangle, Red Square, Green Diamond. Remove the other 4 _Ancient_ locations from the game without looking at them. Do not include any of the other encounter cards listed in the original setup instructions. (There should be a total of 5 cards, not counting the set-aside Descent to Yoth.)",
+        "additionalRule": "For the duration of this scenario, the following additional rules apply: the “check your supplies” ability on the Mouth of K’n-yan can be used from any location, and it discards enemies as well as treacheries; and _Forced_ – After a successful exploration ends: Shuffle the top card of the encounter deck into the exploration deck."
+      }
     },
     "resolutions": {
+      "noResolution": {
+        "title": "No Resolution",
+        "body": "<p>Bạn thức dậy, nằm trên tảng đá thô ở một nơi lạnh hơn và sâu hơn nhiều so với trước đây. Bạn đứng dậy và quan sát xung quanh, chú ý đến ánh sáng đỏ dường như phát ra từ hang động bên trái của bạn. Bạn đi theo nó trong vài phút, cho đến khi cuối cùng nó dẫn bạn vào một lối vào sáng sủa, đầy những cột trụ đá. Ở phía cuối căn phòng là một ô cửa được trang trí công phu, một đĩa tròn bằng đá đã được lăn sang một bên để tiết lộ cõi địa ngục bên kia.</p><ul><li>Kiểm tra Nhật ký Chiến dịch.<ul><li>*If the investigators rescued Alejandro*, proceed to _Resolution 1_.</li><li>*If Alejandro is missing*, proceed to _Resolution 2_.</li></ul></li></ul>"
+      },
       "resolution1": {
-        "title": "Kết thúc thứ nhất"
+        "title": "Kết thúc thứ nhất",
+        "body": "<p>_Resolution 1_: Alejandro kiểm tra lối vào với ánh mắt ngạc nhiên, hai tay giơ lên ​​trong niềm hân hoan, \"Cuối cùng thì đây rồi! Yoth, hang của loài rắn! Những kẻ bị nguyền rủa, những kẻ chạy trốn khỏi sự hủy diệt của Valusia!” Bạn không biết những gì ông ấy nói, và bạn bắt đầu lo lắng. Ngay sau đó, một thứ gì đó chạy vụt qua phía sau bạn, và một âm thanh giống như tiếng móng vuốt lách cách khiến bạn bất ngờ. Nổi lên từ bóng tối phía sau bạn là một số sinh vật lạ lẫm, những sinh vật mà bạn chưa từng thấy: cao 10 feet (3m), với thân hình nón kết thúc bằng bốn phần phụ kỳ lạ có độ dài khác nhau. Alejandro bình tĩnh nói, “Các ngươi đây rồi.” Một trong những sinh vật phản ứng bằng cách bấm móng vuốt của nó vào nhau theo một kiểu có chủ ý. Alejandro ra lệnh cho lũ sinh vật, “Hãy lấy tâm trí của chúng. Chúng không còn giá trị sử dụng nữa.\" Đó là ký ức con người cuối cùng của bạn.</p><ul><li>If the Harbinger of Valusia entered play during this scenario:<ul><li>If it is in the victory display, cross out “*the Harbinger is still alive*” in your Campaign Log.</li><li>If it is still in play or is set aside, next to “*the Harbinger is still alive*” in your Campaign Log, record in parentheses how much damage is on the Harbinger of Valusia, replacing the number that was previously in parentheses.</li></ul></li><li>Cho mỗi điểm báo thù ở trên khu vực trưng bày thành tích, ghi lại 1 kiểm đếm dưới phần \"Cơn thịnh nộ của Yig\" trong Nhật ký Chiến dịch của bạn.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
       },
       "resolution2": {
-        "title": "Kết thúc thứ hai"
+        "title": "Kết thúc thứ hai",
+        "body": "<p>_Resolution 2_: Trước khi bạn có thể đi vào lớp tiếp theo của hang động, một âm thanh giống như tiếng móng vuốt lách cách khiến bạn bất ngờ. Nổi lên từ bóng tối phía sau bạn là một số sinh vật lạ lẫm, những sinh vật mà bạn chưa từng thấy: cao 10 feet (3m), với thân hình nón kết thúc bằng bốn phần phụ kỳ lạ có độ dài khác nhau. Bạn choáng váng khi thấy một bóng người đứng đầu nhóm: không ai khác chính là Alejandro Vela. “Hãy lấy tâm trí của chúng,” Alejandro ra lệnh cho lũ sinh vật. \"Chúng không còn giá trị sử dụng nữa.\" Đó là ký ức con người cuối cùng của bạn.</p><ul><li>If the Harbinger of Valusia entered play during this scenario:<ul><li>If it is in the victory display, cross out “*the Harbinger is still alive*” in your Campaign Log.</li><li>If it is still in play or is set aside, next to “*the Harbinger is still alive*” in your Campaign Log, record in parentheses how much damage is on the Harbinger of Valusia, replacing the number that was previously in parentheses.</li></ul></li><li>Cho mỗi điểm báo thù ở trên khu vực trưng bày thành tích, ghi lại 1 kiểm đếm dưới phần \"Cơn thịnh nộ của Yig\" trong Nhật ký Chiến dịch của bạn.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
       }
     }
   }

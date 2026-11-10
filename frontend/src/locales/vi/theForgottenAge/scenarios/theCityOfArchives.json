@@ -1,24 +1,97 @@
 {
   "heading": "Màn VI",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 (-3 instead if you have 5 or more cards in your hand).",
+      "cultist": "-2. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.",
+      "tablet": "-3. Nếu bạn thất bại, discard 1 random card from your hand.",
+      "elderThing": "@:theForgottenAge.theCityOfArchives.tokens.easyStandard.cultist"
+    },
+    "hardExpert": {
+      "skull": "-2 (if you have 5 or more cards in your hand, you automatically fail instead).",
+      "cultist": "-2. Đặt 1 manh mối của bạn lên địa điểm của bạn.",
+      "tablet": "-3. For each point you fail by, discard 1 random card from your hand.",
+      "elderThing": "@:theForgottenAge.theCityOfArchives.tokens.hardExpert.cultist"
+    }
+  },
+  "xp": {
+    "perfected": "Gains insight into the secrets of the Earth.",
+    "successful": "Gains insight into the secrets of the Earth.",
+    "backfired": "Gains insight into the secrets of the Earth."
+  },
+  "label": {
+    "cardsToDiscard": "Cards to discard"
+  },
+  "tooltips": {
+    "cyclopeanVaults": {
+      "discard": "Discard each non-weakness card in your hand.",
+      "remember": "If you have no cards in your hand: Remember that you \"read about Earth.\""
+    }
+  },
+  "remembered": {
+    "foundTheProcess": "You found the process.",
+    "dissectedAnOrgan": "You dissected an organ.",
+    "interviewedASubject": "You interviewed a subject.",
+    "realizedWhatYearItIs": "You realized what year it is.",
+    "activatedTheDevice": "You activated the device.",
+    "readAboutEarth": "You read about the Earth.",
+    "sawAFamiliarSpecimen": "You saw a familiar specimen."
+  },
   "intro": {
     "label": {
       "cooperate": "*Hợp tác và nói cho các sinh vật mọi thứ bạn biết.*",
       "resist": "*Từ chối và chống lại sự giam cầm.*"
     },
-    "title": "Kịch bản VI: The City of Archives"
+    "title": "Kịch bản VI: The City of Archives",
+    "intro1": "<p>Bạn nhớ rất ít những gì xảy ra trong vài ngày tới. Ý thức của bạn mờ dần khi cơ thể bạn trở nên kiệt quệ, và tâm trí bạn cố gắng một cách yếu ớt để hiểu chính xác điều gì đã xảy ra với bạn.</p><p>Cư dân của nơi này cũng giống như những sinh vật mà bạn đã thấy Alejandro kết giao: những cái nón khổng lồ gợn sóng bằng thịt nhớp nháp, với bốn chi dày kéo dài từ đỉnh. Chúng thật kinh khủng khi nhìn vào, nhưng chúng không gây hại cho bạn như bạn tưởng. Vài ngày đầu tiên của bạn bị các sinh vật giam giữ và tra hỏi, một vài trong số chúng bằng cách nào đó có thể giao tiếp bằng tiếng Anh. Những con khác tái tạo ngôn ngữ của bạn nhờ một cỗ máy tương lai kỳ lạ, được chơi như một loại nhạc cụ. Nó làm bạn nhớ đến cây đàn piano jazz tại Nightingale. Chỉ sau đó bạn mới nhận ra cơ thể mình đã bị thay đổi. Bạn không có tay hay ngón tay để chơi đàn, không có chân để bước đi, không có phổi để hét lên. Bây giờ bạn là một trong số chúng, một trong những sinh vật đã giam cầm bạn, và cơ thể ban đầu của bạn không còn thấy ở đâu nữa.</p><p>Bất chấp việc bạn bị giam cầm, các sinh vật dường như không có ý định làm hại bạn. Thay vào đó, chúng chỉ đơn thuần phỏng vấn bạn, hỏi đủ loại câu hỏi về nhiều chủ đề: xã hội, nghề nghiệp, công nghệ, hệ sinh thái, cơ thể con người của bạn. Khát khao tri thức của chúng rất mạnh mẽ, không có hồi kết. Câu hỏi của chúng bao gồm từ những điều bình thường cho đến phức tạp. Chúng yêu cầu bạn viết thật nhiều bằng ngôn ngữ của bạn, lấy bất cứ thứ gì bạn viết để cất vào kho lưu trữ rộng lớn của chúng. Bạn được thông báo rằng bạn sẽ có thể tự do đi lang thang trong thành phố nếu bạn hợp tác.</p><ul><li>Các điều tra viên phải quyết định <i>(chọn một)</i>:<ul><li>*Cooperate and tell the creatures everything you know*. Proceed to _Intro 2_.</li><li>*Refuse and resist captivity*. Skip to _Intro 3_.</li></ul></li></ul>",
+    "intro2": "<p>Bạn hợp tác với các sinh vật, hy vọng sẽ kiếm được tự do cho mình. Bạn chán ngấy cảnh bị giam cầm, và có lẽ bạn sẽ có thể tìm được đường về nhà nếu bạn có thể đi lang thang trong thành phố theo ý muốn. Các sinh vật có vẻ hài lòng khi bạn trả lời câu hỏi của chúng, mặc dù cách cư xử của chúng vẫn hoàn toàn xa lạ với bạn. Nhiều ngày cho đến nhiều tuần đã trôi qua, thậm chí có thể lâu hơn. Rất khó để nói đã qua bao lâu. Cuối cùng, một trong những sinh vật thông báo cho bạn biết rằng bạn có thể tự do đi lang thang trong các hội trường của thành phố, với một số hạn chế: Bạn không được phép làm tổn hại đến cơ thể mới của mình, vì nó thuộc về con khác của chủng tộc của bọn chúng, và bạn không được phép rời khỏi thành phố. Sự hạn chế của bạn được dỡ bỏ và sinh vật quan sát một cách thích thú khi bạn đã quen với cơ thể hình nón của mình.</p><p class='basic right'>các điều tra viên đã hợp tác với sinh vật Yithians.</p><p class='basic right'>Skip to _Setup._</p>",
+    "intro3": "<p>_Intro 3:_ These creatures abducted you and even stole you from your own body. You refuse to give your captors even a single answer. You’d spit in their faces if you could—if you knew how to spit with such body, and if you knew which one of the creatures’ four distensible appendages was a face. Breaking free of your restrains is a hopeless endeavor, but you struggle to escape regardless. Your efforts do not go unnoticed, and one of the creatures is assigned to watch you. It seems more concerned with preventing you from harming your body than preventing you from escaping. After many days of captivity, you find a way to use this to your advantage. You struggle so hard against your restraints that they pierce into your leathery, cold flesh, drawing out a bit of viscous slime-blood. Your guard quickly apporoaches, clicking its claws together repeatedly. It undoes your restraints, and the moment it does, your claw appendages strike at what you believe to be the creature’s throat. It collapses to the floor, writhing in pain.</p><p class='basic right'>In your Campaign Log, record that *the investigators resisted captivity.*.</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
   },
   "setup": {
-    "beforeDrawingOpeningHandsAlejandro": "Trước khi rút bài trên tay đầu màn chơi, nếu một người chơi có Alejandro Vela trong chồng bài của mình, tìm lá bài Alenjandro Vela và đặt ông ấy một bên, ngoài khu vực chơi.",
-    "setAside": "Đặt The Custodian sang một bên, ngoài khu vực chơi.",
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The City of Archives*, *Agents of Yog-Sothoth*, *Locked Doors*, *Chilling Cold*, and *Striking Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/city-of-archives.png' /><img src='{setImgPath}/agents-of-yog.png' /><img src='{setImgPath}/locked-doors.png' /><img src='{setImgPath}/chilling-cold.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
     "beforeDrawingOpeningHandsItems": "Trước khi rút bài trên tay đầu màn chơi, mỗi điều tra viên tìm trong chồng bài của mình và khu vực chơi tất cả tài sản [[Item]] unique. Đặt mỗi một tài sản đó sang một bên, ngoài khu vực chơi. Chúng không tồn tại trong khoảng thời gian này.",
-    "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch."
+    "beforeDrawingOpeningHandsAlejandro": "Trước khi rút bài trên tay đầu màn chơi, nếu một người chơi có Alejandro Vela trong chồng bài của mình, tìm lá bài Alenjandro Vela và đặt ông ấy một bên, ngoài khu vực chơi.",
+    "bodyOfAYithian": "Thay thế mỗi lá bài điều tra viên của người chơi bằng lá bài điều tra viên Body of a Yithian (xem phần <b>Cơ thể của sinh vật Yithian</b> bên dưới).",
+    "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch.",
+    "cooperated1": "các điều tra viên đã hợp tác với sinh vật Yithians.",
+    "resisted1": "Đặt Interview Room (<i>Restraining Chamber</i>) vào chơi (nó là một trong 3 vị trí Interview Room). Mỗi điều tra viên bắt đầu chơi tại vị trí Interview Room (<i>Restraining Chamber</i>). Ngẫu nhiên 2 vị trí Interview Room còn lại và cũng đặt chúng vào chơi.",
+    "cooperated2": "Mỗi điều tra viên nhận 1 manh mối <i>(từ token pool)</i>.",
+    "resisted2": "Tìm trong chồng bài encounter đã tập hợp 1 lá Yithian Observer và đặt nó vào khu vực trưng bày thành tích.",
+    "placeLocations": "Đặt 3 vị trí Halls of Pnakotus vào chơi. Đặt mỗi vị trí còn lại một bên, ngoài khu vực chơi.",
+    "setAside": "Đặt The Custodian sang một bên, ngoài khu vực chơi.",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the *Return to The City of Archives* encounter set. It is indicated by the following icon:<section class='encounter-sets'><img src='{setImgPath}/return-to-city-of-archives.png' /></section>",
+      "placeLocations": "Also put Halls of Pnakotus (*Southern Corridors*) into play.",
+      "setAside": "Also set Cyclopean Vaults and Alien Conservatory aside, out of play. (These locations should be put into play during act 1b, when the remainder of the set-aside locations are put into play.)",
+      "actDeck": "Remove Act 2a—*Restricted Access* from the game and replace it with the new Act 2a—*Unrestricted Access*."
+    }
   },
+  "specialRules": [
+    {
+      "title": "@:theForgottenAge.theCityOfArchives.bodyOfAYithian.title",
+      "body": "@:theForgottenAge.theCityOfArchives.bodyOfAYithian.body"
+    }
+  ],
   "bodyOfAYithian": {
-    "title": "Cơ thể của sinh vật Yithian"
+    "title": "Cơ thể của sinh vật Yithian",
+    "body": "<p class='basic'>Trong quá trình chuẩn bị cho màn chơi này, mỗi điều tra viên được hướng dẫn thay thế lá bài điều tra viên của họ bằng một trong các lá bài điều tra viên Body of a Yithian được cung cấp trong Mythos Pack này.</p><ul><li>Mỗi bộ bài của điều tra viên vẫn giữ nguyên, nhưng trong suốt màn chơi này, họ phải sử dụng lá bài điều tra viên Body of a Yithian, và do đó không thể sử dụng bất kỳ năng lực điều tra viên nào của họ. Mỗi điều tra viên vẫn sử dụng lá bài điều tra viên nhỏ, để phân biệt ai là ai.<ul><li>Each investigator should still use their investigator mini-card so they can tell who is who.</li></ul></li><li>Bất cứ sang chấn nào bình thường được đặt vào điều tra viên của bạn sẽ được chuyển dời vào lá bài điều tra viên Body of a Yithian của bạn.</li><li>Bất cứ lá bài nào được đính kèm hoặc đặt bên dưới lá bài điều tra viên của bạn được đính kèm hoặc đặt bên dưới lá bài Body of a Yithian của bạn.</li><li>Trong suốt màn chơi này, lá bài Body of a Yithian của bạn có cùng tên với lá bài điều tra viên cũ của bạn. <i>Ví dụ: Nếu bạn đang chơi Wendy Adams, xem lá bài Body of a Yithian như thể nó là “Wendy Adams” trong suốt màn chơi này.</i></li><li>Lá bài Body of a Yithian có biểu tượng encounter The City of Archives, và do đó không thể được sử dụng trong bất kỳ màn chơi nào khác, ngoại trừ màn chơi The City of Archives trừ khi được ghi rõ.</li></ul>"
   },
   "resolutions": {
+    "xp": {
+      "bonus": "Gained insight into the secrets of the Earth"
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_If no resolution was reached (each investigator was defeated):_ “Alejandro, what are you—?” You suddenly cry out. A nurse stands over you, peering into your eyes with a small light. You push the nurse away and rise to your feet, suddenly puzzled and disoriented. Despite the nurse’s protests, you wobble feebly out of the room. You are in a hospital, its white halls smelling faintly of disinfectant and other chemicals. Just moments prior, hadn’t you been exploring some kind of underground cavern?… You cannot recall.</p><p>“Excuse me? Come back, you must rest!” The nurse calls out to you, gripping your forearm and pulling you back to your cot. She examines you closely while you recover from the shock of being transported so far in so short a time. “Who is Alejandro?” she asks, and you struggle to recall. The name doesn’t ring a bell.</p><p>You ask the nurse how you came to be here, wondering why she isn’t surprised at your sudden appearance. “Why, you admitted yourself to St. Mary’s just last night. Do you not remember?” You have no memory of this, and you are starting to grow concerned. “You were acting a little strangely, if I may be so bold. And you spoke in a strange fashion, almost as if English weren’t your first language. But now I see that you probably just drank a little bit too much.” She notices your questioning expression and smiles. “Don’t worry. We get that kind of thing quite often these days, now that all the bars and pubs are on the up-and-up again.”</p><p>You examine your face in the mirror. You are tired and older than you remember. Something important lies on the very edge of your memory, fuzzy and blurred. It takes about a minute before the significance of the nurse’s last statement catches up to you. Turning back toward the nurse, you ask what year it is, terrified of the answer.</p><p>“Why, 1934 of course. My, you must have had a heck of a night!” She chuckles.</p><ul><li>In your Campaign Log, record that *the investigators had their memories expunged*.</li><li>Mỗi điều tra viên bị khiến <b>điên loạn</b>.</li><li>Các điều tra viên thất bại.</li></ul>"
+    },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
+      "body": "<p>Bạn thức dậy trên bề mặt đá lạnh của hang động, tâm trí bạn choáng váng sau chuyến hành trình xuyên thời gian và không gian.</p>",
+      "tasks": "Check the number of tasks on act 2b that were completed during this scenario.",
+      "tasks6": "If all 6 tasks were completed, record in your Campaign Log that *the process was perfected*. Each investigator earns 4 bonus experience as they gain insight into the secrets of the Earth.",
+      "tasks5": "If 5 tasks were completed, record in your Campaign Log that *the process was successful*. Each investigator earns 2 bonus experience as they gain insight into the secrets of the Earth.",
+      "tasks4": "If 4 tasks were completed, record in your Campaign Log that *the process backfired*. Each investigator earns 1 bonus experience as they gain insight into the secrets of the Earth.",
+      "tasks3": "If 3 tasks were completed, record in your Campaign Log that *the process backfired spectacularly*.",
       "xp": "Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory của các lá bài trong vùng trưng bày thành tích."
     }
   }

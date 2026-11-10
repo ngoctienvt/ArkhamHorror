@@ -4,6 +4,7 @@
     "title": "Màn II-A: Tìm kiếm Kadath"
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Search for Kadath*, *Agents of Nyarlathotep*, *Corsairs*, *Dreamlands*, *Whispers of Hypnos*, and *Zoogs*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-search-for-kadath.png' /><img src='{setImgPath}/agents-of-nyarlathotep.png' /><img src='{setImgPath}/corsairs.png' /><img src='{setImgPath}/dreamlands.png' /><img src='{setImgPath}/whispers-of-hypnos.png' /><img src='{setImgPath}/zoogs.png' /></section>",
     "putLocations": "Đặt vị trí Ulthar, Skai River, và Dylath-Leen vào chơi.",
     "beginInUlthar": "Mỗi điều tra viên bắt đầu chơi tại Ulthar.",
     "setOtherLocationsAside": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
@@ -17,6 +18,7 @@
       "title": "Thiết lập Oriab",
       "loseClues": "Mỗi điều tra viên mất tất cả manh mối của họ.",
       "removeLocations": "Loại bỏ mỗi vị trí đang được chơi khỏi màn chơi (hoặc đặt nó vào khu vực trưng bày thành tích nếu nó có Victory X và không có manh mối trên nó). Mỗi kẻ địch và attachment ở vị trí đó bị discard. Các điều tra viên chưa bị hạ gục trong quá trình này.",
+      "putLocations": "Đặt mỗi vị trí [[Oriab]] đặt một bên hồi đầu vào chơi (Baharna, Mt. Ngranek, và Nameless Ruins).",
       "placeInvestigators": "Đặt các điều tra viên tại Baharna.",
       "spawnNightriders": "Tìm trong chồng bài encounter 1 bản sao của Nightriders và spawn nó tại Mt. Ngranek. Nếu có 3 hoặc 4 điều tra viên trong màn chơi, tìm trong chồng bài encounter 1 bản sao Nightriders khác và spawn nó tại Nameless Ruins. Xào lại chồng bài encounter.",
       "advanceAct": "Tiến tới Act 2a—“The Isle of Oriab.”"
@@ -25,6 +27,7 @@
       "title": "Thiết lập Mnar",
       "loseClues": "Mỗi điều tra viên mất tất cả manh mối của họ.",
       "removeLocations": "Loại bỏ mỗi vị trí đang được chơi khỏi màn chơi (hoặc đặt nó vào khu vực trưng bày thành tích nếu nó có Victory X và không có manh mối trên nó). Mỗi kẻ địch và attachment ở vị trí đó bị discard. Các điều tra viên chưa bị hạ gục trong quá trình này.",
+      "putLocations": "Đặt mỗi vị trí [[Mnar]] đặt một bên hồi đầu vào chơi (Kadatheron, Sarnath, và Ruins of Ib).",
       "placeInvestigators": "Đặt các điều tra viên tại Kadatheron.",
       "spawnBeingsOfIb": "Spawn kẻ địch Beings of Ib đặt một bên hồi đầu tại Ruins of Ib.",
       "advanceAct": "Tiến tới Act 2a—“The Doom That Came Before.”"
@@ -33,6 +36,7 @@
       "title": "Thiết lập Forbidden Lands",
       "loseClues": "Mỗi điều tra viên mất tất cả manh mối của họ.",
       "removeLocations": "Loại bỏ mỗi vị trí đang được chơi khỏi màn chơi (hoặc đặt nó vào khu vực trưng bày thành tích nếu nó có Victory X và không có manh mối trên nó). Mỗi kẻ địch và attachment ở vị trí đó bị discard. Các điều tra viên chưa bị hạ gục trong quá trình này.",
+      "putLocations": "Đặt mỗi vị trí [[Forbidden]] đặt một bên hồi đầu vào chơi (Ilek-Vad, Forbidden Lands, và Zulan-Thek).",
       "placeInvestigators": "Đặt các điều tra viên tại Ilek-Vad.",
       "spawnManticore": "Spawn kẻ địch Stalking Manticore đặt một bên hồi đầu tại Forbidden Lands.",
       "spawnHorde": "Spawn kẻ địch Horde of Night đặt một bên hồi đầu tại Zulan-Thek.",
@@ -54,37 +58,138 @@
       "title": "Vị trí trong màn chơi Tìm kiếm Kadath",
       "body": "<p class='basic'>Mỗi vị trí của màn chơi này không có mặt unreveal, và do đó chúng tiến vào chơi với mặt reveal lật lên. Thay vì mặt unreveal, những vị trí này có câu chuyện ở mặt còn lại. Bất cứ khi nào 1 vị trí trong màn chơi này tiến vào chơi (bao gồm cả lúc setup), đặt manh mối lên vị trí đó tương ứng giá trị manh mối như bình thường. Vị trí có thể được lật theo 1 trong 2 cách sau. Hầu hết được lật bởi từ khóa veild, như mô tả ở dưới. Một số vị trí khác thì được lật bởi khả năng được in trên vị trí đó. <b>Một khi 1 vị trí được lật và câu chuyện của nó được đọc, nó không thể được lật lại cho phần còn lại của màn chơi, trừ khi được ghi rõ.</b></strong></p>"
     },
+    "veiled": {
+      "title": "Veiled",
+      "body": "<p class='basic'>Nhiều vị trí trong trường hợp này có từ khóa veiled. Từ khóa này thể hiện rằng một vị trí chứa truyền thuyết hoặc sự hỗ trợ chưa rõ mà các điều tra viên phải tìm kiếm trước khi nó có thể được sử dụng cho họ.</p><p class='basic'>Là một khả năng [fast], một điều tra viên tại một địa điểm veiled không có manh mối ở trên nó có thể lật vị trí đó, giải quyết nội dung ở phía bên kia của nó.</p>"
+    },
     "swarmingAndVictory": {
       "title": "Kẻ địch với Swarming và Victory",
       "body": "<p class='basic'>Khi _Victory X_ xuất hiện trên kẻ địch swarming, dòng này chỉ hoạt động cho lá bài vật chủ. Các lá bài swarm không thể tiến vào khu vực trưng bày thành tích và không bao giờ có điểm victory.</p>"
     }
   },
   "flavorText": {
+    "intro1": {
+      "title": "Intro 1",
+      "body": "<p>Bạn nghỉ đêm tại Einar's Place. Giấc nghỉ của bạn không yên bình. Ngay cả khi người khác có thể ngủ trong giấc mơ, bạn thì lại không. Tâm trí bạn tràn đầy lo lắng về nhiệm vụ đang chờ đợi phía trước. Bạn ngẫm nghĩ về lời cảnh báo của con mèo đen về mối nguy hiểm trong thế giới thực, và bạn thắc mắc về những người khác đã theo Virgil Gray xuống những bậc thang của giấc ngủ và xuyên qua Khu rừng bị phù phép. Bây giờ họ cũng ở đây sao? Có lẽ nếu bạn tìm thấy lâu đài này và quay trở lại với bằng chứng về Vùng đất giấc mơ, bạn có thể cứu tất cả mọi người: chính bạn, bạn bè của bạn và cả những người mơ mộng khác.</p><p class='basic'>Kiểm tra Nhật ký Chiến dịch.</p><ul><li>*If the black cat is at your side*, proceed to _Intro 2_.</li><li>*If the above is not true, and Luke Robinson is in this group*, skip to _Intro 3_.</li><li>*If neither of the above is true*, skip to _Intro 4_.</li></ul>"
+    },
+    "intro2": {
+      "title": "Intro 2",
+      "body": "<p>Khi bình minh ló dạng và ánh sáng lọt qua rèm cửa phòng bạn, bạn để ý thấy một bóng hình con mèo đang ngồi trước cửa sổ. Khi tầm nhìn của bạn rõ ràng lại, bạn bị choáng ngợp bởi đôi mắt màu vàng xuyên thấu của nó, sáng như ánh bình minh. Bạn nhận ra hình dạng này là con mèo biết nói của Virgil. Bạn hỏi con mèo đen nó đã ngồi đó bao lâu rồi.</p><p>Nó trả lời một cách mâu thuẫn, “Đủ lâu để biết cậu không thức cũng không ngủ.”</p><p>Bản chất của thế giới này vẫn khiến bạn bối rối. Người ta thậm chí có thể ngủ trong Vùng đất giấc mơ không? Nếu vậy, tâm trí của họ sẽ đi đâu? Tò mò, bạn đặt câu hỏi này cho con mèo.</p><p>“Những người ở đây trong cơ thể vật lý của họ thì có thể, nhưng cậu thì hoàn toàn khác. Bây giờ, đừng bận tâm đến tất cả những điều đó. Bắt đầu công việc thôi.” Con mèo đen nhảy lên giường của bạn. “Tôi đã đưa cho bạn bè của cậu lời cảnh báo mà cậu muốn tôi chuyển cho họ. Có vẻ như họ cũng đang chuẩn bị vào Vùng đất giấc mơ. Trong lúc đó, tôi sẽ ở lại với cậu. Dù sao thì ai đó cũng phải trông chừng cậu và thú cưng con người của tôi.”</p><p class='basic'>Kiểm tra Nhật ký Chiến dịch.</p><ul><li>*If Luke Robinson is in this group*, proceed to _Intro 3_.</li><li>Otherwise, skip to _Intro 4_.</li></ul>"
+    },
+    "intro3": {
+      "title": "Intro 3",
+      "body": "<p>Vào buổi sáng, bạn thấy Virgil và Randolph đang nói chuyện ở quảng trường thị trấn bên ngoài Einar's Place. Bạn vẫn không chắc phải nghĩ gì về một trong hai người họ, nhưng bạn có cảm nhận tốt về nơi bạn nên đi tiếp theo. Rốt cuộc, đây không phải là chuyến du ngoạn đầu tiên của bạn đến vùng đất truyền thuyết của những giấc mơ. Nói chuyện với Randolph, bạn đề nghị nói chuyện với linh mục Atal ở Ngôi đền của Cựu Thần (Temple of the Elder Ones) gần đó. Đó là cái tên mà bạn đã nghe thấy trong lần cuối cùng bạn đến thăm thành phố Ulthar trong giấc ngủ của mình, mặc dù cho đến bây giờ bạn không có lý do gì để xin lời khuyên của vị linh mục. Randolph trao cho bạn một cái nhìn sửng sốt rồi nhanh chóng biến thành một nụ cười nhếch mép.</p><p>“Thật thú vị,” anh ấy nói, “Tôi cũng định đề nghị như vậy. Atal thông thái vô cùng. Ông ấy có thể biết nơi để tìm nơi chúng ta tìm kiếm.</p><p>Virgil, háo hức tham gia vào cuộc phiêu lưu này, vỗ tay. “Chà, chúng ta còn chờ gì nữa? Lối này, các bạn của tôi!”</p><p>Bạn gật đầu và đi đến ngôi đền, một tòa tháp hình tròn bằng đá ngà sừng sững trên ngọn đồi cao nhất trong thị trấn. Một đội quân mèo nhỏ tuần tra các bức tường của nó. Con mèo đứng đầu đội hình không ai khác chính là con mèo già với vết sẹo mà bạn đã gặp trong rừng trước đó. Nó bước tới để ngăn bạn tiến vào và nhìn nhóm bạn một cách giận dữ.</p><p>Con mèo già nói với giọng sắc bén, “Xin chào lần nữa. Tôi cho rằng các cậu muốn tôi tránh sang một bên.”</p><p class='basic'>Kiểm tra Nhật ký Chiến dịch.</p><ul><li>các điều tra viên được cứu bởi Randolph Carter.</li><li>*If the cats collected their tribute from the Zoogs*, skip to _Intro 6_.</li></ul>"
+    },
+    "intro4": {
+      "title": "Intro 4",
+      "body": "<p>Sáng hôm sau, bạn thấy Virgil và Randolph đang nói chuyện ở quảng trường thị trấn bên ngoài Einar's Place. Mặc dù bạn vẫn chưa chắc chắn nên nghĩ gì về một trong số họ, nhưng bạn biết rằng cả hai đều rất thông thạo địa hình của vùng đất xa lạ này. Bạn hỏi họ về động thái tiếp theo bạn nên làm. Randolph gợi ý, “Chúng ta nên nói chuyện với linh mục Atal trong Ngôi đền của Đại Cổ Thần. Ông ấy vô cùng thông thái và có thể biết nơi để tìm nơi chúng tôi tìm kiếm.” Bạn hỏi rằng ngôi đền cách đây bao xa.</p><p>Randolph trả lời, “Không xa chút nào. Nó ở trên đỉnh ngọn đồi cao nhất trong Ulthar. Đi thôi, tôi sẽ dẫn đường.\" Với Randolph dẫn đầu, bạn tìm đường đến Ngôi đền của Cựu Thần, một tòa tháp hình tròn bằng đá ngà được bảo vệ bởi một đội quân mèo nhỏ. Con mèo đứng đầu đội hình không ai khác chính là con mèo già với vết sẹo mà bạn đã gặp trong rừng trước đó. ó bước tới để ngăn bạn tiến vào và nhìn nhóm bạn một cách giận dữ.</p><p>Con mèo già nói với giọng sắc bén, “Xin chào lần nữa. Tôi cho rằng các cậu muốn tôi tránh sang một bên.”</p><p class='basic'>Kiểm tra Nhật ký Chiến dịch.</p><ul><li>các điều tra viên được cứu bởi Randolph Carter.</li><li>*If the cats collected their tribute from the Zoogs*, skip to _Intro 6_.</li></ul>"
+    },
+    "intro5": {
+      "title": "Intro 5",
+      "body": "<p>Con mèo nói, đuôi cứng và thẳng, “Chà, tệ quá.” Nhiều con mèo khác đe dọa bạn từ hai bên, một số con rít lên ầm ĩ. Lông của chúng phồng lên, và mắt chúng lóe lên sự giận dữ. “Nhiệm vụ của chúng tôi là bảo vệ nơi này khỏi những kẻ bên ngoài hung hăng như cậu. Các cậu không được chào đón ở đây.</p><p>Randolph cầu khẩn, “Làm ơn. Chúng tôi chỉ cố gắng nói chuyện với Atal. Chúng tôi không làm hại ai.\"</p><p>\"Các cậu có thể nói một đằng làm một nẻo.\" Con mèo sẹo bước đi. “Bây giờ hãy ra khỏi đây và đừng quay lại.”</p><p class='basic'>Các điều tra viên phải quyết định <i>(chọn một)</i>:</p><ul><li>*Leave empty-handed.* Skip to _Intro 7_.</li><li>*Force your way into the temple.* Skip to _Intro 8_.</li></ul>"
+    },
+    "intro6": {
+      "title": "Intro 6",
+      "body": "<p>Bạn nói với con mèo rằng bạn chỉ ở đây để nói chuyện với Atal, và bạn không có ý làm hại ai. “À, đừng lo lắng, con người,” con mèo nói với một cái ngáp dài—kiểu chỉ một con mèo mới có thể thực hiện và trông vẫn có vẻ vương giả trong hành động. “Cậu có vẻ không phải kiểu người hay gây rắc rối. 'Bên cạnh đó thì tôi sẽ không đi đâu cả.\" Bạn nhìn thấy một cục nhỏ trước mặt con mèo: một con gà lôi bị ăn dở, bê bết máu. Bạn chống lại sự thôi thúc hếch mũi lên và thấy mình thật may mắn khi con mèo này ở bên phe bạn. “Vào đi,” nó nói, rồi liếm miếng sườn khi chuẩn bị kết thúc bữa ăn của mình.</p><p class='basic right'>Skip to _Intro 9_.</p>"
+    },
+    "intro7": {
+      "title": "Intro 7",
+      "body": "<p>Từ bỏ, bạn rời khỏi ngôi đền trên đỉnh đồi phía sau. “Tôi cho rằng chúng ta sẽ phải xoay xở mà không có sự thông thái của Atal,” Randolph thở dài nói. “Trong mọi trường hợp, có khả năng điểm đến của chúng ta ở xa đây—có lẽ ở một lục địa khác hoàn toàn. Chúng ta sẽ cần có một lối đi an toàn bằng đường biển. Tôi đề nghị chúng ta đi về phía nam, đến thành phố cảng Dylath-Leen. Chúng ta có thể tìm ra bước tiếp theo của mình từ đó.” Bạn gật đầu và nhìn ngôi đền đá lần cuối, tự hỏi về tri thức mà bạn có lẽ đã để lại.</p><p class='basic right'>Skip to _Setup_.</p>"
+    },
+    "intro8": {
+      "title": "Intro 8",
+      "body": "<p>Bạn thông báo cho con mèo rằng bạn sẽ vào ngôi đền bằng cách này hay cách khác, và một con mèo đơn giản sẽ không cản được đường bạn. Nó gầm gừ, hạ thấp cơ thể và chuẩn bị vồ lấy, “Muốn cược không?” Nhận thấy sự hỗn loạn, một số con mèo bảo vệ ngôi đền vây quanh bạn. Bạn không muốn làm hại những con mèo này, nhưng bạn cũng sẽ không để chúng cản trở mục tiêu của mình. Gật đầu với những người bạn đồng hành của mình, bạn lao như điên đến cổng đền. Một cơn bão tiếng rít và tiếng rít giận dữ nổ ra xung quanh bạn khi lũ mèo dựng lên hàng phòng thủ trong tuyệt vọng. Một bức tường đầy móng vuốt và răng bé xíu chạm vào bạn, nhưng bạn vẫn bất chấp vượt qua. Bạn đóng sầm cánh cửa đá lại sau lưng và nghe thấy tiếng con mèo già hét lên từ phía bên kia: “Được rồi, con người! Gặp linh mục của ngươi đi! Nhưng đừng nghĩ rằng sự vi phạm này sẽ được tha thứ!”</p><ul><li>các điều tra viên cưỡng ép tiến vào ngôi đền.</li></ul><p class='basic right'>Proceed to _Intro 9_.</p>"
+    },
+    "intro9": {
+      "title": "Intro 9",
+      "body": "<p>Trên đỉnh của ngôi đền, ngồi trên một chiếc bục ngà voi, linh mục Atal đang đợi bạn. Ông ta là một người đàn ông ốm yếu, rắn rỏi với bộ râu đen dài và lưa thưa, đôi má hóp và đôi mắt trắng đục như sữa của một người bị mù lòa. Randolph thì thầm khi bạn ngồi xuống trước bục, “Đừng để đôi mắt đánh lừa cậu. Atal đã sống hơn ba thế kỷ, nhưng trí nhớ của ông ấy rất sắc bén.”</p><p>Bạn hỏi vị linh mục về nhiệm vụ của bạn và về điểm đến của bạn: lâu đài mà Randolph mô tả trong giấc mơ của mình. “Bạn nói về nơi yên nghỉ của những Đại Cổ Thần, cao trên Kadath vô danh. Ngay cả tôi cũng không biết vị trí thực sự của nó. Và điều này lại tốt, vì những thành quả của việc cố gắng leo lên một nơi như vậy sẽ thực sự cay đắng. Người bạn đồng hành của tôi, Barzai, đã từng leo lên một đỉnh núi chỉ thiêng liêng bằng một phần nhỏ nơi đó, và anh ấy không bao giờ được nhìn thấy cũng như nghe thấy tin tức gì nữa. Các vị thần của Kadath có vẻ không có sức mạnh, nhưng họ được bảo vệ bởi các vị thần khác từ bên ngoài, những người tốt hơn là không nên thảo luận. Sẽ khôn ngoan hơn nếu để tất cả các vị thần yên và bỏ lại sự dại dột này phía sau.”</p><p>Việc Atal sử dụng từ “các vị thần” khiến bạn tò mò. Bạn tự hỏi loại thần nào có thể tồn tại ở một nơi như thế này.</p><p>Vị linh mục lắc đầu. “Họ không phải là các vị thần của chúng tôi, mà là các vị thần của Trái đất, vì vùng đất này chỉ là hình ảnh phản chiếu của các cậu.”</p><p>Bạn cố gắng dò hỏi sâu hơn trí tuệ của Atal bằng cách đặt câu hỏi, nhưng lời khuyên của ông ấy không lay chuyển. Ông ấy nhấn mạnh, “Tôi đã nói nhiều hơn những gì tôi nên làm. Làm ơn, vì lợi ích của cậu, đừng theo đuổi sự điên rồ này nữa.”</p><ul><li>Trong Nhật ký Chiến dịch của bạn, kế bên phần \"Bằng chứng về Kadath\", ghi lại 1 kiểm đếm.</li></ul><p class='basic'>Kiểm tra Nhật ký Chiến dịch.</p><ul><li>*If the investigators parleyed with the Zoogs*, proceed to _Intro 10_.</li><li>các điều tra viên được cứu bởi Randolph Carter.</li></ul>"
+    },
+    "intro10": {
+      "title": "Intro 10",
+      "body": "<p>Một tia cảm hứng lóe lên trong bạn, và bạn nhớ đến rượu trăng do Zoogs tặng cho bạn trong Khu rừng bị phù phép. Bạn đề nghị một ít cho Atal, và ông ấy vui vẻ chấp nhận. Bạn giả vờ tự mình uống rượu trong khi đưa hết bản nháp này đến bản nháp khác cho linh mục. Cuối cùng, đôi môi của Atal nới lỏng, và ông ấy nói về những điều bị cấm mà ông ấy sẽ không bao giờ thảo luận nếu không phải vì rượu. Ông ta kể về một hình ảnh được chạm khắc trên bề mặt của ngọn núi Ngranek trên đảo Oriab - trông giống như các vị thần. Ông ta kể về những trụ cột của Kadatheron, nơi ghi lại lịch sử của Vùng đất giấc mơ của Trái Đất. Ông ta kể về những người bị giết bởi chính lũ Night và được chôn cất trong hầm mộ của Zulan-Thek, thành phố của người chết. Ông ta kể về một ngôi sao đáng sợ phía trên một thành phố bị lãng quên không xuất hiện trên bản đồ. Ông ấy nói với giọng say xỉn, “Nếu cậu nhất định phải tìm kiếm Kadath ở Cold Wastes. Có một thành phố dọc bờ biển phía nam: Dylath-Leen. Cậu có thể tìm thấy lối đi ở đó.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, kế bên phần \"Bằng chứng về Kadath\", ghi lại 1 kiểm đếm.</li><li>Each investigator earns 2 experience.</li></ul><p class='basic right'>Skip to _Setup_.</p>"
+    },
+    "intro11": {
+      "title": "Intro 11",
+      "body": "<p>Atal từ chối cho bạn thêm bất kỳ lời khuyên nào, vì vậy bạn quyết định bỏ lại ngôi đền trên đỉnh đồi. “Chúng ta đã học được nhiều điều, nhưng chúng ta vẫn chưa thể biết được vị trí của Kadath,” Randolph thở dài nói. “Có vẻ như điểm đến của chúng ta ở rất xa đây—có lẽ ở một lục địa khác. Chúng ta sẽ cần tìm được đường đi lại bằng đường biển nếu chúng ta phải đi những khoảng cách xa như vậy. Tôi đề nghị chúng ta bắt đầu bằng cách đi về phía nam, đến thành phố cảng Dylath-Leen. Chúng ta có thể tìm ra bước tiếp theo của mình từ đó.”</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
+    },
     "investigatorDefeat": {
-      "title": "Điều tra viên bị hạ gục"
+      "title": "Điều tra viên bị hạ gục",
+      "body": "<p class='basic'>Before resolving any other resolution, if at least one investigator was defeated: The defeated investigators read _Investigator Defeat_ first.</p><p>Bạn thức dậy và thấy mình bị trói bởi những sợi dây gai dày, nằm trên gỗ cứng và ẩm. Sàn nhà lắc lư qua lại một cách đều đặn, và bạn nghe thấy tiếng sóng biển vỗ vào tường. Bạn đang bị giam cầm trên một loại tàu nào đó. Nhưng tại sao?</p><ul><li>Trong Nhật ký Chiến dịch của bạn, mỗi điều tra viên bị hạ gục ghi lại <i>(tên điều tra viên của bạn) đã bị bắt giữ</i>.</li><li>If a defeated investigator’s deck contains Randolph Carter and at least 1 investigator resigned, give ownership of Randolph Carter to an investigator who resigned.</li><li>Proceed to the resolution the investigators reached. If no resolution was reached…<ul><li>…and at least 1 investigator resigned, proceed to _Resolution 1_.</li><li>…and each investigator was defeated, skip to _Resolution 2_.</li></ul></li></ul>"
     }
   },
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p class='basic'>_If no resolution was reached:_</p><ul><li>If at least 1 investigator resigned, proceed to _Resolution 1_.</li><li>If each investigator was defeated, skip to _Resolution 2_.</li></ul>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1 (each defeated investigator should resolve Investigator Defeat first):_ You have ventured far and wide, from the quaint cobbled villages of the kingdom of the Skai to wondrous lands you could have never in a hundred years imagined. You learned much of the Dreamlands and of the gods who dwell atop unknown Kadath. Though you are closer to your goal, you still don’t know its precise location. In the meantime, your quest grows deadlier with each passing day. No matter where you go, foul, nightmarish creatures pursue you across land and sea. Winged beasts with no faces, horned Corsairs wielding razor-sharp cutlasses and commanding great black galleys—the agents of your demise bear many shapes. You decide to return to your ship, safe from the many dangers of the Dreamlands…or so you thought.</p><p>Bạn đã mạo hiểm đi khắp nơi, từ những ngôi làng sỏi đá cổ kính của vương quốc Skai đến những vùng đất kỳ diệu mà bạn chưa bao giờ có thể tưởng tượng được trong hàng trăm năm. Bạn đã học được nhiều điều về Vùng đất giấc mơ và về các vị thần ngự trên đỉnh Kadath vô danh. Mặc dù bạn đang ở gần mục tiêu của mình hơn nhưng bạn vẫn không biết vị trí chính xác của nó. Trong khi đó, nhiệm vụ của bạn trở nên nguy hiểm hơn mỗi ngày trôi qua. Bất kể bạn đi đâu, những sinh vật xấu xa, kinh dị theo đuổi bạn trên khắp đất liền và biển cả. Những con thú có cánh không có khuôn mặt, những tên Corsairs có sừng sử dụng kiếm sắc như dao cạo và chỉ huy những chiếc thuyền lớn màu đen — những tên tay sai đem lại đau khổ cho bạn mang nhiều hình dạng khác nhau. Bạn quyết định quay trở lại con tàu của mình, nơi an toàn trước nhiều mối nguy hiểm của Vùng đất giấc mơ…hoặc bạn nghĩ vậy. Thật không may, tàu của bạn không phải là nơi trú ẩn an toàn. Khi bạn quay trở lại, phi hành đoàn và thuyền trưởng không được tìm thấy ở đâu cả. Không có dấu hiệu của sự vật lộn, nhưng Virgil, người đã trở lại tàu trước đó để chuẩn bị cho chuyến khởi hành tiếp theo, cũng mất tích.\nRandolph thương tiếc, “Tôi sợ điều tồi tệ nhất có thể xảy ra. Nếu bọn Corsair hung ác đó bắt được họ, họ sẽ gặp rắc rối lớn. Họ là tay sai của Các vị thần khác từ Outside, những kẻ có linh hồn và sứ giả là sự hỗn mang<smallcaps>Nyarlathotep</smallcaps>.” Chỉ nghe cái tên thôi cũng khiến bạn rùng mình, mặc dù bạn không biết tại sao. Bạn hỏi nơi họ có thể đã bị mang tới. Như thể đang thảo luận về bất kỳ bến cảng nào khác, anh ấy trả lời: “Những con thú chỉ huy những chiếc thuyền buồm đen của chúng đi thuyền từ Mặt trăng. Nếu chúng ta muốn giải cứu Virgil và những người bạn đồng hành khác của mình, thì đó là nơi chúng ta phải đến.”</p><p>Randolph thương tiếc, “Tôi sợ điều tồi tệ nhất có thể xảy ra. Nếu bọn Corsair hung ác đó bắt được họ, họ sẽ gặp rắc rối lớn. Họ là tay sai của Các vị thần khác từ Outside, những kẻ có linh hồn và sứ giả là sự hỗn mang<smallcaps>Nyarlathotep</smallcaps>.” Chỉ nghe cái tên thôi cũng khiến bạn rùng mình, mặc dù bạn không biết tại sao. Bạn hỏi nơi họ có thể đã bị mang tới. Như thể đang thảo luận về bất kỳ bến cảng nào khác, anh ấy trả lời: “Những con thú chỉ huy những chiếc thuyền buồm đen của chúng đi thuyền từ Mặt trăng. Nếu chúng ta muốn giải cứu Virgil và những người bạn đồng hành khác của mình, thì đó là nơi chúng ta phải đến.”</p><ul><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Cho mỗi Sign of the Gods các điều tra viên đã unveil trong màn chơi này, ghi lại 1 kiểm đếm kế bên \"Bằng chứng về Kadath\" trong Nhật ký Chiến dịch.</li><li>In your Campaign Log, record *Virgil was captured*.</li><li>In your Campaign Log, record *Randolph eluded capture*.</li><li>Nếu bạn đang chơi The Dream-Quest như một chiến dịch gồm 4 phần:</li><li>If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…<ul><li>…and you have not yet played _Scenario 2–B: A Thousand Shapes of Horror_, proceed to that scenario.</li><li>…and you have already played _Scenario 2–B: A Thousand Shapes of Horror_, proceed instead to _Interlude II: The Oneironauts_.</li></ul></li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>Khi bạn kiểm tra môi trường xung quanh, bạn nhận thấy rằng những người bạn đồng hành khác của mình, bao gồm cả Virgil và Randolph, cũng đã bị bắt. Hiện tại họ đang bất tỉnh, nhưng có lẽ khi họ tỉnh dậy, bạn có thể lập một kế hoạch để giải thoát cho chính mình. Rốt cuộc, bất chấp thất bại này, bạn đã học được nhiều điều về Vùng đất giấc mơ và về các vị thần ngự trên đỉnh Kadath vô danh. Mặc dù bạn vẫn chưa biết vị trí chính xác của nó, nhưng nếu bạn có thể trốn thoát khỏi con thuyền tồi tàn này, có lẽ bạn sẽ có hy vọng cho nhiệm vụ của mình. Bạn nuốt lấy một sự tuyệt vọng của mình và hy vọng rằng đây không phải là kết thúc cuộc hành trình của bạn…</p><ul><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Cho mỗi Sign of the Gods các điều tra viên đã unveil trong màn chơi này, ghi lại 1 kiểm đếm kế bên \"Bằng chứng về Kadath\" trong Nhật ký Chiến dịch.</li><li>In your Campaign Log, record *Virgil was captured*.</li><li>In your Campaign Log, record *Randolph was captured*.</li><li>Nếu bạn đang chơi The Dream-Quest như một chiến dịch gồm 4 phần:</li><li>If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…<ul><li>…and you have not yet played _Scenario 2–B: A Thousand Shapes of Horror_, proceed to that scenario.</li><li>…and you have already played _Scenario 2–B: A Thousand Shapes of Horror_, proceed instead to _Interlude II: The Oneironauts_.</li></ul></li></ul>"
     }
-  },
-  "label": {
-    "leaveEmptyHanded": "*Rời đi với hai bàn tay trắng.*",
-    "forceIntoTemple": "*Cưỡng ép tiến vào ngôi đền.*"
   },
   "specialRules": [
     {
       "title": "Vị trí trong màn chơi Tìm kiếm Kadath",
       "body": "<p class='basic'>Mỗi vị trí của màn chơi này không có mặt unreveal, và do đó chúng tiến vào chơi với mặt reveal lật lên. Thay vì mặt unreveal, những vị trí này có câu chuyện ở mặt còn lại. Bất cứ khi nào 1 vị trí trong màn chơi này tiến vào chơi (bao gồm cả lúc setup), đặt manh mối lên vị trí đó tương ứng giá trị manh mối như bình thường. Vị trí có thể được lật theo 1 trong 2 cách sau. Hầu hết được lật bởi từ khóa veild, như mô tả ở dưới. Một số vị trí khác thì được lật bởi khả năng được in trên vị trí đó. <b>Một khi 1 vị trí được lật và câu chuyện của nó được đọc, nó không thể được lật lại cho phần còn lại của màn chơi, trừ khi được ghi rõ.</b></strong></p>"
     },
-    {},
+    {
+      "title": "Veiled",
+      "body": "<p class='basic'>Nhiều vị trí trong trường hợp này có từ khóa veiled. Từ khóa này thể hiện rằng một vị trí chứa truyền thuyết hoặc sự hỗ trợ chưa rõ mà các điều tra viên phải tìm kiếm trước khi nó có thể được sử dụng cho họ.</p><p class='basic'>Là một khả năng [fast], một điều tra viên tại một địa điểm veiled không có manh mối ở trên nó có thể lật vị trí đó, giải quyết nội dung ở phía bên kia của nó.</p>"
+    },
     {
       "title": "Kẻ địch với Swarming và Victory",
       "body": "<p class='basic'>Khi Victory X xuất hiện trên kẻ địch swarming, dòng này chỉ hoạt động cho lá bài vật chủ. Các lá bài swarm không thể tiến vào khu vực trưng bày thành tích và không bao giờ có điểm victory.</p>"
     }
-  ]
+  ],
+  "kingdomOfTheSkai": "You find a captain willing to grant you passage to the remote regions of the Dreamlands, wherein you may find signs from the gods to point you in the direction of Kadath.",
+  "tooltips": {
+    "portResign": "_Resign_. Venturing into the unknown has become too dangerous, so you return to safety with the information you've gathered."
+  },
+  "waresOfBaharna": {
+    "label": {
+      "chooseInvestigator": "Choose investigator to decide on returning discard"
+    }
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the number of Signs of the Gods the investigators have uncovered.",
+      "cultist": "Rút thêm một token khác. If this token is revealed during an investigation and this skill test fails, increase that location's shroud by 1 for the remainder of the round.",
+      "tablet": "-2. Nếu bạn thất bại, either chịu 1 damage and 1 horror, or đặt 1 doom lên the current agenda.",
+      "elderThing": "+2. The black cat points you in the right direction. If this token is revealed during an investigation and you succeed, discover 1 additional clue."
+    },
+    "hardExpert": {
+      "skull": "-X. X is 1 more than the number of Signs of the Gods the investigators have uncovered.",
+      "cultist": "Rút thêm một token khác. If this token is revealed during an investigation and this skill test fails, increase that location's shroud by 2 for the remainder of the round.",
+      "tablet": "-3. Nếu bạn thất bại, either chịu 1 damage and 1 horror, or đặt 1 doom lên the current agenda.",
+      "elderThing": "+1. The black cat points you in the right direction. If this token is revealed during an investigation and you succeed, discover 1 additional clue."
+    }
+  },
+  "label": {
+    "leaveEmptyHanded": "*Rời đi với hai bàn tay trắng.*",
+    "forceIntoTemple": "*Cưỡng ép tiến vào ngôi đền.*",
+    "placeNightgaunt": "Place Tenebrous Nightgaunt in city location",
+    "visitOriab": "Visit the isle of Oriab to the south. Resolve _Oriab Setup_ in the Campaign Guide.",
+    "visitMnar": "Visit the ancient land of Mnar to the west. Resolve _Mnar Setup_ in the Campaign Guide.",
+    "visitForbiddenLands": "Visit the Forbidden Lands to the north. Resolve _Forbidden Lands Setup_ in the Campaign Guide.",
+    "visitTimelessRealm": "Visit the kingdom of the Timeless Realm to the east. Resolve _Timeless Realm Setup_ in the Campaign Guide.",
+    "virgilGray": {
+      "heal1HorrorFromVirgilGray": "Heal 1 horror from Virgil Gray"
+    }
+  },
+  "dreamlandsEclipse": {
+    "label": {
+      "shroudPlus2": "Your location gets +2 shroud for this investigation"
+    }
+  },
+  "theDoomThatCameBefore": {
+    "label": {
+      "visitOriab": "Visit the isle of Oriab to the south. Resolve Oriab Setup in the Campaign Guide.",
+      "visitForbiddenLands": "Visit the Forbidden Lands to the north. Resolve Forbidden Lands Setup in the Campaign Guide.",
+      "visitTimelessRealm": "Visit the kingdom of the Timeless Realm to the east. Resolve Timeless Realm Setup in the Campaign Guide."
+    }
+  }
 }

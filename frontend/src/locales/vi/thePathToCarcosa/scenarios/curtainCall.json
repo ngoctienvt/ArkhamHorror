@@ -1,22 +1,62 @@
 {
   "heading": "Màn I",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 (-3 instead if you have 3 or more horror on you).",
+      "cultist": "-4. If your location has at least 1 horror on it, chịu 1 horror (from the token pool). If your location has no horror on it, place 1 horror on it instead.",
+      "tablet": "Con Đường Đến Carcosa",
+      "elderThing": "Con Đường Đến Carcosa"
+    },
+    "hardExpert": {
+      "skull": "-X, where X là số lượng horror trên người bạn. (If you have no horror on you, X is 1.)",
+      "cultist": "-5. If your location has at least 1 horror on it, chịu 1 horror (from the token pool). If your location has no horror on it, place 1 horror on it instead.",
+      "tablet": "Con Đường Đến Carcosa",
+      "elderThing": "Con Đường Đến Carcosa"
+    }
+  },
   "intro": {
     "title": "Màn I: Hạ Màn",
     "body": "<p>Bạn giật mình thức dậy, như thể bị lay chuyển bởi một lực lượng vô hình. Chắc hẳn bạn đã ngủ khá lâu rồi, vì chỉ còn một vài khán giả quen thuộc và không có người biểu diễn trên sân khấu. Ánh đèn mờ, và màn sân khấu bị rách nát, mặc dù bạn không nhớ nó có bị vậy trong phần đầu không. Bạn đợi một lát trước khi chắc chắn đây không phải là một phần của màn trình diễn. Trong khi chờ, một mùi hôi thối nhưng khó nhận biết là mùi gì lan tỏa trong không khí. Bạn đã ngủ bao lâu rồi? Rũ bỏ cơn buồn ngủ, bạn đi về phía một trong những khách quen đang ngồi và hỏi thời gian, nhưng anh ta không trả lời. Lúc này bạn mới nhận ra mình đang nói chuyện với một xác chết.</p>"
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Curtain Call*, *Evil Portents*, *Delusions*, *Hauntings*, *Cult of the Yellow Sign*, *Striking Fear*, *Rats*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/curtain-call.png' /><img src='{setImgPath}/evil-portents.png' /><img src='{setImgPath}/delusions.png' /><img src='{setImgPath}/hauntings.png' /><img src='{setImgPath}/cult-of-the-yellow-sign.png' /><img src='{setImgPath}/striking-fear.png' /><img src='{setImgPath}/rats.png' /></section>",
     "setAside": "Đặt những lá bài sau sang một bên, ngoài khu vực chơi: The Man in the Pallid Mask, Royal Emissary, các bản sao của Lobby Doorway, và các bản sao của Backstage Doorway.",
     "placeLocations": {
       "instructions": "Đặt các vị trí Theatre, Lobby, Balcony, và Backstage vào khu vực chơi. Mỗi điều tra viên bắt đầu chơi tại vị trí Theatre.",
       "lola": "Nếu Lola Hayes được chọn làm điều tra viên cho chiến dịch này thì cô bắt đầu chơi tại vị trí Backstage."
+    },
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to Curtain Call*, *Maddening Delusions*, and *Neurotic Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-curtain-call.png' /><img src='{setImgPath}/maddening-delusions.png' /><img src='{setImgPath}/neurotic-fear.png' /></section>*Maddening Delusions* replaces *Delusions* and *Neurotic Fear* replaces *Striking Fear*. Remove the replaced sets from the game.",
+      "actDeck": "Construct the act deck using all six copies of Act 2a—*The Stranger*.",
+      "royalEmissary": "Attach this scenario card to Royal Emissary as a reminder: _Forced_ – After Royal Emissary is added to the victory display, place 1 resource on this card as a warning. For each warning on this card, Royal Emissary gets +1 health per investigator."
     }
   },
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<div class='resolution'><p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Một lần nữa bạn lại giật mình tỉnh giấc, lần này bởi những ngón tay lành lạnh của một bàn tay ở trên vai bạn. Một người đàn ông lớn tuổi hỏi, giúp bạn đứng dậy, \"Cậu ổn chứ?\" Tâm trí bạn là một mớ ký ức rối rắm. Điều cuối cùng bạn còn nhớ là Rạp hát Ward đã trở thành một nơi đầy ác mộng, tràn ngập những kẻ cuồng tín nguy hiểm và nỗi kinh hoàng lạ kỳ. Lo lắng, bạn liếc nhìn xung quanh, chỉ để thấy mình đang ở trên lề đường đầy mưa bên ngoài rạp hát. Bất chấp những sự kiện mới nãy, thị trấn có vẻ bình thường trong mắt bạn — hoặc ít nhất là những gì diễn ra bình thường đối với thị trấn Arkham. Ánh sáng chói của đèn pha chiếu thẳng vào mắt bạn khi ô tô chạy ngang trên đường, làm bắn nước mưa bẩn lên vỉa hè bên cạnh bạn. Ông lão vẻ mặt đầy quan tâm, nhận thấy được vẻ khiếp sợ trong mắt bạn. Ông ta thốt lên, “Cậu có bị sao không? Mấy thằng nhóc rắc rối!”. “Mấy đứa côn đồ đánh cậu trên đường đến rạp à! Không một con đường nào mà mấy đứa côn đồ đó lại không cho là của tụi nó.\"</p><p>Bạn đứng dậy và đi tới cửa sổ chính của Rạp hát Ward để thử nhìn vào trong, nhưng trời quá tối nên không thể nhìn thấy gì bên trong. Người đàn ông lớn tuổi nhìn bạn một cách tò mò trong giây lát, sau đó nhún vai và tiếp tục bước đi. Ông ta nói, đi vòng qua góc phố, “Chà, tốt nhất là tôi nên đi làm việc của mình. Tôi cũng sẽ làm như vậy, nếu tôi là cậu,”. Bạn nhanh chóng đi theo, hy vọng cảnh báo ông ấy tránh xa rạp hát. Nhưng khi bạn rẽ vào góc, bạn nhìn thấy không phải là người đàn ông lớn tuổi, mà là hình ảnh quen thuộc của Kẻ Lạ trong chiếc mặt nạ nhợt nhạt, không có gì đáng chú ý của anh ta. Ánh mắt vững vàng của anh ta nhìn xuống bạn. Bạn hỏi, \"Anh <b>là</b> ai?\" Kẻ Lạ không đáp lại, mà thay vào đó quay người lại và biến mất vào con hẻm phía sau nhà hát. Bạn đuổi theo, hy vọng có câu trả lời, nhưng khi bạn đến con hẻm, không có gì ở đó cả— ngoại trừ một tờ thông báo trên bức tường gần lối vào của nhân viên rạp hát. “Đừng là một người không biết tận hưởng cuộc sống! Hãy đến với bữa tiệc của dàn diễn viên vở kịch Vị Vua Áo vàng. 8 giờ tối, tại nhà Constance Dumaine, 1452 Đại lộ Atlantic. Chỉ được ăn mặc trang trọng.” Bạn xé tờ thông báo trên tường và gấp nó vào túi áo khoác, hy vọng nó sẽ dẫn bạn đến câu trả lời mà bạn tìm kiếm.</p><ul><li>Kẻ Lạ đi theo bạn.</li><li>Trong Nhật ký chiến dịch của bạn, dưới phần \"Đuổi theo Kẻ Lạ\", đặt một dấu kiểm đếm cho mỗi lần The Man in the Pallid Mask bị đánh bại trong kịch bản này. Trong phần còn lại của chiến dịch, hãy kiểm đếm số lần The Man in the Pallid Mask bị đánh bại trong một màn chơi. Mỗi kiểm đếm sẽ đưa bạn đến gần hơn với sự thật.</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p>_Resolution 1_: Chạy thoát khỏi rạp hát, bạn đi thẳng đến đồn cảnh sát ở Easttown. Bước qua cánh cửa, trước cái nhìn chằm chằm của những người đúng xem cũng như các sĩ quan cảnh sát, bạn yêu cầu được gặp Cảnh sát trưởng Engle, nhấn mạnh tầm quan trọng của việc ghé thăm của bạn. Viên trung sĩ đang uể oải làm việc với đống giấy tờ, lắc đầu và giơ một ngón tay lên một cách im lặng, sau đó chỉ vào chiếc ghế gần đó. Sự chờ đợi này vô cùng đau khổ. Mỗi khoảnh khắc kéo dài như vĩnh hằng. Kim đồng hồ gần đó bò từng bước. Bạn gõ gõ những ngón tay trên bàn làm việc. Nhịp nhịp đôi chân của mình. Bạn liên tục nhìn qua vai để đảm bảo rằng chiếc mặt nạ nhợt nhạt của Kẻ Lạ đang không theo dõi bạn qua cửa sổ chính. Cuối cùng, viên trung sĩ đặt bút xuống và ngồi dậy, ra hiệu cho bạn. “Được rồi, có điều gì quan trọng vậy?” Bạn chỉ mới giải thích được nửa chừng về các sự kiện trong đêm thì anh ấy thở dài và lắc đầu. Anh ta nói, “Này, nếu đây là một trò đùa thì nó chẳng vui chút nào,” “Chúng tôi có các sĩ quan ở trung tâm thành phố suốt đêm. Đừng cố cho tôi ăn thứ gì đó tầm bậy vào thẳng mặt chứ. \" Bạn nài nỉ, nhưng viên trung sĩ đứng dậy và mở cửa, ra hiệu cho bạn rời đi. Anh ta cao giọng. “Sao, cậu nghĩ chúng tôi không đủ bận hay sao? Biến đi! ” Anh ta lầm bầm về “những con chim mù” sau lưng bạn khi tiễn bạn ra khỏi đồn cảnh sát.</p><p>You _know_ what you saw earlier that night. Frustrated, you head back to the Ward Theatre to find some kind of proof you 4 can take to the police. You are surprised to find that the front door of the theatre is locked. You are about to decide whether or not to break down the door when you see a notice on the wall near the entrance. “Don’t be a wet blanket! Come to The King in Yellow cast party. 8pm, at the home of Constance Dumaine, 1452 Atlantic Avenue. Formal dress only.” You tear the notice from the wall and fold it into your coat pocket, hoping it will lead you to the answers you seek.</p><ul><li>Bạn có thực sự nghĩ rằng cảnh sát sẽ giúp bạn?</li><li>Trong Nhật ký Chiến dịch, ghi lại rằng <i>bạn đã cố gắng cảnh báo cảnh sát</i>. Đánh dấu một <b>Conviction</b> vào Nhật ký Chiến dịch của bạn.</li><li>cảnh sát nghi ngờ bạn.</li><li>Kẻ Lạ đi theo bạn.</li><li>Trong Nhật ký chiến dịch của bạn, dưới mục \"Đuổi theo Kẻ Lạ\", hãy đặt hai dấu kiểm đếm. Trong phần còn lại của chiến dịch, hãy kiểm đếm số lần The Man in the Pallid Mask bị đánh bại trong một trò chơi. Mỗi kiểm đếm sẽ đưa bạn đến gần hơn với sự thật.</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>_Resolution 2_: Bạn nghĩ đến việc đi gặp cảnh sát, nhưng cân nhắc đến những điều kinh hãi trong rạp chiếu phim, khả năng cao là họ cho rằng bạn điên hơn là tin vào câu chuyện của bạn. Một phần nhỏ trong bạn thắc mắc liệu đây có phải là một trò đùa nào đó hay không, nhưng không thể như vậy — tất cả đều quá chân thực, quá đáng sợ để quên đi. Đang băn khoăn không biết phải làm gì, bạn thấy mình quay lại lối thoát cũ, về lại rạp hát với những bước chân thận trọng. Ánh sáng chói của đèn pha chiếu thẳng vào mắt bạn khi ô tô chạy trên đường, làm bắn nước mưa bẩn lên vỉa hè bên cạnh bạn. Rạp hát Ward sớm xuất hiện trong tầm mắt, ánh đèn rực rỡ của nó chiếm rọi các con đường của Trung tâm thành phố. Bạn đã nghĩ rằng nhà hát sẽ đổ nát, nhưng bên ngoài của nó trông vẫn giống như khi bạn đến xem vở kịch Vị Vua Áo Vàng vào lúc sớm đêm nay. Bạn đi đến cửa sổ phía trước của Rạp hát Ward và thử nhìn qua, nhưng trời quá tối nên không thể nhìn thấy gì bên trong.</p><p>Ngay sau đó, một cơn ớn lạnh lướt qua gáy bạn và bạn cảm thấy mình đang bị theo dõi. Bạn quay lại, và phát hiện ra một bóng đen lẩn trốn ngay góc phố. Một bầy gián băng qua vỉa hè, theo sau cái bóng. Cơ của bạn căng thẳng cùng với sự không chắc chắn, và bạn chạy vòng góc phố để đuổi theo. Đứng với vẻ lãnh đạm trên vỉa hè là một người đàn ông trông quen thuộc với chiếc mặt nạ nhợt nhạt.</p><p>Ánh mắt vững chải của anh ta nhìn xuống bạn. Bạn hỏi, \"Anh <b> là </b> ai?\". Kẻ Lạ không trả lời, thay vào đó là quay người lại và biến mất vào con hẻm phía sau rạp hát. Bạn rượt theo, hy vọng có được câu trả lời, nhưng khi bạn đến con hẻm, không có ai cả — ngoại trừ một thông báo trên bức tường gần lối vào của nhân viên rạp hát. “Đừng là một người không biết tận hưởng cuộc sống! Hãy đến với bữa tiệc của dàn diễn viên vở kịch Vị Vua Áo vàng. 8 giờ tối, tại nhà Constance Dumaine, 1452 Đại lộ Atlantic. Chỉ được ăn mặc trang trọng.” Bạn xé tờ thông báo trên tường và gấp nó vào túi áo khoác, hy vọng nó sẽ dẫn bạn đến câu trả lời mà bạn tìm kiếm.</p><ul><li>Bạn có nghĩ rằng nó là khôn ngoan khi không cảnh báo bất cứ ai?</li><li>Trong Nhật ký Chiến dịch của bạn, hãy ghi lại rằng<i>bạn đã chọn không đến chỗ cảnh sát</i>. Đánh dấu một <b>Doubt</b> trong Nhật ký Chiến dịch của bạn.</li><li>Kẻ Lạ đi theo bạn.</li><li>Trong Nhật ký chiến dịch của bạn, dưới mục \"Đuổi theo Kẻ Lạ\", hãy đặt hai dấu kiểm đếm. Trong phần còn lại của chiến dịch, hãy kiểm đếm số lần The Man in the Pallid Mask bị đánh bại trong một trò chơi. Mỗi kiểm đếm sẽ đưa bạn đến gần hơn với sự thật.</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
+    }
+  },
+  "label": {
+    "curtainCall": {
+      "r1": "We have to warn the police about what's going on! (-> R1)",
+      "r2": "The police won't believe us. We have to solve this mystery on our own. (-> R2)"
+    },
+    "theStrangerAlaranMists": {
+      "endYourTurn": "End your turn after completing the effects of the move"
+    }
+  },
+  "tooltips": {
+    "greenRoom": {
+      "investigate": "{'{'}action{'}'} _Investigate_. You get +3 {'{'}intellect{'}'} for this investigation. After this skill test ends, discard each card in your hand."
     }
   }
 }

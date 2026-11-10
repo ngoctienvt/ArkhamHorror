@@ -1,5 +1,32 @@
 {
   "heading": "Màn V",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X là số lượng doom trong màn chơi (tối đa 5).",
+      "cultist": "-2. Nếu bạn thất bại, move each unengaged _Byakhee_ in play once toward the nearest investigator.",
+      "tablet": "-3. Cancel the effects and icons of each skill card committed to this test.",
+      "elderThing": "-2. Nếu bạn thất bại, lose 1 resource for each point you failed by."
+    },
+    "hardExpert": {
+      "skull": "-X. X là số lượng doom trong màn chơi.",
+      "cultist": "-2. Move each unengaged _Byakhee_ in play once toward the nearest investigator.",
+      "tablet": "-4. Cancel the effects and icons of each skill card committed to this test.",
+      "elderThing": "-3. Nếu bạn thất bại, lose 1 resource for each point you failed by."
+    }
+  },
+  "label": {
+    "moveTheOrganist": "Move the organist",
+    "theParisianConspiracy": {
+      "spawn": "Where to spawn the organist"
+    },
+    "grandGuignol": {
+      "shuffle": "Shuffle all non-weakness cards from your hand into your deck, then draw an equal number of cards"
+    },
+    "deadlyFate": {
+      "attack": "That enemy attacks you (from the discard pile)",
+      "drawEnemy": "Draw enemy"
+    }
+  },
   "intro": {
     "label": {
       "dream10": {
@@ -7,30 +34,85 @@
         "dream12": "*\"Thật sự thì mình đang nhìn thấy cái gì?\"*"
       }
     },
-    "title": "Màn V: Bóng Ma Sự Thật"
+    "title": "Màn V: Bóng Ma Sự Thật",
+    "readIntro1": "Nhà Vua đã đoạt lấy các nạn nhân của hắn.",
+    "readIntro2": "Otherwise, skip to _Intro 2_.",
+    "intro1": "<p>_Intro 1_: Đã vài tháng trôi qua kể từ khi vở kịch Vị Vua Áo Vàng đến Ward Theatre. Bạn và những người đồng hành đã và đang điều tra những sự cố kỳ lạ xảy ra sau đó. Những gì bạn đã tìm thấy khiến bạn đặt câu hỏi liệu có khôn ngoan nếu tiếp tục điều tra, nhưng sự thật đang kêu gọi bạn, và bạn không thể không đáp lại nó. Có vẻ như bạn không phải là người đầu tiên chắp ghép lại những chuyện kỳ lạ xung quanh vở kịch Vị Vua Áo Vàng. Một nhóm điều tra viên khác cũng đang nghiên cứu những sự kiện này. Chỉ vài ngày sau buổi biểu diễn ở thị trấn Arkham, họ được nhận vào nhà thương điên, huyên thuyên về sự trở lại của Nhà Vua và \"những con quái vật\" đã tấn công họ. Bằng cách nào đó, điều này không làm bạn ngạc nhiên. Số phận của họ khiến bạn càng chắc chắn rằng bạn đang đi đúng hướng… Và càng chắc chắn rằng bạn nên dừng lại khi vẫn còn cơ hội.</p><p>Bạn đã tìm thấy hồ sơ mà các điều tra viên lưu giữ trước khi bị giam giữ và tìm lại dấu vết hướng đi họ để lại. Họ đã phỏng vấn một số diễn viên và đoàn làm vở kịch Vị Vua Áo Vàng, và khám phá ra một số thông tin quan trọng. Nghiên cứu của họ cũng bao gồm các ghi chép về những khám phá có được ở Hiệp hội Lịch sử của thị trấn Arkham và thời gian ở nhà thương điên, bao gồm cả các tương tác với một bệnh nhân tên là “Daniel Chesterfield”. Sau một đêm dài biên soạn và so sánh các ghi chép, bạn chìm vào giấc ngủ sâu. Trong giấc mơ của bạn, bạn có tầm nhìn của thành phố Carcosa — những ngôi sao đen của nó, hai mặt trời, các mặt trăng bị vỡ và những ngọn tháp xoắn.</p><p class='basic right'>Continue to _Dream 1_. Don’t get lost.</p>",
+    "intro2": "<p>_Intro 2_: Đã vài tuần trôi qua kể từ các sự kiện trong nhà thương điên, và bạn vẫn chưa biết sự thật về vở kịch Vị Vua Áo Vàng và thành phố Carcosa. Bạn đã lùng sục khắp thành phố để tìm dấu hiệu của những người khác mà Daniel đã đề cập — những người đang “mở đường đến thành phố Carcosa” —nhưng không tìm thấy gì. Hoặc là dấu vết đã nguội lạnh, hoặc là họ không còn ở thị trấn Arkham nữa. Có lẽ Daniel thực sự bị mất trí, và bạn chỉ đang đi theo anh ấy vào một cái hang thỏ. Mỗi đêm, bạn trằn trọc trước khi dần chìm vào trong những giấc mơ sống động về thành phố Carcosa — những ngôi sao đen, mặt trời đôi, mặt trăng vỡ vụn và những ngọn tháp xoắn.</p><p class='basic right'>Continue to _Dream 1_. Don’t get lost.</p>",
+    "dream1": "<p>_Dream 1_: Bạn rơi qua vực thẳm trống rỗng của hồ Hali. Những sinh vật chưa biết tới và có nguồn gốc không xác định ẩn nấp ngay bên ngoài bóng tối trong tầm mắt của bạn. Hastur lờ mờ phía trên bạn, lộng lẫy nhưng bị trói buộc trong ngục tù điên cuồng của hắn, điều khiển cuộc hạ cánh khổ sở của bạn bằng một cánh tay dang ra.</p><p class='basic right'>Mỗi điều tra viên nhận được một điểm yếu Lost Soul <i>(The Path to Carcosa # 227)</i> (không tính vào giới hạn bộ bài). Xào một bản sao của điểm yếu này vào vào trong bộ bài của mỗi điều tra viên.</p><p class='basic right'>Mỗi điều tra viên nhận được một điểm yếu Lost Soul <i>(The Path to Carcosa # 227)</i> (không tính vào giới hạn bộ bài). Xào một bản sao của điểm yếu này vào vào trong bộ bài của mỗi điều tra viên.</p><p class='basic right'>Continue to _Dream 2_.</p>",
+    "dream2": {
+      "body": "<p>_Dream 2_: Constance nắm lấy tay bạn và kéo bạn lên sàn nhảy tao nhã. “Đến ngay, đừng ngại. Đêm nay là một đêm để khiêu vũ! Để ăn mừng!”</p>",
+      "dream8": "<p class='basic right'>Nhà Vua đã đoạt lấy các nạn nhân của hắn.</p>",
+      "dream3": "<p class='basic right'>bạn đã xâm nhập vào một cuộc họp bí mật.</p>",
+      "dream4": "<p class='basic right'>bạn đã giết những con quái vật ở bữa tiệc tối.</p>",
+      "dream6": "<p class='basic right'>If none of the above are true, continue to _Dream 6_.</p>"
+    },
+    "dream3": "<p>_Dream 3_: Người đàn ông với bộ ria mép và chiếc gậy cán bạc nói, “À, không phải vị khách quý của chúng tôi đây sao,” Ông ta lấy một chai rượu từ quầy gần đó và rót cho bạn một ly. Ông ấy nói với một nụ cười, “Tôi nghe nói rằng cậu đã rất quan tâm đến tác phẩm nhỏ của chúng tôi,” “Cho tôi biết là cho đến hiện tại, cậu tận hưởng Màn 2 thế nào rồi?”</p><p class='basic right'>Continue to _Dream 6_.</p>",
+    "dream4": "<p>_Dream 4_: Khói và lửa hồng bay lên trong bầu trời đêm không sao. Tiếng la hét của những sinh vật đang bị thiêu cháy khiến bạn có một cảm giác hoàn thành kinh khủng. Chúng nghe như âm thanh của con người. Nhưng bạn biết điều đó không đúng.</p><p class='basic right'>Each investigator suffers 1 mental trauma. Continue to _Dream 6_.</p>",
+    "dream5": "<p>_Dream 5_: You peer in the mirror, and your reflection gives you a curious glance. “Wait a second, this isn’t Dream 1,” you say.</p><p class='basic right'>Continue to _Dream 1_.</p>",
+    "dream6": {
+      "body": "<p>_Dream 6_: Đèn nhà hát trở nên mờ ảo và một ánh đèn chiếu vào sân khấu. Sinh vật kêu lên, \"Chào mừng các quý bà và quý ông!\" Các xúc tu của nó vươn khắp sân khấu, lên xà nhà và khắp các lối đi. Nó xé toạc rèm cửa, và tấm vải đỏ rách nát rơi xuống hình dáng phồng ra của nó.</p>",
+      "dream7": "<p class='basic right'>cảnh sát nghi ngờ bạn.</p>",
+      "dream8": "<p class='basic right'>Otherwise, continue to _Dream 8_.</p>"
+    },
+    "dream7": "<p>_Dream 7_: Bạn thấy mình đang ở bên trong Sở Cảnh sát Arkham, cố gắng giải thích một cách tuyệt vọng cho người trung sĩ bàn về những gì đã xảy ra ở Ward Theatre. Anh ta chế giễu và từ chối tin bạn. Anh ấy nói và vỗ vào cổ tay bạn một chiếc còng, “Chúng tôi biết cậu thực sự đang làm gì.\" \"Cậu bị bắt vì tội ăn cắp vặt. Các chàng trai, đưa chúng đi.” Một số cảnh sát khác đã chặn bạn và ngăn cản bất kỳ cuộc chạy trốn nào. Sự phản đối của bạn không được nghe thấy khi bạn bị áp giải xuống một cầu thang bê tông và bị tống vào một phòng giam lạnh lẽo. Vị trung sĩ bàn giấy hét lên, “Có lẽ bị giam một lát sẽ thay đổi câu chuyện của cậu,” Anh ta đóng sầm cánh cửa lại sau lưng, để lại bạn với những dòng suy nghĩ mông lung. Làm thế nào họ tìm ra? Làm sao họ có thể biết được?</p><p class='basic right'>Chọn một điều tra viên. Điều tra viên được chọn nhận điểm yếu Paranoia (Core 97) (không tính vào giới hạn bộ bài). Xào 1 bản sao của điểm yếu này vào bộ bài của điều tra viên đó, nếu có thể.</p><p class='basic right'>Chọn một điều tra viên. Điều tra viên được chọn nhận điểm yếu Paranoia (Core 97) (không tính vào giới hạn bộ bài). Xào 1 bản sao của điểm yếu này vào bộ bài của điều tra viên đó, nếu có thể.</p><p class='basic right'>Continue to _Dream 8_.</p>",
+    "dream8": {
+      "body": "<p>_Dream 8_: Bạn nhìn vào gương, và Kẻ Lại nhìn lại bạn. Ánh mắt của anh ta nhìn sâu vào tâm trí bạn. Tấm gương vỡ tan.</p>",
+      "dream9": "<p class='basic right'>Đuổi theo Kẻ lạ</p>",
+      "dream10": "<p class='basic right'>If there are 4 or more tally marks under “Chasing the Stranger,” continue to _Dream 10_."
+    },
+    "dream9": "<p>_Dream 9_: Bạn đuổi theo Kẻ Lạ qua những con đường tối tăm, lạnh lẽo bao gồm hàng trăm nghìn cơ thể bằng xương xẩu. Đầu lâu quan sát khi bạn chạy, miệng chúng phát ra tiếng chế giễu khi bạn đi qua. Kẻ Lạ chạm phải một bức tường xương chắc chắn, và bị những bàn tay xương xẩu nắm lấy và kéo vào tường. Tiếng cười chế giễu của chúng đạt đến đỉnh điểm khủng khiếp.</p><p class='basic right'>Continue to _Dream 13_.</p>",
+    "dream10": "<p>_Dream 10_: You chase the Stranger up a steep staircase of broken stone, a torrent of rain crashing upon your back as you run. Lighting flashes in the distance. A vortex of swirling black clouds looms above you, threatening to swallow the world whole. The masked man dashes through a wide set of doors atop the stairs, and you follow close behind. The sound of crashing thunder is muffled as the doors close behind you. Looking up, you see a familiar depiction in stained glass. “Beautiful, is it not?” the Stranger says quietly.</p><ul><li>The investigators must decide (choose one):<ul><li>“How could any of this be beautiful to you?” Continue to _Dream 11_.</li><li><i>\"Thật sự thì mình đang nhìn thấy cái gì?\"</i></li></ul></li></ul>",
+    "dream11": "<p>_Dream 11_: Bạn tránh nhìn vào tấm kính màu. Nếu người đàn ông đê hèn này coi nó là đẹp, có lẽ đó là một cái bẫy nào đó nhằm gài bẫy vào tâm trí bạn. Bạn nắm chặt tay cho đến khi các khớp ngón tay trắng bệch và bước tới đối đầu với Kẻ Lạ.</p><p class='basic right'>Đánh dấu một <b>Conviction</b> trong Nhật ký Chiến dịch của bạn.</p>",
+    "dream12": "<p>_Dream 12_: Bạn nhìn lên tấm kính màu, tò mò. Hình dạng của cái bóng dọc theo cửa sổ là gì? Ý nghĩa đằng sau thiết kế kỳ lạ này là gì?</p><p class='basic right'>Đánh dấu một <b>Doubt</b> trong Nhật ký chiến dịch của bạn.</p>",
+    "dream13": "<p>_Dream 13_: Giọng nói của Daniel gọi bạn. \"Họ đang mở con đường đến thành phố Carcosa.\"</p><p class='basic right'>Continue to _Awakening_.</p>",
+    "awakening": "<p>_Awakening_: Bạn thức dậy sau giấc mơ chập chờn của mình, đổ mồ hôi và nôn khan. Điều này không thể diễn ra lâu hơn nữa. Bạn chỉ có một lựa chọn nếu bạn muốn tiếp tục cuộc điều tra của mình. Bạn phải tìm Nigel Engram, giám đốc của vở kịch Vị Vua Áo Vàng, và là người xây dựng sự điên rồ này. Chỉ ông ta mới có câu trả lời mà bạn tìm kiếm. Bạn đóng gói hành lý và lên kế hoạch cho chuyến đi đến Paris, Kinh đô Ánh sáng.</p>",
+    "proceedToJordansInformation": "Proceed to _Jordan’s Information_.",
+    "otherwise": "Otherwise, skip to _Setup_.",
+    "jordansInformation": "<p>_Jordan’s Information_: According to Mr. Jordan Perry, who had financed several performances of The King in Yellow across the world, Nigel Engram was an eccentric and impassioned man, almost to the point of mania. Rumor was, he hadn’t directed any other works since discovering The King in Yellow. Jordan had first met with Mr. Engram at a café in Montparnasse, “L’agneau Perdu.” You travel there first, hoping to find Mr. Engram...</p><ul><li>Mỗi điều tra viên bắt đầu màn chơi với thêm 3 tài nguyên. Thay vì vị trí bắt đầu bình thường, mỗi điều tra viên bắt đầu chơi tại Montparnasse.</li></ul><p class='basic right'>Proceed to _Setup_.</p>"
   },
   "setup": {
+    "gatherSets": "Khi tập hợp bộ bài encounter <i>The Midnight Masks</i>, chỉ lấy 5 lá bài treachery (2 lá False Lead và 3 lá Hunting Shadow). Không tập hợp các lá bài vị trí, act, agenda, scenario reference từ bộ đó.",
     "doubt": {
+      "instructions": "Sự nghi ngờ",
       "remove": "Tìm trong chồng bài encounter tập hợp được cả 2 bản sao của Twin Suns và 3 bản sao của Hunting Shadow, và loại bỏ chúng khỏi màn chơi.",
       "act": "Trong màn chơi này, sử dụng Act 1—The Parisian Conspiracy (v. I). Các phiên bản Act 1 khác bị loại bỏ khỏi màn chơi."
     },
     "conviction": {
+      "instructions": "If you have more _Conviction_ than _Doubt_:",
       "remove": "Tìm trong chồng bài encounter tập hợp được cả 2 bản sao của Black Stars Rise và cả 2 bản sao của False Lead, và loại bỏ chúng khỏi màn chơi.",
       "act": "Trong màn chơi này, sử dụng Act 1—The Parisian Conspiracy (v. II). Các phiên bản Act 1 khác bị loại bỏ khỏi màn chơi."
     },
-    "lostSoul": "Nếu có bất kỳ bản sao của điểm yếu Lost Soul nào còn lại, đặt chúng một bên, ngoài khu vực chơi.",
     "chooseLocations": "Chọn ngẫu nhiên 1 trong 2 vị trí Montmartre, 1 trong 2 vị trí Opéra Garnier, và 1 trong 2 vị trí Le Marais. Đặt các vị trí được chọn vào chơi. Loại bỏ các phiên bản khác của những vị trí này khỏi màn chơi.",
-    "setAside": "Đặt lá bài kẻ địch The Organist có 2 mặt một bên, ngoài khu vực chơi."
+    "placeLocations": "Put the remaining locations (Montparnasse, Gare d’Orsay, Grand Guignol, Canal Saint-Martin, Père Lachaise Cemetery, Notre-Dame, and Gardens of Luxembourg) into play. (Xem bên dưới để biết vị trí gợi ý.) Each investigator begins play at Gare d’Orsay.",
+    "setAside": "Đặt lá bài kẻ địch The Organist có 2 mặt một bên, ngoài khu vực chơi.",
+    "lostSoul": "Nếu có bất kỳ bản sao của điểm yếu Lost Soul nào còn lại, đặt chúng một bên, ngoài khu vực chơi.",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to A Phantom of Truth* and *Hastur’s Envoys*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-phantom-of-truth.png' /><img src='{setImgPath}/hasturs-envoys.png' /></section>*Hastur’s Envoys* replaces *Agents of Hastur*. Remove the replaced set from the game.",
+      "chooseLocations": "Randomly choose 1 of the 2 Montparnasse locations, 1 of the 2 Grand Guignol locations, 1 of the 2 Père Lachaise Cemetery locations, 1 of the 2 Canal Saint-Martin locations, 1 of the 2 Notre-Dame locations, and 1 of the 2 Gardens of Luxembourg locations. Put those locations into play. Remove the other versions of those locations from the game.",
+      "setAside": "Also set both copies of Figure in the Shadows aside, out of play.",
+      "additionalRule": "For the duration of this scenario, the following additional rule applies: _Forced_ – After The Organist enters play: Shuffle both set-aside copies of Figure in the Shadows into the encounter deck, along with the encounter discard pile."
+    }
   },
   "resolutions": {
+    "xp": {
+      "bonus": "Gained insight into the machinations of the Tattered King."
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<div class='resolution'><p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Bạn không biết mình đang ở đâu trong thành phố khi chạy trốn cho mạng sống của bản thân. Bàn chân của bạn tự di chuyển theo ý chúng. Tiếng đập của những đôi cánh gân guốc và tiếng kêu la của những sinh vật phía trên thúc đẩy bạn tiến về phía trước. Chẳng bao lâu bạn thấy mình đang chạy xuống một đại lộ hẹp, băng qua một dãy cổng sắt nặng nề. Bạn đang ở trong một ngõ cụt — một sân vườn với những ngôi nhà cổ kính ở hai bên. Bạn quay trở lại lối vào để tìm hình dáng của những sinh vật có cánh đang cản đường bạn. Chúng đậu trên các cánh cổng và ban công phía trên, chờ đợi sự diệt vong của bạn. Bước đi với vẻ tự tin lạnh lùng, nham hiểm, người đàn ông mặc đồ đen mở cánh cổng sắt và bước vào sân vườn. Gương mặt anh ta lấp lóe trong tối. Đôi mắt của anh ta xuyên thấu linh hồn bạn. Trong một khoảnh khắc, bạn nhận ra con người thật của anh ta. Đây là điều cuối cùng bạn nhớ về đêm đó.</p><ul><li>bạn đã không thoát khỏi cái nhìn của bóng ma.</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 2 token [elder_thing] vào túi hỗn mang.</li><li>VIP Đã Bị Giết</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p>_Resolution 1_: Bạn chỉ có thể cho rằng ngôi nhà này thuộc về Nigel Engram, đạo diễn của vở kịch Vị Vua Áo vàng. Cuối cùng, bạn cũng đã tìm thấy nguồn thông tin của mình… và bạn thấy một chút nhẹ nhõm trong tinh thần của mình. Bạn cảm thấy mình giống như một con chó bị dây xích dắt đi, số phận của bạn được quyết định bởi một người chủ độc ác, người đã giam giữ bạn từ lâu trong bóng tối. Bạn đẩy những suy nghĩ u ám này về phía sau tâm trí và gõ cửa phòng ông Engram. Không có phản hồi gì ngoài một đàn chim ác là bay tán loạn từ sân thượng bởi một tiếng ồn đột ngột. Bạn thử xoay nắm cửa, hy vọng mình sẽ không phải dùng đến các biện pháp mạnh hơn. Trước sự ngạc nhiên của bạn, bạn thấy cửa không khóa.</p><p>Bên trong, khắp nhà của Nigel là một đống ghi chú, sách cũ và sơ đồ kỳ lạ. Bao bọc chiếc bàn cà phê trong phòng khách của anh là một tấm bản đồ cũ kỹ, bạc màu, có nhiều nếp gấp và mép rách. Nó có vẻ là một bản đồ chưa hoàn chỉnh về các hầm mộ bên dưới Paris, hoặc ít nhất là một phần của nó. Thức ăn trong tủ đựng thức ăn của anh ấy đã cũ và ôi thiu. Không có dấu hiệu cho thấy bất kỳ ai đã sống ở đây trong nhiều năm, nhưng mực trên tường phòng khách vẫn còn ướt và mới. Liên tục gần như mỗi một inch của giấy dán trên tường, nó viết:</p><p class='wolgast'><center><fancy>Hắn ta đã ở đây.</fancy></center></p><ul><li>bạn đã tìm thấy nhà của Nigel.</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 2 token [cultist] vào túi hỗn mang.</li><li>VIP Đã Bị Giết</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>_Resolution 2_: Bạn chỉ có thể cho rằng ngôi nhà này thuộc về Nigel Engram, đạo diễn của vở kịch Vị Vua Áo vàng. Cuối cùng, bạn cũng đã tìm thấy nguồn thông tin của mình… và bạn thấy một chút nhẹ nhõm trong tinh thần của mình. Bạn cảm thấy mình giống như một con chó bị dây xích dắt đi, số phận của bạn được quyết định bởi một người chủ độc ác, người đã giam giữ bạn từ lâu trong bóng tối. Bạn đẩy những suy nghĩ u ám này về phía sau tâm trí và gõ cửa phòng ông Engram. Không có phản hồi gì ngoài một đàn chim ác là bay tán loạn từ sân thượng bởi một tiếng ồn đột ngột. Trước sự ngạc nhiên của bạn, cánh cửa mở ra.</p><p>Bên kia ngưỡng cửa là một người đàn ông cao lớn với bộ ria mép dày và màu nâu. Một cây gậy cán bạc quen thuộc dựa vào bức tường bên cạnh chiếc mắc áo. Ông ta nói, “Thì ra là cậu,” \"Mời vào. Tôi đã chờ đợi cậu từ lâu rồi.\" Ông ta quay đi và đi về phía nhà bếp của mình. Bạn có thể nghe thấy tiếng huýt của ấm trà, như thể ông ấy đã chuẩn bị cho việc bạn đến.</p><p>Bạn vào nhà ông ta, không biết phải làm gì tiếp theo. Người đàn ông hiền lành, khiêm tốn này không hoàn toàn như những gì bạn mong đợi. Ngôi nhà của Nigel là một đống ghi chú, sách cũ và sơ đồ kỳ lạ. Bao bọc chiếc bàn cà phê trong phòng khách của anh là một tấm bản đồ cũ kỹ, bạc màu, có nhiều nếp gấp và mép rách. Nó có vẻ là một bản đồ chưa hoàn chỉnh về các hầm mộ bên dưới Paris, hoặc ít nhất là một phần của nó. Ông Engram một lúc sau quay lại với trà nóng, một đĩa pho mát và bánh quy giòn. Ông hỏi, với một nụ cười thích thú, \"Tôi cho rằng cậu đến đây để tìm đường đến Carcosa?\" Bạn lắc đầu đáp lại, nhưng ông ấy dường như không nhận ra. Ông ta đi đi lại lại quanh phòng trong khi nói nhanh, “Anh ta nói với tôi rằng cậu sẽ đến sớm. Cho nên tôi nên… Chuẩn bị. ” Nigel quay về phía bạn khi anh ta chạm vào cánh cửa gỗ đối diện bạn, mắt ông ta lóe sáng. \"Đừng lo. Tất cả đã sẵn sàng. Con đường đã được mở sẵn”. Ông ấy mở cửa phòng làm việc và bước vào trong, bỏ bạn lại để tự hiểu câu nói khó hiểu của anh ấy. Bạn đợi vài phút để ông ấy trở lại, nhưng khi ông ấy không trở lại, bạn bắt đầu lo lắng. Sau đó, bạn nhận thấy rằng nấm mốc đã bắt đầu phát triển trên miếng pho mát mà ông ấy mang cho bạn. Bạn gọi và bạn ngập ngừng gõ cửa phòng làm việc của ông ấy, \"Ông Engram?” Không có phản hồi. Khi bước vào phòng, bạn thấy ông ấy đang treo cổ trên chiếc quạt trần, cơ thể đã thối rữa sau nhiều tuần phân hủy.</p><ul><li>Ghi lại trong Nhật ký Chiến dịch là <i>bạn đã tìm thấy Nigel Engram</i>. Mỗi điều tra viên nhận 1 sang chấn tinh thần từ cú sốc của phát hiện của họ. Mỗi điều tra viên kiếm được thêm 2 kinh nghiệm khi họ hiểu sâu hơn về mưu đồ của Vị Vua Rách Rưới.</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 2 token [tablet] vào túi hỗn mang.</li><li>VIP Đã Bị Giết</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<div class='resolution'><p>_Resolution 3_: Khi mặt trời mọc một lần nữa trên đường chân trời của Paris, bạn mất dấu của nhân vật bí ẩn. Chán nản vì thất bại của mình, bạn trở về khách sạn để ngủ và hồi phục sau những điều kinh hoàng trong vài đêm qua. Những giấc mơ chập chờn của bạn trở lại— những giấc mơ về thành phố Carcosa, về Vị Vua Rách Rưới, và về nhân vật mà bạn đã theo đuổi trên đường phố Paris. Khi bạn thức dậy, bạn không còn ở trong phòng khách sạn của mình.</p><ul><li>bạn không tìm thấy Nigel.</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 2 token [elder_thing] vào túi hỗn mang.</li><li>VIP Đã Bị Giết</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     }
   }
 }

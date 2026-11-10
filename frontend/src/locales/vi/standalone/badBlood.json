@@ -1,34 +1,87 @@
 {
-  "setup": {
-    "placeLocations": "Đặt Northside, Downtown, Easttown, Miskatonic University, Rivertown, Town Hall, Velma's Diner, và Curiositie Shoppe vào chơi.",
-    "startAt": "Mỗi điều tra viên bắt đầu chơi tại Velma's Diner.",
-    "removeStoryAssets": "Loại bỏ story asset Ichtaca *(The Forgotten Guardian)* và story asset Expedition Journal khỏi trò chơi.",
-    "placeMemories": "Đặt 1 resource lên mỗi địa điểm đang trong cuộc chơi, như một “ký ức”.",
-    "scenarioReference": "Loại bỏ lá bài scenario reference gốc từ chồng bài encounter *Threads of Fate* khỏi trò chơi. Sử dụng lá bài scenario reference mới được cung cấp trong chồng bài encounter *Bad Blood* có thể tải xuống.",
-    "randomLocation": "Tìm trong các mặt sau của chồng bài act gốc thuộc bộ encounter *Threads of Fate* các địa điểm sau: Eztli Exhibit, Black Cave, Train Tracks, và Arkham Police Station. Chọn ngẫu nhiên một địa điểm và đưa nó vào chơi, bỏ qua khả năng <b>revelation</b> của nó. Loại bỏ các lá bài act và agenda gốc còn lại thuộc bộ encounter *Threads of Fate* khỏi trò chơi."
-  },
-  "resolutions": {
-    "resolution1": {
-      "title": "Kết thúc thứ nhất"
-    },
-    "resolution2": {
-      "title": "Kết thúc thứ hai"
-    },
-    "label": {
-      "chooseSwap": "Agnes Baker có thể nâng cấp Heirloom of Hyberborea lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Dark Memory xuống phiên bản gốc của nó.",
-      "mustSwap": "Agnes Baker phải nâng cấp Dark Memory lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Heirloom of Hyberborea xuống phiên bản gốc của nó"
-    }
-  },
   "specialRules": [
     {
-      "title": "Tuần tra"
+      "title": "Tuần tra",
+      "body": "<p class='basic'>Một số kẻ địch có keyword patrol. Trong enemy phase (ở bước 3.2 của framework), mỗi kẻ địch đang ready, unengaged và có keyword patrol sẽ di chuyển đến một vị trí nối liền dọc theo con đường ngắn nhất hướng tới vị trí được chỉ định (như được mô tả trong ngoặc đơn bên cạnh từ patrol).</p><ul><li>Nếu có nhiều địa điểm đủ điều kiện làm địa điểm được chỉ định, điều tra viên chính có thể chọn địa điểm mà kẻ địch sẽ di chuyển tới.</li><li>Nếu một kẻ địch có patrol bị buộc phải di chuyển đến một vị trí bị chặn bởi một khả năng của bài, kẻ địch đó sẽ không di chuyển.</li></ul>"
     },
     {
-      "title": "Thu thập Ký ức"
+      "title": "Thu thập Ký ức",
+      "body": "<p class='basic'>Trong kịch bản này, Agnes và Elspeth đang chạy đua để thu thập ký ức.</p><ul><li>Agnes có thể thu thập ký ức bằng cách sử dụng khả năng [fast] trên act 1a.</li><li>Elspeth tự động thu thập ký ức thông qua các khả năng <b>Forced</b> trên agenda 1a; khi tổng modifier của các chaos token tại địa điểm của cô ấy là 6 trở lên (bỏ qua +/–).<ul><li>For the purposes of counting their modifiers only, treat these chaos tokens as having been revealed during a skill test.</li></ul></li></ul>"
     },
     {
       "title": "Cảnh Giác",
       "body": "<p class='basic'>Mỗi khi một điều tra viên thất bại trong bài kiểm tra kỹ năng khi cố gắng né tránh một kẻ địch có từ khóa Alert (cảnh giác), sau khi áp dụng tất cả kết quả của bài kiểm tra kỹ năng, kẻ địch đó sẽ tấn công điều tra viên đang né tránh. Kẻ địch không bị kiệt sức sau khi thực hiện một cuộc tấn công Alert. Cuộc tấn công này xảy ra bất kể kẻ địch có đang engage với điều tra viên né tránh hay không.</p>"
     }
-  ]
+  ],
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the number of memories Agnes Baker has collected.",
+      "cultist": "-2. Ready Elspeth Baudin and resolve her patrol keyword.",
+      "tablet": "-3. If you fail and there is a memory at Elspeth Baudin's location, place this token on that location.",
+      "elderThing": "-6. Agnes Baker may take up to 3 damage to increase your skill value by 2 for each damage taken."
+    },
+    "hardExpert": {
+      "skull": "-X. X is 1 more than the number of memories Agnes Baker has collected.",
+      "cultist": "-3. Ready Elspeth Baudin and resolve her patrol keyword. If she is engaged with an investigator, she makes an attack.",
+      "tablet": "-5. If you fail and there is a memory at Elspeth Baudin's location, place this token on that location.",
+      "elderThing": "-8. Agnes Baker may take up to 3 damage to increase your skill value by 2 for each damage taken."
+    }
+  },
+  "log": {
+    "agnesCollectsMemory": "Agnes Baker collects a memory (total: {count})",
+    "elspethCollectsMemory": "Elspeth Baudin collects a memory (total: {count})",
+    "agnesStealsMemory": "Agnes Baker collects a memory from Elspeth Baudin"
+  },
+  "label": {
+    "collectMemoryFromElspeth": "Agnes Baker collects 1 memory from Elspeth Baudin",
+    "gainCluesFromTokenBank": "Agnes Baker gains {count} clues from the token bank",
+    "elderThingDamage": "Agnes Baker may take up to 3 damage to increase your skill value by 2 for each damage taken"
+  },
+  "intro": {
+    "title": "Challenge Scenario: Bad Blood",
+    "body": "<p>Bạn luôn biết rằng có điều gì đó… khác biệt… ở bạn. Từ khi còn nhỏ, trong những giấc mơ, bạn đã nhìn thấy một cõi khác. Một cuộc đời khác. Một nơi của phép thuật và sự uy nghi, của chinh phạt và đàn áp. Khoảnh khắc bạn tìm thấy chiếc chìa khóa cũ kỹ, kỳ lạ đó—khoảnh khắc bạn nhận ra họa tiết dọc theo tay cầm của nó, hình dáng những chiếc răng của nó—bạn biết những giấc mơ đó hoàn toàn không phải là giấc mơ, mà là ký ức. Ký ức về một cuộc đời khác. Về một nơi gọi là “Hyperborea.” Và khi những ký ức ùa về, phép thuật cũng vậy.</p><p>For months you practiced in secret, delving into your memories and honing your powers. But lately, your dreams have turned dark and grisly. Your former self was not as caring or forgiving as you. She was ruthless. Power-hungry. Terrible to behold. You've taken it upon yourself to wield these strange powers only to help others, and not to hurt them.</p><p>Nhưng bạn không phải là người duy nhất có ký ức bắt đầu quay trở lại. Elspeth Baudin lần đầu tiên ghé thăm quán ăn vài tuần trước. Ban đầu, cô ta chỉ là một khách hàng như bao người khác. Cô ta gọi trứng, thịt xông khói và một ly cà phê đen, không khác mấy so với nhiều khách hàng khác tại Velma’s. Nhưng có điều gì đó trong ánh mắt cô ta—một tia sáng của sự nhận ra hoặc tò mò—khiến bạn phải cảnh giác với cô ta.</p><p>Rồi đến những câu hỏi.</p><p>Đầu tiên, cô ta hỏi về chiếc chìa khóa bạn đeo trên sợi dây chuyền quanh cổ. Bạn nở nụ cười tươi nhất và nói với cô ta lời nói dối quen thuộc của mình—rằng đó là một vật gia truyền, một món đồ trang sức vô hại không có giá trị gì ngoài ý nghĩa tinh thần. Nhưng điều đó không làm cô ta nản lòng. Cô ta bắt đầu tọc mạch về cuộc sống của bạn, về gia đình bạn… về những giấc mơ của bạn.</p><p>Elspeth không phải là một khách hàng bình thường. Cô ta không hề nói chuyện phiếm. Cô ta đang tìm kiếm những câu trả lời, giống hệt như bạn. Vì vậy, bạn đã tự mình tìm hiểu. Nhưng không có hồ sơ nào cho thấy Elspeth là cư dân của Arkham, và một vài người bạn tìm thấy biết về cô ta chỉ nói bằng những giọng thì thầm, sợ hãi, và cung cấp cho bạn rất ít thông tin để điều tra.</p><p>Then came a call from the Curiositie Shoppe in Northside. Elspeth had been searching for more artifacts like your own \"heirloom,\" even going so far as to utter the name Hyperborea. She is searching for something that can unlock more of her memories, just like you…but she is not like you. That sinister smirk of hers, the way her contacts trembled with fear at the mention of her name—you shudder to think what somebody with foul intentions could do with the sort of powers your memories hold…</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
+  },
+  "setup": {
+    "gatherSets": "Khi tập hợp chồng bài encounter <i>The Midnight Masks</i>, chỉ tập hợp 5 lá bài treachery (2x False Lead và 3x Hunting Shadow) và các vị trí sau: Northside, Downtown <i>(First Bank of Arkham)</i>, Easttown, Miskatonic University, và Rivertown. Không tập hợp các vị trí còn lại hoặc các lá bài act, agenda, và scenario reference từ chồng bài đó.",
+    "scenarioReference": "Loại bỏ lá bài scenario reference gốc từ chồng bài encounter *Threads of Fate* khỏi trò chơi. Sử dụng lá bài scenario reference mới được cung cấp trong chồng bài encounter *Bad Blood* có thể tải xuống.",
+    "placeLocations": "Đặt Northside, Downtown, Easttown, Miskatonic University, Rivertown, Town Hall, Velma's Diner, và Curiositie Shoppe vào chơi.",
+    "startAt": "Mỗi điều tra viên bắt đầu chơi tại Velma's Diner.",
+    "randomLocation": "Tìm trong các mặt sau của chồng bài act gốc thuộc bộ encounter *Threads of Fate* các địa điểm sau: Eztli Exhibit, Black Cave, Train Tracks, và Arkham Police Station. Chọn ngẫu nhiên một địa điểm và đưa nó vào chơi, bỏ qua khả năng <b>revelation</b> của nó. Loại bỏ các lá bài act và agenda gốc còn lại thuộc bộ encounter *Threads of Fate* khỏi trò chơi.",
+    "actAgendaDecks": "Build the act and agenda decks using only the new act and agenda cards provided in the *Bad Blood* encounter set.",
+    "removeStoryAssets": "Loại bỏ story asset Ichtaca *(The Forgotten Guardian)* và story asset Expedition Journal khỏi trò chơi.",
+    "placeElspeth": "Place the Elspeth Baudin enemy into play at the Curiositie Shoppe.",
+    "placeMemories": "Đặt 1 resource lên mỗi địa điểm đang trong cuộc chơi, như một “ký ức”."
+  },
+  "agendas": {
+    "outForBlood": {
+      "title": "Out For Blood",
+      "body": "<p>*A crackle of arcane power lashes throughout the sky, seeking out you and your companions. For a brief moment, the torment is unbearable. The pain forks through your body like poison in your veins. A flash of light in the back of your vision blinds you. Then, just as suddenly, it is over. But there is something missing. Something lost. Is she trying to steal your memories?*</p><p>Elspeth Baudin attacks each investigator in player order, regardless of their current location *(even if she is exhausted)*.</p><p>Flip this agenda back over.</p>"
+    }
+  },
+  "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p class='basic'>_If no resolution was reached because each investigator was defeated:_ Proceed to _Resolution 2_.</p>"
+    },
+    "resolution1": {
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>Thật quá đơn giản. Bạn có thể kết liễu cô ta ngay bây giờ. Ngăn cô ta dùng sức mạnh của mình để đe dọa người khác... Nhưng nếu vậy, bạn có khác gì cô ta đâu? Bạn hạ tay xuống, và phép thuật tan biến vào không khí lạnh lẽo. “Tại sao?” cô ta hỏi, giọng vỡ vụn vì đau đớn. Bạn lắc đầu và nói với cô ta rằng cô ta đã sai. Sức mạnh thực sự là khả năng tạo ra hòa bình, không phải khả năng gây chiến. “Đồ ngốc,” cô ta gắt gỏng, lảo đảo đứng dậy. “Rốt cuộc thì ngươi cũng chỉ là một kẻ yếu đuối. Và ngươi sẽ hối hận vì đã để ta sống.” Bạn nhìn cô ta bước đi với chỉ những mảnh vỡ của cuộc đời trước kia trong đầu. Sức mạnh của cô ta đã cạn kiệt đáng kể, nhưng cô ta vẫn là một mối lo. Có lẽ bạn nên xử lý cô ta, như cô ta đã nói. Dù vậy, bạn thở phào nhẹ nhõm. Bạn không muốn sức mạnh này thay đổi con người mình. Bạn sẽ không để bản thân trở nên giống cô ta. Bất kể thế nào đi nữa.</p><ul><li>Agnes Baker nhận được kinh nghiệm bằng với tổng giá trị Victory X của mỗi lá bài trong victory display, hoặc bằng với số lượng ký ức cô đã thu thập được vào cuối trò chơi, tùy theo giá trị nào cao hơn.</li><li>Each other investigator only earns experience equal to the combined Victory X value of each card in the victory display.<ul><li>*Experience*: {xp}</li></ul></li><li>Agnes Baker <b>may</b> either upgrade Heirloom of Hyperborea to its advanced version, or downgrade the advanced version of Dark Memory to its original version.</li></ul>"
+    },
+    "resolution2": {
+      "title": "Kết thúc thứ hai",
+      "body": "<p>Elspeth đang nắm giữ mạng sống của bạn. Cô ta giơ tay lên, ma thuật của cô ta đe dọa xé xác bạn. Cô ta nhếch mép cười. Bạn nhắm mắt lại và chuẩn bị tinh thần… nhưng không có đòn kết liễu nào giáng xuống. Thay vào đó, cô ta kéo bạn đứng dậy và phủi bụi trên tạp dề của bạn. “Thôi nào,” cô ta thì thầm với một nụ cười quỷ quyệt. “Ngươi không phải là một con thú thút thít. Ngươi không nhớ bản chất thực sự của mình là gì sao? Bản chất thực sự của chúng ta là gì?” Sau đó, không có thêm bất kỳ sự trừng phạt nào, cô ta rời đi, để lại cho bạn chỉ là những mảnh vỡ của cuộc đời trước đây.</p><ul><li>Agnes Baker nhận được kinh nghiệm bằng với tổng giá trị Victory X của mỗi lá bài trong victory display, hoặc bằng với số lượng ký ức cô đã thu thập được vào cuối trò chơi, tùy theo giá trị nào cao hơn.</li><li>Each other investigator only earns experience equal to the combined Victory X value of each card in the victory display.<ul><li>*Experience*: {xp}</li></ul></li><li>Agnes Baker <b>must</b> either upgrade Dark Memory to its advanced version, or downgrade the advanced version of Heirloom of Hyperborea to its original version.</li></ul>"
+    },
+    "label": {
+      "chooseSwap": "Agnes Baker có thể nâng cấp Heirloom of Hyberborea lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Dark Memory xuống phiên bản gốc của nó.",
+      "mustSwap": "Agnes Baker phải nâng cấp Dark Memory lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Heirloom of Hyberborea xuống phiên bản gốc của nó",
+      "upgradeHeirloomOfHyperborea": "Upgrade Heirloom of Hyperborea to its advanced version",
+      "downgradeHeirloomOfHyperborea": "Downgrade the advanced version of Heirloom of Hyperborea to its original version",
+      "upgradeDarkMemory": "Upgrade Dark Memory to its advanced version",
+      "downgradeDarkMemory": "Agnes Baker có thể nâng cấp Heirloom of Hyberborea lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Dark Memory xuống phiên bản gốc của nó.",
+      "doNotSwap": "Do not swap"
+    },
+    "xp": {
+      "memories": "Memories Agnes Baker collected"
+    }
+  }
 }

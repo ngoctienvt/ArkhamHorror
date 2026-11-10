@@ -1,24 +1,87 @@
 {
   "heading": "Màn VI",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 (-3 instead if you are at an _Altered_ location).",
+      "cultist": "Rút thêm một token khác. Cancel the effects and icons of each skill card committed to this test.",
+      "tablet": "-2 (-4 instead if it is Agenda 2).",
+      "elderThing": "-X. Discard the top 2 cards of your deck. X is the total printed cost of those discarded cards."
+    },
+    "hardExpert": {
+      "skull": "-2 (-5 instead if you are at an _Altered_ location).",
+      "cultist": "Rút thêm một token khác. Cancel the effects and icons of each skill card committed to this test.",
+      "tablet": "-3. If it is Agenda 2, you automatically fail instead.",
+      "elderThing": "-X. Discard the top 3 cards of your deck. X is the total printed cost of those discarded cards."
+    }
+  },
+  "tooltips": {
+    "baseOfTheHill": {
+      "resign": "\"This is more than I signed up for!\"",
+      "investigate": "{'{'}action{'}'}: _Investigate_. If you succeed, instead of discovering clues, put a random set-aside Diverging Path into play. (Limit once per round.)"
+    },
+    "ascendingPath": {
+      "investigate": "{'{'}action{'}'}: _Investigate_. If you succeed, instead of discovering clues, put a random set-aside Altered Path into play. (Limit once per round.)"
+    },
+    "destroyedPath": {
+      "investigate": "{'{'}action{'}'}: _Investigate_. If you succeed, instead of discovering clues, remove 1 doom from Destroyed Path."
+    }
+  },
   "intro": {
     "title": "Màn VI: Nơi Diệt Vong Chờ Đón",
-    "body": "<p>Bạn tỉnh giấc nhờ một tiếng thét thất thanh. Lo sợ điều tồi tệ nhất xảy ra, bạn mang trang bị của mình và đi về hướng các con đường làng ở Dunwich. Ngay khi bước chân ra ngoài, bạn đã cảm nhận được sự hôi hám trong không khí lạnh lẽo buổi đêm: một mùi cay nồng khó có thể diễn tả được và bầu không khí nặng nề làm việc thở cũng trở khó khăn. Người dân làng Dunwich bịt kín các cánh cửa nhà, và ngôi làng trở nên yên tĩnh và hiu quạnh. Từ đằng xa, một ánh sáng yếu ớt phát ra từ một đỉnh đồi phía trên ngôi làng. Bạn biết về ngọn đồi này thông qua các ghi chép của Zebulon và Armitage. Nó được gọi là Đồi Sentinel. Những câu chuyện kể về các nghi lễ satan được thực hiện ở đó — những nghi thức với các giàn thiêu lớn thắp sáng bầu trời buổi đêm trong khi mặt đất rung chuyển ầm ầm bên dưới.</p><p>Những đàn chim đớp muỗi đậu quanh bạn trên các mái nhà của ngôi làng, cái nhìn của chúng đem lại điềm xấu trong khi bạn leo vào trong chiếc xe tải cũ nát của Zebulon. Khi bạn lái xe về phía Đồi Sentinel, nhiều tiếng thét thất thanh hơn vang vọng khắp nơi với âm độ khủng khiếp khiến lỗ tai của bạn đau đớn. Mọi thứ bạn tìm hiểu được và trải qua ở làng Dunwich đã dẫn đến nơi này. Nếu nghi lễ hôi hám mà Seth tìm cách thực hiện có liên quan gì đến những gì Armitage và đồng nghiệp đã ngăn cản vài tháng trước, thì nó liên quan đến sự chấp thuận của một sinh vật cổ xưa - Yog ‐ Sothoth. Thất bại trong việc dừng nghi lễ này lại có thể đem lại sự diệt vong… không chỉ cho làng Dunwich, mà là cả thế giới.</p>"
+    "body": "<p>Bạn tỉnh giấc nhờ một tiếng thét thất thanh. Lo sợ điều tồi tệ nhất xảy ra, bạn mang trang bị của mình và đi về hướng các con đường làng ở Dunwich. Ngay khi bước chân ra ngoài, bạn đã cảm nhận được sự hôi hám trong không khí lạnh lẽo buổi đêm: một mùi cay nồng khó có thể diễn tả được và bầu không khí nặng nề làm việc thở cũng trở khó khăn. Người dân làng Dunwich bịt kín các cánh cửa nhà, và ngôi làng trở nên yên tĩnh và hiu quạnh. Từ đằng xa, một ánh sáng yếu ớt phát ra từ một đỉnh đồi phía trên ngôi làng. Bạn biết về ngọn đồi này thông qua các ghi chép của Zebulon và Armitage. Nó được gọi là Đồi Sentinel. Những câu chuyện kể về các nghi lễ satan được thực hiện ở đó — những nghi thức với các giàn thiêu lớn thắp sáng bầu trời buổi đêm trong khi mặt đất rung chuyển ầm ầm bên dưới.</p><p>Những đàn chim đớp muỗi đậu quanh bạn trên các mái nhà của ngôi làng, cái nhìn của chúng đem lại điềm xấu trong khi bạn leo vào trong chiếc xe tải cũ nát của Zebulon. Khi bạn lái xe về phía Đồi Sentinel, nhiều tiếng thét thất thanh hơn vang vọng khắp nơi với âm độ khủng khiếp khiến lỗ tai của bạn đau đớn. Mọi thứ bạn tìm hiểu được và trải qua ở làng Dunwich đã dẫn đến nơi này. Nếu nghi lễ hôi hám mà Seth tìm cách thực hiện có liên quan gì đến những gì Armitage và đồng nghiệp đã ngăn cản vài tháng trước, thì nó liên quan đến sự chấp thuận của một sinh vật cổ xưa - Yog ‐ Sothoth. Thất bại trong việc dừng nghi lễ này lại có thể đem lại sự diệt vong… không chỉ cho làng Dunwich, mà là cả thế giới.</p>",
+    "proceedToPart1": "Check Campaign Log. If *Naomi has the investigators’ back*: Proceed to _Part 1_.",
+    "otherwise": "Otherwise: Skip to _Setup_.",
+    "part1": {
+      "body": "<p>_Part 1_: Con đường dẫn lên Đồi Sentinel hẹp và quá gập ghềnh cho chiếc xe tải của Zebulon, vì vậy bạn đỗ xe ở chân đồi và chuẩn bị đi bộ cho phần còn lại của đoạn đường. Ngay sau đó, bạn nhận thấy rằng mình không chỉ một mình ở đây. Một số người đàn ông và phụ nữ đi ra từ khu rừng phía sau bạn, rút súng và nhắm thẳng chúng vào bạn. Bạn giơ hai tay lên và chuẩn bị cho điều tồi tệ nhất. “Chờ đã,” một người trong số họ nói và vẫy tay về phía những người khác. \"Tôi nhận ra cậu từ Clover Club.\" Anh ta cười toe toét và hạ vũ khí xuống. \"Naomi gửi cậu lời chào của bà ấy.\"</p><p>Curious, you ask what the gangsters are doing here. “Ms. O’Bannion had us investigate the attack on her fiancé’s club,” he explains. “Turns out there were some men in Arkham behind the whole thing. Some Bishop fellow and his lackeys. We tailed them all the way to this dump.” Before he can explain further, the all-too-familiar ratta-tat of a tommy gun echoes across the hill. “That’ll be Vinny. Come on, boys!” He beckons to the others to follow and runs up the hill. Shaking your head, you do the same. These mobsters don’t know what they’re getting into.</p><ul><li>Trưởng nhóm nhận 1 manh mối từ kho manh mối.</li></ul><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
+    }
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: Where Doom Awaits, Beast-thralls, Sorcery, Bishop’s Thralls, Striking Fear, Ancient Evils, Chilling Cold. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/where-doom-awaits.png' /><img src='{setImgPath}/beast-thralls.png' /><img src='{setImgPath}/sorcery.png' /><img src='{setImgPath}/bishops-thralls.png' /><img src='{setImgPath}/striking-fear.png' /><img src='{setImgPath}/ancient-evils.png' /><img src='{setImgPath}/chilling-cold.png' /></section>",
     "placeLocations": "Đặt các vị trí Base of the Hill, Ascending Path, và Sentinel Peak vào màn chơi. Mỗi điều tra viên bắt đầu màn chơi tại Base of the Hill.",
     "divergingPaths": "Loại bỏ ngẫu nhiên 1 bản sao của vị trí Diverging Path khỏi màn chơi. Đặt 3 bản sao còn lại của vị trí Diverging Path sang một bên, ngoài khu vực chơi.",
     "alteredPaths": "Loại bỏ ngẫu nhiên 1 bản sao của vị trí Altered Path khỏi màn chơi. Đặt 3 bản sao còn lại của vị trí Altered Path sang một bên, ngoài khu vực chơi.",
     "setAside": "Đặt Seth Bishop sang một bên, ngoài khu vực chơi.",
+    "adjustChaosBag": "Based on your difficulty level, add the following chaos token(s) to the chaos bag, for the remainder of the campaign:<div class='columns'><ul><li>_Easy_: -3</li><li>_Standard_: -5</li></ul><ul><li>_Hard_: -6</li><li>_Expert_: -7</li></ul></div>",
     "act2": {
-      "instructions": "Tùy thuộc vào các trường hợp xảy ra, một phiên bản khác của lá Act 2 sẽ được sử dụng trong màn chơi này. Các phiên bản khác của Act 2 được bỏ ra khỏi màn chơi hoàn toàn."
+      "instructions": "Tùy thuộc vào các trường hợp xảy ra, một phiên bản khác của lá Act 2 sẽ được sử dụng trong màn chơi này. Các phiên bản khác của Act 2 được bỏ ra khỏi màn chơi hoàn toàn.",
+      "v1": "Check Campaign Log. If *the investigators restored Silas Bishop*, use Act 2—Ascending the Hill (v. I)",
+      "v2": "các điều tra viên thất bại trong việc lấy lại cuốn sách Necronomicon.",
+      "v3": "If neither of the above are true, use Act 2—Ascending the Hill (v. III)"
+    },
+    "addDoom": "Check Campaign Log. *For each Brood of Yog-Sothoth that escaped into the wild*, add 1 doom to agenda 1a.",
+    "hideousAbominations": "các điều tra viên giúp Silas Bishop thoát khỏi nỗi thống khổ.",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to Where Doom Awaits*, *Erratic Fear*, *Resurgent Evils*, and *Creeping Cold*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-where-doom-awaits.png' /><img src='{setImgPath}/erratic-fear.png' /><img src='{setImgPath}/resurgent-evils.png' /><img src='{setImgPath}/creeping-cold.png' /></section>*Erratic Fear* replaces *Striking Fear*, *Resurgent Evils* replaces *Ancient Evils*, and *Creeping Cold* replaces *Chilling Cold*. Remove the replaced sets from the game.",
+      "placeLocations": "Put Base of the Hill (*Warped and Twisted*), Ascending Path (*Warped and Twisted*), and Sentinel Peak into play. Each investigator begins play at Base of the Hill.",
+      "divergingPaths": "Loại bỏ ngẫu nhiên 1 bản sao của vị trí Diverging Path khỏi màn chơi. Đặt 3 bản sao còn lại của vị trí Diverging Path sang một bên, ngoài khu vực chơi.",
+      "alteredPaths": "Loại bỏ ngẫu nhiên 1 bản sao của vị trí Altered Path khỏi màn chơi. Đặt 3 bản sao còn lại của vị trí Altered Path sang một bên, ngoài khu vực chơi.",
+      "setAside": "Also set Naomi O’Bannion aside, out of play.",
+      "naomi": "Check Campaign Log. If *Naomi has your back*: Instead of gaining clues from the token bank, the lead investigator may choose an investigator to add the set-aside Naomi O’Bannion to their deck. This card does not count toward that investigator’s deck size."
     }
   },
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<div class='resolution'><p class='basic'>_If no resolution was reached (each investigator resigned or was defeated)_: Go to _Resolution 2_.</p></div>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p>_Resolution 1_: Cuốn sách được đóng một cách ẩu tả dường như là những ghi chép văn bản của Old Whateley, người đã dạy cho Wilbur những bí mật cổ xưa của yêu thuật. Bạn tìm thấy một đoạn văn mô tả một địa điểm nằm ngoài thời gian và không gian, nơi các thế giới hội tụ và Yog-Sothoth trú ngụ. Chỉ khi tiếp cận được điểm kết nối nằm ở vùng biên của thực tại này, bạn mới có thể sửa chữa vết rách đã chia cắt thế giới. Cảm thấy như thể bạn sắp đi đến diệt vong, bạn tập hợp một chút can đảm cuối cùng và bước vào cổng.</p><ul><li>In your Campaign Log, record that *the investigators entered the gate*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>_Resolution 2_: Các phù thủy đến từ làng Dunwich, tìm kiếm sức mạnh bí ẩn nằm ngoài địa hạt này, đã hoàn thành điều mà Wilbur và Old Whateley không thể. Thông qua việc hiến tế máu và những thí nghiệm không sao diễn tả được, sức mạnh hắc ám mà các phù thủy tìm kiếm giờ đã nằm trong tầm tay của họ. Tuy nhiên, họ sẽ không bao giờ có cơ hội thực sự sử dụng sức mạnh này. Khi cầu khẩn tổ tiên của Wilbur để được kiến thức, họ đã kéo sinh vật ra khỏi chiều không gian bậc cao của nó. Yog-Sothoth xuất hiện từ khe hở phía trên Đồi Sentinel, xóa mờ bầu trời và bao trùm thế giới. Bây giờ nó đã đến Trái đất, và nó sẽ cai trị nơi mà nhân loại từng là chủ nhân.</p><ul><li>Yog-Sothoth xé bỏ rào cản giữa các thế giới và hợp nhất thành một với tất cả thực tại.</li><li>Mỗi điều tra viên bị khiến <b>điên loạn</b>.</li><li>Các điều tra viên thất bại.</li></ul></div>"
+    }
+  },
+  "label": {
+    "baseOfTheHill": {
+      "investigate": "Put a random Diverging Path into play"
+    },
+    "ascendingPath": {
+      "investigate": "Put a random Altered Path into play"
+    },
+    "destroyedPath": {
+      "investigate": "Remove 1 doom from {name}"
     }
   }
 }

@@ -1,31 +1,144 @@
 {
+  "cluesToSpend": "Clues to spend",
+  "xp": {
+    "bonus": "Saved the fabric of existence."
+  },
+  "remembered": {
+    "theChemistWasSaved": "The chemist was saved",
+    "theFormulaWasNotCompleted": "The formula was not completed",
+    "theSampleWasRecovered": "The sample was recovered",
+    "theSampleWasLost": "The sample was lost",
+    "theMiGoWereDrivenOff": "The Mi-Go were driven off",
+    "theSecretOfTheOozeWasStolen": "The secret of the ooze was stolen",
+    "theExplosivesWereDefused": "The explosives were defused",
+    "theExplosivesWereDetonated": "The explosives were detonated"
+  },
+  "intro": {
+    "title": "The Blob That Ate Everything",
+    "body": "<p class='basic'><blockquote><i>Báo cáo Sự cố: 8L-08</i>\r\n<i>Thứ Năm, 07/05/1928</i>\r\n<i>Blackwater, MA</i>\r\n\r\n<i>0312 giờ - Sự kiện va chạm ngay bên ngoài Blackwater. Đã chặn cuộc gọi cảnh sát, các đặc vụ được cử đi điều tra. Đã phỏng vấn nông dân địa phương, Ron Graham; khẳng định thiên thạch rộng vài feet, có màu hơi xanh lục. Hố va chạm có đường kính khoảng 100 yard. Phát hiện bức xạ ở khu vực ngoại vi. Đề nghị cách ly ngay lập tức và để nhóm nghiên cứu quan sát thêm. Tình hình đang trong tầm kiểm soát.</i></blockquote></p><p class='basic'><i>0312 giờ - Sự kiện va chạm ngay bên ngoài Blackwater. Đã chặn cuộc gọi cảnh sát, các đặc vụ được cử đi điều tra. Đã phỏng vấn nông dân địa phương, Ron Graham; khẳng định thiên thạch rộng vài feet, có màu hơi xanh lục. Hố va chạm có đường kính khoảng 100 yard. Phát hiện bức xạ ở khu vực ngoại vi. Đề nghị cách ly ngay lập tức và để nhóm nghiên cứu quan sát thêm. Tình hình đang trong tầm kiểm soát.</i></blockquote></p><p>Nó không hề nằm trong tầm kiểm soát.</p><p>That was the report the G-men took when they first arrived. For the next few days, the town of Blackwater was on lockdown. The impact was all that was talked about in the papers, but not much was known aside from the enormous crater and the effect it had on the countryside. Nobody was allowed to leave the town, and only those approved by the shadowy government agency were allowed to enter. Those unfortunate few included high-ranking government agents, and a team of researchers from the nearby Miskatonic University, who were summoned to investigate the meteor itself. For the rest of the town’s inhabitants, it was a strange occurrence, nothing more… that is, until the meteor hatched.</p><p>I saw it with my own eyes. When the anomaly emerged, the first thing it did was devour the team of researchers who had been sent to collect and study samples from the meteor. The next thing it did was devour their lab equipment. Then Ron Graham’s tractor. Then his house, in its entirety. It continued to grow and spread, devouring everything in its path. I barely escaped with my life.</p><p>Khi quân đội đến, họ nghĩ rằng họ có thể giết nó bằng đạn và pháo. Mọi thứ họ ném vào sinh vật đó đều bị nuốt chửng, hết đợt này đến đợt khác. Sau đó nó tách ra thành hàng trăm mảnh nhỏ hơn của chính nó, và quân đội nhanh chóng bị áp đảo. Trong khi trận chiến vẫn đang diễn ra ác liệt, tôi và những người khác ở lại thị trấn nhìn thấy những ánh sáng và hình thù trên bầu trời. Có thứ gì đó ở trên đó, đang chờ đợi. Chờ đợi thời cơ.</p><p>Lệnh cách ly vẫn còn hiệu lực, và chúng tôi đang mắc kẹt ở giữa. Sẽ không lâu nữa trước khi dị thường phát triển đủ lớn để nuốt chửng mọi thứ ở Blackwater. Và nếu điều đó xảy ra, ai có thể ngăn chặn cơn thịnh nộ của nó?</p>"
+  },
   "setup": {
+    "gatherSets": "Gather all cards from *The Blob That Ate Everything* encounter set. This set is indicated by this icon:<section class='encounter-sets'><img src='{setImgPath}/the-blob-that-ate-everything.png' /></section>",
+    "gatherElseSets": "Gather the *The Blob That Ate Everything Else* and *Mi-Go Incursion II* encounter sets. Set all cards from *Mi-Go Incursion II* aside, out of play. Shuffle the 4 new Quarantine Zone locations together with the original locations and remove 5 at random.",
+    "epicMultiplayer": "Loại bỏ tất cả các lá bài trong bộ bài encounter <i>Single Group</i> khỏi màn chơi.",
+    "singleGroup": "Loại bỏ tất cả các lá bài trong bộ bài encounter <i>Epic Multiplayer</i> khỏi màn chơi.",
+    "setAsideMiGo": "Set all cards from the Mi-Go Incursion encounter set aside, out of play. This set is indicated by this icon:<section class='encounter-sets'><img src='{setImgPath}/migo.png' /></section>",
+    "setAside": "Search the *The Blob That Ate Everything* encounter set for Vulnerable Heart, 1 copy of Grasping Ooze, 1 copy of Cubic Ooze, and both copies of Oozewraith, and set them aside, out of play.",
     "subject": "Đặt kẻ địch Subject 8L-08 vào chơi bên cạnh agenda deck. Nó không ở bất kỳ vị trí nào.",
+    "placeLocations": "Set up the locations according to the guidelines below:",
     "shuffleQuarantine": "Xào các vị trí Quarantine Zone với nhau và loại bỏ 1 trong số chúng khỏi trò chơi.",
     "placeCrater": "Đặt The Crater vào chơi.",
+    "innerRing": "Lấy Research Site, Temporary HQ, và 2 vị trí Quarantine Zone ngẫu nhiên. Xào chúng và đặt mỗi vị trí kết nối với The Crater, theo một thứ tự ngẫu nhiên.",
+    "outerRing": "Lấy Fungus Mound và 3 vị trí Quarantine Zone ngẫu nhiên. Xào chúng và đặt mỗi vị trí vào 1 trong 4 vị trí ở vòng ngoài, xa nhất từ The Crater.",
     "remaining": "Đặt các vị trí Quarantine Zone còn lại vào chơi.",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Temporary HQ.",
-    "innerRing": "Lấy Research Site, Temporary HQ, và 2 vị trí Quarantine Zone ngẫu nhiên. Xào chúng và đặt mỗi vị trí kết nối với The Crater, theo một thứ tự ngẫu nhiên.",
-    "outerRing": "Lấy Fungus Mound và 3 vị trí Quarantine Zone ngẫu nhiên. Xào chúng và đặt mỗi vị trí vào 1 trong 4 vị trí ở vòng ngoài, xa nhất từ The Crater."
+    "countermeasures": "Đặt 1 resource lên lá bài scenario reference như một biện pháp đối phó (countermeasure)."
   },
+  "tooltips": {
+    "theCrater": {
+      "deal": "{'{'}action{'}'} Spend 1 countermeasure: Deal 3 damage to Subject 8L-08 or a Manifold enemy at any location."
+    },
+    "researchSite": {
+      "gainCountermeasure": "{'{'}action{'}'} Spend 2 clues: Gain 1 countermeasure.",
+      "placeClues": "{'{'}action{'}'} Spend 1 countermeasure: Place 2 clues on Research Site _(from the token pool)_."
+    },
+    "temporaryHQ": {
+      "action": "{'{'}action{'}'} Spend 1 countermeasure: Choose one – Heal 3 damage, Heal 3 horror, Gain 5 resources, or Draw 3 cards."
+    },
+    "fungusMound": {
+      "test": "{'{'}action{'}'} Spend 1 countermeasure: Choose a Mi-Go enemy at any location and test {'{'}intellect{'}'} (0). For each point you succeed by, deal 1 damage to the chosen enemy (to a maximum of 5)."
+    },
+    "sewer": {
+      "move": "{'{'}action{'}'} Test {'{'}intellect{'}'} (1). If you succeed, move to a location up to X connections away from Sewer, where X is the amount you succeeded by."
+    },
+    "bridge": {
+      "defeat": "{'{'}fast{'}'} Choose an exhausted Manifold enemy at Bridge and test {'{'}intellect{'}'} (X), where X is that enemy's evade value. If you succeed, defeat the chosen enemy. (Max one success per game.)"
+    },
+    "waterTower": {
+      "damage": "{'{'}action{'}'} If there are no clues on Water Tower: Test {'{'}intellect{'}'} (3). If you succeed, deal 3 damage to each Ooze enemy at Water Tower and at each connecting location. (Max one success per game.)"
+    },
+    "church": {
+      "evade": "{'{'}action{'}'} If there are no clues on Church: Choose an Ooze enemy at Church, or a connecting location. Move the chosen enemy one location away from Church and automatically evade it. (Group limit once per game.)"
+    },
+    "theMilitarysPlan": {
+      "action": "{'{'}action{'}'}: Test {'{'}intellect{'}'} or {'{'}agility{'}'} (3). If you succeed, remove the horror token on this location."
+    }
+  },
+  "specialRules": [
+    {
+      "title": "Blob X",
+      "body": "<p class='basic'>Nhiều kẻ địch trong kịch bản này là những mảnh của anomaly đã tách ra và có tri giác riêng. Tiêu diệt những kẻ địch này sẽ gây sát thương (damage) cho anomaly. Khi một kẻ địch có <b>Blob X</b> bị tiêu diệt, gây X sát thương cho Subject 8L-08.</p><ul><li>Kẻ địch có <b>Blob X</b> không được đặt vào khu vực chiến thắng (victory display) khi chúng bị tiêu diệt trừ khi chúng cũng có <b>Victory X</b>.</li></ul>"
+    },
+    {
+      "title": "Devour",
+      "body": "<p class='basic'>Trong kịch bản này, Subject 8L-08 có thể \"nuốt chửng\" (devour) nhiều thứ khác nhau.</p><ul><li>Nếu một lá bài bị nuốt chửng, nó được đặt bên dưới Subject 8L-08. Các lá bài bên dưới Subject 8L-08 được coi là không còn trong cuộc chơi (out of play). Mỗi lá bài bị nuốt chửng được trả về bộ bài của chủ sở hữu vào cuối trò chơi. Nếu một điều tra viên bị nuốt chửng, người đó bị hạ gục (killed).</li><li>Nếu một token bị nuốt chửng, nó được đặt vào kho token (token pool).</li><li>Khi chọn một địa điểm (location) để nuốt chửng, bạn không thể chọn nuốt chửng một địa điểm nếu điều đó khiến một địa điểm khác không còn kết nối hợp lệ nào.</li><li>Subject 8L-08 can also devour certain aspects of reality or metaphysical objects. If it does so, you will be instructed of the consequences.</li></ul>"
+    },
+    {
+      "title": "Countermeasures",
+      "body": "<p class='basic'>Countermeasures đại diện cho vật tư, nghiên cứu, hoặc thiết bị quân sự có thể hỗ trợ các điều tra viên trong việc sinh tồn. Countermeasures có thể được tiêu hao thông qua một số khả năng của lá bài để kích hoạt các hiệu ứng mạnh mẽ. Tuy nhiên, việc nhận thêm countermeasures mới là rất hiếm, vì vậy hãy cẩn thận với cách bạn sử dụng chúng!</p>"
+    },
+    {
+      "title": "Lá bài Cốt truyện",
+      "body": "<p class='basic'>Các lá bài cốt truyện (story cards) là một kiểu bài mới trong màn chơi này. Những lá bài này đóng vai trò như một cách để bổ sung các câu chuyện và thường xuất hiện ở mặt còn lại của một lá bài màn chơi khác. Khi bạn được hướng dẫn xử lý một lá bài cốt truyện, hãy đọc nội dung cốt truyện của nó và giải quyết hiệu ứng của nó, nếu có.</p>"
+    },
+    {
+      "title": "Reality Acid",
+      "body": "<style>.reality-acid-table{width:100%;border-collapse:collapse;font-size:.82em;line-height:1.25;background:#BEC5B1;color:#1f1a12}.reality-acid-table th{background:#A2B695;color:#1f1a12;text-transform:uppercase;letter-spacing:.04em;border:1px solid #7f9273;padding:4px 6px;font-weight:bold}.reality-acid-table td{border:1px solid #8f9b86;padding:4px 6px;vertical-align:top;font-weight:normal}.reality-acid-table tbody tr:nth-child(odd){background:#BEC5B1}.reality-acid-table tbody tr:nth-child(even){background:#CDD0C3}.reality-acid-table .token{width:13%;text-align:center;color:#1f1a12;white-space:nowrap}.reality-acid-table .aspect{width:74%}</style><p class='basic'><smallcaps>Subject 8L-08 mở to cái mõm của nó, và nuốt chửng…</smallcaps>\r\n<i>(Nếu tổ hợp chaos token được rút không có trong danh sách, hoặc nếu khía cạnh được liệt kê không thể bị nuốt chửng, hãy rút hai chaos token mới và tham khảo lại bảng.)</i></p><table class='reality-acid-table'><thead><tr><th colspan='2'>Chaos Tokens</th><th>Aspect of Reality Devoured</th></tr></thead><tbody><tr><td class='token'>{autoFail}</td><td class='token'>{skull}/{cultist}</td><td class='aspect'>…The non-_Elite_ enemy nearest to you.</td></tr><tr><td class='token'>{autoFail}</td><td class='token'>{tablet}/{elderThing}</td><td class='aspect'>…A treachery at your location.</td></tr><tr><td class='token'>{autoFail}</td><td class='token'>–1 to –8</td><td class='aspect'>…1 horror and 1 damage from your investigator card.</td></tr><tr><td class='token'>{autoFail}</td><td class='token'>+0/+1</td><td class='aspect'>…Your greatest flaw. Search your deck for any 1 weakness card. It is devoured.</td></tr><tr><td class='token'>{autoFail}</td><td class='token'>{elderSign}</td><td class='aspect'>…The {autoFail} token just revealed.</td></tr><tr><td class='token'>+1</td><td class='token'>{skull}/{cultist}</td><td class='aspect'>…Your caution. Resolve Reality Acid three more times, ignoring this result.</td></tr><tr><td class='token'>+1</td><td class='token'>{tablet}/{elderThing}</td><td class='aspect'>…Your ignorance. Discover 1 clue at your location.</td></tr><tr><td class='token'>+1</td><td class='token'>–1 to –8</td><td class='aspect'>…Friendships. Until the end of the round, investigators cannot commit cards to each others’ skill tests.</td></tr><tr><td class='token'>+1</td><td class='token'>0</td><td class='aspect'>…Your player reference card.</td></tr><tr><td class='token'>0</td><td class='token'>0</td><td class='aspect'>…1 per-investigator clues from your location.</td></tr><tr><td class='token'>0</td><td class='token'>{skull}</td><td class='aspect'>…Your voice. Until the end of the round, you cannot speak or make noise.</td></tr><tr><td class='token'>0</td><td class='token'>{cultist}</td><td class='aspect'>…Your group’s food and drinks. It cannot be consumed until your group has dealt at least 3 damage to Subject 8L-08.</td></tr><tr><td class='token'>0</td><td class='token'>{tablet}</td><td class='aspect'>…The concept of language. Until the end of the investigation phase, you can only speak in gibberish.</td></tr><tr><td class='token'>0</td><td class='token'>{elderThing}</td><td class='aspect'>…Light. Until the end of the round, investigators must play with all nearby light sources turned off or covered (except for flashlights).</td></tr><tr><td class='token'>0</td><td class='token'>–1/–2</td><td class='aspect'>…Itself, and then regurgitates itself. Deal 1 damage to Subject 8L-08.</td></tr><tr><td class='token'>0</td><td class='token'>–3</td><td class='aspect'>…All damage from each _Manifold_ enemy.</td></tr><tr><td class='token'>0</td><td class='token'>–4 to –8</td><td class='aspect'>…All of the supplies, ammo, charges, and secrets among assets you control.</td></tr><tr><td class='token'>–1</td><td class='token'>{skull}</td><td class='aspect'>…Your hope. Until the end of the next mythos phase, set your base willpower to 0.</td></tr><tr><td class='token'>–1</td><td class='token'>{cultist}</td><td class='aspect'>…Your curiosity. Until the end of the next mythos phase, set your base intellect to 0.</td></tr><tr><td class='token'>–1</td><td class='token'>{tablet}</td><td class='aspect'>…Your precision. Until the end of the next mythos phase, set your base combat to 0.</td></tr><tr><td class='token'>–1</td><td class='token'>{elderThing}</td><td class='aspect'>…Your attention. Until the end of the next mythos phase, set your base agility to 0.</td></tr><tr><td class='token'>–1</td><td class='token'>–1</td><td class='aspect'>…Your versatility. Until the end of the round, you cannot play or use cards that do not match your investigator’s class.</td></tr><tr><td class='token'>–1</td><td class='token'>–2</td><td class='aspect'>…Your cell phone.</td></tr><tr><td class='token'>–1</td><td class='token'>–3</td><td class='aspect'>…The chaos bag. Remove all tokens from it and place them in a different container.</td></tr><tr><td class='token'>–1</td><td class='token'>–4 to –8</td><td class='aspect'>…Level 1–5 cards of your choice with at least 5 total levels from among your deck, discard pile, hand, and play area.</td></tr><tr><td class='token'>–2</td><td class='token'>{skull}/{cultist}</td><td class='aspect'>…The top 3 cards of your deck.</td></tr><tr><td class='token'>–2</td><td class='token'>{tablet}/{elderThing}</td><td class='aspect'>…The top 3 cards of your discard pile.</td></tr><tr><td class='token'>–2</td><td class='token'>–2</td><td class='aspect'>…The deckbox you store your deck in.</td></tr><tr><td class='token'>–2</td><td class='token'>–3</td><td class='aspect'>…Your investigator’s card sleeve.</td></tr><tr><td class='token'>–2</td><td class='token'>–4 to –8</td><td class='aspect'>…Your party’s teamwork. Each investigator loses 1 action.</td></tr><tr><td class='token'>–3</td><td class='token'>{skull}/{cultist}/{tablet}/{elderThing}</td><td class='aspect'>…A _Talent_, _Connection_, or _Condition_ asset you control.</td></tr><tr><td class='token'>–3</td><td class='token'>–4 to –8</td><td class='aspect'>…Your sense of time. Until you advance the agenda, investigators cannot use time-keeping devices, ask about the time, or trigger abilities on any card with “time,” “watch,” or “chrono” in its title.</td></tr><tr><td class='token'>–4 to –8</td><td class='token'>{skull}/{cultist}</td><td class='aspect'>…Your investigator mini card. (Use something else to mark your location.)</td></tr><tr><td class='token'>–4 to –8</td><td class='token'>{tablet}/{elderThing}</td><td class='aspect'>…Your house. Search the collection for Your House (Core #124); it is devoured.</td></tr><tr><td class='token'>–4 to –8</td><td class='token'>–4 to –8</td><td class='aspect'>…Your soul. Record in your Campaign Log that you have no soul.</td></tr><tr><td class='token'>{skull}</td><td class='token'>{skull}</td><td class='aspect'>…The highest-cost _Ally_ asset you control.</td></tr><tr><td class='token'>{skull}</td><td class='token'>{cultist}</td><td class='aspect'>…All event cards in your hand.</td></tr><tr><td class='token'>{skull}</td><td class='token'>{tablet}</td><td class='aspect'>…All of your resources.</td></tr><tr><td class='token'>{skull}</td><td class='token'>{elderThing}</td><td class='aspect'>…All skill cards in your hand.</td></tr><tr><td class='token'>{cultist}</td><td class='token'>{cultist}</td><td class='aspect'>…All cards that have been exiled.</td></tr><tr><td class='token'>{cultist}</td><td class='token'>{tablet}</td><td class='aspect'>…Your identity. Until the end of the round, treat your investigator’s text box as if it were blank (including _Traits_).</td></tr><tr><td class='token'>{cultist}</td><td class='token'>{elderThing}</td><td class='aspect'>…The concept of speed. Until the end of the round, investigators cannot gain or take additional actions.</td></tr><tr><td class='token'>{tablet}</td><td class='token'>{tablet}</td><td class='aspect'>…Your sense of urgency. Until the end of the round, you cannot move.</td></tr><tr><td class='token'>{tablet}</td><td class='token'>{elderThing}</td><td class='aspect'>…Your potential. Until the end of the round, your skills cannot be increased.</td></tr><tr><td class='token'>{elderThing}</td><td class='token'>{elderThing}</td><td class='aspect'>…Your patience. Place 1 doom on the current agenda.</td></tr><tr><td class='token'>{elderSign}</td><td class='token'>{skull}/{cultist}</td><td class='aspect'>…All _Spell_ and _Ritual_ assets you control.</td></tr><tr><td class='token'>{elderSign}</td><td class='token'>{tablet}/{elderThing}</td><td class='aspect'>…All _Item_ assets you control.</td></tr><tr><td class='token'>{elderSign}</td><td class='token'>+1</td><td class='aspect'>…The concept of a “discard pile.” Until the end of the next mythos phase, each card that would be placed in any investigator’s discard pile is instead devoured.</td></tr><tr><td class='token'>{elderSign}</td><td class='token'>0</td><td class='aspect'>…One of your hands. For the remainder of the game, you have 1 fewer hand slot.</td></tr><tr><td class='token'>{elderSign}</td><td class='token'>–1</td><td class='aspect'>…The concept of success. The next time an investigator would succeed at a test by 2 or more, that investigator instead automatically fails.</td></tr><tr><td class='token'>{elderSign}</td><td class='token'>–2/–3</td><td class='aspect'>…1 countermeasure.</td></tr><tr><td class='token'>{elderSign}</td><td class='token'>–4 to –8</td><td class='aspect'>…The concept of easiness. Until the end of the game, flip the scenario reference card to its Hard/Expert side.</td></tr></tbody></table>"
+    }
+  ],
   "resolutions": {
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Giờ đây Blackwater không còn sót lại gì. Khu vực cách ly đã bị phá vỡ. Hiện tượng dị thường này không thể bị ngăn chặn. Trước tiên, nó sẽ lan rộng khắp vùng nông thôn, nuốt chửng mọi thứ trên đường đi. Chẳng bao lâu nữa toàn bộ Massachusetts sẽ bị nuốt chửng. Sau đó là toàn bộ New England. Nó đã đào sâu xuống lòng đất và không thể bị ngăn cản ngay cả bởi các đại dương. Không có lục địa nào là an toàn. Mọi sinh vật sống trên hành tinh sẽ bị nuốt chửng. Và sau đó, Trái Đất cũng vậy.\r\n…nhưng đó sẽ không phải là kết thúc.\r\nNgay cả khoảng không vũ trụ cũng không thể ngăn cản sự phát triển của sinh vật này. Theo thời gian, nó sẽ tiếp tục mở rộng và nuốt chửng cho đến khi không còn gì ngoài sự trống rỗng lạnh lẽo của không gian và khối nhầy đã nuốt chửng mọi thứ.</p><ul><li>In your Campaign Log, record that *Subject 8L-08 devoured the entire universe*.</li><li>Các điều tra viên thất bại.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_:</p><p class='basic'><blockquote><i>Báo cáo Sự cố: 8L-08, tiếp theo</i>\r\n<i>Thứ Tư, 07/11/1928</i>\r\n<i>Blackwater, MA</i>\r\n<i>0742 giờ - Đã tiếp xúc với đối tượng ████████████. Đối tượng ███████████ thiên thạch; các nhà nghiên cứu không chắc liệu thiên thạch đóng vai trò là đường dẫn cho ██████████ hay như một loại ██████████████. Đã khởi động các quy trình phản ứng khẩn cấp ngay lập tức. Vào khoảng 0500 giờ, đối tượng đã bị tiêu diệt bởi bên thứ ba. Theo quy trình hoạt động, các mẫu vật đã được thu thập và gửi đến ██████ để nghiên cứu thêm. Các đặc vụ hiện đang xóa sạch những dấu vết còn lại của đối tượng khỏi khu vực cách ly. Khuyến nghị mạnh mẽ việc xóa bỏ ngay lập tức báo cáo sự cố có mâu thuẫn trước đó.</i>\r\n<i>Công dân của Blackwater đã được thông báo ██████████ cách ly ████████ sự lây nhiễm của virus lây truyền qua đường không khí. ███████ một vài ca nhiễm ████████; các đội y tế đang trên đường đến để xác nhận.</i>\r\n<i>Các đặc vụ đang cố gắng gặp gỡ những người tham chiến không có giấy phép để thẩm vấn. Do tính chất nhạy cảm của sự cố, khuyến nghị thả tự do sau đó theo dõi chặt chẽ. Câu chuyện phải được giữ ████████████. ████████████████████████████████████████████.</i>\r\n<i>Tiêu hủy báo cáo sự cố ngay lập tức. Các chỉ thị bổ sung sẽ được gửi sau.</i></blockquote></p><p class='basic'>0742 hours – Contact made with <span class='censor'>hostile alien</span> subject.Subject <span class='censor'>arrived via</span> meteor; researchers are unsure whether meteor served as an avenue for <span class='censor'>space travel</span> or as some kind of <span class='censor'>weaponized egg</span>. Initiated immediate emergency response procedures. At roughly 0500 hours, subject was eliminated by third party. As per operational protocol, samples have been collected and sent to <span class='censor'>Roswell</span> for further study. Agents are currently scrubbing remainder of subject’s presence from quarantine zone. Strongly recommend immediate expunging of previous conflicting incident report.</p><p class='basic'>Citizens of Blackwater have been informed <span class='basic'>that</span> quarantine <span class='censor'>was due to</span> contagion of airborne virus. <span class='censor'>Induced</span> several infections <span class='censor'>to this end</span>; medical teams en route to confirm.</p><p class='basic'><i>Các đặc vụ đang cố gắng gặp gỡ những người tham chiến không có giấy phép để thẩm vấn. Do tính chất nhạy cảm của sự cố, khuyến nghị thả tự do sau đó theo dõi chặt chẽ. Câu chuyện phải được giữ ████████████. ████████████████████████████████████████████.</i></p><p class='basic'>Destroy this incident report immediately. Additional instructions to follow.</p><ul><li>In your Campaign Log, record that *the anomaly was contained*.</li><li>For each of the following assets that are in play (Universal Solvent, Pet Oozeling, Mi-Go Weapon, and Lt. Wilson Stewart), any one investigator may choose to add that asset to his or her deck. It does not count toward that investigator’s deck size.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
+    }
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 for every 5 cards Subject 8L-08 has devoured.",
+      "cultist": "-2. If this token is revealed during an attack against an enemy, that enemy gains retaliate for this attack.",
+      "tablet": "-3. After this skill test ends, Subject 8L-08 devours each card that was committed to the test.",
+      "elderThing": "-5. Choose up to 5 cards from your hand. Subject 8L-08 devours each of those cards. You get +1 skill value for this test for each card devoured in this way."
+    },
+    "hardExpert": {
+      "skull": "-1 for every 3 cards Subject 8L-08 has devoured.",
+      "cultist": "-3. If this token is revealed during an attack against an enemy, it gains retaliate for this test.",
+      "tablet": "-4. After this skill test ends, Subject 8L-08 devours each card that was committed to the test.",
+      "elderThing": "-7. Choose up to 7 cards from your hand. Subject 8L-08 devours each of those cards. You get +1 skill value for this test for each card devoured in this way."
     }
   },
   "label": {
+    "doneDevouring": "Done devouring cards",
     "ltWilsonStewart": {
-      "drawCard": "Rút 1 lá bài."
+      "healDamage": "Heal 1 damage from Lt. Wilson Stewart",
+      "healHorror": "Heal 1 horror from Lt. Wilson Stewart",
+      "gainSkillValue": "You get +1 skill value for your next skill test",
+      "drawCard": "Rút 1 lá bài.",
+      "gainResource": "Gain 1 resource"
     },
     "temporaryHQ": {
+      "healDamage": "Heal 3 damage",
+      "healHorror": "Heal 3 horror",
+      "gainResources": "Gain 5 resources",
       "drawCards": "Rút 3 lá bài."
+    },
+    "replicatingAberration": {
+      "spendCountermeasure": "Spend 1 countermeasure to prevent the replication",
+      "allowSpawn": "Allow the Replicating Aberration to spawn"
+    },
+    "abandonedWindmill": {
+      "investigate": "Move the clues to a Research Site or Temporary HQ"
     }
   },
   "realityAcid": {
+    "title": "Reality Acid",
+    "devours": "<smallcaps>Subject 8L-08 mở to cái mõm của nó, và nuốt chửng…</smallcaps>",
+    "consultAgain": "<i>(Nếu tổ hợp chaos token được rút không có trong danh sách, hoặc nếu khía cạnh được liệt kê không thể bị nuốt chửng, hãy rút hai chaos token mới và tham khảo lại bảng.)</i>",
     "outcomes": {
+      "nearestEnemy": "…kẻ địch không phải [[Elite]] gần bạn nhất.",
       "treachery": "…một treachery tại vị trí của bạn.",
       "heal": "…1 điểm kinh hoàng (horror) và 1 điểm sát thương (damage) khỏi lá bài điều tra viên của bạn.",
       "greatestFlaw": "…khuyết điểm lớn nhất của bạn. Tìm trong deck của bạn 1 lá bài weakness bất kỳ. Nó bị devoured.",
@@ -34,46 +147,49 @@
       "ignorance": "…sự thiếu hiểu biết của bạn. Khám phá 1 manh mối tại vị trí của bạn.",
       "friendships": "…tình bạn. Cho đến khi kết thúc vòng chơi, các điều tra viên không thể commit bài vào các bài kiểm tra kỹ năng của nhau.",
       "playerReferenceCard": "…thẻ tham chiếu người chơi của bạn.",
+      "locationClues": "…1 per player clues from your location.",
       "voice": "…giọng nói của bạn. Cho đến khi kết thúc vòng, bạn không thể nói chuyện hay tạo ra tiếng ồn.",
       "foodAndDrinks": "…đồ ăn và thức uống của nhóm bạn. Chúng không thể được tiêu thụ cho đến khi nhóm của bạn gây ít nhất 3 damage cho Subject 8L-08.",
       "language": "…khái niệm về ngôn ngữ. Cho đến khi kết thúc investigation phase, bạn chỉ có thể nói lảm nhảm.",
       "light": "…ánh sáng. Cho đến khi kết thúc vòng chơi, các điều tra viên phải chơi với tất cả các nguồn sáng xung quanh bị tắt hoặc che lại (ngoại trừ đèn pin).",
       "regurgitate": "…chính nó, và sau đó tự nôn ra chính nó. Gây 1 damage cho Subject 8L-08.",
+      "manifold": "…tất cả damage từ mỗi kẻ địch [[Manifold]].",
       "uses": "…tất cả supplies, ammo, charges, và secrets trên các asset bạn điều khiển.",
+      "willpower": "…hy vọng của bạn. Cho đến khi kết thúc mythos phase tiếp theo, đặt [willpower] cơ bản của bạn về 0.",
+      "intellect": "…sự tò mò của bạn. Cho đến khi kết thúc mythos phase tiếp theo, đặt [intellect] cơ bản của bạn về 0.",
+      "combat": "…sự chính xác của bạn. Cho đến khi kết thúc mythos phase tiếp theo, đặt [combat] cơ bản của bạn về 0.",
+      "agility": "…sự chú ý của bạn. Cho đến khi kết thúc mythos phase tiếp theo, đặt [agility] cơ bản của bạn về 0.",
       "versatility": "…sự linh hoạt của bạn. Cho đến khi kết thúc vòng chơi, bạn không thể chơi hoặc sử dụng các lá bài không cùng class với điều tra viên của bạn.",
       "cellPhone": "…điện thoại di động của bạn.",
       "chaosBag": "…chaos bag. Lấy tất cả token ra khỏi đó và đặt chúng vào một vật chứa khác.",
+      "levelCards": "…các lá bài level 1 - 5 tùy chọn với tổng level ít nhất là 5 từ deck, discard pile, trên tay và khu vực chơi của bạn.",
+      "top3Deck": "…The top 3 cards of your deck.",
       "top3Discard": "…3 lá bài trên cùng discard pile của bạn.",
       "deckbox": "…hộp đựng bài mà bạn cất deck của mình.",
       "cardSleeve": "…bọc bài điều tra viên của bạn.",
       "teamwork": "…sự hợp tác của nhóm bạn. Mỗi điều tra viên mất 1 action.",
+      "talentAsset": "…một asset [[Talent]], [[Connection]], hoặc [[Condition]] mà bạn điều khiển.",
+      "senseOfTime": "…cảm nhận về thời gian của bạn. Cho đến khi bạn advance agenda, các điều tra viên không được sử dụng các thiết bị đo thời gian, hỏi về thời gian, hoặc kích hoạt các khả năng trên bất kỳ lá bài nào có chữ \"time\", \"watch\", hoặc \"chrono\" trong tên.",
+      "miniCard": "…mini card điều tra viên của bạn. (Sử dụng thứ khác để đánh dấu vị trí của bạn.)",
       "yourHouse": "…ngôi nhà của bạn. Tìm trong bộ sưu tập lá bài Your House (Core #124); nó đã bị devoured.",
       "noSoul": "…linh hồn của bạn. Ghi lại vào Nhật ký Chiến dịch rằng *bạn không có linh hồn.*",
+      "ally": "…asset [[Ally]] có cost cao nhất mà bạn kiểm soát.",
       "events": "…tất cả các lá bài event trên tay bạn.",
       "resources": "…tất cả resource của bạn.",
       "skills": "…tất cả các lá bài skill trên tay bạn.",
       "exiledCards": "…tất cả các lá bài đã bị exiled.",
+      "identity": "…danh tính của bạn. Cho đến khi kết thúc vòng chơi, coi text box của điều tra viên của bạn là trống không (bao gồm cả các [[Traits]]).",
       "speed": "…khái niệm về tốc độ. Cho đến khi kết thúc vòng chơi, các điều tra viên không thể nhận thêm hoặc thực hiện thêm action.",
       "cannotMove": "…cảm giác cấp bách của bạn. Cho đến khi kết thúc vòng chơi, bạn không thể di chuyển.",
       "potential": "…tiềm năng của bạn. Cho đến khi kết thúc vòng chơi, các kỹ năng của bạn không thể được tăng lên.",
       "doom": "…sự kiên nhẫn của bạn. Đặt 1 doom lên agenda hiện tại.",
+      "spellRitual": "…tất cả asset [[Spell]] và [[Ritual]] mà bạn kiểm soát.",
+      "item": "…tất cả các asset [[Item]] mà bạn kiểm soát.",
+      "discardPile": "…khái niệm về \"discard pile.\" Cho đến khi kết thúc mythos phase tiếp theo, mỗi lá bài đáng lẽ được đặt vào discard pile của bất kỳ điều tra viên nào thay vào đó sẽ bị nuốt chửng.",
       "handSlot": "…một bàn tay của bạn. Trong phần còn lại của trò chơi, bạn có ít hơn 1 hand slot.",
       "success": "…khái niệm về sự thành công. Lần tiếp theo một điều tra viên đáng lẽ thành công một bài kiểm tra với cách biệt từ 2 trở lên, điều tra viên đó thay vào đó sẽ tự động thất bại.",
-      "easiness": "…khái niệm về sự dễ dàng. Cho đến khi kết thúc trò chơi, lật scenario reference card sang mặt Hard/Expert.",
-      "senseOfTime": "…cảm nhận về thời gian của bạn. Cho đến khi bạn advance agenda, các điều tra viên không được sử dụng các thiết bị đo thời gian, hỏi về thời gian, hoặc kích hoạt các khả năng trên bất kỳ lá bài nào có chữ \"time\", \"watch\", hoặc \"chrono\" trong tên.",
-      "miniCard": "…mini card điều tra viên của bạn. (Sử dụng thứ khác để đánh dấu vị trí của bạn.)",
-      "discardPile": "…khái niệm về \"discard pile.\" Cho đến khi kết thúc mythos phase tiếp theo, mỗi lá bài đáng lẽ được đặt vào discard pile của bất kỳ điều tra viên nào thay vào đó sẽ bị nuốt chửng."
+      "countermeasure": "…1 countermeasure.",
+      "easiness": "…khái niệm về sự dễ dàng. Cho đến khi kết thúc trò chơi, lật scenario reference card sang mặt Hard/Expert."
     }
-  },
-  "specialRules": [
-    {},
-    {},
-    {
-      "body": "<p class='basic'>Countermeasures đại diện cho vật tư, nghiên cứu, hoặc thiết bị quân sự có thể hỗ trợ các điều tra viên trong việc sinh tồn. Countermeasures có thể được tiêu hao thông qua một số khả năng của lá bài để kích hoạt các hiệu ứng mạnh mẽ. Tuy nhiên, việc nhận thêm countermeasures mới là rất hiếm, vì vậy hãy cẩn thận với cách bạn sử dụng chúng!</p>"
-    },
-    {
-      "title": "Lá bài Cốt truyện"
-    },
-    {}
-  ]
+  }
 }

@@ -1,32 +1,92 @@
 {
   "heading": "Màn II",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 (-3 instead if there is doom on your location).",
+      "cultist": "-X. X is the number of locations with doom on them.",
+      "tablet": "@:theForgottenAge.theDoomOfEztli.tokens.easyStandard.cultist",
+      "elderThing": "Reveal another chaos token. Nếu bạn thất bại, đặt 1 doom lên your location."
+    },
+    "hardExpert": {
+      "skull": "-2 (-4 instead if there is doom on your location).",
+      "cultist": "-X. X is the total amount of doom on locations in play.",
+      "tablet": "@:theForgottenAge.theDoomOfEztli.tokens.hardExpert.cultist",
+      "elderThing": "Reveal another chaos token. Place 1 doom on your location."
+    }
+  },
+  "label": {
+    "snakePit": {
+      "move": "Move to the Snake Pit",
+      "doNotMove": "Do not move to the Snake Pit"
+    },
+    "ancientHall": {
+      "instructions": "_Forced_ - At the end of the round: Flip 1 of the clues on Ancient Hall to its doom side. Any investigator at Ancient Hall may spend 3 resources to cancel this effect.",
+      "doNotSpendResources": "Do not spend resources"
+    },
+    "burialPit": {
+      "draw": "Draw a card from the top of the encounter deck",
+      "doom": "Place 1 doom on Burial Pit"
+    }
+  },
+  "tooltips": {
+    "entryway": {
+      "resign": "You've escaped ...for now."
+    }
+  },
   "intro": {
-    "title": "Màn II: Sự diệt vong của Eztli"
+    "title": "Màn II: Sự diệt vong của Eztli",
+    "readIntro1": "các điều tra viên buộc phải chờ nguồn vật tư dự trữ bổ sung.",
+    "readIntro2": "các điều tra viên đã mở một con đường dẫn đến các tàn tích Eztli.",
+    "intro1": "<p class='basic'>_Intro 1:_</p><p class='anke'><right><fancy>Thứ tư, ngày 8 tháng 7 năm, 1925</fancy></right></p><p>Our runners, José and Maria, returned several days later. They were fully stocked with food, water, aspirin, and weapons. I am curious how deep Alejandro’s connections are in Mexico. For an outcast historian, he was able to secure guns and ammunition faster than I had anticipated. But perhaps it is better if he keeps his sources undisclosed.</p><p>Chúng tôi mạo hiểm một lần nữa vào rừng. Lần này, chúng tôi đã chuẩn bị sẵn sàng. Chúng tôi đã có bài học từ chuyến đi trước, và chúng tôi băng qua hẻm núi có con sông, mạo hiểm tiến sâu về phía nam hơn những gì chúng tôi đã dám tới trước đây. Cuối cùng thì chúng tôi cũng đến được tàn tích mà Alejandro đã tìm kiếm, và chẳng bao lâu nữa chúng tôi sẽ đi vào nơi mà Alejandro tin là ngôi đền chính. Thật kỳ lạ, những sinh vật rắn mà chúng tôi gặp trước đó không tấn công vũ lực như chúng tôi đã lo sợ. Có thể chúng đã lẩn đi? Hoặc chỉ đơn giản là nằm chờ, chuẩn bị phục kích trong khi chúng tôi ngủ vào ban đêm?</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>",
+    "intro2": "<p class='basic'>_Intro 2:_</p><p class='anke'><right><fancy>Thứ sáu, ngày 3 tháng 7 năm 1925</fancy></right></p><p>We spent most of yesterday moving our camp to the edge of the ruins. With the serpentine creatures still guarding the region, we have decided that a small party will have the best chance of slipping into the main temple unnoticed. I told Maria, the expedition’s naturalist, to take one of the trucks and wait beyond the northern edge of the rainforest. Our cartographer, José, is guarding the camp until we return. We’re on our own, but at least we’ve cleared an escape route in the event things go sour…</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Doom of Eztli*, *Agents of Yig*, *Yig’s Venom*, *Temporal Flux*, *Deadly Traps*, *Forgotten Ruins*, *Poison*, and *Chilling Cold*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-doom-of-eztli.png' /><img src='{setImgPath}/agents-of-yig.png' /><img src='{setImgPath}/yigs-venom.png' /><img src='{setImgPath}/temporal-flux.png' /><img src='{setImgPath}/deadly-traps.png' /><img src='{setImgPath}/forgotten-ruins.png' /><img src='{setImgPath}/poison.png' /><img src='{setImgPath}/chilling-cold.png' /></section>",
     "placeLocations": "Đặt vị trí Entryway vào chơi. Mỗi điều viên bắt đầu chơi tại vị trí Entryway.",
+    "explorationDeck": "Tạo chồng bài khám phá. Việc này được làm bằng cách lấy 5 vị trí [[Ancient]] một mặt và xào chúng vào với nhau, cùng với 1 bản sao của mỗi lá bài treachery sau: Ill Omen, Deep Dark, Final Mistake, Entombed, và Crypt Chill.",
     "setAside": "Đặt những lá bài sau một bên, ngoài khu vực chơi: kẻ địch The Harbinger of Valusia, vị trí the Chamber of Time, và tài sản the Relic of Ages.",
     "poisoned": "Đặt mỗi điểm yếu Poisonsed đang không ở trong chồng bài của một điều tra sang một bên.",
-    "explorationDeck": "Tạo chồng bài khám phá. Việc này được làm bằng cách lấy 5 vị trí [[Ancient]] một mặt và xào chúng vào với nhau, cùng với 1 bản sao của mỗi lá bài treachery sau: Ill Omen, Deep Dark, Final Mistake, Entombed, và Crypt Chill."
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to The Doom of Eztli*, *Venomous Hate*, and *Temporal Hunters*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-doom-of-eztli.png' /><img src='{setImgPath}/venomous-hate.png' /><img src='{setImgPath}/temporal-hunters.png' /></section>*Venomous Hate* replaces *Yig’s Venom* and *Temporal Hunters* replaces *Temporal Flux*. Remove the replaced sets from the game.",
+      "replaceLocations": "Before setup, remove the original Burial Pit, Underground Ruins, and Secret Passage locations from the game, and replace the original Entryway, Ancient Hall, Grand Chamber, and Chamber of Time locations with the new versions from this encounter set.",
+      "harbinger": "Before setup, replace the original Harbinger of Valusia enemy with the new Harbinger of Valusia (*The Sleeper Returns*).",
+      "setAside": "Also gather the 3 Pit Viper cards from the *Serpents* encounter set and set them aside, out of play.",
+      "explorationDeck": "When building the exploration deck, use only Sealed Passage, Mosaic Chamber, Tomb of the Ancients, Throne Room, Snake Pit, Ancient Hall, and Grand Chamber. Do not include any of the other encounter cards listed in the original setup instructions.",
+      "additionalRule": "For the duration of this scenario, the following additional rule applies: _Forced_ – After a successful exploration ends: Shuffle the top card of the encounter deck into the exploration deck."
+    }
   },
   "resolutions": {
+    "label": {
+      "goBackInside": "“We can’t stop now—we have to go back inside!” - Proceed to Resolution 4.",
+      "thisPlaceMustBeDestroyed": "“It’s too dangerous. This place must be destroyed.” - Proceed to Resolution 5."
+    },
     "defeated": {
-      "title": "Điều tra viên bị hạ gục"
+      "title": "Điều tra viên bị hạ gục",
+      "body": "<div class='resolution'><p class='basic'>_Before resolving any other resolution, if at least one investigator was defeated:_ The defeated investigators read _Investigator Defeat_ first.</p><p>Ngôi đền rung chuyển với sức mạnh dữ dội của một trận động đất, khiến bạn ngã quỵ xuống đất. Các sinh vật rắn xuất hiện từ bóng tối xung quanh bạn, bao quanh bạn hoàn toàn. Ý nghĩ, \"đây là cách mọi thứ kết thúc,” lóe lên trong tâm trí bạn. Trong một khoảnh khắc, bạn suy ngẫm về sự ngớ ngẩn của cái chết của mình. Bạn chỉ có thể hy vọng rằng không ai khác đủ ngu ngốc để cố gắng khám phá những tàn tích bị bỏ rơi này.</p><ul><li>Các sinh vật đã tấn công bạn trước khi bạn kịp có thời gian để phản ứng. Bạn hét lên trong đau đớn khi bị xiên bởi những ngọn giáo sắc như dao cạo.<ul><li>Each investigator who was defeated is _killed_. (If there are not enough investigators to continue the campaign, the campaign is over and the players lose.)</li><li>If another resolution was reached, the remaining investigators proceed to that resolution.</li><li>If no resolution was reached (each investigator was defeated): Go to _Resolution 2._</li></ul></li><li>Đột nhiên, một giọng nói từ xa rít lên với những kẻ khác, và những con rắn ngập ngừng lùi vào trong bóng tối. Bạn chạy lấy tính mạng của mình, không sẵn lòng mạo hiểm thêm.<ul><li>Record three tally marks under “Yig’s Fury.”</li><li>If another resolution was reached, the remaining investigators proceed to that resolution.</li><li>If no resolution was reached (each investigator was defeated): Go to _Resolution 3._</li></ul></li></ul></div>"
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p class='basic'>_If no resolution was reached because each investigator resigned before act 3:_ Go to _Resolution 3._</p>"
     },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p class='basic'>_Resolution 1 (each defeated investigator should resolve Investigator Defeat first):_</p><p>(Phần sau được viết nguệch ngoạc bên dưới mục nhật ký trước đó.)</p><p>Bên ngoài của tàn tích ngôi đền cho thấy có nguồn gốc từ nền văn minh Aztec, nhưng một khi chúng tôi xâm nhập vào bên trong, rõ ràng những tòa nhà này có nguồn gốc rất khác biệt và không giống của con người. Những tàn tích này vẫn còn hoạt động. Các đường rãnh trên tường được phát sáng như thể được cung cấp năng lượng từ điện, và một luồng năng lượng yếu ớt phản chiếu khắp các hành lang. Bất chấp những sinh vật rắn, chúng tôi đi đến một lối đi ẩn dẫn sâu hơn vào lòng đất.</p><p>Trong buồng trung tâm của những sảnh ngầm dưới đất này, chúng tôi tìm thấy phần thưởng của mình: một quả cầu thép không rõ nguồn gốc, vo ve kêu và phát sáng với ánh sáng xanh mờ. Nó được gắn một cách tinh vi vào một khung đồng, trông có vẻ quan trọng cho tôn giáo nào đó, và chúng tôi biết rằng nó không thể được làm bởi người Aztec.</p><p>Đem cổ vật theo cùng, chúng tôi chạy trốn khỏi các tàn tích. Tòa nhà bắt đầu đổ nát xung quanh chúng tôi, như thể quả cầu là thứ duy nhất giữ cho nó đứng vững. Liệu có phải nó cung cấp năng lượng cho các tàn tích, như là một cục pin? Chính xác thiết bị này là gì mà những con rắn đã bảo vệ nhiệt tinh đến vậy?</p><p>Maria was waiting for us with the trucks when we finally reached the northern edge of the rainforest. We’re getting the hell out of this serpent-infested jungle while we still can.<ul><li>Trong Nhật ký Chiến dịch của bạn, hãy ghi lại rằng <i>các điều tra viên đã khôi phục được Relic of Ages</i>. Một điều tra viên phải thêm tài sản Relic of Ages vào bộ bài của họ. Lá bài này không tính vào kích thước bộ bài của điều tra viên đó.</li><li>Ghi lại trong Nhật ký Chiến dịch của bạn rằng <i>Harbinger vẫn còn sống</i>. Bên cạnh mục này, trong ngoặc đơn, ghi lại mức độ chấn thương thể chất ở trên Harbinger of Valusia.</li><li>Cho mỗi điểm báo thù ở trên khu vực trưng bày thành tích, ghi lại 1 kiểm đếm dưới phần \"Cơn thịnh nộ của Yig\" trong Nhật ký Chiến dịch của bạn.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>Kết thúc thứ hai</p><p>(Phần sau được viết nguệch ngoạc bên dưới mục nhật ký trước đó.)</p><p>Bản tính của tôi không quen để lại việc còn dang dở. Vì những người đồng đội đã ngã xuống, tôi đã tự mình ghi lại phần còn lại của chuyến thám hiểm vào nhật ký này.</p><p>The others never made it out of the temple. I convinced two of the other members of the expedition, José and Andrea, to venture in after the others…But now I fear a terrible fate has befallen them, as well.</p><p>Thankfully, my gambit was worthwhile. While José and Andrea searched for the others, I snuck into the temple and took a different route. Having seen what we have seen, knowing what we know now, I couldn’t have returned to the university without evidence of our discovery. While the serpent creatures were distracted, I was able to reach a hidden passageway that led deeper underground.</p><p>Trong buồng trung tâm của những sảnh dưới lòng đất này, tôi tìm thấy một thiết bị. Quả cầu được làm bằng một loại thép kỳ lạ, được gắn một cách tinh vi vào chiếc khung bằng đồng của nó. Nó phát ra sức mạnh trong tay tôi và phát ra ánh sáng xanh mờ. Bất kỳ kẻ ngốc nào cũng có thể nói rằng nó không phải do người Aztec tạo ra, nhưng các thành viên khác của đoàn thám hiểm thậm chí không thể bắt đầu tìm hiểu ý nghĩa thực sự của nó. Những tàn tích bắt đầu đổ nát xung quanh tôi khi tôi rời đi, nhưng điều đó không quan trọng. Cổ vật bây giờ là tất cả những gì quan trọng.</p><p>Với cổ vật trong tay, tôi quay trở lại trại và nói với những người khác đã đến lúc khởi hành. Maria đã đợi chúng tôi cùng những chiếc xe tải khi chúng tôi cuối cùng đã đến rìa phía bắc của khu rừng rậm. Bây giờ chúng tôi đang hướng đến Texas, nơi chúng tôi sẽ vượt biên sang Hoa Kỳ.</p><p>Thật là xấu hổ vì những gì đã xảy ra với những người khác. Sự hy sinh của họ sẽ không vô ích. Giờ thì công việc của tôi có thể tiếp tục.</p><p class='right'>- Alejandro Vela</p><ul><li>In your Campaign Log, record that *Alejandro recovered the Relic of Ages*.</li><li>Ghi lại trong Nhật ký Chiến dịch của bạn rằng <i>Harbinger vẫn còn sống</i>. Bên cạnh mục này, trong ngoặc đơn, ghi lại mức độ chấn thương thể chất ở trên Harbinger of Valusia.</li><li>Cho mỗi điểm báo thù ở trên khu vực trưng bày thành tích, ghi lại 1 kiểm đếm dưới phần \"Cơn thịnh nộ của Yig\" trong Nhật ký Chiến dịch của bạn.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<div class='resolution'><p>_Resolution 3 (each defeated investigator should resolve Investigator Defeat first):_</p><p>(Phần sau được viết nguệch ngoạc bên dưới mục nhật ký trước đó.)</p><p>Đây là một sai lầm. Một sai lầm khủng khiếp. Chúng tôi thoát khỏi ngôi đền với mạng sống của mình, nhưng gần như là quá trễ. Những tàn tích vẫn còn hoạt động. Cứ như thể các bức tường đã biết về sự xâm nhập của chúng tôi, ghét bỏ sự hiện diện của chúng tôi. Nó muốn chúng tôi ra ngoài. Muốn chúng tôi chết.</p><p>We have gathered outside the temple where José is waiting for us. Alejandro, unwilling to return home empty-handed, wants us to go back inside. We must decide what to do next.</p><p>Các điều tra viên phải quyết định <i>(chọn một)</i>:</p><ul><li>“We can’t stop now—we have to go back inside!” Proceed to _Resolution 4_.</li><li>“It’s too dangerous. This place must be destroyed.” Proceed to _Resolution 5_.</li></ul></div>"
     },
     "resolution4": {
-      "title": "Kết thúc thứ 4"
+      "title": "Kết thúc thứ 4",
+      "body": "<p>Kết thúc thứ 4</p><p>(Phần sau được viết nguệch ngoạc bên dưới mục nhật ký trước đó.)</p><p>Chúng tôi đã đưa ra quyết định của mình. Alejandro nói đúng: bây giờ chúng tôi đã đi quá xa để có thể lùi bước. Kế hoạch của chúng tôi là tập hợp mọi người lại và quay trở lại ngôi đền một lần nữa. Thậm chí từ đây, chúng ta có thể nói rằng cách bố trí của ngôi đền đã bị cong vênh và biến đổi. Các tàn tích dường như đã được đặt lại về trạng thái ngủ đông của chúng. Với một chút may mắn, chúng tôi sẽ thành công lần này…</p><ul><li>Các điều tra viên phải chơi lại<b>Màn II: Sự diệt vong của Eztli</b>. Thiết lập trò chơi này về lại bước Setup (chuẩn bị màn chơi). Không ghi lại bất kỳ điều gì trong Nhật ký chiến dịch của bạn ngoại trừ bất kỳ sang chấn bị nhận phải nào từ màn chơi vừa rồi của bạn. Không có điểm kinh nghiệm nào được kiếm từ màn chơi vừa rồi của bạn.</li><li>Bất kỳ người chơi nào có điều tra viên bị giết hoặc bị <b>điên loạn</b> đều phải chọn điều tra viên mới để chơi tiếp như bình thường.</li><li>Trong quá trình chuẩn bị màn chơi, khi vị trí Entryway được đưa vào chơi, hãy đặt 1 doom trên nó cho mỗi lần đạt được giải pháp này.</li></ul>"
     },
     "resolution5": {
-      "title": "Giải pháp thứ 5"
+      "title": "Giải pháp thứ 5",
+      "body": "<div class='resolution'><p>Giải pháp thứ 5</p><p>(Phần sau được viết nguệch ngoạc bên dưới mục nhật ký trước đó.)</p><p>We made our decision. There was no way we were going back into that deathtrap. Thankfully, there was another way. José had brought some TNT from the trucks, and there was more than enough to level the damned place.</p><p>Đêm đó, chúng tôi đã tổ chức một màn trình diễn pháo hoa. Khu rừng rậm phản đối. Những con chim bay tán loạn trên bầu trời, mặt đất ầm ầm, và những tiếng gầm gừ căm ghét bao quanh trại của chúng tôi. Nhưng thuốc nổ đã làm được công việc của nó. Khi lớp bụi lắng xuống, chúng tôi bắt đầu sàng lọc các mảnh vỡ để tìm kiếm bất cứ thứ gì có ý nghĩa lịch sử hoặc văn hóa mà chúng tôi có thể mang về Arkham.</p><p>José was the first to notice the blue light peeking out from underneath the remains of the temple. The rays grew in intensity with each passing moment. As we started clearing the rubble in order to discover the source of the light, there was a sudden flash, and the debris at the center of the ruins scattered. A steel orb of unknown origin lay on top of the rubble, gently humming. It was attached delicately to a bronze frame, appearing almost religious in its significance. The blue glow emanating from the device dimmed as I touched it. There was no way a device like this was built by the Aztecs.</p><p>With the artifact in tow, we left the smoldering temple behind us. We had outstayed our welcome in this rainforest, and we knew it. Around us, the jungle hissed. The ground slithered and crawled with snakes. In the darkness, we heard shoutsin a language we could not understand. There was no time to pack up camp; we ran as soon as we had the chance. Andrea was struck in her throat by a black-feathered arrow, her startled scream captured in grim perpetuity. José was grabbed by a giant boa as we fled north into the river canyon. His neck snapped before we could reach him.</p><p>Maria đã đợi chúng tôi với những chiếc xe tải khi chúng tôi cuối cùng đã đến rìa phía bắc của khu rừng rậm. Chúng tôi đã không dừng lại cho đến khi chúng tôi băng qua Thành phố Mexico. Ngay cả bây giờ tôi cũng không cảm thấy an toàn: ai có thể chứ, sau khi nhìn thấy những gì chúng tôi đã thấy?</p><p>Những người Eztli và chốn địa ngục bị bỏ quên chết tiệt.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, hãy ghi lại rằng <i>các điều tra viên đã khôi phục được Relic of Ages</i>. Một điều tra viên phải thêm tài sản Relic of Ages vào bộ bài của họ. Lá bài này không tính vào kích thước bộ bài của điều tra viên đó.</li><li>Ghi lại trong Nhật ký Chiến dịch của bạn rằng <i>Harbinger vẫn còn sống</i>. Bên cạnh mục này, trong ngoặc đơn, ghi lại mức độ chấn thương thể chất ở trên Harbinger of Valusia.</li><li>Cho mỗi điểm báo thù ở trên khu vực trưng bày thành tích, ghi lại 1 kiểm đếm dưới phần \"Cơn thịnh nộ của Yig\" trong Nhật ký Chiến dịch của bạn.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     }
   }
 }

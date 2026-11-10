@@ -1,86 +1,239 @@
 {
+  "headings": {
+    "kind": {
+      "finale": "Finale"
+    },
+    "finale": "The Doom of Arkham"
+  },
   "interludes": {
     "3": "Sự thức tỉnh",
     "4": "Trở về Arkham"
   },
+  "finale": {
+    "title": "Finale: The Doom of Arkham",
+    "body": "<p>Một tháng sau khi bạn trở về Arkham trôi qua như một giấc mơ. Vẫn có cảm giác gì đó <i>không đúng.</i> Những mối bận tâm về cuộc sống trước đây của bạn chẳng là gì so với sự hùng vĩ lạnh lẽo và mối đe dọa của thành phố cổ đại. Trong những giấc mơ, bạn lang thang khắp thành phố cổ, bị săn đuổi bởi một thứ mà bạn không dám miêu tả. Nếu bạn nói cho ai đó biết sự thật về những gì bạn đã thấy, bạn có thể bị tống vào trại thương điên, hoặc tệ hơn. Bạn cố gắng truy tìm cả Ruby và Andy để hỏi về những giấc mơ của họ, nhưng không thể tìm thấy dấu vết nào của họ.</p><p>Tờ Arkham Advertiser đã bắt đầu đưa tin về sự lây lan của một \"căn bệnh ngủ\" bất thường trong dân cư thành phố. Không có nguyên nhân rõ ràng, không có dấu hiệu bệnh tật, không có điểm chung nào giữa các nạn nhân. Mọi người dường như chỉ chìm vào giấc ngủ mỗi đêm, không bao giờ tỉnh lại. Có vô số tin đồn về những người mộng du lang thang trên đường phố vào ban đêm. Tuy nhiên, thay vì gây ra sự hoảng loạn, dân chúng dường như chấp nhận những tin tức đáng báo động này với sự thờ ơ tẻ nhạt. Bản thân thành phố Arkham cũng đang chìm vào một giấc ngủ sâu.</p><p>Trong những giấc mơ chập chờn của mình, bạn vẫn thấy thành phố bị nhấn chìm và con quái vật khổng lồ từng ngủ vùi trong đó. Bạn biết, không chút nghi ngờ, rằng bạn sẽ gặp lại hắn.</p><p class='basic right'>Proceed to _The Doom of Arkham Part I_.<P>"
+  },
   "epilogue": {
-    "title": "Phần kết"
+    "title": "Phần kết",
+    "checkCampaignLog": "Check your Campaign Log.",
+    "proceedToEpilogue1": "*If Cthulhu annihilated the city of Arkham*, proceed to _Epilogue 1_.",
+    "proceedToEpilogue2": "Nếu <i>Cthulhu đã bị xua đuổi</i> hoặc <i>Cthulhu đã bị trục xuất, nhưng Arkham đã bị phá hủy</i>:",
+    "proceedToEpilogue3": "*If Cthulhu was banished*, skip to _Epilogue 3_.",
+    "proceedToEpilogue4": "*If the investigators halted Cthulhu’s awakening*, skip to _Epilogue 4_.",
+    "epilogue1": {
+      "title": "Epilogue 1: August 20",
+      "body": "<p>Đã gần hai tháng trôi qua kể từ sự hủy diệt của Arkham. Theo các báo cáo, hầu hết những người sống sót đã được đưa vào một viện điều dưỡng ở phía bắc bang. Những người còn lại phải nằm liệt giường vì chứng hôn mê lây nhiễm đã hoành hành thành phố trong suốt tháng qua, và không có manh mối nào về những gì thực sự đã xảy ra. Một vài lời kể mà chúng tôi có được cho rằng sự hủy diệt là do “một con quái vật khổng lồ” đã tàn phá thành phố, phá hủy mọi thứ trên đường đi của nó. Hàng tá thành phố khác dọc theo bờ biển phía đông và bờ biển Nam Mỹ đã báo cáo những hiện tượng tương tự. Người dân địa phương gọi đó là một cuộc tàn phá thầm lặng, mặc dù dư luận cho rằng đó là một cơn bão mạnh bất thường.</p><p>Tương lai của Arkham thật mờ mịt. Với rất ít nhà cửa và cơ sở hạ tầng để trở về, những cư dân sống sót đã phân tán đến các ngôi làng lân cận ở Dunwich, Kingsport, Innsmouth, và Providence. Các cuộc thảo luận về việc liệu có nên cứu vãn chút ít tàn tích của Miskatonic University hay không vẫn đang diễn ra, nhưng không mấy khả quan. Arkham giờ đây chỉ còn là một thị trấn ma.</p><p class='right'><right>–Minnie Klein</right></p>"
+    },
+    "epilogue2": {
+      "title": "Epilogue 2: September 18",
+      "body": "<p>To Ruby Standish, <span class='censor'>XX</span> Rue <span class='censor'>XXX</span> no 3, Paris, France:</p><p>Thật không may, tôi không có thời gian để đến thăm cô vào lúc này. Tôi vẫn còn quá nhiều việc phải làm ở Arkham. Thành phố đang gắng gượng vượt qua hết mức có thể, nhưng sẽ cần thời gian trước khi mọi thứ cảm thấy “bình thường” trở lại. Nếu “bình thường” thậm chí còn khả thi sau những gì đã xảy ra. Có vẻ như không ai nhớ nhiều về những gì đã xảy ra đêm đó. Họ cho rằng một hệ thống bão lớn đã quét qua, tôi đoán một vài thành phố khác dọc theo bờ biển cũng bị ảnh hưởng, vì vậy mọi người đều bám vào ý tưởng rằng đó là một loại bão cuồng phong nào đó.</p><p>Một số ít người trong chúng tôi thực sự nhớ về nó đều ngần ngại chia sẻ bất cứ điều gì. Arkham Asylum vẫn chưa được khôi phục, nhưng có rất nhiều viện điều dưỡng gần đó. Bất cứ ai đề cập đến những gì thực sự đã xảy ra đều bị dán nhãn là nạn nhân của căn bệnh mộng mị và bị tống vào viện.</p><p><fancy>Ngày 18 tháng 9</fancy>\r\n<i>Gửi Ruby Standish, ██ Rue ███ số 3, Paris Pháp:</i>\r\nThật không may, tôi không có thời gian để đến thăm cô vào lúc này. Tôi vẫn còn quá nhiều việc phải làm ở Arkham. Thành phố đang gắng gượng vượt qua hết mức có thể, nhưng sẽ cần thời gian trước khi mọi thứ cảm thấy “bình thường” trở lại. Nếu “bình thường” thậm chí còn khả thi sau những gì đã xảy ra. Có vẻ như không ai nhớ nhiều về những gì đã xảy ra đêm đó. Họ cho rằng một hệ thống bão lớn đã quét qua, tôi đoán một vài thành phố khác dọc theo bờ biển cũng bị ảnh hưởng, vì vậy mọi người đều bám vào ý tưởng rằng đó là một loại bão cuồng phong nào đó.\r\nMột số ít người trong chúng tôi thực sự nhớ về nó đều ngần ngại chia sẻ bất cứ điều gì. Arkham Asylum vẫn chưa được khôi phục, nhưng có rất nhiều viện điều dưỡng gần đó. Bất cứ ai đề cập đến những gì thực sự đã xảy ra đều bị dán nhãn là nạn nhân của căn bệnh mộng mị và bị tống vào viện.\r\nỞ đâu đó, sâu thẳm bên trong, tôi chắc chắn rằng Hắn sẽ trở lại. Những giấc mơ cũ vẫn chưa dừng lại. Hắn vẫn ở đó, đâu đó sâu trong tâm trí tôi, chờ đợi thời cơ.\r\nKhi hắn thực sự quay lại, không có lượng chất nổ hay hỏa lực nào có thể ngăn cản hắn. Nếu hắn trở lại, đó sẽ là để trả thù.\r\nCô rời đi có lẽ là một quyết định khôn ngoan. Tôi chắc chắn rằng nước Pháp rất đẹp.\r\n<right><fancy>Andy Van Nortwick</fancy></right></p><p>Cô rời đi có lẽ là một quyết định khôn ngoan. Tôi chắc chắn rằng nước Pháp rất đẹp.</p><p class='right'><right><fancy>Andy Van Nortwick</fancy></right></p>"
+    },
+    "epilogue3": {
+      "title": "Epilogue 3: September 18",
+      "body": "<p>To Ruby Standish, <span class='censor'>XX</span> Rue <span class='censor'>XXX</span> no 3, Paris, France:</p><p>Thật không may, lúc này tôi không có thời gian để đến thăm cô. Tôi vẫn còn quá nhiều việc phải làm ở Arkham. Thành phố đang gắng gượng phục hồi hết mức có thể, nhưng sẽ phải mất một thời gian trước khi mọi thứ trở lại 'bình thường'. Nếu như sự 'bình thường' đó còn có thể tồn tại sau những gì đã xảy ra. Dù vậy, dự án khôi phục đã diễn ra suôn sẻ một cách đáng ngạc nhiên. Với sự hậu thuẫn từ New Horizons Industries, những tòa nhà mới sáng bóng đã bắt đầu mọc lên khắp thị trấn. Chúng tôi thậm chí còn có một nhà hát mới! Ồ, và cô sẽ rất vui khi biết rằng Arkham Advertiser đã đề nghị cho tôi một vị trí toàn thời gian. Tôi sẽ chưa thể thực sự làm việc cho đến khi văn phòng được xây lại, nhưng ít nhất đó cũng là một thiện ý.</p><p>Dường như chẳng còn ai nhớ về đêm đó. Họ cho rằng một “hệ thống bão nghiêm trọng” đã gây ra sự tàn phá—ngay cả sau khi tôi chỉ ra những dấu chân khổng lồ trong đống đổ nát. Tôi đoán một vài thành phố khác dọc bờ biển cũng bị ảnh hưởng, vì vậy mọi người đều bám vào ý tưởng rằng đó là một cơn bão cuồng phong nào đó. Bất kỳ lời kể nào khác đều bị bác bỏ, coi như là ảo giác từ căn bệnh ngủ kỳ lạ đã quét qua thị trấn trước cuộc tấn công.</p><p>Tôi muốn cảm ơn cô vì, ừm, mọi thứ. Tôi hẳn đã chết nếu không có cô và các cộng sự của Randall. Cùng với phần lớn Arkham. Tôi không chắc liệu Hắn có bao giờ trở lại không, nhưng nếu điều đó xảy ra, tôi biết phải gọi cho ai.</p><p class='right'><right><fancy>Andy Van Nortwick</fancy></right></p>"
+    },
+    "epilogue4": {
+      "title": "Epilogue 4: May 30",
+      "body": "<p>Đó là một hành trình dài trở về từ R’lyeh. Khi chúng tôi trở lại Arkham, Tillinghast Esoterica—và có lẽ là chính Randall—đã biến mất không tăm tích. Ruby coi như tất cả các khoản nợ của chúng tôi đã được trả, mặc dù tôi lo lắng một ngày nào đó ông ta có thể xuất hiện để đòi nợ.</p><p>Mùa xuân đang tràn ngập Arkham. Những đóa hoa nở rộ và không khí trong lành khác xa với những sảnh đường ẩm thấp của thành phố chết chìm. Bất kể bao nhiêu thời gian trôi qua, tôi sẽ không bao giờ quên khuôn mặt của thứ đó ở nơi sâu thẳm của thành phố cổ đại. Có phải Ancient One đã khiến nó trỗi dậy? Hay là những giấc mơ của hàng ngàn tín đồ của hắn? Không thể biết được điều gì đã khởi động những bánh răng địa ngục đó, cũng như khi nào chúng có thể trỗi dậy trở lại.</p><p class='right'><right><fancy>-Nhật ký của bạn</fancy></right></p>"
+    }
   },
   "theAwakening": {
-    "title": "Chuyển cảnh III: Sự thức tỉnh"
+    "title": "Chuyển cảnh III: Sự thức tỉnh",
+    "awakening1": "<p>Một chấn động dữ dội hất bạn ngã sấp. Khi bạn lồm cồm bò dậy, Ruby cố nén một tiếng nấc kinh hãi. Một cái bóng nặng nề xuất hiện, bị che khuất trong bóng tối âm u như nấm mồ bên trong những cánh cổng. Một nhịp đập đều đặn—giống như nhịp tim—gợn sóng qua đường chân trời đầy ác mộng của thành phố. Con quái vật cổ xưa tự kéo lê bụng mình qua cánh cổng.</p><p>Con thú khổng lồ lắc lư không vững. Hắn dễ dàng to bằng một ngọn núi nhỏ, với làn da xanh xao bệnh hoạn, đầu và mặt giống bạch tuộc, cùng một đôi cánh rũ rượi, rách nát. Mắt bạn hoa lên, nhìn một thành hai khi nhìn hắn, như thể sinh vật này vừa ở đây vừa ở nơi khác, vừa siêu hình vừa hữu hình. Mùi hôi thối từ lớp thịt thối rữa cổ xưa của hắn gần như đủ khiến bạn buồn nôn.</p><p>The thing’s red eyes glow as he gazes down on you. A steady, insistent weight presses down on your shoulders, forcing you to kneel. You hear yourself speaking in a voice not quite your own: “CTHULHU FHTAGN!”</p>",
+    "checkCampaignLog": "Check your Campaign Log.",
+    "proceedToTheAwakening2": "Nếu có ít nhất 1 artifact được đánh dấu dưới mục \"Artifacts Earned\"",
+    "skipToTheAwakening3": "Otherwise, skip to _The Awakening 3_.",
+    "awakening2": "<p>\"Đừng nhìn!\" Ruby hét lên. Bạn quay lại và thấy những người bạn đồng hành của mình cũng đang quỳ trước vị thần say giấc đã chết đầy kinh hoàng kia. Một hơi ấm lan tỏa khắp cơ thể bạn khi hắn thâm nhập sâu vào tâm trí, vào những ký ức của bạn. Cảm giác ấm áp nhường chỗ cho một thứ gì đó lạnh lẽo, đầy thù hận. Nhìn lên, bạn thấy hắn đang nhìn chằm chằm lại bạn, con mắt thứ năm của hắn đang mở.</p><p>Bạn cảm nhận được cơn thịnh nộ của hắn. Bạn đã lấy đi một phần lãnh địa của hắn. Bạn phải bỏ mạng.</p>",
+    "replaceChaosTokensWithTwo": "Remove all {'{'}cultist{'}'}, {'{'}tablet{'}'}, and {'{'}elderThing{'}'} tokens from the chaos bag. Then, add 2 {'{'}cultist{'}'} tokens, 2 {'{'}tablet{'}'} tokens, and 2 {'{'}elderThing{'}'} tokens to the chaos bag for the remainder of the campaign. Skip to _The Awakening 4_.",
+    "awakening3": "<p>\"Đừng nhìn!\" Ruby hét lên. Bạn quay lại và thấy những người bạn đồng hành của mình cũng đang quỳ gối trước vị thần say giấc đã chết đầy kinh hoàng kia. Một hơi ấm lan tỏa khắp cơ thể bạn khi hắn thâm nhập sâu vào tâm trí, vào những ký ức của bạn. Great Cthulhu quay ánh nhìn khỏi bạn, hướng về phía bắc. Trong tâm trí, bạn thấy hình ảnh bức tượng nhỏ màu xanh lá cây trên bàn của Randall ở Arkham. Cảm giác ấm áp nhường chỗ cho một thứ gì đó lạnh lẽo, đầy thù hận. Nhìn lên, bạn thấy Great Cthulhu đang nhìn chằm chằm lại bạn, con mắt mộng mị thứ năm của hắn đang mở.</p><p>Bạn cảm nhận được cơn thịnh nộ của hắn đối với kẻ đã đánh cắp một phần lãnh địa của hắn. Kẻ đó phải chết.</p>",
+    "replaceChaosTokens": "Remove all {'{'}cultist{'}'}, {'{'}tablet{'}'}, and {'{'}elderThing{'}'} tokens from the chaos bag. Then, add 1 {'{'}cultist{'}'} token, 1 {'{'}tablet{'}'} token, and 2 {'{'}elderThing{'}'} tokens to the chaos bag for the remainder of the campaign.",
+    "proceedToTheAwakening4": "Proceed to _The Awakening 4_.",
+    "awakening4": "<p>Chống lại ý chí khủng khiếp của Ancient One, bạn đứng dậy và đỡ những người khác đứng lên. Great Cthulhu vươn những xúc tu gân guốc tóm lấy bạn khi bạn bỏ chạy đến mép nước và chèo điên cuồng về phía con tàu <i>Cassandra.</i> Khi đã lên tàu, con tàu luồn lách qua một eo biển hẹp giữa một loạt những ngọn tháp nhô lên và những bãi cạn chết người để tiến ra đại dương bao la.</p><p>Một tiếng gầm chói tai vang vọng khắp mặt nước. Bạn quay lại và thấy sinh vật gớm ghiếc khổng lồ trượt xuống làn nước đen ngòm một cách nhớp nháp và khuất tầm nhìn. Bạn nhìn chằm chằm xuống vực sâu không đáy, chờ đợi xem năm con mắt đỏ rực giận dữ có trồi lên để lật úp con tàu hay không. Đường chân trời đầy ác mộng của R'lyeh le lói ngọn lửa màu xanh lục nhạt khi nó mờ dần vào khoảng không xa xăm. Một phút trôi qua, rồi mười phút, rồi ba mươi phút. Không có chuyển động nào, không có sự khuấy động nào dưới đáy sâu. Sinh vật gớm ghiếc kia có thể đã mất hứng thú, hoặc có lẽ đã bị mắc kẹt trong những bãi cạn. Hoặc, ít nhất, bạn hy vọng là vậy.</p>",
+    "proceedToReturnToArkham": "Proceed to _Interlude IV: Return to Arkham_."
   },
   "returnToArkham": {
+    "title": "Interlude: Return to Arkham",
+    "checkCampaignLog": "Check your Campaign Log.",
+    "proceedToReturnToArkham1": "Nếu có ít nhất 1 artifact được đánh dấu dưới mục \"Artifacts Earned\"",
+    "skipToReturnToArkham2": "Otherwise, skip to _Return to Arkham 2_.",
+    "returnToArkham1": "<p>Giấc ngủ của bạn trên chuyến hành trình trở về đầy rẫy những cơn ác mộng. Khi trở về Arkham, bạn và những người khác mang những phát hiện của cuộc thám hiểm về cho một Tillinghast đang vô cùng hân hoan. Khi bạn thuật lại các sự kiện của cuộc thám hiểm cho nhà sưu tầm, ông ta xoay từng món đồ trên tay, kinh ngạc trước công nghệ cổ đại. \"Các bạn đã làm tất cả những gì tôi yêu cầu và hơn thế nữa,\" ông ta cười tươi. \"Hãy coi như các khoản nợ của các bạn đã được xóa bỏ. Và, tất nhiên, tôi rất sẵn lòng thực hiện thỏa thuận ban đầu của chúng ta.\"</p>",
+    "returnToArkham2": "<p>Giấc ngủ của bạn trên chuyến hành trình trở về đầy rẫy những cơn ác mộng. Khi trở về Arkham, bạn và những người khác bày ra một vài phát hiện ít ỏi của mình trước mặt Tillinghast. Nhà sưu tầm đồ cổ vô cùng tức giận khi thấy các bạn trở về tay không cho đến khi Andy đặt phiến đá hắc diện thạch mà anh tìm thấy ở R'lyeh lên bàn ông ta. Randall quan sát nó với một ánh nhìn lạnh lẽo. \"Tôi cho rằng thế này là… tạm được. Hãy coi như các khoản nợ của các bạn đã được xóa bỏ. Và, mặc dù thực tế là các bạn gần như không mang về được <i>bất cứ thứ gì</i> có giá trị, tôi vẫn có nghĩa vụ phải thực hiện thỏa thuận ban đầu của chúng ta.\"</p>",
+    "checkTasks": "Check the Tasks section of your Campaign Log.",
+    "gainTaskExperience": "For each progress marked under your Task, you (and only you) gain 1 bonus experience.",
+    "resolveTasks": "Each investigator resolves their respective Task. Once each investigator has read their Task’s corresponding entry, proceed to _The Doom of Arkham_.",
+    "xp": {
+      "taskProgress": "Progress under your Task"
+    },
     "tasks": {
       "walkInFaith": {
+        "title": "Task: Walk in Faith",
+        "readOnly": "_Read only if you have the “Walk in Faith” Task._",
         "fiveOrMoreProgress": "Nếu có từ 5 progress trở lên được đánh dấu dưới Task của bạn:",
+        "otherwise": "_Otherwise:_",
         "completed": "<p>Khi trở về, bạn được tôn vinh như một nhà tiên tri giữa những tín đồ đồng đạo của mình. Những giấc mơ đã dẫn bạn đến R'lyeh cũng chính là những khải tượng được chia sẻ bởi những anh chị em trong đức tin. Giờ đây, ngày càng có nhiều người trong số họ ca hát bằng những ngôn ngữ kỳ lạ và khâu những chiếc áo choàng chắp vá. Mục đích của bạn khi du hành đến R'lyeh, khi chứng kiến những người hành hương lạc lối đó, không phải là để làm lung lay đức tin của bạn, mà là để khôi phục nó. Bạn đã thoáng thấy khuôn mặt của những thực thể cổ đại. Chỉ có bạn mới xứng đáng dẫn dắt người dân của mình thoát khỏi bóng tối và bước ra ánh sáng. Bạn chỉ cần tiếp tục đi theo con đường của mình với cùng một sự tận tâm không thể lay chuyển đã giải cứu bạn khỏi R'lyeh.</p>",
-        "failedEffect": "Loại bỏ vĩnh viễn Task \"Walk in Faith\" khỏi deck của bạn và chịu 1 mental trauma. Trong phần còn lại của campaign, bạn phải coi token {'{'}elderThing{'}'} như thể nó là token {'{'}autoFail{'}'}.",
-        "failed": "<p>Bạn đứng trên một cây cầu nhìn xuống sông Miskatonic, ngắm nhìn dòng nước bên dưới nhảy múa và lấp lánh. Khi trở về, bạn cảm thấy có điều gì đó khác biệt. Có điều gì đó đã thay đổi. Những tín đồ đồng đạo của bạn nói rằng những kẻ ngoại đạo mặc áo choàng chắp vá gần đây đã đến, thốt ra những lời tiên tri màu nhiệm và những lời hứa hẹn hấp dẫn. Giờ đây, nơi thờ tự của bạn bị bao phủ bởi những biểu tượng báng bổ: một bàn tay với con mắt rực lửa; một chén thánh tràn ngập máu. Những gì bạn từng nghĩ là thiêng liêng đã bị hủy hoại.\\r</p><p>Giờ đây, khi đứng nhìn xuống dòng nước, bạn cầm kỷ vật đức tin của mình trong một tay. Bạn không thể không cảm thấy rằng mình đã bị dẫn dụ lạc lối. Hít một hơi thật sâu, bạn ném kỷ vật xuống dòng nước bên dưới. Khi nó chìm xuống, bạn cảm thấy một phần nào đó của bản thân mình cũng chìm theo nó. Giờ không còn đường quay lại nữa.</p>"
+        "completedEffect": "Task này đã hoàn thành <i>(nó được đưa vào chơi với mặt <b>Completed</b> ngửa lên)</i>.",
+        "failed": "<p>Bạn đứng trên một cây cầu nhìn xuống sông Miskatonic, ngắm nhìn dòng nước bên dưới nhảy múa và lấp lánh. Khi trở về, bạn cảm thấy có điều gì đó khác biệt. Có điều gì đó đã thay đổi. Những tín đồ đồng đạo của bạn nói rằng những kẻ ngoại đạo mặc áo choàng chắp vá gần đây đã đến, thốt ra những lời tiên tri màu nhiệm và những lời hứa hẹn hấp dẫn. Giờ đây, nơi thờ tự của bạn bị bao phủ bởi những biểu tượng báng bổ: một bàn tay với con mắt rực lửa; một chén thánh tràn ngập máu. Những gì bạn từng nghĩ là thiêng liêng đã bị hủy hoại.\\r</p><p>Giờ đây, khi đứng nhìn xuống dòng nước, bạn cầm kỷ vật đức tin của mình trong một tay. Bạn không thể không cảm thấy rằng mình đã bị dẫn dụ lạc lối. Hít một hơi thật sâu, bạn ném kỷ vật xuống dòng nước bên dưới. Khi nó chìm xuống, bạn cảm thấy một phần nào đó của bản thân mình cũng chìm theo nó. Giờ không còn đường quay lại nữa.</p>",
+        "failedEffect": "Loại bỏ vĩnh viễn Task \"Walk in Faith\" khỏi deck của bạn và chịu 1 mental trauma. Trong phần còn lại của campaign, bạn phải coi token {'{'}elderThing{'}'} như thể nó là token {'{'}autoFail{'}'}."
       },
       "goodMoney": {
+        "title": "Task: Good Money",
+        "readOnly": "_Read only if you have the “Good Money” Task._",
         "fiveOrMoreProgress": "Nếu có từ 5 progress trở lên được đánh dấu dưới Task của bạn:",
+        "otherwise": "_Otherwise:_",
+        "completed": "<p>Cười khẩy, bạn rời khỏi cuộc hẹn với Sanford cùng một chiếc cặp táp nhét đầy tiền. Bạn đã tuồn đủ những món đồ cổ lặt vặt và ghi chú nghiên cứu để làm hài lòng cả Tillinghast lẫn lão già gàn dở Sanford. Với khoản tiền thù lao từ mỗi người bọn họ, bạn có đủ tiền mặt để đi bất cứ nơi nào bạn muốn, trở thành bất cứ ai bạn muốn. Dù sao thì có vẻ như Sanford và lũ tay sai của lão cũng sắp tiêu tùng rồi.</p>",
+        "completedEffect": "Task này đã hoàn thành <i>(nó được đưa vào chơi với mặt <b>Completed</b> ngửa lên)</i>.",
         "failed": "<p>Cười khẩy, bạn rời khỏi cuộc hẹn với Sanford cùng một chiếc cặp táp đầy ắp. Bạn rẽ qua một góc đường và nhận ra mình đang bị bao vây bởi những tên côn đồ.\\r \"Tillinghast bảo chúng tao rằng mày đã quá hạn trả nợ rồi. May thay, tao nghĩ mày đã sẵn sàng để thanh toán,\" một tên trong số chúng nói. Rõ ràng, việc chơi trò hai mang khó hơn bạn tưởng. Giơ nắm đấm lên, bạn chuẩn bị tinh thần cho những gì sắp xảy ra tiếp theo. Chết tiệt, nếu phải gục ngã, bạn cũng sẽ chiến đấu đến cùng.</p>",
-        "completed": "<p>Cười khẩy, bạn rời khỏi cuộc hẹn với Sanford cùng một chiếc cặp táp nhét đầy tiền. Bạn đã tuồn đủ những món đồ cổ lặt vặt và ghi chú nghiên cứu để làm hài lòng cả Tillinghast lẫn lão già gàn dở Sanford. Với khoản tiền thù lao từ mỗi người bọn họ, bạn có đủ tiền mặt để đi bất cứ nơi nào bạn muốn, trở thành bất cứ ai bạn muốn. Dù sao thì có vẻ như Sanford và lũ tay sai của lão cũng sắp tiêu tùng rồi.</p>"
+        "failedEffect": "Loại bỏ vĩnh viễn Task \"Good Money\" khỏi deck của bạn và chịu 1 physical trauma. Tìm trong bộ sưu tập một basic weakness [[Injury]] hoặc [[Criminal]] và thêm nó vào deck của bạn. Lá bài này không tính vào kích thước deck của điều tra viên của bạn."
       },
       "dreamsOfDestruction": {
         "title": "Nhiệm vụ: Dreams of Destruction",
+        "readOnly": "_Read only if you have the “Dreams of Destruction” Task._",
         "fiveOrMoreProgress": "Nếu có từ 5 progress trở lên được đánh dấu dưới Task của bạn:",
+        "otherwise": "_Otherwise:_",
         "completed": "<p>Bạn lật xem phần thưởng của Randall cho tất cả những nỗ lực của bạn: một chồng sách rách nát của Blavatsky và Crowley. Chúng có thể làm hài lòng một nhà tiên tri tập sự nào đó, nhưng với bạn thì không. Việc anh ta đưa chúng ra làm phần thưởng gần như là một sự xúc phạm. Gấp cuốn sách lại, bạn nghe thấy một tiếng thì thầm yếu ớt của chính những giọng nói mà bạn đã nghe thấy ở R'lyeh. Những cơn ác mộng của bạn không phải là điềm báo của sự hủy diệt: chúng là những lời cảnh báo từ những linh hồn lang thang. Thảm họa sắp tới có thể là không thể tránh khỏi, chúng nói với bạn, nhưng điều đó không có nghĩa là bạn không thể chiến đấu với nó.</p>",
-        "failed": "<p>Những tiếng thì thầm từng hành hạ bạn ở R'lyeh cuối cùng cũng đã dừng lại. Kể từ khi trở về từ R'lyeh, bạn thức dậy mỗi sáng trong sự im lặng hoàn toàn. Tuy nhiên, thay vì an ủi bạn, sự vắng bóng của những tiếng thì thầm lại càng khiến bạn tràn ngập nỗi kinh hoàng. Cứ như thể mối liên kết của bạn với thế giới bên kia đã bị cắt đứt. Hoặc có lẽ những linh hồn muốn cảnh báo bạn về thảm họa sắp tới đã bỏ rơi bạn.</p>"
+        "completedEffect": "Task này đã hoàn thành <i>(nó được đưa vào chơi với mặt <b>Completed</b> ngửa lên)</i>.",
+        "failed": "<p>Những tiếng thì thầm từng hành hạ bạn ở R'lyeh cuối cùng cũng đã dừng lại. Kể từ khi trở về từ R'lyeh, bạn thức dậy mỗi sáng trong sự im lặng hoàn toàn. Tuy nhiên, thay vì an ủi bạn, sự vắng bóng của những tiếng thì thầm lại càng khiến bạn tràn ngập nỗi kinh hoàng. Cứ như thể mối liên kết của bạn với thế giới bên kia đã bị cắt đứt. Hoặc có lẽ những linh hồn muốn cảnh báo bạn về thảm họa sắp tới đã bỏ rơi bạn.</p>",
+        "failedEffect": "Loại bỏ token [elder_sign] khỏi chaos bag trong phần còn lại của campaign."
       },
       "noPlaceLikeHome": {
         "title": "Nhiệm vụ: No Place Like Home",
+        "readOnly": "_Read only if you have the “No Place Like Home” Task._",
         "fiveOrMoreProgress": "Nếu có từ 5 progress trở lên được đánh dấu dưới Task của bạn:",
+        "otherwise": "_Otherwise:_",
         "completed": "<p>Bạn lao ra khỏi Tillinghast Esoterica, đầu óc ong ong với những lời hứa hẹn ngọt ngào của Randall. Khoản nợ của bạn đã được xóa, nhưng vẫn còn vấn đề tiền ăn ở cần giải quyết. \"Chỉ vài tháng nữa thôi, và chúng ta có thể thanh toán xong,\" hắn thủ thỉ. Thay vì trả lời, bạn chộp lấy phần thưởng của mình và bước ra ngoài. Chuyện này chưa bao giờ là vì tiền. Hắn muốn giữ bạn lại làm tay sai. Chắc chắn cuối cùng hắn sẽ tìm bạn để đòi tiền, nhưng điều đó không quan trọng lúc này. Ngay từ đầu bạn đã không cần hắn. Nhà là thứ bạn tạo dựng nên, chứ không phải nơi bạn dựng lên nó, không có gì Tillinghast có thể làm để tước đoạt điều đó khỏi bạn lúc này.</p>",
-        "failed": "<p>Bạn đi bộ qua Southside, ngẫm nghĩ về những lời cuối cùng của Randall dành cho bạn. Khoản nợ của bạn đã được xóa, nhưng vẫn còn vấn đề tiền ăn ở cần giải quyết. \"Chỉ vài tháng nữa thôi, và chúng ta có thể thanh toán xong,\" hắn thủ thỉ. Bạn cảm ơn hắn. Đó là một yêu cầu hoàn toàn hợp lý. Và suy cho cùng, hắn là lý do duy nhất khiến bạn không phải sống lang thang trên đường phố.\\r</p><p>Đi ngang qua Ma's Boarding House, bạn ngửi thấy mùi thơm của một bữa ăn gia đình: bánh mì mới nướng, đậu xanh và giăm bông thái lát. Bụng bạn sôi lên. Bạn cảm thấy một niềm khao khát xa xưa, một thứ gì đó hơn cả cơn đói. Chỉ cần làm việc thêm một chút nữa, và Tillinghast sẽ giúp bạn đứng vững trên đôi chân của mình. Một ngày không xa, bạn sẽ có một ngôi nhà của riêng mình.</p>"
+        "completedEffect": "Task này đã hoàn thành <i>(nó được đưa vào chơi với mặt <b>Completed</b> ngửa lên)</i>.",
+        "failed": "<p>Bạn đi bộ qua Southside, ngẫm nghĩ về những lời cuối cùng của Randall dành cho bạn. Khoản nợ của bạn đã được xóa, nhưng vẫn còn vấn đề tiền ăn ở cần giải quyết. \"Chỉ vài tháng nữa thôi, và chúng ta có thể thanh toán xong,\" hắn thủ thỉ. Bạn cảm ơn hắn. Đó là một yêu cầu hoàn toàn hợp lý. Và suy cho cùng, hắn là lý do duy nhất khiến bạn không phải sống lang thang trên đường phố.\\r</p><p>Đi ngang qua Ma's Boarding House, bạn ngửi thấy mùi thơm của một bữa ăn gia đình: bánh mì mới nướng, đậu xanh và giăm bông thái lát. Bụng bạn sôi lên. Bạn cảm thấy một niềm khao khát xa xưa, một thứ gì đó hơn cả cơn đói. Chỉ cần làm việc thêm một chút nữa, và Tillinghast sẽ giúp bạn đứng vững trên đôi chân của mình. Một ngày không xa, bạn sẽ có một ngôi nhà của riêng mình.</p>",
+        "failedEffect": "Thêm 1 token [cultist] vào túi hỗn mang cho phần còn lại của chiến dịch."
       },
       "doNoHarm": {
         "title": "Nhiệm vụ: Do No Harm",
+        "readOnly": "_Read only if you have the “Do No Harm” Task._",
         "fiveOrMoreProgress": "Nếu có từ 5 progress trở lên được đánh dấu dưới Task của bạn:",
+        "otherwise": "_Otherwise:_",
         "completed": "<p>Đi bộ qua Independence Square, bạn rẽ qua một góc phố và thấy một bóng người gục ngã trên mặt đất. Bạn lao đến chỗ người đó trong khi tâm trí tràn ngập những ký ức về người hành hương ở R'lyeh. Dạ dày bạn quặn thắt khi đến gần, hy vọng sẽ không phải chứng kiến một cảnh tượng quá đỗi kinh hoàng. Cô ấy vẫn đang thở. Bạn có thể giúp cô ấy. Bất kể mọi người gặp rắc rối gì, bạn biết mình sẽ luôn ở đó để giúp đỡ.</p>",
-        "failed": "<p>Bạn đột ngột tỉnh giấc giữa đêm đầu tiên trở lại Arkham. Con mèo đang nằm ở cuối giường bạn hoảng hốt bỏ chạy khi bạn lau mồ hôi lạnh trên trán. Ký ức về những khuôn mặt bạn bỏ lại phía sau dần phai mờ, nhưng bạn không thể ngừng nghĩ về những lời cuối cùng của người đàn ông hấp hối: \"Mẹ.\" Nhịp tim của bạn chậm lại khi bạn nhìn chằm chằm ra ngoài cửa sổ. Những suy nghĩ về những gì bạn có thể làm khác đi bao trùm lấy bạn. Bạn sẽ không bao giờ có thể cứu được tất cả mọi người. Liệu có đáng để cố gắng không?</p>"
+        "completedEffect": "Task này đã hoàn thành <i>(nó được đưa vào chơi với mặt <b>Completed</b> ngửa lên)</i>.",
+        "failed": "<p>Bạn đột ngột tỉnh giấc giữa đêm đầu tiên trở lại Arkham. Con mèo đang nằm ở cuối giường bạn hoảng hốt bỏ chạy khi bạn lau mồ hôi lạnh trên trán. Ký ức về những khuôn mặt bạn bỏ lại phía sau dần phai mờ, nhưng bạn không thể ngừng nghĩ về những lời cuối cùng của người đàn ông hấp hối: \"Mẹ.\" Nhịp tim của bạn chậm lại khi bạn nhìn chằm chằm ra ngoài cửa sổ. Những suy nghĩ về những gì bạn có thể làm khác đi bao trùm lấy bạn. Bạn sẽ không bao giờ có thể cứu được tất cả mọi người. Liệu có đáng để cố gắng không?</p>",
+        "failedEffect": "Thêm một token [tablet] vào túi hỗn mang cho phần còn lại của chiến dịch."
       },
       "toeTheLine": {
+        "title": "Task: Toe the Line",
+        "readOnly": "_Read only if you have the “Toe the Line” Task._",
         "fiveOrMoreProgress": "Nếu có từ 5 progress trở lên được đánh dấu dưới Task của bạn:",
+        "otherwise": "_Otherwise:_",
         "completed": "<p>\"Bạn sẽ phụ trách giám sát việc xây dựng và quản lý nhà máy mới sau này.\" Người chủ mới của bạn rạng rỡ, đẩy một bản hợp đồng mới tinh qua mặt bàn. Khi nhìn ra ngoài cửa sổ văn phòng mới của mình, bạn cảm thấy trái tim mình rộn ràng. Sau thành công của bạn với cuộc thám hiểm, Tillinghast đã đề cập đến mối quan hệ của ông ta với New Horizons Industries đang chớm nở. Mặc dù ông trùm ngành đóng gói thịt vẫn chưa khởi công ở Arkham, Randall đã đảm bảo với bạn rằng bạn sẽ được chăm sóc chu đáo. Tất cả những gì bạn cần làm là ký vào đường kẻ chấm.</p>",
-        "failed": "<p>Căn phòng trở nên im lặng khi bạn bước vào. Khi bạn xin lại công việc cũ, Tillinghast đã rất vui lòng giúp đỡ. Khi người giám sát cũ của bạn trò chuyện như thể bạn chưa từng rời đi, bạn bắt gặp những ánh nhìn lo lắng của các đồng nghiệp cũ. Dù gã doanh nhân mờ ám kia đã dùng đến những mối quan hệ nào, thì chúng chắc chắn đã phát huy tác dụng. Khi ngồi xuống, bạn nhìn ra những đồng nghiệp đang lo lắng mà bạn từng gọi là bạn bè. Bạn đã có được mọi thứ mình muốn, thậm chí cả chiếc bàn làm việc cũ. Tại sao bạn vẫn cảm thấy trống rỗng đến vậy?</p>"
+        "completedEffect": "Task này đã hoàn thành <i>(nó được đưa vào chơi với mặt <b>Completed</b> ngửa lên)</i>.",
+        "failed": "<p>Căn phòng trở nên im lặng khi bạn bước vào. Khi bạn xin lại công việc cũ, Tillinghast đã rất vui lòng giúp đỡ. Khi người giám sát cũ của bạn trò chuyện như thể bạn chưa từng rời đi, bạn bắt gặp những ánh nhìn lo lắng của các đồng nghiệp cũ. Dù gã doanh nhân mờ ám kia đã dùng đến những mối quan hệ nào, thì chúng chắc chắn đã phát huy tác dụng. Khi ngồi xuống, bạn nhìn ra những đồng nghiệp đang lo lắng mà bạn từng gọi là bạn bè. Bạn đã có được mọi thứ mình muốn, thậm chí cả chiếc bàn làm việc cũ. Tại sao bạn vẫn cảm thấy trống rỗng đến vậy?</p>",
+        "failedEffect": "Loại bỏ vĩnh viễn Task \"Toe the Line\" khỏi deck của bạn và chịu 1 physical trauma.",
+        "tokenReplacement": {
+          "title": "Toe the Line",
+          "body": "Two non-symbol tokens drawn at random are replaced with a chaos token of a value 2 lower for the remainder of the campaign:"
+        }
       },
       "proveYourWorth": {
         "title": "Nhiệm vụ: Prove Your Worth",
+        "readOnly": "_Read only if you have the “Prove Your Worth” Task._",
         "fiveOrMoreProgress": "Nếu có từ 5 progress trở lên được đánh dấu dưới Task của bạn:",
+        "otherwise": "_Otherwise:_",
         "completed": "<p>Đã vài đêm kể từ khi bạn trở về Arkham, và bạn đang nhìn xuống một đám đông ngưỡng mộ. Không có gì ngạc nhiên khi chuyến thám hiểm thành công. Tất cả là nhờ bạn. Và sau khi hứa hẹn với Tillinghast một vài ân huệ nhỏ nhặt, bạn đang nhận được sự công nhận mà bạn vô cùng xứng đáng. Chẳng bao lâu nữa, bạn sẽ đảm bảo rằng bất cứ ai từng nghi ngờ bạn cũng sẽ nhận được những gì họ đáng phải nhận. Ai đã nói khiêm tốn là một điều tốt cơ chứ?</p>",
-        "failed": "<p>Vào đêm bạn trở về, bạn thấy mình bị loại ra khỏi nhóm bạn cũ một cách nhục nhã. Chính Tillinghast đã lan truyền những tin đồn tồi tệ nhất về bạn. Điều tồi tệ hơn là tất cả chúng đều là sự thật. Bạn chẳng qua chỉ là một gánh nặng cho chuyến thám hiểm. Bạn là trò cười của cả nhóm. Không có thành tựu nào bạn đạt được là do thực lực của chính bạn. Bạn vô dụng đúng như những gì họ nói.</p>"
+        "completedEffect": "Task này đã hoàn thành <i>(nó được đưa vào chơi với mặt <b>Completed</b> ngửa lên)</i>.",
+        "failed": "<p>Vào đêm bạn trở về, bạn thấy mình bị loại ra khỏi nhóm bạn cũ một cách nhục nhã. Chính Tillinghast đã lan truyền những tin đồn tồi tệ nhất về bạn. Điều tồi tệ hơn là tất cả chúng đều là sự thật. Bạn chẳng qua chỉ là một gánh nặng cho chuyến thám hiểm. Bạn là trò cười của cả nhóm. Không có thành tựu nào bạn đạt được là do thực lực của chính bạn. Bạn vô dụng đúng như những gì họ nói.</p>",
+        "failedEffect": "Loại bỏ vĩnh viễn Task \"Prove Your Worth\" khỏi deck của bạn và chịu 1 mental trauma. Loại bỏ các lá bài level 1-5 khỏi deck của bạn có tổng giá trị từ 10 experience trở lên <i>(hãy nhớ mua các lá bài mới để duy trì kích thước deck hợp lệ)</i>. Bạn không thể mua lại những lá bài đó."
       },
       "plumbTheDepths": {
         "title": "Nhiệm vụ: Plumb the Depths",
+        "readOnly": "_Read only if you have the “Plumb the Depths” Task._",
         "fiveOrMoreProgress": "Nếu có từ 5 progress trở lên được đánh dấu dưới Task của bạn:",
+        "otherwise": "_Otherwise:_",
         "completed": "<p>Chưa đầy một tuần sau khi trở về, bạn nhận được yêu cầu từ Miskatonic University để chính thức trình bày những phát hiện của mình. Từ 'biên chế' đã lọt vào tai bạn không chỉ một lần. Bất chấp sự hoan nghênh đáng kinh ngạc mà các nghiên cứu đã mang lại cho bạn, danh tiếng này lại có vẻ trống rỗng. Những thủ tục học thuật rườm rà chẳng khác gì một vở kịch bóng. Và nó chẳng là gì so với những sự thật kinh hoàng mà bạn đã biết được ở R'lyeh. Đã hơn một lần, bạn thấy mình thức giấc trong bóng tối, thở hổn hển, với những ký ức về một thời đại và một thế giới không phải của bạn. Bạn biết sự thật khủng khiếp: Nhân loại chẳng qua chỉ là một tiếng vang yếu ớt của những nền văn minh vĩ đại hơn nhiều.\\r</p><p>Có lẽ điều đó là sự thật. Có lẽ bạn chỉ là một hạt bụi, và mọi nỗ lực của bạn đều vô ích. Nhưng bạn cũng đã nghe những điều tuyệt vời về chế độ đãi ngộ biên chế của Miskatonic. Bạn xứng đáng có được nó, khốn kiếp thật. Tội gì mà không tận hưởng cơ chứ.</p>",
-        "failed": "<p>Đã vài đêm sau khi bạn trở về, và bạn đang ngồi trong một trong nhiều phòng đọc tại Orne Library của Miskatonic, nhìn chằm chằm vào ngọn lửa đang cháy rực. Những phát hiện của bạn bị coi là điều viển vông, và những văn tự cổ mà bạn dịch đã bị gạt bỏ không thương tiếc. Bạn sẽ may mắn nếu được dạy trẻ con, chứ đừng nói đến việc giảng bài trong những hội trường lớn của một trường đại học. Bạn dừng việc đọc để nhìn vào một bản thảo kỳ lạ được viết nguệch ngoạc trên lề cuốn sách của bạn, quen thuộc một cách kỳ lạ. Trong một khoảnh khắc, bạn cảm thấy một sự tò mò quen thuộc nhói lên, giống như những gì bạn đã cảm thấy ở R'lyeh.\\r</p><p>Bạn gấp cuốn sách lại. Nếu không ai chịu lắng nghe bạn, thì bận tâm làm gì?</p>"
+        "completedEffect": "Task này đã hoàn thành <i>(nó được đưa vào chơi với mặt <b>Completed</b> ngửa lên)</i>.",
+        "failed": "<p>Đã vài đêm sau khi bạn trở về, và bạn đang ngồi trong một trong nhiều phòng đọc tại Orne Library của Miskatonic, nhìn chằm chằm vào ngọn lửa đang cháy rực. Những phát hiện của bạn bị coi là điều viển vông, và những văn tự cổ mà bạn dịch đã bị gạt bỏ không thương tiếc. Bạn sẽ may mắn nếu được dạy trẻ con, chứ đừng nói đến việc giảng bài trong những hội trường lớn của một trường đại học. Bạn dừng việc đọc để nhìn vào một bản thảo kỳ lạ được viết nguệch ngoạc trên lề cuốn sách của bạn, quen thuộc một cách kỳ lạ. Trong một khoảnh khắc, bạn cảm thấy một sự tò mò quen thuộc nhói lên, giống như những gì bạn đã cảm thấy ở R'lyeh.\\r</p><p>Bạn gấp cuốn sách lại. Nếu không ai chịu lắng nghe bạn, thì bận tâm làm gì?</p>",
+        "failedEffect": "Thêm 1 token [skull] vào chaos bag cho phần còn lại của chiến dịch."
       }
     }
   },
   "anOfferYouCantRefuse": {
     "title": "Chuyển tiếp I: Lời Đề Nghị Không Thể Chối Từ",
+    "interlude1": "<p>_Interlude 1_: \"Thứ bạn vừa thu hồi không chỉ là một món đồ cổ thông thường. Nó được mua với giá rất đắt từ một tay buôn ở Ai Cập, người đã thừa kế nó từ một người họ hàng mua nó ở Bắc Kinh, bạn biết chuyện đó diễn ra thế nào mà,\" Randall cười khẩy khi bạn chiêm ngưỡng cổ vật. Nó là một bức tượng có hình dáng hơi giống người, ngồi ở tư thế khom lưng, với cái đầu nặng nề giống bạch tuộc và các đường nét giống loài mực. Có một sự ác độc nào đó trong biểu cảm của nó, một điều gì đó đáng ghê tởm trong chính cách nó được điêu khắc. Bạn cảm thấy khó mà rời mắt khỏi nó.</p>",
+    "agencyDetectiveOrCriminal": "<p class='red'>Câu chuyện cường điệu của Randall về việc thu thập cổ vật dường như khiên cưỡng một cách không cần thiết. Bạn có mọi lý do để tin rằng bức tượng cổ này đã được lấy qua những phương thức không mấy hợp pháp. Đáng buồn thay, điều này không cho bạn biết gì về nguồn gốc thực sự của di vật.</p>",
+    "interlude1Continued": "<p>\"Đây là một di vật độc nhất vô nhị có nguồn gốc từ thời tiền sử, tôi dám nói là từ trước cả khi có loài người,\" giọng nói của Randall phá vỡ sự mê hoặc. Phần còn lại trong câu chuyện của nhà sưu tầm đồ cổ lập dị này vượt quá sức tưởng tượng. Ông ta mô tả một ghi chép về một cuộc chiến vũ trụ cổ đại nào đó, và cách ông ta tin rằng toàn bộ trái đất đang ở trên bờ vực của một ngày tận thế, rất giống với thảm họa đã tiêu diệt kẻ tạo ra bức tượng.</p><p>Trong toàn bộ lịch sử nhân loại—trong mọi nền thần thoại tách biệt—đều tồn tại một câu chuyện về một trận đại hồng thủy. Một cơn đại thảm họa. Có những truyền thuyết về một thành bang vĩ đại: một pháo đài của tri thức và sức mạnh, đã chìm xuống dưới những con sóng. Nhân loại đã gọi nó bằng nhiều cái tên. Atlantis. Mu. Lemuria. Nhưng tên thật của nó, một cái tên tồn tại từ trước cả lịch sử, là <i><b>R’lyeh</b></i>.</p><p>\"Thông qua rất nhiều nghiên cứu công phu, cùng với sự trợ giúp của một gã thủy thủ điên tên là Gustaf, tôi đã xác định được tọa độ tương đối của thành phố cổ đại này. Một dải đại dương ở Nam Thái Bình Dương nơi nhiều tàu thuyền đã bị đắm hoặc biến mất không một lời giải thích. Điều này đưa tôi đến lời đề nghị của mình. Tôi cần một người táo bạo và tháo vát để dẫn dắt một cuộc thám hiểm đến thành phố cổ đại đó. Một người có thể mang về bằng chứng về tri thức cổ đại của nó, nghiên cứu những bí mật của nó, ghi chép lại những kỳ quan của nó. Tôi cần người đó là bạn,\" Randall nói, nhìn bạn, rồi nhìn sang Ruby và Andy.</p><p>\"Nếu bạn chấp nhận, tôi sẽ xóa bỏ mọi khoản nợ còn lại của bạn và cung cấp cho bạn đủ tiền để nghỉ hưu một cách thoải mái. <i>Rất</i> thoải mái. Và, tất nhiên, tôi sẽ hỗ trợ bạn giải quyết những mối bận tâm <i>khác</i> của bạn.\"</p><p>Tâm trí bạn miên man nghĩ về những \"mối bận tâm\" khác đó.</p>",
+    "chooseTask": "In player order, each investigator must choose a different Task and read its text.",
+    "label": {
+      "walkInFaith": "Walk in Faith",
+      "toeTheLine": "Toe the Line",
+      "noPlaceLikeHome": "No Place Like Home",
+      "goodMoney": "Good Money",
+      "doNoHarm": "Do No Harm",
+      "proveYourWorth": "Prove Your Worth",
+      "dreamsOfDestruction": "Dreams of Destruction",
+      "plumbTheDepths": "Plumb the Depths",
+      "refuse": "Refuse. Proceed to _Interlude 3_.",
+      "accept": "Take his offer. Skip to _Interlude 4_."
+    },
     "task": {
+      "walkInFaith": {
+        "title": "Task: Walk in Faith",
+        "body": "<p>All your life, you have believed in something greater than yourself, something that guides your hand and directs your path. Months ago, you recognized the unblinking eye set in the stained glass of Tillinghast’s shop from your dreams. It was a sign. You can’t help but feel that this is the reason you were led here. You have no choice but to say yes.</p>"
+      },
+      "toeTheLine": {
+        "title": "Task: Toe the Line",
+        "body": "<p>You were a bright star, rising through the ranks—until your sudden and ignominious fall from grace. Your former colleague saw to it that you’d never come by honest work, so you turned to Tillinghast to make a living. You’ve always hoped he might help you get your old position back and restore your good name.</p>"
+      },
       "noPlaceLikeHome": {
-        "title": "Nhiệm vụ: No Place Like Home"
+        "title": "Nhiệm vụ: No Place Like Home",
+        "body": "<p>Mr. Tillinghast has always been good to you. When you were down on your luck, it was Tillinghast who got you off the streets, who paid for a warm bed and a hot meal at Ma’s Boarding House. The money he’s promised for this job will finally get you back on your feet. You know he’s good for it.</p>"
+      },
+      "goodMoney": {
+        "title": "Task: Good Money",
+        "body": "<p>Over the years, you’ve had to do plenty of things you’d never admit in polite society. But that’s all over now. This is your chance for the fresh start Tillinghast promised you years ago when he paid off your old debt. With what Tillinghast is promising, you should finally be able to live life on your own terms—so long as you survive one more cockamamie errand.</p>"
       },
       "doNoHarm": {
-        "title": "Nhiệm vụ: Do No Harm"
+        "title": "Nhiệm vụ: Do No Harm",
+        "body": "<p>People have always depended on you when things go wrong. Randall has seen your talents put to good use over the course of your work with him; the slippery businessman has never given you easy work, but you’ve always risen to the challenge. If you nail this last job, he’s promised you enough to live your dreams.</p>"
       },
       "proveYourWorth": {
-        "title": "Nhiệm vụ: Prove Your Worth"
+        "title": "Nhiệm vụ: Prove Your Worth",
+        "body": "<p>You’ve heard them talking about you behind your back. “Dead weight,” they called you. You’ll show them. Randall has promised you everything you need to rise to the top, to show those catty bastards what you’re really made of. You need this job to prove to everyone that you’re not the failure your peers say you are.</p>"
       },
       "dreamsOfDestruction": {
-        "title": "Nhiệm vụ: Dreams of Destruction"
+        "title": "Nhiệm vụ: Dreams of Destruction",
+        "body": "<p>Every night for the past year, you have been wracked with awful nightmares. Visions of a terrible calamity. Streets in ruin. Spectral forms of the drowned. And above it all some nameless, looming form. You entered Tillinghast’s shop hoping to find answers in his occult tomes, and soon found yourself ensnared in his growing enterprise. Randall has promised you answers.</p>"
       },
       "plumbTheDepths": {
-        "title": "Nhiệm vụ: Plumb the Depths"
+        "title": "Nhiệm vụ: Plumb the Depths",
+        "body": "<p>You never meant to get involved with Randall, or the mob, or any of this. But you can never suppress the inexorable itch to understand the world around you. Although you have been warned time and again that your curiosity would be the end of you, you can’t deny the allure of the unknown. This job will make your career, if you can just play your cards right.</p>"
       }
+    },
+    "interlude2": "<p>_Interlude 2_: Bạn nheo mắt nhìn Randall. Có điều gì đó ông ta không nói với bạn. Một uẩn khúc nào đó. Luôn có uẩn khúc khi làm việc với Tillinghast. Giống như việc luôn có thêm một công việc nữa cần phải làm. Bạn hỏi ông ta đó là gì và ông ta thở dài. \"Tôi tưởng điều đó là hiển nhiên, nhưng chuyến thám hiểm này có khả năng sẽ khá nguy hiểm. Đó là lý do tại sao tôi nghĩ đến việc giao phó nó cho bạn. Bạn đã chứng tỏ mình là người khá tháo vát. Và như tôi đã nói, tôi dự định sẽ thưởng cho bạn một cách hậu hĩnh.\"</p><p>Bạn nheo mắt nhìn Randall. Có điều gì đó ông ta không nói với bạn. Một uẩn khúc nào đó. Luôn có uẩn khúc khi làm việc với Tillinghast. Giống như việc luôn có thêm một công việc nữa cần phải làm. Bạn hỏi ông ta đó là gì và ông ta thở dài. \"Tôi tưởng điều đó là hiển nhiên, nhưng chuyến thám hiểm này có khả năng sẽ khá nguy hiểm. Đó là lý do tại sao tôi nghĩ đến việc giao phó nó cho bạn. Bạn đã chứng tỏ mình là người khá tháo vát. Và như tôi đã nói, tôi dự định sẽ thưởng cho bạn một cách hậu hĩnh.\"</p><p class='basic'>Các điều tra viên phải quyết định <i>(chọn một)</i>:</p>",
+    "refuse": "Refuse. Proceed to _Interlude 3_.",
+    "accept": "Take his offer. Skip to _Interlude 4_.",
+    "interlude3": "<p>_Interlude 3_: Chắc chắn phải có một uẩn khúc. Nếu không, Tillinghast sẽ không đưa ra một miếng mồi hấp dẫn như vậy. Bạn không muốn dính dáng đến ông ta nữa. Bạn lắc đầu từ chối.</p><p>“Then get out,” Tillinghast says icily, pointing to the door. “I have no further use for you. Rest assured, however, that if you speak a word of this to anyone, you will regret it.” Without a word, you walk out of the shop, leaving behind whatever wonders—and dangers—Tillinghast had in store for you.</p><ul><li>Các điều tra viên thất bại.</li></ul>",
+    "interlude4": "<p>_Interlude 4_: Bất kể lý do ông ta giấu giếm điều quan trọng nhất là gì, lời đề nghị này quá hấp dẫn để có thể từ chối. Ruby và Andy cùng gật đầu đồng ý với bạn. Khuôn mặt của Tillinghast nở nụ cười nửa miệng quen thuộc. \"Thật tuyệt vời. Tôi đã hy vọng bạn sẽ đồng ý. Thực sự, đây là cơ hội có một không hai trong đời. Tôi đảm bảo với bạn điều này sẽ thay đổi <i>mọi thứ.</i>\"</p><p>Sau khi Andy thương lượng để có được nguồn cung cấp phim chụp đầy đủ, và Ruby tăng mức hoa hồng của mình lên, Tillinghast vạch ra kế hoạch cho chuyến thám hiểm. Ngày mai, một chuyến tàu sẽ đưa bạn đến San Francisco, nơi con tàu <i>Cassandra</i> sẽ đưa bạn đến các tọa độ được cung cấp ở Nam Thái Bình Dương. Nhà sưu tầm đồ cổ tỏ ra hân hoan phấn khích, gần như một đứa trẻ khi vạch ra các chi tiết. \"Tôi đã gửi đủ đồ tiếp tế để toàn bộ đoàn thám hiểm dùng trong vài tháng nếu cần. Dù vậy, hãy chuẩn bị cho mọi tình huống.\"</p><p class='basic right'>Proceed to _Interlude II: Expedition to R’lyeh_</p>",
+    "recommended": {
+      "noPlaceLikeHome": "Khuyên dùng cho các điều tra viên Survivor ([survivor]), [[Drifter]], [[Hunter]], hoặc [[Wayfarer]].",
+      "walkInFaith": "Khuyên dùng cho các điều tra viên Guardian ([guardian]), Mystic ([mystic]), [[Believer]], [[Blessed]], [[Chosen]], [[Hunter]], hoặc [[Sorcerer]].",
+      "toeTheLine": "Khuyên dùng cho các điều tra viên Guardian ([guardian]), [[Agency]], [[Detective]], [[Hunter]], [[Police]], hoặc [[Veteran]].",
+      "goodMoney": "Khuyên dùng cho các điều tra viên Rogue ([rogue]), [[Civic]], [[Criminal]], [[Entrepreneur]], hoặc [[Socialite]].",
+      "proveYourWorth": "Khuyên dùng cho các điều tra viên [[Agency]], [[Performer]], [[Silver Twilight]], hoặc [[Socialite]].",
+      "doNoHarm": "Khuyên dùng cho các điều tra viên [[Assistant]], [[Civic]], [[Medic]], [[Veteran]], hoặc [[Warden]].",
+      "dreamsOfDestruction": "Khuyên dùng cho các điều tra viên Mystic ([mystic]), [[Artist]], [[Clairvoyant]], [[Cultist]], [[Cursed]], [[Dreamer]], [[Performer]], hoặc [[Sorcerer]].",
+      "plumbTheDepths": "Khuyên dùng cho các điều tra viên Seeker ([seeker]), [[Agency]], [[Clairvoyant]], [[Detective]], [[Miskatonic]], [[Scholar]], hoặc [[Reporter]]."
     }
   },
   "expeditionToRlyeh": {
     "title": "Chuyển cảnh II: Expedition to R'lyeh",
-    "westernChaosTokens": "Loại bỏ 1 token {'{'}tablet{'}'} khỏi chaos bag. Thêm 1 token {'{'}cultist{'}'} vào chaos bag trong phần còn lại của chiến dịch."
+    "body": "<img class='interlude-banner' src='{setImgPath}/../extra/the-drowned-city/rlyeh.png' alt='R’lyeh' /><p>Trời chập tối khi bạn lần đầu tiên nhìn thấy thành phố cổ đại. Bạn bước ra khỏi cabin và thấy Andy cùng Ruby đang nhìn chằm chằm vào một đường chân trời lởm chởm, ảm đạm ở phía mũi tàu bên mạn phải. Thành phố cổ đại là một mớ hỗn độn của những tòa tháp sụp đổ, những khu phố như mê cung, và những con đường lởm chởm uốn lượn cuộn vào nhau như một cái tổ chuột. Andy suýt đánh rơi máy ảnh khi một con sóng nhấp nhô nâng lên rồi thả mũi tàu xuống với một tiếng va đập chát chúa.</p><p>“Bạn đang thấy điều này. Nó có thật. Hãy nói với tôi là nó có thật,” Andy nói, điên cuồng lắp thêm phim vào chiếc máy ảnh trầy xước của mình. Bạn và những thành viên còn lại trong thủy thủ đoàn kinh ngạc trước đường chân trời bẻ cong tâm trí với một sự pha trộn giữa kinh sợ và kinh hoàng. Nước biển tuôn ra từ miệng của những bức tượng ngoại lai và những lăng mộ cổ đại. Những hình dạng phù du kỳ lạ bay lượn ra vào những hẻm núi hắc diện thạch của R’lyeh. Nó không giống bất cứ thứ gì được xây dựng bởi bàn tay con người.</p><p>Bạn nhận ra mình đang lẩm nhẩm tên của thành phố. Ngay cả Ruby, người luôn điềm tĩnh, dường như cũng chết lặng khi con tàu đi qua một vòng bãi đá ngầm vào một vịnh rộng. Sau khi đổ bộ, đoàn thám hiểm cắm trại trên bãi biển cát đen, dưới chân một ngọn tháp hắc diện thạch cao chót vót. Những cánh cửa khổng lồ, đầy đe dọa được đặt ở chân tháp hiện ra lờ mờ như những người lính gác câm lặng. Hầu như không có một lời nào giữa các thành viên đoàn thám hiểm trong đêm đầu tiên; Andy dành cả buổi tối để nghiền ngẫm một viên đá hắc diện thạch có khắc những ký tự phát sáng, trong khi Ruby âu yếm sắp xếp lại túi đồ nghề của mình.</p><p>Vào buổi sáng, bạn thảo luận xem nên đi theo tuyến đường nào. Tillinghast đã cung cấp đủ thiết bị lặn, đồ leo núi và khẩu phần ăn để khám phá sâu vào đất liền trong ít nhất hai tuần trước khi bạn cần quay lại bãi biển. Tuy nhiên, Andy và Ruby lại bất đồng quan điểm. Andy muốn đi dọc theo bờ biển đến bức tường phía tây đổ nát gần cửa vịnh. Ruby, người luôn thoải mái với độ cao, muốn đi lên đường chân trời để lập bản đồ thành phố. Cô ấy chỉ tay một cách hào hứng vào một cấu trúc giống như nhà thờ ở đằng xa sâu trong đất liền.</p><p>Tùy thuộc vào nhân vật nào bạn muốn đi theo, bạn sẽ khám phá thành phố cổ đại từ tây sang đông, hoặc từ đông sang tây. Bạn phải quyết định, với tư cách là một nhóm:</p>",
+    "label": {
+      "west": "Đi theo Andy dọc theo bờ biển đến Western Wall.",
+      "east": "Đồng hành cùng Ruby qua Obsidian Canyons hướng tới một cấu trúc khổng lồ trong đất liền."
+    },
+    "westernExpedition": "<p>Có điều gì đó về bức tường đổ nát phía xa và những ngọn tháp chìm dưới nước đang vẫy gọi bạn. Sau khi đồng ý đi cùng Andy về phía tây, anh thở phào nhẹ nhõm. “Tất nhiên là tôi có thể tự lo cho bản thân, nhưng nếu chúng ta phải lặn, tôi sẽ…” anh nhìn chằm chằm vào khoảng không phía xa một lúc. “Tôi không muốn làm bạn lo lắng, nhưng tôi dám thề là tôi đã thấy thứ gì đó có hình dáng con người đang bơi bên dưới. Tôi sẽ rất vui nếu có người đi cùng.” Bạn nhìn qua làn nước đen ngòm về phía rìa vịnh nhỏ, chợt cảm thấy e ngại. Một thứ gì đó nhô lên khỏi những con sóng trong chốc lát, rồi biến mất. Bạn có cảm giác như đang bị theo dõi.</p><p>“Vậy thì hai tuần nữa,” Ruby nói, vác một cuộn dây thừng lên vai. “Chúng ta sẽ gặp lại nhau ở đây sau hai tuần nữa. Đừng quên những bộ đồ lặn. Và đừng để bản thân bị giết. Tôi sẽ rất ghét việc mất đi đối thủ yêu thích của mình.”</p>",
+    "easternExpedition": "<p>_Eastern Expedition:_ Since you landed, you haven’t been able to take your eyes off the phantasmagoric skyline. After agreeing to accompany her eastward, you catch the faintest hint of a smile from Ruby. “Fine, you can come along. As long as you don’t hold me back,” she smirks. A fell wind whistles through the perilous canyons, smelling of ancient decay and another, sweeter smell. Storm clouds churn in the distance threateningly.</p>",
+    "theExpeditionHeadedWest": "In your Campaign Log, record *the expedition headed west*.",
+    "andyVanNortwick": "Chọn một điều tra viên để thêm story asset Andy Van Nortwick vào deck của họ. Lá bài này không tính vào deck size của họ. Lá bài này có thể được tìm thấy trong encounter set <i>Expedition</i>.",
+    "westernChaosTokens": "Loại bỏ 1 token {'{'}tablet{'}'} khỏi chaos bag. Thêm 1 token {'{'}cultist{'}'} vào chaos bag trong phần còn lại của chiến dịch.",
+    "proceedToTheWesternWall": "Proceed to _The Western Wall._",
+    "theExpeditionHeadedEast": "In your Campaign Log, record *the expedition headed east*.",
+    "rubyStandish": "Chọn một điều tra viên để thêm story asset Ruby Standish vào deck của họ. Lá bài này không tính vào deck size của họ. Có thể tìm thấy lá bài này trong encounter set <i>Expedition</i>.",
+    "proceedToObsidianCanyons": "Proceed to _Obsidian Canyons._"
   }
 }

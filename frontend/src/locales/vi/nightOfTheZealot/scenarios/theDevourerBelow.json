@@ -1,20 +1,70 @@
 {
-  "setup": {
-    "placeLocations": "Đặt vị trí Main Path vào bàn chơi. Xáo 6 copy của lá Arkham Woods, chọn ngẫu nhiên 4 lá trong đó, và đặt vào bàn chơi mà không nhìn vào mặt reveal của nó. Loại bỏ 2 lá còn lại khỏi trò chơi. Mỗi điều tra viên bắt đầu tại Main Path.",
-    "setOutOfPlay": "Đặt lá Ritual Site và Umôrdhoth qua một bên, ngoài khu vực chơi hiện tại."
+  "heading": "Part III",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the number of _Monster_ enemies in play.",
+      "cultist": "-2. Place 1 doom on the nearest enemy.",
+      "tablet": "-3. If there is a _Monster_ enemy at your location, chịu 1 damage.",
+      "elderThing": "-5. If there is an _Ancient One_ enemy in play, reveal another token."
+    },
+    "hardExpert": {
+      "skull": "-3. Nếu bạn thất bại, after this skill test, search the encounter deck and discard pile for a _Monster_ enemy, and draw it. Shuffle the encounter deck.",
+      "cultist": "-4. Place 2 doom on the nearest enemy.",
+      "tablet": "-5. If there is a _Monster_ enemy at your location, chịu 1 damage and 1 horror.",
+      "elderThing": "-7. If there is an _Ancient One_ enemy in play, reveal another token."
+    }
   },
-  "resolutions": {
-    "resolution1": {
-      "title": "Kết thúc thứ nhất"
-    },
-    "resolution2": {
-      "title": "Kết thúc thứ hai"
-    },
-    "resolution3": {
-      "title": "Kết thúc thứ ba"
+  "tooltips": {
+    "mainPath": {
+      "resign": "\"There's nothing we can do to stop them!\" You flee from the woods, leaving Arkham to its grisly fate."
     }
   },
   "intro": {
+    "title": "Part III: The Devourer Below",
     "body": "<p>Sau 1 đêm điên cuồng tìm kiếm khắp thành phố Arkham, bạn đã lần ra và tra khảo được 1 vài thành viên của giáo phái. Điều bạn phát hiện ra thật đáng lo ngại: chúng tự nhận bản thân đang thờ phụng 1 thực thể tàn ác đến từ thế giới khác được biết đến với cái tên là Umordhoth.</p><p>Bạn đã xác nhận được phần lớn câu chuyện của Lita: giáo phái này đang lo lắng về việc hang ổ ngạ quỷ bị phá hủy. Tuy nhiên, một điều bất ngờ ở đây là người đã xâm nhập vào hang ổ và khiến các sự kiện đêm nay diễn ra chính là Lita Chantler! Bạn không chắc tại sao chi tiết quan trọng này lại không được Lita kể ra - phải chăng bà ta bỏ qua chi tiết này và chỉ kể vừa đủ để cuốn bạn vào cuộc xung đột của bà ấy? Nhưng ở một góc độ khác, bà ta dường như đang chiến đấu để bảo vệ thành phố Arkham khỏi một mối đe dọa khủng khiếp.</p><p>Mảnh ghép cuối cùng được tìm thấy trong một cuốn nhật ký do một trong những tín đồ sở hữu. Nó mô tả một nghi lễ đen tối được thực hiện sâu trong khu rừng phía nam thị trấn Arkham, ngay đêm nay. Theo cuốn nhật ký, việc hoàn thành nghi lễ sẽ mở ra một cánh cổng và đưa chủ nhân hắc ám của giáo phái đến thế giới này. Lita cảnh cáo, “Nếu giáo phái không bị dừng lại thì có khả năng sự trả thù của Umôrdhoth sẽ nuốt chủng mọi thứ trên đường nó đi qua.” Sợ hãi nhưng với quyết tâm ngăn chặn nghi lễ, bạn đi vào rừng…</p>"
+  },
+  "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: The Devourer Below, Ancient Evils, Striking Fear, Ghouls, and Dark Cult. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-devourer-below.png' /><img src='{setImgPath}/ancient-evils.png' /><img src='{setImgPath}/striking-fear.png' /><img src='{setImgPath}/ghouls.png' /><img src='{setImgPath}/dark-cult.png' /></section>",
+    "placeLocations": "Đặt vị trí Main Path vào bàn chơi. Xáo 6 copy của lá Arkham Woods, chọn ngẫu nhiên 4 lá trong đó, và đặt vào bàn chơi mà không nhìn vào mặt reveal của nó. Loại bỏ 2 lá còn lại khỏi trò chơi. Mỗi điều tra viên bắt đầu tại Main Path.",
+    "setOutOfPlay": "Đặt lá Ritual Site và Umôrdhoth qua một bên, ngoài khu vực chơi hiện tại.",
+    "randomSet": "Ngẫu nhiên chọn 1 trong 4 bộ bài encounter: <i>Agents of Yog-Sothoth</i>, <i>Agents of Shub-Niggurath</i>, <i>Agents of Cthulhu</i>, or <i>Agents of Hastur</i>.",
+    "cultistsWhoGotAway": {
+      "instructions": "Check the number of names recorded under “Cultists Who Got Away” in your Campaign Log.",
+      "zeroNames": "If there are exactly 0 names, no changes are made.",
+      "oneOrTwoNames": "If there are exactly 1 or 2 names, place 1 doom on Agenda 1a.",
+      "threeOrFourNames": "If there are exactly 3 or 4 names, place 2 doom on Agenda 1a.",
+      "fiveOrSixNames": "If there are exactly 5 or 6 names, place 3 doom on Agenda 1a."
+    },
+    "pastMidnight": "Mỗi người chơi bỏ đi 2 lá bài ngẫu nhiên trong các lá bài khởi đầu.",
+    "ghoulPriest": "Check Campaign Log. If *the Ghoul Priest is still alive*: Shuffle it into the encounter deck.",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to The Devourer Below*, *Ghouls of Umôrdhoth*, and *The Devourer’s Cult*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-devourer-below.png' /><img src='{setImgPath}/ghouls-of-umrdhoth.png' /><img src='{setImgPath}/the-devourers-cult.png' /></section>*Ghouls of Umôrdhoth* replaces *Ghouls* and *The Devourer’s Cult* replaces *Dark Cult*. Remove the replaced sets from the game.",
+      "placeLocations": "When choosing 4 Arkham Woods locations to put into play at random, include the 4 new Arkham Woods locations from this encounter set, for a total of 10 possibilities.",
+      "vaultOfEarthlyDemise": "After setting the Umôrdhoth enemy aside, attach *Vault of Earthly Demise* to it."
+    }
+  },
+  "resolutions": {
+    "xp": {
+      "bonus": {
+        "resolution1": "Saved Arkham from a terrible fate",
+        "resolution2": "Mỗi điều tra viên nhận được thêm 10 điểm kinh nghiệm, vì họ đã chiến thắng trong trận chiến chống lại một kẻ thù thực sự khủng khiếp."
+      }
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Quá sợ hãi để đối mặt với số phận của mình, Lita chạy trốn vào màn đêm. Bà ta nhận ra rằng bà ta đã thất bại và sự trả thù của Umôrdhoth sẽ theo đuổi bà ta bất cứ nơi nào bà ta đến. Các xúc tua của sinh vật này lan rộng khắp thành phố Arkham, tìm kiếm bà ta. Nó ẩn nấp trong mọi ngóc ngách tối tăm, lồng ghép vào trong các mối nối của thực tại. Nhưng Lita không được tìm thấy ở bất cứ đâu, vì vậy sinh vật này ẩn náu trong bóng tối cho đến ngày nay, không ngừng tìm kiếm… giết chóc.</p><ul><li>Thị trấn Arkham bị nuốt chửng bởi sự trả thù khủng khiếp của Umôrdhoth.</li><li>Mỗi điều tra viên còn sống bị <b>giết chết</b>.</li><li>Các điều tra viên thất bại.</li></ul>"
+    },
+    "resolution1": {
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Bạn đã thành công trong việc ngăn giáo phái triệu tập chủ nhân của nó. Mặc dù bạn không chắc điều gì sẽ xảy ra nếu giáo phái thành công, bạn yên tâm rằng — ít nhất là vào lúc này — thị trấn Arkham vẫn an toàn. Bạn bắt giữ được nhiều tín đồ nhất có thể, nhưng rất ít người dân thị trấn tin vào câu chuyện của bạn. Có lẽ sau tất cả, mọi thứ chỉ ở trong đầu của bạn.</p><ul><li>In your Campaign Log, record that *the ritual to summon Umôrdhoth was broken*.</li><li>Mỗi điều tra viên phải chịu 2 sang chấn tinh thần, vì họ không bao giờ có thể hồi phục hoàn toàn sau trải nghiệm kinh hoàng này.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Các điều tra viên thành công!</li></ul>"
+    },
+    "resolution2": {
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Bằng sức mạnh của bàn tay và ý chí, bằng cách nào đó bạn đã tổn thương Umôrdhoth đến mức đủ để gửi nó về lại chiều không gian mà nó xuất hiện. Hơi ấm và ánh sáng trở lại với khu rừng khi khối không gian hút chính nó vào lại và biến mất trong tích tắc. Bạn không chắc liệu sinh vật này có thể bị giết chết hay không, nhưng tạm thời thì có vẻ như nó đã rút lui. Khi chủ nhân của chúng biến mất, những con ngạ quỷ gần đó leo xuống cái hố phía dưới, chạy trốn cùng với những tiếng gào thét kinh khủng và chói tai. Bạn đã ngăn chặn được một âm mưu xấu xa, nhưng trận chiến cũng gây tổn hại cho cơ thể và tâm trí của bạn. Tệ hơn nữa, bạn không thể không cảm thấy sự nhỏ bé của bản thân khi đối mặt với những bí ẩn của thế giới. Còn những nỗi kinh hoàng nào khác tồn tại ở trong các góc sâu tăm tối của thực tại?</p><ul><li>In your Campaign Log, record that *the investigators repelled Umôrdhoth.*</li><li>Each investigator suffers 2 physical trauma and 2 mental trauma, as the fight against Umôrdhoth has taken its toll on their body and mind.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Các điều tra viên thành công!</li></ul>"
+    },
+    "resolution3": {
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Đối mặt với nỗi kinh hoàng này, bạn không tin mình có thể làm gì để ngăn chặn nó. Bạn chỉ có một hy vọng duy nhất để sống sót. Bạn quay sang Lita và ném bà ta vào thứ kỳ quái kinh khủng kia, khiếp sợ nhìn cái khoảng không gian vặn vẹo nuốt mất bà ta. Bà ta hét lên trong nỗi thống khổ khi sự sống bị hút hết khỏi cơ thể của bản thân. Những tín đồ niệm “Umôrdhoth… Umôrdhoth…”. Lita Chantler biến mất không một dấu vết. Trong một khoảnh khắc, bạn lo sợ rằng sinh vật kia sẽ quay sang bạn, nhưng bạn nghe thấy một trong các tín đồ nói, “Umôrdhoth là một vị thần công chính chỉ xử lý những kẻ có tội và đáng chết. Đi đi và ngươi sẽ được tha thứ.\" Khối không gian vặn vẹo biến mất, hơi ấm và ánh sáng trở lại khu rừng. Các tín đồ bỏ đi, để lại cho bạn mạng sống của mình. Những khoảnh khắc cuối cùng của Lita sẽ mãi mãi khắc sâu vào trong trí nhớ của bạn.</p><ul><li>các điều tra viên đã hy sinh Lita Chantler cho Umôrdhoth.</li><li>Each investigator suffers 2 physical trauma and 2 mental trauma, as the mere sight of Umôrdhoth has taken its toll on their body and mind.</li><li>Cảm giác tội lỗi về việc hy sinh Lita mãi mãi ám ảnh trí nhớ của bạn. Mỗi điều tra viên phải tìm trong bộ sưu tập một lá bài điểm yếu [[Madness]] ngẫu nhiên và thêm nó vào bộ bài của mình.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Các điều tra viên đã sống sót, nhưng hành động của họ đè nặng lên lương tâm của bản thân.</li></ul>"
+    }
   }
 }

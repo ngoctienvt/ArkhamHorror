@@ -1,27 +1,86 @@
 {
   "heading": "Màn I-B",
+  "remembered": {
+    "hadADrink": "{name} had a drink",
+    "cheated": "{name} cheated"
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-2. You may spend 2 resources to treat this token as a 0, instead.",
+      "cultist": "-3. If you succeed, gain 3 resources.",
+      "tablet": "-2. Nếu bạn thất bại, discard 3 resources."
+    },
+    "hardExpert": {
+      "skull": "-3. You may spend 3 resources to treat this token as a 0, instead.",
+      "cultist": "-3. Nếu bạn thất bại, discard 3 resources.",
+      "tablet": "-2. Discard 3 resources."
+    }
+  },
   "intro": {
     "title": "Màn I-B: Nhà Cái Luôn Thắng",
     "body": "<p>Tiến sĩ Armitage gợi ý bạn tìm cộng sự của ông, tiến sĩ Francis Morgan. Ông ấy không chắc liệu tiến sĩ Morgan có đang gặp rắc rối hay không, nhưng ông ấy không hài lòng cho lắm với cách sống hiện tại của đồng nghiệp mình. Ông ấy đang ở trong Clover Club, một tổ chức đánh bạc khét tiếng nằm đâu đó ở trung tâm thành phố. Việc tìm kiếm vị trí chính xác của câu lạc bộ này không hề dễ dàng — bạn phải tốn kha khá tiền đút lót chỉ để biết nhà hàng nào trong số các nhà hàng ở trung tâm thành phố (Downtown) hoạt động như bình phong của câu lạc bộ. Nhà hàng đó là La Bella Luna, một quán ăn Ý khá cao cấp nằm cạnh nhà hát. Bạn thay một bộ đồ sang trọng và tiến đến đó.</p><p>Phía trước nhà hàng La Bella Luna là một người đàn ông mặc bộ đồ có họa tiết kẻ sọc, anh ta đang đánh giá bạn khi bạn đến gần. “Tận hưởng đi,” anh ta nói với nụ cười nhếch mép như một con rắn trong khi mở cửa trước của nhà hàng.</p>"
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The House Always Wins*, *Bad Luck*, *Naomi’s Crew*, *Rats*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-house-always-wins.png' /><img src='{setImgPath}/bad-luck.png' /><img src='{setImgPath}/naomis-crew.png' /><img src='{setImgPath}/rats.png' /></section>",
+    "setAsideEncounterSets": "Set the *Hideous Abominations* and *Striking Fear* encounter sets aside, out of play. These sets are indicated by the following icons:<section class='encounter-sets'><img src='{setImgPath}/hideous-abominations.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
     "placeLocations": "Đặt các lá bài vị trí Clover Club Lounge, Clover Club Bar, Clover Club Cardroom, và La Bella Luna vào bàn chơi. Mỗi điều tra viên bắt đầu màn chơi tại nhà hàng La Bella Luna.",
     "placeCloverClubPitBoss": "Đặt lá bài Clover Club Pit Boss vào màn chơi tại vị trí Clover Club Lounge.",
     "setAside": "Đặt những lá bài sau đây sang một bên, ngoài bàn chơi: Darkened Hall, Peter Clover, Dr. Francis Morgan, và các bản sao của Back Hall Doorway.",
-    "note": "<p class='basic'>_Chú ý:_ Khi bắt đầu màn chơi này, agenda 1a cấp cho mỗi kẻ địch [[Criminal]] từ khóa Aloof (xa lánh) giúp ngăn chặn những kẻ địch đó tự động đeo bám bạn. Tại một số thời điểm, những kẻ địch đó có thể mất từ khóa Aloof. Hãy nhớ rằng những kẻ địch không còn từ khóa Aloof sẽ tự động đeo bám các điều tra viên có mặt tại vị trí của nó, như bình thường.</p>"
+    "note": "<p class='basic'>_Chú ý:_ Khi bắt đầu màn chơi này, agenda 1a cấp cho mỗi kẻ địch [[Criminal]] từ khóa Aloof (xa lánh) giúp ngăn chặn những kẻ địch đó tự động đeo bám bạn. Tại một số thời điểm, những kẻ địch đó có thể mất từ khóa Aloof. Hãy nhớ rằng những kẻ địch không còn từ khóa Aloof sẽ tự động đeo bám các điều tra viên có mặt tại vị trí của nó, như bình thường.</p>",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to The House Always Wins* and *Erratic Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-house-always-wins.png' /><img src='{setImgPath}/erratic-fear.png' /></section>*Erratic Fear* replaces *Striking Fear*. Remove the replaced set from the game.",
+      "placeLocations": "Put the Clover Club Bar, Clover Club Cardroom, and La Bella Luna locations into play. Then choose one of the two Clover Club Lounge locations at random, put it into play, and remove the other version of Clover Club Lounge from the game. Each investigator begins play in La Bella Luna.",
+      "setAside": "Also set the Clover Club Stage aside, out of play."
+    }
   },
   "resolutions": {
+    "xp": {
+      "resolution1": "Reflects on the night’s events.",
+      "resolution4": "Reflects on the night’s events."
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "Mỗi điều tra viên đã Resign (từ bỏ) trước Act 3 hoặc bị hạ gục"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p>_Resolution 1_: Bạn chạy trối chết đến cuối khu nhà gần đó và dừng lại để nghỉ mệt. Trước khi kịp hồi phục lại hơi thở, mặt đất rung chuyển mạnh kèm theo 1 tiếng đổ vỡ lớn. Người dân xung quanh chạy từ nhà và các cửa hàng ra để xem chuyện gì đang xảy ra, một đám đông bu lại trên con đường. Bạn chen vào phía trước đám đông và kinh hoàng khi nhìn thấy tòa nhà bạn vừa thoát ra giờ đã thành đống đổ nát. Không có dấu hiệu của tiến sĩ Morgan ở bất cứ đâu.</p><ul><li>băng đảng O'Bannion có chuyện muốn nói với các điều tra viên.</li><li>In your Campaign Log, record that *Dr. Francis Morgan was kidnapped.*</li><li>Thêm 1 token [elder_thing] vào túi hỗn mang cho các màn còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>If this is the first scenario of the campaign, proceed to Scenario I–A: Extracurricular Activity. Otherwise, proceed to Interlude I: Armitage’s Fate.</li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>_Resolution 2_: \"Chuyện gì đang xảy ra …?\" Tiến sĩ Morgan cuối cùng cũng thoát khỏi tình trạng ngơ ngác khi bạn tìm đường đến được nơi an toàn. Bạn hỏi ông ấy có nhớ gì không, ông ta lắp bắp và lắc đầu. Ông giải thích với dáng vẻ kiệt quệ, “Tôi không rõ ràng lắm”. “Tôi đang có những giờ phút huy hoàng của đời mình! Có lẽ tôi cũng đã uống quá nhiều rượu nữa. Nhưng, những sinh vật đó — tôi chưa từng thấy bất cứ thứ gì như vậy kể từ khi… ”Ông ấy nói nhỏ tiếng lại, và bạn biết rằng tâm trí ông ấy đang quay cuồng. Đôi mắt ông ấy chợt sáng lên khi nhận ra điều gì đó và khuôn mặt trở nên tái xanh. “Tôi đang không ở trong trạng thái tốt nhất, nhưng tôi sẽ giúp các bạn điều tra. Cho dù là điều gì chăng nữa.\"</p><ul><li>băng đảng O'Bannion có chuyện muốn nói với các điều tra viên.</li><li>Trong Nhật ký Chiến dịch, ghi lại rằng <i>các điều tra viên đã giải cứu được tiến sĩ Francis Morgan</i>. Một điều tra viên bất kỳ có thể chọn thêm tiến sĩ Francis Morgan vào bộ bài của mình. Lá bài này không tính vào giới hạn bộ bài của điều tra viên đó.</li><li>Thêm 1 token [elder_thing] vào túi hỗn mang cho các màn còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Proceed to Scenario I–A: Extracurricular Activity.</li></ul></div>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<div class='resolution'><p>_Resolution 3_: Mặc dù bạn không thể tìm thấy tiến sĩ Morgan trong câu lạc bộ, người đàn ông bạn đã giải cứu rất biết ơn sự giúp đỡ của bạn. Anh ta tự giới thiệu mình là Peter Clover, chủ sở hữu của nơi bạn vừa thoát khỏi. Bất chấp hoàn cảnh hiện tại, anh ta vẫn giữ một dáng vẻ chuyên nghiệp. Khi bạn đi về phía con đường, một chiếc Chrysler B-70 láng bóng lăn đến trước bạn, và một người phụ nữ tuyệt đẹp với mái tóc nâu dài cùng đôi mắt híp bước ra. Cô ấy được bao quanh bởi những người đàn ông trông nguy hiểm, những người đang bỏ tay vào túi áo khi trông thấy bạn. \"Peter,\" cô ấy nói với một tiếng thở phào nhẹ nhõm, \"Thật may mắn, anh không sao. Tôi nghe nói anh gặp rắc rối?\" Cô ấy quay lại và nhìn chằm chằm vào bạn với đôi mắt chết người. \"Họ là ai?\"</p><p>Clover phủi bụi áo vest của mình, không một chút lo lắng. Anh ta hắng giọng, \"Naomi, em yêu, đây là những người bạn của anh. Họ…\" . Anh ta giải thích sau khi ngừng lại một chút, \"Họ đã hộ tống anh ra khỏi câu lạc bộ,\" \"Anh rất biết ơn họ\" Người phụ nữ khoanh tay và dành một chút thời gian để đánh giá bạn trước khi cho bạn một nụ cười nhếch mép.</p><p>\"Thật là tốt. Tôi phải cảm ơn bạn vì đã chăm sóc cho Peter. Giờ thì hãy rời khỏi đây; chúng tôi sẽ lo liệu mọi việc từ giờ\". Cô ấy gật đầu với những tên bặm trợn bên cạnh cô ấy và họ đi ngang qua bạn về phía lối vào phía sau của câu lạc bộ, rút súng từ bên dưới áo khoác ra. Bạn không chắc lắm về 'lo liệu mọi việc' có nghĩa là gì, nhưng bạn khá chắc là bạn không muốn ở đây khi tiếng súng nổ ra. Bạn cảm ơn Naomi và Peter, và rời đi.</p><ul><li>In your Campaign Log, record that *Naomi has the investigators’ backs*.</li><li>In your Campaign Log, record that *Dr. Francis Morgan was kidnapped*.</li><li>Thêm 1 token [elder_thing] vào túi hỗn mang cho các màn còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Proceed to Interlude I: Armitage’s Fate.</li></ul></div>"
     },
     "resolution4": {
-      "title": "Kết thúc thứ 4"
+      "title": "Kết thúc thứ 4",
+      "body": "<div class='resolution'>_Resolution 4_: You are pulled from the debris by several firefighters, one of whom exclaims, “We’ve got a live one!” A few of them patch you up, and the cops ask you what happened. You’re certain they wouldn’t believe your story about horrible monstrosities demolishing the building from within. Unsure of what to say, you give a vague statement about not remembering much. “We’re bringing you to St. Mary’s,” one of the nurses says, pointing to a nearby ambulance. Knowing now how dire the situation is, you slip away while she is distracted by something else in the rubble…</p><ul><li>băng đảng O'Bannion có chuyện muốn nói với các điều tra viên.</li><Li>In your Campaign Log, record that *Dr. Francis Morgan was kidnapped*.</li><li>Thêm 1 token [elder_thing] vào túi hỗn mang cho các màn còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận 1 sang chấn thể chất.</li><li>các điều tra viên bất tỉnh trong vài giờ.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>If this is the first scenario of the campaign, proceed to Scenario I–A: Extracurricular Activity. Otherwise, proceed to Interlude I: Armitage’s Fate.</li></ul></div>"
+    }
+  },
+  "label": {
+    "skull": {
+      "spend": "Spend 1 resource to treat this token as a 0, instead. | Spend {count} resources to treat this token as a 0, instead.",
+      "doNotSpend": "Do not spend resources"
+    },
+    "cheated": "Remember that you have \"cheated.\"",
+    "raiseTheStakes": {
+      "place": "Put Raise the Stakes into play in your threat area"
+    }
+  },
+  "tooltips": {
+    "laBellaLuna": {
+      "resign": "This was a bust"
+    },
+    "backAlley": {
+      "resign": "We can get out this way!"
+    }
+  },
+  "returnToCloverClubLounge": {
+    "label": {
+      "putIntoPlay": "Put it into play",
+      "doNotPutIntoPlay": "Do not put it into play"
     }
   }
 }

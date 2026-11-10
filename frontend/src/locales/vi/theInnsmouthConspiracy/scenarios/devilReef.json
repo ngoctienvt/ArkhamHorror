@@ -1,52 +1,94 @@
 {
   "heading": "Màn IV",
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Devil Reef*, *Agents of Hydra*, *Creatures of the Deep*, *Flooded Caverns*, *Malfunction*, and *Rising Tide*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/devil-reef.png' /><img src='{setImgPath}/agents-of-hydra.png' /><img src='{setImgPath}/undersea-creatures.png' /><img src='{setImgPath}/flooded-caves.png' /><img src='{setImgPath}/malfunction.png' /><img src='{setImgPath}/rising-tide.png' /></section>",
     "placeKeys": "Đặt từng chìa khóa sang một bên, như sau:",
     "faceupKeys": "Đặt các chìa khoá màu tím, trắng và đen sang một bên, ngửa lên.",
     "facedownKeys": "Đặt các chìa khoá màu vàng, xanh lá cây, đỏ và xanh biển sang một bên, úp xuống. Xáo trộn chúng để bạn không biết cái nào là cái nào.",
     "churningWaters": "Đặt vị trí Churning Waters vào chơi. *(Nó bắt đầu với việc bị ngập hoàn toàn.)*",
     "fishingVessel": "Đặt lá bài câu chuyện Fishing Vessel vào chơi tại Churning Waters.",
+    "startInVessel": "Mỗi điều tra viên bắt đầu chơi tại Fishing Vessel <i>(xem phần Phương Tiện Di Chuyển bên dưới)</i>.",
     "setAsideRelics": "Đặt các lá bài tài sản câu chuyện sau một bên, ngoài khu vực chơi: Awakened Mantle, Headdress of Y'ha-nthlei, và Waveworn Idol.",
     "devilReefLocations": "Xào 5 vị trí Devil Reef và đặt chúng vào chơi, mặt chưa để lộ ngửa lên.",
     "notAdjacent": "Không đặt chúng *liền kề* với Churning Waters — các vị trí này được kết nối không phải thông qua sự liền kề mà thông qua các ký hiệu kết nối của chúng.",
     "unfathomableDepths": "Chuẩn bị Unfathomable Depths (Độ sâu không thể đo lường) bằng cách thực hiện các bước sau:",
     "removeThree": "Trước tiên, hãy loại bỏ1 trong số các địa điểm sau khỏi trò chơi mà không nhìn vào chúng: Cyclopean Ruins, Deep One Grotto, va2 Temple of the Union. Mỗi địa điểm này đều là mặt để lộ của một vị trí Unfathomable Depths.",
     "setAsideThree": "Đặt 3 vị trí Unfathomable Depths còn lại sang một bên, ngoài khu vực chơi.",
+    "tidalTunnelsDeck": "Shuffle the 8 Tidal Tunnel locations to form the Tidal Tunnels deck.",
+    "unrevealedSide": "Mỗi lá bài trong chồng bài Tidal Tunnel phải có mặt không để lộ ngửa lên để chỉ hiển thị mặt \"Tidal Tunnel\".",
     "placeNearEncounterDeck": "Đặt chồng bài này gần chồng bài encounter.",
     "checkCampaignLog": "Kiểm tra phần \"Ký ức đã được khôi phục\" trong Nhật ký Chiến dịch. Tùy thuộc vào các trường hợp sau đây, một phiên bản khác của agenda 1 sẽ được sử dụng trong màn chơi này. Loại bỏ các phiên bản khác của agenda 1 khỏi màn chơi.",
-    "floodTokens": "Thêm token lũ lụt vào kho chứa token.",
-    "unrevealedSide": "Mỗi lá bài trong chồng bài Tidal Tunnel phải có mặt không để lộ ngửa lên để chỉ hiển thị mặt \"Tidal Tunnel\"."
+    "secretsOfTheSeaV1": "Nếu <i>trận chiến với một con quỷ đáng sợ</i> được liệt kê trong phần Ký ức đã được khôi phục.",
+    "secretsOfTheSeaV2": "Nếu không thì, sử dụng Agenda 1a—Secrets of the Sea (v.II).",
+    "floodTokens": "Thêm token lũ lụt vào kho chứa token."
+  },
+  "specialRules": [
+    {
+      "title": "Phương tiện di chuyển",
+      "body": "<p class='basic'>Một tài sản có từ khoá vehicle đại diện cho phương tiện di chuyển mà người chơi có thể đi vào hoặc rời khỏi. Một tài sản có từ khoá này được gọi là một phương tiện di chuyển, và tuân theo các luật sau:</p><ul><li>While an investigator’s mini-card is placed overlapping a vehicle, that investigator is in that vehicle. While an investigator’s mini-card is placed overlapping their location, that investigator is instead not in a vehicle (even if they are at the same location as a vehicle).<ul><li>As a {'{'}action{'}'} ability, an investigator may enter or leave a vehicle at their location. Move that investigator’s mini-card onto the vehicle or off of the vehicle and onto their location to indicate their new position. Each investigator may perform this ability only once each round.</li><li>Một điều tra viên đang ở trên phương riện di chuyển cũng có mặt tại vị trí của phương tiện di chuyển đó.</li><li>Khi điều tra viên ở trên phương tiện di chuyển, điều tra viên đó không thể di chuyển độc lập với phương tiện đó.</li></ul></li><li>Các phương tiện thường có một hoặc nhiều khả năng cho phép chúng di chuyển đến một địa điểm được kết nối. Khi một phương tiện di chuyển đi từ địa điểm này đến địa điểm khác, tất cả các điều tra viên trên nó cũng di chuyển theo.</li><li>Các phương tiện di chuyển không làm thay đổi chuyển động của kẻ địch hoặc sự đeo bám của kẻ địch dưới bất kỳ hình thức nào trừ khi có ghi chú khác.</li></ul>"
+    },
+    {
+      "title": "Chìa khóa",
+      "body": "<div class='red bordered'><p class='basic'>During this scenario, keys represent the following:</p><ul><li>Đỏ/ Xanh biển/ Xanh lá/ Vàng: Các thiết bị khác nhau được sử dụng để xâm nhập vào nơi sâu hơn của Rạn San Hô Quỷ.</li><li>Màu tím: Một tượng thần kỳ lạ.</li><li>Màu đen: Một vương miện huyền bí.</li><li>Màu trắng: Một chiếc áo choàng tà ác.</li></ul></div>"
+    }
+  ],
+  "deepOnePredator": {
+    "label": {
+      "moveKey": "Move {key} key to Deep One Predator",
+      "moveClue": "Move one of your clues to Deep One Predator"
+    }
+  },
+  "deepOneHatchling": {
+    "label": {
+      "attacksYou": "Deep One Hatchling attacks you"
+    }
   },
   "intro1": {
     "title": "Màn IV: Rạn San Hô Quỷ",
     "body": "<center>THỨ SÁU, NGÀY 2 THÁNG 9 NĂM 1927</center> <center> BA TUẦN TRƯỚC ĐÓ</center> Tiếng động cơ tàu ầm ầm làm bạn giật mình thoát khỏi dòng suy nghĩ. \"Mọi người ngoài đó ổn chứ?\" thuyền trưởng gầm gừ. \"Trông cứ như cậu vừa nhìn thấy ma vậy. Mặt mày tái nhợt như tờ giấy.\" Bạn quay lại và đối mặt với ông già tóc hoa râm. Ông Moore là thuyền trưởng duy nhất bạn có thể tìm thấy ở thị trấn Innsmouth, người không bị ảnh hưởng bởi bất kỳ lời nguyền hay sự méo mò nào đã bao trùm hầu hết thị trấn. Tuy nhiên, dáng vẻ đầy nhân tính của ông ấy không làm giảm đi những chiếc răng gãy, cái hàm vênh hoặc vết sẹo lớn rách trên má phải. Tuy nhiên, ông ấy là một nhân vật đáng hoan nghênh nếu xét đến chặng đường còn lại của cuộc điều tra của bạn đã diễn ra như thế nào. \"Không thể tin được là cậu lại muốn đến Rạn San Hô Quỷ đáng nguyền rủa đó,\" ông ấy kêu lên, lắc đầu. \"Chỉ kẻ ngốc mới làm thế.\" Bạn chỉ ra rằng người thủy thủ đã rất vui lòng cung cấp chuyến đi khi bạn cho anh ta xem khoản tiền được trả, khiến anh ta cười khúc khích. \"Cậu thắng rồi,\" ông ấy thừa nhận. \"Bây giờ hãy sẵn sàng. Chúng ta sẽ khởi hành trong 10 phút.\" Ông ấy loạng choạng từ boong chính xuống cầu để lập biểu đồ trong khi bạn chuẩn bị cho cuộc hành trình phía trước."
   },
   "intro2": {
-    "title": "Màn IV: Rạn San Hô Quỷ"
+    "title": "Màn IV: Rạn San Hô Quỷ",
+    "body": "<p>Đặc vụ Dawson cuối cùng cũng lên tàu. Ông ta mặc một chiếc áo khoác dày và đeo một khẩu súng ngắn trên vai. “Đặc vụ Harper có một kho vũ khí phụ,” ông ấy giải thích. \"Tôi nghe đồn thế, không chắc lắm.\"</p><p>Bạn biết những tin đồn mà Dawson đề cập đến: Rạn San Hô Quỷ được cho là bị ma ám, hoặc có lẽ bị nhiễm một loại sinh vật biển quỷ quái nào đó. Các thủy thủ của thị trấn Innsmouth kể về những bóng người bò vào và ra khỏi hang động dọc theo nhiều hòn đảo của rạn san hô, về những chiếc vây biến dạng kỳ lạ nổi trên bề mặt biển, và về cả những chiếc thuyền đâm vào những tảng đá lởm chởm và biến mất dưới làn sóng.</p><p>\"Tất cả các điều tra của chúng tôi đều dẫn đến nơi này. Bất kể chuyện gì đang xảy ra ở thị trấn này, Dòng Dagon bí truyền và 'Rạn San Hô Quỷ' này là trung tâm của mọi sự. Đặc vụ Harper nghi ngờ những tin đồn này được lan truyền bởi Dòng để xua đuổi các thủy thủ khỏi từ rạn san hô. Nếu điều đó là sự thật thì chắc chắn Dòng đang che giấu điều gì đó.”</p><p>Bạn hỏi Harper đâu, Dawson liếc nhìn bạn một cách khó hiểu. \"Cô ấy có nhiệm vụ của mình. Chúng ta có nhiệm vụ của chúng ta.\" Bạn nhắc Dawson rằng bạn đã hoàn thành nhiệm vụ được thuê để thực hiện, điều này khiến vị cựu binh nhếch mép cười. \"Đúng. Vậy mà cậu lại ở đây.\"</p><p>Ông ấy nói đúng. Lẽ ra bạn có thể rời đi ngay sau khi Harper được cứu, nhưng bạn vẫn ở lại để hỗ trợ họ điều tra. Có lẽ vì ý thức trách nhiệm, hoặc có lẽ vì hiếu kỳ. Dù thế nào đi nữa, giờ bạn đã ở đây và không thể quay lại được nữa.</p>"
   },
   "intro3": {
-    "title": "Màn IV: Rạn San Hô Quỷ"
+    "title": "Màn IV: Rạn San Hô Quỷ",
+    "body": "<p>Đặc vụ Dawson cuối cùng cũng lên tàu. Những chiếc túi nặng trĩu treo dưới đôi mắt mệt mỏi của anh. “Tất cả manh mối của chúng ta đều nguội lạnh,” ông ấy nói với vẻ từ bỏ. “Dù đặc vụ Harper đang ở đâu thì cô ấy cũng nằm ngoài tầm với của chúng ta.”</p><p>Bạn cố gắng an ủi Dawson bằng cách nhắc nhở ông ấy lý do bạn chọn điều tra Rạn San Hô Quỷ. Những tin đồn nói rằng nó bị ma ám, hoặc có lẽ bị nhiễm một loại sinh vật biển quỷ quái nào đó. ác thủy thủ của thị trấn Innsmouth kể về những bóng người bò vào và ra khỏi hang động dọc theo nhiều hòn đảo của rạn san hô, về những chiếc vây biến dạng kỳ lạ nổi trên bề mặt biển, và về cả những chiếc thuyền đâm vào những tảng đá lởm chởm và biến mất dưới làn sóng.</p><p>“You’re right,” Dawson admits with a sigh. “Whatever happened to Agent Harper, it has something to do with the Esoteric Order of Dagon. That book that was slipped under your hotel room door is evidence enough of that. And if my hypothesis is right, the ones who have been spreading these rumors about Devil Reef are none other than the Order themselves. If that’s true, there must be something they’re hiding.”</p><p>Bạn gật đầu và bắt đầu chuẩn bị cho nhiệm vụ. Đặc vụ Dawson nhìn bạn tò mò suốt thời gian qua. \"Sao cậu lại ở lại?\" cuối cùng ông ấy hỏi. “Cậu lẽ ra đã có thể rời khỏi thị trấn Innsmouth sau khi chúng ta không giải cứu được đặc vụ Harper, nhưng cậu lại chọn ở lại. Vì sao?”</p><p>Truth be told, you aren’t sure. Perhaps it was a sense of duty. Perhaps it was curiosity. You shrug and tell him that it doesn’t matter. You’re here now, and there’s no going back. Your admission earns you a smile from the hardened vet.</p><p>\"Được rồi. Hãy đi tìm thứ họ đang che giấu,\" ông ấy nói.</p>"
   },
   "flashback9": {
-    "title": "Hồi tưởng IX"
+    "title": "Hồi tưởng IX",
+    "body": "<div class='blue'><h1>Flashback IX</h1><p>Khi bạn lội qua hang động ngập nước, chân bạn va vào một vật gì đó cứng và bằng kim loại. Nước quá tối và đục để bạn có thể nhìn thấy những gì nằm bên dưới bề mặt. Nín thở, bạn lặn xuống nước và mò mẫm xung quanh tìm vật thể. Cuối cùng, bàn tay của bạn quấn quanh một vật gì đó mịn và nặng. Bạn kéo nó lên trên bề mặt và đẩy nó lên một tảng đá nhô ra.</p><p>Đó là một bức tượng mô tả một thực thể nào đó—hoặc có lẽ là một vị thần—mặc dù nó không giống bất kỳ nhân vật tôn giáo nào mà bạn từng thấy. Cảnh tượng những đường gân có gai kỳ lạ và con mắt duy nhất bằng pha lê trong suốt của nó khiến bạn sởn gai ốc. Chưa hết, nó còn kêu gọi bạn, như tiếng sóng biển vỗ vào bờ trong một ngày sương mù u ám…</p><hr /><p class='basic'>In your Campaign Log, under “Memories Recovered,” record *discovery of a strange idol.*</p><p class='basic'>Take control of both the purple key and the set-aside <span data-image-id='07179'>Waveworn Idol</span> story asset. Place the purple key on the <span data-image-id='07179'>Waveworn Idol</span>. *(It is still under that investigator’s control.)* For the remainder of the game, whoever takes control of the purple key takes control of the <span data-image-id='07179'>Waveworn Idol</span>, as well. If the purple key is placed on another card, place the <span data-image-id='07179'>Waveworn Idol</span> near that card, uncontrolled. If the purple key leaves play, remove the <span data-image-id='07179'>Waveworn Idol</span> from the game.</p></div>"
   },
   "flashback10": {
-    "title": "Hồi tưởng X"
+    "title": "Hồi tưởng X",
+    "body": "<div class='blue'><h1>Flashback X</h1><p>Bạn bơi qua một loạt các sảnh rộng lớn dưới đáy biển cho đến khi cuối cùng bạn đến được một vòng tròn gồm các cột trụ. Bên trong công trình ngập nước này có một bàn thờ được phủ một tấm vải hoa văn. Nó được thêu bằng những sợi vàng lộng lẫy và được khảm bằng đá quý lục bảo. Mặc dù được ngâm trong nước nhưng tấm vải vẫn được bảo quản hoàn hảo. Tự hỏi một vật thể như vậy đang làm gì sâu trong hang động dưới nước này, bạn quyết định mang nó theo.</p><p>Khoảnh khắc bạn ngoi lên từ vực sâu và đặt chân lên tảng đá khô, bạn ngạc nhiên nhận ra rằng tấm vải đã khô hoàn toàn. Lật nó trên tay, bạn tìm thấy một chiếc khuy vàng và nhận ra nó không chỉ đơn giản là một tấm vải không có hình dáng mà còn là một chiếc áo choàng—thậm chí có lẽ là một phần của một bộ trang phục đầy đủ. Khi bạn khoác lên mình chiếc áo choàng kỳ lạ, những viên đá quý của nó tỏa ra sức mạnh bí ẩn.</p><hr /><p class='basic'>In your Campaign Log, under “Memories Recovered,” record *discovery of an unholy mantle.*</p><p class='basic'>Take control of both the white key and the set-aside <span data-image-id='07180'>Awakened Mantle</span> story asset. Place the white key on the <span data-image-id='07180'>Awakened Mantle</span>. *(It is still under that investigator’s control.)* For the remainder of the game, whoever takes control of the white key takes control of the <span data-image-id='07180'>Awakened Mantle</span>, as well. If the white key is placed on another card, place the <span data-image-id='07180'>Awakened Mantle</span> near that card, uncontrolled. If the white key leaves play, remove the <span data-image-id='07180'>Awakened Mantle</span> from the game.</p></div>"
   },
   "flashback11": {
-    "title": "Hồi tưởng XI"
+    "title": "Hồi tưởng XI",
+    "body": "<div class='blue'><h1>Flashback XI</h1><p>You reach an outcropping of rock overlooking a ceremony of sorts. Horrifying fish-like creatures prostrate themselves in front of two enormous statues: one of onyx, another of white marble. At the precipice of this ridge sits a golden crown sporting a shell-like pattern and three distinct horns. Whatever this artifact is, it is clearly important to these creatures. Summoning your courage, you snatch the artifact and escape while you still can. The relic thrums with power in your hands as you flee.</p><hr /><p class='basic'>In your Campaign Log, under “Memories Recovered,” record *discovery of a mystical relic.*</p><p class='basic'>Take control of both the black key and the set-aside <span data-image-id='07181'>Headdress of Y’ha-nthlei</span> story asset. Place the black key on the <span data-image-id='07181'>Headdress of Y’ha-nthlei</span>. *(It is still under that investigator’s control.)* For the remainder of the game, whoever takes control of the black key takes control of the <span data-image-id='07181'>Headdress of Y’ha-nthlei</span>, as well. If the black key is placed on another card, place the <span data-image-id='07181'>Headdress of Y’ha-nthlei</span> near that card, uncontrolled. If the black key leaves play, remove the <span data-image-id='07181'>Headdress of Y’ha-nthlei</span> from the game.</p></div>"
   },
   "resolutions": {
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Khi ánh sáng ban ngày mờ dần và thủy triều dâng cao nuốt chửng nhiều hòn đảo khác nhau ngoài khơi Innsmouth, bạn quyết định quay trở lại bến cảng với những phát hiện của mình. \"Cậu đã tìm thấy thứ cậu muốn tìm chưa?\" Ông Moore hỏi khi bạn đã đến bờ biển an toàn.</p><p>Thành thật mà nói, bạn không hoàn toàn chắc chắn. Những gì bạn tìm thấy thật đáng kinh ngạc. Các vịnh nhỏ và hang động thủy triều của Rạn San Hô Quỷ không chỉ là nơi sinh sống của Dòng Dagon bí truyền mà còn là nơi sinh sống của vô số sinh vật kỳ lạ: con vật lai giữa cá, người và quái vật. Bạn có thể đã giữ được mạng sống của mình, nhưng nỗi kinh hoàng bạn nhìn thấy trong những hang động đó sẽ ở lại với bạn mãi mãi. Những chiếc răng lởm chởm sắc nhọn—những bàn thờ vấy máu—những lời cầu nguyện tà ác—dấu hiệu của một thảm họa sắp xảy ra—nó vẫn ám ảnh bạn ngay cả sau khi bạn trốn thoát.</p><p>Nhưng liệu thị trấn Innsmouth có thực sự an toàn? Liệu sẽ còn nơi nào thực sự an toàn?</p>"
     }
   },
-  "specialRules": [
-    {
-      "title": "Phương tiện di chuyển"
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the number of keys the investigators control.",
+      "cultist": "-2. If you fail and this is an attack or evasion attempt against a _Deep One_ enemy, it engages you. (If it is already engaged with you, it disengages first, then re-engages you.)",
+      "tablet": "-3. If you fail and you are not in a vehicle, chịu 1 damage.",
+      "elderThing": "-4. If you fail and your location has a key on it, chịu 1 horror."
     },
-    {
-      "title": "Chìa khóa"
+    "hardExpert": {
+      "skull": "-X. X is 1 more than the number of keys the investigators control.",
+      "cultist": "-3. If this is an attack or evasion attempt against a _Deep One_ enemy, it engages you. (If it is already engaged with you, it disengages first, then re-engages you.)",
+      "tablet": "-4. If you are not in a vehicle, chịu 1 damage.",
+      "elderThing": "-5. If your location has a key on it, chịu 1 horror."
     }
-  ]
+  },
+  "label": {
+    "shuffleThomasDawsonInto": "Choose an investigator to shuffle Thomas Dawson into",
+    "addThomasDawsonToHand": "Choose an investigator to add Thomas Dawson into their hand"
+  }
 }

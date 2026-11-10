@@ -1,9 +1,24 @@
 {
   "intro": {
+    "title": "Court of the Ancients",
+    "checkCampaignLog": "Check your Campaign Log.",
+    "headedWest": "If the expedition headed west, proceed to _Court of the Ancients 1_.",
+    "headedEast": "If the expedition headed east, skip to _Court of the Ancients 2_.",
+    "courtOfTheAncients1": "Thời gian dường như trôi tuột đi khi bạn đi theo những đường hầm tối tăm ra khỏi trung tâm thành phố. Cuối cùng, tiếng máy móc ầm ĩ và rung động liên tục tan biến, thay vào đó là một sự im lặng đáng ngại. Andy vừa mới đề nghị bạn quay lại để tìm một tuyến đường khác thì những bậc thang bất tận cũng chấm dứt. Một cánh cửa được chạm khắc tinh xảo nằm trên trần nhà phía trên bạn. Nhấn vào một bảng điều khiển ở giữa cửa sẽ mở ra một cấu trúc rộng lớn, thoáng đãng, lờ mờ giống như gian chính của một giáo đường ngoài hành tinh cổ đại. Một thang máy cao chót vót thống trị trung tâm, được bao quanh bởi các tầng hình vòng xoắn ốc. Các bức tường được bao phủ bởi vô số ký tự ngoài hành tinh, tỏa ra ánh sáng xanh lục nhấp nháy. Bạn tự hỏi liệu kho lưu trữ vĩ đại này có chứa thứ gì giá trị không.",
+    "courtOfTheAncients2": "Bạn đáp xuống tầng trên cùng của gian chính cao chót vót. Những cầu thang xoắn ốc và lối đi hẹp bao quanh cấu trúc rộng lớn, hé lộ thêm nhiều tầng bên dưới. Các bức tường xung quanh bạn được bao phủ bởi những ký tự ngoài hành tinh phát sáng: hàng trăm nghìn biểu tượng bao phủ mọi bề mặt. Bạn tự hỏi liệu kho lưu trữ vĩ đại này có chứa thứ gì giá trị không.",
+    "courtOfTheAncients2Ruby": "“Cẩn thận đấy. Chúng ta không phải là những người đầu tiên ở đây,” Ruby nói. Kẻ trộm đá quý đang cúi xuống một thi thể người nằm sấp trong vũng máu tươi. Bạn bị ấn tượng bởi chiếc áo choàng chắp vá đầy màu sắc của cái xác. Một tiếng gầm trầm đục, vang rền dội lại khắp căn phòng. Nét mặt của Ruby trở nên nghiêm trọng.",
+    "courtOfTheAncients2Conclusion": "“Nếu muốn tìm thấy bất cứ thứ gì có giá trị, chúng ta tốt nhất nên hành động nhanh chóng.”",
+    "resolvePlumbTheDepths": "If any investigator has the Plumb the Depths Task, they resolve their respective story to the right.",
     "proceedToSetup": "Tiếp tục đến _Setup_",
     "plumbTheDepths": {
       "title": "Nhiệm vụ: Plumb the Depths",
-      "choose": "Bạn phải quyết định (chọn một):"
+      "instructions": "_Read only if you have the “Plumb the Depths” Task:_",
+      "body": "You can’t help but marvel at the austere grandeur of the ancient structure. Was this an ancient palace? A library? A place of worship? The intricate murals on the walls are a blend of pictograph and alien writing, depicting an ancient migration across the stars. The glyphs glow with a flickering green light, chronicling unknowable histories, ancient secrets hidden from humankind.",
+      "memories": "One image—a nightmarescape of oceanic horrors and sunken cities—catches your attention. You press the eye of a particularly disturbing creature and feel a rush of ancient memories. Thoughts and feelings of an alien being, images of the stygian depths of some distant planet, overwhelm your consciousness. The memories give way to clearer, more defined facts, dates, a history recorded by a prehistoric civilization.",
+      "reflection": "You begin to feel yourself slip away, as though your consciousness were being drawn through a sieve. There is much more you could learn…but should you?",
+      "choose": "Bạn phải quyết định (chọn một):",
+      "lookAway": "Xóa 1 tiến trình dưới mục “Plumb the Depths” trong Nhật ký Chiến dịch của bạn. Mỗi điều tra viên bắt đầu kịch bản tiếp theo với 1 clue <i>(từ token pool)</i>.",
+      "seekTheTruth": "Đánh dấu 2 tiến trình dưới mục “Plumb the Depths” trong Nhật ký Chiến dịch của bạn và chịu 1 mental trauma. Mỗi điều tra viên bắt đầu kịch bản tiếp theo với ít hơn 1 lá bài trong tay bài khởi đầu."
     },
     "label": {
       "plumbTheDepths": {
@@ -14,19 +29,31 @@
   },
   "setup": {
     "title": "Chuẩn bị màn chơi",
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: _Court of the Ancients_, _Domination_, _Dreams_, _Elder Mist_, _The Inescapable_, _R’lyeh_, and _Star Spawn_. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/court-of-the-ancients.png' /><img src='{setImgPath}/domination.png' /><img src='{setImgPath}/dreams.png' /><img src='{setImgPath}/elder-mist.png' /><img src='{setImgPath}/the-inescapable.png' /><img src='{setImgPath}/rlyeh.png' /><img src='{setImgPath}/star-spawn.png' /></section>",
     "placeFixedLocations": "Đặt các địa điểm Twisting Catwalks, West Antechamber, East Antechamber, và Ancient Altar vào chơi theo sơ đồ sắp xếp địa điểm.",
     "placeCrumblingArchives": "Xào các bản sao của Crumbling Archives và loại bỏ ngẫu nhiên một trong số chúng khỏi trò chơi. Đặt mỗi bản sao còn lại của Crumbling Archives vào chơi như được hiển thị trong sơ đồ sắp xếp địa điểm.",
+    "checkCampaignLogWest": "Check your Campaign Log. If _the expedition headed west_:",
+    "westGreatLift": "Đặt địa điểm Great Lift vào khu vực chơi ở tầng 1, mặt <i>(Inactive)</i> ngửa lên. (Xem <b>The Great Lift and Sliding Locations</b> bên dưới).",
+    "westGatherStowaways": "Gather all cards from the _Stowaways_ encounter set. This set is indicated by the following icon:<section class='encounter-sets'><img src='{setImgPath}/stowaways.png' /></section>",
+    "westBuildActAgendaDeck": "Tạo chồng bài act và agenda sử dụng agenda 1a-\"Ruined Archives,\" agenda 2a-\"Unstable Foundations,\" act 1a-\"Steps of Giants,\" và act 2a—\"Escape the Tower (v. 1).\" Loại bỏ mỗi act và agenda khác khỏi trò chơi.",
     "westStarSpawn": "Tìm kẻ địch Star Spawn Observer trong tập bài encounter *Star Spawn* và đặt nó sang một bên, ngoài cuộc chơi. Loại bỏ ngẫu nhiên hai lá bài khác trong tập bài encounter *Star Spawn* khỏi trò chơi.",
     "westBeginAtEastAntechamber": "Mỗi điều tra viên bắt đầu cuộc chơi tại East Antechamber.",
+    "checkCampaignLogEast": "Check your Campaign Log. If _the expedition headed east_:",
+    "eastGreatLift": "Đặt địa điểm Great Lift vào khu vực chơi ở tầng 4, mặt <i>(Inactive)</i> ngửa lên. (Xem <b>The Great Lift and Sliding Locations</b> bên dưới).",
+    "eastGatherPilgrims": "Gather all cards from the _Pilgrims_ encounter set. This set is indicated by the following icon:<section class='encounter-sets'><img src='{setImgPath}/pilgrims.png' /></section>",
     "eastBuildActAgendaDeck": "Tạo chồng bài act và agenda sử dụng agenda 1a-\"Flooded Archives,\" agenda 2a-\"Unstable Foundations,\" act 1a—\"Steps of Giants,\" và act 2a—\"Escape the Tower (v. II).\" Loại bỏ mỗi act và agenda khác khỏi trò chơi.",
     "eastAddFloodTokens": "Thêm token lũ lụt vào kho chứa token.",
     "eastFloodLevelsOneAndTwo": "Tăng flood level của mỗi địa điểm ở tầng 1 và 2.",
     "eastFullyFloodLevelOne": "Tăng flood level của mỗi địa điểm ở tầng 1 sao cho chúng bị fully flooded.",
     "eastStarSpawn": "Tìm kẻ địch Star Spawn Observer trong tập bài encounter *Star Spawn* và đặt nó sang một bên, ngoài cuộc chơi. Loại bỏ mỗi lá bài khác trong tập bài encounter *Star Spawn* khỏi trò chơi.",
+    "eastBeginAtTwistingCatwalks": "Each investigator begins play at Twisting Catwalks.",
     "setCardsAside": "Đặt story asset Shard of Y'ch'lecht và kẻ địch Colossal Tyrant sang một bên, ngoài cuộc chơi.",
-    "readyToBegin": "Bây giờ bạn đã sẵn sàng để bắt đầu.",
-    "westBuildActAgendaDeck": "Tạo chồng bài act và agenda sử dụng agenda 1a-\"Ruined Archives,\" agenda 2a-\"Unstable Foundations,\" act 1a-\"Steps of Giants,\" và act 2a—\"Escape the Tower (v. 1).\" Loại bỏ mỗi act và agenda khác khỏi trò chơi.",
-    "buildEncounterDeck": "Xào các lá bài encounter còn lại để xây dựng chồng bài encounter."
+    "checkCampaignLogInescapable": "Check your Campaign Log.",
+    "creatureWasDefeated": "Loại bỏ tập bài encounter <i>The Inescapable</i> khỏi trò chơi.",
+    "otherwise": "Otherwise, set The Inescapable enemy aside, out of play.",
+    "chooseExpeditionAsset": "Theo thứ tự người chơi, mỗi người chơi có thể chọn 1 asset [[Artifact]] đã giành được hoặc 1 asset [[Item]] từ tập bài encounter <i>Expedition</i> để bắt đầu in play dưới quyền kiểm soát của họ.",
+    "buildEncounterDeck": "Xào các lá bài encounter còn lại để xây dựng chồng bài encounter.",
+    "readyToBegin": "Bây giờ bạn đã sẵn sàng để bắt đầu."
   },
   "rules": {
     "greatLift": {
@@ -34,12 +61,53 @@
       "body": "<p class='basic'>Trong scenario này, các điều tra viên sẽ cần sử dụng Great Lift để khám phá các tầng khác của tòa tháp.</p><ul><li>Các địa điểm không kết nối với nhau ngoại trừ thông qua Great Lift, các biểu tượng kết nối của chúng, hoặc một số hiệu ứng bài nhất định.</li><li>Great Lift chỉ kết nối với các địa điểm ở bên trái và bên phải của nó, và ngược lại.</li><li>Khi được hướng dẫn trượt Great Lift lên hoặc xuống, hãy di chuyển Great Lift đến tầng phía trên hoặc phía dưới tầng hiện tại của nó.<ul><li>Great Lift không thể di chuyển lên trên tầng 4 hoặc xuống dưới tầng 1.</li></ul></li><li>Khi Great Lift di chuyển, mỗi lá bài và token tại địa điểm đó sẽ di chuyển cùng với nó.</li></ul>"
     }
   },
+  "label": {
+    "chooseExpeditionAssetQuestion": "Choose an earned Artifact asset, or an Item asset from the Expedition encounter set, to begin in play under your control.",
+    "noExpeditionAsset": "Do not take an Artifact or Expedition asset.",
+    "additionalActions": "Additional actions to spend",
+    "greatLift": {
+      "slideUp": "Slide Great Lift up",
+      "slideDown": "Slide Great Lift down",
+      "slideUpAdditional": "Spend 1 clue per investigator to slide Great Lift up",
+      "slideDownAdditional": "Spend 1 clue per investigator to slide Great Lift down",
+      "doNotSlide": "Do not slide Great Lift"
+    }
+  },
+  "cosmicOmen": {
+    "label": {
+      "shuffleGlyphIntoEncounterDeck": "Shuffle one Glyph card in play into the encounter deck",
+      "takeHorrorAndDiscard": "Take 1 direct horror and discard 1 card at random from your hand"
+    }
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "[skull]: -X. X là số lượng lá bài [[Glyph]] trong victory display.\r\n[cultist]: -2 (thành -4 nếu có một kẻ địch [[Stowaway]] tại vị trí của bạn).\r\n[tablet]: -2. Nếu vị trí của bạn bị flooded, lật một token khác.\r\n[elder_thing]: -4. Nếu token này được lật trong một nỗ lực tấn công hoặc né tránh, nhận 1 damage hoặc 1 horror.",
+      "cultist": "[skull]: -X. X là số lượng lá bài [[Glyph]] trong victory display.\r\n[cultist]: -2 (thành -4 nếu có một kẻ địch [[Stowaway]] tại vị trí của bạn).\r\n[tablet]: -2. Nếu vị trí của bạn bị flooded, lật một token khác.\r\n[elder_thing]: -4. Nếu token này được lật trong một nỗ lực tấn công hoặc né tránh, nhận 1 damage hoặc 1 horror.",
+      "tablet": "[skull]: -X. X là số lượng lá bài [[Glyph]] trong victory display.\r\n[cultist]: -2 (thành -4 nếu có một kẻ địch [[Stowaway]] tại vị trí của bạn).\r\n[tablet]: -2. Nếu vị trí của bạn bị flooded, lật một token khác.\r\n[elder_thing]: -4. Nếu token này được lật trong một nỗ lực tấn công hoặc né tránh, nhận 1 damage hoặc 1 horror.",
+      "elderThing": "[skull]: -X. X là số lượng lá bài [[Glyph]] trong victory display.\r\n[cultist]: -2 (thành -4 nếu có một kẻ địch [[Stowaway]] tại vị trí của bạn).\r\n[tablet]: -2. Nếu vị trí của bạn bị flooded, lật một token khác.\r\n[elder_thing]: -4. Nếu token này được lật trong một nỗ lực tấn công hoặc né tránh, nhận 1 damage hoặc 1 horror."
+    },
+    "hardExpert": {
+      "skull": "[skull]: -X. X nhiều hơn 1 so với số lượng lá bài [[Glyph]] trong victory display.\r\n[cultist]: -3 (thành -5 nếu có một kẻ địch [[Stowaway]] tại vị trí của bạn).\r\n[tablet]: -3. Nếu vị trí của bạn bị flooded, lật một token khác.\r\n[elder_thing]: -5. Nếu token này được lật trong một nỗ lực tấn công hoặc né tránh, nhận 1 damage và 1 horror.",
+      "cultist": "[skull]: -X. X nhiều hơn 1 so với số lượng lá bài [[Glyph]] trong victory display.\r\n[cultist]: -3 (thành -5 nếu có một kẻ địch [[Stowaway]] tại vị trí của bạn).\r\n[tablet]: -3. Nếu vị trí của bạn bị flooded, lật một token khác.\r\n[elder_thing]: -5. Nếu token này được lật trong một nỗ lực tấn công hoặc né tránh, nhận 1 damage và 1 horror.",
+      "tablet": "[skull]: -X. X nhiều hơn 1 so với số lượng lá bài [[Glyph]] trong victory display.\r\n[cultist]: -3 (thành -5 nếu có một kẻ địch [[Stowaway]] tại vị trí của bạn).\r\n[tablet]: -3. Nếu vị trí của bạn bị flooded, lật một token khác.\r\n[elder_thing]: -5. Nếu token này được lật trong một nỗ lực tấn công hoặc né tránh, nhận 1 damage và 1 horror.",
+      "elderThing": "[skull]: -X. X nhiều hơn 1 so với số lượng lá bài [[Glyph]] trong victory display.\r\n[cultist]: -3 (thành -5 nếu có một kẻ địch [[Stowaway]] tại vị trí của bạn).\r\n[tablet]: -3. Nếu vị trí của bạn bị flooded, lật một token khác.\r\n[elder_thing]: -5. Nếu token này được lật trong một nỗ lực tấn công hoặc né tránh, nhận 1 damage và 1 horror."
+    }
+  },
   "resolutions": {
+    "xp": {
+      "bonus": "for plumbing the court of the ancients"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Chuẩn bị tinh thần cho một đoạn leo khác, bạn đặt tay này lên tay kia, di chuyển từ chỗ bám này sang chỗ bám khác trong khi tòa tháp chực chờ sụp đổ dưới chân bạn. Cuối cùng, bạn kéo mình lên mép của mái vòm vỡ nát và thoát ra ngoài an toàn. Andy leo ra khỏi khoảng sân cổ xưa, theo sau là những người còn lại của đoàn thám hiểm. Tất cả các bạn nhìn xuống đường chân trời rực rỡ của R’lyeh, thứ dường như đang chuyển động và lắc lư một cách kỳ lạ trong những cơn gió biển mạnh mẽ.</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn.<ul><li>Cross out “Court of the Ancients” on the R’lyeh map.</li><li>Đánh dấu vào ô bên cạnh \"Shard of Y'ch'lecht\" dưới mục \"Artifacts Earned.\"</li></ul></li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Proceed to _Obsidian Canyons_.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Sau khi mày mò và xoay vặn từng gờ của bệ đá, cuối cùng nó cũng trượt mở ra. Bên dưới là một cầu thang xoắn ốc dẫn xuống bóng tối sâu thẳm. Một tảng đá khác vỡ vụn trên sàn của tòa nhà cổ xưa. “Chúng ta phải ra khỏi đây!” Ruby hét lên. Không lãng phí thời gian, bạn đi xuống cầu thang, bỏ lại tòa tháp đang sụp đổ cùng những bí mật cổ xưa của nó ở phía sau.</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn.<ul><li>Cross out “Court of the Ancients” on the R’lyeh map.</li><li>Đánh dấu vào ô bên cạnh \"Shard of Y'ch'lecht\" dưới mục \"Artifacts Earned.\"</li></ul></li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Proceed to _The Grand Vault_.</li></ul>"
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Những người còn lại trong đoàn thám hiểm kể lại rằng họ tìm thấy bạn đang đứng ở rìa vách đá cao chót vót như thể đang mộng du. Bạn dụi mắt. Bạn không có chút ký ức nào về khoảng sân kỳ dị đó. Và, xét đến việc nó gần như đã sụp đổ hoàn toàn, bạn sẽ không bao giờ nhớ lại được.</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn.<ul><li>Cross out “Court of the Ancients” on the R’lyeh map.</li><li>Đánh dấu vào ô bên cạnh \"Shard of Y'ch'lecht\" dưới mục \"Artifacts Earned.\"</li></ul></li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Check your Campaign Log.<ul><li>If the expedition headed west, proceed to _Obsidian Canyons_.</li><li>If the expedition headed east, proceed to _The Grand Vault_.</li></ul></li></ul>"
     }
   }
 }

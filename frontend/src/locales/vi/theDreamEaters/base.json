@@ -4,49 +4,72 @@
       "title": "Thế Giới Thực Chỉ Là Một Thực Tại",
       "body": "<blockquote>“Trong giấc ngủ chập chờn, anh ta đi xuống bảy mươi bậc thang đến hang lửa và nói về thiết kế này với các linh mục có râu Nasht và Kaman-Thah. Và các linh mục lắc đầu và thề rằng đó sẽ là cái chết của linh hồn anh ta.” – H. P. Lovecraft, Nhiệm vụ trong mơ của Kadath Vô Danh</p>"
     },
+    "prologue": {
+      "title": "Lời mở đầu",
+      "body": "<p class='cursive'><fancy>Thứ Sáu, ngày 13 tháng 2 năm 1925</fancy></p><p>Có điều gì đó kỳ lạ đang xảy ra ở thị trấn Arkham, Massachusetts.</p><p>Thông thường, điều này sẽ không gây ngạc nhiên cho cư dân của thị trấn buồn tẻ ở New England này. Thật vậy, Arkham luôn nổi tiếng với những sự kiện kỳ ​​lạ mà một số người sẽ nói là hiện tượng siêu nhiên. Tuy nhiên, bản chất của sự kiện cụ thể lần này không phải là thông thường.</p><p>Tất cả bắt đầu trong số mới nhất của <i>Tales from Nevermore</i>. Một nhà văn tên là Virgil Gray đã mô tả một cuộc hành trình mà anh ta đã thực hiện trong những giấc mơ của mình - một cuộc hành trình mà anh ta tuyên bố không phải là tác phẩm do anh ta hư cấu ra. Anh ấy đã viết về một cầu thang xoắn ốc dài, một cột lửa có tri giác nóng không tưởng, một cái cây đến từ mặt trăng và một con mèo biết nói đầy tính tò mò… cùng những thứ khác khó tin không kém. Nhưng đó không phải là truyện ngắn phi thường này lần đầu tiên thu hút sự chú ý của bạn. Ngay sau khi truyện ngắn của Virgil được xuất bản, <i>Tales from Nevermore</i> bắt đầu nhận và xuất bản hết lá thư này đến lá thư khác từ những người đã đọc truyện ngắn của Virgil và tuyên bố rằng họ đã trải qua giấc mơ giống như vậy. Chẳng bao lâu sau, Arkham Advertiser đã lan truyền câu chuyện và tin tức về hiện tượng kỳ lạ này đã đến tai các chuyên gia.</p><p>Virgil Gray đã bị thuyết phục để trải qua trị liệu tại bệnh viện tâm thần của địa phương, và nhiều người khác cũng có chứng rối loạn tâm thần của nhà văn cũng đã cam kết chữa trị. Giả thuyết phổ biến trong giới học thuật là giấc mơ của Virgil chân thực đến mức ông không thể tách rời thực tế khỏi hư cấu, và các bài viết của ông đã lan truyền ảo tưởng của mình cho người khác giống như một dạng cuồng loạn được chia sẻ. Bạn vẫn không bị thuyết phục. Rốt cuộc, có nhiều điều chưa biết về việc nằm mơ. Các chuyên gia y tế có những lý thuyết cực kỳ khác nhau về trạng thái não bộ của một người trong khi ngủ. Gần đây, các chuyên gia như Sigmund Freud đã đề xuất rằng giấc mơ là biểu hiện của những ham muốn, nỗi sợ hãi hoặc ám ảnh trong tiềm thức của một người. Về phần mình, các thầy bói từ lâu đã tin rằng những giấc mơ có thể được xem xét và giải nghĩa để nói lên quá khứ hoặc tương lai của người mơ. Nhưng nếu những lý thuyết này là đúng, thì làm thế nào mà nhiều bên—tất cả những người thuộc các tầng lớp xã hội rất khác nhau—có thể chia sẻ những trải nghiệm giống nhau trong giấc mơ của họ? Sẽ thế nào nếu hiểu biết thời hiện đại của chúng ta về giấc ngủ hoàn toàn sai? Điều gì sẽ xảy ra nếu thực sự có một nơi mà ý thức của chúng ta du hành đến khi chúng ta ngủ—một vùng đất của những giấc mơ tồn tại bên ngoài thế giới thực của chúng ta?</p><p>Bạn và những người bạn đồng hành của mình đã tập hợp lại với nhau để tìm hiểu tận cùng của hiện tượng kỳ lạ này. Nếu những người khác trong thị trấn có thể du hành đến một thế giới khác trong giấc mơ của họ, thì có lẽ bạn cũng có thể. Bạn đã tái tạo lại hoàn cảnh cuộc hành trình của Virgil một cách hoàn hảo. Nếu mọi việc suôn sẻ, một nửa nhóm bạn sẽ thực hiện chuyến đi đến “vùng đất giấc mơ” này và quay trở lại. Nhóm còn lại sẽ ở trong thế giới thực, nghiên cứu các mô thức giấc ngủ của những người bạn đồng hành của bạn để đảm bảo không có gì xấu xảy ra…</p>"
+    },
+    "campaignStructure": {
+      "title": "Lời mở đầu",
+      "body": "<p class='basic'>This cycle consists of two separate four-part campaigns—A and B.</p><p class='basic'>Campaign A is called *The Dream-Quest* and consists of scenarios 1–A, 2–A, 3–A, and 4–A. This campaign tells the story of those investigators who journey into the world of dreams.</p><p class='basic'>Campaign B is called *The Web of Dreams* and consists of scenarios 1–B, 2–B, 3–B, and 4–B. This campaign tells the story of those investigators who stay behind in the waking world.</p><p class='basic'>The scenarios in this cycle can be played in one of three ways: as one of the above four-part campaigns (either A or B), or as an interconnected eight-part campaign (both A and B) in which a single group of 1–4 players takes control of two separate groups of investigators and alternates between them.</p><ul><li>Nếu bạn đang chơi The Dream-Quest như một chiến dịch gồm 4 phần:<ul><li>Proceed to _Campaign A Setup_. After each scenario, proceed to the next numbered A scenario, as instructed by the scenario’s resolution. Do not play the four B scenarios. This campaign is a self-contained experience.</li></ul></li><li>Nếu bạn đang chơi The Web of Dreams dưới dạng chiến dịch gồm bốn phần:<ul><li>Proceed to _Campaign B Setup_. After each scenario, proceed to the next numbered B scenario, as instructed by the scenario’s resolution. Do not play the four A scenarios. This campaign is a self-contained experience.</li></ul></li><li>If you are playing The Dream-Eaters as an eight-part campaign:<ul><li>Each player should build a different investigator deck for each campaign, choosing one of their investigators to be part of Campaign A and one to be part of Campaign B. (*For added chaos, the players may also choose randomly.*)</li><li>Lưu ý rằng mỗi chiến dịch có túi hỗn mang riêng, như được mô tả trong hướng dẫn thiết lập của từng chiến dịch. Tuy nhiên, không cần phải xây dựng đồng thời cả hai túi hỗn mang. Sử dụng phần “Túi hỗn mang” trong mỗi Nhật ký Chiến dịch để ghi lại nội dung hiện tại của mỗi túi hỗn mang để bạn có thể chuyển đổi giữa chúng một cách dễ dàng.</li><li>From there, you can proceed to either _Scenario 1–A: Beyond the Gates of Sleep_, or _Scenario 1–B: Waking Nightmare_ (your choice). After each scenario, follow the resolution’s instructions to determine when to alternate between the two groups. Decisions made by one group may sometimes affect the other group.</li></ul></li></ul>"
+    },
     "theBlackCat": {
-      "title": "Chuyển tiếp I: Con Mèo Đen"
+      "title": "Chuyển tiếp I: Con Mèo Đen",
+      "body": "<ul><li>Nếu bạn chơi cả <i>The Web of Dreams</i> và <i>The Dream-Quest</i> như một chiến dịch gồm tám phần được kết nối với nhau.</li><li>If you are playing The Web of Dreams (Campaign B) by itself: Skip to _The Black Cat 3_.</li></ul>"
     },
     "theBlackCat1": {
-      "title": "Chuyển tiếp I: Con Mèo Đen"
+      "title": "Chuyển tiếp I: Con Mèo Đen",
+      "body": "<p>_The Black Cat 1:_ As you travel out of the Enchanted Woods, you pass through rolling green meadows under a bright-blue, cloudless sky. You speak with the blond-haired man—who introduces himself as Randolph Carter— for several hours along your journey south. You pass through a town Randolph calls Nir and over a stone bridge spanning a wide river. Since the man seems friendly and knowledgeable about both your world and this one, you explain to him your situation: that you had followed the writings of a man named Virgil Gray to reach this strange land, in order to see for yourself the truth of his story. “There is a place in Ulthar where you may yet meet this man for yourself,” Randolph responds. “When we reach Ulthar, I will show you.”</p><p>The town of Ulthar is not quite what you had imagined. The border of the town is marked by a cobblestone road separating its quaint cottages from the rolling green meadows beyond. Inside the town, narrow cobbled streets are filled almost to capacity with cats of all kinds and colors, which part as you approach. Old peaked roofs and overhanging upper stories arch over the hilly streets; the entire village seems a haphazard cluster of homes and old-fashioned businesses. As you reach the town square near the center of the village, Randolph stops and addresses you with a youthful smile. “Welcome to Ulthar,” he proclaims. “As I mentioned before, you are quite safe here. There is but one paramount law to keep in mind as you traverse this place: in the town of Ulthar, no one may kill a cat.” Given how utterly packed the streets are with cats, you wonder aloud if this is indeed a town run by cats. “Not quite,” Randolph replies, pondering your words, “though I suppose one might call it the center of cat society here in the Dreamlands. The reason for that law’s existence is a story for another time. First, come—I have a feeling we’ll find this ‘Virgil’ fellow you speak of at Einar’s.”</p><p>Randolph leads you through the town square, which is surrounded by buildings adorned with cat motifs in the form of statues, signs, and even stained-glass windows. You eventually arrive at one such building bearing a sign that reads “Einar’s Place.” Inside is a medieval-style tavern filled with long wooden tables. You spot several patrons and three times as many cats. One such patron at the wooden counter feeds one of the cats small strips of dried meat. He is a handsome man in his early thirties, with short dark hair, a strong jaw, and sharp cheekbones. You recognize him instantly as the writer Virgil Gray. In the back of your mind, you wonder if this chance meeting is merely an act of fortune or something preordained, for good or for ill.</p><p>Regardless, you approach the man and introduce yourself, along with Randolph. Virgil shakes your hand and Randolph’s with a joyful smile. “Well met, fellow dreamers!” the writer says, a hint of boyish excitement in his voice. “It is wonderful to meet more fellow believers. I had become so sick and tired of reading about my supposed ‘illness’ in the papers.”</p><p>You nod your head in agreement and inform Virgil that you intend to find some proof of this discovery to bring back to the waking world. “Don’t you think I tried that?” he replies, stymied. “Sadly, it is impossible for one who is asleep to bring anything from this realm into the real world. This is all imagination, you see. Ideas, concepts, fantasies. You cannot hold a thought in your hands, can you?”</p><p>Randolph interjects. “There is a place within the Dreamlands that may hold the proof you seek. I have seen it in my dreams. I visited there three times, each time just a fleeting moment before I was snatched away by the rising sun...but try as I might, I cannot find the way again. I have spent many nights searching.”</p><p>“Oh?” Virgil asks, intrigued. “And what is this place?”</p><p>“It is a marvelous city,” he describes, his eyes aglow with wonder, “golden and lovely like nothing I have seen before or since. A city beyond the peaks of the unknown mountain Kadath, where no one has ever set foot before. There, veiled within the clouds and crowned by stars, lies the onyx castle of the Great Ones.”</p><p>Virgil idly pets the cat on the countertop next to him as he is absorbed by Randolph’s tale. It is a slender creature with lustrous black fur, dark as the void of space itself. “Then we must find this place! Even if it does not have the proof we seek, it sounds like the adventure of a lifetime. Enough to fill a hundred pages, or more!”</p><p>You tell Virgil and Randolph that before you commit to such an adventure, you must return to the waking world and tell your companions about your experiences. Just then, another voice, cryptic and quiet, chimes: “Oh, you can’t wake up. The eye is upon you now.”</p><p>You and the others spin your heads around, searching for the source of the voice. The barkeeper? Another patron? Then Virgil’s black cat stretches and sits up, its piercing yellow eyes reflecting the light of the sun through the window outside. “I have waited a long time for you to seek Kadath,” it says.</p><p>“You can talk?” Virgil says, nearly toppling over his stool as he jumps in surprise.</p><p>“I’m a cat, you dolt. Of course I can talk,” the black cat replies, licking its paw out of boredom. “You have met a thousand cats from Ulthar, and now you are surprised?”</p><p>“But...I thought...” Virgil wipes his brow with his palm.</p><p>“Never mind him,” the black cat says, addressing you directly. “I assure you, you cannot cross back into the waking world until you find Kadath. It is your only way out. In the meantime, I will return and tell your companions about the quest ahead of you.” It hops off of the countertop and walks confidently toward the exit. “Though I imagine their task will be even more arduous...”</p><ul><li>If you are playing both The Dream-Quest and The Web of Dreams as interconnected campaigns: Proceed to _The Black Cat 2_.</li><li>Con mèo bí ẩn biến mất khỏi cửa trước khi bạn có cơ hội trả lời.</li></ul>"
     },
     "theBlackCat2": {
-      "title": "Chuyển tiếp I: Con Mèo Đen"
+      "title": "Chuyển tiếp I: Con Mèo Đen",
+      "body": "<p>\"Tôi nên nói gì với bạn bè của cậu trong thế giới thực?\"</p><ul><li>Điều tra viên chính phải quyết định (chọn một):<ul><li>Tell your companions of your quest, your plight, and your peril. The black cat will return to you once this message is delivered. This may put an undue burden on your companions. In the Campaign Log for The Dream-Quest (Campaign A), record *the black cat delivered news of your plight*.</li><li><i>Nói với những người bạn đồng hành của bạn về những người bạn mới của bạn và về Vùng đất giấc mơ.</i></li><li><i>Nói với bạn bè của bạn rằng họ đang gặp nguy hiểm, và bạn thì an toàn.</i></li><li>Bạn đe dọa con mèo đen, cảnh báo nó không được tiếp cận bạn bè của bạn trong bất kỳ trường hợp nào. Con mèo đen ngáp và biến mất khỏi cửa.</li></ul></li><li>Proceed to _The Black Cat 3_.</li></ul>"
     },
     "theBlackCat3": {
-      "title": "Chuyển tiếp I: Con Mèo Đen"
+      "title": "Chuyển tiếp I: Con Mèo Đen",
+      "body": "<p>“…Cậu hẳn là bạn của họ,” giọng nói bí ẩn vang lên từ phía trên. Trước sự ngạc nhiên của bạn, giọng nói nhỏ nhẹ đó không phải của một người, mà là của một con mèo đen đang nằm dài lười biếng trên cành cây treo trên lối đi bên ngoài bệnh viện. “Ồ, nhấc hàm của cậu lên khỏi mặt đất và lắng nghe đây.” Con mèo đứng dậy và nhảy lên đỉnh của một hàng rào gần đó, đi dọc hàng rào với vẻ duyên dáng mà chỉ loài mèo mới có.</p><p>“Đó là một trong những con mèo của Vùng đất giấc mơ của Trái đất,” Randolph tuyên bố, giọng anh nhuốm màu vui vẻ, giống như lần đầu tiên anh gặp lại một người bạn cũ sau nhiều năm. “Đã bao lâu rồi tôi chưa nói chuyện với một người trong số các bạn!”</p><p>Đôi mắt màu vàng xuyên thấu của con mèo lườm Randolph một lúc trước khi nó quay lại nhìn bạn. \"…Chắc chắn rồi. Sao cũng được, tôi mang một thông điệp từ những người bạn đang nằm mơ của cậu.”</p><p class='basic'>Check the Campaign Log for The Dream-Quest (Campaign A). Choose and read the section below that applies to your situation.</p>"
     },
     "youAreOnYourOwn": {
-      "title": "Chuyển tiếp I: Con Mèo Đen"
+      "title": "Chuyển tiếp I: Con Mèo Đen",
+      "body": "<p class='basic'>Nếu bạn đang chơi riêng phần <i>The Web of Dreams</i> (Chiến dịch B), và không có Nhật ký Chiến dịch cho phần <i>The Dream-Quest</i>:</p><p>“Bạn bè của cậu không phải là những người duy nhất gặp rắc rối,” con mèo đen giải thích. “Có một âm mưu to lớn đang diễn ra ở đây, và bạn bè của cậu thì…ừm, cứ cho là họ đang bận rộn một chút với những vấn đề của chính họ vào lúc này. Cậu là người duy nhất có thể phá hủy mạng lưới to lớn này. Hãy quên đi những người bạn đồng hành của cậu và đi sâu vào. Đó là cách duy nhất. Tôi sẽ cố gắng giữ an toàn cho bạn bè của cậu trong khi cậu hoàn thành nhiệm vụ của mình. Bạn hiểu không?\"</p><p class='basic'>In your Campaign Log, record *you are on your own*.</p>"
     },
     "theBlackCatSharedKnowledgeOfTheDreamlands": {
-      "title": "Chuyển tiếp I: Con Mèo Đen"
+      "title": "Chuyển tiếp I: Con Mèo Đen",
+      "body": "<p class='basic'>con mèo đen đã chia sẻ tri thức về Vùng đất giấc mơ.</p><p>Con mèo đen cho bạn biết tất cả về Vùng đất giấc mơ và về nhiệm vụ mà những người bạn của bạn sắp bắt tay vào. “Bạn bè của cậu đang ở một nơi an toàn trong Vùng đất giấc mơ, cùng với một vài người khác. Con vật cưng của tôi, Virgil, là một trong số đó. Đúng vậy, là Virgil đó. Tôi nhìn thấy những cái nhìn trên khuôn mặt của cậu. Họ cũng đang ở cùng với một người nằm mộng khác, một người đàn ông tên là… này, đợi một chút.” Con mèo nhìn Randolph đầy nghi ngờ, rồi ngáp. \"Huh. Cậu biết gì không? Đừng bận tâm. Tôi phải kiểm tra vài thứ.” Cùng với đó, con mèo đột ngột rời đi.</p><p class='basic'>In both Campaign Logs, record *the black cat has a hunch*.</p>"
     },
     "theBlackCatDeliveredNewsOfYourPlight": {
-      "title": "Chuyển tiếp I: Con Mèo Đen"
+      "title": "Chuyển tiếp I: Con Mèo Đen",
+      "body": "<p class='basic'>_*If the black cat delivered news of your plight:*_</p><p>“Vậy nên bạn bè của cậu không trong hoàn cảnh tốt cho lắm. Họ muốn tôi nói với cậu rằng họ đang gặp rất nhiều rắc rối. Họ không thể thức dậy cho đến khi hoàn thành nhiệm vụ này, và nó sẽ không dễ dàng chút nào. Con mắt của sự hỗn loạn đang theo dõi họ. Cậu có nhiệm vụ phải làm, nhưng cậu cũng có thể là niềm hy vọng duy nhất của họ.\" Con mèo đen nhảy xuống khỏi hàng rào và bắt đầu bỏ đi. “Bây giờ, nếu cậu thứ lỗi cho tôi, tốt hơn là tôi nên quay lại với bạn bè của cậu trước khi tất cả họ bị giết.”</p><p class='basic'>Bởi vì không Nhật ký Chiến dịch nào có ghi lại <i>con mèo đen ở bên bạn</i>, trong Nhật ký Chiến dịch của <i>The Dream-Quest</i> (Chiến dịch A), ghi lại <i>con mèo đen ở bên bạn</i>. Thêm 1 token [elder_thing] vào túi hỗn mang cho cả hai chiến dịch.</p>"
     },
     "theBlackCatWarnedTheOthers": {
-      "title": "Chuyển tiếp I: Con Mèo Đen"
+      "title": "Chuyển tiếp I: Con Mèo Đen",
+      "body": "<p class='basic'>_*If the black cat warned the others:*_</p><p>“Bạn bè của cậu bảo tôi nói với bạn rằng họ vẫn ổn. Trên thực tế, họ bảo tôi cảnh báo cậu rằng cậu mới là người gặp nguy hiểm thực sự. Tôi sẽ tin họ nếu tôi là cậu. Có một âm mưu lớn đang diễn ra ở đây và cậu là người duy nhất có thể ngăn chặn nó. Điều tốt nhất bạn có thể làm là tiến lên phía trước, vì lợi ích của cả hai bên. Đừng lo lắng, tôi sẽ ở lại đây một khoảng thời gian. Ai đó phải giữ cho cậu sống.</p><p class='basic'>Bởi vì không Nhật ký Chiến dịch nào có ghi lại <i>con mèo đen ở bên bạn</i>, trong Nhật ký Chiến dịch của <i>The Web of Dreams</i> (Chiến dịch B), ghi lại <i>con mèo đen ở bên bạn</i>. Thêm 1 token [tablet] vào túi hỗn mang cho cả hai chiến dịch.</p>"
     },
     "okayFineHaveItYourWayThen": {
-      "title": "Chuyển tiếp I: Con Mèo Đen"
+      "title": "Chuyển tiếp I: Con Mèo Đen",
+      "body": "<p class='basic'>_*If okay, fine, have it your way then:*_</p><p>“Không, cậu biết gì không? Quên nó đi. Tôi chắc rằng cậu sẽ ổn thôi.\" Con mèo đen đột nhiên bỏ đi mà không nói thêm lời nào.</p><p class='basic'>In both Campaign Logs, record *you asked for it*.</p>"
     },
     "theOneironauts1": {
-      "title": "Chuyển tiếp II: The Oneironauts"
+      "title": "Chuyển tiếp II: The Oneironauts",
+      "body": "<p><i>Theo màn 2–B, các điều tra viên cuối cùng đã đi đến cuối cầu thang bí ẩn…</i></p><p>Con mèo đen đang đợi bạn ở chân cầu thang, nhìn bạn đi xuống đoạn đường dài với đôi mắt xa xăm, không chớp. Bạn đang định hỏi làm thế nào con mèo đến đó thì nó cắt ngang bạn. “Đừng bận tâm. Cậu sẽ không hiểu đâu.” Nó cuộn tròn trên sàn đá lạnh, nằm dài giữa không gian ảm đạm.</p><p class='basic'>Check the Campaign Log for The Web of Dreams (Campaign B). Read the section below that applies to your situation, then proceed to the following text. If neither section applies, skip them.</p>"
     },
     "wheresBlondie": {
+      "body": "<p class='basic'><i>Nếu Randolph không sống sót sau khi hạ xuống</i> và <i>con mèo đen có linh cảm</i> :</p><p>Con mèo đen hỏi, nhìn xung quanh, “Cô gái tóc vàng đâu?” Bạn im lặng, đau khổ. \"Ah. Tôi hiểu rồi.\" Con mèo kiểm tra bàn chân của nó. Nó dường như không quan tâm đến việc người bạn đồng hành của bạn không sống sót sau khi hạ xuống. Nó tự nói với bản thân một cách khó hiểu, “Chà, điều đó dường như đã tự giải quyết ổn thỏa.”.</p><p class='basic'>Trong cả hai Nhật ký Chiến dịch, gạch bỏ <i>con mèo đen có linh cảm</i> .</p>",
       "title": "Chuyển tiếp II: The Oneironauts"
     },
     "youAskedForIt": {
+      "body": "<p class='basic'>_*If you asked for it:*_</p><p>“Chà, vì bạn rõ ràng không cần sự giúp đỡ của tôi, tôi sẽ đi ngay bây giờ. Chỉ muốn kiểm tra xem bạn có còn sống hay không. Và rõ ràng là còn. Cho tới lúc này. Vậy thì tạm biệt.” Trước khi bạn có cơ hội trả lời, con mèo đen đã đi mất, bộ lông đen tuyền của nó hòa lẫn vào bóng tối của Underworld.</p><p class='basic'>Bỏ qua phần còn lại của phần chuyển tiếp này.</p><p class='basic right'>Proceed to either _Scenario 3–A: Dark Side of the Moon_ or _Scenario 3–B: Point of No Return_.</p>",
       "title": "Chuyển tiếp II: The Oneironauts"
     },
     "youDidNotAskForIt": {
+      "body": "<p>Bạn đã quá chán với những sự thật nửa vời khó hiểu và không đem lại câu trả lời của con mèo này. Bạn chỉ trích nó. Làm thế nào bạn có thể giúp đỡ được khi bạn cũng có thể đang lần mò trong bóng tối? Con mèo đen ngồi dậy và nheo mắt lại. “Tôi không biết liệu cậu có thể tin cậy được hay không. Thành thật mà nói, tôi vẫn không chắc chắn. Tôi đã dự đoán được về những sự kiện này trong nhiều năm qua. Tôi biết một số điều có thể xảy ra, nhưng không phải tất cả. Cậu có thể là người sẽ cứu tất cả chúng tôi… hoặc là những kẻ ngu ngốc báo trước sự diệt vong của chúng tôi.” Lời biện minh của con mèo nghe có vẻ dễ chấp nhận, và nó cũng giải thích được làm thế nào nó luôn biết tìm bạn ở đâu. Bạn cố gắng thuyết phục con mèo tin tưởng bạn, nhưng nó vẫn không tin. “Nói cho cậu điều này. Bên dưới bề mặt của Biển Dầu Đen (Sea of Pitch) là một lối đi giữa các cõi giới. Đó là nơi cậu cần đến để ngăn thế giới này hợp nhất với thế giới của cậu. Hãy đi tới đó trong an toàn, và tôi sẽ nói với cậu tất cả mọi thứ. Nhưng trước tiên, tôi có một nơi khác phải đi. Bạn bè của cậu cũng cần tôi.\"</p><ul><li>Check Campaign Log. *If the black cat has a hunch*, it wanders off before you can reply, its pitch-black fur melding into the darkness of the Underworld.</li><li>Con mèo đen một lần nữa đề nghị chuyển một tin nhắn cho những người bạn đồng hành của bạn. Điều tra viên chính phải quyết định (chọn một):<ul><li>Tell your companions that you are in trouble. The black cat will return to you with aid once this message is delivered. This may put an undue burden on your companions. In the Campaign Log for The Web of Dreams (Campaign B), record *the black cat requested aid from the others*.</li><li>Con mèo đen đã chia sẻ tri thức về Underworld.</li><li>Con mèo đen sẽ ở lại với họ sau khi tin nhắn này được giao. Điều này có thể làm cho nhiệm vụ của bạn khó khăn hơn một chút.</li></ul></li></ul><p class='basic right'>Proceed to _The Oneironauts 2_.</p>",
       "title": "Chuyển tiếp II: The Oneironauts"
     },
     "theOneironauts2": {
+      "body": "<p><i>Theo màn 2–A, những người nằm mơ chèo thuyền đến những khu vực chưa biết đến…</i></p><p>Bạn mở to mắt khi nghe thấy âm thanh chói tai của một con mèo. Bạn đã sắp trôi vào giấc ngủ… à, chính xác là không phải ngủ. Mặc dù — hoặc có lẽ do — giấc mơ của bạn, bạn đã không thể thực sự ngủ trong thế giới này. Khi bạn tỉnh táo lại, bạn phát hiện ra nguồn gốc của tiếng rên: con mèo của Virgil, đen như là khoảng trống của không gian, ngồi cách đó vài bước chân chờ bạn chú ý. Nó tuyên bố, “Cuối cùng thì đã đến lúc cậu nhận thấy điều gì đó bên ngoài tâm trí của chính mình. Nghe này, tôi có chuyện quan trọng muốn nói với cậu.”</p><p class='basic'>Check the Campaign Log for The Dream-Quest (Campaign A). Read each section below that applies to your situation. Then, proceed to the following text.</p>",
       "title": "Chuyển tiếp II: The Oneironauts"
     },
     "atLeastOneNotCaptured": {
+      "body": "<p class='basic'>_*If at least one of the investigators was not captured:*_</p><p>“Đợi đã, tên con người của tôi đâu?” con mèo hỏi, nghểnh đầu nhìn quanh boong tàu của bạn. \"Không phải tôi đã để anh ta lại với cậu sao?\"\nBạn giải thích rằng Virgil đã bị bắt bởi Corsairs, và con mèo trả lời bằng cách liếm chân nó mà không quan tâm quá nhiều. “Ồ ra vậy. Được rồi. Giờ tôi hiểu chuyện gì xảy ra rồi.\"</p>",
       "title": "Chuyển tiếp II: The Oneironauts"
     },
     "allCaptured": {
@@ -54,116 +77,163 @@
       "title": "Chuyển tiếp II: The Oneironauts"
     },
     "searchingForTheTruth": {
+      "body": "<p class='basic'><i>Nếu con mèo đen có linh cảm</i> và <i>Randolph trốn thoát việc bị bắt giữ</i> :</p><p>Con mèo đen nhìn thấy Randolph đang điều khiển con tàu của bạn và lườm anh ta một cách nghi ngờ. Bạn tự hỏi có chuyện gì không ổn. “Bình thường tôi thích mùi cá, nhưng lần này tanh quá. Có cái gì đó không đúng. Không nên có hai người giống anh ta. Nhưng trí nhớ của tôi không rõ ràng…” Trước đây bạn nghĩ rằng mình nghe nhầm, nhưng bây giờ bạn thực sự bối rối. Hai Randolph? Con mèo đen khẳng định, “Đúng vậy,” Con mèo đen nhấn mạnh vấn đề, “Đây là một, và một người khác trong thế giới thực. Điều đó có vẻ kỳ lạ. Tôi nghĩ có gì đó đang cố can thiệp. Tôi cần phải đi tìm ra điều này.\" Cùng với đó, con mèo nhảy ra khỏi tầm nhìn.</p><p class='basic'>Bỏ qua phần còn lại của phần chuyển tiếp này. Trong cả hai Nhật ký Chiến dịch, ghi lại <i>con mèo đen đang tìm kiếm sự thật</i> .</p>",
       "title": "Chuyển tiếp II: The Oneironauts"
     },
     "nowWhereWasI": {
+      "body": "<p>“Bây giờ tôi nói tới đâu rồi à? Ô đúng rồi. Tôi đã có một cuộc trò chuyện với bạn bè của cậu. Bây giờ họ cũng đang ở Vùng đất giấc mơ. Họ có một lời nhắn cho cậu.”</p><p class='basic'>Check the Campaign Log for The Web of Dreams (Campaign B). Read the section below that applies to your situation.</p><p class='basic right'>Once the relevant entry has been read, choose and proceed to either _Scenario 3–A: Dark Side of the Moon_ or _Scenario 3–B: Point of No Return_.</p>",
       "title": "Chuyển tiếp II: The Oneironauts"
     },
     "theBlackCatRequestedAidFromTheOthers": {
+      "body": "<p class='basic'>_*If the black cat requested aid from the others:*_</p><p>“Bạn bè của cậu đang gặp một chút rắc rối. Họ đã thực hiện chuyến đi một chiều đến một nơi khá tồi tệ và tôi không biết liệu họ có thể vượt qua nó mà không có tôi hay không. Tôi biết nhiệm vụ của cậu bây giờ cũng khá khốc liệt, nhưng nếu tôi không đi cùng họ, thì việc cậu có đến được Kadath hay không cũng không còn quan trọng. Chúc may mắn. Cố gắng đừng chết.” Cùng với đó, con mèo đen nhảy ra khỏi tầm nhìn.</p><p class='basic'>Check both Campaign Logs.</p><ul><li>Thêm 1 token [tablet] vào túi hỗn mang cho cả 2 chiến dịch.</li><li>*If the Campaign Log for The Dream-Quest (Campaign A) has the black cat is at your side recorded*, cross it off and record it in the Campaign Log for The Web of Dreams (Campaign B) instead. Replace 1 {elderThing} token in each campaign’s chaos bag with 1 {tablet} token.</li><li>*If the Campaign Log for The Web of Dreams (Campaign B) has the black cat is at your side recorded*, no change is made.</li></ul>",
       "title": "Chuyển tiếp II: The Oneironauts"
     },
     "warnedTheOthersStory": {
+      "body": "<p class='basic'>_*If the black cat warned the others:*_</p><p>“Bạn bè của cậu đang làm tốt như mong đợi, thực sự đấy. Nhưng họ lo lắng cho cậu, và lo lắng đó cũng có vẻ đúng. Họ có thể không liên lạc được với cậu sớm. Thay vào đó, họ muốn tôi giúp cậu, vì vậy tôi sẽ ở lại đây thêm một thời gian nữa. Phải chắc chắn rằng cậu sống sót. Nếu không, thì…”, nó ngập ngừng một lúc lâu, “…chúng ta đừng nói về điều đó.”</p><p class='basic'>Check both Campaign Logs.</p><ul><li>Thêm 1 token [elder_thing] vào túi hỗn mang cho cả 2 chiến dịch.</li><li>*If the Campaign Log for The Web of Dreams (Campaign B) has the black cat is at your side recorded*, cross it off and record it in the Campaign Log for The Dream-Quest (Campaign A) instead. Replace 1 {tablet} token in each campaign’s chaos bag with 1 {elderThing} token.</li><li>*If the Campaign Log for The Dream-Quest (Campaign A) has the black cat is at your side recorded*, no change is made.</li></ul>",
       "title": "Chuyển tiếp II: The Oneironauts"
     },
     "sharedTheKnowledgeStory": {
+      "body": "<p class='basic'>Con mèo đen đã chia sẻ tri thức về Underworld.</p><p>Con mèo đen cho bạn biết tất cả về vùng Vùng đất giấc mơ mà những người bạn đồng hành của bạn đã bước vào. “Toàn bộ bề mặt của Vùng đất giấc mơ, nơi cậu đang khám phá, bao phủ vùng Underworld giống như một chiếc váy lụa tuyệt đẹp trên một làn da mục nát. Cậu không có lý do gì để phải đến đó, đó là một điều tốt, bởi vì đó là một nơi đặc biệt không hiếu khách. Bây giờ nghĩ lại thì cậu thực sự có thể đã đi ngay vào một lối vào Underworld - lúc ở Khu rừng bị phù phép. Ngoài ra còn có một số lối vào khác: bên dưới một tu viện cũ ở Leng, một lối vào khác trong tàn tích của Sarkomand…”</p><p class='basic'>In the Campaign Log for The Dream-Quest (Campaign A), record *the dreamers know of another path*.</p><p class='basic'>Check both Campaign Logs.</p><ul><li>*If the Campaign Log for The Dream-Quest (Campaign A) has the black cat is at your side recorded*, cross it off. Remove 1 {elderThing} token from the chaos bags for both campaigns.</li><li>*If the Campaign Log for The Web of Dreams (Campaign B) has the black cat is at your side recorded*, cross it off. Remove 1 {tablet} token from the chaos bags for both campaigns.</li><li>*If neither Campaign Log has the black cat is at your side recorded*, no change is made.</li></ul>",
       "title": "Chuyển tiếp II: The Oneironauts"
     },
     "theGreatOnes1": {
-      "title": "Chuyển tiếp III: Các Đại Cổ Thần"
+      "title": "Chuyển tiếp III: Các Đại Cổ Thần",
+      "body": "<p><i>Theo màn 3–A, những người ngủ mơ đang trên đường đến Cold Wastes, nơi Kadath vô danh tồn tại…</i></p><p>Bạn bị một cái trán đầy lông đẩy ra khỏi cơn mơ màng mất ngủ. Bạn nhìn xuống và thấy con mèo đen đang nhìn chằm chằm vào bạn. \"Xin chào. Tôi thấy cậu đã có một số tiến triển. Bạn không chắc liệu bạn có gọi đây là tiến triển hay không. Mặc dù cuối cùng bạn cũng đang trên đường đến Cold Wastes, nhưng bạn vẫn chưa xác định được vị trí chính xác của Kadath vô danh và bạn không biết điều gì sẽ xảy ra khi bạn đến nơi.</p><p class='basic'>Check the Campaign Log for The Dream-Quest (Campaign A). Read the section below that applies to your situation, then proceed to the following text. If no section applies, skip them.</p>"
     },
     "theGreatOnes1GrowWeaker": {
-      "title": "Chuyển tiếp III: Các Đại Cổ Thần"
+      "title": "Chuyển tiếp III: Các Đại Cổ Thần",
+      "body": "<p class='basic'>_*If the dreamers grow weaker:*_</p><p>“Chà,” con mèo đột ngột nói, “trông cậu không được ổn cho lắm, cậu biết không.” Nó ngước nhìn bạn với đôi mắt thờ ơ nhưng tò mò. Bạn hỏi ý nó là gì. “Cậu không thấy sao? Cậu trông có vẻ bệnh. Có ăn đầy đủ không? Sao cũng được, không thành vấn đề. Cậu có thể đi lại, phải không? Thế là đủ tốt rồi.”</p><p class='basic'>Depending on your difficulty, add a token to the chaos bag for The Dream-Quest (Campaign A), as follows: Easy (–3), Standard (–4), Hard (–5), Expert (–7).</p>"
     },
     "theGreatOnes1Searching": {
-      "title": "Chuyển tiếp III: Các Đại Cổ Thần"
+      "title": "Chuyển tiếp III: Các Đại Cổ Thần",
+      "body": "<p class='basic'><i>Nếu Randolph không sống sót sau chuyến hành trình</i> và <i>con mèo đen đang tìm kiếm sự thật</i>:</p><p>“Cái tên kia đang ở đâu?” con mèo đen hỏi, tìm kiếm Randolph. Bạn cố gắng giải thích những gì đã xảy ra, nhưng bạn hầu như không thể thốt ra lời nào. “Không cần nói nữa. Tôi hiểu rồi.\" Con mèo cân nhắc tình hình, dường như không quan tâm lắm đến số phận khủng khiếp của Randolph. Nó nói một cách bí ẩn, “Chà, tôi đoán điều tôi định nói sẽ không còn cần thiết nữa.”.</p><p class='basic'>Trong cả hai Nhật ký Chiến dịch, gạch bỏ phần <i>con mèo đen đang tìm kiếm sự thật</i>.</p>"
     },
     "theGreatOnes1YouAskedForIt": {
-      "title": "Chuyển tiếp III: Các Đại Cổ Thần"
+      "title": "Chuyển tiếp III: Các Đại Cổ Thần",
+      "body": "<p class='basic'>_*If you asked for it:*_</p><p>“Đừng bận tâm đến tôi. Tôi chỉ muốn xem liệu cậu có còn sống không.\" Bạn bắt đầu kể cho con mèo đen nghe về những rắc rối của mình, và nó nghiêng đầu sang một bên với vẻ tò mò như mèo. \"Huh. Thật buồn cười. Tôi có từng nói rằng tôi quan tâm những gì cậu nói? Tôi không <i>nghĩ</i> là mình đã làm. Tốt thôi. Để tôi nói rõ hơn: Tôi chỉ quan tâm đến cậu có thể hoàn thành nhiệm vụ của mình hay không. Tôi không quan cậu bạn đang cảm thấy thế nào.” Đôi mắt con mèo đen trừng trừng không chớp. \"Chúc may mắn. Cậu sẽ cần đến nó.\" Nó lao vào bóng tối và biến mất.</p><p class='basic'>Bỏ qua phần còn lại của phần chuyển tiếp này.</p><p class='basic right'>Proceed to either _Scenario 4–A: Where the Gods Dwell_ or _Scenario 4–B: Weaver of the Cosmos_.</p>"
     },
     "theGreatOnes1Part2": {
-      "title": "Chuyển tiếp III: Các Đại Cổ Thần"
+      "title": "Chuyển tiếp III: Các Đại Cổ Thần",
+      "body": "<p>Bạn hỏi con mèo đen xem nó có biết bạn sẽ tìm thấy gì ở Kadath không. “Phần nào” nó trả lời. “Tôi đã thấy trước việc cậu đến Kadath từ lâu rồi. Thực tế là tôi đã thấy nhiều lần. Nhưng nó… à, nó không diễn ra theo cùng một cách. Hoặc có thể tôi đã không <i>thấy</i> nó theo cùng một cách. Dù thế nào thì tôi nghĩ cậu đang đi đúng hướng. Rốt cuộc, đó là con đường duy nhất còn lại. Tôi biết thêm một chút về những gì cậu sẽ thấy khi đến đó, nhưng tôi e rằng nếu tôi nói với cậu, cậu cũng sẽ thấy khác đi. Đừng lo lắng về nó. Cậu đang làm tốt. Đến Kadath. Tìm vùng đất của những Đại Cổ Thần. Mọi thứ khác sẽ vào đúng vị trí khi cậu đến. Miễn là cậu không làm mọi thứ lộn xộn lên. Những sinh vật mà cậu phải đối mặt, những thực thể mà tôi không muốn nói tên, họ không chỉ đe dọa Vùng đất Giấc mơ. Họ đe dọa chính sự tồn tại. Bây giờ, nếu cậu thứ lỗi cho tôi, tôi có một nơi khác cần đi.\"</p><ul><li>Check Campaign Log. *If the black cat has a hunch*, it bounds off into the void of space before you get the chance to ask it anything else.</li><li>Con mèo đen đề nghị chuyển một lời nhắn cho những người bạn đồng hành của bạn. Trưởng nhóm phải quyết định (chọn một):<ul><li>Tell your companions about the threats that you face. The black cat will return to you with aid once this message is delivered. This may put an undue burden on your companions. In the Campaign Log for The Dream-Quest (Campaign A), record *the black cat spoke of Nyarlathotep*.</li><li>Con mèo đen sẽ ở lại với họ sau khi tin nhắn này được giao. Điều này có thể làm cho nhiệm vụ của bạn khó khăn hơn một chút.</li></ul></li></ul><p class='basic right'>Proceed to _The Great Ones 2_.</p>"
     },
     "theGreatOnes2": {
-      "title": "Chuyển tiếp III: Các Đại Cổ Thần"
+      "title": "Chuyển tiếp III: Các Đại Cổ Thần",
+      "body": "<p><i>Theo màn 3–B, các điều tra viên đã đạt đến vùng sáng tối giao thoa giữa các thế giới…</i></p><p>Tiếng kêu the thé của một con mèo thu hút sự chú ý của bạn vào một mạng nhện gần đó. Khi đến nơi, bạn thấy con mèo đen bị mắc kẹt trên một mạng nhện đặc biệt dính, quằn quại qua lui trong một nỗ lực vô ích để thoát ra. Ngay cả với móng vuốt sắc nhọn của nó, nó dường như đang gặp rắc rối. Bạn nghiêng người và kéo con mèo ra, và nó nhảy từ vòng tay của bạn xuống một bệ đá bên dưới, thứ duy nhất nằm giữa con mèo và khoảng không vô tận. Nó rít lên một lúc rồi đứng thẳng dậy. Nó mắng, “Tôi có nhờ cậu giúp không? Chà, rốt cuộc thì bạn cũng đã đến được bên dưới Sea of Pitch. Bây giờ hãy nhìn xung quanh cậu. Thấy tất cả các mạng nhện này không?\" Nó rất rõ ràng để trông thấy; bạn bị bao vây tứ phía bởi mạng nhện, như là một mạng lưới rộng lớn và nguy hiểm trên khắp không gian trống trải. “Đó là cầu nối giữa thế giới của cậu và Vùng đất Giấc mơ. Nếu nó được hoàn thành, cả hai sẽ hợp nhất. Hiểu chưa? Trừ khi cậu muốn mọi thứ trông giống như bệnh viện nơi bạn bè của bạn đang ngủ, cậu phải ngăn chặn điều này bằng mọi giá. Không có điều gì khác quan trọng hơn. <i>Không có.</i>”</p><p class='basic'>Check the Campaign Log for The Dream-Quest (Campaign A). Read each section below that applies to your situation, then proceed to the following text. If no section applies, skip them.</p>"
     },
     "theGreatOnes2TheSilverKey": {
-      "title": "Chuyển tiếp III: Các Đại Cổ Thần"
+      "title": "Chuyển tiếp III: Các Đại Cổ Thần",
+      "body": "<p class='basic'>_*If the investigators possess the Silver Key:*_</p><p>“Này, cậu vẫn còn giữ chìa khóa đó chứ?” con mèo đen hỏi. Bạn lục tung đồ đạc của mình để tìm chiếc chìa khóa bạn tìm thấy từ Unnameable và đưa nó cho con mèo. “Đưa cái đó cho tôi,” nó yêu cầu, nhảy lên và cắn nó khỏi tay bạn trước khi bạn kịp phản đối. “Đừng nhìn tôi như thế. Những người bạn khác của cậu cần nó hơn cậu.\"</p><p class='basic'>Trong Nhật ký Chiến dịch của <i>The Web of Dreams</i> (Chiến dịch B), gạch bỏ phần <i>các điều tra viên sở hữu Silver Key</i>. Thay vào đó thì ghi lại nó trong Nhật ký Chiến dịch của <i>The Dream-Quest</i> (Chiến dịch A).</p><p class='basic'>Nếu The Silver Key đang trong bộ bài của một điều tra viên bất kỳ, loại bỏ nó. Một điều tra viên bất kỳ của <i>The Dream-Quest</i> (Chiến dịch A) có thể chọn thêm The Silver Key vào bộ bài của họ. Lá bài này không tính vào giới hạn bộ bài của điều tra viên đó.</p>"
     },
     "theGreatOnes2Searching": {
-      "title": "Chuyển tiếp III: Các Đại Cổ Thần"
+      "title": "Chuyển tiếp III: Các Đại Cổ Thần",
+      "body": "<p class='basic'>_*If the black cat is searching for the truth:*_</p><p>Con mèo đen ngừng nói khi nó nhìn thấy Randolph lần đầu tiên. Nó lượn quanh người đàn ông vài vòng, kích động. Về phần mình, Randolph có vẻ bối rối khác thường trước sự hiện diện của con mèo, thậm chí còn lùi lại một bước khi nó tiến lại gần. “Có chuyện gì vậy? Tôi không làm hại bất kỳ đồng loại nào của cậu\", anh ấy nói một cách thực tế. \"Tôi đã làm điều gì đó để cậu khó chịu không?\"</p><p>“Sự tồn tại đơn thuần của anh đã làm tôi khó chịu” con mèo trả lời với một tiếng rít. Nó quay lại phía bạn, vẫn để mắt đến Randolph. “Tôi nghĩ rằng tôi biết những gì đang xảy ra bây giờ. Tất cả đều có lý. Tôi biết ai đang cản trở tầm nhìn của tôi. Đừng tin <i>thứ</i> đó,” nó cảnh báo, đi vòng quanh để theo dõi người đàn ông tóc vàng đằng sau nó. \"Tôi phải đi chuẩn bị. Tôi sẽ trở lại khi thời điểm thích hợp.”</p><p class='basic'>Bỏ qua phần còn lại của phần chuyển tiếp này. Trong cả hai Nhật ký Chiến dịch, ghi lại <i>con mèo đen biết sự thật</i> .</p>"
     },
     "theGreatOnes2Part2": {
-      "title": "Chuyển tiếp III: Các Đại Cổ Thần"
+      "title": "Chuyển tiếp III: Các Đại Cổ Thần",
+      "body": "<p>“Ồ, trước khi tôi quên: bạn bè của cậu gần như đã đến đích. Nếu mọi thứ xảy ra như tôi đã thấy trước, họ sẽ có thể tự giải thoát bản thân. Trong lúc đó, họ muốn tôi cho cậu biết…”</p><p class='basic'>Check the Campaign Log for The Dream-Quest (Campaign A). Read the section below that applies to your situation.</p><p class='basic right'>Once the relevant entry has been read, choose and proceed to either _Scenario 4–A: Where the Gods Dwell_ or _Scenario 4–B: Weaver of the Cosmos_.</p>"
     },
     "theGreatOnes2Nyarlathotep": {
-      "title": "Chuyển tiếp III: Các Đại Cổ Thần"
+      "title": "Chuyển tiếp III: Các Đại Cổ Thần",
+      "body": "<p class='basic'>_*If the black cat spoke of Nyarlathotep:*_</p><p>“…thực thể mà họ phải đối mặt là thực thể có hàng ngàn, có lẽ là vô số mặt nạ. <smallcaps>Nyarlathotep</smallcaps>, nó được một số người gọi như thế. Nó thao túng, lừa đảo, và xảo quyệt. Có lẽ đó là thứ đã nhốt họ ở Vùng đất Giấc mơ ngay từ đầu. Tại sao thì tôi không biết. Nếu cậu muốn họ sống sót, có lẽ họ sẽ cần sự giúp đỡ của tôi. Cậu sẽ ổn khi ở đây một mình, phải không?\" Con mèo đen không đợi câu trả lời; không nói thêm lời nào nữa, nó nhảy vào bầu không khí bên dưới và biến mất.</p><p class='basic'>Check both Campaign Logs.</p><ul><li>Thêm 1 token [elder_thing] vào túi hỗn mang cho cả 2 chiến dịch.</li><li>*If the Campaign Log for The Web of Dreams (Campaign B) has the black cat is at your side recorded*, cross it off and record it in the Campaign Log for The Dream-Quest (Campaign A) instead. Replace 1 {tablet} token in each campaign’s chaos bag with 1 {elderThing} token.</li><li>*If the Campaign Log for The Dream-Quest (Campaign A) has the black cat is at your side recorded*, no change is made.</li></ul>"
     },
     "theGreatOnes2AtlachNacha": {
-      "title": "Chuyển tiếp III: Các Đại Cổ Thần"
+      "title": "Chuyển tiếp III: Các Đại Cổ Thần",
+      "body": "<p class='basic'>_*If the black cat spoke of Atlach-Nacha:*_</p><p>“…cây cầu mà tôi vừa nói tới? Sinh vật dệt nó không giống bất cứ thứ gì cậu từng thấy. <smallcaps>Atlach-Nacha</smallcaps> là cái tên mà tôi đã nghe thì thầm trong những góc tối của Vùng đất Giấc mơ. Nó là chủ nhân và tổ tiên của tất cả những con nhện đang bò xung quanh những khu vực này. Có lẽ thậm chí là ở tất cả các khu vực. Cậu sẽ cần sự giúp đỡ của tôi để ngăn chặn âm mưu của nó.”</p><p class='basic'>Check both Campaign Logs.</p><ul><li>Thêm 1 token [tablet] vào túi hỗn mang cho cả 2 chiến dịch.</li><li>*If the Campaign Log for The Dream-Quest (Campaign A) has the black cat is at your side recorded*, cross it off and record it in the Campaign Log for The Web of Dreams (Campaign B) instead. Replace 1 {elderThing} token in each campaign’s chaos bag with 1 {tablet} token.</li><li>*If the Campaign Log for The Web of Dreams (Campaign B) has the black cat is at your side recorded*, no change is made.</li></ul>"
     },
     "epilogueMatrix": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p class='basic'>Check the Campaign Log for both campaigns. Use the matrix below to find the epilogue that applies to your situation, then proceed to that epilogue.</p><div class='epilogue-table-wrap'><table class='epilogue-matrix' data-selected='{count}'><thead><tr><th></th><th>The bridge was completed.</th><th>The investigators returned to reality.</th><th>The investigators never escaped.</th><th>The investigators are still in the Dreamlands.</th></tr></thead><tbody><tr><th>Nyarlathotep’s invasion has begun.</th><td data-epilogue='1'>Epilogue 1</td><td data-epilogue='2'>Epilogue 2</td><td data-epilogue='3'>Epilogue 3</td><td data-epilogue='4'>Epilogue 4</td></tr><tr><th>The dreamers awoke.</th><td data-epilogue='5'>Epilogue 5</td><td data-epilogue='6'>Epilogue 6</td><td data-epilogue='7'>Epilogue 7</td><td data-epilogue='8'>Epilogue 8</td></tr><tr><th>The dreamers stayed in the Dreamlands forever.</th><td data-epilogue='9'>Epilogue 9</td><td data-epilogue='10'>Epilogue 10</td><td data-epilogue='11'>Epilogue 11</td><td data-epilogue='12'>Epilogue 12</td></tr><tr><th>The dreamers traveled beneath the monastery.</th><td data-epilogue='13'>Epilogue 13</td><td data-epilogue='14'>Epilogue 14</td><td data-epilogue='15'>Epilogue 15</td><td data-epilogue='16'>Epilogue 16</td></tr></tbody></table></div>"
     },
     "epilogue1": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>Con mèo đen khảo sát sự tàn phá. \"Thế giới của cậu là một chiến trường. Trên thực tế, nó luôn như vậy. Các thế lực ngoài tầm hiểu biết của cậu đã xung đột với nhau lâu hơn nhiều so với những gì mà đồng loại của cậu (hoặc thậm chí là đồng loại của tôi) biết được. Họ đã tranh giành vùng đất của những giấc mơ từ lâu, nhưng có rất nhiều thực tại khác bên ngoài Vùng đất Giấc mơ, và chỉ có một thực thể thực sự có thể cai trị tất cả chúng. Tôi đã biết chuyện này luôn có thể xảy ra. Rằng chúng ta có thể thất bại. Nhưng cuối cùng, ít nhất tôi có thể nói tôi đã cố gắng. Đó là lỗi của cậu, thực vậy, không phải của tôi.\"</p><ul><li>Không có người sống sót.</li><li>Các điều tra viên thất bại.</li></ul>"
     },
     "epilogue2": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>\"Vậy là cậu đã quay trở lại thế giới của mình. Tôi hy vọng bạn đã có một chuyến đi vui vẻ. Đúng vậy, những người bạn đồng hành trước đây của cậu đã tỉnh lại một lần nữa. Nhưng họ không như trước nữa phải không? Tất nhiên là thế rồi. Họ có thể không nhớ những giấc mơ của họ, nhưng điều đó không có nghĩa là chúng không xảy ra. Cậu không nhìn thấy tia sáng trong mắt họ sao? Cậu không nhận thấy họ thì thầm với một số thực thể khác khi bạn không có mặt sao? Đúng, là nó. Cậu biết kẻ mà tôi nói đến. Đừng lo lắng, ít nhất cậu có một chút thời gian trước khi kết thúc. Chỉ cần nhớ: Tôi đã cảnh báo bạn.\"</p><ul><li>Hai nhóm đã được đoàn tụ trong thế giới thực. Nhưng có thực là vậy không?</li><li>Các điều tra viên đã ngăn chặn một hình thức hủy diệt, nhưng không ngăn được các hình thức khác.</li></ul>"
     },
     "epilogue3": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>\"Cái gì? Tôi có cảm thấy tội lỗi không? Tất nhiên là không. Chắc chắn, nếu tôi không can thiệp, họ có thể vẫn đang sống cuộc sống của họ, không biết gì về sự thật của thế giới quanh họ. Kể cả Virgil. Nhưng tôi không cảm thấy hối hận. Tôi đã làm những gì tôi phải làm. Tôi đã cố gắng cứu họ. Máu của họ không dính trên tay tôi.\" Con mèo đen nhìn đi chỗ khác. \"Ít nhất họ sẽ không ở đây để chứng kiến sự hỗn loạn sắp xảy ra.\"</p><ul><li>Mỗi điều tra viên từ Chiến dịch B không bao giờ được biết đến lần nào nữa.</li><li>Các điều tra viên đã ngăn chặn một hình thức hủy diệt, nhưng không ngăn được các hình thức khác.</li></ul>"
     },
     "epilogue4": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>_Epilogue 4:_ “What are you still doing here of all places? Oh, I see. You cannot find your way back to the waking world. Well, perhaps that is for the best. You see, your erstwhile companions are awake once more, but they have brought a passenger along with them. Do you really have to ask? You know of whom I speak. Trust me: stay here, in this world. Forget everything about your old life. It’ll be much better here, I promise.”</p><ul><li>Mỗi điều tra viên từ Chiến dịch B sống một cuộc sống hạnh phúc trong sự vô tri của mình.</li><li>Các điều tra viên đã ngăn chặn một hình thức hủy diệt, nhưng không ngăn được các hình thức khác.</li></ul>"
     },
     "epilogue5": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>_Epilogue 5:_ “Oh, you’re awake. Interesting. I did not expect you to return. You probably should not have. There is something you need to know. Your companions…well, long story short, things did not go as planned. Your world is no longer yours. Sorry to be the bearer of bad news. Anyway, since I have no desire to be a meal, I’ll be off now. Whatever you do, don’t leave this room.”</p><ul><li>Mỗi điều tra viên từ Chiến dịch A bị <b>giết chết</b></li><li>Các điều tra viên đã ngăn chặn một hình thức hủy diệt, nhưng không ngăn được các hình thức khác.</li></ul>"
     },
     "epilogue6": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>\"Chà, đây không phải là một cuộc hội ngộ tuyệt vời sao. Đúng vậy, cậu đã trở lại thế giới của những người thức giấc. Bây giờ, tất cả các cậu có thể quay trở lại cuộc sống lòng vòng vô nghĩa mà bạn gọi là cuộc sống. Hãy bỏ lại những giấc mơ của cậu như những mảnh vụn sẽ bị ngấu nghiến khi cậu đói. Hay cuối cùng cậu đã nhận ra rằng thế giới của cậu cũng chỉ là một giấc mơ? Hãy lấy những gì cậu đã hấp thụ từ giấc mơ này và sử dụng nó để định hình số phận của bạn. Còn tôi? Tôi có ngôi nhà của riêng mình để trở về. Đừng lo lắng. Tôi chắc rằng cậu chưa nhìn thấy tôi lần cuối cùng đâu.\"</p><ul><li>Hai nhóm đã được đoàn tụ trong thế giới thực.</li><li>Các điều tra viên thành công!</li></ul>"
     },
     "epilogue7": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>Con mèo đen theo dõi cuộc điều tra của bạn từ xa. \"Tôi xin lỗi vì cậu sẽ không bao giờ biết chuyện gì đã xảy ra với bạn bè của mình. Dù sao thì cậu cũng sẽ không nhớ đến tôi phải không? Tôi hy vọng cậu có thể sớm nghỉ ngơi. Rốt cuộc, thế giới của cậu đã được cứu. Nó sẽ là thật xấu hổ khi lãng phí thời gian thêm phải không? Hãy sống cuộc sống của cậu. Hãy quên đi những người cậu đồng hành của bạn. Không thể làm gì được.\n…Cậu không thể nghe lời tôi, phải không?”</p><ul><li>Mỗi điều tra viên từ Chiến dịch B không bao giờ được biết đến lần nào nữa.</li><li>Các điều tra viên thành công!</li></ul>"
     },
     "epilogue8": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>_Epilogue 8:_ “Are you really never going to return? That’s mighty selfish of you. Your companions are awake in the real world, and yet here you remain, partaking in the wonders of the Dreamlands. Well, I suppose I can’t blame you. I would probably do the same were I in your shoes. I’d tell them where you are, but they won’t remember me anymore, so you’re on your own. As for me? I have my own home to return to. Don’t worry. I’m sure you haven’t seen the last of me.”</p><ul><li>Hai nhóm đã sống sót, nhưng mãi mãi chia xa</li><li>Các điều tra viên thành công!</li></ul>"
     },
     "epilogue9": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>\"Cậu nghĩ rằng cậu chỉ cần ở trong giấc mơ của mình và không bao giờ phải giải quyết hậu quả của những gì đã xảy ra ở đây? Một ý nghĩ ngu ngốc. Hãy nhớ rằng, cậu chỉ đang ngủ. Cơ thể của cậu không ở đây; cậu đang ở cả hai thế giới cùng một lúc. Cậu không hiểu sao? Ồ tốt. Tôi cho rằng cách này tốt hơn cho cậu. Hãy ở lại đây và quên đi mọi thứ về cuộc sống cũ của bạn. Cậu sẽ thích điều này hơn là lựa chọn khác, tôi hứa.\"</p><ul><li>Mỗi điều tra viên từ Chiến dịch A sống một cuộc sống hạnh phúc trong sự vô tri của mình.</li><li>Các điều tra viên đã ngăn chặn một hình thức hủy diệt, nhưng không ngăn được các hình thức khác.</li></ul>"
     },
     "epilogue10": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>\"Cậu thực sự sẽ không bao giờ tỉnh lại sao? Cậu thật ích kỷ. Những người bạn đồng hành của cậu đã trở lại thế giới thực và nghĩ rằng họ đã cứu mạng cậu, nhưng cậu sẽ ở trong căn phòng bệnh viện đó để ngủ mãi mãi, phải không? Chà, tôi cho rằng tôi không thể đổ lỗi cho cậu. Có lẽ tôi cũng sẽ làm như vậy nếu tôi ở trong hoàn cảnh của cậu. Đừng lo, tôi sẽ không nói cho họ biết cậu đang ở đâu. Họ sẽ tiếp tục tìm kiếm cậu nếu tôi làm vậy. Còn tôi thì sao? Tôi có nhà riêng để trở về. Đừng lo lắng. Tôi chắc rằng cậu chưa nhìn thấy tôi lần cuối cùng đâu.</p><ul><li>Hai nhóm đã sống sót, nhưng mãi mãi chia xa</li><li>Các điều tra viên thành công!</li></ul>"
     },
     "epilogue11": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>\"Cứ tiếp tục tìm kiếm không ngừng nghỉ, cậu sẽ không bao giờ tìm thấy chúng đâu. Chúng ở sâu bên dưới bề mặt. Trên thực tế, chúng thậm chí có thể không còn ở dưới đó nữa. Ai biết được. Trong mọi trường hợp, hãy quên chúng đi. Cả hai thế giới đều bây giờ an toàn. Hãy vui mừng! Sống hết mình mà không hối tiếc. Còn tôi? Tôi có nhà riêng để trở về. Đừng lo lắng, tôi chắc rằng cậu chưa nhìn thấy tôi lần cuối cùng đâu.\"</p><ul><li>Mỗi điều tra viên từ Chiến dịch B không bao giờ được biết đến lần nào nữa.</li><li>Các điều tra viên thành công!</li></ul>"
     },
     "epilogue12": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>_Epilogue 12:_ “Ah, so you have found one another at least? Even in a land as vast as the Dreamlands, I suppose it was inevitable you would bump into each other. Are you going to head back to your own world? No, I suppose not. Why would you? Everything you could ever want is here. I can’t blame you. Together you can travel from the Pillars of the West to the Pillars of the East and see every wonder the world of dreams has to offer. Just remember, it’s all fiction. Right?”</p><ul><li>Hai nhóm đã được đoàn tụ trong Vùng đất Giấc mơ.</li><li>Các điều tra viên thành công!</li></ul>"
     },
     "epilogue13": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>\"Một ý nghĩ hay, nhưng cậu đã quá muộn. Sự phá hoại đã lan rộng, và bây giờ chạm đến mọi ngóc ngách của vũ trụ. Thế giới này, thế giới của cậu, thế giới bên dưới... Tôi đã cố gắng giúp đỡ họ, nhưng vẫn chưa đủ. Thành thật mà nói , Tôi ước cậu chưa bao giờ nhìn thấy điều này. Bây giờ cậu sẽ không tìm thấy sự bình yên ở bất kỳ đâu.\"</p><ul><li>Mỗi điều tra viên từ Chiến dịch A trở nên <b>điên loạn</b></li><li>Các điều tra viên đã ngăn chặn một hình thức hủy diệt, nhưng không ngăn được các hình thức khác.</li></ul>"
     },
     "epilogue14": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>\"Cậu đang làm gì ở dưới này? Không, những người bạn đồng hành của cậu đã chạy trốn trở lại thế giới của cậu. Đó là một ý nghĩ hay, nhưng giờ cậu đang ở một mình. Đúng, có nhiều cách để thoát khỏi Underworld, nhưng chúng không hoàn toàn dễ tìm.\" Những con gug bọ ngựa, ghast không hình dạng, và ngạ quỷ, và... rồi cậu sẽ thấy. Thành thật mà nói, tại sao cậu lại xuống đây? Tôi đoán tôi hy vọng một ngày nào đó cậu sẽ quay trở lại. Về phần tôi? Tôi có nhà riêng để trở về. Đừng lo lắng. Tôi chắc rằng cậuhưa nhìn thấy tôi lần cuối cùng đâu.\"</p><ul><li>Hai nhóm đã sống sót, nhưng mãi mãi chia xa</li><li>Các điều tra viên thành công!</li></ul>"
     },
     "epilogue15": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>_Epilogue 15:_ The black cat watches your escape with bated breath. “Wow. I honestly did not see that one coming. They risked their lives for you, and now you risk yours for them. How interesting. Perhaps there is hope for your kind yet.” After a few moments, it grows bored. “Okay, enough of this. I have places to be. I see that you will be all right without me. Take care of both worlds for me, would you?”</p><ul><li>Hai nhóm đã được đoàn tụ trong Vùng đất Giấc mơ.</li><li>Các điều tra viên thành công!</li></ul>"
     },
     "epilogue16": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p>\"Ồ, thật là một chuỗi sai lầm nghiêm trọng. Các cậu vừa đi ngang qua nhau! Ồ tốt. Bây giờ cậu chỉ có một mình. Đúng, có nhiều cách để thoát khỏi Underworld, nhưng chúng thực sự không dễ tìm. Những con gug bọ ngựa, ghast không hình dạng, và ngạ quỷ, và... rồi cậu sẽ thấy. Thành thật mà nói, tại sao cậu lại xuống đây? Tôi đoán tôi hy vọng một ngày nào đó cậu sẽ quay trở lại. Còn tôi? Tôi có nhà riêng của mình để trở về . Đừng lo lắng, tôi chắc chắn rằng cậu chưa nhìn thấy tôi lần cuối cùng đâu.</p><ul><li>Hai nhóm đã sống sót, nhưng mãi mãi chia xa</li><li>Các điều tra viên thành công!</li></ul>"
     },
     "brokeTheLawOfUlthar": {
-      "title": "Phần kết"
-    },
-    "prologue": {
-      "title": "Lời mở đầu",
-      "body": "<p class='cursive'>Thứ Sáu, ngày 13 tháng 2 năm 1925</p><p>Có điều gì đó kỳ lạ đang xảy ra ở thị trấn Arkham, Massachusetts.</p><p>Thông thường, điều này sẽ không gây ngạc nhiên cho cư dân của thị trấn buồn tẻ ở New England này. Thật vậy, Arkham luôn nổi tiếng với những sự kiện kỳ ​​lạ mà một số người sẽ nói là hiện tượng siêu nhiên. Tuy nhiên, bản chất của sự kiện cụ thể lần này không phải là thông thường.</p><p>Tất cả bắt đầu trong số mới nhất của *Tales from Nevermore*. Một nhà văn tên là Virgil Gray đã mô tả một cuộc hành trình mà anh ta đã thực hiện trong những giấc mơ của mình - một cuộc hành trình mà anh ta tuyên bố không phải là tác phẩm do anh ta hư cấu ra. Anh ấy đã viết về một cầu thang xoắn ốc dài, một cột lửa có tri giác nóng không tưởng, một cái cây đến từ mặt trăng và một con mèo biết nói đầy tính tò mò… cùng những thứ khác khó tin không kém. Nhưng đó không phải là truyện ngắn phi thường này lần đầu tiên thu hút sự chú ý của bạn. Ngay sau khi truyện ngắn của Virgil được xuất bản, *Tales from Nevermore* bắt đầu nhận và xuất bản hết lá thư này đến lá thư khác từ những người đã đọc truyện ngắn của Virgil và tuyên bố rằng họ đã trải qua giấc mơ giống như vậy. Chẳng bao lâu sau, Arkham Advertiser đã lan truyền câu chuyện và tin tức về hiện tượng kỳ lạ này đã đến tai các chuyên gia.</p><p>Virgil Gray đã bị thuyết phục để trải qua trị liệu tại bệnh viện tâm thần của địa phương, và nhiều người khác cũng có chứng rối loạn tâm thần của nhà văn cũng đã cam kết chữa trị. Giả thuyết phổ biến trong giới học thuật là giấc mơ của Virgil chân thực đến mức ông không thể tách rời thực tế khỏi hư cấu, và các bài viết của ông đã lan truyền ảo tưởng của mình cho người khác giống như một dạng cuồng loạn được chia sẻ. Bạn vẫn không bị thuyết phục. Rốt cuộc, có nhiều điều chưa biết về việc nằm mơ. Các chuyên gia y tế có những lý thuyết cực kỳ khác nhau về trạng thái não bộ của một người trong khi ngủ. Gần đây, các chuyên gia như Sigmund Freud đã đề xuất rằng giấc mơ là biểu hiện của những ham muốn, nỗi sợ hãi hoặc ám ảnh trong tiềm thức của một người. Về phần mình, các thầy bói từ lâu đã tin rằng những giấc mơ có thể được xem xét và giải nghĩa để nói lên quá khứ hoặc tương lai của người mơ. Nhưng nếu những lý thuyết này là đúng, thì làm thế nào mà nhiều bên—tất cả những người thuộc các tầng lớp xã hội rất khác nhau—có thể chia sẻ những trải nghiệm giống nhau trong giấc mơ của họ? Sẽ thế nào nếu hiểu biết thời hiện đại của chúng ta về giấc ngủ hoàn toàn sai? Điều gì sẽ xảy ra nếu thực sự có một nơi mà ý thức của chúng ta du hành đến khi chúng ta ngủ—một vùng đất của những giấc mơ tồn tại bên ngoài thế giới thực của chúng ta?</p><p>Bạn và những người bạn đồng hành của mình đã tập hợp lại với nhau để tìm hiểu tận cùng của hiện tượng kỳ lạ này. Nếu những người khác trong thị trấn có thể du hành đến một thế giới khác trong giấc mơ của họ, thì có lẽ bạn cũng có thể. Bạn đã tái tạo lại hoàn cảnh cuộc hành trình của Virgil một cách hoàn hảo. Nếu mọi việc suôn sẻ, một nửa nhóm bạn sẽ thực hiện chuyến đi đến “vùng đất giấc mơ” này và quay trở lại. Nhóm còn lại sẽ ở trong thế giới thực, nghiên cứu các mô thức giấc ngủ của những người bạn đồng hành của bạn để đảm bảo không có gì xấu xảy ra…</p>"
-    },
-    "campaignStructure": {
-      "title": "Lời mở đầu"
+      "title": "Phần kết",
+      "body": "<p class='basic'>_*If (your investigator name) has broken the law of Ulthar and you are not killed or driven insane:*_</p><p>Bạn thức dậy vào một đêm với âm thanh rít lên xung quanh bạn. Hàng trăm đôi mắt mèo xuyên thấu nhìn chằm chằm vào bạn trong bóng tối. Một trong những sinh vật nhảy lên ngực bạn, móng vuốt của nó cắm sâu vào da bạn một cách đau đớn. \"Ngươi cho rằng chúng ta sẽ không tìm được ngươi sao?\" Mắt nó lóe sáng. Nó nhe răng, và những con mèo còn lại tiến lại gần.</p><p class='basic right'>Sao mày dám! Bạn <b>bị giết</b>.</p>"
     }
   },
+  "specialRules": [
+    {
+      "title": "@:theDreamEaters.additionalRulesAndClarifications.alert.title",
+      "body": "@:theDreamEaters.additionalRulesAndClarifications.alert.body"
+    },
+    {
+      "title": "@:theDreamEaters.additionalRulesAndClarifications.storyCards.title",
+      "body": "@:theDreamEaters.additionalRulesAndClarifications.storyCards.body"
+    },
+    {
+      "title": "@:theDreamEaters.additionalRulesAndClarifications.swarming.title",
+      "body": "@:theDreamEaters.additionalRulesAndClarifications.swarming.body"
+    },
+    {
+      "title": "@:theDreamEaters.additionalRulesAndClarifications.hidden.title",
+      "body": "@:theDreamEaters.additionalRulesAndClarifications.hidden.body"
+    }
+  ],
   "key": {
+    "theDreamersStrayedFromThePath": "Những người nằm mơ đi lạc khỏi con đường.",
+    "theInvestigatorsWereSavedByRandolphCarder": "các điều tra viên được cứu bởi Randolph Carter.",
     "theCatsCollectedTheirTributeFromTheZoogs": "Những con mèo đã thu thập cống phẩm của chúng từ Zoogs.",
     "theInvestigatorsParleyedWithTheZoogs": "Các điều tra viên đã đàm phán với Zoogs.",
     "drMaheswaranJoinedTheInvestigation": "Bác sĩ Maheswaran đã tham gia cuộc điều tra.",
@@ -174,59 +244,81 @@
     "randolphEscapedTheHospitalWithTheInvestigators": "Randolph đã trốn khỏi bệnh viện cùng với các điều tra viên.",
     "drMaheswaranIsAlive": "Bác sĩ Maheswaran còn sống.",
     "drMaheswaranIsMissing": "Bác sĩ Maheswaran bị mất tích.",
+    "theBlackCatDeliveredNewsOfYourPlight": "Con mèo đen đã đưa tin về hoàn cảnh của bạn.",
+    "theBlackCatSharedKnowledgeOfTheDreamlands": "Con mèo đen đã chia sẻ tri thức về Vùng đất giấc mơ.",
+    "theBlackCatWarnedTheOthers": "con mèo đen đã cảnh báo cho những người khác.",
+    "okayFineHaveItYourWayThen": "Được rồi, tốt thôi, thế thì cứ làm theo cách của bạn.",
+    "theDreamersGrowWeaker": "Những người nằm mơ ngày càng yếu đi.",
     "youAreOnYourOwn": "Bạn phải tự mình làm.",
     "theBlackCatHasAHunch": "Con mèo đen có linh cảm.",
     "theBlackCatIsAtYourSide": "Con mèo đen ở bên cạnh bạn.",
     "youAskedForIt": "Tự làm tự chịu đi.",
     "theInvestigatorsForcedTheirWayIntoTheTemple": "Các điều tra viên cưỡng ép tiến vào ngôi đền.",
     "evidenceOfKadath": "Bằng chứng về Kadath",
+    "hasBrokenTheLawOfUlthar": "Has broken the Law of Ulthar",
+    "wasCaptured": "Was captured",
     "virgilWasCaptured": "Virgil đã bị bắt giữ.",
     "randolphEludedCapture": "Randolph trốn thoát việc bị bắt giữ.",
     "randolphWasCaptured": "Randolph đã bị bắt giữ.",
     "randolphSurvivedTheDescent": "Randolph sống sót sau khi hạ xuống.",
     "randolphDidNotSurviveTheDescent": "Randolph đã không sống sót sau khi hạ xuống.",
     "theInvestigatorsPossessTheSilverKey": "Các điều tra viên sở hữu Silver Key.",
+    "theBlackCatRequestedAidFromTheOthers": "con mèo đen đã yêu cầu sự trợ giúp từ những người khác.",
+    "theBlackCatSharedKnowledgeOfTheUnderworld": "con mèo đen đã chia sẻ tri thức về Underworld.",
+    "theBlackCatIsSearchingForTheTruth": "Con mèo đen đang tìm kiếm sự thật.",
     "theDreamersKnowOfAnotherPath": "Những người nằm mơ biết về một con đường khác.",
     "theInvestigatorsWereCarriedToTheColdWastes": "Các điều tra viên đã được đưa đến Cold Wastes.",
     "theInvestigatorsTraveledToTheColdWastes": "Các điều tra viên đã đi đến Cold Wastes.",
     "randolphCarterDidNotSurviveTheVoyage": "Randolph Carter đã không sống sót sau chuyến đi.",
     "randolphSurvivedTheVoyage": "Randolph sống sót sau chuyến đi.",
+    "theInvestigatorsFoundAWayOutOfTheUnderworld": "Các điều tra viên đã tìm ra lối thoát khỏi Underworld.",
+    "theBlackCatSpokeOfNyarlathotep": "Con mèo đen đã nói về Nyarlathotep.",
     "theBlackCatSpokeOfAtlachNacha": "Con mèo đen đã nói về Atlach-Nacha.",
     "theBlackCatKnowsTheTruth": "Con mèo đen biết sự thật.",
     "nyarlathotepsInvasionHasBegun": "Sự xâm lược của Nyarlathotep đã bắt đầu.",
     "theDreamersEscapedFromNyarlathotepsGrasp": "Những người ngủ mơ đã thoát khỏi bàn tay của Nyarlathotep.",
     "theDreamersBanishedNyarlathotep": "Những người ngủ mơ đã trục xuất Nyarlathotep.",
-    "theInvestigatorsAreTrappedInAtlachNachasRealm": "Các điều tra viên bị mắc kẹt trong địa hạt của Atlach-Nacha.",
-    "theBridgeWasDestroyed": "Cây cầu đã bị phá hủy.",
-    "theDreamersStrayedFromThePath": "Những người nằm mơ đi lạc khỏi con đường.",
-    "theInvestigatorsWereSavedByRandolphCarder": "các điều tra viên được cứu bởi Randolph Carter.",
-    "theBlackCatDeliveredNewsOfYourPlight": "Con mèo đen đã đưa tin về hoàn cảnh của bạn.",
-    "theBlackCatSharedKnowledgeOfTheDreamlands": "Con mèo đen đã chia sẻ tri thức về Vùng đất giấc mơ.",
-    "theBlackCatWarnedTheOthers": "con mèo đen đã cảnh báo cho những người khác.",
-    "okayFineHaveItYourWayThen": "Được rồi, tốt thôi, thế thì cứ làm theo cách của bạn.",
-    "theDreamersGrowWeaker": "Những người nằm mơ ngày càng yếu đi.",
-    "theBlackCatRequestedAidFromTheOthers": "con mèo đen đã yêu cầu sự trợ giúp từ những người khác.",
-    "theBlackCatSharedKnowledgeOfTheUnderworld": "con mèo đen đã chia sẻ tri thức về Underworld.",
-    "theBlackCatIsSearchingForTheTruth": "Con mèo đen đang tìm kiếm sự thật.",
-    "theInvestigatorsFoundAWayOutOfTheUnderworld": "Các điều tra viên đã tìm ra lối thoát khỏi Underworld.",
-    "theBlackCatSpokeOfNyarlathotep": "Con mèo đen đã nói về Nyarlathotep.",
     "theDreamersAwoke": "Những người ngủ mơ đã tỉnh dậy.",
     "theDreamersStayedInTheDreamlandsForever": "Những người ngủ mơ ở lại trong Vùng đất Giấc mơ mãi mãi.",
     "theDreamersTraveledBeneathTheMonastery": "Những người ngủ mơ đã đi du hành bên dưới tu viện.",
+    "theInvestigatorsAreTrappedInAtlachNachasRealm": "Các điều tra viên bị mắc kẹt trong địa hạt của Atlach-Nacha.",
     "theBridgeWasCompleted": "cây cầu đã hoàn thành.",
+    "theBridgeWasDestroyed": "Cây cầu đã bị phá hủy.",
     "theInvestigatorsReturnedToReality": "các điều tra viên đã trở lại thực tại.",
     "theInvestigatorsNeverEscaped": "các điều tra viên không bao giờ trốn thoát.",
     "theInvestigatorsAreStillInTheDreamlands": "các điều tra viên vẫn đang ở trong Vùng đất Giấc mơ."
   },
   "label": {
+    "theDreamQuest": "The Dream-Quest",
+    "theWebOfDreams": "The Web of Dreams",
+    "beyondTheGatesOfSleep": "Beyond the Gates of Sleep",
+    "wakingNightmare": "Waking Nightmare",
+    "darkSideOfTheMoon": "Dark Side of the Moon",
+    "pointOfNoReturn": "Point of No Return",
+    "whereTheGodsDwell": "Where the Gods Dwell",
+    "weaverOfTheCosmos": "Weaver of the Cosmos",
+    "theSearchForKadath": "The Search for Kadath",
+    "aThousandShapesOfHorror": "A Thousand Shapes of Horror",
     "theBlackCat2NewsOfYourPlight": "*Nói với những người bạn của bạn về nhiệm vụ, hoàn cảnh và nguy nan của bạn.*",
     "theBlackCat2KnowledgeOfDreamlands": "*Nói với những người bạn đồng hành của bạn về những người bạn mới của bạn và về Vùng đất giấc mơ.*",
     "theBlackCat2WarnTheOthers": "*Nói với bạn bè của bạn rằng họ đang gặp nguy hiểm, và bạn thì an toàn.*",
     "theBlackCat2DontTrust": "*Bạn không tin tưởng sinh vật này chút nào.*",
     "blackCatWandersOff": "Con mèo đen rời đi trước khi bạn có thể trả lời, bộ lông đen tuyền của nó hòa vào bóng tối của Underworld.",
-    "blackCatBoundsOff": "Con mèo đen bay vào khoảng không trước khi bạn có cơ hội hỏi nó bất cứ điều gì khác."
+    "youDidNotAskForItRequestAid": "Con mèo đen sẽ trở lại trợ giúp bạn sau khi lời nhắn này được gửi đi. Điều này có thể tạo gánh nặng quá mức cho những người bạn đồng hành của bạn.",
+    "youDidNotAskForItKnowledgeOfUnderworld": "Tell your companions about the Underworld. The black cat will then go elsewhere.",
+    "youDidNotAskForItWarnTheOthers": "Con mèo đen sẽ ở lại với họ sau khi tin nhắn này được giao. Điều này có thể làm cho nhiệm vụ của bạn khó khăn hơn một chút.",
+    "blackCatBoundsOff": "Con mèo đen bay vào khoảng không trước khi bạn có cơ hội hỏi nó bất cứ điều gì khác.",
+    "theGreatOnes1SpokeOfNyarlathotep": "<i>Nói với những người bạn đồng hành của cậu về những mối đe dọa mà cậu phải đối mặt.</i>",
+    "theGreatOnes1SpokeOfAtlachNacha": "Con mèo đen sẽ ở lại với họ sau khi tin nhắn này được giao. Điều này có thể làm cho nhiệm vụ của bạn khó khăn hơn một chút."
+  },
+  "question": {
+    "whichScenarioToStart": "Which scenario would you like to start with?",
+    "chooseDeckForPartA": "Choose Deck For Part A",
+    "chooseDeckForPartB": "Choose Deck For Part B",
+    "proceedToWhichScenario": "Proceed to which scenario"
   },
   "additionalRulesAndClarifications": {
+    "title": "Additional Rules and Clarifications",
     "alert": {
       "title": "Cảnh Giác",
       "body": "<p class='basic'>Mỗi khi một điều tra viên thất bại trong bài kiểm tra kỹ năng khi cố gắng né tránh một kẻ địch có từ khóa Alert (cảnh giác), sau khi áp dụng tất cả kết quả của bài kiểm tra kỹ năng, kẻ địch đó sẽ tấn công điều tra viên đang né tránh. Kẻ địch không bị kiệt sức sau khi thực hiện một cuộc tấn công Alert. Cuộc tấn công này xảy ra bất kể kẻ địch có đang engage với điều tra viên né tránh hay không.</p>"
@@ -236,6 +328,7 @@
       "body": "<div class='story-card-rule'><div><p class='basic'>Các lá bài câu chuyện đóng vai trò như một cách bổ sung các câu chuyện và thường xuất hiện ở mặt còn lại của một lá bài màn chơi khác. Khi bạn được hướng dẫn giải quyết một lá bài câu chuyện, chỉ cần đọc nội dung câu chuyện và giải quyết hiệu ứng trò chơi của nó.</p></div><img src='{setImgPath}/../cards/06057b.avif' alt='The Trial of Kaman-Thah story card' /></div>"
     },
     "swarming": {
+      "title": "Swarming X",
       "body": "<p class='basic'>Một kẻ địch có keyword swarming X thực chất là một bầy kẻ địch hoạt động cùng nhau. Sau khi bạn đưa một kẻ địch có keyword swarming X vào in play, đặt X lá bài trên cùng của deck của bạn úp xuống bên dưới kẻ địch đó dưới dạng các lá bài swarm, mà không được nhìn chúng. Kẻ địch mà chúng nằm bên dưới được gọi là “host enemy.” Một số hiệu ứng lá bài scenario cũng có thể hướng dẫn người chơi thêm các lá bài swarm vào một kẻ địch. Việc này được thực hiện theo cùng một quy trình.</p><ul><li>Nếu không rõ điều tra viên nào nên thêm các lá bài swarm, trưởng nhóm sẽ làm điều đó.</li><li>Mỗi lá bài swarm nằm dưới host enemy hoạt động như một bản thể riêng biệt của kẻ địch đó cho hầu hết các mục đích. Mỗi lá bài swarm có cùng các giá trị và text như lá bài host của nó. *(Ví dụ, nếu một điều tra viên đang engaged với một host enemy có 2 lá bài swarm nằm dưới nó, điều tra viên đó đang engaged với tổng cộng 3 kẻ địch.)*</li><li>Mỗi lá bài swarm tấn công riêng biệt khi kẻ địch tấn công trong enemy phase. Một khi host enemy và tất cả các lá bài swarm của nó đã tấn công trong bước này, exhaust tất cả chúng.</li><li>Mỗi lá bài swarm có thể bị tấn công hoặc chịu damage riêng biệt, nhưng host enemy không thể bị defeat khi nó vẫn còn các lá bài swarm nằm bên dưới. Khi một lá bài swarm bị defeat, bất kỳ damage dư nào cũng có thể được gây cho một lá bài swarm khác nằm dưới cùng một host enemy hoặc cho chính host enemy đó. *(Ví dụ, Tony Morgan sử dụng .41 Derringer để tấn công một Stealthy Zoog có 2 lá bài swarm. Đòn tấn công gây 2 damage. Điểm damage đầu tiên defeat 1 trong 2 lá bài swarm, vì vậy điểm damage dư có thể được gây cho lá bài swarm khác, đồng thời defeat nó.)*</li><li>Bất cứ khi nào một lá bài swarm rời khỏi khu vực chơi, hãy đặt nó xuống dưới cùng deck của chủ sở hữu. Nếu bạn không chắc chắn về chủ sở hữu của lá bài swarm, bạn có thể xem nó để xác định chủ sở hữu.</li><li>Kẻ địch host và tất cả các lá bài swarm của nó move, engage, và exhaust như một thực thể duy nhất. (Ví dụ, nếu một kẻ địch host hoặc bất kỳ lá bài swarm nào của nó bị evade, tất cả chúng đều exhaust và trở nên disengaged.)</li></ul>"
     },
     "hidden": {

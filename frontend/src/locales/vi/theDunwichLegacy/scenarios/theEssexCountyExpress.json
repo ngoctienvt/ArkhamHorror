@@ -1,23 +1,62 @@
 {
   "heading": "Màn III",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the current Agenda #.",
+      "cultist": "-1. If you fail and it is your turn, lose all remaining actions and end your turn immediately.",
+      "tablet": "-2. Add 1 doom token to the nearest Cultist enemy.",
+      "elderThing": "-3. Nếu bạn thất bại, choose and discard a card from your hand."
+    },
+    "hardExpert": {
+      "skull": "-X. X is 1 more than the current Agenda #.",
+      "cultist": "Rút thêm một token khác. If you fail and it is your turn, lose all remaining actions and end your turn immediately.",
+      "tablet": "-4. Add 1 doom token to each Cultist enemy in play.",
+      "elderThing": "-3. Nếu bạn thất bại, choose and discard a card from your hand for each point you failed by."
+    }
+  },
   "intro": {
-    "title": "Màn III: Chuyến Tàu Tốc Hành Essex"
+    "title": "Màn III: Chuyến Tàu Tốc Hành Essex",
+    "body": "<p>Các sự kiện gần đây trong Viện Bảo tàng buộc bạn phải xem xét lại câu chuyện của Armitage về làng Dunwich. Đó không thể là sự trùng hợp ngẫu nhiên — Wilbur Whateley, cuốn sách Necronomicon, sinh vật từ Dunwich, và những người và sinh vật đã tấn công thị trấn Arkham ở đây — mọi thứ phải được kết nối lại với nhau. Bây giờ bạn chắc chắn nơi mình phải đến: một ngôi làng vắng vẻ và ảm đạm, làng Dunwich.</p><p>Bạn cân nhắc việc báo cho Cảnh sát Tiểu bang Massachusetts những gì bạn biết, nhưng hậu quả thì có thể nhiều hơn lợi ích có thể có được. Với câu chuyện của bạn, họ có thể sẽ xem chúng như một trò đùa quá trớn. Tệ hơn nữa, họ có thể nhốt bạn lại. Dù gì thì bạn cũng đã có mặt trong một quán bar \"truyền miệng\" bất hợp pháp, và còn  xâm nhập vào viện bảo tàng. Vì vậy, bạn quyết định tự mình đến làng Dunwich để điều tra thêm.</p><p>Bạn đóng gói tất cả mọi thứ bạn nghĩ mình có thể cần và nghỉ ngơi một chút vào buổi tối. Vào buổi sáng, bạn đến ga xe ở Northside và mua vé tàu tốc hành. Ngôi làng Dunwich cách Thung lũng sông Miskatonic vài giờ đi tàu về phía tây bắc. Không có ga xe ở làng Dunwich, nhưng bạn có thể gọi điện cho một trong những người quen của Armitage sống trong ngôi làng nhỏ: một người đàn ông tên là Zebulon Whateley, người đã có mặt trong các sự kiện vài tháng trước.</p><p>Các ghi chép của Armitage chỉ ra rằng gia tộc Whateley có nhiều chi nhánh khác nhau, một số trở nên suy đồi và vô đạo đức, một số khác “không suy tàn” hoặc không bị ảnh hưởng bởi các nghi thức bất chính và ma quỷ. Theo Armitage, chi nhánh của gia tộc Zebulon nằm ở đâu đó giữa những chi nhánh Whateleys đã trở nên suy đồi và những chi nhánh chưa suy đồi, những người biết về truyền thống của tổ tiên mình, nhưng không để chúng làm mục nát bản thân. Ông ấy đồng ý đón bạn ở ga tàu gần nhất và đưa bạn vào ngôi làng.</p><p>Khi tàu khởi hành từ Arkham, bạn cảm thấy những sự kiện của đêm hôm trước ập đến với mình và tình trạng kiệt sức bắt đầu diễn ra. Nhưng trước khi bạn có thể đến đích một cách an toàn, toa tàu đột nhiên kêu ầm ầm và rung lắc, khiến bạn giật cả mình. Con tàu trượt phanh ầm ầm lao một đoạn rồi dừng đột ngột, và bạn nghe thấy một tiếng động lạch cạch phía sau mình…</p>"
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Essex County Express*, *The Beyond*, *Striking Fear*, *Ancient Evils*, *Dark Cult*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-essex-county-express.png' /><img src='{setImgPath}/the-beyond.png' /><img src='{setImgPath}/striking-fear.png' /><img src='{setImgPath}/ancient-evils.png' /><img src='{setImgPath}/dark-cult.png' /></section>",
     "placeLocations": "Đặt ngẫu nhiên 1 trong 3 vị trí Engine Car vào màn chơi. Loại bỏ các phiên bản khác của Engine Car khỏi màn chơi. Sau đó, đặt ngẫu nhiên 6 trong 8 vị trí Train Car vào màn chơi, theo một đường thẳng nằm bên trái Engine Car. Loại bỏ 2 vị trí Train Car còn lại khỏi màn chơi.",
     "revealTrainCar": "Để lộ vị trí Train Car ngoài cùng bên trái. Mỗi điều tra viên bắt đầu màn chơi tại vị trí này. (Nếu vị trí đó có hiệu ứng \"forced\" được kích hoạt khi di chuyển vào vị trí thì bỏ qua nó.)",
-    "setAside": "Đặt 4 bản sao của Across Space and Time một bên, ngoài vùng chơi."
+    "setAside": "Đặt 4 bản sao của Across Space and Time một bên, ngoài vùng chơi.",
+    "adjustChaosBag": "Based on your difficulty level, add the following chaos token(s) to the chaos bag, for the remainder of the campaign:<div class='columns'><ul><li>_Easy_: -2</li><li>_Standard_: -3</li></ul><ul><li>_Hard_: -4</li><li>_Expert_: -5</li></ul></div>",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to The Essex County Express*, *Beyond the Threshold*, *Erratic Fear*, and *Resurgent Evils*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-essex-county-express.png' /><img src='{setImgPath}/beyond-the-threshold.png' /><img src='{setImgPath}/erratic-fear.png' /><img src='{setImgPath}/resurgent-evils.png' /></section>*Beyond the Threshold* replaces *The Beyond*, *Erratic Fear* replaces *Striking Fear*, and *Resurgent Evils* replaces *Ancient Evils*. Remove the replaced sets from the game.",
+      "agendaDeck": "Remove Agenda 1a—*A Tear in Reality* from the game and replace it with the new Agenda 0a—*Where There’s Smoke* and the new Agenda 1a—*A Tear in Reality (v. II)*. When you construct the agenda deck, agenda 0a should be on top.",
+      "placeLocations": "When choosing 6 Train Car locations to put into play at random, include the 2 new Train Car locations from this encounter set, for a total of 10 possible cards. When choosing an Engine Car location to put into play at random, include the new Engine Car location, for a total of 4 possible cards.",
+      "setAside": "Also set the Engineer story asset aside, out of play."
+    }
   },
   "moving": {
     "title": "Di chuyển trên con tàu: “Trái” và “Phải”",
     "body": "<p class='basic'>Trong màn này, các vị trí được sắp xếp từ trái sang phải, với Engine Car (đầu máy) là vị trí ngoài cùng bên phải. Bất cứ khi nào hiệu ứng lá bài đề cập đến “vị trí ở bên trái” hoặc “vị trí ở bên phải”, nó đề cập đến vị trí ngay bên trái hoặc bên phải vị trí của bạn. Bất kỳ hiệu ứng lá bài nào đề cấp đến một hướng (trái hoặc phải) thì nên được hiểu là ở sơ đồ trên trang trước.</p>"
   },
+  "specialRules": [
+    {
+      "title": "@:theDunwichLegacy.theEssexCountyExpress.moving.title",
+      "body": "@:theDunwichLegacy.theEssexCountyExpress.moving.body"
+    }
+  ],
+  "xp": {
+    "bonus": "Granted insight into the cosmos"
+  },
   "resolutions": {
+    "defeat": "<div class='resolution'><p class='basic'>_Before resolving any other resolution, if at least 1 investigator was defeated_: The defeated investigators read _Investigator Defeat_ first.</p><p>_Điều Tra Viên Bị Đánh Bại_: Trải nghiệm của bạn bên ngoài cánh cổng vừa đáng sợ vừa không thể nhớ lại một cách rõ ràng. Một cảnh tượng thôi miên đầy ánh sáng, cảm giác như một thế giới khác và hình học bị biến đổi nhảy múa ở rìa tâm trí của bạn. Một giọng nói kỳ lạ từ bên ngoài vang lên trong tai bạn, ý nghĩa của nó là một bí ẩn. Khi tỉnh dậy, bạn thấy mình đang ở trong rừng, cách con sông Miskatonic vài dặm. Các toa tàu bị phá hủy nằm quanh bạn. Chúng bị nhàu nát như thể bị va chạm mạnh; chúng cũng bị mục nát như thể rỉ sét nhiều năm. Không có dấu hiệu của những hành khách khác.</p><ul><li>Mỗi điều tra viên bị hạ gục nhận một điểm yếu Across Space and Time và phải thêm 1 bản sao của điểm yếu vào bộ bài của mình. Lá bài không tính vào giới hạn bộ bài của điều tra viên.</li><li>Mỗi điều tra viên bị hạ gục sẽ nhận thêm 1 điểm kinh nghiệm nhờ trải nghiệm vượt qua cánh cổng giúp họ có cái nhìn sâu sắc hơn về vũ trụ.</li><li>Lá bài The Necronomicon <i>(Olaus Wormius Translation)</i> phải bị loại bỏ khỏi bộ bài của điều tra viên.</li><li>If an investigator with the Dr. Henry Armitage card, the Professor Warren Rice card, or the Dr. Francis Morgan card in their deck was defeated, in your Campaign Log, record that the character in question *was kidnapped*. The associated card must be removed from that investigator’s deck.</li><li>If no resolution was reached (each investigator was defeated): Go to _Resolution 2_.</li></ul></div>",
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p>_Resolution 1_: Bạn thở phào nhẹ nhõm khi cánh cổng phía sau con tàu tự đóng sập lại một cách an toàn. Số ít hành khách sống sót sau thử thách dường như không thể hiểu chuyện gì vừa xảy ra. Một hành khách đề cập đến “một cái ống nổ ở toa sau,” và điều đó nhanh chóng trở thành lời giải thích cho những người vô tội và thiếu hiểu biết, những người không thể hoặc không chọn tìm hiểu sâu hơn về bí ẩn. Mặt khác, bạn thì biết rõ… mặc dù trong nhận thức muộn màng của mình, bạn ước mình không phải biết.</p><ul><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>_Điều Tra Viên Bị Đánh Bại_: Lo lắng trong lòng, bạn bắt đầu đi dọc theo đường ray xe lửa, tiến về phía làng Dunwich.</p><ul><li>các điều tra viên bị chậm trễ trên đường tới làng Dunwich.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     }
+  },
+  "label": {
+    "dodge": "Test {'{'}agility{'}'} (3) to attempt to dodge the creature. If you fail, you leap too far and barely grip the side of the train, hanging on for dear life. Although you manage to pull yourself up, the experience is terrifying. You suffer 1 mental trauma.",
+    "endure": "Test {'{'}combat{'}'} (3) to attempt to endure the creature's extreme heat. If you fail, the creature flies through you and the heat burns you. You suffer 1 physical trauma."
   }
 }

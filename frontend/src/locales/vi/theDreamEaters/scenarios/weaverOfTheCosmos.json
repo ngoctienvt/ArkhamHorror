@@ -1,32 +1,96 @@
 {
   "heading": "Màn IV-B",
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Weaver of the Cosmos*, *Agents of Atlach-Nacha*, *Spiders*, *Ancient Evils*, and *Chilling Cold*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/weaver-of-the-cosmos.png' /><img src='{setImgPath}/agents-of-atlach-nacha.png' /><img src='{setImgPath}/spiders.png' /><img src='{setImgPath}/ancient-evils.png' /><img src='{setImgPath}/chilling-cold.png' /></section>",
     "putGreatWebs": "Xào mỗi bản sao của The Great Web và đặt ngẫu nhiên 4 lá vào chơi, theo hàng dọc.",
     "beginAtTopmostWeb": "Mỗi điều tra viên bắt đầu chơi ở vị trí The Great Web trên cùng.",
     "setOtherWebsAside": "Đặt mỗi lá bài The Great Web còn lại qua một bên, ngoài khu vực chơi.",
     "setCardsAside": "Đặt các thẻ sau sang một bên, ngoài khu vực chơi: lá Atlach-Nacha hai mặt, kẻ địch 4 Legs of Atlach-Nacha và cả hai bản sao của The Spinner in Darkness.",
     "checkSteps": "Kiểm tra số kiểm đếm được ghi bên cạnh \"Các bước của cây cầu\" trong Nhật ký Chiến dịch.",
+    "twoOrFewerSteps": "*If there are 2 or fewer tally marks recorded*, nothing happens.",
+    "threeToFiveSteps": "*If there are 3–5 tally marks*, place 1 doom on the bottommost location.",
+    "sixToEightSteps": "*If there are 6–8 tally marks*, place 2 doom on the bottommost location.",
+    "nineToElevenSteps": "*If there are 9–11 tally marks*, place 3 doom on the bottommost location.",
+    "twelveOrMoreSteps": "*If there are 12 or more tally marks*, place 4 doom on the bottommost location.",
     "buildEncounterDeck": "Xáo trộn các lá bài encounter còn lại để tạo thành chồng bài encounter."
+  },
+  "rules": {
+    "atlachNacha": {
+      "title": "Atlach-Nacha",
+      "body": "<p class='basic'>Hình dạng của Atlach-Nacha bao gồm nhiều kẻ địch Legs of Atlach-Nacha. Mỗi kẻ địch trong số này hoạt động như một kẻ địch riêng biệt với từ khóa Massive và được coi là đã engage với từng điều tra viên tại vị trí của nó, giống như hầu hết những kẻ địch Massive khác.</p><ul><li>Mỗi kẻ địch Legs of Atlach-Nacha được xem là ở vị trí mà nó chạm vào, như được mô tả trong sơ đồ bên dưới.</li><li>Lá bài trung tâm của Atlach-Nacha và mỗi kẻ địch Legs of Atlach-Nacha phải luôn duy trì trong cùng một đội hình, ngay cả khi một lá bài bị loại bỏ khỏi đội hình. Nếu một lá bài di chuyển, tất cả các lá bài trong đội hình cũng phải di chuyển.</li><li><b>Hệ quả là các lá bài Legs of Atlach-Nacha không thể di chuyển hoặc bị di chuyển ngoại trừ các hiệu ứng \"spin\" của Atlach-Nacha.</b></li><li>Nếu bạn được hướng dẫn \"spin\" Atlach-Nacha một hoặc nhiều lần, hãy xoay tất cả các lá bài ở giữa (mỗi lá bài Legs of Atlach-Nacha còn lại, cũng như lá bài ở giữa) theo hướng được chỉ định sao cho mỗi lá bài Legs of Atlach-Nacha di chuyển theo chiều kim đồng hồ theo số địa điểm.<ul><li>Example: An effect causes the players to “spin Atlach-Nacha clockwise once.” This means the players should rotate Atlach-Nacha in place such that each of its legs moves one location clockwise, as depicted below.<img src='/img/arkham/campaigns/the-dream-eaters/atlach-nacha-spin.png' style='display:block;max-width:100%;margin:16px auto;' /></li></ul></li></ul>"
+    }
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the highest amount of doom on a location in play.",
+      "cultist": "Rút thêm một token khác. Nếu bạn thất bại, and there is an _Ancient One_ enemy at your location, it attacks you.",
+      "tablet": "0. The black cat tears at the web with its claws. If you succeed by 2 or more, remove 1 doom from your location.",
+      "elderThing": "-3. If this skill test fails during an attack against a _Spider_ enemy, đặt 1 doom lên that enemy's location."
+    },
+    "hardExpert": {
+      "skull": "-X. X is the amount of doom on locations in play.",
+      "cultist": "Rút thêm một token khác. Nếu bạn thất bại, and there is an _Ancient One_ enemy at your location, it attacks you.",
+      "tablet": "-1. The black cat tears at the web with its claws. If you succeed by 2 or more, remove 1 doom from your location.",
+      "elderThing": "-4. If this skill test fails during an attack against a _Spider_ enemy, đặt 1 doom lên that enemy's location."
+    }
   },
   "intro": {
     "title": "Màn IV-B: Weaver of the Cosmos",
     "body": "<p>Tất cả mọi thứ đã dẫn đến điều này. Tác phẩm của Virgil, giấc ngủ không bao giờ kết thúc của những người bạn đồng hành của bạn, bệnh viện St. Mary's, con mèo đen, tất cả những điều đó. Bạn không có lựa chọn nào khác ngoài việc tiếp tục. Không gian đa chiều này là nhà của một sinh vật sẽ xóa sổ thế giới của bạn và thay thế nó bằng một thực tại mới, một viễn cảnh ác mộng tối đen như mực và những sinh vật săn mồi đồng loại của bạn. Nếu bạn không thể ngăn chặn nó dệt, sẽ không còn Trái Đất nào để thức dậy. Bạn phải làm một cái gì đó, ngay cả khi nó có nghĩa là kết thúc của bạn.</p>"
   },
   "resolutions": {
+    "xp": {
+      "resolution1": "Prevented the Dreamlands and reality from merging."
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_If no resolution was reached because each investigator was defeated:_ You awaken trapped inside something tight and sticky. Your arms are bound to your sides, and no matter how fiercely you struggle, you cannot seem to move except to wiggle your fingers hopelessly. Slowly, dread creeps its way through your mind as you realize the situation you are in. As you cannot move your head, you are forced to watch as the eight-legged creature emerges from the darkness. It makes no sound as it steps onto the web. Its many eyes reflect your terrified expression. Its mandibles drip with hunger. You only wish you could look away.</p><ul><li>In your Campaign Log, record *the bridge was completed*.</li><li>Mỗi điều tra viên bị <b>giết chết</b>.</li><li>Nếu bạn đang chơi The Web of Dreams dưới dạng chiến dịch gồm bốn phần:</li><li>*If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…*<ul><li>*…and you have not yet played Scenario 4–A: Where the Gods Dwell*, proceed to that scenario.</li><li>*…and you have already played Scenario 4–A: Where the Gods Dwell*, proceed instead to _Epilogue_.</li></ul></li></ul>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>Bạn nắm chặt một sợi tơ, thứ duy nhất giúp bạn không rơi thẳng xuống vực sâu vô tận của khoảng không.</p><ul><li>In your Campaign Log, record *the bridge was destroyed*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Kiểm tra Nhật ký Chiến dịch. Giải quyết tùy chọn trên cùng được áp dụng.<ul><li>*If the investigators found a way out of the Underworld*, skip to _Resolution 3_.</li><li>các điều tra viên bị mắc kẹt trong địa hạt của Atlach-Nacha.</li><li>*If none of the above are true*, skip to _Resolution 5_.</li></ul></li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2:_ You scramble for hours in the dark, sticky, web-infested void between worlds. When you reach the end of the bridge of cosmic webs, you are met with a terrible sight. The void that once surrounded you fades into a dusky evening, and a familiar skyline of clustering gambrel roofs stands before you. To your dismay, the entirety of the town has been infested by the brood of Atlach-Nacha. Thick webbing extends from the gloomy streets to the tallest rooftops. Spiders and ghasts prowl through the city’s once-busy avenues, seeking human prey to devour—or worse, to imprison forever in cocoons of unbreakable web. You drop to your knees, overtaken by despair. How far does this corruption reach? Is it just Arkham, or…?</p><ul><li>In your Campaign Log, record *the bridge was completed*.</li><li>Mỗi điều tra viên bị khiến <b>điên loạn</b>.</li><li>Nếu bạn đang chơi The Web of Dreams dưới dạng chiến dịch gồm bốn phần:</li><li>*If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…*<ul><li>*…and you have not yet played Scenario 4–A: Where the Gods Dwell*, proceed to that scenario.</li><li>*…and you have already played Scenario 4–A: Where the Gods Dwell*, proceed instead to _Epilogue_.</li></ul></li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>Ở đằng xa, bạn có thể nhìn thấy tòa tháp thấp thoáng phía sau nhện thần khi nó chăng tơ, lối vào vẫy gọi bạn lại gần. Bạn nhớ lại Tháp Koth ở Underworld và đường lên mặt đất. Đây có phải là gốc rễ của cùng một tòa tháp? Liệu nó xuyên qua thế giới giữa các thế giới này? Nếu vậy, bạn có thể trốn thoát. Thay vì quay trở lại con đường bạn đã đến, bạn vung mạng nhện của mình từ bên này sang bên kia và nhảy qua khoảng không, hạ mình xuống chân tháp. Sau đó, bạn bắt đầu một chặng đường dài leo lên—trên bề mặt Sea of Pitch, dưới mặt đất bên dưới Thành phố Gugs, rồi xa hơn nữa lên phía trên. Cuối cùng, sau hàng dặm di chuyển không ngừng nghỉ, bạn đẩy phiến đá trên đỉnh tháp sang một bên và bạn xuất hiện trong Khu rừng bị ám. Bạn niêm phong lối vào phía sau bạn. Không có gì từ Underworld kinh khủng có thể theo bạn ở đây. Lần đầu tiên kể từ khi bước vào Vùng đất Giấc mơ, bạn thở phào nhẹ nhõm. Nhớ lại chương đầu tiên của câu chuyện của Virgil Gray, bạn đi theo một con đường hẹp xuyên qua khu rừng cho đến khi bạn đến một cầu thang bằng đá cứng dẫn lên những đám mây. Đã đến lúc trở về nhà.</p><ul><li>In your Campaign Log, record *the investigators returned to reality*.</li><li>Mỗi điều tra viên phải chịu 2 sang thương về thể chất sau cuộc chiến khốc liệt với nhện thần.</li><li>Nếu bạn đang chơi The Web of Dreams dưới dạng chiến dịch gồm bốn phần:</li><li>*If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…*<ul><li>*…and you have not yet played Scenario 4–A: Where the Gods Dwell*, proceed to that scenario.</li><li>*…and you have already played Scenario 4–A: Where the Gods Dwell*, proceed instead to _Epilogue_.</li></ul></li></ul>"
     },
     "resolution4": {
-      "title": "Kết thúc thứ 4"
+      "title": "Kết thúc thứ 4",
+      "body": "<p>Bạn đã ngăn nhện thần hoàn thành mạng nhện của nó, nhưng trong quá trình này, bạn cũng đã cắt đứt cách thức trốn thoát duy nhất của mình. Định mệnh của bạn là phải lang thang giữa các thế giới kinh khủng này, tìm kiếm bất kỳ hy vọng trốn thoát trong vô vọng. Niềm an ủi duy nhất của bạn là bạn đã ngăn cản tương lai tàn khốc này trở thành tương lai của mọi người trên Trái đất. Có lẽ nếu bạn vẫn sở hữu Chìa Khóa Bạc, bạn có thể đã có một lối thoát. Cố gắng hết mức có thể, trong khoảng không trống trải, ảm đạm bên dưới Sea of Pitch không đáy này, bạn không thể tập hợp được ý chí để tạo ra nó.</p><ul><li>In your Campaign Log, record *the investigators never escaped*.</li><li>Mỗi điều tra viên bị khiến <b>điên loạn</b>.</li><li>Nếu bạn đang chơi The Web of Dreams dưới dạng chiến dịch gồm bốn phần:</li><li>*If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…*<ul><li>*…and you have not yet played Scenario 4–A: Where the Gods Dwell*, proceed to that scenario.</li><li>*…and you have already played Scenario 4–A: Where the Gods Dwell*, proceed instead to _Epilogue_.</li></ul></li></ul>"
     },
     "resolution5": {
-      "title": "Giải pháp thứ 5"
+      "title": "Giải pháp thứ 5",
+      "body": "<p>_Resolution 5:_ You have stopped the spider god from completing its web, but in the process, you have cut off the quickest way for you to return home. So, with your task complete, you begin the long climb toward reality. You are lucky that remnants of the web-bridge still remain intact, or you would have been stranded in this hellish world between worlds. It takes many hours for you to retrace your steps to the Underworld. You eventually emerge from the thick, tar-like Sea of Pitch, close to the shoreline. To your dismay, you realize that you are on the opposite shore of the sea from the dark vale from which you once embarked. With no way to cross the deadly sea, you’ll have to find another way out of this barren expanse. Days pass as you continue to explore the Underworld, reaching darker and more forbidden lands as you travel deeper and deeper below the crust of the Earth’s Dreamlands. Though you eventually find a stairway up, it is very different from the one leading to the Unnamable: a spiraling, otherworldly series of steps that reach dizzying heights and break all laws of reality. When you reach the top, your heart sinks. There is no sign of Arkham here. You are greeted instead by a strange, ruined city and its half-human denizens. The creatures inform you that you have reached the lost city of “Sarkomand.” It appears your return journey is far from over.</p><ul><li>In your Campaign Log, record *the investigators are still in the Dreamlands*.</li><li>Mỗi điều tra viên phải chịu 2 sang thương về thể chất sau cuộc chiến khốc liệt với nhện thần.</li><li>Nếu bạn đang chơi The Web of Dreams dưới dạng chiến dịch gồm bốn phần:</li><li>*If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…*<ul><li>*…and you have not yet played Scenario 4–A: Where the Gods Dwell*, proceed to that scenario.</li><li>*…and you have already played Scenario 4–A: Where the Gods Dwell*, proceed instead to _Epilogue_.</li></ul></li></ul>"
+    }
+  },
+  "theSpiderQueen1": {
+    "title": "Scenario Interlude: The Spider Queen",
+    "body": "<p>Bạn leo lên một vách đá dựng đứng và chứng kiến sự khổng lồ của cây cầu nhện và <i>thứ</i> đi trên nó: Atlach-Nacha, thần nhện, cùng với bầy thợ dệt của nó. Những quái vật nhiều chân liên tục đan xen các tơ nhện vũ trụ, làm việc không ngừng nghỉ. Khi những sinh vật khủng khiếp dệt từng sợi chỉ, bạn cảm thấy thực tại và giấc mơ bị bóp méo, không ngừng va chạm vào nhau. Ở đằng xa, những làn sóng của giấc mơ đập vào những tảng đá của thực tại, và thực tại sụp đổ vào giấc mơ vô định hình đang trào dâng lên. Bạn hầu như không thể hiểu được những khung cảnh kỳ lạ đang thay đổi. Một mạng nhện dính treo bên cạnh vị trí thuận lợi của bạn, giống như một chiếc thang bằng lụa dẫn xuống nơi diệt vong của bạn.</p><ul><li>Kiểm tra Nhật ký Chiến dịch.<ul><li>*If Randolph survived the descent and the black cat knows the truth*, proceed to _The Spider Queen 2_.</li><li>*Otherwise, if Randolph survived the descent*, skip to _The Spider Queen 3_.</li><li>*If Randolph did not survive the descent*, skip to _The Spider Queen 4_.</li></ul></li></ul>"
+  },
+  "theSpiderQueen2": {
+    "title": "Scenario Interlude: The Spider Queen",
+    "body": "<p>Bạn đang chuẩn bị leo xuống nền đất bên dưới thì bạn nghe thấy giọng nói của con mèo đen từ phía sau người bạn đồng hành của bạn, Randolph. Giọng nói đó ra lệnh, \"Thả nó xuống,\" Một nụ cười nham hiểm nở trên khuôn mặt của Randolph khi anh ta đánh rơi một lưỡi kiếm mã não lởm chởm, nó rơi xuống đất.</p><p>“So you have seen through my mask?” he says. “No matter. You will complete this errand upon which I have sent you, regardless. Your world depends on it.”</p><p>Hoang mang, bạn hỏi tại sao Randolph lại hành động như vậy. Con mèo đen nhảy lên vai bạn và đậu ở đó, ánh mắt của nó không bao giờ rời khỏi người bạn đồng hành đầu tiên của bạn. \"Tôi đã tìm ra nó một lúc trước. Hắn ta không phải Randolph. Chưa bao giờ là Randolph. Chỉ là một kẻ xen vào vào cơ thể của Randolph.\"</p><p>\"Kẻ xen vào?\" Randolph đùng đùng phẫn nói. \"Ngươi, con mèo, mới là kẻ xen vào! Đúng vậy, ta biết ngươi là gì. Đây không phải là nơi của ngươi. Nói thế đủ rồi.\" Một nụ cười bò trên môi anh một lần nữa. \"Ngươi có một nhiệm vụ phải thực hiện. Vậy thì tạm biệt... cho lúc này.\" Sau khi cảnh báo xong, Kẻ-Không-Phải-Randolph bước ra khỏi nền đất và biến mất.</p><ul><li>Nếu bộ bài của một điều tra viên có Randolph Carter <i>(Chained to the Waking World)</i> <i>(The Dream-Eaters card #79)</i>, loại bỏ anh ấy khỏi chồng bài đó cho phần còn lại của chiến dịch.</li><li>Skip to _The Spider Queen 4_.</li></ul>"
+  },
+  "theSpiderQueen3": {
+    "title": "Scenario Interlude: The Spider Queen",
+    "body": "<p>_The Spider Queen 3:_ You begin to climb down the web to the platform below, from which you can reach the edge of the bridge and Atlach-Nacha itself. Halfway down, the suspended platform jolts and starts to sway violently from side to side. You grip the silken threads tightly, hoping that the sticky web will keep you from falling. You look to Randolph to make sure he is okay, and it is then that you notice he is not climbing above you as you had suspected he would. You look up to find your companion scowling at you from above, a blade of onyx in his hands. He has cut a segment of the web upon which you are climbing. You have no time to ask what he is doing before he severs the web completely. You plummet to the rocks below, landing painfully on your back. When you look back up at Randolph, his countenance has changed.</p><p>“Foolish mortals. I was never going to allow you to save your companions. You have an errand of mine to run, and that is your sole purpose. If you wish to live, complete this task for me.” He peers across at the unfathomable spider that looms before you. “I shall be the one to claim your world—not that thing.” Then, Not-Randolph simply turns and walks away.</p><ul><li>các điều tra viên bị mắc kẹt trong địa hạt của Atlach-Nacha.</li><li>Nếu bộ bài của một điều tra viên có Randolph Carter <i>(Chained to the Waking World)</i> <i>(The Dream-Eaters card #79)</i>, loại bỏ anh ấy khỏi chồng bài đó cho phần còn lại của chiến dịch.</li><li>Depending on your difficulty, add a token to the chaos bag, as follows: Easy (–3), Standard (–4), Hard (–5), Expert (–7).</li><li>Proceed to _The Spider Queen 4_.</li></ul>"
+  },
+  "theSpiderQueen4": {
+    "title": "Scenario Interlude: The Spider Queen",
+    "body": "<p>Sinh vật sắp hoàn thành công trình của nó. Đôi chân của nó di chuyển nhanh nhẹn, kéo hết sợi tơ này đến sợi tơ vũ trụ khác với quyết tâm phi thường. Nó hầu như không nhận ra sự hiện diện của bạn. Có lẽ nếu bạn có thể cắt đứt chân của nó, hoặc xé toạc lớp màng mà nó đang đứng…</p><ul><li>Loại bỏ mỗi vị trí trong màn chơi ngoại trừ vị trí dưới cùng. Chuyển vị trí đó lên trên đầu khu vực chơi. Xào các vị trí The Great Web còn lại và đặt 7 trong số đó thành 1 vòng tròn, cùng với vị trí của các điều tra viên (ở trên cùng của vòng tròn). Cho đến khi kết thúc màn chơi, mỗi vị trí kết nối với vị trí kế bên đó <i>(theo chiều kim đồng hồ hoặc ngược chiều kim đồng hồ)</i>.</li><li>Lắp ráp Atlach-Nacha bằng cách thực hiện các bước sau theo thứ tự:<ul><li>Find the double-sided Atlach-Nacha card and flip it to the side that only has art on it.</li><li>Arrange the 4 Legs of Atlach-Nacha enemies next to it, as depicted below:<img src='/img/arkham/campaigns/the-dream-eaters/atlach-nacha-assembly.png' style='display:block;max-width:100%;margin:16px auto;' /></li><li>Đặt Atlach-Nacha đã lắp ráp vào giữa khu vực chơi, giữa 8 vị trí, sao cho một góc của mỗi kẻ địch Legs of Atlach-Nacha chạm vào một vị trí khác nhau <i>(xem phần gợi ý khu vực chơi)</i>.</li></ul></li><li>Xào từng bản sao đặt một bên hồi đầu của The Spinner in Darkness vào chồng bài encounter, cùng với chồng bài encounter bỏ.</li><li>Read the rules for “Atlach-Nacha.”</li></ul>"
+  },
+  "theGreatWebPrisonOfCocoons": {
+    "label": {
+      "placeDoom": "Place 1 doom on this location"
+    }
+  },
+  "theGreatWebCosmicWeb": {
+    "label": {
+      "placeDoom": "Place 1 doom on this location"
     }
   }
 }

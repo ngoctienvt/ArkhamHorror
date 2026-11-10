@@ -1,6 +1,25 @@
 {
+  "specialRules": [
+    {
+      "title": "Chìa khóa",
+      "body": "<p class='basic'>Bản mở rộng này giới thiệu các token chìa khóa đại diện cho các vật thể hoặc phần thông tin quan trọng có thể được lấy và sử dụng trong các màn chơi.</p><p class='basic'>If a scenario uses one or more keys, the setup of that scenario indicates how many are set aside and whether they should be faceup or randomized facedown. Keys can enter play via several different card effects, and they are usually placed on an enemy, location, or story asset. Keys can be acquired in any of three ways:</p><ul><li>If a location with a key on it has no clues, an investigator may take control of each of the location’s keys as a {'{'}fast{'}'} ability.</li><li>Nếu một điều tra viên khiến kẻ địch có chìa khóa trên nó rời khỏi cuộc chơi, điều tra viên đó PHẢI nắm quyền kiểm soát mỗi chìa khóa trên kẻ địch đó. (Nếu nó rời khỏi trò chơi bằng một số cách khác, hãy đặt các chìa khóa đó vào vị trí nó đang ở.)</li><li>Một số hiệu ứng lá bài có thể cho phép một điều tra viên được quyền kiểm soát chìa khóa bằng các cách khác nhau.</li></ul><p class='basic'>When an investigator takes control of a key, they flip it faceup (if it is facedown) and place it on their investigator card. If an investigator who controls one or more keys is eliminated, place each of their keys on their location. As an {'{'}action{'}'} ability, an investigator may give any number of their keys to another investigator at the same location.</p><p class='basic'><b>Các chìa khóa không có hiệu ứng mặc định trong trò chơi.</b> Tuy nhiên, một số hiệu ứng thẻ bài có thể thay đổi tùy thuộc vào chìa khóa mà điều tra viên kiểm soát. Ngoài ra, đôi khi có thể cần có chìa khóa để tiếp tục tiến trình trong màn chơi.</p>"
+    },
+    {
+      "title": "Token Ngập Lụt",
+      "body": "<p class='basic'>Throughout this campaign, scenario card effects can flood locations. Each location has one of three different flood levels: it is either unflooded, partially flooded, or fully flooded. A location’s flood level can be tracked using the double-sided flood tokens included in this deluxe box. A location’s flood level has no inherent game effect. However, some card effects may change or become stronger while you are at a flooded location, particularly if that location is fully flooded.</p><ul><li>A location with no flood token is unflooded.</li><li>Nếu một vị trí bị ngập một phần, hãy đặt token ngập lụt lên vị trí đó với mặt bị ngập một phần để biểu thị điều này.</li><li>Nếu một vị trí đã bị ngập hoàn toàn, hãy đặt token ngập lụt lên vị trí đó với mặt bị ngập hoàn toàn (hoặc nếu nó đã bị ngập một phần, hãy lật token ngập lụt của nó lên) để biểu thị điều này.</li><li>Nếu mực nước lũ của một vị trí \"tăng lên\" (increase), nó sẽ chuyển từ không ngập sang ngập một phần hoặc từ ngập một phần đến ngập hoàn toàn. Một vị trí bị ngập hoàn toàn không thể tăng mực nước lũ.</li><li>Nếu mực nước lũ của một địa điểm bị \"giảm xuống\" (decrease), nó sẽ thay đổi từ ngập hoàn toàn sang ngập một phần hoặc từ ngập một phần sang không ngập. Nếu một vị trí không bị ngập, hãy loại bỏ token ngập lụt của vị trí đó.</li><li>Cho mục đích của hiệu ứng lá bài, cả vị trí bị ngập một phần và vị trí bị ngập hoàn toàn đều được coi là \"bị ngập\" (flooded).</li></ul>"
+    },
+    {
+      "title": "Bless and Curse Tokens",
+      "body": "<p class='basic'>This expansion introduces two new kinds of chaos tokens: bless ({'{'}bless{'}'}) tokens and curse ({'{'}curse{'}'}) tokens. By default, the chaos bag does not contain any {'{'}bless{'}'} or {'{'}curse{'}'} tokens. However, certain card effects can add these tokens or remove them from the chaos bag.</p><ul><li>{'{'}bless{'}'} tokens revealed during a skill test have the following effects: “+2. Reveal another token. Instead of returning this token to the chaos bag, return it to the token pool.”<ul><li>No more than 10 total {'{'}bless{'}'} tokens can be included in the chaos bag or sealed on cards in play at any given time.</li></ul></li><li>{'{'}curse{'}'} tokens revealed during a skill test have the following effects: “–2. Reveal another token. Instead of returning this token to the chaos bag, return it to the token pool.”<ul><li>No more than 10 total {'{'}curse{'}'} tokens can be included in the chaos bag or sealed on cards in play at any given time.</li></ul></li><li>{'{'}bless{'}'} or {'{'}curse{'}'} tokens revealed outside of a skill test have no effect on their own unless otherwise specified by a card effect.</li></ul>"
+    },
+    {
+      "title": "Niêm phong",
+      "body": "<p class='basic'>Như một chi phí bổ sung để một lá bài có keyword seal enter play, người điều khiển nó phải tìm chaos token được chỉ định trong chaos bag và đặt nó lên trên lá bài, qua đó seal token đó. Nếu có nhiều lựa chọn token để seal, người điều khiển lá bài sẽ chọn. Nếu token được chỉ định không có trong chaos bag, lá bài không thể enter play.</p><p class='basic'>Như một chi phí bổ sung để một lá bài có keyword seal enter play, người điều khiển nó phải tìm chaos token được chỉ định trong chaos bag và đặt nó lên trên lá bài, qua đó seal token đó. Nếu có nhiều lựa chọn token để seal, người điều khiển lá bài sẽ chọn. Nếu token được chỉ định không có trong chaos bag, lá bài không thể enter play.\r\nMột chaos token bị seal không được coi là nằm trong chaos bag, và do đó không thể bị reveal từ chaos bag như một phần của skill test hoặc ability.\r\nKhi một chaos token được \"release\", nó được trả lại vào chaos bag và không còn được coi là bị seal nữa. <b>Nếu một lá bài có một hoặc nhiều chaos token bị seal trên đó leave play vì bất kỳ lý do gì, mọi chaos token bị seal trên đó sẽ ngay lập tức được release</b>.\r\nMột số lá bài (có hoặc không có keyword seal) cũng có thể có các ability để seal một hoặc nhiều chaos token như một phần effect của chúng. Điều này được thực hiện theo cùng một quy trình như trên: tìm chaos token được chỉ định trong chaos bag, loại bỏ nó khỏi chaos bag và đặt nó lên lá bài. Nếu token được chỉ định không có trong chaos bag, effect sẽ thất bại.</p><p class='basic'>Một số lá bài (có hoặc không có keyword seal) cũng có thể có các ability để seal một hoặc nhiều chaos token như một phần effect của chúng. Điều này được thực hiện theo cùng một quy trình như trên: tìm chaos token được chỉ định trong chaos bag, loại bỏ nó khỏi chaos bag và đặt nó lên lá bài. Nếu token được chỉ định không có trong chaos bag, effect sẽ thất bại.</p>"
+    }
+  ],
   "interludes": {
     "1": "Những mảnh ghép",
+    "2": "The Syzygy",
     "3": "Bên dưới những Con Sóng",
     "4": "Sự Thật Ẩn Giấu"
   },
@@ -40,38 +59,60 @@
       "anEncounterWithASecretCult": "Một cuộc chạm trán với một giáo phái bí mật."
     }
   },
+  "interlude2": {
+    "theSyzygy1": {
+      "title": "The Syzygy 1",
+      "body": "<p>Ánh sáng lóe lên trong tâm trí bạn. Bóng tối nhấn chìm dòng suy nghĩ của bạn trong khi ký ức mờ dần. Bạn đang nằm một lần nữa trên bãi biển đá ngoài khơi, hộp sọ của bạn đập thình thịch trong đau đớn. Đặc vụ Harper nghiêng người về phía bạn với sự lo lắng khắc sâu trên trán. \"Này! Này, cậu rốt cục tỉnh rồi chứ?\"</p><p>Bạn ngồi dậy, cơ bắp của bạn đau nhức. Có vẻ như thủy triều dâng thêm một chút trong khi bạn hồi tưởng. Nước lạnh vỗ vào mắt cá chân và thấm vào giày của bạn. \"Chuyện gì đã xảy ra?\" cô nói. \"Cậu nhớ lại điều gì?\"</p>"
+    },
+    "theSyzygy2": {
+      "title": "The Syzygy 2",
+      "body": "<p>Bạn nói với Harper rằng bạn nhớ nhiệm vụ tìm kiếm cô ấy, nhưng sau một tuần tìm kiếm, bạn đã không làm được. Điều cuối cùng bạn nhớ là ai đó đã nhét một cuốn sổ dưới cửa phòng khách sạn của bạn với một số thông tin liên quan đến một tổ chức được gọi là \"Dòng Dagon bí truyền\".</p><p>Cô giải thích, \"Ồ. Vâng, đó là tôi. Xin lỗi vì tôi không thể ở lại để gặp cậu, nhưng tôi có một số công việc khác để làm\". Cô ấy nói với bạn rằng sau vài ngày bị giam cầm, cuối cùng cô ấy đã giành được ưu thế trước kẻ bắt giữ mình và tự giải thoát, nhưng cô ấy đã bị thương trong quá trình này. Như thể để chứng minh câu chuyện của mình, cô ấy mở chiếc áo khoác ngoài của mình, và bạn thấy những vết máu đen thấm qua chiếc áo sơ mi cài cúc của cô ấy. Một số băng cá nhân ló ra bên dưới lớp vải. \"Mém nữa là mất quả thận rồi. May mắn cho tôi chứ?\"</p><p>Bạn phàn nàn rằng bạn đã lãng phí thời gian tìm kiếm cô ấy khắp nơi, và cô ấy chế giễu. \"Không hẳn! Cậu đã biết được nhiều điều trong một tuần hơn so với những gì tôi làm trong hai tuần. Tôi biết rằng cậu đang ở tìm một cái gì đó, và tôi muốn giúp đỡ, nhưng tôi vẫn đang bị theo dõi. Vì vậy, tôi đã để lại một chút nghiên cứu vững chắc mà tôi đã tìm thấy và để im trong một thời gian. Chính cậu mới là người thực sự làm phần còn lại.\" Đáng buồn thay, cậu lại không nhớ gì về \"phần còn lại\".</p>"
+    },
+    "theSyzygy3": {
+      "title": "The Syzygy 3",
+      "body": "<p>Bạn nói với Harper rằng bạn nhớ nhiệm vụ tìm cô ấy và kẻ bắt cóc cô ấy. Cô ấy cười sảng khoái. \"Nhân tiện thì cảm ơn cậu một lần nữa vì điều đó. Thế nhưng, thực tế thì mọi thứ dưới tầm kiểm soát của tôi\", cô nói đùa. \"Vậy, cậu còn nhớ gì không?\"</p><p>Bạn lắc đầu. Điều cuối cùng bạn nhớ đến là việc đề cập đến một tổ chức được gọi là \"Dòng Dagon bí truyền\".</p><p>Harper lẩm bẩm một lời nguyền rủa dưới hơi thở của cô. \"Thật đáng tiếc. Nhưng dù mất trí nhớ hay không, ít ra tôi có thể tin tưởng cậu. Mặc kệ việc cậu có nhớ hay không, cậu cũng đã từng vì tôi trong quá khứ.\"</p>"
+    },
+    "theSyzygy4": {
+      "title": "The Syzygy 4",
+      "body": "<p>\"Đừng lo lắng,\" cô nói, \"Tôi sẽ kể cho cậu nghe. Có nhiều điều cậu vẫn chưa nhớ.\" Ngay sau đó, một tiếng sấm vang dội vang vọng ở chân trời phía đông và một làn sóng mạnh ập vào cầu cảng. Bầu trời có màu đỏ thẫm đằng sau những đám mây bão đen kịt xoay quanh mặt trời và mặt trăng. Các thiên thể liên kết với nhau một cách hoàn hảo. \"Đây không phải dấu hiệu tốt.\" đôi môi Harper cứng đờ vì lo lắng. \"Được rồi, kế hoạch mới. Hãy quay lại thị trấn Innsmouth. Tôi sẽ giải thích những gì tôi biết trên đường đi.\"</p>"
+    }
+  },
   "interlude3": {
+    "beneathTheWaves1": {
+      "title": "Beneath the Waves 1",
+      "body": "<p>Bạn lướt qua ký ức của mình, đấu tranh để trở về hiện tại. Bạn nhớ một phòng giam tối tăm. Một con dao kề cổ. Một người đàn ông có đôi mắt mở to, không chớp, mặc áo choàng dài có mũ trùm đầu. \"Oceiros,\" một giọng nói khác vang lên, \"những tên này cũng được tìm thấy chỗ hang ổ của Dagon. Chúng tôi tin rằng chúng chính là những kẻ đang rình mò quanh Rặng San Hô Quỷ.\"</p><p>Oceiros gật đầu. Con dao kề cổ họng bạn cứa sâu hơn. “Hãy mang những gì bọn chúng đã đánh cắp đến ngọn hải đăng ngay lập tức,” hắn ta ra lệnh. \"Đã đến lúc bắt đầu công việc vĩ đại của chúng ta. Không ai có thể làm gián đoạn công việc của Dòng nữa.\"</p><p>Tâm trí của bạn quay trở lại hiện tại. Tiếng ầm ầm của động cơ ô tô lớn dần khi các giác quan của bạn quay trở lại. Đặc vụ Harper nắm lấy vai bạn và nhìn thẳng vào mắt bạn. “Một ký ức khác à,” cô thốt lên với một chút ngạc nhiên. \"Cậu có nhớ điều gì không? Nhớ được gì rồi?\"</p><p>Bạn rũ bỏ cơn đau nhức do hộp sọ đập thình thịch và hỏi Harper xem cái tên Oceiros có ý nghĩa gì không. \"Oceiros Marsh? Ông ta là người canh giữ ngọn hải đăng cũ ở Falcon Point,\" cô trả lời. \"Tại sao? Cậu đã nhìn thấy gì?\"</p>"
+    },
     "purpleKey": "<p>Bạn mô tả lại tượng thần được tìm thấy trong hang động dưới đáy biển. Đặc vụ Harper gật đầu cùng bạn. “Tôi nhớ đã thấy điều gì đó tương tự như thế trong một số ghi chú tôi tìm thấy trong khi cậu đi điều tra rạn san hô. Nó mô tả một vị thần cổ xưa nào đó—người mà những sinh vật hèn hạ đó tôn thờ.” Giọng cô ấy thấp xuống chỉ còn hơn một lời thì thầm. \"Điều tôi nghi ngờ là đây không chỉ là chuyện thần thoại.\" Bạn hỏi tượng thần hiện đang ở đâu và cô ấy lắc đầu. \"Tôi nghi ngờ nó đã bị lấy đi khi cậu bị ném xuống cái hố đó,\" cô trả lời.</p>",
     "whiteKey": "<p>Bạn nhớ lại chiếc áo choàng kỳ lạ mà bạn tìm thấy chìm sâu trong Rạn San Hô Quỷ. “Đúng, tôi nhớ đã thấy điều đó,” Harper nói và búng ngón tay. “Một trong những 'linh mục' trong Dòng Dagon bí truyền đáng nguyền rủa đó đã mặc nó khi tôi mới đến thị trấn Innsmouth. Nó hẳn đã được đưa đến ngọn hải đăng cùng với những đồ đạc còn lại của cậu khi cậu bị bắt tại trụ sở của Dòng. Nếu chúng ta may mắn, nó sẽ vẫn còn ở đó…”</p>",
     "blackKey": "<p>Bạn kể cho Đặc vụ Harper về ngôi đền có hai bức tượng bạn phát hiện được ở Rạn San Hô Quỷ và về chiếc vương miện mà bạn đã đánh cắp. \"Nghe giống như 'Cái mũ của Y'ha-nthlei' mà tôi đã đọc khi nghiên cứu về Dòng. Tôi rất ấn tượng là cậu có thể lấy được nó. Dù nó là gì đi nữa, nó có vẻ khá quan trọng đối với Dòng. Dù vậy, tôi vẫn chưa biết 'Y'ha-nthlei' là gì.\" Bạn nhận xét rằng bạn không còn chiếc vương miện nữa và cô ấy gật đầu. Cô giải thích: “Chắc hẳn nó đã bị lấy đi khỏi cậu và mang đến ngọn hải đăng cùng với những đồ đạc còn lại của cậu trước khi bạn mất đi ký ức.</p>",
+    "noKeys": "<p>Bạn gặp khó khăn để ghi nhớ bất cứ điều gì có giá trị hơn chuyến khám phá rạn san hô ban đầu. Bạn nhớ lại những sinh vật kỳ lạ mà bạn đã chiến đấu, những hòn đảo khác nhau mà bạn đã khám phá và thủy triều dâng cao, nhưng không còn nữa. Những bí mật hẳn phải được ẩn giấu trong những rạn san hô đó, nhưng hoặc là bạn không thể tìm thấy chúng, hoặc đơn giản là bạn không nhớ ra. Đầu bạn nhức nhối khi bạn cố gắng gợi lại những ký ức từ khoảng trống trong tâm trí. \"Không sao đâu,\" Đặc vụ Harper nói, đặt tay lên vai bạn. \"Chúng ta sẽ cùng nhau tìm ra điều này.\"</p>",
+    "beneathTheWaves2": "<p>“Có vẻ như ký ức của cậu đang bắt đầu quay trở lại,” Đặc vụ Harper nói với nụ cười ngập ngừng. \"Cậu cảm thấy thế nào?\"</p><p>Bạn chật vật để tìm một câu trả lời phù hợp. Một phần trong bạn cảm thấy nhẹ nhõm khi ký ức quay trở lại, nhưng phần còn lại lại ước gì chúng đừng sống động đến thế. Bạn tự hỏi một lần nữa liệu mình có nên tận dụng cơ hội này để lái xe trở lại thị trấn Arkham và không bao giờ đặt chân đến Innsmouth nữa hay không. Sau đó, ánh mắt của bạn gặp ánh mắt của Harper và bạn thấy được sự quyết tâm mãnh liệt trong mắt cô ấy. Một quyết tâm tương tự cũng khuấy động trong bạn.</p><p>Bạn không nói gì nhưng cô ấy dường như hiểu được. \"Có lẽ có rất nhiều thứ cần phải làm. Hiện tại, hãy tập trung vào việc đến Falcon Point. Nếu những gì cậu nói là đúng và Oceiros là một phần của Dòng Dagon bí truyền, thì sẽ có câu trả lời ở đó.\" Cô ấy nhìn qua vai của cô, nhìn chăm chú vào đường chân trời phía tây. Mặt trời lặn ngay dưới hàng cây, nhuộm bầu trời trong màu đỏ thẫm. “Có điều gì đó mách bảo tôi rằng chuyện này vẫn chưa kết thúc.”</p>",
     "xp": {
+      "purpleKey": "The idol was brough to the lighthouse.",
       "whiteKey": "Áo choàng đã được đem tới ngọn hải đăng.",
       "blackKey": "Vương miện đã được đem tới ngọn hải đăng."
-    },
-    "beneathTheWaves1": {
-      "body": "<p>Bạn lướt qua ký ức của mình, đấu tranh để trở về hiện tại. Bạn nhớ một phòng giam tối tăm. Một con dao kề cổ. Một người đàn ông có đôi mắt mở to, không chớp, mặc áo choàng dài có mũ trùm đầu. \"Oceiros,\" một giọng nói khác vang lên, \"những tên này cũng được tìm thấy chỗ hang ổ của Dagon. Chúng tôi tin rằng chúng chính là những kẻ đang rình mò quanh Rặng San Hô Quỷ.\"</p><p>Oceiros gật đầu. Con dao kề cổ họng bạn cứa sâu hơn. “Hãy mang những gì bọn chúng đã đánh cắp đến ngọn hải đăng ngay lập tức,” hắn ta ra lệnh. \"Đã đến lúc bắt đầu công việc vĩ đại của chúng ta. Không ai có thể làm gián đoạn công việc của Dòng nữa.\"</p><p>Tâm trí của bạn quay trở lại hiện tại. Tiếng ầm ầm của động cơ ô tô lớn dần khi các giác quan của bạn quay trở lại. Đặc vụ Harper nắm lấy vai bạn và nhìn thẳng vào mắt bạn. “Một ký ức khác à,” cô thốt lên với một chút ngạc nhiên. \"Cậu có nhớ điều gì không? Nhớ được gì rồi?\"</p><p>Bạn rũ bỏ cơn đau nhức do hộp sọ đập thình thịch và hỏi Harper xem cái tên Oceiros có ý nghĩa gì không. \"Oceiros Marsh? Ông ta là người canh giữ ngọn hải đăng cũ ở Falcon Point,\" cô trả lời. \"Tại sao? Cậu đã nhìn thấy gì?\"</p>"
-    },
-    "noKeys": "<p>Bạn gặp khó khăn để ghi nhớ bất cứ điều gì có giá trị hơn chuyến khám phá rạn san hô ban đầu. Bạn nhớ lại những sinh vật kỳ lạ mà bạn đã chiến đấu, những hòn đảo khác nhau mà bạn đã khám phá và thủy triều dâng cao, nhưng không còn nữa. Những bí mật hẳn phải được ẩn giấu trong những rạn san hô đó, nhưng hoặc là bạn không thể tìm thấy chúng, hoặc đơn giản là bạn không nhớ ra. Đầu bạn nhức nhối khi bạn cố gắng gợi lại những ký ức từ khoảng trống trong tâm trí. \"Không sao đâu,\" Đặc vụ Harper nói, đặt tay lên vai bạn. \"Chúng ta sẽ cùng nhau tìm ra điều này.\"</p>",
-    "beneathTheWaves2": "<p>“Có vẻ như ký ức của cậu đang bắt đầu quay trở lại,” Đặc vụ Harper nói với nụ cười ngập ngừng. \"Cậu cảm thấy thế nào?\"</p><p>Bạn chật vật để tìm một câu trả lời phù hợp. Một phần trong bạn cảm thấy nhẹ nhõm khi ký ức quay trở lại, nhưng phần còn lại lại ước gì chúng đừng sống động đến thế. Bạn tự hỏi một lần nữa liệu mình có nên tận dụng cơ hội này để lái xe trở lại thị trấn Arkham và không bao giờ đặt chân đến Innsmouth nữa hay không. Sau đó, ánh mắt của bạn gặp ánh mắt của Harper và bạn thấy được sự quyết tâm mãnh liệt trong mắt cô ấy. Một quyết tâm tương tự cũng khuấy động trong bạn.</p><p>Bạn không nói gì nhưng cô ấy dường như hiểu được. \"Có lẽ có rất nhiều thứ cần phải làm. Hiện tại, hãy tập trung vào việc đến Falcon Point. Nếu những gì cậu nói là đúng và Oceiros là một phần của Dòng Dagon bí truyền, thì sẽ có câu trả lời ở đó.\" Cô ấy nhìn qua vai của cô, nhìn chăm chú vào đường chân trời phía tây. Mặt trời lặn ngay dưới hàng cây, nhuộm bầu trời trong màu đỏ thẫm. “Có điều gì đó mách bảo tôi rằng chuyện này vẫn chưa kết thúc.”</p>"
+    }
   },
   "interlude4": {
     "hiddenTruths": {
-      "title": "Chuyển tiếp IV: Sự Thật Ẩn Giấu"
+      "title": "Chuyển tiếp IV: Sự Thật Ẩn Giấu",
+      "body": "<p>Ngay khi tâm trí bạn quay trở lại hiện tại, bạn bắt đầu vạch ra kế hoạch của mình. Một kế hoạch xâm nhập vào lãnh địa của Deep Ones và chấm dứt âm mưu của chúng một lần và mãi mãi. \"Điều này thật nực cười, cậu biết điều đó phải không?\" Harper hỏi. Bạn gật đầu. Tất nhiên là thật buồn cười. Bạn đã dành hai ngày qua để chạy trốn. Bị truy bắt. Săn đuổi. Dày vò.</p><p>Nhưng bạn cũng đã dành hai ngày qua để tìm lại những ký ức mà bạn đã quên. Và những gì bạn đã thấy là điều bạn không thể bỏ qua. Bạn đã nhìn thấy vị thần mà Dòng Dagon bí truyền được đặt theo tên và bạn hiểu Dòng dự định làm gì. Sự thẳng hàng của các thiên thể trên bầu trời, thủy triều dâng cao đều đặn, thời tiết biến động thất thường, những sinh vật nổi lên từ vực sâu, tất cả đều gắn kết với nhau. Bạn đã nhìn thấy nó. Sẽ có một trận lũ lụt, một thảm họa quét sạch loài người để chỉ còn lại vực sâu. Thành phố vĩ đại trong rạn san hô sẽ trỗi dậy một lần nữa và trở thành trái tim của mọi sự sống trên Trái đất.</p><p>Vẫn còn những khoảng trống trong trí nhớ của bạn, nhưng tất cả những điều bạn biết là đúng. Toàn bộ thị trấn Innsmouth bị nhấn chìm bởi âm mưu này. Dòng kiểm soát thị trấn thông qua lời thề và của cải bí mật mà nó tích trữ từ vực sâu. Chẳng trách họ lại đối xử với những người ngoài như bạn một cách khinh miệt như vậy.</p><p>Bạn nhìn Harper bằng ánh mắt sâu sắc Cô thở dài và gật đầu. \"Tôi biết rồi. Đó là cách duy nhất.\" Cùng nhau, cả hai vạch ra lộ trình của mình. Những con tàu bị bỏ hoang vẫn rải rác ở bến cảng Innsmouth. Dưới sự bao phủ của màn đêm, bạn phải sử dụng một trong số chúng, đi thuyền đến Rạn San Hô Quỷ và một lần nữa đi xuống tàn tích thời kỳ trước cơn đại hồng thủy ở vực sâu bên dưới những hòn đảo bị bỏ hoang. Đó là nơi có lối khác vào thành phố . Y'ha-nthlei.</p><p>Da bạn rùng mình vì lạnh khi bạn thốt ra từ đó. Harper nhăn mặt, mặc dù bạn có thể cảm nhận được sự quyết tâm đằng sau ánh mắt sắt đá của cô ấy. \"Tôi sẽ hoàn thành nhiệm vụ này, vì Dawson. Vì cậu.\"</p><p>Bạn trình bày tất cả thông tin bạn đã khám phá được và những cổ vật bạn có được bất chấp nỗi kinh hoàng đang chống lại bạn. Bạn biết đường đến Y'ha-nthlei đã bị phong tỏa. Phải có cách nào đó để vào được. Có lẽ bạn đã có câu trả lời mà bạn tìm kiếm…</p>"
     },
-    "rightfulKeeper": "<p>Bây giờ bạn đã hiểu mục đích của cổ vật bạn tìm thấy ở Rạn San Hô Quỷ. Nó không chỉ là một đối tượng quyền lực. Đó là một huy hiệu—một kiểu vật gia truyền, được đeo bởi người đứng gác cổng vào thành phố của Deep Ones. Bạn đã đánh bại kẻ được chuẩn bị để trở thành người bảo vệ tiếp theo của nó. Bây giờ di tích công nhận bạn là người thừa kế hợp pháp của nó. Có lẽ với điều này, bạn sẽ có thể vào được Y'ha-nthlei…</p>"
+    "guardianDispatched": "<p>You study the trophy you found in the sacrificial pit in which you awoke several days ago—part of what was once the creature that you fought in Devil Reef. It wasn’t the same kind of creature as the “Deep Ones” that the Esoteric Order of Dagon worships, but you cannot help ruminating over the similarities between them. You recall that fish never cease growing as they age, and wonder if the same may be true for Deep Ones. Perhaps it was an ancient breed of Deep One—something so old, it grew enormous and twisted beyond imagination. If so, what was it doing in Devil Reef? Was it guarding Y’ha-nthlei? And if so, what does that bode for you? You decide to take the trophy with you, hoping it is important enough to aid in your mission…</p>",
+    "rightfulKeeper": "<p>Bây giờ bạn đã hiểu mục đích của cổ vật bạn tìm thấy ở Rạn San Hô Quỷ. Nó không chỉ là một đối tượng quyền lực. Đó là một huy hiệu—một kiểu vật gia truyền, được đeo bởi người đứng gác cổng vào thành phố của Deep Ones. Bạn đã đánh bại kẻ được chuẩn bị để trở thành người bảo vệ tiếp theo của nó. Bây giờ di tích công nhận bạn là người thừa kế hợp pháp của nó. Có lẽ với điều này, bạn sẽ có thể vào được Y'ha-nthlei…</p>",
+    "label": {
+      "keepElinaHarper": "Will Elina Harper accompany you into Y’ha-nthlei?",
+      "addElinaHarper": "Add Elina Harper to your deck",
+      "doNotAddElinaHarper": "Do not add Elina Harper to your deck"
+    }
   },
   "epilogue": {
     "epilogue1": {
-      "title": "Phần kết"
+      "title": "Phần kết",
+      "body": "<p><b>Epilogue 1:</b> The drive home to Arkham is quiet. After everything you have been through, you would have thought the quiet to be a peaceful repreive…but you are alone with your thoughts—thoughts of Innsmouth, of Deep Ones, of enormous monsters dwelling in the depths beneath the waves. You find yourself checking your rearview mirror regularly, waiting to spot the headlights of pursuers who want you dead; the glowing, unblinking eyes of an aquatic horror in your back seat; or perhaps even the cold, dead glare of Thomas Dawson, mutated nearly beyond recognition. But you see nothing. Just an empty road.</p><p>Bạn thở dài và ôn lại các sự kiện trong vài tuần qua một lần nữa. Bạn tin rằng bạn đã có một bức tranh hoàn chỉnh về những gì đã xảy ra, nhưng bạn vẫn cảm thấy như thiếu thứ gì đó. Một khoảng trống khác trong ký ức của bạn…</p>"
     },
     "checkMemories": "Kiểm tra phần \"Ký ức đã được khôi phục\" trong Nhật ký chiến dịch",
-    "epilogue2": {
-      "title": "Phần kết",
-      "body": "<p>_Phần kết 2_ …bạn rũ bỏ cảm xúc đó. Nó không còn quan trọng nữa. Toàn bộ thử thách này bây giờ đã ở phía sau bạn. Thị trấn Innsmouth, Dagon, Hydra, Y'ha-nthlei - chỉ là một ký ức khủng khiếp mà bạn ước mình có thể quên đi, giống như tất cả những ký ức khác mà bạn đã đánh mất. Bàn chân của bạn nằm nặng trên chân ga. Bạn càng rời xa nơi địa ngục này càng nhanh thì càng tốt.</p>"
-    },
-    "flashback15": {
-      "title": "Hồi tưởng XV"
-    },
+    "ifAllFourteen": "If all 14 of the following entries are listed under “Memories Recovered,” read _Flashback XV_. Otherwise, proceed to _Epilogue 2_.",
     "memories": {
       "aMeetingWithThomasDawson": "Một cuộc gặp gỡ với Thomas Dawson.",
       "aBattleWithAHorrifyingDevil": "Một trận chiến với một con ác quỷ kinh hoàng.",
@@ -87,10 +128,17 @@
       "aConversationWithMrMoore": "cuộc trò chuyện với ông Moore",
       "theLifecycleOfADeepOne": "Vòng đời của một “Deep One.”",
       "aStingingBetrayal": "Một sự phản bội cay đắng."
+    },
+    "epilogue2": {
+      "title": "Phần kết",
+      "body": "<p>_Phần kết 2_ …bạn rũ bỏ cảm xúc đó. Nó không còn quan trọng nữa. Toàn bộ thử thách này bây giờ đã ở phía sau bạn. Thị trấn Innsmouth, Dagon, Hydra, Y'ha-nthlei - chỉ là một ký ức khủng khiếp mà bạn ước mình có thể quên đi, giống như tất cả những ký ức khác mà bạn đã đánh mất. Bàn chân của bạn nằm nặng trên chân ga. Bạn càng rời xa nơi địa ngục này càng nhanh thì càng tốt.</p>"
+    },
+    "flashback15": {
+      "title": "Hồi tưởng XV",
+      "body": "<div class='blue'><h1>Flashback XV</h1><p>Bạn đã trở lại văn phòng của Đặc vụ Dawson ở Boston. Ông ấy chỉ mới bước ra ngoài một lúc để lấy một số tài liệu cho bạn ký. Chắc chắn là một loại thỏa thuận không nói về bất cứ điều gì bạn có thể thấy hoặc nghe khi làm việc cho chính phủ. Vài phút trôi qua. Bạn bắt đầu đi lang thang khắp văn phòng, xem xét nhiều cuốn sách và bản đồ mà Dawson đã rải khắp nơi. Một số khá vô hại - một cuốn sách giáo khoa y học, lịch sử của New England, một chuyên luận về giải phẫu các sinh vật dưới nước trên khắp Đại Tây Dương - nhưng bạn càng xem xét kỹ bộ sưu tập của ông thì các cuốn sách càng trở nên xa lạ.</p><p>Tiến gần hơn đến phía văn phòng của Dawson, bạn nhận thấy rất nhiều sách, phong bì và tài liệu trải khắp mặt bàn của ông ấy nằm trên một tấm bản đồ được mở ra. Bạn quyết định tình cờ xem qua, hy vọng nhiệm vụ của Dawson sẽ khiến ông ấy phải rời khỏi văn phòng thêm một thời gian nữa. Đẩy một số đồ vật cản đường bạn sang một bên, bạn kiểm tra bản đồ. Đó là một bản đồ hải lý khổng lồ về các đại dương trên thế giới, được đánh dấu ở nhiều điểm bằng mực đen mới. Một cây bút máy nằm gần đó.</p><p>The marks that Dawson has made are curious, to say the least. There are over a dozen scattered across the seas. Some lie just off the coast of various continents, while others are in the middle of the ocean, their locations marked with wide, unfilled cirles to show that their exact coordinates unknown. Strange words are scribbled next to each. P’tha’wei in the north Atlantic, near Greenland. Yhe’nthalla in the south Atlantic, just off the coast of Africa. R’lyeh deep in the south Pacific. Th’all-iewa by Australia in the eastern Indian Ocean. And at least ten more, some marked with question marks—an indication that this record is incomplete. You gently push aside the book that lies atop North America and see one more just off the coast of Massachusetts. Y’ha-nthlei.</p><p>You slam on the brakes and screech to a halt as your mind pulls back to the present. No. It can’t be. Your heart twists into a knot as you realize the truth. No—!</p><p>Y'ha-nthlei không phải là quê hương của Deep Ones. Nó chỉ là một trong số rất nhiều nơi.</p><hr /><p class='basic'>In your Campaign Log, under “Memories Recovered,” record *the horrible truth.*</p></div>"
     }
   },
   "memoriesRecovered": {
-    "theHorribleTruth": "Sự thật kinh hoàng.",
     "aMeetingWithThomasDawson": "Một cuộc gặp gỡ với Thomas Dawson.",
     "aBattleWithAHorrifyingDevil": "Một trận chiến với một con ác quỷ kinh hoàng.",
     "aDecisionToStickTogether": "Một quyết định gắn bó cùng nhau.",
@@ -104,17 +152,50 @@
     "discoveryOfAMysticalRelic": "Phát hiện ra một di vật huyền bí.",
     "aConversationWithMrMoore": "cuộc trò chuyện với ông Moore",
     "theLifecycleOfADeepOne": "vòng đời của một \"Deep One\"",
-    "aStingingBetrayal": "Một sự phản bội cay đắng."
+    "aStingingBetrayal": "Một sự phản bội cay đắng.",
+    "youRememberWhereYouHaveToGo": "You remember where you have to go",
+    "theHorribleTruth": "Sự thật kinh hoàng."
   },
   "possibleHideouts": {
     "innsmouthJail": "Innsmouth Jail (nhà tù Innsmouth)",
     "shorewardSlums": "Shoreward Slums (khu ổ chuột ven biển)",
     "sawboneAlley": "Sawbone Alley (hẻm Sawbone)",
     "theHouseOnWaterStreet": "The House on Water Street (ngôi nhà trên đường Water)",
-    "esotericOrderOfDagon": "Dòng Dagon bí truyền"
+    "esotericOrderOfDagon": "Dòng Dagon bí truyền",
+    "newChurchGreen": "New Church Green"
+  },
+  "possibleSuspects": {
+    "brianBurnham": "Brian Burnham",
+    "barnabasMarsh": "Barnabas Marsh",
+    "otheraGilman": "Othera Gilman",
+    "zadokAllen": "Zadok Allen",
+    "joyceLittle": "Joyce Little",
+    "robertFriendly": "Robert Friendly"
+  },
+  "label": {
+    "noAir": "You did not find air, Take 5 direct damage",
+    "shuffleThatCardIntoLeadsDeck": "Shuffle that card into the Leads deck"
+  },
+  "syzygy": {
+    "label": {
+      "loseResources": "Each investigator loses 3 resources.",
+      "takeHorror": "Each investigator takes 2 horror.",
+      "placeDoomCanAdvance": "Doomed là một khả năng keyword.\r\nKhi một kẻ địch có keyword Doomed bị đánh bại (bởi một điều tra viên hoặc một hiệu ứng scenario), đặt 1 doom lên agenda hiện tại. Hiệu ứng này có thể khiến agenda hiện tại advance."
+    }
+  },
+  "fogOverInnsmouth": {
+    "label": {
+      "putIntoPlay": "Put Fog over Innsmouth into play next to the agenda deck."
+    }
+  },
+  "furtiveLocals": {
+    "label": {
+      "putIntoPlay": "Put Furtive Locals into play next to the agenda deck."
+    }
   },
   "key": {
     "memoriesRecovered": "Ký Ức Đã Được Khôi Phục",
+    "outForBlood": "Out for blood",
     "theMissionFailed": "Nhiệm vụ thất bại.",
     "theMissionWasSuccessful": "Nhiệm vụ thành công.",
     "possibleSuspects": "Nghi phạm",
@@ -129,6 +210,7 @@
     "theHeaddressWasBroughtToTheLighthouse": "Vương miện đã được đem tới ngọn hải đăng.",
     "theInvestigatorsReachedFalconPointBeforeSunrise": "Các điều tra viên đã đến được Falcon Point trước khi mặt trời mọc.",
     "theInvestigatorsReachedFalconPointAfterSunrise": "Các điều tra viên đã đến được Falcon Point sau khi mặt trời mọc.",
+    "possessesADivingSuit": "Possesses a diving suit",
     "theInvestigatorsPossessAMapOfYhaNthlei": "Các điều tra viên sở hữu một bản đồ của Y'ha-nthlei.",
     "theInvestigatorsPossessTheKeyToYhaNthlei": "Các điều tra viên sở hữu một chìa khóa của Y'ha-nthlei.",
     "dagonHasAwakened": "Dagon đã thức tỉnh.",
@@ -136,25 +218,15 @@
     "theOrdersRitualWasDisrupted": "Nghi lễ của Dòng đã bị gián đoạn.",
     "theGatekeeperHasBeenDefeated": "Người gác cổng đã bị đánh bại.",
     "theGuardianOfYhanthleiIsDispatched": "Người bảo vệ của thành phố Y'ha-nthlei được phái đi.",
+    "theGatewayToYhanthleiRecognizesYouAsTheRightfulKeeper": "The Gateway to Y'ha-nthlei Recognizes You as the Rightful Keeper",
     "theInvestigatorsEscapedYhanthlei": "Các điều tra viên đã trốn thoát khỏi Y'ha-nthlei.",
     "thePlotOfTheDeepOnesWasThwarted": "Âm mưu của Deep Ones đã bị cản trở.",
     "theFloodHasBegun": "Lũ lụt đã bắt đầu.",
     "agentHarpersMissionIsComplete": "Nhiệm vụ của đặc vụ Harper đã hoàn thành.",
     "theRichesOfTheDeepAreLostForever": "Sự giàu có của vực sâu bị đánh mất vĩnh viễn.",
     "agentHarpersMissionIsCompleteButAtWhatCost": "Nhiệm vụ của đặc vụ Harper đã hoàn thành… nhưng bằng cái giá nào?",
+    "theRichesOfTheDeepAreLostForeverButAtWhatCost": "The Riches of the Deep are Lost Forever... but at what cost?",
     "theDeepOnesHaveFloodedTheEarth": "Deep Ones đã ngập lụt cả Trái đất.",
     "theHorribleTruth": "Sự thật kinh hoàng."
-  },
-  "specialRules": [
-    {
-      "title": "Chìa khóa"
-    },
-    {
-      "title": "Token Ngập Lụt"
-    },
-    {},
-    {
-      "title": "Niêm phong"
-    }
-  ]
+  }
 }

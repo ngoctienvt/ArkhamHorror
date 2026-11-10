@@ -1,35 +1,375 @@
 {
+  "toastTitle": "Mở khóa thành tựu!",
+  "tabTitle": "Thành tựu",
+  "tabs": {
+    "official": "Chính thức",
+    "homebrew": "Homebrew"
+  },
+  "pageTitle": "Thành tựu",
+  "gameDeleted": "Ván chơi đã bị xóa",
+  "viewGame": "Xem ván chơi",
+  "settingsToggleTitle": "Bật thành tựu",
+  "settingsToggleDescription": "Theo dõi và mở khóa thành tựu trong quá trình chơi.",
+  "noneEarnedYet": "Chưa đạt được thành tựu nào",
+  "progressLabel": "Tiến độ: {earned}/{total}",
+  "campaigns": {
+    "06": "The Dream-Eaters",
+    "07": "The Innsmouth Conspiracy",
+    "08": "Edge of the Earth",
+    "09": "The Scarlet Keys",
+    "10": "The Feast of Hemlock Vale",
+    "11": "The Drowned City",
+    "50": "Return to the Night of the Zealot",
+    "51": "Return to the Dunwich Legacy",
+    "52": "Return to The Path to Carcosa",
+    "53": "Return to The Forgotten Age",
+    "54": "Return to The Circle Undone",
+    "13": "Children of Blood"
+  },
   "entries": {
+    "TheZealotsRevenge": {
+      "name": "The Zealot's Revenge",
+      "text": "Have Lita Chantler's reaction ability deal the killing blow to the Ghoul Priest."
+    },
+    "IDontTrustHer": {
+      "name": "I Don't Trust Her",
+      "text": "When given the option to add Lita Chantler to your deck, refuse to do so."
+    },
+    "InsuranceDoesntCoverGhouls": {
+      "name": "Insurance Doesn't Cover Ghouls",
+      "text": "Burn your house to the ground in The Gathering."
+    },
+    "ButDoIHaveTo": {
+      "name": "…But Do I Have To?",
+      "text": "In The Midnight Masks, have each investigator remain in Your House for the first three rounds."
+    },
+    "ConspiracyOfSilence": {
+      "name": "Conspiracy of Silence",
+      "text": "Find and interrogate all six unique cultists in The Midnight Masks."
+    },
+    "TourOfArkham": {
+      "name": "Tour of Arkham",
+      "text": "Trigger each of the \"once per game\" abilities on all of the locations in play in The Midnight Masks."
+    },
+    "DoYouGetItNow": {
+      "name": "Do You Get It Now?",
+      "text": "Trigger the Forced ability on Billy Cooper by defeating the Ghoul Priest at his location."
+    },
+    "PinchHitter": {
+      "name": "Pinch Hitter",
+      "text": "Defeat three Ghoul enemies with a Baseball Bat without it breaking."
+    },
+    "EvenDeathMayDie": {
+      "name": "Even Death May Die",
+      "text": "Defeat Umôrdhoth while the Vault of Earthly Demise is attached to it."
+    },
+    "BreakTheCircle": {
+      "name": "Break the Circle",
+      "text": "Complete The Devourer Below without Umôrdhoth spawning."
+    },
+    "TheyreJustMisunderstood": {
+      "name": "They're Just Misunderstood",
+      "text": "Win the Night of the Zealot campaign without defeating a single unique Cultist enemy."
+    },
+    "UmordhothsFavor": {
+      "name": "Umôrdhoth's Favor",
+      "text": "Win the Night of the Zealot campaign without defeating a single Ghoul enemy."
+    },
     "ZealotLineInTheSand": {
-      "name": "Lằn Ranh Trên Cát"
+      "name": "Lằn Ranh Trên Cát",
+      "text": "Win the Night of the Zealot campaign with at least three Ultimatums active."
+    },
+    "ArkhamExpertise": {
+      "name": "Arkham Expertise",
+      "text": "Win the Night of the Zealot campaign on Expert difficulty."
+    },
+    "WhatIsThisStuffAnyway": {
+      "name": "What Is This Stuff, Anyway?",
+      "text": "Defeat The Experiment using the Alchemical Concoction in Extracurricular Activities."
+    },
+    "NoVoidForYou": {
+      "name": "No Void For You",
+      "text": "Complete The Miskatonic Museum without ever defeating the Hunting Horror."
+    },
+    "FirstRuleOfArkham": {
+      "name": "First Rule of Arkham",
+      "text": "Burn the Necronomicon in The Miskatonic Museum."
+    },
+    "AllAboard": {
+      "name": "All Aboard",
+      "text": "Complete The Essex County Express without letting any Helpless Passengers leave play."
     },
     "TheGangsAllHere": {
-      "name": "Cả Hội Đều Ở Đây"
+      "name": "Cả Hội Đều Ở Đây",
+      "text": "In The Survivors, have the following characters survive The Dunwich Legacy:",
+      "items": {
+        "DrHenryArmitage": "Dr. Henry Armitage",
+        "ZebulonWhateley": "Zebulon Whateley",
+        "DrFrancisMorgan": "Dr. Francis Morgan",
+        "EarlSawyer": "Earl Sawyer",
+        "ProfessorWarrenRice": "Professor Warren Rice"
+      }
+    },
+    "NoBroodLeftBehind": {
+      "name": "No Brood Left Behind",
+      "text": "Have no Broods of Yog-Sothoth escape into the wild in Undimensioned and Unseen."
+    },
+    "RemindMeNotToPissHerOff": {
+      "name": "Remind Me Not To Piss Her Off",
+      "text": "Defeat either version of Seth Bishop while Naomi O'Bannion is under your control."
+    },
+    "Eureka": {
+      "name": "Eureka!",
+      "text": "Identify the Strange Solution."
+    },
+    "BeyondWhatVeil": {
+      "name": "Beyond What Veil?",
+      "text": "Take 10 damage from Beyond the Veil without being defeated."
+    },
+    "HereWeGoAgain": {
+      "name": "Here We Go Again",
+      "text": "Have Dr. Henry Armitage, Dr. Francis Morgan, and Professor Warren Rice in play at the same time."
+    },
+    "BirdHunting": {
+      "name": "Bird Hunting",
+      "text": "Defeat 3 Whippoorwills in a single turn."
+    },
+    "TheyArentGettingAwayWithThis": {
+      "name": "They Aren't Getting Away With This",
+      "text": "Win The Dunwich Legacy campaign as \"Ashcan\" Pete with Duke listed under \"Sacrificed to Yog-Sothoth.\""
+    },
+    "TabulaRasa": {
+      "name": "Tabula Rasa",
+      "text": "Win The Dunwich Legacy campaign with no Tablet or Elder Thing tokens in the chaos bag."
     },
     "DunwichLineInTheSand": {
-      "name": "Lằn Ranh Trên Cát"
+      "name": "Lằn Ranh Trên Cát",
+      "text": "Win The Dunwich Legacy campaign with at least three Ultimatums active."
+    },
+    "DunwichExpertise": {
+      "name": "Dunwich Expertise",
+      "text": "Win The Dunwich Legacy campaign on Expert difficulty."
+    },
+    "FairWarning": {
+      "name": "Fair Warning",
+      "text": "Defeat the Royal Emissary three times during a single playthrough of Curtain Call."
+    },
+    "FirstSteps": {
+      "name": "First Steps",
+      "text": "Interview the following VIPs in The Last King:",
+      "items": {
+        "ConstanceDumaine": "Constance Dumaine",
+        "SebastienMoreau": "Sebastien Moreau",
+        "JordanPerry": "Jordan Perry",
+        "AshleighClarke": "Ashleigh Clarke",
+        "IshimaruHaruko": "Ishimaru Haruko"
+      }
+    },
+    "CrashingTheParty": {
+      "name": "Crashing the Party",
+      "text": "Defeat the Lunatic version of Dianne Devine in The Last King."
+    },
+    "ForPryingEyes": {
+      "name": "For Prying Eyes",
+      "text": "Add the Hidden Library to the victory display in Echoes of the Past."
+    },
+    "TheCuckoosNest": {
+      "name": "The Cuckoo's Nest",
+      "text": "Resign with Daniel Chesterfield under an investigator's control in The Unspeakable Oath."
+    },
+    "TakeALookAtThis": {
+      "name": "Take a Look at This!",
+      "text": "Parley with the Host of Insanity in The Unspeakable Oath."
+    },
+    "ThePathOfDeath": {
+      "name": "The Path of Death",
+      "text": "Use your Clasp of Black Onyx to find a shortcut in The Pallid Mask."
+    },
+    "GuessingGame": {
+      "name": "Guessing Game",
+      "text": "Advance to the final agenda of one agenda deck before advancing the first agenda of the other agenda deck in Black Stars Rise."
+    },
+    "HasturMadeMeDoIt": {
+      "name": "Hastur Made Me Do It",
+      "text": "Defeat Hastur in Dim Carcosa while a Possession treachery is in your hand."
+    },
+    "SayMyName": {
+      "name": "Say My Name",
+      "text": "After you have heeded Daniel's warning, speak the name of HASTUR aloud seven or more times during a single scenario (or its setup)."
+    },
+    "GetBackHere": {
+      "name": "Get Back Here",
+      "text": "Win The Path to Carcosa campaign having never ended a scenario with The Man in the Pallid Mask in play."
+    },
+    "ThePathIsFalse": {
+      "name": "The Path is False",
+      "text": "Win The Path to Carcosa campaign with 8 Doubt."
+    },
+    "ThePathIsReal": {
+      "name": "The Path is Real",
+      "text": "Win The Path to Carcosa campaign with 8 Conviction."
     },
     "ThePathIsMine": {
-      "name": "Con đường là của tôi"
+      "name": "Con đường là của tôi",
+      "text": "Win The Path to Carcosa campaign with less than 2 Doubt and Conviction in total."
     },
     "CarcosaLineInTheSand": {
-      "name": "Lằn Ranh Trên Cát"
+      "name": "Lằn Ranh Trên Cát",
+      "text": "Win The Path to Carcosa campaign with at least three Ultimatums active."
+    },
+    "CarcosaExpertise": {
+      "name": "Carcosa Expertise",
+      "text": "Win The Path to Carcosa campaign on Expert difficulty."
+    },
+    "WhyDidItHaveToBeSnakes": {
+      "name": "Why Did It Have to Be Snakes?",
+      "text": "Defeat twenty Serpent enemies across The Forgotten Age campaign."
+    },
+    "WatchThemUnravel": {
+      "name": "Watch Them Unravel",
+      "text": "Complete all four act decks during a single playthrough of Threads of Fate."
+    },
+    "HopeForHumanity": {
+      "name": "Hope for Humanity",
+      "text": "Restore Ichtaca's faith in humanity in The Boundary Beyond."
+    },
+    "Scenario5What": {
+      "name": "Scenario 5-What?",
+      "text": "Skip Heart of the Elders, Part 1."
+    },
+    "BeyondPerfection": {
+      "name": "Beyond Perfection",
+      "text": "Complete all eight tasks on act 2 of The City of Archives during a single playthrough."
+    },
+    "IRememberEverything": {
+      "name": "I Remember Everything!",
+      "text": "Restore Alejandro's memories in The City of Archives."
+    },
+    "Patricide": {
+      "name": "Patricide",
+      "text": "Defeat Yig in The Depths of Yoth."
+    },
+    "HesGotAPoint": {
+      "name": "He's Got a Point",
+      "text": "Side with Alejandro in Shattered Aeons."
+    },
+    "ValusiaSoundsGreat": {
+      "name": "Valusia Sounds Great",
+      "text": "Side with Ichtaca in Shattered Aeons."
+    },
+    "IveBuiltUpAnImmunity": {
+      "name": "I've Built Up An Immunity",
+      "text": "Win The Forgotten Age campaign without ever becoming poisoned."
+    },
+    "WeHaveAnUnderstanding": {
+      "name": "We Have an Understanding",
+      "text": "Win The Forgotten Age campaign without ever dealing any damage to the Harbinger of Valusia."
+    },
+    "WhoNeedsAnyOfThisJunk": {
+      "name": "Who Needs Any of This Junk?",
+      "text": "Win The Forgotten Age campaign without purchasing any supplies."
+    },
+    "DontTreadOnMe": {
+      "name": "Don't Tread on Me",
+      "text": "Win The Forgotten Age campaign with no tally marks recorded under Yig's Fury in your Campaign Log."
+    },
+    "BaneOfYig": {
+      "name": "Bane of Yig",
+      "text": "Win The Forgotten Age campaign with 25 or more tally marks recorded under Yig's Fury in your Campaign Log."
+    },
+    "IfICouldTurnBackTime": {
+      "name": "If I Could Turn Back Time",
+      "text": "Forge your own path, unlock Scenario IX, and win The Forgotten Age campaign."
+    },
+    "YothExpertise": {
+      "name": "Yoth Expertise",
+      "text": "Win The Forgotten Age campaign on Expert difficulty."
+    },
+    "WhoYouGonnaCall": {
+      "name": "Who You Gonna Call?",
+      "text": "Defeat 13 Geist or Spectral enemies across the campaign. Enemies who are not discarded or added to the victory display do not count."
+    },
+    "SaviorOfHumanity": {
+      "name": "Savior of Humanity",
+      "text": "Rescue every Silver Twilight enemy who appears in At Death's Doorstep."
+    },
+    "TenOutOfTenWouldReadAgain": {
+      "name": "10/10 Would Read Again",
+      "text": "Using The Black Book, take a total of 10 horror with its ability throughout the campaign."
+    },
+    "CarlShmarl": {
+      "name": "Carl Shmarl",
+      "text": "Become part of the Silver Twilight Lodge's Inner Circle, then betray them in Union and Disillusion."
+    },
+    "TheThreefoldRule": {
+      "name": "The Threefold Rule",
+      "text": "Join forces with Erynn and turn on her coven in Union and Disillusion."
+    },
+    "NewWorldOrder": {
+      "name": "New World Order",
+      "text": "Help the Silver Twilight Lodge win The Circle Undone campaign."
+    },
+    "ImmortalitySoundsNice": {
+      "name": "Immortality Sounds Nice",
+      "text": "Help Anette's Coven win The Circle Undone campaign."
+    },
+    "MoreLikeExcursion": {
+      "name": "More Like Excursion",
+      "text": "Complete In the Clutches of Chaos without a single incursion occurring."
     },
     "MemberThese": {
+      "name": "'Member These?",
+      "text": "Discover the following Mementos:",
       "items": {
         "MesmerizingFlute": "Mesmerizing Flute (Sáo mê hoặc)",
         "KeziahsFormulae": "Công thức của Keziah",
         "RitualComponents": "Ritual Components (Thành phần nghi lễ)",
         "WornCrucifix": "Thánh Giá Hao Mòn",
-        "GilmansJournal": "Nhật ký của Gilman"
+        "ScrapOfTornShadow": "Scrap of Torn Shadow",
+        "WispOfSpectralMist": "Wisp of Spectral Mist",
+        "StrangeIncantation": "Strange Incantation",
+        "CornHuskDoll": "Corn Husk Doll",
+        "GilmansJournal": "Nhật ký của Gilman",
+        "BloodyTreeCarvings": "Bloody Tree Carvings"
       }
+    },
+    "CaseClosed": {
+      "name": "Case Closed",
+      "text": "Save each of the following characters from a terrible fate:",
+      "items": {
+        "ValentinoRivas": "Valentino Rivas",
+        "GavriellaMizrah": "Gavriella Mizrah",
+        "PennyWhite": "Penny White",
+        "JeromeDavids": "Jerome Davids"
+      }
+    },
+    "MusicOfTheOuterGods": {
+      "name": "Music of the Outer Gods",
+      "text": "Accept your fate and win The Circle Undone campaign by joining the Pipers of Azathoth."
+    },
+    "WeaverOfShadowAndMist": {
+      "name": "Weaver of Shadow and Mist",
+      "text": "Reject your fate and win The Circle Undone campaign by crafting a spell to contain Azathoth."
+    },
+    "FinePrint": {
+      "name": "Fine Print",
+      "text": "Win The Circle Undone campaign by signing your name in The Black Book of Azathoth."
+    },
+    "SpeakTheWordsAloud": {
+      "name": "duolA sdroW eht kaepS",
+      "text": "Win The Circle Undone campaign by discovering and reversing an ancient incantation."
+    },
+    "CircleExpertise": {
+      "name": "Circle Expertise",
+      "text": "Win The Circle Undone campaign on Expert difficulty."
     },
     "OneFirstLastJob": {
       "name": "Một Phi Vụ Cuối Cùng Đầu Tiên",
       "text": "Hoàn thành chiến dịch *The Drowned City* một lần ở bất kỳ độ khó nào."
     },
     "SeasonTwo": {
-      "name": "Mùa Hai"
+      "name": "Mùa Hai",
+      "text": "Play through the campaign on hard or expert mode using 4 investigators from 4 different previous campaigns. Cannot currently be earned: this requires Epic Campaign Mode, which is not yet implemented."
     },
     "CliffDiver": {
       "name": "Nhảy Vách Đá",
@@ -44,8 +384,8 @@
       "text": "Kết thúc *The Western Wall* với mọi địa điểm đã được lật mở."
     },
     "TidalFlipMinigame": {
-      "text": "Hoàn thành *The Drowned Quarter* với mọi địa điểm đã được lật mở và không bị flooded.",
-      "name": "Minigame Tidal Flip"
+      "name": "Minigame Tidal Flip",
+      "text": "Hoàn thành *The Drowned Quarter* với mọi địa điểm đã được lật mở và không bị flooded."
     },
     "NoAcolyteLeftBehind": {
       "name": "Không Một Acolyte Nào Bị Bỏ Lại",
@@ -56,7 +396,8 @@
       "text": "Đánh bại Mother trong *The Apiary* chỉ bằng hiệu ứng _Forced_ của bà ta."
     },
     "InTheDeepEnd": {
-      "name": "Ở Vùng Nước Sâu"
+      "name": "Ở Vùng Nước Sâu",
+      "text": "Escape The Grand Vault with the Tidal Tablet after every location has been fully flooded."
     },
     "SorryDidntSeeYouThere": {
       "name": "Xin Lỗi, Không Thấy Bạn Ở Đó",
@@ -79,7 +420,8 @@
       "text": "Dịch toàn bộ 26 ký tự ngoại lai trong một lần chơi duy nhất của chiến dịch *The Drowned City*."
     },
     "EmptyHanded": {
-      "name": "Trắng Tay"
+      "name": "Trắng Tay",
+      "text": "Return from R’lyeh without having collected any Artifact story assets."
     },
     "WhyWontYouStayDead": {
       "name": "TẠI. SAO. NGƯƠI. KHÔNG. CHỊU. CHẾT?!",
@@ -97,19 +439,35 @@
       "name": "Khi Sức Mạnh Được Kết Hợp…",
       "text": "Hoàn thành chiến dịch *The Drowned City* sau khi đã kiếm được các artifact sau:",
       "items": {
-        "GrislyMask": "\"Mặt Nạ\" Rùng Rợn"
+        "BarrierNode": "Barrier Node",
+        "GrislyMask": "\"Mặt Nạ\" Rùng Rợn",
+        "ObsidianClaw": "Obsidian Claw",
+        "TidalTablet": "Tidal Tablet",
+        "ShardOfYchlecht": "Shard of Y’ch’lecht",
+        "HorrorInClay": "Horror in Clay"
       }
     },
     "Obligations": {
       "name": "Nghĩa vụ",
-      "text": "Hoàn thành chiến dịch *The Drowned City* với các nhiệm vụ sau được hoàn tất:"
+      "text": "Hoàn thành chiến dịch *The Drowned City* với các nhiệm vụ sau được hoàn tất:",
+      "items": {
+        "WalkInFaith": "Walk in Faith",
+        "DreamsOfDestruction": "Dreams of Destruction",
+        "ToeTheLine": "Toe the Line",
+        "DoNoHarm": "Do No Harm",
+        "GoodMoney": "Good Money",
+        "NoPlaceLikeHome": "No Place Like Home",
+        "ProveYourWorth": "Prove Your Worth",
+        "PlumbTheDepths": "Plumb the Depths"
+      }
     },
     "DoYouAlwaysFollowOrders": {
       "name": "Bạn Có Luôn Tuân Lệnh Không?",
       "text": "Không đi chệch khỏi con đường trong Beyond the Gates of Sleep."
     },
     "AwwButTheyreSoCute": {
-      "name": "Aww, Nhưng Chúng Thật Đáng Yêu"
+      "name": "Aww, Nhưng Chúng Thật Đáng Yêu",
+      "text": "Do not defeat a single Zoog enemy in Beyond the Gates of Sleep."
     },
     "LosingMyReligion": {
       "name": "Đánh Mất Đức Tin",
@@ -152,7 +510,8 @@
       "text": "Chiến thắng campaign *The Dream-Quest* với ít nhất ba Ultimatum đang kích hoạt."
     },
     "DreamlandsExpertise": {
-      "name": "Chuyên Gia Dreamlands"
+      "name": "Chuyên Gia Dreamlands",
+      "text": "Win The Dream-Quest campaign on Expert difficulty."
     },
     "BewareTheBlackCat": {
       "name": "Cẩn Thận The Black Cat",
@@ -163,7 +522,8 @@
       "text": "Chiến thắng *The Dream-Eaters* dưới dạng một campaign 8 phần liên kết, và để cả hai nhóm đoàn tụ trong phần kết."
     },
     "EveryonesAFeministUntilThereIsASpiderAround": {
-      "name": "Ai cũng là người theo chủ nghĩa nữ quyền cho đến khi có nhện xuất hiện"
+      "name": "Ai cũng là người theo chủ nghĩa nữ quyền cho đến khi có nhện xuất hiện",
+      "text": "Defeat twenty Spider enemies. (Swarm cards do not count.)"
     },
     "TheCarterMethod": {
       "name": "Phương pháp Carter",
@@ -174,6 +534,7 @@
       "text": "Mang Dr. Shivani Maheswaran theo cùng và không để cô ấy nhận bất kỳ damage hay horror nào trong Waking Nightmare."
     },
     "DejaVu": {
+      "name": "Déjà Vu",
       "text": "Giải quyết mọi free triggered ability trên mọi địa điểm trong *A Thousand Shapes of Horror* (không tính Mysterious Stairs trong act 2)."
     },
     "TheCasaLomaManeuver": {
@@ -189,21 +550,36 @@
       "text": "Lật mọi địa điểm ít nhất một lần trong Point of No Return."
     },
     "MarchOfTheGhouls": {
-      "name": "Cuộc Hành Quân Của Ghoul"
+      "name": "Cuộc Hành Quân Của Ghoul",
+      "text": "Have 4 Ghoul enemies attached to Richard Upton Pickman in Point of No Return."
+    },
+    "TheIshimuraFlex": {
+      "name": "The Ishimura Flex",
+      "text": "Trong một round duy nhất, đánh bại cả 4 Legs of Atlach-Nacha trong Weaver of the Cosmos."
+    },
+    "YouSpinMeRightRound": {
+      "name": "You Spin Me Right ’Round",
+      "text": "Đảm bảo rằng Atlach-Nacha xoay đủ 360 độ trong cùng một phase ở Weaver of the Cosmos."
     },
     "MasterOfUnlocking": {
+      "name": "Master of Unlocking",
       "text": "Sử dụng The Silver Key để hủy tổng cộng ít nhất 10 horror trong cùng một scenario."
     },
     "WebOfDreamsLineInTheSand": {
       "name": "Lằn Ranh Trên Cát",
       "text": "Chiến thắng campaign *The Web of Dreams* với ít nhất ba Ultimatum được kích hoạt."
     },
+    "UnderworldExpertise": {
+      "name": "Underworld Expertise",
+      "text": "Win The Web of Dreams campaign on Expert difficulty."
+    },
     "WouldYouJustDieAlready": {
       "name": "Sao Ngươi Không Chết Quách Đi Cho Rồi",
       "text": "Đánh bại The Amalgam 5 lần trở lên trong The Pit of Despair."
     },
     "ElementaryDearDawson": {
-      "name": "Cơ Bản Thôi, Dawson Thân Mến"
+      "name": "Cơ Bản Thôi, Dawson Thân Mến",
+      "text": "Guess both the correct Suspect and Hideout in The Vanishing of Elina Harper."
     },
     "AintNothinGonnaBreakMyStride": {
       "name": "Không Gì Có Thể Cản Bước Tôi",
@@ -226,7 +602,8 @@
       "text": "Hoàn thành cả *The Lair of Dagon* và *Into the Maelstrom* mà không đánh thức Dagon hoặc Hydra."
     },
     "GoneFishing": {
-      "name": "Đi Câu Cá"
+      "name": "Đi Câu Cá",
+      "text": "Defeat 20 Deep One enemies."
     },
     "FullBuild": {
       "name": "Trang Bị Đầy Đủ",
@@ -236,7 +613,6 @@
       "name": "“Bạn Tỉnh Dậy Trong Một Căn Phòng...”",
       "text": "Khôi phục từng ký ức sau đây trong suốt chiến dịch *The Innsmouth Conspiracy*:",
       "items": {
-        "TheHorribleTruth": "Sự thật kinh hoàng.",
         "AMeetingWithThomasDawson": "Một cuộc gặp gỡ với Thomas Dawson.",
         "ABattleWithAHorrifyingDevil": "Một trận chiến với một con ác quỷ kinh hoàng.",
         "ADecisionToStickTogether": "Một quyết định gắn bó cùng nhau.",
@@ -250,11 +626,13 @@
         "DiscoveryOfAMysticalRelic": "Phát hiện ra một di vật huyền bí.",
         "AConversationWithMrMoore": "cuộc trò chuyện với ông Moore",
         "TheLifecycleOfADeepOne": "Vòng đời của một “Deep One.”",
-        "AStingingBetrayal": "Một sự phản bội cay đắng."
+        "AStingingBetrayal": "Một sự phản bội cay đắng.",
+        "TheHorribleTruth": "Sự thật kinh hoàng."
       }
     },
     "BiggerFishToFry": {
-      "name": "Có việc lớn hơn phải làm"
+      "name": "Có việc lớn hơn phải làm",
+      "text": "Complete The Innsmouth Conspiracy campaign without defeating a single Deep One enemy."
     },
     "InnsmouthLineInTheSand": {
       "name": "Lằn Ranh Trên Cát",
@@ -293,7 +671,8 @@
       "text": "Phá sập tất cả năm Mist-Pylons (Cột Sương Mù) và thoát ra với mạng sống trong The Heart of Madness, Part II (Trái Tim của Điên Loạn, Phần II)."
     },
     "TheSoundOfMadness": {
-      "name": "Âm Thanh của Điên Loạn"
+      "name": "Âm Thanh của Điên Loạn",
+      "text": "Draw ten copies of “Tekeli-li!” during a single game."
     },
     "SorryImAllOutOfDogPuns": {
       "name": "Xin Lỗi, Tôi Hết Trò Chơi Chữ Về Chó Rồi",
@@ -315,8 +694,13 @@
       "name": "Wuk Wuk Bùm",
       "text": "Dùng Dynamite (Thuốc Nổ) để đánh bại hai Giant Albino Penguins (Chim Cánh Cụt Bạch Tạng Khổng Lồ) cùng lúc."
     },
+    "TheColdNeverBotheredMeAnyway": {
+      "name": "The Cold Never Bothered Me Anyway",
+      "text": "Win the Edge of the Earth campaign with eight Frost tokens in the chaos bag at the end of the campaign."
+    },
     "HellFrozeOver": {
-      "name": "Địa Ngục Đóng Băng"
+      "name": "Địa Ngục Đóng Băng",
+      "text": "Win the Edge of the Earth campaign with zero Frost tokens in the chaos bag at the end of the campaign."
     },
     "AbandonedAndAlone": {
       "name": "Bị Bỏ Rơi và Cô Độc",
@@ -332,10 +716,17 @@
       "items": {
         "DrAmyKensler": "Tiến sĩ Amy Kensler",
         "ProfWilliamDyer": "Giáo sư William Dyer",
-        "DrMalaSinha": "Tiến sĩ Mala Sinha"
+        "Danforth": "Danforth",
+        "JamesCookieFredericks": "James “Cookie” Fredericks",
+        "EliyahAshevak": "Eliyah Ashevak",
+        "DrMalaSinha": "Tiến sĩ Mala Sinha",
+        "TakadaHiroko": "Takada Hiroko",
+        "AveryClaypool": "Avery Claypool",
+        "RoaldEllsworth": "Roald Ellsworth"
       }
     },
     "SnowLineInTheSand": {
+      "name": "Line in the…Snow",
       "text": "Thắng chiến dịch *Edge of the Earth* (Rìa Trái Đất) với ít nhất ba Ultimatums (Tối Hậu Thư) đang hoạt động."
     },
     "AntarcticExpertise": {
@@ -353,6 +744,10 @@
     "WhatsInAName": {
       "name": "Có Gì Trong Một Cái Tên?",
       "text": "Nói cho Amaranth biết tên thật của cô ấy trong Dead Heat."
+    },
+    "PorqueNoLosDos": {
+      "name": "Porque No Los Dos?",
+      "text": "Đánh bại cả hai bản sao của Desi cùng lúc trong Dancing Mad."
     },
     "LostAndFound": {
       "name": "Thất Lạc và Tìm Thấy",
@@ -407,10 +802,12 @@
       "text": "Chiến thắng chiến dịch *The Scarlet Keys* với chỉ 17 thời gian đã trôi qua hoặc ít hơn."
     },
     "TrustNobody": {
-      "name": "Đừng Tin Một Ai"
+      "name": "Đừng Tin Một Ai",
+      "text": "Win The Scarlet Keys campaign with 4 Elder Thing tokens in the chaos bag and without ever removing any Elder Thing tokens."
     },
     "TrustEverybody": {
-      "name": "Tin Tất Cả Mọi Người"
+      "name": "Tin Tất Cả Mọi Người",
+      "text": "Win The Scarlet Keys campaign with 4 Tablet tokens in the chaos bag and without ever removing any Tablet tokens."
     },
     "HereIsYourBadge": {
       "name": "Đây Là Huy Hiệu Của Bạn",
@@ -420,11 +817,17 @@
       "name": "Chìa Khóa Đến Trái Tim Tôi",
       "text": "Thu thập từng chìa khóa dưới đây trong suốt campaign *The Scarlet Keys*:",
       "items": {
+        "TheEyeOfRavens": "The Eye of Ravens",
+        "TheLastBlossom": "The Last Blossom",
+        "TheLightOfPharos": "The Light of Pharos",
+        "TheSableGlass": "The Sable Glass",
+        "TheWeepingLady": "The Weeping Lady",
         "TheTwistedAntiprism": "Khối Lăng Kính Vặn Xoắn",
         "TheShadeReaper": "Lưỡi Hái Bóng Tối",
         "TheMirroringBlade": "Lưỡi Kiếm Phản Chiếu",
         "TheBaleEngine": "Cỗ Máy Tai Ương",
-        "TheRuinousChime": "Hồi Chuông Hủy Diệt"
+        "TheRuinousChime": "Hồi Chuông Hủy Diệt",
+        "TheWellspringOfFortune": "The Wellspring of Fortune"
       }
     },
     "ScarletLineInTheSand": {
@@ -446,7 +849,9 @@
         "MarquezSacrificedHerself": "Dr. Marquez đã hy sinh bản thân cho Vale.",
         "TheInvestigatorsSacrificedThemselves": "Các điều tra viên đã hy sinh bản thân cho Vale.",
         "TheValeWasSaved": "The Vale đã được cứu.",
-        "TheValeBurned": "The Vale đã bị thiêu rụi."
+        "TheValeBurned": "The Vale đã bị thiêu rụi.",
+        "BarelySurvivedTheFeast": "The investigators barely survived the feast",
+        "BecameTheTrueFeast": "The investigators became the true feast"
       }
     },
     "AStrongSilentType": {
@@ -466,6 +871,7 @@
       "text": "*Chia sẻ một điệu nhảy* với 4 cư dân khác nhau trong prelude *The Second Evening*."
     },
     "AudreyIII": {
+      "name": "Audrey III",
       "text": "Hoàn thành một scenario trong khi đang giao chiến với một Poisonblossom có từ 10 overgrowth trở lên."
     },
     "HoldOnToYourPotatoes": {
@@ -473,6 +879,7 @@
       "text": "Hoàn thành *Written in Rock* với cả một cư dân và asset Prismatic Shard dưới quyền kiểm soát của bạn."
     },
     "DreamHomeBreakover": {
+      "name": "Dream Home Breakover",
       "text": "Hoàn thành *Hemlock House* với 10 địa điểm trong victory display."
     },
     "SettlingTheScore": {
@@ -500,6 +907,7 @@
       "text": "Hoàn thành Resolution Lambs to the Slaughter trong Prelude: The Final Evening."
     },
     "OblivionShmoblivion": {
+      "name": "Oblivion Shmoblivion",
       "text": "Chiến thắng *Fate of the Vale* với mọi kẻ địch Cosmic Emissary trong victory display."
     },
     "HighDive": {
@@ -508,10 +916,18 @@
     },
     "BestFriendsForever": {
       "name": "Mãi Mãi Là Bạn Thân!",
-      "text": "Đạt Relationship Level 6 với các cư dân sau:"
+      "text": "Đạt Relationship Level 6 với các cư dân sau:",
+      "items": {
+        "LeahAtwood": "Leah Atwood",
+        "SimeonAtwood": "Simeon Atwood",
+        "RiverHawthorne": "River Hawthorne",
+        "GideonMizrah": "Gideon Mizrah",
+        "WilliamHemlock": "William Hemlock"
+      }
     },
     "KnowYourPlace": {
-      "name": "Biết Thân Biết Phận"
+      "name": "Biết Thân Biết Phận",
+      "text": "Win The Feast of Hemlock Vale campaign with Mother Rachel at Relationship Level 3 or higher."
     },
     "HeartOfSteel": {
       "name": "Trái Tim Thép",
@@ -533,22 +949,95 @@
       "name": "Chuyên Môn Hemlock",
       "text": "Chiến thắng chiến dịch *The Feast of Hemlock Vale* ở độ khó Expert"
     },
+    "HideAndSeek": {
+      "name": "Hide and Seek",
+      "text": "Defeat Julia Stern before agenda 2a advances in River of Blood."
+    },
+    "FriendlyNeighborhoodInvestigator": {
+      "name": "Friendly Neighborhood Investigator",
+      "text": "Do not let a single Civilian enemy get defeated during River of Blood."
+    },
+    "TrophyCollector": {
+      "name": "Trophy Collector",
+      "text": "Add Fang of Zburamoarte to any investigator’s deck."
+    },
+    "NoMeatSlabUnhooked": {
+      "name": "No Meat-Slab Unhooked",
+      "text": "Finish New Horizons with every location revealed, and with no clues remaining on locations."
+    },
+    "FilingPaperwork": {
+      "name": "Filing Paperwork",
+      "text": "Add either Forged Permit or Sanguine Song to any investigator’s deck."
+    },
+    "ThatLlLearnHim": {
+      "name": "That’ll Learn Him",
+      "text": "Use the ability on Zburamoarte’s Lair to deal the killing blow to Zburamoarte in New Horizons."
+    },
+    "SafetyInspector": {
+      "name": "Safety Inspector",
+      "text": "Do not let a single Civilian enemy get defeated during New Horizons."
+    },
+    "ThanksForYourVote": {
+      "name": "Thanks for Your Vote",
+      "text": "Add Charlie Kane to any investigator’s deck."
+    },
+    "HellHathNoFury": {
+      "name": "Hell Hath No Fury",
+      "text": "Have Julia Stern deal the killing blow to Howard Wilkes in Blood Money."
+    },
+    "LookOutBelow": {
+      "name": "Look Out Below",
+      "text": "Use the Balcony location’s ability to defeat Howard Wilkes in Blood Money."
+    },
+    "APartyEveryoneCanEnjoy": {
+      "name": "A Party Everyone Can Enjoy",
+      "text": "Do not let a single Civilian enemy get defeated during Blood Money."
+    },
+    "IfYouCantBeatThem": {
+      "name": "If You Can’t Beat Them…",
+      "text": "Complete the Blood Money scenario with each available copy of Suspicious Guest in the victory display."
+    },
+    "YouGotRedOnYou": {
+      "name": "You Got Red on You",
+      "text": "Seal 3 {blood} tokens on your investigator in a single round."
+    },
+    "DontForgetYourPPE": {
+      "name": "Don’t Forget Your PPE",
+      "text": "Finish Children of Blood with 0 {blood} tokens in the chaos bag."
+    },
+    "BathedInBlood": {
+      "name": "Bathed in Blood",
+      "text": "Finish Children of Blood with 12 {blood} tokens in the chaos bag."
+    },
+    "AndAllIGotWereTheseBloodyFangs": {
+      "name": "And All I Got Were These Bloody Fangs",
+      "text": "Unlock the Chosen of Zburamoarte campaign reward card."
+    },
+    "ItsPartOfMyBackstory": {
+      "name": "It’s Part of My Backstory",
+      "text": "Complete Children of Blood with the following investigators:",
+      "items": {
+        "DanielaReyes": "Daniela Reyes",
+        "MigueldelaCruz": "Miguel de la Cruz"
+      }
+    },
     "WaterfrontWetWork": {
+      "name": "Waterfront Wet Work",
+      "text": "Complete Children of Blood campaign on the following difficulties:",
       "items": {
         "Easy": "Dễ",
         "Standard": "Cơ bản",
         "Hard": "Khó",
         "Expert": "Chuyên gia"
       }
-    },
-    "TheIshimuraFlex": {
-      "text": "Trong một round duy nhất, đánh bại cả 4 Legs of Atlach-Nacha trong Weaver of the Cosmos."
-    },
-    "YouSpinMeRightRound": {
-      "text": "Đảm bảo rằng Atlach-Nacha xoay đủ 360 độ trong cùng một phase ở Weaver of the Cosmos."
-    },
-    "PorqueNoLosDos": {
-      "text": "Đánh bại cả hai bản sao của Desi cùng lúc trong Dancing Mad."
     }
+  },
+  "clearCampaign": "Xóa thành tựu chiến dịch",
+  "clearOne": "Xóa thành tựu này",
+  "clearCampaignConfirm": "Bạn có chắc chắn muốn xóa tất cả thành tựu cho chiến dịch này không?",
+  "clearOneConfirm": "Bạn có chắc chắn muốn xóa thành tựu này không?",
+  "parts": {
+    "theDreamQuest": "The Dream-Quest",
+    "theWebOfDreams": "The Web of Dreams"
   }
 }

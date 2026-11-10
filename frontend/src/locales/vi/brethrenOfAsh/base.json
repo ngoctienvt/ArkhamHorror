@@ -1,8 +1,10 @@
 {
+  "prologue": "<h1>A Glorious Rebirth</h1><p>Arkham luôn có chút kỳ lạ. Dường như mỗi lần bạn đọc tin tức, lại có một báo cáo mới về một vụ giết người rùng rợn hoặc một vụ mất tích đột ngột. Một thi thể bầm dập ở Waterfront District. Một sĩ quan cảnh sát mất tích ở French Hill. Một ấn chú đẫm máu được vẽ trong con hẻm phía sau Velma's Diner. Thành phố này có không ít những kẻ lập dị và những người theo thuyết âm mưu, chắc chắn rồi, nhưng ngay cả người quan sát tỉnh táo nhất cũng không thể phớt lờ sự thật: có điều gì đó không ổn với thành phố này.</p><p>Tuy nhiên, hầu hết người dân ở Arkham không thích chìm đắm trong những điều tồi tệ. Sau trận lụt sáu tháng trước, thành phố đang tự xây dựng lại mạnh mẽ hơn bao giờ hết, với dòng tiền mới đổ vào từ các nhà đầu tư bên ngoài. Họ nói rằng mọi thứ đang ngày càng tốt đẹp hơn, và có vẻ như đúng là vậy. Nhưng bạn biết rằng luôn có điều gì đó ẩn giấu đằng sau câu chuyện.</p><p>Bất kể điều gì đang chờ đợi phía trước, bạn không phải đối mặt với nó một mình. Có những người khác giống như bạn, những người đã chạm trán với những nỗi kinh hoàng tương tự, và sẽ không chấp nhận những lời giải thích dễ dãi hay những thứ tiêu khiển để tự an ủi. Họ cũng biết rằng có phần sự thật trong những lời nguyền cổ xưa và truyền thuyết về phù thủy của thành phố này. Bạn sẽ sát cánh cùng họ chống lại những thế lực tà ác ẩn nấp bên ngoài tầm hiểu biết của người phàm chứ? Hay bạn sẽ khuất phục, như rất nhiều người khác, trước những nỗi kinh hoàng của Mythos?</p>",
   "key": {
     "investigatorsDefeatedTheirMaskedPursuer": "Các điều tra viên đã đánh bại kẻ truy đuổi đeo mặt nạ của họ.",
     "investigatorsSavedMiskatonicUniversity": "Các điều tra viên đã cứu Miskatonic University.",
     "miskatonicUniversityBurned": "Miskatonic University đã bị thiêu rụi.",
+    "servantOfElokoss": "Servant of Elokoss",
     "investigatorsDiscoveredTheCultsWhereabouts": "Các điều tra viên đã phát hiện ra tung tích của giáo phái.",
     "investigatorsFailedInTheirSearch": "Các điều tra viên đã thất bại trong cuộc tìm kiếm.",
     "investigatorsKilledTheServantOfFlame": "Các điều tra viên đã tiêu diệt Servant of Flame",

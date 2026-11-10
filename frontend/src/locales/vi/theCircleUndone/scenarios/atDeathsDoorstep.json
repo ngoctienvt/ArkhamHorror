@@ -6,26 +6,110 @@
       "body": "<p class='basic'>Trong suốt màn chơi này, bạn có thể được hướng dẫn hoán đổi các vị trí đặt một bên hồi đầu với các vị trí hiện có. Khi một vị trí được hoán đổi với một vị trí đang được chơi, vị trí đó sẽ chiếm chỗ đó. Tất cả các token, bài đính kèm, điều tra viên, kẻ địch và các lá bài khác tại vị trí cũ lúc này được xem là ở vị trí mới (ví dụ: các lá bài đính kèm vẫn sẽ được đính kèm tại đó). Không có thành phần trò chơi nào được coi là đã di chuyển trong quá trình hoán đổi này.</p>"
     }
   ],
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 (-3 instead if your location is haunted).",
+      "tablet": "-2. If you fail and this is an attack or evasion attempt, resolve each haunted ability on your location.",
+      "elderThing": "-2. If there is a _Spectral_ enemy at your location, chịu 1 damage."
+    },
+    "hardExpert": {
+      "skull": "-2 (-4 instead if your location is haunted).",
+      "tablet": "-3. If this is an attack or evasion attempt, resolve each haunted ability on your location.",
+      "elderThing": "-4. If there is a _Spectral_ enemy at your location, chịu 1 damage and 1 horror."
+    }
+  },
+  "label": {
+    "wineCellarSpectral": {
+      "removeDoom": "Remove 1 doom from a Silver Twilight enemy in play",
+      "placeDoom": "Place 1 doom on a Silver Twilight enemy in play"
+    },
+    "trophyRoom": {
+      "spendResources": "Spend 2 resources to gain 1 clue (from the token pool)."
+    },
+    "senatorNathanielRhodesAdeptPolitician": {
+      "take": "Take control of 1 of his clues",
+      "flip": "Flip 1 doom on him to its clue side"
+    }
+  },
+  "tooltips": {
+    "wineCellarSpectral": {
+      "haunted": "_Haunted_ - You must either place 1 doom on a _Silver Twilight_ enemy in play, or take 1 direct horror."
+    },
+    "entryHall": {
+      "resign": "\"I guess there is nothing to those disappearances after all.\""
+    },
+    "entryHallSpectral": {
+      "resign": "You tear through the front doors of the manor, escaping the spectral realm and leaving the remainder of the survivors to their fate."
+    },
+    "trophyRoomSpectral": {
+      "haunted": "Lose 2 resources. For each resource you cannot lose from this effect, take 1 horror."
+    },
+    "billiardsRoomSpectral": {
+      "haunted": "You must either discard an asset you control or take 1 damage."
+    },
+    "masterBedroomSpectral": {
+      "haunted": "Place 1 of your clues on Master Bedroom."
+    },
+    "balconySpectral": {
+      "haunted": "Each of your cards with health takes 1 direct damage."
+    },
+    "officeSpectral": {
+      "haunted": "Choose and discard a card from your hand."
+    }
+  },
   "intro": {
     "title": "Màn II: Tại Cửa Tử",
-    "introPart1": "<center><b>Bốn Người Mất Tích, Chưa Biết Đang Ở Đâu</b></center> Người dân của French Hill vẫn còn xôn xao sau sự biến mất đột ngột của một số khách và người làm ở nhà của ông Josef Meiger trong đêm dạ tiệc từ thiện Silver Twilight vào chủ nhật tuần trước. Ông Meiger chia sẻ một ngày sau vụ mất tích: “Chúng tôi hoàn toàn bối rối không biết làm thế nào điều này có thể xảy ra. Chúng tôi tin tưởng rằng Cảnh sát trưởng Engle và Cảnh sát thị trấn Arkham sẽ điều tra và tìm kiếm những người mất tích.” Hiện vẫn chưa có dấu vết nào về tung tích của cô Gavriella Mizrah, ông Jerome Davids, ông Valentino Rivas và bà Penny White, tất cả đều biến mất giữa sự kiện và không thấy bóng dáng kể từ đó. Cảnh sát đang đưa ra một phần thưởng đáng kể cho bất kỳ ai cung cấp thông tin liên quan đến những vụ mất tích này. Khi được hỏi liệu cảnh sát có xem đây là một vụ giết người hay không, cảnh sát trưởng Engle trả lời: “Không có lý do để cân nhắc đây là hành động trả thù. Tuy nhiên, dựa trên hoàn cảnh, chúng tôi phải xem xét mọi khả năng.\" Không có người tham dự nào khác đưa ra tuyên bố liên quan đến buổi dạ tiệc, buổi tiệc dường như kết thúc mà không gặp trở ngại nào mặc dù có người mất tích. Cho đến nay, không có thành viên ưu tú nào của Silver Twilight Lodge bày tỏ bất kỳ mối quan tâm nào về bữa tối gây quỹ từ thiện của Lodge, nó gần đây đã được chuyển đến cùng địa điểm đó: trang viên của Josef Meiger ở French Hill. Ông Meiger nói với Arkham Advertiser trong một cuộc phỏng vấn ngày hôm qua, “Tôi chắc chắn rằng sự kiện này sẽ thành công rực rỡ. Không có lý do gì để những người dân ngay thẳng của Arkham phải lo lắng.\" –Minnie Klein"
+    "introPart1": "<center><b>Bốn Người Mất Tích, Chưa Biết Đang Ở Đâu</b></center> Người dân của French Hill vẫn còn xôn xao sau sự biến mất đột ngột của một số khách và người làm ở nhà của ông Josef Meiger trong đêm dạ tiệc từ thiện Silver Twilight vào chủ nhật tuần trước. Ông Meiger chia sẻ một ngày sau vụ mất tích: “Chúng tôi hoàn toàn bối rối không biết làm thế nào điều này có thể xảy ra. Chúng tôi tin tưởng rằng Cảnh sát trưởng Engle và Cảnh sát thị trấn Arkham sẽ điều tra và tìm kiếm những người mất tích.” Hiện vẫn chưa có dấu vết nào về tung tích của cô Gavriella Mizrah, ông Jerome Davids, ông Valentino Rivas và bà Penny White, tất cả đều biến mất giữa sự kiện và không thấy bóng dáng kể từ đó. Cảnh sát đang đưa ra một phần thưởng đáng kể cho bất kỳ ai cung cấp thông tin liên quan đến những vụ mất tích này. Khi được hỏi liệu cảnh sát có xem đây là một vụ giết người hay không, cảnh sát trưởng Engle trả lời: “Không có lý do để cân nhắc đây là hành động trả thù. Tuy nhiên, dựa trên hoàn cảnh, chúng tôi phải xem xét mọi khả năng.\" Không có người tham dự nào khác đưa ra tuyên bố liên quan đến buổi dạ tiệc, buổi tiệc dường như kết thúc mà không gặp trở ngại nào mặc dù có người mất tích. Cho đến nay, không có thành viên ưu tú nào của Silver Twilight Lodge bày tỏ bất kỳ mối quan tâm nào về bữa tối gây quỹ từ thiện của Lodge, nó gần đây đã được chuyển đến cùng địa điểm đó: trang viên của Josef Meiger ở French Hill. Ông Meiger nói với Arkham Advertiser trong một cuộc phỏng vấn ngày hôm qua, “Tôi chắc chắn rằng sự kiện này sẽ thành công rực rỡ. Không có lý do gì để những người dân ngay thẳng của Arkham phải lo lắng.\" –Minnie Klein",
+    "introPart2": "<p>Bạn gấp tờ báo lại và đặt nó sang một bên trên bàn của mình, xem xét các hồ sơ khác mà bạn đã thu thập được trong vài ngày qua liên quan đến những người mất tích. Đã vài ngày kể từ trải nghiệm trong khu rừng. Bạn đã cố gắng hết sức đặt nó khỏi tâm trí, nhưng không thể. Mỗi đêm, bạn mơ về một nơi vô danh trong khoảng không, một giai điệu nghịch âm phảng phất của tiếng sáo thôi miên kéo bạn về phía trước. Bây giờ có những người khác mất tích khỏi thị trấn mà không có dấu vết. Vụ việc mất tích nhảy múa dọc theo các góc cạnh của suy nghĩ của bạn. <i>Không có lý do gì để lo lắng</i>, bạn trầm tư, ngẫm đi ngẫm lại những lời của người đàn ông trong đầu mình. Bạn nghĩ đến vị thầy bói và lời cảnh báo của cô ấy, và bạn tự hỏi liệu bạn có đơn giản là đang tưởng tượng về những điều quái gở trong khi chúng không tồn tại không. Bất kể thế nào, chỉ có một cách để biết chắc chắn. Bạn cầm bức thiệp mời lên, xem xét chữ viết thư pháp chạm nổi khảm bạc và hoàn mỹ.</p>",
+    "introPart3": "<p class='center billenia'><center><fancy>The Silver Twilight Lodge</fancy></center></p><p class='basic'><center><i>mời bạn đến dự vào tối ngày 29 tháng 11 lúc 8 giờ tại trang viên của Josef Ekhard Meiger, vì từ thiện của Fairchild Foundation</i></center></p>",
+    "introPart4": "<p>Trong khi chuẩn bị cho đêm sắp tới, bạn không thể không tự hỏi: Liệu bạn có đang hành động để khắc phục số mạng của mình, như lời khuyên của người thầy bói không? Hay bạn đang sẵn sàng bước vào hàm của một số mạng nghiệt ngã?</p><p class='basic'>Tiếp tục đến <b>Setup</b></p>"
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *At Death’s Doorstep*, *Silver Twilight Lodge*, *Spectral Predators*, *Trapped Spirits*, *Inexorable Fate*, and *Chilling Cold*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/at-deaths-doorstep.png' /><img src='{setImgPath}/silver-twilight-lodge.png' /><img src='{setImgPath}/spectral-predators.png' /><img src='{setImgPath}/trapped-spirits.png' /><img src='{setImgPath}/inexorable-fate.png' /><img src='{setImgPath}/chilling-cold.png' /></section>",
+    "setSetsAside": "Set the *Realm of Death* and *The Watcher* encounter sets aside, out of play. These sets are indicated by the following icons:<section class='encounter-sets'><img src='{setImgPath}/realm-of-death.png' /><img src='{setImgPath}/the-watcher.png' /></section>",
+    "setLocationsAside": "Đặt 7 vị trí [[Spectral]] sang một bên, ngoài khu vực chơi.",
     "setJosefAside": "Đặt kẻ địch Josef Meiger sang một bên, ngoài khu vực chơi.",
     "josefNote": "*Lưu ý: Lá bài này có hai mặt và có thẻ câu chuyện ở mặt còn lại. Để có trải nghiệm tốt nhất, đừng nhìn sang mặt còn lại trừ khi có một hiệu ứng hướng dẫn bạn làm như vậy.*",
+    "placeLocations": "Đặt mỗi vị trí không phải [[Spectral]] vào chơi (Entry Hall, Victorian Halls, Trophy Room, Billiards Room, Master Bedroom, Balcony, và Office). Mỗi điều tra viên bắt đầu chơi tại vị trí Entry Hall.",
     "checkCampaignLog": "Kiểm tra phần \"Người Mất Tích\" trong Nhật ký Chiến dịch:",
+    "gavriellaNotCrossedOff": "Place 6 clues on the Entry Hall if Gavriella Mizrah’s profile is not crossed off.",
+    "jeromeNotCrossedOff": "Place 6 clues on the Office if Jerome Davids’s profile is not crossed off.",
+    "valentinoNotCrossedOff": "Place 6 clues on the Billiards Room if Valentino Rivas’s profile is not crossed off.",
+    "pennyNotCrossedOff": "Place 6 clues on the Balcony if Penny White’s profile is not crossed off.",
     "piecesOfEvidence": "Đồng đều nhất có thể, hãy loại bỏ tổng số manh mối từ các vị trí trên bằng với số *mẩu bằng chứng đã bị bỏ lại* trong Nhật ký Chiến dịch của bạn.",
-    "placeLocations": "Đặt mỗi vị trí không phải [[Spectral]] vào chơi (Entry Hall, Victorian Halls, Trophy Room, Billiards Room, Master Bedroom, Balcony, và Office). Mỗi điều tra viên bắt đầu chơi tại vị trí Entry Hall."
+    "theMortalRealm": "<section class='note-green'><h1>The Mortal Realm</h1><p>_Note_: This scenario’s setup only uses the seven locations without the _Spectral_ trait. Each of the _Spectral_ locations should be set aside.</p></div>",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to At Death’s Doorstep*, *Bloodthirsty Spirits*, *Unspeakable Fate*, *Chilling Mists*, and *Unstable Realm*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-at-deaths-doorstep.png' /><img src='{setImgPath}/bloodthirsty-spirits.png' /><img src='{setImgPath}/unspeakable-fate.png' /><img src='{setImgPath}/chilling-mists.png' /><img src='{setImgPath}/unstable-realm.png' /></section>*Bloodthirsty Spirits* replaces *Trapped Spirits*, *Unspeakable Fate* replaces *Inexorable Fate*, *Chilling Mists* replaces *Chilling Cold*, and *Unstable Realm* replaces *Realm of Death*. Remove the replaced sets from the game.",
+      "setSetsAside": "Set the *Unstable Realm* encounter set aside, out of play, instead of the *Realm of Death* encounter set. Likewise, when act 1b instructs the players to shuffle the *Realm of Death* encounter set into the encounter deck, shuffle in the *Unstable Realm* encounter set instead.",
+      "placeLocations": "Also put the Senator Nathaniel Rhodes enemy into play in the Entry Hall with 1 clue per investigator on him, and put the Wine Cellar location into play.",
+      "setLocationsAside": "Also set the _Spectral_ version of the Wine Cellar aside, out of play.",
+      "additionalRule": "For the duration of this scenario, the following additional rule applies: while resolving The Watcher’s Grasp treachery, The Spectral Watcher does not exhaust after it attacks."
+    }
+  },
+  "interlude1": {
+    "title": "Interlude I: A Record of Those Lost",
+    "instructions": "Kiểm tra phần \"Người Mất Tích\" trong Nhật ký Chiến dịch.",
+    "gavriella": "<p class='basic'>If Gavriella Mizrah’s profile is not crossed off and there are no clues on the Entry Hall, read the following:</p><p>Sảnh vào trang viên được trang trí rất đẹp, nhưng bạn thấy thật kỳ lạ khi lan can bằng gỗ của cầu thang lớn gần đây đã được sửa chữa một cách vội vã từ vẻ ngoài của nó. Trong khi không ai nhìn thấy, bạn đi theo lan can cầu thang cho đến khi bạn phát hiện ra thứ mình đang tìm kiếm: vài mảnh gỗ vụn, có lẽ bị đạn bắn vỡ tung tóe. Bạn leo lên cầu thang một lần nữa và đặt mình vào vị trí mà một người cần phải đứng để bắn một phát súng như vậy. Sau một lúc quan sát, ánh sáng yếu ớt gần một trong những cây dương xỉ trang trí trên tầng hai đập vào mắt bạn. Ở đó, bạn tìm thấy bằng chứng: một vỏ đạn từ khẩu súng lục .45. Một khẩu súng thực sự đã được bắn ở sảnh vào của trang viên - nhưng nếu điều đó là sự thật, làm sao không ai nghe thấy tiếng súng?</p><p class='basic'>Under “Missing Persons,” next to Gavriella Mizrah’s profile, record *the investigators are on Gavriella’s trail*.</p>",
+    "jerome": "<p class='basic'>If Jerome Davids’s profile is not crossed off and there are no clues on the Office, read the following:</p><p>Văn phòng cá nhân của Josef Meiger khá ngăn nắp đối với một người có thư ký riêng vừa mất tích. Có lẽ ông ta chỉ là một người khó tính… hoặc có lẽ ông ta đang tiêu hủy bằng chứng về những gì sai trái. Bạn không tìm thấy gì đáng chú ý trong bất kỳ tài liệu nào của Josef, nhưng sau khi xem xét kỹ, bạn nhận ra có một nơi bạn chưa kiểm tra: thùng rác. Tại đây bạn có được manh mối. Gần dưới cùng là một cuốn nhật ký bỏ túi nhỏ của Jerome Davids, có lẽ đã bị nhân viên dọn vệ sinh ném bất cẩn vào đó. Bạn lật đến trang cuối cùng. Ở đó, Jerome đã ghi lại một danh sách tên, có lẽ được chép lại từ tài liệu của Josef. Bạn chưa biết nó có ý nghĩa gì, nhưng nó phải rất quan trọng.</p><p class='basic'>Under “Missing Persons,” next to Jerome Davids’s profile, record *the investigators are on Jerome’s trail*.</p>",
+    "penny": "<p class='basic'>If Penny White’s profile is not crossed off and there are no clues on the Balcony, read the following:</p><p>Ban công bên ngoài phòng ngủ của Josef Meiger nhìn ra những con đường mưa và những ngọn tháp ảm đạm của French Hill. Theo những người chứng kiến, Penny được nhìn thấy lần cuối khi bước vào phòng ngủ của Josef, có lẽ là để dọn dẹp hoặc để tìm đồ dùng cá nhân của ông ta. Tàn thuốc trên sàn ban công lại cho thấy một câu chuyện khác. Penny ra đây để nghỉ ngơi, và đánh giá mức độ bận rộn của các nhân viên còn lại, đây có lẽ là một việc cần thiết. Nếu cô ấy gặp bất kỳ nguy hiểm nào, liệu cô ấy có thể trèo lên hoặc nhảy xuống từ ban công? Bạn nhìn qua các góc cạnh. Có thể, nhưng không chắc. Một cú ngã từ đây có thể làm gãy chân, hoặc tệ hơn thế. Cô ấy có thể đã lùi trở lại trang viên, nơi cô ấy có thể kêu cứu… chỉ là, không ai thấy cô ấy ra khỏi phòng ngủ. Một cái gì đó không đúng. Bạn nhét mẩu thuốc lá vào túi áo khoác, hy vọng đó thực sự là một manh mối chứ không chỉ là thông tin nhiễu.</p><p class='basic'>Under “Missing Persons,” next to Penny White’s profile, record *the investigators are on Penny’s trail*.</p>",
+    "valentino": "<p class='basic'>If Valentino Rivas’s profile is not crossed off and there are no clues on the Billiards Room, read the following:</p><p>Việc theo dấu Valentino không khó. Là khách mời danh dự (và linh hồn của bữa tiệc, từ những gì bạn nghe thấy) luôn có một đám đông xung quanh anh ấy. Điều này khiến câu chuyện anh ấy “biến mất khi họ không nhìn thấy” càng khó tin hơn. Trong phòng chơi bida, nơi Valentino được nhìn thấy lần cuối, bạn hỏi dồn Adam Gensler, người mà anh ta đang chơi bida cùng ngay trước khi mất tích. Anh ta giải thích, bồn chồn và nhịp chân liên tục, “Nghe này, tôi đã nói với cảnh sát và các phóng viên những gì tôi nhìn thấy. Anh ta giận dữ nhấn mạnh, quay lại ván bida của mình, \"Tino và tôi đang chơi bida, tôi quay mặt đi chỗ khác, điều tiếp theo là tôi biết anh ấy đã đi rồi.\" Anh ta lẩm bẩm, \"Viên bi số một chết tiệt đâu rồi?\" Có thể không là gì, nhưng có vẻ như Valentino không phải là thứ duy nhất mất tích vào đêm đó.</p><p class='basic'>Under “Missing Persons,” next to Valentino Rivas’s profile, record *the investigators are on Valentino’s trail*.</p>"
   },
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "Mỗi điều tra viên đã rút lui hoặc bị hạ gục và lúc đó đang là Act 1"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Ngay khi bạn bước ra sân, bạn bị bao quanh bởi những người đàn ông dữ tợn trong những chiếc áo choàng đi mưa. Một số người trong số họ thò tay vào túi áo khoác: cảnh báo bạn không nên làm bất cứ điều gì vội vàng. Trước khi bất kỳ lời đe dọa nào được thốt ra, sự im lặng bị phá vỡ bởi một giọng nói băng giá. \"Các quý ông, không cần phải như vậy.\" Những người đàn ông lùi lại để lộ một người đàn ông lớn tuổi mà bạn nhận ra là Carl Sanford, chủ tịch của Silver Twilight Lodge. Bất chấp tình huống nguy hiểm, biểu hiện của ông ấy gần như quá bình thường. Sự hoàn toàn vắng mặt nỗi sợ hãi trong cử chỉ và hành động của ông ta cho thấy một sự tự tin được hỗ trợ bởi một sức mạnh vững vàng. Các vệ sĩ của ông ấy lùi lại vài bước, cho phép bạn nói chuyện riêng với ông Sanford.</p><ul><li>In your Campaign Log, record *the investigators escaped the spectral realm*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Proceed to _Interlude II: The Price of Progress._</li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Bạn đi ra khỏi trang viên và được bao trùm bởi không khí buổi tối tràn đầy sức sống. Cuộc điều tra đã khiến bạn kiệt sức và hoang tưởng một cách kỳ lạ. Điều gì đó về sự kiện đó khiến bạn cảm thấy khác thường, mặc dù bạn không chắc tại sao. Mặc dù các vị khách dường như không biết gì, nhưng bạn nhận thấy rằng các người làm đầy mồ hôi và bồn chồn, và các thành viên của Lodge cũng có vẻ căng thẳng. Đã hơn một lần, bạn nhận thấy ánh mắt của họ đang hướng về bạn, theo dõi từng cử động của bạn. Nếu không biết về tình huống, bạn có thể nghĩ rằng Silver Twilight Lodge đã bị bạn theo dõi vì một lý do nào đó. Dù vậy, bạn không thể tìm thấy nhiều thông tin về bốn vụ mất tích và bạn nghi ngờ rằng bạn sẽ không bao giờ tìm được. Có lẽ nó cũng chẳng là gì cả.</p><ul><li>các điều tra viên không biết được gì về âm mưu của Lodge.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Skip _Interlude II: The Price of Progress_, and proceed directly to _Scenario III: The Secret Name_.</li></ul></div>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Bạn bỏ chạy về phía sảnh vào của trang viên, nhưng bức tường sương mù vẫn cản đường bạn. Nổi lên từ màn sương là một số khuôn mặt và cánh tay ma quái, đang quằn quại và la hét trong đau khổ. Bạn quay lại và đối mặt với nét mặt trống rỗng của Watcher đội mũ trùm đầu. Trước khi bạn thậm chí nhận ra số mệnh của mình, cơ thể bồng bềnh của sinh vật này đang xoáy và sà trong không khí như thể được tạo thành từ chính sương mù. Sinh vật tái tạo trước bạn, và bàn tay cháy đen của nó nắm chặt cổ họng bạn, giữ bạn trên cao với sức mạnh khủng khiếp. Bạn đá và cắm móng vào bàn tay sinh vật, vùng vẫy với sự hung dữ của một con vật bị dồn vào đường cùng, nhưng không có ích gì. Điều cuối cùng bạn nhìn thấy là ánh sáng chói đỏ của đôi mắt của nó đi sâu vào tâm trí bạn.</p><ul><li>các điều tra viên không được trông thấy hoặc nghe đến một lần nào nữa.</li><li>Each investigator who resigned earns experience equal to the Victory X value of each card in the victory display.</li><li>Mỗi người chơi có điều tra viên bị giết phải chọn một điều tra viên mới từ kho điều tra viên sẵn có.</li><li>Skip _Interlude II: The Price of Progress_, and proceed directly to _Scenario III: The Secret Name_.</li></ul></div>"
     }
   }
 }

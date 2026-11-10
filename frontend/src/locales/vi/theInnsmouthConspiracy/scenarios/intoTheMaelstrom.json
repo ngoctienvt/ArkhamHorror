@@ -1,57 +1,141 @@
 {
   "heading": "Màn VIII",
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Into the Maelstrom*, *Agents of Hydra*, *Creatures of the Deep*, *Flooded Caverns*, *Shattered Memories*, *Syzygy*, and *Ancient Evils*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/into-the-maelstrom.png' /><img src='{setImgPath}/agents-of-hydra.png' /><img src='{setImgPath}/undersea-creatures.png' /><img src='{setImgPath}/flooded-caves.png' /><img src='{setImgPath}/shattered-memories.png' /><img src='{setImgPath}/syzygy.png' /><img src='{setImgPath}/ancient-evils.png' /></section>",
+    "placeKeys": "Check Campaign Log. Place each of the following keys (blue, red, green, and yellow) as follows:",
+    "blueKey": "If _the investigators possess the key to Y’ha-nthlei_, choose an investigator to take control of the blue key. Otherwise, set it aside, facedown.",
+    "redKey": "If _the investigators possess a map of Y’ha-nthlei_, choose an investigator to take control of the red key. Otherwise, set it aside, facedown.",
+    "greenKey": "If _the guardian of Y’ha-nthlei is dispatched_, choose an investigator to take control of the green key. Otherwise, set it aside, facedown.",
+    "yellowKey": "cổng vào thành phố Y'ha-nthlei công nhận bạn là người trông coi hợp pháp của nó",
+    "fewerThanFour": "If there are fewer than 4 set-aside keys, shuffle the purple, white, and black keys facedown. Then, one at a time, set each of these keys aside until there are no more than 4 set-aside keys. Remove each remaining key in excess of the set-aside keys from the game. The removed keys will not be used in this scenario.",
+    "shuffleKeys": "Shuffle each set-aside key so you do not know which is which.",
     "placeLocations": "Đặt Gateway vào Y’ha-nthlei vào chơi. *(Nó bắt đầu với việc bị ngập một phần.)* Đưa từng vị trí trong 8 vị trí Tidal Tunnel vào chơi xung quanh nó.",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Gateway to Y'ha-nthlei.",
     "setAsideOtherLocations": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
+    "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch.",
     "divingSuits": "Mỗi điều tra viên *sở hữu bộ đồ lặn* bắt đầu chơi với lá bài Diving Suit tong khu vực chơi của họ.",
     "removeUnusedDivingSuits": "Loại bỏ từng Diving Suit không được sử dụng khỏi màn chơi.",
+    "actDeck": "Khi xây dựng chồng bài act, chỉ sử dụng phiên bản City of the Deep (v.I) của act 2a. Đặt City of the Deep (v.II) và City of the Deep (v.III) sang một bên, ngoài khu vực chơi.",
     "setAsideCards": "Đặt kẻ địch Lloigor, Aquatic Abomination, Hydra và Dagon sang một bên, ngoài khu vực chơi.",
-    "floodTokens": "Thêm token lũ lụt vào kho chứa token.",
-    "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch.",
-    "actDeck": "Khi xây dựng chồng bài act, chỉ sử dụng phiên bản City of the Deep (v.I) của act 2a. Đặt City of the Deep (v.II) và City of the Deep (v.III) sang một bên, ngoài khu vực chơi."
+    "floodTokens": "Thêm token lũ lụt vào kho chứa token."
+  },
+  "specialRules": [
+    {
+      "title": "Chìa khóa",
+      "body": "<div class='red bordered'><p class='basic'>During this scenario, keys represent the following:</p><ul><li>Màu đỏ: Thông tin liên quan đến con đường từ thế giới khác đến Y'ha-nthlei và những bí mật ẩn chứa bên trong.</li><li>Màu xanh biển: Chìa khóa cho phép đi qua cổng vào Y'ha-nthlei và các ngưỡng cửa khác của nó.</li><li>Màu xanh lá: Một chiếc cúp chứng tỏ sự xứng đáng của một người được vào Y'ha-nthlei và giao tiếp với các vị thần của nó.</li><li>Màu vàng: Huy hiệu biểu thị lòng trung thành của một người với Y'ha-nthlei và các vị thần của nó.</li><li>Màu tím: Chìa khóa vàng lấp lánh để mở các hầm vực sâu.</li><li>Màu đen: Chìa khóa bằng đá hắc thạch dùng để kích hoạt các loại bẫy trong thành phố vực sâu.</li><li>Màu trắng: Chìa khóa bằng san hô, một trong nhiều loại dùng để định hướng độ sâu của Y'ha-nthlei.</li></ul></div>"
+    }
+  ],
+  "hydrasBrood": {
+    "label": {
+      "placeDoomOnHydra": "Place 1 doom on Hydra",
+      "hydraAttacksYou": "Hydra attacks you"
+    }
+  },
+  "dagonsBrood": {
+    "label": {
+      "placeDoomOnDagon": "Place 1 doom on Dagon",
+      "dagonAttacksYou": "Dagon attacks you"
+    }
+  },
+  "dagonDeepInSlumber": {
+    "label": {
+      "exhaustDagon": "Exhaust Dagon",
+      "removeDoomFromDagon": "Remove 1 doom from Dagon"
+    }
+  },
+  "hydraDeepInSlumber": {
+    "label": {
+      "exhaustHydra": "Exhaust Hydra",
+      "removeDoomFromHydra": "Remove 1 doom from Hydra"
+    }
   },
   "intro": {
     "title": "Màn VIII: Tiến Vào Vòng Xoáy",
     "body": "<p>Kế hoạch của bạn rất đơn giản. Ngu ngốc, nhưng đơn giản. Hiểu biết bạn đã thu thập được dẫn bạn đến kết luận rằng Dòng Dagon bí truyền là nguyên nhân gây ra thủy triều dâng cao và sự xuất hiện của những con \"Deep Ones\" kinh khủng. Không chỉ vậy, trong suốt vài thập kỷ qua, Dòng đã biến người dân thị trấn thành những sinh vật khủng khiếp hơn, sử dụng chúng để xâm nhập vào thị trấn Innsmouth từ bên trong. Nhưng tệ hơn hết, thực thể mà giáo phái tôn thờ-Dagon-chỉ là một trong hai. Bạn đời của nó, Hydra, vẫn đang ngủ say ở vực sâu bên dưới thị trấn Innsmouth, chờ đợi được đánh thức và khẳng định quyền sở hữu của mình đối với đại dương vô tận.</p><p>Đây là những kết luận dẫn đến kế hoạch của bạn: Du hành một lần nữa đến Rạn San Hô Quỷ, đi xuống thành phố của Deep Ones ẩn dưới đáy đại dương và chấm dứt kế hoạch của Deep Ones một lần và mãi mãi. Đặc vụ Harper giúp bạn chuẩn bị, chất đồ đạc của bạn lên chiếc thuyền mà bạn đã đánh cắp được từ những gì còn sót lại của bến cảng Innsmouth. “Chúng ta chỉ có một cơ hội duy nhất để làm điều này,” Harper nói. “Tôi không nghĩ mình cần phải nhắc cậu điều gì có thể xảy ra nếu chúng ta thất bại.” Cô ấy nhìn thẳng vào đống tàn tích bị ngập lụt của Innsmouth. \"Cậu đã sẵn sàng chưa?\"</p>"
   },
   "flashback14": {
-    "title": "Hồi tưởng XIV"
+    "title": "Hồi tưởng XIV",
+    "body": "<div class='blue'><h1>Flashback XIV</h1><p>You are deep below the Esoteric Order of Dagon’s headquarters once more, emerging from the hall where you had disrupted the Order’s ritual. You follow Agent Dawson through a series of winding, flooded corridors flanked by statues of aquatic monstrosities and malformed beasts. You ask Dawson where exactly you’re headed, but he doesn’t reply. Finally, you enter another chamber, similar to the last. Its walls are covered in otherworldly effigies and a depiction of ocean waves swirling below an alignment of celestial bodies. Another familiar pool dominates the cavern, inside which the dark shape of something massive slumbers. To your surprise, Agent Harper stands in front of the pool, gazing into its dark reflection. She turns with a start when she hears you approach, relaxing only once she sees who you are. “Is it done?” Dawson asks.</p><p>She nods. “This one isn’t waking up anytime soon.”</p><p>“Good. The Order is on to us. We have no time to spare. Let’s get to the vault and take what we came for.”</p><p>You reel. What exactly is going on here? Both of the agents notice your confusion at the same time. A moment of grim understanding dawns as you realize the truth of the situation. The agency didn’t come here to investigate criminal activity in Innsmouth at all. They came here for something else. And the only vaults you’ve seen so far in these depths are the ones filled with archaic riches. The material wealth that has kept the town of Innsmouth afloat all these years—perhaps the very riches that persuaded so many of the townsfolk to follow the Order and forsake their own humanity.</p><p>Stifling your frustration, you ask how much of Dawson’s briefing was a lie. “Not all of it,” he says calmly. “Agent Harper was missing when I contacted you, that much was true. But she was sent here on a different mission. One we must complete this very moment or risk losing everything we’ve worked for. And you’re going to help us.”</p><p>You cross your arms in defiance. It’s one thing to be kept in the dark by the two agents you’ve risked your life for. It’s another to help them smuggle treasure on behalf of the government, especially when so much more is at stake.</p><p>“I don’t think you understand,” Dawson replies, his voice surprisingly level. “You are an asset of the agency and under my authority. You will do as I command.” As the silence between you grows more and more tense, you spot Dawson’s hand twitching toward his holstered weapon. Is he truly willing to go that far…?</p><p>Just then, you hear shouting down the hall. “Shit. They’re here.” Dawson turns to Harper, his orders terse and quiet: “Take the exit through Devil Reef. We’ll head back the way we came. Meet up at the vault.”</p><p>The next minute is a blur. Dawson and Harper split up. Despite your anger, you decide it is best to follow Agent Dawson, since you are familiar with that escape route. A torrent of footsteps and hollers follows close behind. You don’t get far before you are cornered. An elderly man with wide, unblinking eyes and long robes blocks your exit. “Take them,” he says. The rest you recall only in flashes of horror. The interrogation. The dark, flooded pit. Dawson’s fate. Harper discovering you on the beach—</p><p>—You turn on Harper, your vision adjusting back to the present. She seems to understand what you have seen. Her hand hovers dangerously near her handgun. “Dammit,” she says. “I was hoping you wouldn’t remember what happened the last time we were in this room…” She draws in a shaky breath as the two of you silently judge one another. “So, what now?” she asks. “I still have a job to do. Are you going to get in my way?”</p><hr /><p class='basic'>In your Campaign Log, under “Memories Recovered,” record *a stinging betrayal.*</p><p class='basic'>Các điều tra viên phải quyết định <i>(chọn một)</i>:</p><ul><li>Đặt City of the Deep (v.II) đặt một bên vào chơi bên cạnh act hiện tại. Nó cung cấp một mục tiêu thay thế mới.</li><li>Tìm trong bài trên tay, chồng bài, chồng bài bỏ và tất cả các khu vực chơi của mỗi người chơi để tìm Elina Harper và loại cô ấy khỏi màn chơi.</li></ul></div>",
+    "label": {
+      "helpAgentHarper": "Đặt City of the Deep (v.II) đặt một bên vào chơi bên cạnh act hiện tại. Nó cung cấp một mục tiêu thay thế mới.",
+      "defyAgentHarper": "Tìm trong bài trên tay, chồng bài, chồng bài bỏ và tất cả các khu vực chơi của mỗi người chơi để tìm Elina Harper và loại cô ấy khỏi màn chơi."
+    }
   },
   "resolutions": {
+    "xp": {
+      "bonus": "Bonus"
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Tiếng niệm kinh của Deep Ones tăng lên đến đỉnh điểm. Những bức tường kỳ lạ của Y'ha-nthlei vặn vẹo trước mắt bạn, giống như những lá phổi đang cố gắng thở một cách tuyệt vọng. Không khí trở nên loãng. Nước thấm qua các bức tường. Không gì có thể ngăn cản được sức hút của thủy triều lúc này. Không gì có thể ngăn được cơn đại hồng thủy. Một tiếng gầm chiến thắng vang lên khắp thành phố, và những công dân của vùng đất sâu trỗi dậy để đáp lại tiếng kêu trong niềm hân hoan của họ. Bạn suy sụp vì kiệt sức và cam chịu. Phần của bạn bây giờ đã kết thúc. Một phần của nhân loại sẽ sớm theo sau.</p>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Bạn điên cuồng tìm đường quay trở lại lối vào thành phố dưới đáy biển, hy vọng có thể sống sót trốn thoát. Bạn cảm nhận được sự kéo mạnh quen thuộc của các dòng nước xung quanh mình khi bạn bước sang phía bên kia ngưỡng cửa của thế giới lạ kỳ này. Trái tim của bạn không ngừng đập cho đến khi cuối cùng bạn phá vỡ ra khỏi mặt nước và gục xuống một tảng đá nhô ra.</p>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Khi bạn ra khỏi các hang động của Rạn San Hô Quỷ và nhìn lên bầu trời, bạn cảm thấy nhẹ nhõm khi thấy mặt trời và mặt trăng không còn thẳng hàng nữa. Thủy triều dường như cũng đang rút dần. Biển cả dường như cuối cùng đã bình tĩnh lại.</p>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Khi bạn ra khỏi hang động của Rạn San Hô Quỷ và nhìn lên bầu trời, cổ họng bạn nghẹn lại. Mặt trời và mặt trăng vẫn bị xếp thẳng hàng và biển cả vẫn nuốt chửng phần lớn bờ biển.</p>"
     },
     "resolution4": {
-      "title": "Kết thúc thứ 4"
+      "title": "Kết thúc thứ 4",
+      "body": "<p>_Resolution 4_: Agent Harper is the first to speak. “We did it. I can’t believe we did it.” You nod. Not only were you able to stop the Deep Ones, but you helped Harper accomplish her mission as well. She digs through her belongings for a bright orange firearm with a large barrel, loads a flare into it, and launches the bright light into the sky with a victorious smirk. “They’ll be coming for us any minute now. I’m sure you’ll be rewarded handsomely for your help. So long as you agree to speak to nobody about any of this, of course,” she says. You nod. It’s not like anyone would believe you, anyway.</p>"
     },
     "resolution5": {
-      "title": "Giải pháp thứ 5"
+      "title": "Giải pháp thứ 5",
+      "body": "<p>_Resolution 5_: Không có dấu hiệu của đặc vụ Harper ở đâu cả. Có lẽ cô ấy chưa bao giờ sống sót rời khỏi thành phố. Bạn nuôi hy vọng rằng cô ấy đang ở đâu đó ngoài kia. Tuy nhiên, bạn cảm thấy nhẹ nhõm vì ít nhất sẽ không ai có thể sử dụng sự giàu có của Y'ha-nthlei để thao túng nhân loại nữa. Không phải chính phủ, không phải Deep Ones-không ai cả.</p>"
     },
     "resolution6": {
-      "title": "Kết quả 6"
+      "title": "Kết quả 6",
+      "body": "<p>_Resolution 6_: Đặc vụ Harper là người đầu tiên lên tiếng. \"Chà. Tôi cho là nhiệm vụ đã hoàn thành.\" Bạn cắn môi. Cô ấy có thể đã hoàn thành nhiệm vụ của mình, nhưng ảnh hưởng của nghi lễ Deep Ones đối với thế giới sẽ không bao giờ phai mờ. Cô lục tung đồ đạc của mình để tìm một khẩu súng màu cam sáng có nòng lớn, nạp pháo sáng vào đó và phóng tia sáng rực rỡ lên trời với nụ cười chiến thắng tự mãn. \"Chúng sẽ đến tìm chúng ta bất cứ lúc nào. Sau đó, chúng ta sẽ cho nổ tung thành phố đó và hy vọng rằng mọi chuyện sẽ kết thúc,\" cô nói. Bạn không chắc chắn lắm. Phần lớn thiệt hại đã diễn ra. Liệu nó có bao giờ thực sự kết thúc? Hay bạn chỉ đang trì hoãn điều không thể tránh khỏi?</p>"
     },
     "resolution7": {
-      "title": "Kết cục 7"
+      "title": "Kết cục 7",
+      "body": "<p>_Resolution 7_: Không có dấu vết nào của Đặc vụ Harper ở bất cứ đâu. Có lẽ cô ấy đã không thể sống sót thoát khỏi thành phố. Bạn vẫn nuôi hy vọng rằng cô ấy đang ở ngoài kia, tại một nơi nào đó. Dù vậy, bạn cảm thấy nhẹ nhõm vì ít nhất, sẽ không ai có thể sử dụng sự giàu có của Y'ha-nthlei để thao túng nhân loại thêm một lần nào nữa. Không phải chính phủ, không phải Deep Ones - không một ai. Bạn nhìn ra ngoài một lần nữa về phía những con sóng đang vỗ mạnh nơi chân trời. Trận lụt dường như đã dừng lại. Có lẽ bạn đã gây đủ tổn hại cho Deep Ones và chủ nhân của chúng để làm thất bại nghi lễ của chúng. Hoặc có lẽ chúng chỉ đang chờ đợi thời cơ, đợi cho đến khi có thể trồi lên một lần nữa. Mọi chuyện thực sự đã kết thúc chưa? Hay bạn chỉ đơn thuần là đang trì hoãn một điều tất yếu?</p>"
     },
     "resolution8": {
-      "title": "Giải pháp thứ 8"
+      "title": "Giải pháp thứ 8",
+      "body": "<p>_Resolution 8_: Khi nghi lễ kết thúc, bờ biển phía đông trở thành bờ biển đầu tiên bị nước biển dâng cao nhấn chìm. Phần còn lại của lục địa sẽ nhanh chóng theo sau. Các chỏm băng tan chảy, nhấn chìm phần còn lại của Trái Đất. Các thành phố sụp đổ. Nhân loại không còn nữa. Tất cả những gì còn lại là đại dương và sự thẳng hàng vĩnh viễn của các thiên thể lờ mờ trên đỉnh đầu. Và tất nhiên, những kẻ thừa kế của Trái đất mới này: Hydra, Dagon và con cái của họ.</p>"
+    }
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 (-3 instead if there are 4 or more unflooded _Y'ha-nthlei_ locations in play).",
+      "cultist": "-3. Nếu bạn thất bại, đặt 1 doom lên the current agenda (this may cause the current agenda to advance).",
+      "tablet": "-4. Nếu bạn thất bại, you must either increase the flood level of your location or chịu 1 damage.",
+      "elderThing": "-5. If you fail and there is a key on your location, chịu 1 horror."
+    },
+    "hardExpert": {
+      "skull": "-2 (-4 instead if there are 4 or more unflooded _Y'ha-nthlei_ locations in play).",
+      "cultist": "-4. Nếu bạn thất bại, đặt 1 doom lên the current agenda (this may cause the current agenda to advance).",
+      "tablet": "-5. Nếu bạn thất bại, you must either increase the flood level of your location or chịu 1 damage.",
+      "elderThing": "-6. If you fail and there is a key on your location, chịu 1 horror."
+    }
+  },
+  "treacherousDepths": {
+    "label": {
+      "increaseFloodLevel": "Increase the flood level of your current location",
+      "discardAssetsToShroud": "Discard assets from your play area with a total resource cost of at least X, where X is your location's shroud value."
+    }
+  },
+  "conspiracyOfDeepOnes": {
+    "label": {
+      "placeDoomCanAdvance": "Place 1 doom on the current agenda (this effect may cause the current agenda to advance)",
+      "ancientOneAttacks": "The nearest _Ancient One_ enemy in play attacks you"
     }
   },
   "cityOfTheDeep": {
     "label": {
-      "continuePlaying": "Tiếp tục chơi."
+      "continuePlaying": "Tiếp tục chơi.",
+      "proceedToR1": "Proceed immediately to (→R1)"
     }
   },
-  "specialRules": [
-    {
-      "title": "Chìa khóa"
-    }
-  ]
+  "label": {
+    "helpAgentHarper": "Đặt City of the Deep (v.II) đặt một bên vào chơi bên cạnh act hiện tại. Nó cung cấp một mục tiêu thay thế mới.",
+    "defyAgentHarper": "Tìm trong bài trên tay, chồng bài, chồng bài bỏ và tất cả các khu vực chơi của mỗi người chơi để tìm Elina Harper và loại cô ấy khỏi màn chơi."
+  }
 }

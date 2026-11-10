@@ -1,40 +1,114 @@
 {
   "heading": "Màn IV-A",
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Where the Gods Dwell*, *Agents of Nyarlathotep*, *Dreamer’s Curse*, *Whispers of Hypnos*, and *Dark Cult*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/where-gods-dwell.png' /><img src='{setImgPath}/agents-of-nyarlathotep.png' /><img src='{setImgPath}/dreamers-curse.png' /><img src='{setImgPath}/whispers-of-hypnos.png' /><img src='{setImgPath}/dark-cult.png' /></section>",
+    "putLocations": "Đặt các vị trí sau vào chơi: Plateau of Leng, Cold Wastes, Monastery of Leng, Onyx Gates, và The Onyx Castle.",
     "beginAtPlateauOfLeng": "Mỗi điều tra viên bắt đầu chơi tại Plateau of Leng.",
     "setForsakenTowersAside": "Đặt 6 vị trí Forsaken Tower sang một bên, ngoài khu vực chơi.",
     "setCardsAside": "Đặt các lá bài sau một bên, ngoài khu vực chơi: High Priest Not to Be Described, 5 bản sao của Nyarlathotep, 4 bản sao của Whispering Chaos, 2 bản sao của Myriad Forms, và The Crawling Mist.",
     "buildEncounterDeck": "Xáo trộn các lá bài encounter còn lại để tạo thành chồng bài encounter."
   },
-  "intro": {
-    "title": "Màn IV-A: Where the Gods Dwell"
-  },
-  "intro1": {
-    "title": "Màn IV-A: Where the Gods Dwell"
-  },
-  "intro2": {
-    "title": "Màn IV-A: Where the Gods Dwell"
-  },
-  "resolutions": {
-    "resolution1": {
-      "title": "Kết thúc thứ nhất"
-    },
-    "resolution2": {
-      "title": "Kết thúc thứ hai"
-    },
-    "resolution3": {
-      "title": "Kết thúc thứ ba"
-    },
-    "resolution4": {
-      "title": "Kết thúc thứ 4"
-    },
-    "resolution5": {
-      "title": "Giải pháp thứ 5"
+  "theEyeOfChaos": {
+    "label": {
+      "choose": "Choose:",
+      "nyarlathotepAttackOnce": "Nyarlathotep immediately attacks you and is shuffled into the encounter deck.",
+      "nyarlathotepAttackThrice": "Nyarlathotep immediately attacks you three times and is returned to that investigator's hand.",
+      "shuffled": "Nyarlathotep immediately attacks you and is shuffled into the encounter deck.",
+      "returned": "Nyarlathotep immediately attacks you three times and is returned to that investigator's hand."
     }
   },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the number of the current act.",
+      "cultist": "Rút thêm một token khác. Nếu bạn thất bại, đặt 1 doom lên the current agenda.",
+      "tablet": "-4. Nếu bạn thất bại, choose and reveal a copy of Nyarlathotep in your hand. It attacks you and is shuffled into the encounter deck.",
+      "elderThing": "0. The black cat reminds you that it's all a dream."
+    },
+    "hardExpert": {
+      "skull": "-X. X is the number of the current act plus the number of the current agenda.",
+      "cultist": "Rút thêm một token khác. Nếu bạn thất bại, đặt 1 doom lên the current agenda. This effect may cause the current agenda to advance.",
+      "tablet": "-6. Nếu bạn thất bại, choose and reveal a copy of Nyarlathotep in your hand. It attacks you and is shuffled into the encounter deck.",
+      "elderThing": "-1. The black cat reminds you that it's all a dream."
+    }
+  },
+  "intro": {
+    "title": "Màn IV-A: Where the Gods Dwell",
+    "body": "<p class='basic'>Kiểm tra Nhật ký Chiến dịch.</p><ul><li>các điều tra viên đã được đưa đến Cold Wastes.</li><li>*If the investigators traveled to the Cold Wastes*, skip to _Intro 2_.</li></ul>"
+  },
+  "intro1": {
+    "title": "Màn IV-A: Where the Gods Dwell",
+    "body": "<p>Phải mất nhiều giờ để chiến mã của bạn đến đích. Bạn không dám đi lung tung, vì ngã xuống chắc chắn sẽ chết. Bên cạnh đó, đây có thể là cơ hội duy nhất để bạn tìm thấy Kadath. Các sinh vật đi qua những cổng vòm đan xen những cái bóng, trên vùng biển xanh lấp lánh dưới ánh trăng và qua những dải sương mù dày đặc rộng lớn. Cuối cùng, bạn đến một lục địa xa xôi phía bắc, nơi mà ngay cả người thuyền trưởng gan dạ của bạn cũng chưa bao giờ mạo hiểm. Những sinh vật khổng lồ sống trong đại dương sâu thẳm, tối tăm—mối nguy hiểm khủng khiếp đối với bất kỳ con tàu nào dám vượt qua những vùng biển đáng sợ.</p><p>Chiến mã của bạn bay qua một khung cảnh băng tuyết hoang vắng trước khi hạ cánh. Ở đằng xa, qua màn tuyết mù mịt, bạn hầu như không nhận ra hình dạng của một tòa nhà mái vòm. Một trong những sinh vật có cánh chỉ về hướng tàn tích được tiên đoán trước, âm thầm ra lệnh cho bạn tiếp tục. Những người còn lại lặng lẽ đứng phía sau bạn với sự kiên nhẫn hoàn hảo, đề phòng bạn trốn thoát, mặc dù bạn không có ý định chạy trốn. Bạn sẽ tìm thấy và vượt qua những đỉnh núi của Kadath vô danh, hoặc bạn sẽ chết trong quá trình cố gắng.</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
+  },
+  "intro2": {
+    "title": "Màn IV-A: Where the Gods Dwell",
+    "body": "<p>_Intro 2:_ The White Ship sails effortlessly through the aether. Along the way, it passes under archways of woven shadow, over cerulean seas that glimmer in the moonlight, and through vast swaths of dense mist. Eventually, you reach a continent far to the north, where even your intrepid captain never ventured. Colossal creatures dwell in the deep, dark ocean—a terrible danger to any ship that dares the dreadful seas.</p><p>Con Tàu Trắng lướt đi dễ dàng đi qua không gian. Trên đường đi, nó đi qua những cổng vòm đan xen những cái bóng, trên biển xanh lấp lánh dưới ánh trăng và qua những dải sương mù dày đặc rộng lớn. Cuối cùng, bạn đến một lục địa xa xôi về phía bắc, nơi mà ngay cả vị thuyền trưởng gan dạ của bạn cũng chưa bao giờ mạo hiểm. Những sinh vật khổng lồ sống trong đại dương sâu thẳm, tối tăm—mối nguy hiểm khủng khiếp đối với bất kỳ con tàu nào dám vượt qua những vùng biển khủng khiếp. Thuyền trưởng thả neo con tàu bay trên một khung cảnh băng tuyết hoang vắng. Một số tia sáng mặt trăng ló ra từ thân tàu màu trắng của con tàu, tạo thành một lối đi đến vùng lãnh nguyên bên dưới. Ở đằng xa, qua làn sương mù của những bông tuyết, bạn hầu như không thể nhận ra hình dạng của một tòa nhà mái vòm. “Chào mừng đến với Cao nguyên Leng đáng nguyền rủa,” vị thuyền trưởng lớn tuổi nói với một chút tiếc nuối trong giọng nói. “Cậu sẽ không tìm thấy niềm vui hay bình yên ở đây. Chỉ có cái chết. Làm ơn, một lần nữa tôi phải cầu xin cậu từ bỏ nhiệm vụ này và quay trở lại những vùng đất yên bình hơn. Cậu có chắc đây là nơi cậu muốn xuống không?”\nBạn gật đầu. Thuyền trưởng thở dài trả lời. \"Tôi hiểu rồi. Con Tàu Trắng sẽ không còn dong buồm đến nơi bị bỏ hoang này nữa, vì nó làm rung sợ đến tận cùng. Cậu sẽ phải tự đi tiếp từ đây. Tôi xin chào tạm biệt và chúc cậu may mắn, người du hành.” Bạn sẽ tìm thấy và vượt qua những đỉnh núi của Kadath vô danh, hoặc bạn sẽ chết trong quá trình cố gắng.</p><p>Con Tàu Trắng lướt đi dễ dàng đi qua không gian. Trên đường đi, nó đi qua những cổng vòm đan xen những cái bóng, trên biển xanh lấp lánh dưới ánh trăng và qua những dải sương mù dày đặc rộng lớn. Cuối cùng, bạn đến một lục địa xa xôi về phía bắc, nơi mà ngay cả vị thuyền trưởng gan dạ của bạn cũng chưa bao giờ mạo hiểm. Những sinh vật khổng lồ sống trong đại dương sâu thẳm, tối tăm—mối nguy hiểm khủng khiếp đối với bất kỳ con tàu nào dám vượt qua những vùng biển khủng khiếp. Thuyền trưởng thả neo con tàu bay trên một khung cảnh băng tuyết hoang vắng. Một số tia sáng mặt trăng ló ra từ thân tàu màu trắng của con tàu, tạo thành một lối đi đến vùng lãnh nguyên bên dưới. Ở đằng xa, qua làn sương mù của những bông tuyết, bạn hầu như không thể nhận ra hình dạng của một tòa nhà mái vòm. “Chào mừng đến với Cao nguyên Leng đáng nguyền rủa,” vị thuyền trưởng lớn tuổi nói với một chút tiếc nuối trong giọng nói. “Cậu sẽ không tìm thấy niềm vui hay bình yên ở đây. Chỉ có cái chết. Làm ơn, một lần nữa tôi phải cầu xin cậu từ bỏ nhiệm vụ này và quay trở lại những vùng đất yên bình hơn. Cậu có chắc đây là nơi cậu muốn xuống không?”\nBạn gật đầu. Thuyền trưởng thở dài trả lời. \"Tôi hiểu rồi. Con Tàu Trắng sẽ không còn dong buồm đến nơi bị bỏ hoang này nữa, vì nó làm rung sợ đến tận cùng. Cậu sẽ phải tự đi tiếp từ đây. Tôi xin chào tạm biệt và chúc cậu may mắn, người du hành.” Bạn sẽ tìm thấy và vượt qua những đỉnh núi của Kadath vô danh, hoặc bạn sẽ chết trong quá trình cố gắng.</p><p>Con Tàu Trắng lướt đi dễ dàng đi qua không gian. Trên đường đi, nó đi qua những cổng vòm đan xen những cái bóng, trên biển xanh lấp lánh dưới ánh trăng và qua những dải sương mù dày đặc rộng lớn. Cuối cùng, bạn đến một lục địa xa xôi về phía bắc, nơi mà ngay cả vị thuyền trưởng gan dạ của bạn cũng chưa bao giờ mạo hiểm. Những sinh vật khổng lồ sống trong đại dương sâu thẳm, tối tăm—mối nguy hiểm khủng khiếp đối với bất kỳ con tàu nào dám vượt qua những vùng biển khủng khiếp. Thuyền trưởng thả neo con tàu bay trên một khung cảnh băng tuyết hoang vắng. Một số tia sáng mặt trăng ló ra từ thân tàu màu trắng của con tàu, tạo thành một lối đi đến vùng lãnh nguyên bên dưới. Ở đằng xa, qua làn sương mù của những bông tuyết, bạn hầu như không thể nhận ra hình dạng của một tòa nhà mái vòm. “Chào mừng đến với Cao nguyên Leng đáng nguyền rủa,” vị thuyền trưởng lớn tuổi nói với một chút tiếc nuối trong giọng nói. “Cậu sẽ không tìm thấy niềm vui hay bình yên ở đây. Chỉ có cái chết. Làm ơn, một lần nữa tôi phải cầu xin cậu từ bỏ nhiệm vụ này và quay trở lại những vùng đất yên bình hơn. Cậu có chắc đây là nơi cậu muốn xuống không?”\nBạn gật đầu. Thuyền trưởng thở dài trả lời. \"Tôi hiểu rồi. Con Tàu Trắng sẽ không còn dong buồm đến nơi bị bỏ hoang này nữa, vì nó làm rung sợ đến tận cùng. Cậu sẽ phải tự đi tiếp từ đây. Tôi xin chào tạm biệt và chúc cậu may mắn, người du hành.” Bạn sẽ tìm thấy và vượt qua những đỉnh núi của Kadath vô danh, hoặc bạn sẽ chết trong quá trình cố gắng.</p><p>Con Tàu Trắng lướt đi dễ dàng đi qua không gian. Trên đường đi, nó đi qua những cổng vòm đan xen những cái bóng, trên biển xanh lấp lánh dưới ánh trăng và qua những dải sương mù dày đặc rộng lớn. Cuối cùng, bạn đến một lục địa xa xôi về phía bắc, nơi mà ngay cả vị thuyền trưởng gan dạ của bạn cũng chưa bao giờ mạo hiểm. Những sinh vật khổng lồ sống trong đại dương sâu thẳm, tối tăm—mối nguy hiểm khủng khiếp đối với bất kỳ con tàu nào dám vượt qua những vùng biển khủng khiếp. Thuyền trưởng thả neo con tàu bay trên một khung cảnh băng tuyết hoang vắng. Một số tia sáng mặt trăng ló ra từ thân tàu màu trắng của con tàu, tạo thành một lối đi đến vùng lãnh nguyên bên dưới. Ở đằng xa, qua làn sương mù của những bông tuyết, bạn hầu như không thể nhận ra hình dạng của một tòa nhà mái vòm. “Chào mừng đến với Cao nguyên Leng đáng nguyền rủa,” vị thuyền trưởng lớn tuổi nói với một chút tiếc nuối trong giọng nói. “Cậu sẽ không tìm thấy niềm vui hay bình yên ở đây. Chỉ có cái chết. Làm ơn, một lần nữa tôi phải cầu xin cậu từ bỏ nhiệm vụ này và quay trở lại những vùng đất yên bình hơn. Cậu có chắc đây là nơi cậu muốn xuống không?”\nBạn gật đầu. Thuyền trưởng thở dài trả lời. \"Tôi hiểu rồi. Con Tàu Trắng sẽ không còn dong buồm đến nơi bị bỏ hoang này nữa, vì nó làm rung sợ đến tận cùng. Cậu sẽ phải tự đi tiếp từ đây. Tôi xin chào tạm biệt và chúc cậu may mắn, người du hành.” Bạn sẽ tìm thấy và vượt qua những đỉnh núi của Kadath vô danh, hoặc bạn sẽ chết trong quá trình cố gắng.</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
+  },
+  "grandDesign1": {
+    "title": "Scenario Interlude: Grand Design",
+    "body": "<p>Cao hơn và cao hơn nữa, bạn vựợt qua những ngọn núi xa về phía bắc. Ánh sáng nhợt nhạt tỏa sáng từ một đỉnh núi đen kịt xuyên qua bầu trời rực rỡ và bạn biết rằng bạn sắp kết thúc nhiệm vụ của mình. Bạn dành hàng giờ đồng hồ để leo lên những con dốc phủ đầy tuyết cho đến khi cuối cùng bạn đến được những bậc thang bị cấm dẫn đến đại sảnh của lâu đài. Lâu đài sừng sững trên một vách núi nhìn ra toàn bộ lục địa và đại dương bên kia. Đó là một cảnh tượng hùng vĩ. Bên trên, vô số tòa tháp mờ ảo hiện ra lờ mờ, bị cắt xé trong các vòng xoáy tuyết và mưa đá. Bạn phá một con đường mòn xuyên qua lớp tuyết đông cứng trước lâu đài, và nó nhanh chóng nhường chỗ cho con đường mã não nhẵn bóng. Cơn gió cắt da cắt thịt dần lặng đi thành tiếng huýt sáo. Bạn đang tắm mình trong bóng tối kỳ lạ lấp đầy không gian rộng lớn. Chẳng mấy chốc sẽ không còn gì ngoài tiếng bước chân của bạn vang vọng trên sàn đá mã não và sự tĩnh lặng cô độc của đại sảnh. Mặc dù bạn không bước qua ngưỡng cửa nào, nhưng giờ đây bạn đã nhận ra nơi mình đang đứng: bên trong sảnh đường của những Đại Cổ Thần. Bạn mong đợi được gặp những người bảo vệ, người hầu của các vị thần, hoặc thậm chí có thể là chính những sinh vật mạnh mẽ đó, nhưng bạn chỉ gặp phải sự cô đơn và những điềm báo ớn lạnh như những cơn gió xuyên thấu bên ngoài. Bạn tiếp tục đi về phía trước cho đến khi cuối cùng bạn đến cuối hành lang. Ở đây, hai bên là những cây cột mã não nhẵn nhụi, bạn không tìm thấy… gì cả.</p><p>Không có vị thần nào ở đây cả. Nơi này đã bị bỏ hoang từ lâu.</p><p>Virgil há hốc mồm. “Tôi…tôi không hiểu.”</p><ul><li>Để lộ vị trí The Onyx Castle và đặt mỗi điều tra viên ở The Great Hall vào mặt để lộ của nó.</li><li>Loại bỏ mỗi vị trí khác, ngoại trừ vị trí The Great Hall khỏi màn chơi.</li><li>Kiểm tra Nhật ký Chiến dịch.<ul><li>*If Randolph survived the voyage*, proceed to _Grand Design 2_.</li><li>*If Randolph did not survive the voyage*, skip to _Grand Design 3_.</li></ul></li></ul>"
+  },
+  "grandDesign2": {
+    "title": "Scenario Interlude: Grand Design",
+    "body": "<p>_Grand Design 2:_ You turn to Randolph for answers. He has been your guide through all of this madness. Surely he will know what is going on. “Finally,” he says, gazing upon the hall with wide eyes. “We have reached the halls of the Great Ones, upon whom it is unlawful for mortals to look. We knew it was forbidden, yet here we are, our quest complete.” He turns to Virgil. “Was it worth it, sir? Have you found the evidence you seek?”</p><p>Virgil takes a step back. “What are you on about, Randolph? Was this not your idea? You are the one who led us on this quest to begin with.”</p><p>Randolph smiles and places a hand on Virgil’s shoulder. “Yes, I am. But I am not Randolph Carter.” He pulls back his other arm and, before you can react, drives a razor-sharp blade of onyx through Virgil Gray’s chest. Virgil’s corpse slides to the polished floor, eyes forever frozen in tragic shock. The being that was never Randolph Carter turns toward you, its shadow shifting into myriad shapes as it stretches across the ground. “Behold!” its many voices growl. “Your just reward!”</p><ul><li>Nếu trong chồng bài của một điều tra viên có chứa Randolph Carter <i>(Expert Dreamer)</i> <i>(The Dream-Eaters card #59)</i>, loại bỏ anh ấy khỏi chồng bài cho phần còn lại của chiến dịch.</li><li>Kiểm tra Nhật ký Chiến dịch.<ul><li>*If the black cat is at your side*, skip to _Grand Design 4_.</li><li>Otherwise, skip to _Grand Design 5_.</li></ul></li></ul>"
+  },
+  "grandDesign3": {
+    "title": "Scenario Interlude: Grand Design",
+    "body": "<p>_Grand Design 3:_ Just then, a voice behind you breaks the silence, punctuating your confusion. “Virgil Gray. You have come to see the Great Ones, upon whom it is unlawful for mortals to look.” The voice belongs to a tall, thin figure bedecked in the ornate prismatic robes of an ancient pharaoh, crowned with a golden pschent that glows faintly in the darkness. “What is it you expected to find?”</p><p>“Are you one of the gods who dwells in this castle?” Virgil asks, approaching the being. “Why is this place so dark and lonely?”</p><p>The regal figure permits an unhappy expression to flicker briefly over its countenance. “The gods you seek have fled their castle on unknown Kadath to dwell in another land, a land so marvelous they have forgotten how to be gods. Will you help me right this wrong?” the figure asks. Before Virgil can reply, it pulls its arm back and drives a razor- sharp blade of onyx through Virgil’s chest. His corpse slides to the polished floor, eyes forever frozen in tragic shock. The figure turns toward you, its shadow shifting into myriad shapes as it stretches across the ground. “No,” its many voices growl. “It is not enough.”</p><ul><li>Kiểm tra Nhật ký Chiến dịch.<ul><li>*If the black cat is at your side*, proceed to _Grand Design 4_.</li><li>Otherwise, skip to _Grand Design 5_.</li></ul></li></ul>"
+  },
+  "grandDesign4": {
+    "title": "Scenario Interlude: Grand Design",
+    "body": "<p>Trong khi đó, con mèo đen vẫn đậu trên vai bạn, quan sát bằng đôi mắt hẹp và lạnh lùng. Giống như nó đã đọc kịch bản này nhiều lần trước đây, nhưng bây giờ mới thấy các diễn viên đóng vai của họ. Nó nói, “Tôi xin lỗi, Virgil” Nhưng thực tế thì không phải thế.</p><p class='basic right'>Proceed to _Grand Design 5_.</p>"
+  },
+  "grandDesign5": {
+    "title": "Scenario Interlude: Grand Design",
+    "body": "<p>The Crawling Chaos tách ra thành hàng trăm nghìn cái bóng, và biến mất trong không khí lạnh lẽo, ẩm ướt.</p><ul><li>Randomly choose 1 plus 1 {perPlayer} copies of the set-aside Nyarlathotep enemy without looking at them, and shuffle them into the encounter deck. Remove each other copy of Nyarlathotep from the game.</li><li>Xào The Crawling Mist và mỗi bản sao của Myriad Forms và Whispering Chaos đặt một bên hồi đầu vào chồng bài encounter, cùng với chồng bài encounter bỏ.</li><li>Xào các vị trí Forsaken Tower đặt một bên hồi đầu và chọn ngẫu nhiên 4 trong đó đặt vào chơi. Những vị trí này nên bao quanh The Great Hall, một cái trong mỗi hướng chính: bắc, đông, nam và tây.</li><li>Cho đến cuối màn chơi, mỗi vị trí Forsaken Tower được gọi theo vị trí tương ứng của nó so với The Great Hall, như sau:<ul><li>The location above The Great Hall is called the “Northern Tower.”</li><li>Vị trí ở bên phải The Great Hall được gọi là “Eastern Tower.” (Ngọn tháp phía Đông)</li><li>Vị trí ở dưới The Great Hall được gọi là “Southern Tower.” (Ngọn tháp phía Nam)</li><li>Vị trí ở bên trái The Great Hall được gọi là “Western Tower.” (Ngọn tháp phía Tây)</li></ul></li></ul>"
+  },
+  "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>Bạn giật mình tỉnh giấc, choáng váng và tập trung vào tầm quan trọng của giấc mơ đã thu hút sự chú ý của bạn bấy lâu nay. Tuy nhiên, khi bạn cố gắng nhớ lại bất kỳ điều gì trong số đó, bạn chỉ nhớ được rất ít. Tất cả chỉ là một đám mây mù—giống như những ký ức xa xôi từ nhiều thập kỷ trước. Chỉ còn lại gợi ý của giấc mơ. Một lâu đài đen. Một con tàu đi qua không gian. Một cầu thang. Một con mèo đen. Điều duy nhất bạn nhớ là một giọng nói trong đầu bạn. Một sự thật cơ bản của vũ trụ mà bạn không thể rũ bỏ khỏi trí nhớ của mình. Nó nói với bạn, ngay cả bây giờ, khi bạn run rẩy dưới tấm khăn trải giường của bệnh viện: “Giấc mơ của ngươi là của ta!”</p><ul><li>In your Campaign Log, record *Nyarlathotep’s invasion has begun*.</li><li>Nếu bạn đang chơi The Dream-Quest như một chiến dịch gồm 4 phần:</li><li>*If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…*<ul><li>*…and you have not yet played Scenario 4–B: Weaver of the Cosmos*, proceed to that scenario.</li><li>*…and you have already played Scenario 4–B: Weaver of the Cosmos*, proceed instead to _Epilogue_.</li></ul></li></ul>"
+    },
+    "resolution1": {
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>Sự tồn tại đang chế nhạo tâm trí bạn lùi vào bóng tối, và bạn lại một lần nữa bị bỏ lại với cảm giác cô đơn tận cùng bao trùm. Các sảnh rộng lớn của lâu đài mã não là không là gì khác ngoài bằng chứng của sự tuyệt vọng và đau khổ. Bất cứ vị thần nào từng sinh sống ở nơi này đã rời đi từ lâu. Đến đây đúng là điên rồ. Bạn khiêng xác Virgil lên đỉnh núi tuyết Kadath và chôn anh ta bên ngoài lâu đài. Bạn vẫn không hiểu kẻ được gọi là Nyarlathotep muốn gì với anh ta, hoặc với bạn, nhưng ít nhất bây giờ bạn có thể bỏ lại Vùng đất Giấc mơ phía sau… nếu đó thực sự là điều bạn muốn làm.</p><ul><li>In your Campaign Log, record *the dreamers escaped from Nyarlathotep’s grasp*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Mỗi điều tra viên phải chịu 2 sang thương tinh thần từ cuộc chiến giữa sự thật và hư cấu trong giấc mơ của chính họ.</li><li>Các điều tra viên phải quyết định <i>(chọn một)</i>:<ul><li>*Wake up.* Skip to _Resolution 3_.</li><li>*Remain on the surface of the Dreamlands.* Skip to _Resolution 4_.</li><li><i>Mạo hiểm tiến vào Underworld để tìm những người bạn đồng hành của bạn.</i></li></ul></li></ul>"
+    },
+    "resolution2": {
+      "title": "Kết thúc thứ hai",
+      "body": "<p>Không điều gì còn lại của sự tồn tại đã từng chế nhạo tâm trí bạn. Bạn lại một lần nữa bị bỏ lại với cảm giác cô đơn tận cùng bao trùm. Các sảnh rộng lớn của lâu đài mã não là không là gì khác ngoài bằng chứng của sự tuyệt vọng và đau khổ. Nhưng ít nhất bây giờ chúng không còn bị ám bởi kẻ đã dụ dỗ bạn đến đây. Bây giờ bạn đã hiểu mục đích của nó từ lâu là gì: đi sâu vào tâm trí bạn, nhận thức rõ hình dạng của bạn và thức tỉnh cùng với bạn. Trở thành chủ nhân của cả giấc mơ và hiện thực cùng một lúc. Con mèo đen - dù nó thực sự là gì - hẳn đã nhìn thấy điều này trong tiên đoán của nó. Bạn khiêng xác Virgil lên đỉnh núi tuyết Kadath và chôn anh ta bên ngoài lâu đài. Khi nhiệm vụ của bạn đã hoàn thành, bạn không còn lý do gì để ở lại nơi này nữa. Cuối cùng thì bạn cũng có thể bỏ lại Vùng đất Giấc mơ…nếu đó thực sự là điều bạn muốn làm.</p><ul><li>In your Campaign Log, record *the dreamers banished Nyarlathotep*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Mỗi điều tra viên phải chịu 2 sang thương tinh thần từ cuộc chiến giữa sự thật và hư cấu trong giấc mơ của chính họ.</li><li>Các điều tra viên phải quyết định <i>(chọn một)</i>:<ul><li>*Wake up.* Proceed to _Resolution 3_.</li><li>*Remain on the surface of the Dreamlands.* Skip to _Resolution 4_.</li><li><i>Mạo hiểm tiến vào Underworld để tìm những người bạn đồng hành của bạn.</i></li></ul></li></ul>"
+    },
+    "resolution3": {
+      "title": "Kết thúc thứ ba",
+      "body": "<p>Bạn giật mình tỉnh giấc, choáng váng và tập trung vào tầm quan trọng của giấc mơ đã thu hút sự chú ý của bạn bấy lâu nay. Tuy nhiên, khi bạn cố gắng nhớ lại bất kỳ điều gì trong số đó, bạn chỉ nhớ được rất ít. Tất cả chỉ là một đám mây mù—giống như những ký ức xa xôi từ nhiều thập kỷ trước. Chỉ còn lại gợi ý của giấc mơ. Một lâu đài đen. Một con tàu đi qua không gian. Một cầu thang. Một con mèo đen. Bạn nhớ mình đã hoàn thành một nhiệm vụ sâu sắc nào đó, nhưng suốt cả cuộc đời, bạn không thể nhớ đó là gì.</p><ul><li>In your Campaign Log, record *the dreamers awoke*.</li><li>Nếu bạn đang chơi The Dream-Quest như một chiến dịch gồm 4 phần:</li><li>*If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…*<ul><li>*…and you have not yet played Scenario 4–B: Weaver of the Cosmos*, proceed to that scenario.</li><li>*…and you have already played Scenario 4–B: Weaver of the Cosmos*, proceed instead to _Epilogue_.</li></ul></li></ul>"
+    },
+    "resolution4": {
+      "title": "Kết thúc thứ 4",
+      "body": "<p>Bạn nghĩ về nhiều cuộc hành trình bạn đã có ở Vùng đất Giấc mơ và những điều tuyệt vời mà bạn đã thấy: những khu rừng huyền bí, những cung điện xinh đẹp, những đại dương xanh biếc. Bạn đã bao giờ trải nghiệm những điều kỳ diệu như vậy trong thế giới thực chưa? Bạn có thể thực sự trở lại cuộc sống trần tục như vậy sau những gì bạn đã trải qua ở đây? Có lẽ ở lại sẽ tốt hơn. Bạn có thể thoát khỏi vùng đất Leng đáng sợ này và quay trở lại những vùng đất an toàn hơn. Bạn có thể sống trong vương quốc vượt thời gian của Celephaïs, nơi tràn ngập niềm vui và bạn sẽ không bao giờ già đi. Hoặc có lẽ sống giữa những con mèo ở thị trấn dễ chịu Ulthar, nơi nhiệm vụ của bạn bắt đầu. Hoặc khám phá ranh giới của Vùng đất Giấc mơ và xem tất cả những điều kỳ diệu mà nó mang lại. Bạn đã có quyết định. Bạn không thể quay lại thế giới thực, vì bạn chưa bao giờ muốn rời đi.</p><ul><li>In your Campaign Log, record *the dreamers stayed in the Dreamlands forever*.</li><li>Nếu bạn đang chơi The Dream-Quest như một chiến dịch gồm 4 phần:</li><li>*If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…*<ul><li>*…and you have not yet played Scenario 4–B: Weaver of the Cosmos*, proceed to that scenario.</li><li>*…and you have already played Scenario 4–B: Weaver of the Cosmos*, proceed instead to _Epilogue_.</li></ul></li></ul>"
+    },
+    "resolution5": {
+      "title": "Giải pháp thứ 5",
+      "body": "<p>Bạn nhớ lại những gì con mèo đen đã nói với bạn về cuộc hành trình của những người bạn đồng hành của bạn. Mặc dù bạn không muốn bỏ lại bề mặt của Vùng đất Giấc mơ, nhưng có thể có cách bạn có thể giúp đỡ bạn bè của mình. Bạn leo trở lại những đỉnh núi cực bắc của Leng, trở lại tàn tích mái vòm nơi bạn đối đầu với đại tư tế của Nyarlathotep. Ở đó, chính giữa căn phòng, là cái hố toang hoác dẫn đến những vực sâu chưa từng thấy của Underworld. Bạn đồng hành của bạn đang ở dưới đó, ở đâu đó… phải không?</p><ul><li>In your Campaign Log, record *the dreamers traveled beneath the monastery*.</li><li>*If you have not yet played Scenario 4–B: Weaver of the Cosmos*, proceed to that scenario.</li><li>*If you have already played Scenario 4–B: Weaver of the Cosmos*, proceed instead to _Epilogue_.</li></ul>"
+    }
+  },
+  "xp": {
+    "resolution2": "Stopped Nyarlathotep’s scheme once and for all."
+  },
+  "remembered": {
+    "maneuveredThePriestCloser": "Maneuvered the high priest closer.",
+    "stunnedThePriest": "Stunned the priest."
+  },
   "label": {
+    "abandonedByTheGods": {
+      "choose": "Choose {count}"
+    },
     "wakeUp": "*Tỉnh dậy.*",
     "remainOnSurface": "*Ở lại trên bề mặt của Vùng đất Giấc mơ.*",
     "ventureIntoUnderworld": "*Mạo hiểm tiến vào Underworld để tìm những người bạn đồng hành của bạn.*"
+  },
+  "theShapeOfChaos": {
+    "label": {
+      "choose": "Choose:",
+      "shuffled": "Nyarlathotep immediately attacks you and is shuffled into the encounter deck.",
+      "returned": "Nyarlathotep immediately attacks you three times and is returned to that investigator's hand."
+    }
   }
 }

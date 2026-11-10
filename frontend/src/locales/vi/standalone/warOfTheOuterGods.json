@@ -1,47 +1,113 @@
 {
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 for each clue you have.",
+      "cultist": "-3. Nếu bạn thất bại, place 1 resource on the nearest _Mutated_ enemy, as a mutation.",
+      "tablet": "-3. Nếu bạn thất bại, draw the top _Hex_ card in the encounter discard pile.",
+      "elderThing": "-4. Nếu bạn thất bại, place one card committed to this test facedown underneath an _Insect_ enemy, as a swarm card."
+    },
+    "hardExpert": {
+      "skull": "-2 for each clue you have.",
+      "cultist": "-4. Place 1 resource on each _Mutated_ enemy, as a mutation.",
+      "tablet": "-4. Draw the top _Hex_ card in the encounter discard pile.",
+      "elderThing": "-5. Place each card committed to this test facedown underneath an _Insect_ enemy, as a swarm card."
+    }
+  },
+  "label": {
+    "bladeOfArkat": {
+      "resourcesToRemove": "Resources to remove"
+    },
+    "placeDoomOnTheBlueAgenda": "Place 1 doom on the blue agenda",
+    "placeClueOnYourLocation": "Place 1 of your clues on your location",
+    "take2Horror": "Take 2 horror",
+    "take3Horror": "Take 3 horror",
+    "removeHandFromGame": "Remove each card in your hand from the game",
+    "removeCluesFromAroundHubDimension": "Remove 2 clues from around Hub Dimension",
+    "huneStitchedHeraldAttacksYou": "Hune-Stitched Herald attacks you",
+    "youAndYourAssetsTakeDamage": "You and each asset you control take 1 direct damage",
+    "removeItemFromGame": "Choose an Item asset you control and remove it from the game",
+    "take2Damage": "Take 2 damage",
+    "placeCluesOnYourLocation": "Place 2 of your clues on your location",
+    "removeCardsInHandFromGame": "Choose 3 cards in your hand and remove them from the game",
+    "removeTopOfDeckFromGame": "Remove the top 6 cards of your deck from the game. Shuffle each weakness removed this way into your deck",
+    "spendClues": "Spend 3 clues",
+    "placeEnemyOnTopOfEncounterDeck": "Place a non-Elite enemy at your location on top of the encounter deck",
+    "lookAtTopOfEncounterDeck": "Look at the top 5 cards of the encounter deck. Discard 2 of them and return the rest to the top, in any order",
+    "skipTest": "Do not test"
+  },
+  "intro": {
+    "title": "War of the Outer Gods",
+    "body": "<p>Hơn một thập kỷ sau cuộc Đại Chiến, một loại chiến tranh khác đã ập đến Trái Đất—một cuộc xung đột được gây ra bởi những phe phái đã ẩn mình từ lâu trong bóng tối của xã hội.</p><p>Nó bắt đầu với những vụ án mạng ở Arkham—hơn một tá thi thể chỉ trong vỏn vẹn sáu ngày. Cảnh sát ban đầu cho rằng thủ phạm là một kẻ giết người hàng loạt, cho đến khi thi thể của nạn nhân thứ sáu xuất hiện dưới dạng một đống thịt và nội tạng bầy nhầy, giống như một bữa ăn bị nhai nát rồi nhổ ra. Không một con người nào có thể thực hiện một vụ giết người rùng rợn đến vậy.</p><p>Khi những vụ giết người tương tự bắt đầu nổ ra ở các thành phố khác trên khắp Bắc Mỹ, bạn đã tìm cách khám phá sự thật. Một kẻ giết người hàng loạt không thể có mặt ở Arkham, Providence, Montréal, và New York City cùng một lúc. Đây chắc chắn là việc làm của một tổ chức. Nhưng đó không phải là tất cả những gì bạn phát hiện ra: có những điểm chung giữa nhiều nạn nhân, phân loại họ thành ba nhóm riêng biệt.</p><p>In Providence, many victims were older and well-educated. In Montréal, those killed lived in the woods outside the city, or had professions dealing with nature or biology in some capacity. In New York, bodies turned up deep in the sewers and underground subway tunnels, their identities shrouded in mystery.</p><p>You have spent the past few weeks trying to unearth the truth behind these murders and the various factions carrying them out. In this time, the conflict has grown exponentially. Massacres. Bombings. Sightings of strange ceremonies in the streets. Entities blotting out the stars in the night sky. Swarms of locust-like insects devouring people whole. Mutated lizard creatures prowling the sewers. And worse yet, while Arkham seems to be the conflict's epicenter, these incidents are spreading all across the world.</p><p>Đây không phải là một cuộc chiến bình thường, và không phải là thứ mà các nhà chức trách có thể giải quyết. Bạn là người duy nhất nghi ngờ sự thật. Bằng cách nào đó, bạn phải tìm ra những phe phái này đang tranh giành điều gì, và chấm dứt cuộc xung đột trước khi nó nuốt chửng toàn bộ thế giới trong sự điên loạn này.</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
+  },
   "setup": {
+    "gatherSets": "Gather all cards from the *War of the Outer Gods* encounter set. This set is indicated by this icon:<section class='encounter-sets'><img src='{setImgPath}/war-of-the-outer-gods.png' /></section>",
+    "gatherFactionSets": "Tập hợp tất cả 9 lá bài từ mỗi set trong ba encounter set khác: <i>Children of Paradise</i>, <i>Swarm of Assimilation</i>, và <i>Death of Stars</i>. Đặt các encounter set này sang một bên, ngoài khu vực chơi. <i>(Lưu ý: 1 Ethereal Entity, 1 Trylogog, và 1 Bringer of Paradise được bao gồm trong encounter set</i> War of the Outer Gods<i>, trong khi phần còn lại nằm trong ba encounter set này.)</i>",
     "agendaDecks": "Khi thiết lập agenda deck, đặt cả ba agenda deck vào khu vực chơi, theo thứ tự này (từ trên xuống dưới): xanh lá, xanh dương, và sau đó là đỏ.",
     "placeLocations": "Đặt địa điểm Hub Dimension sang một bên và đặt 10 địa điểm còn lại vào khu vực chơi.",
     "beginAtArkham": "Mỗi điều tra viên bắt đầu chơi tại Arkham.",
-    "shuffleRemainder": "Xào 19 lá bài encounter còn lại để tạo thành encounter deck.",
     "spawnCultists": "Tìm trong encounter set *War of the Outer Gods* 1 bản sao của Disciple of the Swarm, 1 bản sao của Nihilistic Stargazer, và 1 bản sao của Zealot of Paradise. Spawn mỗi kẻ địch đó (theo chỉ dẫn \"Spawn - \" của chúng).",
-    "setAsideAssets": "Đặt 5 story asset sau sang một bên, ngoài khu vực chơi: Cloak of the Outer Realms, Pocker Portal, Dreaded End, Blade of Ark'at, và Enchanted Skull."
+    "setAsideAssets": "Đặt 5 story asset sau sang một bên, ngoài khu vực chơi: Cloak of the Outer Realms, Pocker Portal, Dreaded End, Blade of Ark'at, và Enchanted Skull.",
+    "shuffleRemainder": "Xào 19 lá bài encounter còn lại để tạo thành encounter deck.",
+    "epicMultiplayer": "If you are playing in *Epic Multiplayer Mode*, the event organizer calculates and announces the global doom thresholds for each agenda."
   },
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>*If no resolution was reached (each investigator was defeated)*:</p><ul><li>Tìm faction đang dẫn đầu và tiến hành tương ứng:<ul><li>If the red faction was in the lead, skip to _Resolution 5_.</li><li>If the blue faction was in the lead, skip to _Resolution 6_.</li><li>If the green faction was in the lead, skip to _Resolution 7_.</li></ul></li><li>If you are playing in *Epic Multiplayer Mode*, you share in the resolution that the remaining players reach.</li></ul>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Nhiều cánh cửa của trung tâm giờ đây đã được niêm phong chặt chẽ dưới sự kiểm soát nghiêm ngặt của bạn. Với việc trung tâm bị niêm phong, các giáo phái đang tranh giành quyền sở hữu nó hy vọng sẽ quay trở lại hoạt động trong bí mật—có lẽ chờ đợi một thời điểm khi trung tâm mở lại và chúng có thể sử dụng nó để thúc đẩy những âm mưu tàn ác của mình. Cho đến lúc đó, Trái Đất vẫn an toàn… nói một cách tương đối.</p><ul><li>Any one investigator may choose to add the Cloak of the Outer Realms story asset to their deck. It does not count toward that investigator's deck size.</li><li>Any one investigator may choose to add the Pocket Portal story asset to their deck. It does not count toward that investigator's deck size.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Bầy đàn của Ezel quá đông đảo để có thể đánh bại bằng những phương pháp thông thường. Nhưng có một mẹo! Dù chúng có thể đến từ thế giới khác, côn trùng vẫn là côn trùng, và nhiều tổ có một con chúa trong số chúng. Sử dụng tất cả sự khéo léo của mình, bạn vạch ra một kế hoạch để tiêu diệt con chúa và từ đó phân tán bầy đàn.</p><p>Đáng ngạc nhiên thay, kế hoạch của bạn đã thành công. Với việc con chúa bị tiêu diệt, bầy đàn trở nên mất phương hướng, cơn đói của chúng được thay thế bằng cảm giác tuyệt vọng và hoảng loạn. Không lâu sau, vô số sinh vật lại một lần nữa chui xuống cái hố nơi chúng xuất phát. Có lẽ một con chúa khác sẽ đến để thống nhất chúng, nhưng bạn sẽ niêm phong cái hố chết tiệt đó rất lâu trước khi điều đó xảy ra. Hiện tại, Trái Đất đã an toàn.</p><ul><li>Any one investigator may choose to add the Cloak of the Outer Realms story asset to their deck. It does not count toward that investigator's deck size.</li><li>Any one investigator may choose to add the Enchanted Skull story asset to their deck. It does not count toward that investigator's deck size.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Hình dạng của Silenus là vô định hình, có lẽ thậm chí hoàn toàn không có vật chất, nhưng không phải là không có điểm yếu. Sử dụng các nghi thức của chính giáo phái của nó để chống lại nó, bạn tạo ra một câu thần chú có sức nóng chói lòa đến mức ngay cả sự trống rỗng của không gian cũng không thể nuốt chửng nó. Khi nghi lễ của bạn được giải phóng, những lớp sương mù rút lui trong đau đớn, không phát ra âm thanh nào ngoài tiếng rít chói tai của không khí bị hút qua một môi trường chân không.</p><p>Bạn quan sát bầu trời trong sợ hãi, hy vọng rằng sương mù không quay trở lại ngay khi nghi lễ của bạn kết thúc. Vài phút trôi qua. Rồi vài giờ. Những vì sao quen thuộc một lần nữa lấp đầy bầu trời đêm. Có lẽ thực thể đó đã biến mất vĩnh viễn. Nếu những ghi chép của nhiều người quan sát sinh vật này là đúng, nó có khả năng sẽ quay trở lại trong tương lai—có thể là hàng trăm hoặc hàng ngàn năm nữa kể từ bây giờ. Bạn có thể đã cứu Trái Đất ngày hôm nay, nhưng sự thấu hiểu về bản chất thực sự của thực thể này vẫn tiếp tục ám ảnh bạn.</p><ul><li>Any one investigator may choose to add the Cloak of the Outer Realms story asset to their deck. It does not count toward that investigator's deck size.</li><li>Any one investigator may choose to add the Dreaded End story asset to their deck. It does not count toward that investigator's deck size.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
     },
     "resolution4": {
-      "title": "Kết thúc thứ 4"
+      "title": "Kết thúc thứ 4",
+      "body": "<p>_Resolution 4_: Máu xanh lá và mủ dính trào ra từ lớp vỏ của con quái thú khi nó gục ngã, rên rỉ với sức mạnh làm rung chuyển cả Trái Đất. Nhờ hành động nhanh chóng của bạn, bạn đã hạ gục con quái thú trước khi nó có thể trở nên quá mạnh để ngăn chặn. Ngay cả khi còn non nớt, nó đã là một kẻ thù đáng gờm.</p><p>Bạn nhìn trong sự kinh tởm khi cơ thể nó tan chảy thành thứ chất lỏng màu vàng nhạt. Thứ này hóa ra lại là một \"thiên đường\" cơ đấy. Với quả trứng đã nở và thứ bên trong bị tiêu diệt, bạn hy vọng rằng giáo phái Ark'at sẽ giải tán, mặc dù bạn lo sợ rằng sự trả thù có thể một ngày nào đó sẽ đến để đáp trả sự can thiệp của bạn.</p><ul><li>Any one investigator may choose to add the Cloak of the Outer Realms story asset to their deck. It does not count toward that investigator's deck size.</li><li>Any one investigator may choose to add the Blade of Ark'at story asset to their deck. It does not count toward that investigator's deck size.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
     },
     "resolution5": {
-      "title": "Giải pháp thứ 5"
+      "title": "Giải pháp thứ 5",
+      "body": "<p>_Resolution 5_: Từng chút một, bầy đàn phân giải mọi vật chất trên Trái Đất, biến đổi từng phân tử để giống với chúng. Ý thức của bạn vẫn còn, bị mắc kẹt vĩnh viễn trong bầy đàn vo ve, tồi tệ đó. Nhưng mọi thứ đều ổn. Bạn đang ở cùng nữ hoàng bây giờ. Một cơn đói kỳ lạ gặm nhấm bạn. Mong muốn duy nhất của bạn là đồng hóa. Bầy đàn phải phát triển!</p><ul><li>Mỗi điều tra viên bị <b>giết chết</b>.</li><li>Các điều tra viên thất bại.</li></ul>"
     },
     "resolution6": {
-      "title": "Kết quả 6"
+      "title": "Kết quả 6",
+      "body": "<p>_Resolution 6_: Trái Đất chỉ là hành tinh đầu tiên bị nhấn chìm bởi Silenus, hiện thân của Empty Sky, sự kết thúc đói khát của vạn vật. Khi lõi hành tinh giảm xuống độ không tuyệt đối, mọi sự sống ngay lập tức bị dập tắt. Từ khe hở được tạo ra bởi nexus trên Trái Đất, thực thể sau đó vươn ra mọi ngóc ngách của hệ mặt trời, nuốt chửng mọi hơi ấm trên đường đi. Không gì có thể ngăn cản nó bây giờ.</p><ul><li>Mỗi điều tra viên bị <b>giết chết</b>.</li><li>Các điều tra viên thất bại.</li></ul>"
     },
     "resolution7": {
-      "title": "Kết cục 7"
+      "title": "Kết cục 7",
+      "body": "<p>_Resolution 7_: The beast's rampage is impossible to stop. You were the only ones with any knowledge of how to defeat the thing. One by one, as it makes its way across the continents and through the oceans, cities fall. Armies are obliterated. Governments collapse. The monstrous creatures hatched by the cult of Ark'at continue their ravenous hunt until there is nothing left to rule over but the vast wastes of Earth and the crumbling ruins of human civilization. The \"paradise\" they so willingly killed for has come.</p><ul><li>Mỗi điều tra viên bị <b>giết chết</b>.</li><li>Các điều tra viên thất bại.</li></ul>"
+    },
+    "xp": {
+      "bonus": "Mỗi điều tra viên nhận 2 kinh nghiệm thưởng vì họ đã ngăn chặn tất cả các Outer Gods hoàn thành âm mưu của chúng"
+    },
+    "label": {
+      "greenFactionInTheLead": "The green faction was in the lead",
+      "blueFactionInTheLead": "The blue faction was in the lead",
+      "redFactionInTheLead": "The red faction was in the lead"
     }
   },
   "rules": {
     "factions": {
-      "title": "Các phe phái"
+      "title": "Các phe phái",
+      "body": "<p class='basic'>This scenario introduces three warring factions, each with their own sets of enemies, treacheries, and agendas. These factions can be differentiated by color—blue, green, or red.</p><ul><li>The _Cult of Silenus_ is the _blue_ faction. Blue cards can also be identified by their star and constellation patterns.<div class='card-examples'><div class='top'><div class='ex'><img src='{setImgPath}/../cards/86025.avif' /><img class='arrow' src='{setImgPath}/../extra/war-of-the-outer-gods/arrows/arrow-blue.svg' style='--at:12%' /></div><div class='ex'><img src='{setImgPath}/../cards/86026.avif' /><img class='arrow left' src='{setImgPath}/../extra/war-of-the-outer-gods/arrows/arrow-blue.svg' style='--at:29%' /></div></div><div class='ex'><img class='agenda' src='{setImgPath}/../cards/86003.avif' /><img class='arrow left' src='{setImgPath}/../extra/war-of-the-outer-gods/arrows/arrow-blue.svg' style='--at:13%;--right:-33px;' /></div></div></li><li><b>Cult of Magh'an Ark'at</b> là phe <b>xanh lá</b>. Các lá bài màu xanh lá cũng có thể được nhận diện bằng họa tiết vảy và xúc tu của chúng.</li><li><b>Cult of Ezel-zen-rezl</b> là phe <b>đỏ</b>. Các lá bài màu đỏ cũng có thể được nhận diện bằng họa tiết tổ ong và cánh côn trùng của chúng.</li><li>Trừ khi có ghi chú khác, các lá bài của mỗi phe hoạt động như các lá bài bình thường cùng loại (kẻ địch, treachery, hoặc agenda).</li><li>Nếu các điều tra viên được hướng dẫn thực hiện một chuỗi hành động \"theo thứ tự phe,\" đầu tiên hãy giải quyết chuỗi đó cho phe xanh lá. Sau đó giải quyết chuỗi đó cho phe xanh dương. Cuối cùng giải quyết chuỗi đó cho phe đỏ. <i>(Lưu ý: Đây cũng là thứ tự của các agenda từ trên xuống dưới như được mô tả trong quá trình setup.)</i></li></ul>"
     },
     "factionAgendas": {
-      "title": "Agenda của các phe phái"
+      "title": "Agenda của các phe phái",
+      "body": "<p class='basic'>Trong quá trình setup, ba chồng bài agenda khác nhau được tạo ra, mỗi chồng cho một phe phái (xanh lá, xanh dương, và đỏ). Các chồng bài agenda này đại diện cho tiến độ của mỗi phe phái hướng tới mục tiêu của họ.</p><ul><li>Trong bước \"đặt doom lên agenda hiện tại\" của mythos phase, đặt 1 doom lên mỗi agenda, theo thứ tự phe phái.</li><li>During the “check doom threshold” step of the mythos phase, check the doom threshold for each agenda one at a time, in faction order (or if you are playing Epic Multiplayer Mode, in the order announced by the event organizer).</li><li>Trong khi có ba agenda đang in play, doom trên các lá bài người chơi không được tính vào ngưỡng doom của bất kỳ agenda nào trong số đó.</li><li>Nếu một hiệu ứng bài yêu cầu một điều tra viên đặt doom lên \"agenda hiện tại\", người chơi có thể chọn đặt nó lên agenda nào.</li><li>Khi một agenda advance, tất cả doom trên mỗi agenda khác vẫn giữ nguyên. Loại bỏ tất cả doom khỏi mỗi lá bài khác đang in play (bài người chơi, kẻ địch, và vị trí), như bình thường.</li></ul>"
     },
     "inTheLead": {
-      "title": "\"Đang dẫn đầu\""
+      "title": "\"Đang dẫn đầu\"",
+      "body": "<p class='basic'>Mỗi phe phái đang cố gắng advance qua agenda deck của họ trước khi phe đối lập có thể làm điều tương tự. Phe phái \"đang dẫn đầu\" là phe phái đã advance xa nhất qua agenda deck của họ. Nếu có trường hợp hòa giữa hai hoặc nhiều phe phái, phe phái đang hòa có nhiều doom nhất trên agenda của họ là phe phái dẫn đầu. Nếu vẫn tiếp tục hòa, phe phái có nhiều kẻ địch in play nhất là phe phái dẫn đầu.</p>"
     },
     "warring": {
-      "title": "Giao tranh"
+      "title": "Giao tranh",
+      "body": "<p class='basic'>Warring (giao chiến) là một keyword khiến các phe phái warring di chuyển về phía nhau và tấn công lẫn nhau trong enemy phase.</p><p class='basic'>Trong bước \"hunter enemies move\" của enemy phase, mỗi kẻ địch ready, unengaged có keyword warring sẽ di chuyển một lần về phía kẻ địch warring gần nhất thuộc một phe phái khác.</p><ul><li>Các kẻ địch warring di chuyển theo thứ tự phe phái.</li><li>Các kẻ địch warring đã ở tại một location có một hoặc nhiều kẻ địch thuộc một phe phái khác sẽ không di chuyển.</li><li>Nếu có nhiều kẻ địch ở khoảng cách bằng nhau đủ điều kiện làm mục tiêu cho việc di chuyển này, trưởng nhóm sẽ chọn một mục tiêu để kẻ địch di chuyển về phía đó.</li><li>Nếu không có kẻ địch nào đủ điều kiện làm mục tiêu cho việc di chuyển này, kẻ địch đó sẽ không di chuyển.</li><li>Nếu một kẻ địch warring bị buộc phải di chuyển đến một location mà việc di chuyển bị chặn bởi một card ability, kẻ địch đó sẽ không di chuyển.</li></ul><p class='basic'>Trong bước \"resolve enemy attacks\" của enemy phase, mỗi kẻ địch unengaged có keyword warring sẽ tấn công một kẻ địch warring tại location của nó thuộc một phe phái khác.</p><ul><li>Các kẻ địch warring tấn công theo thứ tự phe phái.</li><li>Nếu có nhiều kẻ địch đủ điều kiện làm mục tiêu cho đòn tấn công này, kẻ địch warring sẽ tấn công kẻ địch (thuộc phe phái khác) có lượng health còn lại thấp nhất. Nếu hòa, trưởng nhóm có thể chọn mục tiêu của đòn tấn công.</li><li>Một đòn tấn công được thực hiện theo cách này sẽ gây ra lượng damage bằng tổng giá trị damage và horror của kẻ địch tấn công.</li><li><b>Nếu một kẻ địch tấn công và defeat một kẻ địch khác (không phải là một lá bài swarm), đặt 1 doom lên agenda tương ứng với phe phái của kẻ địch tấn công.</b></li></ul><div class='warring-example'><p class='we-title'>Ví dụ về Warring:</p><p class='we-cap'>*A Disciple of the Swarm is in Streets of New York City, a Hune-Stitched Herald is in Arkham, and a Zealot of Paradise is in Streets of Montréal. Each of them has the warring keyword, and each is ready and unengaged.*</p><div class='we-panel we-setup'><div class='we-spot'><img class='loc' src='{setImgPath}/../cards/86021.avif' /><img class='enemy' src='{setImgPath}/../cards/86029.avif' /></div><div class='we-spot'><img class='loc' src='{setImgPath}/../cards/86014.avif' /><img class='enemy' src='{setImgPath}/../cards/86037.avif' /></div><div class='we-spot'><img class='loc' src='{setImgPath}/../cards/86018.avif' /><img class='enemy' src='{setImgPath}/../cards/86027.avif' /></div></div><p class='we-cap'><i>Trong bước \"hunter enemies move\" của enemy phase, mỗi kẻ địch này di chuyển một lần về phía kẻ địch warring gần nhất thuộc phe phái khác. Trong trường hợp này, kẻ địch màu xanh lá cây di chuyển trước, đến Arkham. Hune-Stitched Herald không di chuyển, vì đã có một kẻ địch tại location của nó. Cuối cùng, Disciple of the Swarm cũng di chuyển đến Arkham.</i></p><div class='we-panel we-move'><div class='we-spot'><img class='loc' src='{setImgPath}/../cards/86021.avif' /><img class='enemy red-faction faded' src='{setImgPath}/../cards/86029.avif' /></div><div class='we-spot gathered'><img class='loc' src='{setImgPath}/../cards/86014.avif' /><img class='enemy blue-faction' src='{setImgPath}/../cards/86037.avif' /><img class='enemy red-faction' src='{setImgPath}/../cards/86029.avif' /><img class='enemy green-faction' src='{setImgPath}/../cards/86027.avif' /></div><div class='we-spot'><img class='loc' src='{setImgPath}/../cards/86018.avif' /><img class='enemy green-faction faded' src='{setImgPath}/../cards/86027.avif' /></div><img class='we-arrow we-mv-left' src='{setImgPath}/../extra/war-of-the-outer-gods/arrows/warring-move-arrow.svg' /><img class='we-arrow we-mv-right' src='{setImgPath}/../extra/war-of-the-outer-gods/arrows/warring-move-arrow-right.svg' /></div><p class='we-cap'><i>Trong bước \"resolve enemy attacks\" của enemy phase, mỗi kẻ địch này tấn công một kẻ địch warring thuộc phe phái khác. Đầu tiên Zealot of Paradise tấn công Disciple of the Swarm gây 1 damage, vì nó có lượng health còn lại ít hơn Hune-Stitched Herald. Tiếp theo, Hune-Stitched Herald cũng tấn công Disciple of the Swarm, gây 3 damage. Điều này defeat Disciple of the Swarm trước khi nó có cơ hội tấn công và khiến 1 doom được đặt lên agenda màu xanh dương.</i></p><div class='we-panel we-attack'><div class='enemy'><img src='{setImgPath}/../cards/86029.avif' /><img class='dmg d1' src='{setImgPath}/../tokens/damage-token.png' /><img class='dmg d2' src='{setImgPath}/../tokens/damage-token.png' /><img class='dmg d3' src='{setImgPath}/../tokens/damage-token.png' /><img class='dmg d4' src='{setImgPath}/../tokens/damage-token.png' /></div><div class='enemy'><img src='{setImgPath}/../cards/86037.avif' /></div><div class='enemy'><img src='{setImgPath}/../cards/86027.avif' /></div><img class='we-arrow we-atk-top' src='{setImgPath}/../extra/war-of-the-outer-gods/arrows/warring-attack-arrow-top.svg' /><img class='we-arrow we-atk-bot' src='{setImgPath}/../extra/war-of-the-outer-gods/arrows/warring-attack-arrow-bottom.svg' /></div></div>"
     },
     "wards": {
       "title": "Bùa bảo vệ",
@@ -50,6 +116,40 @@
     "placeAroundThisLocation": {
       "title": "\"Đặt xung quanh vị trí này\"",
       "body": "Nếu các điều tra viên được hướng dẫn đặt 1 hoặc nhiều clue \"xung quanh\" một location, những clue đó nên được đặt sao cho chúng nằm sát mép lá bài location, nhưng không được đặt lên trên chính lá bài location đó. Các clue nằm \"xung quanh\" một location không được coi là nằm \"trên\" location đó và không thể được discover bằng bất kỳ cách nào.<div class='place-around'><img src='{setImgPath}/../cards/86024b.avif' /><div class='clues left'><img src='{setImgPath}/../tokens/clue.png' /><img src='{setImgPath}/../tokens/clue.png' /></div><div class='clues right'><img src='{setImgPath}/../tokens/clue.png' /><img src='{setImgPath}/../tokens/clue.png' /><img src='{setImgPath}/../tokens/clue.png' /><img src='{setImgPath}/../tokens/clue.png' /><img src='{setImgPath}/../tokens/clue.png' /><img src='{setImgPath}/../tokens/clue.png' /><img src='{setImgPath}/../tokens/clue.png' /><img src='{setImgPath}/../tokens/clue.png' /></div><div class='clues top'><img src='{setImgPath}/../tokens/clue.png' /><img src='{setImgPath}/../tokens/clue.png' /></div><div class='clues bottom'><img src='{setImgPath}/../tokens/clue.png' /><img src='{setImgPath}/../tokens/clue.png' /><img src='{setImgPath}/../tokens/clue.png' /><img src='{setImgPath}/../tokens/clue.png' /></div></div>"
+    },
+    "swarmingX": {
+      "title": "Swarming X",
+      "body": "The swarming X keyword represents a pack of enemies operating in unison. After an enemy with the swarming X keyword enters play, place the top X cards of your deck facedown underneath the enemy as swarm cards, without looking at them. The enemy those swarm cards are underneath is called the \"host enemy.\" Some scenario card effects may also instruct a player to add swarm cards to an enemy. This is done using the same process.<ul><li>Nếu không rõ điều tra viên nào nên thêm các lá bài swarm, trưởng nhóm sẽ làm điều đó.</li><li>Each swarm card underneath the host enemy acts as a separate instance of that enemy. Each swarm card has the same values and text as its host card. *(For example, if an investigator is engaged with a host enemy with 2 swarm cards underneath it, that investigator is engaged with 3 enemies in total.)*</li><li>Mỗi lá bài swarm tấn công riêng biệt khi kẻ địch tấn công trong enemy phase. Một khi host enemy và tất cả các lá bài swarm của nó đã tấn công trong bước này, exhaust tất cả chúng.</li><li>Each swarm card can be attacked or dealt damage separately, but the host enemy cannot be defeated while it still has swarm cards underneath it. When a swarm card is defeated, any excess damage may be dealt to another swarm card underneath the same host enemy, or if all of its swarm cards are gone, to the host enemy itself. *(For example, Roland Banks uses a .45 Automatic to attack a Trylogog with 2 swarm cards. The attack deals 2 damage. The first point of damage defeats 1 of the 2 swarm cards, so the excess point of damage may be dealt to another swarm card, defeating it as well.)*</li><li>Bất cứ khi nào một lá bài swarm rời khỏi khu vực chơi, hãy đặt nó xuống dưới cùng deck của chủ sở hữu. Nếu bạn không chắc chắn về chủ sở hữu của lá bài swarm, bạn có thể xem nó để xác định chủ sở hữu.</li><li>Kẻ địch host và tất cả các lá bài swarm của nó move, engage, và exhaust như một thực thể duy nhất. (Ví dụ, nếu một kẻ địch host hoặc bất kỳ lá bài swarm nào của nó bị evade, tất cả chúng đều exhaust và trở nên disengaged.)</li><li>When Victory X appears on an enemy with the Swarming X keyword, this text is only active for the host card. Swarm cards cannot enter the victory display and are never worth victory points.</li></ul>"
     }
-  }
+  },
+  "specialRules": [
+    {
+      "title": "@:standalone.warOfTheOuterGods.rules.factions.title",
+      "body": "@:standalone.warOfTheOuterGods.rules.factions.body"
+    },
+    {
+      "title": "@:standalone.warOfTheOuterGods.rules.factionAgendas.title",
+      "body": "@:standalone.warOfTheOuterGods.rules.factionAgendas.body"
+    },
+    {
+      "title": "@:standalone.warOfTheOuterGods.rules.inTheLead.title",
+      "body": "@:standalone.warOfTheOuterGods.rules.inTheLead.body"
+    },
+    {
+      "title": "@:standalone.warOfTheOuterGods.rules.warring.title",
+      "body": "@:standalone.warOfTheOuterGods.rules.warring.body"
+    },
+    {
+      "title": "@:standalone.warOfTheOuterGods.rules.wards.title",
+      "body": "@:standalone.warOfTheOuterGods.rules.wards.body"
+    },
+    {
+      "title": "@:standalone.warOfTheOuterGods.rules.placeAroundThisLocation.title",
+      "body": "@:standalone.warOfTheOuterGods.rules.placeAroundThisLocation.body"
+    },
+    {
+      "title": "@:standalone.warOfTheOuterGods.rules.swarmingX.title",
+      "body": "@:standalone.warOfTheOuterGods.rules.swarmingX.body"
+    }
+  ]
 }

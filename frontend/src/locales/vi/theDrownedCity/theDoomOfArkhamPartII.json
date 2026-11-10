@@ -1,7 +1,17 @@
 {
   "intro": {
+    "title": "The Doom of Arkham: Phần II",
+    "theDoomOfArkham1": "<p>_The Doom of Arkham 1_: Bạn và những người khác bất lực đứng nhìn Cthulhu san phẳng phần còn lại của Rivertown. Dòng nước đen ngòm nhấn chìm các con phố và để lại đống đổ nát trên đường hắn đi qua. \"Randall đứng sau chuyện này. Tôi không biết bằng cách nào hay tại sao, nhưng tôi nghĩ hắn muốn chúng ta đánh thức thứ đó dậy!\" Ruby nói. Những ngọn lửa đói khát bắt đầu liếm láp đống đổ nát khi các đường ống dẫn khí bị vỡ bốc cháy, soi sáng các quân đoàn Cthulhu's spawn khi chúng tràn xuống thành phố. \"Nếu điều đó là sự thật, thì tốt hơn hết chúng ta nên tìm cách ngăn chặn nó,\" Andy nói. Họ nhìn bạn chờ đợi chỉ thị.</p>",
     "mustDecide": "Điều tra viên phải đưa ra quyết định (chọn một):",
+    "lastStand": "<i>\"Chúng ta cần phải tử thủ và đánh đuổi hắn bằng hỏa lực áp đảo.\"</i>",
+    "anotherWay": "Bạn chỉ có thể chọn tùy chọn này nếu có từ 5 [[Artifacts]] trở lên được đánh dấu/liệt kê và không bị gạch bỏ dưới mục \"Artifacts Earned\" trong Nhật ký Chiến dịch của bạn.",
+    "theDoomOfArkham2": "<p>_The Doom of Arkham 2_: \"Tôi thích suy nghĩ của bạn,\" Thanh tra Legrasse nói khi ông nạp đạn vào súng với một tiếng lách cách đã tai. Cùng nhau, các bạn lập kế hoạch để chống lại mối đe dọa cổ xưa. Ruby đề nghị vài người trong số các bạn lên các mái nhà, trong khi Legrasse gọi điện cho một vài mối liên hệ ở sở cảnh sát Arkham. Nếu sát cánh cùng nhau, các bạn có thể thu hút cơn thịnh nộ của Cthulhu khỏi Arkham. \"Đây là ý tưởng tồi tệ nhất mà tôi từng nghe, nhưng tôi không nghĩ chúng ta có lựa chọn nào khác,\" Ruby nói. Bạn thấy một tia gì đó—có phải là sự sợ hãi không?—trong mắt cô ấy. Bạn không có lựa chọn nào khác ngoài việc chiến đấu.</p>",
+    "recordStoodTogether": "In your Campaign Log, record _the investigators stood together_.",
     "alliesIntoPlay": "Tìm kiếm trong các chồng bài encounter *Expedition* và *The Doom of Arkham*, deck của mỗi điều tra viên, và tất cả các khu vực in-play và out-of-play để tìm các story asset sau: John Raymond Legrasse, Ruby Standish, và Andy Van Nortwick. Đặt mỗi asset này vào chơi dưới quyền kiểm soát của bất kỳ điều tra viên nào. Mỗi asset này không chiếm ally slot trong scenario này.",
+    "theDoomOfArkham3": "<p>_The Doom of Arkham 3_: Andy vẫy gọi tất cả các bạn vào một quán ăn bỏ hoang khi mực nước tiếp tục dâng cao. \"Đây không phải là lĩnh vực chuyên môn của tôi,\" anh nói, đặt một xấp giấy rời lên bàn. \"Nhưng tôi đã dịch các ký tự từ R'lyeh, và tôi nghĩ chúng ta có thể ngăn chặn điều này bằng, ừm... chà, một nghi thức.\" Ruby gạt phắt những lời phản đối của Thanh tra Legrasse khi Andy phác thảo một \"nghi thức hoàn trả\" mà anh phát hiện ra trong các cung điện cổ xưa của R'lyeh. Bằng cách sử dụng các mảnh vỡ của thành phố cổ R'lyeh, các bạn có thể phong ấn kẻ cổ xưa đó lại.</p>",
+    "theDoomOfArkham3Continued": "<p>\"Các ký tự mà tôi dịch dường như ngụ ý rằng Cthulhu và, ờ, những đứa con của hắn bị ràng buộc với chính R'lyeh—\" anh trải ra một tấm bản đồ Arkham. \"Nếu chúng ta đặt những cổ vật này quanh thành phố như thế này, tôi có thể thực hiện nghi thức và trục xuất hắn. Tuy nhiên, tôi sẽ cần tất cả các bạn thu hút sự chú ý của hắn, khiến hắn không rời mắt khỏi các bạn, trong khi tôi chuẩn bị.\" Andy giơ lên một trong những cổ vật mà bạn đã thu hồi từ Randall, lật nó qua lại trong tay. Nó phát ra một thứ ánh sáng phi tự nhiên.</p>",
+    "theDoomOfArkham3Ruby": "<p>\"Tôi sẽ đến sở cảnh sát Arkham,\" Thanh tra Legrasse nói. \"Tôi có một vài mối liên hệ ở đó. Chúng ta sẽ có thể đưa một số sĩ quan ra đường để giúp đỡ những người sống sót.\" Ruby, người vẫn im lặng kể từ khi Andy phác thảo kế hoạch, khoanh tay lại. \"Vậy anh muốn chúng tôi chọc giận cái thứ theo đúng nghĩa đen là đang phá hủy thành phố để anh có thể lầm bầm vài từ và giấu vài di vật.\" Cô rít một hơi thuốc lá. \"Thì có chuyện gì tồi tệ xảy ra được cơ chứ?\"</p>",
+    "recordAlliesHaveAPlan": "In your Campaign Log, record _your allies have a plan_.",
     "alliesSetAside": "Tìm kiếm trong các chồng bài encounter *Expedition* và *The Doom of Arkham*, deck của mỗi điều tra viên, và tất cả các khu vực in-play và out-of-play để tìm các story asset sau: John Raymond Legrasse, Ruby Standish, và Andy Van Nortwick. Để chúng sang một bên, out of play.",
     "addToken": "Thêm 1 token {elderThing} vào chaos bag trong phần còn lại của chiến dịch.",
     "proceedToSetup": "Tiếp tục đến _Setup_",
@@ -11,21 +21,28 @@
     }
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Doom of Arkham Part II*, *Domination*, *Elder Mist*, *Flood*, *Star Spawn*, *Agents of Cthulhu*, and *The Midnight Masks*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-doom-of-arkham-part-ii.png' /><img src='{setImgPath}/domination.png' /><img src='{setImgPath}/elder-mist.png' /><img src='{setImgPath}/flood.png' /><img src='{setImgPath}/star-spawn.png' /><img src='{setImgPath}/agents-of-cthulhu.png' /><img src='{setImgPath}/midnight-masks.png' /></section>",
+    "midnightMasksLocations": "When gathering the *The Midnight Masks* encounter set, only gather the location cards. Do not gather any other cards from this set.",
     "placeLocations": "Đặt mỗi địa điểm vào chơi theo sơ đồ sắp xếp địa điểm.",
+    "arkhamLocations": "Tập hợp mỗi địa điểm từ chồng bài *The Midnight Masks* cùng với Eastern Rooftops và Western Rooftops. Đặt ngẫu nhiên một trong hai địa điểm Downtown và một trong hai địa điểm Southside vào chơi và loại bỏ các phiên bản khác của những địa điểm đó khỏi trò chơi. Đặt Northside, Easttown, St. Mary's Hospital, và Miskatonic University vào chơi.",
+    "rivertownRuined": "Đặt Rivertown *(Ruined)* từ chồng bài encounter *The Doom of Arkham Part II* vào chơi. Loại bỏ phiên bản khác của Rivertown khỏi trò chơi.",
     "setAsideLocations": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
     "cthulhuAtRivertown": "Đặt kẻ địch một mặt Cthulhu *(Ancient Evil)* tại Rivertown.",
     "startAtRivertown": "Mỗi điều tra viên bắt đầu chơi tại Rivertown.",
+    "cthulhuBoard": "Lắp ráp Cthulhu Board theo sơ đồ.",
     "placeBoard": "Tìm bảng punchboard hai mặt đi kèm trong hộp này và đặt nó phía trên chồng bài act và agenda, ngửa mặt Cthulhu lên.",
+    "placeFacets": "Đặt mỗi bản của ba kẻ địch Cthulhu (Hoary Wings, Fierce Visage, và Wicked Claw) lên Cthulhu Board, để ngửa mặt không [[Enraged]], sao cho chúng tạo thành một bức tranh hoàn chỉnh về Cthulhu.",
+    "buildCthulhuDeck": "Xào 18 lá bài Cthulhu để tạo thành chồng bài Cthulhu (Xem <b>The Cthulhu Deck</b> bên dưới). Đặt chồng bài này cạnh Cthulhu Board.",
+    "checkCampaignLogActAgenda": "Check your Campaign Log to build the act and agenda deck:",
+    "fightBack": "Tạo agenda deck bằng agenda 1a—\"The Doom of Arkham\" và act deck bằng act 1a—\"Fight Back!\" Loại bỏ các act và agenda khác khỏi trò chơi.",
+    "banishHim": "Tạo agenda deck bằng agenda 1a-\"The Doom of Arkham\" và act deck bằng act 1a-\"Banish Him!\" Đặt special agenda — \"The Final Seal\" sang một bên, out of play. Loại bỏ các act và agenda khác khỏi trò chơi.",
+    "checkCampaignLog": "Check your Campaign Log.",
     "artifacts": "Tập hợp tất cả các artifact đã thu thập được mà không bị gạch bỏ dưới mục \"Artifacts Earned.\" Đưa mỗi lá bài đó vào chơi dưới quyền kiểm soát của một điều tra viên, chia đều nhất có thể.",
     "floodedNeighborhoods": "Thêm các flood token vào token pool và tăng flood level của mỗi địa điểm được liệt kê dưới mục \"Flooded Neighborhoods.\"",
     "starSpawnAside": "Đặt encounter set *Star Spawn* sang một bên, out of play.",
-    "readyToBegin": "Số phận của Arkham nằm trong tay bạn. Giờ bạn đã sẵn sàng để bắt đầu.",
-    "arkhamLocations": "Tập hợp mỗi địa điểm từ chồng bài *The Midnight Masks* cùng với Eastern Rooftops và Western Rooftops. Đặt ngẫu nhiên một trong hai địa điểm Downtown và một trong hai địa điểm Southside vào chơi và loại bỏ các phiên bản khác của những địa điểm đó khỏi trò chơi. Đặt Northside, Easttown, St. Mary's Hospital, và Miskatonic University vào chơi.",
-    "rivertownRuined": "Đặt Rivertown *(Ruined)* từ chồng bài encounter *The Doom of Arkham Part II* vào chơi. Loại bỏ phiên bản khác của Rivertown khỏi trò chơi.",
-    "placeFacets": "Đặt mỗi bản của ba kẻ địch Cthulhu (Hoary Wings, Fierce Visage, và Wicked Claw) lên Cthulhu Board, để ngửa mặt không [[Enraged]], sao cho chúng tạo thành một bức tranh hoàn chỉnh về Cthulhu.",
-    "buildCthulhuDeck": "Xào 18 lá bài Cthulhu để tạo thành chồng bài Cthulhu (Xem <b>The Cthulhu Deck</b> bên dưới). Đặt chồng bài này cạnh Cthulhu Board.",
     "cthulhusRage": "Đặt 1 resource lên scenario reference card, dưới \"Cthulhu's Rage\" (Xem <b>Cthulhu's Rage</b> bên dưới). Nếu chỉ có 1 hoặc 2 người chơi, đặt thêm 1 resource lên scenario reference card.",
-    "buildEncounterDeck": "Xào các lá bài encounter còn lại để xây dựng chồng bài encounter."
+    "buildEncounterDeck": "Xào các lá bài encounter còn lại để xây dựng chồng bài encounter.",
+    "readyToBegin": "Số phận của Arkham nằm trong tay bạn. Giờ bạn đã sẵn sàng để bắt đầu."
   },
   "rules": {
     "cthulhuBoard": {
@@ -41,15 +58,61 @@
       "body": "<p class='basic'>Trong suốt màn chơi này, số lượng resource dưới \"Cthulhu's Rage\" trên lá bài scenario reference biểu thị sự tức giận của Cthulhu đối với các điều tra viên. Cthulhu's Rage càng cao, kẻ ngủ say thức tỉnh càng trở nên nguy hiểm và chết chóc hơn. Bản thân Cthulhu's Rage không có hiệu ứng trò chơi nội tại; tuy nhiên, một số hiệu ứng lá bài encounter có thể thay đổi hoặc trở nên mạnh hơn tùy thuộc vào mức độ hiện tại của Cthulhu's Rage.</p>"
     }
   },
+  "label": {
+    "chooseAllyInvestigator": "Choose an investigator to take control of {name}.",
+    "chooseArtifactInvestigator": "Choose an investigator to control {name}.",
+    "chooseAlly": "Choose a set-aside _Ally_ story asset to take control of.",
+    "noAlly": "Do not take control of an _Ally_ story asset.",
+    "chooseInvestigatorToTest": "Choose an investigator to test",
+    "increaseFloodLevel": "Increase the flood level of Cthulhu's location",
+    "dreadsightGroupChoice": "The investigators must decide, as a group",
+    "cthulhuAttacks": "Cthulhu <i>(Wicked Claw)</i> attacks each investigator at its location",
+    "chooseEnemyForDoom": "Choose an enemy on the Cthulhu Board with no doom on it",
+    "chooseSkillForTest": "Choose a skill to test",
+    "chooseCthulhuEnemyToReturn": "Choose a [[Cthulhu]] enemy to return to the Cthulhu Board, [[Enraged]] side faceup",
+    "chooseLocationToFlood": "Choose a location to increase the flood level of",
+    "chooseLocationToRuin": "Choose the fully flooded location Cthulhu moves to",
+    "cluesToPlace": "How many of your clues do you want to place on this location?"
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is Cthulhu's Rage.",
+      "cultist": "[skull]: -X. X là Cthulhu's Rage.\r\n[cultist]: -3. Nếu bạn thất bại và địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -3. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -1. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của Cthulhu deck. (Tối đa rút một lá mỗi round.)",
+      "tablet": "[skull]: -X. X là Cthulhu's Rage.\r\n[cultist]: -3. Nếu bạn thất bại và địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -3. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -1. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của Cthulhu deck. (Tối đa rút một lá mỗi round.)",
+      "elderThing": "[skull]: -X. X là Cthulhu's Rage.\r\n[cultist]: -3. Nếu bạn thất bại và địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -3. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -1. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của Cthulhu deck. (Tối đa rút một lá mỗi round.)"
+    },
+    "hardExpert": {
+      "skull": "-X. X is 2 more than Cthulhu's Rage.",
+      "cultist": "-5. If your location is flooded, chịu 1 damage.",
+      "tablet": "[skull]: -X. X nhiều hơn Cthulhu's Rage 2.\r\n[cultist]: -5. Nếu địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -5. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -3. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của chồng bài Cthulhu. (Tối đa rút một lá mỗi round.)",
+      "elderThing": "[skull]: -X. X nhiều hơn Cthulhu's Rage 2.\r\n[cultist]: -5. Nếu địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -5. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -3. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của chồng bài Cthulhu. (Tối đa rút một lá mỗi round.)"
+    }
+  },
   "resolutions": {
+    "xp": {
+      "bonus": "for dispelling an ancient evil"
+    },
+    "label": {
+      "removeNoWeakness": "Do not remove a random basic weakness"
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Bạn chật vật đứng dậy khi mặt đất rung chuyển bởi một cơn địa chấn khác. Cthulhu hùng mạnh nhìn xuống bạn với năm con mắt đỏ vô hồn. Bạn đã từng mơ thấy khoảnh khắc này. Thân hình đồ sộ của hắn che khuất những vì sao trên cao, tỏa sáng với một vầng hào quang kỳ dị. Hơi thở thối rữa của hắn phả vào bạn, khuấy động mặt nước. Trong một khoảnh khắc, mọi tiếng ồn ào mờ dần khi bạn bắt gặp ánh nhìn của cổ thần. Bạn cảm nhận được hắn trong tâm trí mình. Không có sự tức giận hay thịnh nộ, chỉ có sự thờ ơ lạnh lẽo.</p><p>Đây không phải là sự trừng phạt, không phải là sự phán xét, không phải là sự hủy diệt. Bạn và giống loài của bạn không gì khác hơn là một sự phiền toái. Những xúc tu dày đặc, đầy vảy mọc ra từ khuôn mặt của Cthulhu trườn qua mặt nước, tìm kiếm bạn, tìm kiếm những thứ mà bạn và giống loài của bạn đã lấy từ hắn. Bạn bất lực không thể chống cự. Tại sao phải chống cự chứ? Số mệnh của bạn và số mệnh của tất cả giống loài thảm hại của bạn đã được viết trên những vì sao. Sự diệt vong đã đến với Arkham.</p><ul><li>In your Campaign Log, record _Cthulhu annihilated the city of Arkham_.</li><li>Các điều tra viên, cùng với tất cả mọi người khác ở Arkham, đều <b>bị giết.</b></li><li>Các điều tra viên thất bại.</li><li>Proceed to _Epilogue_.</li></ul>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Sau nhiều giờ vật lộn, bạn đứng trước Cthulhu hùng mạnh, kẻ đang nhìn xuống bạn bằng năm con mắt đỏ vô cảm. Bạn đã từng mơ thấy khoảnh khắc này. Thân hình đồ sộ của hắn che khuất những vì sao trên cao, tỏa ra một thứ ánh sáng lấp lánh từ thế giới khác. Hơi thở thối rữa của hắn phả vào bạn, làm xáo động mặt nước. Trong một khoảnh khắc, tiếng ồn ào mờ dần khi bạn bắt gặp ánh nhìn của cổ thần. Bạn cảm nhận được hắn trong tâm trí mình. Không có sự tức giận hay phẫn nộ, chỉ có sự thờ ơ lạnh lẽo.</p><p>Một tiếng súng vang lên, theo sau là hàng tá tiếng súng khác. Phía sau bạn, từ những mái nhà gần đó, và những nơi khác trong khu vực lân cận, một loạt đạn và chất nổ trút xuống lớp thịt chảy xệ, hôi thối của cổ thần. Inspector Legrasse hét lên với các sĩ quan đồng nghiệp của mình, thúc giục họ không được dừng lại. Cthulhu vĩ đại rên rỉ trong đau đớn khi hỏa lực dữ dội xé toạc lớp thịt bọc thép của hắn, làm ngập các con phố bằng thứ máu đen đặc như dầu. Cuối cùng, tình thế dường như đã xoay chuyển theo hướng có lợi cho bạn. Bị chùn bước bởi cuộc tấn công không ngừng nghỉ, cổ thần quay trở lại Miskatonic và chao đảo lao xuống nước, theo sau là một bầy sinh vật quái dị.</p><p>Bạn có thể cảm thấy những người khác nín thở, chờ đợi một sự trả đũa nào đó, nhưng không có gì xảy ra. Sau đó, một tiếng reo hò phá vỡ sự im lặng, theo sau là hàng tá tiếng reo hò khác. Arkham đã an toàn… ít nhất là lúc này.</p><ul><li>In your Campaign Log, record _Cthulhu was driven away_.</li><li>Mỗi điều tra viên chịu 3 physical trauma và 3 mental trauma từ trận chiến của họ với Cthulhu.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Các điều tra viên chiến thắng campaign! Nhưng sẽ mất bao lâu trước khi Cthulhu quay trở lại?</li><li>Proceed to _Epilogue_.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Ngay khi Cthulhu chuẩn bị tấn công, các ấn chú trên cơ thể hắn sáng chói lòa, và tứ chi hắn đột nhiên cứng đờ. Andy mạnh dạn bước ra đường, vấp váp đọc thêm hai khổ chú ngữ bằng giọng khàn đặc. Bạn và Ruby cùng anh ấy tụng niệm những câu chú khi nghi lễ thành hình. Cổ thần gầm lên một lần nữa và ngã sấp xuống, như thể bị trói bởi những sợi dây vô hình. Một vầng hào quang ánh sáng xanh lục và vàng kỳ quái cắt ngang những đám mây, sau đó vén ra để lộ bầu trời đêm phía trên. Nằm gọn trong trung tâm của một tinh vân màu ngọc lục bảo và vàng là một ngôi sao sáng chói.</p><p>Ánh sao trở nên mãnh liệt hơn. Trước mắt bạn, cơ thể của cổ thần vặn vẹo và uốn cong như một hình ảnh phản chiếu bị vỡ. Chỉ trong một khoảnh khắc, bạn nhìn thấy những ngọn tháp của R’lyeh lấp lánh trong đường chân trời vỡ nát của Arkham, trông vừa xa lạ vừa quen thuộc cùng một lúc. Với một tiếng gầm cuối cùng, Cthulhu biến mất vào cõi hư không.</p><p>Vầng hào quang của những vì sao xa xôi thu hẹp lại, rồi sụp đổ cùng một tiếng sấm sét. Để lại sau đó là một sự im lặng đáng sợ.</p><p>You, Ruby, and Andy climb up to the roof of a nearby building and sit on the edge looking out at the ruined city. Rivertown and much of the Merchant District are entirely underwater, but most of Arkham remains intact. The three of you stare at the apocalyptic landscape as the storm clouds dissipate, bathing the city in pale moonlight. A lone siren blares across the swollen banks of the Miskatonic River. Andy stands up and extends a hand to you.</p><p>“Không có thời gian để nghỉ ngơi đâu. Người dân Arkham vẫn cần chúng ta, hơn bao giờ hết.”</p><ul><li>In your Campaign Log, record _Cthulhu was banished_.</li><li>Mỗi điều tra viên chịu 1 physical trauma và 1 mental trauma từ trận chiến của họ với Cthulhu.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Các điều tra viên thành công!</li><li>Proceed to _Epilogue_.</li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Ngay khi Cthulhu chuẩn bị tấn công, các ấn chú trên cơ thể hắn sáng chói lòa, và tứ chi hắn đột nhiên cứng đờ. Andy mạnh dạn bước ra đường, vấp váp đọc thêm hai khổ chú ngữ bằng giọng khàn đặc. Bạn và Ruby cùng anh ấy tụng niệm những câu chú khi nghi lễ thành hình. Cổ thần gầm lên một lần nữa và ngã sấp xuống, như thể bị trói bởi những sợi dây vô hình. Một vầng hào quang ánh sáng xanh lục và vàng kỳ quái cắt ngang những đám mây, sau đó vén ra để lộ bầu trời đêm phía trên. Nằm gọn trong trung tâm của một tinh vân màu ngọc lục bảo và vàng là một ngôi sao sáng chói.</p><p>Ánh sao trở nên mãnh liệt hơn. Trước mắt bạn, cơ thể của cổ thần vặn vẹo và uốn cong như một hình ảnh phản chiếu bị vỡ. Chỉ trong một khoảnh khắc, bạn nhìn thấy những ngọn tháp của R’lyeh lấp lánh trong đường chân trời vỡ nát của Arkham, trông vừa xa lạ vừa quen thuộc cùng một lúc. Với một tiếng gầm cuối cùng, Cthulhu biến mất vào cõi hư không.</p><p>Vầng hào quang của những vì sao xa xôi thu hẹp lại, rồi sụp đổ cùng một tiếng sấm sét. Để lại sau đó là một sự im lặng đáng sợ.</p><p>You, Ruby, and Andy climb up to the roof of a nearby building and sit on the edge looking out at the ruined city. The city of Arkham is a portrait of ruin. Rivertown is entirely underwater. Independence Square and the town hall are little more than rubble, and little remains of the city’s other neighborhoods. You can only imagine the death toll. The three of you stare in stricken silence as the storm clouds dissipate, bathing the city in pale moonlight. You look to Ruby and see her in tears.</p><p>“I didn’t think I gave a damn for this city, but here I am, crying like a baby,” she sobs. “What else could we have done?”</p><ul><li>In your Campaign Log, record _Cthulhu was banished_, but _Arkham was destroyed_.</li><li>Mỗi điều tra viên chịu 2 physical trauma và 2 mental trauma từ trận chiến của họ với Cthulhu.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Các điều tra viên chiến thắng campaign, mặc dù Arkham đã hoàn toàn trở thành đống đổ nát.</li><li>Proceed to _Epilogue_.</li></ul>"
     }
+  },
+  "errata": {
+    "theFinalSeal": "The first sentence on the back of this agenda should read: “If this agenda advanced by reaching its doom threshold, each investigator is defeated. Otherwise…”"
   }
 }

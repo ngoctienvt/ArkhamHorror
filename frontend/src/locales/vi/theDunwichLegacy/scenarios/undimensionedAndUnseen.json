@@ -1,25 +1,82 @@
 {
   "heading": "Màn V",
+  "label": {
+    "chooseInvestigatorToPlaceClue": "Choose an investigator to place a clue",
+    "cluesToSpend": "Number of clues to spend",
+    "doNotRemoveCluesFail": "Do not remove clues from Brood of Yog-Sothoth and fail skill test",
+    "doNotRemoveCluesTreatAsMinusFour": "Do not remove clues from Brood of Yog-Sothoth and treat as -4",
+    "spawnSetAsideBrood": "Spawn a set aside Brood of Yog-Sothoth at a random location"
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 for each Brood of Yog-Sothoth in play.",
+      "cultist": "Rút thêm một token khác. If you fail this test, chịu 1 horror.",
+      "tablet": "0. You must either remove all clue tokens from a Brood of Yog-Sothoth in play, or this token's modifier is -4 instead.",
+      "elderThing": "-3. If this token is revealed during an attack or evasion attempt against a Brood of Yog-Sothoth, it immediately attacks you."
+    },
+    "hardExpert": {
+      "skull": "-2 for each Brood of Yog-Sothoth in play.",
+      "cultist": "Rút thêm một token khác. If you fail this test, chịu 1 horror and 1 damage.",
+      "tablet": "0. You must either remove all clue tokens from a Brood of Yog-Sothoth in play, or this test automatically fails.",
+      "elderThing": "-5. If this token is revealed during an attack or evasion attempt against a Brood of Yog-Sothoth, it immediately attacks you."
+    }
+  },
+  "tooltips": {
+    "dunwichVillage": {
+      "resign": "You hide from the creatures."
+    }
+  },
   "intro": {
     "title": "Màn V: Vô Hình Vô Dạng",
-    "body": "<p>Việc tìm kiếm trong ngôi làng Dunwich giúp bạn phát hiện ra một số tài liệu, ghi chép nhật ký và các học thuyết bí truyền. Đọc qua những tài liệu này làm bạn kiệt quệ cả tinh thần lẫn thể xác. Hầu hết nội dung được viết bởi một nguồn duy nhất, đó là một người có tên là Seth Bishop. Khi bạn hỏi thăm xung quanh thị trấn, bạn biết rằng Seth là một người dân của làng Dunwich. Cùng với một vài người khác, Seth đã tận mắt chứng kiến ​​sự tàn phá do sự kiện “Kinh hoàng ở Dunwich” gây ra, tên sự kiện này do Armitage đặt. Kỳ lạ là kể từ thời điểm đó, rất ít người nhìn thấy Seth quanh thị trấn, và những người nói rằng đã trông thấy ông ta cho biết là đôi mắt ông ta đỏ ngầu, cùng với khuôn mặt đẫm mồ hôi và nhợt nhạt.</p><p>Bạn tin chắc là bất cứ ai trông thấy những gì Seth đã từng thấy cũng sẽ trở nên lo lắng hoặc hoang tưởng. Nhưng càng đọc những bài viết điên cuồng và rối rắm của ông ấy, bạn càng tin rằng ông ta cũng đang tham gia vào các sự kiện gần đây. Các bài viết của ông ta nói về việc \"thu thập hài cốt\" và sử dụng các phương pháp huyền bí để \"thấm nhuần tinh hoa của các đấng cổ xưa\" vào những sinh vật khác, và cuối cùng là vào con người. Các chú giải và sơ đồ vô cùng phức tạp và thách thức khả năng hiểu biết.</p><p>Trước khi bạn có thể tìm thấy Seth và chạm trán với ông ta, một số người đàn ông và phụ nữ trong làng đến gần bạn trong hoảng loạn. Một trong số họ than khóc, \"Nó đã trở lại!\" Bạn nhận ra anh ta là Curtis Whateley, thuộc nhánh chưa suy đồ. “Cái thứ giết chết những người trong dòng họ Fryes đã trở lại! Chúng đập nát ngôi nhà của Bishop như thể chúng làm bằng giấy!” Curtis và những người dân làng kêu la ầm ĩ trong hoảng sợ.</p>"
+    "body": "<p>Việc tìm kiếm trong ngôi làng Dunwich giúp bạn phát hiện ra một số tài liệu, ghi chép nhật ký và các học thuyết bí truyền. Đọc qua những tài liệu này làm bạn kiệt quệ cả tinh thần lẫn thể xác. Hầu hết nội dung được viết bởi một nguồn duy nhất, đó là một người có tên là Seth Bishop. Khi bạn hỏi thăm xung quanh thị trấn, bạn biết rằng Seth là một người dân của làng Dunwich. Cùng với một vài người khác, Seth đã tận mắt chứng kiến ​​sự tàn phá do sự kiện “Kinh hoàng ở Dunwich” gây ra, tên sự kiện này do Armitage đặt. Kỳ lạ là kể từ thời điểm đó, rất ít người nhìn thấy Seth quanh thị trấn, và những người nói rằng đã trông thấy ông ta cho biết là đôi mắt ông ta đỏ ngầu, cùng với khuôn mặt đẫm mồ hôi và nhợt nhạt.</p><p>Bạn tin chắc là bất cứ ai trông thấy những gì Seth đã từng thấy cũng sẽ trở nên lo lắng hoặc hoang tưởng. Nhưng càng đọc những bài viết điên cuồng và rối rắm của ông ấy, bạn càng tin rằng ông ta cũng đang tham gia vào các sự kiện gần đây. Các bài viết của ông ta nói về việc \"thu thập hài cốt\" và sử dụng các phương pháp huyền bí để \"thấm nhuần tinh hoa của các đấng cổ xưa\" vào những sinh vật khác, và cuối cùng là vào con người. Các chú giải và sơ đồ vô cùng phức tạp và thách thức khả năng hiểu biết.</p><p>Trước khi bạn có thể tìm thấy Seth và chạm trán với ông ta, một số người đàn ông và phụ nữ trong làng đến gần bạn trong hoảng loạn. Một trong số họ than khóc, \"Nó đã trở lại!\" Bạn nhận ra anh ta là Curtis Whateley, thuộc nhánh chưa suy đồ. “Cái thứ giết chết những người trong dòng họ Fryes đã trở lại! Chúng đập nát ngôi nhà của Bishop như thể chúng làm bằng giấy!” Curtis và những người dân làng kêu la ầm ĩ trong hoảng sợ.</p>",
+    "label": {
+      "calm": "<i>Bạn nỗ lực trấn an dân làng để biết thêm thông tin.</i>",
+      "warn": "<i>Bạn nỗ lực cảnh báo dân làng và thuyết phục họ di tản.</i>"
+    },
+    "part1": "<p>_Part 1_: Bạn muốn trấn an dân làng để họ có thể giải thích cho bạn chuyện gì đang xảy ra. Họ kể với bạn rằng có tiếng động ầm ầm ở phía bắc, và khi họ đến đó xem xét, họ phát hiện trang trại của Bishop đã bị xé nát thành từng mảnh. Một vài dấu chân nặng nề hướng vào Thung lũng Cold Spring gần đó. Một trong những người dân làng hỏi, “Cậu biết phải làm gì đúng không? Người dân Arkham các cậu đã ngăn chặn chuyện này lần trước.” Curtis lắc đầu và cắn môi của anh ta.</p><p>Anh ta nói, “Chúng tôi thậm chí không thể nhìn thấy thứ quái quỷ đó cho đến khi giáo sư phun bột vào nó. Cho đến tận hôm nay, tôi ước gì mình đã không nhìn thấy nó…” Cần phải làm gì đó để ngăn chặn cơn nổi loạn của con quái vật. Nhưng, nếu các tài liệu bạn tìm thấy là đúng, có thể có nhiều hơn một sinh vật như vậy đang ở ngoài này….</p><ul><li>Record in your Campaign Log that *you calmed the townsfolk*. Continue to _Setup_.</li></ul>",
+    "part2": "<p>_Part 2_: Bạn cảnh báo người dân thị trấn rằng họ đang gặp nguy hiểm nghiêm trọng, và thúc giục họ chạy trốn khỏi làng Dunwich trong khi có thể. Một số người trong số họ ngay lập tức nghe theo lời khuyên của bạn vì nhớ tới con vật quái dị khủng khiếp trước đây đã gây nguy hiểm cho ngôi làng. Curtis khuỵu xuống trong tuyệt vọng, vã mồ hôi. Curtis nói lắp bắp, “Lại là <b>thứ này</b> nữa sao? Nó trở lại với chúng ta.\" “Tôi hy vọng bạn đã lấy được một ít bột mà vị giáo sư lớn tuổi đã có lần trước. Chúng tôi thậm chí không thể nhìn thấy thứ chết tiệt đó cho đến khi ông ta phun vào nó. Cho đến tận hôm nay, tôi ước gì mình đã không nhìn thấy nó… ”Phải làm gì đó để ngăn chặn cơn nổi loạn của con quái vật này. Nhưng, nếu các tài liệu bạn tìm thấy là đúng, có thể có nhiều hơn một sinh vật như vậy đang ở ngoài này….</p><ul><li>Record in your Campaign Log that *you warned the townsfolk*. Continue to _Setup_.</li></ul>"
   },
   "setup": {
-    "setAside": "Đặt mỗi bản sao của Esoteric Formula sang một bên, ngoài màn chơi.",
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: Undimensioned and Unseen, Whippoorwills, Beast-thralls, Dunwich, and Striking Fear. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/undimensioned-and-unseen.png' /><img src='{setImgPath}/whippoorwills.png' /><img src='{setImgPath}/beast-thralls.png' /><img src='{setImgPath}/dunwich.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
     "placeLocations": "Đặt ngẫu nhiên 1 trong 2 phiên bản của các vị trí sau đây vào màn chơi: Dunwich Village, Cold Spring Glen, Blasted Heath, Ten‐Acre Meadow, Devil’s Hop Yard, và Whateley Ruins. Loại bỏ các phiên bản còn lại của chúng khỏi màn chơi. Mỗi điều tra viên bắt đầu màn chơi tại vị trí Dunwich Village.",
+    "sacrificedToYogSothoth": {
+      "instructions": "Check the number of names recorded under “Sacrificed to Yog‑Sothoth” in your Campaign Log.",
+      "fourOrMore": "Đặt 2 bản sao của Brood of Yog‐Sothoth sang một bên, ngoài màn chơi. Loại bỏ 3 bản sao còn lại của Brood of Yog‐Sothoth hoàn toàn khỏi màn chơi.",
+      "exactlyThree": "Đặt 1 bản sao của Brood of Yog‐Sothoth vào chơi tại vị trí Cold Spring Glen, và đặt 2 bản sao của Brood of Yog‐Sothoth sang một bên, ngoài màn chơi. Loại bỏ 2 bản sao còn lại của Brood of Yog‐Sothoth hoàn toàn khỏi màn chơi.",
+      "exactlyTwo": "Đặt 1 bản sao của Brood of Yog‐Sothoth vào chơi tại vị trí Cold Spring Glen, và đặt 3 bản sao của Brood of Yog‐Sothoth sang một bên, ngoài màn chơi. Loại bỏ bản sao còn lại của Brood of Yog‐Sothoth hoàn toàn khỏi màn chơi.",
+      "oneOrFewer": "Đặt 1 bản sao của Brood of Yog‐Sothoth vào chơi tại vị trí Cold Spring Glen, đặt 1 bản sao của Brood of Yog‐Sothoth vào chơi tại vị trí Blasted Heath. Sau đó, đặt 3 bản sao còn lại của Brood of Yog‐Sothoth sang một bên, ngoài màn chơi."
+    },
+    "setAside": "Đặt mỗi bản sao của Esoteric Formula sang một bên, ngoài màn chơi.",
     "powderOfIbnGhazi": "Một điều tra viên có lá bài Powder of Ibn‐Ghazi trong bộ bài có thể tìm kiếm nó trong bộ bài của mình và đặt nó vào chơi.",
-    "randomBasicWeakness": "Mỗi điều tra viên tìm ngẫu nhiên trong bộ sưu tập một điểm yếu [[Madness]], [[Injury]], hoặc [[Pact]] cơ bản và thêm nó vào bộ bài của mình cho phần còn lại của chiến dịch."
+    "randomBasicWeakness": "Mỗi điều tra viên tìm ngẫu nhiên trong bộ sưu tập một điểm yếu [[Madness]], [[Injury]], hoặc [[Pact]] cơ bản và thêm nó vào bộ bài của mình cho phần còn lại của chiến dịch.",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to Undimensioned and Unseen* and *Erratic Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-undimensioned-and-unseen.png' /><img src='{setImgPath}/erratic-fear.png' /></section>*Erratic Fear* replaces *Striking Fear*. Remove the replaced set from the game.",
+      "broodOfYogSothoth": "Remove 4 copies of Brood of Yog-Sothoth from the original scenario and replace them with the 4 new versions of Brood of Yog-Sothoth from the *Return to Undimensioned and Unseen* encounter set.",
+      "additionalRule": "For the duration of this scenario, the following additional rule applies: if a Brood of Yog-Sothoth would be put into play, it is chosen at random from among the set-aside versions of Brood of Yog-Sothoth."
+    }
   },
   "choosingARandomLocation": {
     "title": "Lựa Chọn một Vị Trí Ngẫu Nhiên",
     "body": "Trong màn chơi này, bạn thường sẽ được hướng dẫn để lựa chọn một vị trí ngẫu nhiên. Điều này nên được thực hiện bằng cách xào trộn 6 vị trí đã loại bỏ khỏi màn chơi lúc setup (các phiên bản của mỗi vị trí đang trong màn chơi hiện không được sử dụng) và rút ngẫu nhiên 1 vị trí."
   },
+  "specialRules": [
+    {
+      "title": "@:theDunwichLegacy.undimensionedAndUnseen.choosingARandomLocation.title",
+      "body": "@:theDunwichLegacy.undimensionedAndUnseen.choosingARandomLocation.body"
+    }
+  ],
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<div class='resolution'><p class='basic'>_If no resolution was reached (each investigator resigned or was defeated)_: Go to _Resolution 1_."
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p>_Resolution 1_: Bạn đã làm tất cả những gì có thể để ngăn chặn những con quái vật nổi loạn, nhưng có nhiều con hơn bạn tưởng và bạn đã không thể tiêu diệt tất cả. Kiệt sức và kinh sợ, bạn rút về nhà của Zebulon và hy vọng sống sót qua đêm.</p><ul><li>Trong Nhật ký Chiến dịch, ghi rằng <i>X brood đã trốn thoát vào vùng hoang dã</i>. X là tổng số Brood of Yog‐Sothoth vẫn đang trong play hoặc được để riêng.</li><li>Nếu bộ bài của một điều tra viên có lá bài Powder of Ibn-Ghazi, loại bỏ nó khỏi bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>_Resolution 2_: Sau khi tiêu diệt những gì có vẻ là con cuối cùng trong số những con quái vật nổi loạn, bạn rút về nhà của Zebulon, kiệt sức và lo lắng về điều mình vừa trải qua.</p><ul><li>In your Campaign Log, record that *no brood escaped into the wild*.</li><li>Nếu bộ bài của một điều tra viên có lá bài Powder of Ibn-Ghazi, loại bỏ nó khỏi bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     }
   }
 }

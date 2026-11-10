@@ -1,0 +1,29 @@
+{
+  "cardOption": {
+    "title": "Tùy chọn Lá bài",
+    "configure": "Tùy chọn lá bài",
+    "filterPlaceholder": "Lọc các lá bài có tùy chọn…",
+    "clear": "Xóa",
+    "c11582": {
+      "abilities": {
+        "1": "{'{'}fast{'}'} Exhaust Grisly \"Mask\": Disengage khỏi mỗi kẻ địch. Cho đến đầu lượt tiếp theo của bạn, bạn không thể di chuyển và không thể gây sát thương hoặc engage kẻ địch."
+      },
+      "onlyWhenEngaged": {
+        "label": "Chỉ kích hoạt khi đang engaged"
+      }
+    },
+    "c11756a": {
+      "abilities": {
+        "1": "{'{'}reaction{'}'} Khi bạn nhận 1 hoặc nhiều tài nguyên: Đặt 1 trong các tài nguyên đó lên Good Money."
+      },
+      "stopAtFiveResources": {
+        "label": "Ngừng kích hoạt khi đạt 5 tài nguyên"
+      }
+    },
+    "c11764": {
+      "treatAsPartiallyFlooded": {
+        "label": "Xử lý fully flooded như partially flooded"
+      }
+    }
+  }
+}

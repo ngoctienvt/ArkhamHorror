@@ -1,21 +1,77 @@
 {
-  "setup": {
-    "actAgendaDeck": "Loại bỏ tất cả các lá bài act và agenda của bộ encounter *The Vanishing of Elina Harper* khỏi trò chơi. Xây dựng chồng bài act và agenda chỉ sử dụng các lá bài act và agenda mới được cung cấp trong bộ encounter *Red Tide Rising*.",
-    "placeLocations": "Đưa các địa điểm sau vào chơi: Innsmouth Square, Marsh Refinery, Innsmouth Harbour, Fish Street Bridge, First National Grocery, Gilman House, và The Little Bookshop.",
-    "removeStoryAssets": "Loại bỏ các story asset Thomas Dawson và Elina Harper khỏi trò chơi.",
-    "shuffleRemainder": "Xáo trộn các lá bài encounter còn lại để tạo thành chồng bài encounter.",
-    "midnightMasks": "Khi tập hợp bộ bài encounter *The Midnight Masks*, chỉ tập hợp 5 lá bài treachery (2 lá False Lead và 3 lá Hunting Shadow). Không tập hợp các lá bài khác từ bộ encounter đó",
-    "scenarioReference": "Loại bỏ lá bài scenario reference của bộ encounter *The Vanishing of Elina Harper* khỏi trò chơi. Sử dụng lá bài scenario reference mới được cung cấp trong bộ encounter *Red Tide Rising*."
-  },
-  "resolutions": {
-    "resolution1": {
-      "title": "Kết thúc thứ nhất"
+  "specialRules": [
+    {
+      "title": "Searching for Dad",
+      "body": "<p class='basic'>In this scenario, Wendy is searching Innsmouth for any sign of her father. The Leads deck contains each of the 6 _Suspect_ enemies and the 6 _Hideout_ locations. As _Suspect_ and _Hideout_ cards leave play, Wendy must draw new leads from the Leads deck. The objective is to empty the Leads deck before agenda 2b is reached. The fewer cards that remain in the Leads deck, the better.</p>"
     },
-    "resolution2": {
-      "title": "Kết thúc thứ hai"
+    {
+      "title": "Mysterious Photo",
+      "body": "<p class='basic'>_Suspect_ and _Hideout_ cards cannot be added to the victory display except by using the double-sided Mysterious Photo story asset under Wendy's control. Its front side lets Wendy parley with _Suspect_ enemies and add clueless _Suspects_ at her location to the victory display by spending clues as a group. Its back side does the same for _Hideout_ locations via investigation. Each card added to the victory display this way improves the experience gained at the end of the scenario.</p>"
+    }
+  ],
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is half the number of _Suspect_ and _Hideout_ cards in the victory display (rounded up).",
+      "cultist": "-2. (-4 instead if you are parleying with a _Suspect_ enemy or investigating a _Hideout_ location).",
+      "tablet": "-3. If you succeed, look at the top card of the Leads deck. You may choose to shuffle the Leads deck.",
+      "elderThing": "-1. Nếu bạn thất bại, shuffle the top card of the encounter deck into the Leads deck."
+    },
+    "hardExpert": {
+      "skull": "-X. X is the number of _Suspect_ and _Hideout_ cards in the victory display.",
+      "cultist": "-3. (-5 instead if you are parleying with a _Suspect_ enemy or investigating a _Hideout_ location).",
+      "tablet": "-4. If you succeed, look at the top card of the Leads deck. You may choose to shuffle the Leads deck.",
+      "elderThing": "-2. Nếu bạn thất bại, shuffle the top card of the encounter deck into the Leads deck."
     }
   },
   "intro": {
+    "title": "Challenge Scenario: Red Tide Rising",
     "body": "<p>Người ta không quan tâm đến những kẻ bị bỏ lại phía sau. Đó là điều đầu tiên bạn học được trên đường phố, sau khi rời khỏi trại trẻ mồ côi. Bạn đã phải tự lo cho bản thân, làm bất cứ điều gì có thể để sống qua ngày. Cho đến nay, chỉ với trí thông minh của mình và chiếc bùa hộ mệnh mà Mẹ để lại trước khi họ đưa bà đi, bạn đã xoay xở để sống sót. Thỉnh thoảng, ai đó sẽ tỏ lòng thương cảm và ném một hai đồng xu vào cốc của bạn. Một buổi sáng tuyệt vời nọ, một quý cô tốt bụng rời khỏi Velma's đã cho bạn phần xúc xích và trứng thừa của cô ấy. Nhưng phần lớn thời gian, bạn chỉ có thể dựa vào chính mình. Những đứa trẻ bụi đời khác có thể cùng chung cảnh ngộ với bạn, nhưng bạn sẽ ngần ngại khi gọi bất kỳ ai trong số chúng là bạn bè, ngoại trừ có lẽ là James, và điều đó cũng hơi khiên cưỡng. Không—cơn đói, sự cô đơn, nỗi buồn chán và sự hoài nghi mới là những người bạn tốt nhất và duy nhất của bạn. Và bất chấp tất cả những điều đó, bằng cách nào đó nó vẫn tốt hơn là ở trại trẻ mồ côi.\\r</p><p>Rồi ngày định mệnh cũng đến. Nó bắt đầu như bao ngày khác, với việc bạn và James rảo bước qua Rivertown, “thu thập” bất cứ thứ gì bạn có thể bán cho Oliver Thomas. Phần còn lại chắc chắn sẽ thuộc về băng đảng của Marvin—một đám trẻ bụi đời tụ tập lại để bắt nạt những đứa khác—nhưng có một món đồ lặt vặt trong số những thứ bạn kiếm được khiến bạn chú ý: một bức ảnh. Không phải một bức ảnh bình thường, mà là ảnh của cha bạn.\\r</p><p>Không thể nhầm lẫn được. Không có chút nghi ngờ nào trong tâm trí bạn. Trong bức ảnh, cha bạn đứng trước một tòa nhà mà bạn không nhận ra. Tấm biển phía sau ông ấy dường như được viết bằng một ngôn ngữ khác, nên có lẽ là ở một nơi nào đó rất, rất xa. Không có cách nào để biết bức ảnh được chụp gần đây hay không. Nó đã sờn, bẩn và bị xước ở vài chỗ. Bạn lật nó lại và ở đó, được viết nguệch ngoạc bằng nét chữ quen thuộc, bạn đọc được: “Chẳng bao lâu nữa Red Tide sẽ dâng lên. Hãy giữ an toàn nhé, cô con gái bé bỏng của cha.”\\r</p><p>Bạn nài nỉ James nói cho bạn biết bức ảnh từ đâu ra, và cậu ta khẳng định một người đàn ông mặc áo khoác len dài và đội chiếc mũ quả dưa màu nâu sẫm đã thả nó vào cốc của bạn vào lúc nào đó trước khi bạn đụng độ băng đảng của Marvin. Bạn lập tức lên đường, hỏi thăm xung quanh để tìm người đàn ông đội mũ quả dưa. Manh mối duy nhất của bạn là ông ta đã nhảy lên một chiếc xe buýt gần Easttown. Chiếc xe buýt tồi tàn, không có biển hiệu chạy đến thị trấn cảng Innsmouth. Bạn gom góp nhiều đồng xu nhất có thể và lên chuyến xe buýt duy nhất đến bến cảng cũ kỹ, bị bỏ rơi đó. Nếu cha vẫn còn ở ngoài kia, bạn phải tìm ông ấy. Bạn phải làm vậy!</p>"
+  },
+  "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Red Tide Rising*, *The Vanishing of Elina Harper*, *Agents of Dagon*, *Fog over Innsmouth*, *The Locals*, *Chilling Cold*, *Locked Doors*, *Nightgaunts*, and *The Midnight Masks*.<section class='encounter-sets'><img src='{setImgPath}/red-tide-rising.png' /><img src='{setImgPath}/disappearance-of-elina-harper.png' /><img src='{setImgPath}/agents-of-dagon.png' /><img src='{setImgPath}/fog-over-innsmouth.png' /><img src='{setImgPath}/locals.png' /><img src='{setImgPath}/chilling-cold.png' /><img src='{setImgPath}/locked-doors.png' /><img src='{setImgPath}/nightgaunts.png' /><img src='{setImgPath}/midnight-masks.png' /></section>",
+    "midnightMasks": "Khi tập hợp bộ bài encounter *The Midnight Masks*, chỉ tập hợp 5 lá bài treachery (2 lá False Lead và 3 lá Hunting Shadow). Không tập hợp các lá bài khác từ bộ encounter đó",
+    "scenarioReference": "Loại bỏ lá bài scenario reference của bộ encounter *The Vanishing of Elina Harper* khỏi trò chơi. Sử dụng lá bài scenario reference mới được cung cấp trong bộ encounter *Red Tide Rising*.",
+    "actAgendaDeck": "Loại bỏ tất cả các lá bài act và agenda của bộ encounter *The Vanishing of Elina Harper* khỏi trò chơi. Xây dựng chồng bài act và agenda chỉ sử dụng các lá bài act và agenda mới được cung cấp trong bộ encounter *Red Tide Rising*.",
+    "placeLocations": "Đưa các địa điểm sau vào chơi: Innsmouth Square, Marsh Refinery, Innsmouth Harbour, Fish Street Bridge, First National Grocery, Gilman House, và The Little Bookshop.",
+    "leadsDeck": "Prepare the Leads deck: find the 6 unique enemies with the _Suspect_ trait and the 6 single-sided locations with the _Hideout_ trait, and shuffle these 12 cards together to form the Leads deck. Place it near the scenario reference card.",
+    "drawLead": "Rút lá bài trên cùng của chồng bài Leads, giải quyết khả năng revelation của nó.",
+    "setAsideMonsters": "Để riêng mỗi kẻ địch [[Monster]] sau ra ngoài cuộc chơi: Winged One và cả hai bản sao của Hunting Nightgaunt.",
+    "setAsideAngryMob": "Set Angry Mob aside, out of play.",
+    "adjustments": "Depending on the number of investigators (treat the number of investigators as 1 higher if playing Hard difficulty, and 2 higher if playing Expert): 2 investigators, begin with 1 doom on agenda 1; 3 investigators, begin with 2 doom on agenda 1; 4 investigators, shuffle 1 random set-aside _Monster_ enemy into the Leads deck.",
+    "removeStoryAssets": "Loại bỏ các story asset Thomas Dawson và Elina Harper khỏi trò chơi.",
+    "mysteriousPhoto": "Wendy Adams có thể chọn mặt nào của nó khi được đưa vào chơi.",
+    "shuffleRemainder": "Xáo trộn các lá bài encounter còn lại để tạo thành chồng bài encounter."
+  },
+  "label": {
+    "mysteriousPhotoSuspects": "Mysterious Photo enters play with its _Suspect_ side faceup",
+    "mysteriousPhotoHideouts": "Mysterious Photo enters play with its _Hideout_ side faceup",
+    "flipMysteriousPhoto": "Flip Mysterious Photo over",
+    "shuffleLeadsDeck": "Shuffle the Leads deck",
+    "doNotShuffleLeadsDeck": "Do not shuffle the Leads deck"
+  },
+  "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>If no resolution was reached because each investigator resigned: Proceed to _Resolution 1_.</p><p>If no resolution was reached because each investigator was defeated: Proceed to _Resolution 2_.</p>"
+    },
+    "resolution1": {
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1:_ You didn't find Dad, but you were able to find the next best thing: the man in the brown derby. You approach casually, hoping he'll ignore you like everyone else tends to do, so you can confront him. You follow him into a dark alley and immediately realize he's leading you somewhere hidden away from prying eyes. \"Didn't think you'd follow me,\" he says once you're alone.</p><p>The questions come pouring out of you. Does he know your father? Where is he? Why the photo? What is the Red Tide? But he simply holds up a finger to his lips. \"Shhh, kid. You're gonna get me killed.\" He sighs, removes his cap, and runs his trembling fingers through oily hair. \"Look, all I can tell you is...your Dad, he fell in with some bad people. Some real scary people. But he wanted out. And the only way out...\" he grimaces and shakes his head. \"You gotta understand. He can't come home. You'd be in danger. So would he. But...he still wanted you to know that he loves you. So...\"</p><p>You wipe a stray tear that threatens to crawl down your cheek. The man looks terrified. He's either a world-class actor, or he's telling the truth. You ask him one last question—who are the bad people Dad fell in with?—but the moment you ask, he shakes his head and backs away. \"I've already said too much!\" is the last thing he says before he flees.</p><ul><li>Bỏ qua giá trị Victory X của mỗi lá bài [[Suspect]] và [[Hideout]] trong victory display. Thay vào đó…</li><li>If Wendy Adams was defeated, she must either upgrade Abandoned and Alone to its advanced version, or downgrade the advanced version of Wendy's Amulet to its original version.</li><li>Cô ấy có thể nâng cấp Wendy’s Amulet lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Abandoned and Alone về phiên bản gốc của nó.</li></ul>"
+    },
+    "resolution2": {
+      "title": "Kết thúc thứ hai",
+      "body": "<p>Bạn đợi những kẻ truy đuổi khuất sau góc phố trước khi lén lút quay lại trạm xe buýt và lên chuyến xe tiếp theo đến Arkham. Bạn tức giận vò nhàu mép bức ảnh của Bố. Một giọt nước mắt lăn dài trên má bạn. Bạn vẫn không có manh mối thực sự nào. Người đàn ông đội mũ quả dưa và mặc áo khoác dạ sáng hôm đó là ai? Bạn đã dính líu vào chuyện gì thế này? Nhưng, khi liếc nhìn bức ảnh một lần nữa, một tia hy vọng vẫn đọng lại trong tâm trí bạn: Bố vẫn còn sống. Chắc chắn là vậy.</p><ul><li>Bỏ qua giá trị Victory X của mỗi lá bài [[Suspect]] và [[Hideout]] trong victory display. Thay vào đó…</li><li>Wendy Adams phải nâng cấp Abandoned and Alone lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Wendy’s Amulet về phiên bản gốc của nó.</li></ul>"
+    },
+    "xp": {
+      "wendy": "Victory display (1 experience for each card beyond the 3rd)",
+      "other": "Victory display (1 experience for each card beyond the 5th)"
+    },
+    "label": {
+      "upgradeWendysAmulet": "Upgrade Wendy's Amulet to its advanced version",
+      "downgradeWendysAmulet": "Wendy Adams phải nâng cấp Abandoned and Alone lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Wendy’s Amulet về phiên bản gốc của nó.",
+      "upgradeAbandonedAndAlone": "Wendy Adams phải nâng cấp Abandoned and Alone lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Wendy’s Amulet về phiên bản gốc của nó.",
+      "downgradeAbandonedAndAlone": "Cô ấy có thể nâng cấp Wendy’s Amulet lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Abandoned and Alone về phiên bản gốc của nó.",
+      "doNotSwap": "Do not swap any cards"
+    }
   }
 }

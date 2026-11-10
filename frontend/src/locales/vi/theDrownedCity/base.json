@@ -5,36 +5,6 @@
     "Hard": "*Tôi muốn lặn*",
     "Expert": "*Tôi muốn R'lyeh*"
   },
-  "glyphs": {
-    "title": "Ký tự Ngoại lai"
-  },
-  "artifactsEarned": {
-    "title": "Cổ vật đã thu thập"
-  },
-  "key": {
-    "rubyWonTheBet": "Ruby đã thắng cược.",
-    "rubyLostTheBet": "Ruby đã thua cược.",
-    "theExpeditionHeadedWest": "Đoàn thám hiểm đã tiến về phía tây.",
-    "theExpeditionHeadedEast": "Đoàn thám hiểm đã tiến về phía đông.",
-    "theExpeditionHelpedThePilgrim": "Đoàn thám hiểm đã giúp đỡ người hành hương.",
-    "grislyMask": "\"Mặt Nạ\" Rùng Rợn",
-    "discoveredGlyphs": "Ký tự Ngoại lai",
-    "thePilgrimsWereSaved": "Những người hành hương đã được cứu.",
-    "thePilgrimsWereDevoured": "Những người hành hương đã bị nuốt chửng.",
-    "theInvestigatorsExterminatedTheAlienParasites": "Các điều tra viên đã tiêu diệt những ký sinh trùng ngoài hành tinh.",
-    "thePowerWasDiverted": "Năng lượng đã bị chuyển hướng.",
-    "theInnerSanctumWasUnsealed": "Thánh địa bên trong đã được mở niêm phong.",
-    "yourAlliesHaveAPlan": "Đồng minh của bạn có một kế hoạch.",
-    "theInvestigatorsStoodTogether": "Các điều tra viên đã sát cánh cùng nhau.",
-    "theInvestigatorsDidNotConfrontTheNightmare": "Các điều tra viên đã không đối đầu với cơn ác mộng.",
-    "theInvestigatorsHaltedCthulhusAwakening": "Các điều tra viên đã ngăn chặn sự thức tỉnh của Cthulhu.",
-    "floodedNeighborhoods": "Các khu phố bị ngập lụt",
-    "cthulhuWasDrivenAway": "Cthulhu đã bị xua đuổi.",
-    "cthulhuAnnihilatedTheCityOfArkham": "Cthulhu đã hủy diệt thành phố Arkham.",
-    "cthulhuWasBanished": "Cthulhu đã bị trục xuất.",
-    "theInvestigatorsDiscoveredAnAlienLanguage": "Các điều tra viên đã khám phá ra một ngôn ngữ ngoài hành tinh.",
-    "theCreatureWasDefeated": "Sinh vật đã bị đánh bại."
-  },
   "specialRules": [
     {
       "title": "Token Ngập Lụt",
@@ -49,10 +19,140 @@
       "body": "@:theDrownedCity.additionalRulesAndClarifications.alienGlyphs"
     },
     {
+      "title": "New Keywords",
       "body": "@:theDrownedCity.newKeywords.body"
     }
   ],
+  "label": {
+    "noAir": "You did not find air. Take 5 direct damage.",
+    "walkInFaith": {
+      "drawFromDeck": "Draw 1 card from your deck instead",
+      "drawEncounter": "Draw from the encounter deck as normal"
+    },
+    "naomiOBannion": {
+      "preventReadying": "Take 1 damage to prevent Naomi O’Bannion from readying",
+      "doNotTakeDamage": "Do not take 1 damage"
+    },
+    "dreamingMigration": {
+      "moveNearestEnemy": "Move the nearest enemy to your location and it attacks you",
+      "drawTopmostEnemy": "Draw the topmost enemy in the encounter discard pile"
+    },
+    "horrorInClay": {
+      "blankPrintedText": "Treat this asset’s printed text box as if it were blank until the end of the round",
+      "moveStarSpawn": "Move a _Star Spawn_ enemy once in any direction"
+    }
+  },
+  "intro": {
+    "title": "The Risen Deep",
+    "body": "<p class='indent'>“... thành phố tử thi ác mộng R’lyeh, được xây dựng từ những kỷ nguyên vô tận trước lịch sử bởi những hình thù khổng lồ, gớm ghiếc rỉ xuống từ những vì sao tăm tối. Nơi đó Cthulhu vĩ đại cùng bầy lũ của hắn đang nằm đó, ẩn náu trong những hầm ngục xanh rì nhớp nháp và cuối cùng, sau những chu kỳ không thể đong đếm, phát ra những ý nghĩ gieo rắc nỗi sợ hãi vào giấc mơ của những tâm hồn nhạy cảm và uy quyền kêu gọi những kẻ trung thành bắt đầu một cuộc hành hương của sự giải phóng và phục hồi.”</p><p class='basic right'><right>–H. P. Lovecraft, “The Call of Cthulhu“</right></p>"
+  },
   "prologue": {
-    "title": "Lời mở đầu"
+    "title": "Lời mở đầu",
+    "body": "<p><fancy>Ngày 15 tháng 4</fancy></p><p>Có điều gì đó không ổn suốt một thời gian qua. Đây là một năm lạnh lẽo bất thường, với tuyết rơi dày, mưa và sương mù khiến bầu trời New England chìm trong trạng thái u sầu triền miên. Một sự bồn chồn lo âu dường như đã len lỏi vào mọi khía cạnh của đời sống thường nhật. Những cuộc cãi vã nhỏ ở các góc phố dẫn đến xô xát. Những tiếng la hét và gào thét bị bóp nghẹt vang lên sau những cánh cửa đóng kín. Một lượng không nhỏ sinh viên bỗng dưng ngừng đến lớp tại Đại học Miskatonic. Người dân Arkham cảm nhận được điều đó từ trong xương tủy. Có điều gì đó khác biệt. Có điều gì đó không ổn.</p><p class='basic right'>Proceed to _One Last Job._</p>"
+  },
+  "additionalRulesAndClarifications": {
+    "title": "Additional Rules and Clarifications",
+    "floodTokens": "<h3>Flood Tokens</h3><p class='basic'>Throughout this campaign, scenario card effects can flood locations. Each location can be at one of three different flood levels: it is either unflooded, partially flooded, or fully flooded. A location’s flood level can be tracked using the double‑sided flood tokens included in this campaign box. _A location’s flood level has no inherent game effect_. However, some card effects may change or become stronger while you are at a flooded location, particularly if that location is fully flooded.</p><ul><li>A location with no flood token is unflooded.</li><li>Nếu một vị trí bị ngập một phần, hãy đặt token ngập lụt lên vị trí đó với mặt bị ngập một phần để biểu thị điều này.</li><li>Nếu một vị trí đã bị ngập hoàn toàn, hãy đặt token ngập lụt lên vị trí đó với mặt bị ngập hoàn toàn (hoặc nếu nó đã bị ngập một phần, hãy lật token ngập lụt của nó lên) để biểu thị điều này.</li><li>Nếu mực nước lũ của một vị trí \"tăng lên\" (increase), nó sẽ chuyển từ không ngập sang ngập một phần hoặc từ ngập một phần đến ngập hoàn toàn. Một vị trí bị ngập hoàn toàn không thể tăng mực nước lũ.</li><li>Nếu mực nước lũ của một địa điểm bị \"giảm xuống\" (decrease), nó sẽ thay đổi từ ngập hoàn toàn sang ngập một phần hoặc từ ngập một phần sang không ngập. Nếu một vị trí không bị ngập, hãy loại bỏ token ngập lụt của vị trí đó.</li><li>Cho mục đích của hiệu ứng lá bài, cả vị trí bị ngập một phần và vị trí bị ngập hoàn toàn đều được coi là \"bị ngập\" (flooded).</li></ul>",
+    "artifacts": "<h3>Artifacts</h3><p class='basic'>Các điều tra viên có thể thu thập một số story asset [[Artifact]] nhất định, cũng được gọi đơn giản là \"artifact\", trong suốt campaign <i>The Drowned City</i>. Các artifact hoạt động giống như bất kỳ asset nào khác, ngoại trừ những điều sau:</p><ul><li class='basic'>Các artifact không bao giờ được thêm vào bộ bài điều tra viên. Sau khi giải quyết xong một scenario, trả mọi artifact đang in play về hộp.</li><li class='basic'>Khi thiết lập một scenario, các điều tra viên có thể được yêu cầu bắt đầu in play với một story asset [[Artifact]] đã giành được. Chỉ những artifact đã được đánh dấu trong phần \"Artifacts Earned\" của Nhật ký Chiến dịch mới có thể được chọn trong quá trình này.</li><li class='basic'>Các artifact có mặt sau lá bài độc nhất, không có cost, không thể leave play, và không thể được chọn để discard thông qua các hiệu ứng của scenario.</li><li class='basic'>Some artifacts contain alien glyphs. Any text below these glyphs is considered to be blank unless investigators have translated each alien glyph on the artifact.</li><li class='basic'>Nếu bất kỳ điều tra viên nào đang kiểm soát một artifact bị defeated, <b>hãy trao quyền kiểm soát nó cho điều tra viên sống sót gần nhất</b> thay vì loại bỏ nó khỏi trò chơi.</li></ul>",
+    "alienGlyphs": "<h3>Alien Glyphs</h3><p class='basic'>Trong suốt campaign, các điều tra viên có thể được hướng dẫn dịch một ký tự trên trang thứ hai của Nhật ký Chiến dịch. Để làm điều đó, hãy viết đoạn văn bản đã dịch vào khoảng trống ngay bên dưới ký tự đó, theo hướng dẫn của trò chơi.</p><ul><li class='basic'>Ý nghĩa của một ký tự không có hiệu ứng game nội tại.</li><li class='basic'>Some artifacts contain alien glyphs. Any text below these glyphs is considered to be blank unless investigators have translated each alien glyph on the artifact.</li><li class='basic'>Hầu hết các scenario trong chiến dịch <i>The Drowned City</i> sẽ hướng dẫn người chơi đặt các lá bài [[Glyph]] sang một bên, out of play. Hầu hết các lá bài [[Glyph]] là các lá bài story hai mặt với một loại bài encounter khác ở mặt trước. Để có trải nghiệm tốt nhất, đừng đọc mặt story của chúng trừ khi được trò chơi yêu cầu!</li></ul>"
+  },
+  "newKeywords": {
+    "title": "New Keywords",
+    "body": "<h3>Alert</h3><p class='basic'>Mỗi khi một điều tra viên thất bại trong bài kiểm tra kỹ năng khi cố gắng né tránh một kẻ địch có từ khóa Alert (cảnh giác), sau khi áp dụng tất cả kết quả của bài kiểm tra kỹ năng, kẻ địch đó sẽ tấn công điều tra viên đang né tránh. Kẻ địch không bị kiệt sức sau khi thực hiện một cuộc tấn công Alert. Cuộc tấn công này xảy ra bất kể kẻ địch có đang engage với điều tra viên né tránh hay không.</p><h3>Patrol</h3><p class='basic'>Some enemies in this campaign have the patrol keyword. During the enemy phase (in framework step 3.2), each ready, unengaged enemy with the patrol keyword moves to a connecting location along the shortest path toward the designated target (as described in parentheses next to the word “patrol”).</p><h3>Relentless</h3><p class='basic'>Một số kẻ địch trong chiến dịch này có keyword relentless. Trong enemy phase (sau bước framework 3.3), mỗi kẻ địch có keyword relentless đã tấn công trong phase này (ngay cả khi đòn tấn công đó bị hủy) sẽ ready và tấn công (các) điều tra viên mà nó đang engage cùng lần thứ hai.</p><h3>Seal</h3><p class='basic'>Một chaos token bị seal không được coi là nằm trong chaos bag, và do đó không thể bị reveal từ chaos bag như một phần của skill test hoặc ability.</p>"
+  },
+  "glyphs": {
+    "title": "Ký tự Ngoại lai",
+    "runes": {
+      "a": "Depths",
+      "b": "Plant",
+      "c": "[elder_thing]",
+      "d": "Wave",
+      "e": "Darkness",
+      "f": "Stars",
+      "g": "Life",
+      "h": "Y’ch’lecht",
+      "i": "Cthulhu",
+      "j": "Sleep",
+      "k": "Dreams",
+      "l": "Arm",
+      "m": "Earth",
+      "n": "Doom",
+      "o": "Power",
+      "p": "Weather",
+      "q": "Hand",
+      "r": "Time",
+      "s": "Machine",
+      "t": "Air",
+      "u": "Daughters",
+      "v": "Stranger",
+      "w": "Parasite",
+      "x": "Sum",
+      "y": "Knowledge",
+      "z": "City"
+    }
+  },
+  "rlyehMap": {
+    "rlyehWesternWall": "The Western Wall",
+    "rlyehDrownedQuarter": "The Drowned Quarter",
+    "rlyehApiary": "The Apiary",
+    "rlyehGrandVault": "The Grand Vault",
+    "rlyehCourtOfTheAncients": "Court of the Ancients",
+    "rlyehObsidianCanyons": "Obsidian Canyons",
+    "rlyehSepulchreOfTheSleeper": "Sepulchre of the Sleeper"
+  },
+  "artifactsEarned": {
+    "title": "Cổ vật đã thu thập"
+  },
+  "key": {
+    "rubyWonTheBet": "Ruby đã thắng cược.",
+    "rubyLostTheBet": "Ruby đã thua cược.",
+    "theInvestigatorsDiscoveredAnAlienLanguage": "Các điều tra viên đã khám phá ra một ngôn ngữ ngoài hành tinh.",
+    "walkInFaith": "Walk in Faith",
+    "toeTheLine": "Toe the Line",
+    "noPlaceLikeHome": "No Place Like Home",
+    "goodMoney": "Good Money",
+    "doNoHarm": "Do No Harm",
+    "proveYourWorth": "Prove Your Worth",
+    "dreamsOfDestruction": "Dreams of Destruction",
+    "plumbTheDepths": "Plumb the Depths",
+    "theExpeditionHeadedWest": "Đoàn thám hiểm đã tiến về phía tây.",
+    "theExpeditionHeadedEast": "Đoàn thám hiểm đã tiến về phía đông.",
+    "theExpeditionHelpedThePilgrim": "Đoàn thám hiểm đã giúp đỡ người hành hương.",
+    "theExpeditionLeftThePilgrim": "The expedition left the pilgrim.",
+    "theCreatureWasDefeated": "Sinh vật đã bị đánh bại.",
+    "barrierNode": "Barrier Node",
+    "obsidianClaw": "Obsidian Claw",
+    "shardOfYchlecht": "Shard of Y'ch'lecht",
+    "tidalTablet": "Tidal Tablet",
+    "grislyMask": "\"Mặt Nạ\" Rùng Rợn",
+    "horrorInClay": "Horror in Clay",
+    "discoveredGlyphs": "Ký tự Ngoại lai",
+    "rlyehMap": "R’lyeh Map",
+    "thePilgrimsWereSaved": "Những người hành hương đã được cứu.",
+    "thePilgrimsWereDevoured": "Những người hành hương đã bị nuốt chửng.",
+    "theInvestigatorsExterminatedTheAlienParasites": "Các điều tra viên đã tiêu diệt những ký sinh trùng ngoài hành tinh.",
+    "thePowerWasDiverted": "Năng lượng đã bị chuyển hướng.",
+    "theInnerSanctumWasUnsealed": "Thánh địa bên trong đã được mở niêm phong.",
+    "helpedWithTheRopes": "Helped with the ropes",
+    "wasHelpedWithTheRopes": "Was helped with the ropes",
+    "yourAlliesHaveAPlan": "Đồng minh của bạn có một kế hoạch.",
+    "theInvestigatorsStoodTogether": "Các điều tra viên đã sát cánh cùng nhau.",
+    "isStrongInTheirFaith": "Is strong in their faith.",
+    "madeBank": "Made bank.",
+    "understandsTheFuture": "Understands the future.",
+    "foundTheirTrueHome": "Found their true home.",
+    "sworeAnOathToProtectOthers": "Swore an oath to protect others.",
+    "foundNewWork": "Found new work.",
+    "pulledTheirWeight": "Pulled their weight.",
+    "learnedTheSecretTruth": "Learned the secret truth.",
+    "lostTheirFaith": "Lost their faith.",
+    "theInvestigatorsDidNotConfrontTheNightmare": "Các điều tra viên đã không đối đầu với cơn ác mộng.",
+    "theInvestigatorsHaltedCthulhusAwakening": "Các điều tra viên đã ngăn chặn sự thức tỉnh của Cthulhu.",
+    "floodedNeighborhoods": "Các khu phố bị ngập lụt",
+    "cthulhuWasDrivenAway": "Cthulhu đã bị xua đuổi.",
+    "cthulhuAnnihilatedTheExpedition": "Cthulhu annihilated the expedition.",
+    "cthulhuAnnihilatedTheCityOfArkham": "Cthulhu đã hủy diệt thành phố Arkham.",
+    "cthulhuWasBanished": "Cthulhu đã bị trục xuất.",
+    "arkhamWasDestroyed": "Arkham was destroyed."
   }
 }

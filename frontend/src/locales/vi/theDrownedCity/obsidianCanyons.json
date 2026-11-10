@@ -1,13 +1,35 @@
 {
   "intro": {
+    "title": "Obsidian Canyons",
+    "checkCampaignLog": "Check your Campaign Log.",
+    "headedWest": "If the expedition headed west, proceed to _Obsidian Canyons 1_.",
+    "headedEast": "If the expedition headed east, proceed to _Obsidian Canyons 2_.",
+    "obsidianCanyons1": "<p>_Obsidian Canyons 1_: \"Tôi đang mơ à?\" Andy nhìn ra đường chân trời. Những hình thù phù du kết tụ rồi tan biến trong màn sương mù bên dưới. Ở phía xa, bạn nhìn thấy Obsidian Gates nơi bạn đã cập bến. Khoảng không rộng lớn giữa bạn và nơi đó chứa đầy những ngọn tháp bẻ cong tâm trí và làn sương mù màu xanh độc hại. Andy chửi thề khi trút nước ra khỏi túi máy ảnh của mình. \"Ông Tillinghast đã đảm bảo với tôi rằng chiếc túi này kín khí. Tôi đã nói với ông ấy tất cả những gì tôi muốn là những bức ảnh, có thể là một hợp đồng xuất bản sách. Và bây giờ tất cả đã bị hủy hoại.\"</p><ul><li>Skip to _Obsidian Canyons 3_.</li></ul>",
+    "obsidianCanyons2": "<p>_Obsidian Canyons 2_: Những con phố của R'lyeh ngập trong nước đọng và một mùi hôi thối, lợm giọng mà bạn không thể nhận ra. Sau khi mất hàng giờ mà không tiến triển được bao nhiêu từ nơi bạn cập bến, bạn tìm thấy một con đường có thể leo lên đỉnh. Sử dụng dây thừng và một ít đồ nghề leo núi, bạn chạm đến điểm quan sát gần nhất. Mái vòm cổ xưa vẫy gọi bạn ở phía xa. \"Đừng có nhìn xuống,\" Ruby nói. \"Nếu bạn ngã, tôi sẽ không cạo bạn lên khỏi mặt đất đâu.\"</p><ul><li>Proceed to _Obsidian Canyons 3_.</li></ul>",
+    "obsidianCanyons3": "<p>_Obsidian Canyons 3_: Thành phố kỳ dị trải dài hàng dặm. Những mảnh vỡ của các ngọn tháp lơ lửng trên không trung phía trên những tòa tháp sụp đổ, và những rạn san hô đầy màu sắc treo lủng lẳng dưới gầm những cây cầu cổ xưa. Những xác tàu cổ đang phân hủy tựa chênh vênh trên đỉnh những ngọn tháp hắc diện thạch, khẽ đung đưa. Bạn và những người đồng hành kinh ngạc nhìn chằm chằm vào khung cảnh khó tin này.\r\nMột cơn gió mạnh như bão gần như cuốn phăng bạn khỏi mặt đất. Bạn giữ thăng bằng và nhìn về phía nam để thấy những đám mây bão đen tối, giận dữ đang phát ra những tia năng lượng màu xanh lục nổ lách tách. Tiếng gió rít gào đạt đến đỉnh điểm, rồi đột ngột tắt lịm. Khung cảnh bên dưới dường như tự sắp xếp lại khi những đám mây chướng khí uốn cong và cuộn xoáy. Đầu bạn quay cuồng; khi bạn nhìn lại, khung cảnh thành phố nơi đường chân trời đã thay đổi hoàn toàn.</p>",
+    "resolveTasks": "If any investigator has the Dreams of Destruction or Prove Your Worth Tasks, they resolve their respective story on this page.",
+    "setupWest": "If the expedition headed west, proceed to _Setup (v. I) – Western Expedition_.",
+    "setupEast": "If the expedition headed east, proceed to _Setup (v. II) – Eastern Expedition_.",
     "dreamsOfDestruction": {
       "title": "Nhiệm vụ: Dreams of Destruction",
-      "choose": "Bạn phải quyết định (chọn một):"
+      "instructions": "_Read only if you have the “Dreams of Destruction” Task:_",
+      "body": "Khi bạn nhìn ra khung cảnh ngoạn mục, những tiếng thì thầm hỗn loạn lấp đầy tâm trí bạn. Bị choáng ngợp, bạn khuỵu gối xuống, hai tay ôm chặt lấy thái dương. Trong tâm nhãn, bạn thấy một vầng hào quang, một bầu trời đầy những bóng đen u ám, và một thực thể khổng lồ đang quằn quại trong đau đớn, bao phủ bởi những ấn chú phát sáng. Đó là một ảo ảnh? Hay một ký ức cổ xưa? Bạn thấy những ngọn tháp của thành phố uốn cong như những ngọn cỏ khi các thiên thạch rơi xuống từ bầu trời. Có thứ gì đó bên trong bạn đang khuấy động. Bạn đang cảm nhận được nỗi bi thương của một ai đó— hay một thứ gì đó— khác. Thành phố bị chôn vùi, tĩnh lặng, cam chịu ngủ yên dưới đáy đại dương trong hàng tỷ tỷ năm. Bất kể thứ bạn cảm nhận được là gì, nó muốn chia sẻ gánh nặng, nỗi sợ hãi, và những khao khát của bạn. Bạn chỉ cần để nó bước vào…",
+      "vision": "Khi bạn nhìn ra khung cảnh ngoạn mục, những tiếng thì thầm hỗn loạn lấp đầy tâm trí bạn. Bị choáng ngợp, bạn khuỵu gối xuống, hai tay ôm chặt lấy thái dương. Trong tâm nhãn, bạn thấy một vầng hào quang, một bầu trời đầy những bóng đen u ám, và một thực thể khổng lồ đang quằn quại trong đau đớn, bao phủ bởi những ấn chú phát sáng. Đó là một ảo ảnh? Hay một ký ức cổ xưa? Bạn thấy những ngọn tháp của thành phố uốn cong như những ngọn cỏ khi các thiên thạch rơi xuống từ bầu trời. Có thứ gì đó bên trong bạn đang khuấy động. Bạn đang cảm nhận được nỗi bi thương của một ai đó— hay một thứ gì đó— khác. Thành phố bị chôn vùi, tĩnh lặng, cam chịu ngủ yên dưới đáy đại dương trong hàng tỷ tỷ năm. Bất kể thứ bạn cảm nhận được là gì, nó muốn chia sẻ gánh nặng, nỗi sợ hãi, và những khao khát của bạn. Bạn chỉ cần để nó bước vào…",
+      "sorrow": "Khi bạn nhìn ra khung cảnh ngoạn mục, những tiếng thì thầm hỗn loạn lấp đầy tâm trí bạn. Bị choáng ngợp, bạn khuỵu gối xuống, hai tay ôm chặt lấy thái dương. Trong tâm nhãn, bạn thấy một vầng hào quang, một bầu trời đầy những bóng đen u ám, và một thực thể khổng lồ đang quằn quại trong đau đớn, bao phủ bởi những ấn chú phát sáng. Đó là một ảo ảnh? Hay một ký ức cổ xưa? Bạn thấy những ngọn tháp của thành phố uốn cong như những ngọn cỏ khi các thiên thạch rơi xuống từ bầu trời. Có thứ gì đó bên trong bạn đang khuấy động. Bạn đang cảm nhận được nỗi bi thương của một ai đó— hay một thứ gì đó— khác. Thành phố bị chôn vùi, tĩnh lặng, cam chịu ngủ yên dưới đáy đại dương trong hàng tỷ tỷ năm. Bất kể thứ bạn cảm nhận được là gì, nó muốn chia sẻ gánh nặng, nỗi sợ hãi, và những khao khát của bạn. Bạn chỉ cần để nó bước vào…",
+      "choose": "Bạn phải quyết định (chọn một):",
+      "drownOut": "Xóa 1 progress dưới mục \"Dreams of Destruction\" trong Nhật ký Chiến dịch của bạn và chịu 1 mental trauma. Bạn (và chỉ mình bạn) nhận 2 bonus experience.",
+      "letItIn": "Đánh dấu 2 progress dưới mục \"Dreams of Destruction\" trong Nhật ký Chiến dịch của bạn. Vào đầu lượt đầu tiên của mỗi điều tra viên trong scenario <i>Obsidian Canyons</i>, họ phải rút lá bài trên cùng của encounter deck."
     },
     "proveYourWorth": {
       "title": "Nhiệm vụ: Prove Your Worth",
+      "instructions": "_Read only if you have the “Prove Your Worth” Task:_",
       "body": "Không ai khác trong chuyến thám hiểm này đánh giá cao tài năng của bạn. Làm sao họ có thể chứ? Nhiệm vụ của bạn là giúp đỡ, để cho họ thấy tại sao bạn lại là sự lựa chọn hoàn hảo cho chuyến thám hiểm chết tiệt này. Không ai yêu cầu bạn, nhưng đây có thể là thời điểm hoàn hảo để chứng tỏ giá trị của bạn.",
-      "choose": "Bạn phải quyết định (chọn một):"
+      "choose": "Bạn phải quyết định (chọn một):",
+      "ropesAreWrong": "Không cần bàn bạc với họ, hãy chọn một điều tra viên để giúp đỡ (không phải chính bạn, nếu có thể). Ghi nhớ \"[tên điều tra viên của bạn] helped with the ropes\" (cũng như tên của điều tra viên được chọn). Mỗi điều tra viên bắt đầu scenario tiếp theo với ít hơn 2 resource khởi điểm.",
+      "trustTheirHandiwork": "Mỗi điều tra viên bắt đầu scenario tiếp theo với thêm 1 resource khởi điểm."
+    },
+    "xp": {
+      "dreamsOfDestruction": "for drowning out the whispers"
     },
     "label": {
       "dreamsOfDestruction": {
@@ -16,45 +38,58 @@
       },
       "proveYourWorth": {
         "ropesAreWrong": "*\"Những sợi dây thừng này buộc sai hết rồi. Tôi có thể làm tốt hơn nhiều.\"*",
-        "trustTheirHandiwork": "*\"Tôi tin tưởng vào tay nghề của họ.\"*"
+        "trustTheirHandiwork": "*\"Tôi tin tưởng vào tay nghề của họ.\"*",
+        "chooseInvestigator": "Choose an investigator to help."
       }
     }
   },
   "setup": {
     "west": {
       "title": "Thiết lập (v.I) - Western Expedition",
+      "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Obsidian Canyons*, *Cosmic Legacy*, *Elder Mist*, *The Inescapable*, *R’lyeh*, *Star Spawn*, *Ancient Evils*, *Chilling Cold*, *Nightgaunts*, and *Striking Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/obsidian-canyons.png' /><img src='{setImgPath}/cosmic-legacy.png' /><img src='{setImgPath}/elder-mist.png' /><img src='{setImgPath}/the-inescapable.png' /><img src='{setImgPath}/rlyeh.png' /><img src='{setImgPath}/star-spawn.png' /><img src='{setImgPath}/ancient-evils.png' /><img src='{setImgPath}/chilling-cold.png' /><img src='{setImgPath}/nightgaunts.png' /><img src='{setImgPath}/striking-fear.png' /></section>Set all 14 cards in the *Ancient Evils*, *Chilling Cold*, and *Striking Fear* encounter sets aside, out of play, as _“open sky”_ (see _Open Sky_).",
       "gatherLocations": "Tập hợp từng địa điểm trong encounter set *Obsidian Canyons*.",
       "removeLocations": "Loại bỏ Ancient Dome khỏi trò chơi.",
+      "setAsideLocations": "Set R’lyeh Streets, Central Spire, Floating Spire, Aerial Waterfall, Glyph Orrery{'{'}runeD{'}'}, and Western Wall aside, out of play.",
+      "buildSummitDeck": "Xào các địa điểm [[Summit]] còn lại thành một chồng bài riêng, mặt chưa lật ngửa lên. Đây là <b>Summit deck</b>. (Xem <b>The Summit Deck and Sliding Locations</b> bên dưới)",
+      "placeStart": "Đặt R'lyeh Streets vào chơi cùng với 4 trong số các lá bài open sky đã để riêng theo sơ đồ sắp xếp địa điểm cho act 1 bên dưới.",
       "fillGrid": "Lấp đầy mỗi khoảng trống trong sơ đồ bằng lá bài dưới cùng của Summit deck ở phía trên và bên phải của R'lyeh Streets cho đến khi có 3 hàng và 4 cột.",
       "shuffleInCentralSpire": "Xào lá Central Spire đã để riêng vào 3 lá trên cùng của Summit deck.",
+      "beginAtRlyehStreets": "Mỗi điều tra viên bắt đầu chơi tại R'lyeh Streets.",
       "windsStoryCard": "Tìm lá bài story hai mặt Eastern Winds/Western Winds và đặt nó vào chơi, ngửa mặt Eastern Winds.",
       "buildActAgendaDeck": "Xây dựng các chồng bài act và agenda sử dụng agenda 1a—\"Encroaching Storms,\" act 1a-\"Scouring the Spires,\" act 2a-\"Deadly Skies,\" và act 3a—\"Return to the Shoreline.\" Loại bỏ các act và agenda còn lại khỏi trò chơi.",
       "stormIntensity": "Đặt 1 resource lên lá bài scenario reference dưới Storm Intensity.",
       "starSpawn": "Xào các kẻ địch từ bộ encounter *Star Spawn* và loại bỏ ngẫu nhiên 2 kẻ địch khỏi trò chơi.",
-      "readyToBegin": "Bây giờ bạn đã sẵn sàng để bắt đầu.",
-      "placeStart": "Đặt R'lyeh Streets vào chơi cùng với 4 trong số các lá bài open sky đã để riêng theo sơ đồ sắp xếp địa điểm cho act 1 bên dưới.",
-      "beginAtRlyehStreets": "Mỗi điều tra viên bắt đầu chơi tại R'lyeh Streets.",
-      "buildEncounterDeck": "Xào các lá bài encounter còn lại để xây dựng chồng bài encounter."
+      "setCardsAside": "Set the double-sided Sky Relic{'{'}runeF{'}'} story asset, Eroded Frieze{'{'}runeE{'}'} treachery, and the Obsidian Claw story asset aside, out of play.",
+      "checkCampaignLogInescapable": "Loại bỏ tập bài encounter <i>The Inescapable</i> khỏi trò chơi.",
+      "chooseExpeditionAsset": "Theo thứ tự người chơi, mỗi người chơi có thể chọn 1 asset [[Artifact]] đã giành được hoặc 1 asset [[Item]] từ tập bài encounter <i>Expedition</i> để bắt đầu in play dưới quyền kiểm soát của họ.",
+      "buildEncounterDeck": "Xào các lá bài encounter còn lại để xây dựng chồng bài encounter.",
+      "readyToBegin": "Bây giờ bạn đã sẵn sàng để bắt đầu."
     },
     "east": {
       "title": "Thiết lập (v.II) - Eastern Expedition",
+      "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Obsidian Canyons*, *Cosmic Legacy*, *Elder Mist*, *The Inescapable*, *R’lyeh*, *Star Spawn*, *Chilling Cold*, *Nightgaunts*, and *Striking Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/obsidian-canyons.png' /><img src='{setImgPath}/cosmic-legacy.png' /><img src='{setImgPath}/elder-mist.png' /><img src='{setImgPath}/the-inescapable.png' /><img src='{setImgPath}/rlyeh.png' /><img src='{setImgPath}/star-spawn.png' /><img src='{setImgPath}/chilling-cold.png' /><img src='{setImgPath}/nightgaunts.png' /><img src='{setImgPath}/striking-fear.png' /></section>Set all 11 cards in the *Chilling Cold* and *Striking Fear* encounter sets aside, out of play, as _“open sky”_ (see _Open Sky_).",
       "gatherLocations": "Tập hợp từng địa điểm trong encounter set *Obsidian Canyons*.",
       "removeLocations": "Loại bỏ Western Wall và Floating Spire khỏi trò chơi.",
+      "setAsideLocations": "Set R’lyeh Streets, Central Spire, Aerial Waterfall, Glyph Orrery{'{'}runeD{'}'}, and Ancient Dome aside, out of play.",
+      "buildSummitDeck": "Xào các địa điểm [[Summit]] còn lại thành một chồng bài riêng, mặt chưa lật ngửa lên. Đây là <b>Summit deck</b>. (Xem <b>The Summit Deck and Sliding Locations</b> bên dưới)",
+      "placeStart": "Đặt R'lyeh Streets vào chơi cùng với 4 trong số các lá bài open sky đã để riêng theo sơ đồ sắp xếp địa điểm cho act 1 bên dưới.",
       "fillGrid": "Lấp đầy mỗi khoảng trống trong sơ đồ bằng lá bài dưới cùng của Summit deck ở phía trên và bên phải của R'lyeh Streets cho đến khi có 3 hàng và 4 cột.",
       "shuffleInCentralSpire": "Xào lá Central Spire đã để riêng vào 3 lá trên cùng của Summit deck.",
+      "beginAtRlyehStreets": "Mỗi điều tra viên bắt đầu chơi tại R'lyeh Streets.",
       "windsStoryCard": "Tìm lá bài story hai mặt Eastern Winds/Western Winds và đặt nó vào chơi, ngửa mặt Western Winds.",
       "buildActAgendaDeck": "Xây dựng các chồng bài act và agenda sử dụng agenda 1a-\"Otherworldly Storms,\" act 1a—\"Searching the Spires,\" và act 2a—\"To The Ancient Dome!\" Loại bỏ các act và agenda còn lại khỏi trò chơi.",
       "stormIntensity": "Đặt 1 resource lên lá bài scenario reference dưới Storm Intensity.",
       "starSpawn": "Xào các kẻ địch từ bộ encounter *Star Spawn* và loại bỏ ngẫu nhiên 3 kẻ địch khỏi trò chơi.",
+      "setCardsAside": "Set the double-sided Sky Relic{'{'}runeF{'}'} story asset, Eroded Frieze{'{'}runeE{'}'} treachery, and the Obsidian Claw story asset aside, out of play, along with *The Inescapable* encounter set.",
       "removeStarVampire": "Tìm trong bộ encounter *Obsidian Canyons* một bản sao của kẻ địch Star Vampire và loại bỏ nó khỏi trò chơi.",
-      "readyToBegin": "Bây giờ bạn đã sẵn sàng để bắt đầu.",
-      "placeStart": "Đặt R'lyeh Streets vào chơi cùng với 4 trong số các lá bài open sky đã để riêng theo sơ đồ sắp xếp địa điểm cho act 1 bên dưới.",
-      "beginAtRlyehStreets": "Mỗi điều tra viên bắt đầu chơi tại R'lyeh Streets.",
-      "buildEncounterDeck": "Xào các lá bài encounter còn lại để xây dựng chồng bài encounter."
+      "chooseExpeditionAsset": "Theo thứ tự người chơi, mỗi người chơi có thể chọn 1 asset [[Item]] từ encounter set <i>Expedition</i> để bắt đầu vào chơi dưới quyền kiểm soát của họ. Set này được biểu thị bằng biểu tượng sau:",
+      "buildEncounterDeck": "Xào các lá bài encounter còn lại để xây dựng chồng bài encounter.",
+      "readyToBegin": "Bây giờ bạn đã sẵn sàng để bắt đầu."
     }
   },
   "rules": {
     "openSky": {
+      "title": "Open Sky",
       "body": "<p class='basic'>Trong suốt scenario này, bạn sẽ được hướng dẫn đặt các lá bài \"open sky\" bằng cách lấy các lá bài encounter đã tập hợp trong quá trình chuẩn bị và đặt chúng vào các vị trí được chỉ định, úp xuống.</p><ul><li>Open sky được tính là một vị trí đối với các hiệu ứng bài, tính liền kề của vị trí, và để xác định khoảng cách giữa các vị trí.</li><li>Các điều tra viên không thể di chuyển vào open sky trừ khi có chỉ định khác từ hiệu ứng scenario.</li><li>Open sky không thể bị điều tra và không thể đánh rơi manh mối trên đó. Nếu một manh mối bị đánh rơi hoặc đặt lên open sky vì bất kỳ lý do gì, các điều tra viên phải chọn vị trí đã lật gần nhất và đặt manh mối đó lên vị trí này thay thế.</li><li>Các vị trí có thể đi vào khu vực chơi tại một chỗ đang bị chiếm bởi một lá bài open sky. Nếu điều này xảy ra, lá bài open sky đang chiếm chỗ đó sẽ rời khỏi khu vực chơi.</li><li>Nếu open sky rời khỏi khu vực chơi vì bất kỳ lý do gì, hãy đặt nó lên _trên cùng_ của chồng bài Summit. _Không_ đặt nó vào encounter discard pile. Tất cả kẻ địch, token, và attachment tại open sky đó bị discard.</li></ul>"
     },
     "summitDeck": {
@@ -62,23 +97,101 @@
       "body": "<p class='basic'>Trong scenario này, các vị trí và open sky sẽ đi vào và rời khỏi khu vực chơi thông qua chồng bài Summit. Chồng bài này bao gồm các lá bài vị trí Summit cũng như các lá bài open sky một mặt.</p><ul><li>Các lá bài luôn được rút từ _dưới cùng_ của chồng bài Summit.</li><li>Các lá bài encounter từ chồng bài Summit luôn được đặt úp xuống (mặt chưa lật ngửa lên nếu chúng là các vị trí).</li><li>Nếu một khoảng trống giữa các vị trí và/hoặc open sky được tạo ra vì bất kỳ lý do gì và không được lấp đầy ngay lập tức thông qua các hướng dẫn trên lá bài scenario, hãy lấp đầy khoảng trống đó bằng lá bài _dưới cùng_ của chồng bài Summit, đặt úp xuống nếu đó là một lá bài encounter hoặc mặt chưa lật ngửa lên nếu đó là một vị trí.</li><li>Các điều tra viên có thể được hướng dẫn trượt các hàng sang trái hoặc phải. Để làm vậy, trượt từng lá bài trong hàng đó (các vị trí và open sky) một lần theo hướng được chỉ định. Mỗi lá bài và token tại các vị trí/open sky đó cũng di chuyển theo. Bất kỳ lá bài nào di chuyển ra ngoài các cột đã thiết lập sẽ được đặt lên trên cùng của chồng bài Summit.</li><li>Một số vị trí không thể bị di chuyển. Nếu được hướng dẫn trượt các lá bài trong một hàng và có một vị trí trong hàng đó không thể bị di chuyển, hãy để vị trí đó ở nguyên chỗ của nó và \"bỏ qua\" nó, di chuyển lá bài đáng lẽ sẽ đi vào chỗ của nó vào khoảng trống gần nhất được tạo ra.</li></ul>"
     },
     "stormIntensity": {
+      "title": "Storm Intensity",
       "body": "<p class='basic'>Trong suốt scenario này, số lượng resource dưới \"Storm Intensity\" trên lá bài scenario reference biểu thị sức mạnh của những cơn bão dị giới của R'lyeh. Storm Intensity càng cao, thời tiết càng nguy hiểm. Bản thân Storm Intensity không có hiệu ứng trò chơi tự thân nào; tuy nhiên, một số hiệu ứng scenario có thể thay đổi hoặc trở nên mạnh hơn tùy thuộc vào mức độ Storm Intensity hiện tại.</p>"
     },
     "locationAdjacency": {
+      "title": "Location Adjacency in this Scenario",
       "body": "<p class='basic'>Trong scenario này, các địa điểm được sắp xếp theo một mô hình lưới cố định. _Mỗi địa điểm được kết nối với mỗi địa điểm liền kề với nó._</p><ul><li>Các địa điểm liền kề chung một cạnh (trái, phải, trên, hoặc dưới).</li><li>Các địa điểm chỉ chung một góc không được coi là liền kề.</li></ul>"
     }
   },
+  "label": {
+    "chooseExpeditionAssetQuestion": "Choose an asset to begin in play under your control.",
+    "noExpeditionAsset": "Do not take an Artifact or Expedition asset.",
+    "cluesToSpend": "Choose how many clues to spend.",
+    "summitEntry": {
+      "spendClue": "Spend 1 clue",
+      "test": "Test {agility} (2)"
+    },
+    "searchTheSpires": {
+      "chooseLocation": "Choose a card from the bottom of the Summit deck.",
+      "placeNone": "Do not put a revealed location into play",
+      "chooseOrder": "Choose the next card to place on top of the Summit deck. The final card chosen will be topmost.",
+      "restOnTop": "Place the remaining cards on top of the Summit deck in any order"
+    },
+    "summitDeck": {
+      "toTop": "Place on the top of the Summit deck",
+      "toBottom": "Place on the bottom of the Summit deck"
+    },
+    "wingsOfTerror": {
+      "drawEnemy": "Draw that enemy",
+      "attack": "That enemy attacks you"
+    },
+    "lostInTheClouds": {
+      "eachInvestigatorTakesHorror": "Each investigator takes 2 direct horror",
+      "resolveWinds": "Resolve the Forced effect on the Eastern Winds/Western Winds story card as if you had drawn a non-{eldersign} symbol token"
+    }
+  },
+  "tooltips": {
+    "westernWall": {
+      "resign": "You clamber down."
+    },
+    "ancientDome": {
+      "resign": "You clamber down."
+    }
+  },
+  "hangingShip": {
+    "slide": "Slide Hanging Ship into an adjacent open sky"
+  },
+  "magneticSpires": {
+    "swap": "Choose an open sky up to 2 spaces away and swap Magnetic Spires with it"
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the current Storm Intensity.",
+      "cultist": "[skull]: -X. X là Storm Intensity hiện tại.\r\n[cultist]: -4. Nếu test này thất bại, đặt 1 doom lên kẻ địch gần nhất.\r\n[tablet]: -1 cho mỗi open sky liền kề với vị trí hiện tại của bạn.\r\n[elder_thing]: -2. Nếu có một kẻ địch tại vị trí của bạn, reveal thêm một token.",
+      "tablet": "[skull]: -X. X là Storm Intensity hiện tại.\r\n[cultist]: -4. Nếu test này thất bại, đặt 1 doom lên kẻ địch gần nhất.\r\n[tablet]: -1 cho mỗi open sky liền kề với vị trí hiện tại của bạn.\r\n[elder_thing]: -2. Nếu có một kẻ địch tại vị trí của bạn, reveal thêm một token.",
+      "elderThing": "[skull]: -X. X là Storm Intensity hiện tại.\r\n[cultist]: -4. Nếu test này thất bại, đặt 1 doom lên kẻ địch gần nhất.\r\n[tablet]: -1 cho mỗi open sky liền kề với vị trí hiện tại của bạn.\r\n[elder_thing]: -2. Nếu có một kẻ địch tại vị trí của bạn, reveal thêm một token."
+    },
+    "hardExpert": {
+      "skull": "-X. X is 2 more than the current Storm Intensity.",
+      "cultist": "-6. Place 1 doom on the nearest enemy.",
+      "tablet": "[skull]: -X. X bằng Storm Intensity hiện tại cộng thêm 2.\r\n[cultist]: -6. Đặt 1 doom lên kẻ địch gần nhất.\r\n[tablet]: -2 cho mỗi open sky liền kề với vị trí hiện tại của bạn.\r\n[elder_thing]: -4. Nếu có một kẻ địch tại vị trí của bạn, reveal thêm một token.",
+      "elderThing": "[skull]: -X. X bằng Storm Intensity hiện tại cộng thêm 2.\r\n[cultist]: -6. Đặt 1 doom lên kẻ địch gần nhất.\r\n[tablet]: -2 cho mỗi open sky liền kề với vị trí hiện tại của bạn.\r\n[elder_thing]: -4. Nếu có một kẻ địch tại vị trí của bạn, reveal thêm một token."
+    }
+  },
   "resolutions": {
+    "xp": {
+      "bonus": "for braving the obsidian canyons"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Andy ngồi trên một tảng đá lấp lánh, cố gắng hết sức để không tỏ ra run rẩy. \"Chà, tôi đã nghĩ chuyến đi này sẽ tạo nên bước ngoặt cho sự nghiệp của mình. Nhưng hóa ra—giữa những ký sinh trùng ngoài hành tinh, bão từ, và, bạn biết đấy, Thái Bình Dương—sự nghiệp của tôi chẳng có hy vọng gì,\" anh thở dài. \"Ít nhất thì chúng ta cũng trở về nguyên vẹn. Chà, phần lớn là vậy,\" anh cười, cẩn thận giữ lấy cánh tay đang băng bó của mình.</p><p>Sau khi những người còn lại trong nhóm đã tập hợp, bạn quay trở lại bãi biển nơi bạn đã đổ bộ.</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn.<ul><li>If the Obsidian Claw was under the control of an investigator when the scenario ended, check the box next to “Obsidian Claw” in the “Artifacts Earned” section of your Campaign Log.</li><li>Trong Campaign Log, gạch bỏ \"Obsidian Canyons\" trên bản đồ R'lyeh.</li></ul></li><li>If any investigator has the Prove Your Worth Task, they resolve their respective story on this page.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Proceed to _The Sepulchre of the Sleeper_.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Bạn cùng Ruby đứng ở đỉnh của khoảng sân cổ xưa. Khi bạn nhìn xuống vực sâu, bạn choáng ngợp trước sự rộng lớn bao la của cấu trúc này. Mái vòm vỡ nát nơi bạn đứng có đường kính ít nhất một phần tư dặm, và bao phủ một không gian rộng lớn, thoáng đãng. Bên dưới, một thang máy cao chót vót đứng ở trung tâm của một gian giữa giống như thánh đường, được bao quanh bởi các tầng hình khuyên xoắn ốc. Năm gian bán nguyệt dài tỏa ra từ cấu trúc trung tâm giống như những móng vuốt hắc diện thạch, thống trị đường chân trời kỳ dị.</p><p>Ruby đứng ở mép nứt và nhìn xuống khoảng không bao la bên dưới. \"Tôi thậm chí không biết mình có nhìn thấy đáy hay không, nhưng tôi nghĩ bất cứ thứ gì dưới đó đều tốt hơn cơn bão kia.\"</p><p>Nhìn ra đường chân trời đang tối dần, bạn phải đồng ý.</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn.<ul><li>If the Obsidian Claw was under the control of an investigator when the scenario ended, check the box next to “Obsidian Claw” in the “Artifacts Earned” section of your Campaign Log.</li><li>Trong Campaign Log, gạch bỏ \"Obsidian Canyons\" trên bản đồ R'lyeh.</li></ul></li><li>If any investigator has the Prove Your Worth Task, they resolve their respective story on this page.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Proceed to _Court of the Ancients_.</li></ul>"
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Những cơn gió độc rít gào qua các hành lang bằng đá đen của thành phố cổ đại với sức mạnh của một cơn bão. Khi bạn bị vùi dập từ mọi phía bởi những cơn gió rát buốt và sắc lẹm, những luồng hơi hăng hắc làm đầu óc bạn quay cuồng với những ảo ảnh bất an. Những hiện tượng thời tiết kỳ dị này dường như thổi đến từ một nơi nào đó rất xa xăm, từ một cõi tồn tại phi không gian.</p><p>Bạn tỉnh dậy và thấy những người bạn đồng hành đang tập trung quanh mình. Khi họ đỡ bạn đứng dậy, bạn quay mặt đi khỏi đường chân trời rực rỡ và những đám mây đang cuồn cuộn. Bạn không có ký ức gì về việc mình đã ngất đi. Làm thế nào mà bạn lại đến được đây?</p><ul><li>Trong Campaign Log, gạch bỏ \"Obsidian Canyons\" trên bản đồ R'lyeh.</li><li>Mỗi điều tra viên phải tìm trong bộ sưu tập một basic weakness [[Madness]] hoặc [[Omen]] ngẫu nhiên và thêm nó vào deck của họ trong phần còn lại của chiến dịch.</li><li>If any investigator has the Prove Your Worth Task, they resolve their respective story on this page.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Check your Campaign Log.<ul><li>If the expedition headed west, proceed to _The Sepulchre of the Sleeper_.</li><li>If the expedition headed east, proceed to _Court of the Ancients_.</li></ul></li></ul>"
     },
     "proveYourWorth": {
       "title": "Nhiệm vụ: Prove Your Worth",
+      "instructions": "_Read only if you have the “Prove Your Worth” Task:_",
+      "checkCampaignLog": "Check your Campaign Log.",
+      "helpedWithTheRopes": "If “[your investigator’s name] helped with the ropes,” proceed to _Task 1_.",
+      "otherwise": "Otherwise, skip to _Task 2_.",
+      "task1": "Bạn nên tự hào về những gì mình đã làm. Những người còn lại trong đoàn thám hiểm đã rất ấn tượng với công việc của bạn đến mức bạn nghe thấy một người trong số họ hô vang tên bạn khi bạn đang leo lên. Họ có thể đã hét lên; bạn không chắc lắm. Bất kể chuyện gì đã xảy ra, họ dường như không có ý định thảo luận thêm về nó. Đáng buồn thay, công việc của bạn với những sợi dây thừng không giúp ích được gì nhiều. Vài sợi trong số đó đã bị đứt trong quá trình leo, và một thành viên khác của đoàn thám hiểm giờ đã bị gãy chân. Thật đáng tiếc. Chắc hẳn đó là lỗi của nhà sản xuất.",
       "task1Chosen": "Điều tra viên mà bạn đã chọn để giúp đỡ trước đó chịu 1 physical trauma và nhận 2 điểm kinh nghiệm thưởng.",
-      "task1Progress": "Bạn khá hài lòng với bản thân, phải không? Đánh dấu 2 tiến trình dưới mục \"Prove Your Worth\" trong Nhật ký Chiến dịch của bạn."
+      "task1Progress": "Bạn khá hài lòng với bản thân, phải không? Đánh dấu 2 tiến trình dưới mục \"Prove Your Worth\" trong Nhật ký Chiến dịch của bạn.",
+      "task2": "\"Không, không phải như thế!\" Một thành viên khác của đoàn thám hiểm lại can thiệp vào để hỗ trợ. Bạn cố nuốt lại lời đáp trả của mình. Họ không biết bản thân thô lỗ đến mức nào. Mà họ cũng chẳng quan tâm. Tại sao phải cất công chứng tỏ bản thân với những kẻ vô ơn này? Bọn họ không đáng để bạn phải bận tâm.",
+      "task2Trauma": "It’s true: you’ll never measure up. Erase 1 progress under “Prove Your Worth” and suffer 1 mental trauma.",
+      "task2OtherInvestigators": "Each other investigator (except you) gains 1 bonus experience.",
+      "xp": {
+        "helped": "for the ropes that snapped",
+        "other": "for putting up with it"
+      }
     }
   }
 }

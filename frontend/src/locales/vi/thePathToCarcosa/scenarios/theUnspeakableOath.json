@@ -1,24 +1,107 @@
 {
   "heading": "Màn IV",
+  "label": {
+    "remembered": {
+      "setAFireInTheKitchen": "Set a fire in the kitchen",
+      "incitedAFightAmongstThePatients": "Incited a fight amongst the patients",
+      "distractedTheGuards": "Distracted the guards",
+      "releasedADangerousPatient": "Released a dangerous patient",
+      "knowTheGuardsPatrols": "Know the guards' patrols",
+      "recalledTheWayOut": "Recalled the way out",
+      "youTookTheKeysByForce": "You took the keys by force"
+    },
+    "cloudedMemory": {
+      "forget": "Forget something an investigator has \"remembered\" from an ability on a location. (It is no longer true.)",
+      "chooseForget": "Forget something an investigator has \"remembered\" from an ability on a location. (It is no longer true.)",
+      "horror": "Take 1 horror and Clouded Memory gains surge."
+    },
+    "placeMonsterUnderActDeck": "Randomly choose an enemy from among the set-aside Monster enemies and place it beneath the act deck without looking at it",
+    "thisTestAutomaticallyFails": "This test automatically fails",
+    "infirmary": {
+      "healDamage": "Heal 1 damage and take 1 direct horror",
+      "healHorror": "Heal 1 horror and take 1 direct damage"
+    },
+    "wallsClosingIn": {
+      "chooseEnemy": "Randomly choose 1 enemy from among the set-aside Monster enemies and place it beneath the act deck without looking at it"
+    },
+    "arkhamAsylum": {
+      "youKnockHerOverAndGrabTheKeys": "You knock her over and grab the keys"
+    }
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1. Nếu bạn thất bại, randomly choose an enemy from among the set-aside _Monster_ enemies and place it beneath the act deck without looking at it.",
+      "cultist": "-X. X là số lượng horror trên người bạn.",
+      "tablet": "-X. X is the base shroud value of your location.",
+      "elderThing": "0. Either randomly choose an enemy from among the set-aside _Monster_ enemies and place it beneath the act deck without looking at it, or this test automatically fails instead."
+    },
+    "hardExpert": {
+      "skull": "Rút thêm một token khác. Nếu bạn thất bại, randomly choose an enemy from among the set-aside _Monster_ enemies and place it beneath the act deck without looking at it. (Limit once per test.)",
+      "cultist": "-X. X là số lượng horror trên người bạn. Nếu bạn thất bại, chịu 1 horror.",
+      "tablet": "-X. X is the base shroud value of your location. Nếu bạn thất bại, chịu 1 horror.",
+      "elderThing": "0. Either randomly choose an enemy from among the set-aside _Monster_ enemies and place it beneath the act deck without looking at it, or this test automatically fails instead."
+    }
+  },
+  "remembered": {
+    "setAFireInTheKitchen": "Set a fire in the kitchen",
+    "incitedAFightAmongstThePatients": "Incited a fight amongst the patients",
+    "distractedTheGuards": "Distracted the guards",
+    "releasedADangerousPatient": "Released a dangerous patient",
+    "knowTheGuardsPatrols": "Know the guards' patrols",
+    "recalledTheWayOut": "Recalled the way out",
+    "youTookTheKeysByForce": "You took the keys by force"
+  },
   "intro": {
-    "title": "Màn IV: Lời Tuyên Thệ Không Thể Nói"
+    "title": "Màn IV: Lời Tuyên Thệ Không Thể Nói",
+    "foundTheWayForward": "những kẻ theo đuổi dấu hiệu đã tìm thấy con đường tiến về phía trước.",
+    "didNotFindTheWayForward": "Otherwise: Read _Intro 2_.",
+    "intro1": "<p>_Intro 1_: \"Thức dậy, Daniel.\" Những từ đó vang vọng trong suy nghĩ của bạn khi bạn lướt qua căn phòng lộn xộn, cố gắng hiểu những gì bạn vừa trải qua. Bạn thức dậy vào buổi chiều hôm đó với một cái giật mình dữ dội, cơ thể bạn run rẩy, ga trải giường ướt đẫm mồ hôi. Mặc dù bạn đã có giấc ngủ 8 tiếng rưỡi lành mạnh, nhưng bạn thậm chí còn cảm thấy kiệt sức hơn so với đêm trước. Bạn thoáng thấy đôi mắt đen, đỏ ngầu của mình trong chiếc gương cạnh tủ trang điểm và tự hỏi liệu mình đã ngủ được giấc nào chưa.</p><p>Bạn tự hỏi Daniel là ai? Căn phòng trong giấc mơ của bạn trông giống như một nhà tù, nhưng người đàn ông - Daniel - anh ta dường như bị rối loạn, như thể anh ta không kiểm soát được tâm trí của mình. Điều này dẫn đến một kết luận duy nhất: nhà thương điên. Biết rằng mình sẽ có chút manh mối ở đây, bạn đi về phía Nhà thương điên Arkham, hy vọng linh cảm của bạn là đúng.</p><p class='basic right'>Continue to _Intro 3_.</p>",
+    "intro2": "<p>_Intro 2_: Trong vài ngày tới, bạn đi sâu vào bằng chứng đã thu thập được, hy vọng sẽ tìm thấy bất kỳ thông tin nào liên quan đến Daniel Chesterfield, diễn viên chính trong quá trình sản xuất vở kịch Vị Vua Áo Vàng trước đó. Theo như những gì bạn biết được, anh ấy là thành viên duy nhất còn sống trong dàn diễn viên và đoàn làm vở kịch. Những người còn lại — những người bạn không tìm thấy bất kỳ hồ sơ nào — đã biến mất hoặc chết ngay sau đêm khai mạc theo nhiều cách khác nhau nhưng đều là do những cách không bình thường. Tai nạn quái đản. Tự sát. Biến mất.</p><p>Có vẻ như Daniel là manh mối tiềm năng duy nhất của bạn để điều tra sâu hơn. Theo hồ sơ bạn tìm thấy, anh ta đã được nhận vào Nhà thương điên Arkham nhiều năm trước. Tất cả tài liệu về việc điều trị của Daniel dường như dừng lại ở đó. Bạn không chắc liệu anh ấy có còn sống hay không. Có lẽ anh ta đã được chữa khỏi và được trả tự do. Bạn hy vọng tránh được điều này, nhưng dường như chỉ có một cách để xác nhận. Bạn thu dọn đồ đạc của mình và đi vào trung tâm thành phố, hướng tới Nhà thương điên Arkham.</p><p class='basic right'>Continue to _Intro 3_.</p>",
+    "intro3": "<p>_Intro 3_: Khi bước vào nhà thương điên, bạn dừng lại để nói chuyện với nhân viên lễ tân, mặc dù bạn cảm thấy cơ thể mình thôi thúc phải tiến sâu hơn vào của nhà thương điên này. Anh ấy cho thấy một biểu cảm bối rối khi bạn kể cho anh ấy nghe về vở kịch Vị Vua Áo Vàng và về Daniel. Nhưng trước sự khăng khăng của bạn, anh ta lục tung tủ tài liệu của mình, cuối cùng lôi ra một tập tài liệu màu trắng hoàn toàn. Bên trong là vô số thông tin về những bệnh nhân được nhận vào nhà thương điên — hồ sơ y tế, đánh giá sức khỏe tâm thần, và những thứ tương tự. Bạn nhận ra một vài trong số các khuôn mặt khi anh ấy lật từng trang. “Daniel… Daniel Chesterfield, phải không? Anh ta được nhận vào dưới sự chăm sóc đặc biệt của Bác sĩ Mintz. Nhưng bạn không thể gặp anh ta; cấp độ của anh ấy chỉ giới hạn nhân viên được gặp.” Bạn thuyết phục và nài nỉ để được vào khu vực bệnh nhân, vì biết rằng Daniel phải nắm giữ chìa khóa để hiểu điều gì đang thực sự diễn ra.</p><p>Nhân viên lễ tân nở một nụ cười thương hại và mủi lòng, gật đầu chào với các nhân viên bảo vệ gần đó. Anh ta nói với tất cả sự trung thực của một người bán rong đường phố, “Ồ, dĩ nhiên, dĩ nhiên,” “Tôi sẽ lên lịch cho cậu gặp mặt với Bác sĩ Mintz để cậu có thể nói chuyện với ông ấy về Daniel. Những quý ông này sẽ cho bạn thấy bạn vào.\" Nhẹ nhõm vì bạn sẽ sớm nhận được câu trả lời mà bạn tìm kiếm, bạn được hộ tống vào khu bệnh nhân của Nhà thương điên Arkham…</p>",
+    "proceedToConstancesInformation": "Proceed to _Constance’s Information_.",
+    "otherwise": "Otherwise, skip to _Setup_.",
+    "constancesInformation": "<p>_Constance’s Information_: Bạn nhớ lại những gì Constance đã nói với bạn khi bạn nói chuyện với cô ấy trong bữa tiệc tối địa ngục của cô ấy. Cô và các thành viên khác trong dàn diễn viên và đoàn làm kịch đã được đạo diễn Nigel Engram yêu cầu phải tuyên thệ. Lúc đầu, cô xem nó như ý thích của một nghệ sĩ lập dị; điều mà ông Engram đã làm như một hình thức kỳ lạ để đoàn kết và củng cố mối quan hệ của dàn diễn viên và đoàn làm kịch. Và với lòng tin của ông ấy, cô thừa nhận rằng nó hiệu quả; kể từ khi họ thực hiện lời thệ kỳ lạ của mình, cô và các thành viên khác trong đoàn cảm thấy tự tin và tràn đầy tinh thần hơn rất nhiều. Có lẽ Daniel đã có trải nghiệm tương tự trong quá trình thực hiện vở kịch <u>Vị Vua Áo Vàng</u> cuối cùng. Bạn phải nói chuyện với anh ta về điều này.</p><ul><li>Mỗi điều tra viên đặt lá bài đầu tiên úp xuống trong khu vực chơi của mình mà không nhìn vào nó. Xem lá bài này như một tài sản [[Courage]] với chi phí 0, và 2 tinh thần. Bỏ lá này vào chồng bài bỏ nếu nó rời khỏi màn chơi bằng bất kỳ lý do nào.</li></ul><div class='basic right'>Proceed to _Setup_.</div>"
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Unspeakable Oath*, *Hastur’s Gift*, *Inhabitants of Carcosa*, *Delusions*, *Decay & Filth*, and *Agents of Hastur*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-unspeakable-oath.png' /><img src='{setImgPath}/hasturs-gift.png' /><img src='{setImgPath}/inhabitants-of-carcosa.png' /><img src='{setImgPath}/delusions.png' /><img src='{setImgPath}/decay-and-filth.png' /><img src='{setImgPath}/agents-of-hastur.png' /></section>",
+    "monsters": "Đặt mỗi kẻ địch [[Monster]] trong chồng bài encounter tập hợp được sang một bên, thành một chồng riêng lẻ. (Nên có tổng cộng 7 kẻ địch [[Monster]].)",
+    "lunatics": "Đặt mỗi kẻ địch [[Lunatic]] trong chồng bài encounter tập hợp được sang một bên, thành một chồng riêng lẻ. (Nên có tổng cộng 7 kẻ địch [[Lunatic]].)",
+    "chooseLocations": "Ngẫu nhiên chọn 1 bản sao của vị trí Asylum Halls *(Eastern Patient Wing)* và 1 bản sao của vị trí Asylum Halls *(Western Patient Wing)*. Loại bỏ các bản sao này khỏi màn chơi. Đặt các vị trí Asylum Halls còn lại vào màn chơi. Mỗi điều tra viên bắt đầu màn chơi tại vị trí Asylum Halls theo lựa chọn của bản thân.",
     "setAside": "Đặt các lá bài sau sang một bên, ngoài màn chơi: Daniel Chesterfield, và mỗi bản sao của Patient Confinement.",
-    "chooseLocations": "Ngẫu nhiên chọn 1 bản sao của vị trí Asylum Halls *(Eastern Patient Wing)* và 1 bản sao của vị trí Asylum Halls *(Western Patient Wing)*. Loại bỏ các bản sao này khỏi màn chơi. Đặt các vị trí Asylum Halls còn lại vào màn chơi. Mỗi điều tra viên bắt đầu màn chơi tại vị trí Asylum Halls theo lựa chọn của bản thân."
+    "placeLocations": "Đặt các vị trí sau vào màn chơi: Mess Hall, Kitchen, Yard, Garden, Infirmary, and Basement Hall.",
+    "adjustChaosBag": "Based on your difficulty level, add the following chaos token(s) to the chaos bag, for the remainder of the campaign:<div class='columns'><ul><li>_Easy_: -2</li><li>_Standard_: -3</li></ul><ul><li>_Hard_: -4</li><li>_Expert_: -5</li></ul></div>",
+    "act2": {
+      "instructions": "Check Campaign Log. Depending on the following circumstances, a different version of Act 2 should be used in this scenario. Each other version of Act 2 is removed from the game.",
+      "v1": "bạn lấy chiếc móc mã não đi.",
+      "v2": "Otherwise, use Act 2—”The Really Bad Ones” (v. II)"
+    },
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to The Unspeakable Oath*, *Maddening Delusions*, *Decaying Reality*, and *Hastur’s Envoys*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-unspeakable-oath.png' /><img src='{setImgPath}/maddening-delusions.png' /><img src='{setImgPath}/decaying-reality.png' /><img src='{setImgPath}/hasturs-envoys.png' /></section>*Maddening Delusions* replaces *Delusions*, *Decaying Reality* replaces *Decay & Filth*, and *Hastur’s Envoys* replaces *Agents of Hastur*. Remove the replaced sets from the game.",
+      "setAside": "Also set the Host of Insanity enemy and the Radical Treatment treachery aside, out of play.",
+      "act2": "Sự nghi ngờ"
+    }
+  },
+  "tooltips": {
+    "noAsylum": {
+      "resign": "Finally, a way out!"
+    }
   },
   "resolutions": {
     "defeated": {
-      "title": "Điều tra viên bị hạ gục"
+      "title": "Điều tra viên bị hạ gục",
+      "body": "<div class='resolution'><p class='basic'>_Before resolving any other resolution, if at least 1 investigator was defeated_: The defeated investigators read _Investigator Defeat_ first.</p><p>_Điều Tra Viên Bị Đánh Bại_: “Bác sĩ Mintz, bệnh nhân đã được dùng thuốc và sẵn sàng gặp ông ngay bây giờ.” Cô y tá Heather mở hồ sơ trên chiếc bàn gần đó, dành một chút thời gian để xem lại hồ sơ của bệnh nhân.</p><p>Bác sĩ Mintz hỏi với giọng đều đều, \"Có chuyển biến nào trong tình trạng của bệnh nhân không?\". Một kiểu hình thức. Cả hai đều biết bệnh nhân không còn khả năng hồi phục.</p><p>\"Không có. Những ảo tưởng của bệnh nhân vẫn còn. Yêu cầu được nói chuyện với Warden, tuyên bố họ chỉ là các vị khách, và lan man về vở kịch được phát sóng vào đêm hôm trước, vở kịch <u>Vị Vua Áo Vàng</u>.”</p><p>“Và những tội ác khác của họ? Sự cố trong rạp hát? Còn về địa chỉ 1452 Atlantic Ave thì sao? ”</p><p>\"Họ tin rằng họ đã bị tấn công và đang tự vệ.\" Giọng cô dày đặc vẻ thương hại. Điều gì có thể khiến một người thình lình trở nên như vậy? Không có hồ sơ nào của bệnh nhân cho thấy có tiền sử bất ổn về tâm thần. “Ông có lý giải được chuyện này không, bác sĩ?”</p><p>Bác sĩ Mintz thở dài và đứng dậy, lấy tập tài liệu trên bàn làm việc, \"Ai có thể chứ?\" “Công việc của tôi không phải là hiểu chuyện gì diễn ra. Mà là chữa bệnh. Có lẽ quy trình thử nghiệm của tôi sẽ chứng tỏ kết quả trong chuyện này.” Cô y tá nhăn mặt và cảm thấy nổi da gà trên cánh tay. Cô biết quy trình của anh ta sẽ diễn ra như thế nào, và cô nghi ngờ nó sẽ chứng tỏ được điều gì.</p><ul><li>Mỗi điều tra viên bị hạ gục trở nên <b>điên loạn</b>. Nếu không đủ điều tra viên để tiếp tục chiến dịch, chiến dịch kết thúc và các điều tra viên thất bại.</li><li>Mỗi điều tra viên bị hạ gục trở nên <b>điên loạn</b>. Nếu không đủ điều tra viên để tiếp tục chiến dịch, chiến dịch kết thúc và các điều tra viên thất bại.</li><li>If another resolution was reached, the remaining investigators proceed to that resolution.</li><li>If no resolution was reached (each investigator was defeated): Go to _Resolution 1_.</li></ul></div>"
     },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p>_Resolution 1_: …Và như vậy đã kết thúc sự điên rồ của vở kịch Vị Vua Áo Vàng.</p><ul><li>Nhà Vua đã đoạt lấy các nạn nhân của hắn.</li><li>Nếu không đủ điều tra viên để tiếp tục chiến dịch, chiến dịch kết thúc và các điều tra viên thất bại. Còn không thì chiến dịch tiếp tục. (Mỗi người chơi có điều tra viên trở nên <b>điên loạn</b> phải chọn một điều tra viên mới trong kho điều tra viên sẵn có.)</li><li>bạn lấy chiếc móc mã não đi.</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>VIP Đã Bị Giết</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 2 token [cultist] vào túi hỗn mang.</li><li>Màn V: Bóng Ma Sự Thật</li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>_Điều Tra Viên Bị Đánh Bại_: Bạn phải đối mặt với một số nhân viên bệnh viện và bảo vệ, những người ngăn cản bạn trốn thoát. Cảm thấy bị dồn vào chân tường và bị mắc kẹt, bạn không có lựa chọn nào khác ngoài việc chiến đấu theo cách của mình để vượt qua họ. Khi bạn cố gắng trốn thoát, một số bệnh nhân gần đó nhìn thấy cơ hội và tấn công những người bảo vệ với một cơn giận dữ điên cuồng. Y tá Heather hét lên và rút lui, và trong cơn náo loạn, bạn trốn thoát, bị bầm dập và bị đánh đập nhưng được tự do một lần nữa. Sẽ mất một thời gian để vết thương của bạn lành lại, nhưng bạn chưa có thời gian cho việc đó.</p><ul><li>các điều tra viên bị tấn công khi trốn thoát khỏi Nhà thương điên.</li><li>Mỗi điều tra viên nhận 1 sang chấn thể chất vì bị tấn công bởi bảo vệ của Nhà thương điên.</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>VIP Đã Bị Giết</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 2 token [tablet] vào túi hỗn mang.</li><li>Proceed to _Interlude II: Lost Soul_.</li></ul></div>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<div class='resolution'><p>_Điều Tra Viên Bị Đánh Bại_: Với việc các nhân viên nhà thương điên bị phân tâm và bệnh nhân chạy trốn khắp nơi, bạn có thể lẩn trốn mà không bị phát hiện. Bạn trốn sâu hơn vào khu vườn phía sau nhà thương điên, nơi có hàng rào cao hai tầng với hàng rào thép gai là tất cả những gì ngăn cách bạn với thế giới bên ngoài. Bạn có ít thời gian và cần phải di chuyển thật xa khỏi nhà thương điên trước khi bảo vệ quay lại và phát hiện bạn. Sử dụng một chiếc áo khoác bó mà bạn tìm thấy bên trong để che hàng rào thép gai, bạn trèo qua hàng rào một cách nhanh chóng, chạy trốn sang phía bên kia.</p><ul><li>các điều tra viên trốn thoát khỏi Nhà thương điên.</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>VIP Đã Bị Giết</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 2 token [elder_thing] vào túi hỗn mang.</li><li>Proceed to _Interlude II: Lost Soul_.</li></ul></div>"
     }
   }
 }

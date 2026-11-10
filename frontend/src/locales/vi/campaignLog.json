@@ -1,7 +1,12 @@
 {
   "base": {
     "key": {
+      "drivenInsaneInvestigators": "Điều tra viên phát điên",
+      "killedInvestigators": "Điều tra viên bị giết",
       "theRougarouContinuesToHauntTheBayou": "Rougarou tiếp tục lảng vảng quanh vùng đầm lầy.",
+      "theRougarouIsDestroyed": "Rougarou đã bị tiêu diệt.",
+      "theRougarouEscapedAndYouEmbracedTheCurse": "Rougarou đã trốn thoát và bạn đã đón nhận lời nguyền.",
+      "manyWereSacrificedToCnidathquaDuringTheCarnivale": "Nhiều người đã bị hiến tế cho Cnidathqua trong Lễ hội hóa trang.",
       "theSunBanishedCnidathquaIntoTheDepths": "Mặt trời đã đẩy Cnidathqua xuống vực sâu.",
       "cnidathquaRetreatedToNurseItsWounds": "Cnidathqua rút lui để chữa trị vết thương.",
       "theCurseOfSlumberWasLifted": "Lời nguyền giấc ngủ đã được hóa giải.",
@@ -10,8 +15,31 @@
       "theDayOfReckoningIsComing": "Ngày Phán Xét đang đến.",
       "theAbyssWasSaved": "The Abyss đã được cứu.",
       "youJoinedForcesWithXzharah": "Bạn đã hợp sức với Xzharah.",
+      "dreamersInTheAbyss": "Những người mơ mộng ở Abyss",
+      "brotherhoodAgentsWhoEscaped": "Các đặc vụ Brotherhood đã trốn thoát",
+      "wasTakenByTheAbyss": "Đã bị bắt bởi Abyss",
+      "youHaveNoSoul": "Bạn không có linh hồn",
       "theExcelsiorClaimsAnotherVictim": "Khách sạn Excelsior tuyên bố một nạn nhân khác.",
-      "theInvestigatorsFledTheSceneOfTheCrime": "Các điều tra viên đã bỏ trốn khỏi hiện trường gây án."
+      "theInvestigatorsFledTheSceneOfTheCrime": "Các điều tra viên đã bỏ trốn khỏi hiện trường gây án.",
+      "theExcelsiorIsQuietForNow": "Khách sạn Excelsior hiện tại đang yên tĩnh.",
+      "theMurdersContinueUnsolved": "Các vụ giết người vẫn chưa có lời giải.",
+      "theInvestigatorsSurvivedTheMidwinterGala": "Các điều tra viên sống sót sau Đêm dạ tiệc Giữa đông.",
+      "theInvestigatorsWereDefeatedAtTheMidwinterGala": "Các điều tra viên bị đánh bại tại Đêm dạ tiệc Giữa đông.",
+      "youHaveIdentifiedTheSolution": "Bạn đã xác định được giải pháp",
+      "youHaveTranslatedTheGlyphs": "Bạn đã dịch các ký tự cổ (glyphs)",
+      "youHaveIdentifiedTheStone": "Bạn đã nhận diện được khối đá",
+      "doomApproaches": "Doom đang đến gần",
+      "theHourIsNigh": "Giờ khắc đã điểm",
+      "youHaveTranslatedTheTome": "Bạn đã dịch cuốn sách cổ (tome)",
+      "youHaveInterpretedTheDreams": "Bạn đã diễn giải những giấc mơ",
+      "youHaveTranslatedTheGrimoire": "Bạn đã dịch cuốn sách ma pháp (grimoire)",
+      "youHaveIdentifiedTheGateway": "Bạn đã xác định được cổng không gian (gateway)",
+      "youHaveClassifiedANewSpecies": "Bạn đã phân loại một loài mới",
+      "youHaveCalculatedTheDayOfReckoning": "Bạn đã tính toán Ngày Phán Xét",
+      "teachings1": "Giáo lý",
+      "teachings2": "Giáo lý",
+      "teachings3": "Giáo lý",
+      "youHaveUnearthedTheSecretsOfThePharaohs": "Bạn đã khai quật những bí mật của các Pharaoh"
     }
   }
 }

@@ -1,13 +1,31 @@
 {
   "heading": "Màn ???",
+  "specialRules": [
+    {
+      "title": "Mirage (Ảo Ảnh)",
+      "body": "<p class='basic'>Từ khóa Mirage (Ảo Ảnh) biểu thị các địa điểm là hiện thân của ký ức của bạn và đồng đội. Những địa điểm này không có mặt chưa lộ và do đó vào trò chơi với mặt hiển lộ. Thay vì mặt chưa lộ, các địa điểm này có lá bài câu chuyện ở mặt sau. Những lá bài câu chuyện này cho phép điều tra viên đi sâu hơn vào ảo ảnh kỳ lạ và mở khóa ký ức mới dưới dạng địa điểm hoặc lá bài gặp gỡ. Con số trong từ khóa Mirage biểu thị số manh mối cần để lật nó, trong khi tiêu đề lá bài trong ngoặc đơn chỉ ra ký ức nào có thể xuất hiện.</p><ul><li>As a {'{'}action{'}'} ability, investigators at a mirage location may spend the indicated number of clues, as a group, to flip it over and resolve the story card on its other side.</li><li>Khi một địa điểm có từ khóa Mirage (Ảo Ảnh) vào màn chơi <i>(bao gồm trong lúc chuẩn bị)</i>, với mỗi lá bài được chỉ ra bởi từ khóa Mirage đã ở trong màn chơi hoặc khu vực trưng bày thành tích, giảm giá trị manh mối của địa điểm đó theo giá trị Mirage của nó.<ul><li>*Note: This is less likely to occur the first time you play Fatal Mirage, but is much more likely during subsequent playthroughs.*</li><li>*For example: Prison of Memories has a clue value of 3 {'{'}perPlayer{'}'} and has the following text: “Mirage 1 {'{'}perPlayer{'}'} (Base Camp, Deck of the Theodosia, University Halls).” When Prison of Memories enters play, the investigators check which of the three cards indicated by its mirage keyword are already in play or in the victory display. Both University Halls and Deck of the Theodosia are already in play, but Base Camp is still set aside. Therefore, the clue value of Prison of Memories is reduced by 2 {'{'}perPlayer{'}'}, meaning only 1 {'{'}perPlayer{'}'} clues are placed on it when it enters play.*</li></ul></li><li>Một địa điểm được coi là \"xóa sạch ảo ảnh\" nếu mọi lá bài được chỉ ra bởi từ khóa Mirage (Ảo Ảnh) của nó đã ở trong màn chơi hoặc khu vực trưng bày thành tích. Địa điểm đã xóa sạch ảo ảnh không thể lật lại lần nữa.</li></ul>"
+    }
+  ],
   "tooltips": {
     "mirage": "Mirage (Ảo Ảnh)"
   },
+  "label": {
+    "chooseAgenda": "The investigators may choose which agenda to use (the higher the agenda number, the less time the investigators will have).",
+    "keepPlaying": "Keep playing",
+    "moveToPrisonOfMemories": "Move to the Prison of Memories",
+    "shuffleTekeliliIntoYourDeck": "Shuffle the top card of the Tekeli-li deck into your deck without looking at it.",
+    "averyClaypoolAntarcticGuideResolute": {
+      "revealANewChaosToken": "Reveal a new chaos token",
+      "spend1Supply": "Spend 1 Supply"
+    }
+  },
   "intro1": {
-    "title": "Màn ???: Fatal Mirage (Ảo Ảnh Chết Người)"
+    "title": "Màn ???: Fatal Mirage (Ảo Ảnh Chết Người)",
+    "body": "<p class='basic valid'>If this is your first time playing Fatal Mirage this campaign, proceed to _Intro 1_. Otherwise, skip to _Intro 2_.</p><p>_Intro 1_: Khi bước qua cánh cửa, bạn thấy mình trong một mạng lưới các đường hầm băng giá, bao phủ bởi sương mù và chất lỏng nhỏ giọt lấp lánh. Hình ảnh phản chiếu của bạn nhìn lại bạn từ vô số góc độ kỳ lạ. Giọng bạn vang vọng khắp hành lang gương vô tận này. Bạn quay lại và phát hiện lối vào đã biến mất sau lưng. Rồi, từ khóe mắt, bạn thoáng thấy một bóng dáng quen thuộc đang bước qua làn sương ấy—nhưng không, điều đó không thể nào. Có thể sao nổi?</p><p class='basic'>Find and read the passage below that corresponds to which character was killed in the plane crash. Then, proceed to _Setup_.</p>"
   },
   "intro2": {
-    "title": "Màn ???: Fatal Mirage (Ảo Ảnh Chết Người)"
+    "title": "Màn ???: Fatal Mirage (Ảo Ảnh Chết Người)",
+    "body": "<p class='basic invalid'>If this is your first time playing Fatal Mirage this campaign, proceed to _Intro 1_. Otherwise, skip to _Intro 2_.</p><p>Một lần nữa, bạn thấy mình trong mạng lưới đường hầm băng giá, ngập trong sương mù và khí độc. Lối vào biến mất sau lưng bạn. Hình ảnh phản chiếu của bạn, lấp lánh với chút nét mờ ảo như không thực, nhìn chằm chằm lại bạn từ nhiều góc độ cùng lúc.</p><p class='normal'>Tiếp tục đến <b>Setup</b></p>"
   },
   "resolutions": {
     "xp": {
@@ -15,34 +33,77 @@
     },
     "isThereADifference": "Có khác biệt gì không?",
     "noSay": "Nhưng cậu không có quyền quyết định chuyện này.",
-    "crossOutMemoriesDiscovered": "Gạch bỏ mỗi địa điểm được ghi trong \"Memories Discovered\" (Ký Ức Đã Được Khám Phá) mà lá bài câu chuyện tương ứng cũng được ghi trong \"Memories Banished\" (Ký Ức Bị Xóa).",
-    "partnerDamage": "Trong phần \"Expedition Team\" (Đội Thám hiểm) của Nhật ký Chiến dịch, ghi lại số lượng chấn thương thể chất và tinh thần trên mỗi lá bài tài sản đồng đội trong màn chơi.",
-    "title": "Kết thúc thứ nhất",
     "victory": "Trong phần \"Fatal Mirage\" (Ảo Ảnh Chết Người) của Nhật ký Chiến dịch, dưới mục \"Memories Banished\" (Ký Ức Bị Xóa), ghi lại mỗi lá bài câu chuyện trong khu vực trưng bày thành tích. Mỗi điều tra viên nhận kinh nghiệm bằng giá trị Victory X (Chiến Thắng X) của mỗi lá bài được ghi lại theo cách này. *(Không nhận điểm kinh nghiệm cho các lá bài đã được ghi trong mục này)*.",
-    "memoriesDiscovered": "Trong phần \"Fatal Mirage\" (Ảo Ảnh Chết Người) của Nhật ký Chiến dịch, dưới mục \"Memories Discovered\" (Ký Ức Đã Được Khám Phá), ghi lại mỗi địa điểm không phải [[Otherworld]] đang trong màn chơi."
+    "memoriesDiscovered": "Trong phần \"Fatal Mirage\" (Ảo Ảnh Chết Người) của Nhật ký Chiến dịch, dưới mục \"Memories Discovered\" (Ký Ức Đã Được Khám Phá), ghi lại mỗi địa điểm không phải [[Otherworld]] đang trong màn chơi.",
+    "crossOutMemoriesDiscovered": "Gạch bỏ mỗi địa điểm được ghi trong \"Memories Discovered\" (Ký Ức Đã Được Khám Phá) mà lá bài câu chuyện tương ứng cũng được ghi trong \"Memories Banished\" (Ký Ức Bị Xóa).",
+    "nonStoryVictory": "If there are any other non-story cards in the victory display worth Victory X, each investigator earns experience equal to that amount.",
+    "partnerDamage": "Trong phần \"Expedition Team\" (Đội Thám hiểm) của Nhật ký Chiến dịch, ghi lại số lượng chấn thương thể chất và tinh thần trên mỗi lá bài tài sản đồng đội trong màn chơi.",
+    "proceed": "Proceed to the next scenario of the campaign, in numerical order, as follows:",
+    "proceedToTheForbiddenPeaks": "If the last scenario you played before this one was Ice and Death, proceed to _Scenario II: To the Forbidden Peaks_.",
+    "proceedToCityOfTheElderThings": "If the last scenario you played before this one was To the Forbidden Peaks, proceed to _Scenario III: City of the Elder Things_.",
+    "proceedToTheHeartOfMadness": "If the last scenario you played before this one was City of the Elder Things, proceed to _Scenario IV: The Heart of Madness_.",
+    "noResolutionTitle": "No Resolution",
+    "title": "Kết thúc thứ nhất",
+    "noResolution": "<p>_If no resolution was reached (each investigator was defeated)_: You stumble wearily to your feet. A dream? Your grip your temples, your mind aching. It feels as though a pneumatic drill has been taken to the inside of your skull. If this is what sleep is to be in this hellish place, you want no part of it.</p>",
+    "resolution1": "<p>_Resolution 1_: Bạn ngã nhào qua cánh cửa, rơi xuống tấm đệm ngủ, vùng vẫy trong đống chăn ấm rối bời. Không có cánh cửa nào đóng lại sau lưng bạn. Có phải bạn chỉ tưởng tượng ra tất cả? Hay nó đều là thật?</p>"
+  },
+  "dyerWasKilledInThePlaneCrash": "<p>_If William Dyer was killed in the plane crash:_</p><p>Giáo sư Dyer đã chết. Không thể nào là ông ấy được. Vậy mà…</p><p>Bạn thấy ông ấy đi qua đi lại trong một hình ảnh phản chiếu, lẩm bẩm một mình. “Nó phải bị ngăn lại. Họ không thể làm điều này.” Ông ấy dừng lại, như đang trò chuyện với ai đó mà bạn không nghe thấy. “Tôi không quan tâm. Nó phải chấm dứt ngay lập tức!” Tội nghiệp Dyer. Bạn nhớ lại việc ông ấy đã cố cảnh báo cậu. Vậy mà giờ bạn vẫn ở đây.</p><p>Ảo ảnh biến mất nhanh như cách nó xuất hiện. Nơi quái quỷ gì thế này? Và sao những sự kiện mà bạn không hề biết lại hiện ra trước mắt bạn thế này?</p>",
+  "ellsworthWasKilledInThePlaneCrash": "<p>_If Roald Ellsworth was killed in the plane crash:_</p><p>Ellsworth đã chết. Không thể nào là anh ấy được. Vậy mà…</p><p>Bạn thấy anh ấy trong một buồng điện thoại, tranh cãi gay gắt với ai đó ở đầu bên kia. “Tôi biết nó nguy hiểm. Nhưng tôi vẫn phải đi,” anh ấy lập luận. “Tin tôi đi, chuyện này quá quan trọng để bỏ qua.”</p><p>Ảo ảnh biến mất nhanh như cách nó xuất hiện. Nơi quái quỷ gì thế này? Và sao những sự kiện mà bạn không hề biết lại hiện ra trước mắt bạn thế này?</p>",
+  "ashevakWasKilledInThePlaneCrash": "<p>_If Eliyah Ashevak was killed in the plane crash:_</p><p>Eliyah đã chết. Không thể nào là anh ấy được. Vậy mà…</p><p>Eliyah bò qua tuyết, để lại một vệt máu phía sau. “Cậu đang dẫn tôi đến nơi an toàn à?” anh ấy khẽ hỏi một con chó xám lớn. Bạn nhận ra hình dáng quen thuộc của Anyu, có lẽ trẻ hơn vài tuổi nhưng vẫn vô cùng to lớn.</p><p>Ảo ảnh biến mất nhanh như cách nó xuất hiện. Nơi quái quỷ gì thế này? Và sao những sự kiện mà bạn không hề biết lại hiện ra trước mắt bạn thế này?</p>",
+  "danforthWasKilledInThePlaneCrash": "<p>_If Danforth was killed in the plane crash:_</p><p>Danforth đã chết. Không thể nào là anh ấy được. Vậy mà…</p><p>Người học sinh ngồi tại bàn trong Orne Library (Thư viện Orne), lẩm bẩm một mình khi đọc: “Tôi thấy nó. Tôi biết tôi thấy. Tôi thấy nó.” Anh ấy bắt đầu gà gật, rồi giật mình tỉnh giấc. Vòng thâm đen dưới mắt cho bạn biết anh ấy đã không ngủ nhiều ngày. “Tôi thấy nó… nó là thật…”</p><p>Ảo ảnh biến mất nhanh như cách nó xuất hiện. Nơi quái quỷ gì thế này? Và sao những sự kiện mà bạn không hề biết lại hiện ra trước mắt bạn thế này?</p>",
+  "cookieWasKilledInThePlaneCrash": "<p>_If James “Cookie” Fredericks was killed in the plane crash:_</p><p>Cookie đã chết. Không thể nào là anh ấy được. Vậy mà…</p><p>Anh ấy tựa vào một chiếc gương pha lê, tay run rẩy khi nạp đạn vào súng trường. Bụi bẩn và muội than phủ đầy mặt và làm bẩn đồng phục anh ấy. Anh ấy trông trẻ hơn, nhưng không kém phần tiều tụy. “Trung sĩ Fredericks,” một giọng nói khác khiến anh ấy thoát khỏi cơn mê. “Đức đã phá vỡ phòng tuyến đêm qua. Chúng đang bao vây. Chúng ta phải thoát khỏi đây!”</p><p>Ảo ảnh biến mất nhanh như cách nó xuất hiện. Nơi quái quỷ gì thế này? Và sao những sự kiện mà bạn không hề biết lại hiện ra trước mắt bạn thế này?</p>",
+  "claypoolWasKilledInThePlaneCrash": "<p>_If Avery Claypool was killed in the plane crash:_</p><p>Claypool đã chết. Không thể nào là anh ấy được. Vậy mà…</p><p>Bạn nhìn anh ấy nghiên cứu bản đồ Antarctica (Nam Cực), các vùng bên trong biên giới chỉ được ghi lại một phần. “Nó phải ở đây,” anh ấy nói, chỉ vào một điểm trong vòng tròn vẽ vội bằng bút chì. “Trong dãy núi này. Nhưng…” anh ấy ngập ngừng, liếc qua vai nhìn ai đó mà bạn không thấy. “Không thể nào là vậy, đúng không?”</p><p>Ảo ảnh biến mất nhanh như cách nó xuất hiện. Nơi quái quỷ gì thế này? Và sao những sự kiện mà bạn không hề biết lại hiện ra trước mắt bạn thế này?</p>",
+  "takadaWasKilledInThePlaneCrash": "<p>_If Takada Hiroko was killed in the plane crash:_</p><p>Takada đã chết. Không thể nào là cô ấy được. Vậy mà…</p><p>Dù còn trẻ, bạn vẫn nhận ra cô ấy. Cô ấy vẫy tay khi một chiếc máy bay cất cánh từ đường băng mưa. Tay ai đó nắm vai cô ấy động viên. “Anh ấy sẽ sớm trở lại,” một giọng nói bảo cô ấy. Nhưng Takada trông không được thuyết phục.</p><p>Ảo ảnh biến mất nhanh như cách nó xuất hiện. Nơi quái quỷ gì thế này? Và sao những sự kiện mà bạn không hề biết lại hiện ra trước mắt bạn thế này?</p>",
+  "sinhaWasKilledInThePlaneCrash": "<p>_If Dr. Mala Sinha was killed in the plane crash:_</p><p>Tiến sĩ Sinha đã chết. Không thể nào là cô ấy được. Vậy mà…</p><p>Nữ bác sĩ xem xét thứ mà bạn chỉ có thể cho là một xác chết, cơ thể mềm nhũn và không còn sự sống. “Giờ tử: 14:23. Ghi lại đi,” cô ấy nói, giọng đều và bình tĩnh. Nhưng trong hình ảnh phản chiếu mờ sương, bạn thấy môi cô ấy khẽ run lên khi nhiệm vụ khiến cô ấy kiệt sức.</p><p>Ảo ảnh biến mất nhanh như cách nó xuất hiện. Nơi quái quỷ gì thế này? Và sao những sự kiện mà bạn không hề biết lại hiện ra trước mắt bạn thế này?</p>",
+  "kenslerWasKilledInThePlaneCrash": "<p>_If Dr. Amy Kensler was killed in the plane crash:_</p><p>Tiến sĩ Kensler đã chết. Không thể nào là cô ấy được. Vậy mà…</p><p>Giáo sư viết trong một cuốn sổ bìa da nhỏ, văn phòng mờ ảo dưới ánh nến. Bạn tự hỏi cô ấy đang vẽ sơ đồ giải phẫu nào, nhưng trước khi bạn kịp nhìn, cô ấy xé trang giấy ra, vò nát và ném vào thùng rác với một tiếng thở dài.</p><p>Ảo ảnh biến mất nhanh như cách nó xuất hiện. Nơi quái quỷ gì thế này? Và sao những sự kiện mà bạn không hề biết lại hiện ra trước mắt bạn thế này?</p>",
+  "tokens": {
+    "easyStandard": {
+      "skull": "–X. X is the number of story cards in the victory display.",
+      "cultist": "–2. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.",
+      "tablet": "–3. Nếu bạn thất bại, you must either move to the Prison of Memories, or shuffle the top card of the Tekeli-li deck into your deck without looking at it.",
+      "elderthing": "–4. If you fail, place 1 doom on an _Eidolon_ enemy in play."
+    },
+    "hardExpert": {
+      "skull": "–X. X is the current agenda number plus the number of story cards in the victory display.",
+      "cultist": "–2. If you do not succeed by at least 2, đặt 1 manh mối của bạn lên địa điểm của bạn.",
+      "tablet": "–4. Nếu bạn thất bại, you must either move to the Prison of Memories, or shuffle the top card of the Tekeli-li deck into your deck without looking at it. (If you fail by 2 or more, do both instead.)",
+      "elderthing": "–5. If you fail, place 1 doom on an _Eidolon_ enemy in play."
+    }
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Fatal Mirage*, *Agents of the Unknown*, *Left Behind*, *Miasma*, *Nameless Horrors*, *Silence and Mystery*, *Tekeli-li*, and *Chilling Cold*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/fatal-mirage.png' /><img src='{setImgPath}/agents-of-the-unknown.png' /><img src='{setImgPath}/left-behind.png' /><img src='{setImgPath}/miasma.png' /><img src='{setImgPath}/nameless-horrors.png' /><img src='{setImgPath}/silence-and-mystery.png' /><img src='{setImgPath}/tekeli-li.png' /><img src='{setImgPath}/chilling-cold.png' /></section>",
     "firstTime": {
       "buildAgendaDeck": "Xây dựng chồng bài agenda chỉ dùng agenda 1. Loại bỏ các agenda còn lại ra khỏi trò chơi.",
       "buildActDeck": "Xây dựng bộ bài act chỉ dùng act 1. Loại bỏ các act còn lại ra khỏi trò chơi.",
       "placeLocations": "Đặt địa điểm Prison of Memories (Nhà Tù Ký Ức) vào màn chơi, mặt hiển lộ.",
       "startAt": "Mỗi điều tra viên bắt đầu trò chơi tại Prison of Memories (Nhà Tù Ký Ức).",
-      "setOtherLocationsAside": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi."
+      "setOtherLocationsAside": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
+      "setOutOfPlay": "Set each of the following cards aside, out of play: the nine “Memory of…” enemies, and the nine _Resolute_ story assets."
     },
     "repeat": {
+      "buildAgendaDeck": "Build the agenda deck using only agenda 2 if this is the second time you are playing _Fatal Mirage_, or agenda 3 if this is the third time. Remove the remaining agendas from the game.",
+      "buildActDeck": "Build the act deck using only act 2 if this is the second time you are playing _Fatal Mirage_, or act 3 if this is the third time. Remove the remaining acts from the game.",
       "memoriesBanished": "Tìm mỗi lá bài câu chuyện được liệt kê trong mục \"Memories Banished\" (Ký Ức Bị Xóa) trong Nhật ký Chiến dịch của bạn. Đặt mỗi lá bài này vào khu vực trưng bày thành tích.",
       "setRemainingMemoriesAside": "Đặt mỗi kẻ địch \"Memory of…\" (Ký Ức về…) còn lại sang một bên, ngoài màn chơi.",
+      "memoriesDiscovered": "Tìm mỗi địa điểm được liệt kê trong mục \"Memories Discovered\" (Ký Ức Đã Được Khám Phá) trong Nhật ký Chiến dịch của bạn. Đặt mỗi địa điểm này vào trò chơi, mặt hiển lộ ngửa, cùng với Prison of Memories (Nhà Tù Ký Ức) *(nhớ điều chỉnh giá trị manh mối của mỗi địa điểm theo từ khóa Mirage (Ảo Ảnh), như mô tả dưới đây)*",
       "startAt": "Mỗi điều tra viên bắt đầu trò chơi tại Prison of Memories (Nhà Tù Ký Ức).",
       "setOtherLocationsAside": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
-      "memoriesDiscovered": "Tìm mỗi địa điểm được liệt kê trong mục \"Memories Discovered\" (Ký Ức Đã Được Khám Phá) trong Nhật ký Chiến dịch của bạn. Đặt mỗi địa điểm này vào trò chơi, mặt hiển lộ ngửa, cùng với Prison of Memories (Nhà Tù Ký Ức) *(nhớ điều chỉnh giá trị manh mối của mỗi địa điểm theo từ khóa Mirage (Ảo Ảnh), như mô tả dưới đây)*",
       "setResoluteAside": "Đặt sang một bên mỗi lá bài tài sản câu chuyện [[Resolute]] (Kiên Định) trong số chín lá chưa được nhận từ lần chơi trước của Fatal Mirage (Ảo Ảnh Chết Người)."
     },
     "checkDifficulty": "Kiểm tra cấp độ khó.",
+    "hard": "If you are playing on Hard difficulty, add 1 doom to the agenda.",
+    "expert": "If you are playing on Expert difficulty, add 2 doom to the agenda.",
     "tekelili": "Xáo trộn tất cả các lá bài điểm yếu Tekeli-li! chưa nằm trong bộ bài của điều tra viên để tạo thành chồng bài Tekeli-li. Đặt chồng bài này gần chồng bài agenda."
   },
-  "specialRules": [
-    {
-      "title": "Mirage (Ảo Ảnh)"
+  "deckOfTheTheodosia": {
+    "label": {
+      "addShroud": "Give it +2 shroud for this investigation",
+      "spendAdditionalAction": "Spend 1 additional action"
     }
-  ]
+  },
+  "drKenslersOffice": {
+    "label": {
+      "removeSecret": "Remove 1 secret from an asset you control"
+    }
+  }
 }

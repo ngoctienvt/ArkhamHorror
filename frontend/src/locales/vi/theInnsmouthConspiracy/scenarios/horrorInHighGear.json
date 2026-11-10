@@ -1,38 +1,87 @@
 {
   "heading": "Màn V",
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Horror in High Gear*, *Fog over Innsmouth*, *Malfunction*, *Shattered Memories*, and *Ancient Evils*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/horror-in-high-gear.png' /><img src='{setImgPath}/fog-over-innsmouth.png' /><img src='{setImgPath}/malfunction.png' /><img src='{setImgPath}/shattered-memories.png' /><img src='{setImgPath}/ancient-evils.png' /></section>",
     "roadDeck": "Tạo chồng bài Road (Con Đường). Điều này được thực hiện bằng cách thực hiện các bước sau:",
+    "findRoadLocations": "Tìm Falcon Point Approach và cả 6 lá bài Long Way Around. Mỗi lá này có mặt để lộ là 1 vị trí Old Innsmouth Road. Đặt chúng một bên, ngoài khu vực chơi.",
     "bottomThree": "Xào lá bài Falcon Point Approach và 2 lá bài Old Innsmouth Road vào để tạo thành 3 lá bài cuối cùng của chồng bài Road.",
     "remainingOnTop": "Đặt tất cả các lá bài Old Innsmouth Road còn lại lên trên theo thứ tự ngẫu nhiên.",
+    "unrevealedSide": "Tất cả các lá bài trong bộ bài Road chỉ nên hiển thị mặt Old Innsmouth Road để người chơi không biết lá nào là lá nào.",
+    "putRoadIntoPlay": "Đặt 3 lá bài trên cùng của bộ bài Road vào chơi theo một đường thẳng từ trái sang phải, trong đó bên trái là “phía sau” và bên phải là “phía trước”.",
+    "chooseVehicles": "Chọn phương tiện di chuyển. Có hai phương tiện di chuyển mà các điều tra viên có thể sử dụng trong tình huống này—Xe hơi của Thomas Dawson và Xe hơi của Elina Harper. Mỗi điều tra viên phải chọn một phương tiện di chuyển để lên xe. Không quá hai điều tra viên có thể lên cùng một phương tiện. (Xem phần Phương tiện di chuyển bên dưới.)",
     "vehiclesBeginAtFront": "Mỗi phương tiện di chuyển có ít nhất một điều tra viên sẽ bắt đầu chơi ở vị trí phía trước vị trí Old Innsmouth Road. Loại bỏ các phương tiện di chuyển khác khỏi màn chơi.",
+    "runningSide": "Mỗi phương tiện di chuyển bắt đầu chơi với mặt <i>(Running)</i> ngửa lên <i>(xem phần Đang chạy/Ngừng chạy bên dưới)</i>.",
     "beginInVehicle": "Mỗi điều tra viên bắt đầu chơi trên phương tiện di chuyển mà họ đã chọn để lên.",
+    "triggerRoad": "Kích hoạt từ khóa Road X của vị trí đó khi nó được để lộ <i>(xem Road X bên dưới)</i>.",
     "chooseDrivers": "Chọn người lái. Một điều tra viên trên mỗi phương tiện di chuyển phải được chỉ định là người điều khiển phương tiện đó.",
     "driverNote": "Mỗi phương tiện luôn phải có người điều khiển và có ít nhất một điều tra viên trên nó. Nếu người lái rời khỏi phương tiện di chuyển hoặc bị loại bỏ thì chọn một điều tra viên khác trên phương tiện đó làm người điều khiển mới.",
     "playerCount": "Dựa vào số lượng người chơi trong màn chơi:",
+    "onePlayer": "If there is exactly 1 player in the game, no changes are made.",
+    "twoOrThreePlayers": "If there are 2–3 players in the game, search the gathered encounter sets for 1 random _Vehicle_ enemy. Spawn that enemy at the rearmost location.",
+    "fourPlayers": "If there are exactly 4 players in the game, search the gathered encounter sets for 2 random _Vehicle_ enemies. Spawn each of those enemies at the rearmost location.",
     "checkCampaignLog": "Kiểm tra nhật ký chiến dịch. Tùy thuộc vào các trường hợp sau đây mà sử dụng một phiên bản khác của agenda 1 trong màn chơi này. Loại bỏ các phiên bản khác của agenda 1 khỏi màn chơi.",
-    "findRoadLocations": "Tìm Falcon Point Approach và cả 6 lá bài Long Way Around. Mỗi lá này có mặt để lộ là 1 vị trí Old Innsmouth Road. Đặt chúng một bên, ngoài khu vực chơi.",
-    "unrevealedSide": "Tất cả các lá bài trong bộ bài Road chỉ nên hiển thị mặt Old Innsmouth Road để người chơi không biết lá nào là lá nào.",
-    "putRoadIntoPlay": "Đặt 3 lá bài trên cùng của bộ bài Road vào chơi theo một đường thẳng từ trái sang phải, trong đó bên trái là “phía sau” và bên phải là “phía trước”.",
-    "chooseVehicles": "Chọn phương tiện di chuyển. Có hai phương tiện di chuyển mà các điều tra viên có thể sử dụng trong tình huống này—Xe hơi của Thomas Dawson và Xe hơi của Elina Harper. Mỗi điều tra viên phải chọn một phương tiện di chuyển để lên xe. Không quá hai điều tra viên có thể lên cùng một phương tiện. (Xem phần Phương tiện di chuyển bên dưới.)"
+    "theChaseIsOnV2": "If _the Terror of Devil Reef is dead_, use Agenda 1a—The Chase is On! (v. II).",
+    "theChaseIsOnV1": "Nếu không, hãy sử dụng Agenda 1a—The Chase is On! (v.I)."
+  },
+  "specialRules": [
+    {
+      "title": "Phương tiện di chuyển",
+      "body": "<p class='basic'>Một tài sản có từ khoá vehicle đại diện cho phương tiện di chuyển mà người chơi có thể đi vào hoặc rời khỏi. Một tài sản có từ khoá này được gọi là một phương tiện di chuyển, và tuân theo các luật sau:</p><ul><li>While an investigator’s mini-card is placed overlapping a vehicle, that investigator is in that vehicle. While an investigator’s mini-card is placed overlapping their location, that investigator is instead not in a vehicle (even if they are at the same location as a vehicle).<ul><li>As a {'{'}action{'}'} ability, an investigator may enter or leave a vehicle at their location. Move that investigator’s mini-card onto the vehicle or off of the vehicle and onto their location to indicate their new position. Each investigator may perform this ability only once each round.</li><li>Một điều tra viên đang ở trên phương riện di chuyển cũng có mặt tại vị trí của phương tiện di chuyển đó.</li><li>Khi điều tra viên ở trên phương tiện di chuyển, điều tra viên đó không thể di chuyển độc lập với phương tiện đó.</li></ul></li><li>Các phương tiện thường có một hoặc nhiều khả năng cho phép chúng di chuyển đến một địa điểm được kết nối. Khi một phương tiện di chuyển đi từ địa điểm này đến địa điểm khác, tất cả các điều tra viên trên nó cũng di chuyển theo.</li><li>Các phương tiện di chuyển không làm thay đổi chuyển động của kẻ địch hoặc sự đeo bám của kẻ địch dưới bất kỳ hình thức nào trừ khi có ghi chú khác.</li></ul>"
+    },
+    {
+      "title": "Đang chạy / Ngừng chạy",
+      "body": "<p class='basic'>Vehicles in this scenario can either be “running” or “stopped,” as indicated by their two sides. The differences between a running vehicle and a stopped vehicle is indicated by the game text on each side. A vehicle’s engine can be started or stopped using the ability on that vehicle, flipping it over to its other side.</p><ul><li>Thông thường mà nói, các điều tra viên sẽ chỉ có thể tiến triển nhanh chóng khi xe đang chạy. Tuy nhiên, đôi khi bạn nên dừng xe trong thời gian ngắn nếu bạn đang đến gần một vị trí nguy hiểm, chẳng hạn như Cliffside Road (vách đá) hoặc Tight Turn (lối rẽ nhỏ). Hãy cẩn thận!</li></ul>"
+    },
+    {
+      "title": "Con đường X",
+      "body": "<p class='basic'>Trong màn chơi này, các điều tra viên đang đi trên Đường Old Innsmouth từ Innsmouth đến Falcon Point. Con đường này nhìn chung là một đường thẳng từ trái sang phải, nhưng đôi khi có những lối đi phân nhánh.</p><p class='basic'>Mỗi khi một vị trí có từ khóa Road X được tiết lộ, nếu không có vị trí nào phía trước địa điểm vừa được tiết lộ, hãy đưa X địa điểm mới vào chơi thành một cột dọc phía trước nó, mặt Old Innsmouth Road ngửa lên. Vị trí đầu tiên của những vị trí này phải là lá trên cùng của chồng bài Road. Mỗi vị trí còn lại để đưa vào sử dụng đều được lấy từ các vị trí Long Way Around đặt một bên hồi đầu <i>(nếu không có đủ vị trí Long Way Around, hãy sử dụng nhiều nhất có thể)</i>. Xáo trộn từng vị trí đó để người chơi không biết đó là vị trí nào.</p><p><i>Ví dụ: Trish là tài xế chiếc xe của Elina Harper, và vừa mới di chuyển chiếc xe đó về phía trước đến một vị trí chưa được để lộ. Đó là Fork in the Road với từ khóa \"Road 2\". Vì hiện tại không có vị trí nào phía trước của Fork in the Road, do đó cô ấy phải đặt 2 vị trí Old Innsmouth Road trước Fork in the Road. Cô ấy lấy lá bài trên cùng của chồng bài Road và một trong những vị trí Long Way Around đặt một bên hồi đầu, đưa cả hai vào chơi thành một cột dọc mới phía trước Fork in the Road và xáo trộn chúng để người chơi không biết cái nào là cái nào.</i></p><ul><li>Thông thường, bạn nên tránh đi một Long Way Around (đường vòng) vì nó sẽ làm bạn chậm lại và giảm lượng thời gian bạn có để đến được Falcon Point.</li><li><b>Trong màn chơi này, mỗi vị trí được kết nối với từng vị trí phía sau hoặc phía trước nó, nhưng không được kết nối với bất kỳ vị trí nào khác trên cùng cột của nó.</b></li></ul>"
+    }
+  ],
+  "label": {
+    "discardAsset": "Discard an asset you control",
+    "whichVehicle": "Which vehicle will you start in?",
+    "whereWillEnemySpawn": "Where will the enemy spawn?"
   },
   "intro": {
     "title": "Màn V: Nỗi kinh hoàng ở Vòng Tua Cao",
     "body": "<p>Cây cối lướt qua khi bạn đi ầm ầm dọc theo con đường đất cũ ngay bên ngoài thị trấn Innsmouth. Mặt trời đã lặn ở chân trời phía Tây, chỉ còn lại vầng trăng tròn soi sáng những con đường bụi bặm trong ánh sáng rực rỡ, kỳ quái. “Chỗ này,” Đặc vụ Harper hét lên từ ghế hành khách át tiếng động cơ ô tô ầm ầm. Cô ấy chỉ vào một điểm trên bản đồ mà cô ấy đã trải dài trên đùi, gõ nhẹ vào đó nhiều lần. \"Ngọn hải đăng Falcon Point. Đó là nơi Oceiros nên ở.\" Một cơn rùng mình chạy dọc sống lưng bạn. Nếu ký ức của bạn đáng tin cậy thì Oceiros chính là người đã bỏ mặc bạn chết trong những đường hầm thủy triều đó. Bạn hỏi Harper là Falcon Point cách thị trấn Innsmouth bao xa, hy vọng sẽ đến nơi trước khi Dòng nhận ra bạn đã trốn thoát. Cô ấy thở dài. \"Nó không xa lắm, nhưng những con đường này quanh co. Chúng có thể khó di chuyển. Rẽ nhầm một cái và—\" cả bạn và Harper đều nhìn thấy đèn trong gương chiếu hậu của bạn cùng một lúc. Đèn pha. Và chúng ngày càng lớn hơn và sáng hơn theo từng giây. Harper thầm nguyền rủa. \"Tôi không nghĩ rằng đó là bạn của cậu, phải không?\" Bạn lắc đầu và siết chặt tay lái. Có vẻ như Dòng đã biết chuyến bay của bạn từ Innsmouth. Bạn bảo Đặc vụ Harper giữ chặt và nhấn chân ga.</p>"
   },
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Chuyến lái xe đến Falcon Point của bạn không phải là một chuyến đi thú vị. Giữa những tín đồ theo đuôi bạn và những sinh vật sống bên trong khu rừng nằm ngoài thị trấn Innsmouth, phương tiện di chuyển của bạn luôn bị quấy rối ở mọi ngã rẽ. Không có cách nào để trốn thoát mà không hề hấn gì, bạn buộc phải bỏ phương tiện di chuyển của mình và lẻn đi bộ qua khu rừng. Khi bạn nhìn thấy ngọn hải đăng xa xa, bình minh đã tô điểm bầu trời bầu trời bằng ánh sáng màu cam. \"Cuối cùng cũng đến,\" Đặc vụ Harper rên rỉ. Không còn thời gian để nghỉ ngơi, bạn tiếp tục chuyến đi đến ngọn hải đăng Falcon Point, kiệt sức nhưng đầy quyết tâm.</p>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Bạn thở phào nhẹ nhõm khi nhìn thấy ngọn hải đăng xa xa xuyên qua màn sương mù. \"Chúng ta hãy dừng lại ở đây và đi bộ phần còn lại của chuyến đi,\" Harper gợi ý. \"Nếu vẫn còn ai ở trong ngọn hải đăng đó, tốt nhất là họ không nên nghe thấy chúng ta đến gần.\" Lời khuyên của cô ấy rất có lý. Bạn không chắc chắn điều gì sẽ xảy ra khi đến Falcon Point, nhưng tất cả các dấu hiệu đều chỉ ra rằng đó là một tiền đồn khác của Dòng. Bạn kiểm tra kỹ để chắc chắn rằng không bị ai bám theo, sau đó tấp vào lề đường. Thu dọn đồ đạc trong cốp xe và bắt đầu hành trình đến ngọn hải đăng Falcon Point…</p>"
     }
   },
-  "specialRules": [
-    {
-      "title": "Phương tiện di chuyển"
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 (-3 instead if there are 6 or fewer locations remaining in the Road deck).",
+      "cultist": "-1. For each point you fail by, an investigator in your vehicle places 1 of their clues on your location.",
+      "tablet": "-2. For each point you fail by, an investigator in your vehicle loses 1 resource.",
+      "elderThing": "-4. Nếu bạn thất bại, resolve the hunter keyword on each enemy in play."
     },
-    {
-      "title": "Đang chạy / Ngừng chạy"
-    },
-    {
-      "title": "Con đường X"
+    "hardExpert": {
+      "skull": "-2 (-4 instead if there are 6 or fewer locations remaining in the Road deck).",
+      "cultist": "-2. For each point you fail by, an investigator in your vehicle places 1 of their clues on your location.",
+      "tablet": "-3. For each point you fail by, an investigator in your vehicle loses 1 resource.",
+      "elderThing": "-4. Resolve the hunter keyword on each enemy in play."
     }
-  ]
+  },
+  "tooltips": {
+    "elinaHarpersCarRunning": {
+      "drawAndMoveRoad": "If you are this vehicle's driver: Draw the top card of the encounter deck. Then, move this vehicle to a connecting _Road_ location. (Max once per round.)",
+      "stopCar": "If you are this vehicle's driver: You stop the car. Flip this vehicle over.",
+      "drive": "If you are this vehicle's driver: Draw the top card of the encounter deck. Then, move this vehicle to a connecting _Road_ location. (Max once per round.)",
+      "stop": "If you are this vehicle's driver: You stop the car. Flip this vehicle over."
+    },
+    "thomasDawsonsCarRunning": {
+      "drawAndMoveRoad": "If you are this vehicle's driver: Draw the top card of the encounter deck. Then, move this vehicle to a connecting _Road_ location. (Max once per round.)",
+      "stopCar": "If you are this vehicle's driver: You stop the car. Flip this vehicle over.",
+      "drive": "If you are this vehicle's driver: Draw the top card of the encounter deck. Then, move this vehicle to a connecting _Road_ location. (Max once per round.)",
+      "stop": "If you are this vehicle's driver: You stop the car. Flip this vehicle over."
+    }
+  }
 }

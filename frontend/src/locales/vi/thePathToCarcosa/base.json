@@ -1,68 +1,9 @@
 {
   "difficulty": {
-    "Easy": "*Tôi muốn xem vở kịch*",
-    "Standard": "*Tôi muốn đọc các dấu hiệu*",
-    "Hard": "*Tôi muốn nói lời tuyên thệ*",
-    "Expert": "*Tôi muốn Vị Vua Áo Vàng*"
-  },
-  "interludes": {
-    "2": "Đánh Mất Linh Hồn"
-  },
-  "label": {
-    "conviction": "Sự tin chắc",
-    "doubt": "Sự nghi ngờ"
-  },
-  "key": {
-    "theStrangerIsOnToYou": "Kẻ Lạ đi theo bạn.",
-    "youTriedToWarnThePolice": "Bạn cố gắng cảnh báo cảnh sát.",
-    "thePoliceAreSuspiciousOfYou": "Cảnh sát nghi ngờ bạn.",
-    "youChoseNotToGoToThePolice": "Bạn chọn không đến chỗ cảnh sát.",
-    "doubt": "Sự nghi ngờ",
-    "conviction": "Sự tin chắc",
-    "vIPsInterviewed": "VIP Đã Phỏng Vấn",
-    "vIPsSlain": "VIP Đã Bị Giết",
-    "youIntrudedOnASecretMeeting": "Bạn đã xâm nhập vào một cuộc họp bí mật.",
-    "youFledTheDinnerParty": "Bạn trốn thoát khỏi bữa tiệc tối.",
-    "youSlayedTheMonstersAtTheDinnerParty": "Bạn đã giết những con quái vật ở bữa tiệc tối.",
-    "youTookTheOnyxClasp": "Bạn lấy chiếc móc mã não đi.",
-    "youLeftTheOnyxClaspBehind": "Bạn bỏ cái móc mã não ở lại.",
-    "youDestroyedTheOathspeaker": "Bạn tiêu diệt người tuyên thệ.",
-    "theFollowersOfTheSignHaveFoundTheWayForward": "Những kẻ theo đuổi dấu hiệu đã tìm thấy con đường tiến về phía trước.",
-    "theInvestigatorsWereAttackedAsTheyEscapedTheAsylum": "Các điều tra viên bị tấn công khi trốn thoát khỏi Nhà thương điên.",
-    "theInvestigatorsEscapedTheAsylum": "Các điều tra viên trốn thoát khỏi Nhà thương điên.",
-    "youIgnoredDanielsWarning": "Bạn bỏ qua lời cảnh báo của Daniel.",
-    "youHeadedDanielsWarning": "Bạn lưu ý lời cảnh báo của Daniel.",
-    "youDidNotEscapeTheGazeOfThePhantom": "Bạn đã không thoát khỏi cái nhìn của bóng ma.",
-    "youFoundNigelEngram": "Bạn đã tìm thấy Nigel Engram.",
-    "youWereUnableToFindNigel": "Bạn không tìm thấy Nigel.",
-    "youAwokeInsideTheCatacombs": "Bạn tỉnh dậy bên trong hầm mộ.",
-    "youEnteredTheCatacombsOnYourOwn": "Bạn đã tự mình bước vào hầm mộ.",
-    "youKnowTheSiteOfTheGate": "Bạn biết vị trí của cánh cổng.",
-    "readActII": "Đọc Act II",
-    "youOpenedThePathBelow": "Bạn đã mở con đường phía dưới.",
-    "youOpenedThePathAbove": "Bạn đã mở con đường phía trên.",
-    "theRealmOfCarcosaMergedWithOurOwnAndHasturRulesOverThemBoth": "Địa hạt của thành phố Carcosa hợp nhất với thế giới chúng ta, và Hastur cai trị cả hai.",
-    "theInvestigatorsPreventedHasturFromEscapingHisPrison": "Các điều tra viên đã ngăn chặn Hastur thoát khỏi nhà tù của hắn.",
-    "hasturHasYouInHisGrasp": "Hastur bắt giữ được bạn trong tầm tay của hắn.",
-    "chasingTheStranger": "Đuổi theo Kẻ lạ",
-    "youFoundNigelsHome": "bạn đã tìm thấy nhà của Nigel."
-  },
-  "prologue": {
-    "yellowSign": {
-      "title": "Bạn Đã Từng Thấy Dấu Hiệu Màu Vàng Chưa?",
-      "body": "<p>“Ông ấy đề cập đến việc thành lập Vương triều ở Carcosa, các hồ kết nối vùng Hastur, Aldebaran, và bí ẩn của vùng Hyades. Ông ấy nói về nữ hoàng Cassilda và con gái bà, Camilla, và lắng nghe những tầng mây sâu thẳm của hồ Demhe và hồ Hali. \" - Robert W. Chambers, \"Người sửa chữa danh tiếng\"</p>"
-    },
-    "title": "Lời mở đầu",
-    "body": "<p>Bạn lật mở tờ chương trình gấp trên tay, đọc nó như thể đã đọc cả trăm lần. Nó viết là, \"Miskatonic Playhouse trình bày: The King in Yellow\". “Buổi diễn đặc biệt một đêm tại Nhà hát Ward của thị trấn Arkham. Một vở kịch 2 phần hấp dẫn không tưởng. Được dàn dựng và đạo diễn bởi Nigel Engram. ” Dàn diễn viên là một đoàn kịch nhỏ, cùng với một cái tên hậu đề ở cuối là: \"Kẻ Lạ.\"</p><p>Việc có một vở kịch được mong đợi như vậy đến với thị trấn Arkham từ Paris là một sự kiện đáng chú ý, ngay cả khi nó chỉ diễn ra trong một đêm. Trong nhiều tuần trước buổi biểu diễn, nó được bàn tán khắp nơi trong thị trấn. Nó có vẻ khiêm tốn quá mức… nhưng mà, bạn có bằng chứng cho thấy có điều gì đó xấu xa đang diễn ra. Nó bắt đầu với sự biến mất của một trong những diễn viên sân khấu tại nhà hát - một cậu bé mới mười bảy tuổi đã bỏ lỡ buổi diễn tập vào một đêm và không bao giờ được nhìn thấy nữa. Sau đó, chưa đầy hai tuần trước khi biểu diễn, có xác một nhạc sĩ được tìm thấy với một khẩu súng trong miệng. Có lẽ ớn lạnh nhất là người đàn ông điên loạn mà các viên cảnh sát đã gặ phải ở Quảng trường Độc lập (Independence Square), hắn ta say sưa nói về “sự trở lại của Nhà Vua”. Ông ta đã được đưa đến Nhà thương điên Arkham (Arkham Asylum), và bạn ngạc nhiên khi phát hiện ra rằng ông ta không cô độc trong ảo tưởng của mình.</p><p>Nhận thấy những sự kiện này đáng ngờ, bạn và những người đồng hành của mình đã dấn thân tìm hiểu sâu hơn vào sự việc. Mặc dù không thể chứng minh được mối liên kết nào, nhưng đây không phải là những sự kiện kỳ ​​lạ duy nhất xung quanh vở kịch sắp diễn ra. Các trường hợp tự tử và trở nên điên loạn xảy ra ngay sau đó, và bạn quyết tâm tìm ra nguyên nhân.</p><p>Ánh đèn trong khán phòng mờ đi, và một spotlight chiếu sáng sâu khấu. Vở kịch diễn ra không hoàn toàn như những gì bạn mong đợi. Phần một của The King in Yellow chán òm với nhịp độ chậm và đơn điệu. Bối cảnh và nhân vật hấp dẫn, nhưng câu chuyện lòng vòng và vô lý không đem lại tính giải trí. Bạn bắt đầu tự hỏi liệu những sự kiện kinh hoàng xung quanh The King in Yellow không có mối liên hệ nào với nhau thật sao. Có lẽ đó chỉ là trí tưởng tượng quá mức của bạn; làm thế nào mà một buổi biểu diễn tầm thường và khiêm nhượng như vậy lại có thể gây ra sự hỗn loạn như thế? Bạn ngạc nhiên khi phần đầu tiên kết thúc mà không có bất kỳ xung đột hay tiết lộ nào. Đèn sáng lên trong khoảng thời gian tạm dừng, và bạn cân nhắc việc về sớm, nén lại cơn ngáp của mình. Tuy nhiên, trước khi bạn kịp quyết định, bạn thấy mình đang trôi… trôi… vào giấc ngủ.</p>"
-  },
-  "interlude1": {
-    "title": "Chuyển tiếp I: Phần thưởng của Sự điên loạn"
-  },
-  "interlude2": {
-    "title": "Chuyển tiếp II: Đánh Mất Linh Hồn"
-  },
-  "epilogue": {
-    "title": "Phần kết"
+    "Easy": "<i>Tôi muốn xem vở kịch</i>",
+    "Standard": "<i>Tôi muốn đọc các dấu hiệu</i>",
+    "Hard": "<i>Tôi muốn nói lời tuyên thệ</i>",
+    "Expert": "<i>Tôi muốn <u>Vị Vua Áo Vàng</u></i>"
   },
   "specialRules": [
     {
@@ -70,11 +11,110 @@
       "body": "<p class='basic'>Một số encounter card trong The Path to Carcosa campaign có từ khóa \"hidden\" (ẩn giấu). Những lá bài ẩn giấu có khả năng Revelation để thêm chúng một cách bí mật vào tay của bạn. Điều này cần được làm mà không để lộ lá bài hoặc nội dung lá bài cho các điều tra viên khác. Trong khi một lá bài ẩn giấu ở trên tay của bạn, xem nó như thể nó ở trong threat area của bạn. Khả năng Constant của nó được hoạt động, và khả năng trên lá bài có thể được kích hoạt, nhưng chỉ bạn có thể kích hoạt. Lá bài ẩn giấu tính vào tổng số lá bài trên tay, nhưng nó không thể bị bỏ đi bằng bất kỳ cách nào ngoại trừ những cái mô tả trên lá bài. Khi bị bỏ đi, lá bài hidden được đặt vào chồng bài encounter bỏ. Chúng không là một phần trong chồng bài của bạn như các lá bài điểm yếu. Để trải nghiệm được tốt nhất, người chơi được khuyến khích nên giữ cho mình \"ở trong vai nhân vật\" và không chia sẻ thông tin về các lá bài ẩn giấu trên tay mình.</p>"
     },
     {
-      "title": "Sự nghi ngờ và Sự tin chắc"
+      "title": "Sự nghi ngờ và Sự tin chắc",
+      "body": "<p class='basic'>Một số giải pháp của câu chuyện và phần chuyển tiếp trong The Path to Carcosa campaign hướng dẫn người chơi \"đánh dấu một <b>Doubt</b>\" hoặc \"đánh dấu một <b>Conviction</b>\" trong Campaign Log. Điều này được thực hiện bằng cách đánh dấu vào một trong các ô kế bên “<b>Doubt</b>” hay “<b>Conviction</b>” trong Campaign Log.</p><p class='basic'>Trong các màn sau của chiến dịch, một số màn chơi có thể bị thay đổi phụ thuộc vào việc liệu các điều tra viên \"có nhiều <b>Doubt</b> hơn <b>Conviction</b>\" hay \"có nhiều <b>Conviction</b> hơn <b>Doubt</b>.\" Các điều tra viên có nhiều <b>Doubt</b> hơn <b>Conviction</b> nếu số ô được đánh dấu bên cạnh <b>Doubt</b> lớn hơn số ô được đánh dấu bên cạnh <b>Conviction</b> (và ngược lại). <b>Doubt</b> và <b>Conviction</b> chia sẻ cho tất cả các điều tra viên, và không phụ thuộc vào một điều tra viên cụ thể nào. <b>Doubt</b> và <b>Conviction</b> không có hiệu ứng trong trò chơi ngoại trừ khi được đề cập cụ thể bởi cuốn Hướng dẫn Chiến dịch hoặc bởi hiệu ứng của một lá bài.</p>"
     },
     {
       "title": "Lá bài Cốt truyện",
       "body": "<p class='basic'>Các là bài câu chuyện là một loại bài mới ở trong The Path to Carcosa campaign. Những lá bài này đóng vai trò thêm các câu chuyện bổ sung và thường xuất hiện ở mặt trái của lá bài scenario. Khi được hướng dẫn xử lý lá bài câu chuyện, bạn đơn giản chi cần đọc nội dung câu chuyện và xử lý nội dung của nó, nếu có.</p>"
     }
-  ]
+  ],
+  "interludes": {
+    "1": "Phần thưởng của Sự điên loạn",
+    "2": "Đánh Mất Linh Hồn"
+  },
+  "label": {
+    "gainAdditionalXp": "Chọn {name} để nhận thêm 1 XP",
+    "youngPsychopath": {
+      "fight": "Young Psychopath nhận +3 fight cho đến cuối investigation phase"
+    },
+    "conviction": "Conviction",
+    "doubt": "Doubt"
+  },
+  "key": {
+    "theStrangerIsOnToYou": "Kẻ Lạ đi theo bạn.",
+    "chasingTheStranger": "Đuổi theo Kẻ lạ",
+    "youTriedToWarnThePolice": "bạn đã cố gắng cảnh báo cảnh sát.",
+    "thePoliceAreSuspiciousOfYou": "cảnh sát nghi ngờ bạn.",
+    "youChoseNotToGoToThePolice": "bạn chọn không đến chỗ cảnh sát.",
+    "doubt": "Doubt",
+    "conviction": "Conviction",
+    "vIPsInterviewed": "VIP Đã Phỏng Vấn",
+    "vIPsSlain": "VIP Đã Bị Giết",
+    "youIntrudedOnASecretMeeting": "bạn đã xâm nhập vào một cuộc họp bí mật.",
+    "youFledTheDinnerParty": "bạn trốn thoát khỏi bữa tiệc tối.",
+    "youSlayedTheMonstersAtTheDinnerParty": "bạn đã giết những con quái vật ở bữa tiệc tối.",
+    "youTookTheOnyxClasp": "bạn lấy chiếc móc mã não đi.",
+    "youLeftTheOnyxClaspBehind": "bạn bỏ cái móc mã não ở lại.",
+    "youDestroyedTheOathspeaker": "bạn tiêu diệt người tuyên thệ.",
+    "theFollowersOfTheSignHaveFoundTheWayForward": "những kẻ theo đuổi dấu hiệu đã tìm thấy con đường phía trước.",
+    "theKingClaimedItsVictims": "Nhà Vua đã đoạt lấy các nạn nhân của hắn.",
+    "theInvestigatorsWereAttackedAsTheyEscapedTheAsylum": "các điều tra viên bị tấn công khi trốn thoát khỏi Nhà thương điên.",
+    "theInvestigatorsEscapedTheAsylum": "các điều tra viên trốn thoát khỏi Nhà thương điên.",
+    "youIgnoredDanielsWarning": "bạn bỏ qua lời cảnh báo của Daniel.",
+    "youHeadedDanielsWarning": "bạn lưu ý lời cảnh báo của Daniel.",
+    "youDidNotEscapeTheGazeOfThePhantom": "bạn đã không thoát khỏi cái nhìn của bóng ma.",
+    "youFoundNigelsHome": "bạn đã tìm thấy nhà của Nigel.",
+    "youFoundNigelEngram": "bạn đã tìm thấy Nigel Engram.",
+    "youWereUnableToFindNigel": "bạn không tìm thấy Nigel.",
+    "youAwokeInsideTheCatacombs": "bạn tỉnh dậy bên trong hầm mộ.",
+    "youEnteredTheCatacombsOnYourOwn": "bạn đã tự mình bước vào hầm mộ.",
+    "youKnowTheSiteOfTheGate": "bạn biết vị trí của cánh cổng.",
+    "readActII": "Đọc Act II",
+    "youOpenedThePathBelow": "bạn đã mở con đường phía dưới.",
+    "youOpenedThePathAbove": "bạn đã mở con đường phía trên.",
+    "theRealmOfCarcosaMergedWithOurOwnAndHasturRulesOverThemBoth": "địa hạt của thành phố Carcosa hợp nhất với chính thế giới chúng ta, và Hastur cai trị cả hai.",
+    "theInvestigatorsPreventedHasturFromEscapingHisPrison": "các điều tra viên đã ngăn chặn Hastur thoát khỏi ngục tù của hắn.",
+    "hasturHasYouInHisGrasp": "Hastur bắt giữ được bạn trong tầm tay của hắn.",
+    "possessed": "Bị ám"
+  },
+  "prologue": {
+    "yellowSign": {
+      "title": "Bạn Đã Từng Thấy Dấu Hiệu Màu Vàng Chưa?",
+      "body": "<p>“Ông ấy đề cập đến việc thành lập Vương triều ở Carcosa, các hồ kết nối vùng Hastur, Aldebaran, và bí ẩn của đám mây Hyades. Ông ấy nói về Cassilda và Camilla, và âm mưu sâu thẳm của bóng tối nơi mây mù Yhtill.”</p><p class='basic right'>—Robert W. Chambers, “The Repairer of Reputations”</p>"
+    },
+    "title": "Lời mở đầu",
+    "body": "<p>Bạn lật mở tờ chương trình gấp trên tay, đọc nó như thể đã đọc nó hàng trăm lần trước đây. Vở kịch <i>Vị Vua Áo Vàng</i>, đến từ Paris, một vở kịch chỉ diễn duy nhất một đêm tại Rạp hát Ward. Đó là chủ đề bàn tán của thị trấn trong nhiều tuần nay. Nhưng các thông tin về vở kịch nói chung khá mơ hồ. Những bức thư gián điệp, sự biến mất, những vụ tự tử...</p><p>Những tin đồn này là lý do bạn có mặt ở đây đêm nay. Lời giải thích hợp lý duy nhất là một sự giả dối, một chiêu trò quảng cáo tinh vi để thổi phồng mức độ quan tâm của mọi người về buổi diễn. Nhưng có một điều gì đó sâu thẳm trong bạn nói rằng đó không chỉ là sự trùng hợp ngẫu nhiên. Bạn phải điều tra đến cùng.</p><p>Ánh đèn sân khấu mờ đi và buổi biểu diễn bắt đầu.</p>",
+    "ifLola": "Nếu Lola Hayes được chọn làm điều tra viên cho chiến dịch này: Điều tra viên đó đọc phần sau. Người chơi Lola Hayes đọc lớn phần sau.",
+    "otherwise": "Nếu không: Chuyển đến _Scenario I: Curtain Call_.",
+    "lola": "<p>_Lola Prologue_: Hồi I diễn ra suôn sẻ, như thường lệ trong các buổi diễn tập. Nhưng có điều gì đó không ổn. Người phụ nữ đóng vai Camilla tiếp tục chuyển lời thoại của cô ấy sang tiếng Pháp, ngay cả sau khi bạn đã sửa lại cho cô ấy ba lần. Không ai có thể làm việc dưới sự căng thẳng như thế này. Bạn thở dài, rời khỏi sân khấu và đến phòng thay đồ của mình để thay đồ cho Hồi II. Bạn tự nhủ phải cố gắng trải qua đêm nay. Bạn đã không nhận ra sự tĩnh lặng đã bao trùm lấy rạp hát.</p>",
+    "proceed": "Chuyển đến _Scenario I: Curtain Call_."
+  },
+  "resolutions": {
+    "xp": {
+      "bonus": "Số clue còn trên act deck khi trò chơi kết thúc"
+    }
+  },
+  "interlude1": {
+    "title": "Chuyển tiếp I: Phần thưởng của Sự điên loạn",
+    "body": "<ul><li>Các điều tra viên phải quyết định (chọn một):<ul><li><p>Mọi thứ dường như đã lắng xuống. Có lẽ chúng ta nên quay trở lại bên trong và tìm kiếm thêm manh mối. Tiến hành _Lunacy’s Reward 1_.</p></li><li><p>Tôi không tin tưởng nơi này một chút nào. Hãy chặn cánh cửa này từ bên ngoài và đi khỏi đây. Tiến hành _Lunacy’s Reward 2_.</p></li><li><p>Nếu những sinh vật đó trốn thoát, thị trấn này sẽ bị tiêu diệt. Chúng ta phải đốt cháy nơi này. Tiến hành _Lunacy’s Reward 3_.</p></li></ul></li></ul>",
+    "label": {
+      "chooseLunacysReward1": "Chuyển đến _Lunacy’s Reward 1_",
+      "chooseLunacysReward2": "Chuyển đến _Lunacy’s Reward 2_",
+      "chooseLunacysReward3": "Chuyển đến _Lunacy’s Reward 3_"
+    },
+    "lunacysReward1": "<p>_Lunacy’s Reward 1_: Sự thay đổi trong bầu không khí khiến bạn tò mò. Sẽ ra sao nếu nó là có thật? Nếu tất cả những điều đó là sự thật thì sao? Bạn tìm kiếm trong các tài liệu lưu trữ và phòng làm việc của bệnh viện tâm thần, tìm kiếm bất cứ thứ gì có thể làm sáng tỏ lịch sử của tổ chức này. Cuối cùng, bạn tình cờ tìm thấy hồ sơ của một bệnh nhân có mô tả kỳ lạ giống với Kẻ Lạ mà bạn đã gặp vào tối nay...</p><ul><li>Trong Campaign Log của bạn, dưới mục “VIPs Interviewed,” ghi lại *Daniel Chesterfield*.</li><li>Bất kỳ một điều tra viên nào cũng có thể thêm Daniel Chesterfield vào bộ bài của mình. Lá bài này không tính vào giới hạn kích thước bộ bài của điều tra viên đó.</li></ul>",
+    "lunacysReward2": "<p>_Lunacy’s Reward 2_: Bạn không thể tin vào các giác quan của mình. Tất cả chỉ là một trò lừa, một nỗ lực nhằm khiến bạn mất trí. Bạn quay lưng lại với bệnh viện tâm thần và đi bộ một mạch dài đến ga xe lửa ở Phía Bắc. Bạn cần phải đến nơi nào đó an toàn, nơi nào đó bạn có thể suy nghĩ thấu đáo.</p><ul><li>Trong Campaign Log của bạn, đánh dấu một <b>Doubt</b>.</li></ul>",
+    "lunacysReward3": "<p>_Lunacy’s Reward 3_: Bạn không dám mạo hiểm bước lại vào bên trong ngôi nhà điên loạn đó. Nhưng bạn cũng không thể bỏ mặc nó như vậy được. Bạn tìm thấy một can dầu hỏa trong nhà kho của người làm vườn và dập tắt ngọn lửa đang cháy âm ỉ trên khắp các tấm gỗ của viện tâm thần. Khi ngọn lửa bùng lên trên bầu trời đêm, bạn quay lưng và bỏ đi, biết rằng ít nhất lũ quái vật bên trong sẽ không bao giờ làm hại ai nữa.</p><ul><li>Trong Campaign Log của bạn, đánh dấu một <b>Conviction</b>.</li></ul>"
+  },
+  "interlude2": {
+    "title": "Chuyển tiếp II: Đánh Mất Linh Hồn",
+    "label": {
+      "ignoreTheWarning": "Bị ám? Lời thề? Chắc chắn phải có lời giải thích khác cho tất cả những điều này. Tiến hành _Ignore the Warning_.",
+      "heedTheWarning": "Chúng ta phải nghe theo lời cảnh báo của Daniel. Chúng ta không được nhắc đến tên của Vị Vua Áo Vàng. Tiến hành _Heed the Warning_."
+    },
+    "ignoreTheWarning": "<p>_Ignore the Warning_: Trong nhiều giờ liền, bạn đấu tranh với sự hiểu biết sâu sắc này về Vị Vua Áo Vàng. Bạn không thể tin vào những gì Daniel đã nói. Sự chiếm đoạt? Lời thề? Vị Vua Áo Vàng chỉ là một vở kịch hư cấu, và chắc chắn có một lời giải thích hợp lý cho tất cả những điều này. Bạn từ chối tin vào những lời lảm nhảm của một kẻ điên.</p><ul><li>Trong Campaign Log của bạn, đánh dấu một <b>Doubt</b>.</li></ul>",
+    "heedTheWarning": "<p>_Heed the Warning_: Trong nhiều giờ liền, bạn đấu tranh với sự hiểu biết sâu sắc này về Vị Vua Áo Vàng. Lời cảnh báo của Daniel cứ vang vọng mãi trong tâm trí bạn. Mặc dù khó tin, nhưng bạn đã tận mắt chứng kiến những điều không thể tin được xảy ra trong vài tuần qua. Tốt hơn hết là bạn nên cẩn trọng và không nhắc đến tên của thực thể đó nữa.</p><ul><li>Trong Campaign Log của bạn, đánh dấu một <b>Conviction</b>.</li></ul>",
+    "danielSurvived": "<p>_Daniel Survived_: Bạn quyết định ẩn náu một thời gian trong Nhà trọ của Ma. Nhiều tuần trôi qua. Các sự kiện tại nhà thương điên và bữa tiệc tối đã có tác động không thể phủ nhận đối với bạn, và trong nhiều ngày, bạn cảm thấy bất an. Tuy nhiên, chẳng bao lâu sau, bạn nghe thấy tiếng gõ cửa điên cuồng vào phòng mình. Đó là Daniel Chesterfield, hối hả và thở không ra hơi. “Họ đang tìm tôi!” anh ta thốt lên, “Người đàn ông đeo mặt nạ… hắn biết tôi ở đâu! Các bạn phải giúp tôi!” Bạn trấn tĩnh Daniel và lắng nghe câu chuyện của anh ấy. Anh ấy giải thích rằng anh ấy từng là diễn viên trong một vở kịch trước đó của <i>Vị Vua Áo Vàng</i>, ở Paris. Anh ấy nhận ra người đàn ông đeo chiếc mặt nạ nhợt nhạt từ đoàn kịch. “Hắn ta đã phát điên, hoàn toàn phát điên,” Daniel thì thầm, nhìn chằm chằm vào khoảng không xa xăm. “Bạn đã thấy hắn rồi, phải không? Chiếc mặt nạ kinh khủng đó? Hắn ta không thể tháo nó ra. Nó không chịu rơi ra! Nó sẽ không bao giờ rời ra…” Anh ấy run rẩy và ôm đầu trong tay. Bạn hỏi anh ấy về <i>Vị Vua Áo Vàng</i>, nhưng tất cả những gì anh ấy có thể nói với bạn là địa điểm ở Paris nơi đoàn kịch đã biểu diễn.</p><ul><li>Trong Campaign Log của bạn, ghi lại rằng *các điều tra viên bị tấn công khi trốn thoát khỏi Nhà thương điên*.</li><li>Trong Campaign Log của bạn, dưới mục “Chasing the Stranger,” hãy đặt một dấu gạch kiểm (tally mark).</li><li>Mỗi điều tra viên nhận được 2 điểm kinh nghiệm thưởng, khi họ hiểu sâu hơn về mưu đồ của Vị Vua Rách Rưới.</li></ul>",
+    "danielDidNotSurvive": "<p>_Daniel Did Not Survive_: Bạn quyết định ẩn náu một thời gian trong Nhà trọ của Ma, không chắc liệu tin tức về các sự kiện tại bệnh viện tâm thần có lọt ra ngoài công chúng hay không. Bạn dành thời gian này để ghi chép chi tiết về các sự kiện bạn đã trải qua cho đến nay, bao gồm cả đoạn đối thoại ngắn giữa bạn và Daniel. Anh ấy đã nói về Vị Vua Áo Vàng như thể đó là một sinh thể có thật, và thậm chí còn gọi tên nó. “Hastur.” Anh ấy đã lảm nhảm, lẩm bẩm và gào thét những cụm từ khác nữa. Bạn nghi ngờ liệu mình có bao giờ quên được chúng không. “Hắn bắt chúng tôi phải nói Lời tuyên thệ.” “Cái giá đã được trả.” “Họ đang mở con đường dẫn đến Carcosa.” Trong nhiều giờ, bạn nghĩ về lời cảnh báo của Daniel dành cho bạn, điều mà anh ấy đã cầu xin bạn phải lắng nghe: “Đừng nói tên của Hắn.” Những khoảnh khắc cuối cùng của anh ấy cứ lặp đi lặp lại trong tâm trí bạn.</p><ul><li>Các điều tra viên phải quyết định (chọn một):<ul><li>Bị ám? Lời thề? Chắc chắn phải có lời giải thích khác cho tất cả những điều này. Tiến hành _Ignore the Warning_.</li><li>Chúng ta phải nghe theo lời cảnh báo của Daniel. Chúng ta không được nhắc đến tên của Vị Vua Áo Vàng. Tiến hành _Heed the Warning_.</li></ul></li></ul>",
+    "danielWasPossessed": "<p>_Daniel Was Possessed_: Bạn quyết định ẩn náu một thời gian trong Nhà trọ của Ma, không chắc liệu tin tức về các sự kiện tại bệnh viện tâm thần có lọt ra ngoài công chúng hay không. Bạn dành thời gian này để ghi chép chi tiết về các sự kiện bạn đã trải qua cho đến nay, bao gồm cả đoạn đối thoại ngắn giữa bạn và Daniel. Anh ấy đã nói về Vị Vua Áo Vàng như thể đó là một thực thể có thật, và thậm chí còn gọi tên nó. “Hastur.” Anh ấy đã lảm nhảm, lẩm bẩm và gào thét những cụm từ khác nữa. Bạn nghi ngờ liệu mình có bao giờ quên được chúng không. “Hắn bắt chúng tôi phải nói Lời tuyên thệ.” “Cái giá đã được trả.” “Họ đang mở con đường dẫn đến Carcosa.”</p><p>Vào đêm thứ ba, bạn trở về phòng và phát hiện cửa đã bị phá tung. Bạn bước vào một cách thận trọng, tự hỏi liệu cảnh sát có đang theo dõi mình không. Hoặc tệ hơn là Kẻ Lạ. Bạn ngạc nhiên khi thấy thi thể của Daniel Chesterfield đang nằm trên sàn với vẻ mặt đau đớn, đôi mắt mở to. Anh ấy đã chết. Mắt anh ấy đỏ ngầu và ngả vàng, và anh ấy nắm chặt một bản sao của cuốn kịch Vị Vua Áo Vàng trong đôi bàn tay cứng đờ của mình. Bạn gỡ cuốn kịch bản ra khỏi bàn tay lạnh ngắt của anh ấy và xem xét nó. Daniel đã viết nguệch ngoạc các ghi chú vào lề mỗi trang, hầu hết là khó hiểu, nhưng có một vài ghi chú rõ ràng nổi bật. Lần đầu tiên thành phố hư cấu Carcosa được nhắc đến, viết nguệch ngoạc bên cạnh đó Daniel đã viết:</p><div class='wolgast'><p>*Carcosa là có thật</p><p>Đừng để họ mở con đường</p></div><p>Khi Cassilda nói về vị vua rách rưới, Daniel đã viết:</p><div class='wolgast'><p>Hastur là vị vua rách rưới</p><p>bị nhốt trong ngục tù giữa các vì sao</p><p>hãy phong ấn hắn lại và ngăn chặn sự điên rồ này</p></div><p>Tâm trí bạn ngập tràn những câu hỏi. Làm thế nào anh ta trốn thoát khỏi bệnh viện tâm thần? Anh ta đã chết như thế nào? Và tại sao bây giờ trong mắt bạn anh ấy lại có vẻ là con người? Không còn nhiều thời gian, bạn dọn dẹp đồ đạc trong phòng và bỏ trốn. Lời nói của Daniel, điều mà anh ấy đã cầu xin bạn lắng nghe, cứ lặp đi lặp lại trong tâm trí bạn.</p><ul><li>Các điều tra viên phải quyết định (chọn một):<ul><li>Bị ám? Lời thề? Chắc chắn phải có lời giải thích khác cho tất cả những điều này. Tiến hành _Ignore the Warning_.</li><li>Chúng ta phải nghe theo lời cảnh báo của Daniel. Chúng ta không được nhắc đến tên của Vị Vua Áo Vàng. Tiến hành _Heed the Warning_.</li></ul></li></ul>",
+    "xp": {
+      "bonus": "Hiểu sâu hơn về mưu đồ của Vị Vua Rách Rưới."
+    }
+  },
+  "checkIfInterviewed": "<div class='right'>Kiểm tra Nhật ký Chiến dịch. *Nếu {name} được liệt kê dưới mục VIPs Interviewed*:</div>",
+  "epilogue": {
+    "title": "Phần kết",
+    "body": "<p class='basic'>_Chỉ đọc phần sau nếu các điều tra viên thắng chiến dịch._</p><p class='basic'>Kiểm tra Campaign Log. Nếu có ít nhất một điều tra viên bị ám (possessed), _chỉ những điều tra viên đó_ mới đọc phần kết này. Không đọc to phần này trừ khi tất cả các điều tra viên đều bị ám.</p><p>Mất nhiều tháng để chuẩn bị, nhưng cuối cùng bạn cũng đã sẵn sàng để ra mắt tác phẩm mới nhất của mình với thế giới. Thu thập các khoản đầu tư tài chính là nhiệm vụ đầu tiên của bạn, tất nhiên rồi. Việc đó không mất quá nhiều thời gian do các mối quan hệ bạn đã tạo dựng được trong thời gian lưu trú tại Paris. Bạn đã được đảm bảo rằng dàn diễn viên tập hợp được là những người tốt nhất mà tiền bạc có thể mua được, nhưng bạn vẫn cố gắng làm cho mọi thứ trở nên hoàn hảo. Nó phải thật hoàn hảo. Câu chuyện phải được kể, để cả thế giới được biết. Bạn đã nghe thấy đoàn kịch thì thầm sau lưng mình: những nhận xét về niềm đam mê kỳ lạ của bạn, sự lo lắng về đôi mắt vàng sắc lẹm của bạn. Điều đó không quan trọng đối với bạn. Tất cả những gì bạn quan tâm là buổi biểu diễn. Cách phát âm của các từ ngữ. Giai điệu bài hát của Cassilda. Thiết kế chiếc mặt nạ của Kẻ Lạ.</p><p>Đây sẽ là buổi biểu diễn vĩ đại nhất của Vở kịch Vị Vua Áo Vàng từ trước đến nay.</p>"
+  }
 }

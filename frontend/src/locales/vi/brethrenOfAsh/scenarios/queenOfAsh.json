@@ -1,26 +1,97 @@
 {
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the number of Fire! treacheries in play.",
+      "cultist": "-2. If this is an attack or evasion targeting a _Cultist_ enemy, reveal another token.",
+      "tablet": "-2 (-4 instead if you are at a _Ritual Site_ location).",
+      "elderThing": "-3. Nếu bạn thất bại, draw the topmost copy of Fire! in the encounter discard pile."
+    },
+    "hardExpert": {
+      "skull": "-X. X is twice the number of Fire! treacheries in play.",
+      "cultist": "-3. If this is an attack or evasion targeting a _Cultist_ enemy, reveal another token.",
+      "tablet": "-4. If you are at a _Ritual Site_ location, you automatically fail instead.",
+      "elderThing": "-5. Nếu bạn thất bại, draw the topmost copy of Fire! in the encounter discard pile."
+    }
+  },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: <section class='encounter-sets grid'><div><img src='{setImgPath}/queen-of-ash.png' /><span>Queen of Ash</span></div><div><img src='{setImgPath}/ashen-pilgrims.png' /><span>Ashen Pilgrims</span></div><div><img src='{setImgPath}/cosmic-evils.png' /><span>Cosmic Evils</span></div><div><img src='{setImgPath}/cultists.png' /><span>Cultists</span></div><div><img src='{setImgPath}/fire.png' /><span>Fire!</span></div><div><img src='{setImgPath}/hallucinations.png' /><span>Hallucinations</span></div><div><img src='{setImgPath}/reeking-decay.png' /><span>Reeking Decay</span></div><div><img src='{setImgPath}/sewers.png' /><span>Sewers</span></div><div><img src='{setImgPath}/torment.png' /><span>Torment</span></div></section>",
+    "placeUndergroundCistern": "Put Underground Cistern into play.",
     "sewers": "Xáo trộn các địa điểm trong bộ encounter _Sewers_ để bạn không biết đâu là đâu và đưa tất cả vào khu vực chơi, ở mặt chưa lật.",
     "sluiceControl": "Để riêng Sluice Control, out of play.",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Sewer Culvert.",
     "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch.",
+    "scouredArkhamForAnswers": "If the investigators scoured Arkham for answers, each investigator begins the game with 1 clue.",
+    "stirredUpTrouble": "*If the investigators stirred up trouble*, find each _Cultist_ enemy in the _Ashen Pilgrims_ and _Cultists_ encounter sets, shuffle them together and put 1 {'{'}perPlayer{'}'} enemies from that set into play, each at a different Sewer Tunnels location.",
+    "killedServantOfFlame": "*If the investigators killed the Servant of Flame*, remove the Servant of Flame enemy from the game. Otherwise, set it aside, out of play.",
+    "placeDoom": "If there are 3 or 4 players in the game, place 1 doom on the agenda. During setup, place 1 doom on the agenda.",
     "setOutOfPlay": "Tập hợp tập bài encounter _Fire!_ và đặt mỗi bản sao của Fire! sang một bên, ngoài khu vực chơi, cùng với cả hai bản sao của asset phần thưởng Collector và các kẻ địch Elokoss, Queen’s Knight, và Herald of Flame."
   },
   "intro": {
-    "title": "Kịch bản III: Queen of Ash"
+    "title": "Kịch bản III: Queen of Ash",
+    "intro1": "<p>_Intro 1_: Dr. Armitage cảm ơn cô phục vụ tại Velma’s Diner khi cô đặt hai miếng bánh táo ấm nóng giữa hai người. Vị thủ thư trưởng đẩy một miếng về phía bạn với một nụ cười gượng gạo. “Arkham đang thay đổi. Thế giới đang thay đổi—tôi e là theo chiều hướng tồi tệ hơn—nhưng ít nhất chúng ta có bánh.”</p><p>Cùng nhau, bạn và Dr. Armitage chắp vá lại một bức tranh đáng lo ngại về tình hình hiện tại. “The Brethren of Ash không phải là những kẻ chủ mưu,” Armitage nói. “Chúng là những thrall, tất cả bọn chúng. Những thrall của một nữ thần cổ đại, kẻ mà chúng gọi là ‘Elokoss’.” Dr. Armitage cho bạn xem một bản khắc gỗ kỳ cục về một cái cây sần sùi với những cành đang bốc cháy trước khi tiếp tục.</p><p>“Sau khi tham dự một trong những buổi tụ tập bí mật của giáo phái, một số tín đồ tiềm năng xuất hiện một vết bầm tím kỳ lạ đánh dấu họ là người của Elokoss. Những tín đồ này đến từ mọi tầng lớp xã hội: giàu và nghèo, yếu và mạnh. Quan trọng nhất, những thrall này không hề biết rằng chúng đang chịu sự chi phối của ả. Kẻ truy đuổi bí ẩn của bạn là một thrall như vậy. Theo lời tiên tri, ‘Servant of Flame’ kẻ đã tấn công chúng ta tại trường đại học là điềm báo cho sự trở lại của nữ hoàng. Servant thu thập các vật hiến tế để dọn đường cho sự tái sinh huy hoàng của nữ hoàng của chúng. Một sự tái sinh mà chúng dự đoán sẽ xảy ra ngay tối nay.”</p>",
+    "addTokens": "Based on your campaign difficulty, perform the following. If you are playing on…",
+    "easy": "Vì bạn đang chơi ở độ khó Easy, thêm 1 token [elder_thing] vào chaos bag cho phần còn lại của chiến dịch.",
+    "standard": "Vì bạn đang chơi ở độ khó Standard, thêm một token [elder_thing] và một token [tablet] vào chaos bag cho phần còn lại của chiến dịch.",
+    "hard": "Vì bạn đang chơi ở độ khó Hard, thêm một token [elder_thing], [tablet], và một token [skull] vào chaos bag cho phần còn lại của chiến dịch.",
+    "expert": "Vì bạn đang chơi ở độ khó Expert, thêm một token [elder_thing], [tablet], [cultist], và một token [skull] vào chaos bag cho phần còn lại của chiến dịch.",
+    "checkCampaignLog": "Check your campaign log.",
+    "discovered": "các điều tra viên đã phát hiện ra tung tích của giáo phái.",
+    "otherwise": "Otherwise, skip to _Intro 3_.",
+    "intro2": "<p>_Intro 2_: Ý nghĩ về việc người bạn của mình bị hiến tế khiến bạn lạnh thấu xương. Thay vì chắp vá những bằng chứng gián tiếp, bạn đề nghị khám xét nơi ở của Servant of Flame để tìm manh mối. Cuộc tìm kiếm của bạn mang lại một số manh mối. Một lời mời đến một cuộc họp bí mật. Một đôi bốt lấm bùn xước xát. Một hồ sơ về các hoạt động buôn lậu ở Waterfront District. Một bức ảnh chụp ba khuôn mặt được thắp sáng bởi ánh nến trong bóng tối. Mọi thứ đều chỉ về hệ thống cống ngầm Arkham.</p><p>Ý nghĩ về việc người bạn của mình bị hiến tế khiến bạn lạnh thấu xương. Thay vì chắp vá những bằng chứng gián tiếp, bạn đề nghị khám xét nơi ở của Servant of Flame để tìm manh mối. Cuộc tìm kiếm của bạn mang lại một số manh mối. Một lời mời đến một cuộc họp bí mật. Một đôi bốt lấm bùn xước xát. Một hồ sơ về các hoạt động buôn lậu ở Waterfront District. Một bức ảnh chụp ba khuôn mặt được thắp sáng bởi ánh nến trong bóng tối. Mọi thứ đều chỉ về hệ thống cống ngầm Arkham.\r\n\"Bạn không thấy hơi ngớ ngẩn sao, khi một giáo phái tôn thờ lửa lại tiến hành công việc của họ trong cống ngầm?\" Armitage cười khúc khích. \"Nhưng tôi tin là bạn đúng.\"\r\nCùng nhau, hai người quyết định lùng sục cống ngầm để tìm bất kỳ dấu vết nào của bạn mình.</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>",
+    "intro3": "<p>_Intro 3_: Ý nghĩ về việc người bạn của mình bị hiến tế khiến bạn lạnh thấu xương. Cùng nhau, bạn và Tiến sĩ Armitage nghiền ngẫm một vài manh mối quý giá mà hai người đã thu thập được. Sau vài giờ phân tích đến tê liệt cả đầu óc, Armitage đưa ra giả thuyết rằng Brethren of Ash đang tiến hành nghi lễ của chúng trong cống ngầm Arkham.</p><p>\"Bạn không thấy hơi ngớ ngẩn sao, khi một giáo phái tôn thờ lửa lại tiến hành công việc của họ trong cống ngầm?\" Armitage cười khúc khích. \"Nhưng đó là manh mối duy nhất chúng ta có.\"</p><p>Cùng nhau, hai người quyết định lùng sục cống ngầm để tìm bất kỳ dấu vết nào của bạn mình.</p><ul><li>Khi setup, đặt 1 doom lên agenda.</li></ul><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
   },
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_If no resolution was reached (each investigator resigned or was defeated)_: Dr. Armitage barely escapes the sewers alive, wracked with guilt at leaving his companions behind. By dawn, an unquenchable fire has spread through all of Easttown, claiming countless lives. Although the Arkham Fire Department tries its best, the flames rage for three days before finally dying out. Those who fled whisper of unspeakable visions—a terrifying, ghoulish face staring out of the flames—that still haunt them. Doctors and nurses are still unable to identify the source of the victims' strange bruises, which will not heal. Any trace of Armitage's companions, as well as the Brethren of Ash, has been eradicated in the inferno.</p><ul><li>In your campaign log, record that *Elokoss was reborn*.</li><li>Mỗi điều tra viên bị <b>giết chết</b>.</li><li>Các điều tra viên thất bại.</li></ul>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Vượt lên mọi nghịch cảnh, vật chứa của ác thần cổ đại Elokoss đã bị tiêu diệt, và kế hoạch của giáo phái nhằm đưa ả đến cõi này đã bị ngăn chặn. Tiến sĩ Armitage chăm sóc các cultist khi họ tỉnh lại. Bạn tìm thấy người bạn của mình trong số đó, hoảng sợ và bối rối, nhưng ngoài ra không hề hấn gì. Khi bạn giải thích những sự kiện tồi tệ của buổi tối, người đó chăm chú lắng nghe. Trong lúc hộ tống người đó và những người vô tội khác ra khỏi cống ngầm, bạn nhận ra một dấu ấn kỳ lạ, quen thuộc trên cổ người đó. Vết bầm đã nhạt đi, và chỉ có thể nhìn thấy mờ mờ, nhưng nó vẫn ở đó.</p><p>Có lẽ chỉ là vấn đề thời gian cho đến khi dấu ấn thức tỉnh trở lại, và thêm nhiều tín đồ của Queen of Ash trỗi dậy một lần nữa để hồi sinh nữ thần của chúng. Bạn thề rằng bạn sẽ sẵn sàng, nếu ngày đó lại đến.</p><ul><li>các điều tra viên đã đánh bại Elokoss và Brethren of Ash.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>Each investigator earns 5 bonus experience for defeating Elokoss and for saving their friend.</li></ul></li><li>Các điều tra viên đã nhận được lá bài phần thưởng chiến dịch Collector. Thêm cả hai bản sao của lá bài này vào player card pool. <i>(xem “Reward Cards” ở trang 23 của sổ luật)</i>.</li><li>Mỗi điều tra viên chịu 2 mental trauma và 2 physical trauma từ những trải nghiệm kinh hoàng của họ.</li><li>Các điều tra viên thành công!</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Một cơn gió hú táp những tàn tro vào người bạn. Dr. Armitage giật lấy một cuốn cổ thư sờn rách từ tay một cultist đã gục ngã và tụng niệm bằng một ngôn ngữ trầm đục, phi nhân loại. Một tiếng rắc lớn, như tiếng gỗ nứt, vang vọng khắp bể chứa nước, và cái cây rực lửa biến thành tro bụi ngay trước mắt bạn. Xung quanh bạn, các cultist buông vũ khí và khựng lại, đột nhiên trông có vẻ lạc lối. Họ không còn chịu sự chi phối của Elokoss nữa.</p><p>Bạn tìm thấy người bạn của mình trong số họ, hoảng sợ và bối rối, nhưng ngoài ra thì bình an vô sự. Mọi dấu vết của dấu ấn trên cổ họ đã biến mất, và phần còn lại của giáo phái dường như đã trở lại bình thường, không có ký ức gì về các sự kiện của buổi tối. Tuy nhiên, trải nghiệm đêm nay khiến bạn sợ hãi. Trong những tháng tới, chỉ một chút dấu hiệu của khói cũng khiến tim bạn đập thình thịch. Ngọn lửa đã dịu xuống, nhưng bạn không thể rũ bỏ cảm giác dai dẳng rằng ở đâu đó sâu dưới thành phố, những tàn lửa từ cơn thịnh nộ của Elokoss vẫn tiếp tục âm ỉ.</p><ul><li>các điều tra viên đã ngăn chặn sự tái sinh vinh quang của Elokoss.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Mỗi điều tra viên nhận 5 experience thưởng vì đã ngăn chặn một nghi lễ báng bổ.</li><li>Các điều tra viên đã nhận được lá bài phần thưởng chiến dịch Collector. Thêm cả hai bản sao của lá bài này vào player card pool. <i>(xem “Reward Cards” ở trang 23 của sổ luật)</i>.</li><li>Mỗi điều tra viên chịu 2 mental trauma và 2 physical trauma từ những sự kiện của buổi tối.</li><li>Các điều tra viên thành công!</li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Cửa cống cũ rít lên khi mở ra, xả xuống một dòng thác nước thải hôi thối. Dọc theo các hành lang, bạn nghe thấy dòng nước chảy xiết kèm theo tiếng la hét của vô số cultist. Thay vì cố gắng bỏ chạy, bạn chấp nhận số phận của mình. Rõ ràng là không có lối thoát. Bạn đã làm những gì phải làm. Khi bùn lầy dâng lên nhanh chóng đến mắt cá chân, rồi đầu gối, rồi đến cổ bạn, bạn nghĩ đến người bạn của mình và Dr. Armitage, cùng vô số những người khác có lẽ đã chết đuối. Bạn đã hy sinh bản thân và họ để ngăn chặn sự trở lại của một thế lực tà ác cổ xưa. Bạn chỉ hy vọng sự hy sinh của mình không vô ích.</p><ul><li>các điều tra viên đã làm ngập nghi thức triệu hồi của Brethren of Ash.</li><li>Mỗi điều tra viên không resign bị <b>giết</b>.</li><li>Mỗi điều tra viên đã resign nhận experience bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>Each investigator earns 3 bonus experience for escaping the deluge.</li></ul></li><li>Các điều tra viên đã nhận được lá bài phần thưởng chiến dịch Collector. Thêm cả hai bản sao của lá bài này vào player card pool. <i>(xem “Reward Cards” ở trang 23 của sổ luật)</i>.</li><li>Mỗi điều tra viên sống sót chịu 3 mental trauma, vì họ bị dằn vặt bởi cảm giác tội lỗi khi bỏ lại bạn bè của mình.</li><li>Các điều tra viên chiến thắng chiến dịch, nhưng chỉ là vấn đề thời gian cho đến khi những tín đồ của Elokoss trỗi dậy một lần nữa...</li></ul>"
     },
     "xp": {
+      "resolution3": "for escaping the deluge",
       "bonus": "Kinh nghiệm thưởng"
+    }
+  },
+  "codex": {
+    "servantOfFlame": {
+      "title": "{'{'}codex{'}'} Codex Φ: Servant of Flame",
+      "intro": "<p>Bằng cách đánh bại Servant of Flame, bạn đã giúp họ tỉnh táo lại. Khi bạn tháo mặt nạ của họ ra, họ bối rối nhìn bạn.</p><p class='basic'>_Check your campaign log and resolve one of the following:_</p>",
+      "davidRenfield": {
+        "body": "<p>_If David Renfield is the harbinger of Elokoss:_</p><p>David gầm gừ khi bạn cố gắng giúp ông ta đứng dậy. “Mặc kệ ta. Ta là một bề tôi tự nguyện. Ta đã chào đón bà ta vào cơ thể mình. Và giờ bà ta sẽ thanh tẩy tất cả trong ngọn lửa thanh trừng của mình,” ông ta cười yếu ớt trước khi trút hơi thở cuối cùng.</p><p class='basic right'>Mỗi điều tra viên có thể tìm trong deck của mình một lá bài [[Tome]] hoặc [[Spell]] và play nó, bỏ qua mọi cost.</p>"
+      },
+      "corneliaAkely": {
+        "body": "<p>_If Cornelia Akely is the harbinger of Elokoss:_</p><p>Cornelia bàng hoàng nhìn chằm chằm vào đôi bàn tay đẫm máu của mình. “Tôi cứ tưởng tất cả chỉ là một cơn ác mộng,” cô nói khi bạn đỡ cô đứng dậy. Cô nhìn bạn một lượt và nhíu mày. “Bạn bị thương rồi. Tôi có thể giúp.”</p><p class='basic right'>Mỗi điều tra viên hồi 3 damage.</p>"
+      },
+      "naomiOBannion": {
+        "body": "<p>_If Naomi O’Bannion is the harbinger of Elokoss:_</p><p>“Đây là loại tiệc tùng gì vậy?” Naomi gầm lên, rồi nhìn bạn với ánh mắt sát khí. “Và các người là ai cơ chứ?” Bạn cố gắng hết sức để giải thích tình hình khi đỡ cô ấy đứng dậy.</p><p class='basic right'>Mỗi điều tra viên nhận 5 resource.</p>"
+      },
+      "sgtEarlMonroe": {
+        "body": "<p>_If Sgt. Earl Munroe is the harbinger of Elokoss:_</p><p>The officer’s face is frozen in a look of terror as you take off the mask. “Where am I?” he asks, almost childlike. “And what did I do?” he looks at his blood-splattered clothing in horror.</p><p class='basic right'>Mỗi điều tra viên có thể tìm trong deck của mình một asset [[Weapon]] và play nó, bỏ qua mọi cost.</p>"
+      },
+      "abigailForeman": {
+        "body": "<p>_If Abigail Foreman is the harbinger of Elokoss:_</p><p>Abigail nắm chặt tay bạn khi bạn tháo chiếc mặt nạ của cô ấy ra. “Kết liễu ả đi. Elokoss không được thức tỉnh,” cô ho khan. Nữ thủ thư đưa cho bạn một tờ giấy nhàu nát trước khi ngất xỉu.</p><p class='basic right'>Mỗi điều tra viên có thể rút tối đa 3 lá bài.</p>"
+      },
+      "margaretLiu": {
+        "body": "<p>_If Margaret Liu is the harbinger of Elokoss:_</p><p>“Chuyện này giống hệt như vụ lộn xộn ở Tick Tock Club,” cô Liu tức giận nói khi bạn đỡ cô ấy đứng dậy. Nữ ca sĩ tỏ ra không hề bối rối trước sự hỗn loạn xung quanh. Thay vì hỏi về vụ lộn xộn đó, bạn chỉ cho cô ấy lối ra.</p><p class='basic right'>Mỗi điều tra viên hồi 3 horror.</p>"
+      },
+      "label": {
+        "davidRenfield": {
+          "search": "Search your deck for a _Tome_ or _Spell_ card and play it, ignoring all costs."
+        },
+        "sgtEarlMonroe": {
+          "search": "Search your deck for a _Weapon_ asset and play it, ignoring all costs."
+        }
+      }
     }
   }
 }

@@ -1,22 +1,54 @@
 {
+  "tokens": {
+    "easyStandard": {
+      "skull": "-2 (-4 instead if you are at a _Bayou_ location).",
+      "cultist": "-2. If the Rougarou is in your location, reveal another token.",
+      "tablet": "Rút thêm một token khác. Nếu bạn thất bại, until the end of the round, you cannot move.",
+      "elderThing": "-4. If the Rougarou is at your location, it attacks you."
+    },
+    "hardExpert": {
+      "skull": "-3 (-6 instead if you are at a _Bayou_ location).",
+      "cultist": "-3. If the Rougarou is in your location, reveal another token.",
+      "tablet": "Rút thêm một token khác. Nếu bạn thất bại, until the end of the round, you cannot move.",
+      "elderThing": "-4. If the Rougarou is at your location or a connecting location, it attacks you."
+    }
+  },
+  "remembered": {
+    "foundAnAncientBindingStone": "Found an ancient binding stone",
+    "foundAStrangeDoll": "Found a strange doll"
+  },
+  "intro": {
+    "title": "Terror Grips New Orleans!",
+    "body": "<p>Minnie Klein, your contact at the Arkham Advertiser, has slipped you a draft of the article over a cup of coffee at Velma's Diner. It would have gone to print had Doyle Jeffries, the lead editor, not scoffed at the concept. \"I believe his exact words were, 'I ain't printing the ravings of some Voodoo lunatic and passing it off as news,'\" she explained. From the sly grin spreading across her face, you could tell she smelled a story.</p><p>The headline was sensationalist. Three killings, in nine days was enough to spook a town, sure. But you doubt all of New Orleans is gripped by terror, or even knows about the killings. Still, something piqued your interest. \"Lady Esprit,\" the Voodoo priestess from the article, claimed that a malign curse had taken root in the bayou.</p><p>\"There's something to this, isn't there? I know that look,\" Minnie said. You weren't sure. If Lady Esprit was right, this \"roux-ga-roux\" wouldn't stop killing at three, that's for sure. But curses? Wolf-people? How could such things be real? Only one way to find out. You put on your coat and head for the Northside Station...</p>"
+  },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Curse of the Rougarou* and *The Bayou*. These sets are indicated by the following icons, respectively: <section class='encounter-sets'><img src='{setImgPath}/curse-of-the-rougarou.png' /><img src='{setImgPath}/the-bayou.png' /></section>",
     "setAsideEncounterSets": "Đặt bộ bài encounter Curse of the Rougarou sang một bên, ngoài màn chơi.",
+    "placeLocations": "Sắp xếp mỗi vị trí thành 4 chồng bài, theo các đặc điểm ([[[New Orleans]], [[Riverside]], [[Wilderness]], và [[Unhallowed]]). Chọn ngẫu nhiên 1 trong những chồng bài này và loại bỏ các vị trí đó khỏi trò chơi. Chọn ngẫu nhiên một trong ba chồng bài còn lại và đưa những vị trí đó vào màn chơi. Đặt 2 chồng bài còn lại sang một bên, ngoài màn chơi. Mỗi điều tra viên bắt đầu chơi tại một địa điểm [Bayou] đang có trong màn chơi.",
     "setAside": "Đặt các lá bài sau sang một bên, ngoài màn chơi: Lady Esprit, Bear Trap, và Fishing Net."
   },
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p class='basic'>_If no resolution was reached (each investigator resigned or was defeated)_: Go to _Resolution 1_.</p>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Bằng cách nào đó, bạn xoay sở được để quay lại an toàn trước khi trời sáng, nghỉ ngơi cho đến xế chiều. Cho đến khi bạn tìm thấy Quý bà Esprit vào ngày hôm sau, bạn mới nhận ra ai là nạn nhân của đêm qua. Với trái tim nặng trĩu và nỗi sợ hãi không thể lay chuyển, bạn chọn chôn xác cô ấy thay vì liên hệ với chính quyền — càng ít người đi sâu vào vấn đề xảy ra ở vùng đầm lầy này càng tốt.</p><ul><li>In your Campaign Log, record that *the Rougarou continues to haunt the bayou*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: The creature gives a pitiful wail as dark miry blood oozes from its wounds. By the time its body collapses into the mud, it has transformed back into its original form-the form of a young, dark-skinned man, his expression twisted in agony. You bring his body back to Lady Esprit and she works her strange magic, removing the stain of the curse from the land. \"Call on me should you ever need my help,\" the mysterious woman tells you.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, hãy ghi lại rằng <i> Rougarou đã bị tiêu diệt và lời nguyền được gỡ bỏ </i>. Bỏ lá điểm yếu Curse of the Rougarou khỏi bộ bài của người đang mang nó. Một điều tra viên bất kỳ có thể chọn thêm lá bài Lady Esprit vào bộ bài của họ. Lá bài này không tính vào kích thước bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Bằng cách nào đó, bạn đã có thể dập tắt cơn thịnh nộ và khát máu của lời nguyền bên trong sinh vật, và trong nháy mắt, hình dạng của một người đàn ông trẻ, da ngăm đen đứng trước mặt bạn, thở hổn hển và đổ mồ hôi. Anh ta dường như chỉ bây giờ mới nhận ra mọi thứ mình đã làm, và đồng ý sẽ chạy trốn đến một nơi hẻo lánh không có người, nơi anh ta không thể làm hại ai. Tuy nhiên, lời nguyền vẫn tồn tại. Anh ấy nhìn thấy điều đó trong mắt bạn và nắm chặt lấy cánh tay bạn. \"Đừng để nó kiểm soát,\" ông cảnh báo. \"Tôi yếu đuối, nhưng bạn - tôi có thể nthấy bạn là người mạnh mẽ. Hãy kiểm soát lời nguyền mà tôi không làm được.\"</p><ul><li>Trong Nhật ký Chiến dịch của bạn, hãy ghi lại rằng <i> Rougarou đã trốn thoát và bạn đã nhận phải lời nguyền </i>. Người mang lá bài điểm yếu Curse of the Rougarou phải thêm lá bài Monstous Transformation vào bộ bài của họ. Lá bài này không tính vào kích thước bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
     }
   },
   "huntingTheRougarou": {
     "label": {
-      "resolution3": "Kết thúc thứ ba"
+      "resolution3": "Kết thúc thứ ba",
+      "flipBack": "Flip back to a side"
     }
   }
 }

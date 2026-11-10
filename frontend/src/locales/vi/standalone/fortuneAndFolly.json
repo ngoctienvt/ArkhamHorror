@@ -1,11 +1,122 @@
 {
+  "specialRules": [
+    {
+      "title": "Checkpoint",
+      "body": "<p class='basic'>Scenario này được chia thành hai phần. Người chơi có thể chọn chơi từng phần một (với một khoảng nghỉ giữa mỗi phần), hoặc họ có thể chơi cả hai phần liên tiếp nhau như một phần của một phiên chơi dài hơn. Mỗi phần là một trò chơi riêng biệt với setup và resolution riêng. Sau khi hoàn thành phần đầu tiên của scenario này, campaign guide sẽ hướng dẫn các điều tra viên đến một Checkpoint để chỉ dẫn họ cách tiếp tục. Nếu các điều tra viên muốn tiến thẳng đến phần tiếp theo của scenario, Checkpoint sẽ hướng dẫn họ cách dọn dẹp trò chơi để chuẩn bị cho phần tiếp theo. Nếu các điều tra viên muốn nghỉ ngơi và tiếp tục chơi trong phiên chơi tiếp theo, Checkpoint sẽ hướng dẫn họ ghi lại thông tin vào Campaign Log để giúp việc setup cho phiên chơi tiếp theo diễn ra nhanh chóng và dễ dàng.</p>"
+    },
+    {
+      "title": "Mức độ Báo động",
+      "body": "<p class='basic'>The setup of this scenario instructs the players to place 1 doom on each investigator card, marking their current “alarm level.” As the heist progresses, alarm levels may increase or decrease based on the investigators’ actions and decisions. A higher alarm level means the casino is closer to discovering your actions, which will endanger the chances of a successful heist. If an effect raises an investigator’s alarm level by any amount, place that much doom next to that investigator’s card to represent this. Likewise, if an effect reduces an investigator’s alarm level by any amount, remove that much doom from next to that investigator’s card. An investigator’s alarm level cannot be reduced below 1 or raised above 10.</p><p class='basic'>Mặc dù được đánh dấu bằng các token doom, alarm level của một điều tra viên không phải là doom, và không được tính vào doom threshold của agenda.</p><p class='basic'>Alarm level của một điều tra viên có hiệu ứng bổ sung sau:</p><ul><li>Mỗi kẻ địch [[Casino]] tại vị trí của một điều tra viên có alarm level từ 6 trở lên sẽ mất aloof.</li></ul>"
+    },
+    {
+      "title": "Isamara Ordoñez",
+      "body": "<p class='basic'>Isamara Ordoñez là một lá bài story asset hai mặt. Nếu Isamara Ordoñez rời khỏi khu vực chơi vì bất kỳ lý do gì, hoặc nếu một điều tra viên đang điều khiển Isamara Ordoñez bị hạ gục, cô ấy sẽ được set aside.</p>"
+    },
+    {
+      "title": "Tuần tra",
+      "body": "<p class='basic'>Một số kẻ địch có keyword patrol. Trong enemy phase (ở bước 3.2 của framework), mỗi kẻ địch đang ready, unengaged và có keyword patrol sẽ di chuyển đến một vị trí nối liền dọc theo con đường ngắn nhất hướng tới vị trí được chỉ định (như được mô tả trong ngoặc đơn bên cạnh từ patrol).</p><ul><li>If there are multiple locations that qualify as the designated location, the lead investigator may choose which location that enemy moves toward.</li><li>If an enemy with patrol would be compelled to move to a location that is blocked by a card ability, that enemy does not move.</li><li>During this scenario, locations are arranged into two main “hubs” consisting of either Public or Restricted locations (see pages 15 and 26). If an enemy’s patrol location is “clockwise” or “counterclockwise,” that means they will move to the connecting location in the clockwise or counterclockwise direction for the hub they are in. Enemies do not patrol between hubs in this manner unless they move via another method.</li></ul>"
+    },
+    {
+      "title": "Biểu tượng Game",
+      "body": "<p class='basic'>Encounter card abilities in this scenario will sometimes ask an investigator to discard cards from the encounter deck in order to “check their game icons.” To do so, that investigator discards the specified number of encounter cards and checks the game icons listed on each. The icons will consist of a color (red or black), a suit (heart, diamond, club, or spade), and a rank (4, 5, 6, 7, 8, 9, 10, J, Q or K).</p><p class='basic'>For the purposes of determining numerical value, J, Q and K count as 10. For the purposes of determining color, hearts and diamonds are red, while clubs and spades are black.</p><p class='basic'>Nếu encounter deck hết bài trong khi kiểm tra các game icon, hãy set aside những lá bài đã bị discard, xào phần còn lại của discard pile vào encounter deck, sau đó tiếp tục discard bài.</p><p class='basic'>\"Sequential rank\" trên một hiệu ứng bài chỉ ra rằng rank của các game icon được kiểm tra phải theo thứ tự liên tiếp (tức là \"liên tiếp nhau\").</p><p class='basic'>Nếu một lá bài không có game icon bị discard, hãy set aside nó và discard thêm một lá bài khác vào vị trí đó. <i>(Bất kỳ lá bài nào được set aside theo cách này sẽ bị discard sau khi các game icon đã được kiểm tra.)</i></p><p class='basic'>Lưu ý: Một rank \"A\" xuất hiện trên một số lá bài encounter. Những lá bài đặc biệt này không được đưa vào encounter deck và do đó các icon này không bao giờ được sử dụng khi kiểm tra game icon.</p>"
+    },
+    {
+      "title": "Mulligan",
+      "body": "<p class='basic'>Một số hiệu ứng vị trí [[Game]] yêu cầu bạn discard bài từ encounter deck sẽ chỉ định rằng bạn có thể thực hiện mulligan. Điều này có nghĩa là sau khi một điều tra viên discard số lượng encounter card được chỉ định và kiểm tra các game icon của chúng, họ có thể set aside bao nhiêu lá bài đã discard đó tùy thích. Sau đó, họ discard một số lượng bài tương đương từ encounter deck để thay thế các lá bài đã set aside. Khi hiệu ứng được giải quyết xong, họ discard các lá bài đã set aside.</p>"
+    },
+    {
+      "title": "The Wellspring of Fortune",
+      "body": "<p class='basic'>Scenario này bao gồm The Wellspring of Fortune, là một \"key,\" một loại bài mới được giới thiệu trong campaign The Scarlet Keys. Luật đầy đủ cho loại bài key có thể được tìm thấy trong campaign guide The Scarlet Keys. Cho mục đích của scenario này, The Wellspring of Fortune chỉ được sử dụng như một vật đánh dấu cho các token và một mục tiêu để các điều tra viên đạt được. Hãy coi text box của The Wellspring of Fortune là trống rỗng trong suốt thời gian của scenario này. Do đó, luật đầy đủ cho các key card không cần thiết để chơi scenario này; tuy nhiên, nếu các điều tra viên đang chơi scenario này như một phần của campaign The Scarlet Keys, họ có thể giành được The Wellspring of Fortune và sử dụng nó trong các scenario tương lai.</p>"
+    }
+  ],
+  "headings": {
+    "checkpoint1": "Checkpoint"
+  },
   "names": {
     "checkpoint1": "Kế hoạch",
+    "part1": "Fortune and Folly, Part I",
     "part2": "Fortune and Folly, Phần II"
   },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is half your alarm level (rounded up).",
+      "cultist": "Rút thêm một token khác. Nếu bạn thất bại, raise your alarm level by 1.",
+      "tablet": "-3. Nếu bạn thất bại, the nearest enemy moves once toward you.",
+      "elderThing": "-5. You may raise your alarm level by 1 to automatically succeed, instead."
+    },
+    "hardExpert": {
+      "skull": "-X. X is your alarm level.",
+      "cultist": "Rút thêm một token khác. Nếu bạn thất bại, raise your alarm level by 1.",
+      "tablet": "-4. The nearest enemy moves once toward you.",
+      "elderThing": "-6. You may raise your alarm level by 1 to automatically succeed, instead."
+    }
+  },
+  "tooltips": {
+    "casinoFloorBusyNight": {
+      "resign": "It's time to get out of here!"
+    },
+    "casinoFloorCalmNight": {
+      "resign": "It's time to get out of here!"
+    },
+    "relicRoom": {
+      "reveal": "{'{'}action{'}'} Take 1 damage and 1 horror unless an investigator \"found Abarran's sigil\": Test {'{'}willpower{'}'} or {'{'}agility{'}'} (4). If you succeed, investigators at Vault Door may spend 4 {'{'}perPlayer{'}'} clues, as a group, to reveal Relic Room"
+    }
+  },
   "label": {
+    "isamaraOrdonezTheTorchSinger": {
+      "ready": "Ready"
+    },
+    "huntersHunger": {
+      "discard": "Discard an _Ally_ asset you control. Each other investigator takes 1 horror.",
+      "test": "Test {'{'}agility{'}'} (3). If you fail, take 1 direct damage and 1 direct horror."
+    },
+    "elderThing": {
+      "alarm": "Raise your alarm level by 1 to automatically succeed"
+    },
+    "relicRoom": {
+      "reveal": "Spend 4 {'{'}perPlayer{'}'} clues, as a group, to reveal Relic Room"
+    },
+    "cardsToDiscard": "Cards to Discard",
+    "avariceCalls": {
+      "test": "Test {'{'}willpower{'}'} (X), where X is half your alarm level (rounded up)."
+    },
+    "suspiciousGaze": {
+      "alarm": "Raise your alarm level by 1"
+    },
+    "keepHand": "Finish Taking Mulligan",
+    "theGrifter": {
+      "rank": "Change Rank",
+      "suit": "Change Suit",
+      "color": "Change Color",
+      "alarmLevel": "Reduce your alarm level by 1",
+      "change": {
+        "unpracticed": "Raise your alarm level by 1 to change the rank, suit, or color of a discarded game icon (to anything).",
+        "practiced": "Raise your alarm level by 1 to change the rank, suit, or color of up to 2 discarded game icons (to anything)."
+      }
+    },
     "rank": {
-      "Four": "Bốn"
+      "Four": "Bốn",
+      "Five": "Five",
+      "Six": "Six",
+      "Seven": "Seven",
+      "Eight": "Eight",
+      "Nine": "Nine",
+      "Ten": "Ten",
+      "Jack": "Jack",
+      "Queen": "Queen",
+      "King": "King",
+      "Ace": "Ace"
+    },
+    "suit": {
+      "Clubs": "Clubs",
+      "Diamonds": "Diamonds",
+      "Hearts": "Hearts",
+      "Spades": "Spades"
+    },
+    "baccarat": {
+      "Player": "Player",
+      "Banker": "Banker",
+      "Tie": "Tie"
     }
   },
   "remembered": {
@@ -14,103 +125,145 @@
     "foundAVent": "Đã tìm thấy một lỗ thông hơi",
     "convincedIsamaraToParticipateInTheHeist": "Đã thuyết phục Isamara tham gia vụ cướp",
     "obtainedAnEmployeeUniform": "Đã lấy được đồng phục nhân viên",
-    "stoleAbarransKeys": "Đã đánh cắp chìa khóa của Abarran"
+    "stoleAbarransKeys": "Đã đánh cắp chìa khóa của Abarran",
+    "wonACultistMedallion": "Won a cultist medallion",
+    "observedTheStaff": "Observed the staff",
+    "foundAbarransSigil": "Found Abarran's sigil",
+    "obtainedASchematic": "Obtained a schematic",
+    "impersonatedAGuard": "Impersonated a guard",
+    "stayedOutOfSight": "Stayed out of sight",
+    "deliveredADecoyPackage": "Delivered a decoy package",
+    "isamaraMesmerizedTheGuardsWithHerSong": "Isamara mesmerized the guards with her song"
   },
   "intro": {
-    "patrol": {
-      "title": "Tuần tra"
-    },
-    "gameIcons": {
-      "title": "Biểu tượng Game"
-    },
-    "mulligans": {
-      "title": "Mulligan"
-    },
-    "theWellspringOfFortune": {
-      "body": "<div class='columns' style='padding-right: 30px;'><p class='basic' style='padding-left: 0; margin-left: 0;'>Scenario này bao gồm The Wellspring of Fortune, là một \"key,\" một loại bài mới được giới thiệu trong campaign *The Scarlet Keys*. Luật đầy đủ cho loại bài key có thể được tìm thấy trong campaign guide *The Scarlet Keys*. Cho mục đích của scenario này, The Wellspring of Fortune chỉ được sử dụng như một vật đánh dấu cho các token và một mục tiêu để các điều tra viên đạt được. _Hãy coi text box của The Wellspring of Fortune là trống rỗng trong suốt thời gian của scenario này._ Do đó, luật đầy đủ cho các key card không cần thiết để chơi scenario này; tuy nhiên, nếu các điều tra viên đang chơi scenario này như một phần của campaign *The Scarlet Keys*, họ có thể giành được The Wellspring of Fortune và sử dụng nó trong các scenario tương lai.</p><div style='flex:1; margin-top: 30px;' class='fan-thin'><img src='{setImgPath}/../cards/88045.avif' /><img src='{setImgPath}/../cards/88045b.avif' /></div></div>"
+    "title": "Fortune and Folly, Part I",
+    "intro1": "<p>_Intro 1_: NGƯỜI ĐÀN ÔNG BỊ SÉT ĐÁNH HAI LẦN CHỈ VÀI PHÚT SAU KHI TRÚNG LỚN! Tiêu đề giật gân này là thứ đầu tiên thu hút sự chú ý của bạn. Bạn có thể đã phớt lờ nó và coi đó chỉ là một sự kiện phi thường và khó tin được phóng đại để bán báo, nếu không có những câu chuyện khác nối tiếp theo sau, tất cả đều xoay quanh cùng một nơi: một sòng bạc ở Monte Carlo tên là Défis de la Roulette. Ngoài việc vị khách xui xẻo bị sét đánh gục chỉ vài khoảnh khắc sau khi rời sòng bạc với số tiền thắng cược, những người khác cũng đã gặp phải những số phận thê thảm nhưng khó tin ở bên trong hoặc gần đó. Khi tìm hiểu thêm, có vẻ như sòng bạc này xuất hiện một cách nhanh chóng và bất ngờ, và chính quyền ở Monaco đã kín tiếng một cách đáng ngờ về việc chính xác nó đến từ đâu và ai là chủ sở hữu. Kể từ khi mở cửa, sòng bạc đã trở thành thỏi nam châm thu hút những điều phi tự nhiên và phi lý. Càng tìm hiểu, bạn càng thấy đáng để ít nhất là đến xem xét nhằm xác định xem những sự kiện này chỉ là sự trùng hợp ngẫu nhiên, hay là kết quả của một thứ gì đó đen tối hơn nhiều.</p>",
+    "scarletKeys": "<p>Nếu bạn đang chơi <i>Fortune and Folly</i> như một ngoại truyện trong chiến dịch <i>The Scarlet Keys</i>:</p>",
+    "notScarletKeys": "<p>Otherwise, skip to _Intro 3_.</p>",
+    "intro2": "<p>_Intro 2_: Nhóm của bạn đã được cung cấp tên của một người liên lạc tại Défis de la Roulette: Isamara Ordoñez. Isamara không chỉ là một nhân viên ở đó, cô ấy còn là \"Flor de Nicaragua,\" một ca sĩ mà các buổi biểu diễn của cô đã trở thành điểm thu hút lớn đối với sòng bạc. Cô ấy được cho là đã liên hệ với nhiều bên khác nhau để nhờ giúp đỡ trong suốt tháng qua, lo ngại về một số sự kiện mà cô đã chứng kiến ở hậu trường. The Foundation có lý do để tin rằng một Key có thể liên quan đến những sự kiện kỳ lạ này. Bạn tìm một bàn trong sảnh sòng bạc và chờ đợi một khoảnh khắc thích hợp để thu hút sự chú ý của cô ấy. Chỉ vài phút sau, một người phụ nữ trong chiếc váy đỏ nổi bật bước lên sân khấu. Màn trình diễn của cô ấy quyến rũ đến mức cô ấy đã rời khỏi sân khấu trước khi bạn nhớ ra lý do tại sao mình ở đây. Không nghi ngờ gì nữa, cô ấy chính là người mà bạn đang tìm kiếm. Khi cô ấy liếc nhìn đám đông, bạn vẫy tay nhẹ. Lúc đầu, cô ấy dường như không mấy chú ý, nhưng sau đó ánh mắt cô ấy rơi vào bông hoa mà bạn được dặn phải cài. Cô ấy tiến đến bàn của bạn và ngồi xuống. Một nụ cười bình thản tô điểm trên khuôn mặt cô, nhưng lời nói của cô lại sắc bén và thẳng thắn. \"Nếu bạn được Họ cử đến, nói chuyện ở đây không an toàn đâu. Gặp tôi trong một giờ nữa.\" Cô ấy đưa cho bạn một tấm danh thiếp có địa chỉ của một quán cà phê gần đó. Sau đó cô ấy đứng dậy, vuốt phẳng chiếc váy của mình. \"Cảm ơn bạn rất nhiều vì những lời tốt đẹp về màn trình diễn của tôi!\" cô ấy nói để cho bất kỳ ai ở gần đó nghe thấy. \"Hy vọng sớm gặp lại bạn!\"</p><p class='basic right'>Skip to _Intro 4_.</p>",
+    "intro3": "<p>_Intro 3_: Although you ask around town about the casino for several days, promising leads seem to be scarce. When you visit the casino itself, nothing appears out of place, although your probing questions don’t go entirely unnoticed. As you sit in the casino lounge, assessing whether the trip to Monte Carlo was a complete waste of time and if nothing is amiss here after all, a woman in a striking red dress sits down at your table. You recognize her as Isamara Ordoñez, the singer who had performed just moments before, capturing the audience with her hauntingly beautiful voice. A casual smile adorns her face, but her words are sharp and pointed. “You’re being too careless. We can’t talk here. If you want to know the truth, meet me in an hour.” She hands you a card with the address of a nearby café. She then stands, smoothing out her dress. “Thank you so much for the kind words about my performance,” she says for the benefit of anyone nearby. “Hope to see you again soon!”</p><p class='basic right'>Proceed to _Intro 4_.</p>",
+    "intro4": "<p>_Intro 4_: Isamara mặc một chiếc áo khoác dài màu xanh sẫm khi bạn gặp cô ấy, mái tóc nâu gợn sóng của cô bị che khuất một phần dưới chiếc mũ rộng vành. Rõ ràng, cô ấy lo lắng về việc có ai đó nhận ra mình. \"Bạn đã đúng khi nghi ngờ về những gì đang xảy ra tại Défis,\" cô bắt đầu, không lãng phí thời gian cho những lời chào hỏi xã giao. \"Bề ngoài, nó là một sòng bạc giống như bất kỳ sòng bạc nào khác. Nhưng có nhiều điều đang diễn ra hơn bất cứ ai có thể đoán được. Phía sau hậu trường, một giáo phái có tên là Fortune's Chosen mới là những kẻ thực sự điều hành mọi thứ. Chúng rất chết chóc và nguy hiểm. Bất cứ ai đến quá gần sự thật hoặc ngáng đường sòng bạc theo một cách nào đó đều đã gặp phải một số phận kinh hoàng.\"</p><p>Bạn hỏi về chủ sòng bạc, và mức độ liên quan của hắn với giáo phái này. Isamara nở một nụ cười không chút vui vẻ. \"Abarran? Hắn là thủ lĩnh của chúng. Không chỉ vậy, hắn còn là kẻ tồi tệ nhất trong số chúng. Hắn đã mang sòng bạc đến đây, nhưng quan trọng hơn, hắn đã mang theo Wellspring.\"</p><p>Isamara giải thích rằng hầm ngầm của sòng bạc cất giữ một thánh tích kỳ lạ và mạnh mẽ có nguồn gốc bí ẩn. Chính thánh tích này là nguyên nhân gây ra những sự kiện khó tin dường như liên tục xuất hiện xung quanh sòng bạc. Vật phẩm này được biết đến với cái tên Wellspring of Fortune, và nó có sức mạnh thao túng xác suất và vận may. Abarran canh giữ nó vô cùng gắt gao, vì bất cứ ai sở hữu Wellspring đều có thể xoay chuyển vận may cho mục đích của họ, bất kể mục đích đó có ích kỷ và tàn phá đến mức nào. Theo thời gian, hắn đã tạo ra đội ngũ trung thành của Fortune's Chosen bằng cách ban cho chúng một phần lợi ích của Wellspring. Chúng đã tôn kính nó gần như một vị thần. Những tín đồ thực sự này có thể dễ dàng được phân biệt với các nhân viên sòng bạc thông thường nhờ những mặt dây chuyền hình đồng xu đặc trưng mà chúng đeo quanh cổ. \"Abarran tin tưởng tôi vì một lý do nào đó, và hắn thậm chí còn đề nghị tôi gia nhập. Tôi nghĩ hắn coi tôi là một tài sản tiềm năng,\" Isamara lẩm bẩm.</p><p>Bạn hỏi Isamara cô ấy muốn bạn làm gì. \"Đánh cắp Wellspring. Đưa nó đi thật xa khỏi đây. Tôi không biết phải nói thế nào cho rõ ràng hơn. Chừng nào nó còn trong tay Abarran, hắn sẽ sử dụng nó để gia tăng quyền lực cho bản thân. Tệ hơn nữa, tôi e rằng sức mạnh của nó càng được sử dụng lâu, thì nguy cơ gây hại cho những người trong sòng bạc càng lớn. Ai biết được nó có thể triệu hồi những thảm họa tưởng chừng như không thể nào xảy ra nếu nó không bị mang đi?\"</p><p>Lời nói của cô ấy dường như không hẳn là một lời cầu cứu mà giống như một lời kêu gọi hành động. Bạn thấy mình đồng ý với nhiệm vụ này gần như trong vô thức. Khi bạn định đứng dậy, cô ấy dùng tay cản bạn lại.</p><p>\"Một điều cuối cùng: đừng đánh giá thấp Abarran. Hắn là một kẻ nguy hiểm. Hắn khoác lên mình vẻ mặt lịch sự với thế giới, nhưng bên dưới lớp mặt nạ đó là một cơn giận dữ khó kìm nén có thể bùng nổ nếu hắn cảm thấy phần thưởng của mình bị đe dọa. Tôi đã chứng kiến cơn nóng giận của hắn, và tôi không nghi ngờ rằng nó có thể khiến hắn xé xác một người thành từng mảnh bằng tay không nếu hắn cảm thấy có lý do.\" Mang theo ý nghĩ 'vui vẻ' đó, bạn bắt đầu lên kế hoạch cho một vụ trộm với tiền cược cao nhất.</p><p class='basic right'>If you would like to skip the stakeout and jump straight to the heist, skip to _Fortune and Folly, Part II_. (*Warning: Skipping the stakeout will dramatically increase the difficulty of Part II.*)</p><p class='basic right'>Otherwise, proceed to _Intro 5_.</p>",
+    "intro5": "<p>_Intro 5_: Vài ngày sau, bạn gặp Isamara để thảo luận về kế hoạch theo dõi sòng bạc trước vụ trộm. Isamara giải thích những gì bạn cần tìm kiếm khi đêm theo dõi đến gần, cảnh báo rằng bạn sẽ không có thời gian để hoàn thành mọi thứ:</p><p class='basic'>Dưới đây là tóm tắt thông tin mà Isamara truyền đạt cho các điều tra viên về cuộc theo dõi sòng bạc sắp tới.</p><ul><li>Những tay chơi lớn rất được coi trọng. Nếu bạn vung đủ tiền, nó sẽ mở ra các lựa chọn trong suốt vụ trộm.</li><li>Lấy được đồng phục từ một trong những nhân viên sòng bạc có thể giúp ích rất nhiều để bạn đi qua mà không bị chú ý.</li><li>Isamara dành nhiều tâm huyết cho vụ cướp, nhưng cô ấy cũng có lý do để lo lắng về việc trực tiếp tham gia. Có lẽ bạn có thể làm cô ấy đổi ý?</li><li>Bạn càng thắng nhiều tiền, khả năng sòng bạc phải đưa các xe chở tiền ra vào đêm bận rộn diễn ra vụ cướp càng lớn. Những chiếc xe này tình cờ có đủ không gian bên trong để một người ẩn nấp...</li><li>Đâu đó trong sòng bạc có một lỗ thông hơi lớn chạy thẳng từ khu vực công cộng đến khu vực dành cho nhân viên, bỏ qua lối vào thông thường của nhân viên.</li><li>Abarran luôn giữ chìa khóa văn phòng của mình trên người trong khi đi tuần tra hàng ngày. Đó là một rủi ro, nhưng nếu bạn có thể lấy được chìa khóa từ hắn, bạn sẽ không phải tìm cách vào văn phòng của hắn sau này.</li><li>Có một không gian bên trong sảnh chính của sòng bạc có thể được sử dụng để giấu các asset cho vụ cướp. Bất kỳ asset nào được đặt ở đây sẽ có sẵn ngay lập tức khi đêm trọng đại bắt đầu.</li><li>The Wellspring of Fortune hấp thụ và thao túng sức mạnh của vận may và tài lộc. Bạn càng chơi nhiều trò chơi may rủi, việc giành quyền kiểm soát nó sau này sẽ càng dễ dàng và nhanh chóng hơn.</li><li>Cuối cùng, bạn càng thu thập được nhiều manh mối về hoạt động của sòng bạc, cơ hội giữ kín tung tích khi đến lúc thực hiện vụ cướp thực sự càng cao và bạn sẽ càng chuẩn bị tốt hơn cho vai trò của mình.</li></ul>",
+    "label": {
+      "skip": "Skip to _Fortune and Folly, Part II_.",
+      "doNotSkip": "Proceed to _Intro 5_."
     },
     "alarmLevel": {
-      "title": "Mức độ Báo động"
+      "title": "Mức độ Báo động",
+      "body": "<p class='basic'>The setup of this scenario instructs the players to place 1 doom on each investigator card, marking their current “alarm level.” As the heist progresses, alarm levels may increase or decrease based on the investigators’ actions and decisions. A higher alarm level means the casino is closer to discovering your actions, which will endanger the chances of a successful heist. If an effect raises an investigator’s alarm level by any amount, place that much doom next to that investigator’s card to represent this. Likewise, if an effect reduces an investigator’s alarm level by any amount, remove that much doom from next to that investigator’s card. _An investigator’s alarm level cannot be reduced below 1 or raised above 10_.</p><p class='basic'>Mặc dù được đánh dấu bằng các token doom, alarm level của một điều tra viên không phải là doom, và không được tính vào doom threshold của agenda.</p><p class='basic'>Alarm level của một điều tra viên có hiệu ứng bổ sung sau:</p><ul><li>Mỗi kẻ địch [[Casino]] tại vị trí của một điều tra viên có alarm level từ 6 trở lên sẽ mất aloof.</li></ul>"
+    },
+    "patrol": {
+      "title": "Tuần tra",
+      "body": "<p class='basic'>Một số kẻ địch có keyword patrol. Trong enemy phase (ở bước 3.2 của framework), mỗi kẻ địch đang ready, unengaged và có keyword patrol sẽ di chuyển đến một vị trí nối liền dọc theo con đường ngắn nhất hướng tới vị trí được chỉ định (như được mô tả trong ngoặc đơn bên cạnh từ patrol).</p><ul><li>If there are multiple locations that qualify as the designated location, the lead investigator may choose which location that enemy moves toward.</li><li>If an enemy with patrol would be compelled to move to a location that is blocked by a card ability, that enemy does not move.</li><li>Trong scenario này, các vị trí được sắp xếp thành hai \"hub\" chính bao gồm các vị trí [[Public]] hoặc [[Restricted]]. Nếu vị trí patrol của một kẻ địch là \"clockwise\" hoặc \"counterclockwise\", điều đó có nghĩa là chúng sẽ di chuyển đến vị trí nối liền theo hướng cùng chiều hoặc ngược chiều kim đồng hồ tương ứng với hub mà chúng đang ở.</li></ul><div class='columns'><img src='{setImgPath}/../extra/fortune-and-folly/patrol-public.avif'><img src='{setImgPath}/../extra/fortune-and-folly/patrol-restricted.avif'></div>"
+    },
+    "gameIcons": {
+      "title": "Biểu tượng Game",
+      "body": "<p class='basic' style='container-type: inline-size'>Các khả năng của lá bài encounter trong scenario này đôi khi sẽ yêu cầu một điều tra viên discard các lá bài từ encounter deck để \"kiểm tra game icon của chúng\". Để làm như vậy, điều tra viên đó discard số lượng lá bài encounter được chỉ định và kiểm tra các game icon được liệt kê trên mỗi lá. Các icon sẽ bao gồm một màu sắc (đỏ hoặc đen), một chất (♥, ♦, ♠, hoặc ♣), và một rank (4, 5, 6, 7, 8, 9, 10, J, Q, hoặc K).</p><ul><li>For the purposes of determining numerical value, J, Q, and K count as 10. For the purposes of determining color, ♥ and ♦ are red, while ♠ and ♣ are black.</li><li>Nếu encounter deck hết bài trong khi kiểm tra các game icon, hãy set aside những lá bài đã bị discard, xào phần còn lại của discard pile vào encounter deck, sau đó tiếp tục discard bài.</li><li>\"Sequential rank\" trên một hiệu ứng bài chỉ ra rằng rank của các game icon được kiểm tra phải theo thứ tự liên tiếp (tức là \"liên tiếp nhau\").</li><li>Nếu một lá bài không có game icon bị discard, hãy set aside nó và discard thêm một lá bài khác vào vị trí đó. <i>(Bất kỳ lá bài nào được set aside theo cách này sẽ bị discard sau khi các game icon đã được kiểm tra.)</i></li><li>Lưu ý: Một rank \"A\" xuất hiện trên một số lá bài encounter. Những lá bài đặc biệt này không được đưa vào encounter deck và do đó các icon này không bao giờ được sử dụng khi kiểm tra game icon.</li></ul>"
+    },
+    "mulligans": {
+      "title": "Mulligan",
+      "body": "<p class='basic'>Một số hiệu ứng vị trí [[Game]] yêu cầu bạn discard bài từ encounter deck sẽ chỉ định rằng bạn có thể thực hiện mulligan. Điều này có nghĩa là sau khi một điều tra viên discard số lượng encounter card được chỉ định và kiểm tra các game icon của chúng, họ có thể set aside bao nhiêu lá bài đã discard đó tùy thích. Sau đó, họ discard một số lượng bài tương đương từ encounter deck để thay thế các lá bài đã set aside. Khi hiệu ứng được giải quyết xong, họ discard các lá bài đã set aside.</p>"
+    },
+    "theWellspringOfFortune": {
+      "title": "The Wellspring of Fortune",
+      "body": "<div class='columns' style='padding-right: 30px;'><p class='basic' style='padding-left: 0; margin-left: 0;'>Scenario này bao gồm The Wellspring of Fortune, là một \"key,\" một loại bài mới được giới thiệu trong campaign *The Scarlet Keys*. Luật đầy đủ cho loại bài key có thể được tìm thấy trong campaign guide *The Scarlet Keys*. Cho mục đích của scenario này, The Wellspring of Fortune chỉ được sử dụng như một vật đánh dấu cho các token và một mục tiêu để các điều tra viên đạt được. _Hãy coi text box của The Wellspring of Fortune là trống rỗng trong suốt thời gian của scenario này._ Do đó, luật đầy đủ cho các key card không cần thiết để chơi scenario này; tuy nhiên, nếu các điều tra viên đang chơi scenario này như một phần của campaign *The Scarlet Keys*, họ có thể giành được The Wellspring of Fortune và sử dụng nó trong các scenario tương lai.</p><div style='flex:1; margin-top: 30px;' class='fan-thin'><img src='{setImgPath}/../cards/88045.avif' /><img src='{setImgPath}/../cards/88045b.avif' /></div></div>"
     }
   },
   "part1": {
     "setup": {
+      "gatherSets": "Gather all cards from the *Fortune and Folly* encounter set. This set is indicated by this icon:<section class='encounter-sets'><img src='{setImgPath}/fortune-and-folly.png'></section>",
       "agendaAndActDecks": "Tạo agenda deck chỉ sử dụng agenda 1 và act deck chỉ sử dụng act 1. Để riêng các lá bài agenda và act còn lại sang một bên, out of play.",
-      "theStakeout": "Đặt story card The Stakeout cạnh Casino Floor.",
-      "ifTheUniformFits": "Spawn 1 bản sao của Casino Guard tại Roulette Wheel. Đính kèm story card If the Uniform Fits... vào nó *(If the Uniform Fits... nằm ở mặt sau của story card Package Delivery).*",
-      "setAside": "Để riêng các lá bài sau, out of play: 3 lá story card Fortune's Disfavor, story asset Cash Cart, story asset Deck of Possibilities, và story asset Isamara Ordoñez *(The Torch Singer)*.",
+      "setAsideEncounterSets": "Set the following encounter sets aside, out of play: *Fortune’s Chosen* and *Plan in Shambles*. These sets are indicated by the following icons:<section class='encounter-sets'><img src='{setImgPath}/fortunes-chosen.png'><img src='{setImgPath}/plan-in-shambles.png'></section>",
       "placeLocations": "Đưa Casino Floor, Casino Lounge, và High Roller's Table vào chơi với mặt Calm Night ngửa lên. Đưa mỗi địa điểm [[Public]] khác vào chơi.",
-      "startAt": "Mỗi điều tra viên bắt đầu chơi tại Casino Floor *(Calm Night)*."
+      "theStakeout": "Đặt story card The Stakeout cạnh Casino Floor.",
+      "startAt": "Mỗi điều tra viên bắt đầu chơi tại Casino Floor *(Calm Night)*.",
+      "restricted": "Để riêng mỗi địa điểm [[Restricted]], out of play.",
+      "isamara": "Put the Isamara Ordoñez (*Lounge Singer*) story asset into play at Baccarat Table, _Inconspicuous_ side faceup.",
+      "abarran": "Spawn the Abarran Arrigorriagakoa enemy at High Roller’s Table, (*The Man with the Ruby Ring*) side faceup.",
+      "ifTheUniformFits": "Spawn 1 bản sao của Casino Guard tại Roulette Wheel. Đính kèm story card If the Uniform Fits... vào nó *(If the Uniform Fits... nằm ở mặt sau của story card Package Delivery).*",
+      "role": "Mỗi điều tra viên chọn một trong các story asset [[Role]] và giành quyền kiểm soát nó, ngửa mặt [[Unpracticed]]. Nếu có chính xác một điều tra viên trong game, điều tra viên đó chọn và giành quyền kiểm soát thêm một story asset [[Role]], ngửa mặt [[Unpracticed]].",
+      "extraRoles": "Loại bỏ mỗi story asset [[Role]] không được chọn khỏi trò chơi.",
+      "theWellspringOfFortune": "Attach The Wellspring of Fortune key, _Stable_ side faceup, to the act deck. Place 7 {'{'}perPlayer{'}'} clues on it. Its text box is considered to be blank for the duration of this scenario.",
+      "setAside": "Để riêng các lá bài sau, out of play: 3 lá story card Fortune's Disfavor, story asset Cash Cart, story asset Deck of Possibilities, và story asset Isamara Ordoñez *(The Torch Singer)*.",
+      "alarmLevel": "Place 1 doom next to each investigator card. This doom represents that investigator’s current alarm level. It does not count as doom and does not count toward the current agenda’s doom threshold."
     },
     "resolutions": {
+      "noResolution": {
+        "title": "No Resolution",
+        "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Tiến tới <b>Resolution 1</b>.</p>"
+      },
       "resolution1": {
-        "title": "Kết thúc thứ nhất"
+        "title": "Kết thúc thứ nhất",
+        "body": "<p>_Resolution 1_: Bạn nhận ra mình bị buộc phải rời khỏi sòng bạc sau khi thu hút quá nhiều sự chú ý. Chắc chắn rằng chẳng bao lâu nữa đặc điểm nhận dạng của bạn sẽ lan truyền giữa các nhân viên. Điều này chắc chắn sẽ làm mọi chuyện trở nên khó khăn hơn nhiều khi vụ trộm bắt đầu.</p><ul><li>Mỗi điều tra viên không resign tăng alarm level của họ lên 2.</li><li>Các điều tra viên không thể tiêu experience hoặc thay đổi deck của họ giữa Fortune and Folly, Part I và Fortune and Folly, Part II.</li></ul>"
       },
       "resolution2": {
-        "title": "Kết thúc thứ hai"
+        "title": "Kết thúc thứ hai",
+        "body": "<p>_Resolution 2_: Bạn hy vọng rằng những gì bạn có thể tìm hiểu và hoàn thành đêm nay sẽ là đủ. Ít nhất bạn có thể yên tâm hơn một chút khi biết rằng các nhân viên dường như không đặc biệt chú ý đến bạn. Điều đó sẽ giúp bạn dễ dàng tránh gây chú ý khi vụ trộm thực sự bắt đầu.</p><ul><li>Các điều tra viên không thể tiêu experience hoặc thay đổi deck của họ giữa Fortune and Folly, Part I và Fortune and Folly, Part II.</li></ul>"
       }
     }
   },
   "part2": {
     "setup": {
       "stash": "Trước khi rút bài trên tay ban đầu cho scenario này, mỗi điều tra viên có thể tìm trong deck của mình tất cả các lá bài được ghi lại là \"Stashed\" và để riêng chúng (1 bản sao cho mỗi bản sao được ghi lại). Mỗi điều tra viên thêm từng lá bài stashed đã để riêng vào bài trên tay ban đầu của mình sau khi thực hiện mulligan.",
+      "gatherSets": "Gather all cards from the *Fortune and Folly* encounter set. This set is indicated by this icon:<section class='encounter-sets'><img src='{setImgPath}/fortune-and-folly.png'></section>",
       "agendaAndActDecks": "Tạo agenda deck sử dụng các agenda 2-4 và act deck sử dụng các act 2-3. Để riêng các lá bài agenda và act còn lại, out of play.",
+      "neededTimeToRest": "*If the investigators need time to rest*, place 1 doom on agenda 2a.",
+      "setAsideEncounterSets": "Set the following encounter sets aside, out of play: *Fortune’s Chosen* and *Plan in Shambles*. These sets are indicated by the following icons:<section class='encounter-sets'><img src='{setImgPath}/fortunes-chosen.png'><img src='{setImgPath}/plan-in-shambles.png'></section>",
+      "roles": "Mỗi điều tra viên kiểm soát các story asset [[Role]] được ghi lại cho điều tra viên đó trong Sổ Ghi chép Chiến dịch, mặt [[Unpracticed]] ngửa lên. Nếu [[Role]] được chọn đã được ghi lại trong Sổ Ghi chép Chiến dịch của bạn là [[Practiced]], thì nó sẽ vào khu vực chơi với mặt [[Practiced]] ngửa lên thay thế.",
+      "skippedPart1": "If you skipped Part I, each investigator chooses any 1 of the _Role_ story assets and takes control of it, _Unpracticed_ side faceup. If there is exactly 1 investigator in the game, that investigator chooses and takes control of an additional _Role_ story asset, _Unpracticed_ side faceup.",
+      "extraRoles": "Loại bỏ mỗi story asset [[Role]] không được chọn khỏi trò chơi.",
+      "placeLocations": "Đưa Casino Floor, Casino Lounge, và High Roller's Table vào khu vực chơi, mặt <i>(Busy Night)</i> ngửa lên. Đưa tất cả các địa điểm khác vào khu vực chơi. <i>(Xem Location Placement cho cả hai hub. Hub restricted nên được đặt phía trên hub public.)</i>",
       "theHeist": "Đặt story card The Heist bên cạnh Vault Door. *(The Heist nằm ở mặt sau của story card The Stakeout.)*",
+      "theWellspringOfFortune": "Attach The Wellspring of Fortune to Relic Room, Stable side faceup. If you played Part I, place the recorded number of clues on it. (Otherwise, place 7 {'{'}perPlayer{'}'} clues on it.)",
       "startAt": "Mỗi điều tra viên bắt đầu chơi tại Casino Floor.",
+      "isamara": "Nếu bạn \"đã thuyết phục Isamara tham gia vụ trộm:\"",
       "setAside": "Để các lá bài sau sang một bên, ngoài cuộc chơi: 3 lá bài story Fortune's Disfavor, lá bài story Package Delivery, lá bài story asset Deck of Possibilities, lá bài story asset Isamara Ordoñez *(The Torch Singer)*, và lá Abarran Arrigorriagakoa với mặt *(Abarran Unleashed)* ngửa lên. *(Package Delivery nằm ở mặt sau của lá bài story If the Uniform Fits...)*",
-      "spawnEnemies": "Tìm trong chồng bài encounter 1 bản sao của Casino Guard. Spawn nó tại High Roller's Table. Sau đó, tìm trong chồng bài encounter 1 bản sao của Security Patrol. Spawn nó tại Casino Lounge."
+      "cleanedOutTheHouse": "*If you cleaned out the house*, put the Cash Cart into play at High Roller’s Table. Otherwise, set it aside, out of play.",
+      "spawnEnemies": "Tìm trong chồng bài encounter 1 bản sao của Casino Guard. Spawn nó tại High Roller's Table. Sau đó, tìm trong chồng bài encounter 1 bản sao của Security Patrol. Spawn nó tại Casino Lounge.",
+      "alarmLevel": "Đặt alarm level của mỗi điều tra viên bằng với mức đã được ghi lại trong Checkpoint."
     },
     "additionalRewards": {
-      "title": "Phần Thưởng Thêm"
+      "title": "Phần Thưởng Thêm",
+      "body": "<ul><li>Kiểm tra số lượng nhiệm vụ trên lá bài story The Heist đã được hoàn thành trong scenario này.<ul><li>Each investigator earns 1 bonus experience for each additional task beyond the minimum of 4 completed on The Heist story card.</li><li>If only 4 or fewer tasks were completed, no additional rewards are granted.</li><li>Các điều tra viên đã giành được Isamara Ordoñez. Bất kỳ một điều tra viên nào cũng có thể chọn thêm Isamara Ordoñez <i>(The Torch Singer)</i> vào deck của họ. Lá bài này không tính vào deck size của điều tra viên đó.</li><li>Nếu có từ 6 nhiệm vụ trở lên được hoàn thành, các điều tra viên đã giành được Deck of Possibilities. Bất kỳ một điều tra viên nào cũng có thể chọn thêm Deck of Possibilities vào deck của họ. Lá bài này không tính vào deck size của điều tra viên đó. Trong quá trình setup của mỗi scenario, điều tra viên đó tập hợp các lá bài encounter từ Fortune and Folly với các biểu tượng trò chơi sau: J♠, J♥, J♦, J♣, Q♦, Q♠, K♣, K♥, A♠. Các lá bài này được xào vào một \"possibilities deck\" riêng biệt. <i>(Ngoài ra, bạn có thể sử dụng các lá bài tây tiêu chuẩn thay vì các lá bài encounter từ</i> Fortune and Folly.<i>)</i></li></ul></li></ul>"
     },
     "resolutions": {
+      "label": {
+        "fortunesChosen": "Trong Nhật ký Chiến dịch, ghi lại rằng <i>Fortune's Chosen đã trói buộc bạn bằng vận rủi.</i> Chọn bất kỳ token số nào trong chaos bag. Thay thế nó bằng một token số có giá trị thấp hơn 2 <i>(ví dụ: Bạn có thể thay thế token 0 bằng token -2, hoặc token -3 bằng token -5).</i>"
+      },
       "scarletKeys": "Nếu bạn đang chơi campaign *The Scarlet Keys*:",
+      "meddled": "In your Campaign Log, record that the cell meddled in Abarran’s affairs.",
       "bearer": "Chọn một điều tra viên làm người sở hữu The Wellspring of Fortune và cập nhật Nhật ký Chiến dịch tương ứng.",
       "fortunesChosen": "Trong Nhật ký Chiến dịch, ghi lại rằng *Fortune's Chosen đã trói buộc bạn bằng vận rủi.* Chọn bất kỳ token số nào trong chaos bag. Thay thế nó bằng một token số có giá trị thấp hơn 2 *(ví dụ: Bạn có thể thay thế token 0 bằng token -2, hoặc token -3 bằng token -5).*",
+      "xp": "Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory của các lá bài trong vùng trưng bày thành tích.",
+      "additionalRewards": "Proceed to _Additional Rewards_.",
       "resolution1": {
-        "title": "Kết thúc thứ nhất"
+        "title": "Kết thúc thứ nhất",
+        "body": "<p>_Resolution 1_: Cùng với Isamara, bạn kiểm tra món thánh tích là nguồn gốc của mọi rắc rối này. Đôi khi nó trông giống như một đồng xu bình thường, dù là một đồng xu vô cùng cổ xưa từ một nền văn minh đã bị lãng quên từ lâu. Tuy nhiên, vào những lúc khác, không khí xung quanh nó lại bị bóp méo và vặn xoắn. Giờ đây, từ kinh nghiệm của mình, bạn cũng biết cách mà nó có thể biến những điều tưởng chừng như không thể thành hiện thực. Lần đầu tiên, bạn thấy một nụ cười chân thật trên khuôn mặt của Isamara. \"Tôi phải cảm ơn bạn vì điều này. Vì đã lấy nó khỏi tay Abarran. Và đưa nó rời khỏi nơi này. Tôi không biết chuyện gì sẽ xảy ra nếu bạn không làm vậy. Đêm nay đã đủ tồi tệ rồi, nhưng sẽ không có gì ngăn cản được Abarran giữ chặt lấy báu vật của hắn, bất kể có bao nhiêu người phải chết trên con đường đó.\" Bạn bắt đầu thu dọn đồ đạc của mình, trong khi Isamara cũng làm như vậy. Bạn biết rằng mình sẽ cần phải rời khỏi Monte Carlo ngay lập tức, vì bất kỳ ai trong số Fortune's Chosen còn sống sót, bao gồm cả chính Abarran, sẽ săn lùng bạn và Wellspring. \"Tôi đã nhìn thấy hắn lần cuối, trước khi chúng ta trốn thoát,\" Isamara giải thích, \"Ánh mắt đầy giận dữ của hắn... Không có món tạo tác quý giá của mình, hắn sẽ càng trở nên bất ổn hơn.\" Bạn nói với cô ấy rằng có lẽ hắn mới là kẻ nên sợ hãi. Rốt cuộc thì, cô ấy đã dàn dựng thành công sự sụp đổ của hắn từ bên trong. Nghe những lời của bạn, nụ cười đó lại nở trên khuôn mặt cô ấy một lần nữa. \"Tôi có thể sẽ quen với ý nghĩ đó.\" Với mọi thứ đã sẵn sàng và Wellspring trong tay, bạn bỏ lại Monte Carlo phía sau, hy vọng vận may của mình sẽ kéo dài.</p>"
       },
       "resolution2": {
-        "title": "Kết thúc thứ hai"
+        "title": "Kết thúc thứ hai",
+        "body": "<p>_Resolution 2_: Dù xét theo khía cạnh nào, việc trốn thoát khỏi nanh vuốt của những sinh vật kinh khủng đó cùng với một đội ngũ nhân viên và bảo vệ sòng bạc có thể được coi là một đêm thành công. Thế nhưng Wellspring, mục đích duy nhất của phi vụ đánh cướp xui xẻo này, đã tuột khỏi tầm tay bạn. Trong những ngày sau đó, bạn tự hỏi liệu mình có đủ can đảm hay điên rồ để thử lại không, nhưng sòng bạc không bao giờ mở cửa trở lại và không có thêm dấu vết nào của Abarran hay Fortune's Chosen. Các tờ báo im lặng một cách kỳ lạ về các sự kiện của đêm đó, không hề đề cập đến những con quái vật kỳ dị đã khủng bố khách hàng của sòng bạc. Hơn bao giờ hết, có vẻ như một người hoặc một nhóm nào đó đã giúp Abarran thiết lập hoạt động của hắn ở đây và cũng đang bảo vệ hắn sau khi sự việc xảy ra. Quan trọng hơn, sau phi vụ đánh cướp bất thành của bạn và sự xâm nhập kỳ lạ từ chiều không gian khác, Abarran đã mang Wellspring đi đâu đó rất xa khỏi đây. Có khả năng bạn có thể theo dõi hắn và tìm ra cách khác để lấy được thánh tích, nhưng hiện tại, không có manh mối nào và không có dấu vết nào về nơi hắn có thể đã đi. Bạn rời Monte Carlo, lui về dưỡng thương và tự hỏi liệu mình sẽ có may mắn, hay xui xẻo, khi một ngày nào đó lại chạm trán Abarran và Wellspring.</p>"
       },
       "resolution3": {
-        "title": "Kết thúc thứ ba"
-      },
-      "xp": "Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory của các lá bài trong vùng trưng bày thành tích."
+        "title": "Kết thúc thứ ba",
+        "body": "<p>_Resolution 3_: When you come to consciousness some time later, you are struck first by the absolute quiet. As you rise to your feet, the casino is completely empty. No cultists. No monsters. No patrons. Not a single soul to be seen. And it doesn’t take much to realize that the relic you sought is long gone too. You stumble out into the daylight to find the city going about its business, as if nothing untoward had taken place. In the days that follow, the casino closes its doors for good. There is no further sign of Abarran or the Fortune’s Chosen. You leave Monte Carlo, nursing your wounds and wondering if you will have the fortune, or misfortune, of running into Abarran and the Wellspring again one day.</p>"
+      }
     }
   },
   "checkpoint1": {
     "thePlan1": {
-      "title": "Checkpoint: Kế hoạch"
+      "title": "Checkpoint: Kế hoạch",
+      "body": "<p>_The Plan 1_: Khi cuộc do thám đã hoàn tất, đã đến lúc lên kế hoạch cho vụ trộm thực sự. Chỉ còn vài ngày nữa là đến tối thứ Bảy tại Défis de la Roulette, buổi tối bận rộn nhất trong tuần và là thời điểm hoàn hảo để hòa mình vào đám đông. Kế hoạch cho vụ trộm rất đơn giản, ít nhất là trên lý thuyết. Khi nhân viên sòng bạc và lực lượng an ninh đang bận rộn với đám đông ngày thứ Bảy, trước tiên bạn sẽ tiến vào các khu vực công cộng, giống như lần trước. Tại đó, bạn sẽ cố gắng tránh bị chú ý nhiều nhất có thể trong khi hoàn thành các nhiệm vụ cần thiết. Khi đã xong, bạn sẽ lẻn vào các khu vực hạn chế ở phía sau sòng bạc dành riêng cho nhân viên. Khu vực này chứa chính căn hầm, nơi đặt Wellspring of Fortune. Theo Isamara, cánh cửa hầm không chỉ được bảo vệ bằng thép đặc, mà còn bị đóng chặt bởi một loại năng lượng nào đó. Chưa dừng lại ở đó, nó còn liên tục bị giám sát bởi lính gác, các đội tuần tra và những cultist của Fortune's Chosen. Sẽ cần một kế hoạch được thực hiện cẩn thận, cùng một chút ứng biến, để thành công bất chấp mọi khó khăn. Với thời gian ngắn ngủi để thu thập vật tư và luyện tập cách tiếp cận, có thể sẽ không có đủ thời gian để nghỉ ngơi và hồi phục sau lần đụng độ đầu tiên của bạn với sòng bạc.</p>"
     },
     "thePlan3": {
-      "title": "Checkpoint: Kế hoạch"
+      "title": "Checkpoint: Kế hoạch",
+      "body": "<p>_The Plan 3_: Hít một hơi thật sâu, bạn thực hiện những khâu chuẩn bị cuối cùng...</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại từng dòng văn bản mà bạn được hướng dẫn phải nhớ trong suốt scenario này. <i>(Bạn cũng sẽ phải nhớ những điều này cho Phần II.)</i></li><li>Kiểm tra tổng lượng damage và horror trên mỗi điều tra viên.</li><li>Ghi lại tên của từng lá bài [[Role]] dưới quyền kiểm soát của một điều tra viên khi trò chơi kết thúc. Nếu bạn đã chọn lật bất kỳ lá bài nào sang mặt [[Practiced]], hãy đảm bảo chọn lựa chọn thích hợp.</li><li>For every 1 {'{'}perPlayer{'}'} clues on The Stakeout story card at the conclusion of part I, the investigators, as a group, choose one of the following options:<ul><li>Reduce each investigator’s alarm level by 1.</li><li>Choose a _Role_ card that was under an investigator’s control when the game ended. In your Campaign Log, write _Practiced_ next to the title of the chosen card.</li></ul></li><li>Ghi lại mức độ báo động của mỗi điều tra viên vào Nhật ký Chiến dịch.</li><li>Ghi lại số lượng manh mối trên The Wellspring of Fortune vào Nhật ký Chiến dịch</li><li>Tập hợp các asset úp mặt từ bên dưới Casino Floor thuộc \"kho cất giấu cho vụ trộm\". Trong Nhật ký Chiến dịch của bạn, ghi lại \"Đã cất giấu:\" và bên cạnh đó là tên của từng asset đã thu thập.</li><li>Dọn dẹp màn chơi như bình thường.</li><li>When you are ready to play again, proceed to _Fortune and Folly, Part II_.</li></ul>"
     },
+    "choices": "<ul><li>For every 1 {'{'}perPlayer{'}'} clues on The Stakeout story card at the conclusion of part I, the investigators, as a group, choose one of the following options:</li></ul>",
     "label": {
-      "alarm": "Giảm mức báo động của mỗi điều tra viên đi 1."
-    }
-  },
-  "specialRules": [
-    {
-      "body": "<p class='basic'>Scenario này được chia thành hai phần. Người chơi có thể chọn chơi từng phần một (với một khoảng nghỉ giữa mỗi phần), hoặc họ có thể chơi cả hai phần liên tiếp nhau như một phần của một phiên chơi dài hơn. Mỗi phần là một trò chơi riêng biệt với setup và resolution riêng. Sau khi hoàn thành phần đầu tiên của scenario này, campaign guide sẽ hướng dẫn các điều tra viên đến một Checkpoint để chỉ dẫn họ cách tiếp tục. Nếu các điều tra viên muốn tiến thẳng đến phần tiếp theo của scenario, Checkpoint sẽ hướng dẫn họ cách dọn dẹp trò chơi để chuẩn bị cho phần tiếp theo. Nếu các điều tra viên muốn nghỉ ngơi và tiếp tục chơi trong phiên chơi tiếp theo, Checkpoint sẽ hướng dẫn họ ghi lại thông tin vào Campaign Log để giúp việc setup cho phiên chơi tiếp theo diễn ra nhanh chóng và dễ dàng.</p>"
+      "alarm": "Giảm mức báo động của mỗi điều tra viên đi 1.",
+      "flipRole": "Choose a _Role_ card that was under an investigator’s control when the game ended. In your Campaign Log, write _Practiced_ next to the title of the chosen card."
     },
-    {
-      "title": "Mức độ Báo động"
-    },
-    {
-      "body": "<p class='basic'>Isamara Ordoñez là một lá bài story asset hai mặt. Nếu Isamara Ordoñez rời khỏi khu vực chơi vì bất kỳ lý do gì, hoặc nếu một điều tra viên đang điều khiển Isamara Ordoñez bị hạ gục, cô ấy sẽ được set aside.</p>"
-    },
-    {
-      "title": "Tuần tra"
-    },
-    {
-      "title": "Biểu tượng Game"
-    },
-    {
-      "title": "Mulligan"
-    },
-    {
-      "body": "<p class='basic'>Scenario này bao gồm The Wellspring of Fortune, là một \"key,\" một loại bài mới được giới thiệu trong campaign The Scarlet Keys. Luật đầy đủ cho loại bài key có thể được tìm thấy trong campaign guide The Scarlet Keys. Cho mục đích của scenario này, The Wellspring of Fortune chỉ được sử dụng như một vật đánh dấu cho các token và một mục tiêu để các điều tra viên đạt được. Hãy coi text box của The Wellspring of Fortune là trống rỗng trong suốt thời gian của scenario này. Do đó, luật đầy đủ cho các key card không cần thiết để chơi scenario này; tuy nhiên, nếu các điều tra viên đang chơi scenario này như một phần của campaign The Scarlet Keys, họ có thể giành được The Wellspring of Fortune và sử dụng nó trong các scenario tương lai.</p>"
-    }
-  ]
+    "chooseRoleToFlip": "<p>Choose a _Role_ card that was under an investigator’s control when the game ended. In your Campaign Log, write _Practiced_ next to the title of the chosen card.</p>"
+  }
 }

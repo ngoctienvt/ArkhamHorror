@@ -1,17 +1,41 @@
 {
   "heading": "Màn VII",
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Lair of Dagon*, *Agents of Dagon*, *Flooded Caverns*, *Syzygy*, *Dark Cult*, and *Locked Doors*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/lair-of-dagon.png' /><img src='{setImgPath}/agents-of-dagon.png' /><img src='{setImgPath}/flooded-caves.png' /><img src='{setImgPath}/syzygy.png' /><img src='{setImgPath}/dark-cult.png' /><img src='{setImgPath}/locked-doors.png' /></section>",
     "placeKeys": "Đặt mỗi chìa khoá như sau:",
     "faceupKeys": "Đặt các chìa khóa màu đen, xanh lá, xanh biển, tím và đỏ sang một bên, ngửa mặt lên.",
+    "facedownKeys": "Set the white and yellow keys aside, facedown. Shuffle them so you do not know which is which.",
     "placeLocations": "Đặt các vị trí sau vào chơi: Grand Entryway, Foul Corridors, 2 lá bài First Floor Hall, 2 lá bài Second Floor Hall, và 1 lá bài Third Floor Hall.",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Grand Entryway.",
     "setAsideOtherLocations": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
     "setAsideCards": "Đặt các lá bài sau một bên, ngoài khu vực chơi: 2 lá bài treachery Syzygy, 2 lá bài treachery Tidal Alignment, lá bài Y'ha-nthlei Statue, kẻ địch Apostle of Dagon, và kẻ địch Dagon.",
+    "checkMemories": "Kiểm tra phần \"Ký ức đã được khôi phục\" trong Nhật ký chiến dịch:",
+    "fourOrFewer": "Vì có 4 ký ức trở xuống được ghi lại, hãy thêm 5 token [bless] vào túi hỗn mang.",
+    "fiveToSeven": "…5–7 memories recorded, add 2 {'{'}curse{'}'} tokens to the chaos bag.",
+    "eightOrMore": "Vì có từ 8 ký ức trở lên được ghi lại, hãy thêm 5 token [curse] vào túi hỗn mang.",
+    "jailbreak": "Kiểm tra phần \"Ký ức đã được khôi phục\" trong Nhật ký chiến dịch:",
     "checkSecretCult": "Kiểm tra phần \"Ký ức đã được khôi phục\" trong Nhật ký chiến dịch",
+    "theInitiationV1": "Nếu <i>cuộc chạm trán với một giáo phái bí mật</i> được liệt kê trong phần \"Ký ức được phục hồi\":",
+    "theInitiationV2": "Otherwise, when constructing the agenda deck, use Agenda 1a—“The Initiation (v. II)” and remove Agenda 1a—“The Initiation (v. I)” from the game.",
     "checkStickTogether": "Kiểm tra phần \"Ký ức đã được khôi phục\" trong Nhật ký chiến dịch",
+    "whatLurksBelowV1": "Nếu <i>quyết định đi cùng với nhau</i> được liệt kê trong phần \"Ký ức đã được phục hồi\":",
+    "whatLurksBelowV2": "Otherwise, set Thomas Dawson aside, out of play. When constructing the agenda deck, use Agenda 2a—“What Lurks Below (v. II)” and remove Agenda 2a—“What Lurks Below (v. I)” from the game.",
     "floodTokens": "Thêm token lũ lụt vào kho chứa token."
   },
+  "specialRules": [
+    {
+      "title": "Sử dụng Chìa khóa",
+      "body": "<p class='basic'>Trong màn chơi này, các điều tra viên có thể được hướng dẫn sử dụng 1 hoặc nhiều chìa khóa. Chỉ có điều tra viên kiểm soát được chìa khóa mới có thể sử dụng nó. Các chìa khóa đã sử dụng được đặt trên lá bài tham chiếu màn chơi.</p>"
+    },
+    {
+      "title": "Chìa khóa",
+      "body": "<div class='red bordered'><p class='basic'>During this scenario, keys represent the following:</p><ul><li>Màu đỏ: Một huy hiệu được khắc một hình ảnh có hình một sự hy sinh vĩ đại.</li><li>Màu xanh biển: Một cuộn giấy mô tả chi tiết một số hoạt động và bí mật của Dòng.</li><li>Màu xanh lá: Một huy hiệu có hình mắt cá đang mở rộng.</li><li>Màu tím: Một huy hiệu được khắc một vòng tròn các từ ngữ nằm trong một bảng chữ cái mà bạn không thể hiểu nổi.</li><li>Màu đen: Một huy hiệu được khắc một biểu tượng huyền bí.</li><li>Màu trắng / Màu vàng: Các huy hiệu có nét vẽ mô tả sự thẳng hàng của các thiên thể. Chìa khóa trắng biểu thị mặt trăng chồng lên mặt trời. Chìa khóa màu vàng biểu thị mặt trời chồng lên mặt trăng.</li></ul></div>"
+    }
+  ],
   "label": {
+    "discardTwoCards": "Discard 2 cards from your hand",
+    "discardAsset": "Discard an asset you control",
+    "takeControlOfThomasDawson": "Choose investigator to take control of Thomas Dawson",
     "tellOceirosNothing": "Không nói với Oceiros bất cứ điều gì.",
     "lieToOceiros": "Nói dối Oceiros.",
     "tellOceirosEverything": "Nói cho Oceiros mọi thứ."
@@ -21,38 +45,83 @@
     "body": "<center>THỨ NĂM, NGÀY 15 THÁNG 9 NĂM 1927</center> <center> MỘT TUẦN TRƯỚC</center> Bạn đứng bên ngoài những bậc thang bằng đá cẩm thạch nứt nẻ dẫn đến hội trường của Dòng Dagon bí truyền. Tất cả bằng chứng đã dẫn bạn đến đây. Dù chuyện gì đang xảy ra ở thị trấn này thì Dòng này đứng đằng sau nó. Bạn chắc chắn về điều đó… mặc dù mục tiêu cuối cùng của họ vẫn là một bí ẩn. Thị trấn yên tĩnh đến lạ thường khi bạn đứng trước lối vào của tòa nhà. Ngày xưa, nơi này có thể rất nổi bật và sang trọng. Nhiều năm không tu sửa và thiệt hại do lũ lụt đã khiến nó gần như bị hủy hoại. Lớp sơn màu trắng một thời của nó giờ xám xịt và bong tróc, nhiều cây cột bên ngoài lối vào đang bắt đầu vỡ vụn. Tuy nhiên, nó vẫn là một trong những nơi đáng sợ hơn cả ở thị trấn Innsmouth, thể hiện uy quyền bất chấp tình trạng suy tàn của nó. Không, không phải uy quyền – thứ gì đó đen tối hơn. Một mối đe dọa lờ mờ, không nói nên lời. \"Cậu đã sẵn sàng chưa?\" Đặc vụ Dawson hỏi. Phong thái điềm tĩnh thường ngày của ông ấy đã biến mất, thay vào đó là vẻ nghiêm nghị thiếu hài hước khiến bạn mất cảnh giác. \"Chính là nó. Đây là nơi chúng ta sẽ tìm thấy câu trả lời.\" Bạn không chắc chắn lắm. Mọi đầu mối khác mà bạn đã đi theo đều chỉ dẫn đến nhiều câu hỏi hơn."
   },
   "intro2": {
-    "title": "Màn VII: Hang ổ của Dagon"
+    "title": "Màn VII: Hang ổ của Dagon",
+    "body": "<p><b>Intro 2:</b> Agent Harper was kidnapped when she got too close to the Order, but interrogating her kidnapper didn’t exactly yield the answers you needed. What you know now is that the Order’s influence pervades Innsmouth, from important civic figures to everyday citizens. Finances, religion, politics…everything is wrapped up in this cult’s business in some way or another. What’s worse, many of the town’s inhabitants seem to follow the Order with blind, fanatical devotion. So many that you’re not sure this is even a functioning town anymore. It’s no wonder the people are so hostile toward outsiders.</p><p>Mãi cho đến khi điều tra về Rạn San Hô Quỷ, bạn mới thực sự bắt đầu bóc tách lớp vỏ bên ngoài của Innsmouth và để lộ ra lớp mục nát bên dưới. Ở đó, bạn tìm thấy những gì mà Dòng đang che giấu: những sinh vật quái dị xuất hiện từ vực sâu và rình mò trên các hòn đảo thủy triều, tụ tập cầu nguyện cho một vị thần khủng khiếp nào đó. Có lẽ nó thậm chí chính là \"Dagon\" được Dòng tôn thờ.</p>"
   },
   "intro3": {
-    "title": "Màn VII: Hang ổ của Dagon"
+    "title": "Màn VII: Hang ổ của Dagon",
+    "body": "<p>Bạn chắc chắn rằng Đặc vụ Harper đã bị bắt cóc sau khi cô ấy bắt đầu điều tra Dòng. Cuộc điều tra của riêng bạn có thể đã kết thúc theo cách tương tự nếu bạn không hạn chế hoạt động trong một tuần sau khi người dân thị trấn nổi giận. Có vẻ như ảnh hưởng của Dòng đã lan rộng khắp thị trấn Innsmouth, từ những công dân quan trọng đến những công dân bình thường. Tài chính, tôn giáo, chính trị… mọi thứ đều được bao bọc trong hoạt động kinh doanh của giáo phái này bằng cách này hay cách khác. Nhưng tại sao lại vậy?</p><p>Mãi cho đến khi điều tra về Rạn San Hô Quỷ, bạn mới thực sự bắt đầu bóc tách lớp vỏ bên ngoài của Innsmouth và để lộ ra lớp mục nát bên dưới. Ở đó, bạn tìm thấy những gì mà Dòng đang che giấu: những sinh vật quái dị xuất hiện từ vực sâu và rình mò trên các hòn đảo thủy triều, tụ tập cầu nguyện cho một vị thần khủng khiếp nào đó. Có lẽ nó thậm chí chính là \"Dagon\" được Dòng tôn thờ.</p>"
   },
   "intro4": {
-    "title": "Màn VII: Hang ổ của Dagon"
+    "title": "Màn VII: Hang ổ của Dagon",
+    "body": "<p><i>Kéeet.</i> Đặc vụ Dawson mở cánh cửa lớn dùng làm lối vào tòa nhà và bạn theo sát phía sau. Bên trong, hội trường tối tăm và tĩnh lặng đến đáng sợ. Chỉ có tiếng nước nhỏ giọt kéo dài trong không khí. \"Tôi không thích điều này chút nào,\" Dawson nói khi cửa trước đóng lại sau lưng bạn. Ông ta tháo súng, bật đèn pin và quét căn phòng. \"Chúng ta nên ở cùng nhau. Đông người vẫn an toàn hơn.\" Bạn gật đầu đồng ý. Dòng đã được chứng minh là rất nguy hiểm và họ chắc chắn không muốn bạn lục lọi trong trụ sở của họ…</p>"
   },
   "intro5": {
-    "title": "Màn VII: Hang ổ của Dagon"
+    "title": "Màn VII: Hang ổ của Dagon",
+    "body": "<p><i>Kéeet.</i> Đặc vụ Dawson mở cánh cửa lớn dùng làm lối vào tòa nhà, và bạn theo sát phía sau. Bên trong, hội trường tối tăm và tĩnh lặng đến đáng sợ. Chỉ có tiếng nước nhỏ giọt kéo dài trong không khí. \"Thật yên tĩnh. Tôi đoán tối nay không có nghi lễ nào diễn ra. Điều này thật tốt,\" Dawson nói khi cửa trước đóng lại sau lưng bạn. Ông ta bật đèn pin và chiếu sáng một ô cửa gần đó. \"Chúng ta nên chia ra. Bằng cách đó chúng ta có thể điều tra được nhiều nơi hơn. Xem thử cậu có thể tìm ra thứ họ đang giấu ở đây không. Tôi sẽ gặp cậu sau.\" Bạn gật đầu và đi về hướng ngược lại…</p>"
   },
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Nơi này nguy hiểm hơn bạn tưởng. Bạn vấp ngã khi chạy trốn qua những hành lang tối tăm, ngập nước, lùi bước nhanh nhất có thể để đến lối vào. Tim bạn đập thình thịch trong lồng ngực khi cuối cùng bạn cũng nhìn thấy lối ra. Bạn thở hổn hển khi lao qua cánh cửa để đến nơi an toàn—</p><p>—Only you are not safe. Standing at the bottom of the steps is an angry throng of citizens, far too many for you to fight your way through. “There! Get ‘em!” a wrinkled woman at the head of the mob shouts. You are surrounded and grabbed within moments. You struggle and fight for your life, but it’s no use. The last thing you remember is being dragged back through the halls of the Order to some unknown fate…</p>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: You’re somewhere else now, lying on your stomach on cold, damp stone. Your arms are held tight behind your back. You have no idea how you got here. As consciousness returns, your vision comes into focus. You crane your neck up to view your surroundings, but it’s too dark to see anything inside your stone cell.</p><p>“I’ll ask you one last time. Who sent you here?” a voice asks. It is deep and husky, like the croaking of a frog.</p><p>You hear the familiar, cool baritone of Agent Dawson reply: “Your breath smells awful. Ever heard of brushing your teeth?” Despite the sarcasm dripping from his words, his voice wavers ever so slightly.</p><p>“Your mockery only masks the fear that hides within,” the voice replies. “Very well. If you are of no use to us, you will be the first to be sacrificed.”</p><p>Your vision continues to adjust. You can just barely make out Dawson’s silhouette on the other side of the cell. He is kneeling before a metal hatch in the stone floor. An elderly robed figure presses a curved knife against Dawson’s throat. Someone lifts the hatch, and Dawson’s eyes go wide. He gives you one last despairing look, shakes his head slowly and deliberately, and quietly slides something across the stone floor. Then the hooded figure pushes him in. In the scuffle and the low light, nobody notices the car key that skitters to a halt directly next to you.</p><p>You grab the key and stuff it into your pocket just before you are shoved forward. Two more sets of cold, clammy hands grab your shoulders, and the hooded figure slides his knife up to your neck. All you can see of his face are his wide, unblinking eyes.</p><p>“Oceiros, these ones were found in Dagon’s lair as well,” another voice explains to the elderly figure in the robes. “We believe they were the ones snooping around Devil Reef.”</p><p>The man with the knife to your throat nods. “Your turn,” he declares. “Tell us why you have come and perhaps we will let you go. Who sent you? What have you seen?”</p>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: You remember the slow, gentle shaking of Agent Dawson’s head and know what he meant by the gesture. You look up into the man’s unblinking eyes, set your jaw, and say nothing. A moment of silent understanding passes between you and your interrogator. “Very well. Your defiance has earned you naught but a slow, agonizing death.” The metal hatch opens again. Inside, you see nothing but darkness. You glare long and hard at your captor.</p><p>“Hãy mang những gì chúng đã đánh cắp đến ngọn hải đăng ngay lập tức,” Oceiros ra lệnh cho một trong những nhân vật mặc áo choàng khác. \"Đã đến lúc bắt đầu công việc vĩ đại của chúng ta. Không ai sẽ làm gián đoạn hoạt động kinh doanh của Dòng nữa. Chẳng bao lâu nữa, tất cả sẽ hiểu được trật tự tự nhiên của cuộc đời.\" Sau đó, ông ta gật đầu với những người bắt giữ bạn và bạn bị đẩy về phía trước. Bàn tay nhớp nháp thả bạn ra và đột nhiên bạn rơi vào bóng tối. Điều cuối cùng bạn cảm thấy là đầu bạn đập vào đá lạnh, và sau đó—</p>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: You can think of only one way out of this situation. The Order believes that you are poking around their business, so you will have to convince them that you don’t know or care what they are up to. You lie as best you can, spinning a story that might convince them you were simply in the wrong place at the wrong time. “And what of your unfortunate friend?” your interrogator asks. You tell him that you have never met that man in your life. “Perhaps you speak the truth,” the man says, and you breathe a short-lived sigh of relief before he dashes your hopes: “…but it matters not. You have seen too much, and for that, you must be silenced. Worry not. You will be joining our kindred soon.” The metal hatch opens again. Inside, you see nothing but darkness.</p><p>“Hãy mang những gì chúng đã đánh cắp đến ngọn hải đăng ngay lập tức,” Oceiros ra lệnh cho một trong những nhân vật mặc áo choàng khác. \"Đã đến lúc bắt đầu công việc vĩ đại của chúng ta. Không ai sẽ làm gián đoạn hoạt động kinh doanh của Dòng nữa. Chẳng bao lâu nữa, tất cả sẽ hiểu được trật tự tự nhiên của cuộc đời.\" Sau đó, ông ta gật đầu với những người bắt giữ bạn và bạn bị đẩy về phía trước. Bàn tay nhớp nháp thả bạn ra và đột nhiên bạn rơi vào bóng tối. Điều cuối cùng bạn cảm thấy là đầu bạn đập vào đá lạnh, và sau đó—</p>"
     },
     "resolution4": {
-      "title": "Kết thúc thứ 4"
+      "title": "Kết thúc thứ 4",
+      "body": "<p>_Resolution 4_: Không điều gì trong số này là những gì bạn mong muốn. Với hy vọng tránh được số phận của Dawson, bạn không còn cách nào khác ngoài việc kể lại mọi chuyện cho người thẩm vấn của mình. Bạn giải thích rằng bạn được Dawson thuê để tìm đặc vụ mất tích của ông ta và tiếp tục mô tả các sự kiện diễn ra trong vài tuần qua, bao gồm cả việc bạn khám phá Rạn San Hô Quỷ và cuộc điều tra của bạn về Dòng. Một nụ cười chậm rãi nở trên khuôn mặt người đàn ông khi bạn tiết lộ mọi điều bạn biết. \"Ta cảm ơn sự thẳng thắn của ngươi. Đáng buồn thay, ta chỉ có một cách duy nhất để trả ơn ngươi. Ngươi đã nhìn thấy quá nhiều, vì điều đó, ngươi phải được giữ im lặng.\" Trái tim bạn lạnh đi khi bạn nhận ra ý hắn ta là gì. Cánh cửa kim loại lại mở ra. Bên trong, bạn không thấy gì ngoài bóng tối.</p><p>“Hãy mang những gì chúng đã đánh cắp đến ngọn hải đăng ngay lập tức,” Oceiros ra lệnh cho một trong những nhân vật mặc áo choàng khác. \"Đã đến lúc bắt đầu công việc vĩ đại của chúng ta. Không ai sẽ làm gián đoạn hoạt động kinh doanh của Dòng nữa. Chẳng bao lâu nữa, tất cả sẽ hiểu được trật tự tự nhiên của cuộc đời.\" Sau đó, ông ta gật đầu với những người bắt giữ bạn và bạn bị đẩy về phía trước. Bàn tay nhớp nháp thả bạn ra và đột nhiên bạn rơi vào bóng tối. Điều cuối cùng bạn cảm thấy là đầu bạn đập vào đá lạnh, và sau đó—</p>"
     }
   },
-  "specialRules": [
-    {
-      "title": "Sử dụng Chìa khóa",
-      "body": "<p class='basic'>Trong màn chơi này, các điều tra viên có thể được hướng dẫn sử dụng 1 hoặc nhiều chìa khóa. Chỉ có điều tra viên kiểm soát được chìa khóa mới có thể sử dụng nó. Các chìa khóa đã sử dụng được đặt trên lá bài tham chiếu màn chơi.</p>"
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1 for each key on this card.",
+      "cultist": "0. Reveal an additional chaos token. If you reveal 1 or more {'{'}curse{'}'} tokens during this test, you automatically fail.",
+      "tablet": "-3. Nếu bạn thất bại, place each key you control on your location.",
+      "elderThing": "-4. Nếu bạn thất bại, add 1 {'{'}curse{'}'} token to the chaos bag."
     },
-    {
-      "title": "Chìa khóa"
+    "hardExpert": {
+      "skull": "-2 for each key on this card.",
+      "cultist": "-2. Reveal an additional chaos token. If you reveal 1 or more {'{'}curse{'}'} tokens during this test, you automatically fail.",
+      "tablet": "-3. Place each key you control on your location and chịu 1 damage.",
+      "elderThing": "-4. Add 2 {'{'}curse{'}'} tokens to the chaos bag."
     }
-  ]
+  },
+  "remembered": {
+    "unlockedTheEntranceToTheCaves": "Unlocked the entrance to the caves",
+    "unlockedTheThirdFloor": "Unlocked the third floor",
+    "unlockedTheFinalDepths": "Unlocked the final depths"
+  },
+  "hallOfLoyalty": {
+    "label": {
+      "addBlessTokens": "Add 4 {'{'}bless{'}'} tokens",
+      "addBlessTokensPartial": "Add 4 (actual {actual}) {'{'}bless{'}'} tokens"
+    }
+  },
+  "lairOfDagon": {
+    "label": {
+      "doNotSpendKey": "Do not spend key",
+      "spendKey": "Spend {key}"
+    }
+  },
+  "whatLurksBelow": {
+    "label": {
+      "doNotTakeKey": "Do not take a key",
+      "takeKey": "Take {key} key"
+    }
+  },
+  "tooltips": {
+    "grandEntryway": {
+      "resign": "You've had enough of this place."
+    }
+  }
 }

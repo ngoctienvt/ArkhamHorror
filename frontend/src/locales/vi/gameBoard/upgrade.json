@@ -1,0 +1,31 @@
+{
+  "title": "Nâng cấp Bộ bài ({xp} TỔNG xp)",
+  "fetching": "Đang lấy bộ bài từ {deckSource}...",
+  "newInvestigator": "Tải Điều tra viên mới",
+  "killed": "Điều tra viên của bạn đã bị giết hoặc phát điên. Hãy chọn một điều tra viên mới.",
+  "directlyUpdateContent": "Nâng cấp bộ bài của bạn trực tiếp trên {deckSource} và đồng bộ tại đây.",
+  "openDeck": "Mở Bộ bài trên {deckSource}",
+  "pullUpdate": "Tải Bộ bài đã nâng cấp từ {deckSource}",
+  "OR": "HOẶC",
+  "deckUrlPlaceholder": "Đường dẫn bộ bài ArkhamDB hoặc arkham.build",
+  "orUploadJson": "hoặc tải lên tệp JSON",
+  "Upgrade": "Nâng cấp",
+  "continueWithoutUpgrading": "Tiếp tục mà không nâng cấp",
+  "waitingOtherPlayer": "Đang chờ người chơi khác nâng cấp bộ bài.",
+  "fetchFailed": "Không thể lấy bộ bài từ {deckSource}. Hãy kiểm tra xem bộ bài có công khai (public) không và thử lại.",
+  "fetchRejected": "{deckSource} từ chối yêu cầu: {message}",
+  "fetchUnusable": "Bộ bài lấy từ {deckSource} không có điều tra viên hoặc không có lá bài nào, nên không thể sử dụng.",
+  "arkhamBuildShareNotFound": "arkham.build không có bộ bài chia sẻ nào tại liên kết đó. Hãy mở bộ bài trên arkham.build và dùng liên kết Share — liên kết trên thanh địa chỉ của bộ bài của riêng bạn sẽ không hoạt động.",
+  "unrecognizedUrl": "Đường dẫn không phải là URL bộ bài của ArkhamDB hoặc arkham.build hợp lệ.",
+  "uploadInvalidJson": "Tệp đó không phải là JSON hợp lệ. Hãy xuất bộ bài từ ArkhamDB hoặc arkham.build và tải tệp đó lên.",
+  "uploadNotADecklist": "Tệp đó không giống như danh sách bài xuất ra — không có điều tra viên hoặc không có lá bài nào.",
+  "noChangesPrompt": "Bộ bài này không thêm lá bài mới nào và bạn vẫn còn {xp} XP chưa dùng. Trên arkham.build và ArkhamDB, phiên bản nâng cấp được tạo TRƯỚC KHI bạn tiêu XP — hãy hoàn tất các thay đổi ở đó rồi kéo về lại. Vẫn tiếp tục nâng cấp mà không có thay đổi?",
+  "upgradeFailed": "Không thể nâng cấp bộ bài. Không có gì bị thay đổi, bạn có thể yên tâm thử lại.",
+  "skippingPrompt": "Bạn có chắc chắn muốn bỏ qua nâng cấp bộ bài này không?",
+  "unspendableXp": "XP không thể tiêu",
+  "xp": "{total} XP",
+  "victoryDisplay": "Victory Display",
+  "tally": {
+    "vengeance": "Vengeance"
+  }
+}

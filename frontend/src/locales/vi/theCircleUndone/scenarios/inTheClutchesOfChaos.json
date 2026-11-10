@@ -1,5 +1,48 @@
 {
   "heading": "Màn VII",
+  "specialRules": [
+    {
+      "title": "@:theCircleUndone.inTheClutchesOfChaos.choosingARandomLocation.title",
+      "body": "@:theCircleUndone.inTheClutchesOfChaos.choosingARandomLocation.body"
+    },
+    {
+      "title": "@:theCircleUndone.inTheClutchesOfChaos.breachesAndIncursions.title",
+      "body": "@:theCircleUndone.inTheClutchesOfChaos.breachesAndIncursions.body"
+    }
+  ],
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the total amount of doom and breaches on your location.",
+      "cultist": "Rút thêm một token khác. If there are fewer than 3 breaches on your location, place 1 breach on your location.",
+      "tablet": "-2. For each point you fail by, remove 1 breach from the current act.",
+      "elderThing": "-3. Nếu bạn thất bại, place 1 breach on a random location."
+    },
+    "hardExpert": {
+      "skull": "-X. X is 1 higher than the total amount of doom and breaches on your location.",
+      "cultist": "Rút thêm một token khác. If there are fewer than 3 breaches on your location, place 1 breach on your location.",
+      "tablet": "-3. For each point you fail by, remove 1 breach from the current act.",
+      "elderThing": "-4. Nếu bạn thất bại, place 1 breach on a random location."
+    }
+  },
+  "tooltips": {
+    "southChurch": {
+      "resign": "You hide through the night."
+    }
+  },
+  "label": {
+    "toilAndTrouble": {
+      "power": "Resolve the revelation ability on the topmost Power treachery in the encounter discard pile",
+      "incursion": "Resolve an incursion at your location"
+    },
+    "breachesToRemove": "Breaches to remove",
+    "merchantDistrict": {
+      "choose": "Pay for additional breaches",
+      "removeSupply": "Remove 1 supply",
+      "removeCharge": "Remove 1 charge",
+      "removeAmmo": "Remove 1 ammo",
+      "removeSecret": "Remove 1 secret"
+    }
+  },
   "standalone": {
     "label": {
       "anetteMasonIsPossessedByEvil": "Anette Mason bị chiếm hữu bởi con quỷ.",
@@ -7,26 +50,46 @@
     }
   },
   "intro": {
-    "title": "Kịch bản VII: In the Clutches of Chaos"
+    "title": "Kịch bản VII: In the Clutches of Chaos",
+    "intro1": "<p>_Intro 1_: Sau những gì bạn đã thấy ở Hòn Đảo Không Người Ghé Thăm, niềm tin của bạn vào nhân loại như một tấm băng mỏng. Bạn cảm thấy mình như một linh hồn vất vưởng, lang thang trên đường phố mà không có đích đến trong đầu. Bạn ước mình có thể trở về nhà và quên đi mọi thứ đã xảy ra trong vài tuần qua, nhưng bạn biết đó chỉ là một ước muốn viển vông. Sau nhiều giờ lượn lờ không mục đích, bạn quay trở lại thực tế khi nhận ra mình đã đi lạc vào Quảng trường Độc lập. Một làn gió nhẹ mang theo một vệt lá mong manh trên bãi cỏ trong rừng, kéo tầm mắt của bạn lên phía trên. Anna Kaslow đang ngồi giữa một vòng lá vàng mùa thu ở đó. Đôi mắt cô ta đang nhắm nghiền trong trạng thái xuất thần, những ngón tay của cô ta ấn vào thái dương của mình. Trải ra bãi cỏ trước mặt cô ấy là một chiếc chăn len, và trên đó là một vòng tròn những lá bài tarot úp mặt chồng lên nhau. Bạn đến gần và ngồi trước vị thầy bói. Bây giờ bạn mới nhận ra rằng bạn đang đau đớn và mệt mỏi như thế nào. Mỗi một cơ của bạn đều bị đau nhức và bạn phải nỗ lực rất nhiều mới không mất đi nhận thức.</p><p class='basic'>Kiểm tra Nhật ký Chiến dịch.</p><ul><li>các điều tra viên không được trông thấy hoặc nghe đến một lần nào nữa.</li><li>Otherwise, skip to _Intro 3_.</li></ul>",
+    "intro2": "<p>_Intro 2_: Bạn nhận ra vị thầy bói từ cuộc điều tra của bạn về những vụ mất tích tại trang viên của Josef Meiger. Chính lời khuyên của cô ấy đã khiến nhóm nạn nhân thứ hai đến với sự diệt vong, hoặc có lẽ thế. Thật kỳ lạ, cô ta dường như cũng nhận ra bạn. Cô ta chạy các ngón tay của mình dọc theo vòng tròn của các lá bài trước mặt. “Tôi hoài nghi rằng những tuần vừa qua khá gian nan với cậu. Cậu có đến đây để nhận chỉ dẫn không?” Bạn nhăn nhó. Lần cuối cùng Anna đọc vận mệnh của ai đó, nó đã không kết thúc tốt đẹp với họ. Điều gì khiến bạn nghĩ rằng bạn thì khác?</p><p class='basic right'>Skip to _Intro 4_.</p>",
+    "intro3": "<p>_Intro 3_: Anna mở mắt. \"Tôi đã tự hỏi khi nào chúng ta sẽ gặp lại nhau.\" Bạn lớn tiếng hỏi làm thế nào cô ta có thể không biết, khi mọi thứ khác mà cô ta dự đoán đã trở thành hiện thực. Nhận xét của bạn làm bạn nhận được nụ cười khúc khích của vị thầy bói. \"Điều đó không có nghĩa là tôi biết tất cả mọi thứ, cậu trai đáng mến của tôi.\" Cô ta chạy các ngón tay của mình dọc theo vòng tròn của các lá bài trước mặt. “Tôi hoài nghi rằng những tuần vừa qua khá gian nan với cậu. Cậu có đến đây để nhận chỉ dẫn không?” Bạn nhăn nhó. Mọi chuyện bạn đầu từ việc cô ta đọc vận mệnh của bạn. Điều gì khiến bạn nghĩ rằng một lần đọc bài nữa sẽ khiến tất cả chuyện này biến mất?</p><p class='basic right'>Proceed to _Intro 4_.</p>",
+    "intro4": "<p>_Intro 4_: Trước khi bạn có thể trả lời, Anna lật lá bài gần cô ấy nhất. Nó mô tả một nhân vật trùm đầu bằng lông cùng vũ với năm thanh kiếm cắm trên mặt đất xung quanh nó. Những người khác co rúm lại và bỏ chạy trước nhân vật chiến thắng, và một đám mây đen tụ tập lại trên đầu. Phía trên hình ảnh này, lá bài có nội dung: FIVE OF SWORDS. “Bạn có thể cảm thấy như thể bạn đã bị đánh bại, nhưng bạn không được tuyệt vọng. Trận chiến có thể kết thúc, nhưng cuộc đấu tranh của bạn vẫn còn chưa kết thúc”. Sự đau đớn mắc vào cổ họng của bạn. Bạn không muốn gì hơn là để cơn ác mộng này kết thúc, nhưng những lời của Anna đã trở thành sự thật: bạn biết nó sẽ không kết thúc trừ khi bạn tự mình chấm dứt nó.</p><p>Một tia sáng rực cháy khắp bầu trời, ngay sau đó là một tiếng sấm nổ vang dội. Những đám mây phía trên không phải của tự nhiên. Các hình dạng ma quái thay đổi và đảo lộn trong màn sương phía trên. Nếu bạn lắng nghe kỹ, bạn có thể lờ mờ nghe thấy tiếng hú đau đớn và buồn bã của chúng trôi theo cơn gió. Anna khẽ thốt lên, “Mọi chuyện đã bắt đầu.” Bạn đứng dậy, bỏ qua sự kiệt sức, đau đớn và sợ hãi của bản thân.</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *In the Clutches of Chaos*, *Agents of Azathoth*, and *Nightgaunts*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/in-the-clutches-of-chaos.png' /><img src='{setImgPath}/agents-of-azathoth.png' /><img src='{setImgPath}/nightgaunts.png' /></section>",
     "placeLocations": "Chọn ngẫu nhiên một trong hai vị trí Rivertown, một trong hai vị trí Merchant District, một trong hai vị trí French Hill, một trong hai vị trí Uptown, một trong hai vị trí Southside và một trong hai vị trí South Church và đặt chúng vào chơi. Loại bỏ các phiên bản khác của Rivertown, Merchant District, French Hill, Uptown, Southside và South Church khỏi màn chơi. Mỗi điều tra viên bắt đầu chơi ở Southside.",
     "anetteMasonIsPossessedByEvil": {
+      "checkCampaignLog": "Check Campaign Log. *If Anette Mason is possessed by evil*, perform the following:",
+      "gatherSets": "Gather all cards from the following additional encounter sets: *Music of the Damned*, *Anette’s Coven*, *City of Sins*, and *Witchcraft*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/music-of-the-damned.png' /><img src='{setImgPath}/anettes-coven.png' /><img src='{setImgPath}/city-of-sins.png' /><img src='{setImgPath}/witchcraft.png' /></section>",
       "actDeck": "Khi xây dựng chồng bài act, sử dụng Act 1a—“Dark Knowledge (v. I)” và Act 2a—“Beyond the Grave.”",
       "placeLocations": "Đặt Hangman’s Hill *(Where It All Ends)* và Silver Twilight Lodge *(Shrouded in Mystery)* vào chơi."
     },
     "carlSanfordPossessesTheSecretsOfTheUniverse": {
+      "checkCampaignLog": "Carl Sanford sở hữu những bí mật của vũ trụ.",
+      "gatherSets": "Khi tập hợp bộ bài encounter <i>The Midnight Masks</i>, chỉ tập hợp 5 lá bài treachery (2 lá False Lead và 3 lá Hunting Shadow). Không tập hợp các lá bài khác từ bộ encounter đó",
       "actDeck": "Khi xây dựng chồng bài act, sử dụng Act 1a—“Dark Knowledge (v. II)” and Act 2a—“New World Order.”",
       "placeLocations": "Đặt Silver Twilight Lodge *(Where It All Ends)* và Hangman’s Hill *(Shrouded in Mystery)* vào chơi."
     },
-    "setAside": "Đặt kẻ địch Piper of Azathoth sang một bên, ngoài khu vực chơi."
+    "setAside": "Đặt kẻ địch Piper of Azathoth sang một bên, ngoài khu vực chơi.",
+    "breaches": {
+      "instructions": "Chọn 2 vị trí ngẫu nhiên khác nhau. Đặt 1 lỗ thủng vào mỗi vị trí đó <i>(xem Lỗ thủng và Xâm nhập)</i>.",
+      "twoPlayers": "If there are 2 investigators in the game, perform this step twice.",
+      "threePlayers": "If there are 3 investigators in the game, perform this step three times.",
+      "fourPlayers": "If there are 4 investigators in the game, perform this step three times, choosing 3 different random locations each time, instead of 2."
+    },
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to In the Clutches of Chaos*, *City of the Damned*, and *Hexcraft*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-in-the-clutches-of-chaos.png' /><img src='{setImgPath}/city-of-the-damned.png' /><img src='{setImgPath}/hexcraft.png' /></section>*City of the Damned* replaces *City of Sins* and *Hexcraft* replaces *Witchcraft*. Remove the replaced sets from the game.",
+      "placeLocations": "Choose at random one of the three copies of each of the following locations: French Hill, Rivertown, Southside, Uptown, South Church, and Merchant District. Remove the chosen locations from the game and use the rest throughout setup, as normal."
+    }
   },
   "choosingARandomLocation": {
     "title": "Lựa Chọn một Vị Trí Ngẫu Nhiên",
     "body": "<p class='basic'>Trong màn chơi này, bạn thường sẽ được hướng dẫn chọn một vị trí ngẫu nhiên. Điều này nên được thực hiện bằng cách xào 8 vị trí đã bị loại bỏ khỏi màn chơi trong quá trình chuẩn bị màn chơi (phiên bản của mỗi vị trí đang chơi hiện không được sử dụng) và rút ngẫu nhiên 1 vị trí. Nếu bạn được hướng dẫn chọn nhiều vị trí ngẫu nhiên khác nhau, hãy xào 8 vị trí hiện không được sử dụng cùng nhau và rút ngẫu nhiên số vị trí khác nhau bằng số lượng đã chỉ định.</p>"
   },
   "breachesAndIncursions": {
-    "title": "Lỗ thủng và Sự xâm nhập"
+    "title": "Lỗ thủng và Sự xâm nhập",
+    "body": "<p class='basic'>Trong màn chơi này, doom không tích lũy theo tốc độ thông thường. Thay vào đó, các lỗ thủng — được biểu thị bằng token tài nguyên — được đặt trên các vị trí. Khi đủ số token lỗ thủng đã được đặt trên một vị trí, một <b>sự xâm nhập </b> sẽ xảy ra, làm tăng thêm doom cho vị trí đó và khiến các lỗ thủng mở ra ở các vị trí kết nối với nó. Do đó, mục tiêu chính của điều tra viên trong trường hợp này là ngăn chặn các sự xâm nhập xảy ra bằng cách loại bỏ các lỗ thủng khỏi các vị trí. Điều này chỉ có thể được thực hiện bằng cách sử dụng các khả năng trên mỗi vị trí.</p><h3>Placing Breaches</h3><p class='basic'>Các lỗ thủng chủ yếu được đặt trên các vị trí thông qua khả năng sau trên Agenda 1a: “<b>Forced</b> - Khi nào doom được đặt vào agenda này: Thay vào đó, hãy đặt 1 lỗ thủng vào một số vị trí ngẫu nhiên khác nhau với số lượng hơn 1 so với số lượng điều tra viên.” Tuy nhiên, các hiệu ứng lá bài cũng có thể đặt các lỗ thủng trực tiếp vào các vị trí.</p><p><i> Ví dụ: Có hai điều tra viên trong màn chơi, và đó là giai đoạn mythos. Trong bước “đặt 1 doom vào agenda hiện tại” của giai đoạn mythos, thay vì đặt doom vào Agenda 1a, các điều tra viên phải chọn ngẫu nhiên 3 địa điểm khác nhau. Các địa điểm được chọn ngẫu nhiên là Southside, Rivertown và French Hill. Do đó, 1 lỗ thủng được đặt trên mỗi vị trí đó.</i></p><p>Khi các lỗ thủng được đặt ở nhiều vị trí khác nhau, chúng nên được đặt từng chỗ một. Quá trình này có thể bị gián đoạn nếu nó gây ra <b>sự xâm nhập</b> (xem bên dưới).</p><h3>Resolving Incursions</h3><p class='basic'>Sự xâm nhập chủ yếu được gây ra thông qua khả năng sau trong Agenda 1a: “<b>Forced</b> - Khi 1 lỗ thủng sẽ được đặt tại một địa điểm có 3 lỗ thủng: Thay vào đó, hãy giải quyết <b>sự xâm nhập</b> tại địa điểm đó.” Tuy nhiên, các hiệu ứng của lá bài cũng có thể gây ra một <b>sự xâm nhập</b> xảy ra. Để giải quyết một sự xâm nhập tại một vị trí, hãy thực hiện các bước sau, theo thứ tự:</p><ul><li>Đầu tiên, loại bỏ tất cả lỗ thủng trên vị trí đó.</li><li>Thứ hai, đặt 1 doom vào vị trí đó.</li><li>Cuối cùng, đặt 1 lỗ thủng trên mỗi vị trí kết nối. Điều này có thể tạo ra phản ứng dây chuyền và gây ra các lần xâm nhập khác, vì vậy hãy cẩn thận!</li><li>Một khi một sự xâm nhập được giải quyết tại một vị trí, các lỗ thủng từ các sự xâm nhập khác không thể được đặt vào vị trí đó cho phần nào còn lại giai đoạn này.</li></ul><p><i> Ví dụ: Một lỗ thủng sắp được đặt vào Rivertown đang có 3 lỗ thủng trên đó. Thay vào đó, một <b>sự xâm nhập</b> được giải quyết tại Rivertown. Đầu tiên, tất cả các lỗ thủng trên Rivertown đều được gỡ bỏ. Sau đó, 1 doom được đặt trên Rivertown. Cuối cùng, 1 lỗ hổng được đặt ra trên mỗi vị trí kết nối với Rivertown. Điều này có thể gây ra một sự xâm nhập khác tại một trong những vị trí đó.</i></p>"
   },
   "resolutions": {
     "label": {
@@ -36,17 +99,25 @@
       "spellsOfOld": "* “Vậy hãy dạy tôi cách mạnh mẽ hơn.” *",
       "assumedControl": "*“Ông không xứng đáng để dẫn dắt chúng tôi.”*"
     },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Kiểm tra Nhật ký Chiến dịch.</p><ul><li>*If Anette Mason is possessed by evil*, proceed to _Resolution 3_.</li><li>Carl Sanford sở hữu những bí mật của vũ trụ.</li></ul>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Linh hồn cười khúc khích khi nghe thấy lời bạn nói, nhưng tiếng cười của bà ta sớm tắt lịm. Nổi lên từ những cái cây, những phù thủy còn lại của nhóm Anette - do phù thủy tóc đỏ Erynn lãnh đạo - bao quanh Anette một cách lặng lẽ. Erynn gật đầu trang trọng với bạn, niềm tin của cô ấy thể hiện qua phong thái nghiêm nghị của cô ấy. Hiểu được lý do tại sao họ đến, bạn bước sang một bên và cho phép họ làm việc của mình.</p><p>Một trong những phù thủy vẽ một vòng tròn trên đám đất xung quanh Anette, trong khi những người còn lại trói cô ấy bằng những sợi dây năng lượng nóng bỏng. Hồn ma hét lên và than khóc trong đau đớn, nhưng các phù thủy không dám dừng lại. Cuối cùng, khi tiếng niệm của họ lên đến đỉnh điểm, Erynn dùng dao đâm xuyên qua vòng tròn thần thánh, ấn mạnh vào không khí và căng thẳng như thể cô ấy đang cố xuyên thủng một viên đá rắn. Hồn ma của Keziah rời đi trong một cơn lốc sương mù, tan biến trong không khí loãng với tiếng kêu cuối cùng. Cơ thể của Anette, không còn được nâng đỡ, ngã gục xuống đất. Bạn nói, đặt tay lên vai Erynn, \"Mọi chuyện đã kết thúc.”</p><p>Cô trả lời một cách gay gắt, chỉ lên bầu trời, “Không.” Các đám mây bão đều đã biến mất, nhưng bạn không đếm được một ngôi sao nào trên bầu trời đêm. Các biên giới của đường chân trời đóng khung khoảng trống trống trải phía trên bạn, một vết thủng lớn đến mức bạn thậm chí còn không nhận ra nó ở đó. Nó đã tồn tại bao lâu trong thị trấn trong khi bạn dành thời gian để chống lại những sự xâm nhập nhỏ hơn?</p><p>Bạn hỏi xem điều gì có thể được thực hiện để đóng một sự xâm nhập có kích thước như vậy. Cô ấy nghiến chặt hàm. \"Tôi không biết. Nhưng tôi biết ai có thể”. Cô quỳ trên người Anette, giơ tay và tát mạnh vào mặt cô ấy. Anette giật mình tỉnh giấc, giật mình ra khỏi trạng thái sững sờ.</p><p>Erynn kéo cô đứng dậy, buộc cô phải nhìn lên thảm họa mà cô đã gây ra, \"Đây có phải là những gì chị muốn?\"</p><p>Anette trả lời, giọng cô ấy rệu rã, “Em biết là không phải mà. Chị chỉ muốn tất cả chúng ta có chút sức mạnh mà bà ấy sở hữu. Chị không có ý định sử dụng nó theo cách mà bà ấy đã làm. Nhưng linh hồn bà ấy đã kiểm soát, và chị không thể chống lại”. Cô ấy cúi đầu hối lỗi, “Tôi xin lỗi, các chị em. Tôi đã làm chúng ta thất bại. Tôi đã không đủ mạnh mẽ”.</p><ul><li>Các điều tra viên phải quyết định <i>(chọn một)</i>:<ul><li>*“You’ve done enough harm. We’ll handle this from here.”* In your Campaign Log, record *the investigators continued alone*.</li><li>*“We will need your help to fix this.”* In your Campaign Log, record *the investigators asked Anette for assistance*.</li><li>Bạn chỉ có thể chọn lựa chọn này nếu tối thiểu một điều tra viên có trait [[Detective]], [[Police]], hoặc [[Agency]].</li><li>Bạn chỉ có thể chọn lựa chọn này nếu tối thiểu một điều tra viên có trait [[Sorcerer]], [[Miskatonic]], hoặc [[Scholar]].</li></ul></li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Proceed to _Interlude IV: Twist of Fate_.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Bạn sẽ không cho rằng chủ tịch của Silver Twilight Lodge nói dối về hậu quả của hành động của bạn - sau tất cả, ông ta đã lừa dối bạn nhiều lần trước đây. Bạn hỏi ông ta ý ông ấy là gì khi nói rằng tất cả chúng ta sẽ bị tuyệt chủng. Ông ta nhăn mặt và bảo bạn hãy nhìn ra ngoài.</p><p>Các đám mây bão đều đã biến mất, nhưng bạn không đếm được một ngôi sao nào trên bầu trời đêm. Các biên giới của đường chân trời đóng khung khoảng trống trống trải phía trên bạn, một lỗ thủng lớn đến mức bạn thậm chí còn không nhận ra nó ở đó. Nó đã tồn tại bao lâu trong thị trấn trong khi bạn dành thời gian để chống lại những sự xâm nhập nhỏ hơn?</p><p>Sanford ủ rũ nhìn theo bạn, dõi lên bầu trời đêm. Bạn hỏi có thể làm gì để đóng một lỗ hổng có kích thước như vậy, nhưng trước khi ông ta có thể trả lời, những cuộn xoáy đen hiện ra từ bóng tối, xoắn lại thành những chiếc áo choàng đen. Trong nháy mắt, bạn bị bao quanh bởi các phù thủy của nhóm Anette. Nữ thượng tế bước tới, trừng mắt nhìn Carl Sanford với tất cả sự dữ tận kinh khủng.</p><p>Cô ấy cảnh báo bạn, “Đừng tin vào lời nói của loài sâu độc ác này. Mọi thứ hắn ta đã làm đều là vì mục đích của riêng mình. Hắn ta sẵn lòng đem thế giới làm con tin nếu nó là cơ hội cuối cùng để có sức mạnh”.</p><p>Bất chấp vết thương của mình, Sanford đứng dậy và đáp trả lại cô: “Thật là đạo đức giả! Ngươi quên rằng chính ngươi và giáo phái lầm lạc của ngươi đã bắt đầu tất cả những điều này sao? Triệu hồi người chết, yêu cầu bọn họ đưa cho quyền lực?” Ông ta chế giễu. “Chúng ta tìm cách nâng cao cả nhân loại. Còn các ngươi chỉ tìm cách nâng cao bản thân.\" Sanford quay lại kêu gọi óc phán đoán của bạn lần cuối. Ông ta nói khẽ, “Đừng để bị lừa dối. Kết quả này không phải là những gì Lodge mong muốn. Hãy cho phép tôi giúp đỡ, và cùng nhau có lẽ chúng ta có thể đem mọi thứ trở lại bình thường.”</p><ul><li>Các điều tra viên phải quyết định <i>(chọn một)</i>:<ul><li>*“You’ve done enough harm. We’ll handle this from here.”* In your Campaign Log, record *the investigators continued alone*.</li><li>các điều tra viên đã yêu cầu Sanford hỗ trợ.</li><li>Bạn chỉ có thể chọn lựa chọn này nếu tối thiểu một điều tra viên có trait [[Detective]], [[Police]], hoặc [[Agency]].</li><li>Bạn chỉ có thể chọn lựa chọn này nếu tối thiểu một điều tra viên có trait [[Sorcerer]], [[Silver Twilight]], hoặc [[Cultist]].</li></ul></li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Proceed to _Interlude IV: Twist of Fate_.</li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Anette đứng ở trung tâm vòng tròn phù thủy của mình, đôi mắt rực sáng với sức mạnh vô biên. Phía trên, hàng trăm hình dạng ma quái vươn ra ngoài, một mạng lưới sức mạnh liên kết các phù thủy và những người đồng bào đã chết của họ. Những cơn thịnh nộ ập xuống, mỗi người đòi hỏi một cơ thể cho riêng mình, tự mình thao túng nó. Sự phản kháng duy nhất của các phù thủy là máu chảy ra từ mắt họ khi phép thuật bất đắc dĩ của họ đạt đến đỉnh điểm.</p><p>Giọng nói quái gở của Keziah vang lên qua đôi môi của Anette, \"Đã đến lúc! Hỗn Loạn Nguyên Sơ đang chờ! Hãy nghe chúng tôi, Vua Quỷ!” Giọng bà ta vang lên trong đêm, và một lỗ hổng lớn hơn cả bầu trời mở ra. Các biên giới của đường chân trời đóng khung khoảng không trống rỗng bên trên. Nó vươn tới vô tận, vượt ra ngoài giới hạn của không gian ba chiều. Bà ta nói chuyện với một sinh vật không có mặt ở đây, nhưng có thể nghe thấy từng lời của bà ấy: “Tôi đã làm theo lời của ngài. Bây giờ hãy gặt hái thế giới của những kẻ đang sinh sống này, và để chúng phải gánh chịu những sai lầm của chúng.\" Cùng với đó, những hình bóng ma quái lần lượt biến mất, bị sự trống rỗng bên trên quét sạch. Anette và các chị em gái của cô ngã xuống đất một cách bất thường. Một cây sáo mỏng manh, nghịch âm vang vọng khắp thế giới…</p><ul><li>In your Campaign Log, record *doom draws ever closer*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Proceed to _Interlude IV: Twist of Fate_.</li></ul>"
     },
     "resolution4": {
-      "title": "Kết thúc thứ 4"
+      "title": "Kết thúc thứ 4",
+      "body": "<p>_Resolution 4_: Carl Sanford đứng trên bục của Lodge’s Inner Sanctum, mặc áo choàng màu xanh bạc. Trước mặt ông ta, thần dân của ông ta quỳ gối phục tùng, sẵn sàng nhận sức mạnh đã hứa với họ và giành lấy vị trí chính đáng của họ trong thế giới mới mà họ sẽ tạo ra. Cuốn sách Sanford đọc phát ra một ánh sáng mê hoặc. Ông ta tuyên bố khi buổi lễ lên đến đỉnh điểm, \"Những ràng buộc của cái chết đã kìm hãm chúng ta quá lâu! Chúng ta sẽ phá vỡ những ràng buộc này và đi lên một bình diện cao hơn!\"</p><p>Phía trên chính tòa nhà mà họ đang đứng, một lỗ thủng lớn hơn cả bầu trời mở ra. Các biên giới của đường chân trời đóng khung khoảng không trống rỗng bên trên. Nó vươn tới vô tận, vượt ra ngoài giới hạn của không gian ba chiều. Sau đó, tất cả các ngọn nến trong chính điện của Lodge đều bị dập tắt ngay lập tức, và tiếng niệm kinh chấm dứt, theo sau đó là tiếng rì rầm kín đáo và lo lắng. Sanford gặng hỏi, cố gắng đọc một cách tuyệt vọng từ cuốn sách trước mặt ông ta, \"Chuyện gì đang xảy ra vậy?\" Nhưng đã quá muộn. Lodge chỉ thành công trong việc đẩy nhanh sự diệt vong của họ. Sự bất tử đích thực chỉ có thể đạt được bởi những người xứng đáng. Một cây sáo mỏng manh, nghịch âm vang vọng khắp thế giới…</p><ul><li>In your Campaign Log, record *doom draws ever closer*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Proceed to _Interlude IV: Twist of Fate_.</li></ul>"
     }
   }
 }

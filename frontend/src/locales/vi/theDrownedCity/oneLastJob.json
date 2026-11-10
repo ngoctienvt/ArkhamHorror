@@ -1,15 +1,46 @@
 {
+  "intro": {
+    "title": "One Last Job",
+    "body1": "<p>Bạn kìm lại một cơn rùng mình trong không khí mát mẻ của mùa xuân khi đứng đợi dưới ngọn đèn đường leo lét. Đêm nay là đêm cuối cùng bạn làm thuê cho Randall Tillinghast, một tay buôn đồ cổ địa phương. Lô hàng mới nhất của nhà sưu tầm đồ cổ này từ New Orleans đã mất tích, và ông ta đã giao cho bạn nhiệm vụ thu hồi nó. Đây chỉ là nhiệm vụ mới nhất trong chuỗi những \"việc vặt\" đầy rủi ro và thường là phi pháp cho lão già xảo quyệt này. Công việc đêm nay sẽ trả gần đủ để thanh toán nốt phần nợ còn lại của bạn với Tillinghast.\\r</p><p>Cả hai người cung cấp thông tin của bạn đều đến đúng giờ. Ruby Standish, siêu trộm nữ trang khét tiếng, tiến đến với một nụ cười nửa miệng đầy ẩn ý. Chàng phóng viên gan dạ Andy Van Nortwick đến ngay sau đó. Tillinghast dường như thu hút được một nhóm chuyên gia đa dạng nhất cho những \"đặc ân\" của ông ta.\\r</p><p>Từ lời kể của Ruby và Andy, bạn chắp vá được một ý tưởng sơ bộ về vị trí của lô hàng. \"Tôi đã theo dõi nó từ nhà kho ở Southside đến một vài tay buôn chợ đen ở Rivertown. E là không may mắn lắm,\" Ruby nói. Andy cởi mũ và lau trán \"Tôi suýt nữa thì bỏ mạng trong một cuộc đọ súng ở khu trung tâm. Có vẻ như băng Sheldon và băng O'Bannion lại choảng nhau rồi.\"\\r</p><p>Hai băng đảng đang ở giữa một cuộc chiến tranh giành lãnh địa khác—có vẻ liên quan đến một lô rượu lậu bị mất tích. Rất có thể lô hàng bị mất tích chỉ vô tình bị nẫng đi cùng với mục tiêu thực sự của các băng đảng.</p>",
+    "wendy": "<p class='red'>\"Nếu chúng ta đang tiến vào lãnh địa của băng đảng, tốt nhất bạn đừng làm gì bốc đồng,\" Andy nói, sự lo lắng lộ rõ trong giọng nói của anh. \"Sau vụ này, chúng ta sẽ có thừa tiền để truy tìm cha bạn. Tôi hứa.\"</p>",
+    "body2": "<p>Bạn rùng mình khi một cơn gió lạnh lùa qua. Ruby mỉm cười một cách tinh quái. \"Bạn nghĩ sao về một vụ cá cược nhỏ? Được ăn cả ngã về không. Người đầu tiên lấy được lô hàng sẽ có tất cả. Tôi hy vọng bạn đã sẵn sàng để thua,\" cô ta cười khẩy.</p><p>Trước khi bạn kịp trả lời, cô ta đã tan vào bóng tối.</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
+  },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *One Last Job*, *Dreams*, *Chilling Cold*, *Locked Doors*, *The Midnight Masks*, *Rats*, and *Striking Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/one-last-job.png' /><img src='{setImgPath}/dreams.png' /><img src='{setImgPath}/chilling-cold.png' /><img src='{setImgPath}/locked-doors.png' /><img src='{setImgPath}/midnight-masks.png' /><img src='{setImgPath}/rats.png' /><img src='{setImgPath}/striking-fear.png' /></section>When gathering *The Midnight Masks* encounter set, only gather the location cards. Do not gather the acts, agendas, or treacheries from this set.",
     "locations": "Loại bỏ các vị trí sau khỏi trò chơi: St. Mary's Hospital, Southside, Graveyard, Your House, và ngẫu nhiên một trong hai bản sao của Downtown.",
-    "startAt": "Mỗi điều tra viên bắt đầu chơi tại Tillinghast Esoterica."
+    "placeLocations": "Put each remaining location into play.",
+    "startAt": "Mỗi điều tra viên bắt đầu chơi tại Tillinghast Esoterica.",
+    "actDeck": "Construct the act deck using one of the two copies of act 1a—“Questioning the Gangs,” chosen at random. Set each copy of act 2 and act 3 aside, out of play.",
+    "setAside": "Set aside Sadie Sheldon, Naomi O’Bannion, and both copies of Gang Enforcer."
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "[skull]: -X. X là số lượng kẻ địch [[Criminal]] đang in play (tối đa là 4).\r\n[tablet]: -2 (thay vào đó là -4 nếu có một kẻ địch [[Criminal]] tại vị trí của bạn).\r\n[elder_thing]: -3. Nếu bạn thất bại, discard 3 lá bài trên cùng của chồng bài encounter. Chọn 1 kẻ địch [[Criminal]] bị discard bởi hiệu ứng này và spawn nó engaged với bạn.",
+      "tablet": "[skull]: -X. X là số lượng kẻ địch [[Criminal]] đang in play (tối đa là 4).\r\n[tablet]: -2 (thay vào đó là -4 nếu có một kẻ địch [[Criminal]] tại vị trí của bạn).\r\n[elder_thing]: -3. Nếu bạn thất bại, discard 3 lá bài trên cùng của chồng bài encounter. Chọn 1 kẻ địch [[Criminal]] bị discard bởi hiệu ứng này và spawn nó engaged với bạn.",
+      "elderThing": "[skull]: -X. X là số lượng kẻ địch [[Criminal]] đang in play (tối đa là 4).\r\n[tablet]: -2 (thay vào đó là -4 nếu có một kẻ địch [[Criminal]] tại vị trí của bạn).\r\n[elder_thing]: -3. Nếu bạn thất bại, discard 3 lá bài trên cùng của chồng bài encounter. Chọn 1 kẻ địch [[Criminal]] bị discard bởi hiệu ứng này và spawn nó engaged với bạn."
+    },
+    "hardExpert": {
+      "skull": "[skull]: -X. X nhiều hơn 1 so với số lượng kẻ địch [[Criminal]] đang in play.\r\n[tablet]: -3 (thay vào đó là -5 nếu có một kẻ địch [[Criminal]] tại vị trí của bạn).\r\n[elder_thing]: -4. Nếu bạn thất bại, discard 6 lá bài trên cùng của chồng bài encounter. Chọn 1 kẻ địch [[Criminal]] bị discard bởi hiệu ứng này và spawn nó engaged với bạn. Nó thực hiện một đòn tấn công ngay lập tức.",
+      "tablet": "[skull]: -X. X nhiều hơn 1 so với số lượng kẻ địch [[Criminal]] đang in play.\r\n[tablet]: -3 (thay vào đó là -5 nếu có một kẻ địch [[Criminal]] tại vị trí của bạn).\r\n[elder_thing]: -4. Nếu bạn thất bại, discard 6 lá bài trên cùng của chồng bài encounter. Chọn 1 kẻ địch [[Criminal]] bị discard bởi hiệu ứng này và spawn nó engaged với bạn. Nó thực hiện một đòn tấn công ngay lập tức.",
+      "elderThing": "[skull]: -X. X nhiều hơn 1 so với số lượng kẻ địch [[Criminal]] đang in play.\r\n[tablet]: -3 (thay vào đó là -5 nếu có một kẻ địch [[Criminal]] tại vị trí của bạn).\r\n[elder_thing]: -4. Nếu bạn thất bại, discard 6 lá bài trên cùng của chồng bài encounter. Chọn 1 kẻ địch [[Criminal]] bị discard bởi hiệu ứng này và spawn nó engaged với bạn. Nó thực hiện một đòn tấn công ngay lập tức."
+    }
   },
   "resolutions": {
-    "resolution1": {
-      "title": "Kết thúc thứ nhất"
+    "xp": {
+      "bonus": "as they reflect on the night’s work"
     },
-    "victory": "Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory của các lá bài trong vùng trưng bày thành tích."
-  },
-  "intro": {
-    "body1": "<p>Bạn kìm lại một cơn rùng mình trong không khí mát mẻ của mùa xuân khi đứng đợi dưới ngọn đèn đường leo lét. Đêm nay là đêm cuối cùng bạn làm thuê cho Randall Tillinghast, một tay buôn đồ cổ địa phương. Lô hàng mới nhất của nhà sưu tầm đồ cổ này từ New Orleans đã mất tích, và ông ta đã giao cho bạn nhiệm vụ thu hồi nó. Đây chỉ là nhiệm vụ mới nhất trong chuỗi những \"việc vặt\" đầy rủi ro và thường là phi pháp cho lão già xảo quyệt này. Công việc đêm nay sẽ trả gần đủ để thanh toán nốt phần nợ còn lại của bạn với Tillinghast.\\r</p><p>Cả hai người cung cấp thông tin của bạn đều đến đúng giờ. Ruby Standish, siêu trộm nữ trang khét tiếng, tiến đến với một nụ cười nửa miệng đầy ẩn ý. Chàng phóng viên gan dạ Andy Van Nortwick đến ngay sau đó. Tillinghast dường như thu hút được một nhóm chuyên gia đa dạng nhất cho những \"đặc ân\" của ông ta.\\r</p><p>Từ lời kể của Ruby và Andy, bạn chắp vá được một ý tưởng sơ bộ về vị trí của lô hàng. \"Tôi đã theo dõi nó từ nhà kho ở Southside đến một vài tay buôn chợ đen ở Rivertown. E là không may mắn lắm,\" Ruby nói. Andy cởi mũ và lau trán \"Tôi suýt nữa thì bỏ mạng trong một cuộc đọ súng ở khu trung tâm. Có vẻ như băng Sheldon và băng O'Bannion lại choảng nhau rồi.\"\\r</p><p>Hai băng đảng đang ở giữa một cuộc chiến tranh giành lãnh địa khác—có vẻ liên quan đến một lô rượu lậu bị mất tích. Rất có thể lô hàng bị mất tích chỉ vô tình bị nẫng đi cùng với mục tiêu thực sự của các băng đảng.</p>"
+    "resolution1": {
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Bạn quay trở lại Tillinghast Esoterica cùng với cả lô hàng và Ruby Standish. Nữ trộm trang sức hậm hực thừa nhận bạn đã thắng vụ cá cược nhỏ của cô ta, và hứa sẽ mời bạn một ly sau đó mà không đả động gì đến vụ \"được ăn cả ngã về không\" mà cô ta đã đề xuất. Một tiếng chuông bạc vang lên khi bạn bước vào cửa hàng đồ cổ ẩm mốc quen thuộc. Chỉ trong chốc lát, Randall đã mở chiếc hộp trên bàn của mình. Bên trong là một bức tượng thần nhỏ màu xanh ngọc bích được bọc trong vải.</p><p.“I could not be more impressed,” Tillinghast says. His eyes glitter as he appraises the green figurine. As you look at the idol, your head swims. Ruby paces the foyer of the shop nervously and addresses your employer sharply. “All right, Tillinghast. We held up our end of the bargain. Where’s our cut?” The shop door rings again as Andy returns. Randall seats himself behind his desk and peers at you and the others over steepled fingers. “My suspicions have been confirmed: the relic is genuine. Well done. What if I told you I had an offer too good to refuse?”</p>"
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>Bạn lê bước, bầm dập và thâm tím, quay trở lại Tillinghast Esoterica và tựa hẳn vào cửa tiệm. Cửa sổ kính màu vẽ một kim tự tháp với một con mắt khổng lồ đang nhìn chằm chằm vào bạn với điệu bộ vô cảm. Có điều gì đó về nó luôn có vẻ kỳ quái, đáng lo ngại. Sau một lúc lâu, bạn đứng vững lại bên khung cửa và bước vào tiệm. Bên trong, bạn thấy Ruby và Andy đang tụ tập quanh bàn của Randall, đánh giá một bức tượng nhỏ màu xanh lá cây.</p><p>Randall rướn người về phía trước trên ghế và nhìn bạn cùng những người khác qua những ngón tay chắp lại hình tháp. \"Muộn còn hơn không, tôi cho là vậy. Những nghi ngờ của tôi đã được xác nhận: cổ vật này là hàng thật. Làm tốt lắm. Sẽ thế nào nếu tôi nói với bạn rằng tôi có một lời đề nghị quá tốt để có thể từ chối?\"</p>"
+    },
+    "rubyLostTheBet": "In your Campaign Log, record *Ruby lost the bet*.",
+    "rubyWonTheBet": "In your Campaign Log, record *Ruby won the bet*.",
+    "victory": "Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory của các lá bài trong vùng trưng bày thành tích.",
+    "discoveredAnAlienLanguage": "Các điều tra viên đã khám phá ra một ngôn ngữ ngoài hành tinh.",
+    "proceed": "Proceed to _Interlude I: An Offer You Can’t Refuse_"
   }
 }

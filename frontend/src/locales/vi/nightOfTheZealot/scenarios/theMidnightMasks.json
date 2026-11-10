@@ -1,16 +1,58 @@
 {
   "heading": "Phần II",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the highest number of doom on a _Cultist_ enemy in play.",
+      "cultist": "-2. Place 1 doom on the nearest _Cultist_ enemy.",
+      "tablet": "[skull]: -X. X là Cthulhu's Rage.\r\n[cultist]: -3. Nếu bạn thất bại và địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -3. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -1. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của Cthulhu deck. (Tối đa rút một lá mỗi round.)"
+    },
+    "hardExpert": {
+      "skull": "-X. X is the total number of doom in play.",
+      "cultist": "-2. Place 1 doom on each _Cultist_ enemy in play. If there are no _Cultist_ enemies in play, reveal another token.",
+      "tablet": "-4. Nếu bạn thất bại, place all your clues on your location."
+    }
+  },
+  "intro": {
+    "title": "Part II: The Midnight Masks",
+    "body": "<p class='basic'>Check Campaign Log. *If Lita was forced to find others to help her cause*: Read _Intro 1_.</p><p class='basic'>Otherwise, skip to _Intro 2_.</p>"
+  },
+  "intro1": "<p>_Intro 1_: Người phụ nữ đến với bạn trong cơn hoảng loạn, kể lể như điện dại về những con quái vật trồi lên từ mặt đất trong một ngôi nhà gần Rivertown. Bà ta giải thích, “Ta đã bẫy được chúng, nhưng vẫn còn những con khác nữa. Còn những cái hố khác.” Nếu là tuần trước, bạn có thể nghĩ rằng bà ta là một người mất trí. Tuy nhiên, những sự kiện gần đây đã thách thức định kiến của bạn về tình trạng bình thường là gì. Bạn quyết định nghe bà ta nói. Bà ta giới thiệu bản thân tên là Lita Chantler và kể ra một câu chuyện làm căng giới hạn niềm tin của bạn. Bà ta xác nhận, “Những sinh vật mà tôi nói đến được gọi là ngạ quỷ - những sinh vật tàn ác đem lại bệnh dịch ở các hầm mộ, hang động và đường hầm bên dưới thành phố Arkham…</p><p class='basic right'>Continue to _Intro 3_.</p>",
+  "intro2": "<p>_Intro 2_: Sau thảm họa xảy ra tại nhà của bạn, Lita Chantler, người phụ nữ tóc đỏ ở trong phòng khách nhà bạn, đưa ra một câu chuyện làm kéo căng giới hạn niềm tin của bạn, dù bạn được chứng kiến tận mắt. Bà ta nói, \"Những sinh vật trong ngôi nhà được gọi là ngạ quỷ. Chúng là những sinh vật tàn ác đem lại bệnh dịch ở các hầm mộ, hang động và đường hầm bên dưới thành phố Arkham…\"</p><p class='basic right'>Continue to _Intro 3_.</p>",
+  "intro3": "<p>_Intro 3_: “Những sinh vật này sống bằng việc ăn xác người, và chúng được phục vụ bởi một giáo phái hắc ám ở trong thành phố Arkham, thành viên của chúng là những kẻ thờ phụng một chủ nhân cổ đại của loài ngạ quỷ này. Nhóm tà giáo này đã giết hại người dân vô tội và đem xác của họ cho đám ngạ quỷ ăn, thỏa mãn cơn đói kinh khủng của chúng…. Một sự cân bằng hắc ám được duy trì. Cho đến gần đây.” Lita tiếp tục nói, “Một trong những hang ổ lưu giữ xác người của đám tà giáo này đã bị phá hủy. Từ lúc đó, lũ ngạ quỷ hoạt động tích cực hơn bình thường. Ta đã theo dõi hoạt động của bọn chúng và cố gắng ngăn chặn bọn chúng chạy tán loạn khắp thành phố. Nhưng ta nghĩ rằng điều gì đó tồi tệ hơn đang diễn ra. Giáo phái này đang âm mưu một việc gì đó đen tối và đáng ngại hơn những gì tôi do thám được. Dấu hiệu cho thấy kế hoạch của chúng sẽ bộc lộ vào tối nay, ngay sau giữa đêm. Còn xa hơn thế là gì thì ta không biết”.</p><p>Lita nói tiếp, “Hầu hết tín đồ sẽ giống như người thường, bất chấp ý định xấu xa của chúng.” “Mỗi khi giáo phái họp mặt, thành viên của chúng mang những chiếc mặt nạ có hình đầu lâu của nhiều loại thú vật để bảo vệ danh tính bản thân. Những chiếc mặt nạ đó là mục tiêu của chúng ta. Biểu tượng của cái chết và suy tàn. Chúng ta phải vạch mặt đám tín đồ bằng cách lột mặt nạ của chúng và làm trật hướng kế hoạch của chúng. Chúng ta chỉ còn vài tiếng. Càng tìm được nhiều tín độ trước nửa đêm thì càng tốt”.</p><p class='basic right'>Continue to _Setup_.</p>",
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<div class='resolution'><p class='basic'>_If no resolution was reached (each investigator resigned or was defeated):_ Read _Resolution 1_.</p></div>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p>_Resolution 1_: Bạn đã đạt được một số thông tin hữu ích về giáo phái và kế hoạch của chúng. Bạn chỉ có thể hy vọng là nhiêu đây đã đủ.</p><ul><li>Trong Nhật ký Chiến dịch, dưới phần \"Tín Đồ Đã Thẩm Vấn\", ghi lại tên những tín đồ đặc trưng ở trong vùng trưng bày thành tích.</li><li>Trong Nhật ký Chiến dịch, dưới phần \"Tín Đồ Đã Trốn Thoát\", ghi lại tên những tín đồ đặc trưng vẫn còn trong chồng bài Cultist hay còn trong trò chơi.</li><li>If the Ghoul Priest is in the victory display, cross out “*the Ghoul Priest is still alive*” in your Campaign Log.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>_Resolution 2_: Mười hai hồi chuông rung lên, báo hiệu đã nửa đêm. Bạn đã hết thời gian; nghi lễ của giáo phái sẽ sớm bắt đầu. Bạn đã đạt được một số thông tin hữu ích về giáo phái và kế hoạch của chúng. Bạn chỉ có thể hy vọng là nhiêu đây đã đủ.</p><ul><li>Trong Nhật ký Chiến dịch, dưới phần \"Tín Đồ Đã Thẩm Vấn\", ghi lại tên những tín đồ đặc trưng ở trong vùng trưng bày thành tích.</li><li>Trong Nhật ký Chiến dịch, dưới phần \"Tín Đồ Đã Trốn Thoát\", ghi lại tên những tín đồ đặc trưng vẫn còn trong chồng bài Cultist hay còn trong trò chơi.</li><li>In your Campaign Log, record that *it is past midnight.*</li><li>If the Ghoul Priest is in the victory display, cross out “*the Ghoul Priest is still alive*” in your Campaign Log.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     }
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Midnight Masks*, *Chilling Cold*, *Nightgaunts*, *Dark Cult*, and *Locked Doors*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/midnight-masks.png' /><img src='{setImgPath}/chilling-cold.png' /><img src='{setImgPath}/nightgaunts.png' /><img src='{setImgPath}/dark-cult.png' /><img src='{setImgPath}/locked-doors.png' /></section>",
+    "cultistDeck": "<div class='columns simple'><p class='basic'>Đặt các lá bài encounter <i>Cult of Umôrdhoth</i> sang một bên thành \"chồng bài Tín Đồ\" riêng, và xào bộ bài.</p><section class='encounter-sets'><img src='{setImgPath}/cult-of-umordhoth.png' /></section></div>",
+    "placeLocations": "Chọn ngẫu nhiên một trong hai vị trí Downtown (trung tâm thành phố) và một trong hai vị trí Southside (khu vực phía Nam) đưa chúng vào bàn chơi. Loại bỏ các phiên bản khác của Downtown và Southside khỏi màn chơi. Sau đó, đưa các địa điểm Northside (khu vực phía Bắc), Easttown, Rivertown, St. Mary Hospital (bệnh viện St. Mary), Graveyard (nghĩa trang), Miskatonic University (đại học Miskatonic) và Your House (ngôi nhà của bạn) vào bàn chơi.",
     "acolytes": {
-      "instructions": "Dựa vào số lượng người chơi trong màn chơi:"
+      "instructions": "Dựa vào số lượng người chơi trong màn chơi:",
+      "onePlayer": "If there is exactly 1 player in the game, no changes are made.",
+      "twoPlayer": "Tìm trong các lá bài encounter đã tập hợp lại 1 lá Acolyte và spawn nó tại Southside.",
+      "threePlayer": "Tìm trong các lá bài encounter đã tập hợp lại 2 lá Acolyte. Spawn 1 lá tại Southside và 1 lá tại Downtown.",
+      "fourPlayer": "Tìm trong các lá bài encounter đã tập hợp lại 3 lá Acolyte. Spawn 1 lá tại Southside, 1 lá tại Downtown, và 1 lá tại Graveyard."
+    },
+    "burnedToTheGround": "Loại bỏ vị trí Your House ra khỏi trò chơi. Tất cả điều tra viên bắt đầu trò chơi tại Rivertown.",
+    "houseStillStanding": "Check Campaign Log. If *your house is still standing*: Each investigator begins play at Your House.",
+    "ghoulPriest": "Check Campaign Log. If *the Ghoul Priest is still alive*: Shuffle it into the encounter deck.",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to The Midnight Masks* and *The Devourer’s Cult*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-midnight-masks.png' /><img src='{setImgPath}/the-devourers-cult.png' /></section>*The Devourer’s Cult* replaces *Dark Cult*. Remove the replaced set from the game.",
+      "cultistDeck": "<div class='columns simple'><p class='basic'>When creating the Cultist deck, include the 3 new *Cult of Umôrdhoth* cards from this expansion. Shuffle the Cultist deck and remove 3 random cards from it without looking at them. (You should be left with a 5-card Cultist deck.) The new cards are indicated by the following icon:</p><section class='encounter-sets'><img src='{setImgPath}/return-cult.png' /></section></div>",
+      "predatorOrPrey": "When constructing the agenda deck, use one of the two copies of Agenda 1a—*Predator or Prey* at random, without looking at their other sides. Remove the other version of Agenda 1a from the game.",
+      "placeLocations": "Also choose one of the two Easttown locations, one of the two Northside locations, one of the two Rivertown locations, and one of the two Miskatonic University locations at random, and put those into play. Remove the other versions of Easttown, Northside, Rivertown, and Miskatonic University from the game.",
+      "acolytes": "If you are instructed to search the encounter deck for an Acolyte, search the encounter deck for any 1-health _Cultist_ enemy instead."
     }
   }
 }

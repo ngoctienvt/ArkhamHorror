@@ -2,33 +2,84 @@
   "keywordsAndConcepts": {
     "title": "Từ khóa và Khái niệm",
     "entries": [
-      {},
-      {},
       {
+        "title": "Doomed",
+        "body": "<p>Doomed là một khả năng keyword.\r\nKhi một kẻ địch có keyword Doomed bị đánh bại (bởi một điều tra viên hoặc một hiệu ứng scenario), đặt 1 doom lên agenda hiện tại. Hiệu ứng này có thể khiến agenda hiện tại advance.</p><ul><li>Một hiệu ứng \"discard\" một kẻ địch không được coi là defeat kẻ địch đó và không kích hoạt keyword Doomed.</li></ul>"
+      },
+      {
+        "title": "Hunter",
+        "body": "<p>Hunter là một khả năng keyword.\r\nVào lúc bắt đầu enemy phase, mỗi kẻ địch ready, unengaged có keyword Hunter di chuyển đến một địa điểm kết nối, dọc theo con đường ngắn nhất hướng tới điều tra viên gần nhất. Kẻ địch ở một địa điểm có một hoặc nhiều điều tra viên sẽ không di chuyển.</p><ul><li>Some enemies may target specific prey. (See “Prey.”)</li><li>Nếu có nhiều điều tra viên có khoảng cách bằng nhau đủ điều kiện là \"điều tra viên gần nhất\", kẻ địch Hunter di chuyển về phía người đáp ứng tốt nhất mục tiêu được chỉ định của nó. Nếu không có ai, hoặc nếu kẻ địch không có keyword Prey, điều tra viên trưởng sẽ quyết định.</li><li>Nếu một kẻ địch Hunter bị bắt buộc phải di chuyển vào một địa điểm nhưng bị chặn bởi một khả năng của lá bài, kẻ địch đó sẽ không di chuyển.</li></ul>"
+      },
+      {
+        "title": "Peril",
         "body": "<p>Peril là một khả năng keyword.\\r</p><p>Trong khi một điều tra viên đang resolve một lá bài encounter có keyword Peril, họ không thể bàn bạc với những người chơi khác. Những người chơi khác không thể chơi bài, kích hoạt khả năng, hoặc commit bài vào các kiểm tra kỹ năng của điều tra viên đó trong khi lá bài encounter Peril đang được resolve.</p>"
       },
-      {},
-      {},
-      {}
+      {
+        "title": "Prey",
+        "body": "<p>Prey là một khả năng keyword.\r\nNếu có cơ hội, một số kẻ địch sẽ truy đuổi một điều tra viên nhất định. Những kẻ địch này được nhận diện bằng keyword Prey trong text box của chúng, theo sau là các hướng dẫn về việc chúng nên engage với ai, nằm trong ngoặc đơn.</p><ul><li>Khi phải chọn giữa nhiều điều tra viên có khoảng cách bằng nhau (hoặc giữa các điều tra viên tại địa điểm của nó), một kẻ địch có keyword Prey sẽ nhắm mục tiêu vào điều tra viên đáp ứng tốt nhất các hướng dẫn Prey của nó.</li></ul>"
+      },
+      {
+        "title": "Retaliate",
+        "body": "<p>Retaliate là một khả năng keyword.\r\nMỗi khi một điều tra viên thất bại trong một kiểm tra kỹ năng khi tấn công một kẻ địch đang ready có keyword Retaliate, sau khi áp dụng tất cả các kết quả cho kiểm tra kỹ năng đó, kẻ địch đó sẽ thực hiện một đòn tấn công nhắm vào điều tra viên đang tấn công. Một kẻ địch không bị exhaust sau khi thực hiện một đòn tấn công Retaliate.</p><ul><li>Đòn tấn công này xảy ra bất kể kẻ địch có đang engaged với điều tra viên đang tấn công hay không.</li></ul>"
+      },
+      {
+        "title": "Surge",
+        "body": "<p>Surge là một keyword khả năng.\r\nSau khi một điều tra viên rút và giải quyết một lá bài encounter có keyword surge, điều tra viên đó phải rút và giải quyết một lá bài khác.</p><ul><li>Nếu một điều tra viên rút một lá bài có keyword surge trong quá trình setup, keyword surge vẫn được giải quyết.</li></ul>"
+      }
     ]
   },
+  "tokens": {
+    "hardExpert": {
+      "skull": "-X. X is the current act number + 1.",
+      "tablet": "-2. Rút thêm một token khác. Nếu bạn thất bại, chịu 1 damage.",
+      "elderThing": "-4. Nếu bạn thất bại, if able, draw the top card of the encounter discard pile with the title Fire!."
+    },
+    "easyStandard": {
+      "skull": "-X. X is the current act number.",
+      "tablet": "-1. Rút thêm một token khác. Nếu bạn thất bại, chịu 1 damage.",
+      "elderThing": "-3. If you fail by 2 or more, if able, draw the top card of the encounter discard pile with the title Fire!."
+    }
+  },
+  "label": {
+    "searchingForDrArmitage": {
+      "drawFromDiscard": "Only search discard",
+      "drawFromBoth": "Search encounter deck and discard"
+    }
+  },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: <section class='encounter-sets grid'><div><img src='{setImgPath}/spreading-flames.png' /><span>Spreading Flames</span></div><div><img src='{setImgPath}/ashen-pilgrims.png' /><span>Ashen Pilgrims</span></div><div><img src='{setImgPath}/bystanders.png' /><span>Bystanders</span></div><div><img src='{setImgPath}/cosmic-evils.png' /><span>Cosmic Evils</span></div><div><img src='{setImgPath}/eldritch-lore.png' /><span>Eldritch Lore</span></div><div><img src='{setImgPath}/fire.png' /><span>Fire!</span></div><div><img src='{setImgPath}/hallucinations.png' /><span>Hallucinations</span></div><div><img src='{setImgPath}/mad-science.png' /><span>Mad Science</span></div><div><img src='{setImgPath}/miskatonic-university.png' /><span>Miskatonic University</span></div></section>",
     "placeLocations": "Đưa lá bài địa điểm Your Friend's Room vào khu vực chơi. Để riêng các địa điểm khác sang một bên, out of play.",
-    "startAt": "Mỗi điều tra viên bắt đầu chơi tại Your Friend's Room."
+    "startAt": "Mỗi điều tra viên bắt đầu chơi tại Your Friend's Room.",
+    "setOutOfPlay": "Set all 5 copies of the Fire! treachery, the Dr. Henry Armitage story asset, and the Servant of Flame enemy aside, out of play."
   },
   "intro": {
     "title": "Kịch bản I: Spreading Flames",
     "body": "<p>Những chuyện kỳ lạ đang xảy ra trong thành phố Arkham. Một loạt các vụ hỏa hoạn và những \"tai nạn\" rùng rợn gần đây đã khiến cả thành phố phải đứng ngồi không yên. Dù tờ Arkham Advertiser đã đưa ra vài lời giải thích hời hợt, bạn và các cộng sự của mình không mấy tin tưởng. Những bóng người mặc áo choàng đã được nhìn thấy gần những sự kiện kỳ lạ này, và người bạn chung của các bạn tin chắc rằng họ là thủ phạm. Bạn đồng ý gặp nhau tại ký túc xá của người bạn đó ở Miskatonic University để cố gắng tìm hiểu ngọn ngành sự việc. Tuy nhiên, khi bạn đến nơi, phòng của bạn mình trống không và khu ký túc xá lại im ắng đến lạ thường…</p>"
   },
   "resolutions": {
+    "label": {
+      "r2": "Stay and fight the fire! (→ Resolution 2)",
+      "r3": "There's no time. We have to go. (→ Resolution 3)"
+    },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Bạn tỉnh dậy ở rìa khuôn viên trường, đôi mắt cay xè vì khói, và lặng người sững sờ nhìn Miskatonic University bốc cháy. Những tàn lửa nhảy múa trên bầu trời phía trên đám cháy lớn như những vì sao rực lửa. Quá kiệt sức để giúp đỡ, bạn nhìn một nhóm sinh viên vật lộn trong vô vọng để ngăn chặn ngọn lửa. Đầu tiên là đài quan sát, sau đó là ký túc xá, và cuối cùng là tòa nhà khoa học bị ngọn lửa thiêu rụi. Giữa sự hỗn loạn, bạn tìm thấy Dr. Henry Armitage đang đứng dưới một gốc cây bạch dương, nhìn Orne Library bốc cháy. Ngọn lửa liếm sạch bộ khung của tòa nhà tráng lệ, để lại một đống đổ nát trơ trọi. Vị thủ thư trưởng rõ ràng đang bị sốc. Khuôn mặt ông tái mét khi bạn giải thích những tình tiết kỳ lạ xoay quanh sự biến mất của người bạn mình. Kẻ thù rực lửa kia là ai? Và những kẻ trùm đầu tuần tra quanh khuôn viên trường muốn gì?</p><ul><li>In your campaign log, record that <b>Miskatonic University burned</b>.</li><li>Mỗi điều tra viên chịu 1 mental trauma, vì họ bị dằn vặt bởi cảm giác tội lỗi khi để trường đại học bị thiêu rụi.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Khung cảnh trở nên hỗn loạn khi hàng tá sinh viên cùng nhau hợp sức dập tắt biển lửa đang hoành hành. Tâm trí bạn quay cuồng với hàng loạt câu hỏi. Kẻ truy đuổi bạn là ai? Những kẻ trùm đầu tuần tra quanh khuôn viên trường thực sự muốn gì? Và người bạn của bạn đang ở đâu?</p><p>Dr. Armitage đặt một tay lên vai bạn, làm bạn giật mình. \"Nếu chúng ta muốn tìm lại người bạn của cậu và kẻ bắt cóc, chúng ta phải đi ngay. Tôi sẽ giải thích mọi thứ trên đường.\" Bạn nhìn những sinh viên đang dũng cảm chiến đấu với ngọn lửa, rồi nhìn vị thủ thư trưởng. Bạn có thể ở lại và giúp đỡ, nhưng điều đó sẽ làm tiêu tốn khoảng thời gian quý giá.</p><ul><li>các điều tra viên đã đánh bại kẻ truy đuổi đeo mặt nạ của họ.</li><li>Chọn một điều tra viên để trở thành người sở hữu story asset Dr. Henry Armitage. <i>(Thêm lá bài đó vào bộ bài của điều tra viên đó, bỏ qua các giới hạn xây dựng bộ bài. Nó không tính vào kích thước bộ bài của điều tra viên đó.)</i></li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Các điều tra viên phải quyết định <i>(chọn một)</i>:<ul><li>*Stay and fight the fire*! Proceed to _Resolution 2_.</li><li>*“There’s no time. We have to go.”* Skip to _Resolution 3_.</li></ul></li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Đôi mắt bạn cay xè vì mùi khói khét khi bạn chung tay cùng những người khác để dập tắt ngọn lửa hung hãn. Bạn cố gắng khống chế ngọn lửa cho đến khi Arkham Fire Department đến hiện trường. Khi tình hình đã được kiểm soát, bạn vội vã đi gặp Dr. Armitage.</p><ul><li>các điều tra viên đã cứu Miskatonic University.</li><li>Mỗi điều tra viên nhận 1 kinh nghiệm thưởng và chịu 1 physical trauma từ những vết bỏng họ gặp phải khi dập lửa.</li><li>Proceed to _Scenario II: Smoke and Mirrors._</li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Bạn bỏ chạy khỏi khuôn viên trường cùng Dr. Armitage, phó mặc ngôi trường cho số phận. Tiếng còi hụ lấn át mọi âm thanh khác khi bạn đi theo vị thủ thư trưởng đến căn hộ của ông.</p><ul><li>In your campaign log, record that *Miskatonic University burned*.</li><li>Mỗi điều tra viên chịu 1 mental trauma, vì họ bị dằn vặt bởi cảm giác tội lỗi khi để trường đại học bị thiêu rụi.</li><li>Proceed to _Scenario II: Smoke and Mirrors_.</li></ul>"
+    },
+    "xp": {
+      "resolution2": "for fighting the fires",
+      "bonus": "as they reflect on the events of the night"
     }
   }
 }

@@ -1,29 +1,71 @@
 {
   "heading": "Màn II",
+  "tokens": {
+    "easyStandard": {
+      "skull": "Rút thêm một token khác. Nếu bạn thất bại, đặt 1 doom lên a _Possessed_ enemy in play.",
+      "cultist": "-2. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.",
+      "tablet": "-4. Nếu bạn thất bại, chịu 1 horror.",
+      "elderThing": "-X. X là chỉ số shroud của địa điểm bạn đang ở."
+    },
+    "hardExpert": {
+      "skull": "Rút thêm một token khác. Nếu bạn thất bại, đặt 1 doom lên the _Possessed_ enemy in play with the most remaining health.",
+      "cultist": "-3. Đặt 1 manh mối của bạn lên địa điểm của bạn.",
+      "tablet": "-4. Take 1 horror.",
+      "elderThing": "-X. X là chỉ số shroud của địa điểm bạn đang ở. Nếu bạn thất bại, chịu 1 damage."
+    }
+  },
   "intro": {
     "title": "Màn II: Vị Vua Cuối Cùng",
     "body": "<p>Nếu có ai có câu trả lời cho những câu hỏi đang nung nấu trong đầu bạn thì đó chính là dàn diễn viên và đoàn làm vở kịch Vị Vua Áo Vàng. Không có hướng đi nào khác, bạn mặc bộ quần áo đẹp nhất của mình và đi đến địa điểm 1452 Đại lộ Atlantic, nơi một người phụ nữ tên là Constance Dumaine đang tổ chức một sự kiện kỷ niệm buổi diễn một đêm của vở kịch ở thị trấn Arkham.</p>"
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Last King*, *Hastur’s Gift*, *Decay & Filth*, *The Stranger*, *Ancient Evils*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-last-king.png' /><img src='{setImgPath}/hasturs-gift.png' /><img src='{setImgPath}/decay-and-filth.png' /><img src='{setImgPath}/the-stranger.png' /><img src='{setImgPath}/ancient-evils.png' /></section>",
+    "placeLocations": "Đặt toàn bộ 6 địa điểm vào màn chơi (Foyer, Courtyard, Living Room, Ballroom, Dining Room, and Gallery). Xem bên dưới để biết vị trí gợi ý. Mỗi điều tra viên bắt đầu chơi tại Foyer.",
     "bystanders": {
-      "note": "*Lưu ý: Những lá bài này có hai mặt và có câu chuyện ở mặt bên kia. Để có trải nghiệm tốt nhất, đừng nhìn vào mặt bên kia trừ khi có hiệu ứng hướng dẫn bạn làm như vậy.*",
-      "instructions": "Xào 5 lá tài sản Bystander (Constance Dumaine, Jordan Perry, Ishimaru Haruko, Sebastien Moreau, và Ashleigh Clarke) và đặt ngẫu nhiên mỗi lá vào trong mỗi vị trí, ngoại trừ vị trí Foyer (phòng giải lao). Đặt 1 manh mối vào trong mỗi lá tài sản, và thêm manh mối tương ứng số lượng điều tra viên."
+      "instructions": "Xào 5 lá tài sản Bystander (Constance Dumaine, Jordan Perry, Ishimaru Haruko, Sebastien Moreau, và Ashleigh Clarke) và đặt ngẫu nhiên mỗi lá vào trong mỗi vị trí, ngoại trừ vị trí Foyer (phòng giải lao). Đặt 1 manh mối vào trong mỗi lá tài sản, và thêm manh mối tương ứng số lượng điều tra viên.",
+      "note": "*Lưu ý: Những lá bài này có hai mặt và có câu chuyện ở mặt bên kia. Để có trải nghiệm tốt nhất, đừng nhìn vào mặt bên kia trừ khi có hiệu ứng hướng dẫn bạn làm như vậy.*"
     },
     "setAside": "Đặt kẻ địch Dianne Devine sang một bên, ngoài khu vực chơi.",
     "sickeningReality": {
       "instructions": "Đặt 5 lá bài câu chuyện “Sickening Reality” bên dưới lá bài scenario.",
       "note": "*Lưu ý: Những lá bài này có hai mặt và có mặt encounter ở mặt bên kia. Để có trải nghiệm tốt nhất, đừng nhìn vào mặt bên kia trừ khi có hiệu ứng hướng dẫn bạn làm như vậy.*"
+    },
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to The Last King*, *Decaying Reality*, and *Delusory Evils*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-last-king.png' /><img src='{setImgPath}/decaying-reality.png' /><img src='{setImgPath}/delusory-evils.png' /></section>*Decaying Reality* replaces *Decay & Filth* and *Delusory Evils* replaces *Ancient Evils*. Remove the replaced sets from the game.",
+      "agendaDeck": "Remove Agenda 1a—*Fashionably Late* from the game and replace it with the new Agenda 1a—*Better Never Than Late*.",
+      "dianneDevine": "Bản gốc",
+      "sickeningReality": "Bản gốc",
+      "setAside": "Also set the Shocking Display treachery aside, out of play."
     }
   },
   "resolutions": {
+    "xp": {
+      "bonus": "Đối với mỗi 2 manh mối có trên chồng bài act khi màn chơi kết thúc, hãy chọn một điều tra viên để nhận thêm 1 điểm kinh nghiệm. Kinh nghiệm từ phần thưởng này phải được chia đều cho các điều tra viên nhất có thể."
+    },
+    "goToR1": "Ít nhất một điều tra viên đã từ bỏ",
+    "goToR2": "_If no resolution was reached because each investigator was defeated_: Go to _Resolution 2_.",
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p>_Resolution 1_: Không khí mùa thu rực rỡ bao trùm lấy bạn khi bạn ra khỏi trang viên. Bạn không còn nghi ngờ gì về việc dàn diễn viên và đoàn làm kịch Vị Vua Áo Vàng đã bị ảnh hưởng bởi cơn điên loạn. Có lẽ nó cũng ảnh hưởng đến bạn nữa. Bạn cảm thấy bóng tối đang xâm chiếm, một hình ảnh hiện diện trong tâm trí bạn không gì khác ngoài ánh mắt của Kẻ Lạ. Giật mình, lần đầu tiên bạn nhìn quanh sân trước kể từ khi thoát khỏi trang viên. Khung cảnh trông… khác hẳn. Các cửa sổ phía trước không bị đập vỡ như khi bạn đến lần đầu. Dấu vết máu mà bạn nhận thấy trên hiên nhà đã bị xóa sạch, và thay vào đó là tiếng nhạc xập xình đáng lo ngại mà bạn đã nghe khi bước vào, cùng với những giai điệu nhẹ nhàng của nhạc jazz chậm rãi vọng ra từ sân trong.</p><ul><li>Trong Nhật Ký Chiến Dịch, dưới phần \"VIP Đã Phỏng Vấn\", ghi lại tên của các nhân vật bạn \"đã phỏng vấn\".</li><li>Trong Nhật Ký Chiến Dịch, dưới phần \"VIP Đã Bị Giết\", ghi lại tên của mỗi kẻ địch [[Lunatic]] độc nhất có trong khu vực trưng bày thành tích.</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Đối với mỗi 2 manh mối có trên chồng bài act khi màn chơi kết thúc, hãy chọn một điều tra viên để nhận thêm 1 điểm kinh nghiệm. Kinh nghiệm từ phần thưởng này phải được chia đều cho các điều tra viên nhất có thể.</li><li>Proceed to _Interlude I: Lunacy’s Reward_.</li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>_Resolution 2_: “Xin lỗi, nhưng giờ đã muộn lắm rồi,” bạn nghe thấy một người phục vụ nói trong khi anh ta nhẹ nhàng vỗ vào vai bạn. Bạn nhận ra rằng bạn đang ngồi trên một chiếc ghế dài trong phòng khách của trang viên và bạn đã ngủ một lúc. Bữa tiệc dường như đang lắng xuống. Không có âm nhạc lấp đầy các sảnh, thức ăn đã hết sạch và chỉ còn lại một số khách. Người phục vụ hỏi với một nụ cười đã được huấn luyện, \"Có lẽ anh muốn tôi lấy áo khoác cho anh?\" Bạn loạng choạng khi đứng dậy, tựa vào tay vịn của chiếc ghế dài. Đầu bạn nặng trĩu vì chóng mặt và tầm nhìn của bạn bị mờ đi. Bạn nhấn mạnh rằng bạn vẫn ổn, và bắt đầu đi về phía tiền sảnh.</p><P>You no longer see any of the guests you were searching for earlier, not even the hostess, Mrs. Dumaine. All traces of the madness and horror you’ve experienced are gone. Even the oddities you witnessed upon entering the manor have vanished—the signs of struggle, the broken windows, the blood trail on the porch… Every piece of evidence has been erased. But you still remember the night’s events, and in your memory you will find your answers.</p><ul><li>Trong Nhật Ký Chiến Dịch, dưới phần \"VIP Đã Phỏng Vấn\", ghi lại tên của các nhân vật bạn \"đã phỏng vấn\".</li><li>Trong Nhật Ký Chiến Dịch, dưới phần \"VIP Đã Bị Giết\", ghi lại tên của mỗi kẻ địch [[Lunatic]] độc nhất có trong khu vực trưng bày thành tích.</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Đối với mỗi 2 manh mối có trên chồng bài act khi màn chơi kết thúc, hãy chọn một điều tra viên để nhận thêm 1 điểm kinh nghiệm. Kinh nghiệm từ phần thưởng này phải được chia đều cho các điều tra viên nhất có thể.</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 1 token [cultist], 1 token [tablet], and 1 token [elder_thing] vào túi hỗi mang.</li><li>Màn III: Âm Vang từ Quá Khứ</li></ul></div>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<div class='resolution'><p>_Resolution 3_: Vài ngày sau đó, bạn thấy mình đang hồi tưởng lại bữa tiệc mà bạn đã tham dự tại 1452 Đại lộ Atlantic. Bạn đã có một khoảng thời gian vô cùng tuyệt vời! Tuy nhiên, trí nhớ của bạn mơ hồ. Bạn không thể không cảm thấy mình quên một điều gì đó quan trọng. Điều gì đó về vở kịch mà bạn đã xem lúc sớm vào đêm hôm đó — vở kịch Vị Vua Áo Vàng. Cảm giác khó chịu đó theo đuổi bạn trong mọi khoảnh khắc bạn tỉnh. Bạn cố gắng hết sức nhớ lại đầy đủ các sự kiện trong đêm, nhưng vẫn còn một lỗ hổng trong trí nhớ của bạn. Khi bạn cố gắng nhớ lại, lo lắng trong bạn tăng lên, đến mức gần như trở thành cơn ám ảnh. Quyết định rằng bạn phải hoàn toàn biết những gì đã xảy ra vào đêm đó, bạn tiến về trang viên của Hiệp hội Lịch sử ở Southside. Có lẽ ở đó bạn có thể tìm hiểu thêm về vở kịch <u>Vị Vua Áo Vàng</u> …</p><ul><li>VIP Đã Phỏng Vấn</li><li>Trong Nhật Ký Chiến Dịch, dưới phần \"VIP Đã Bị Giết\", ghi lại tên của mỗi kẻ địch [[Lunatic]] độc nhất có trong khu vực trưng bày thành tích.</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Đối với mỗi 2 manh mối có trên chồng bài act khi màn chơi kết thúc, hãy chọn một điều tra viên để nhận thêm 1 điểm kinh nghiệm. Kinh nghiệm từ phần thưởng này phải được chia đều cho các điều tra viên nhất có thể.</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 1 token [cultist], 1 token [tablet], and 1 token [elder_thing] vào túi hỗi mang.</li><li>Màn III: Âm Vang từ Quá Khứ</li></ul></div>"
     }
+  },
+  "tooltips": {
+    "foyer": {
+      "resign": "Having found valuable information about the production, you depart and plan your next move. (*If each undefeated investigator has resigned, proceed to \"if no resolution was reached\" in the Campaign Guide.*)"
+    }
+  },
+  "label": {
+    "fineDining": {
+      "place": "Place 1 of your clues on a Bystander asset in play"
+    },
+    "gainAdditionalXp": "{name} gains 1 additional experience point"
   }
 }

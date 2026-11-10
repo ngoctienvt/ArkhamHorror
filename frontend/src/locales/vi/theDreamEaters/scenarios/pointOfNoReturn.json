@@ -1,36 +1,30 @@
 {
   "heading": "Màn III-B",
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Point of No Return*, *Creatures of the Underworld*, *Whispers of Hypnos*, *Ancient Evils*, *Ghouls*, and *Striking Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/point-of-no-return.png' /><img src='{setImgPath}/creatures-of-the-underworld.png' /><img src='{setImgPath}/whispers-of-hypnos.png' /><img src='{setImgPath}/ancient-evils.png' /><img src='{setImgPath}/ghouls.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
+    "setEncounterSetsAside": "Set each of the following encounter sets aside, out of play: *Descent into the Pitch*, *Terror of the Vale*, *Agents of Atlach-Nacha*, and *Nightgaunts*. These sets are indicated by the following icons:<section class='encounter-sets'><img src='{setImgPath}/descent-into-the-pitch.png' /><img src='{setImgPath}/terror-of-the-vale.png' /><img src='{setImgPath}/agents-of-atlach-nacha.png' /><img src='{setImgPath}/nightgaunts.png' /></section>",
     "putLocations": "Đặt các vị trí sau vào chơi: Vaults of Zin, City of Gugs, Tower of Koth, và Plain of the Ghouls.",
     "beginAtVaultsOfZin": "Mỗi điều tra viên bắt đầu chơi tại Vaults of Zin.",
     "setOtherLocationsAside": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
     "setEnchantedWoodsAside": "Tìm trong bộ sưu tập lá bài Enchanted Woods *(Stone Trapdoor)* *(The Dream-Eaters #53)* và đặt nó một bên, ngoài khu vực chơi.",
     "setCardsAside": "Đặt kẻ địch Gug Sentinel, lá bài tài sản Richard Upton Pickman, và điểm yếu False Awakening sang một bên, ngoài khu vực chơi.",
     "checkAct": "Kiểm tra Nhật ký Chiến dịch. Tùy thuộc vào các trường hợp sau,một phiên bản khác của act 1 sẽ được dùng trong màn chơi này. Loại bỏ phiên bản còn lại của act 1 khỏi màn chơi",
+    "useActV1": "*If Randolph did not survive the descent*, use Act 1a—“Entering the Underworld (v. I).”",
+    "useActV2": "*If Randolph survived the descent*, use Act 1a—“Entering the Underworld (v. II).”",
     "checkSteps": "Một làn sóng đau đớn và buồn nôn tràn qua bạn. Kiểm tra số kiểm đếm được ghi bên cạnh “Các bước của cây cầu” trong Nhật ký Chiến dịch.",
+    "noSteps": "*If there are no tally marks recorded*, nothing happens.",
+    "oneToFourSteps": "*If there are 1–4 tally marks*, place 1 damage on the scenario reference card. This represents the distortion within the Dreamlands.",
+    "fiveOrMoreSteps": "*If there are 5 or more tally marks*, place 2 damage on the scenario reference card. This represents the distortion within the Dreamlands.",
     "buildEncounterDeck": "Xáo trộn các lá bài encounter còn lại để tạo thành chồng bài encounter."
   },
   "rules": {
     "locations": {
       "title": "Vị trí trong màn chơi Point of No Return",
       "body": "<p class='basic'>Mỗi vị trí của màn chơi này không có mặt unreveal, và do đó chúng tiến vào chơi với mặt reveal lật lên. Thay vì mặt unreveal, những vị trí này có câu chuyện ở mặt còn lại. Bất cứ khi nào 1 vị trí trong màn chơi này tiến vào chơi (bao gồm cả lúc setup), đặt manh mối lên vị trí đó tương ứng giá trị manh mối như bình thường. Vị trí có thể được lật theo 1 trong 2 cách sau. Hầu hết được lật bởi từ khóa veild, như mô tả ở dưới. Một số vị trí khác thì được lật bởi khả năng được in trên vị trí đó. <b>Một khi 1 vị trí được lật và câu chuyện của nó được đọc, nó không thể được lật lại cho phần còn lại của màn chơi, trừ khi được ghi rõ.</b></strong></p>"
-    }
-  },
-  "intro": {
-    "title": "Màn III–B: Point of No Return"
-  },
-  "intro1": {
-    "title": "Màn III–B: Point of No Return"
-  },
-  "intro2": {
-    "title": "Màn III–B: Point of No Return"
-  },
-  "resolutions": {
-    "resolution1": {
-      "title": "Kết thúc thứ nhất"
     },
-    "resolution2": {
-      "title": "Kết thúc thứ hai"
+    "veiled": {
+      "title": "Veiled",
+      "body": "<p class='basic'>Nhiều vị trí trong trường hợp này có từ khóa veiled. Từ khóa này thể hiện rằng một vị trí chứa truyền thuyết hoặc sự hỗ trợ chưa rõ mà các điều tra viên phải tìm kiếm trước khi nó có thể được sử dụng cho họ.</p><p class='basic'>Là một khả năng [fast], một điều tra viên tại một địa điểm veiled không có manh mối ở trên nó có thể lật vị trí đó, giải quyết nội dung ở phía bên kia của nó.</p>"
     }
   },
   "specialRules": [
@@ -38,6 +32,54 @@
       "title": "Vị trí trong màn chơi Point of No Return",
       "body": "<p class='basic'>Mỗi vị trí của màn chơi này không có mặt unreveal, và do đó chúng tiến vào chơi với mặt reveal lật lên. Thay vì mặt unreveal, những vị trí này có câu chuyện ở mặt còn lại. Bất cứ khi nào 1 vị trí trong màn chơi này tiến vào chơi (bao gồm cả lúc setup), đặt manh mối lên vị trí đó tương ứng giá trị manh mối như bình thường. Vị trí có thể được lật theo 1 trong 2 cách sau. Hầu hết được lật bởi từ khóa veild, như mô tả ở dưới. Một số vị trí khác thì được lật bởi khả năng được in trên vị trí đó. <b>Một khi 1 vị trí được lật và câu chuyện của nó được đọc, nó không thể được lật lại cho phần còn lại của màn chơi, trừ khi được ghi rõ.</b></strong></p>"
     },
-    {}
-  ]
+    {
+      "title": "Veiled",
+      "body": "<p class='basic'>Nhiều vị trí trong trường hợp này có từ khóa veiled. Từ khóa này thể hiện rằng một vị trí chứa truyền thuyết hoặc sự hỗ trợ chưa rõ mà các điều tra viên phải tìm kiếm trước khi nó có thể được sử dụng cho họ.</p><p class='basic'>Là một khả năng [fast], một điều tra viên tại một địa điểm veiled không có manh mối ở trên nó có thể lật vị trí đó, giải quyết nội dung ở phía bên kia của nó.</p>"
+    }
+  ],
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the amount of damage on this card.",
+      "cultist": "Rút thêm một token khác. Nếu bạn thất bại, after this skill test ends, draw the top card of the encounter deck.",
+      "tablet": "+1. The black cat helps you navigate through the death-fire. If this token is revealed during an investigation and you succeed, draw 1 card.",
+      "elderThing": "-3. If you fail by 2 or more, choose a ready enemy at your location or a connecting location. That enemy moves to your location, engages you, and makes an immediate attack."
+    },
+    "hardExpert": {
+      "skull": "-X. X is 1 more than the amount of damage on this card.",
+      "cultist": "Rút thêm một token khác. Nếu bạn thất bại, after this skill test ends, draw the top card of the encounter deck.",
+      "tablet": "0. The black cat helps you navigate through the death-fire. If this token is revealed during an investigation and you succeed, draw 1 card.",
+      "elderThing": "-4. If you fail by 2 or more, choose a ready enemy at your location or a connecting location. That enemy moves to your location, engages you, and makes an immediate attack."
+    }
+  },
+  "intro": {
+    "title": "Màn III–B: Point of No Return",
+    "body": "<p class='basic'>Kiểm tra Nhật ký Chiến dịch.</p><ul><li>*If Randolph did not survive the descent*, proceed to _Intro 1_.</li><li>*If Randolph survived the descent*, skip to _Intro 2_.</li></ul>"
+  },
+  "intro1": {
+    "title": "Màn III–B: Point of No Return",
+    "body": "<p>Cuối cùng bạn đã đến được Vùng đất Giấc mơ, nhưng nó không như bạn mong đợi. Hang động khổng lồ này khác rất xa với những vùng đất kỳ diệu và những thành phố thần kỳ được mô tả trong các tác phẩm của Virgil Gray. Có lẽ tác giả chưa bao giờ mạo hiểm đi sâu đến thế này dưới lòng đất, chưa bao giờ tìm thấy những nỗi kinh hoàng ẩn nấp bên dưới bề mặt của Vùng đất Giấc mơ. Bạn nghi ngờ rằng anh ấy sẽ không bỏ qua những câu chuyện có tính chất lạnh sống lưng như vậy. Khi dấn thân vào vùng đất tối tăm và cằn cỗi, bạn thấy mình tràn ngập nỗi tuyệt vọng trống rỗng—một sự trống rỗng gặm nhấm trái tim bạn và phản chiếu khung cảnh ảm đạm xung quanh bạn. Bạn đến đây để giúp đỡ bạn bè của mình, và bây giờ người dẫn đường duy nhất của bạn trong thế giới này đã biến mất. Sẽ thế nào nếu tất cả điều này là một sai lầm kinh khủng?</p><p>Bạn rũ bỏ những suy nghĩ đen tối này khỏi tâm trí và tập trung vào con đường phía trước. Đã quá muộn để nghĩ về những gì bạn có thể làm khác đi. Đây là con đường phía trước của bạn bây giờ. Ngay cả khi bạn không thể giúp bạn bè của mình, ngay cả khi bạn đã quá muộn để giúp Randolph, thì bây giờ bạn có một nhiệm vụ khác. Rõ ràng khu vực này của Vùng đất Giấc mơ liên quan đến những sinh vật xâm chiếm thực tại của bạn. Các câu trả lời phải nằm ở đây. Bên cạnh đó, nó không giống như bạn có nhiều sự lựa chọn nữa.</p><p>Bạn đi bộ đến rìa của một vách đá lởm chởm nhìn ra khu vực hang động bên dưới. Vùng đất này vô cùng rộng lớn. Ở đằng xa, dọc theo những vách đá, bạn nhìn thấy một thành phố có tường bao quanh tất cả mọi thứ. Trong số nhiều tòa tháp của nó, một ngọn tháp màu đen vươn cao đến mức nó phải xuyên qua bề mặt của Vùng đất Giấc mơ. Phía nam là một đồng bằng trải dài nhìn xuống thung lũng bên dưới, và bạn có thể nhìn thấy những hình thù chuyển động trong ánh sáng lân quang màu xám. Bạn hy vọng những sinh vật sống trong vùng đất này là những người mà bạn có thể giao tiếp được. Bạn có những nghi ngờ của mình… nhưng ít nhất bây giờ bạn đã có một kế hoạch. Cho dù đó là một kế hoạch tốt hay không thì chưa biết.</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
+  },
+  "intro2": {
+    "title": "Màn III–B: Point of No Return",
+    "body": "<p>Cuối cùng bạn đã đến được Vùng đất Giấc mơ, nhưng nó không như bạn mong đợi. Hang động khổng lồ này khác rất xa với những vùng đất kỳ diệu và những thành phố thần kỳ được mô tả trong các tác phẩm của Virgil Gray. Có lẽ tác giả chưa bao giờ mạo hiểm đi sâu đến thế này dưới lòng đất, chưa bao giờ tìm thấy những nỗi kinh hoàng ẩn nấp bên dưới bề mặt của Vùng đất Giấc mơ. Bạn nghi ngờ rằng anh ấy sẽ không bỏ qua những câu chuyện có tính chất lạnh sống lưng như vậy. Khi dấn thân vào vùng đất tối tăm, cằn cỗi, bạn nói mối quan ngại của mình với Randolph. Anh ấy khẳng định, “Đúng là chúng ta đang ở xa những người bạn đồng hành của cậu hơn là dự định. Tuy nhiên, theo ý kiến của tôi thì—có lẽ đây là một điều may mắn ẩn dưới. Rõ ràng Underworld có liên quan đến những sinh vật xâm chiếm thực tại của chúng ta. Tôi đề nghị chúng ta điều tra thêm khi có cơ hội. Chúng ta có thể trở lại bề mặt của Vùng đất Giấc mơ sau khi khám phá ra sự thật.”</p><p>Bạn hỏi Randolph xem anh ta có manh mối nào không, và anh ta bước đến rìa của một vách đá lởm chởm nhìn ra thế giới hang động bên dưới. “Tôi đã từng đến đây,” anh khẽ nói, lấy lại tinh thần. “Những bức tường phía xa kia thuộc về Thành phố Gugs. Phía nam là một đồng bằng trải dài nhìn xuống thung lũng bên dưới. Đồng bằng đó là nơi những con ngạ quỷ sinh sống. Có lẽ ở đó chúng ta có thể tìm hiểu thêm.” Bạn nêu lên những nghi ngờ của mình, tự hỏi liệu những sinh vật như vậy có khả năng trò chuyện hòa bình hay không. “Chúng thông minh hơn cậu nghĩ, và có thể khá hữu ích nếu chúng ta thuyết phục chúng giúp đỡ chúng ta. Trên thực tế, có một người mà tôi coi là bạn bè của mình, một nghệ sĩ tên là Richard Pickman. Nếu chúng ta đủ may mắn để tìm thấy anh ta, đó có thể là cơ hội tốt nhất của chúng ta.” Bạn vẫn còn nghi ngờ… nhưng ít nhất bây giờ bạn đã có một kế hoạch. Cho dù đó là một kế hoạch tốt hay không thì chưa biết.</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
+  },
+  "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p class='basic'>_If no resolution was reached (each investigator was defeated):_ Skip to _Resolution 2_.</p>"
+    },
+    "resolution1": {
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>Chất lỏng màu đen, hắc ín dâng lên xung quanh, nuốt chửng bạn và bạn sợ rằng mình đã mắc một sai lầm chết người. Áp lực của chất lỏng dày đặc bao quanh cơ thể bạn, nghiền nát bạn từ mọi phía. Nhưng sau đó bạn nổi lên ở phía bên kia. Bạn rơi vào một khoảnh khắc im lặng ngắn ngủi trước khi bị một tấm mạng nhện gân guốc phát sáng tóm lấy. Hoảng sợ, bạn bò đến một bệ đá cứng gần đó. Chỗ trú ẩn của bạn là một trong số rất nhiều chỗ, mỗi chỗ lơ lửng trong không trung và được kết nối bằng mạng nhện dày. Ngoài xa là một không gian vũ trụ rộng lớn, một bóng tối vô tận trải dài đến tận tầm mắt.</p><ul><li>Với mỗi damage trên lá bài tham chiếu màn chơi, ghi lại 1 kiểm đếm kế bên phần \"Các bước của cây cầu\" trong Nhật ký Chiến dịch</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Nếu bạn đang chơi The Web of Dreams dưới dạng chiến dịch gồm bốn phần:</li><li>*If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…*<ul><li>*…and you have not yet played Scenario 3–A: Dark Side of the Moon*, proceed to that scenario.</li><li>*…and you have already played Scenario 3–A: Dark Side of the Moon*, proceed instead to _Interlude III: The Great Ones_.</li></ul></li></ul>"
+    },
+    "resolution2": {
+      "title": "Kết thúc thứ hai",
+      "body": "<p>Bạn chuẩn bị tinh thần khi một làn sóng thực tại bị biến dạng khác ập vào bạn. Cảm giác này, bất kể nó là gì, ngày càng mạnh mẽ hơn khi thời gian trôi qua. Ai đó hoặc cái gì đó đang gây ra nó, nhưng làm thế nào? Ngay khi bạn đang cân nhắc ý nghĩa của nó, bạn nhận ra một điều kỳ lạ: bạn không phải là người duy nhất bị ảnh hưởng. Thực tế là hoàn toàn không chỉ thế; toàn bộ Underworld dường như đang thay đổi theo từng làn sóng năng lượng bị biến dạng chảy qua vùng đất. Các bức tường dịch chuyển, sàn nhà nghiêng và ánh sáng lân quang mờ ảo nhấp nháy với ánh sáng vũ trụ, ánh sáng thế giới khác. Mặt đất rung chuyển khi một làn sóng lực khác tràn qua nền móng của thế giới giấc mơ. Bề mặt đá mà bạn đứng nhường đường. Bạn vùng vẫy trong không trung, cố gắng nắm lấy thứ gì đó, bất cứ thứ gì bạn có thể dùng để kéo mình lên. Tay của bạn quấn quanh một tấm ván gỗ đã sơn. Bạn không có thời gian để đặt câu hỏi về sự xuất hiện của nó—sự sống còn là ưu tiên hàng đầu.</p><p>Khi bạn đứng dậy, bạn nhận ra mình đang cuộn tròn trên một chiếc ghế dài trong công viên, xung quanh là sương mù dày đặc và những mái nhà màu xám ảm đạm của thị trấn Arkham. Không có mặt đất trước mặt bạn. Chỉ là một cái hố mở, vô tận vào những vực sâu không đáy. Có lẽ là Underworld? Nhưng sao điều đó có thể xảy ra? Con mèo của Virgil tình cờ quan sát bạn từ một cành cây treo trên băng ghế công viên. “Nó sẽ không dừng lại,” con mèo đen nói với bạn. “Không cho đến khi không còn gì trong thế giới của cậu.” Bạn tự hỏi mình có thể làm gì khi đối mặt với nỗi kinh hoàng như vậy. Con mèo nhìn xuống cái hố bên dưới. \"Nó đang đợi cậu.\"</p><p>Một tiếng ầm ầm khác. Ở đằng xa, bạn kinh hãi nhìn toàn bộ tòa nhà bị hút vào lòng đất. Bạn nghĩ rằng bạn phát hiện ra một người đi bộ ở đằng xa, nhưng đó không phải là con người. Nếu điều này tiếp diễn lâu hơn nữa, những người bạn đồng hành của bạn sẽ không có thế giới để thức tỉnh. Bạn chuẩn bị tinh thần, nhìn xuống cái hố trống rỗng và nuốt nước bọt. Con mèo nói, “Xuống đi.\"</p><p>Bạn ngã xuống. Tiếng gió gào thét làm điếc tai khi nó quất vào đầu bạn. Bạn nghĩ rằng bạn không thể sống sót sau một cú ngã như thế này. Nhưng thay vì rớt lộp độp trên nền đất cứng, đá, bạn lại bị mắc vào một tấm mạng gân guốc, phát sáng. Hoảng sợ, bạn bò đến một bệ đá cứng gần đó. Chỗ trú ẩn của bạn là một trong số rất nhiều chỗ, mỗi chỗ lơ lửng trong không trung và được kết nối bằng mạng nhện dày. Ngoài đó là một không gian vũ trụ rộng lớn, một bóng tối vô tận trải dài đến tận tầm mắt.</p><ul><li>Trưởng nhóm nhận điểm yếu False Awakening <i>(The Dream-Eaters #275)</i> (không tính vào giới hạn bộ bài), Thêm lá bài này vào chồng bài của trưởng nhóm.</li><li>Với mỗi damage trên lá bài tham chiếu màn chơi, ghi lại 1 kiểm đếm kế bên phần \"Các bước của cây cầu\" trong Nhật ký Chiến dịch</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Nếu bạn đang chơi The Web of Dreams dưới dạng chiến dịch gồm bốn phần:</li><li>*If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…*<ul><li>*…and you have not yet played Scenario 3–A: Dark Side of the Moon*, proceed to that scenario.</li><li>*…and you have already played Scenario 3–A: Dark Side of the Moon*, proceed instead to _Interlude III: The Great Ones_.</li></ul></li></ul>"
+    }
+  },
+  "besetByMonsters": {
+    "label": {
+      "discardRandom": "Discard 1 card at random"
+    }
+  }
 }

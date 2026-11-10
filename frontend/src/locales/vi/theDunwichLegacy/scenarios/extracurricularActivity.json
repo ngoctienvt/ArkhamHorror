@@ -5,21 +5,72 @@
     "body": "<p>Tiến sĩ Armitage lo lắng đồng nghiệp của mình, giáo sư Warren Rice, có thể đang gặp phải rắc rối, vì vậy ông ấy đã nhờ bạn giúp đỡ trong việc tìm kiếm bạn của mình. Ông ta có vẻ lo lắng một cách thái quá về sự biến mất của đồng nghiệp khi coi giáo sư Rice mới chỉ “mất tích” trong vài giờ…</p>"
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Extracurricular Activity*, *Sorcery*, *The Beyond*, *Bishop’s Thralls*, *Whippoorwills*, *Ancient Evils*, *Locked Doors*, and *Agents of Yog‑Sothoth*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/extracurricular-activity.png' /><img src='{setImgPath}/sorcery.png' /><img src='{setImgPath}/the-beyond.png' /><img src='{setImgPath}/bishops-thralls.png' /><img src='{setImgPath}/whippoorwills.png' /><img src='{setImgPath}/ancient-evils.png' /><img src='{setImgPath}/locked-doors.png' /><img src='{setImgPath}/agents-of-yog.png' /></section>",
+    "facultyOffices": {
+      "body": "Depending on the following circumstances, a different version of Faculty Offices should be used in this scenario.",
+      "theNightIsStillYoung": "If Extracurricular Activity is the first scenario of the campaign, use Faculty Offices (*The Night is Still Young*). Set it aside, out of play. Remove Faculty Offices (*The Hour is Late*) from the game.",
+      "theHourIsLate": "If you have completed The House Always Wins, use Faculty Offices (*The Hour is Late*). Set it aside, out of play. Remove Faculty Offices (*The Night is Still Young*) from the game."
+    },
     "setAside": "Đặt các lá bài sau đây sang một bên, ngoài vùng chơi: “Jazz” Mulligan, Alchemical Concoction, The Experiment, Professor Warren Rice, Dormitories, và Alchemy Labs.",
-    "placeLocations": "Đặt các vị trí Miskatonic Quad, Orne Library, Humanities Building, Student Union, Science Building, and Administration Building vào vùng chơi. Mỗi điều tra viên bắt đầu màn chơi tại Miskatonic Quad."
+    "placeLocations": "Đặt các vị trí Miskatonic Quad, Orne Library, Humanities Building, Student Union, Science Building, and Administration Building vào vùng chơi. Mỗi điều tra viên bắt đầu màn chơi tại Miskatonic Quad.",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to Extracurricular Activity*, *Beyond the Threshold*, *Resurgent Evils*, *Secret Doors*, and *Yog-Sothoth’s Emissaries*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-extracurricular-activities.png' /><img src='{setImgPath}/beyond-the-threshold.png' /><img src='{setImgPath}/resurgent-evils.png' /><img src='{setImgPath}/secret-doors.png' /><img src='{setImgPath}/yog-sothoths-emissaries.png' /></section>*Beyond the Threshold* replaces *The Beyond*, *Resurgent Evils* replaces *Ancient Evils*, *Secret Doors* replaces *Locked Doors*, and *Yog-Sothoth’s Emissaries* replaces *Agents of Yog-Sothoth*. Remove the replaced sets from the game.",
+      "placeLocations": "Put the Miskatonic Quad, Humanities Building, Student Union, Science Building, and Administration Building locations into play. Then randomly choose between Orne Library and Warren Observatory: put the chosen location into play and remove the other from the game. Mỗi điều tra viên bắt đầu chơi tại Miskatonic Quad.",
+      "enthralledSecurityGuard": "Check Campaign Log. If you have completed *Return to The House Always Wins*: Search the encounter sets for 1 copy of Enthralled Security Guard and spawn it at the Administration Building."
+    }
   },
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<div class='resolution'><p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Khi bạn chạy khỏi trường đại học, bạn nghe thấy tiếng la hét từ đầu phía bắc của khuôn viên trường. Một chiếc xe cấp cứu đi ngang qua bạn và bạn lo sợ điều tồi tệ nhất đã xảy ra. Vài giờ sau, bạn biết rằng một 'con chó dại thuộc giống nào đó' đã tìm được đường vào ký túc xá của trường đại học. Con vật này đã tấn công các sinh viên bên trong và nhiều người đã bị thương nặng hoặc giết chết trong vụ tấn công.</p><ul><li>In your Campaign Log, record that Professor Warren Rice was kidnapped.</li><li>Trong Nhật ký Chiến dịch của bạn, hãy ghi lại rằng <i> các điều tra viên thất bại trong việc cứu các sinh viên </i>. Bạn bị ám ảnh bởi cảm giác tội lỗi. Thêm 1 token [tablet] vào túi hỗn mang cho phần còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>If this is the first scenario of the campaign, proceed to Scenario I–B: The House Always Wins. Otherwise, proceed to Interlude I: Armitage’s Fate.</li></ul></div>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p>_Resolution 1_: Bạn thấy Giáo sư Rice bị trói và bịt miệng trong tủ trong văn phòng của ông ấy. Khi bạn trả tự do cho ông, ông thông báo với bạn rằng những người đàn ông và phụ nữ lạ đi lang thang trong khuôn viên trường đã theo dõi anh ta trong nhiều giờ. Họ dồn anh ta vào văn phòng và trói anh ta lại, mặc dù vì mục đích gì thì ông không rõ. Bạn thông báo với anh ta rằng tiến sĩ Armitage đã cử bạn đi, và Rice trông nhẹ nhõm hơn, mặc dù ông nghi ngờ rằng tiến sĩ Morgan cũng có thể đang gặp nguy hiểm. Bởi vì những người lạ mặt trong khuôn viên trường dường như đang nhắm vào giáo sư Rice, bạn quyết định rằng hành động tốt nhất bây giờ là hộ tống ông ấy ra khỏi khuôn viên trường càng nhanh càng tốt. Khi bạn rời trường đại học, bạn nghe thấy tiếng la hét từ đầu phía bắc của khuôn viên trường. Xe cấp cứu đi ngang qua bạn và bạn lo sợ điều tồi tệ nhất đã xảy ra. Vài giờ sau, bạn biết rằng một con 'chó dại thuộc giống nào đó' đã tìm được đường vào ký túc xá của trường đại học. Con vật này đã tấn công các sinh viên bên trong, và nhiều người đã bị thương nặng hoặc giết chết trong vụ tấn công.</p><ul><li>các điều tra viên cứu được giáo sư Warren Rice.</li><li>Trong Nhật ký Chiến dịch của bạn, hãy ghi lại rằng <i> các điều tra viên thất bại trong việc cứu các sinh viên </i>. Bạn bị ám ảnh bởi cảm giác tội lỗi. Thêm 1 token [tablet] vào túi hỗn mang cho phần còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Proceed to Scenario I–B: The House Always Wins.</li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>_Resolution 2_: Bạn kéo các chuông báo cháy của ký túc xá và đưa các sinh viên ra khỏi lối ra phía bắc của tòa nhà, với hy vọng có thể đi ra khỏi khuôn viên trường. Nhiều sinh viên bối rối và kiệt sức, nhưng bạn tin rằng nỗ lực giải thích tình huống lúc này sẽ gây hại nhiều hơn lợi. Vài phút sau, một tiếng thét đinh tai nhức óc khủng khiếp vang vọng khắp khuôn viên trường. Bạn bảo các sinh viên đợi tại chỗ và quay trở lại ký túc xá để điều tra. Thật kỳ lạ, bạn không tìm thấy dấu vết của sinh vật kỳ lạ — điều này khiến bạn thấy lo lắng hơn là nhẹ nhõm. Bạn vội vàng đến văn phòng của khoa để tìm giáo sư Rice, nhưng không có dấu hiệu của ông ấy ở đâu cả.</p><ul><li>In your Campaign Log, record that *Professor Warren Rice was kidnapped*.</li><li>In your Campaign Log, record that *the students were rescued*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>If this is the first scenario of the campaign, proceed to Scenario I–B: The House Always Wins. Otherwise, proceed to Interlude I: Armitage’s Fate.</li></ul></div>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<div class='resolution'><p>_Resolution 3_: Sau khi đánh bại sinh vật kỳ lạ và đáng sợ ở Deparment of Alchemy (khoa giả kim thuật), bạn vội vã chạy đến văn phòng khoa để tìm giáo sư Rice. Vào thời điểm bạn đến văn phòng của ông, không có bóng dáng ông ở đâu cả.</p><ul><li>In your Campaign Log, record that *Professor Warren Rice was kidnapped*.</li><li>In your Campaign Log, record that *the Experiment was defeated*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>If this is the first scenario of the campaign, advance to The House Always Wins. Otherwise, advance to Interlude I—Armitage’s Fate.</li></ul>"
     },
     "resolution4": {
-      "title": "Kết thúc thứ 4"
+      "title": "Kết thúc thứ 4",
+      "body": "<div class='resolution'><p>_Resolution 4_: Bạn thức dậy vài giờ sau đó, kiệt sức và bị thương. Bạn không chắc mình đã thấy gì, nhưng cảnh tượng đó khiến tâm trí bạn kinh hoàng. Từ những người sống sót khác, bạn biết được rằng một 'con chó dại thuộc giống nào đó' đã tìm thấy đường vào ký túc xá của trường đại học. Con vật này đã tấn công các học sinh bên trong, và nhiều người đã bị thương nặng hoặc giết chết trong vụ tấn công.</p><ul><li>các điều tra viên bất tỉnh trong vài giờ.</li><li>In your Campaign Log, record that *Professor Warren Rice was kidnapped*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Trong Nhật ký Chiến dịch của bạn, hãy ghi lại rằng <i> các điều tra viên thất bại trong việc cứu các sinh viên </i>. Bạn bị ám ảnh bởi cảm giác tội lỗi. Thêm 1 token [tablet] vào túi hỗn mang cho phần còn lại của chiến dịch.</li><li>If this is the first scenario of the campaign, advance to Scenario I–B: The House Always Wins. Otherwise, advance to Interlude I: Armitage’s Fate.</li></ul></div>"
+    },
+    "xp": {
+      "noResolution": "Reflects on the night’s events.",
+      "resolution4": "Reflects on the night’s events."
+    }
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-1. Nếu bạn thất bại, discard the top 3 cards of your deck.",
+      "cultist": "-1 (-3 instead if there are 10 or more cards in your discard pile).",
+      "elderThing": "-X. Discard the top 2 cards of your deck. X is the total printed cost of those discarded cards."
+    },
+    "hardExpert": {
+      "skull": "-2. Nếu bạn thất bại, discard the top 5 cards of your deck.",
+      "cultist": "-1 (-5 instead if there are 10 or more cards in your discard pile).",
+      "elderThing": "-X. Discard the top 3 cards of your deck. X is the total printed cost of those discarded cards."
+    }
+  },
+  "tooltips": {
+    "miskatonicQuad": {
+      "resign": "\"We can't find Rice anywhere...\" You leave the campus, hoping Armitage will forgive you."
+    },
+    "alchemyLabs": {
+      "action": {
+        "can": "{'{'}action{'}'}: _Investigate_. If you are successful, instead of discovering clues, take the Alchemical Concoction from underneath this location if able.",
+        "cannot": "{'{'}action{'}'}: _Investigate_. If you are successful, instead of discovering clues, take the Alchemical Concoction from underneath this location if able (YOU CANNOT)."
+      }
+    }
+  },
+  "label": {
+    "alchemyLabs": {
+      "investigate": "Take the Alchemical Concoction"
     }
   }
 }

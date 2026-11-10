@@ -1,46 +1,93 @@
 {
   "heading": "Màn II",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the level of your location.",
+      "cultist": "-1. Nếu bạn thất bại, move to the location directly below you.",
+      "tablet": "-3. Nếu bạn thất bại, lose contol of an _Expedition_ asset and place it at your location.",
+      "elderThing": "-4. Nếu bạn thất bại, the nearest _Elder Thing_ enemy moves once towards you. If it is engaged with you, it attacks."
+    },
+    "hardExpert": {
+      "skull": "-X. X is 2 plus the level of your location.",
+      "cultist": "-1. Move to the location directly below you.",
+      "tablet": "-4. Nếu bạn thất bại, lose contol of an _Expedition_ asset and place it at your location.",
+      "elderThing": "-5. Nếu bạn thất bại, the nearest _Elder Thing_ enemy moves once towards you. If it is engaged with you, it attacks."
+    }
+  },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *To the Forbidden Peaks*, *Deadly Weather*, *Elder Things*, *Hazards of Antarctica*, *Nameless Horrors*, and *Tekeli-li*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/to-the-forbidden-peaks.png' /><img src='{setImgPath}/deadly-weather.png' /><img src='{setImgPath}/elder-things.png' /><img src='{setImgPath}/hazards-of-antarctica.png' /><img src='{setImgPath}/nameless-horrors.png' /><img src='{setImgPath}/tekeli-li.png' /></section>",
+    "placeLocations": "Xáo trộn bảy địa điểm Mountainside (Sườn Núi) và đặt năm địa điểm vào màn chơi theo một đường chéo. Đặt hai địa điểm còn lại sang một bên, ngoài màn chơi. Đặt địa điểm The Summit (Đỉnh Núi) vào màn chơi ở đầu đường chéo. Vị trí của mỗi địa điểm có cấp độ riêng từ 0-5, bắt đầu từ địa điểm thấp nhất ở cấp 0 và tăng dần đến The Summit ở cấp 5.",
     "revealLevel0": "Lật địa điểm cấp 0. Mỗi điều tra viên bắt đầu màn chơi tại địa điểm đó.",
     "addElderThingToken": "Thêm 1 token {'{'}elderThing{'}'} (elder thing) vào túi hỗn mang.",
+    "suppliesRecovered": "Kiểm tra phần \"Supplies Recovered\" (Vật Tư Tìm Lại) trong Nhật ký Chiến dịch và đặt mỗi lá bài tài sản câu chuyện [[Expedition]] (Thám Hiểm) được liệt kê vào màn chơi tại địa điểm cấp 0.",
     "setTerrorOfTheStarsAside": "Đặt kẻ địch Terror of the Stars (Nỗi Kinh hoàng từ Các Vì sao) sang một bên, ngoài màn chơi.",
     "checkDifficulty": "Kiểm tra cấp độ khó.",
-    "tekelili": "Xáo trộn tất cả các lá bài điểm yếu Tekeli-li! chưa nằm trong bộ bài của điều tra viên để tạo thành chồng bài Tekeli-li. Đặt chồng bài này gần chồng bài agenda.",
-    "placeLocations": "Xáo trộn bảy địa điểm Mountainside (Sườn Núi) và đặt năm địa điểm vào màn chơi theo một đường chéo. Đặt hai địa điểm còn lại sang một bên, ngoài màn chơi. Đặt địa điểm The Summit (Đỉnh Núi) vào màn chơi ở đầu đường chéo. Vị trí của mỗi địa điểm có cấp độ riêng từ 0-5, bắt đầu từ địa điểm thấp nhất ở cấp 0 và tăng dần đến The Summit ở cấp 5."
+    "hard": "If you are playing on Hard difficulty, add 1 doom to agenda 1a.",
+    "expert": "If you are playing on Expert difficulty, add 2 doom to agenda 1a.",
+    "tekelili": "Xáo trộn tất cả các lá bài điểm yếu Tekeli-li! chưa nằm trong bộ bài của điều tra viên để tạo thành chồng bài Tekeli-li. Đặt chồng bài này gần chồng bài agenda."
   },
   "intro1": {
-    "title": "Màn II: To the Forbidden Peaks (Đi Tới Các Đỉnh Núi Cấm)"
+    "title": "Màn II: To the Forbidden Peaks (Đi Tới Các Đỉnh Núi Cấm)",
+    "body": "<p>_Intro 1_: Tiếng gió rít gào khi nhóm của bạn chuẩn bị cho hành trình dài phía trước. Có rất ít lời trò chuyện. Dù có thể nghe được giọng nói nghèn nghẹt của nhau qua bịt tai và khăn quàng, bạn sẽ nói gì đây? Sự im lặng của nỗi sợ chung đã đủ ồn ào.</p><p>Điểm đến của bạn còn cách xa hàng dặm. Những đỉnh núi lởm chởm hiện lên mờ xa trên đường chân trời, như đang chế nhạo bạn. Bạn kiểm tra tinh thần tình hình của mình…</p>"
   },
   "intro2": {
-    "title": "Màn II: To the Forbidden Peaks (Đi Tới Các Đỉnh Núi Cấm)"
+    "title": "Màn II: To the Forbidden Peaks (Đi Tới Các Đỉnh Núi Cấm)",
+    "body": "<p>_Intro 2_: Bạn trèo qua băng tuyết trong nhiều giờ gian khổ. May mắn thay, bạn không gặp lại những sinh vật từ hai ngày trước, khiến bạn tự hỏi liệu tất cả có phải chỉ là ảo ảnh tàn nhẫn. Nhưng khi đến gần chân dãy núi phủ tuyết lởm chởm, bạn phát hiện một sinh vật hoàn toàn khác.</p><p>Nó nằm đông cứng và chôn nửa trong tuyết, như một cột mốc ghê rợn dẫn đường cho bạn. Cơ thể nó hình thùng, với lớp da dày và đôi cánh da rách nát. Một phần phụ hình sao biển nhô ra khỏi tuyết từ nửa trên, điểm xuyết năm con mắt chết và một chùm lông mao lấp lánh. Năm bộ xúc tu nằm đông cứng trong băng. Nhìn sinh vật này khiến bạn lạnh hơn cả thời tiết Nam Cực.</p><p>Không thể nghi ngờ: đây là một trong những \"Elder Things\" (Cổ Vật) mà Giáo sư Dyer và Danforth từng gặp khi mạo hiểm vào trung tâm Antarctica (Nam Cực). Nhưng điều gì đã giết nó? Chắc chắn không chỉ là cái lạnh?</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
   },
   "interlude": {
     "title": "Chuyển tiếp Màn: Thảm Kịch Ủa Đến",
+    "instructions1": "<p class='basic'>Tìm tất cả thành viên đội thám hiểm còn sống (bao gồm cả những người hiện đang được điều tra viên kiểm soát) không có dấu kiểm bên cạnh tên trong phần \"Expedition Team\" (Đội Thám hiểm) của Nhật ký Chiến dịch, và chọn ngẫu nhiên một người trong số họ.</p>",
     "paragraph1": "<p>Mọi thứ xảy ra trong chớp mắt. Bạn chỉ kịp hét lên tên đồng đội trước khi họ bị tóm lấy. Nhiều hình dạng biến đổi của nó quấn quanh cơ thể họ. Họ vùng vẫy để thoát ra, nhưng vô vọng.</p>",
     "cookie": "<p>Nếu nạn nhân là James \"Cookie\" Fredericks:</p><p>Người cựu binh chai sạn nhổ ra một câu chửi và xoay sở rút tay phải khỏi cái nắm của thứ đó. Đủ để anh ấy bắn một phát bằng khẩu colt. Tiếng súng vang dội khắp núi và xé qua khối thịt vô định hình ghê tởm của nó.</p><p class='basic'>Gây 2 chấn thương vật lý cho The Terror of the Stars (Khủng Bố Dưới Các Vì Sao).</p>",
     "paragraph2": "<p>Rồi, không chút do dự, nó đâm các xúc tu vào cơ thể nạn nhân và xé họ ra như một miếng thịt sống. Máu phun ra nhuộm đỏ tuyết. Nó thả xác đồng đội bạn xuống đất một cách không thương tiếc và quay sự chú ý sang bạn.</p>",
     "instructions2": "<p class='basic'>Trong phần \"Expedition Team\" (Đội Thám hiểm) của Nhật ký Chiến dịch, gạch tên nhân vật được chọn. Nếu họ đang trong màn chơi, họ bị đánh bại và loại bỏ khỏi màn chơi.</p></div>"
   },
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "Phần còn lại của hành trình qua các đỉnh núi là một cơn lốc tuyết và nỗi sợ. Bạn leo cao hơn, cao hơn nữa, đẩy bản thân đến những giới hạn không tưởng. Vậy mà đỉnh núi vẫn mãi ngoài tầm với. Khi đêm buông xuống và thời tiết càng thêm chết chóc, sự tuyệt vọng buộc bạn tìm nơi khác để sống sót."
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p>Khung cảnh từ đỉnh núi thật ngoạn mục, nhưng bạn không có tâm trạng để thưởng thức. Trải dài trước mắt bạn, phía bên kia những đỉnh núi đáng nguyền rủa này, là thành phố được mô tả trong báo cáo của Dyer. Dáng vẻ ma mị của nó không thể nhầm lẫn. Hàng chục tòa nhà hình nón và kim tự tháp bằng đá phiến đen và sa thạch xếp chồng lên nhau khắp khu vực như một mê cung của những hình học hoàn hảo. Dù bị thời gian bào mòn, thành phố vẫn sừng sững, ẩn mình sau những đỉnh núi lởm chởm và tuyết dày.</p><p>Trong một lúc, bạn đứng im lặng ngắm nhìn cảnh tượng kỳ diệu. Nếu không vì bao thử thách trên đường đi, đây sẽ là khoảnh khắc chiến thắng. Nhưng sau những hy sinh để đến đây, thắng lợi trở nên trống rỗng.</p><p>Gió lạnh thổi qua các đỉnh núi. Không khí quá loãng để bạn nán lại. Sau một lúc nghỉ ngơi, bạn bắt đầu chuyến leo xuống dài vào thành phố xa lạ. Bạn sẽ phải dựng trại trước khi đến chân núi. Hy vọng rằng, bạn sẽ ẩn mình khỏi những sinh vật kinh khủng trú ngụ nơi đó…</p><ul><li>In your Campaign Log, record *the team climbed to the summit*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Với mỗi tài sản [[Expedition]] (Thám Hiểm) trong khu vực trưng bày thành tích, một điều tra viên có thể chọn thêm tài sản đó vào chồng bài của họ. Nó không tính vào kích thước chồng bài. Với mỗi tài sản [[Expedition]] được thêm vào chồng bài của điều tra viên theo cách này, điều tra viên đó nhận 1 kinh nghiệm thưởng.</li><li>Với mỗi tài sản [[Expedition]] (Thám Hiểm) không có trong khu vực trưng bày thành tích, gạch bỏ tiêu đề của nó trong phần \"Supplies Recovered\" (Vật Tư Tìm Lại) của Nhật ký Chiến dịch.</li><li>Trong phần \"Expedition Team\" (Đội Thám hiểm) của Nhật ký Chiến dịch, ghi lại số lượng chấn thương thể chất và tinh thần trên mỗi lá bài tài sản đồng đội trong màn chơi.</li><li>Proceed to _Interlude II: Endless Night_.</li></ul></div>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>Ngay khi bạn bắt đầu mất hy vọng, bạn tìm thấy một hang động tối tăm nằm sâu trong sườn núi. Gió rít bên ngoài lối vào hang, mang theo một trận tuyết bất ngờ. Bạn không chắc điều gì tồi tệ hơn—chết từ từ trong hang băng lạnh giá, hay cũng từ từ khi không thể đến đỉnh núi. Nhưng khi một đồng đội bật đèn pin, bạn nhận ra có thể có lựa chọn thứ ba.</p><p>Các bức tường của đường hầm hẹp này phủ đầy chữ tượng hình kỳ lạ, loại mà bạn chưa từng thấy. Chữ viết cổ xưa của một ngôn ngữ ngoài hành tinh, bạn đoán vậy. Có thể là của Elder Things (Cổ Vật) từng gọi nơi này là nhà. Quan trọng hơn, hang động kéo dài sâu hơn vào sườn núi, vượt xa tầm chiếu của ánh sáng.</p><p>Bạn bỏ phiếu và quyết định tiến lên, hy vọng vượt mong đợi rằng đường hầm có thể dẫn đến lối ra khác. Ngạc nhiên thay, hành trình khá suôn sẻ, dù bóng tối luôn hiện diện, những tiếng rên rỉ kỳ quái vọng lại, và tiếng thì thầm của thứ gì đó sâu bên dưới làm hao mòn tinh thần bạn. Trong nhiều giờ bạn tiếp tục, cho đến cuối cùng, thật may mắn, bạn thấy ánh sáng phía xa.</p><p>Bạn lại bước ra sườn núi, lần này với một khung cảnh ngoạn mục. Trải dài trước mắt bạn là thành phố trong báo cáo của Dyer. Dáng vẻ ma mị của nó không thể nhầm lẫn. Hàng chục tòa nhà hình nón và kim tự tháp bằng đá phiến đen và sa thạch xếp chồng lên nhau khắp khu vực như mê cung của những hình học hoàn hảo. Dù bị thời gian bào mòn, thành phố vẫn sừng sững, ẩn mình sau những đỉnh núi lởm chởm và tuyết dày.</p><p>Trong một lúc, bạn đứng im lặng ngắm nhìn cảnh tượng kỳ diệu. Bằng cách nào đó, bạn đã tìm ra lối qua núi. Nếu không vì bao thử thách trên đường đi, đây sẽ là khoảnh khắc chiến thắng. Nhưng sau những hy sinh để đến đây, thắng lợi trở nên trống rỗng. Sau một lúc nghỉ ngơi, bạn bắt đầu chuyến leo xuống dài vào thành phố xa lạ. Bạn sẽ phải dựng trại trước khi đến chân núi. Hy vọng rằng, bạn sẽ ẩn mình khỏi những sinh vật kinh khủng trú ngụ nơi đó…</p><ul><li>đội đã tìm ra một lối khác qua dãy núi.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Gạch bỏ mỗi tiêu đề lá bài trong phần \"Supplies Recovered\" (Vật Tư Tìm Lại) của Nhật ký Chiến dịch.</li><li>Trong phần \"Expedition Team\" (Đội Thám hiểm) của Nhật ký Chiến dịch, ghi lại số lượng chấn thương thể chất và tinh thần trên mỗi lá bài tài sản đồng đội trong màn chơi.</li><li>Proceed to _Interlude II: Endless Night._</li></ul></div>"
     }
   },
+  "eliyah": {
+    "alive": "<p>Nếu Eliyah Ashevak còn sống và Wooden Sledge (Xe Trượt Gỗ) được liệt kê trong mục \"Supplies Recovered\" (Vật Tư Tìm Lại):</p><p>“Nó không đủ lớn hay chắc chắn để chở hết chúng ta,” Eliyah giải thích khi kéo thùng vật phẩm cuối cùng lên chiếc xe trượt cũ, “nhưng ít nhất nó cũng chở được lương thực và thiết bị.” Anh ấy đảm bảo dây cương căng đều và mọi dây đai của đàn chó được buộc chắc trước khi gãi sau tai Anyu, con dẫn đầu đàn. “Không hào hứng lắm với việc phải kéo thứ này lên núi, nhưng… cứ đến đó rồi tính. Được rồi, các cô gái. Cậu sẵn sàng chưa?” Anyu sủa một tiếng. “Ừ, tôi biết cậu sẵn sàng rồi.”</p><p class='basic'>Các điều tra viên không chịu ảnh hưởng xấu nào.</p>",
+    "otherwise": "<p>_Otherwise:_</p><p>Bạn rên rỉ khi vác chiếc ba lô khổng lồ nặng trĩu đầy thiết bị lên lưng. Bạn chắc chắn không mong đợi việc lê bước qua tuyết với thêm hai mươi cân, nhưng không thể tránh được. Bạn không biết mình sẽ ở nơi sắp đến bao lâu, và bạn sẽ cần mọi thứ trong ba lô đó để sống sót.</p><p class='basic'>Thêm 1 token [frost] (băng giá) vào túi hỗn mang.</p>"
+  },
   "claypool": {
-    "alive": "<p>Nếu Avery Claypool còn sống</p><p>“Thời tiết giờ có thể trông quang đãng,” Claypool giải thích, “nhưng nó có thể xấu đi trong chớp mắt. Chúng ta sẽ đi trên băng phần lớn hành trình, nên hãy để ý các vết nứt. Băng cần dày khoảng 60 phân để đi qua an toàn, vì vậy luôn đi sau tôi và tôi sẽ dùng cái khoan này để kiểm tra.” Anh ấy giơ lên một thiết bị khoan mũi xoắn và dẫn đường.</p><p class='basic'>Các điều tra viên không chịu ảnh hưởng xấu nào.</p>"
+    "alive": "<p>Nếu Avery Claypool còn sống</p><p>“Thời tiết giờ có thể trông quang đãng,” Claypool giải thích, “nhưng nó có thể xấu đi trong chớp mắt. Chúng ta sẽ đi trên băng phần lớn hành trình, nên hãy để ý các vết nứt. Băng cần dày khoảng 60 phân để đi qua an toàn, vì vậy luôn đi sau tôi và tôi sẽ dùng cái khoan này để kiểm tra.” Anh ấy giơ lên một thiết bị khoan mũi xoắn và dẫn đường.</p><p class='basic'>Các điều tra viên không chịu ảnh hưởng xấu nào.</p>",
+    "otherwise": "<p>_Otherwise:_</p><p>Bạn khởi hành khi bầu trời trông quang đãng, nhưng chỉ một giờ sau, thời tiết đột ngột chuyển xấu. Tuyết rơi dày đã đủ tệ, nhưng chính lớp băng mới thực sự làm bạn chậm lại. Không có Claypool dẫn đường an toàn, bạn phải tiến chậm và cẩn thận để đảm bảo đến được dãy núi mà vẫn còn sống.</p><p class='basic'>Either add 1 {'{'}frost{'}'} token to the chaos bag, or each investigator suffers 1 physical trauma.</p>"
+  },
+  "takada": {
+    "alive": "<p>Nếu Takada Hiroko còn sống:</p><p>Khi bạn khởi hành, bạn nghe Takada ngân nga một bài hát dưới hơi thở—vừa đủ nhỏ để bạn không nhận ra đó là gì. Tuy nhiên, một người khác dường như nhận ra. “Lại bài hát đó,” họ nói. “Tôi nghe cậu hát nó trên tàu Theodosia (Theodosia) lúc đến đây.”</p><p>Takada thở dài. “Đó là bài hát cha tôi dạy tôi. Giúp tôi giết thời gian,” cô ấy giải thích.</p><p>Bạn hỏi liệu cô ấy có muốn dạy cậu không, và cô ấy nở nụ cười đầu tiên bạn thấy kể từ khi hành trình bắt đầu: “Ừ. Ừ, tôi muốn.” Bạn dành phần còn lại của chuyến đi để hát và gắn kết với nhau, làm trôi thời gian.</p><p class='basic'>Các điều tra viên không chịu ảnh hưởng xấu nào.</p>",
+    "otherwise": "<p>_Otherwise:_</p><p>Nhóm chịu đựng cái lạnh trong im lặng không thể chịu nổi. Mỗi bước chân vừa cô đơn vừa kinh hoàng.</p><p class='basic'>Either add 1 {'{'}frost{'}'} token to the chaos bag, or each investigator suffers 1 mental trauma.</p>"
   },
   "theMountainPass": {
-    "scouted": "<p>*Nếu các điều tra viên đã trinh sát lối qua núi:*</p><p>Bạn tìm lối qua an toàn mà bạn và Ellsworth đã trinh sát đêm qua, dẫn cả đội tiến lên. Những vách đá dựng đứng bao quanh bạn khi đến chân đồi, chặn gió lạnh. Lối tắt giúp bạn nhanh chóng bắt đầu chuyến leo lên các đỉnh núi…</p><p class='basic'>Trong lúc chuẩn bị, khi bạn lật địa điểm bắt đầu, giảm giá trị manh mối của nó xuống một nửa (làm tròn lên).</p>"
+    "scouted": "<p>*Nếu các điều tra viên đã trinh sát lối qua núi:*</p><p>Bạn tìm lối qua an toàn mà bạn và Ellsworth đã trinh sát đêm qua, dẫn cả đội tiến lên. Những vách đá dựng đứng bao quanh bạn khi đến chân đồi, chặn gió lạnh. Lối tắt giúp bạn nhanh chóng bắt đầu chuyến leo lên các đỉnh núi…</p><p class='basic'>Trong lúc chuẩn bị, khi bạn lật địa điểm bắt đầu, giảm giá trị manh mối của nó xuống một nửa (làm tròn lên).</p>",
+    "otherwise": "<p>_Otherwise:_</p><p>Vùng đồng băng dẫn đến chân đồi của dãy núi lởm chởm là địa hình khó vượt qua. Dù đã chuẩn bị giày tuyết và quần áo ấm để chống lạnh, việc di chuyển vẫn chậm và gian nan. Gió chống lại bạn ở mọi ngả, những cơn gió mạnh đủ để hất ngã bạn. Nhưng bạn vẫn tiếp tục tiến lên, không nao núng.</p><p class='basic'>Các điều tra viên không chịu ảnh hưởng xấu nào.</p>"
   },
   "hypothermia": {
     "label": {
-      "addFrost": "Thêm 1 token {'{'}frost{'}'} (băng giá) vào túi hỗn mang."
+      "addFrost": "Thêm 1 token {'{'}frost{'}'} (băng giá) vào túi hỗn mang.",
+      "takeHorror": "Take {count} horror"
     }
   },
   "label": {
-    "addFrostToken": "Thêm 1 token {'{'}frost{'}'} (băng giá) vào túi hỗn mang."
+    "addFrostToken": "Thêm 1 token {'{'}frost{'}'} (băng giá) vào túi hỗn mang.",
+    "eachInvestigatorSuffersPhysicalTrauma": "Each investigator suffers {count} physical trauma.",
+    "eachInvestigatorSuffersMentalTrauma": "Each investigator suffers {count} mental trauma."
+  },
+  "rooflessRampart": {
+    "label": {
+      "removeDoom": "Remove 1 doom from the agenda",
+      "discardEnemy": "Discard 1 non-Elite enemy",
+      "discardTreachery": "Discard 1 treachery"
+    }
   }
 }

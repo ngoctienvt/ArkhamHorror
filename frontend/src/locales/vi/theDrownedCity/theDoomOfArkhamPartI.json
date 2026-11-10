@@ -1,32 +1,81 @@
 {
   "intro": {
+    "title": "The Doom of Arkham: Phần I",
+    "intro1": "<p>Bạn bị đánh thức khỏi một cơn ác mộng nữa bởi tiếng gõ cửa dữ dội. Bạn mở cửa và thấy Andy và Ruby trông tơi tả, cùng với một thanh tra ăn mặc chỉnh tề tự giới thiệu là John Raymond Legrasse. Vị thanh tra giải thích rằng anh ta đang điều tra một loạt các giáo phái giấc mơ trên khắp nước Mỹ và nước ngoài.</p>",
+    "intro2": "<p>Bạn mời họ vào nhà khi trời bắt đầu mưa. Khi đã an tọa, vị thanh tra đưa ra bức ảnh của một bức tượng quen thuộc. Vài tháng trước, anh ta đã gửi bức tượng cho một đồng nghiệp ở Miskatonic University để phân tích. Rõ ràng, yêu cầu của Tillinghast nhờ bạn tìm \"lô hàng mất tích\" của hắn chẳng qua chỉ là một vụ trộm vặt. Anh ta nói với bạn rằng anh ta đã đến Arkham khoảng một tháng trước để thẩm vấn Tillinghast và thu hồi bức tượng.</p>",
+    "intro3": "<p>\"Tôi cảm thấy có gì đó không ổn sau khi chúng tôi giao nộp các cổ vật,\" Andy nói với vẻ u ám. \"Vì vậy, vài ngày sau, tôi đi đến cửa hàng. Khi chúng tôi đến đó, cửa hàng đã chuyển đi. Hoặc chúng tôi nghĩ vậy. Cuối cùng Ruby cũng tìm thấy nó, và chúng tôi bước vào thì thấy thanh tra đang cãi nhau với Tillinghast và—mọi chuyện diễn ra không suôn sẻ lắm.\"</p>",
+    "intro4": "<p>\" Nói thế là còn nhẹ đấy,\" Legrasse nói. \"Randall đang tìm cách lảng tránh tôi thì hai người này xuất hiện. Hắn ném chúng tôi ra ngoài, rất nhanh. Khi chúng tôi nhìn quanh, chúng tôi không ở… đây.\" Bạn hỏi anh ta ý anh ta là gì, và anh ta lắc đầu. \"Ý tôi là chúng tôi <i>không ở đây.</i> Ở Arkham. Cánh cửa cửa hàng của hắn dẫn đến một nơi hoàn toàn khác. Chúng tôi mất cả tháng trời mới quay lại được\"</p>",
+    "intro5": "<p>\"Tôi nghĩ chúng tôi đã ở đâu đó tại Tây Tạng, hoặc thậm chí xa hơn về phía bắc. Đó là… một hành trình để trở về,\" Andy thở dài. Vài tháng trước, bạn có thể thấy câu chuyện của họ khó tin, nhưng bây giờ thì không. Với những gì bạn đã biết về Tillinghast, không có gì ngạc nhiên khi hắn có một kế hoạch thâm độc hơn nhiều so với việc thu thập đơn thuần. Nhưng là gì?</p>",
+    "intro6": "<p>Cùng với Thanh tra Legrasse, Ruby và Andy, bạn quyết tâm thu hồi các cổ vật và đối mặt với Tillinghast, bất kể hắn ở đâu. Khi bạn khởi hành, cơn mưa chuyển thành một trận mưa như trút nước.</p>",
     "proceedToSetup": "Tiếp tục đến _Setup_"
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Doom of Arkham Part I*, *Deep Ones*, *Domination*, *Dreams*, *Star Spawn*, *Agents of Cthulhu*, and *The Midnight Masks*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-doom-of-arkham-part-i.png' /><img src='{setImgPath}/tdc_deep-ones.png' /><img src='{setImgPath}/domination.png' /><img src='{setImgPath}/dreams.png' /><img src='{setImgPath}/star-spawn.png' /><img src='{setImgPath}/agents-of-cthulhu.png' /><img src='{setImgPath}/midnight-masks.png' /></section>",
+    "midnightMasksCards": "When gathering the *The Midnight Masks* encounter set, only gather the location and treachery cards. Do not gather the acts or agendas from this set.",
+    "placeLocations": "Find each location in the *The Midnight Masks* encounter set and put them into play as follows:",
+    "randomVersions": "Đưa một trong hai địa điểm Downtown và một trong hai địa điểm Southside vào chơi một cách ngẫu nhiên và loại bỏ các phiên bản khác của những địa điểm đó khỏi trò chơi. Đưa Northside, Easttown, Rivertown, St. Mary's Hospital, và Miskatonic University vào chơi theo sơ đồ sắp xếp địa điểm ở bên phải.",
     "setAsideLocations": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
     "startAtRivertown": "Mỗi điều tra viên bắt đầu chơi tại Rivertown.",
+    "cardsBeneathLocations": "Xào địa điểm Tillinghast Esoterica một mặt cùng với từng lá treachery từ bộ bài encounter *The Midnight Masks* và đặt một trong số chúng dưới mỗi địa điểm ngoại trừ Rivertown.",
     "starSpawn": "Xào các kẻ địch từ bộ bài encounter *Star Spawn* và loại bỏ ngẫu nhiên hai lá khỏi trò chơi. (Thay vào đó loại bỏ ba lá nếu chơi ở chế độ Dễ.)",
+    "setCardsAside": "Gather all earned artifacts along with the Horror in Clay story asset and set them aside, out of play.",
     "legrasse": "Chọn một điều tra viên để thêm story asset John Raymond Legrasse vào bộ bài của họ. Lá bài này không tính vào kích cỡ bộ bài của họ.",
     "legrasseInPlay": "Đưa story asset John Raymond Legrasse vào chơi dưới quyền kiểm soát của điều tra viên đó. Ông ấy không chiếm ally slot trong Phần I hoặc Phần II của màn chơi này.",
     "doomOnAgenda": "Đặt doom lên agenda bằng với số lượng điều tra viên.",
     "floodTokens": "Thêm token lũ lụt vào kho chứa token.",
-    "randomVersions": "Đưa một trong hai địa điểm Downtown và một trong hai địa điểm Southside vào chơi một cách ngẫu nhiên và loại bỏ các phiên bản khác của những địa điểm đó khỏi trò chơi. Đưa Northside, Easttown, Rivertown, St. Mary's Hospital, và Miskatonic University vào chơi theo sơ đồ sắp xếp địa điểm ở bên phải.",
-    "cardsBeneathLocations": "Xào địa điểm Tillinghast Esoterica một mặt cùng với từng lá treachery từ bộ bài encounter *The Midnight Masks* và đặt một trong số chúng dưới mỗi địa điểm ngoại trừ Rivertown.",
     "buildEncounterDeck": "Xào các lá bài encounter còn lại để xây dựng chồng bài encounter."
   },
+  "rules": {
+    "partsOfTheDoomOfArkham": {
+      "title": "Part I and Part II in The Doom of Arkham",
+      "body": "<p class='basic'>Màn chơi này được chia thành hai phần. Người chơi có thể chọn chơi từng phần một (với một khoảng nghỉ giữa mỗi phần), hoặc họ có thể chơi cả hai phần cùng lúc như một phiên chơi dài hơn. Mỗi phần là một ván chơi riêng với setup và resolution riêng.</p><p class='basic'><b>Các điều tra viên có thể nâng cấp bộ bài của họ giữa Phần I và Phần II.</b></p>"
+    }
+  },
+  "label": {
+    "chooseLegrasseInvestigator": "Choose an investigator to add John Raymond Legrasse to their deck."
+  },
+  "tooltips": {
+    "theComingStorm": {
+      "resign": "{action}: <b>Resign.</b> You give up your search."
+    }
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "[skull]: -X. X là một nửa số vị trí không có lá bài scenario nào bên dưới chúng (làm tròn lên).\r\n[cultist]: -3. Nếu kiểm tra này thất bại, đặt 1 doom lên kẻ địch gần nhất chưa có doom trên đó.\r\n[tablet]: -3. Nếu kiểm tra này thất bại, đặt 1 manh mối của bạn xuống vị trí của bạn.\r\n[elder_thing]: -2. Nếu vị trí của bạn bị flooded, lật thêm một token khác.",
+      "cultist": "[skull]: -X. X là một nửa số vị trí không có lá bài scenario nào bên dưới chúng (làm tròn lên).\r\n[cultist]: -3. Nếu kiểm tra này thất bại, đặt 1 doom lên kẻ địch gần nhất chưa có doom trên đó.\r\n[tablet]: -3. Nếu kiểm tra này thất bại, đặt 1 manh mối của bạn xuống vị trí của bạn.\r\n[elder_thing]: -2. Nếu vị trí của bạn bị flooded, lật thêm một token khác.",
+      "tablet": "[skull]: -X. X là một nửa số vị trí không có lá bài scenario nào bên dưới chúng (làm tròn lên).\r\n[cultist]: -3. Nếu kiểm tra này thất bại, đặt 1 doom lên kẻ địch gần nhất chưa có doom trên đó.\r\n[tablet]: -3. Nếu kiểm tra này thất bại, đặt 1 manh mối của bạn xuống vị trí của bạn.\r\n[elder_thing]: -2. Nếu vị trí của bạn bị flooded, lật thêm một token khác.",
+      "elderThing": "[skull]: -X. X là số lượng lá bài [[Glyph]] trong victory display.\r\n[cultist]: -2 (thành -4 nếu có một kẻ địch [[Stowaway]] tại vị trí của bạn).\r\n[tablet]: -2. Nếu vị trí của bạn bị flooded, lật một token khác.\r\n[elder_thing]: -4. Nếu token này được lật trong một nỗ lực tấn công hoặc né tránh, nhận 1 damage hoặc 1 horror."
+    },
+    "hardExpert": {
+      "skull": "[skull]: -X. X là số lượng vị trí không có lá bài scenario nào bên dưới.\r\n[cultist]: -5. Nếu kiểm tra này thất bại, đặt 1 doom lên kẻ địch gần nhất chưa có doom trên đó.\r\n[tablet]: -5. Nếu kiểm tra này thất bại, đặt 1 manh mối của bạn xuống vị trí của bạn.\r\n[elder_thing]: -4. Nếu vị trí của bạn đang flooded, lật một token khác.",
+      "cultist": "[skull]: -X. X là số lượng vị trí không có lá bài scenario nào bên dưới.\r\n[cultist]: -5. Nếu kiểm tra này thất bại, đặt 1 doom lên kẻ địch gần nhất chưa có doom trên đó.\r\n[tablet]: -5. Nếu kiểm tra này thất bại, đặt 1 manh mối của bạn xuống vị trí của bạn.\r\n[elder_thing]: -4. Nếu vị trí của bạn đang flooded, lật một token khác.",
+      "tablet": "[skull]: -X. X là số lượng vị trí không có lá bài scenario nào bên dưới.\r\n[cultist]: -5. Nếu kiểm tra này thất bại, đặt 1 doom lên kẻ địch gần nhất chưa có doom trên đó.\r\n[tablet]: -5. Nếu kiểm tra này thất bại, đặt 1 manh mối của bạn xuống vị trí của bạn.\r\n[elder_thing]: -4. Nếu vị trí của bạn đang flooded, lật một token khác.",
+      "elderThing": "[skull]: -X. X là số lượng vị trí không có lá bài scenario nào bên dưới.\r\n[cultist]: -5. Nếu kiểm tra này thất bại, đặt 1 doom lên kẻ địch gần nhất chưa có doom trên đó.\r\n[tablet]: -5. Nếu kiểm tra này thất bại, đặt 1 manh mối của bạn xuống vị trí của bạn.\r\n[elder_thing]: -4. Nếu vị trí của bạn đang flooded, lật một token khác."
+    }
+  },
   "resolutions": {
+    "xp": {
+      "bonus": "for confronting Randall Tillinghast"
+    },
     "label": {
       "readyToFight": "*\"Chúng tôi đã sẵn sàng chiến đấu.\"*",
       "needMoreTime": "*\"Chúng tôi cần thêm thời gian.\"*"
     },
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_If each investigator resigned or was defeated_: Một nhóm ba người dân địa phương kinh hãi lao xuống phố ngang qua bạn, theo sau là một spawn of Cthulhu nặng nề. Máu bạn lạnh toát. Không có nơi nào an toàn để bạn chạy trốn. Bạn lang thang trên những con phố ngập nước, tìm kiếm dấu vết của Ruby, Andy, hoặc Inspector Legrasse.</p><ul><li>Mỗi điều tra viên tìm trong bộ sưu tập một basic weakness [[Injury]] hoặc [[Madness]] ngẫu nhiên và thêm nó vào bộ bài của họ. Lá bài này không tính vào kích cỡ bộ bài của điều tra viên đó.</li><li>Tiến tới <b>Resolution 1</b>.</li></ul>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Một tiếng gầm đầy bất an làm rung chuyển cả nền móng của Arkham. Đứng cạnh những người đồng hành, bạn ngước lên và thấy hình dáng khổng lồ, quen thuộc của Cthulhu đang lù lù bước ra khỏi Miskatonic River. Chỉ với một cử động, Ancient One giẫm nát toàn bộ một khu phố của Rivertown dưới chân. Tiếng gỗ nứt gãy và kính vỡ vụn tràn ngập không trung, theo sau là hàng loạt tiếng la hét.</p><p>Andy, Ruby, và Inspector trao nhau một cái nhìn nghiêm trọng khi những nỗi sợ hãi tồi tệ nhất của bạn đã được xác nhận. \"Chúng ta phải làm gì đó\" Andy hét lên giữa tiếng ồn ào.</p><ul><li>Update your Campaign Log. Under “Artifacts Earned”:<ul><li>Cross out the name of each _Artifact_ asset that was not under any investigator’s control when the scenario ended.</li><li>If the Horror in Clay was under the control of an investigator when the scenario ended, record “Horror in Clay” under “Artifacts Earned.”</li></ul></li><li>Trong Nhật ký Chiến dịch, ghi lại \"Flooded Neighborhoods:\" cùng với danh sách từng địa điểm bị ngập lụt</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Các điều tra viên phải quyết định <i>(chọn một)</i>:<ul><li>“We’re ready to fight.” Proceed to _Resolution 2_ if you wish to continue playing immediately.</li><li>Bạn muốn nghỉ ngơi và tiếp tục vào lần chơi tới.</li></ul></li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Chỉ có bạn mới có thể chống lại mối đe dọa nghiêm trọng này. Arkham đang cần bạn ngay lúc này.</p><ul><li>Dọn dẹp màn chơi như bình thường.</li><li>Proceed immediately to _The Doom of Arkham Part II_.</li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Bạn hối thúc những người đồng hành dành thời gian chuẩn bị và trấn tĩnh lại cho trận chiến cuối cùng.</p><ul><li>Dọn dẹp màn chơi như bình thường.</li><li>When you are ready to play again, begin at _The Doom of Arkham Part II_.</li></ul>"
     }
   }
 }

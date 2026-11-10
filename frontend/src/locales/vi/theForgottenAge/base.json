@@ -1,155 +1,14 @@
 {
-  "interludes": {
-    "1": "Những Đêm Trằn Trọc",
-    "2": "Cuộc thám hiểm kết thúc",
-    "3": "Rừng rậm vẫy gọi",
-    "4": "Những người bị giam cầm"
+  "difficulty": {
+    "Easy": "I want to explore",
+    "Standard": "I want a tough journey",
+    "Hard": "I want to be forgotten",
+    "Expert": "I want Yig’s vengeance"
   },
-  "key": {
-    "theInvestigatorsWereForcedToWaitForAdditionalSupplies": "Các điều tra viên buộc phải chờ nguồn vật tư dự trữ bổ sung.",
-    "ichtacaObservedYourProgressWithKeenInterest": "Ichtaca quan sát sự tiến tới của bạn bằng một sự chú ý mãnh liệt.",
-    "alejandroFollowedTheInvestigatorsIntoTheRuins": "Alejandro đã theo chân các điều tra viên vào các tàn tích.",
-    "ichtacaIsWaryOfTheInvestigators": "Ichtaca cảnh giác với các điều tra viên.",
-    "theInvestigatorsHaveEarnedIchtacasTrust": "Các điều tra viên đã giành được sự tin tưởng của Ichtaca.",
-    "alejandroChoseToRemainAtCamp": "Alejandro đã chọn ở lại trại.",
-    "theInvestigatorsClearedAPathToTheEztliRuins": "Các điều tra viên đã mở một con đường dẫn đến các tàn tích Eztli.",
-    "yigsFury": "Cơn thịnh nộ của Yig",
-    "theInvestigatorsRecoveredTheRelicOfAges": "Các điều tra viên đã khôi phục được Relic of Ages.",
-    "alejandroRecoveredTheRelicOfAges": "Alejandro đã khôi phục được Relic of Ages.",
-    "theInvestigatorsGaveCustodyOfTheRelicToAlejandro": "Các điều tra viên giao việc canh giữ cổ vật cho Alejandro.",
-    "theInvestigatorsHaveEarnedAlejandrosTrust": "Các điều tra viên nhận được sự tin tưởng của Alenjandro.",
-    "theInvestigatorsGaveCustodyOfTheRelicToHarlanEarnstone": "Các điều tra viên giao việc canh giữ cổ vật cho Harlan Earnstone.",
-    "alejandroIsContinuingHisResearchOnHisOwn": "Alejandro đang tiếp tục tự nghiên cứu.",
-    "theInvestigatorsFoundTheMissingRelic": "Các điều tra viên đã tìm thấy cổ vật bị mất tích.",
-    "theInvestigatorsRescuedAlejandro": "Các điều tra viên đã cứu được Alejandro.",
-    "alejandroIsMissing": "Alejandro bị mất tích.",
-    "theInvestigatorsForgedABondWithIchtaca": "Các điều tra viên đã tạo được mối quan hệ với Ichtaca.",
-    "ichtacaIsInTheDark": "Ichtaca ở trong bóng tối",
-    "ichtacaHasConfidenceInYou": "Ichtaca có niềm tin vào bạn.",
-    "theInvestigatorsMappedOutTheWayForward": "Các điều tra viên vạch ra con đường tiến về phía trước.",
-    "ichtacasFaithIsRestored": "Niềm tin của Ichtaca được khôi phục.",
-    "theInvestigatorsCooperatedWithTheYithians": "Các điều tra viên đã hợp tác với sinh vật Yithians.",
-    "theInvestigatorsResistedCaptivity": "Các điều tra viên đã chống lại việc bị giam cầm.",
-    "theInvestigatorsHadTheirMemoriesExpunged": "Các điều tra viên đã bị xóa trí nhớ.",
-    "theProcessWasPerfected": "Quá trình chuyển đổi đã thành công một cách hoàn hảo.",
-    "theProcessWasSuccessful": "Quá trình chuyển đổi đã thành công.",
-    "theProcessBackfired": "Quá trình chuyển đổi đã phản tác dụng.",
-    "theProcessBackfiredSpectacularly": "Quá trình chuyển đổi đã phản tác dụng một cách ngoạn mục.",
-    "alejandroRemembersEverything": "Alejandro ghi nhớ mọi thứ.",
-    "alejandroIsSetAgainstYou": "Alejandro chống lại bạn.",
-    "ichtacaIsSetAgainstYou": "Ichtaca chống lại bạn.",
-    "theInvestigatorsFellIntoTheDepths": "Các điều tra viên ngã xuống vực sâu.",
-    "theNexusIsNear": "Nexus ở gần kề.",
-    "theBraziersAreLit": "Các lò than được thắp sáng.",
-    "theBraziersRemainUnlit": "Các lò than không được thắp sáng.",
-    "theInvestigatorsSavedTheCivilizationOfTheSerpents": "Các điều tra viên đã cứu nền văn minh của Serpents.",
-    "theInvestigatorsSavedTheCivilizationOfTheYithians": "Các nhà điều tra đã cứu nền văn minh của người Yithian.",
-    "theFabricOfTimeIsUnwoven": "Sợi chỉ của thời gian bị thay đổi.",
-    "theInvestigatorsSealedTheRelicOfAgesForever": "Các điều tra viên đã phong ấn Relic of Ages mãi mãi.",
-    "theRelicIsMissing": "Cổ vật bị mất tích."
-  },
-  "prologue": {
-    "earthIsNotOurs": {
-      "title": "Trái Đất không phải của Chúng Ta",
-      "body": "<p>“Thần thoại nguyên thủy và ảo tưởng hiện đại đã cùng nhau cho rằng nhân loại chỉ là một - có lẽ là ít nhất - trong số các chủng tộc tiến hóa cao và cai trị quá trình phát triển của hành tinh lâu đời và phần lớn chưa được biết này.” - H. P. Lovecraft, “Bóng tối vượt thời gian”</p>"
-    },
-    "expeditionLeader": "Nếu Ursula Downs, Leo Anderson, hoặc Monterey Jack được chọn làm điều tra viên cho chiến dịch này: Hãy chọn một trong những điều tra viên đó làm trưởng đoàn thám hiểm. Điều tra viên đó bắt đầu Màn chơi I và II với tư cách là trưởng nhóm.",
-    "title": "Lời mở đầu"
-  },
-  "interlude1": {
-    "title": "Chuyển tiếp I: Những Đêm Trằn Trọc",
-    "provisions": "Kiểm tra vật tư của bạn. Với tư cách một nhóm, mỗi điều tra viên phải gạch bỏ 1 khẩu phần ăn cho mỗi điều tra viên từ kho vật tư của mình. Với mỗi vật tự không thể gạch bỏ, chọn một điều tra viên đọc phần Thiếu Khẩu Phần Ăn.",
-    "medicine": "Kiểm tra vật tư của bạn. Mỗi điều tra viên có thuốc phải gạch bỏ nó khỏi kho vật tư của họ để chọn và loại bỏ 1 điểm yếu Poisoned từ chồng bài của bất kỳ điều tra viên nào. Mỗi điều tra viên vẫn còn điểm yếu Poisoned đọc phần _Chất Độc Lan Rộng_."
-  },
-  "interlude2": {
-    "title": "Chuyển tiếp II: Cuộc thám hiểm kết thúc"
-  },
-  "interlude3": {
-    "title": "Chuyển tiếp III: Khu Rừng Vẫy Gọi",
-    "body": "<p>Một lần nữa, bạn phiêu lưu về phía nam, bỏ lại sự an toàn của nền văn minh phía sau. Không có thời gian để lãng phí. Con đường đến Nexus nằm trên vùng đất quen thuộc, không xa đường mòn của chuyến thám hiểm trước. Sử dụng cuốn nhật ký bìa da làm chỉ dẫn cho mình, bạn hồi tưởng lại hành trình của cuộc thám hiểm. Chẳng mấy chốc, bạn đã ở sâu trong rừng rậm, bị bao vây tứ phía bởi những mối nguy hiểm—một số là của thiên nhiên, số khác khá kỳ lạ...</p>",
-    "provisions": "Kiểm tra vật tư của bạn. Với tư cách một nhóm, mỗi điều tra viên phải gạch bỏ 1 khẩu phần ăn cho mỗi điều tra viên từ kho vật tư của mình. Với mỗi vật tự không thể gạch bỏ, chọn một điều tra viên đọc phần Thiếu Khẩu Phần Ăn.",
-    "cultistCount": "Có 2 hoặc nhiều hơn số token {'{'}cultist{'}'} trong túi hỗn mang.",
-    "forgedBond": "các điều tra viên đã tạo được mối quan hệ với Ichtaca.",
-    "hasConfidence": "Ichtaca có niềm tin vào bạn.",
-    "gas": "<p>Kiểm tra vật tư của bạn. Một điều tra viên bất kỳ phải gạch bỏ 1 bình xăng từ vật tư của họ. Nếu không có bình xăng nào bị gạch bỏ, đọc phần _Hết Xăng_.</p>",
-    "medicine": "Kiểm tra vật tư của bạn. Mỗi điều tra viên có thuốc phải gạch bỏ nó khỏi kho vật tư của họ để chọn và loại bỏ 1 điểm yếu Poisoned từ chồng bài của bất kỳ điều tra viên nào. Mỗi điều tra viên vẫn còn điểm yếu Poisoned đọc phần _Chất Độc Lan Rộng_.",
-    "ichtaca": "Kiểm tra túi hỗn mang và Nhật ký Chiến dịch. Nếu tất cả điều sau là đúng, trưởng nhóm đọc phần Niềm Tin Khôi Phục."
-  },
-  "interlude4": {
-    "title": "Chuyển tiếp IV: Those Held Captive",
-    "checkAMindRecovered": {
-      "tabletCount": "Có từ 2 trở lên token {'{'}tablet{'}'} trong túi hỗn mang.",
-      "rescuedAlejandro": "các điều tra viên đã cứu được Alejandro.",
-      "body": "Kiểm tra túi hỗn mang và Nhật ký Chiến dịch. Nếu tất cả điều dưới đây là đúng, trưởng nhóm đọc phần _Khôi Phục Tâm Trí_. Nếu có bất kỳ điều nào là không đúng, trưởng nhóm đọc phần _Mất Mãi Mãi_."
-    },
-    "provisions": "Kiểm tra vật tư của bạn. Với tư cách một nhóm, mỗi điều tra viên phải gạch bỏ 1 khẩu phần ăn cho mỗi điều tra viên từ kho vật tư của mình. Với mỗi vật tự không thể gạch bỏ, chọn một điều tra viên đọc phần Thiếu Khẩu Phần Ăn.",
-    "medicine": "Kiểm tra vật tư của bạn. Mỗi điều tra viên có thuốc phải gạch bỏ nó khỏi kho vật tư của họ để chọn và loại bỏ 1 điểm yếu Poisoned từ chồng bài của bất kỳ điều tra viên nào. Mỗi điều tra viên vẫn còn điểm yếu Poisoned đọc phần _Chất Độc Lan Rộng_."
-  },
-  "interlude5": {
-    "title": "Chuyển tiếp V: The Darkness",
-    "senseOfTime": "<p>Bạn không biết bao nhiêu thời gian đã trôi qua trong vực thẳm lạnh lẽo, khủng khiếp của N'kai.</p><p class='basic right'>Gạch bỏ tất cả các khẩu phần ăn và thuốc mà các điều tra viên còn lại trong vật tư dự trữ của họ.</p>",
-    "map": "Kiểm tra nhật ký chiến dịch. *Nếu các lò than được thắp sáng*, hãy kiểm tra vật tư dự trữ của bạn. Nếu bất kỳ điều tra viên nào có bản đồ, họ sẽ đọc phần_Đọc các dấu hiệu_."
-  },
-  "epilogue": {
-    "title": "Phần kết"
-  },
-  "supplies": {
-    "title": "Vật Tư Dự Trữ",
-    "provisions": {
-      "name": "Khẩu phần ăn",
-      "description": "Phần thức ăn và nước uống cho một người. Đồ phải có cho bất kỳ cuộc hành trình nào."
-    },
-    "medicine": {
-      "name": "Thuốc",
-      "description": "Để ngăn ngừa bệnh tật, nhiễm trùng hoặc nọc độc."
-    },
-    "rope": {
-      "name": "Dây thừng",
-      "description": "Vài cuộn dây dài chắc chắn. Rất quan trọng cho việc leo núi và khảo sát hang động."
-    },
-    "blanket": {
-      "name": "Chăn",
-      "description": "Giữ ấm vào ban đêm."
-    },
-    "canteen": {
-      "name": "Bi đông",
-      "description": "Có thể làm đầy lại tại các con sông suối."
-    },
-    "torches": {
-      "name": "Đuốc",
-      "description": "Có thể thắp sáng các khu vực tối, hoặc làm bánh."
-    },
-    "compass": {
-      "name": "La bàn",
-      "description": "Có thể dẫn đường cho bạn khi bạn lạc đường trong vô vọng."
-    },
-    "map": {
-      "name": "Bản đồ",
-      "description": "Hiện chưa được đánh dấu, nhưng theo thời gian, bạn có thể vạch ra khu vực xung quanh mình."
-    },
-    "binoculars": {
-      "name": "Ống nhòm",
-      "description": "Để giúp bạn nhìn thấy những nơi ở xa."
-    },
-    "chalk": {
-      "name": "Phấn",
-      "description": "Dùng để viết lên bề mặt đá gồ ghề."
-    },
-    "pendant": {
-      "name": "Mặt dây chuyền",
-      "description": "Vô dụng, nhưng đem lại những kỷ niệm giúp cảm thấy thoải mái hơn khi đi xa nhà."
-    },
-    "gasoline": {
-      "name": "Bình xăng"
-    },
-    "pocketknife": {
-      "name": "Dao bỏ túi",
-      "description": "Quá nhỏ để được sử dụng như một vũ khí đáng tin cậy, nhưng dễ che giấu."
-    },
-    "pickaxe": {
-      "name": "Cuốc chim",
-      "description": "Để phá vỡ các bề mặt đá."
-    }
+  "vengeance": {
+    "investigatorsDefeated": "One or more investigators were defeated",
+    "ruinsDestroyed": "The ruins of Eztli were destroyed",
+    "pillarsOfKnYan": "Pillar of K'n-yan"
   },
   "specialRules": [
     {
@@ -164,7 +23,368 @@
       "title": "Vật Tư Dự Trữ",
       "body": "<p class='basic'>Tại một số thời điểm nhất định trong suốt chiến dịch Kỷ Nguyên Bị Lãng Quên, các điều tra viên có cơ hội lựa chọn vật tư dự trữ để thực hiện các chuyến thám hiểm của họ vào chốn hoang dã. Những đồ dự trữ này được ghi lại trong Nhật ký Chiến dịch, dưới phần “Vật Tư Dự Trữ” của mỗi điều tra viên. Vật tư dự trữ được mua bằng các điểm vật tư, được cấp cho các điều tra viên bất cứ khi nào họ có cơ hội mua vật tư. Các điểm vật tư dư ra sẽ không được trữ lại và bị mất. Vật tư dự trữ của mỗi điều tra viên sẽ xác định các lựa chọn có thể có trong quá trình chơi và trong suốt cốt chuyện của chiến dịch này. Mỗi vật tư dự trữ bản thân nó không có tác dụng. Một số hiệu ứng lá bài, lựa chọn của cốt chuyện và giải pháp có thể thay đổi hoặc khả dụng tùy thuộc vào đồ dự trữ mà các điều tra viên mang theo.</p>"
     },
-    {},
-    {}
-  ]
+    {
+      "title": "Vengeance X",
+      "body": "<p class='basic'>Một số lá bài encounter có giá trị điểm báo thù. Dòng chữ <b>Vengeance X</b> chỉ ra rằng một lá bài có giá trị là X điểm báo thù. Giống như <b>Victory X</b>, khi một lá bài encounter với <b>Vengeance X</b> bị điều tra viên vượt qua, nó sẽ được lưu trữ trong khu vực trưng bày thành tích cho đến khi kết thúc màn chơi. Tuy nhiên, không giống như điểm chiến thắng, điểm báo thù đại diện cho nhận thức và thù hận của Father of Serpents (chúa tể của các loài rắn), và nói chung là nên tránh tích lũy điểm báo thù bất cứ khi nào có thể. Điểm báo thù trong khu vực trưng bày thành tích không ảnh hưởng đến màn chơi trừ khi được đề cập cụ thể bởi một lá bài encounter khác.</p><p class='basic'>Một số lá bài encounter có giá trị điểm báo thù. Dòng chữ <b>Vengeance X</b> chỉ ra rằng một lá bài có giá trị là X điểm báo thù. Giống như <b>Victory X</b>, khi một lá bài encounter với <b>Vengeance X</b> bị điều tra viên vượt qua, nó sẽ được lưu trữ trong khu vực trưng bày thành tích cho đến khi kết thúc màn chơi. Tuy nhiên, không giống như điểm chiến thắng, điểm báo thù đại diện cho nhận thức và thù hận của Father of Serpents (chúa tể của các loài rắn), và nói chung là nên tránh tích lũy điểm báo thù bất cứ khi nào có thể. Điểm báo thù trong khu vực trưng bày thành tích không ảnh hưởng đến màn chơi trừ khi được đề cập cụ thể bởi một lá bài encounter khác.</p><ul><li>Khi kẻ địch với <b>Vengeance X</b> bị hạ hục, hãy đặt lá bài vào khu vực trưng bày thành tích thay vì đặt trong chồng bài bỏ.</li><li>Vào cuối một màn chơi, hãy lấy từng địa điểm có <b>Vengeance X</b> đang chơi, được để lộ và không có manh mối nào trên đó, và đặt nó vào khu vực trưng bày thành tích.</li><li>Khi một lá bài treachery với <b>Vengeance X</b> được xử lý xong, hãy đặt nó vào màn hình chiến thắng thay vì trong chồng bài bỏ.</li><li>Các lá bài có giá trị điểm báo thù cũng không có giá trị điểm chiến thắng trừ khi lá bài có cả <b>Victory X</b> và <b>Vengeance X.</b></li></ul>"
+    },
+    {
+      "title": "Explore",
+      "body": "<p class='basic'>Một số khả năng trong chiến dịch này được xác định bằng hành động <b>Explore</b> . Những khả năng như vậy thường được sử dụng để tìm các địa điểm mới để đưa vào chơi và được thực hiện bằng hành động “được kích hoạt”.</p><p class='basic'>Các ability <b>Explore</b> hướng dẫn bạn rút lá bài trên cùng của “exploration deck”, đây là một chồng bài riêng biệt được tạo ra trong quá trình setup của một số scenario. Chồng bài này bao gồm một vài địa điểm một mặt và các lá bài treachery.</p><ul><li>Mỗi khả năng <b>Explore</b> biểu thị một loại vị trí cụ thể bạn muốn rút được. <b>Nếu một vị trí của loại đó được rút, nó được đặt vào chơi, và bạn di chuyển đến vị trí đó.</b> Đây được xem là khám phá “thành công”.</li><li>Nếu bất kỳ vị trí nào khác được rút, đặt nó kế bên chồng bài khám phá, và bạn rút lá bài tiếp theo trong chồng bài khám phá. Lặp lại bước này cho đến khi một vị trí thuộc loại đó được rút, hoặc một lá bài treachery được rút. Sau khi hành động này kết thúc, xào mỗi vị trí kế bên chồng bài khám phá vào lại chồng bài khám phá.</li><li>Nếu một lá bài treachery được rút ra, nó được xử lý như bình thường. Nếu nó bị discard, đặt nó vào trong chồng bài encounter bỏ như bình thường. Không có chồng bài bỏ riêng cho chồng bài khám phá. Đây được xem là khám phá “thất bại”.</li><li>Khi một vị trí một mặt được đặt vào chơi từ chồng bài khám phá, đặt manh mối vào vị trí đó tương ứng với giá trị manh mối.</li></ul><p><i>Ví dụ: Agenda 1a—“Expedition into the Wild” có khả năng sau: “[action]: <b>Explore.</b> Rút lá bài đầu tiên của chồng bài khám phá. Nếu đó là vị trí kết nối, đặt nó vào chơi và di chuyển tới đó.\" Ursula Downs đang ở Expedition Camp và muốn tìm một vị trí mới để đi tới. Cô ấy dùng hành động đầu tiên của mình để khám phá, rút lá bài đầu tiên của chồng bài khám phá. Lá bài được rút là Circuitous Trail. Bởi vì Circuitous Trail là một vị trí không kết nối với Expedition camp, nó được đặt sang kế bên chồng bài khám phá, và Ursula rút tiếp lá bài tiếp theo từ chồng bài khám phá. Lần này, cô ấy rút phải lá treachery Low on Supplies, nên xử lý nó như bình thường và đặt nó vào chồng bài bỏ. Việc khám phá của cô ấy thất bại, và cô ấy phải xào lá bài Circuitous Trail mà mình đã rút hồi nãy vào lại chồng bài khám phá. \nUrsula quyết định khám phá một lần nữa, sử dụng hành động thứ hai của mình. Lần này, cô ấy rút được vị trí Path of Thorns, kết nối với Expedition camp. Việc khám phá của cô ấy thành công. Path of Thorns được đặt vào chơi với số manh mối tương ứng giá trị manh mối có trên đó, và Ursula ngay lập tức di chuyển từ Expedition Camp đến Path of Thorns.</i></p>"
+    }
+  ],
+  "interludes": {
+    "1": "Những Đêm Trằn Trọc",
+    "2": "Cuộc thám hiểm kết thúc",
+    "3": "Rừng rậm vẫy gọi",
+    "4": "Những người bị giam cầm",
+    "5": "The Darkness"
+  },
+  "key": {
+    "theInvestigatorsWereForcedToWaitForAdditionalSupplies": "Các điều tra viên buộc phải chờ nguồn vật tư dự trữ bổ sung.",
+    "ichtacaObservedYourProgressWithKeenInterest": "Ichtaca quan sát sự tiến tới của bạn bằng một sự chú ý mãnh liệt.",
+    "alejandroFollowedTheInvestigatorsIntoTheRuins": "Alejandro đã theo chân các điều tra viên vào các tàn tích.",
+    "ichtacaIsWaryOfTheInvestigators": "Ichtaca cảnh giác với các điều tra viên.",
+    "theInvestigatorsHaveEarnedIchtacasTrust": "Các điều tra viên đã giành được sự tin tưởng của Ichtaca.",
+    "alejandroChoseToRemainAtCamp": "Alejandro đã chọn ở lại trại.",
+    "theInvestigatorsClearedAPathToTheEztliRuins": "Các điều tra viên đã mở một con đường dẫn đến các tàn tích Eztli.",
+    "yigsFury": "Cơn thịnh nộ của Yig",
+    "theInvestigatorsRecoveredTheRelicOfAges": "Các điều tra viên đã khôi phục được Relic of Ages.",
+    "alejandroRecoveredTheRelicOfAges": "Alejandro đã khôi phục được Relic of Ages.",
+    "theHarbingerIsStillAlive": "The Harbinger is still alive",
+    "theInvestigatorsGaveCustodyOfTheRelicToAlejandro": "Các điều tra viên giao việc canh giữ cổ vật cho Alejandro.",
+    "theInvestigatorsHaveEarnedAlejandrosTrust": "Các điều tra viên nhận được sự tin tưởng của Alenjandro.",
+    "theInvestigatorsGaveCustodyOfTheRelicToHarlanEarnstone": "Các điều tra viên giao việc canh giữ cổ vật cho Harlan Earnstone.",
+    "alejandroIsContinuingHisResearchOnHisOwn": "Alejandro đang tiếp tục tự nghiên cứu.",
+    "youAreForgingYourOwnWay": "You are forging your own way",
+    "theInvestigatorsFoundTheMissingRelic": "Các điều tra viên đã tìm thấy cổ vật bị mất tích.",
+    "theRelicIsMissing": "Cổ vật bị mất tích.",
+    "theInvestigatorsRescuedAlejandro": "Các điều tra viên đã cứu được Alejandro.",
+    "alejandroIsMissing": "Alejandro bị mất tích.",
+    "theInvestigatorsForgedABondWithIchtaca": "Các điều tra viên đã tạo được mối quan hệ với Ichtaca.",
+    "theInvestigatorsRecruitedTheHelpOfAnotherExpedition": "The investigators recruited the help of another expedition",
+    "ichtacaIsInTheDark": "Ichtaca ở trong bóng tối",
+    "pathsAreKnownToYou": "Paths are known to you",
+    "ichtacaHasConfidenceInYou": "Ichtaca có niềm tin vào bạn.",
+    "theInvestigatorsMappedOutTheWayForward": "Các điều tra viên vạch ra con đường tiến về phía trước.",
+    "ichtacasFaithIsRestored": "Niềm tin của Ichtaca được khôi phục.",
+    "theJungleWatches": "The jungle watches",
+    "theInvestigatorsCooperatedWithTheYithians": "Các điều tra viên đã hợp tác với sinh vật Yithians.",
+    "theInvestigatorsResistedCaptivity": "Các điều tra viên đã chống lại việc bị giam cầm.",
+    "theInvestigatorsHadTheirMemoriesExpunged": "Các điều tra viên đã bị xóa trí nhớ.",
+    "theProcessWasPerfected": "Quá trình chuyển đổi đã thành công một cách hoàn hảo.",
+    "theProcessWasSuccessful": "Quá trình chuyển đổi đã thành công.",
+    "theProcessBackfired": "Quá trình chuyển đổi đã phản tác dụng.",
+    "theProcessBackfiredSpectacularly": "Quá trình chuyển đổi đã phản tác dụng một cách ngoạn mục.",
+    "alejandroRemembersEverything": "Alejandro ghi nhớ mọi thứ.",
+    "alejandroIsSetAgainstYou": "Alejandro chống lại bạn.",
+    "ichtacaIsSetAgainstYou": "Ichtaca chống lại bạn.",
+    "theInvestigatorsFellIntoTheDepths": "Các điều tra viên ngã xuống vực sâu.",
+    "theNexusIsNear": "Nexus ở gần kề.",
+    "theBraziersAreLit": "Các lò than được thắp sáng.",
+    "theBraziersRemainUnlit": "Các lò than không được thắp sáng.",
+    "theInvestigatorsMendedTheTearInTheFabricOfTime": "The investigators mended the tear in the fabric of time",
+    "theInvestigatorsSavedTheCivilizationOfTheSerpents": "Các điều tra viên đã cứu nền văn minh của Serpents.",
+    "theInvestigatorsSavedTheCivilizationOfTheYithians": "Các nhà điều tra đã cứu nền văn minh của người Yithian.",
+    "theFabricOfTimeIsUnwoven": "Sợi chỉ của thời gian bị thay đổi.",
+    "theInvestigatorsTurnedBackTime": "The investigators turned back time",
+    "theInvestigatorsSealedTheRelicOfAgesForever": "Các điều tra viên đã phong ấn Relic of Ages mãi mãi."
+  },
+  "title": {
+    "supplyPointsToGain": "Gain supply points"
+  },
+  "label": {
+    "checkYourSupplies": "Check your supplies",
+    "supplyPointsToGain": "Each investigator may convert up to 10 of their experience to supply points, at a rate of 1 supply point for every 2 experience converted.",
+    "supplyPointsToGainWithExtra": "Each investigator may convert up to 10 of their experience to supply points, at a rate of 1 supply point for every 2 experience converted (Extra experience points {count}).",
+    "bestLaidPlans": {
+      "shuffle": "Shuffle the top card of the encounter deck into the exploration deck"
+    },
+    "snakeBite": {
+      "damageAlly": "Deal 5 damage to an _*Ally*_ asset you control",
+      "damageSelf": "Take 1 direct damage. If you are not poisoned, put a set-aside Poisoned weakness into play in your threat area."
+    },
+    "lowOnSupplies": {
+      "resources": "Each investigator loses 2 resources.",
+      "damage": "Each investigator takes 1 damage.",
+      "discardAsset": "Each investigator chooses and discards an asset they control."
+    },
+    "ancestralFear": {
+      "placeDoom": "Place 1 doom on your location and discard Ancestral Fear (instead of placing it in the victory display).",
+      "addToVictory": "Place Ancestral Fear in the victory display."
+    },
+    "serpentsCall": {
+      "poisoned": "Put a set-aside Poisoned weakness into play in your threat area",
+      "drawEncounterCards": "Draw the top 2 cards of the encounter deck"
+    },
+    "explorationDeck": {
+      "placeOnTop": "Place one card on top of exploration deck",
+      "placeOnBottom": "Place one card on bottom of exploration deck"
+    },
+    "mouthOfKnYanTheCavernsMaw": {
+      "resign": "Let's make camp and solve this puzzle tomorrow"
+    }
+  },
+  "standalone": {
+    "paths": "The investigators may choose how many paths are known to you (choose a number between 0 and 5). The more paths are known to you, the quicker and easier the scenario will be."
+  },
+  "prologue": {
+    "earthIsNotOurs": {
+      "title": "Trái Đất không phải của Chúng Ta",
+      "body": "<p>“Thần thoại nguyên thủy và ảo tưởng hiện đại đã cùng nhau cho rằng nhân loại chỉ là một - có lẽ là ít nhất - trong số các chủng tộc tiến hóa cao và cai trị quá trình phát triển của hành tinh lâu đời và phần lớn chưa được biết này.” - H. P. Lovecraft, “Bóng tối vượt thời gian”</p>"
+    },
+    "title": "Lời mở đầu",
+    "body": "<p class='anke'><right><fancy>Thứ ba, ngày 2 tháng 6 năm 1925</fancy></right></p><p>Có vẻ như sẽ không có thời gian nghỉ ngơi cho chúng ta vào mùa hè này.</p><p>Hôm nay tôi vừa gặp Harlan Earnstone, một nhà sử học tại Đại học Miskatonic và một người bạn cũ của tôi. Ông ấy đã nói rằng ông ấy có một lời mời làm việc cho tôi, nhưng thành thật mà nói, tôi không biết mình mong đợi điều gì.</p><p>Harlan giới thiệu tôi với một cộng sự của ông: Alejandro Vela, một nhà sử học nổi tiếng từ biên giới phía nam. Ông Vela tốt nghiệp một trường đại học danh tiếng ở Thành phố Mexico và đã dành nhiều năm nghiên cứu về Đế chế Aztec. Ông ta tuyên bố rằng ông ta đã tìm thấy bằng chứng liên quan đến sự tồn tại của một thành bang của Aztec chưa từng được biết đến có tên là Eztli. Những phát hiện kỳ lạ và chưa từng có trước đây của ông ấy đã không được trường đại học chấp nhận, và ông ấy trở thành người bị bỏ rơi trong giới của mình.</p><p>Alejandro đến thị trấn Arkham để tìm kiếm tài trợ cho một cuộc thám hiểm vào các khu rừng nhiệt đới ở miền nam Mexico, nơi ông ta tin rằng tàn tích của thành bang Eztli vẫn chưa được khám phá. Mô tả của ông về nguồn gốc của thành bang này thách thức sự hiểu biết hiện đại về lịch sử Mesoamerican. Mặc dù vậy, ông bạn Harlan cũ của tôi bị mê hoặc bởi những khám phá của Alejandro. Đại học Miskatonic đã đồng ý tài trợ cho chuyến thám hiểm (mặc dù khá ít ỏi), và Harlan muốn tôi đi cùng.</p><p>Theo những gì tôi thấy, rất có thể chúng ta đang tìm kiếm thứ gì đó thậm chí không tồn tại. Nhưng nếu chỉ có một chút cơ hội là những người Eztli này tồn tại, thì ý nghĩa lịch sử sẽ rất sâu sắc. Chúng tôi đã tranh luận về vấn đề này trong một thời gian, nhưng cuối cùng, chúng tôi đã chấp nhận lời đề nghị của Alejandro. Công việc chuẩn bị đang được tiến hành và chúng tôi sẽ bắt đầu vào cuối tháng. Với một chút may mắn, chúng ta sẽ làm cho cuốn nhật ký này chứa đầy những khám phá thú vị. Còn không thì cũng là một món đồ tốt để đặt bên dưới chiếc bàn bị nghiêng của Harlan.</p>",
+    "expeditionLeader": "Nếu Ursula Downs, Leo Anderson, hoặc Monterey Jack được chọn làm điều tra viên cho chiến dịch này: Hãy chọn một trong những điều tra viên đó làm trưởng đoàn thám hiểm. Điều tra viên đó bắt đầu Màn chơi I và II với tư cách là trưởng nhóm.",
+    "label": {
+      "expeditionLeader": "Choose an Expedition Leader"
+    },
+    "pickSupplies": "<p class='basic'>Là một người bị ruồng bỏ trong giới học thuật, kinh phí cho chuyến thám hiểm của Alejandro bị hạn chế. Mỗi điều tra viên phải chọn một vài vật tư để mang theo cho chuyến thám hiểm. Trong Nhật ký Chiến dịch, dưới phần “Vật Tư Dự Trữ” của mỗi điều tra viên, hãy ghi lại các vật tư dự trữ mà điều tra viên đã chọn mang theo. <i> (Lưu ý: Có thể lấy các vật tư và thuốc nhiều hơn một lần bằng cách ghi lại tên của chúng nhiều lần và tiêu số lượng điểm vật tư thích hợp.) </i></p><ul><li><p class='basic'>Mỗi điều tra viên có thể dùng điểm vật tư dự trữ để mua các vật tư dự trữ bên dưới. Điểm vật tư dự trữ của mỗi điều tra viên dựa trên số lượng điều tra viên có trong chiến dịch. <i>(Chú ý: Provisions, Medicine và Gasoline có thể được lấy nhiều hơn một lần bằng cách ghi chép lại tên của nó nhiều lần và sử dụng điểm vật tư dự trữ tương ứng.)</i></p><p class='basic'><strong>1 investigator:</strong> 10 supply points</p><p class='basic'><strong>2 investigators:</strong> 7 supply points each</p><p class='basic'><strong>3 investigators:</strong> 5 supply points each</p><p class='basic'><strong>4 investigators:</strong> 4 supply points each</p></li><li><p class='basic'>The description of each supply below gives some insight into how it might be used during the campaign. Choose wisely.</p></li></ul>"
+  },
+  "interlude1": {
+    "title": "Chuyển tiếp I: Những Đêm Trằn Trọc",
+    "blanket": "<p class='basic'>Check your supplies. Each investigator with a blanket reads _Restful Sleep_. The rest read _Tossing and Turning_.</p>",
+    "restfulSleep": "<p>_Restful Sleep_: Hạnh phúc là tôi đã có thể ngủ mỗi đêm. Tuy nhiên, trong khi cơ thể tôi được nghỉ ngơi, tâm trí của tôi lại bị những cơn ác mộng vây hãm. Một hang động giống như một cái miệng đang há, chìm ngập trong ánh sáng đỏ mờ ảo… những bức tường bò trườn trên đó là những lớp vảy lấp lánh của hàng trăm con rắn lục… có lẽ không ngủ còn tốt hơn.</p><p class='basic right'>Bạn không bị ảnh hưởng xấu nào cả.</p>",
+    "tossingAndTurning": "<p>_Tossing and Turning_: Những đêm trong rừng, tôi hầu như không ngủ được. Một làn sương mù kỳ lạ cuộn qua khu trại mỗi đêm, khiến khu vực chìm trong cái lạnh dữ dội và khác thường. Chiếc túi ngủ của tôi giúp chống lại một số yếu tố môi trường, nhưng chúng tôi đã không chuẩn bị cho thời tiết bất thường này. Ruồi và muỗi vo ve bên tai mỗi khi tôi bắt đầu chuẩn bị chìm vào giấc ngủ. Ngay cả khi cuối cùng cũng ngủ được, tôi sẽ nhanh chóng giật mình tỉnh giấc vì bị côn trùng hoặc thằn lằn bò ngang mặt. Tôi cá rằng tôi sẽ ngủ được rất ít trong cuộc hành trình này…</p><p class='basic right'>You suffer 1 physical or mental trauma (your choice).</p>",
+    "lookout": "The lead investigator must choose one investigator to be the group’s lookout. Then, that investigator checks their supplies. If they have binoculars, they read _Shapes in the Trees_. Otherwise, they read _Eyes in the Dark_.",
+    "shapesInTheTrees": "<p>_Shapes in the Trees_: Hầu hết mỗi đêm trôi qua mà không xảy ra sự cố nào, nhưng vào đêm nay, tôi giật mình bởi tiếng xào xạc của những cành cây dọc theo biên giới phía nam của khu trại. Bất chấp bóng tối, tôi có thể sử dụng ống nhòm của mình để xem các hình thù chuyển động trên cây. Các hình thù giống như con người, nhưng… tại sao? Tại sao họ chỉ quan sát chúng tôi từ xa? Mục đích của họ là gì?</p><p class='basic right'>Bạn nhận được thêm 2 kinh nghiệm khi hiểu sâu hơn về động cơ của Eztli.</p>",
+    "eyesInTheDark": "<p>_Eyes in the Dark_: Mỗi đêm, tôi bị theo dõi. Tôi không chỉ cảm thấy bị theo dõi: tôi nhìn thấy những đôi mắt nhìn ra từ bóng tối âm u bao quanh khu trại của chúng tôi. Họ biết chúng tôi đã ở đó. Đôi mắt vàng dõi theo tôi, cảnh giác, tôi rút vũ khí ra, sẵn sàng bảo vệ khu trại nếu cần. Mắt chúng tôi chạm nhau, và một bóng tối bao trùm lấy trái tim tôi.</p><p class='basic right'>You suffer 1 mental trauma.</p>",
+    "provisions": "Kiểm tra vật tư của bạn. Với tư cách một nhóm, mỗi điều tra viên phải gạch bỏ 1 khẩu phần ăn cho mỗi điều tra viên từ kho vật tư của mình. Với mỗi vật tự không thể gạch bỏ, chọn một điều tra viên đọc phần Thiếu Khẩu Phần Ăn.",
+    "lowOnRations": "<p>_Low on Rations_: Chúng tôi nghĩ rằng chúng tôi đã mang đủ thức ăn và nước uống cho mọi người, nhưng chuyến đi đã ảnh hưởng lớn đến nguồn vật tư dự trữ của chúng tôi. Khi mặt trời mọc và đến giờ ăn, chúng tôi phát hiện ra mình đã cạn kiệt nguồn lương thực dự trữ.</p><p class='basic right'>Bạn bắt đầu màn chơi với ít hơn 3 tài nguyên.</p>",
+    "medicine": "Kiểm tra vật tư của bạn. Mỗi điều tra viên có thuốc phải gạch bỏ nó khỏi kho vật tư của họ để chọn và loại bỏ 1 điểm yếu Poisoned từ chồng bài của bất kỳ điều tra viên nào. Mỗi điều tra viên vẫn còn điểm yếu Poisoned đọc phần _Chất Độc Lan Rộng_.",
+    "thePoisonSpreads": "<p>_The Poison Spreads_: Nhiều ngày trôi qua, chất độc tiếp tục lan truyền khắp cơ thể tôi. Đến đêm thứ hai, làn da ướt đẫm mồ hôi. Tôi bắt đầu cảm thấy khó thở và bắt đầu mỗi sáng bằng việc nôn ra phần lớn bữa tối hôm trước.</p><p class='basic right'>You suffer 1 physical trauma.</p>",
+    "label": {
+      "doNotUseMedicine": "Do not use medicine"
+    },
+    "xp": {
+      "insight": "Insight into the motivations of the Eztli"
+    }
+  },
+  "interlude2": {
+    "label": {
+      "pickExpeditionsEnd2": "It belongs in a museum.",
+      "pickExpeditionsEnd3": "It is too dangerous to be on display."
+    },
+    "title": "Chuyển tiếp II: Cuộc thám hiểm kết thúc",
+    "pickExpeditionsEnd1": "Check Campaign Log. *If the investigators recovered the Relic of Ages*: Read _Expedition’s End 1_.",
+    "pickExpeditionsEnd2": "If Alejandro recovered the Relic of Ages: Skip to _Expedition’s End 5_.",
+    "expeditionsEnd1": "<p>_Expedition’s End 1:_<p><p class='anke'>Friday, July 17th, 1925</p><p>Cuối cùng chúng tôi đã quay trở lại thị trấn Arkham, chuyến thám hiểm của chúng tôi “thành công”. Alejandro phấn khích báo cáo những phát hiện của mình cho trường đại học. Làm thế nào ông ấy vẫn duy trì được chủ nghĩa duy tâm mơ mộng của mình sau những chuyện kinh khủng mà chúng tôi đã trải qua trong rừng rậm là điều tôi không hiểu nổi. Sự chú ý của ông ấy tập trung vào cổ vật kỳ lạ mà chúng tôi đã phát hiện ra trong khu di tích. Tôi ước gì chúng tôi biết thêm một chút về nguồn gốc của cổ vật. Nó làm tôi lo lắng rất nhiều. Nó kêu vo ve mọi lúc và tỏa một năng lượng khác thường mà tôi khó có thể mô tả được. Khi chúng tôi trở về nhà với cổ vật đang mang theo, giấc ngủ đêm của chúng tôi bị quấy rầy bởi những cơn ác mộng kỳ quái: những giấc mơ về những thế giới và các nền văn minh khác.</p><p>Alejandro muốn đưa cổ vật đến Viện bảo tàng Miskatonic, để trưng bày cùng với các hiện vật Eztli khác mà chúng tôi đã khám phá ra. Cảm xúc của tôi khá lẫn lộn. Tại bảo tàng, nó sẽ được chăm sóc thích hợp, và các nhà sử học sẽ có thể nghiên cứu nó và thậm chí có thể thấy được mục đích của nó. Tuy nhiên, tôi sợ rằng cổ vật có thể quá nguy hiểm cho công chúng. Rốt cuộc thì chúng tôi vẫn không biết cái thứ chết tiệt đó là gì. Alejandro sẽ ghét điều này, nhưng có lẽ tốt hơn là nên giữ cổ vật ở một nơi an toàn, nơi tôi và Harlan có thể nghiên cứu nó một cách bí mật. Tôi sẽ phải đưa ra quyết định tối nay; sau ngày mai, tôi sẽ không có thời gian để thay đổi ý định…</p><ul><li>The lead investigator must decide (choose one):<ul><li><p><i> Nó thuộc về viện bảo tàng. Alejandro và các nhân viên bảo tàng sẽ có thể nghiên cứu nó và tìm hiểu thêm về mục đích của nó.</i></p><p class='basic'>Proceed to _Expedition’s End 2_.</p></li><li><p><i> Nó quá nguy hiểm để được trưng bày. Chúng tôi nên giữ nó kín đáo và an toàn cho đến khi chúng tôi biết thêm về nó.</i></p><p class='basic'>Skip to _Expedition’s End 3_.</p></li></ul></li></ul>",
+    "expeditionsEnd2": "<p>_Expedition’s End 2:_</p><p class='anke'><right><fancy>Chủ nhật, ngày 19 tháng 7, năm 1925</fancy></right></p><p>Tôi đã quyết định giao việc canh giữ cổ vật cho Alejandro. Xét cho cùng, toàn bộ cuộc thám hiểm này dựa trên nghiên cứu của ông ấy - ông ấy nên là người nghiên cứu nó. Nếu ai đó có thể khám phá bí mật của cổ vật, thì đó chính là ông ấy.</p><p>Cổ vật sẽ trở thành tâm điểm của một cuộc triển lãm mới tại bảo tàng. Alejandro đã viết rất nhiều về những khám phá của chúng tôi, nhưng công việc của ông ấy chỉ mới bắt đầu. Nhiều bí ẩn về chuyến thám hiểm của chúng tôi vẫn còn. Làm thế nào mà người Eztli vẫn chưa được khám phá trong một thời gian dài? Tại sao họ lại trông như đang canh giữ rừng rậm, và canh giữ khỏi cái gì? Ai đã thực sự xây dựng nên những di tích đền thờ mà chúng tôi đã khám phá? Tôi chắc chắn Alejandro sẽ khám phá ra câu trả lời cho những câu hỏi này, nếu có đủ thời gian.</p><p>Về phần tôi, vai trò của tôi trong nỗ lực này đã kết thúc. Tuy nhiên, tôi vẫn chưa thể thư giãn. Suy nghĩ của tôi không ngừng nghĩ về khu rừng - những hình thù ngoằn ngoèo trong bóng tối, những mũi tên bằng đá vỏ chai cắm vào những bộ xương, những giọng nói kỳ dị réo lên trong cái hang sâu. Khi tôi đi qua các con phố, tôi thấy mình bị thu hút về phía bảo tàng mà không hề nhận ra, như thể bị ám ảnh để nhìn thấy cổ vật một lần nữa. Có một cảm giác khó chịu trong tâm trí tôi, như thể chúng tôi đã bỏ quên một điều gì đó quan trọng. Tôi phải làm gì để thoát khỏi—</p><p>(Mục nhật ký kết thúc đột ngột.)</p><ul><li>các điều tra viên giao việc canh giữ cổ vật cho Alejandro.</li><li>các điều tra viên nhận được sự tin tưởng của Alenjandro.</li><li>Thêm một token [tablet] vào túi hỗn mang cho phần còn lại của chiến dịch.</li><li>Skip to _Expedition’s End 4_.</li></ul>",
+    "expeditionsEnd3": "<p>_Expedition’s End 3:_</p><p class='anke'><right><fancy>Chủ nhật, ngày 19 tháng 7, năm 1925</fancy></right></p><p>Tôi đã quyết định giữ kín cổ vật. Alejandro không hài lòng với quyết định của tôi, nhưng cho đến khi chúng ta biết quả cầu có khả năng gì, điều quan trọng là nó phải ở một nơi an toàn, nơi nó sẽ không gây nguy hiểm cho người khác. Harlan đồng ý với tôi, và đã đề nghị được quản lý cổ vật và giữ nó trong văn phòng riêng của ông ấy. Ở đó, chúng tôi có thể nghiên cứu cổ vật một cách bí mật.</p><p>Alejandro ở lại thị trấn Arkham trong thời gian này, ghi lại những ghi chép của anh ấy về chuyến thám hiểm và giúp viện bảo tàng tổ chức một cuộc triển lãm trưng bày những khám phá khác ít nguy hiểm hơn của chúng tôi. Còn tôi, tôi hy vọng sẽ tìm thấy câu trả lời cho những bí ẩn khác: Làm thế nào mà người Eztli vẫn chưa bị khám phá trong suốt thời gian dài như vậy? Tại sao họ lại xuất hiện với dáng vẻ canh giữ khu rừng rậm, và canh giữ nó khỏi cái gì? Ai đã thực sự xây dựng nên những di tích đền thờ mà chúng tôi đã khám phá?</p><p>Suy nghĩ của tôi không ngừng về khu rừng - những hình thù ngoằn ngoèo trong bóng tối, những mũi tên bằng đá vỏ chai cắm vào những bộ xương, những giọng nói dị dạng rít lên trong hang sâu. Mỗi lần rời văn phòng của Harlan, tôi lại thấy mình khao khát được quay lại và ngắm nhìn cổ vật một lần nữa. Có một cảm giác khó chịu đằng sau tâm trí tôi, như thể chúng tôi đã quên một điều gì đó quan trọng. Tôi phải làm gì để thoát khỏi—</p><p>(Mục nhật ký kết thúc đột ngột.)</p><ul><li>các điều tra viên giao việc canh giữ cổ vật cho Harlan Earnstone.</li><li>Record in your Campaign Log that *Alejandro is continuing his research on his own*. If Alejandro Vela is currently in an investigator’s deck, remove him from that investigator’s deck.</li><li>Proceed to _Expedition’s End 4_.</li></ul>",
+    "expeditionsEnd4": "<p>_Expedition’s End 4:_</p><p>Bạn đánh rơi chiếc bút khi tiếng gõ cửa lớn khiến bạn giật mình và đứng bật dậy. Bây giờ là gần 2 giờ 30 phút sáng. Ai có thể có mặt trước cửa nhà bạn vào giờ này? Suy nghĩ của bạn lại lang thang về khu rừng rậm, và bạn thấy mình đối mặt với hình ảnh những sinh vật rắn tấn công bạn trong chính ngôi nhà của mình. Rùng mình, bạn tìm một vũ khí và tiến đến cửa chính một cách cẩn thận, sẵn sàng tấn công nếu cần thiết. Bạn hít một hơi dài và mở cửa.</p><p>Phía bên kia là một người phụ nữ quen thuộc với làn da nâu, mái tóc nâu dàià đôi mắt vàng xuyên thấu ánh lên một cái nhìn khó chịu. Mặc dù trang phục của cô ấy đã thay đổi, bạn sẽ nhận ra cô ấy ngay lập tức là Ichtaca, chiến binh Eztli mà bạn gặp trong khu rừng nhiệt đới. Mặc một chiếc áo khoác dài và đội mũ Bollman, cô ấy rõ ràng không thoải mái trong đôi giày của mình. Cô ấy há hốc mồm tức giận. Bạn chuẩn bị nâng vũ khí để phòng vệ thì cô ấy thở dài và bước chậm rãi qua ngưỡng cửa nhà bạn, đóng cánh cửa sau lưng cô ấy. Cô ấy nói một cách mờ mịt, “Bất cứ điều gì cậu đã làm, cậu phải đảo ngược nó. Hoặc tất cả chúng ta sẽ không còn tồn tại.\"</p><p class='basic right'>The story continues in _Scenario III: Threads of Fate_.</p>",
+    "expeditionsEnd5": "<p>_Expedition’s End 5_: Harlan Earnstone đi ngang qua phòng khách của bạn, dùng khăn tay chấm lên trán nhăn nheo. \"Đó là lỗi của tôi. Lẽ ra, tôi không bao giờ nên khuyến khích họ thực hiện chuyến thám hiểm đáng sợ đó”. Mặc dù hai người chỉ mới gặp nhau một vài lần trước đây, ông Earnstone đã trở thành một người liên lạc quý giá của bạn tại Đại học Miskatonic. Khi chuyến thám hiểm mới nhất của trường Đại học trở về với chỉ một vài người sống sót và một số hiện vật cổ xưa, kỳ lạ, ông ấy đã tìm đến bạn để xin lời khuyên.</p><p>\"Tôi biết. Ít nhất tôi cũng nên thấy an ủi vì cuộc thám hiểm đã thành công, mặc dù nó bị tổn thất nặng nề. Alejandro đã đúng. Người Eztli là có thật. Tuy nhiên… tôi lo ngại về một số phát hiện này.” Harlan lôi một cuốn nhật ký nhỏ đóng bìa da từ vali của mình và đưa cho bạn. “Trước cái chết bi thảm của trưởng đoàn thám hiểm, ông ấy đã ghi lại nhiều khám phá của nhóm vào cuốn nhật ký này. Một trong những thành viên sống sót của đoàn thám hiểm đã lấy được nó từ trại trước khi chạy trốn khỏi rừng rậm. Tôi nghĩ nếu cậu đọc những mục này, cậu sẽ hiểu ý tôi. Những điều họ đã trải qua, những sinh vật họ gặp phải…” Harlan rùng mình và điều chỉnh kính của mình với đôi tay run rẩy quá mức. “Tôi không chỉ lo lắng cho Alejandro, mà cho tất cả chúng ta. Hãy đọc nhật ký này, và nếu cậu có thể, hãy để mắt tới đồng nghiệp của tôi”. Bạn đồng ý giúp đỡ, nhưng sự lo lắng của anh ấy không hề giảm bớt. “Tôi chỉ hy vọng rằng tôi không làm cậu phải chịu số phận tương tự qua việc nhờ sự giúp đỡ của cậu.”</p><p>Bạn dành thời gian còn lại của đêm đó để nghiên cứu nhật ký thám hiểm, đầu óc bạn nghĩ về những sinh vật rắn kỳ lạ và những chiến binh Aztec. Rất lâu sau khi Harlan rời đi, một tiếng gõ cửa lớn khiến bạn giật mình, và bạn bật dậy. Bây giờ là gần 2 giờ 30 phút sáng. Ai có thể có mặt trước cửa nhà bạn vào giờ này? Bạn mở cửa chính một cách thận trọng. Phía bên kia là một người phụ nữ với làn da nâu, mái tóc nâu dài và đôi mắt vàng xuyên thấu trong cái nhìn khó chịu. Cô ấy mặc một chiếc áo khoác dài và đội một chiếc mũ Bollman, cùng đôi giày rõ ràng không thoải mái. Miệng cô ấy thể hiện sự tức giận. Một tia sáng lóe lên trong tâm trí, và bạn ngay lập tức nhận ra cô ấy là ai. Sau cùng, bạn đã đọc đi đọc lại phần mô tả trong nhật ký về Ichtaca, chiến binh Eztli. Cô ấy thở dài và chậm rãi bước qua ngưỡng cửa nhà bạn, đóng cánh cửa sau lưng cô ấy. Cô ấy nói một cách mờ mịt, “Bất cứ điều gì họ đã làm, cậu phải đảo ngược nó. Hoặc tất cả chúng ta sẽ không còn tồn tại.\"</p><p class='basic right'>The story continues in _Scenario III: Threads of Fate_.</p>"
+  },
+  "interlude3": {
+    "title": "Chuyển tiếp III: Khu Rừng Vẫy Gọi",
+    "body": "<p>Một lần nữa, bạn phiêu lưu về phía nam, bỏ lại sự an toàn của nền văn minh phía sau. Không có thời gian để lãng phí. Con đường đến Nexus nằm trên vùng đất quen thuộc, không xa đường mòn của chuyến thám hiểm trước. Sử dụng cuốn nhật ký bìa da làm chỉ dẫn cho mình, bạn hồi tưởng lại hành trình của cuộc thám hiểm. Chẳng mấy chốc, bạn đã ở sâu trong rừng rậm, bị bao vây tứ phía bởi những mối nguy hiểm—một số là của thiên nhiên, số khác khá kỳ lạ...</p>",
+    "gas": "<p>Kiểm tra vật tư của bạn. Một điều tra viên bất kỳ phải gạch bỏ 1 bình xăng từ vật tư của họ. Nếu không có bình xăng nào bị gạch bỏ, đọc phần _Hết Xăng_.</p>",
+    "outOfGas": "<p>_Out of Gas_: Thật không may, cách bìa rừng nhiệt đới khoảng hơn chục dặm về phía bắc, xe của bạn hết xăng. Vì thời gian gấp gáp nên bạn quyết định đi bộ hết quãng đường còn lại thay vì quay lại đổ xăng. Đi bộ khiến bạn phải lùi lại vài giờ, nhưng chẳng mấy chốc bạn đã đến khu rừng một lần nữa.</p><p class='basic right'>Khi rút bài trên tay cho màn chơi này, các điều tra viên không thể mulligan.</p>",
+    "map": "Check your supplies. If any investigator has a map, they read _A Path Discovered_.",
+    "aPathDiscovered": "<p>_A Path Discovered_: Nhờ tấm bản đồ của bạn, đã được đánh dấu từ chuyến thám hiểm trước, bạn có thể đi qua khu rừng nhiệt đới mà không bị lạc và bạn đến đích theo cách của riêng mình.</p><p class='basic right'>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng <i>các điều tra viên vạch ra con đường tiến về phía trước.</i></p>",
+    "provisions": "Kiểm tra vật tư của bạn. Với tư cách một nhóm, mỗi điều tra viên phải gạch bỏ 1 khẩu phần ăn cho mỗi điều tra viên từ kho vật tư của mình. Với mỗi vật tự không thể gạch bỏ, chọn một điều tra viên đọc phần Thiếu Khẩu Phần Ăn.",
+    "lowOnRations": "<p>_Low on Rations_: Băng qua khu rừng để tìm đường đến Nexus mất nhiều thời gian hơn bạn dự đoán và trong lúc vội vã, bạn đã không thể săn bắt hoặc kiếm thêm thức ăn. Cơn đói làm lu mờ tâm trí bạn và khoét một lỗ đau đớn trong dạ dày của bạn.</p><p class='basic right'>Bạn bắt đầu màn chơi với ít hơn 3 tài nguyên.</p>",
+    "medicine": "Kiểm tra vật tư của bạn. Mỗi điều tra viên có thuốc phải gạch bỏ nó khỏi kho vật tư của họ để chọn và loại bỏ 1 điểm yếu Poisoned từ chồng bài của bất kỳ điều tra viên nào. Mỗi điều tra viên vẫn còn điểm yếu Poisoned đọc phần _Chất Độc Lan Rộng_.",
+    "thePoisonSpreads": "<p>_The Poison Spreads_: Chất độc tiếp tục lan rộng trong cơ thể bạn, tàn phá các cơ quan nội tạng của bạn. Một cơn sốt khủng khiếp đốt cháy bạn, ngày càng mạnh hơn mỗi ngày. Bạn khó có thể không nôn thức ăn của mình ra. Cơ thể bạn cảm thấy như thể nó đã bị rút cạn tất cả sức lực.</p><p class='basic right'>You suffer 1 physical trauma.</p>",
+    "canteen": "<p>Khi bạn lê bước qua khu rừng sum sê và đi qua một loạt tàn tích đền thờ mọc um tùm quen thuộc, đôi mắt tinh tường của bạn phát hiện ra một hoa văn dọc theo bức tường đá của kiến trúc. Khi kiểm tra kỹ hơn, bạn sẽ thấy rằng dây leo và đất đóng thành cục đã che giấu một chữ tượng hình được chạm khắc tinh xảo.</p><p class='basic right'>Kiểm tra vật tư của bạn. Nếu bất kỳ điều tra viên có bi đông, người đó đọc phần <b>Hoa Văn trên Đá</b>. Còn không thì, đọc phần <b>Bí Mật trên Đá</b>.</p>",
+    "patternsInTheStone": "<p>_Patterns in the Stone_: Bạn lấy bi đông của mình ra và vẩy nước lên những bức tường đá, rửa sạch bụi bẩn và làm cho những dây leo xơ cứng dễ gỡ ra hơn. Hoa văn của các nét chạm đã được nhìn thấy rõ ràng và mặc dù ý nghĩa của nó vẫn còn là một bí ẩn, nhưng sự lặp lại của sáu ký tự đặc biệt gợi ý về một chỉ dẫn cụ thể…</p><p class='basic right'>Mỗi điều tra viên có bi đông bắt đầu màn chơi với 1 manh mối <i>(từ kho manh mối)</i>.</p>",
+    "secretsInTheStone": "<p>_Secrets in the Stone_: Cố gắng hết sức có thể, bạn không thể dọn sạch bụi bẩn và dây leo chỉ bằng tay không. Bạn không có lựa chọn nào khác ngoài việc để lại bí ẩn này phía sau.</p><p class='basic right'>Bạn không bị ảnh hưởng xấu nào cả.</p>",
+    "ichtaca": "Kiểm tra túi hỗn mang và Nhật ký Chiến dịch. Nếu tất cả điều sau là đúng, trưởng nhóm đọc phần Niềm Tin Khôi Phục.",
+    "cultistCount": "Có 2 hoặc nhiều hơn số token {'{'}cultist{'}'} trong túi hỗn mang.",
+    "forgedBond": "các điều tra viên đã tạo được mối quan hệ với Ichtaca.",
+    "hasConfidence": "Ichtaca có niềm tin vào bạn.",
+    "faithRestored": "<p>_Faith Restored_: Vào đêm trước của đêm thứ hai trong rừng, bạn và những người bạn đồng hành của mình ngồi trước đống lửa trại mờ ảo, sưởi ấm và cố gắng giữ tinh thần thoải mái bất chấp nhiệm vụ phía trước. Ichtaca đến gần đống lửa trại và ngồi đối diện với bạn. Đôi mắt của cô ấy nhìn xuống đất, và đôi vai của cô ấy trĩu xuống với một trọng lượng nặng nề. “Tôi cảm thấy mình phải xin lỗi anh,” cô thừa nhận, nhìn vào ngọn lửa bập bùng. “Các anh đã chứng tỏ mình vừa khôn ngoan vừa dữ dội, và tôi chẳng làm được gì ngoài việc ra lệnh cho các anh và luôn gây nguy hiểm cho mọi người.” Có một khoảng dừng dài, yên bình giữa bạn. “Có lẽ cuối cùng vẫn có hy vọng cho nhân loại,” cô ấy nói khẽ khi bắt gặp ánh mắt của bạn. Cô ấy có nói vì bạn không? Hay cho chính cô ấy nữa?</p><p>Ichtaca đứng dậy sau một thời gian. “Tôi tin tưởng anh canh gác đêm nay. Hãy cảnh giác với những con rắn. Họ chắc chắn đang theo dõi chúng ta.” Trại của bạn yên tĩnh trong phần còn lại của đêm, nhưng màn đêm tràn đầy tiếng lách cách của lửa trại và dàn hợp xướng của những con côn trùng kêu ríu rít.</p><p class='basic right'>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng <i>niềm tin của Ichtaca được khôi phục</i>. Thêm 1 token [cultist] vào trong túi hỗn mang cho phần còn lại của chiến dịch.</p>",
+    "label": {
+      "doNotUseMedicine": "Do not use medicine"
+    }
+  },
+  "interlude4": {
+    "title": "Chuyển tiếp IV: Those Held Captive",
+    "checkProcess": {
+      "body": "Mỗi điều tra viên để lộ 1 token hỗn mang ngẫu nhiên từ túi hỗn mang. Tham khảo danh sách dưới đây để xem những tác dụng phụ từ xui xẻo của bạn.",
+      "noIllEffects": "Each investigator who reveals a {'{'}elderSign{'}'} or +1 token suffers no ill effects.",
+      "outOfBodyExperience": "Each investigator who reveals a {'{'}skull{'}'} token or any number other than +1 gains the Out of Body Experience weakness, and must add it to their deck.",
+      "bodyOfAYithian": "Nhận điểm yếu Out of Body Experience, và phải thêm nó vào chồng bài của bạn."
+    },
+    "checkAMindRecovered": {
+      "body": "Kiểm tra túi hỗn mang và Nhật ký Chiến dịch. Nếu tất cả điều dưới đây là đúng, trưởng nhóm đọc phần _Khôi Phục Tâm Trí_. Nếu có bất kỳ điều nào là không đúng, trưởng nhóm đọc phần _Mất Mãi Mãi_.",
+      "tabletCount": "Có từ 2 trở lên token {'{'}tablet{'}'} trong túi hỗn mang.",
+      "rescuedAlejandro": "các điều tra viên đã cứu được Alejandro.",
+      "theCustodianWasUnderControl": "The Custodian was under an investigator’s control when the previous scenario ended."
+    },
+    "aMindRecovered": "<p>_A Mind Recovered_: Bạn chuyển sự chú ý của mình sang môi trường xung quanh. Mặc dù không nhìn thấy những sinh vật đã phục kích bạn nhưng Alejandro nằm trên mặt đất gần đó, tỉnh lại. Trước sự ngạc nhiên của bạn, ông ấy cũng có vẻ bối rối như bạn. Lúc đầu, có vẻ như ông ta không nhớ gì về chuyến thám hiểm trước đó hoặc cổ vật của người Eztli, nhưng sau đó đôi mắt ông ấy đột nhiên sáng lên như nhớ ra điều gì. Ông ấy nắm chặt vai bạn và nhìn bạn như thể lần đầu tiên sau nhiều năm. Ông ta ngã người ra sau dựa vào bức tường đá, hồi phục sau dòng ký ức đột ngột ùa về, \"Tôi nhớ rồi! Sinh vật đó và tôi dùng chung một tâm trí trong khoảng thời gian qua. Nó mong muốn tìm thấy cổ vật của người Eztli, mặc dù với mục đích gì thì tôi không biết. Lúc nào cậu cũng tin tưởng tôi, ngay cả khi sinh vật đó nắm quyền kiểm soát. Cậu đã cứu tôi khỏi vực sâu đó và đưa tôi trở về làm người. Tôi không biết lấy gì để có thể trả ơn cậu.\" Ông ấy bắt tay bạn thật mạnh, đầy quyết tâm đột ngột và mãnh liệt. “Cậu và tôi sẽ sửa chữa tất cả những điều này. Sau đó, chúng ta sẽ cho thế giới biết những gì chúng ta đã thấy.”</p><p class='basic right'>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng <i>Alejandro ghi nhớ mọi thứ</i>. Thêm 1 token [tablet] vào trong túi hỗn mang cho phần còn lại của chiến dịch.</p>",
+    "foreverLost": "<p>_Forever Lost_: Bạn chuyển sự chú ý của mình sang môi trường xung quanh. Cả Alejandro và những sinh vật đã phục kích bạn đều không thấy ở đâu cả. Bạn tự hỏi Alejandro đã hợp tác với chúng trong bao lâu và tại sao. Có lẽ bạn sẽ không bao giờ biết. Tuy nhiên, bạn nghi ngờ đây không phải là lần cuối cùng bạn nhìn thấy ông ấy.</p><p class='basic right'>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng <i>Alejandro chống lại bạn</i>. Nếu Alejandro Vela nằm trong chồng bài của điều tra viên nào, loại bỏ ông ấy khỏi chồng bài của điều tra viên đó cho phần còn lại của chiến dịch.</p>",
+    "chalk": "<p>Những bậc thang hẹp ở phía bên kia của ô cửa đá dường như dài vô tận. Mặc dù một ánh sáng đỏ mờ phát ra từ sâu hơn trong hang động, cho dù bạn có đi qua bao nhiêu bước, ánh sáng cũng không sáng hơn. Nó dường như trở nên xa hơn với mỗi bước đi, chế giễu sự kiên trì của bạn. Sau một lúc, bạn đến một mỏm đá nhỏ, nơi có một cánh cổng bằng đá chắn lối đi của bạn vào sâu hơn trong hang. Cánh cổng có hoa văn chạm khắc quen thuộc, đã bạc màu do lâu năm và hư hỏng, rỉ ra một chất mủ bạc màu kỳ lạ.</p><p class='basic right'>Check your supplies. If any investigator has chalk, they read _The Way Is Open_. Otherwise, the lead investigator reads _The Way Is Shut_.</p>",
+    "theWayIsOpen": "<p>_The Way Is Open_: Tình huống khơi dậy trí nhớ của bạn, và bạn tham khảo cuốn nhật ký thám hiểm. Mô hình này tương tự như mô hình được tìm thấy trong khu di tích Eztli. Sử dụng phấn và các hình vẽ trong nhật ký của bạn làm tài liệu tham khảo, bạn khôi phục toàn bộ biểu tượng và các đường rãnh lại phát sáng rực rỡ một lần nữa. Cổng đá tự nâng lên và bạn có thể tiếp tục đi tới.</p><p class='basic right'>Bạn không bị ảnh hưởng xấu nào cả.</p>",
+    "theWayIsShut": "<p>_The Way Is Shut_: Bạn không chắc đi tiếp như thế nào. Sau khi tranh luận về ưu điểm của từng lựa chọn, bạn quyết định rằng bạo lực có thể là giải pháp duy nhất. Bạn phải dùng hết sức lực của mình để nhấc tảng đá lên, và bạn mở ra con đường phía trước cho từng người trong số các bạn. Đó không phải là nhiệm vụ đơn giản, và cơ thể bạn đau nhức khủng khiếp vì nỗ lực này.</p><p class='basic right'>Khi rút bài trên tay cho màn chơi này, các điều tra viên không thể mulligan.</p>",
+    "provisions": "Kiểm tra vật tư của bạn. Với tư cách một nhóm, mỗi điều tra viên phải gạch bỏ 1 khẩu phần ăn cho mỗi điều tra viên từ kho vật tư của mình. Với mỗi vật tự không thể gạch bỏ, chọn một điều tra viên đọc phần Thiếu Khẩu Phần Ăn.",
+    "lowOnRations": "<p>_Low on Rations_: Vài giờ sau, bạn gần như quá mệt mỏi để đi tiếp. Mỗi phần trên cơ thể bạn đau nhức dữ dội. Không có gì trong hang động hoang vắng này để ăn ngoài nấm dại thỉnh thoảng xuất hiện, và mặc dù sự cám dỗ gặm nhấm bên trong bạn, bạn không thể phân biệt được loại nào có độc, còn loại nào thì có lợi cho sức khỏe…</p><p class='basic right'>Bạn bắt đầu màn chơi với ít hơn 3 tài nguyên.</p>",
+    "medicine": "Kiểm tra vật tư của bạn. Mỗi điều tra viên có thuốc phải gạch bỏ nó khỏi kho vật tư của họ để chọn và loại bỏ 1 điểm yếu Poisoned từ chồng bài của bất kỳ điều tra viên nào. Mỗi điều tra viên vẫn còn điểm yếu Poisoned đọc phần _Chất Độc Lan Rộng_.",
+    "doNotUseMedicine": "Do not use medicine",
+    "thePoisonSpreads": "<p>_The Poison Spreads_: Chất độc đã lan đến gần như mọi bộ phận trên cơ thể bạn. Làn da của bạn nhợt nhạt, và bạn đổ mồ hôi lạnh vì sốt. Chỉ cần đứng dậy thôi cũng đòi hỏi một nỗ lực to lớn và bạn không được nghỉ ngơi vào ban đêm mặc dù đã kiệt sức. Sẽ không lâu nữa trước khi chất độc cướp đi mạng sống của bạn.</p><p class='basic right'>You suffer 1 physical trauma.</p>",
+    "blanket": "<p>Sau khi đi xuống hàng trăm bậc thang, bạn quyết định dừng lại và nghỉ ngơi. Mặc dù đồng hồ của bạn cho bạn biết rằng màn đêm đã buông xuống, nhưng việc thiếu bầu trời tự nhiên đang bắt đầu ảnh hưởng đến đồng hồ sinh học của bạn. Không có gờ bằng phẳng trong tầm nhìn, mỗi thành viên trong nhóm của bạn dùng một trong các bậc thang hẹp để ngủ.</p><p class='basic right'>Check your supplies. Each investigator with a blanket reads _Restful Sleep_. The rest read _Tossing and Turning_.</p>",
+    "restfulSleep": "<p>_Restful Sleep_: Mặc dù bạn khao khát một chiếc giường ngủ, nhưng ít nhất chiếc chăn của bạn sẽ bảo vệ bạn khỏi cái lạnh buốt giá tràn ngập trong hang động. Khi “bình minh” đến, cơ thể bạn khao khát được ngủ nhiều hơn, nhưng bạn biết rằng mình phải tiến về phía trước và đến Nexus nhanh nhất có thể…</p><p class='basic right'>Bạn không bị ảnh hưởng xấu nào cả.</p>",
+    "tossingAndTurning": "<p>_Tossing and Turning_: Giấc ngủ không dễ dàng đến với bạn. Hầu như không có gì bảo vệ bạn khỏi cái lạnh thấu xương của hang động dưới lòng đất, và bạn nằm run rẩy hàng giờ trước khi kiệt sức cuối cùng cũng chiếm lấy bạn. Bạn thức dậy sau mỗi giờ vì cựa quậy của cơ thể gần như khiến bạn ngã khỏi bậc đá của mình. Khi “bình minh” đến, bạn thậm chí còn mệt mỏi hơn cả đêm hôm trước.</p><p class='basic right'>You suffer 1 physical or mental trauma (*your choice*).</p>"
+  },
+  "interlude5": {
+    "xp": {
+      "bonus": "Gained insight into the caverns that dwell beneath the surface of the Earth."
+    },
+    "title": "Chuyển tiếp V: The Darkness",
+    "fellIntoTheDepths": "Check Campaign Log. *If the investigators fell into the depths*, proceed to _The Darkness 1_.",
+    "theNexusIsNear": "*If the Nexus is near*, skip to _The Darkness 2_.",
+    "theDarkness1": "<p>_The Darkness 1_: Bạn tỉnh giấc, nằm úp mặt trên nền đá lạnh và cứng của hang động. Bạn bị bầm dập mọi chỗ nhưng bằng cách nào đó vẫn còn sống. Phải mất vài phút trước khi bạn lấy lại đủ sức để đứng vững. Bạn bị lạc hoàn toàn và vô vọng trong những hang động rộng lớn không thể tưởng tượng được, bao trùm bởi bóng tối đen như mực. Bạn đã sống sót suốt chặng đường này chỉ để chết ở đây, mất tích trước toàn thể nhân loại?</p><p class='basic right'>Proceed to _The Darkness 2_.</p>",
+    "theDarkness2": "<p>_The Darkness 2_: Những hang động ghê gớm, đỏ như máu và những thành phố đầy oán hận của Yoth không thể sáng bằng những vực sâu đáng sợ nằm bên dưới chúng. Bây giờ bạn đang ở tầng sâu nhất của thế giới ngầm này: hang động Ichtaca được gọi là “N'kai”. Không có gì có thể giúp bạn chuẩn bị cho bóng tối không ánh sáng bao quanh bạn từ mọi phía, một bóng tối đen như mực mà không nguồn sáng nào của bạn có thể xuyên qua. Bạn dò dẫm trong bóng tối cho đến khi cảm nhận được bức tường lởm chởm của hang động và bắt đầu đi theo nó một cách vô định, hy vọng tìm được đường về phía trước một cách tuyệt vọng. Bạn nhận ra một điều nghiệt ngã: ngay cả khi bạn hoàn thành nhiệm vụ của mình, bạn chắc chắn sẽ không bao giờ tìm được cách quay trở lại bề mặt. Bóng tối bao trùm của hang động lấp đầy bạn với nỗi sợ hãi mà bạn chưa từng trải qua. Bạn không thể nhìn thấy bàn tay của mình khi mò mẫm trong bóng tối, bạn cũng không thể biết mình đang ở trong một đường hầm hẹp hay một không gian rộng lớn. Mặt đất bên cạnh bạn có thể kéo dài hàng dặm hoặc đột ngột trở thành một hang động không đáy, và bạn sẽ không thể nhận ra sự khác biệt trừ khi bạn bước vào đó. Hàng giờ trôi qua khi bạn mò mẫm trong bóng tối một cách chậm rãi, cẩn thận và đầy lo lắng. Mỗi bước có thể là bước cuối cùng của bạn.</p><p class='basic right'>Theo thứ tự, đọc mỗi phần sau:</p>",
+    "theMissingRelic": "Kiểm tra Nhật ký Chiến dịch. <i>Nếu các điều tra viên đã tìm thấy cổ vật bị mất tích</i>, trưởng nhóm đọc <b>Arcane Thrumming</b>.",
+    "arcaneThrumming": "<p>_Arcane Thrumming_: Lo lắng rằng cú ngã của bạn có thể làm hỏng cổ vật Eztli, bạn lấy nó ra khỏi ba lô và kiểm tra. Điều kỳ lạ là thiết bị dường như hoàn toàn không bị hư hại. Nó rung với cường độ ngày càng tăng, giờ đây tiếng vo ve to hơn bao giờ hết.</p><p class='basic right'>Check Campaign Log. *If the investigators recovered the Relic of Ages*, and *if you are forging your own path*, read _Final Dawning_, below. Otherwise, you suffer no ill effects.</p>",
+    "growingConcern": "<p>_Growing Concern_: Khi bạn đứng dậy, mặt đất rung động và gầm gừ. Một cái gì đó sâu bên dưới bạn đang di chuyển. Chuyển động. Biến đổi.</p><p class='basic right'>Depending on your difficulty mode, add the following chaos token to the chaos bag for the remainder of the campaign:</p><div class='columns'><div>Easy: –3</div><div>Standard: –4</div><div>Hard: –5</div><div>Expert: –6</div></div>",
+    "finalDawning": "<p>_Final Dawning_: Không có Alejandro hay Ichtaca làm bạn phân tâm, bạn thấy mình đang chăm chú nghiên cứu cổ vật. Cả hai “người hướng dẫn” của bạn đều chỉ cho bạn những lời nói dối. Họ che giấu bản chất thực sự của cổ vật với bạn, thao túng bạn nhằm đưa cổ vật đến chính nơi này. Sau trải nghiệm của bạn với Đại chủng tộc của Yith, bạn nghĩ rằng bạn đã hiểu tại sao. Công nghệ đằng sau thiết kế của thiết bị vượt xa những gì con người có thể đạt được, nhưng hoàn toàn khả thi đối với người Yithian. Bạn thậm chí còn nhận ra một số yếu tố xây dựng cổ vật từ công nghệ trong Pnakotus. Bằng cách nào đó, nó đã rơi vào tay của người Eztli, người đã bảo vệ nó cẩn thận khỏi mọi loại sinh vật. Sinh vật tồn tại trước cả loài người. Những sinh vật muốn sử dụng nó để quay ngược thời gian. Và bây giờ cổ vật thuộc quyền sở hữu của bạn, chỉ bạn mới có thể ngăn chặn điều này xảy ra.</p><p class='basic right'>Điều tra viên có cổ vật Relic of Ages trong chồng bài của mình đổi nó với phiên bản mới của Relic of Ages: Relic of Ages (<i>Repossess the Past</i>).</p>",
+    "torches": "<P>After hours of slow progress, you eventually stumble into a brazier, filled with marble cubes.</p><p class='basic right'>Kiểm tra vật tư dự trữ của bạn. Nếu có bất kỳ điều tra viên nào có ngọn đuốc, người đó đọc phần <b>Ngọn đuốc</b>. Còn không thì đọc phần <b>Vực thẳm</b>.</p>",
+    "torchlight": "<p>_Torchlight_: Mặc dù ánh sáng từ những ngọn đuốc của bạn bị nuối chửng bởi bóng tối áp đảo của khu vực này, bạn quyết định thử thắp sáng lò than bằng ngọn lửa. Trước sự ngạc nhiên của bạn, sau khi bạn cầm ngọn đuốc chạm vào những khối lập phương kỳ lạ trong giây lát, lò than phun ra ngọn lửa xanh và bạc dữ dội, thiêu rụi ngọn đuốc của bạn và gần như làm tan chảy bàn tay của bạn đến tận xương. Mặc dù ánh sáng từ ngọn lửa rực rỡ chỉ chiếu tới vài mét xung quanh bạn, nhưng nhiều lò than hơn sẽ sáng lên từ xa, ngọn lửa của chúng dẫn đường cho bạn về phía trước. Ít nhất thì bạn hy vọng là thế…</p><p class='basic right'>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng <i>các lò than được thắp sáng</i>.</p>",
+    "theAbyss": "<p>_The Abyss_: Vật liệu kỳ lạ bên trong dường như không chấp nhận bất kỳ nguồn lửa nào bạn sử dụng để cố thắp sáng nó. Hy vọng của bạn bị dập tắt cùng với ánh sáng xung quanh bạn. Một cách khốn khổ, bạn chuẩn bị chịu đựng bóng tối phía trước.</p><p class='basic right'>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng <i>các lò than vẫn không được thắp sáng</i>.</p>",
+    "map": "Kiểm tra nhật ký chiến dịch. *Nếu các lò than được thắp sáng*, hãy kiểm tra vật tư dự trữ của bạn. Nếu bất kỳ điều tra viên nào có bản đồ, họ sẽ đọc phần_Đọc các dấu hiệu_.",
+    "readingSigns": "<p>_Reading Signs_: Khi bạn đi qua các hang động, có một thứ thu hút sự chú ý của bạn: những dòng nước lạnh, nhẹ nhàng chảy xuống các bức tường của hang động. Tò mò, bạn mở bản đồ của chuyến thám hiểm trước và ngồi bên một trong những lò than được thắp sáng, nhẩm tính các bước đã đi của mình. Nếu tính toán của bạn là chính xác, bạn đã đi xa hơn nhiều về phía nam so với những gì bạn có thể đoán. Có thể nào những hang động này kéo dài đến tận bờ biển? Liệu các hang động này có bao giờ kết thúc?</p><p class='basic right'>Mỗi điều tra viên có bản đồ nhận thêm 2 kinh nghiệm khi họ hiểu rõ hơn về các hang động nằm bên dưới bề mặt Trái đất.</p>",
+    "senseOfTime": "<p>Bạn không biết bao nhiêu thời gian đã trôi qua trong vực thẳm lạnh lẽo, khủng khiếp của N'kai.</p><p class='basic right'>Gạch bỏ tất cả các khẩu phần ăn và thuốc mà các điều tra viên còn lại trong vật tư dự trữ của họ.</p>"
+  },
+  "epilogue": {
+    "title": "Phần kết",
+    "body": "<p>Kiểm tra Nhật ký Chiến dịch.</p><p>Kiểm tra Nhật ký Chiến dịch. Chỉ đọc phần sau <i>nếu các điều tra viên đã quay ngược thời gian</i>.</p><p>Chỉ có một cách để ngăn chặn tất cả những điều này không bao giờ xảy ra. Trước khi bạn đến và bắt đầu tất cả những sự kiện này, tàn tích Eztli đã ngủ yên, và cổ vật tương đối an toàn trong nhà tù tối tăm của nó. Nếu không phải vì mong muốn tìm thấy nó của Alejandro, nó có thể vẫn chưa được khám phá trong nhiều thế kỷ. Với sự hiểu biết mới của bạn về khả năng của cổ vật, bạn có thể quay lại quá khứ và đưa mọi thứ về lại đúng chỗ. Bạn có thể phong ấn nó mãi mãi và ngăn không cho quá khứ của bạn tìm thấy nó… ngay cả khi bạn phải trả giá bằng chính mạng sống của mình.</p><ul><li>Proceed to _Scenario IX: Turn Back Time_.</li></ul>"
+  },
+  "resupplyPoint": {
+    "extraXp": "<div class='unspendable'>Extra Xp to spend: {count}</div>",
+    "label": {
+      "visitStMarys": "Visit St. Mary’s?",
+      "doNotRemovePoisoned": "Do not remove Poisoned weaknes",
+      "doNotRemoveTrauma": "Do not remove trauma",
+      "removePhysicalTrauma": "Spend 5 xp to visit St. Mary's Hospital and remove a physical trauma",
+      "removeMentalTrauma": "Spend 5 xp to visit St. Mary's Hospital and remove a mental trauma",
+      "removePoisoned": "Spend 3 xp to visit St. Mary's Hospital and remove a Poisoned weakness"
+    },
+    "pickSupplies": "<p class='basic'>Rõ ràng là bây giờ bạn sẽ phải mạo hiểm một lần nữa vào vùng hoang dã trước khi bí ẩn đằng sau Relic of Ages được giải quyết. Mỗi điều tra viên có quyền lựa chọn vật tư dự trữ để thêm vào danh sách vật tư hiện tại của họ. Trong Nhật ký Chiến dịch, dưới phần “Vật Tư Dự Trữ” của mỗi điều tra viên, hãy ghi lại các vật tư mà điều tra viên chọn mang theo.</p><ul><li><p class='basic'>Trước khi khởi hành từ Arkham, bạn nên đến Bệnh viện St. Mary một lần.</p><ul><li><p class='basic'>Mỗi điều tra viên có điểm yếu Poisoned trong bộ bài của họ có thể dành 3 điểm kinh nghiệm để loại bỏ điểm yếu đó khỏi bộ bài của họ.</p></li><li><p class='basic'>Mỗi điều tra viên có thể dành 5 điểm kinh nghiệm để loại bỏ một điểm sang chấn thể chất hoặc tinh thần đối với điều tra viên của họ.</p></li></ul></li><li><p class='basic'>Mỗi điều tra viên có thể dùng điểm vật tư dự trữ để mua các vật tư dự trữ bên dưới. Điểm vật tư dự trữ của mỗi điều tra viên dựa trên số lượng điều tra viên có trong chiến dịch. <i>(Chú ý: Provisions, Medicine và Gasoline có thể được lấy nhiều hơn một lần bằng cách ghi chép lại tên của nó nhiều lần và sử dụng điểm vật tư dự trữ tương ứng.)</i></p><p class='basic'><strong>1 investigator</strong>: 8 supply points</p><p class='basic'><strong>2 investigators</strong>: 5 supply points each</p><p class='basic'><strong>3 investigators</strong>: 4 supply points each</p><p class='basic'><strong>4 investigators</strong>: 3 supply points each</p></li></ul>"
+  },
+  "supplies": {
+    "title": "Vật Tư Dự Trữ",
+    "choose": "Pick Supplies ({pointsRemaining} points remaining)",
+    "chosen": "Chosen Supplies",
+    "provisions": {
+      "name": "Khẩu phần ăn",
+      "cost": "1 supply point each",
+      "description": "Phần thức ăn và nước uống cho một người. Đồ phải có cho bất kỳ cuộc hành trình nào.",
+      "tooltip": "(@:theForgottenAge.supplies.provisions.cost) @:theForgottenAge.supplies.provisions.description",
+      "count": "@:theForgottenAge.supplies.provisions.name | @:theForgottenAge.supplies.provisions.name ({count})"
+    },
+    "medicine": {
+      "name": "Thuốc",
+      "cost": "2 supply points each",
+      "description": "Để ngăn ngừa bệnh tật, nhiễm trùng hoặc nọc độc.",
+      "tooltip": "(@:theForgottenAge.supplies.medicine.cost) @:theForgottenAge.supplies.medicine.description",
+      "count": "@:theForgottenAge.supplies.medicine.name | @:theForgottenAge.supplies.medicine.name ({count})"
+    },
+    "rope": {
+      "name": "Dây thừng",
+      "cost": "3 supply points",
+      "description": "Vài cuộn dây dài chắc chắn. Rất quan trọng cho việc leo núi và khảo sát hang động.",
+      "tooltip": "(@:theForgottenAge.supplies.rope.cost) @:theForgottenAge.supplies.rope.description",
+      "count": "@:theForgottenAge.supplies.rope.name | @:theForgottenAge.supplies.rope.name ({count})"
+    },
+    "blanket": {
+      "name": "Chăn",
+      "cost": "2 supply points",
+      "description": "Giữ ấm vào ban đêm.",
+      "tooltip": "(@:theForgottenAge.supplies.blanket.cost) @:theForgottenAge.supplies.blanket.description",
+      "count": "@:theForgottenAge.supplies.blanket.name | @:theForgottenAge.supplies.blanket.name ({count})"
+    },
+    "canteen": {
+      "name": "Bi đông",
+      "cost": "2 supply points",
+      "description": "Có thể làm đầy lại tại các con sông suối.",
+      "tooltip": "(@:theForgottenAge.supplies.canteen.cost) @:theForgottenAge.supplies.canteen.description",
+      "count": "@:theForgottenAge.supplies.canteen.name | @:theForgottenAge.supplies.canteen.name ({count})"
+    },
+    "torches": {
+      "name": "Đuốc",
+      "cost": "3 supply points",
+      "description": "Có thể thắp sáng các khu vực tối, hoặc làm bánh.",
+      "tooltip": "(@:theForgottenAge.supplies.torches.cost) @:theForgottenAge.supplies.torches.description",
+      "count": "@:theForgottenAge.supplies.torches.name | @:theForgottenAge.supplies.torches.name ({count})"
+    },
+    "compass": {
+      "name": "La bàn",
+      "cost": "2 supply points",
+      "description": "Có thể dẫn đường cho bạn khi bạn lạc đường trong vô vọng.",
+      "tooltip": "(@:theForgottenAge.supplies.compass.cost) @:theForgottenAge.supplies.compass.description",
+      "count": "@:theForgottenAge.supplies.compass.name | @:theForgottenAge.supplies.compass.name ({count})"
+    },
+    "map": {
+      "name": "Bản đồ",
+      "cost": "3 supply points",
+      "description": "Hiện chưa được đánh dấu, nhưng theo thời gian, bạn có thể vạch ra khu vực xung quanh mình.",
+      "tooltip": "(@:theForgottenAge.supplies.map.cost) @:theForgottenAge.supplies.map.description",
+      "count": "@:theForgottenAge.supplies.map.name | @:theForgottenAge.supplies.map.name ({count})"
+    },
+    "binoculars": {
+      "name": "Ống nhòm",
+      "cost": "2 supply points",
+      "description": "Để giúp bạn nhìn thấy những nơi ở xa.",
+      "tooltip": "(@:theForgottenAge.supplies.binoculars.cost) @:theForgottenAge.supplies.binoculars.description",
+      "count": "@:theForgottenAge.supplies.binoculars.name | @:theForgottenAge.supplies.binoculars.name ({count})"
+    },
+    "chalk": {
+      "name": "Phấn",
+      "cost": "2 supply point",
+      "description": "Dùng để viết lên bề mặt đá gồ ghề.",
+      "tooltip": "(@:theForgottenAge.supplies.chalk.cost) @:theForgottenAge.supplies.chalk.description",
+      "count": "@:theForgottenAge.supplies.chalk.name | @:theForgottenAge.supplies.chalk.name ({count})"
+    },
+    "pendant": {
+      "name": "Mặt dây chuyền",
+      "cost": "1 supply point",
+      "description": "Vô dụng, nhưng đem lại những kỷ niệm giúp cảm thấy thoải mái hơn khi đi xa nhà.",
+      "tooltip": "(@:theForgottenAge.supplies.pendant.cost) @:theForgottenAge.supplies.pendant.description",
+      "count": "@:theForgottenAge.supplies.pendant.name | @:theForgottenAge.supplies.pendant.name ({count})"
+    },
+    "gasoline": {
+      "name": "Bình xăng",
+      "cost": "1 supply point each",
+      "description": "Đủ cho một hành trình dài bằng ô tô.",
+      "tooltip": "(@:theForgottenAge.supplies.gasoline.cost) @:theForgottenAge.supplies.gasoline.description",
+      "count": "@:theForgottenAge.supplies.gasoline.name | @:theForgottenAge.supplies.gasoline.name ({count})"
+    },
+    "pocketknife": {
+      "name": "Dao bỏ túi",
+      "cost": "2 supply points",
+      "description": "Quá nhỏ để được sử dụng như một vũ khí đáng tin cậy, nhưng dễ che giấu.",
+      "tooltip": "(@:theForgottenAge.supplies.pocketknife.cost) @:theForgottenAge.supplies.pocketknife.description",
+      "count": "@:theForgottenAge.supplies.pocketknife.name | @:theForgottenAge.supplies.pocketknife.name ({count})"
+    },
+    "pickaxe": {
+      "name": "Cuốc chim",
+      "cost": "2 supply points",
+      "description": "Để phá vỡ các bề mặt đá.",
+      "tooltip": "(@:theForgottenAge.supplies.pickaxe.cost) @:theForgottenAge.supplies.pickaxe.description",
+      "count": "@:theForgottenAge.supplies.pickaxe.name | @:theForgottenAge.supplies.pickaxe.name ({count})"
+    },
+    "keyOfEztli": {
+      "name": "Key of Eztli",
+      "count": "@:theForgottenAge.supplies.keyOfEztli.name | @:theForgottenAge.supplies.keyOfEztli.name ({count})"
+    },
+    "mysteriousScepter": {
+      "name": "Mysterious Scepter",
+      "count": "@:theForgottenAge.supplies.mysteriousScepter.name | @:theForgottenAge.supplies.mysteriousScepter.name ({count})"
+    },
+    "stickyGoop": {
+      "name": "Sticky Goop",
+      "count": "@:theForgottenAge.supplies.stickyGoop.name | @:theForgottenAge.supplies.stickyGoop.name ({count})"
+    },
+    "journal": {
+      "name": "Journal",
+      "description": "To keep a record of the events of the expedition.",
+      "tooltip": "@:theForgottenAge.supplies.journal.description",
+      "count": "@:theForgottenAge.supplies.journal.name | @:theForgottenAge.supplies.journal.name ({count})"
+    },
+    "satchel": {
+      "name": "Satchel",
+      "description": "<b>Satchel:</b> <i>Một nơi an toàn để cất giữ bất cứ thứ gì bạn tìm thấy trong hầm mộ.</i>",
+      "tooltip": "@:theForgottenAge.supplies.satchel.description",
+      "count": "@:theForgottenAge.supplies.satchel.name | @:theForgottenAge.supplies.satchel.name ({count})"
+    }
+  }
 }

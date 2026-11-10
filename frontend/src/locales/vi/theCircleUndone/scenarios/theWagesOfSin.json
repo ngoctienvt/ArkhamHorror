@@ -1,29 +1,130 @@
 {
   "heading": "Màn IV",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is 1 higher than the number of copies of Unfinished Business in the victory display.",
+      "cultist": "-3. Until the end of the round, each Heretic enemy in play gets +1 fight and +1 evade.",
+      "tablet": "-3. Nếu bạn thất bại, trigger the forced ability on a copy of Unfinished Business in yout threat area as if it were the end of the round.",
+      "elderThing": "-2. If you fail and this is an attack or evasion attempt, resolve each haunted ability on your location."
+    },
+    "hardExpert": {
+      "skull": "-X. X is the number of copies of Unfinished Business in the victory display. Rút thêm một token khác.",
+      "cultist": "-4. Until the end of the round, each Heretic enemy in play gets +1 fight and +1 evade.",
+      "tablet": "-4. Nếu bạn thất bại, trigger the forced ability on a copy of Unfinished Business in your threat area as if it were the end of the round.",
+      "elderThing": "-2. If this is an attack or evasion attempt, resolve each haunted ability on your location."
+    }
+  },
+  "messages": {
+    "understandTheTragicLyrics": "\"You understand the tragic lyrics behind the witch's song\"",
+    "banished": "{card} is \"banished\""
+  },
+  "tooltips": {
+    "hangmansBrook": {
+      "resign": "\"Who's bright idea was this, anyway?\""
+    },
+    "hangmansBrookSpectral": {
+      "resign": "@:theCircleUndone.theWagesOfSin.tooltips.hangmansBrook.resign",
+      "haunted": "Take 1 damage. Until the end of the round, the above resign ability cannot be triggered."
+    },
+    "returnToHangmansBrookSpectral": {
+      "resign": "@:theCircleUndone.theWagesOfSin.tooltips.hangmansBrook.resign",
+      "haunted": "Place 1 clue from the supply on Hangman's Brook."
+    },
+    "hauntedFieldsSpectral": {
+      "haunted": "Move the nearest Spectral enemy once toward Haunted Fields."
+    },
+    "abandonedChapelSpectral": {
+      "haunted": "Until the end of the round, you get -1 to each skill."
+    },
+    "theGallowsSpectral_169": {
+      "haunted": "Discard the top 3 cards of the standard encounter deck. If a Witch enemy is discarded by this effect, draw it."
+    },
+    "theGallowsSpectral_170": {
+      "haunted": "Discard the top 3 cards of the standard encounter deck. If a Geist enemy is discarded by this effect, draw it."
+    },
+    "hereticsGravesSpectral_171": {
+      "haunted": "Reduce your base {'{'}willpower{'}'} to 1 until the end of your next turn."
+    },
+    "hereticsGraves_172": {
+      "haunted": "Heal 1 damage from each Heretic and each Witch enemy in play."
+    },
+    "chapelCryptSpectral_173": {
+      "haunted": "Spawn the top card of your deck facedown, engaged with you. Treat that card as a Reanimated Dead enemy with 1 fight, 1 health, 1 evade, 1 damage, and the Monster trait."
+    },
+    "chapelCryptSpectral_174": {
+      "haunted": "Find the topmost Hex treachery in the standard encounter discard pile and put it into play in your threat area."
+    },
+    "chapelCryptSpectral_175": {
+      "haunted": "Discard a random card from beneath Chapel Attic."
+    },
+    "chapelAtticSpectral_176": {
+      "haunted": " Discard a random card from your hand (2 cards instead of you have 5 or more cards in hand)."
+    }
+  },
+  "label": {
+    "ominousPortents": {
+      "spectral": "Draw the top card of the spectral encounter deck. That card gains peril, and its effects cannot be canceled.",
+      "test": "Test {'{'}willpower{'}'} (3). If you fail take 2 horror."
+    },
+    "baneOfTheLiving": {
+      "unfinishedBusiness": "Choose an Unfinished Business card in play, flip it to its Heretic side, and place damage on it equal to half its health.",
+      "geist": "Discard cards from the top of the spectral encounter deck until a Geist enemy is discarded. Spawn that enemy engaged with you."
+    },
+    "witchweed": {
+      "surge": "Give Witchweed surge to place it in the standard encounter discard pile.",
+      "otherwise": "Place it in the spectral encounter discard pile."
+    }
+  },
   "intro": {
     "title": "Màn IV: Tiền Công Tội Lỗi",
     "body": "<p>Kể từ khi chạm trán với hồn ma trong Ngôi nhà Phù thủy, bạn đã buộc phải xem xét lại mọi điều bạn biết về sự sống và cái chết. Keziah Mason đã chết cách đây hơn hai trăm năm, nhưng linh hồn của cô ấy vẫn còn trong màn sương ma quái - giống như màn sương mà bạn đã gặp trong trang viên của Josef Meiger. Một câu hỏi đọng lại trong tâm trí bạn khi bạn xem xét các sự kiện đã xảy ra: Linh hồn của Keziah tồn tại nhờ màn sương, hay là màn sương tồn tại do sự hiện diện của cô ấy? Cái nào là nguyên nhân, và cái nào là hệ quả?</p><p>Bạn càng tìm hiểu sâu hơn về lịch sử của phù thủy và ngược đãi ở thị trấn Arkham, bạn càng trở nên bồn chồn. Đêm này qua đêm khác, bạn bị tấn công bởi những giấc mơ khủng khiếp - những giấc mơ về cái chết và mục nát, về cảm giác tội lỗi và xấu hổ. Có một con ác quỷ trú ngụ trong thị trấn này, một ác quỷ từ lâu đã ẩn mình trong bóng tối quá khứ của Arkham. Tệ hơn nữa, các câu hỏi của bạn đã đi vào bế tắc. Bạn tin rằng nếu bạn có thể tìm thấy nhóm phù thủy mà bạn đã thấy trong khu rừng vào đêm định mệnh đó, bạn có thể tìm hiểu thêm về Keziah Mason hoặc về ác quỷ chưa được nói tới này.</p><p>Khi đang làm các hoạt động buổi sáng hàng ngày, đôi mắt của bạn lướt qua một trong những tiêu đề nhỏ hơn của tờ báo hôm nay: “Hồn ma được nhìn thấy trên Đồi Hangman? Người dân của Uptown cho rằng đã nhìn thấy hình dạng con người trong màn sương mù dày đặc tỏa ra từ Hangman’s Brook… ” Đó không phải là sự trùng hợp ngẫu nhiên, phải không?</p><p>Sau đó, một nhận thức xuất hiện trong bạn — nếu đó là phù thủy mà bạn tìm kiếm, nơi duy nhất bạn có thể chắc chắn để tìm thấy họ là sáu feet (182cm) dưới lòng đất, nơi mà những phù thủy tự xưng đã bị hành quyết suốt những năm về trước. Tìm kiếm hồn ma trong nghĩa địa có thể không phải là lựa chọn an toàn nhất cho bạn, nhưng bạn không chắc liệu có thể an toàn trong thành phố này nữa không.</p>"
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Wages of Sin*, *Anette’s Coven*, *City of Sins*, *Inexorable Fate*, *Realm of Death*, *Trapped Spirits*, and *Witchcraft*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-wages-of-sin.png' /><img src='{setImgPath}/anettes-coven.png' /><img src='{setImgPath}/city-of-sins.png' /><img src='{setImgPath}/inexorable-fate.png' /><img src='{setImgPath}/realm-of-death.png' /><img src='{setImgPath}/trapped-spirits.png' /><img src='{setImgPath}/witchcraft.png' /></section>",
+    "theWatcherSet": "Set *The Watcher* encounter set aside, out of play. This encounter set is indicated by the following icon:<section class='encounter-sets'><img src='{setImgPath}/the-watcher.png' /></section>",
+    "placeLocations": "Chọn ngẫu nhiên một trong hai vị trí The Gallows, một trong hai vị trí Heretics ’Graves, một trong hai vị trí Chapel Attic và một trong hai vị trí Chapel Crypt, và đưa chúng vào chơi. Loại bỏ các phiên bản khác của The Gallows, Heretics' Graves, Chapel Attic và Chapel Crypt khỏi màn chơi. Sau đó, đặt Haunted Fields, Abandoned và Hangman’s Brook vào chơi.",
+    "spectral": "Những địa điểm này có mặt để lộ ở cả 2 mặt. Một mặt có trait [[Spectral]], và mặt còn lại thì không. Khi đặt những địa điểm này vào chơi, sử dụng mặt không có trait [[Spectral]].",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại vị trí Hangman’s Brook.",
     "setAside": "Đặt 4 tài sản Spectral Web sang một bên, ngoài khu vực chơi.",
     "heretics": "Xào 6 kẻ địch Heretic, và đặt ngẫu nhiên 4 trong số đó sang một bên. Loại bỏ 2 phiên bản còn lại khỏi màn chơi. Những lá bài này có 2 mặt và có mặt câu chuyện ở mặt còn lại. Để có trải nghiệm tốt nhất, đừng nhìn vào mặt câu chuyện ở mặt còn lại.",
     "encounterDecks": "Màn chơi này sử dụng 2 chồng bài encounter khác nhau.",
-    "spectralDeck": "Tách từng lá bài còn lại với trait [[Spectral]] và xào chúng vào với nhau để tạo thành chồng bài spectral encounter *(xem phần “The Spectral Encounter Deck,” bên dưới)*."
+    "spectralDeck": "Tách từng lá bài còn lại với trait [[Spectral]] và xào chúng vào với nhau để tạo thành chồng bài spectral encounter *(xem phần “The Spectral Encounter Deck,” bên dưới)*.",
+    "standardDeck": "Xào mỗi lá bài không có trait [[Spectral]] còn lại thành chồng bài encounter tiêu chuẩn.",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to The Wages of Sin*, *City of the Damned*, *Unspeakable Fate*, *Unstable Realm*, *Bloodthirsty Spirits*, and *Hexcraft*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-wages-of-sin.png' /><img src='{setImgPath}/city-of-the-damned.png' /><img src='{setImgPath}/unspeakable-fate.png' /><img src='{setImgPath}/unstable-realm.png' /><img src='{setImgPath}/bloodthirsty-spirits.png' /><img src='{setImgPath}/hexcraft.png' /></section>*City of the Damned* replaces *City of Sins*, *Unspeakable Fate* replaces *Inexorable Fate*, *Unstable Realm* replaces *Realm of Death*, *Bloodthirsty Spirits* replaces *Trapped Spirits*, and *Hexcraft* replaces *Witchcraft*. Remove the replaced sets from the game.",
+      "setAside": "Also set the Erynn MacAoidh story asset aside, out of play.",
+      "actDeck": "Check Campaign Log. If *Erynn wants to meet*: When building the act deck, use the new Act 1a—*In Pursuit of Answers* instead of the original act 1, and include both versions of act 2. When advancing to act 2a, put both act cards into play; the text on both cards is active.",
+      "placeLocations": "Randomly choose one of the two Hangman’s Brook locations to use during this scenario’s setup. Remove the other version from the game.",
+      "heretics": "When randomly choosing 4 Heretic enemies to set aside, shuffle the 2 new Heretic enemies in with the original 6, for a total of 8 possibilities.",
+      "additionalRule": "For the duration of this scenario, the following additional rule applies: while resolving The Watcher’s Grasp treachery, The Spectral Watcher does not exhaust after it attacks."
+    }
   },
+  "specialRules": [
+    {
+      "title": "@:theCircleUndone.theWagesOfSin.theSpectralEncounterDeck.title",
+      "body": "@:theCircleUndone.theWagesOfSin.theSpectralEncounterDeck.body"
+    }
+  ],
   "theSpectralEncounterDeck": {
     "title": "Chồng bài encounter Spectral",
     "body": "<p class='basic'>Trong quá trình chuẩn bị màn chơi này, hai chồng bài encounter được xây dựng: một chồng encounter “tiêu chuẩn” và một chồng encounter “spectral”. Nói chung, bất cứ khi nào điều tra viên tương tác với chồng bài encounter, thì điều tra viên đó nên sử dụng chồng bài encounter tiêu chuẩn. Tuy nhiên, tại một thời điểm nhất định trong màn chơi này, các vị trí có thể lật sang mặt [[Spectral]] của chúng. Trong khi một điều tra viên đang ở một địa điểm có trait [[Spectral]], điều tra viên đó nên sử dụng chồng bài encounter spectral thay vì chồng bài encounter tiêu chuẩn cho tất cả các mục đích, trừ khi có ghi chú khác. Điều này bao gồm việc rút các lá bài từ chồng bài encounter, cũng như tìm kiếm, xem xét, để lộ hoặc tương tác với chồng bài encounter (hoặc chồng bài encounter bỏ) theo bất kỳ cách nào. Điều này cũng bao gồm các khả năng được kích hoạt khi chồng bài encounter hết bài. Nếu một hiệu ứng đặc biệt đề cập đến chồng bài encounter tiêu chuẩn hoặc chồng bài encounter spectral, nó sẽ tương tác với bộ bài được chỉ định bất kể vị trí của người điều tra. Mỗi một trong hai chồng bài encounter đều có chồng bài encounter bỏ riêng. Bất cứ khi nào một lá bài có trait [[Spectral]] bị loại bỏ, nó sẽ được đặt trong chồng bài bỏ cho chồng bài spectral. Tất cả các lá bài encounter khác sẽ bị loại bỏ vào chồng bài bỏ của chồng bài encounter tiêu chuẩn. * Lưu ý: Việc lật một vị trí từ mặt này sang mặt còn lại trong trường hợp này không được xem là \"để lộ\" (reveal) vị trí mới. *</p>"
   },
   "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p class='basic'>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Tiến tới <b>Resolution 1</b>.</p><p class='basic'>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Chuyển tới <b>Resolution 2</b>.</p>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Những tia nắng yếu ớt xuyên qua lớp mây mù, và màn sương bất thường cuối cùng cũng rút đi. Nhờ vậy, Đồi Hangman trở lại trạng thái ban đầu của nó. Không có hồn ma đáng sợ nào khác xuất hiện để ám ảnh bạn, và những phù thủy đã triệu hồi chúng đã rút lui vào bóng tối một lần nữa. Bạn hy vọng rằng bạn đã làm đủ để ngăn chặn phần còn lại của thị trấn Arkham khỏi bị hủy hoại bởi sự kinh hoàng này.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi chép lại rằng <i>X heretics đã bị thả vào trong thị trấn Arkham</i>. X là số kẻ địch Heretic đang được chơi. (Nếu đang ở Act 1, ghi chép <i>4 heretics đã bị thả vào trong thị trấn Arkham</i>.)<ul><li>If X is 3 or less, under “Mementos Discovered,” record *Wisp of Spectral Mist*.</li></ul></li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Cam chịu số phận, bạn khuỵu xuống. Làn sương tách ra. Thời gian chậm lại khi watcher xuất hiện. Hình dạng ma quái của nó trượt dọc theo mặt đất, tiếp cận với sự chắc chắn chậm chạp của một chiếc đồng hồ tích tắc. Bạn nhắm mắt lại, không muốn nhìn vào kẻ sẽ giết bạn. Ngón tay của bạn chạm vào lòng bàn tay của bạn, và bạn gồng mình lên.</p><p>Từng khắc trôi qua.</p><p>Khi bạn mở mắt một lần nữa, sinh vật đã biến mất, cùng với làn sương mù ma quái.</p><p>… Bạn đã được tha sao?</p><ul><li>các điều tra viên đã sống sót khỏi vòng tay của watcher.</li><li>Trong Nhật ký Chiến dịch của bạn, ghi chép lại rằng <i>X heretics đã bị thả vào trong thị trấn Arkham</i>. X là số kẻ địch Heretic đang được chơi. (Nếu đang ở Act 1, ghi chép <i>4 heretics đã bị thả vào trong thị trấn Arkham</i>.)<ul><li>If X is 3 or less, under “Mementos Discovered,” record *Wisp of Spectral Mist*.</li></ul></li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: As you depart Hangman’s Hill, the unnatural mist lingers behind—a reminder that you chose information and power over the safety of the city. The last thing you see as you cross the brook is the blood streaking down the bark of the trees flanking the bridge. The sight is repulsive, and yet…perhaps there is information to be gathered here, as well. Hoping you’ve done the right thing, you study the strange carvings for a moment before continuing to your next destination.</p><ul><li>In your Campaign Log, record *1 heretic was unleashed unto Arkham*.</li><li>In your Campaign Log, under “Mementos Discovered,” record *Bloody Tree Carvings*.</li><li>In your Campaign Log, record *Erynn joined the investigators*. Any one investigator may choose to add the Erynn MacAoidh story asset to their deck. This card does not count toward that investigator’s deck size.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
     }
   }
 }

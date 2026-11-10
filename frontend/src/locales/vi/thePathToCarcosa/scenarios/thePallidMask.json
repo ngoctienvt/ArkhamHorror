@@ -3,34 +3,84 @@
   "xp": {
     "readActII": "Đọc Act II"
   },
-  "intro": {
-    "title": "Màn VI: Chiếc Mặt Nạ Nhợt Nhạt"
-  },
-  "setup": {
-    "setAside": "Tìm lá bài Tomb of Shadows và Blocked Passage (mỗi lá là mặt để lộ của một vị trí Catacombs). Đặt chúng một bên, ngoài khu vực chơi.",
-    "catacombs": {
-      "instructions": "Đặt tất cả các vị trí khác một bên tạo thành \"Chồng bài Catacombs.\" (Chồng bài Hầm mộ). Để làm điều này, thực hiện điều sau:",
-      "top": "Sau đó, đặt tất cả vị trí Catacombs còn lại lên trên, theo thứ tự ngẫu nhiên. Tất cả các lá bài trong Chồng bài Catacombs chỉ nên để lộ mặt Catacombs, khiến cho người chơi không phân biệt được chúng.",
-      "bottom": "Xào các lá bài Tomb of Shadows và Blocked Passage đặt một bên hồi đầu và 3 lá vị trí Catacombs cùng với nhau để tạo thành 5 lá bài cuối cùng của Chồng bài Catacombs, mặt Catacombs được lật lên."
-    },
-    "theManInThePallidMask": "Người mang điểm yếu The Man in the Pallid Mask tìm lá bài này trong bộ bài của mình và đặt nó một bên, ngoài khu vực chơi.",
-    "start": {
-      "instructions": "Kiểm tra Nhật ký Chiến dịch."
-    },
-    "startAt": "Mỗi điều tra viên bắt đầu chơi tại vị trí bắt đầu. *(Nhớ kích hoạt hiệu ứng _Forced_ ở vị trí đó khi để lộ nó.)* Nếu \"bạn đã mở một lối đi bí mật,\" chọn 1 vị trí Catacombs liền kề vị trí bắt đầu và để lộ nó."
-  },
-  "resolutions": {
-    "resolution1": {
-      "title": "Kết thúc thứ nhất"
-    },
-    "resolution2": {
-      "title": "Kết thúc thứ hai"
-    }
-  },
   "specialRules": [
     {
       "title": "Vị Trí Liền Kề trong Hầm Mộ",
       "body": "<p class='basic'>Trong màn chơi này, các vị trí sẽ được sắp xếp theo một mô hình định sẵn, với các vị trí mới từ Chồng bài Hầm mộ sẽ xuất hiện ở bên trái, bên phải, bên trên hoặc bên dưới các vị trí hiện có, khi chúng được tiết lộ. Một vị trí được đưa vào chơi ở bên trái, bên phải, bên trên hoặc bên dưới một vị trí khác phải được đặt bên cạnh vị trí đó theo cách chúng được mô tả, và không có vị trí nào khác ở giữa chúng. Vị trí cạnh vị trí khác theo cách này được coi là _liền kề_. Các vị trí chỉ liền kề theo trục dọc và ngang (trái, phải, trên và dưới), và không liền kề theo đường chéo. Trong màn chơi này, các vị trí liền kề được coi là kết nối với nhau. Bạn không thể đưa một vị trí vào chơi khi đã có một vị trí sẵn ở đó. Nếu bạn được lựa chọn đặt một vị trí từ Chồng bài Hầm mộ ở một trong nhiều điểm và một trong những điểm đó bị chiếm bởi một vị trí sẵn có, bạn không thể chọn vị trí đó. Bạn phải chọn một vị trí chưa bị chiếm chỗ, nếu có thể. Nếu tất cả các vị trí được chỉ định đều bị chiếm bởi các vị trí hiện có, hiệu ứng _Forced_ sẽ thất bại và không có vị trí Hầm Mộ mới nào được đưa vào chơi.</p>"
     }
-  ]
+  ],
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the number of locations away from the starting location you are (max 5).",
+      "cultist": "-2. If this token is revealed during an attack, and this skill test is successful, this attack deals 1 less damage.",
+      "tablet": "-2. If there is a ready _Ghoul_ or _Geist_ enemy at your location, it attacks you (if there is more than one, choose one).",
+      "elderThing": "-3. Nếu bạn thất bại, search the encounter deck and discard pile for a _Ghoul_ or _Geist_ enemy and draw it."
+    },
+    "hardExpert": {
+      "skull": "-X. X is the number of locations away from the starting location you are.",
+      "cultist": "-3. If this token is revealed during an attack and this skill test is successful, this attack deals no damage.",
+      "tablet": "-3. If there is a _Ghoul_ or _Geist_ enemy at your location, it readies and attacks you (if there is more than one, choose one).",
+      "elderThing": "-4. Nếu bạn thất bại, search the encounter deck and discard pile for a _Ghoul_ or _Geist_ enemy and draw it."
+    }
+  },
+  "label": {
+    "chooseWhoReadsActII": "Đọc Act II",
+    "doneChoosingWhoReadsActII": "Done choosing who will read Act II",
+    "above": "Place Above",
+    "below": "Place Below",
+    "right": "Place to the Right",
+    "left": "Place to the Left",
+    "doneReadingActII": "Done having investigators read Act II"
+  },
+  "remembered": {
+    "youOpenedASecretPassageway": "You opened a secret passageway."
+  },
+  "intro": {
+    "title": "Màn VI: Chiếc Mặt Nạ Nhợt Nhạt",
+    "readIntro1": "bạn đã không thoát khỏi cái nhìn của bóng ma.",
+    "readIntro2": "bạn đã tìm thấy Nigel Engram.",
+    "intro1": "<p>_Intro 1_: Bạn bị đánh thức bởi không khí bẩn, hôi thối và bụi trong cổ họng của mình. Bạn đang nằm trên một phiến đá lạnh bên trong một đường ngầm không ánh sáng. Bạn đến đây bằng cách nào? Và \"đây\" chính xác là ở đâu? Một cơn rùng mình chạy dọc cơ thể và da gà bạn dựng đứng. Đứng dậy, bạn quan sát môi trường xung quanh mình. Các bộ xương trang trí trên các bức tường và trần nhà xung quanh bạn, các đầu lâu há miệng nhìn lại bạn ở khắp mọi nơi bạn nhìn tới.</p><ul><li>bạn tỉnh dậy bên trong hầm mộ.</li></ul>",
+    "intro2": "<p>_Intro 2_: Tài liệu ở nhà của Nigel Engram không trả lời được câu hỏi nào của bạn về vở kịch Vị Vua Áo Vàng, nhưng nó gợi ý về nơi bạn nên đến tiếp theo. Tấm bản đổ cũ nát bạn tìm thấy ở trên bàn cà phê của ông ấy mô tả một phần của Hầm mộ Paris khét tiếng. Một căn phòng cụ thể trên bản đồ đã được khoanh tròn bằng bút, và bên cạnh nó viết: \"Chìa khóa để mở Con Đường nằm ở đây!\". Bạn nuốt nỗi sợ của mình và tiến thẳng đến lối vào hầm mộ bên dưới đường Rue de la Tombe-Issoire.</p><ul><li>bạn đã tự mình bước vào hầm mộ.</li></ul>",
+    "proceedToHarukosInformation": "Proceed to _Haruko’s Information_.",
+    "otherwise": "Otherwise, skip to _Setup_.",
+    "harukosInformation": "<p>_Haruko’s Information_: Vừa đi chiếc cổng mái vòm gần nhất, bạn thấy một biểu tượng quen thuộc được khắc trên hộp sọ của một con cừu: những hàng hình bán nguyệt đồng tâm, được xếp bằng những chữ rune kỳ lạ. Hai đường lượn sóng đi xuống từ thiết kế, dẫn đến xương hàm dưới của hộp sọ. Bạn nhận ra nó giống như họa tiết mà Haruko đã chỉ cho bạn. Tự hỏi tại sao nó lại xuất hiện ở đây, bạn kiểm tra hộp sọ chi tiết hơn. Ngay khi bạn chạm vào mặt dưới xương hàm của hộp sọ, miệng của nó đột nhiên mở ra. Bộ xương đổ sụp xuống đất khi bức tường trượt ra để lộ ra một con đường mới.</p><ul><li>Ghi nhớ rằng \"bạn đã mở một lối đi bí mật.\"</li></ul><p class='basic right'>Proceed to _Setup_.</p>"
+  },
+  "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Pallid Mask*, *Ghouls*, *Hauntings*, and *Chilling Cold*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-pallid-mask.png' /><img src='{setImgPath}/ghouls.png' /><img src='{setImgPath}/hauntings.png' /><img src='{setImgPath}/chilling-cold.png' /></section>",
+    "setAside": "Tìm lá bài Tomb of Shadows và Blocked Passage (mỗi lá là mặt để lộ của một vị trí Catacombs). Đặt chúng một bên, ngoài khu vực chơi.",
+    "start": {
+      "instructions": "Kiểm tra Nhật ký Chiến dịch.",
+      "awoke": "bạn tỉnh dậy bên trong hầm mộ.",
+      "entered": "bạn đã tự mình bước vào hầm mộ."
+    },
+    "catacombs": {
+      "instructions": "Đặt tất cả các vị trí khác một bên tạo thành \"Chồng bài Catacombs.\" (Chồng bài Hầm mộ). Để làm điều này, thực hiện điều sau:",
+      "bottom": "Xào các lá bài Tomb of Shadows và Blocked Passage đặt một bên hồi đầu và 3 lá vị trí Catacombs cùng với nhau để tạo thành 5 lá bài cuối cùng của Chồng bài Catacombs, mặt Catacombs được lật lên.",
+      "top": "Sau đó, đặt tất cả vị trí Catacombs còn lại lên trên, theo thứ tự ngẫu nhiên. Tất cả các lá bài trong Chồng bài Catacombs chỉ nên để lộ mặt Catacombs, khiến cho người chơi không phân biệt được chúng."
+    },
+    "startAt": "Mỗi điều tra viên bắt đầu chơi tại vị trí bắt đầu. *(Nhớ kích hoạt hiệu ứng _Forced_ ở vị trí đó khi để lộ nó.)* Nếu \"bạn đã mở một lối đi bí mật,\" chọn 1 vị trí Catacombs liền kề vị trí bắt đầu và để lộ nó.",
+    "theManInThePallidMask": "Người mang điểm yếu The Man in the Pallid Mask tìm lá bài này trong bộ bài của mình và đặt nó một bên, ngoài khu vực chơi.",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the *Return to The Pallid Mask* encounter set. It is indicated by the following icon:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-pallid-mask.png' /></section>",
+      "catacombs": "When building the Catacombs deck, first set aside the Tomb of Shadows and the Blocked Passage, as normal. Next, add the 4 new Catacombs locations from this encounter set to the remaining Catacombs locations and determine your starting location, as normal. Then randomly choose 4 Catacombs locations and remove them from the game without looking at them. Build the remainder of the Catacombs deck as normal.",
+      "additionalRule": "For the duration of this scenario, the following additional rules apply: for the purposes of Corpse Dweller’s spawn ability, The Man in the Pallid Mask does not count as a _Humanoid_ enemy; and while it is act 2, The Man in the Pallid Mask cannot leave the Tomb of Shadows."
+    }
+  },
+  "resolutions": {
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<div class='resolution'><p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Bạn bị đánh thức bởi một sĩ quan cảnh sát và nhấc chân lên. Bạn cảm thấy như thể trọng lượng của một đoàn tàu đã dồn vào đầu bạn. Đau đớn không thể chịu nổi. Người đàn ông chiếu đèn pin vào mắt bạn và hỏi bạn một số câu hỏi bằng tiếng Pháp. Còn đang ngơ ngác, bạn cảm thấy khó trả lời. Anh ta chỉ về phía cầu thang gần đó và đẩy bạn ra khỏi hầm mộ. Bạn đi đến con đường Rue de la Tombe-Issoire và từ từ đi đến một khách sạn nơi bạn có thể ở lại qua đêm.</p><p>Nhiều ngày nghiên cứu sau đó, ý nghĩa của những biểu đồ kỳ lạ mà bạn nhìn thấy trong hầm mộ vẫn còn trốn tránh bạn. Bạn cảm thấy như thể bạn đã được dẫn dắt rượt đuổi một con ngỗng hoang dã. Ngay khi bạn chuẩn bị bỏ cuộc, bạn nhìn thấy một cuốn sách màu vàng nhạt trên chiếc bàn gần nhất. Bạn choáng váng khi phát hiện ra rằng đó là kịch bản đầy đủ của vở kịch Vị Vua Áo Vàng. Vẽ trên bìa sách bằng mực đen là một biểu đồ giống hệt như cái bạn đã phải vật lộn để giải nghĩa trong nhiều đêm mất ngủ. Ai đã đặt nó ở đây? Làm thế nào nó đến phòng khách sạn của bạn? Dù là gì đi nữa, bạn biết bạn phải làm gì. Vở kịch nắm giữ những bí mật - nó có tất cả - nhưng giống như một kẻ ngốc, bạn đã tránh đọc Act II vì mê tín. Từ ngữ của nó không thể làm hại bạn nhiều hơn những sinh vật và những kẻ cuồng tín mà bạn đã gặp. Run sợ, bạn mở sang phần thứ hai và bắt đầu đọc.</p><ul><li>bạn biết vị trí của cánh cổng.</li><li>Mỗi điều tra viên phải lựa chọn liệu có đọc Act II của vở kịch Vị Vua Áo Vàng. Tối thiểu 1 điều tra viên phải đọc Act II.\nTrong Nhật ký Chiến dịch, ghi lại tên của những điều tra viên chọn đọc Act II. Mỗi điều tra viên đọc Act II tìm trong bộ sưu tập ngẫu nhiên 1 điểm yếu cơ bản [[Madness]] hoặc [[Pact]], và thêm nó vào chồng bài của mình (không tính vào giới hạn bộ bài). Mỗi điều tra viên đọc Act II nhận thêm 2 kinh nghiệm do họ hiểu sâu hơn về mưu đồ của Vị Vua Rách Rưới.</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 2 token [elder_thing] vào túi hỗn mang.</li><li>VIP Đã Bị Giết</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
+    },
+    "resolution1": {
+      "title": "Kết thúc thứ nhất",
+      "body": "<div class='resolution'><p>_Resolution 1_: Hộp sọ bị đốt cháy giữ chìa khóa của mọi thứ. Bạn chắc chắn về nó. Bạn đã thử mọi phương pháp có sẵn cho bạn để nghiên cứu biểu đồ mà nó mang tới, nhưng đáp án vẫn lảng tránh bạn.. Bạn đã mang hộp sọ cho các chuyên gia, nhà huyền học và các giáo sư. Bạn thậm chí đã nhiều hơn một lần thử nói chuyện với đầu lâu. Bực tức, bạn đặt chiếc đầu lâu lên bàn ăn đêm và cố gắng ngủ một chút lần đầu tiên kể từ khi thoát khỏi hầm mộ. Khi bạn chìm vào giấc ngủ, bạn không thể để qua một bên hình ảnh biểu đồ được khắc trên trán của hộp sọ.</p><p>You awaken with a spark of inspiration and rush to the Musée du Louvre, a famous Parisian museum housing tens of thousands of paintings, drawings, and archaeological finds. You spend days exploring the museum—every display, every collection, every single object of art that might hold a clue to the diagram’s meaning. Finally, you see it: a painting depicting a beautiful island town weathering a torrential storm. Waves crash against the stone of the outer wall, the tide threatening to swallow the island whole. Lightning flashes around the tower of the abbey above the village. A whirlwind of black clouds churns in the sky above. The diagram from the burned skull you hold in your hands is recreated perfectly in the stained glass of the abbey. The title of the piece is “The Path Is Open.”</p><ul><li>bạn biết vị trí của cánh cổng.</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 2 token [cultist] vào túi hỗn mang.</li><li>VIP Đã Bị Giết</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
+    },
+    "resolution2": {
+      "title": "Kết thúc thứ hai",
+      "body": "<div class='resolution'><p>_Resolution 2_: Bạn rơi không ngừng qua vực thẳm trống rỗng. Không có không khí nào giúp làm chậm quá trình rơi xuống hoặc đi qua mái tóc của bạn. Đó là một lối đi phản thực tại. Cuối cùng, bạn đi qua một cửa ngõ vô hình và đi vào một địa hạt khác. Thấp thoáng phía trên và bên dưới của bạn là hai đường chân trời, cái này là sự phản chiếu cong vênh của cái kia. Một vòng xoáy của những đám mây đen và những con sóng xô bờ nằm ​​giữa chúng. Bạn nghiên cứu cả hai phía — thành phố quen thuộc và tấm gương kỳ lạ của nó. Đây có lẽ nào là con đường dẫn đến Carcosa? Một lối đi giữa thực tại, nơi các cõi hội tụ? Nếu vậy, tất cả những gì còn lại là tìm nơi cánh cổng này xuất hiện trên Trái Đất. Bạn rơi vào vòng xoáy bên dưới.</p><p>Bạn bị đánh thức bởi một sĩ quan cảnh sát và nhấc chân lên. Bạn cảm thấy như thể trọng lượng của một đoàn tàu đã dồn vào đầu bạn. Đau đớn không thể chịu nổi. Người đàn ông chiếu đèn pin vào mắt bạn và hỏi bạn một số câu hỏi bằng tiếng Pháp. Đôi mắt của bạn mở to với một sự nhận thức rõ ràng và bạn giành lấy cánh tay của mình khỏi sự kìm kẹp của người đàn ông đang bối rối. \"Mình phải đi ngay lập tức!\"</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại rằng <i>bạn biết vị trí của cánh cổng</i>. Thêm 2 kiểm đếm dưới phần \"Đuổi theo Kẻ Lạ.\"</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 2 token [tablet] vào túi hỗn mang.</li><li>VIP Đã Bị Giết</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li></li></ul></div>"
+    },
+    "xp": {
+      "bonus": "Gains insight into the machinations of the Tattered King."
+    }
+  }
 }

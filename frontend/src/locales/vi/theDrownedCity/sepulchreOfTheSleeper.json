@@ -1,29 +1,92 @@
 {
   "intro": {
+    "title": "Sepulchre of the Sleeper",
+    "checkCampaignLog": "Check your Campaign Log.",
+    "sepulchreOfTheSleeper1": "<p>_Sepulchre of the Sleeper 1_: Cuộc hội ngộ của đoàn thám hiểm trên bãi biển diễn ra vô cùng ảm đạm, càng thêm nặng nề bởi màn sương mù cuồn cuộn. Một trong những thành viên phi hành đoàn mà bạn để lại để trông thuyền đã chết; theo lời những người khác, cô ấy đã bị sát hại khi số khẩu phần ăn còn lại bị đánh cắp bởi những người hành hương đang chết đói. May mắn thay, chiếc <i>Cassandra</i> vẫn còn nguyên vẹn. Bạn chỉ còn vừa đủ thức ăn để quay về đất liền. Andy và Ruby thảo luận về những phát hiện của họ trong khi phần còn lại của đoàn thám hiểm băng bó vết thương và bắt đầu chất đồ lên chiếc <i>Cassandra</i> cho chuyến hành trình về nhà. Khi con tàu đã được chất đầy đồ, bạn đến chỗ Andy và Ruby trên bờ biển.</p>",
+    "proceedToSepulchreOfTheSleeper2": "Nếu có ít nhất 1 artifact được đánh dấu dưới mục \"Artifacts Earned\"",
+    "proceedToTheAwakening": "Otherwise, proceed to _Interlude III: The Awakening_.",
+    "sepulchreOfTheSleeper2": "<p>_Sepulchre of the Sleeper 2_: \"Anh đã giải mã được bao nhiêu phần của mớ chữ gà bới xấu xí đó rồi?\" Ruby hỏi. Andy đang khom người trên phiến hắc diện thạch, ghi chép vào một cuốn sổ tay bọc da. Trong ánh sáng lờ mờ của buổi chiều tà, những glyph trên phiến đá phát sáng như ngọn lửa nhợt nhạt. Andy lật qua vài trang giấy sũng nước và đặt một mảnh giấy đẫm máu lên tảng đá. \"Đủ để giải mã thứ này. Tôi tìm thấy nó trên xác của một trong những người hành hương. Nó dịch đại khái là thế này,\" anh vội vã viết bản dịch lên một trang giấy mới và đưa nó cho bạn. Trên đó viết:</p><p>\"Anh đã giải mã được bao nhiêu phần của mớ chữ gà bới xấu xí đó rồi?\" Ruby hỏi. Andy đang khom người trên phiến hắc diện thạch, ghi chép vào một cuốn sổ tay bọc da. Trong ánh sáng lờ mờ của buổi chiều tà, những glyph trên phiến đá phát sáng như ngọn lửa nhợt nhạt. Andy lật qua vài trang giấy sũng nước và đặt một mảnh giấy đẫm máu lên tảng đá. \"Đủ để giải mã thứ này. Tôi tìm thấy nó trên xác của một trong những người hành hương. Nó dịch đại khái là thế này,\" anh vội vã viết bản dịch lên một trang giấy mới và đưa nó cho bạn. Trên đó viết:\r\n<center><fancy>\"Chưa hẳn đã chết những gì có thể nằm yên vĩnh hằng</fancy></center>\r\n<center><fancy>và qua những kỷ nguyên kỳ lạ, ngay cả cái chết cũng có thể chết đi.\"</fancy></center></p>",
+    "proceedToSepulchreOfTheSleeper3": "If all 5 artifacts are checked under “Artifacts Earned,” all 26 glyphs are translated in the glyph record, and the inner sanctum was unsealed, proceed to _Sepulchre of the Sleeper 3_.",
+    "addZeroToken": "Thêm một token 0 vào chaos bag trong phần còn lại của campaign",
+    "sepulchreOfTheSleeper3": "<p>_Sepulchre of the Sleeper 3_: Cùng với lời kể của bạn, Ruby và Andy giúp bạn từ từ chắp vá lại một câu chuyện qua các bức phù điêu và artifact khác nhau được tìm thấy trong thành phố cổ đại. Một chủ đề chung xuất hiện: một nền văn minh ngoài hành tinh từ xa xôi ngoài các vì sao, một cuộc chiến tranh cổ đại trước cả lịch sử, sự chìm xuống của R'lyeh, cái \"chết\" và sự trở lại được tiên tri của một vị thần cổ đại tên là <b><i>Cthulhu</i></b>.</p><p>Andy chỉ vào ngọn tháp trung tâm. Những cánh cổng hắc diện thạch ở phần đế đang mở toang. Một mùi thối rữa thoang thoảng nhưng gay gắt bay ra từ chúng. \"Những thành viên phi hành đoàn ở lại nói rằng những cánh cửa đó đã mở ra một tuần trước. Ai đó đã đi vào trong, nhưng họ không bao giờ trở lại,\" Andy nói. Anh chia sẻ một vài bản dịch anh đã thực hiện từ các bản rập của cánh cổng. \"Bản này mô tả một sự tái sinh huy hoàng, một kẻ say ngủ trỗi dậy, và sự trở lại của các Great Old One. Nó tuyên bố hắn sẽ lấy lại những gì thuộc về mình: mọi phần của R'lyeh đã bị đánh cắp, mọi ngóc ngách trong lãnh địa của hắn.\"</p><p>\"Thứ này—Cthulhu—đã chết. Hoặc đang ngủ. Tôi không chắc; các chi tiết quá lắm cũng chỉ lờ mờ. Nhưng với việc thành phố và mọi thứ khác trong đó đang thức tỉnh, tôi cho rằng chỉ là vấn đề thời gian cho đến khi hắn cũng thức tỉnh. Hắn đã gọi những kẻ theo hầu đến đây từ giấc mơ của họ. Và đánh giá qua mùi hương, hắn đang ở <i>trong đó</i>,\" người phóng viên chỉ vào những cánh cổng hắc diện thạch.</p><p>Sau một khoảng lặng dài, Ruby đứng dậy.</p><p>\"Sẽ không còn là một vụ trộm ra hồn nếu chúng ta để cửa mở,\" cô nháy mắt. \"Tôi cho rằng chúng ta nên khóa thứ này lại trước khi giong buồm về phía hoàng hôn. Ai đi cùng tôi nào?\"</p>",
     "mustDecide": "Điều tra viên phải đưa ra quyết định (chọn một):",
+    "knowBetter": "<i>\"Chúng ta không nên dại dột mà quấy rầy bất cứ thứ gì bên trong.\"</i>",
+    "layItToRest": "“We should lay it to rest… permanently.” Proceed to _Setup_.",
     "label": {
       "knowBetter": "*\"Chúng ta không nên dại dột mà quấy rầy bất cứ thứ gì bên trong.\"*",
       "layItToRest": "*\"Chúng ta nên cho nó yên nghỉ... vĩnh viễn\"*"
     }
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Sepulchre of the Sleeper*, *Domination*, *Dreams*, *R’lyeh*, *Star Spawn*, *Ancient Evils*, and *Striking Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/sepulchre-of-the-sleeper.png' /><img src='{setImgPath}/domination.png' /><img src='{setImgPath}/dreams.png' /><img src='{setImgPath}/rlyeh.png' /><img src='{setImgPath}/star-spawn.png' /><img src='{setImgPath}/ancient-evils.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
     "placeLocations": "Đặt Dreamer's Rest và mỗi bản sao của Sigil-Carved Alcove vào chơi.",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Dreamer's Rest.",
+    "chooseExpeditionItem": "Theo thứ tự người chơi, mỗi người chơi có thể chọn 1 asset [[Item]] từ encounter set <i>Expedition</i> để bắt đầu vào chơi dưới quyền kiểm soát của họ. Set này được biểu thị bằng biểu tượng sau:",
+    "artifacts": "Tập hợp tất cả các asset [[Artifact]] đã giành được và đặt mỗi lá bài đó vào chơi dưới quyền kiểm soát của một điều tra viên, chia đều nhất có thể.",
     "buildAgendaDeck": "Xây dựng một agenda deck đặc biệt sử dụng Beneath the City làm agenda đầu tiên và Cthulhu Awakened làm agenda thứ hai. Chúng thay thế cho act deck và agenda deck.",
     "buildEncounterDeck": "Xào các lá bài encounter còn lại để xây dựng chồng bài encounter."
   },
   "rules": {
     "disturbance": {
+      "title": "Disturbance",
       "body": "<p class='basic'>Trong suốt scenario này, số lượng resource dưới \"Disturbance\" trên lá bài scenario reference thể hiện mức độ nhận thức của Cthulhu về các điều tra viên. Disturbance càng cao, the Sleeper càng gần với việc thức tỉnh. Bản thân Disturbance không có hiệu ứng game nội tại nào; tuy nhiên, một số hiệu ứng của lá bài encounter có thể thay đổi hoặc trở nên mạnh hơn tùy thuộc vào mức độ Disturbance hiện tại.</p>"
     }
   },
+  "label": {
+    "chooseExpeditionItem": "Choose an _Item_ asset to begin in play under your control.",
+    "noExpeditionItem": "Do not take an _Item_ asset.",
+    "chooseArtifactInvestigator": "Choose an investigator to control {name}.",
+    "placeAdditionalDoomOnObsidianClaw": "Spend 1 {perPlayer} clues, as a group, to place 1 additional doom on the Obsidian Claw",
+    "placeAdditionalDoomOnBarrierNode": "Spend 1 {perPlayer} clues, as a group, to place 1 additional doom on the Barrier Node",
+    "placeAdditionalDoomOnTidalTablet": "Spend 1 {perPlayer} clues, as a group, to place 1 additional doom on the Tidal Tablet",
+    "placeAdditionalDoomOnGrislyMask": "Spend 1 {perPlayer} clues, as a group, to place 1 additional doom on the Grisly “Mask”",
+    "placeAdditionalDoomOnShardOfYchlecht": "Spend 1 {perPlayer} clues, as a group, to place 1 additional doom on the Shard of Y’ch’lecht",
+    "doNotPlaceAdditionalDoom": "Do not place additional doom",
+    "readyCthulhu": "Ready Cthulhu",
+    "eachInvestigatorHereTakesDirectDamage": "Each investigator at Cthulhu’s location takes 1 direct damage"
+  },
+  "tooltips": {
+    "weakenCthulhu": "{fast} During your turn, remove 1 doom from an _Artifact_ asset you control: Cthulhu loses relentless and gets -1 fight and -1 evade until the end of the round. (Limit once per asset per round.)",
+    "sigilCarvedAlcoveStoryOfAmbition": {
+      "test": "{action}: Test {willpower} (5). If you succeed, place 1 doom on Obsidian Claw. Investigators at this location may spend 1 {perPlayer} clues, as a group, to place 1 additional doom on Obsidian Claw."
+    },
+    "sigilCarvedAlcoveStoryOfResilience": {
+      "test": "{action}: Test {combat} (5). If you succeed, place 1 doom on Barrier Node. Investigators at this location may spend 1 {perPlayer} clues, as a group, to place 1 additional doom on Barrier Node."
+    },
+    "sigilCarvedAlcoveStoryOfInfinity": {
+      "test": "{action}: Test {intellect} (5). If you succeed, place 1 doom on Tidal Tablet. Investigators at this location may spend 1 {perPlayer} clues, as a group, to place 1 additional doom on Tidal Tablet."
+    },
+    "sigilCarvedAlcoveStoryOfDefiance": {
+      "test": "{action}: Test {agility} (5). If you succeed, place 1 doom on Grisly “Mask”. Investigators at this location may spend 1 {perPlayer} clues, as a group, to place 1 additional doom on Grisly “Mask”."
+    }
+  },
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the current Disturbance (to a maximum of 6).",
+      "cultist": "[skull]: -X. X là Disturbance hiện tại (tối đa 6).\r\n[cultist]: -4. Nếu bạn thất bại, rút lá bài trên cùng của encounter deck. Nếu bạn thất bại từ 3 điểm trở lên, lá bài đó nhận thêm peril và surge.\r\n[tablet]: -4. Với mỗi điểm thất bại, bạn phải nhận 1 horror hoặc discard 1 lá bài từ tay.\r\n[elder_thing]: -3. Reveal một token khác.",
+      "tablet": "[skull]: -X. X là Disturbance hiện tại (tối đa 6).\r\n[cultist]: -4. Nếu bạn thất bại, rút lá bài trên cùng của encounter deck. Nếu bạn thất bại từ 3 điểm trở lên, lá bài đó nhận thêm peril và surge.\r\n[tablet]: -4. Với mỗi điểm thất bại, bạn phải nhận 1 horror hoặc discard 1 lá bài từ tay.\r\n[elder_thing]: -3. Reveal một token khác.",
+      "elderThing": "-3. Rút thêm một token khác."
+    },
+    "hardExpert": {
+      "skull": "-X. X is the current Disturbance.",
+      "cultist": "[skull]: -X. X là Disturbance hiện tại.\r\n[cultist]: -6. Nếu bạn thất bại, rút lá bài trên cùng của encounter deck. Nếu bạn thất bại từ 3 điểm trở lên, lá bài đó nhận thêm peril và surge.\r\n[tablet]: -6. Với mỗi điểm thất bại, bạn phải nhận 1 horror hoặc discard 1 lá bài từ tay.\r\n[elder_thing]: -4. Reveal một token khác.",
+      "tablet": "[skull]: -X. X là Disturbance hiện tại.\r\n[cultist]: -6. Nếu bạn thất bại, rút lá bài trên cùng của encounter deck. Nếu bạn thất bại từ 3 điểm trở lên, lá bài đó nhận thêm peril và surge.\r\n[tablet]: -6. Với mỗi điểm thất bại, bạn phải nhận 1 horror hoặc discard 1 lá bài từ tay.\r\n[elder_thing]: -4. Reveal một token khác.",
+      "elderThing": "-4. Rút thêm một token khác."
+    }
+  },
   "resolutions": {
+    "xp": {
+      "bonus": "Mỗi điều tra viên nhận 10 experience thưởng, vì họ đã ngăn chặn một thế lực tà ác cổ đại trỗi dậy để gieo rắc nỗi kinh hoàng cho toàn trái đất một lần nữa."
+    },
     "investigatorDefeat": {
       "title": "Điều tra viên bị hạ gục",
-      "drivenInsane": "Mỗi điều tra viên bị đánh bại đều bị <b>insane</b>. Nếu không có điều tra viên nào sống sót, các điều tra viên thua campaign."
+      "body": "<p>_Điều Tra Viên Bị Đánh Bại_: Suy sụp cả về thể xác lẫn tinh thần, bạn gục ngã trước hình hài vĩ đại của Cthulhu. Xung quanh bạn, thành phố rung chuyển, rót vào tai bạn một tiếng ù đinh tai nhức óc. Cthulhu nhìn xuống bạn với vẻ thờ ơ. Đối với hắn, bạn chẳng khác gì một sự phiền toái, một loài sâu bọ nhỏ bé. Ý thức của bạn chẳng mấy chốc tự sụp đổ khi cấu trúc mỏng manh của tâm trí nhường chỗ cho sự tự do vô bờ bến của sự điên loạn tột cùng.</p>",
+      "drivenInsane": "Mỗi điều tra viên bị đánh bại đều bị <b>insane</b>. Nếu không có điều tra viên nào sống sót, các điều tra viên thua campaign.",
+      "otherResolution": "If another resolution was reached, the remaining investigators proceed to that resolution."
     },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Hình hài khổng lồ của Cthulhu ngã ngửa vào hồ nước trung tâm. Đôi bàn tay có móng vuốt chảy xệ của hắn bám lấy mép hồ, không tìm được chỗ bám, khi hình hài của hắn chìm xuống dưới làn nước đen ngòm. Năm con mắt đỏ rực, bị bóp méo bởi mặt nước, từ từ mờ dần khỏi tầm nhìn. Và, cũng đột ngột như khi bắt đầu, mọi thứ trở nên tĩnh lặng và im lìm.</p><p>Bạn bước ra khỏi những cánh cổng hắc diện thạch và đi đến mép bờ biển. Cuối cùng, bạn đã sẵn sàng bỏ lại thành phố này phía sau, mang những cổ vật này trở về Arkham, và tiếp tục cuộc sống của mình. Khi leo lên con tàu <i>Cassandra</i>, bạn nhìn lại đường chân trời báng bổ, in bóng trên nền mặt trời lặn như xương sống của một con quái thú cổ đại. Làn nước đục ngầu cuộn trào khi thành phố cổ đại bắt đầu chìm xuống, gần như không thể nhận ra, để bị đại dương đòi lại. Cả Kẻ say giấc và ngôi nhà của hắn ở R'lyeh đều đã được an nghỉ.</p><p>\"Tôi tự hỏi ông Tillinghast định làm gì với những cổ vật đó,\" Andy trầm ngâm. \"Chắc là bán chúng đi,\" Ruby nói, một điếu thuốc kẹp giữa hai hàm răng. Nhắm mắt lại, bạn quay trở lại cabin. Có lẽ đêm nay, lần đầu tiên sau nhiều tháng, bạn sẽ tận hưởng một giấc ngủ sâu, không mộng mị.</p><ul><li>In your Campaign Log, record the investigators halted Cthulhu’s awakening.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Mỗi điều tra viên chịu 2 mental trauma.</li><li>Các điều tra viên thành công!</li><li>Proceed to _Epilogue_.</li></ul>"
     }
   }
 }

@@ -1,39 +1,114 @@
 {
   "heading": "Màn V",
+  "tokens": {
+    "easyStandard": {
+      "skull": "-X. X is the highest number of doom on a _Cultist_ enemy in play.",
+      "cultist": "-2. Rút thêm một token khác.",
+      "tablet": "-3. Nếu bạn thất bại, đặt 1 doom lên the nearest _Cultist_ enemy.",
+      "elderThing": "-3. Nếu bạn thất bại, move 1 doom from the nearest _Cultist_ enemy to the current agenda."
+    },
+    "hardExpert": {
+      "skull": "-X. X is the total number of doom among _Cultist_ enemies in play.",
+      "cultist": "-2. Rút thêm một token khác.",
+      "tablet": "-3. Nếu bạn thất bại, đặt 1 doom lên each _Cultist_ enemy in play. If there are no _Cultist_ enemies in play, reveal another token.",
+      "elderThing": "-3. Nếu bạn thất bại, move all doom from the _Cultist_ enemy with the most doom on it to the current agenda. If no _Cultist_ enemies in play have doom on them, reveal another token."
+    }
+  },
+  "tooltips": {
+    "lodgeGatesWeveBeenExpectingYou": {
+      "resign": "On second thought, maybe coming here was a bad idea"
+    },
+    "lodgeGatesMembersOnly": {
+      "resign": "On second thought, maybe coming here was a bad idea"
+    },
+    "lobbyWeveBeenExpectingYou": {
+      "parley": "{'{'}action{'}'}: _Parley._ The guards recognize you from the Meiger estate and let you pass. Reveal the Lobby."
+    },
+    "lodgeCellarMembersOnly": {
+      "action": "{'{'}action{'}'}: Investigators at the Lodge Gates spend 1 {'{'}perPlayer{'}'} clues, as a group: Reveal the Lodge Cellar."
+    }
+  },
+  "label": {
+    "unlight": "Unlight a brazier at your location",
+    "exhaust": "Exhaust the Spectral Watcher",
+    "damage": "Deal 5 damage to the Spectral Watcher",
+    "puzzleBox": {
+      "unlight": "Unlight a brazier at your location",
+      "damage": "Deal 5 damage to the Spectral Watcher",
+      "exhaust": "Exhaust the Spectral Watcher"
+    }
+  },
   "standalone": {
     "label": {
-      "members": "Các điều tra viên trở thành thành viên của Lodge."
+      "members": "Các điều tra viên trở thành thành viên của Lodge.",
+      "notMembers": "The investigators are not members of the Lodge."
     }
   },
   "intro": {
     "title": "Màn V: Vì Điều Tốt Đẹp Hơn",
-    "deceivingTheLodge": "<p class='green'>… Mặc dù bạn nghi ngờ Lodge có những mưu cầu lợi ích khác. Lodge rõ ràng biết nhiều hơn những gì đang xảy ra hơn là những gì họ thừa nhận. Có một mục đích nham hiểm ẩn bên dưới bề mặt của Lodge, và bạn dự định sẽ khám phá mục đích đó là gì.</p>"
+    "intro1": "<p>_Intro 1_: Kể từ khi bạn suýt soát chết tại Hangman’s Hill, tình hình ở thị trấn Arkham chỉ trở nên tồi tệ hơn. Trong những ngày sau đó, đã có nhiều báo cáo về \"những lần nhìn thấy ma\" và thậm chí nhiều vụ mất tích khác. Một lớp sương mỏng màu xám kéo dài trên các con phố vào mọi khung giờ, cả ngày lẫn đêm. Ngay khi mặt trời bắt đầu lặn vào mỗi buổi tối, cửa nhà được đóng chặt và khóa lại. Không biết thực sự chuyện gì xảy ra, rất ít người dám mạo hiểm ra ngoài vào ban đêm. Một số doanh nghiệp thậm chí đã đóng cửa không đón khách trong ngày, với lý do \"thời tiết xấu.\" Mọi thứ đang vượt ra khỏi tầm kiểm soát.</p><p class='basic'>Kiểm tra Nhật ký Chiến dịch.</p>",
+    "membersOfTheLodge": "*If the investigators are members of the Lodge*, proceed to _Intro 2_.",
+    "enemiesOfTheLodge": "*If the investigators are enemies of the Lodge*, skip to _Intro 3_.",
+    "learnedNothingOfTheLodgesSchemes": "các điều tra viên không biết được gì về âm mưu của Lodge.",
+    "neverSeenOrHeardFromAgain": "các điều tra viên không được trông thấy hoặc nghe đến một lần nào nữa.",
+    "intro2": "<p>_Intro 2_: Sinh vật xuất hiện tại buổi dạ tiệc từ thiện của Lodge rõ ràng không bị hạn chế chỉ ở trang viên của Josef Meiger, điều đó có nghĩa là nỗi kinh hoàng bạn đã trải qua có thể chỉ là khởi đầu của một điều gì đó tồi tệ hơn nhiều. Đã đến lúc báo cáo những phát hiện của bạn cho Silver Twilight Lodge. Có lẽ họ có thể giúp phân tích tri thức bạn đã thu thập và cho bạn biết về bước tiếp theo cần làm. Với sự giúp đỡ của họ, có lẽ bạn có thể cứu thị trấn Arkham…</p><p class='basic'>Check Campaign Log. *If the investigators are deceiving the Lodge*, read the sidebar below. Otherwise, skip this sidebar.</p>",
+    "deceivingTheLodge": "<p class='green'>… Mặc dù bạn nghi ngờ Lodge có những mưu cầu lợi ích khác. Lodge rõ ràng biết nhiều hơn những gì đang xảy ra hơn là những gì họ thừa nhận. Có một mục đích nham hiểm ẩn bên dưới bề mặt của Lodge, và bạn dự định sẽ khám phá mục đích đó là gì.</p>",
+    "intro2Skip": "<p class='basic right'>Skip to _Setup_.</p>",
+    "intro3": "<p>_Intro 3_: Sinh vật xuất hiện tại buổi dạ tiệc từ thiện của Lodge rõ ràng không bị hạn chế chỉ ở trang viên của Josef Meiger, điều đó có nghĩa là nỗi kinh hoàng bạn đã trải qua có thể chỉ là khởi đầu của một điều gì đó tồi tệ hơn nhiều. Bạn không chắc tại sao, nhưng bạn biết Silver Twilight Lodge được kết nối với sinh vật theo một cách nào đó. Có lẽ đến lúc ghé thăm Lodge dù cho có hay không có sự cho phép của họ.</p><p class='basic right'>Skip to _Setup_.</p>",
+    "intro4": "<p>_Intro 4_: Bạn không thể không tự hỏi liệu mình có bỏ lỡ điều gì quan trọng trong ngôi nhà của Josef Meiger hay không. Bốn vụ mất tích xảy ra tại buổi dạ tiệc từ thiện của Lodge không thể là một sự trùng hợp ngẫu nhiên. Nếu những nạn nhân đó gặp phải một sinh vật giống như sinh vật bạn đã thấy ở nghĩa địa thì nỗi kinh hoàng mà bạn đã trải qua có thể chỉ là khởi đầu của một điều gì đó tồi tệ hơn nhiều. Bạn vẫn chưa rõ lý do tại sao nhưng bạn chắc chắn rằng Silver Twilight Lodge có liên quan đến những sự kiện này theo một cách nào đó. Có lẽ đến lúc ghé thăm Lodge dù cho có hay không có sự cho phép của họ.</p><p class='basic right'>Skip to _Setup_.</p>",
+    "intro5": "<p>_Intro 5_: Quá nhiều vụ mất tích đã xảy ra tại trang viên của Josef Meiger để có thể xem đó chỉ là sự trùng hợp ngẫu nhiên: đầu tiên là 4 nạn nhân trong buổi dạ tiệc từ thiện, sau đó là những người tham gia bữa tối gây quỹ một tuần sau đó. Nếu họ gặp phải một sinh vật giống như sinh vật bạn đã thấy ở nghĩa địa thì nỗi kinh hoàng mà bạn đã trải qua có thể chỉ là khởi đầu của một điều gì đó tồi tệ hơn nhiều. Bạn vẫn chưa rõ lý do tại sao nhưng bạn chắc chắn rằng Silver Twilight Lodge có liên quan đến những sự kiện này theo một cách nào đó. Có lẽ đến lúc ghé thăm Lodge dù cho có hay không có sự cho phép của họ.</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
   },
   "setup": {
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *For the Greater Good*, *City of Sins*, *Silver Twilight Lodge*, *Ancient Evils*, *Dark Cult*, and *Locked Doors*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/for-the-greater-good.png' /><img src='{setImgPath}/city-of-sins.png' /><img src='{setImgPath}/silver-twilight-lodge.png' /><img src='{setImgPath}/ancient-evils.png' /><img src='{setImgPath}/dark-cult.png' /><img src='{setImgPath}/locked-doors.png' /></section>",
     "membersOfTheLodge": {
+      "instructions": "Check Campaign Log. If the investigators are members of the Lodge, perform the following:",
       "actDeck": "Khi xây dựng chồng bài act, sử dụng Act 1a—“Warm Welcome” và loại bỏ Act 1a—“Infiltrating the Lodge” khỏi màn chơi.",
       "weveBeenExpectingYou": "Đặt các phiên bản Lodge Gates, Lobby, và Lodge Cellar với phần tiêu đề nhỏ là *(We’ve Been Expecting You)* vào chơi. Loại bỏ các phiên bản khác của các vị trí này khỏi màn chơi.",
       "removeFromGame": "Tìm trong chồng bài encounter đã tập hợp những lá bài sau, và loại bỏ chúng khỏi màn chơi: 3 bản sao của Acolyte, 1 bản sao của Wizard of the Order, 2 bản sao của Knight of the Inner Circle, và 1 bản sao của Cell Keeper."
     },
     "otherwise": {
+      "instructions": "Otherwise, perform the following, instead:",
       "actDeck": "Khi xây dựng chồng bài act, sử dụng Act 1a—“Infiltrating the Lodge” và loại bỏ Act 1a—“Warm Welcome” khỏi màn chơi.",
+      "membersOnly": "Đặt các phiên bản Lodge Gates, Lobby, và Lodge Cellar với phần phụ đề (Members Only) vào chơi. Loại bỏ các phiên bản khác của những địa điểm này khỏi màn chơi.",
       "removeFromGame": "Tìm trong chồng bài encounter đã tập hợp những lá bài sau, và loại bỏ chúng khỏi màn chơi: 3 bản sao của Lodge Neophyte, 1 bản sao của Keeper of Secrets, 2 bản sao của Knight of the Outer Void, và 1 bản sao của Lodge Jailor."
     },
     "placeLocations": "Đặt vị trí Lodge Catacombs và Lounge vào chơi. Mỗi điều tra viên bắt đầu chơi tại Lodge Gates. Đặt các vị trí còn lại sang một bên, ngoài khu vực chơi (Library, Vault, Inner Sanctum, và 2 vị trí Sanctum Doorway).",
-    "setAside": "Đặt các lá bài sau sang một bên, ngoài khu vực chơi: tài sản Puzzle Box, kẻ địch Summoned Beast, tài sản August Lindquist và kẻ địch Nathan Wick có 2 mặt."
+    "setAside": "Đặt các lá bài sau sang một bên, ngoài khu vực chơi: tài sản Puzzle Box, kẻ địch Summoned Beast, tài sản August Lindquist và kẻ địch Nathan Wick có 2 mặt.",
+    "setAsideKeys": "Set 1 {'{'}skull{'}'} token, 1 {'{'}cultist{'}'} token, 1 {'{'}tablet{'}'} token, and 1 {'{'}elderThing{'}'} token aside, out of play. These tokens should be taken from your collection, not from your chaos bag. These tokens are keys. (See “Keys” on next page.)",
+    "returnTo": {
+      "gatherSets": "Also gather all cards from the following encounter sets: *Return to For the Greater Good*, *City of the Damned*, and *Impending Evils*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-for-the-greater-good.png' /><img src='{setImgPath}/city-of-the-damned.png' /><img src='{setImgPath}/impending-evils.png' /></section>*City of the Damned* replaces *City of Sins* and *Impending Evils* replaces *Ancient Evils*. Remove the replaced sets from the game.",
+      "placeLocations": "Choose 1 of the 2 Lounge locations at random. Put it into play along with the rest of the starting locations. Remove the other version of the Lounge from the game.",
+      "setAside": "Also set the new Hidden Passageway and Sanctum Doorway locations aside, out of play.",
+      "additionalRule": "For the duration of this scenario, the following additional rules apply: the _Objective_ on Act 3a is optional; after all other keys have been put into play, if another effect would cause a set-aside key to be put into play, use another unused (+/-) chaos token instead of putting no key into play; and at the end of the scenario, add each (+/-) chaos token controlled by an investigator to the victory display, each worth _Victory 1_."
+    }
   },
+  "specialRules": [
+    {
+      "title": "@:theCircleUndone.forTheGreaterGood.keys.title",
+      "body": "@:theCircleUndone.forTheGreaterGood.keys.body"
+    }
+  ],
   "keys": {
-    "title": "Chìa khóa"
+    "title": "Chìa khóa",
+    "body": "<p class='basic'>Phần chuẩn bị của màn chơi này hướng dẫn người chơi đặt 1 token [skull], 1 token [cultist], 1 token [tablet], và 1 token [elder_thing] sang một bên để làm chìa khóa. Những chìa khóa này không bao giờ được cho vào túi hỗn mang và không dùng như các token hỗn mang bình thường. Thay vào đó, chúng đại diện cho các chìa khóa mà các điều tra viên cần khôi phục và sử dụng trong suốt màn chơi.</p><p class='basic'>Các chìa khóa có thể được chơi qua các hiệu ứng lá bài khác nhau, và thường được đặt vào kẻ địch, vị trí, hay story asset. Chìa khóa có thể được lấy bằng 1 trong 3 cách sau:</p><ul><li>Nếu một địa điểm có chìa khóa mà không còn manh mối, một điều tra viên có thể kiểm soát chìa khóa đó bằng khả năng [fast].</li><li>Nếu 1 kẻ địch có chìa khóa rời khỏi màn chơi, điều tra viên khiến kẻ địch đó rời khỏi màn chơi phải kiểm soát chìa khóa của nó. (Nếu kẻ địch rời khỏi chơi bằng một số phương pháp khác, hãy đặt chìa khóa vào vị trí nó đang ở.)</li><li>Một số hiệu ứng lá bài có thể cho phép các điều tra viên kiểm soát chìa khóa theo những cách khác.</li></ul><p class='basic'>When an investigator takes control of a key, he or she places that key on his or her investigator card. If an investigator who controls 1 or more keys is eliminated, place each of those keys on his or her location. As an {'{'}action{'}'} ability, an investigator may give any number of his or her keys to another investigator at the same location."
   },
   "resolutions": {
+    "extraKey": "Extra Key ({key})",
+    "noResolution": {
+      "title": "No Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Bạn xoay sở thoát được khỏi tòa nhà và chạy trốn. Khi bạn chạy đi, bạn có thể nghe thấy một tiếng ầm ầm phát ra từ trang viên. Một số người khác xông ra từ cánh cửa trước phía sau bạn, quá bận tâm để chú ý đến bạn. Một người hét lên với những người đồng hành cùng cô ấy: “Hãy ra ngoài và tập hợp tại Unvisited Isle (Đảo Không Người Ghé Thăm)! Chúng ta phải thực hiện nghi thức trói buộc dù có hoặc không có thiết bị!”</p><p>Một người đàn ông đứng ở cánh cổng hỏi, \"Thế còn con quái vật canh giữ thì sao?\"</p><p>Cô ta trả lời,\"Vô ích. Đi thôi!\"</p><p>Đó là lúc tiếng la hét bắt đầu. Một tia máu bắn tung tóe vào cửa sổ tầng hầm. Những người trốn thoát ngay lập tức hoảng sợ bỏ chạy.</p><p>Bạn không dừng lại hay nhìn lại. Bạn chạy cho đến khi tòa nhà mờ dần sau lớp sương mù dày đặc, xám xịt, cho đến khi bạn không còn nghe thấy tiếng la hét của những người vẫn còn bên trong, cho đến khi chân bạn không thể cử động được nữa.</p><p>Đây có phải là kiểu “hy sinh” mà Silver Twilight Lodge tin tưởng thực hiện không? Và nếu vậy, điều này có ý nghĩa gì với “nghi thức trói buộc” mà họ tìm cách hoàn thành tại Unvisited Isle?</p><ul><li>In your Campaign Log, record *the guardian of the trap emerged*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Skip _Interlude III: The Inner Circle_, and proceed directly to _Scenario VI: Union and Disillusion_.</li></ul>"
+    },
     "resolution1": {
-      "title": "Kết thúc thứ nhất"
+      "title": "Kết thúc thứ nhất",
+      "body": "<p>_Resolution 1_: Mọi thớ thịt của bạn đều căng ra khi chiếc hộp kéo bạn vào. Tuy nhiên, trước khi nó làm được điều đó, một bàn tay lớn tuổi đột ngột đóng nắp lại. Bạn quay về phía sau và đổ sụp khi lực kéo không còn. Khi các giác quan của bạn cuối cùng cũng quay trở lại, Carl Sanford đang đứng bên cạnh bạn, bình tĩnh đến lạ thường. Ông ta nói, “Tôi thấy cậu đã mở được thiết bị mà không cần đánh bại được con quái vật canh giữ nó. Thật may mắn.” Ông ta kiểm tra kỹ chiếc hộp, gỡ chìa khóa và đồng xu ra khỏi hộp đựng và nhận ra chúng ngay lập tức. Không ngờ tới, ông Sanford giao chiếc hộp lại cho bạn, cùng với những linh kiện đã dùng để mở khóa nó, “Tôi đã có cảm giác rằng cậu sẽ là một tài sản quý giá của Lodge, nhưng có vẻ như tôi đã đánh giá thấp tài xoay sở của cậu. Có lẽ đã đến lúc cậu biết được sự thật đằng sau tổ chức của chúng tôi. Tôi có cảm giác cậu được định sẵn cho những điều tuyệt vời”. \"Đi với tôi. Chúng ta còn nhiều điều để trao đổi”.</p><ul><li>các điều tra viên đã khám phá ra cách mở puzzle box (hộp câu đố).</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Proceed to _Interlude III: The Inner Circle_.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai"
+      "title": "Kết thúc thứ hai",
+      "body": "<p>_Resolution 2_: Every fiber of your being is stretched as the box pulls you in. However, before it can accomplish its task, you manage to reach out and slam the lid shut. You shudder uncontrollably as your senses slowly return to you. This box is more dangerous than you could have imagined. In the hands of the Lodge, it could have been a powerful weapon, though you’re not sure what they intended to do with it. Just then, you hear several Lodge members approaching. You quickly shift one of the room’s bookcases aside and hide behind it before they enter the room. “You’re sure you heard something in here? I don’t see anybody,” one of them says.</p><p>“Hm…” the other pauses, presumably inspecting the room for signs of intruders. “Must have been nothing.”</p><p>“It’s all right. We’re all a bit on edge since the trap box went missing. Come, we don’t want to be late for the ceremony. Tonight is an important night.” Their footfalls become softer as they depart. The man’s words linger in your thoughts momentarily. What did he mean by tonight being an important night? This could be just as important as the puzzle box they had been attempting to open. You quietly follow the two men as they head deep into the tunnels beneath the Lodge. You struggle to keep up with them while trying to keep your footsteps silent on the stone floor of the passageway. Finally, they enter a large door with the familiar three arrows of Silver Twilight emblazoned along its surface. Ritualistic chanting fills the hall from the other side. You approach softly, placing your ear against the door to listen in.</p><p>“Brothers and sisters,” an elderly voice announces, “thank you for coming to this hallowed gathering. The time we have long waited for approaches.” You recognize the man’s voice – it is Carl Sanford, president of the Silver Twilight Lodge. “For many decades, the Order of the Silver Twilight has pursued knowledge that can elevate humanity. We have defended against threats to our very existence. We have sacrificed everything for this sacred cause. Now, one of these threats terrorizes our city, and once again we must do what has to be done in order to protect it.” The crowd responds with solemn approval. “Tonight, we will complete the ritual we began many nights ago at the center of the Unvisited Isle. Tonight, we will finally bind the revenant and learn what it knows. We must not allow the secrets of AZATHOTH to be lost to those who would do humanity harm.”</p><p>The cult replies with a monotone hymn, and you take this opportunity to flee the Lodge before you are discovered. The conspiracy you have unveiled leaves you with even more questions. If the revenant Mr. Sanford speaks of is what you think it is, binding it will surely protect Arkham, as he claims. But what knowledge do they seek to learn from it?…and what in the hell is an “AZATHOTH?”</p><ul><li>các điều tra viên đã khám phá ra cách mở puzzle box (hộp câu đố).</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Skip _Interlude III: The Inner Circle_, and proceed directly to _Scenario VI: Union and Disillusion_.</li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba"
+      "title": "Kết thúc thứ ba",
+      "body": "<p>_Resolution 3_: Con quái vật xuất hiện từ chiếc hộp là một con quái vật canh giữ hung ác, tàn sát bất cứ ai trên đường đi của nó. Bằng cách nào đó, bạn giết chết được sinh vật, nhưng hậu quả thật thảm khốc. Nhiều thành viên của Lodge đã bị giết một cách tàn nhẫn bởi sự hung hãn của sinh vật trước khi bạn có thể hạ gục nó. Tệ hơn nữa, thiết bị mà từ đó nó xuất hiện đã bị phá hủy đến mức không thể nhận ra. Bạn không chắc liệu nó bị vỡ do sự xuất hiện của con thú hay do cái chết của nó, nhưng dù bằng cách nào thì đó cũng là một kết cục đáng tiếc. Một trong những thành viên mặc áo choàng của Order khẳng định một cách vô cảm khi bạn kiểm tra chiếc hộp câu đố bị nghiền nát, “Việc này không diễn ra như kế hoạch,”</p><p>Một người khác nói thêm: “Nói thế là quá nhẹ.\" Cô ấy đặt một tay lên vai bạn và nhẹ nhàng kéo bạn ra khỏi phần còn lại của thiết bị. Cô ấy nói, “Thôi nào, nó rất khó thành công.\"</p><p>Cộng sự của cô ta phớt lờ sự hiện diện của bạn và nói một cách nghiêm nghị với cô ấy. “Chúng ta sẽ phải đến Unvisited Isle và hoàn thành nghi thức trói buộc mà không có chiếc bẫy.\" Cô ta gật đầu và nhìn bạn lần cuối trước khi các thành viên còn lại của Lodge bỏ trốn khỏi tòa nhà. Đây có phải là kiểu “hy sinh” mà Silver Twilight Lodge tin tưởng thực hiện không? Và nếu vậy, điều này có ý nghĩa gì với “nghi thức trói buộc” mà họ tìm cách hoàn thành tại Unvisited Isle?</p><ul><li>quái vật canh giữ cái bẫy đã xuất hiện và bị hạ gục.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Skip _Interlude III: The Inner Circle_, and proceed directly to _Scenario VI: Union and Disillusion_.</li></ul>"
     }
   }
 }

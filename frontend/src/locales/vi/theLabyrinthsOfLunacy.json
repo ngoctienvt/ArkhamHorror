@@ -1,13 +1,22 @@
 {
   "key": {
     "[groupA]": {
-      "title": "Nhóm A"
+      "orderKey": "a",
+      "title": "Nhóm A",
+      "theGroupEscapedTheLabyrinth": "Đã thoát khỏi mê cung",
+      "theGroupPerished": "Đã bỏ mạng trong mê cung"
     },
     "[groupB]": {
-      "title": "Nhóm B"
+      "orderKey": "b",
+      "title": "Nhóm B",
+      "theGroupEscapedTheLabyrinth": "Đã thoát khỏi mê cung",
+      "theGroupPerished": "Đã bỏ mạng trong mê cung"
     },
     "[groupC]": {
-      "title": "Nhóm C"
+      "orderKey": "c",
+      "title": "Nhóm C",
+      "theGroupEscapedTheLabyrinth": "Đã thoát khỏi mê cung",
+      "theGroupPerished": "Đã bỏ mạng trong mê cung"
     }
   }
 }
