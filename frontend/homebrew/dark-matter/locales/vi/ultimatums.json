@@ -1,0 +1,32 @@
+{
+  "ultimatums": {
+    "UltimatumOfTheUnspeakableOath": {
+      "name": "Tối Hậu Thư Của Lời Thề Không Thể Thốt Ra",
+      "text": "Mỗi khi bạn nói to tên của HASTUR hoặc TASSILDA trong phần chuẩn bị hoặc chơi một màn chơi, ngay lập tức nhận 1 horror."
+    },
+    "UltimatumOfImpendingDoom": {
+      "name": "Tối Hậu Thư Của Diệt Vong Cận Kề",
+      "text": "Bắt đầu mỗi màn chơi với số doom trên agenda bằng với số lượng Impending Doom."
+    },
+    "UltimatumOfTheFeaster": {
+      "name": "Tối Hậu Thư Của Kẻ Phàm Ăn",
+      "text": "Trong phần chuẩn bị của mỗi màn chơi có scanning deck, xào The Feaster from Afar vào scanning deck."
+    },
+    "UltimatumOfInevitability": {
+      "name": "Tối Hậu Thư Của Điều Tất Yếu",
+      "text": "Bắt đầu chiến dịch với 3 tally mark dưới Impending Doom."
+    },
+    "UltimatumOfTheDarkPast": {
+      "name": "Tối hậu thư của Dark Past",
+      "text": "Trong quá trình thiết lập mỗi màn chơi, nếu chưa có trong chồng bài encounter, hãy xáo trộn encounter set Quá Khứ Tăm Tối (Dark Past) vào chồng bài encounter. Trong giai đoạn kết thúc của những màn chơi đó, nếu có 1 bản sao của Hồi Tưởng (Reminiscence) trong victory display, bạn phải thêm 1 token Tablet vào túi chaos (nếu đã có 4 token Tablet trong túi, mỗi điều tra viên chịu 1 chấn thương tinh thần thay thế)."
+    },
+    "UltimatumOfExploration": {
+      "name": "Tối hậu thư của Exploration",
+      "text": "Mỗi khi bạn scan thành công, hãy xáo trộn lá bài trên cùng của chồng bài encounter vào scanning deck. Khi bạn scan, các lá bài encounter không có mặt lưng scanning được coi là có các icon khớp với bất kỳ icon nào. Một lần scan mà bạn rút được một lá bài encounter không có mặt lưng scanning được coi là một lần scan không thành công."
+    },
+    "UltimatumOfAnachronism": {
+      "name": "Tối hậu thư của Anachronism",
+      "text": "Là một chi phí bổ sung để chơi các unique non-story asset, hãy gạch bỏ 1 dấu gạch đếm từ \"Memories\" của bạn."
+    }
+  }
+}

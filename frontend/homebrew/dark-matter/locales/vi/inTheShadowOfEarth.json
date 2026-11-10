@@ -1,0 +1,66 @@
+{
+  "inTheShadowOfEarth": {
+    "intro": {
+      "title": "Màn IIIb: In the Shadow of Earth",
+      "body": "\"Vào giữa thế kỷ 21, Trái Đất chìm trong hỗn loạn hoàn toàn. Bạo loạn, tội ác, sự điên rồ và những thứ tồi tệ hơn đã trở thành chuyện thường ngày trên toàn thế giới. […] Trong một nỗ lực cuối cùng, hai trong số các con tàu Ark đã được hoàn thành và con tàu thứ ba bị tháo dỡ để lấy linh kiện. Hai con tàu hoàn thiện đã khởi hành đến Sao Hỏa, mỗi tàu mang theo 3000 con người trong trạng thái ngủ đông. Một con tàu, Liberty, đã gặp phải sự cố hỏng hóc trạm năng lượng nghiêm trọng khiến toàn bộ phi hành đoàn và hành khách thiệt mạng. Con tàu còn lại, Hope, cuối cùng cũng đã đến được Sao Hỏa…\"\n<right>— Maja, Information Archives</right>\nHành tinh Trái Đất — nơi từng là thánh địa của nhân loại, giờ đây đã bị bỏ mặc cho sự điên rồ của các Ancient Ones. Có rất ít thông tin về những gì còn sót lại trên Trái Đất, nhưng nếu có ai đó cố gắng gửi đi một tín hiệu, các tàu khảo sát đóng quân quanh hành tinh như Nostalgia II sẽ nghe thấy những lời kêu gọi đó.\nChuyến đi diễn ra êm đềm, và bạn dành những ngày của mình để ngắm nhìn chấm xanh của Trái Đất ngày một lớn dần. Đến lúc bạn có thể nhận ra một vài lục địa, tàu Tatterdemalion bắt được một nhịp tín hiệu đơn độc và xa xăm — tiếng vọng từ đèn hiệu cấp cứu của Nostalgia II. Bạn cố gắng gọi phi hành đoàn bằng bộ đàm, nhưng không có phản hồi. Tàu Tatterdemalion bắt đầu giảm tốc, và không có thời gian để lãng phí, bạn chuẩn bị đổ bộ lên con tàu chết tiệt đó."
+    },
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set sau: <i>In the Shadow of Earth</i> và <i>Deep Space</i>. Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/dark-matter/sets/in-the-shadow-of-earth.png' /><img src='{imgPath}/homebrew/dark-matter/sets/deep-space.png' /></section>",
+      "setAsideEnemies": "Để riêng các kẻ địch The Entity và The Feaster from Afar.",
+      "createScanningDeck": "Tạo scanning deck. Thực hiện việc này bằng cách lấy tất cả các lá bài encounter khác có biểu tượng ở dưới cùng mặt sau và xào chúng lại với nhau.",
+      "createEvidenceDeck": "Tạo chồng bài \"Evidence\" úp. Thực hiện việc này bằng cách lấy tất cả các lá bài story một mặt và xào chúng lại với nhau.",
+      "placeLocations": "Đưa tất cả các địa điểm còn lại vào khu vực chơi. Mỗi điều tra viên bắt đầu chơi tại Airlocks.",
+      "setAsideEvidence": "Không được nhìn, đặt lá bài trên cùng của chồng bài \"Evidence\" úp xuống dưới thẻ tham chiếu màn chơi. Lặp lại quá trình này một lần cho mỗi 3 vạch đánh dấu dưới \"Impending Doom\" trong Nhật ký Chiến dịch của bạn.\n<i>(Ví dụ: Nếu bạn có 5 Impending Doom, bạn sẽ đặt tổng cộng 2 lá bài dưới thẻ tham chiếu màn chơi.)</i>"
+    },
+    "tokens": {
+      "easyStandard": {
+        "skull": "-X. X là một nửa tổng sát thương trên bạn và các asset bạn kiểm soát (làm tròn xuống).",
+        "cultist": "-2. Nếu bạn thất bại, gây 1 sát thương hoặc 1 kinh hoàng cho 1 asset [[Ally]] bạn kiểm soát.",
+        "tablet": "Rút thêm 1 token khác. Nếu bạn thất bại, nhận 1 sát thương và 1 kinh hoàng.",
+        "elderThing": "0. Bạn phải chọn một: Nhận 2 sát thương, hoặc tự động thất bại bài kiểm tra này."
+      },
+      "hardExpert": {
+        "skull": "-X. X là một nửa tổng sát thương trên bạn và các asset bạn kiểm soát (làm tròn lên).",
+        "cultist": "-3. Nếu bạn thất bại, gây 1 sát thương hoặc 1 kinh hoàng cho 1 asset [[Ally]] bạn kiểm soát.",
+        "tablet": "-1. Rút thêm 1 token khác. Nếu bạn thất bại, nhận 1 sát thương và 1 kinh hoàng.",
+        "elderThing": "0. Bạn phải chọn một: Nhận 3 sát thương, hoặc tự động thất bại bài kiểm tra này."
+      }
+    },
+    "specialRules": [
+      {
+        "title": "Các lá bài bị loại khỏi trò chơi",
+        "body": "Trong màn chơi này, bạn phải theo dõi các lá bài bị loại khỏi trò chơi. Đặt bất kỳ lá bài nào bị loại khỏi trò chơi vào một khu vực ngoài khu vực chơi nhưng vẫn có thể tiếp cận được."
+      },
+      {
+        "title": "Quét Chuyển Động",
+        "body": "Trong màn chơi này, chỉ định hành động <b>Scan</b> hoạt động hơi khác một chút. <b>Bạn chỉ có thể scan khi đang ở một địa điểm có biểu tượng khớp với lá bài trên cùng của scanning deck.</b> Khi bạn scan, thay vì tìm kiếm lá bài trên cùng của scanning deck khớp với biểu tượng bạn đang scan, chỉ cần rút lá bài trên cùng của scanning deck. Do đó, bạn sẽ phải di chuyển quanh con tàu và đi theo các biểu tượng được mô tả trên lá bài trên cùng của scanning deck."
+      }
+    ],
+    "resolutions": {
+      "noResolution": {
+        "title": "Không Đạt Được Kết Cục Nào",
+        "body": "<p><b>Nếu không đạt được kết cục nào (mỗi điều tra viên đã từ bỏ hoặc bị đánh bại):</b></p><ul><li>Nếu act hiện tại là Act 3, tiến tới <b>Kết Cục 3</b>.</li><li>Nếu không, tiến tới <b>Kết Cục 1</b>.</li></ul>"
+      },
+      "resolution1": {
+        "title": "Kết Cục 1",
+        "body": "<p><b>Kết Cục 1:</b> Bạn chật vật lắm mới có thể sống sót thoát khỏi nơi quái quỷ đó. Những nỗi kinh hoàng mà bạn chứng kiến từ những gì còn sót lại của phi hành đoàn gần như quá sức chịu đựng đối với bạn.</p><ul><li>Nếu không có story asset <b>Crew</b> nào trong victory display: Tiến thẳng tới <b>Kết Cục 5</b>.</li><li>Nếu có các story asset <b>Crew</b> trong victory display: Hãy nhìn vào các lá bài cốt truyện ở dưới thẻ tham chiếu màn chơi nhưng không được đọc chúng. Với mỗi lá bài cốt truyện đó, hãy rút 1 token hỗn mang ngẫu nhiên từ túi chaos. Nếu đó <i>không phải</i> là token {'{'}elderSign{'}'}, {'{'}bless{'}'}, ‘+1’, hoặc ‘0’, story asset <b>Crew</b> tương ứng với lá bài cốt truyện đó chính là một bản sao giả mạo của Entity!<ul><li>Nếu bất kỳ story asset <b>Crew</b> giả mạo nào đang ở trong victory display: Tiến tới <b>Kết Cục 2</b>.</li><li>Nếu không có story asset <b>Crew</b> giả mạo nào trong victory display: Tiến tới <b>Kết Cục 3</b>.</li></ul></li></ul>"
+      },
+      "resolution2": {
+        "title": "Kết Cục 2",
+        "body": "<p><b>Kết Cục 2:</b> Một tiếng hét kinh hoàng vang vọng khắp các hành lang của Tatterdemalion. Một trong những thành viên phi hành đoàn mà bạn đưa lên tàu là một kẻ mạo danh! Nó đã lộ nguyên hình và nuốt chửng tất cả những thành viên phi hành đoàn mà đáng lẽ bạn đã có thể cứu. Cuối cùng bạn cũng xoay sở đánh lùi được nó và tống nó ra ngoài qua khoang điều áp. Tuy nhiên, thiệt hại là rất đáng kể và đã làm nhiệm vụ của bạn bị chậm lại nhiều tháng.</p><ul><li>Tiến tới <b>Kết Cục 5</b>.</li></ul>"
+      },
+      "resolution3": {
+        "title": "Kết Cục 3",
+        "body": "<p><b>Kết Cục 3:</b> Bạn đã xoay sở cứu được một vài thành viên phi hành đoàn, và họ thương tiếc những người đã mất trong nhiều ngày sau đó. May mắn thay, không ai trong số các thành viên phi hành đoàn mà bạn mang lên tàu là kẻ giả mạo. Theo thời gian, họ kể lại rằng sự điên loạn chỉ bắt đầu vài ngày sau khi họ giải mã một đoạn truyền tin từ Trái Đất — một bài thơ bí ẩn.</p><blockquote><i>“Hãy để bình minh đỏ suy đoán<br/>Điều chúng ta sẽ làm,<br/>Khi ánh sao xanh này tắt lịm<br/>Và tất cả lụi tàn.”</i></blockquote><p>Bạn tin rằng bài thơ này hẳn là thứ mà những kẻ cuồng tín đang tìm kiếm — nhưng nó vô nghĩa với bạn và không giúp bạn khám phá ra tọa độ của Fragment.</p><p>Cuối cùng, bạn đưa những thành viên phi hành đoàn còn lại đến một trạm dịch vụ trên quỹ đạo Sao Hỏa, và những người sống sót cảm ơn bạn một lần nữa vì đã cứu mạng họ rồi nói lời từ biệt. Dù vậy, bạn phải bỏ lại chuyện này phía sau và hướng tới một manh mối khác.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>bạn đã giải cứu phi hành đoàn còn lại của Nostalgia II</i>.</li><li>Thêm 1 vạch đếm dưới \"Impending Doom\" trong Nhật ký Chiến dịch của bạn. Sau đó, thêm 1 vạch đếm bổ sung cho mỗi 2 story asset <b>Crew</b> bị loại khỏi trò chơi, bị đính kèm vào Entity, hoặc nằm trong scanning deck.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Quay lại <b>Tìm Kiếm Mảnh Vỡ (The Search for Fragment)</b>.</li></ul>"
+      },
+      "resolution4": {
+        "title": "Kết Cục 4",
+        "body": "<p><b>Kết Cục 4:</b> Những thành viên phi hành đoàn còn lại của Nostalgia II cảm ơn bạn vì đã giúp họ đánh bại thứ gớm ghiếc đó. Họ kể lại rằng sự điên loạn chỉ bắt đầu vài ngày sau khi họ giải mã một đoạn truyền tin từ Trái Đất — một bài thơ bí ẩn.</p><blockquote><i>“Hãy để bình minh đỏ suy đoán<br/>Điều chúng ta sẽ làm,<br/>Khi ánh sao xanh này tắt lịm<br/>Và tất cả lụi tàn.”</i></blockquote><p>Bạn tin rằng bài thơ này hẳn là thứ mà những kẻ cuồng tín đang tìm kiếm — nhưng nó vô nghĩa với bạn và không giúp bạn khám phá ra tọa độ của Fragment.</p><p>Dù vậy, bạn phải bỏ lại chuyện này phía sau và hướng tới một manh mối khác.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>Nostalgia II đã được cứu</i>.</li><li>Một điều tra viên có thể thêm story asset Space Artillery vào deck của họ. Lá bài này không tính vào giới hạn deck của điều tra viên đó.</li><li>Thêm 1 token {'{'}elderThing{'}'} vào túi chaos cho phần còn lại của chiến dịch vì đã thu hút sự chú ý của King in Yellow.</li><li>Thêm 1 vạch đếm dưới \"Impending Doom\" trong Nhật ký Chiến dịch của bạn. Sau đó, thêm 1 vạch đếm bổ sung cho mỗi 2 story asset <b>Crew</b> bị đính kèm vào Entity.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Quay lại <b>Tìm Kiếm Mảnh Vỡ (The Search for Fragment)</b>.</li></ul>"
+      },
+      "resolution5": {
+        "title": "Kết Cục 5",
+        "body": "<p><b>Kết Cục 5:</b> Bạn đã không thể cứu được bất kỳ ai. Điểm an ủi duy nhất — trong suốt thử thách, K2-PS187 đã có thể xâm nhập vào máy chủ chính và phát hiện những gì bọn cuồng tín đã thu thập được: một thông điệp bí ẩn nhận được từ Trái Đất. Bạn dành một khoảng thời gian cố gắng giải mã thông điệp — nhưng vô ích. Bạn phải gác lại việc giải mã này, cùng những trải nghiệm đau thương đi kèm với nó, và hướng tới một manh mối khác.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>bạn đã không thể cứu phi hành đoàn của Nostalgia II</i>.</li><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>tất cả các điều tra viên đã bị tha hóa bởi Trái Đất</i>.</li><li>Thêm 4 vạch đếm dưới \"Impending Doom\" trong Nhật ký Chiến dịch của bạn.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Quay lại <b>Tìm Kiếm Mảnh Vỡ (The Search for Fragment)</b>.</li></ul>"
+      }
+    }
+  }
+}

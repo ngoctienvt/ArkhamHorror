@@ -1,0 +1,56 @@
+{
+  "aWorldTornDownAgain": {
+    "heading": "Màn VI",
+    "name": "Một Thế Giới Lại Bị Xé Toạc",
+    "intro": {
+      "title": "Màn VI: Một Thế Giới Lại Bị Xé Toạc",
+      "intro1": "<p>Rốt cuộc, có một cách đơn giản để dụ băng Sheldon và những kẻ đồng hành siêu nhiên của chúng ra xa khỏi bản thể quá khứ của bạn. Mục tiêu của chúng là bạn, sau cùng thì.</p><p>Dù vậy, những cuộc chạm trán với chúng khiến bạn đến địa điểm nghi lễ trong tình trạng khá tồi tệ.</p><p class='basic'>Mỗi điều tra viên chịu 1 sát thương trực tiếp và 1 kinh hoàng trực tiếp.</p>",
+      "intro2": "<p>Trường Tiểu học Mount Hollyoke &mdash; địa điểm diễn ra nghi lễ báng bổ của Myriad, nơi đã khiến bạn rơi vào quá khứ một năm trước &mdash; không hề có ở đây. Bạn đã đến đúng địa chỉ của nó, nơi mà bạn nhớ rõ ràng là nó từng ở đó, vậy mà nó lại biến mất.</p><p>Không khí rung lên với năng lượng, và một ánh sáng xanh lục phát ra rất mờ nhạt ở rìa tầm nhìn của bạn. Vậy là nghi thức vẫn đang diễn ra. Điều này&hellip; Điều này có thể gây ra một vấn đề lớn.</p>",
+      "intro3": "<p>Trường Tiểu học Mount Hollyoke. Đã một thời gian dài kể từ lần cuối bạn đến thăm. Thành thật mà nói, bạn không thể nói rằng mình nhớ nó.</p><p>Lớp rào chắn được dựng lên bởi Myriad đứng vững chắc xung quanh nó, và không khí đậm đặc năng lượng thời gian. Nghi thức đã bắt đầu, đồng nghĩa với việc đã đến lúc bạn phải can thiệp.</p>"
+    },
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set sau: *A World Torn Down Again*, *Night of the Ritual*, *Agents of Aforgomon*, *Myriad*, *Nyctophobia*, *Thugs* và *Unleashed Chaos*. Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/ages-unwound/sets/a-world-torn-down-again.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/night-of-the-ritual.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/agents-of-aforgomon.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/myriad.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/nyctophobia.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/thugs.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/unleashed-chaos.png' /></section>",
+      "paradox": "Nếu *các điều tra viên đã vi phạm luật nhân quả*, hãy thu thập thêm encounter set *Paradox*, được biểu thị bằng biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/ages-unwound/sets/paradox.png' /></section>",
+      "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch:",
+      "harnessed": "Nếu *the Myriad đã khai thác sức mạnh của một cõi giới khác*: Đặt Featureless Streets vào chơi. Địa điểm bắt đầu là Featureless Streets.",
+      "notHarnessed": "Nếu không, hãy loại bỏ Featureless Streets và act 1a khỏi trò chơi. Trò chơi bắt đầu ở act 2a. Đặt Front Gates, Sports Field, Children's Playground và Side Building vào chơi. Nếu *các điều tra viên đã sử dụng cửa trước của trường học*, hãy đặt Rear Corridors vào chơi. Nếu không, hãy đặt Front Hallway vào chơi. Địa điểm bắt đầu là Sports Field.",
+      "lateInvestigators": "Mỗi điều tra viên *đã trở về Arkham muộn* thực hiện thiết lập như bình thường, nhưng bắt đầu trò chơi mà không ở địa điểm nào. Họ không được coi là đang trong màn chơi, và không thể tương tác với trò chơi theo bất kỳ cách nào. Vào cuối vòng đầu tiên của trò chơi, mỗi điều tra viên này vào chơi tại địa điểm bắt đầu. Mỗi điều tra viên khác bắt đầu chơi tại địa điểm bắt đầu.",
+      "addChaosToken": "Dựa trên mức độ khó của bạn, thêm token chaos sau vào túi chaos cho phần còn lại của chiến dịch: Easy &ndash;3, Standard &ndash;5, Hard &ndash;6, Expert &ndash;7.",
+      "nexus": "Nếu *the Myriad đã dựng lên một lớp bảo vệ mạnh mẽ*, hãy đặt Nexus of Aforgomon vào chơi cạnh agenda deck. Nếu không, hãy loại bỏ Nexus of Aforgomon khỏi trò chơi.",
+      "coloursSpread": "Nếu *the Myriad đã kiểm soát một colour out of space*, hãy đặt The Colour's Spread vào chơi cạnh agenda deck. Nếu không, hãy loại bỏ The Colour's Spread khỏi trò chơi.",
+      "removeLodge": "Nếu *bạn đã thúc đẩy các âm mưu của Hội Silver Twilight*, không có thay đổi nào được thực hiện. Nếu không, hãy loại bỏ mỗi bản sao của Assistance from the Lodge khỏi trò chơi.",
+      "sphinxBonus": "Nếu *bạn đã giải được câu đố của nhân sư*, mỗi điều tra viên bắt đầu trò chơi với thêm 1 lá bài và 2 tài nguyên bổ sung.",
+      "myriadSphinx": "Nếu *the Myriad đã giải được câu đố của nhân sư*, hãy đặt 1 doom lên agenda hiện tại.",
+      "disappeared": "Nếu *[một kẻ địch] đã biến mất một cách bất ngờ*, hãy đặt một bản sao của kẻ địch đó sang một bên, ngoài màn chơi.",
+      "removeHarnessedFuture": "Nếu *các điều tra viên đã bước vào tương lai*, hãy loại bỏ Ritual Circle _(A Harnessed Future)_ khỏi trò chơi.",
+      "removeGatewayToThePast": "Nếu *các điều tra viên đã bước vào quá khứ*, hãy loại bỏ Ritual Circle _(Gateway to the Past)_ khỏi trò chơi.",
+      "setAside": "Đặt mỗi địa điểm còn lại sang một bên, ngoài màn chơi, cùng với Estravius Malone, Hound of Unmaking, Unstable Warding, Unstable Energies, The Myriad Gentleman _(The High Priest)_ và mỗi bản sao của Unleashed Chaos, Stirring Titan và Hired Thugs."
+    },
+    "rules": {
+      "thePastAndThePresent": {
+        "title": "Quá Khứ và Hiện Tại",
+        "body": "<p class='basic'>Màn chơi này có hai act deck. Chồng bài \"a/b\" đại diện cho tiến trình của các điều tra viên hiện tại, và hoạt động như bình thường, trong khi act deck \"c/d\" theo dõi hành động của các bản thể quá khứ của điều tra viên.</p><p class='basic'>Mỗi act \"c/d\" có một hoặc nhiều điều kiện để tiến triển mà ít nhất một trong số đó phải được ghi lại trong Nhật ký Chiến dịch của bạn cùng một mốc thời gian bên cạnh. Sau khi kiểm tra ngưỡng doom mỗi vòng, hãy so sánh các mốc thời gian này với số agenda hiện tại và lượng doom trên agenda. Tiến triển act nếu:</p><ul><li>Số agenda hiện tại bằng với số được ghi lại, và có ít nhất lượng doom trên agenda hiện tại bằng số được ghi lại, hoặc:</li><li>Số agenda hiện tại lớn hơn số được ghi lại.</li></ul><p class='basic'>Ví dụ: Act 1c tiến triển khi ranh giới bị phá vỡ. Agnes Baker có tuyên bố này trong Nhật ký Chiến dịch của cô ấy với (1,5) được viết bên cạnh. Sau khi kiểm tra ngưỡng doom mỗi vòng, cô ấy kiểm tra điều này, và khi agenda có từ 5 doom trở lên, cô ấy tiến triển sang act 1d. Nếu do điểm yếu Dark Memory của cô ấy, agenda 1 đã tiến triển sau khi chỉ có 4 doom trong vòng trước, cô ấy vẫn sẽ tiến triển act 1c trong vòng đó, vì số agenda, 2, lớn hơn số agenda đã ghi lại, 1.</p>"
+      }
+    },
+    "timeRunningShort": {
+      "additionalAction": "Thời Gian Đang Cạn Dần"
+    },
+    "rageAgainstTheEnd": {
+      "additionalActions": "Cuộc Cuồng Nộ Chống Lại Sự Kết Thúc"
+    },
+    "resolutions": {
+      "noResolution": {
+        "title": "Không Đạt Được Kết Thúc Nào",
+        "body": "<p class='basic'>_Nếu không đạt được kết thúc nào (mỗi điều tra viên bị đánh bại)_: Đọc _Kết thúc 2_.</p>"
+      },
+      "resolution1": {
+        "title": "Kết thúc 1",
+        "body": "<p>_Kết thúc 1_: Những phút giây và hàng tỷ năm lướt qua bạn, những bí mật cổ xưa và những tương lai khủng khiếp. Một lực lượng kéo giật bạn, thôi thúc bạn ngã xuống, để lạc vào dòng thời gian một lần nữa.</p><p>Tuy nhiên, lần này, bạn không dễ dàng bị cuốn đi như vậy. Bạn đứng vững, kiên cường chống lại lực kéo của sự hỗn loạn vô tận, và bước đi. Một bước, rồi một bước nữa, kéo mình xuyên qua thời gian. Bạn có thể kiểm soát điều này, rèn giũa con đường của riêng mình, thẳng tiến về phía Aforgomon. Tiến tới một kết cục, bằng cách này hay cách khác.</p><p class='basic'>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.</p>"
+      },
+      "resolution2": {
+        "title": "Kết thúc 2",
+        "body": "<p>_Kết thúc 2_: Bạn chạy, thở hổn hển, xuống một con hẻm. Những người đàn ông có vũ trang vẫn đang truy đuổi&mdash;</p><p>Khi bạn khám phá khu vườn của dinh thự, một người đàn ông cao lớn trong bộ vest lịch lãm bước ra đón bạn&mdash;</p><p>Gia đình bạn, dù ít ỏi, đứng bên giường bạn, chờ đợi&mdash;</p><p>Bạn cất tiếng khóc xé lòng, đôi chân bé nhỏ run rẩy không vững&mdash;</p><p>&mdash;cào cấu trong tuyệt vọng vào những cổ tự được vẽ trên sàn nhà, hy vọng trong vô vọng rằng&mdash;</p><p>“Mẹ.” Từ đầu tiên của bạn.</p><p>“Con xin lỗi. Con đã làm mọi người thất vọng.” Lời cuối cùng của bạn.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng *mọi thời gian hòa làm một*.</li><li>Mỗi điều tra viên bị phát điên.</li><li>Các điều tra viên thua chiến dịch.</li></ul>"
+      }
+    }
+  }
+}

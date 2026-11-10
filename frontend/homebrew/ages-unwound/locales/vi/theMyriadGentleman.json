@@ -1,0 +1,54 @@
+{
+  "theMyriadGentleman": {
+    "heading": "Màn II",
+    "name": "Quý Ông Muôn Mặt",
+    "intro": {
+      "title": "Màn II: Quý Ông Muôn Mặt",
+      "checkCampaignLog": "<p class='basic right'>Kiểm tra Nhật ký Chiến dịch. *Nếu các điều tra viên đã chấp nhận một lời đề nghị giúp đỡ*:<br>Tiếp tục đến _Mở đầu 1_.</p><p class='basic right'>*Nếu các điều tra viên đã từ chối một lời đề nghị giúp đỡ*:<br>Chuyển đến _Mở đầu 2_.</p>",
+      "intro1": "<p>_Mở đầu 1_: Gói hàng chứa đựng vô số thông tin &mdash; chủ yếu là các mẩu báo cắt ra, kèm theo những tờ ghi chú được đánh máy. Tất cả thông tin đều liên quan đến một người tên là Joseph Baxter, một triệu phú tự thân có một dinh thự ở ngoại ô Arkham. Sự liên quan của hắn với bạn không rõ ràng, cho đến khi bạn tìm thấy một loạt thư từ giữa Joseph và băng Sheldon, đàm phán trả tiền cho nhiều công việc mờ ám khác nhau, bao gồm cả việc 'dọn dẹp', à thì, chính bạn. Không rõ chính xác tại sao hắn lại muốn bạn chết &mdash; hắn gọi bạn là 'cái gai trong mắt', nhưng bạn thậm chí còn chưa từng nghe đến người đàn ông này trước ngày hôm nay. Thật kỳ lạ. Và đáng sợ. Chủ yếu là vế sau, nghĩ lại thì.</p><p class='basic right'>Tiếp tục đến _Mở đầu 3_.</p>",
+      "intro2": "<p>_Mở đầu 2_: Với cái bụng no và sự hưng phấn từ caffeine, bạn bắt đầu tìm hiểu lý do chính xác tại sao bạn lại bị nhắm tới. Đó là một công việc chậm chạp, khai thác bất kỳ nguồn lực nào bạn có thể tìm thấy, nhưng nó mang lại kết quả: chôn vùi trong tờ _Arkham Advertiser_ hôm nay là một báo cáo về ba người đàn ông bị bắt trong khu phố của bạn vào sáng sớm, bị nghi ngờ là thành viên của băng Sheldon. Một người liên lạc của bạn cố gắng đào bới được một mẩu thông tin hữu ích khác: băng Sheldon đã làm một lượng lớn công việc cho một ân nhân mới, một người tên là Joseph Baxter. Không có nhiều thứ để thể hiện cho công việc của một buổi sáng, nhưng đó là một sự khởi đầu.</p><ul><li>Khi trò chơi bắt đầu, đặt 1 doom lên agenda hiện tại.</li></ul><p class='basic right'>Tiếp tục đến _Mở đầu 3_.</p>",
+      "intro3": "<p>_Mở đầu 3_: Cổng vào dinh thự của Joseph Baxter đã đóng và then cài, nhưng bạn đã trải qua quá nhiều điều để chuyện đó làm bạn nản lòng. Bạn trèo qua một bức tường thấp, đáp xuống bãi cỏ được cắt tỉa cẩn thận. Đã đến lúc gặp kẻ muốn hành quyết bạn.</p>"
+    },
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set sau: *The Myriad Gentleman*, *Shifting Reality*, *Unravelling Years*, *Agents of Yog-Sothoth* và *Locked Doors*. Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/ages-unwound/sets/the-myriad-gentlemen.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/shifting-reality.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/unravelling-years.png' /><img src='{setImgPath}/agents-of-yog.png' /><img src='{setImgPath}/locked-doors.png' /></section>",
+      "placeLocations": "Đặt các địa điểm Lawn, Hedge Maze, Ornate Fountain và Stables vào chơi. Mỗi điều tra viên bắt đầu chơi tại Lawn.",
+      "setAsideLocations": "Đặt mỗi địa điểm còn lại sang một bên, ngoài màn chơi.",
+      "setAsideCards": "Đặt sang một bên mỗi bản sao của The Myriad Gentleman, Ex Uno Plures, They Just Keep Coming, Not Welcome Here, Aforgomon's Blade và Gaze of Aforgomon."
+    },
+    "rules": {
+      "copiesOfEnemies": {
+        "title": "Bản Sao Của Kẻ Địch",
+        "body": "<p class='basic'>Trong màn chơi này, các điều tra viên có thể được hướng dẫn triệu hồi bản sao của một kẻ địch được chỉ định. Để làm điều này, điều tra viên đó đặt lá bài trên cùng của bộ bài của mình vào chơi trong threat area của họ, coi nó như một bản sao của kẻ địch được chỉ định cho đến khi nó rời khỏi màn chơi (nếu có bất kỳ sự không rõ ràng nào về việc ai nên làm điều này, điều tra viên dẫn đầu sẽ thực hiện). Khi kẻ địch đó rời khỏi màn chơi, chủ sở hữu của lá bài đặt nó xuống dưới đáy bộ bài của họ.</p>"
+      }
+    },
+    "label": {
+      "dealExcessDamage": "Gây lượng sát thương thừa cho các bản sao khác tại địa điểm này",
+      "divideMyriadAttack": "Phân chia đòn tấn công này giữa sát thương và kinh hoàng"
+    },
+    "tooltips": {
+      "lawn": {
+        "resign": "Đến đây quả là một ý tồi."
+      }
+    },
+    "armyOfOne": {
+      "label": {
+        "takeHorror": "Chịu {count} kinh hoàng",
+        "discardCards": "Chọn và bỏ {count} lá bài từ tay bạn"
+      }
+    },
+    "resolutions": {
+      "noResolution": {
+        "title": "Không Đạt Được Kết Thúc Nào",
+        "body": "<p class='basic'>*Nếu không đạt được kết thúc nào (mỗi điều tra viên bị đánh bại)*: Đọc _Kết thúc 2_.</p>"
+      },
+      "resolution1": {
+        "title": "Kết thúc 1",
+        "body": "<p>_Kết thúc 1:_ Joseph Baxter, người đàn ông mà bạn vừa đột nhập vào nhà, là một phần của một giáo phái thờ phụng một thực thể được biết đến với cái tên Aforgomon. Có vẻ là một phần khá lớn, đánh giá qua số lượng bản thể của hắn mà bạn đã chạm trán hôm nay. Dù vậy, chúng vẫn đang truy lùng bạn, những làn sóng vô tận của một người đàn ông phi lý, và bạn không có lựa chọn nào khác ngoài việc bỏ trốn.</p><p>Bạn tìm thấy rất ít manh mối về lý do tại sao hắn muốn bạn chết &mdash; một tờ giấy viết nguệch ngoạc liên kết bạn với một sự kiện ở Cairo, và một lá thư từ băng đảng Sheldon hứa hẹn rằng bạn sẽ sớm bị xử lý.</p><p>Bạn thậm chí chưa bao giờ đến Cairo. Có lẽ hắn đã điên. Nhưng mặt khác, xét đến những gì bạn đã thấy hôm nay, có lẽ bạn mới là người điên.</p><p>Khi mặt trời lặn xuống dưới đường chân trời, bạn cân nhắc các lựa chọn của mình. Bạn có thể đến cảnh sát, nhưng không đời nào họ tin bạn. Bạn có thể bỏ đi, cứ thế biến mất vào màn đêm... nhưng bạn đã thấy những gì giáo phái này có thể làm, và bạn không thể khoanh tay đứng nhìn chúng thực hiện kế hoạch của mình. Hơn nữa, dù điên hay không, chúng vẫn muốn bạn chết. Chủ động tấn công chúng có vẻ hấp dẫn hơn là chỉ đơn giản bị săn lùng.</p><p>Bạn đã có một vị trí, và không có thời gian để lãng phí. Tốt hơn là nên bắt đầu ngay.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng *các điều tra viên đã biết về nghi lễ của Myriad*.</li><li>Nếu the Myriad Gentleman (*Master of the House*) đang ở trong victory display, bất kỳ điều tra viên nào cũng có thể chọn thêm Aforgomon's Blade vào bộ bài của mình. Nếu một điều tra viên chọn đưa Aforgomon's Blade vào bộ bài của mình, họ cũng phải thêm điểm yếu Gaze of Aforgomon vào bộ bài của mình. Những lá bài này không tính vào kích thước bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.</li></ul>"
+      },
+      "resolution2": {
+        "title": "Kết thúc 2",
+        "body": "<p>_Kết thúc 2:_ Bạn hầu như không nhớ được cuộc chạy trốn của mình khỏi dinh thự của Joseph Baxter. Những vết thương bạn đang chăm sóc rất nghiêm trọng, nhưng bạn đã sống sót thoát ra, đó cũng là một điều đáng mừng.</p><p>Bạn không thích những gì đang xảy ra ở đây, hoàn toàn không. Giữa những thứ đã truy đuổi bạn đêm qua, và sự sinh sôi bất thường của người đàn ông bạn đối mặt hôm nay... Đủ để khiến bạn nghi ngờ sự tỉnh táo của chính mình. Chắc chắn là nhiều hơn những gì bạn có thể mang đến báo cảnh sát, trừ khi bạn muốn kết thúc trong nhà thương điên địa phương. Điều đó có nghĩa là, bạn kết luận với một cảm giác chìm nghỉm, rằng lực lượng duy nhất có khả năng đứng lên chống lại chúng chính là bạn.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng *các điều tra viên đã chạy trốn khỏi dinh thự của Gentleman*.</li><li>Nếu the Myriad Gentleman (*Master of the House*) đang ở trong victory display, bất kỳ điều tra viên nào cũng có thể chọn thêm Aforgomon's Blade vào bộ bài của mình. Nếu một điều tra viên chọn đưa Aforgomon's Blade vào bộ bài của mình, họ cũng phải thêm điểm yếu Gaze of Aforgomon vào bộ bài của mình. Những lá bài này không tính vào kích thước bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.</li></ul>"
+      }
+    }
+  }
+}

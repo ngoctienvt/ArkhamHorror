@@ -1,123 +1,123 @@
 {
   "intro": {
-    "title": "Scenario III: Blood Money",
-    "body": "<p>Howard Wilkes’s party is at his fancy new penthouse at the top of one of the rebuilt buildings in Northside, overlooking the dark and industrious district of Arkham. You ride the elevator up to the fourth floor, and follow the short, clean hallway to the door of the penthouse. Rapping on the door, you’re greeted by a tall man in a tuxedo who checks your name and allows you entrance. It would seem Charlie is as good as his word.</p><p>Detective Reynolds, also dressed in formalwear, makes his way over to you as soon as you step into the foyer. “Good, you’re here,” he says. “Problem is that Wilkes isn’t around, and nobody has seen him. I suggest we deal with Miss Thomas. Get her to rethink her business decision. Then we can chat up the rest of the party and see what else we can learn.” He glances around nervously at the other guests nearby, all of whom are looking at him and at you with suspicion. “And let’s be quick about it.”</p>"
+    "title": "Kịch bản III: Blood Money",
+    "body": "<p>Bữa tiệc của Howard Wilkes diễn ra tại căn penthouse sang trọng mới toanh của hắn trên đỉnh một trong những tòa nhà được xây dựng lại ở Northside, nhìn ra quận công nghiệp tối tăm của Arkham. Bạn đi thang máy lên tầng bốn, và đi theo hành lang ngắn, sạch sẽ dẫn tới cửa căn penthouse. Gõ cửa, bạn được đón tiếp bởi một người đàn ông cao lớn trong bộ lễ phục tuxedo, người này kiểm tra tên bạn rồi cho phép bạn bước vào. Có vẻ như Charlie đã giữ đúng lời hứa của mình.</p><p>Thám tử Reynolds, cũng mặc âu phục trang trọng, tiến về phía bạn ngay khi bạn bước vào tiền sảnh. “Tốt quá, các bạn tới rồi,” ông nói. “Vấn đề là Wilkes không có ở đây, và chẳng ai nhìn thấy hắn cả. Tôi đề nghị chúng ta nên xử lý Cô Thomas trước. Thuyết phục cô ta nghĩ lại về quyết định làm ăn của mình. Sau đó chúng ta có thể trò chuyện với những người khác trong bữa tiệc để xem có thể nắm thêm được điều gì không.” Ông lo lắng nhìn quanh những vị khách khác ở gần đó, tất cả bọn họ đều đang nhìn ông và bạn với ánh mắt đầy ngờ vực. “Và hãy làm việc này thật nhanh đấy.”</p>"
   },
   "setup": {
-    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: <section class='encounter-sets grid'><div><img src='{setImgPath}/blood-money.png' /><span>Blood Money</span></div><div><img src='{setImgPath}/agents-of-zburamoarte.png' /><span>Agents of Zburamoarte</span></div><div><img src='{setImgPath}/bloodthirst.png' /><span>Bloodthirst</span></div><div><img src='{setImgPath}/children-of-blood.png' /><span>Children of Blood</span></div><div><img src='{setImgPath}/blood-blight.png' /><span>Blood Blight</span></div><div><img src='{setImgPath}/hunted.png' /><span>Hunted</span></div><div><img src='{setImgPath}/infected.png' /><span>Infected</span></div><div><img src='{setImgPath}/sanguine-secrets.png' /><span>Sanguine Secrets</span></div><div><img src='{setImgPath}/arcane-lock.png' /><span>Arcane Lock{'{'}asterisk{'}'}</span></div></section><div class='center'>{'{'}asterisk{'}'}This encounter set is found in the Arkham Horror: The Card Game core set.</div>",
-    "sanguineSecrets": "When gathering cards from the _Sanguine Secrets_ encounter set, only gather the three copies of Sanguine Cultist and the Blood-Crazed Zealot enemies. Do not gather the Morbid Rituals treacheries.",
-    "gatherAdditionalSets": "Additionally, if there are 3 or 4 investigators, gather all cards from the following encounter set:<section class='encounter-sets grid'><div><img src='{setImgPath}/afflicted.png' /><span>Afflicted</span></div></section>",
-    "placeLocations": "Put the Office, Study, Dining Hall, and Kitchen locations into play according to the diagram on page 24.",
-    "foyer": "Put Foyer into play, (*Boring Party*) side faceup.",
-    "masterBedroom": "Set Master Bedroom aside, out of play.",
-    "balcony": "Nếu bạn đang chơi ở độ khó <b>Easy</b> hoặc <b>Standard</b>:",
-    "startAt": "Each investigator begins play at Foyer.",
-    "priscillaThomas": "Spawn the Priscilla Thomas enemy at Dining Hall.",
-    "suspiciousGuests": "Gather each Suspicious Guest enemy. If the number of investigators in the game is…",
-    "onePlayer": "…exactly 1, spawn 1 Suspicious Guest at the Study. Remove 2 copies of that enemy from the game.",
-    "twoPlayers": "…exactly 2, spawn 1 Suspicious Guest at the Study and 1 at the Office. Remove 1 copy of that enemy from the game.",
-    "threeOrFourPlayers": "…exactly 3 or 4, spawn 1 Suspicious Guest at the Study, 1 at the Office, and 1 at the Dining Hall.",
-    "agendaDeck": "Check your campaign log.",
-    "feedingFrenzyV2": "If *the investigators defeated Zburamoarte* is recorded, construct the agenda deck using agenda 2a—“Feeding Frenzy (v. II).” Remove the other copy of agenda 2a from the game.",
-    "feedingFrenzyV1": "Otherwise, construct the agenda deck using agenda 2a—“Feeding Frenzy (v. I).” Remove the other copy of agenda 2a from the game.",
-    "setAside": "Set aside each copy of the Child of Blood enemy, the Spawn of Zburamoarte enemy, and the Sanguine Rebirth treachery, the Chosen of Zburamoarte double-sided story asset, as well as each enemy from the _Sanguine Secrets_ encounter set and each card in the _Infected_ encounter set.",
-    "howardWilkes": "Gather each copy of the Howard Wilkes enemy.",
-    "firstChildOfZburamoarte": "If you are playing on Easy difficulty, set Howard Wilkes (*First Child of Zburamoarte*) aside, out of play. Remove each other copy of Howard Wilkes from the game.",
-    "tooFarGone": "If you are playing on Standard difficulty, set Howard Wilkes (*Too Far Gone*) aside, out of play. Remove each other copy of Howard Wilkes from the game.",
-    "ultimatePredator": "If you are playing on Hard or Expert difficulty, set Howard Wilkes (*Ultimate Predator*) aside, out of play. Remove each other copy of Howard Wilkes from the game.",
-    "juliaStern": "Check your campaign log. If *the investigators killed Julia Stern* is recorded, remove each copy of the Julia Stern enemy from the game. Otherwise, gather each copy of the Julia Stern enemy.",
-    "firstVictimOfNewHorizons": "If you are playing on Easy difficulty, set Julia Stern (*First Victim of New Horizons*) aside, out of play. Remove each other copy of Julia Stern from the game.",
-    "outForBlood": "If you are playing on Standard difficulty, set Julia Stern (*Out for Blood*) aside, out of play. Remove each other copy of Julia Stern from the game.",
-    "childOfVengeance": "If you are playing on Hard or Expert difficulty, set Julia Stern (*Child of Vengeance*) aside, out of play. Remove each other copy of Julia Stern from the game.",
-    "addCultist": "Thêm 1 token {'{'}cultist{'}'} vào túi hỗn mang cho phần còn lại của chiến dịch."
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau:<section class='encounter-sets grid'><div><img src='{setImgPath}/blood-money.png' /><span>Blood Money</span></div><div><img src='{setImgPath}/agents-of-zburamoarte.png' /><span>Agents of Zburamoarte</span></div><div><img src='{setImgPath}/bloodthirst.png' /><span>Bloodthirst</span></div><div><img src='{setImgPath}/children-of-blood.png' /><span>Children of Blood</span></div><div><img src='{setImgPath}/blood-blight.png' /><span>Blood Blight</span></div><div><img src='{setImgPath}/hunted.png' /><span>Hunted</span></div><div><img src='{setImgPath}/infected.png' /><span>Infected</span></div><div><img src='{setImgPath}/sanguine-secrets.png' /><span>Sanguine Secrets</span></div><div><img src='{setImgPath}/arcane-lock.png' /><span>Arcane Lock{'{'}asterisk{'}'}</span></div></section><div class='center'>{'{'}asterisk{'}'}Encounter set này nằm trong bộ Arkham Horror: The Card Game core set.</div>",
+    "sanguineSecrets": "Khi tập hợp các lá bài từ encounter set _Sanguine Secrets_, chỉ tập hợp ba bản sao của kẻ địch Sanguine Cultist và Blood-Crazed Zealot. Không tập hợp các treachery Morbid Rituals.",
+    "gatherAdditionalSets": "Ngoài ra, nếu có 3 hoặc 4 điều tra viên, hãy tập hợp tất cả các lá bài từ encounter set sau:<section class='encounter-sets grid'><div><img src='{setImgPath}/afflicted.png' /><span>Afflicted</span></div></section>",
+    "placeLocations": "Đưa các địa điểm Office, Study, Dining Hall, và Kitchen in play theo sơ đồ ở trang 24.",
+    "foyer": "Đưa Foyer in play, với mặt (*Boring Party*) ngửa lên.",
+    "masterBedroom": "Để Master Bedroom sang một bên, out of play.",
+    "balcony": "Nếu bạn đang chơi ở độ khó Easy hoặc Standard, hãy để Balcony sang một bên, out of play. Nếu không, hãy loại bỏ nó khỏi trò chơi.",
+    "startAt": "Mỗi điều tra viên bắt đầu chơi tại Foyer.",
+    "priscillaThomas": "Spawn kẻ địch Priscilla Thomas tại Dining Hall.",
+    "suspiciousGuests": "Tập hợp từng kẻ địch Suspicious Guest. Nếu số lượng điều tra viên trong trò chơi là…",
+    "onePlayer": "…chính xác 1, spawn 1 Suspicious Guest tại Study. Loại bỏ 2 bản sao của kẻ địch đó khỏi trò chơi.",
+    "twoPlayers": "…chính xác 2, spawn 1 Suspicious Guest tại Study và 1 tại Office. Loại bỏ 1 bản sao của kẻ địch đó khỏi trò chơi.",
+    "threeOrFourPlayers": "…chính xác 3 hoặc 4, spawn 1 Suspicious Guest tại Study, 1 tại Office, và 1 tại Dining Hall.",
+    "agendaDeck": "Kiểm tra Nhật ký Chiến dịch của bạn.",
+    "feedingFrenzyV2": "Nếu mục *các điều tra viên đã đánh bại Zburamoarte* được ghi lại, hãy xây dựng agenda deck bằng agenda 2a—“Feeding Frenzy (v. II).” Loại bỏ bản sao khác của agenda 2a khỏi trò chơi.",
+    "feedingFrenzyV1": "Nếu không, hãy xây dựng agenda deck bằng agenda 2a—“Feeding Frenzy (v. I).” Loại bỏ bản sao khác của agenda 2a khỏi trò chơi.",
+    "setAside": "Để riêng từng bản sao của kẻ địch Child of Blood, kẻ địch Spawn of Zburamoarte, treachery Sanguine Rebirth, story asset hai mặt Chosen of Zburamoarte, cũng như từng kẻ địch từ encounter set _Sanguine Secrets_ và từng lá bài trong encounter set _Infected_ sang một bên, out of play.",
+    "howardWilkes": "Tập hợp từng bản sao của kẻ địch Howard Wilkes.",
+    "firstChildOfZburamoarte": "Nếu bạn đang chơi ở độ khó Easy, hãy để riêng Howard Wilkes (*First Child of Zburamoarte*) sang một bên, out of play. Loại bỏ các bản sao khác của Howard Wilkes khỏi trò chơi.",
+    "tooFarGone": "Nếu bạn đang chơi ở độ khó Standard, hãy để riêng Howard Wilkes (*Too Far Gone*) sang một bên, out of play. Loại bỏ các bản sao khác của Howard Wilkes khỏi trò chơi.",
+    "ultimatePredator": "Nếu bạn đang chơi ở độ khó Hard hoặc Expert, hãy để riêng Howard Wilkes (*Ultimate Predator*) sang một bên, out of play. Loại bỏ các bản sao khác của Howard Wilkes khỏi trò chơi.",
+    "juliaStern": "Kiểm tra Nhật ký Chiến dịch của bạn. Nếu mục *các điều tra viên đã giết Julia Stern* được ghi lại, hãy loại bỏ từng bản sao của kẻ địch Julia Stern khỏi trò chơi. Nếu không, hãy tập hợp từng bản sao của kẻ địch Julia Stern.",
+    "firstVictimOfNewHorizons": "Nếu bạn đang chơi ở độ khó Easy, hãy để riêng Julia Stern (*First Victim of New Horizons*) sang một bên, out of play. Loại bỏ các bản sao khác của Julia Stern khỏi trò chơi.",
+    "outForBlood": "Nếu bạn đang chơi ở độ khó Standard, hãy để riêng Julia Stern (*Out for Blood*) sang một bên, out of play. Loại bỏ các bản sao khác của Julia Stern khỏi trò chơi.",
+    "childOfVengeance": "Nếu bạn đang chơi ở độ khó Hard hoặc Expert, hãy để riêng Julia Stern (*Child of Vengeance*) sang một bên, out of play. Loại bỏ các bản sao khác của Julia Stern khỏi trò chơi.",
+    "addCultist": "Thêm 1 token {'{'}cultist{'}'} vào chaos bag trong phần còn lại của chiến dịch."
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is 1 more than the number of {'{'}blood{'}'} tokens sealed on your investigator.",
-      "cultist": "-2. If you fail during an attack or evasion targeting a _Monster_ enemy, add 1 {'{'}blood{'}'} token to the chaos bag.",
-      "tablet": "-3. If you fail and there is a {'{'}blood{'}'} token sealed on your investigator, đặt 1 manh mối của bạn lên địa điểm của bạn.",
-      "elderThing": "-4. Nếu bạn thất bại, ready the nearest exhausted _Monster_ enemy."
+      "skull": "-X. X lớn hơn số lượng token {'{'}blood{'}'} bị seal trên thẻ điều tra viên của bạn là 1.",
+      "cultist": "-2. Nếu bạn thất bại trong một đòn tấn công hoặc né tránh (evasion) nhắm vào một kẻ địch _Monster_, hãy thêm 1 token {'{'}blood{'}'} vào chaos bag.",
+      "tablet": "-3. Nếu bạn thất bại và có một token {'{'}blood{'}'} bị seal trên thẻ điều tra viên của bạn, hãy đặt 1 manh mối của bạn lên địa điểm của bạn.",
+      "elderThing": "-4. Nếu bạn thất bại, ready kẻ địch _Monster_ đang exhausted gần nhất."
     },
     "hardExpert": {
-      "skull": "-X. X is 2 more than the number of {'{'}blood{'}'} tokens sealed on your investigator.",
-      "cultist": "-3. If this token is revealed during an attack or evasion targeting a _Monster_ enemy, after this test resolves, add 1 {'{'}blood{'}'} token to the chaos bag.",
-      "tablet": "-4. If you fail and there is a {'{'}blood{'}'} token sealed on your investigator, đặt 1 manh mối của bạn lên địa điểm của bạn.",
-      "elderThing": "-5. Nếu bạn thất bại, ready the nearest exhausted _Monster_ enemy."
+      "skull": "-X. X lớn hơn số lượng token {'{'}blood{'}'} bị seal trên thẻ điều tra viên của bạn là 2.",
+      "cultist": "-3. Nếu token này được tiết lộ trong một đòn tấn công hoặc né tránh (evasion) nhắm vào một kẻ địch _Monster_, sau khi bài kiểm tra này được xử lý, hãy thêm 1 token {'{'}blood{'}'} vào chaos bag.",
+      "tablet": "-4. Nếu bạn thất bại và có một token {'{'}blood{'}'} bị seal trên thẻ điều tra viên của bạn, hãy đặt 1 manh mối của bạn lên địa điểm của bạn.",
+      "elderThing": "-5. Nếu bạn thất bại, ready kẻ địch _Monster_ đang exhausted gần nhất."
     }
   },
   "codex": {
     "partyGuest": {
-      "title": "Codex A: Party Guest",
-      "body": "<p>You chat up the party guest, trying to learn what you can while making sure they don’t interfere in your investigation.</p><p class='basic'>Reveal random tokens from the chaos bag until you reveal a token with a symbol that isn’t sealed on an enemy. If the token is…</p><ul><li>…a {'{'}skull{'}'} token: The guest regards you with suspicion.</li><li>…a {'{'}cultist{'}'} token: This guest is trying to not be noticed.</li><li>…a {'{'}tablet{'}'} token: Seated comfortably, this guest smiles at you.</li><li>…an {'{'}elderThing{'}'} token: This guest can’t eat their food fast enough.</li><li>…a {'{'}blood{'}'} token: This guest is dressed for business, not a party.</li><li>…an {'{'}autoFail{'}'} token: This guest is struggling to stand upright.</li><li>…an {'{'}elderSign{'}'} token: This guest joins a small group to gossip.</li></ul><p class='basic'>After resolving the codex matching the revealed token, any investigator may trigger this codex again.</p>"
+      "title": "Codex A: Khách Dự Tiệc",
+      "body": "<p>Bạn trò chuyện với vị khách dự tiệc, cố gắng tìm hiểu những gì có thể trong khi đảm bảo rằng họ không can thiệp vào cuộc điều tra của bạn.</p><p class='basic'>Tiết lộ các token ngẫu nhiên từ chaos bag cho đến khi bạn tiết lộ được một token có biểu tượng chưa bị seal trên một kẻ địch. Nếu token đó là…</p><ul><li>…một token {'{'}skull{'}'}: Vị khách nhìn bạn với ánh mắt ngờ vực.</li><li>…một token {'{'}cultist{'}'}: Vị khách này đang cố gắng không để bị chú ý.</li><li>…một token {'{'}tablet{'}'}: Ngồi một cách thoải mái, vị khách này mỉm cười với bạn.</li><li>…một token {'{'}elderThing{'}'}: Vị khách này ngấu nghiến đồ ăn nhanh đến mức khó tin.</li><li>…một token {'{'}blood{'}'}: Vị khách này ăn vận như đi làm ăn, chứ không phải đi dự tiệc.</li><li>…một token {'{'}autoFail{'}'}: Vị khách này đang chật vật đứng vững.</li><li>…một token {'{'}elderSign{'}'}: Vị khách này hòa vào một nhóm nhỏ để tán gẫu.</li></ul><p class='basic'>Sau khi giải quyết mục codex tương ứng với token đã tiết lộ, bất kỳ điều tra viên nào cũng có thể kích hoạt codex này một lần nữa.</p>"
     },
     "partyGuestSkull": {
-      "title": "Codex {'{'}skull{'}'}: Party Guest",
-      "body": "<p>The guest begins a long, boring, and painfully oblivious story about how they were shocked to see Howard Wilkes choose Northside—the “working district, of all places”—as the location for not only this party, but also his penthouse. You pretend to be interested as they ramble on, but find a quiet moment to steal away instead.</p><p class='basic right'>Automatically evade this enemy and seal this token on it (if Priscilla Thomas is in play, seal this token on her instead).</p>"
+      "title": "Codex {'{'}skull{'}'}: Khách Dự Tiệc",
+      "body": "<p>Vị khách bắt đầu một câu chuyện dài dòng, buồn tẻ và vô tư đến mức ngớ ngẩn về việc họ đã bàng hoàng ra sao khi thấy Howard Wilkes chọn Northside — “trong muôn vàn nơi, lại là một khu lao động” — làm địa điểm không chỉ cho bữa tiệc này, mà còn cho căn penthouse của hắn. Bạn giả vờ tỏ ra hứng thú khi họ luyên thuyên không ngừng, nhưng rồi tìm một khoảnh khắc yên tĩnh để lẩn đi.</p><p class='basic right'>Tự động evade kẻ địch này và seal token này lên nó (nếu Priscilla Thomas đang in play, hãy seal token này lên cô ấy thay vào đó).</p>"
     },
     "partyGuestCultist": {
-      "title": "Codex {'{'}cultist{'}'}: Party Guest",
-      "body": "<p>As you approach the guest, they stare you down with a deathly glare. Before you can even ask them what’s wrong, a dagger, fashioned from an over-sized fang, flashes in their hands as it’s drawn from their jacket pocket. “I know what you’re trying to do!” they shout. “We won’t let you stop what has already been started!”</p><p class='basic right'>Discard this enemy and spawn 1 random set-aside Cultist enemy engaged with you. Seal this token on that enemy (if Priscilla Thomas is in play, seal this token on her instead).</p>"
+      "title": "Codex {'{'}cultist{'}'}: Khách Dự Tiệc",
+      "body": "<p>Khi bạn tiếp cận vị khách, họ nhìn trừng trừng vào bạn với một ánh mắt chết chóc. Trước khi bạn kịp cất lời hỏi có chuyện gì, một con dao găm được chế tác từ một chiếc nanh quá khổ lóe sáng trên tay họ khi được rút ra từ túi áo khoác. “Ta biết các ngươi đang toan tính điều gì!” chúng hét lên. “Bọn ta sẽ không để các ngươi ngăn chặn những gì đã bắt đầu đâu!”</p><p class='basic right'>Discard kẻ địch này và spawn 1 kẻ địch Cultist ngẫu nhiên đã để riêng engaged với bạn. Seal token này lên kẻ địch đó (nếu Priscilla Thomas đang in play, hãy seal token này lên cô ấy thay vào đó).</p>"
     },
     "partyGuestTablet": {
-      "title": "Codex {'{'}tablet{'}'}: Party Guest",
-      "body": "<p>Your conversation with this guest, while enlightening about some strange happenings in French Hill, is otherwise unhelpful.</p><p class='basic right'>Automatically evade this enemy and seal this token on it. Draw 1 card.</p>"
+      "title": "Codex {'{'}tablet{'}'}: Khách Dự Tiệc",
+      "body": "<p>Cuộc trò chuyện của bạn với vị khách này, dù hé lộ đôi điều về những hiện tượng kỳ lạ ở French Hill, nhưng ngoài ra thì không giúp ích được gì.</p><p class='basic right'>Tự động evade kẻ địch này và seal token này lên nó. Rút 1 lá bài.</p>"
     },
     "partyGuestElderThing": {
-      "title": "Codex {'{'}elderThing{'}'}: Party Guest",
-      "body": "<p>“Darling, you simply must try the hors d’oeuvres!” This guest approaches you, holding a cracker topped with some sort of blood-red meat-spread, ready to force it into your mouth. You grit your teeth, make a comment about needing to use the washroom, and make a swift exit.</p><p class='basic right'>Automatically evade this enemy and seal this token on it. You may move to a connecting location.</p>"
+      "title": "Codex {'{'}elderThing{'}'}: Khách Dự Tiệc",
+      "body": "<p>“Bạn yêu ơi, bạn nhất định phải thử món khai vị này!” Vị khách này tiến lại gần bạn, cầm một miếng bánh quy phết một loại thịt xay đỏ như máu, chực nhét thẳng vào miệng bạn. Bạn nghiến răng, nói một câu rằng mình cần đi vệ sinh, rồi nhanh chóng rời đi.</p><p class='basic right'>Tự động evade kẻ địch này và seal token này lên nó. Bạn có thể di chuyển tới một địa điểm kết nối.</p>"
     },
     "partyGuestBlood": {
-      "title": "Codex {'{'}blood{'}'}: Party Guest",
-      "body": "<p>This guest remarks about how Howard Wilkes has met resistance when trying to distribute his product throughout Arkham, making a name for himself among local businesses as a ruthless megalomaniac. He’s brought Priscilla Thomas here this evening in hopes to find success outside of the city before his entire operation runs out of funding.</p><p class='basic right'>Automatically evade this enemy and seal this token on it (if Priscilla Thomas is in play, seal this token on her instead).</p>"
+      "title": "Codex {'{'}blood{'}'}: Khách Dự Tiệc",
+      "body": "<p>Vị khách này nhận xét về việc Howard Wilkes đã vấp phải sự kháng cự khi cố gắng phân phối sản phẩm của mình khắp Arkham, tự tạo dựng tiếng tăm trong giới kinh doanh địa phương như một kẻ cuồng vọng quyền lực tàn nhẫn. Hắn đưa Priscilla Thomas đến đây tối nay với hy vọng tìm kiếm thành công bên ngoài thành phố trước khi toàn bộ hoạt động của hắn cạn kiệt ngân sách.</p><p class='basic right'>Tự động evade kẻ địch này và seal token này lên nó (nếu Priscilla Thomas đang in play, hãy seal token này lên cô ấy thay vào đó).</p>"
     },
     "partyGuestAutoFail": {
-      "title": "Codex {'{'}autoFail{'}'}: Party Guest",
-      "body": "<p>This guest stumbles a bit, leaning heavily against a marble statue. You approach cautiously, reaching out and asking whether they need help. No sooner does your hand touch their shoulder than they wheel about, a crazed look in their eyes and a snarl on their lips.</p><p class='basic right'>This enemy attacks you. After this attack, that enemy disengages from each investigator and moves to a connecting location (with no investigators, if able).</p>"
+      "title": "Codex {'{'}autoFail{'}'}: Khách Dự Tiệc",
+      "body": "<p>Vị khách này hơi loạng choạng, tựa người nặng nề vào một bức tượng cẩm thạch. Bạn thận trọng tiến lại gần, vươn tay ra hỏi xem họ có cần giúp đỡ không. Bàn tay bạn vừa chạm vào vai họ thì họ liền quay phắt lại, với ánh mắt điên dại cùng tiếng gầm gừ nơi bờ môi.</p><p class='basic right'>Kẻ địch này tấn công bạn. Sau đòn tấn công này, kẻ địch đó disengage khỏi mỗi điều tra viên và di chuyển tới một địa điểm kết nối (không có điều tra viên nào, nếu có thể).</p>"
     },
     "partyGuestElderSign": {
-      "title": "Codex {'{'}elderSign{'}'}: Party Guest",
-      "body": "<p>You find a small group of guests talking amongst themselves in hushed tones. You are able to loiter just outside of their huddle, and learn that each has their own suspicions about what is really going on at tonight’s party.</p><p class='basic right'>Automatically evade this enemy. Gain 1 clue (from the token pool). Then, if Detective Reynolds is in play under an investigator’s control, that investigator gains 1 clue (from the token pool).</p>"
+      "title": "Codex {'{'}elderSign{'}'}: Khách Dự Tiệc",
+      "body": "<p>Bạn tìm thấy một nhóm nhỏ khách mời đang nói chuyện thì thào với nhau. Bạn có thể lượn lờ ngay bên ngoài vòng tròn của họ, và biết được rằng mỗi người đều có những nghi ngờ riêng về những gì thực sự đang diễn ra tại bữa tiệc tối nay.</p><p class='basic right'>Tự động evade kẻ địch này. Nhận 1 clue (từ token pool). Sau đó, nếu Detective Reynolds đang in play dưới sự kiểm soát của một điều tra viên, điều tra viên đó nhận 1 clue (từ token pool).</p>"
     },
     "priscillaThomas": {
       "title": "Codex B: Priscilla Thomas",
-      "body": "<p class='basic'>If this is the first time this codex entry has been triggered this scenario, proceed to _Priscilla Thomas 1_. Otherwise, skip to _Priscilla Thomas 2_.</p>"
+      "body": "<p class='basic'>Nếu đây là lần đầu tiên mục codex này được kích hoạt trong kịch bản này, hãy tiến tới _Priscilla Thomas 1_. Nếu không, hãy chuyển tới _Priscilla Thomas 2_.</p>"
     },
     "priscillaThomas1": {
       "title": "Codex B: Priscilla Thomas",
-      "body": "<p>_Priscilla Thomas 1_: Priscilla Thomas stands near the door to the dining hall, watching the other guests with a look of bored frustration. “A host who arrives late to his own party is never a good sign,” she says. She turns to regard you as you approach, and her eyebrow goes up in suspicion. “I don’t suppose you know anything about that, do you?”</p><p class='basic right'>Proceed to _Priscilla Thomas 2_.</p>"
+      "body": "<p>_Priscilla Thomas 1_: Priscilla Thomas đứng gần cửa vào phòng ăn, quan sát những vị khách khác với vẻ bực bội chán chường. “Một chủ nhà đến muộn trong chính bữa tiệc của mình thì chẳng bao giờ là điềm lành cả,” cô nói. Cô quay lại nhìn bạn khi bạn bước tới, và đôi lông mày cô nhướn lên đầy nghi hoặc. “Tôi không nghĩ là các bạn biết điều gì về chuyện đó đâu nhỉ?”</p><p class='basic right'>Hãy tiến tới _Priscilla Thomas 2_.</p>"
     },
     "priscillaThomas2": {
       "title": "Codex B: Priscilla Thomas",
-      "body": "<p>_Priscilla Thomas 2_: You try talking to Miss Thomas about her reason for being at the party, attempting to sow the seeds of doubt in her mind regarding Howard Wilkes and his business.</p><p class='basic'>Release each chaos token sealed on Priscilla Thomas. Place 1 horror (from the token pool) on Priscilla Thomas for each chaos token released this way.</p><p class='basic'>Choose an investigator at your location to test {'{'}willpower{'}'} or {'{'}intellect{'}'} (3). If that investigator succeeds, place 1 horror on Priscilla Thomas. Then, if there is 4 or more horror on Priscilla Thomas, proceed to _Priscilla Thomas 3_.</p><p class='basic'>Any investigator may trigger this codex entry again.</p>"
+      "body": "<p>_Priscilla Thomas 2_: Bạn cố gắng nói chuyện với Cô Thomas về lý do cô có mặt tại bữa tiệc, gieo những hạt mầm nghi ngờ vào tâm trí cô về Howard Wilkes và công việc làm ăn của hắn.</p><p class='basic'>Release từng chaos token bị seal trên Priscilla Thomas. Đặt 1 horror (từ token pool) lên Priscilla Thomas cho mỗi chaos token được release theo cách này.</p><p class='basic'>Chọn một điều tra viên tại địa điểm của bạn để kiểm tra {'{'}willpower{'}'} hoặc {'{'}intellect{'}'} (3). Nếu điều tra viên đó thành công, hãy đặt 1 horror lên Priscilla Thomas. Sau đó, nếu có từ 4 horror trở lên trên Priscilla Thomas, hãy tiến tới _Priscilla Thomas 3_.</p><p class='basic'>Bất kỳ điều tra viên nào cũng có thể kích hoạt mục codex này một lần nữa.</p>"
     },
     "priscillaThomas3": {
       "title": "Codex B: Priscilla Thomas",
-      "body": "<p>_Priscilla Thomas 3_: Miss Thomas listens to your story, her face stoic but her eyes attentive. Eventually she nods, setting her drink down on a nearby end table. “Say no more,” she said. “I was already feeling like this was a bad deal. You’re only confirming my concerns. Thanks.” She turns to leave, and pauses in the doorway. “If ever you find yourself in Boston and need work, I could make use of your investigative skills. And you’d be paid well.” With that, she leaves, heading for the foyer.</p><p class='basic right'>Remove Priscilla Thomas from the game. Each investigator may heal 2 horror or gain 3 resources.</p>"
+      "body": "<p>_Priscilla Thomas 3_: Cô Thomas chăm chú lắng nghe câu chuyện của bạn, khuôn mặt cô điềm tĩnh nhưng ánh mắt rất chăm chú. Cuối cùng cô gật đầu, đặt ly nước xuống một chiếc bàn nhỏ gần đó. “Không cần nói thêm nữa,” cô nói. “Tôi vốn đã cảm thấy đây là một thương vụ tồi tệ rồi. Các bạn chỉ đang xác nhận thêm những mối lo ngại của tôi thôi. Cảm ơn.” Cô quay lưng bước đi, rồi dừng lại ở ngưỡng cửa. “Nếu có bao giờ các bạn đến Boston và cần việc làm, tôi có thể tận dụng các kỹ năng điều tra của các bạn đấy. Và các bạn sẽ được trả công hậu hĩnh.” Dứt lời, cô rời đi, hướng về phía tiền sảnh.</p><p class='basic right'>Loại bỏ Priscilla Thomas khỏi trò chơi. Mỗi điều tra viên có thể hồi 2 horror hoặc nhận 3 tài nguyên.</p>"
     },
     "label": {
-      "healHorror": "Heal {count} horror",
-      "gainResources": "Gain {count} resources"
+      "healHorror": "Hồi {count} horror",
+      "gainResources": "Nhận {count} tài nguyên"
     }
   },
   "resolutions": {
     "investigatorDefeat": {
-      "title": "Điều tra viên bị hạ gục",
-      "body": "<p class='basic'>Before reading any other resolution, if at least 1 investigator was defeated: The defeated investigators read _Investigator Defeat_ first.</p><p>_Investigator Defeat_: You struggle against the monsters, but their numbers and ferocity overwhelm you, feeding on your flesh as you’re forced to the floor. Your entire world is a blood-soaked tempest of blinding pain before you finally give in to the darkness of death.</p><ul><li>Mỗi điều tra viên bị hạ gục bị <b>giết chết</b>.</li><li>If another resolution was reached, the remaining investigators proceed to that resolution. Otherwise, in your Campaign Log, record *the investigators failed to stop the children of blood*. The investigators lose the campaign!</li></ul>"
+      "title": "Điều Tra Viên Bị Đánh Bại",
+      "body": "<p class='basic'>Trước khi đọc bất kỳ kết cục nào khác, nếu có ít nhất 1 điều tra viên bị đánh bại: Các điều tra viên bị đánh bại đọc mục _Điều Tra Viên Bị Đánh Bại_ trước.</p><p>_Điều Tra Viên Bị Đánh Bại_: Bạn chống cự tuyệt vọng trước lũ quái vật, nhưng số lượng và sự hung hãn tột cùng của chúng đã áp đảo bạn, chúng cắn xé da thịt bạn khi bạn bị đè nghiến xuống sàn. Toàn bộ thế giới của bạn là một cơn bão đẫm máu ngập tràn nỗi đau xé lòng trước khi bạn rốt cuộc buông xuôi đầu hàng trước bóng tối của cái chết.</p><ul><li>Mỗi điều tra viên bị đánh bại bị _giết (killed)_.</li><li>Nếu đạt được một kết thúc khác, những điều tra viên còn sống sót sẽ tiến tới kết thúc đó. Nếu không, trong Nhật ký Chiến dịch của bạn, hãy ghi lại *các điều tra viên đã thất bại trong việc ngăn chặn children of blood*. Các điều tra viên thua chiến dịch!</li></ul>"
     },
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<p>_If no resolution was reached because each surviving investigator resigned during act 1a or act 2a_: Unable to bear the chaos of the party, you flee into the streets. You only hope that the problems of the New Horizons meat and the blighted blood will solve themselves.</p><ul><li>In your Campaign Log, record *the investigators failed to stop the children of blood*.</li><li>Each investigator suffers 1 physical trauma and 1 mental trauma, as they never fully recover from what they witnessed in their investigation.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Each investigator who does not have The Blood Blight weakness and who ended the scenario with 2 or more {'{'}blood{'}'} tokens sealed on their investigator becomes the bearer of a set-aside The Blood Blight weakness.</li><li>Các điều tra viên thất bại.</li></ul>"
+      "title": "Không có Kết cục",
+      "body": "<p>_Nếu không đạt được kết cục nào vì tất cả các điều tra viên còn sống sót đã resign trong act 1a hoặc act 2a_: Không thể chịu đựng nổi sự hỗn loạn điên cuồng của bữa tiệc, bạn tháo chạy ra đường phố. Bạn chỉ hy vọng rằng những vấn đề về nguồn thịt của New Horizons và dòng máu dịch bệnh sẽ tự chúng giải quyết.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã thất bại trong việc ngăn chặn children of blood*.</li><li>Mỗi điều tra viên chịu 1 physical trauma và 1 mental trauma, khi họ không bao giờ có thể hoàn toàn bình phục sau những gì đã chứng kiến trong cuộc điều tra của mình.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Mỗi điều tra viên không có weakness The Blood Blight và kết thúc kịch bản với từ 2 token {'{'}blood{'}'} trở lên bị seal trên thẻ điều tra viên của mình sẽ trở thành bearer của một weakness The Blood Blight đã để riêng.</li><li>Các điều tra viên thua chiến dịch!</li></ul>"
     },
     "resolution1": {
-      "title": "Kết thúc thứ nhất",
-      "body": "<p>_Resolution 1_: You walk out of the penthouse, leaving the defeated Howard Wilkes and the shattered remains of his cult behind. Arkham’s finest arrive as you head out into the street, and you let Detective Reynolds handle their questions. You head back out into Arkham as the first rays of the morning sun peek out over the Miskatonic River.</p><ul><li>In your campaign log, record *the investigators stopped the children of blood*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>Each investigator earns 1 bonus experience for each _Civilian_ enemy beneath the scenario reference card when the scenario ended.</li><li>_Experience_: {xp}</li></ul></li><li>Each investigator who does not have The Blood Blight weakness and who ended the scenario with 2 or more {'{'}blood{'}'} tokens sealed on their investigator becomes the bearer of a set-aside The Blood Blight weakness.<ul><li>If at least 1 investigator has The Blood Blight weakness in their deck, the investigators have earned the Chosen of Zburamoarte campaign reward card. Add this card to the player card pool.</li></ul></li><li>Các điều tra viên thành công!</li></ul>"
+      "title": "Kết thúc 1",
+      "body": "<p>_Resolution 1_: Bạn bước ra khỏi căn penthouse, bỏ lại một Howard Wilkes đã bị đánh bại cùng những tàn tích tan hoang của giáo phái hắn lại phía sau. Lực lượng cảnh sát tinh nhuệ nhất của Arkham ập đến khi bạn bước ra đường phố, và bạn để Thám tử Reynolds lo liệu các câu hỏi của họ. Bạn quay trở lại đường phố Arkham khi những tia nắng ban mai đầu tiên ló dạng trên dòng sông Miskatonic.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã ngăn chặn children of blood*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>Mỗi điều tra viên nhận 1 kinh nghiệm thưởng cho mỗi kẻ địch _Civilian_ nằm dưới lá bài scenario reference card khi kịch bản kết thúc.</li><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Mỗi điều tra viên không có weakness The Blood Blight và kết thúc kịch bản với từ 2 token {'{'}blood{'}'} trở lên bị seal trên thẻ điều tra viên của mình sẽ trở thành bearer của một weakness The Blood Blight đã để riêng.<ul><li>Nếu có ít nhất 1 điều tra viên có weakness The Blood Blight trong bộ bài của họ, các điều tra viên đã nhận được lá bài phần thưởng chiến dịch Chosen of Zburamoarte. Thêm lá bài này vào player card pool.</li></ul></li><li>Các điều tra viên chiến thắng chiến dịch!</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai",
-      "body": "<p>_Resolution 2_: You and the few guests you saved flee the penthouse as the Arkham police arrive. You watch as they rush into the penthouse, but you don’t stick around, heading out into Arkham just as the first rays of the morning sun peek out over the Miskatonic River.</p><ul><li>In your campaign log, record *the investigators failed to stop the children of blood*.</li><li>Each investigator suffers 1 physical trauma and 1 mental trauma, as they never fully recover from the horrors of the Cult of the Sanguine Order.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>Each investigator earns 1 bonus experience for each _Civilian_ enemy beneath the scenario reference card when the scenario ended.</li><li>_Experience_: {xp}</li></ul></li><li>Each investigator who does not have The Blood Blight weakness and who ended the scenario with 2 or more {'{'}blood{'}'} tokens sealed on their investigator becomes the bearer of a set-aside The Blood Blight weakness.<ul><li>If at least 1 investigator has The Blood Blight weakness in their deck, the investigators have earned the Chosen of Zburamoarte campaign reward card. Add this card to the player card pool.</li></ul></li><li>Các điều tra viên thành công!</li></ul>"
+      "title": "Kết thúc 2",
+      "body": "<p>_Resolution 2_: Bạn cùng số ít những vị khách mà bạn đã cứu sống tháo chạy khỏi căn penthouse khi cảnh sát Arkham ập tới. Bạn nhìn họ xông vào căn penthouse, nhưng bạn không nán lại lâu, bước ra thành phố Arkham đúng vào lúc những tia nắng ban mai đầu tiên ló dạng trên dòng sông Miskatonic.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã thất bại trong việc ngăn chặn children of blood*.</li><li>Mỗi điều tra viên chịu 1 physical trauma và 1 mental trauma, khi họ không bao giờ có thể hoàn toàn bình phục sau những nỗi kinh hoàng của Giáo phái Sanguine Order.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>Mỗi điều tra viên nhận 1 kinh nghiệm thưởng cho mỗi kẻ địch _Civilian_ nằm dưới lá bài scenario reference card khi kịch bản kết thúc.</li><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Mỗi điều tra viên không có weakness The Blood Blight và kết thúc kịch bản với từ 2 token {'{'}blood{'}'} trở lên bị seal trên thẻ điều tra viên của mình sẽ trở thành bearer của một weakness The Blood Blight đã để riêng.<ul><li>Nếu có ít nhất 1 điều tra viên có weakness The Blood Blight trong bộ bài của họ, các điều tra viên đã nhận được lá bài phần thưởng chiến dịch Chosen of Zburamoarte. Thêm lá bài này vào player card pool.</li></ul></li><li>Các điều tra viên chiến thắng chiến dịch!</li></ul>"
     },
     "xp": {
-      "rescuedGuests": "for each _Civilian_ enemy rescued"
+      "rescuedGuests": "cho mỗi kẻ địch _Civilian_ được giải cứu"
     }
   }
 }

@@ -166,6 +166,7 @@ const attachedTreacheries = computed(() =>
         :src="image"
         class="card"
         :class="{ 'treachery--can-interact': canHighlight, 'trigger-ready': triggerReady, attached, 'in-hand': isInHand }"
+        :data-card-code="treachery.cardCode"
         :draggable="tuckable || undefined"
         @dragstart="startDrag"
         @click="handleCardClick"

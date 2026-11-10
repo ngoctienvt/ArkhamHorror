@@ -1,0 +1,52 @@
+{
+  "achievements": {
+    "Untattered": {
+      "name": "Nguyên vẹn",
+      "text": "Hoàn thành <i>The Tatterdemalion</i> mà không còn lá bài nào trong scanning deck."
+    },
+    "AirlockSequence": {
+      "name": "Trình tự Khoang điều áp",
+      "text": "Đánh bại 3 kẻ địch bằng khả năng của Vịnh Tàu Cứu Hộ (Escape Pod Bay) trên tàu Tatterdemalion."
+    },
+    "MentalFortitude": {
+      "name": "Tinh thần kiên định",
+      "text": "Đánh bại Bóng Ma Tư Tưởng (Shadow of Thoughts) trong Cơn Ác Mộng Điện Tử."
+    },
+    "BrainBurn": {
+      "name": "Cháy Não",
+      "text": "Đánh bại Ông Kẹ (Boogeyman) trong Cơn Ác Mộng Điện Tử mà tiêu thụ ít hơn 6 manh mối mỗi điều tra viên trong suốt màn chơi."
+    },
+    "OutOfTime": {
+      "name": "Hết Thời Gian",
+      "text": "Đánh bại cả 3 bản sao của Chó Săn Tindalos (Hound of Tindalos) trong Lượng Tử Lạc Lối."
+    },
+    "SaviorOfNostalgia": {
+      "name": "Cứu Tinh Của Hoài Niệm",
+      "text": "Cứu từ 5 story asset [[Crew]] trở lên và đánh bại Thực Thể (Entity) trong Dưới Bóng Trái Đất."
+    },
+    "Neuroscientist": {
+      "name": "Nhà khoa học thần kinh",
+      "text": "Hoàn thành <i>Strange Moons</i> mà không còn lá bài nào trong scanning deck và không có damage nào trên bất kỳ story asset [[Brain]] nào."
+    },
+    "SelfHelp": {
+      "name": "Tự Lực",
+      "text": "Đánh bại tất cả các bản sao của Your Other Self mà không tiêu tốn manh mối trong act cuối cùng của <i>The Machine in Yellow</i>."
+    },
+    "Endtimes": {
+      "name": "Thời Khắc Tận Diệt",
+      "text": "Chiến thắng chiến dịch Dark Matter với 4 token Elder Thing, 3 token Tablet, và không có token Elder Sign trong túi chaos khi kết thúc."
+    },
+    "ItsTooLate": {
+      "name": "Đã Quá Muộn",
+      "text": "Chiến thắng chiến dịch <i>Dark Matter</i> với 12 Impending Doom trở lên."
+    },
+    "LineInTheSky": {
+      "name": "Đường Kẻ Trên Bầu Trời",
+      "text": "Chiến thắng chiến dịch <i>Dark Matter</i> với ít nhất ba Ultimatum đang kích hoạt."
+    },
+    "TheHeirToCarcosa": {
+      "name": "Người Kế Vị Carcosa",
+      "text": "Chiến thắng chiến dịch <i>Dark Matter</i> ở độ khó Expert bằng cách đánh bại Tassilda trong <i>Starfall</i>."
+    }
+  }
+}

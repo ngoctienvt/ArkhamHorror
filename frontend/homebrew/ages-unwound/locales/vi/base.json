@@ -1,0 +1,331 @@
+{
+  "name": "Ages Unwound (Thời Gian Mở Rộng)",
+  "interludes": {
+    "1": "Một Ân Nhân Vô Danh"
+  },
+  "headings": {
+    "interludes": {
+      "1": "Chuyển cảnh I"
+    }
+  },
+  "intro": {
+    "title": "Cái giá của Thời gian",
+    "body": "“Tôi đã quen biết Milwarp trong nhiều năm. Nhưng ký ức của tôi về người đàn ông này đang trở nên mờ nhạt một cách kỳ lạ, giống như một hình ảnh trong tấm gương mờ sương. Tính cách đen tối, nửa như người ngoài hành tinh của anh ta, sự bận tâm của anh ta với những điều huyền bí, kiến thức sâu rộng của anh ta về cuộc sống và truyền thuyết phương Đông, là những thứ tôi nhớ lại với sự nỗ lực và mơ hồ như khi cố gắng khôi phục một giấc mơ. Đôi khi tôi gần như nghi ngờ rằng anh ta đã từng tồn tại. Cứ như thể người đàn ông đó, và tất cả những gì liên quan đến anh ta, đang bị xóa khỏi ghi chép của nhân loại bởi một sự tăng tốc bí ẩn nào đó của quá trình lãng quên thông thường.”\n<right> - Clark Ashton Smith, <i>The Chain of Aforgomon</i>.</right>"
+  },
+  "additionalRulesAndClarifications": {
+    "title": "Các Quy Tắc Bổ Sung và Giải Thích Làm Rõ",
+    "alert": {
+      "title": "Alert",
+      "body": "<p class='basic'>Mỗi khi một điều tra viên thất bại trong bài kiểm tra kỹ năng khi cố gắng né tránh một kẻ địch có từ khóa alert, sau khi áp dụng tất cả kết quả của bài kiểm tra kỹ năng đó, kẻ địch đó sẽ thực hiện một đòn tấn công nhằm vào điều tra viên đang né tránh. Kẻ địch không bị exhaust sau khi thực hiện đòn tấn công alert. Đòn tấn công này xảy ra bất kể kẻ địch đó có đang giao chiến với điều tra viên đang né tránh hay không.</p>"
+    },
+    "storyCards": {
+      "title": "Thẻ Cốt Truyện",
+      "body": "<p class='basic'>Các thẻ cốt truyện đóng vai trò như một phương tiện truyền tải thêm câu chuyện và thường có cả phần mô tả cốt truyện (flavor) cùng các hiệu ứng cơ chế ở cả hai mặt. Thông thường, một thẻ cốt truyện vào chơi hoặc được kích hoạt như là kết quả của một kịch bản hoặc hiệu ứng thẻ bài khác.</p>"
+    },
+    "swarming": {
+      "title": "Swarming X",
+      "body": "<p class='basic'>Một kẻ địch có từ khóa swarming X thực chất là một bầy kẻ địch hoạt động đồng bộ cùng nhau. Sau khi bạn đưa một kẻ địch có từ khóa swarming X vào chơi, hãy đặt X lá bài trên cùng của bộ bài bạn úp mặt bên dưới kẻ địch đó làm các thẻ bầy đàn (swarm cards) mà không được nhìn vào chúng. Kẻ địch mà chúng nằm bên dưới được gọi là &ldquo;kẻ địch chủ&rdquo;. Một số hiệu ứng kịch bản cũng có thể hướng dẫn người chơi thêm thẻ bầy đàn vào kẻ địch. Điều này được thực hiện theo cùng quy trình.</p><ul><li>Nếu không rõ điều tra viên nào nên thêm thẻ bầy đàn, điều tra viên dẫn đầu sẽ thực hiện.</li><li>Mỗi thẻ bầy đàn bên dưới kẻ địch chủ đóng vai trò như một thực thể riêng biệt của kẻ địch đó trong hầu hết mọi trường hợp. Mỗi thẻ bầy đàn có cùng các chỉ số và văn bản như thẻ chủ của nó. <i>(Ví dụ: nếu một điều tra viên đang giao chiến với một kẻ địch chủ có 2 thẻ bầy đàn bên dưới nó, điều tra viên đó đang giao chiến với tổng cộng 3 kẻ địch.)</i></li><li>Mỗi thẻ bầy đàn tấn công riêng biệt khi kẻ địch tấn công trong giai đoạn kẻ địch. Khi kẻ địch chủ và tất cả các thẻ bầy đàn của nó đã tấn công trong bước này, exhaust tất cả chúng.</li><li>Mỗi thẻ bầy đàn có thể bị tấn công hoặc chịu sát thương riêng biệt, nhưng kẻ địch chủ không thể bị đánh bại khi nó vẫn còn các thẻ bầy đàn bên dưới. Khi một thẻ bầy đàn bị đánh bại, bất kỳ sát thương dư thừa nào cũng có thể được gây cho một thẻ bầy đàn khác bên dưới cùng kẻ địch chủ đó hoặc cho chính kẻ địch chủ. <i>(Ví dụ: Tony Morgan sử dụng Chicago Typewriter để tấn công The Myriad Gentleman có 2 thẻ bầy đàn. Đòn tấn công gây 3 sát thương. 2 sát thương đầu tiên đánh bại 1 trong 2 thẻ bầy đàn, vì vậy điểm sát thương dư ra có thể gây cho thẻ bầy đàn khác, làm nó bị thương nhưng chưa bị đánh bại.)</i></li><li>Bất cứ khi nào một thẻ bầy đàn rời khỏi màn chơi, hãy đặt nó xuống dưới đáy bộ bài của chủ sở hữu. Nếu bạn không chắc chắn về chủ sở hữu của thẻ bầy đàn, bạn có thể nhìn vào nó để xác định chủ sở hữu.</li><li>Kẻ địch chủ và tất cả các thẻ bầy đàn của nó di chuyển, giao chiến và exhaust như một thực thể duy nhất. <i>(Ví dụ: nếu kẻ địch chủ hoặc bất kỳ thẻ bầy đàn nào của nó bị né tránh, tất cả chúng đều exhaust và disengage.)</i></li></ul>"
+    },
+    "soloPlay": {
+      "title": "Thay đổi cho Chế độ Chơi Đơn",
+      "body": "<p class='basic'>Một số hiệu ứng trong Ages Unwound sẽ yêu cầu bạn tương tác với bộ bài của một điều tra viên khác. Để mô phỏng điều này trong chế độ chơi đơn thuần túy, hãy xây dựng một bộ bài giả (dummy deck) từ các lá bài sau:</p><ul><li>Vệ Binh (Guardian): .45 Automatic, Beat Cop, Emergency Aid, On the Hunt, Vicious Blow</li><li>Học Giả (Seeker): Hawk-Eye Folding Camera, Old Book of Lore, Barricade, Connect the Dots, Deduction</li><li>Sát Thủ (Rogue): Burglary, Lockpicks, Narrow Escape, Sneak Attack, Quick Thinking</li><li>Huyền Sư (Mystic): Rite of Seeking, Shrivelling, Dark Prophesy, Drawn to the Flame, Fearless</li><li>Người Sống Sót (Survivor): Gravedigger's Shovel, Rabbit's Foot, Hiding Spot, Scrounge for Supplies, Rise to the Occasion</li></ul><p class='basic'>Loại bỏ bất kỳ lá bài nào thuộc hệ của bạn khỏi bộ bài này, cũng như bất kỳ lá bài nào mà bạn đã có ít nhất một bản sao trong bộ bài chính. Nếu bạn không sở hữu bất kỳ lá bài nào trong danh sách này, hãy thay thế bằng các lá bài tương đương từ bộ sưu tập của bạn. <i>(Mỗi hệ có 2 lá hỗ trợ, 2 lá sự kiện và 1 lá kỹ năng, đại diện cho cốt lõi của hệ đó. Tránh các lá bài quá phổ biến hoặc luôn hữu dụng như Lone Wolf.)</i></p><p class='basic'>Bất cứ khi nào bạn được hướng dẫn tương tác với bộ bài của điều tra viên khác, hãy tương tác với bộ bài giả này. Khi một lá bài từ bộ bài giả rời khỏi cuộc chơi, hãy xáo nó trở lại vào bộ bài giả.</p>"
+    }
+  },
+  "prologue": {
+    "title": "Mở đầu",
+    "body": "<p>Cái lạnh thấu xương của màn đêm đã thấm qua lớp quần áo dày, len lỏi vào tận tâm hồn bạn. Đôi mắt bạn giờ đã quen với ánh trăng mờ ảo, không thấy bất kỳ chuyển động nào trên con phố hoang vắng. Đã quá nửa đêm rồi. Chắc hẳn phải hơn 1 giờ sáng.</p><p>Cuộc gọi đó thực sự đáng nghi &mdash; một giọng nói nghẹt lại, méo mó, khẩn khoản yêu cầu bạn gặp mặt vào lúc nửa đêm, rằng vận mệnh của thế giới phụ thuộc vào điều đó. Nghe thật kỳ quái, nhưng kẻ gọi điện biết những điều mà gần như không ai biết về bạn. Đó không hẳn là một lời tống tiền, mà giống như một lời cam kết cho sự tin tưởng. Một lời hứa rằng mọi thứ sẽ sớm được giải thích rõ ràng.</p><p>Bạn cảm thấy mình thật ngớ ngẩn khi lững thững bước về nhà. Cứ như thể một trò đùa tàn nhẫn vừa được dàn dựng để trêu chọc bạn vậy. Có lẽ bạn không nên đi, nhưng điều gì đó đã khiến bạn muốn tin vào giọng nói ở đầu dây bên kia. Thật mù quáng.</p><p>Ánh sáng chói lòa, chập chờn suýt nữa đã làm bạn mù mắt. Bạn chớp mắt liên tục, và khi mắt bạn dần thích nghi, những quầng sáng chói lọi đó hiện rõ thành hình ảnh của lửa đỏ và sự phẫn nộ. Ngôi nhà của bạn đang rực cháy, một lò bát quái dữ dội và nóng bỏng đến mức không thể là do ngẫu nhiên. Ai đó đang muốn giết bạn sao? Nhưng tại sao?</p><p>Và nếu đây là một nỗ lực nhằm lấy mạng bạn, thì cuộc gọi kỳ quái bạn nhận được tối nay có ý nghĩa gì?</p>"
+  },
+  "epilogue": {
+    "title": "Hậu truyện",
+    "instructions": "<p>Kiểm tra Nhật ký Chiến dịch. Theo thứ tự, đọc từng mục sau đây chỉ khi các điều tra viên đã chiến thắng chiến dịch và mục nhật ký chiến dịch liên quan là đúng.</p>",
+    "waning": {
+      "condition": "Chỉ đọc phần sau nếu sự tồn tại của ít nhất một điều tra viên đang suy tàn:",
+      "body": "<p>Bạn mệt mỏi. Điều này không có gì đáng ngạc nhiên: bạn vừa chiến đấu với một vị thần. Tuy nhiên, khi bạn rảo bước qua những con phố Arkham vào sáng sớm, bạn cảm thấy bước chân mình nhẹ bẫng một cách đáng ngạc nhiên &mdash; nếu sự mệt mỏi đè nặng lên bạn, thì cảm giác này lại nâng bạn lên, cho đến khi bạn gần như đang lơ lửng. Bạn cảm thấy mình lịm đi, trong khi vẫn đang bước đi, vào một giấc ngủ êm ái, bất tận&hellip;</p><ul><li>Mỗi điều tra viên có sự tồn tại đang suy tàn bị xóa sổ khỏi thực tại. Xóa mục của điều tra viên đó khỏi Nhật ký Chiến dịch của bạn một cách triệt để nhất có thể, như thể điều tra viên đó chưa từng tồn tại.</li></ul>",
+      "effect": "Mỗi điều tra viên <i>existence is waning</i> bị xóa sổ khỏi thực tại. Xóa mục của điều tra viên đó khỏi Nhật ký Chiến dịch của bạn một cách triệt để nhất có thể, như thể điều tra viên đó chưa từng tồn tại."
+    },
+    "marked": {
+      "condition": "Chỉ đọc phần sau nếu ít nhất một điều tra viên sống sót vẫn mang dấu ấn của Aforgomon:",
+      "body": "<p>Trong những năm sau đó, bạn vẫn bị mê hoặc bởi thời gian. Rốt cuộc, bạn hiểu về không-thời gian có lẽ rõ hơn bất kỳ ai còn sống. Bạn đã vài lần cố gắng chia sẻ những phát hiện của mình; mỗi lần như vậy, các lý thuyết của bạn đều bị bác bỏ vì bị cho là kỳ dị và vô căn cứ. Có <i>quá nhiều thứ</i> bạn có thể dạy cho thế giới &mdash; bạn có thể thúc đẩy lĩnh vực vật lý tiến lên hàng thập kỷ với những gì bạn biết &mdash; nhưng không ai muốn lắng nghe.</p><p>Bốn năm sau cuộc đối đầu cuối cùng của bạn với Aforgomon, bạn gõ cửa ba tiếng vào cửa trước của một dinh thự trang nhã ở ngoại ô Arkham. Một người quản gia im lặng dẫn bạn đến một phòng ngủ, nơi những tấm rèm nhung dày cản mọi ánh sáng và mùi tử khí treo lơ lửng nặng nề trong không khí. Người trong phòng khẽ cựa mình.</p><p>“Ta rất, rất vui vì ngươi đã nhận lời mời của ta.” Giọng nói chỉ nhỉnh hơn một tiếng thì thầm. Hình hài tiều tụy của Joseph Baxter, the Myriad Gentleman, trông như đã ít nhất một trăm tuổi. Ông ta mỉm cười với bạn, nụ cười săn mồi trông khá lạc lõng trên khuôn mặt của ông lão. “Chúng ta có nhiều việc phải làm.”</p>"
+    },
+    "silverTwilight": {
+      "condition": "Chỉ đọc phần sau nếu bạn đã thúc đẩy các âm mưu của Hội Silver Twilight:",
+      "body": "<p>“Và chúng ta hoàn toàn chắc chắn nó là thật?” Ánh mắt của Carl Sanford dừng lại trên người đàn ông nhỏ bé đang ngồi đầy lo lắng trước mặt ông. Ông Sanford vốn đã là một người đáng sợ ngay cả trong những lúc bình thường, nhưng sự dữ dội mà ông đang tập trung vào người đưa tin khiến gã chỉ muốn thu mình lại thành hư vô.</p><p>“V-vâng thưa ngài,” gã cố gắng nói, “Các thử nghiệm của chúng ta đã có kết luận. Bây giờ chúng ta chỉ thiếu một thành phần&mdash;”</p><p>“Không hẳn. Những người bạn mới của chúng ta cũng đã giúp chúng ta việc đó.” Đôi mắt lấp lánh, Sanford lấy ra một xấp giấy tờ rời rạc bị cháy sém từ bàn làm việc của mình. “Sau khi giúp giải quyết chiến dịch của Baxter, một trong những đặc vụ của chúng ta đã thu hồi được một số nghiên cứu của hắn. Chúng ta có mọi thứ chúng ta cần.</p><p>“Hãy để công cuộc vĩ đại bắt đầu.”</p>"
+    }
+  },
+  "aforgomonsBlade": {
+    "label": {
+      "spendChargeForAction": "Chi 1 charge và exhaust Aforgomon's Blade",
+      "doNotSpendCharge": "Không chi charge"
+    }
+  },
+  "monasticTraining": {
+    "label": {
+      "discardToReturn": "Bỏ một lá bài để thêm Monastic Training vào tay bạn"
+    }
+  },
+  "key": {
+    "yourHuntersFoundANewQuarry": "những kẻ săn lùng bạn đã tìm thấy một con mồi mới.",
+    "theInvestigatorsSurvivedTheNightOfFire": "các điều tra viên đã sống sót qua đêm lửa cháy.",
+    "theInvestigatorsSlewTheirStrangeObserver": "các điều tra viên đã tiêu diệt kẻ quan sát kỳ lạ của họ.",
+    "theInvestigatorsEscapedTheNightOfFire": "các điều tra viên đã thoát khỏi đêm rực lửa.",
+    "theInvestigatorsDeclinedAnOfferOfHelp": "các điều tra viên đã từ chối một lời đề nghị giúp đỡ.",
+    "theInvestigatorsAcceptedAnOfferOfHelp": "các điều tra viên đã chấp nhận một lời đề nghị giúp đỡ.",
+    "theInvestigatorsLearntOfTheMyriadsRitual": "các điều tra viên đã biết về nghi lễ của Myriad.",
+    "theInvestigatorsFledTheGentlemansManor": "các điều tra viên đã chạy trốn khỏi dinh thự của Gentleman.",
+    "theBoundaryIsBroken": "Ranh giới đã bị phá vỡ.",
+    "theInvestigatorsUsedTheSchoolsFrontDoor": "các điều tra viên đã sử dụng cửa trước của trường học.",
+    "theInvestigatorsFellToTheMyriad": "các điều tra viên đã gục ngã trước the Myriad.",
+    "theInvestigatorsSteppedIntoThePast": "các điều tra viên đã bước vào quá khứ.",
+    "theInvestigatorsSteppedIntoTheFuture": "các điều tra viên đã bước vào tương lai.",
+    "theInvestigatorsEliminatedTheHighPriest": "các điều tra viên đã tiêu diệt the high priest.",
+    "theTimelineWasWeakened": "dòng thời gian đã bị suy yếu.",
+    "allTimesAreOne": "mọi thời gian hòa làm một.",
+    "theRitualIsNigh": "nghi thức đã đến gần.",
+    "returnedToArkhamLate": "đã trở về Arkham muộn.",
+    "theInvestigatorsViolatedCausality": "các điều tra viên đã vi phạm luật nhân quả.",
+    "theMyriadSolvedTheRiddleOfTheSphinx": "the Myriad đã giải được câu đố của nhân sư.",
+    "theMyriadHarnessedThePowerOfAnotherRealm": "the Myriad đã khai thác sức mạnh của một cõi khác.",
+    "theMyriadTookControlOfAColourOutOfSpace": "the Myriad đã kiểm soát một colour out of space.",
+    "theMyriadRaisedAPowerfulWarding": "The Myriad đã dựng lên một lớp bảo vệ mạnh mẽ.",
+    "theMyriadRecruitedACruelSorcerer": "The Myriad đã chiêu mộ một pháp sư tàn nhẫn.",
+    "theMyriadWeavedADreadCurse": "The Myriad đã dệt nên một lời nguyền đáng sợ.",
+    "disappearedUnexpectedly": "đã biến mất một cách bất ngờ.",
+    "theInvestigatorsUnleashedChaos": "Các điều tra viên đã giải phóng sự hỗn loạn.",
+    "theInvestigatorsBoundAforgomonInAPrisonOfTime": "các điều tra viên đã giam cầm Aforgomon trong một nhà tù thời gian.",
+    "stillBearsAforgomonsMark": "vẫn mang dấu ấn của Aforgomon.",
+    "existenceIsWaning": "có sự tồn tại đang suy tàn.",
+    "youHaveAdvancedTheSchemesOfTheSilverTwilightLodge": "bạn đã thúc đẩy các âm mưu của Silver Twilight Lodge.",
+    "strangeAssistance": "Sự trợ giúp Kỳ lạ",
+    "recordedTimes": "Thời gian đã ghi lại",
+    "mustReplayAWorldTornDown": "các điều tra viên phải đối mặt với Một Thế Giới Bị Xé Toạc một lần nữa.",
+    "mustReplayTimeRunsOut": "các điều tra viên phải đối mặt với Thời Gian Cạn Kiệt một lần nữa.",
+    "theInvestigatorsSnuckIntoTheBackOfTheSchool": "các điều tra viên đã lẻn vào phía sau trường học.",
+    "theInvestigatorsRepelledTheHoundOfUnmaking": "Các điều tra viên đã đẩy lùi Hound of Unmaking.",
+    "theInvestigatorsPutDownTheHoundOfUnmaking": "Các điều tra viên đã hạ gục Hound of Unmaking.",
+    "theInvestigatorsDispelledTheWard": "Các điều tra viên đã giải trừ bùa chú.",
+    "theInvestigatorsBrokeTheFirstCircle": "Các điều tra viên đã phá vỡ vòng tròn đầu tiên.",
+    "damageOnTheHoundOfUnmaking": "Sát thương trên Hound of Unmaking",
+    "youSolvedTheRiddleOfTheSphinx": "bạn đã giải được câu đố của nhân sư.",
+    "youTookTeaWithTheRulerOfAStrangeDimension": "Bạn đã uống trà với kẻ cai trị của một chiều không gian kỳ lạ."
+  },
+  "recordedTimes": {
+    "agenda": "Agenda",
+    "doom": "Doom",
+    "saveFailed": "Không thể lưu thời gian. Vui lòng thử lại.",
+    "tooltip": "Agenda {agenda}, với {doom} doom trên đó"
+  },
+  "label": {
+    "gainActions": "Nhận 1 hành động | Nhận {count} hành động",
+    "aspectsOfInfinity": {
+      "loseSurge": "Lá bài này mất surge"
+    },
+    "riggedToBlow": {
+      "moveOne": "Di chuyển một điều tra viên tại địa điểm của bạn đến một địa điểm kết nối",
+      "moveEach": "Di chuyển mỗi điều tra viên tại địa điểm của bạn đến một địa điểm kết nối"
+    },
+    "unevenAcceleration": {
+      "gainActionAndDraw": "Nhận một hành động. Rút lá bài trên cùng của chồng bài encounter"
+    },
+    "houndOfUnmaking": {
+      "discardAsset": "Bỏ một asset bạn kiểm soát",
+      "takeExtraDamage": "Đòn tấn công gây thêm cho bạn +2 sát thương"
+    },
+    "timeLoop": {
+      "fight": "Chiến đấu",
+      "move": "Di chuyển",
+      "evade": "Né tránh",
+      "investigate": "Điều tra",
+      "play": "Chơi bài",
+      "draw": "Rút bài",
+      "resource": "Lấy tài nguyên"
+    },
+    "timeReshaped": {
+      "loseActionForSkill": "Mất 1 hành động. Bạn nhận +1 chỉ số kỹ năng trong các bài kiểm tra kỹ năng cho đến cuối vòng",
+      "gainActionForSkill": "Nhận 1 hành động. Bạn bị –1 chỉ số kỹ năng trong các bài kiểm tra kỹ năng cho đến cuối vòng"
+    },
+    "timesEbb": {
+      "doNotChoose": "Không chọn một điều tra viên. Mất một hành động"
+    },
+    "contactingTheLodge": {
+      "extraActions": "Chi các hành động bổ sung"
+    },
+    "schemeOfTheMyriad": {
+      "investigate": "Khai thác vết rách thực tại thay vì khám phá manh mối"
+    },
+    "bookHeist": {
+      "steal": "Chờ thời cơ, rồi lao vào chộp lấy nó",
+      "notWorthTheRisk": "Thật không đáng để mạo hiểm"
+    },
+    "answers": {
+      "knowledge": "“Tri thức.” Rút bài cho đến khi bạn đạt số lượng bài tối đa trên tay",
+      "power": "“Quyền năng.” Phân phát 5 supply, ammo, charge hoặc secret giữa các asset bạn kiểm soát",
+      "wealth": "“Sự giàu có.” Nhận 10 tài nguyên",
+      "aid": "“Viện trợ.” Di chuyển đến bất kỳ địa điểm nào và gây 3 sát thương cho một kẻ địch ở đó",
+      "supply": "Đặt 1 supply",
+      "ammo": "Đặt 1 ammo",
+      "charge": "Đặt 1 charge",
+      "secret": "Đặt 1 secret"
+    },
+    "windowOfOpportunity": {
+      "retreat": "Bạn rút lui, trong khi bạn vẫn còn lựa chọn đó",
+      "digSite": "Bạn tiến về phía khu khai quật, quyết tâm phong ấn thứ này trở lại nơi nó xuất phát"
+    },
+    "agencyStrikeTeam": {
+      "damageEachEnemy": "Gây 3 sát thương cho mỗi kẻ địch tại địa điểm đã chọn",
+      "discoverClues": "Khám phá 3 manh mối tại địa điểm đã chọn"
+    },
+    "aLongAndLonelyYear": {
+      "moveToArkham": "Di chuyển đến Arkham, Massachusetts"
+    },
+    "aMultitudeOfPlots": {
+      "placeDoom": "Đặt 1 doom lên agenda hiện tại. Lá bài này nhận surge và bị loại khỏi trò chơi",
+      "addToVictory": "Thêm lá bài này vào victory display, thúc đẩy các kế hoạch của Myriad"
+    },
+    "childrensPlayground": {
+      "spendActions": "Chi hành động để giảm shroud của Children's Playground cho lần điều tra này"
+    },
+    "assistanceFromTheLodge": {
+      "dealDamage": "“Có thứ gì đó chuyển động trong bóng tối ngoài kia, và kẻ thù của bạn gục ngã.” Gây 2 sát thương cho một kẻ địch",
+      "discoverClue": "“Một mảnh giấy, được nhét vào túi bạn lúc nào không hay.” Khám phá một manh mối từ địa điểm của bạn hoặc một địa điểm kết nối",
+      "healDamage": "“Một mũi tiêm, một lớp băng gạc, và cơn đau dịu đi.” Hồi 2 sát thương"
+    }
+  },
+  "tooltips": {
+    "distantEntity": {
+      "test": "Kiểm tra {willpower} (3). Nếu bạn thành công, đặt một tài nguyên lên Distant Entity",
+      "flip": "Nếu có 3 tài nguyên trên Distant Entity: Lật mặt nó lại và giải quyết nội dung của nó"
+    },
+    "onTheLam": {
+      "move": "Di chuyển đến một địa điểm Arkham Streets mới"
+    },
+    "gettingYourBearings": {
+      "move": "Di chuyển đến một địa điểm Arkham Streets mới"
+    },
+    "frontHallway": {
+      "haunted": "Nếu Hound of Unmaking đang trong màn chơi và chưa chịu sát thương, đặt 1 sát thương lên nó"
+    },
+    "cafeteria": {
+      "haunted": "Mất tất cả hành động còn lại và kết thúc lượt của bạn",
+      "investigate": "Điều tra. Nếu bạn thất bại, không kích hoạt năng lực haunted của địa điểm này"
+    },
+    "classroomRitualSupplies": {
+      "haunted": "Kết thúc lượt của bạn"
+    },
+    "classroomGuardedSecrets": {
+      "haunted": "Tìm kiếm trong chồng bài encounter và chồng bài encounter bỏ một kẻ địch [[Criminal]] và rút nó"
+    },
+    "classroomEnergisedAndUnstable": {
+      "haunted": "Với mỗi hành động tiêu chuẩn bạn còn lại, chọn mất 1 hành động hoặc chịu 1 sát thương trực tiếp"
+    },
+    "principalsOffice": {
+      "haunted": "Với mỗi hành động bạn đã hoàn thành trong lượt này, chịu 1 kinh hoàng hoặc chọn và bỏ một lá bài trên tay"
+    },
+    "ritualCircleAHarnessedFuture": {
+      "haunted": "Tạm dừng lượt hiện tại của bạn và loại bỏ điều tra viên của bạn khỏi trò chơi. Khi bắt đầu giai đoạn điều tra viên tiếp theo, đưa điều tra viên của bạn trở lại địa điểm này và tiếp tục lượt hiện tại"
+    },
+    "ritualCircleGatewayToThePast": {
+      "haunted": "Di chuyển đến Front Gates"
+    },
+    "schemeOfTheMyriad": {
+      "investigate": "Điều tra. Nếu bạn thành công, thay vì khám phá manh mối, hãy lật mặt Scheme of the Myriad lại và giải quyết nội dung của nó"
+    },
+    "arkhamMassachusetts": {
+      "helpingYourself": "Các điều tra viên tại địa điểm này chi 2 manh mối cho mỗi điều tra viên, theo nhóm: Loại bỏ 1 tài nguyên khỏi Helping Yourself",
+      "move": "Di chuyển đến London hoặc Paris",
+      "resign": "Rút lui. Bạn quay trở lại Arkham, sẵn sàng cho những gì sắp xảy ra"
+    },
+    "sanFrancisco": {
+      "move": "Di chuyển đến Shanghai hoặc Sydney"
+    },
+    "mexicoCity": {
+      "gainClues": "Bỏ một asset [[Item]] bạn kiểm soát: Nhận 2 manh mối từ token pool"
+    },
+    "london": {
+      "move": "Di chuyển đến Arkham, Massachusetts"
+    },
+    "paris": {
+      "move": "Di chuyển đến Arkham, Massachusetts"
+    },
+    "istanbul": {
+      "heal": "Chi 2 tài nguyên: Hồi 1 sát thương và 1 kinh hoàng",
+      "move": "Chi 2 tài nguyên: Di chuyển đến một địa điểm kết nối"
+    },
+    "cairo": {
+      "search": "Tìm kiếm trong 3 lá bài trên cùng của bộ bài bạn một lá bài và rút nó"
+    },
+    "shanghai": {
+      "move": "Di chuyển đến San Francisco hoặc Sydney",
+      "gainClue": "Chi 3 tài nguyên: Nhận 1 manh mối từ token pool"
+    },
+    "sydney": {
+      "move": "Di chuyển đến San Francisco hoặc Shanghai",
+      "replenish": "Đặt 4 manh mối lên Sydney. Rút 2 lá bài và nhận 2 tài nguyên. Di chuyển đến bất kỳ địa điểm nào khác"
+    },
+    "displacedLegion": {
+      "parley": "Parley. Kiểm tra {intellect} (4) để giao tiếp với những người lính. Nếu bạn thành công, cho đến cuối vòng, Displaced Legion mất massive và nhận aloof",
+      "portal": "Kiểm tra {willpower} (4) để mở một cánh cổng xuyên thời gian. Nếu bạn thành công, thêm Displaced Legion vào victory display"
+    },
+    "theLongGame": {
+      "drawTask": "Các điều tra viên chi 1 manh mối cho mỗi điều tra viên, theo nhóm: Đưa lá bài trên cùng của bộ bài Task vào chơi cạnh act deck, giải quyết hiệu ứng revelation của nó"
+    },
+    "ritualCircleThePresentFractured": {
+      "haunted": "<b>Ám ảnh</b> – Chịu 1 sát thương và 1 kinh hoàng. Đặt 1 manh mối của bạn lên Ritual Circle. Nhận một hành động, chỉ có thể được dùng để điều tra Ritual Circle."
+    }
+  },
+  "ritualCircleThePresentFractured": {
+    "additionalAction": "Ritual Circle"
+  },
+  "ritualCircleAHarnessedFuture": {
+    "removed": "Vòng tròn khép lại quanh {investigator}, người hoàn toàn biến mất khỏi khoảnh khắc hiện tại.",
+    "returns": "{investigator} bước trở lại ra khỏi vòng tròn tại {location}, vào đúng khoảnh khắc họ đã rời đi."
+  },
+  "logEditor": {
+    "title": "Các mục chiến dịch",
+    "entry": "Mục / kết quả",
+    "state": "Trạng thái",
+    "time": "Thời gian đã ghi lại",
+    "none": "Chưa ghi nhận",
+    "recorded": "Đã ghi nhận",
+    "crossedOut": "Đã gạch bỏ",
+    "conflict": "Các kết quả xung đột đã được ghi nhận. Hãy chọn một kết quả để giải quyết.",
+    "saveFailed": "Không thể lưu các mục. Vui lòng thử lại.",
+    "counts": "Đếm số lượng",
+    "investigators": "Các mục của điều tra viên",
+    "enemies": "Những kẻ địch đã biến mất một cách bất ngờ",
+    "addEnemy": "Thêm kẻ địch",
+    "remove": "Xóa",
+    "agenda": "Agenda",
+    "doom": "Doom",
+    "saveTime": "Lưu thời gian",
+    "clearTime": "Xóa thời gian",
+    "hint": "Chỉnh sửa các kết quả liên quan cùng nhau, sau đó lưu lại. Các kết hợp không hợp lệ phải được sửa trước khi lưu. Các mục khác được lưu ngay lập tức.",
+    "outcomes": "Kết quả",
+    "search": "Tìm một mục…",
+    "saving": "Đang lưu…",
+    "saved": "Đã lưu các thay đổi",
+    "noMatches": "Không có mục nào khớp với tìm kiếm của bạn.",
+    "noEnemies": "Chưa có kẻ địch nào được ghi nhận ở đây.",
+    "outcomesTab": "Kết quả",
+    "countsTab": "Đếm số lượng",
+    "investigatorsTab": "Điều tra viên",
+    "enemiesTab": "Kẻ địch",
+    "invalidTitle": "Lịch sử chiến dịch không hợp lệ",
+    "invalidHint": "Các ghi chép này xung đột với nhau. Hãy thay đổi hoặc xóa các kết quả được làm nổi bật trước khi lưu.",
+    "showInvalid": "Hiển thị các kết quả bị ảnh hưởng",
+    "saveOutcomesFirst": "Lưu hoặc hoàn tác các thay đổi kết quả trước khi chỉnh sửa các mục khác.",
+    "unsavedOutcomes": "Các thay đổi kết quả chưa được lưu.",
+    "outcomesSaved": "Các kết quả khớp với nhật ký chiến dịch đã lưu.",
+    "saveOutcomes": "Lưu các kết quả",
+    "resetOutcomes": "Hoàn tác các thay đổi",
+    "validation": {
+      "exclusive": "Chỉ một trong các kết quả này có thể được ghi nhận.",
+      "backPast": "Lối vào phía sau dẫn đến A Harnessed Future, vì vậy nó không thể dẫn đến việc bước vào quá khứ.",
+      "frontFuture": "Lối vào phía trước dẫn đến Gateway to the Past, vì vậy nó không thể dẫn đến việc bước vào tương lai.",
+      "backHound": "Kết quả về Hound thuộc về tuyến đường lối vào phía trước, không phải lối vào phía sau.",
+      "futureHound": "Tuyến đường Hound dẫn đến Gateway to the Past, không phải bước vào tương lai.",
+      "frontWard": "Việc giải trừ bùa chú thuộc về tuyến đường lối vào phía sau, không phải lối vào phía trước.",
+      "pastWard": "Việc giải trừ bùa chú dẫn đến A Harnessed Future, không phải bước vào quá khứ.",
+      "houndWard": "Các kết quả Hound và giải trừ bùa chú thuộc về các tuyến đường khác nhau xuyên qua trường học."
+    }
+  }
+}

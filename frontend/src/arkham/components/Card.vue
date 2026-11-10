@@ -269,6 +269,7 @@ function startDrag(event: DragEvent) {
       :class="{'card--can-interact': cardAction !== -1, 'card--highlighted': isHighlighted && cardAction === -1, 'sideways': forceSideways, 'no-overlay': noOverlay}"
       class="card"
       :src="image"
+      :data-card-code="cardContents.cardCode"
       :data-customizations="JSON.stringify(cardContents.customizations)"
       :data-chained="cardContents.chained || undefined"
       :data-pc="modifiedPlayingCard ? modifiedPlayingCard : null"

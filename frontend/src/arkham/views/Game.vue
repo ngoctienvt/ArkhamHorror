@@ -68,7 +68,7 @@ import { useEventTimer } from '@/arkham/composables/useEventTimer'
 import { useStepPoller } from '@/arkham/composables/useStepPoller'
 import { useAutopilot } from '@/arkham/composables/useAutopilot'
 import { fxBusy } from '@/arkham/composables/useFxBusy'
-import { useDbCardStore } from '@/stores/dbCards'
+import { useDbCardStore, type ArkhamDBCard } from '@/stores/dbCards'
 import { useCardNames } from '@/arkham/composables/useCardNames'
 import { decideActionConfirm, type ActionConfirmRequest } from '@/arkham/actionConfirmPolicy'
 import { awaitingOrganizer, type SharedEventState } from '@/arkham/types/EpicEvent'
@@ -86,8 +86,10 @@ import {
 import useEmitter from '@/composable/useEmitter'
 import { useDebug } from '@/arkham/debug'
 import EntityBrowser from '@/arkham/components/debug/EntityBrowser.vue'
-import { cardImg, imgsrc, isTypingTarget } from '@/arkham/helpers'
-import { cardFaceImages, cardHasDistinctBack } from '@/arkham/cardImages'
+import { cardImg, imgsrc, isLocalized, isTypingTarget } from '@/arkham/helpers'
+import { cardImage, cardFaceImages, cardHasDistinctBack } from '@/arkham/cardImages'
+import { replaceText } from '@/arkham/cardTextFormat'
+import CardData from '@/arkham/components/CardData.vue'
 import { handleEmbeddedI18n } from '@/arkham/i18n'
 import { getGameLocalStorageItem, setGameLocalStorageItem } from '@/arkham/localStorage'
 import * as Arkham from '@/arkham/types/Game'
@@ -479,6 +481,89 @@ const cthulhuDeckCardCodes = new Set([
 const isCthulhuDeckReveal = computed(() => {
   const focusedCard = gameCard.value
   return focusedCard !== null && cthulhuDeckCardCodes.has(toCardContents(focusedCard.card).cardCode.replace(/^c/, ''))
+})
+
+const revelationCardContents = computed(() => {
+  if (!gameCard.value) return null
+  return toCardContents(gameCard.value.card)
+})
+
+const revelationCardCode = computed(() => {
+  const contents = revelationCardContents.value
+  if (!contents) return null
+  return contents.cardCode.replace(/^c/, '')
+})
+
+const revelationDbCard = computed<ArkhamDBCard | null>(() => {
+  const code = revelationCardCode.value
+  if (!code) return null
+  return dbCardStore.getDbCard(code)
+})
+
+const revelationNeedBack = computed(() => {
+  const contents = revelationCardContents.value
+  if (!contents) return false
+  return contents.isFlipped ?? false
+})
+
+const revelationCardName = computed(() => {
+  const db = revelationDbCard.value
+  if (!db) return null
+  const needBack = revelationNeedBack.value
+  let name = (needBack ? (db.double_sided ? (db.back_name || db.name) : db.back_name) : db.name) || null
+  if (!name) return null
+  if (!needBack && db.subname) name = `${name}: ${db.subname}`
+  if ((db.xp || 0) > 0) name = `${name} (${db.xp})`
+  if (db.is_unique) name = `*${name}`
+  return name
+})
+
+const revelationCardTypeName = computed(() => {
+  const t = revelationDbCard.value?.type_name
+  return t ? replaceText(t) : null
+})
+
+const revelationCardFactionName = computed(() => {
+  const t = revelationDbCard.value?.faction_name
+  return t ? replaceText(t) : null
+})
+
+const revelationCardFactionCode = computed(() => {
+  return revelationDbCard.value?.faction_code || 'mythos'
+})
+
+const revelationCardTraits = computed(() => {
+  const db = revelationDbCard.value
+  if (!db) return null
+  const needBack = revelationNeedBack.value
+  return (needBack ? (db.double_sided ? (db.back_traits || db.traits) : db.back_traits) : db.traits) || null
+})
+
+const revelationCardText = computed(() => {
+  const db = revelationDbCard.value
+  if (!db) return null
+  const needBack = revelationNeedBack.value
+  const t = needBack ? (db.back_text || null) : (db.text || null)
+  return t ? replaceText(t) : null
+})
+
+const revelationCardFlavor = computed(() => {
+  const db = revelationDbCard.value
+  if (!db) return null
+  const needBack = revelationNeedBack.value
+  const t = needBack ? (db.back_flavor || null) : (db.flavor || null)
+  return t ? replaceText(t) : null
+})
+
+const hasRevelationCardData = computed(() => {
+  return !!(revelationCardName.value || revelationCardText.value || revelationCardTraits.value || revelationCardFlavor.value)
+})
+
+const showRevelationCardData = computed(() => {
+  if (!gameCard.value || !hasRevelationCardData.value) return false
+  const contents = revelationCardContents.value
+  const img = cardImage(contents?.cardCode ?? '')
+  return !isLocalized(img)
 })
 const showTheSilenceModal = ref(false)
 /* Act / agenda advances waiting to be read. The first one is on screen; the game
@@ -3601,28 +3686,42 @@ onUnmounted(() => {
         >
           <div class="revelation-container">
             <h2>{{ format(gameCard.title) }}</h2>
-            <div class="revelation-card-container">
-              <div
-                class="revelation-card"
-                :style="revelationCardStyle"
-                :class="{ 'cthulhu-revelation-card': isCthulhuDeckReveal }"
-                :role="isCthulhuDeckReveal ? 'button' : undefined"
-                :tabindex="isCthulhuDeckReveal ? 0 : undefined"
-                :aria-label="isCthulhuDeckReveal ? `${format(gameCard.title)}. Click to enact.` : undefined"
-                @click="isCthulhuDeckReveal && continueUI()"
-                @keydown.enter="isCthulhuDeckReveal && continueUI()"
-                @keydown.space.prevent="isCthulhuDeckReveal && continueUI()"
-              >
-                <CardView :game="game" :card="gameCard.card" :playerId="playerId" />
-                <img
-                  v-if="gameCard.card.tag === 'PlayerCard'"
-                  :src="imgsrc('backs/back_player.jpg')"
-                  class="card back"
-                />
-                <img v-else :src="imgsrc('backs/back_encounter.jpg')" class="card back" />
+            <div class="revelation-content">
+              <div class="revelation-card-container">
+                <div
+                  class="revelation-card"
+                  :style="revelationCardStyle"
+                  :class="{ 'cthulhu-revelation-card': isCthulhuDeckReveal }"
+                  :role="isCthulhuDeckReveal ? 'button' : undefined"
+                  :tabindex="isCthulhuDeckReveal ? 0 : undefined"
+                  :aria-label="isCthulhuDeckReveal ? `${format(gameCard.title)}. Click to enact.` : undefined"
+                  @click="isCthulhuDeckReveal && continueUI()"
+                  @keydown.enter="isCthulhuDeckReveal && continueUI()"
+                  @keydown.space.prevent="isCthulhuDeckReveal && continueUI()"
+                >
+                  <CardView :game="game" :card="gameCard.card" :playerId="playerId" />
+                  <img
+                    v-if="gameCard.card.tag === 'PlayerCard'"
+                    :src="imgsrc('backs/back_player.jpg')"
+                    class="card back"
+                  />
+                  <img v-else :src="imgsrc('backs/back_encounter.jpg')" class="card back" />
+                </div>
+                <span v-if="isCthulhuDeckReveal" class="cthulhu-revelation-hint">Click to enact</span>
+                <button v-else @click="continueUI">{{ $t('ok') }}</button>
               </div>
-              <span v-if="isCthulhuDeckReveal" class="cthulhu-revelation-hint">Click to enact</span>
-              <button v-else @click="continueUI">{{ $t('ok') }}</button>
+
+              <CardData
+                v-if="showRevelationCardData"
+                class="revelation-card-data"
+                :name="revelationCardName"
+                :typeName="revelationCardTypeName"
+                :factionName="revelationCardFactionName"
+                :factionCode="revelationCardFactionCode"
+                :traits="revelationCardTraits"
+                :text="revelationCardText"
+                :flavor="revelationCardFlavor"
+              />
             </div>
           </div>
         </div>
@@ -4813,6 +4912,49 @@ header {
   100% {
     opacity: 1;
     transform: rotateY(0deg);
+  }
+}
+
+.revelation-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+  max-width: 90vw;
+}
+
+.revelation-card-data {
+  width: 300px;
+  max-height: 440px;
+  overflow-y: auto;
+  text-align: left;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  animation: revelation-card-data-in 0.4s ease-out;
+}
+
+@keyframes revelation-card-data-in {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .revelation-content {
+    flex-direction: column;
+    align-items: center;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .revelation-card-data {
+    max-height: 250px;
+    width: min(300px, 85vw);
   }
 }
 

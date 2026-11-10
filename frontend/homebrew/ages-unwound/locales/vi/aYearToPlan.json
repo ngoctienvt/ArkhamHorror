@@ -1,0 +1,61 @@
+{
+  "aYearToPlan": {
+    "heading": "Màn V",
+    "name": "Một Năm Để Chuẩn Bị",
+    "intro": {
+      "title": "Màn V: Một Năm Để Chuẩn Bị",
+      "body": "<p>Phải mất một chút thời gian để làm quen với việc ở trong quá khứ. Có một bạn thứ hai ở đây &mdash; bạn đã thấy họ, mặc dù bạn chắc chắn rằng họ không nhìn thấy bạn. Điều đó có nghĩa là bạn không có nhà, hay gia đình, trừ khi bạn muốn can thiệp vào quá khứ của chính mình.</p><p>Tuy nhiên, một khi bạn đã ổn định, bạn có thể thực hiện một số nghiên cứu. Một vài ngày tại thư viện Đại học Miskatonic đã tìm ra một số manh mối thú vị mà bạn dự định theo dõi. Có vẻ như Myriad đang hoạt động trong thời gian này &mdash; vậy tại sao không can thiệp vào kế hoạch của chúng?</p>"
+    },
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set sau: *A Year to Plan*, *Missions*, *Myriad*, *Shifting Reality*, *Unravelling Years*, *Dark Cult* và *The Midnight Masks*. Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/ages-unwound/sets/a-year-to-plan.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/missions.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/myriad.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/shifting-reality.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/unravelling-years.png' /><img src='{setImgPath}/dark-cult.png' /><img src='{setImgPath}/midnight-masks.png' /></section>",
+      "midnightMasks": "Khi thu thập encounter set The Midnight Masks, chỉ lấy 5 lá bài treachery *(2x False Lead và 3x Hunting Shadow)*. Không lấy các lá bài địa điểm, act, agenda hoặc thẻ tham chiếu màn chơi từ set đó.",
+      "placeLocations": "Đặt mỗi địa điểm [[City]] và [[Wilderness]] vào chơi.",
+      "startAt": "Mỗi điều tra viên bắt đầu chơi tại Arkham, Massachusetts.",
+      "helpingYourself": "Đặt treachery Helping Yourself vào chơi cạnh act deck với X tài nguyên trên đó. X là số dấu được đánh dưới Strange Assistance trong Nhật ký Chiến dịch của bạn.",
+      "taskDeck": "Xáo trộn các lá bài treachery sau với nhau để tạo thành chồng bài task: Enemy of my Enemy, A Treasure Unearthed, The Devil You Know, Higher Powers, Entreating the Gods và Up To Something. Đặt chồng bài này gần thẻ tham chiếu màn chơi.",
+      "setAside": "Đặt phần còn lại của encounter set Missions sang một bên, ngoài màn chơi, cùng với mỗi bản sao của Curse of a Thousand Winters."
+    },
+    "resolutions": {
+      "noResolution": {
+        "title": "Không Đạt Được Kết Thúc Nào",
+        "body": "<p class='basic'>_Nếu không đạt được kết thúc nào (mỗi điều tra viên rút lui hoặc bị đánh bại):_ Đọc _Kết thúc 1_.</p>"
+      },
+      "resolution1": {
+        "title": "Kết thúc 1",
+        "body": "<p>_Kết thúc 1_: Đó là một năm dài đằng đẵng. Cảm giác như bạn đã chiến đấu mãi mãi, không bao giờ dừng lại, không bao giờ có thể thư giãn. Thêm một đêm nữa thôi, bạn tự nhủ, khi bạn chuẩn bị lên đường. Sau đêm nay, dù có chuyện gì xảy ra, cuộc chiến của bạn cũng sẽ kết thúc.</p>",
+        "ritualIsNigh": "Trong Nhật ký Chiến dịch của bạn, ghi rằng *nghi thức đã đến gần*.",
+        "returnedToArkhamLate": "Với mỗi điều tra viên không rút lui, ghi vào Nhật ký Chiến dịch của bạn rằng *[tên điều tra viên] đã trở về Arkham muộn*.",
+        "helpingYourselfIncomplete": "Nếu Helping Yourself _chưa_ hoàn thành: *Khi bạn chuẩn bị cho cuộc đột kích vào buổi lễ của Myriad, bạn cảm thấy thời gian vặn xoắn và biến dạng xung quanh mình. Trong một khoảnh khắc hoảng loạn, bạn nghĩ rằng nghi lễ đã bắt đầu sớm. Sau đó, bạn nhớ ra: bản thể quá khứ của bạn đã nhận được sự giúp đỡ từ một ân nhân bí ẩn. Sự giúp đỡ mà bạn đã không thể cung cấp.*",
+        "violatedCausality": "Ghi vào Nhật ký Chiến dịch của bạn rằng *các điều tra viên đã vi phạm luật nhân quả*.",
+        "keeperOfKnowledgeIncomplete": "Nếu Keeper of Knowledge _chưa_ hoàn thành và Ancient Sphinx đang trong màn chơi: *Nhân sư từ đó đã biến mất khỏi Ai Cập. Bạn không nghĩ rằng nó sẽ hạ mình bay đến Arkham chỉ để hỗ trợ giáo phái Aforgomon, nhưng không ai biết được những kiến thức đen tối nào chúng có thể đã moi được từ nó.*",
+        "solvedTheRiddle": "Ghi vào Nhật ký Chiến dịch của bạn rằng *the Myriad đã giải được câu đố của nhân sư.*",
+        "strangePortalIncomplete": "Nếu Strange Portal _chưa_ hoàn thành: *Paris phần lớn khá yên tĩnh, nhưng nếu bạn đào sâu hơn, bạn sẽ tìm thấy hết báo cáo này đến báo cáo khác về những vụ mất tích không thể giải thích. Đồ đạc, con người, thậm chí đôi khi cả những tòa nhà nguyên vẹn.*",
+        "harnessedAnotherRealm": "Ghi vào Nhật ký Chiến dịch của bạn rằng *the Myriad đã khai thác sức mạnh của một cõi giới khác*.",
+        "theTunguskaEventIncomplete": "Nếu The Tunguska _chưa_ hoàn thành: *Bạn vẫn không biết chính xác điều gì đã xảy ra ở Tunguska, nhưng một số Myriad Gentlemen mà bạn chạm trán gần đây có vẻ… khác lạ. Bị biến đổi.*",
+        "tookAColour": "Ghi vào Nhật ký Chiến dịch của bạn rằng *the Myriad đã kiểm soát một colour out of space.*",
+        "multitudeOfPlots": "Với mỗi bản sao của A Multitude of Plots trong victory display, hãy ghi một trong các tuyên bố sau đây tùy bạn chọn vào Nhật ký Chiến dịch của mình, khi bạn thất bại trong việc ngăn chặn Myriad thực hiện một trong những kế hoạch của chúng:",
+        "raisedAPowerfulWarding": "*The Myriad đã dựng lên một lớp bảo vệ mạnh mẽ.*",
+        "recruitedACruelSorcerer": "*The Myriad đã chiêu mộ một pháp sư tàn nhẫn.*",
+        "weavedADreadCurse": "*The Myriad đã dệt nên một lời nguyền đáng sợ.*",
+        "taskRewards": "Với mỗi _Task_ đã hoàn thành sau đây, bất kỳ một điều tra viên nào cũng có thể chọn thêm lá bài người chơi tương ứng vào bộ bài của mình. Mỗi lá bài này không tính vào giới hạn kích thước bộ bài của chủ sở hữu.",
+        "enemyOfMyEnemy": "Nếu Enemy of My Enemy đã hoàn thành, một người chơi có thể thêm Monastic Training vào bộ bài của họ.",
+        "aTreasureUnearthed": "Nếu A Treasure Unearthed đã hoàn thành, một người chơi có thể thêm Chronal Atlas vào bộ bài của họ.",
+        "theDevilYouKnow": "Nếu The Devil You Know đã hoàn thành, một người chơi có thể thêm Ionian Pendant vào bộ bài của họ.",
+        "higherPowers": "Nếu Higher Powers đã hoàn thành, một người chơi có thể thêm Agency Strike Team vào bộ bài của họ.",
+        "entreatingTheGods": "Nếu Entreating the Gods đã hoàn thành, một người chơi có thể thêm Wings of Damakairon vào bộ bài của họ.",
+        "upToSomething": "Nếu Up to Something đã hoàn thành, một người chơi có thể thêm Forestall Fate vào bộ bài của họ.",
+        "chaosTokens": "Loại bỏ tất cả các token {cultist}, {tablet} và {elderThing} khỏi túi chaos. Sau đó, thêm 1 token {cultist} và 1 token {tablet} vào túi chaos.",
+        "actResourceTokens": "Với mỗi tài nguyên trên act hiện tại, thêm 1 token {cultist} vào túi chaos.",
+        "sphinxTokens": "*Nếu the Myriad đã giải được câu đố của nhân sư*, thêm 2 token {tablet} vào túi chaos.",
+        "causalityTokens": "*Nếu các điều tra viên đã vi phạm luật nhân quả*, thêm 2 token {elderThing} vào túi chaos.",
+        "dreadCurse": "*Nếu the Myriad đã dệt nên một lời nguyền đáng sợ*, mỗi điều tra viên phải thêm 1 bản sao của Curse of a Thousand Winters vào bộ bài của mình. Lá bài này không tính vào kích thước bộ bài.",
+        "victoryXp": "Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.",
+        "label": {
+          "raisedAPowerfulWarding": "The Myriad đã dựng lên một lớp bảo vệ mạnh mẽ",
+          "recruitedACruelSorcerer": "The Myriad đã chiêu mộ một pháp sư tàn nhẫn",
+          "weavedADreadCurse": "The Myriad đã dệt nên một lời nguyền đáng sợ"
+        }
+      }
+    }
+  }
+}

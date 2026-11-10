@@ -1,0 +1,99 @@
+{
+  "timeRunsOut": {
+    "heading": "Màn VII",
+    "name": "Thời Gian Cạn Kiệt",
+    "intro": {
+      "title": "Màn VII: Thời Gian Cạn Kiệt",
+      "body": "<p>Thời gian mở ra trước mắt bạn, một cõi mênh mông vô tận của các thực tại.</p><p>Ngay cả giữa lúc thực hiện nhiệm vụ hiện tại, bạn vẫn buộc phải dành một khoảnh khắc để ngỡ ngàng. Mọi thứ từng tồn tại, mọi thứ sẽ tồn tại, có thể tồn tại, đều ở đây, mở ra trước mắt bạn như những trang sách. Tri thức, cơ hội, vẻ đẹp thuần khiết của tất cả&hellip; thật quá đỗi choáng ngợp để tiếp nhận.</p><p>Dù vậy, khoảnh khắc đó trôi qua, và vẻ đẹp của khung cảnh phần nào bị hủy hoại bởi sự hiện diện vô hình đang trỗi dậy phía trên nó. Aforgomon, vị thần của từng phút giây và những vòng chu kỳ; một thực thể khôn lường không mong muốn điều gì hơn ngoài việc hủy diệt mọi thứ bạn nhìn thấy ở đây. Nghi thức bị gián đoạn ở Mount Hollyoke chính là điểm tựa mà qua đó Aforgomon có thể vươn tới vũ trụ của bạn.</p><p>Và đứng giữa lực lượng vũ trụ này cùng vũ trụ mà nó tìm cách hủy diệt&hellip; là bạn. Bạn đột nhiên cảm thấy mình vô cùng, vô cùng nhỏ bé.</p>"
+    },
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set sau: *Time Runs Out*, *Agents of Aforgomon*, *Paradox* và *Unravelling Years*. Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/ages-unwound/sets/time-runs-out.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/agents-of-aforgomon.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/paradox.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/unravelling-years.png' /></section>",
+      "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch. Nếu *các điều tra viên đã giải phóng sự hỗn loạn*, hãy thu thập thêm encounter set *Unleashed Chaos*, được biểu thị bằng biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/ages-unwound/sets/unleashed-chaos.png' /></section>",
+      "placeLocations": "Đặt ngẫu nhiên một trong hai phiên bản của các địa điểm sau vào chơi, ngửa mặt đã khám phá: Fulcrum of Possibility, Days That Never Were, Secrets Long Forgotten, Today, a Thousand Times, What Could Be, What Could Never Be, Dawn of the Universe và The End of All Things.",
+      "removeOtherVersions": "Loại bỏ các phiên bản khác của mỗi địa điểm đó khỏi trò chơi.",
+      "startAt": "Mỗi điều tra viên bắt đầu chơi tại Fulcrum of Possibility.",
+      "setAside": "Đặt The Past, The Present, The Future, và Yourself sang một bên, ngoài màn chơi."
+    },
+    "rules": {
+      "locationsOutsideOfTime": {
+        "title": "Các Địa Điểm Nằm Ngoài Thời Gian",
+        "body": "<p class='basic'>Nhiều địa điểm trong màn chơi này không có mặt chưa khám phá, và do đó vào chơi với mặt đã khám phá ngửa lên. Để có trải nghiệm tốt nhất, đừng nhìn vào mặt sau của các lá bài này trừ khi có hiệu ứng hướng dẫn bạn làm như vậy.</p><p class='basic'>Trong màn chơi này, đôi khi bạn sẽ được hướng dẫn chọn một địa điểm ngẫu nhiên. Điều này nên được thực hiện bằng cách xáo trộn 8 địa điểm bị loại khỏi trò chơi trong quá trình thiết lập (các phiên bản của mỗi địa điểm trong màn chơi hiện không được sử dụng) và rút ngẫu nhiên 1 địa điểm.</p><p class='basic'>Nếu bạn được hướng dẫn chọn một địa điểm ngẫu nhiên phù hợp với một tiêu chí nhất định, hãy tiếp tục rút các địa điểm cho đến khi rút được một địa điểm thỏa mãn các yêu cầu của hiệu ứng.</p>"
+      }
+    },
+    "resolutions": {
+      "noResolution": {
+        "title": "Không Đạt Được Kết Thúc Nào",
+        "body": "<p class='basic'>_Nếu không đạt được kết thúc nào (mỗi điều tra viên bị đánh bại)_: Đọc _Kết thúc 1_.</p>"
+      },
+      "resolution1": {
+        "title": "Kết thúc 1",
+        "body": "<p>_Kết thúc 1_: Sự kết thúc của thời gian là một trải nghiệm không giống bất kỳ trải nghiệm nào khác. Mọi thứ sẽ bất động; bất kỳ cảm giác chuyển động hay nhân quả nào đều biến mất. Mọi thứ từng là hoặc có thể là hoặc chưa bao giờ là sẽ xảy ra ngay bây giờ, chừng nào từ &lsquo;bây giờ&rsquo; còn có bất kỳ ý nghĩa nào ở đây.</p><p>Mọi thời gian hòa làm một. Mọi thứ sẽ là bây giờ. Và đây là nơi bạn bị mắc kẹt, nơi bạn sẽ trở thành một phần của tấm thảm thực tại bất biến, nơi bạn có thể, sẽ, đã, đang, và sẽ bị giam cầm mãi mãi. Nghĩa là, nếu như mãi mãi vẫn còn tồn tại.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng *mọi thời gian hòa làm một*.</li><li>Mỗi điều tra viên bị phát điên.</li><li>Các điều tra viên thua chiến dịch.</li></ul>"
+      },
+      "resolution2": {
+        "title": "Kết thúc 2",
+        "body": "<p>_Kết thúc 2_: Cuối cùng, bạn thấy mình đang nằm trên một bề mặt phẳng, nhẵn. Từng tấc trên cơ thể bạn muốn chìm xuống sàn nhà, hòa làm một với mặt đất. Bạn nằm như vậy trong một thời gian rất, rất dài.</p><p>Mùi khói cuối cùng đã khiến bạn gượng dậy. Bạn đang ở trong phòng thể dục của Trường Tiểu học Mount Hollyoke. Những kẻ theo giáo phái và băng đảng dường như đã rời đi từ lâu, chỉ để lại những cổ tự bất động và những văn bản bị bỏ rơi. Khói bốc vào từ cửa sau, nên bạn đi ra ngoài bằng cửa trước.</p><p>Bình minh đã ló rạng vào một thời điểm nào đó, có lẽ nhiều hơn một lần. Nhưng bạn đã vượt qua, thực tại đã vượt qua, và có lẽ bây giờ bạn có thể quay trở lại một phần nào đó của sự bình thường. Chắc chắn rồi, bạn đã không sống cuộc sống đó trong một năm, nhưng bây giờ bạn là bản thể duy nhất của bạn ở hiện tại. Bạn sẽ cần phải tìm một nơi mới để sống&hellip;</p><p>Chìm đắm trong suy nghĩ, bạn nhìn ngọn lửa lớn thiêu rụi ngôi trường, có lẽ bắt nguồn từ nghi lễ phản tác dụng. Toàn bộ chuyện này bắt đầu bằng một đám cháy; có vẻ hoàn toàn phù hợp khi nó cũng kết thúc theo cách tương tự.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng *các điều tra viên đã giam cầm Aforgomon trong nhà tù thời gian*.</li><li>Với mỗi điều tra viên kết thúc trò chơi với ít nhất 1 bản sao của điểm yếu Unspeakable Oath trên tay, hãy ghi vào Nhật ký Chiến dịch của bạn rằng *[tên điều tra viên] vẫn mang dấu ấn của Aforgomon*.</li><li>Trong Nhật ký Chiến dịch của bạn, hãy ghi tên của mỗi điều tra viên có sự tồn tại đang suy tàn.</li><li>Các điều tra viên chiến thắng chiến dịch!</li></ul>"
+      },
+      "resolution3": {
+        "title": "Kết thúc 3",
+        "body": "<p>_Kết thúc 3_: Thời gian quay cuồng và xoáy tít, đó là một trải nghiệm đặc biệt kỳ lạ khi bạn đang đứng bên ngoài nó. Giữ chặt các dòng chảy mà bạn đang điều khiển, bạn tháo gỡ những tác phẩm của chính mình và của Aforgomon, cho đến khi&hellip;</p><p>Thời gian mở ra trước mắt bạn, một cõi mênh mông vô tận của các thực tại. Mọi thứ từng tồn tại, mọi thứ sẽ tồn tại, có thể tồn tại, đều ở đây, mở ra trước mắt bạn như những trang sách, được thiết lập lại như trước khi cuộc chiến này bắt đầu. Khi sự hiện diện tà ác của Aforgomon một lần nữa phủ bóng lên bạn, bạn thở dài một hơi thật sâu, sẵn sàng cho hiệp hai.</p><p class='basic'>Các điều tra viên phải chơi lại Màn VII: Thời Gian Cạn Kiệt. Người chơi không được thay đổi bộ bài của mình, ngay cả khi chúng đang ở trạng thái bất hợp lệ, hoặc loại bỏ bất kỳ điểm yếu nào được thêm vào trong màn chơi. Bất kỳ người chơi nào có điều tra viên bị giết hoặc bị phát điên sẽ bị loại và không được chọn điều tra viên mới để chơi.</p><ul><li>Thêm 1 token {elderThing} vào túi chaos. Nếu bạn không thể, mỗi điều tra viên chịu 1 sang chấn tinh thần thay vào đó.</li><li>Các điều tra viên phải chơi lại _Màn VII: Thời Gian Cạn Kiệt_. Thiết lập lại trò chơi về phần Thiết lập của màn chơi này. Không ghi bất cứ điều gì khác vào Nhật ký Chiến dịch của bạn ngoại trừ bất kỳ sang chấn nào phải chịu từ ván chơi trước. Không nhận được điểm kinh nghiệm nào từ ván chơi trước của bạn. Người chơi không được thay đổi bộ bài của mình, ngay cả khi chúng ở trạng thái bất hợp lệ, hoặc loại bỏ bất kỳ điểm yếu nào được thêm vào trong màn chơi. Bất kỳ người chơi nào có điều tra viên bị giết hoặc phát điên sẽ bị loại và không được chọn điều tra viên mới để chơi.</li></ul>"
+      }
+    },
+    "elderThing": {
+      "label": {
+        "exileACard": "Exile một lá bài từ tay bạn",
+        "placeDoomOnYourLocation": "Đặt 1 doom lên địa điểm của bạn"
+      }
+    },
+    "fulcrumOfPossibility": {
+      "label": {
+        "moveToAnotherLocation": "Di chuyển đến bất kỳ địa điểm nào khác",
+        "moveAnotherInvestigatorHere": "Di chuyển một điều tra viên khác đến địa điểm này"
+      }
+    },
+    "daysThatNeverWere": {
+      "label": {
+        "takeDirectHorror": "Chịu {count} kinh hoàng trực tiếp",
+        "exileACard": "Exile một lá bài từ cấp 1 trở lên trên tay bạn"
+      }
+    },
+    "secretsLongForgotten": {
+      "label": {
+        "drawACard": "Rút một lá bài",
+        "searchForASkill": "Chịu 1 kinh hoàng và tìm kiếm trong bộ sưu tập của bạn một lá bài kỹ năng cấp 0"
+      }
+    },
+    "dawnOfTheUniverse": {
+      "label": {
+        "takeDamage": "Chịu {count} sát thương",
+        "takeHorror": "Chịu {count} kinh hoàng"
+      }
+    },
+    "erasure": {
+      "label": {
+        "testWillpower": "Kiểm tra {willpower} (3)",
+        "testIntellect": "Kiểm tra {intellect} (3)",
+        "testCombat": "Kiểm tra {combat} (3)",
+        "testAgility": "Kiểm tra {agility} (3)"
+      }
+    },
+    "shatteringParadox": {
+      "label": {
+        "placeDoom": "Đặt 1 doom lên agenda hiện tại",
+        "shelveWardedLocation": "Chọn một địa điểm có bùa chú ngẫu nhiên trong màn chơi và đặt nó bên dưới agenda deck",
+        "takeHorror": "Chịu 6 kinh hoàng"
+      }
+    },
+    "unwrittenExistence": {
+      "label": {
+        "putIntoPlay": "Đưa Unwritten Existence vào chơi trong threat area của bạn",
+        "removeFromGame": "Loại bỏ Unwritten Existence khỏi trò chơi và đặt 2 doom lên agenda hiện tại"
+      }
+    },
+    "watchYouBreak": {
+      "label": {
+        "placeDoom": "Đặt 1 doom lên agenda hiện tại",
+        "drawAWeakness": "Tìm kiếm trong bộ sưu tập của bạn một điểm yếu cơ bản [[Pact]] hoặc [[Madness]] ngẫu nhiên và rút nó"
+      }
+    }
+  }
+}

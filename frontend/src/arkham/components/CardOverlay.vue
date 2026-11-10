@@ -22,6 +22,7 @@ import type { CardDef } from '@/arkham/types/CardDef'
 import KeyToken from '@/arkham/components/Key.vue'
 import { type ArkhamKey, keyToId } from '@/arkham/types/Key'
 import PoolItem from '@/arkham/components/PoolItem.vue'
+import CardData from '@/arkham/components/CardData.vue'
 import { useDbCardStore, ArkhamDBCard } from '@/stores/dbCards'
 import { useI18n } from 'vue-i18n'
 
@@ -1091,7 +1092,6 @@ const dbCardData = computed<boolean>(() =>
 
 const getCardName = (dbCard: ArkhamDBCard, needBack: boolean): string | null => {
   if (!card.value || isLocalized(card.value)) return null
-  if (dbCard.name === dbCard.real_name) return null
   let name = (needBack ? (dbCard.double_sided ? (dbCard.back_name || dbCard.name) : dbCard.back_name) : dbCard.name) || null
   if (!name) return null
   if (!needBack && dbCard.subname) name = `${name}: ${dbCard.subname}`
@@ -1185,15 +1185,27 @@ const resolveHiddenFace = async (src: string, code: string, front: ArkhamDBCard,
 
 watchEffect(() => {
   dbCardName.value = dbCardTypeName.value = dbCardFactionName.value = dbCardFactionCode.value = dbCardTraits.value = dbCardText.value = dbCardCustomizationText.value = dbCardFlavor.value = ''
+  void store.dbCards.length
+  void store.dbCardsIndex
   const src = card.value
   if (!src) return
-  const m = src.match(/(\d+b?)(_.*)?\.avif$/)
-  if (!m) return
-  const code = originalArt(m[1])
-  const tabooSuffix = m[2]
-  const language = localStorage.getItem('language') || 'en'
-  if (imgsrc(`cards/${m[0]}`).includes(language)) return
 
+  const el = hoveredElement.value
+  const directCode = normalizedCardCode(el?.dataset.cardCode ?? el?.dataset.imageId)
+  let rawCode: string | null = directCode
+  let tabooSuffix: string | undefined
+
+  const m = src.match(/\/cards\/c?([0-9a-zA-Z_-]+?)(?:_([a-zA-Z0-9]+))?\.(?:avif|jpg|jpeg|png|webp)(?:\?.*)?$/i)
+    || src.match(/([0-9a-zA-Z_-]+?)(?:_([a-zA-Z0-9]+))?\.(?:avif|jpg|jpeg|png|webp)(?:\?.*)?$/i)
+  if (m) {
+    if (!rawCode) rawCode = m[1]
+    tabooSuffix = m[2] ? `_${m[2]}` : undefined
+  }
+
+  if (!rawCode) return
+  if (isLocalized(src)) return
+
+  const code = originalArt(rawCode)
   const dbCard = store.getDbCard(code)
   if (!dbCard) return
   const needBack = dbCard.code !== code
@@ -1377,32 +1389,18 @@ watchEffect(() => {
       <p v-if="cardErrata" class="card-errata" v-html="`Errata: ${formatContent(cardErrata)}`"></p>
     </div>
 
-    <div
-      class="card-data"
+    <CardData
       v-if="dbCardData"
-      :class="{ reversed, Reversed: upsideDown, [`faction-${dbCardFactionCode || 'neutral'}`]: true }"
-    >
-      <div class="card-data-header">
-        <p v-if="dbCardName"><b>{{ dbCardName }}</b></p>
-      </div>
-      <div class="card-data-body">
-        <div class="card-info">
-          <div>
-            <p v-if="dbCardTypeName">{{ dbCardTypeName }}</p>
-            <p v-if="dbCardTraits"><span style="font-style: italic;">{{ dbCardTraits }}</span></p>
-          </div>
-          <div>
-            <p v-if="dbCardFactionName">{{ dbCardFactionName }}</p>
-          </div>
-        </div>
-        <div v-if="dbCardText" class="card-text">
-          <p v-html="dbCardText"></p>
-        </div>
-        <div v-if="dbCardFlavor" class="card-flavor">
-          <p v-html="dbCardFlavor"></p>
-        </div>
-      </div>
-    </div>
+      :name="dbCardName"
+      :typeName="dbCardTypeName"
+      :factionName="dbCardFactionName"
+      :factionCode="dbCardFactionCode"
+      :traits="dbCardTraits"
+      :text="dbCardText"
+      :flavor="dbCardFlavor"
+      :reversed="reversed"
+      :upsideDown="upsideDown"
+    />
 
     <span class="swarm" v-if="swarm"><BugAntIcon aria-hidden="true" /></span>
     <span class="fight" v-if="fight">{{ fight }}</span>

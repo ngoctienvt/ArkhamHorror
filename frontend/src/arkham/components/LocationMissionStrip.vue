@@ -251,65 +251,68 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
       <div class="body">
         <img class="thumb thumb--landscape" :src="p.image" :data-image="p.image" :data-card-code="p.code" :alt="p.title" loading="lazy" />
         <div class="head">
-          <div class="head-main">
-        <span class="eyebrow">{{ t(`locationMap.${p.kind}`) }} {{ p.step }} / {{ p.total }}</span>
-        <h3>{{ p.title }}</h3>
-          </div>
+          <span class="eyebrow">{{ t(`locationMap.${p.kind}`) }} {{ p.step }} / {{ p.total }}</span>
           <div class="head-aside">
-        <div
-          v-if="p.doom !== null"
-          class="doom"
-          :class="{ 'doom--changed': !!doomChange[p.key], 'doom--critical': doomLeft(p) !== null && doomLeft(p)! <= 1 }"
-        >
-          <span v-if="!p.doomMax">{{ t('locationMap.doomCount', { count: p.doom, max: '?' }) }}</span>
-          <div v-if="p.doomMax && p.doomMax <= 14" class="doom-pips" role="img" :aria-label="t('locationMap.doomCount', { count: p.doom, max: p.doomMax })">
-            <i
-              v-for="n in p.doomMax"
-              :key="n"
-              class="pip"
-              :class="{ filled: n <= p.doom!, 'pip--gain': pipChanged(p.key, n) && n <= p.doom!, 'pip--loss': pipChanged(p.key, n) && n > p.doom! }"
-            ><GameIcon type="doom" /></i>
-            <span v-if="doomChange[p.key] && doomChange[p.key].to !== doomChange[p.key].from" :key="doomChange[p.key].to" class="doom-delta" :class="{ 'doom-delta--loss': doomChange[p.key].to < doomChange[p.key].from }">
-              {{ doomChange[p.key].to > doomChange[p.key].from ? '+' : '−' }}{{ Math.abs(doomChange[p.key].to - doomChange[p.key].from) }}
-            </span>
-          </div>
-          <i v-else-if="p.doomMax" class="doom-bar"><b :style="{ width: Math.min(100, (100 * p.doom) / p.doomMax) + '%' }"></b></i>
-          <span v-if="doomLeft(p) !== null && doomLeft(p)! <= 0" class="doom-alert">{{ t('locationMap.doomAdvancing') }}</span>
-          <span v-else-if="doomLeft(p) === 1" class="doom-alert">{{ t('locationMap.doomImminent') }}</span>
-        </div>
-        <div
-          v-if="p.clues !== null"
-          class="clues"
-          :class="{ 'clues--changed': !!doomChange[p.key], 'clues--ready': p.clueMax !== null && p.clues >= p.clueMax }"
-        >
-          <div class="clue-row">
-            <div v-if="p.clueMax && p.clueMax <= 14" class="doom-pips clue-pips" role="img" :aria-label="t('locationMap.clueCount', { count: p.clues, max: p.clueMax })">
-              <i
-                v-for="n in p.clueMax"
-                :key="n"
-                class="pip pip--clue"
-                :class="{ filled: n <= p.clues!, 'pip--clue-gain': pipChanged(p.key, n) && n <= p.clues!, 'pip--loss': pipChanged(p.key, n) && n > p.clues! }"
-              ><GameIcon type="clue" /></i>
-              <span v-if="doomChange[p.key] && doomChange[p.key].to !== doomChange[p.key].from" :key="doomChange[p.key].to" class="doom-delta clue-delta" :class="{ 'doom-delta--loss': doomChange[p.key].to < doomChange[p.key].from }">
-                {{ doomChange[p.key].to > doomChange[p.key].from ? '+' : '−' }}{{ Math.abs(doomChange[p.key].to - doomChange[p.key].from) }}
-              </span>
+            <div
+              v-if="p.doom !== null"
+              class="doom"
+              :class="{ 'doom--changed': !!doomChange[p.key], 'doom--critical': doomLeft(p) !== null && doomLeft(p)! <= 1 }"
+            >
+              <span v-if="!p.doomMax">{{ t('locationMap.doomCount', { count: p.doom, max: '?' }) }}</span>
+              <div v-if="p.doomMax && p.doomMax <= 14" class="doom-pips" role="img" :title="t('locationMap.doomCount', { count: p.doom, max: p.doomMax })" :aria-label="t('locationMap.doomCount', { count: p.doom, max: p.doomMax })">
+                <i
+                  v-for="n in p.doomMax"
+                  :key="n"
+                  class="pip"
+                  :class="{ filled: n <= p.doom!, 'pip--gain': pipChanged(p.key, n) && n <= p.doom!, 'pip--loss': pipChanged(p.key, n) && n > p.doom! }"
+                ><GameIcon type="doom" /></i>
+                <span v-if="doomChange[p.key] && doomChange[p.key].to !== doomChange[p.key].from" :key="doomChange[p.key].to" class="doom-delta" :class="{ 'doom-delta--loss': doomChange[p.key].to < doomChange[p.key].from }">
+                  {{ doomChange[p.key].to > doomChange[p.key].from ? '+' : '−' }}{{ Math.abs(doomChange[p.key].to - doomChange[p.key].from) }}
+                </span>
+              </div>
+              <i v-else-if="p.doomMax" class="doom-bar"><b :style="{ width: Math.min(100, (100 * p.doom) / p.doomMax) + '%' }"></b></i>
+              <span v-if="doomLeft(p) !== null && doomLeft(p)! <= 0" class="doom-alert">{{ t('locationMap.doomAdvancing') }}</span>
+              <span v-else-if="doomLeft(p) === 1" class="doom-alert">{{ t('locationMap.doomImminent') }}</span>
             </div>
-            <i v-else-if="p.clueMax" class="clue-bar"><b :style="{ width: Math.min(100, (100 * p.clues) / p.clueMax) + '%' }"></b></i>
-            <div class="total clue-total" :title="t('locationMap.clueCount', { count: p.clues, max: p.clueMax ?? '—' })">
-              <GameIcon type="clue" /> {{ t('locationMap.clueCount', { count: p.clues, max: p.clueMax ?? '—' }) }}
+            <div
+              v-if="p.clues !== null"
+              class="clues"
+              :class="{ 'clues--changed': !!doomChange[p.key], 'clues--ready': p.clueMax !== null && p.clues >= p.clueMax }"
+            >
+              <div class="clue-row">
+                <span v-if="!p.clueMax" class="total clue-total" :title="t('locationMap.clueCount', { count: p.clues, max: '—' })">
+                  <GameIcon type="clue" /> {{ t('locationMap.clueCount', { count: p.clues, max: '—' }) }}
+                </span>
+                <div v-else-if="p.clueMax <= 14" class="doom-pips clue-pips" role="img" :title="t('locationMap.clueCount', { count: p.clues, max: p.clueMax })" :aria-label="t('locationMap.clueCount', { count: p.clues, max: p.clueMax })">
+                  <i
+                    v-for="n in p.clueMax"
+                    :key="n"
+                    class="pip pip--clue"
+                    :class="{ filled: n <= p.clues!, 'pip--clue-gain': pipChanged(p.key, n) && n <= p.clues!, 'pip--loss': pipChanged(p.key, n) && n > p.clues! }"
+                  ><GameIcon type="clue" /></i>
+                  <span v-if="doomChange[p.key] && doomChange[p.key].to !== doomChange[p.key].from" :key="doomChange[p.key].to" class="doom-delta clue-delta" :class="{ 'doom-delta--loss': doomChange[p.key].to < doomChange[p.key].from }">
+                    {{ doomChange[p.key].to > doomChange[p.key].from ? '+' : '−' }}{{ Math.abs(doomChange[p.key].to - doomChange[p.key].from) }}
+                  </span>
+                </div>
+                <template v-else>
+                  <i class="clue-bar"><b :style="{ width: Math.min(100, (100 * p.clues) / p.clueMax) + '%' }"></b></i>
+                  <span class="total clue-total" :title="t('locationMap.clueCount', { count: p.clues, max: p.clueMax })">
+                    <GameIcon type="clue" /> {{ t('locationMap.clueCount', { count: p.clues, max: p.clueMax }) }}
+                  </span>
+                </template>
+                <button
+                  type="button"
+                  class="advance-btn"
+                  :class="p.advanceIndex !== null ? 'advance-btn--ready' : 'advance-btn--disabled'"
+                  :disabled="p.advanceIndex === null"
+                  :title="p.advanceIndex !== null ? t('locationMap.advanceAct') : t('locationMap.actionUnavailable')"
+                  @click="p.advanceIndex !== null && emit('choose', p.advanceIndex)"
+                >{{ t('locationMap.advanceAct') }}</button>
+              </div>
             </div>
-            <button
-              type="button"
-              class="advance-btn"
-              :class="p.advanceIndex !== null ? 'advance-btn--ready' : 'advance-btn--disabled'"
-              :disabled="p.advanceIndex === null"
-              :title="p.advanceIndex !== null ? t('locationMap.advanceAct') : t('locationMap.actionUnavailable')"
-              @click="p.advanceIndex !== null && emit('choose', p.advanceIndex)"
-            >{{ t('locationMap.advanceAct') }}</button>
           </div>
         </div>
-          </div>
-        </div>
+        <h3 class="title">{{ p.title }}</h3>
         <p v-if="p.flavor" class="flavor" :title="p.flavor">{{ p.flavor }}</p>
         <p v-if="p.textHtml" class="text" v-html="p.textHtml"></p>
         <div v-for="a in p.actions" :key="a.key" class="act-row" :class="a.choice ? 'act-row--usable' : 'act-row--disabled'">
@@ -332,18 +335,16 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
       <div class="body">
         <img class="thumb thumb--portrait" :src="referenceImage" :data-image="referenceImage" :alt="t('locationMap.reference')" loading="lazy" />
         <div class="head">
-          <div class="head-main">
-            <span class="eyebrow">{{ t('locationMap.reference') }}<template v-if="referenceInfo?.heading"> · {{ referenceInfo.heading }}</template></span>
-            <h3>{{ scenario.name?.title ?? '' }}</h3>
-          </div>
+          <span class="eyebrow">{{ t('locationMap.reference') }}<template v-if="referenceInfo?.heading"> · {{ referenceInfo.heading }}</template></span>
           <div class="head-aside">
             <div v-if="dayTime" class="total day-total" :title="t('locationMap.dayCount', { count: dayTime.day })">
               {{ dayTime.time === 'Night' ? '☾' : '☀' }}
               {{ t('locationMap.dayCount', { count: dayTime.day }) }} ·
               <b>{{ t(`locationMap.timeOfDay.${dayTime.time}`) }}</b>
-        </div>
+            </div>
           </div>
         </div>
+        <h3 class="title">{{ scenario.name?.title ?? '' }}</h3>
         <div v-if="referenceCounters.length" class="counters">
           <span v-for="c in referenceCounters" :key="c.name" class="counter">{{ c.label }} <b>{{ c.n }}</b></span>
         </div>
@@ -368,18 +369,15 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
 .thumb { float: right; margin: 1px 0 4px 10px; height: auto; object-fit: cover; border-radius: 5px; border: 1px solid #c6a87355; box-shadow: 0 2px 8px #0008; }
 .thumb--landscape { width: 92px; aspect-ratio: 1.4; }
 .thumb--portrait { width: 50px; aspect-ratio: 0.72; }
-.head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
-/* "AGENDA 2 / 4" and the card name share one line (wrapping only when the panel is too narrow). */
-.head-main { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 8px; min-width: 0; }
-.head-main .eyebrow { flex: none; }
-.head-aside { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; flex: none; }
+.head { display: flex; align-items: center; justify-content: space-between; gap: 6px; flex-wrap: wrap; }
+.head-aside { display: flex; align-items: center; gap: 4px; flex: none; }
 .head-aside .total { margin-top: 0; }
 .body { display: flow-root; min-width: 0; flex: 1; }
 .body > * + * { margin-top: 3px; }
 .body > .thumb + * { margin-top: 0; }
-.eyebrow { text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.6rem; color: #c6a873; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.6rem; color: #c6a873; line-height: 1.2; flex: none; }
 .agenda .eyebrow { color: #d99e8e; }
-h3 { margin: 0; font: 0.9rem var(--ui-serif); }
+.title, h3 { margin: 1px 0 2px; font: 600 0.92rem/1.25 var(--ui-serif); color: #fff4df; word-break: normal; overflow-wrap: break-word; }
 p { margin: 0; font-size: 0.74rem; line-height: 1.3; }
 .flavor { color: #b9c2ad; font-style: italic; max-height: 5.2em; overflow-y: auto; padding-right: 4px; scrollbar-width: thin; }
 .text { color: #e9e3cc; white-space: pre-line; }

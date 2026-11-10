@@ -1,67 +1,67 @@
 {
   "intro": {
-    "title": "Scenario I: River of Blood",
-    "body": "“Whatever you have to do to stop her, to stop that thing,” Christopher says to you as you prepare to set out in search of Julia. “Just do it.” You spend the night searching frantically through the Waterfront District, but are unable to locate anything conclusive. You retire for a restless night, and hope to have better luck in the morning."
+    "title": "Kịch bản I: River of Blood",
+    "body": "“Dù có phải làm bất cứ điều gì để ngăn chặn cô ấy, ngăn chặn thứ quái vật đó,” Christopher nói với bạn khi bạn chuẩn bị lên đường tìm kiếm Julia. “Thì xin hãy làm đi.” Bạn dành cả đêm lùng sục ráo riết khắp Khu Bến Cảng, nhưng không thể xác định được bất cứ điều gì mang tính quyết định. Bạn trở về nghỉ ngơi trong một đêm đầy bất an, và hy vọng sẽ có vận may tốt hơn vào sáng mai."
   },
   "setup": {
-    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: <section class='encounter-sets grid'><div><img src='{setImgPath}/river-of-blood.png' /><span>River of Blood</span></div><div><img src='{setImgPath}/blood-blight.png' /><span>Blood Blight</span></div><div><img src='{setImgPath}/blood-moon.png' /><span>Blood Moon</span></div><div><img src='{setImgPath}/children-of-blood.png' /><span>Children of Blood</span></div><div><img src='{setImgPath}/hunted.png' /><span>Hunted</span></div><div><img src='{setImgPath}/infected.png' /><span>Infected</span></div><div><img src='{setImgPath}/misinformation.png' /><span>Misinformation</span></div><div><img src='{setImgPath}/preyed-upon.png' /><span>Preyed Upon</span></div><div><img src='{setImgPath}/vermin.png' /><span>Vermin</span></div><div><img src='{setImgPath}/dead-ends.png' /><span>Dead Ends{'{'}asterisk{'}'}</span></div><div><img src='{setImgPath}/flying-terrors.png' /><span>Flying Terrors{'{'}asterisk{'}'}</span></div></section><div class='center'>{'{'}asterisk{'}'}This encounter set is found in the Arkham Horror: The Card Game core set.</div><br><div class='center'>If you are playing on Hard or Expert difficulty, DO NOT gather the _Preyed Upon_ and _Vermin_ encounter sets. Instead, gather all cards from the following encounter sets:</div><section class='encounter-sets grid'><div><img src='{setImgPath}/agents-of-zburamoarte.png' /><span>Agents of Zburamoarte</span></div><div><img src='{setImgPath}/mongrels.png' /><span>Mongrels</span></div></section>",
-    "gatherAdditionalSets": "Additionally, if there are 3 or 4 investigators, gather all cards from the following encounter set:<section class='encounter-sets grid'><div><img src='{setImgPath}/afflicted.png' /><span>Afflicted</span></div></section>",
-    "placeLocations": "Put each location into play, as follows:",
-    "dawn": "Nếu bạn đang chơi ở độ khó <b>Easy</b> hoặc <b>Standard</b>:",
-    "dusk": "If you are playing on Hard or Expert difficulty, put each _Dusk_ location into play. Remove each _Dawn_ location from the game.",
-    "startAt": "Each investigator begins play at Water Street.",
-    "waterfrontCivilians": "Spawn 1 Waterfront Civilian enemy at Main Street.",
-    "additionalWaterfrontCivilians": "If there are 3 or 4 investigators in the game, also spawn 1 Waterfront Civilian enemy at Garrison Street.",
-    "juliaStern": "Gather each copy of the Julia Stern enemy.",
-    "onTheRun": "If you are playing on Easy difficulty, set Julia Stern (*On the Run*) aside, out of play. Remove each other copy of Julia Stern from the game.",
-    "stalkingTheStreets": "If you are playing on Standard difficulty, set Julia Stern (*Stalking the Streets*) aside, out of play. Remove each other copy of Julia Stern from the game.",
-    "preyingUponArkham": "If you are playing on Hard or Expert difficulty, set Julia Stern (*Preying Upon Arkham*) aside, out of play. Remove each other copy of Julia Stern from the game.",
-    "setOutOfPlay": "Set the following cards aside, out of play: each remaining Waterfront Civilian enemy, each Night Feeder enemy (or each Spawn of Zburamoarte enemy if playing on Hard or Expert difficulty), each card in the _Infected_ encounter set, the Detective Reynolds story asset, and the Fang of Zburamoarte story asset.",
-    "lairs": "Shuffle the top 2 cards of the encounter deck together with the set-aside Julia Stern enemy. Place 1 of these cards facedown, at random, beneath each _Lair_ location."
+    "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau:<section class='encounter-sets grid'><div><img src='{setImgPath}/river-of-blood.png' /><span>River of Blood</span></div><div><img src='{setImgPath}/blood-blight.png' /><span>Blood Blight</span></div><div><img src='{setImgPath}/blood-moon.png' /><span>Blood Moon</span></div><div><img src='{setImgPath}/children-of-blood.png' /><span>Children of Blood</span></div><div><img src='{setImgPath}/hunted.png' /><span>Hunted</span></div><div><img src='{setImgPath}/infected.png' /><span>Infected</span></div><div><img src='{setImgPath}/misinformation.png' /><span>Misinformation</span></div><div><img src='{setImgPath}/preyed-upon.png' /><span>Preyed Upon</span></div><div><img src='{setImgPath}/vermin.png' /><span>Vermin</span></div><div><img src='{setImgPath}/dead-ends.png' /><span>Dead Ends{'{'}asterisk{'}'}</span></div><div><img src='{setImgPath}/flying-terrors.png' /><span>Flying Terrors{'{'}asterisk{'}'}</span></div></section><div class='center'>{'{'}asterisk{'}'}Encounter set này nằm trong bộ Arkham Horror: The Card Game core set.</div><br><div class='center'>Nếu bạn đang chơi ở độ khó Hard hoặc Expert, KHÔNG tập hợp các encounter set _Preyed Upon_ và _Vermin_. Thay vào đó, hãy tập hợp tất cả các lá bài từ các encounter set sau:</div><section class='encounter-sets grid'><div><img src='{setImgPath}/agents-of-zburamoarte.png' /><span>Agents of Zburamoarte</span></div><div><img src='{setImgPath}/mongrels.png' /><span>Mongrels</span></div></section>",
+    "gatherAdditionalSets": "Ngoài ra, nếu có 3 hoặc 4 điều tra viên, hãy tập hợp tất cả các lá bài từ encounter set sau:<section class='encounter-sets grid'><div><img src='{setImgPath}/afflicted.png' /><span>Afflicted</span></div></section>",
+    "placeLocations": "Đưa từng địa điểm in play, như sau:",
+    "dawn": "Nếu bạn đang chơi ở độ khó <b>Easy</b> hoặc <b>Standard</b>, hãy đưa từng địa điểm _Dawn_ in play. Loại bỏ từng địa điểm _Dusk_ khỏi trò chơi.",
+    "dusk": "Nếu bạn đang chơi ở độ khó <b>Hard</b> hoặc <b>Expert</b>, hãy đưa từng địa điểm _Dusk_ in play. Loại bỏ từng địa điểm _Dawn_ khỏi trò chơi.",
+    "startAt": "Mỗi điều tra viên bắt đầu chơi tại Water Street.",
+    "waterfrontCivilians": "Spawn 1 kẻ địch Waterfront Civilian tại Main Street.",
+    "additionalWaterfrontCivilians": "Nếu có 3 hoặc 4 điều tra viên trong trò chơi, hãy spawn thêm 1 kẻ địch Waterfront Civilian tại Garrison Street.",
+    "juliaStern": "Tập hợp từng bản sao của kẻ địch Julia Stern.",
+    "onTheRun": "Nếu bạn đang chơi ở độ khó Easy, hãy để riêng Julia Stern (*On the Run*) sang một bên, out of play. Loại bỏ các bản sao khác của Julia Stern khỏi trò chơi.",
+    "stalkingTheStreets": "Nếu bạn đang chơi ở độ khó Standard, hãy để riêng Julia Stern (*Stalking the Streets*) sang một bên, out of play. Loại bỏ các bản sao khác của Julia Stern khỏi trò chơi.",
+    "preyingUponArkham": "Nếu bạn đang chơi ở độ khó Hard hoặc Expert, hãy để riêng Julia Stern (*Preying Upon Arkham*) sang một bên, out of play. Loại bỏ các bản sao khác của Julia Stern khỏi trò chơi.",
+    "setOutOfPlay": "Để các lá bài sau sang một bên, out of play: mỗi kẻ địch Waterfront Civilian còn lại, mỗi kẻ địch Night Feeder (hoặc mỗi kẻ địch Spawn of Zburamoarte nếu chơi ở độ khó Hard hoặc Expert), mỗi lá bài trong encounter set _Infected_, story asset Detective Reynolds, và story asset Fang of Zburamoarte.",
+    "lairs": "Xáo trộn 2 lá bài trên cùng của encounter deck cùng với kẻ địch Julia Stern đã để riêng. Đặt ngẫu nhiên 1 trong những lá bài này úp mặt bên dưới mỗi địa điểm _Lair_."
   },
   "label": {
-    "r1": "\"There might still be hope for her.\" (→ _R1_)",
-    "r2": "\"We need to put an end to this monster.\" (→ _R2_)",
-    "spendExperienceToRemoveBlood": "<p>Spend 2 {'{'}perPlayer{'}'} total experience, as a group, to remove 1 {'{'}blood{'}'} token from the chaos bag<p>",
-    "doNotSpendExperience": "Do not spend experience"
+    "r1": "\"Có thể vẫn còn hy vọng cho cô ấy.\" (→ _R1_)",
+    "r2": "\"Chúng ta cần phải tiêu diệt con quái vật này.\" (→ _R2_)",
+    "spendExperienceToRemoveBlood": "<p>Cả nhóm cùng tiêu tốn tổng cộng 2 {'{'}perPlayer{'}'} kinh nghiệm để loại bỏ 1 token {'{'}blood{'}'} khỏi chaos bag<p>",
+    "doNotSpendExperience": "Không tiêu tốn kinh nghiệm"
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<p>_If no resolution was reached (each investigator was defeated)_: It doesn’t take long before it becomes clear that there are more creatures stalking the night than simply the monster that was Julia Stern. Their unending hunt proved too much for you. The last thing you remember is the creatures looming over you before you mercifully lost consciousness. You awaken to the burning yellow light of dawn. Collecting yourself, you meet up with Detective Reynolds once more.</p><ul><li>In your campaign log, record that *the investigators failed to stop Julia Stern*.</li><li>Add 1 {'{'}blood{'}'} token to the chaos bag for the remainder of the campaign.</li><li>Each investigator becomes the bearer of a set-aside The Blood Blight weakness.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Skip to _Resolution 4_.</li></ul>"
+      "title": "Không có Kết cục",
+      "body": "<p>_Nếu không đạt được kết cục nào (mỗi điều tra viên đều bị đánh bại)_: Chẳng bao lâu sau, mọi chuyện đã trở nên rõ ràng rằng có nhiều sinh vật đang rình rập trong màn đêm hơn là chỉ một mình con quái vật từng là Julia Stern. Cuộc săn lùng bất tận của chúng đã vượt quá sức chịu đựng của bạn. Điều cuối cùng bạn nhớ được là những bóng hình quái vật lừng lững bao trùm phía trên trước khi bạn may mắn chìm vào cõi hôn mê. Bạn tỉnh dậy trong ánh nắng ban mai vàng vọt gay gắt. Trấn tĩnh lại bản thân, bạn hội ngộ với Thám tử Reynolds một lần nữa.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã thất bại trong việc ngăn chặn Julia Stern*.</li><li>Thêm 1 token {'{'}blood{'}'} vào chaos bag trong phần còn lại của chiến dịch.</li><li>Mỗi điều tra viên trở thành bearer của một weakness The Blood Blight đã để riêng.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display. Mỗi điều tra viên cũng nhận thêm 3 kinh nghiệm thưởng khi họ rút ra bài học từ những sai lầm của mình.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Chuyển tới _Kết thúc 4_.</li></ul>"
     },
     "resolution1": {
-      "title": "Kết thúc thứ nhất",
-      "body": "<p>_Resolution 1_: After a grueling conflict, you finally subdue your quarry. Rather than take her life, you knock Julia unconscious and prepare to regroup with Detective Reynolds, holding out hope that there may be some way to save her. When you return to collect her, however, you discover that she has disappeared into the shadows once more. You hope you made the right choice. For now, however, the only path forward for you is to reconnect with Detective Reynolds and get to the bottom of what caused all of this bloodshed in the first place.</p><ul><li>In your campaign log, record that *the investigators spared Julia Stern*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>The investigators may decide to spend 2 {'{'}perPlayer{'}'} total experience, as a group, to remove 1 {'{'}blood{'}'} token from the chaos bag.</li><li>Skip to _Resolution 4_.</li></ul>"
+      "title": "Kết thúc 1",
+      "body": "<p>_Resolution 1_: Sau một cuộc giao tranh khốc liệt, cuối cùng bạn cũng khuất phục được con mồi của mình. Thay vì đoạt mạng cô, bạn đánh Julia bất tỉnh và chuẩn bị tập hợp lại với Thám tử Reynolds, ôm ấp hy vọng rằng có thể có cách nào đó để cứu vãn cô. Tuy nhiên, khi bạn quay lại để đưa cô đi, bạn phát hiện ra cô đã biến mất vào bóng tối một lần nữa. Bạn hy vọng mình đã đưa ra lựa chọn đúng đắn. Dẫu vậy vào lúc này, con đường duy nhất phía trước của bạn là liên lạc lại với Thám tử Reynolds và điều tra ngọn nguồn điều gì đã gây ra tất cả những vụ đổ máu này ngay từ đầu.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã tha mạng cho Julia Stern*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Các điều tra viên có thể quyết định chi tổng cộng 2 {'{'}perPlayer{'}'} kinh nghiệm, theo nhóm, để loại bỏ 1 token {'{'}blood{'}'} khỏi chaos bag.</li><li>Chuyển tới _Kết thúc 4_.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai",
-      "body": "<p>_Resolution 2_: At long last, your hunt comes to an end. Ending Julia’s life, and the lives of her victims, is a regrettable course of action, but it had to be done to make the Waterfront District safe again. After three bloody nights on the banks of the Miskatonic River, you’re hoping that you can reconnect with Detective Reynolds and get to the bottom of what caused all of this in the first place.</p><ul><li>In your campaign log, record that *the investigators killed Julia Stern*.</li><li>Remove 1 {'{'}blood{'}'} token from the chaos bag for the remainder of the campaign.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Skip to _Resolution 4_.</li></ul>"
+      "title": "Kết thúc 2",
+      "body": "<p>_Resolution 2_: Rốt cuộc, cuộc săn lùng của bạn cũng đi đến hồi kết. Đoạt đi mạng sống của Julia, và mạng sống của những nạn nhân của cô, là một hành động đáng tiếc nhưng đó là điều bắt buộc phải làm để mang lại sự an toàn cho Khu Bến Cảng một lần nữa. Sau ba đêm đẫm máu bên bờ sông Miskatonic, bạn hy vọng có thể kết nối lại với Thám tử Reynolds và làm sáng tỏ căn nguyên đã gây ra tất cả những điều này ngay từ đầu.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã giết Julia Stern*.</li><li>Loại bỏ 1 token {'{'}blood{'}'} khỏi chaos bag trong phần còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Chuyển tới _Kết thúc 4_.</li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba",
-      "body": "<p>_Resolution 3_: The hunt through the night is long and arduous, but Julia proves too crafty and too swift for your efforts. By the morning of the third day of your search, you worry that you’ll have to wait until she strikes again. For now, however, the only path forward for you is to reconnect with Detective Reynolds and get to the bottom of what caused all of this bloodshed in the first place.</p><ul><li>In your campaign log, record that *the investigators failed to stop Julia Stern*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Each investigator earns 2 bonus experience as they are better prepared for what is to come.<ul><li>_Experience_: {xp}</li></ul></li><li>Proceed to _Resolution 4_.</li></ul>"
+      "title": "Kết thúc 3",
+      "body": "<p>_Resolution 3_: Cuộc săn lùng xuyên màn đêm kéo dài và đầy gian nan, nhưng Julia tỏ ra quá quỷ quyệt và quá nhanh nhẹn so với những nỗ lực của bạn. Cho đến sáng ngày thứ ba của cuộc tìm kiếm, bạn lo sợ rằng mình sẽ phải chờ đợi cho đến khi cô ta tấn công trở lại. Dẫu vậy vào lúc này, con đường duy nhất phía trước của bạn là liên lạc lại với Thám tử Reynolds và điều tra ngọn nguồn điều gì đã gây ra tất cả những vụ đổ máu này ngay từ đầu.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã thất bại trong việc ngăn chặn Julia Stern*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Mỗi điều tra viên nhận 2 kinh nghiệm thưởng vì họ đã chuẩn bị tốt hơn cho những gì sắp tới.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Hãy tiến tới _Kết thúc 4_.</li></ul>"
     },
     "resolution4": {
-      "title": "Kết thúc thứ 4",
-      "body": "<p>_Resolution 4_: Back at Detective Reynolds’ office, you explain what you’ve learned. He tells you that his leads also pointed towards the New Horizons meat packing facility, and a suspicious group that had been seen around the building, dressed in robes instead of the more standard aprons and coveralls of the workers. “The same place where Julia worked,” Reynolds says. “Seems like that place is worth a visit.”</p><ul><li>Detective Reynolds joins the investigation! Choose an investigator to become the bearer of the set-aside Detective Reynolds story asset.</li><li>If “the investigators found a sacrificial dagger,” choose an investigator to become the bearer of the set-aside Fang of Zburamoarte story asset.</li><li>Each investigator who ended the scenario with 3 {'{'}blood{'}'} tokens sealed on their investigator becomes the bearer of a set-aside The Blood Blight weakness if they are not already a bearer of it.</li><li>Release each sealed {'{'}blood{'}'} token and return them to the chaos bag.</li><li>Proceed to _Scenario II: New Horizons_.</li></ul>"
+      "title": "Kết thúc 4",
+      "body": "<p>_Resolution 4_: Trở lại văn phòng của Thám tử Reynolds, bạn giải thích những gì mình đã biết được. Ông cho bạn hay rằng các manh mối của ông cũng chỉ về phía cơ sở chế biến thịt New Horizons, và một nhóm người đáng ngờ từng được nhìn thấy quanh tòa nhà, mặc áo choàng thay vì những chiếc tạp dề và bộ quần áo bảo hộ lao động tiêu chuẩn của công nhân. “Cùng nơi Julia từng làm việc,” Reynolds nói. “Xem ra nơi đó rất đáng để ghé thăm đấy.”</p><ul><li>Thám tử Reynolds tham gia cuộc điều tra! Chọn một điều tra viên để trở thành bearer của story asset Detective Reynolds đã để riêng.</li><li>Nếu “các điều tra viên đã tìm thấy một con dao găm hiến tế”, hãy chọn một điều tra viên để trở thành bearer của story asset Fang of Zburamoarte đã để riêng.</li><li>Mỗi điều tra viên kết thúc kịch bản với 3 token {'{'}blood{'}'} bị seal trên thẻ điều tra viên của mình sẽ trở thành bearer của một weakness The Blood Blight đã để riêng nếu họ chưa phải là bearer của nó.</li><li>Giải phóng (release) từng token {'{'}blood{'}'} bị seal và trả chúng về chaos bag.</li><li>Hãy tiến tới _Kịch bản II: New Horizons_.</li></ul>"
     },
     "xp": {
-      "noResolution": "as they learn from their mistakes",
-      "resolution3": "as they are better prepared for what is to come"
+      "noResolution": "khi họ rút ra bài học từ những sai lầm của mình",
+      "resolution3": "vì họ đã chuẩn bị tốt hơn cho những gì sắp tới"
     }
   },
-  "spendExperience": "Spend 2 {'{'}perPlayer{'}'} total experience, as a group, to remove 1 {'{'}blood{'}'} token from the chaos bag",
+  "spendExperience": "Cả nhóm cùng tiêu tốn tổng cộng 2 {'{'}perPlayer{'}'} kinh nghiệm để loại bỏ 1 token {'{'}blood{'}'} khỏi chaos bag",
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is the current agenda number.",
-      "tablet": "-2. If you fail and are at a _Lair_ location, chịu 1 horror.",
-      "elderThing": "-3. If you fail and there are 1 or more {'{'}blood{'}'} (*blood*) tokens sealed on your investigator, after this test resolves, release 1 of those tokens and chịu 1 damage."
+      "skull": "-X. X là số thứ tự agenda hiện tại.",
+      "tablet": "-2. Nếu bạn thất bại và đang ở một địa điểm _Lair_, chịu 1 horror.",
+      "elderThing": "-3. Nếu bạn thất bại và có từ 1 token {'{'}blood{'}'} (*máu*) trở lên bị seal trên thẻ điều tra viên của bạn, sau khi bài kiểm tra này được xử lý, hãy release 1 trong những token đó và chịu 1 damage."
     },
     "hardExpert": {
-      "skull": "-X. X is 1 more than the current agenda number.",
-      "tablet": "-3. If you are at a _Lair_ location, chịu 1 horror.",
-      "elderThing": "-4. If there are 1 or more {'{'}blood{'}'} (*blood*) tokens sealed on your investigator, after this test resolves, release 1 of those tokens and take 1 direct damage."
+      "skull": "-X. X lớn hơn số thứ tự agenda hiện tại là 1.",
+      "tablet": "-3. Nếu bạn đang ở một địa điểm _Lair_, chịu 1 horror.",
+      "elderThing": "-4. Nếu có từ 1 token {'{'}blood{'}'} (*máu*) trở lên bị seal trên thẻ điều tra viên của bạn, sau khi bài kiểm tra này được xử lý, hãy release 1 trong những token đó và chịu 1 direct damage."
     }
   }
 }

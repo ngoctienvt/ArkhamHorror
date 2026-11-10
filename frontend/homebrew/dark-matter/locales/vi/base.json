@@ -1,0 +1,223 @@
+{
+  "difficulty": {
+    "Easy": "<i>Tôi muốn đến Mặt Trăng</i>",
+    "Standard": "<i>Tôi muốn đến Sao Hỏa</i>",
+    "Hard": "<i>Tôi muốn du hành giữa các vì sao</i>",
+    "Expert": "Tôi muốn đến nơi chưa ai từng đặt chân tới"
+  },
+  "name": "Dark Matter (Vật Chất Tối)",
+  "about": {
+    "sections": [
+      {
+        "rows": [
+          {
+            "role": "Designed by",
+            "names": "Axolotl"
+          },
+          {
+            "role": "Special thanks (in no particular order)",
+            "names": "MJ Grenier, bluehg (Pat), Ekthelion, Jaxtraxi, Eole, Syndicateassassin, The Beard, Zow Martinez, Spencer Wilkinson, Goober, Knot_I, Serpentine, DerBK, Dr. Jack Science, ZinjanthrOpus, LordHypnos, toastsushi, HarrisonF, Tofu Mushroom (who played the WIP version over 10 times!), CuddlyZombie, dantrolene, zyloemm, Gold, Curtis, Thoth, Tranman, lados_Kairon, zzorba, Pax Cecilia, SpiritReacher, Jam, Lew, ArtemisHarp and their stream on twitch, Kodab Games and their stream on twitch, PlayingBoardGames and their youtube channel, the MythosBusters, the SCED developers, Jefferson, bigstupidgrin, TerranChef, Serendipigans, Pugtato, brandonglee 123, mnBroncos, AnJoPeC, Argus, hunterSa, socraticmethod, TheBudiez, Bires, Sycopath, Antimarkovnikov, PuertoMateo, BMac, ElseWhere (check out the Strength in Numbers blog!), LuChu, etc. (Hope I didn’t forget anyone.)"
+          }
+        ],
+        "text": [
+          "Cảm ơn những người được nhắc đến ở trên vì sự giúp đỡ không thể kể xiết, dù là cố ý hay thông qua thảo luận, nếu không có họ thì chiến dịch này đã không thể thành hiện thực.",
+          "Cảm ơn bộ khung thiết kế tuyệt vời được tạo ra bởi MJ Newman, Nate French và tất cả những người tham gia vào Arkham Horror: The Card Game tại FFG."
+        ]
+      },
+      {
+        "title": "Design Notes",
+        "spoiler": true,
+        "text": [
+          "Hy vọng bạn đã tận hưởng chiến dịch này! Việc tạo ra nó thực sự là một hành trình dài! Chiến dịch này ban đầu bắt đầu như một chiến dịch 3 phần, bao gồm The Tatterdemalion, Electric Nightmare và Starfall, nhưng tôi nhanh chóng nhận ra, cùng với một vài playtester, rằng bối cảnh và câu chuyện quá thú vị để có thể rời đi nhanh như vậy.",
+          "Khung hệ thống của Arkham Horror LCG thực sự là một phương tiện để kể chuyện — và tôi biết rằng kinh dị khoa học viễn tưởng không gian sâu thẳm là một thể loại có sự kết nối sâu sắc với các chủ đề Lovecraftian và rốt cuộc sẽ phải được khám phá bởi các màn chơi tùy chỉnh. Ban đầu tôi không muốn làm nó vì sẽ rất dễ để một chiến dịch mang chủ đề sci-fi đi chệch tông khỏi vũ trụ Arkham Files, nhưng khi tôi cuối cùng cũng tìm ra cách để đưa các điều tra viên đến tương lai mà không quá lố bịch, và cách để kết hợp mythos một cách phù hợp với vũ trụ mà không quá lộ liễu, tôi biết mình phải tạo ra chiến dịch này. The King in Yellow là Ancient One yêu thích của tôi, với cách nó đùa giỡn với nỗi kinh hoàng tâm lý và nhận thức về thực tại, cùng một chút sự phô trương mang tính kịch nghệ, và The Path to Carcosa là chiến dịch yêu thích nhất của tôi được phát hành cho đến nay, vì vậy thật tự nhiên khi một chiến dịch bẻ cong thực tế ảo liên quan đến ký ức trở thành một phần hậu truyện không chính thức của The Path to Carcosa. Hastur không phải là Ancient One mà hầu hết mọi người sẽ liên tưởng đến không gian sâu thẳm, đó chính xác là lý do tại sao nó lại phù hợp đến vậy.",
+          "Tôi hy vọng chiến dịch này thỏa mãn nhu cầu về một chiến dịch sci-fi không gian sâu thẳm. Tôi đã cố gắng kết hợp càng nhiều mô-típ sci-fi được mong đợi từ một chiến dịch \"sci-fi\" một cách tự nhiên nhất có thể trong khi vẫn giữ được tông màu và phong cách viết của các câu chuyện từ FFG. Tôi thực sự hy vọng sẽ có nhiều người hơn khám phá không gian cốt truyện của sci-fi với khung hệ thống Arkham, có lẽ còn xa hơn trong tương lai so với tôi, có thể là một thứ gì đó gần gũi hơn với một space opera? Hoặc thậm chí là một bản chuyển thể thuần túy của loạt phim Alien. Nhưng hiện tại, đó sẽ là tất cả từ tôi trong bối cảnh tương lai tăm tối này.",
+          "Dù sao đi nữa, tôi thực sự hy vọng tất cả các bạn đã tận hưởng chiến dịch này. Than ôi, đã đến lúc bắt tay vào làm chiến dịch tiếp theo, bất cứ khi nào tôi có thời gian rảnh, trong <i>thời kỳ đen tối</i> này."
+        ]
+      }
+    ],
+    "notes": [
+      "<i>Chiến dịch này là một sản phẩm do fan tạo ra không chính thức và không hề được Fantasy Flight Games xác nhận. Mọi quyền đối với tác phẩm nghệ thuật thuộc về các họa sĩ tương ứng.</i>"
+    ]
+  },
+  "xp": {
+    "heirToCarcosa": "Heir to Carcosa"
+  },
+  "intro": {
+    "title": "Trong không gian, không ai có thể nghe thấy tiếng bạn hét",
+    "body": "<p class='basic'>“Ông ta nhắc đến việc thành lập Vương triều ở Carcosa, những hồ nước kết nối Hastur, Aldebaran, và bí ẩn của Hyades. Ông ta nói về Cassilda và Camilla, và thăm dò những vực sâu mây mù của Demhe cùng Hồ Hali.”</p><p class='basic right'>– Robert W. Chambers, “The Repairer of Reputations”</p><p>Đó là năm 2147, và bạn vừa mới tỉnh dậy sau giấc ngủ đông trên một con tàu vũ trụ dường như bị bỏ hoang — và từ đó bạn bị cuốn vào một chuyến phiêu lưu không gian sâu thẳm xuyên suốt hệ mặt trời nhằm ngăn chặn sự tuyệt chủng của loài người. Dựa trên các phần bổ sung của Call of Cthulhu là Ripples from Carcosa của Oscar Rios và the End Time của Tiến sĩ Michael C. LaBossiere, <i>Dark Matter</i> là chiến dịch do người hâm mộ tự tạo gồm 8 màn chơi dành cho <i>Arkham Horror: The Card Game</i> cho 1–4 người chơi, được thiết kế bởi Axolotl. Chiến dịch yêu cầu bản mở rộng deluxe <i>The Path to Carcosa</i>; để có trải nghiệm tốt nhất, bạn rất nên hoàn thành <i>The Path to Carcosa</i> trước khi chơi.</p>"
+  },
+  "specialRules": [
+    {
+      "title": "Scan",
+      "body": "@:darkMatter.additionalRulesAndClarifications.scan"
+    },
+    {
+      "title": "Ký ức",
+      "body": "@:darkMatter.additionalRulesAndClarifications.memories"
+    },
+    {
+      "title": "Alert",
+      "body": "@:darkMatter.additionalRulesAndClarifications.alert"
+    }
+  ],
+  "additionalRulesAndClarifications": {
+    "title": "Quy Tắc Bổ Sung & Làm Rõ",
+    "alert": "<h3>Alert</h3><p class='basic'>Mỗi khi một điều tra viên thất bại một bài kiểm tra kỹ năng trong khi cố gắng né tránh một kẻ địch có từ khóa alert, sau khi áp dụng tất cả các kết quả cho bài kiểm tra kỹ năng đó, kẻ địch đó thực hiện một cuộc tấn công chống lại điều tra viên đang né tránh. Kẻ địch không bị cạn kiệt (exhaust) sau khi thực hiện một đòn tấn công alert. Đòn tấn công này xảy ra bất kể kẻ địch có đang giao chiến với điều tra viên đang né tránh hay không.</p>"
+  },
+  "prologue": {
+    "title": "Mở Đầu",
+    "body": "<p>Bạn lật qua lật lại tờ rơi chương trình gấp trên tay, đọc nó như thể đây là lần thứ một trăm. “Nhà hát Miskatonic trân trọng giới thiệu: Vua Áo Vàng (The King in Yellow),” dòng chữ viết. “Buổi diễn đặc biệt chỉ một đêm duy nhất tại chính Nhà hát Ward của Arkham. Một vở kịch lôi cuốn khó cưỡng gồm hai màn. Dàn dựng và đạo diễn bởi Nigel Engram.” Dàn diễn viên là một nhóm nhỏ, với một vai không ghi tên ở cuối cùng: “Kẻ Xa Lạ (The Stranger).”</p><p>Việc một vở kịch rất được mong đợi từ tận Paris đến với Arkham là một sự kiện đáng chú ý, ngay cả khi nó chỉ diễn ra trong một đêm duy nhất. Trong suốt nhiều tuần trước buổi diễn, nó là chủ đề bàn tán của cả thị trấn. Mọi thứ có vẻ rất đỗi bình thường… vậy mà, bạn lại có bằng chứng cho thấy có điều gì đó nham hiểm đang diễn ra. Mọi chuyện bắt đầu từ sự biến mất của một nhân viên hậu đài tại nhà hát — một cậu bé chỉ mới mười bảy tuổi đã vắng mặt trong một buổi tập và không bao giờ được nhìn thấy nữa. Rồi, chưa đầy hai tuần trước buổi diễn, thi thể của một nhạc công được tìm thấy với một khẩu súng trong miệng. Có lẽ rùng rợn nhất là người đàn ông điên loạn bị cảnh sát bắt giữ tại Quảng trường Độc Lập, kẻ đã la hét và lảm nhảm về “sự trở lại của Đức Vua.” Hắn bị đưa đến Nhà thương điên Arkham, và bạn ngạc nhiên khi phát hiện ra hắn không hề đơn độc trong những ảo tưởng của mình.</p><p>Nhận thấy những sự kiện này đầy đáng ngờ, bạn và các đồng hành đã dấn sâu hơn vào sự việc. Dù không thể chứng minh bất kỳ mối liên hệ nào, đây không phải là những sự kiện kỳ lạ duy nhất xoay quanh vở kịch sắp ra mắt. Những vụ tự sát và điên loạn liên tiếp nối gót theo sau nó, và bạn quyết tâm tìm hiểu lý do tại sao.</p><p>Ánh đèn trong khán phòng mờ dần, và một luồng sáng rọi xuống sân khấu. Những gì diễn ra không hoàn toàn giống như bạn mong đợi. Chậm rãi và đơn điệu, màn đầu tiên của <i>The King in Yellow</i> là một sự tẻ nhạt đến ngán ngẩm. Bối cảnh và nhân vật rất lôi cuốn, nhưng câu chuyện quanh co và vô nghĩa chẳng giải trí hay cung cấp được điều gì. Bạn bắt đầu tự hỏi liệu những sự kiện kinh hoàng xoay quanh <i>The King in Yellow</i> rốt cuộc có liên quan đến nhau hay không. Có lẽ chỉ do trí tưởng tượng quá mức của bạn; làm sao một vở diễn tầm thường và giản dị như thế lại có thể gây ra cảnh hỗn loạn như vậy? Bạn ngạc nhiên khi màn một khép lại mà không có bất kỳ cao trào hay tiết lộ nào. Đèn bật sáng cho giờ giải lao, và bạn cân nhắc việc ra về sớm, kìm lại một cái ngáp. Tuy nhiên, trước khi bạn kịp quyết định, bạn thấy mình đang dần dần… trôi vào… giấc ngủ.</p><p class='basic right'>Tiếp tục tới <b>Màn I: The Tatterdemalion</b>.</p>"
+  },
+  "label": {
+    "alienAid": {
+      "readyAndMoveMiGoScientist": "Sẵn sàng (ready) Mi-Go Scientist và di chuyển nó đến bất kỳ địa điểm nào"
+    },
+    "arrivalOfTheKing": {
+      "memoriesToCrossOut": "Gạch bỏ bất kỳ số lượng vạch đếm nào bên cạnh “Ký ức” của bạn"
+    },
+    "biologyLab": {
+      "healDamage": "Hồi 1 sát thương cho mỗi điều tra viên tại địa điểm của bạn",
+      "healHorror": "Hồi 1 kinh hoàng cho mỗi điều tra viên tại địa điểm của bạn"
+    },
+    "contamination": {
+      "discardAlly": "Bỏ (discard) asset [[Ally]] được đính kèm",
+      "placeDoom": "Đặt 1 doom lên asset [[Ally]] được đính kèm"
+    },
+    "delights": {
+      "doNotRemoveAToken": "Không loại bỏ token",
+      "removeSkull": "Loại bỏ một token Skull khỏi túi chaos",
+      "removeCultist": "Loại bỏ một token Cultist khỏi túi chaos",
+      "removeTablet": "Loại bỏ một token Tablet khỏi túi chaos",
+      "removeElderThing": "Loại bỏ một token Elder Thing khỏi túi chaos",
+      "removeElderSign": "Loại bỏ một token Elder Sign khỏi túi chaos"
+    },
+    "desync": {
+      "traumaAndExile": "Chịu 1 sang chấn tinh thần và thêm 1 vạch đếm bên cạnh “Ký ức” của bạn, sau đó lưu đày (exile) lá bài này",
+      "returnToDeck": "Nếu deck của bạn có từ 5 lá bài trở lên, xào lá bài này trở lại vào deck của bạn. Nếu không, bỏ (discard) nó"
+    },
+    "evaSuit": {
+      "doNotPutIntoPlay": "Không đưa EVA Suit vào chơi"
+    },
+    "fromTheDark": {
+      "takeDamage": "Chịu {count} sát thương",
+      "drawAMimic": "Tìm trong chồng bài encounter và chồng bài bỏ một kẻ địch Mimic và rút nó"
+    },
+    "innocentMishap": {
+      "damageNearestBrain": "Gây 1 sát thương cho story asset [[Brain]] gần nhất",
+      "damageMiGoScientist": "Gây 2 sát thương cho Mi-Go Scientist",
+      "take2DirectDamage": "Chịu 2 tổn thương thể chất trực tiếp"
+    },
+    "internationalCollaboration": {
+      "gainResources": "Nhận số tài nguyên đó thay thế",
+      "drawCards": "Rút số lá bài đó thay thế",
+      "decline": "Từ chối"
+    },
+    "jv7Hyades": {
+      "trefoil": "Scan biểu tượng ba lá",
+      "t": "Scan biểu tượng chữ T"
+    },
+    "medicalFoam": {
+      "doNotPutIntoPlay": "Không đưa Medical Foam vào chơi"
+    },
+    "micrometeoroid": {
+      "discardEachEvent": "Bỏ (discard) từng lá bài event trên tay bạn"
+    },
+    "mindMachineInterface": {
+      "doNotPutIntoPlay": "Không đưa Mind-Machine Interface vào chơi"
+    },
+    "paleBlueDot": {
+      "takeHorror": "Chịu 1 kinh hoàng",
+      "placeDoom": "Thêm 1 doom vào agenda hiện tại và bỏ (discard) lá bài này"
+    },
+    "paradoxicalThreat": {
+      "placeFacedown": "Đặt 3 lá bài trên cùng của chồng bài encounter úp vào threat area của bạn",
+      "doomAndDraw": "Thêm 1 doom vào agenda hiện tại và rút 3 lá bài úp từ threat area của bạn"
+    },
+    "radiationTablets": {
+      "doNotPutIntoPlay": "Không đưa Radiation Tablets vào chơi"
+    },
+    "scan": {
+      "atYourLocation": "Scan tại chính địa điểm của bạn"
+    },
+    "sceneShifting": {
+      "placeDoom": "Đặt 1 doom lên agenda hiện tại",
+      "moveEnemies": "Di chuyển mỗi kẻ địch 1 địa điểm về phía bạn. Mỗi kẻ địch tại địa điểm của bạn ngay lập tức tấn công bạn"
+    },
+    "scienceExpansion": {
+      "purchase": "Mua một story asset Researched Science",
+      "donePurchasing": "Không mua gì cả"
+    },
+    "solarEclipse": {
+      "take1Horror": "Chịu 1 kinh hoàng",
+      "locationGets2Shroud": "Địa điểm của bạn nhận +2 shroud cho lần điều tra này"
+    },
+    "surprise": {
+      "moveBoogeyman": "Di chuyển The Boogeyman đến địa điểm hiện tại của bạn",
+      "boogeymanAttacks": "The Boogeyman ngay lập tức tấn công bạn"
+    },
+    "virtualAccessKey": {
+      "addToDeck": "Thêm Virtual Access Key vào deck của bạn",
+      "doNotAddToDeck": "Không thêm vào deck của bạn"
+    },
+    "whatTypeOfShipIsThis": {
+      "placeDoom": "Đặt 1 doom lên agenda hiện tại và thêm lá bài này vào victory display",
+      "removeFromGame": "Loại bỏ lá bài này khỏi trò chơi"
+    },
+    "withoutATrace": {
+      "assumeCommandOfTheShip": "Tiếp quản quyền chỉ huy con tàu",
+      "scavengeTheShipForParts": "Lùng sục con tàu để lấy linh kiện"
+    }
+  },
+  "key": {
+    "youWereTransportedToTheVirtualDreamlandsByMaja": "bạn đã được Maja dịch chuyển đến Virtual Dreamlands.",
+    "youEnteredTheVirtualDreamlandsByYourOwnMeans": "bạn đã tiến vào Virtual Dreamlands bằng cách riêng của mình.",
+    "hasBeenInfectedByTheCybervirus": "đã bị nhiễm cybervirus.",
+    "youAreTrappedInAVirtualNightmare": "bạn bị mắc kẹt trong một cơn ác mộng ảo.",
+    "youPartiallyRestoredTheSanityOfK2PS187": "bạn đã phục hồi một phần sanity của K2-PS187.",
+    "youFullyRestoredTheSanityOfK2PS187": "bạn đã phục hồi hoàn toàn sanity của K2-PS187.",
+    "youHaveWatchedThePerformanceOfHeirToCarcosa": "bạn đã xem buổi biểu diễn Heir to Carcosa.",
+    "theElbrusStationHasBeenLostInTheQuantumRealm": "Trạm Elbrus đã bị lạc trong cõi lượng tử.",
+    "theElbrusStationHasBeenFullyStabilized": "Trạm Elbrus đã được ổn định hoàn toàn.",
+    "youHaveWitnessedThePrimordialChaos": "Bạn đã chứng kiến sự hỗn mang nguyên thủy.",
+    "youHaveRescuedTheRemainingCrewOfTheNostalgiaII": "bạn đã giải cứu phi hành đoàn còn lại của Nostalgia II.",
+    "theNostalgiaIIHasBeenSaved": "Nostalgia II đã được cứu.",
+    "youCouldntSaveTheCrewOfTheNostalgiaII": "bạn đã không thể cứu phi hành đoàn của Nostalgia II.",
+    "allInvestigatorsHaveBeenCorruptedByTheEarth": "tất cả các điều tra viên đã bị tha hóa bởi Trái Đất.",
+    "youAreNotInGoodStandingWithTheMiGo": "bạn không có quan hệ tốt với Mi-Go.",
+    "youAreAlliedWithTheMiGo": "bạn là đồng minh của Mi-Go.",
+    "youHaveUncoveredTheCultistsInhumanMethods": "bạn đã khám phá ra các phương pháp vô nhân đạo của cultist.",
+    "youHaveWitnessedTheUnconsciousPandemonium": "Bạn đã chứng kiến sự hỗn loạn vô thức.",
+    "youHaveWitnessedTheManifestedMadness": "bạn đã chứng kiến sự điên loạn hiển hiện.",
+    "theInvestigatorsAreTrappedWithinCarcosa": "các điều tra viên bị mắc kẹt trong Carcosa.",
+    "theInvestigatorsKnowOfTheAbjurationOfTheThrone": "các điều tra viên biết về Lời Nguyền Bỏ Ngai Vàng.",
+    "theSunWentSupernovaAndWipedOutMostOfTheSolarSystem": "mặt trời đã trở thành siêu tân tinh và quét sạch phần lớn hệ mặt trời.",
+    "miGoSafelyReturnedToTheirHomeWorld": "Mi-Go đã trở về thế giới quê hương an toàn.",
+    "hopeWasShieldedFromTheBlast": "Hope đã được che chắn khỏi vụ nổ.",
+    "theUCCEscapedToAnotherGalaxy": "UCC đã trốn thoát sang một thiên hà khác.",
+    "livedTheRemainderOfTheirDaysWithHope": "đã sống nốt phần đời còn lại cùng với Hope.",
+    "livedTheRemainderOfTheirDaysOnParadise": "đã sống nốt phần đời còn lại trên Paradise.",
+    "youHaveReturnedToThePalacesOfDimCarcosa": "bạn đã trở lại những cung điện của Dim Carcosa.",
+    "wasCaughtInTheSupernovasBlast": "đã bị cuốn vào vụ nổ siêu tân tinh.",
+    "theInvestigatorsEscapedHastursGrasp": "các điều tra viên cuối cùng đã thoát khỏi nanh vuốt của Hastur và ngăn cản hắn trốn thoát khỏi nhà tù của hắn.",
+    "theRealmOfCarcosaOvertookOurUniverse": "vương quốc Carcosa đã chiếm lấy vũ trụ của chúng ta, và Tassilda cai trị các vì sao đen.",
+    "hasturAndTassildaAreImprisonedInCarcosaOnceMore": "Hastur và Tassilda bị giam cầm ở Carcosa một lần nữa, và vũ trụ đã đánh bại điều tất yếu… Tạm thời là vậy.",
+    "impendingDoom": "Diệt Vong Cận Kề",
+    "memories": "Ký ức"
+  },
+  "electricNightmare": {
+    "label": {
+      "noInvestigatorAddsK2": "Không điều tra viên nào thêm nó vào deck của họ"
+    }
+  },
+  "scienceExpansion": {
+    "title": "Mở Rộng Khoa Học (Science Expansion)",
+    "description": "Bao gồm bản Mở rộng Khoa học Dark Matter: mười story asset Khoa học “Đã Nghiên cứu” (Researched) có thể mua được, có thể mua giữa bất kỳ màn chơi nào bằng điểm kinh nghiệm và “Ký ức”, cùng năm lá bài quét bổ sung được xào vào scanning deck của Starfall. Kate Winthrop không được bao gồm.",
+    "purchase": "Mua Thẻ Bài Khoa Học",
+    "shuffleIn": "Xào 5 thẻ bài scanning thuộc Science Expansion vào scanning deck",
+    "instructions": "Mua một story asset Researched Science, hoặc dừng lại. Mỗi thẻ bài có giá bằng kinh nghiệm và “Ký ức” được in trên mặt trước của nó.",
+    "waiting": "Đang chờ {investigator} mua thẻ bài Khoa học…",
+    "experienceRemaining": "Kinh nghiệm: {count}",
+    "memoriesRemaining": "“Ký ức”: {count}",
+    "donePurchasing": "Hoàn tất mua sắm"
+  }
+}

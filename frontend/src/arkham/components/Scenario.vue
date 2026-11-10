@@ -2709,6 +2709,7 @@ async function addChaosToken(face: any){
             >
               <img
                 :src="topOfEncounterDiscard"
+                :data-card-code="props.scenario.discard[0]?.cardCode"
                 class="card"
               />
               <span class="deck-size">{{discards.length}}</span>
@@ -2760,6 +2761,7 @@ async function addChaosToken(face: any){
             <div class="discard-card">
               <img
                 :src="topOfSpectralDiscard"
+                :data-card-code="spectralDiscard?.[0]?.cardCode"
                 class="card"
               />
               <span class="deck-size">{{ spectralDiscards.length }}</span>

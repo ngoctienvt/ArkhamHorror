@@ -1,0 +1,67 @@
+{
+  "electricNightmare": {
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set sau: <i>Electric Nightmare</i>, <i>Endtimes</i>, và <i>Dark Past</i>. Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/dark-matter/sets/electric-nightmare.png' /><img src='{imgPath}/homebrew/dark-matter/sets/endtimes.png' /><img src='{imgPath}/homebrew/dark-matter/sets/dark-past.png' /></section>",
+      "setAsideBoogeyman": "Để riêng encounter set <i>The Boogeyman</i> sang một bên, ngoài khu vực chơi. Set này được biểu thị bằng biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/dark-matter/sets/the-boogeyman.png' /></section>",
+      "randomizeAct": "Chọn ngẫu nhiên một phiên bản của act 1 (Public School 187) để đưa vào chơi. Loại bỏ hai phiên bản còn lại khỏi trò chơi.",
+      "setAsideLocations": "Để riêng từng bản sao của các địa điểm Undefined Room sang một bên, ngoài khu vực chơi, cùng với Entrance Hall (A Shimmer in the Wall).",
+      "placeSchoolGrounds": "Đưa địa điểm School Grounds vào chơi.",
+      "startAt": "Mỗi điều tra viên bắt đầu chơi tại School Grounds.",
+      "attachMaja": "Đính kèm story asset Maja vào School Grounds.",
+      "setAsideStoryAssets": "Để các story asset sau sang một bên, ngoài khu vực chơi: Alma, David, Tilde, William, và từng bản sao của K2-PS187.",
+      "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch. Nếu một điều tra viên *đã bị nhiễm cybervirus*, điều tra viên đó phải tìm kiếm trong bộ sưu tập lá bài Cybervirus và bắt đầu màn chơi với lá bài đó trên tay."
+    },
+    "specialRules": [
+      {
+        "title": "Các địa điểm trong Virtual Dreamlands",
+        "body": "<p class='basic'>Trong suốt màn chơi này, các địa điểm sẽ được sắp xếp theo sơ đồ, biểu thị bằng các biểu tượng của chúng. Các địa điểm liền kề nhau theo góc vuông trực giao (trái, phải, trên, và dưới), và không liền kề theo đường chéo.</p>"
+      },
+      {
+        "title": "Hoán đổi Địa điểm",
+        "body": "<p class='basic'>Trong suốt màn chơi này, bạn có thể được yêu cầu hoán đổi hai địa điểm với nhau. Khi một địa điểm được hoán đổi với một địa điểm khác, chúng sẽ đổi chỗ cho nhau trong sơ đồ sắp xếp. Tất cả token, attachment, điều tra viên, kẻ địch, và các lá bài khác tại mỗi địa điểm vẫn ở nguyên trên địa điểm đó (chúng đã “di chuyển” cùng với địa điểm — chỉ có sơ đồ sắp xếp và các kết nối thay đổi.)</p><p class='basic'><i>Ví dụ: nếu Wendy Adams hiện đang ở School Grounds và được yêu cầu hoán đổi địa điểm của mình với Entrance Hall (vốn nằm ngay phía trên School Grounds), vị trí của hai địa điểm sẽ được hoán đổi cho nhau. Sau khi hoán đổi hai địa điểm này, Wendy Adams vẫn ở lại School Grounds, lúc này nằm phía trên Entrance Hall.</i></p>"
+      },
+      {
+        "title": "Bầy đàn (Swarming)",
+        "body": "<p class='basic'>Một kẻ địch có các lá bài bầy đàn (swarm cards) bên dưới thực chất là một bầy kẻ địch hành động cùng nhau. Kẻ địch có các lá bài bầy đàn bên dưới được gọi là “kẻ địch chủ” (host enemy). Trong màn chơi này, các lá bài encounter có thể trở thành lá bài bầy đàn. Khi các lá bài bầy đàn đó bị đánh bại, chúng sẽ bị bỏ vào chồng bài encounter bỏ.</p><ul><li>Mỗi lá bài bầy đàn bên dưới kẻ địch chủ đóng vai trò như một cá thể riêng biệt của kẻ địch đó trong hầu hết trường hợp. Mỗi lá bài bầy đàn có cùng chỉ số và văn bản hiệu ứng như thẻ bài chủ của nó.</li><li>Mỗi lá bài bầy đàn tấn công riêng rẽ khi các kẻ địch tấn công trong giai đoạn Enemy. Khi kẻ địch chủ và toàn bộ lá bài bầy đàn của nó đã tấn công trong bước này, hãy làm cạn kiệt (exhaust) tất cả chúng.</li><li>Mỗi lá bài bầy đàn có thể bị tấn công hoặc chịu sát thương riêng biệt, nhưng kẻ địch chủ không thể bị đánh bại khi vẫn còn lá bài bầy đàn bên dưới nó. Khi một lá bài bầy đàn bị đánh bại, bất kỳ sát thương dư thừa nào có thể được gây lên một lá bài bầy đàn khác bên dưới cùng kẻ địch chủ đó hoặc lên chính kẻ địch chủ.</li><li>Kẻ địch chủ và tất cả các lá bài bầy đàn của nó di chuyển, giao chiến và exhaust như một thực thể duy nhất. <i>(Ví dụ: nếu kẻ địch chủ hoặc bất kỳ lá bài bầy đàn nào của nó bị né tránh, tất cả chúng đều exhaust và ngừng giao chiến.)</i></li></ul>"
+      }
+    ],
+    "intro": {
+      "title": "Màn II: Electric Nightmare",
+      "body": "<p>Bạn chật vật theo kịp tốc độ của cô bé khi cô nhảy chân sáo về phía thị trấn nhỏ. \"Cháu tên là Maja. Chỉ thị của cháu là lưu trữ và quản lý các kho lưu trữ thông tin trên tàu.\" Cô bé vội vã giải thích rằng cô bé và một vài người bạn cùng lớp đã bị 'những kẻ xấu' bắt cóc khỏi trường học vào ngày 16 tháng 1 năm 2045. Não của họ đã bị phẫu thuật cắt bỏ và bảo quản trong một cỗ máy thử nghiệm đặc biệt, cuối cùng trở thành siêu máy tính mạnh mẽ điều hành Tatterdemalion, K2-PS187.</p><p>Khi bạn đi bộ qua thị trấn, rõ ràng là có điều gì đó khủng khiếp đã xảy ra ở đây. Mọi thứ dường như đang trong tình trạng hỗn loạn, như thể một cuộc bạo động vừa mới đi qua. Có thể nhìn thấy những hình vẽ graffiti màu vàng mới được sơn mô tả những biểu tượng và chữ tượng hình kỳ lạ. Khắp nơi là những vết máu bắn tung tóe, vỏ đạn rỗng và những chiếc mặt nạ nhợt nhạt. Không có thi thể nào, nhưng bạn có thể nghe thấy âm thanh của những tiếng la hét, tiếng súng và tiếng còi báo động xa xăm vọng lại từ bên ngoài các con phố. Gần đó là một chiếc xe cảnh sát bị lật và một chiếc xe tải thùng màu đen nằm nghiêng. Những vết cào khổng lồ đã xé toạc lớp kim loại của chiếc xe tải và cửa sau của nó mở toang. Khi bạn đi ngang qua, một chiếc đài phát thanh từ bên trong nổ lách tách và rè rè, sau đó vang lên, “Xin chào, Đơn vị 12? Đơn vị 12, có phải bạn không? Vui lòng trả lời.\" Maja làm rõ rằng môi trường ảo này đại diện cho những giấc mơ của K2-PS187 mang hình dạng của ngày họ bị bắt, ngày mà toàn bộ thế giới kết thúc. Điều gì có thể đã xảy ra trên Trái đất trong một tương lai xa xôi? Hay đúng hơn là một quá khứ xa xôi?</p><p>Cuối cùng bạn cũng đến bên ngoài một tòa nhà lớn bằng gạch. Maja dừng lại và chỉ tay về phía đó. \"Đây là nơi bạn bè cháu đang trốn. Những kẻ xấu bắt chúng cháu dịch một câu chuyện đáng sợ và làm một bộ phim cho họ. Chúng cháu không muốn đọc nó, nhưng họ đã ép chúng cháu. Vài ngày sau, Annie, người phiên dịch vạn năng, cô ấy — cô ấy —\" Maja chật vật thốt lên những lời đó. Có một nỗi sợ hãi tuyệt vọng trong mắt cô bé. \"Cô/chú sẽ không tin cháu đâu, nhưng cháu thề, đó là Ông Kẹ! Cháu đã thấy Ông Kẹ ăn thịt cô ấy! Cháu đã bỏ chạy và tìm kiếm trong các kho lưu trữ xem có thứ gì, có ai có thể giúp được không. Sau một thời gian dài, cuối cùng cháu cũng tìm thấy một người và gọi họ. Đó là lúc cô/chú thức dậy! Bây giờ cô/chú đã ở trong hệ thống của chúng cháu, cô/chú có thể cứu chúng cháu!\"</p><p>Trước mặt bạn là một con đường dẫn đến một cặp cửa đôi, phía trên là dòng chữ “Public School 187.” Bên dưới, ai đó đã viết “HASTUR RISES!” bằng sơn xịt màu vàng. Một tiếng hú phi nhân loại vang vọng qua các hành lang bên trong trường học, theo sau là tiếng trẻ em la hét trong kinh hoàng.</p><p class='basic'>Kiểm tra Nhật ký Chiến dịch. Mỗi điều tra viên có từ 3 “Ký ức” trở xuống phải đọc <b>Mất Đồng Bộ (Desynchronization)</b>.</p>"
+    },
+    "tooltips": {
+      "cafeteria": {
+        "investigate": "_{'{'}action{'}'} Điều tra_. Thử thách này tăng +2 độ khó. Nếu thành công, khám phá thêm 1 manh mối từ một địa điểm liền kề."
+      }
+    },
+    "resolutions": {
+      "noResolution": {
+        "title": "Không Đạt Được Kết Cục Nào",
+        "body": "<p><b>Nếu không đạt được kết cục nào (mỗi điều tra viên đã từ bỏ hoặc bị đánh bại):</b></p>",
+        "proceedToResolution1": "Nếu không có lá bài cốt truyện Reintegrated nào trong victory display: Tiến tới <b>Kết Cục 1</b>.",
+        "proceedToResolution2": "Nếu có ít nhất 1 lá bài cốt truyện Reintegrated khi màn chơi kết thúc: Tiến tới <b>Kết Cục 2</b>."
+      },
+      "resolution1": {
+        "title": "Kết Cục 1",
+        "body": "<p><b>Kết Cục 1:</b> Một tiếng vỗ tay vang dội làm bạn giật mình tỉnh giấc. Đám đông trong nhà hát đứng dậy, reo hò không ngớt. Vài khán giả ở hàng ghế đầu đang ném hoa hồng cho các diễn viên trên sân khấu, những người đang cúi chào với nụ cười rạng rỡ trên môi. Một cơn đau đầu dữ dội lan tỏa qua hai thái dương của bạn. Làm thế nào bạn lại quay về đây? Bạn đã ở trong nhà hát suốt thời gian qua sao? Còn con tàu vũ trụ thì sao? Còn thực tại ảo thì sao? Tất cả chỉ là một giấc mơ tồi tệ thôi sao? Trước khi bạn kịp đứng dậy và rời khỏi khán phòng, ánh đèn vụt tắt. Một tia sáng chiếu xuống sân khấu, soi rọi một diễn viên duy nhất, hóa trang thành một chú hề. Chắc hẳn đã có chuyện gì đó không ổn xảy ra bên trong hệ thống mô phỏng. Bạn không còn ở trong cơn ác mộng của K2-PS187 nữa, mà là của chính bạn. Nếu không có sự can thiệp từ bên ngoài, cơ thể bạn có thể sẽ trôi dạt trong không gian vô tận mãi mãi, trong khi tâm trí bạn dần mục nát trong bản sao thối rữa này của thực tại. Kẻ lạ mặt bắt đầu cười. Một tiếng cười kinh khủng, chói tai.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>bạn bị mắc kẹt trong một cơn ác mộng ảo</i>.</li><li>Mỗi điều tra viên bị <b>phát điên (insane)</b>.</li><li>Các điều tra viên thua chiến dịch.</li></ul>"
+      },
+      "resolution2": {
+        "title": "Kết Cục 2",
+        "body": "<p><b>Kết Cục 2:</b> Bạn tỉnh dậy bên trong một lớp học ảo, bao quanh bởi những đứa trẻ mà bạn đã giải cứu. Bản thân những đứa trẻ, ban đầu trông bẩn thỉu và nhếch nhác, giờ đây trông sạch sẽ và gọn gàng trong bộ đồng phục học sinh. Chúng đã kiềm chế sự điên loạn của những đứa trẻ còn lại bằng cách tạo ra một thực tại thu nhỏ mới, ngắt kết nối khỏi máy chủ hệ thống. Những người sống sót thương tiếc sự mất mát của bạn bè mình, nhưng vui mừng vì không còn Boogeyman nào dọa nạt chúng và không còn những kẻ xấu bảo chúng phải làm gì. Cõi mộng ảo không còn là một địa ngục ác mộng như trước nữa.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>bạn đã phục hồi một phần sanity của K2-PS187</i>.</li><li>Kiểm tra số lượng lá bài cốt truyện Reintegrated trong victory display. Nếu có đúng 1 lá, một điều tra viên có thể thêm permanent story asset K2-PS187 (25% Functionality) vào deck của họ; nếu có đúng 2 lá, story asset K2-PS187 (50% Functionality); nếu có đúng 3 lá, story asset K2-PS187 (75% Functionality).</li><li>Nếu có ít nhất 1 bản sao của treachery Reminiscence trong victory display, thêm 1 token {'{'}elderThing{'}'} vào túi chaos cho phần còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Tiến tới <b>Chuyển cảnh I: Mission Briefing</b>.</li></ul>"
+      },
+      "resolution3": {
+        "title": "Kết Cục 3",
+        "body": "<p><b>Kết Cục 3:</b> Bên ngoài, mặt trời ló dạng và có vẻ như là một ngày mùa xuân tuyệt đẹp. Bên trong, các hành lang sạch sẽ và ngăn nắp, với những bức tranh được sơn màu rực rỡ trên tường. Bản thân những đứa trẻ, ban đầu trông bẩn thỉu và nhếch nhác, giờ đây trông sạch sẽ và gọn gàng trong bộ đồng phục học sinh. Chúng vô cùng vui sướng vì Boogeyman và tất cả những kẻ xấu cuối cùng đã biến mất. Chúng hiểu rằng chúng không bao giờ có thể trở về nhà và gia đình chúng đã chết từ lâu. Nhưng điều đó không làm giảm đi niềm hạnh phúc của chúng khi không còn Boogeyman nào dọa nạt chúng và chúng lại có một giáo viên thực sự chăm sóc chúng một lần nữa. Cõi mộng ảo giờ đây tràn ngập những đứa trẻ hạnh phúc, đáng yêu.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>bạn đã phục hồi hoàn toàn sanity của K2-PS187</i>.</li><li>Một điều tra viên có thể chọn thêm permanent story asset K2-PS187 (100% Functionality) vào deck của họ.</li><li>Nếu có ít nhất 1 bản sao của treachery Reminiscence trong victory display, thêm 1 token {'{'}elderThing{'}'} vào túi chaos cho phần còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Tiến tới <b>Chuyển cảnh I: Mission Briefing</b>.</li></ul>"
+      }
+    },
+    "desynchronization": {
+      "title": "Mất Đồng Bộ (Desynchronization)",
+      "body": "<p>Một chiếc xe buýt trường học bị lật úp bám đầy bụi trên sân trường. Khi bạn kiểm tra những ô cửa sổ bị phá hoại, bạn thoáng thấy hình ảnh phản chiếu của chính mình. Tuy nhiên, bạn không còn nhận ra người đang nhìn lại mình nữa. Vóc dáng, những đường nét khuôn mặt đặc trưng, tất cả dường như quá quen thuộc với bạn, nhưng bạn biết đây không phải là cơ thể của mình. Bạn nhìn chằm chằm vào tấm kính trong sự hoài nghi. Khuôn mặt phản chiếu của bạn biến đổi thành một chiếc mặt nạ trống rỗng, nhợt nhạt không có miệng, mũi hay mắt. Thực tế ảo không còn nhận ra hình ảnh bản ngã còn sót lại của bạn nữa — sự phóng chiếu tâm trí của bản thể kỹ thuật số của bạn đã tan biến vào hư vô.</p><ul><li>Bạn phải thêm weakness Desync vào deck của mình. Lá bài này không tính vào deck limit của bạn.</li></ul>"
+    },
+    "label": {
+      "cafeteria": {
+        "investigate": "Khám phá 1 manh mối tại một địa điểm kết nối"
+      }
+    }
+  }
+}

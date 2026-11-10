@@ -1,0 +1,53 @@
+{
+  "nightOfFire": {
+    "heading": "Màn I",
+    "name": "Đêm Rực Lửa",
+    "intro": {
+      "title": "Màn I: Đêm Rực Lửa",
+      "body": "<p>Sự mơ màng đau buồn của bạn bị phá vỡ bởi một chuyển động. Đống lửa từng là nhà của bạn chiếu sáng ba bóng người, đang thong thả tiến về phía bạn. Họ dường như đang cầm...</p><p>Một tràng âm thanh đứt đoạn phá vỡ sự tĩnh lặng của màn đêm. Tiếng súng. Rõ ràng là có kẻ đang cố giết bạn.</p>"
+    },
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set sau: *Night of Fire*, *Agents of Aforgomon*, *Nyctophobia*, *Thugs* và *Unravelling Years*. Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/ages-unwound/sets/night-of-fire.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/agents-of-aforgomon.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/nyctophobia.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/thugs.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/unravelling-years.png' /></section>",
+      "placeRivertown": "Đặt địa điểm Rivertown vào chơi. *(Nó nằm ở mặt đã lật của một trong các địa điểm Arkham Streets.)* Mỗi điều tra viên bắt đầu chơi tại Rivertown.",
+      "arkhamStreetsDeck": "Xáo trộn các địa điểm còn lại thành một chồng bài riêng, ngửa mặt Arkham Streets.",
+      "setAside": "Đặt Myriad Assassin, Irregulars, mỗi bản sao của Eternity's Sentinel, mỗi bản sao của Time Spirit và encounter set Agents of Aforgomon sang một bên, ngoài màn chơi. Encounter set Agents of Aforgomon có thể được nhận biết bằng biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/ages-unwound/sets/agents-of-aforgomon.png' /></section>"
+    },
+    "rules": {
+      "arkhamStreets": {
+        "title": "Đường Phố Arkham",
+        "body": "<p class='basic'>Một số hiệu ứng của màn chơi sẽ yêu cầu bạn di chuyển đến một địa điểm Arkham Streets mới. Để làm điều này, đặt lá bài trên cùng của chồng bài Arkham Streets vào chơi úp mặt, sau đó di chuyển đến đó. Nếu không còn địa điểm nào trong chồng bài Arkham Streets, hủy bỏ hiệu ứng di chuyển.</p><p class='basic'>Lưu ý rằng một khi một địa điểm Arkham Streets đã vào chơi, các kết nối của nó hoạt động bình thường. Có thể bạn sẽ không thể di chuyển trở lại địa điểm trước đó của mình, hoặc một điều tra viên khác ở địa điểm trước đó của bạn không thể đi theo bạn.</p>"
+      }
+    },
+    "hunted": {
+      "label": {
+        "spendTwoClues": "Chi 2 manh mối cho cả nhóm",
+        "spawnTimeSpirits": "Triệu hồi một Time Spirit giao chiến với mỗi điều tra viên"
+      }
+    },
+    "resolutions": {
+      "noResolution": {
+        "title": "Không Đạt Được Kết Thúc Nào",
+        "body": "<p class='basic'>*Nếu không đạt được kết thúc nào (mỗi điều tra viên bị đánh bại)*: Đọc _Kết thúc 1_.</p>"
+      },
+      "xp": {
+        "desperateFlight": "cuộc tháo chạy tuyệt vọng của họ"
+      },
+      "resolution1": {
+        "title": "Kết thúc 1",
+        "body": "<p>_Kết thúc 1_: Mệt mỏi, bầm dập, suy sụp, bạn gục xuống đất. Ở phía xa, đống lửa tang thương của ngôi nhà bạn vẫn cháy, thắp sáng cả màn đêm. Với những bóng người không ngừng truy đuổi bạn, và những sinh vật ác mộng đi cùng chúng, bạn chỉ có thể cho rằng mình sẽ sớm chìm cùng con tàu của mình.</p><p>Dù vậy, bạn đã nằm đây một lúc lâu, và không có ai đến để ghim viên đạn cuối cùng vào bạn. Với nỗ lực phi thường, bạn gượng đứng dậy, chỉ để thấy những con phố xung quanh mình... trống rỗng. Vẫn còn những tiếng súng nổ lách cách ở phía xa &mdash; có lẽ những kẻ truy đuổi bạn đang tìm một mục tiêu mới?</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng *những kẻ săn lùng bạn đã tìm thấy một con mồi mới*.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.</li></ul>"
+      },
+      "resolution2": {
+        "title": "Kết thúc 2",
+        "body": "<p>_Kết thúc 2_: Dần dần, đường phố bắt đầu đông đúc. Những người trẻ tuổi trong trang phục thể thao đang tập thể dục buổi sáng sớm, và những người đàn ông mặc vest vội vã đi đến một văn phòng nào đó. Không có dấu vết nào của sinh vật ác mộng đã truy đuổi bạn. Ít nhất là lúc này, bạn đã thoát khỏi nanh vuốt của nó.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng *các điều tra viên đã sống sót qua đêm lửa cháy*.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display. Mỗi điều tra viên nhận thêm 2 điểm kinh nghiệm từ cuộc tháo chạy tuyệt vọng của họ.</li></ul>"
+      },
+      "resolution3": {
+        "title": "Kết thúc 3",
+        "body": "<p>_Kết thúc 3_: Với sự gục ngã của sinh vật dẫn đầu cuộc truy đuổi bạn, những kẻ săn lùng còn lại tan biến vào màn đêm. Cái xác mà bạn bị bỏ lại nhanh chóng phân hủy, để lại một lớp bùn nâu mà người nào đó có một đêm bớt kinh hoàng hơn có thể nhầm là đất. Ai đó, hoặc thứ gì đó, hẳn đã cử con quái vật này đuổi theo bạn. Nhưng là ai, và tại sao?</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng *các điều tra viên đã tiêu diệt kẻ quan sát kỳ lạ của họ*.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.</li></ul>"
+      },
+      "resolution4": {
+        "title": "Kết thúc 4",
+        "body": "<p>_Kết thúc 4_: Bạn dừng lại, phổi và tay chân của bạn gào thét phản đối. Bạn hít vài hơi thật sâu, những tiếng thở hổn hển xé toạc sự tĩnh lặng của màn đêm.</p><p>Sự tĩnh lặng... lần đầu tiên sau nhiều giờ, không có tiếng hét từ xa hay tiếng súng nổ nào bám theo bạn. Bạn đã sống sót.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng *các điều tra viên đã thoát khỏi đêm rực lửa*.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display. Mỗi điều tra viên nhận thêm 2 điểm kinh nghiệm từ cuộc tháo chạy tuyệt vọng của họ.</li></ul>"
+      }
+    }
+  }
+}

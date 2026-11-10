@@ -1,0 +1,71 @@
+{
+  "strangeMoons": {
+    "intro": {
+      "title": "Màn IIIc: Strange Moons",
+      "body": "\"Lần tiếp xúc đầu tiên của nhân loại với người ngoài hành tinh là vào đầu thế kỷ 21, khi một đoàn thám hiểm mặt trăng tình cờ phát hiện ra một mạng lưới cấu trúc ngầm khổng lồ của người ngoài hành tinh dưới biển regolith. The Greys, theo cách nhân loại biết đến họ, đã núp dưới vỏ bọc của một giống loài tò mò đến hệ mặt trời của chúng ta để quan sát và thăm dò nền văn minh non trẻ. Mục đích thực sự của các hoạt động trên mặt trăng của họ đã bị che giấu trong nhiều năm…\"\n<right>—Maja, Information Archives</right>\nBạn nhìn ra ngoài cửa sổ quan sát và chỉ có thể thấy những đám mây màu cam dày đặc trong phần lớn thời gian hạ cánh. Chỉ sau khi tàu đổ bộ tiến vào tầng đối lưu, những đám mây mới đủ mỏng để bạn có thể nhìn xuống mặt đất bên dưới — hàng dặm cồn tuyết methane lộng gió, bị chia cắt bởi những sườn núi lửa bằng đá băng sắc như dao, những miệng núi lửa há hoác phun ra \"dòng dung nham\" gồm nước lỏng, amoniac và methane, đóng băng thành những hình thù kỳ dị khi chúng đổ xuống sườn dốc. Bạn chưa từng mơ tới thứ gì giống với vẻ đẹp và cảnh quan kỳ lạ này của Titan.\nCon tàu hạ cánh êm ái xuống một tảng băng phẳng. Sau khi K2-PS187 xác nhận rằng đây là tọa độ của những \"chuyến công tác\" bất thường mà các cultist đã thực hiện, bạn mặc đồ bảo hộ, mở cửa sập và bước ra ngoài địa hình khắc nghiệt. Một đường hầm lớn nằm lọt thỏm giữa những vách đá màu cam chào đón bạn. Một thứ ánh sáng xanh lục đập nhịp nhàng từ bên trong, chiếu sáng một hình bóng kỳ lạ, đang canh gác lối vào…"
+    },
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set sau: <i>Strange Moons</i> và <i>Deep Space</i>. Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/dark-matter/sets/strange-moons.png' /><img src='{imgPath}/homebrew/dark-matter/sets/deep-space.png' /></section>",
+      "setAsideInterstellarPredators": "Để encounter set <i>Interstellar Predators</i> sang một bên, ngoài khu vực chơi. Set này được biểu thị bằng biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/dark-matter/sets/interstellar-predators.png' /></section>",
+      "setAsideBrains": "Để riêng từng story asset [[Brain]], ngoài khu vực chơi.",
+      "setAsideFeasterFromAfar": "Để riêng kẻ địch The Feaster from Afar (có mặt sau là scanning).",
+      "createScanningDeck": "Tạo scanning deck. Thực hiện việc này bằng cách lấy tất cả các lá bài encounter khác có biểu tượng ở dưới cùng mặt sau và xào chúng lại với nhau.",
+      "placeLocations": "Đưa tất cả các địa điểm còn lại vào chơi.",
+      "startAt": "Mỗi điều tra viên bắt đầu chơi tại Entrance Tunnel.",
+      "spawnTheGreys": "Spawn kẻ địch The Greys tại Entrance Tunnel."
+    },
+    "tokens": {
+      "easyStandard": {
+        "skull": "-2. Nếu bạn thất bại, gây 1 sát thương cho 1 story asset [[Brain]].",
+        "cultist": "-2. Nếu bạn đã rút 1 token chaos khác trong bài kiểm tra này, nhận 1 kinh hoàng.",
+        "tablet": "Rút thêm 2 token khác cho bài kiểm tra này.",
+        "elderThing": "-3. Nếu đây là một nỗ lực tấn công hoặc né tránh kẻ địch [[Byakhee]], rút thêm 1 token cho bài kiểm tra này."
+      },
+      "hardExpert": {
+        "skull": "-3. Nếu bạn thất bại, gây 1 sát thương cho story asset [[Brain]] gần nhất.",
+        "cultist": "-3. Nếu bạn đã rút 1 token chaos khác trong bài kiểm tra này, nhận 1 kinh hoàng.",
+        "tablet": "Rút thêm 2 token khác cho bài kiểm tra này.",
+        "elderThing": "-4. Nếu đây là một nỗ lực tấn công hoặc né tránh kẻ địch [[Byakhee]], rút thêm 1 token cho bài kiểm tra này."
+      }
+    },
+    "specialRules": [
+      {
+        "title": "Phong ấn (Seal)",
+        "body": "Một số lá bài có thể có khả năng seal một hoặc nhiều chaos token như một phần hiệu ứng của chúng. Điều này được thực hiện như sau: Tìm trong chaos bag token được chỉ định, loại bỏ nó khỏi chaos bag, và đặt nó lên lá bài. Nếu token được chỉ định không có trong chaos bag, hiệu ứng sẽ thất bại.\nKhi một chaos token được “released”, nó được trả lại vào chaos bag và không còn được coi là bị seal. <b>Nếu một lá bài có một hoặc nhiều chaos token bị seal trên đó rời khỏi khu vực chơi vì bất kỳ lý do gì, mọi chaos token bị seal trên đó ngay lập tức được released.</b>"
+      },
+      {
+        "title": "Tuần tra (Patrol)",
+        "body": "<p class='basic'>Một số kẻ địch có từ khóa patrol. Trong giai đoạn Enemy (ở bước cấu trúc 3.2), mỗi kẻ địch sẵn sàng (ready), chưa giao chiến có từ khóa patrol sẽ di chuyển tới một địa điểm kết nối theo con đường ngắn nhất hướng về phía địa điểm chỉ định (như được mô tả trong ngoặc đơn bên cạnh từ patrol).</p><ul><li>Nếu có nhiều địa điểm thỏa mãn là địa điểm chỉ định, điều tra viên trưởng có thể chọn địa điểm mà kẻ địch sẽ di chuyển về phía đó.</li><li>Nếu một kẻ địch có patrol bị buộc phải di chuyển đến một địa điểm bị chặn bởi một hiệu ứng bài, kẻ địch đó sẽ không di chuyển.</li></ul>"
+      },
+      {
+        "title": "Quét não",
+        "body": "Trong màn chơi này, các năng lực <b>Scan</b> sẽ hướng dẫn bạn tìm trong scanning deck một lá bài có hai biểu tượng trùng khớp. Một lá bài chỉ chứa một trong hai biểu tượng là không hợp lệ, và không thể được chọn để scan. Lá bài trong scanning deck phải chứa cả hai biểu tượng được chỉ định, theo bất kỳ thứ tự nào."
+      },
+      {
+        "title": "Kiểm tra Kỹ năng Kết hợp",
+        "body": "Một số kiểm tra kỹ năng trong màn chơi này sẽ yêu cầu các điều tra viên kiểm tra nhiều kỹ năng cùng lúc. Để thực hiện một kiểm tra kỹ năng như vậy, chỉ cần cộng cả hai kỹ năng được chỉ định, sau đó lật và giải quyết một chaos token, so sàng giá trị kỹ năng đã điều chỉnh với độ khó của kiểm tra kỹ năng. Một kiểm tra kỹ năng như vậy được coi là kiểm tra của cả hai loại kỹ năng. Các lá bài có biểu tượng của một trong hai kỹ năng đều có thể được commit vào kiểm tra kỹ năng, và cả hai biểu tượng đều được coi là biểu tượng kỹ năng trùng khớp. (Các biểu tượng kỹ năng chỉ đóng góp một lần cho các kiểm tra kỹ năng liên quan đến việc cộng cùng một kỹ năng.)"
+      },
+      {
+        "title": "Thay thế Địa điểm",
+        "body": "<p class='basic'>Trong suốt màn chơi này, bạn có thể được hướng dẫn đặt các địa điểm mới lên trên các địa điểm hiện có. Khi một địa điểm được đặt lên trên một địa điểm đã có trong khu vực chơi, nó sẽ thay thế vị trí của địa điểm đó. Tất cả token, attachment, điều tra viên, kẻ địch và các lá bài khác tại địa điểm cũ được coi là hiện đang ở địa điểm mới (chúng không “di chuyển” — địa điểm đơn giản là đã thay đổi). Nếu một địa điểm rời khỏi khu vực chơi và có một địa điểm khác bên dưới nó, địa điểm đó sẽ thay thế vị trí của nó. Tất cả token, attachment, điều tra viên, kẻ địch và các lá bài khác tại địa điểm rời khỏi khu vực chơi được coi là hiện đang ở địa điểm trước đó.</p>"
+      }
+    ],
+    "resolutions": {
+      "xp": {
+        "resolution1": "Hiểu biết sâu hơn về các tay sai của King in Yellow"
+      },
+      "noResolution": {
+        "title": "Không Đạt Được Kết Cục Nào",
+        "body": "<p><b>Nếu không đạt được kết cục nào:</b></p><ul><li>Nếu có ít nhất 1 điều tra viên từ bỏ, tiến tới <b>Kết Cục 2</b>.</li><li>Nếu mỗi điều tra viên đều bị đánh bại, tiến tới <b>Kết Cục 1</b>.</li></ul>"
+      },
+      "resolution1": {
+        "title": "Kết Cục 1",
+        "body": "<p><b>Kết Cục 1:</b> Với tiếng vỗ cánh phành phạch và tiếng thét chói tai, bạn không có cơ hội nào trước bầy sinh vật ngoài hành tinh giáng xuống Titan ngay sau khi bạn đến. May mắn thay — có vẻ như bạn không phải là mục tiêu của chúng. Cơ sở của người ngoài hành tinh đã bị lục soát và bất kỳ manh mối nào bạn có thể lượm lặt được đều đã bị phá hủy. Ít nhất, chúng đã để bạn yên. Khi bầu trời cuối cùng cũng sạch bóng những quái vật bay lượn, bạn lục tìm trong đống đổ nát và thấy vài chiếc đĩa vàng với nhiều bán kính khác nhau. Lên tàu Tatterdemalion, bạn nghịch những chiếc đĩa này và cố gắng ghép chúng lại theo nhiều hướng khác nhau — nhưng chúng dường như không có tác dụng gì ngoài giá trị của chính chất liệu đó. Vẫn còn nhiều điều bạn chưa biết, và với quyết tâm vững vàng, bạn chuẩn bị cho chuyến thám hiểm tiếp theo.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>bạn không có quan hệ tốt với Mi-Go</i>.</li><li>Nếu có 3 lá bài story trong victory display, ghi vào Nhật ký Chiến dịch của bạn rằng <i>bạn đã khám phá ra những phương pháp phi nhân tính của bọn cuồng tín</i>. Sau đó, thêm 1 token {'{'}elderThing{'}'} vào túi chaos cho phần còn lại của chiến dịch vì đã thu hút ánh nhìn của King in Yellow.</li><li>Thêm 1 vạch đếm dưới \"Impending Doom\" trong Nhật ký Chiến dịch của bạn, và thêm 1 vạch đếm bổ sung cho mỗi story asset Brain trong khu vực chơi.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Quay lại <b>Tìm Kiếm Mảnh Vỡ (The Search for Fragment)</b>.</li></ul>"
+      },
+      "resolution2": {
+        "title": "Kết Cục 2",
+        "body": "<p><b>Kết Cục 2:</b> Trên con tàu Tatterdemalion, bạn cố gắng giải mã ý nghĩa của những hình ảnh thoáng qua mà bạn đã thấy bên trong cơ sở ngoài hành tinh, nhưng không có gì khiến bạn cảm thấy đặc biệt quan trọng. Một cuộc tìm kiếm kỹ lưỡng trong khoang hàng hóa giúp bạn phát hiện ra một chồng đĩa vàng đã được trao đổi trong cuộc giao dịch. Bạn nghịch chúng và cố gắng kết hợp chúng theo nhiều hướng khác nhau — nhưng chúng dường như không có bất kỳ công dụng nào khác ngoài giá trị của chính vật liệu đó. Vẫn còn nhiều điều bạn chưa biết, và với sự kiên quyết, bạn chuẩn bị cho chuyến thám hiểm tiếp theo.</p><ul><li>Nếu có 3 lá bài story trong victory display, ghi vào Nhật ký Chiến dịch của bạn rằng <i>bạn đã khám phá ra những phương pháp phi nhân tính của bọn cuồng tín</i>. Sau đó, thêm 1 token {'{'}elderThing{'}'} vào túi chaos cho phần còn lại của chiến dịch vì đã thu hút ánh nhìn của King in Yellow.</li><li>Nếu một bản sao của Mi-Go Scientist nằm trong victory display, ghi vào Nhật ký Chiến dịch rằng <i>bạn không có quan hệ tốt với Mi-Go</i>. Nếu không, ghi rằng <i>bạn đã liên minh với Mi-Go</i>.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Thêm 1 vạch đếm dưới \"Impending Doom\" trong Nhật ký Chiến dịch của bạn.</li><li>Quay lại <b>Tìm Kiếm Mảnh Vỡ (The Search for Fragment)</b>.</li></ul>"
+      }
+    }
+  }
+}

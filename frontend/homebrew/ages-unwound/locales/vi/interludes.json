@@ -1,0 +1,12 @@
+{
+  "anUnknownBenefactor": {
+    "title": "Chuyển đoạn I: Một Ân Nhân Vô Danh",
+    "body": "<p>Thật may mắn, buổi sáng đã đến. Sự mệt mỏi đè nặng lên bạn như chì, và bạn không muốn gì hơn là chìm vào chiếc giường của mình, nhưng chiếc giường của bạn đã chìm trong biển lửa và giấc ngủ là một giấc mơ xa vời. Chưa kể với những tên côn đồ có vũ trang vẫn có thể đang truy lùng bạn, bạn không chắc mình có thể chợp mắt được không.</p><p>Bạn quyết định chọn một bữa sáng nóng hổi và một bình cà phê đậm đặc tại Velma's. Trong khi bạn đợi đồ ăn, một cô phục vụ với vẻ mặt bối rối tiến đến bàn của bạn, đặt lên đó một gói giấy màu nâu với một phong bì được dán ở trên. \"Cái này dành cho bạn,\" cô ấy nói thêm một cách không cần thiết.</p><p>Bức thư trong phong bì ngắn gọn và đi thẳng vào vấn đề:</p><p><i>Bọn chúng muốn thấy bạn chết. Tôi thì không. Thứ này có thể giúp ích.</i></p><p>Có Chúa mới biết, bạn đang cần một đồng minh, và chắc chắn ai đó ngoài kia dường như đang giúp đỡ bạn từ xa. Nhưng bạn do dự &mdash; đó có thể là một cái bẫy, và nếu ai đó thực sự muốn giúp bạn, tại sao không lộ diện?</p>",
+    "goingItAlone": "<p>_Tự Lực Cánh Sinh:_ Bạn lùa bánh mì nướng và trứng vào miệng, cố tình phớt lờ gói đồ trước mặt. Trên đường ra ngoài, bạn ném nó vào thùng rác.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>các điều tra viên đã từ chối một lời đề nghị giúp đỡ.</i></li><li>Loại bỏ tất cả các token {cultist} khỏi túi chaos. Thêm 1 token {tablet} vào túi chaos.</li></ul>",
+    "leapOfFaith": "<p>_Bước Đi Của Niềm Tin:_ Nếu ai đó muốn giúp ngăn chặn cái chết không đúng lúc của bạn, bạn không có ý kiến phản đối nào. Bạn cẩn thận mở gói đồ trước mặt...</p><ul><li>Trong Nhật ký Chiến dịch của bạn, đánh dấu 1 <b>Strange Assistance</b> và ghi rằng <i>các điều tra viên đã chấp nhận một lời đề nghị giúp đỡ.</i></li><li>Loại bỏ tất cả các token {tablet} khỏi túi chaos. Thêm 1 token {cultist} vào túi chaos.</li></ul>",
+    "label": {
+      "goingItAlone": "Tôi không biết thứ này là gì, và tôi không tin nó.",
+      "leapOfFaith": "Chúng ta đang quá sức ở đây. Chúng ta cần mọi sự giúp đỡ có thể."
+    }
+  }
+}

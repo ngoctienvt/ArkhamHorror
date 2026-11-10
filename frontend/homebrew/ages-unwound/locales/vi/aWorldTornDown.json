@@ -1,0 +1,94 @@
+{
+  "aWorldTornDown": {
+    "heading": "Màn III",
+    "name": "Một Thế Giới Bị Xé Toạc",
+    "intro": {
+      "title": "Màn III: Một Thế Giới Bị Xé Toạc",
+      "checkCampaignLog": "<p class='basic right'>Kiểm tra Nhật ký Chiến dịch. *Nếu các điều tra viên đã chạy trốn khỏi dinh thự của Gentleman*:<br>Tiếp tục đến _Mở đầu 1_.</p><p class='basic right'>*Nếu các điều tra viên đã biết về nghi lễ của Myriad*:<br>Chuyển đến _Mở đầu 2_.</p>",
+      "intro1": "<p>_Mở đầu 1_: Thiếu các manh mối khác để theo đuổi, bạn nán lại một lúc để quan sát nhà của Myriad Gentleman. Bạn dành một thời gian dài chờ đợi, theo dõi các lối ra của khu đất để tìm bất kỳ dấu hiệu di chuyển nào. Quả nhiên, khi mặt trời lặn, một đoàn xe bắt đầu rời khỏi trang viên. Bạn bám theo hết sức có thể, cẩn thận để không bị phát hiện.</p><p>Không lâu sau, Myriad Gentleman đã đến đích của chúng. Một trường học, theo như vẻ ngoài của nó. Bạn định đi theo chúng, nhưng trước khi bạn có thể vào bên trong, ngôi trường ngập tràn trong ánh sáng xanh lục mờ ảo, đẩy lùi bạn, khi những tiếng tụng niệm nghẹt thở vang ra từ tòa nhà&hellip;</p><p class='basic right'>Tiếp tục đến _Thiết lập_.</p>",
+      "intro2": "<p>_Mở đầu 2_: Trường Tiểu học Mount Hollyoke đã bị hội đồng thị trấn Arkham niêm phong từ vài năm trước, nhưng vì những lý do chưa rõ mà chưa bao giờ bị phá dỡ. Điều này dường như hoàn toàn phù hợp với Myriad &mdash; chúng đã tái sử dụng nó cho các mục đích của riêng mình. Một nghi thức diễn ra ở đây đêm nay &mdash; một nghi thức có thể đặt dấu chấm hết cho mọi thứ và mọi thời đại.</p><p class='basic right'>Tiếp tục đến _Thiết lập_.</p>"
+    },
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set sau: *A World Torn Down*, *Night of the Ritual*, *Agents of Aforgomon*, *Myriad*, *Nyctophobia*, *Thugs* và *Unleashed Chaos*. Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/ages-unwound/sets/a-world-torn-down.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/night-of-the-ritual.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/agents-of-aforgomon.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/myriad.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/nyctophobia.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/thugs.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/unleashed-chaos.png' /></section>",
+      "placeLocations": "Đặt các địa điểm Front Gates, Side Building, Children's Playground, Sports Field, Front Hallway và Rear Corridors vào chơi. Mỗi điều tra viên bắt đầu chơi tại Front Gates.",
+      "setAside": "Đặt mỗi địa điểm khác sang một bên, ngoài màn chơi, cùng với Hound of Unmaking, Unstable Warding, mỗi bản sao của Unleashed Chaos và Stirring Titan, Unstable Energies, Aid from Afar và The Myriad Gentleman _(The High Priest)_."
+    },
+    "rules": {
+      "recordingTheTime": {
+        "title": "Ghi lại Thời Gian",
+        "body": "<p class='basic'>Tại nhiều thời điểm trong màn chơi này, bạn sẽ được yêu cầu ghi lại *thời gian* bên cạnh các mục trong Nhật ký Chiến dịch của bạn. Để làm điều này, chỉ cần ghi lại, trong ngoặc đơn, số agenda hiện tại và số doom trên agenda hiện tại. Ví dụ: Nếu có 4 doom trên agenda 1a, bạn sẽ ghi lại thời gian là (1,4).</p>"
+      },
+      "gainingAndLosingActions": {
+        "title": "Nhận và Mất Hành Động",
+        "body": "<p class='basic'>Khi thời gian ngày càng trở nên bất ổn, số lượng hành động bạn có thể thực hiện trong một lượt cũng có thể thay đổi.</p><ul><li>Một số hiệu ứng đề cập đến *hành động tiêu chuẩn*. Một hành động tiêu chuẩn là bất kỳ hành động nào không có giới hạn về việc sử dụng, bất kể nguồn gốc của nó. Ví dụ, *Finn Edwards* có một bản sao của *Leo De Luca* trong màn chơi. Anh ta có bốn hành động tiêu chuẩn trong các lượt của mình &mdash; ba hành động mặc định và một hành động bổ sung từ Leo &mdash; cũng như một hành động bổ sung, không tiêu chuẩn từ năng lực điều tra viên của mình chỉ có thể được dùng để né tránh.</li><li>Mỗi điều tra viên được coi là nhận các hành động của họ cho vòng tiếp theo ở bước 4.2 của giai đoạn upkeep. Các hiệu ứng cấp cho bạn hành động bổ sung vào mỗi lượt của bạn cũng được coi là cấp cho bạn hành động tại thời điểm này. Điều này có nghĩa là các hiệu ứng sau lượt của một điều tra viên không thể khiến họ mất hành động cho vòng tiếp theo, trừ khi chúng xảy ra sau giai đoạn upkeep. Ví dụ, *Finn Edwards* bị tấn công bởi một *Chronophage* trong giai đoạn kẻ địch. Điều này sẽ khiến anh ta mất một hành động, nhưng vì lượt của anh ta đã kết thúc nên anh ta không còn hành động nào. Trong giai đoạn upkeep của cùng vòng đó, anh ta rút phải điểm yếu *Overzealous*; nếu một lá bài encounter được rút từ hiệu ứng này khiến anh ta mất hành động, điều này diễn ra như bình thường.</li><li>Nếu một hiệu ứng lá bài người chơi (chẳng hạn như *Gold Pocket Watch*) khiến giai đoạn điều tra viên lặp lại, các điều tra viên được coi là nhận các hành động cho các lượt của họ khi bắt đầu giai đoạn đó. Nếu một hiệu ứng lá bài người chơi cho phép một điều tra viên thực hiện thêm một lượt, họ được coi là nhận các hành động của mình khi bắt đầu lượt đó.</li></ul>"
+      },
+      "haunted": {
+        "title": "Ám Ảnh",
+        "body": "<p class='basic'>Ám ảnh là một năng lực xuất hiện trên một số địa điểm. Mỗi khi một điều tra viên thất bại trong bài kiểm tra kỹ năng khi đang điều tra một địa điểm, sau khi áp dụng tất cả các kết quả của bài kiểm tra kỹ năng đó, điều tra viên đó phải giải quyết tất cả các năng lực “Ám ảnh –” trên địa điểm đó.</p><p class='basic'>Một địa điểm được coi là “bị ám ảnh” cho mục đích của các hiệu ứng thẻ bài khác nếu nó có ít nhất một năng lực “Ám ảnh –” (in trên thẻ hoặc bằng cách khác).</p>"
+      }
+    },
+    "aidFromAfar": {
+      "label": {
+        "searchYourDecks": "“Một trong những người đồng hành của bạn cất tiếng gọi — họ đã tìm thấy thứ gì đó!” Mỗi điều tra viên có thể tìm kiếm trong 9 lá bài trên cùng của bộ bài mình một lá bài và rút nó",
+        "discoverClues": "“Mắt bạn chú ý đến một dòng khắc nhỏ mà trước đây bạn đã bỏ lỡ.” Khám phá {count} manh mối từ địa điểm của bạn",
+        "callInGunfire": "“Một làn đạn trút xuống ngực kẻ thù trước mặt bạn.” Tiêu diệt một kẻ địch không phải [[Elite]] tại địa điểm của bạn, hoặc gây {count} sát thương cho một kẻ địch [[Elite]] tại địa điểm của bạn và làm nó kiệt sức"
+      }
+    },
+    "resolutions": {
+      "noResolution": {
+        "title": "Không Đạt Được Kết Thúc Nào",
+        "body": "<p class='basic'>*Nếu không đạt được kết thúc nào (mỗi điều tra viên bị đánh bại)*:</p>",
+        "proceedToResolution1": "*Nếu đang là act 1 khi màn chơi kết thúc*: Đọc _Kết thúc 1_.",
+        "proceedToResolution2": "*Nếu đang là act 2 hoặc 3 khi màn chơi kết thúc*: Đọc _Kết thúc 2_."
+      },
+      "resolution1": {
+        "title": "Kết thúc 1",
+        "body": "<p>_Kết thúc 1_: Dù bạn có cố gắng thế nào, pháo đài của Myriad gần như không thể xuyên thủng. Khi nghi lễ bên trong tiến dần tới kết cục khủng khiếp của nó, bạn lao mình vào nó trong tuyệt vọng, tìm kiếm bất kỳ cách nào để phá vỡ&mdash;</p>",
+        "checkCampaignLog": "<p class='basic'>Kiểm tra Nhật ký Chiến dịch:</p>",
+        "proceedToResolution4": "*Nếu dòng thời gian đã bị suy yếu*, tiếp tục đến _Kết thúc 4_.",
+        "proceedToResolution5": "Nếu không, tiếp tục đến _Kết thúc 5_."
+      },
+      "resolution2": {
+        "title": "Kết thúc 2",
+        "body": "<p>_Kết thúc 2_: Những sự biến dạng xung quanh bạn ngày càng trở nên nghiêm trọng. Bạn hầu như không thể đứng vững, khó có thể di chuyển khi những thực tại vỡ vụn xoay tròn và dịch chuyển. Thời gian tan chảy như bơ trên bếp lò, và bạn thấy mình đang rơi, rơi ra ngoài thời gian&hellip;</p>",
+        "fellToTheMyriad": "Trong Nhật ký Chiến dịch của bạn, ghi rằng *các điều tra viên đã gục ngã trước the Myriad*. Bên cạnh đó, ghi lại thời gian. Nếu không có agenda nào trong màn chơi, ghi thời gian là (3,4).",
+        "eliminatedTheHighPriest": "Nếu The Myriad Gentleman (*The High Priest*) đang ở trong victory display, ghi vào Nhật ký Chiến dịch của bạn rằng *các điều tra viên đã tiêu diệt the high priest*.",
+        "chaosTokens": "Loại bỏ tất cả token {cultist} và {tablet} khỏi túi chaos. Sau đó, thêm 1 token {cultist}, 1 token {tablet} và 2 token {elderThing} vào túi chaos.",
+        "victoryXp": "Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display."
+      },
+      "resolution3": {
+        "title": "Kết thúc 3",
+        "body": "<p>_Kết thúc 3_: Phá nát vòng tròn nghi thức đầu tiên, bạn chuyển sự chú ý sang hai vòng tròn còn lại. Những giáo đồ xung quanh chúng tiến về phía bạn; chúng trông không giống những chiến binh lão luyện cho lắm, nhưng số lượng của chúng đông gấp mười lần bạn. Lùi lại vài bước thận trọng, bạn thấy mình đang đứng bên bờ vực của một vết rách xoáy tròn, đa sắc trong thực tại, vết nứt chưa được thuần hóa từng được chứa đựng bên trong vòng tròn huyền bí mà bạn vừa phá vỡ. Đó có thể là một lối thoát, nhưng là một lối thoát khôn lường&hellip;</p><p>Sau đó, một sự náo loạn ở phía bên kia của khán phòng. Những người mới đến, mở đường xuyên qua đám giáo đồ, tiến thẳng về phía các vòng tròn khác. Rất khó để nhìn xuyên qua đám giáo đồ đang tràn tới, nhưng bạn đã bắt gặp ánh mắt của&mdash;</p><p>Không, điều đó không thể nào.</p><p>Bạn liếc nhìn vết rách phía sau mình. Bóng người đó gật đầu, một lần. Bạn bước vào cõi vô định.</p>",
+        "gatewayToThePast": "Nếu Ritual Circle (*Gateway to the Past*) đang trong màn chơi:",
+        "steppedIntoThePast": "Trong Nhật ký Chiến dịch của bạn, ghi rằng *các điều tra viên đã bước vào quá khứ*.",
+        "pastChaosTokens": "Loại bỏ tất cả token {cultist} và {tablet} khỏi túi chaos. Sau đó, thêm 2 token {tablet} và 1 token {elderThing} vào túi chaos.",
+        "aHarnessedFuture": "Nếu Ritual Circle (*A Harnessed Future*) đang trong màn chơi:",
+        "steppedIntoTheFuture": "Trong Nhật ký Chiến dịch của bạn, ghi rằng *các điều tra viên đã bước vào tương lai*.",
+        "futureChaosTokens": "Loại bỏ tất cả token {cultist} và {tablet} khỏi túi chaos. Sau đó, thêm 2 token {cultist} và 1 token {elderThing} vào túi chaos.",
+        "eliminatedTheHighPriest": "Nếu The Myriad Gentleman (*The High Priest*) đang ở trong victory display, ghi vào Nhật ký Chiến dịch của bạn rằng *các điều tra viên đã tiêu diệt the high priest*.",
+        "victoryXp": "Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display."
+      },
+      "resolution4": {
+        "title": "Kết thúc 4",
+        "body": "<p>_Kết thúc 4_: Bạn chạy, thở hổn hển, xuống một con hẻm. Những người đàn ông có vũ trang vẫn đang truy đuổi&mdash;</p><p>Khi bạn khám phá khu vườn của dinh thự, một người đàn ông cao lớn trong bộ vest lịch lãm bước ra đón bạn&mdash;</p><p>Gia đình bạn, dù ít ỏi, đứng bên giường bạn, chờ đợi&mdash;</p><p>Bạn cất tiếng khóc xé lòng, đôi chân bé nhỏ run rẩy không vững&mdash;</p><p>&mdash;xuyên qua rào chắn. Nhất định phải có cách, ở&mdash;</p><p>“Mẹ.” Từ đầu tiên của bạn.</p><p>“Con xin lỗi. Con đã làm mọi người thất vọng.” Lời cuối cùng của bạn.</p>",
+        "allTimesAreOne": "Trong Nhật ký Chiến dịch của bạn, ghi rằng *mọi thời gian hòa làm một*.",
+        "drivenInsane": "Mỗi điều tra viên bị phát điên.",
+        "loseTheCampaign": "Các điều tra viên thua chiến dịch."
+      },
+      "resolution5": {
+        "title": "Kết thúc 5",
+        "body": "<p>_Kết thúc 5_: Trường Tiểu học Mount Hollyoke đã bị hội đồng thị trấn Arkham niêm phong từ vài năm trước, nhưng vì những lý do chưa rõ mà chưa bao giờ bị phá dỡ. Điều này dường như hoàn toàn phù hợp với Myriad &mdash; chúng đã tái sử dụng nó cho các mục đích của riêng mình. Một nghi thức diễn ra ở đây đêm nay &mdash; một nghi thức có thể đặt dấu chấm hết cho mọi thứ và mọi thời đại.</p>",
+        "timelineWasWeakened": "Trong Nhật ký Chiến dịch của bạn, ghi rằng *dòng thời gian đã bị suy yếu*.",
+        "chaosTokens": "Thêm 2 token {elderThing} vào túi chaos.",
+        "replayScenario": "Các điều tra viên phải chơi lại _Màn III: Một Thế Giới Bị Xé Toạc_. Thiết lập lại trò chơi về phần _Thiết lập_ của màn chơi này. Không nhận điểm kinh nghiệm nào từ ván chơi trước của bạn.",
+        "quote": "<p>“Với một cảm giác quen thuộc đầy bất an, tôi ngắm nhìn những bức tranh mờ ảo bất định trôi qua trước mắt mình trên phương tiện không ngừng vận động này. Những ngôi đền Phương Đông rực rỡ ánh đồng và vàng dưới ánh mặt trời; những đầu hồi và ngọn tháp nhọn hoắt, chen chúc của các thành phố thời trung cổ; những cánh rừng nhiệt đới và phương bắc; trang phục và diện mạo của vùng Levant, Ba Tư, La Mã và Carthage cổ đại, lướt qua như những ảo ảnh bay lượn trong gió. Mỗi hoạt cảnh tiếp theo đều thuộc về một thời kỳ cổ xưa hơn hoạt cảnh trước đó — và tôi biết rằng mỗi cảnh đều là một cảnh tượng từ một kiếp sống trước đây của chính mình.”</p><p>&mdash; Clark Ashton Smith, “The Chain of Aforgomon”</p>"
+      }
+    },
+    "timeRunningOut": {
+      "additionalAction": "Thời Gian Cạn Kiệt"
+    },
+    "endOfTheLine": {
+      "additionalActions": "Điểm Dừng Cuối Cùng"
+    }
+  }
+}

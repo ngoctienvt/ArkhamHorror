@@ -1,0 +1,61 @@
+{
+  "theMachineInYellow": {
+    "theManInThePallidMask": {
+      "label": {
+        "gainClueAndHeal": "Nhận 1 manh mối từ kho token và hồi tối đa 2 sát thương cùng 2 kinh hoàng",
+        "addMemory": "Thêm 1 vạch đếm bên cạnh “Ký ức” của bạn"
+      }
+    },
+    "intro": {
+      "title": "Màn IV: The Machine in Yellow",
+      "body": "Bạn giật mình tỉnh giấc, như thể bị lay động bởi một thế lực vô hình. Chỉ có vài khán giả khác dưới khán đài, và không có người biểu diễn nào trên sân khấu. Ánh đèn mờ ảo, và rèm sân khấu rách nát tơi tả. Một mùi hôi thối nhưng xa lạ tràn ngập trong không khí. Bạn đã trở lại nhà hát Ward — nơi mọi chuyện bắt đầu. Đây có phải là một sản phẩm từ ký ức của bạn? Hay bạn đã mơ suốt thời gian qua? Rũ bỏ cơn buồn ngủ, bạn gọi to vào không trung tìm K2-PS187. Thật nhẹ nhõm, và cũng có chút thất vọng, giọng nói số hóa đáp lại xác nhận rằng quy trình đã diễn ra như kế hoạch. Bạn đã đến được bên trong tâm trí của chính mình…"
+    },
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set sau: <i>Curtain Call</i>, <i>The Machine in Yellow</i>, <i>Dark Past</i>, <i>Delusions</i> và <i>Rats</i>. <i>(Curtain Call và Delusions lấy từ The Path to Carcosa.)</i> Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/curtain-call.png' /><img src='{imgPath}/homebrew/dark-matter/sets/the-machine-in-yellow.png' /><img src='{imgPath}/homebrew/dark-matter/sets/dark-past.png' /><img src='{setImgPath}/delusions.png' /><img src='{setImgPath}/rats.png' /></section>Khi thu thập encounter set <i>Curtain Call</i>, chỉ lấy các địa điểm.",
+      "maddeningDelusions": "Các điều tra viên có thể chọn sử dụng encounter set <i>Maddening Delusions</i> (từ Return to The Path to Carcosa) thay vì encounter set <i>Delusions</i>. Nếu làm vậy, mỗi điều tra viên có thể thêm 1 vạch đếm bên cạnh “Ký ức” của họ. Set này được biểu thị bằng biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/maddening-delusions.png' /></section>",
+      "placeLocations": "Đưa các địa điểm Theatre, Lobby, Balcony, và Backstage vào chơi.",
+      "startAt": "Mỗi điều tra viên bắt đầu chơi tại Theatre.",
+      "setAsideDoorways": "Để riêng mỗi bản sao của các địa điểm Backstage Doorway và Lobby Doorway, ngoài khu vực chơi.",
+      "setAsideYourOtherSelf": "Để riêng mỗi bản sao của kẻ địch Your Other Self, ngoài khu vực chơi."
+    },
+    "maddeningDelusions": {
+      "label": {
+        "useMaddeningDelusions": "Sử dụng encounter set <i>Maddening Delusions</i>",
+        "useDelusions": "Sử dụng encounter set <i>Delusions</i>",
+        "addMemory": "Thêm 1 vạch đếm bên cạnh “Ký ức” của bạn",
+        "doNotAddMemory": "Không thêm dấu gạch nào"
+      }
+    },
+    "tokens": {
+      "easyStandard": {
+        "skull": "-X. X là một nửa số “Ký ức” (Memories) của bạn (làm tròn xuống).",
+        "cultist": "-X. X là số lá bài ẩn (hidden) trên tay bạn.",
+        "tablet": "Rút thêm 1 token khác. Nhân đôi giá trị điều chỉnh của token đó.",
+        "elderThing": "-4. Bạn có thể chọn gạch bỏ 1 dấu gạch cạnh “Ký ức” (Memories) của bạn để tự động thành công."
+      },
+      "hardExpert": {
+        "skull": "-X. X là số “Ký ức” (Memories) của bạn.",
+        "cultist": "-X. X là số lá bài ẩn (hidden) trên tay bạn.",
+        "tablet": "Rút thêm 1 token khác. Nhân đôi giá trị điều chỉnh của token đó.",
+        "elderThing": "-6. Bạn có thể chọn gạch bỏ 1 dấu gạch cạnh “Ký ức” (Memories) của bạn để tự động thành công."
+      }
+    },
+    "resolutions": {
+      "xp": {
+        "resolution1": "Sống lại những ký ức trong quá khứ"
+      },
+      "noResolution": {
+        "title": "Không Đạt Được Kết Cục Nào",
+        "body": "<p><b>Nếu không đạt được kết cục nào (mỗi điều tra viên đã từ bỏ hoặc bị đánh bại):</b> Tiến tới <b>Kết Cục 1</b>.</p>"
+      },
+      "resolution1": {
+        "title": "Kết Cục 1",
+        "body": "<p><b>Kết Cục 1:</b> Bạn đã có một giấc mơ. Một giấc mơ sống động, rõ ràng và chân thực đến khó tin. Bạn đã trốn thoát khỏi nhà hát Ward ra những con đường mưa gió của Arkham. Bạn đã đến bữa tiệc sau buổi diễn của vở kịch kinh hoàng <i>King in Yellow</i>, và dấn thân vào một chuyến phiêu lưu kỳ vĩ, xoắn vặn tâm trí khắp Arkham để rồi cuối cùng dẫn tới nước Pháp và bước vào chính Carcosa. Khi bạn cuối cùng tỉnh giấc trong mồ hôi lạnh ngắt trở lại buồng ngủ đông, bạn gần như đã quên mất thực tại mới mà mình đang sống. Mặc dù thử thách này thật khó khăn và mất nhiều thời gian hơn bạn dự tính, cuối cùng bạn cũng đã mở khóa được phần ký ức bị che giấu bởi bản ngã kia của mình — nghi thức để xác định vị trí của Fragment of Carcosa.</p><ul><li>Nếu có ít nhất 1 bản sao của treachery Reminiscence trong victory display, thêm 1 token {'{'}elderThing{'}'} vào túi chaos cho phần còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Thêm 2 vạch đếm dưới \"Impending Doom\" trong Nhật ký Chiến dịch của bạn.</li><li>Tiến tới <b>Màn V: Fragment of Carcosa</b>.</li></ul>"
+      },
+      "resolution2": {
+        "title": "Kết Cục 2",
+        "body": "<p><b>Kết Cục 2:</b> Khi khối u lây nhiễm - chính là ý thức của tên cultist - cuối cùng cũng bị tống khứ khỏi tâm trí, bạn đã mở khóa được phần ký ức bị che giấu bởi bản ngã kia của mình — nghi thức để xác định vị trí của Fragment of Carcosa. Không chần chừ thêm nữa, bạn nhanh chóng ngắt kết nối bản thân khỏi vùng đất mộng mơ ảo và trở lại cơ thể thực trên tàu Tatterdemalion, sẵn sàng đối mặt với Tassilda sau bao lâu chờ đợi.</p><ul><li>Nếu có ít nhất 1 bản sao của treachery Reminiscence trong victory display, thêm 1 token {'{'}elderThing{'}'} vào túi chaos cho phần còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Tiến tới <b>Màn V: Fragment of Carcosa</b>.</li></ul>"
+      }
+    }
+  }
+}

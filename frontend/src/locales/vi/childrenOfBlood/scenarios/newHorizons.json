@@ -1,92 +1,92 @@
 {
   "intro": {
-    "title": "Scenario II: New Horizons",
-    "body": "With Detective Reynolds at your side, you head to the New Horizons facility in the Waterfront District. “Well, the way I see it we’ve got two options,” Reynolds says. “We can go in now and conduct our search. I’ve got the warrant, and it’ll be more official, but there’s also people who are working. People complicate things. Or…” He produces a set of lockpicks. “We wait until after dark.”",
-    "addCultist": "Thêm 1 token {'{'}cultist{'}'} vào túi hỗn mang cho phần còn lại của chiến dịch.",
-    "chooseAsGroup": "The investigators must choose, as a group:",
-    "searchDuringTheDay": "Search during the day (Hint: Prepare to talk your way in). Proceed to _Setup (v. I)_.",
-    "searchAfterDark": "Search after dark (Hint: Prepare to fight your way in). Skip to _Setup (v. II)_."
+    "title": "Kịch bản II: New Horizons",
+    "body": "Với Thám tử Reynolds kề bên, bạn hướng về cơ sở New Horizons ở Khu Bến Cảng. “Chà, theo cách tôi nhìn nhận thì chúng ta có hai lựa chọn,” Reynolds nói. “Chúng ta có thể vào ngay bây giờ và tiến hành khám xét. Tôi có lệnh khám, và việc đó sẽ chính thống hơn, nhưng cũng có những người đang làm việc. Con người thường làm mọi chuyện phức tạp thêm. Hoặc là…” Ông rút ra một bộ đồ nghề mở khóa. “Chúng ta chờ cho đến khi trời tối.”",
+    "addCultist": "Thêm 1 token {'{'}cultist{'}'} vào chaos bag trong phần còn lại của chiến dịch.",
+    "chooseAsGroup": "Các điều tra viên phải chọn, theo nhóm:",
+    "searchDuringTheDay": "Khám xét vào ban ngày (Gợi ý: Chuẩn bị dùng lời lẽ để tìm đường vào). Hãy tiến tới _Thiết lập (v. I)_.",
+    "searchAfterDark": "Khám xét sau khi trời tối (Gợi ý: Chuẩn bị chiến đấu để mở đường vào). Hãy chuyển tới _Thiết lập (v. II)_."
   },
   "label": {
-    "searchDuringTheDay": "Search during the day",
-    "searchAfterDark": "Search after dark",
-    "spendExperienceToRemoveBlood": "<p>Spend 2 {'{'}perPlayer{'}'} total experience, as a group, to remove 1 {'{'}blood{'}'} token from the chaos bag<p>",
-    "doNotSpendExperience": "Do not spend experience"
+    "searchDuringTheDay": "Khám xét vào ban ngày",
+    "searchAfterDark": "Khám xét sau khi trời tối",
+    "spendExperienceToRemoveBlood": "<p>Cả nhóm cùng tiêu tốn tổng cộng 2 {'{'}perPlayer{'}'} kinh nghiệm để loại bỏ 1 token {'{'}blood{'}'} khỏi chaos bag<p>",
+    "doNotSpendExperience": "Không tiêu tốn kinh nghiệm"
   },
   "version1": {
     "setup": {
-      "title": "Chuẩn bị (v. I)",
-      "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: <section class='encounter-sets grid'><div><img src='{setImgPath}/new-horizons.png' /><span>New Horizons</span></div><div><img src='{setImgPath}/afflicted.png' /><span>Afflicted</span></div><div><img src='{setImgPath}/blood-blight.png' /><span>Blood Blight</span></div><div><img src='{setImgPath}/bloodthirst.png' /><span>Bloodthirst</span></div><div><img src='{setImgPath}/hunted.png' /><span>Hunted</span></div><div><img src='{setImgPath}/infected.png' /><span>Infected</span></div><div><img src='{setImgPath}/sanguine-secrets.png' /><span>Sanguine Secrets</span></div><div><img src='{setImgPath}/vermin.png' /><span>Vermin</span></div><div><img src='{setImgPath}/flying-terrors.png' /><span>Flying Terrors{'{'}asterisk{'}'}</span></div></section><div class='center'>{'{'}asterisk{'}'}This encounter set is found in the Arkham Horror: The Card Game core set.</div>",
-      "gatherLocations": "Gather each location in the _New Horizons_ encounter set.",
-      "day": "Put each _Day_ location into play. Remove each _Night_ location from the game. Each investigator begins play at a Factory Floor location of their choice.",
-      "shallowTunnels": "Nếu bạn đang chơi ở độ khó <b>Easy</b> hoặc <b>Standard</b>:",
-      "darkestDepths": "If you are playing on Hard or Expert difficulty, set Cavern Entrance (*Darkest Depths*), Descending Tunnel, and all 3 copies of Side Chamber (*Darkest Depths*) aside, out of play. Remove each remaining location from the game.",
-      "agendaDeck": "Construct the agenda deck using agenda 1a—“Busy Day” and agenda 2a—“Digging Deeper (v. I).” Remove each other agenda from the game.",
-      "factoryWorkers": "Spawn 1 Factory Worker enemy at each Factory Floor location.",
-      "zburamoarte": "Gather each copy of the Zburamoarte enemy.",
-      "lethargicBeast": "If you are playing on Easy difficulty, set Zburamoarte (*Lethargic Beast*) aside, out of play. Remove each other copy of Zburamoarte from the game.",
-      "sourceOfTheBlight": "If you are playing on Standard difficulty, set Zburamoarte (*Source of the Blight*) aside, out of play. Remove each other copy of Zburamoarte from the game.",
-      "progenitorOfMonsters": "If you are playing on Hard or Expert difficulty, set Zburamoarte (*Progenitor of Monsters*) aside, out of play. Remove each other copy of Zburamoarte from the game.",
-      "setAside": "Set the following cards aside, out of play: the Javier Rivera enemy, each copy of the Blighted Worker enemy, each copy of the Echoing in Darkness treachery, the _Infected_ and _Flying Terrors_ encounter sets, and the Forged Permit and Sanguine Song story assets.",
-      "removeNightWatchman": "Remove the Night Watchman enemy from the game."
+      "title": "Thiết lập (v. I)",
+      "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau:<section class='encounter-sets grid'><div><img src='{setImgPath}/new-horizons.png' /><span>New Horizons</span></div><div><img src='{setImgPath}/afflicted.png' /><span>Afflicted</span></div><div><img src='{setImgPath}/blood-blight.png' /><span>Blood Blight</span></div><div><img src='{setImgPath}/bloodthirst.png' /><span>Bloodthirst</span></div><div><img src='{setImgPath}/hunted.png' /><span>Hunted</span></div><div><img src='{setImgPath}/infected.png' /><span>Infected</span></div><div><img src='{setImgPath}/sanguine-secrets.png' /><span>Sanguine Secrets</span></div><div><img src='{setImgPath}/vermin.png' /><span>Vermin</span></div><div><img src='{setImgPath}/flying-terrors.png' /><span>Flying Terrors{'{'}asterisk{'}'}</span></div></section><div class='center'>{'{'}asterisk{'}'}Encounter set này nằm trong bộ Arkham Horror: The Card Game core set.</div>",
+      "gatherLocations": "Tập hợp từng địa điểm trong encounter set _New Horizons_.",
+      "day": "Đưa từng địa điểm _Day_ in play. Loại bỏ từng địa điểm _Night_ khỏi trò chơi. Mỗi điều tra viên bắt đầu chơi tại một địa điểm Factory Floor tùy họ chọn.",
+      "shallowTunnels": "Nếu bạn đang chơi ở độ khó Easy hoặc Standard, hãy để riêng Cavern Entrance (*Shallow Tunnels*), Descending Tunnel, và cả 3 bản sao của Side Chamber (*Shallow Tunnels*) sang một bên, out of play. Loại bỏ từng địa điểm còn lại khỏi trò chơi.",
+      "darkestDepths": "Nếu bạn đang chơi ở độ khó Hard hoặc Expert, hãy để riêng Cavern Entrance (*Darkest Depths*), Descending Tunnel, và cả 3 bản sao của Side Chamber (*Darkest Depths*) sang một bên, out of play. Loại bỏ từng địa điểm còn lại khỏi trò chơi.",
+      "agendaDeck": "Xây dựng agenda deck bằng cách sử dụng agenda 1a—“Busy Day” và agenda 2a—“Digging Deeper (v. I).” Loại bỏ các agenda khác khỏi trò chơi.",
+      "factoryWorkers": "Spawn 1 kẻ địch Factory Worker tại mỗi địa điểm Factory Floor.",
+      "zburamoarte": "Tập hợp từng bản sao của kẻ địch Zburamoarte.",
+      "lethargicBeast": "Nếu bạn đang chơi ở độ khó Easy, hãy để riêng Zburamoarte (*Lethargic Beast*) sang một bên, out of play. Loại bỏ các bản sao khác của Zburamoarte khỏi trò chơi.",
+      "sourceOfTheBlight": "Nếu bạn đang chơi ở độ khó Standard, hãy để riêng Zburamoarte (*Source of the Blight*) sang một bên, out of play. Loại bỏ các bản sao khác của Zburamoarte khỏi trò chơi.",
+      "progenitorOfMonsters": "Nếu bạn đang chơi ở độ khó Hard hoặc Expert, hãy để riêng Zburamoarte (*Progenitor of Monsters*) sang một bên, out of play. Loại bỏ các bản sao khác của Zburamoarte khỏi trò chơi.",
+      "setAside": "Để các lá bài sau sang một bên, out of play: kẻ địch Javier Rivera, từng bản sao của kẻ địch Blighted Worker, từng bản sao của treachery Echoing in Darkness, các encounter set _Infected_ và _Flying Terrors_, cùng các story asset Forged Permit và Sanguine Song.",
+      "removeNightWatchman": "Loại bỏ kẻ địch Night Watchman khỏi trò chơi."
     }
   },
   "version2": {
     "setup": {
-      "title": "Chuẩn bị (v. II)",
-      "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: <section class='encounter-sets grid'><div><img src='{setImgPath}/new-horizons.png' /><span>New Horizons</span></div><div><img src='{setImgPath}/afflicted.png' /><span>Afflicted</span></div><div><img src='{setImgPath}/children-of-blood.png' /><span>Children of Blood</span></div><div><img src='{setImgPath}/infected.png' /><span>Infected</span></div><div><img src='{setImgPath}/preyed-upon.png' /><span>Preyed Upon</span></div><div><img src='{setImgPath}/sanguine-secrets.png' /><span>Sanguine Secrets</span></div><div><img src='{setImgPath}/stalked.png' /><span>Stalked</span></div><div><img src='{setImgPath}/flying-terrors.png' /><span>Flying Terrors{'{'}asterisk{'}'}</span></div><div><img src='{setImgPath}/reeking-decay.png' /><span>Reeking Decay{'{'}asterisk{'}'}</span></div></section><div class='center'>{'{'}asterisk{'}'}This encounter set is found in the Arkham Horror: The Card Game core set.</div>",
-      "gatherLocations": "Gather each location in the _New Horizons_ encounter set.",
-      "night": "Put each _Night_ location into play. Remove each _Day_ location from the game. Each investigator begins play at a Factory Floor location of their choice.",
-      "shallowTunnels": "Nếu bạn đang chơi ở độ khó <b>Easy</b> hoặc <b>Standard</b>:",
-      "darkestDepths": "If you are playing on Hard or Expert difficulty, set Cavern Entrance (*Darkest Depths*), Descending Tunnel, and all 3 copies of Side Chamber (*Darkest Depths*) aside, out of play. Remove each remaining location from the game.",
-      "agendaDeck": "Construct the agenda deck using agenda 1a—“Quiet Night” and agenda 2a—“Digging Deeper (v. II).” Remove each other agenda from the game.",
-      "zburamoarte": "Gather each copy of the Zburamoarte enemy.",
-      "lethargicBeast": "If you are playing on Easy difficulty, set Zburamoarte (*Lethargic Beast*) aside, out of play. Remove each other copy of Zburamoarte from the game.",
-      "sourceOfTheBlight": "If you are playing on Standard difficulty, set Zburamoarte (*Source of the Blight*) aside, out of play. Remove each other copy of Zburamoarte from the game.",
-      "progenitorOfMonsters": "If you are playing on Hard or Expert difficulty, set Zburamoarte (*Progenitor of Monsters*) aside, out of play. Remove each other copy of Zburamoarte from the game.",
-      "setAside": "Set the following cards aside, out of play: the Night Watchman enemy, each copy of the Blighted Worker enemy, each copy of the Echoing in Darkness treachery, the _Infected_ and _Flying Terrors_ encounter sets, and the Forged Permit and Sanguine Song story assets.",
-      "removeJavierRivera": "Remove the Javier Rivera enemy and each copy of Factory Worker from the game."
+      "title": "Thiết lập (v. II)",
+      "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau:<section class='encounter-sets grid'><div><img src='{setImgPath}/new-horizons.png' /><span>New Horizons</span></div><div><img src='{setImgPath}/afflicted.png' /><span>Afflicted</span></div><div><img src='{setImgPath}/children-of-blood.png' /><span>Children of Blood</span></div><div><img src='{setImgPath}/infected.png' /><span>Infected</span></div><div><img src='{setImgPath}/preyed-upon.png' /><span>Preyed Upon</span></div><div><img src='{setImgPath}/sanguine-secrets.png' /><span>Sanguine Secrets</span></div><div><img src='{setImgPath}/stalked.png' /><span>Stalked</span></div><div><img src='{setImgPath}/flying-terrors.png' /><span>Flying Terrors{'{'}asterisk{'}'}</span></div><div><img src='{setImgPath}/reeking-decay.png' /><span>Reeking Decay{'{'}asterisk{'}'}</span></div></section><div class='center'>{'{'}asterisk{'}'}Encounter set này nằm trong bộ Arkham Horror: The Card Game core set.</div>",
+      "gatherLocations": "Tập hợp từng địa điểm trong encounter set _New Horizons_.",
+      "night": "Đưa từng địa điểm _Night_ in play. Loại bỏ từng địa điểm _Day_ khỏi trò chơi. Mỗi điều tra viên bắt đầu chơi tại một địa điểm Factory Floor tùy họ chọn.",
+      "shallowTunnels": "Nếu bạn đang chơi ở độ khó Easy hoặc Standard, hãy để riêng Cavern Entrance (*Shallow Tunnels*), Descending Tunnel, và cả 3 bản sao của Side Chamber (*Shallow Tunnels*) sang một bên, out of play. Loại bỏ từng địa điểm còn lại khỏi trò chơi.",
+      "darkestDepths": "Nếu bạn đang chơi ở độ khó Hard hoặc Expert, hãy để riêng Cavern Entrance (*Darkest Depths*), Descending Tunnel, và cả 3 bản sao của Side Chamber (*Darkest Depths*) sang một bên, out of play. Loại bỏ từng địa điểm còn lại khỏi trò chơi.",
+      "agendaDeck": "Xây dựng agenda deck bằng cách sử dụng agenda 1a—“Quiet Night” và agenda 2a—“Digging Deeper (v. II).” Loại bỏ các agenda khác khỏi trò chơi.",
+      "zburamoarte": "Tập hợp từng bản sao của kẻ địch Zburamoarte.",
+      "lethargicBeast": "Nếu bạn đang chơi ở độ khó Easy, hãy để riêng Zburamoarte (*Lethargic Beast*) sang một bên, out of play. Loại bỏ các bản sao khác của Zburamoarte khỏi trò chơi.",
+      "sourceOfTheBlight": "Nếu bạn đang chơi ở độ khó Standard, hãy để riêng Zburamoarte (*Source of the Blight*) sang một bên, out of play. Loại bỏ các bản sao khác của Zburamoarte khỏi trò chơi.",
+      "progenitorOfMonsters": "Nếu bạn đang chơi ở độ khó Hard hoặc Expert, hãy để riêng Zburamoarte (*Progenitor of Monsters*) sang một bên, out of play. Loại bỏ các bản sao khác của Zburamoarte khỏi trò chơi.",
+      "setAside": "Để các lá bài sau sang một bên, out of play: kẻ địch Night Watchman, từng bản sao của kẻ địch Blighted Worker, từng bản sao của treachery Echoing in Darkness, các encounter set _Infected_ và _Flying Terrors_, cùng các story asset Forged Permit và Sanguine Song.",
+      "removeJavierRivera": "Loại bỏ kẻ địch Javier Rivera và từng bản sao của Factory Worker khỏi trò chơi."
     }
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is the current act number.",
-      "cultist": "-1. If there is a {'{'}blood{'}'} token sealed on your investigator, reveal an additional token. After this skill test resolves, release 1 {'{'}blood{'}'} token sealed on you.",
-      "tablet": "-3 (-5 instead if there is a {'{'}blood{'}'} token sealed on your investigator. After this test resolves, release 1 {'{'}blood{'}'} token sealed on you).",
-      "elderThing": "-4. If you fail and there is a {'{'}blood{'}'} token sealed on your investigator, chịu 1 damage and release 1 {'{'}blood{'}'} token sealed on you."
+      "skull": "-X. X là số thứ tự act hiện tại.",
+      "cultist": "-1. Nếu có một token {'{'}blood{'}'} bị seal trên thẻ điều tra viên của bạn, hãy tiết lộ thêm một token nữa. Sau khi bài kiểm tra kỹ năng này được xử lý, hãy release 1 token {'{'}blood{'}'} bị seal trên bạn.",
+      "tablet": "-3 (-5 thay vào đó nếu có một token {'{'}blood{'}'} bị seal trên thẻ điều tra viên của bạn. Sau khi bài kiểm tra này được xử lý, hãy release 1 token {'{'}blood{'}'} bị seal trên bạn).",
+      "elderThing": "-4. Nếu bạn thất bại và có một token {'{'}blood{'}'} bị seal trên thẻ điều tra viên của bạn, chịu 1 damage và release 1 token {'{'}blood{'}'} bị seal trên bạn."
     },
     "hardExpert": {
-      "skull": "-X. X is 1 more than the current act number.",
-      "cultist": "-2. If there is a {'{'}blood{'}'} token sealed on your investigator, reveal an additional token.",
-      "tablet": "-3. If there is a {'{'}blood{'}'} token sealed on your investigator, you automatically fail instead.",
-      "elderThing": "-4. After this test resolves, if there is a {'{'}blood{'}'} token sealed on your investigator, chịu 1 damage and release 1 {'{'}blood{'}'} token sealed on you."
+      "skull": "-X. X lớn hơn số thứ tự act hiện tại là 1.",
+      "cultist": "-2. Nếu có một token {'{'}blood{'}'} bị seal trên thẻ điều tra viên của bạn, hãy tiết lộ thêm một token nữa.",
+      "tablet": "-3. Nếu có một token {'{'}blood{'}'} bị seal trên thẻ điều tra viên của bạn, thay vào đó bạn tự động thất bại (automatically fail).",
+      "elderThing": "-4. Sau khi bài kiểm tra này được xử lý, nếu có một token {'{'}blood{'}'} bị seal trên thẻ điều tra viên của bạn, chịu 1 damage và release 1 token {'{'}blood{'}'} bị seal trên bạn."
     }
   },
-  "spendExperience": "Spend 2 {'{'}perPlayer{'}'} total experience, as a group, to remove 1 {'{'}blood{'}'} token from the chaos bag",
+  "spendExperience": "Cả nhóm cùng tiêu tốn tổng cộng 2 {'{'}perPlayer{'}'} kinh nghiệm để loại bỏ 1 token {'{'}blood{'}'} khỏi chaos bag",
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<p>_If no resolution was reached (each investigator was defeated)_: “Things got pretty rough in there.”</p><p>You awaken to the voice of Detective Reynolds. Blinking in the light of the morning, you sit up, waves of pain shooting through your stiff joints. Reynolds puts a hand on your shoulder. “Let’s not push it,” he says. “Besides, I’ve been watching the back of the factory, to see whether anyone—or anything—is going to follow us out.”</p><ul><li>Add 1 {'{'}blood{'}'} token to the chaos bag for the remainder of the campaign.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Skip to _Resolution 5_.</li></ul>"
+      "title": "Không có Kết cục",
+      "body": "<p>_Nếu không đạt được kết cục nào (mỗi điều tra viên đều bị đánh bại)_: “Mọi chuyện trong đó đã trở nên khá gay go.”</p><p>Bạn tỉnh dậy bởi giọng nói của Thám tử Reynolds. Chớp mắt trong ánh ban mai, bạn ngồi dậy, những cơn đau nhức buốt chạy dọc qua các khớp xương ê ẩm. Reynolds đặt một tay lên vai bạn. “Đừng cố quá,” ông nói. “Vả lại, tôi đã canh chừng phía sau nhà máy để xem có ai — hay thứ gì — bám theo chúng ta ra ngoài hay không.”</p><ul><li>Thêm 1 token {'{'}blood{'}'} vào chaos bag trong phần còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Chuyển tới _Kết thúc 5_.</li></ul>"
     },
     "resolution1": {
-      "title": "Kết thúc thứ nhất",
-      "body": "<p>_Resolution 1_: At long last you emerge from the meat packing facility, feeling no better than the cattle flanks that hung from hooks within. You hope that what you were able to accomplish will prove to be useful enough, even if you didn’t get to the bottom of what the cult was doing in the warehouse. At the very least, you have a name to go off of—Howard Wilkes, the owner of New Horizons, and the leader of the cult that was dwelling in its depths.</p><ul><li>In your campaign log, record *the investigators did not complete their search*.</li><li>In your campaign log, record *the investigators left Zburamoarte alive*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>The investigators may decide to spend 2 {'{'}perPlayer{'}'} total experience, as a group, to remove 1 {'{'}blood{'}'} token from the chaos bag.</li><li>Skip to _Resolution 5_.</li></ul>"
+      "title": "Kết thúc 1",
+      "body": "<p>_Resolution 1_: Rốt cuộc bạn cũng thoát ra khỏi cơ sở chế biến thịt, cảm giác chẳng khá hơn những tảng sườn bò đang treo lủng lẳng trên móc sắt bên trong. Bạn hy vọng những gì mình đã làm được sẽ hữu ích, ngay cả khi bạn chưa điều tra đến cùng những gì giáo phái đang làm trong nhà kho. Ít nhất thì bạn cũng có được một cái tên để lần theo — Howard Wilkes, chủ sở hữu của New Horizons, và là kẻ đứng đầu giáo phái đang ẩn náu dưới tầng sâu của nó.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã không hoàn thành cuộc tìm kiếm của mình*.</li><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã để Zburamoarte sống sót*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Các điều tra viên có thể quyết định chi tổng cộng 2 {'{'}perPlayer{'}'} kinh nghiệm, theo nhóm, để loại bỏ 1 token {'{'}blood{'}'} khỏi chaos bag.</li><li>Chuyển tới _Kết thúc 5_.</li></ul>"
     },
     "resolution2": {
-      "title": "Kết thúc thứ hai",
-      "body": "<p>_Resolution 2_: You have gotten to the bottom of the cult’s activities in the warehouse, and while you chose to leave whatever monsters lurked in the depths of the tunnels alive, you can only hope that your efforts will prove enough to put all of this to rest. At the very least, you have a name to go off of—Howard Wilkes, the owner of New Horizons, and the leader of the cult that was dwelling in its depths.</p><ul><li>In your campaign log, record *the investigators completed their search*.</li><li>In your campaign log, record *the investigators left Zburamoarte alive*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>The investigators may decide to spend 2 {'{'}perPlayer{'}'} total experience, as a group, to remove 1 {'{'}blood{'}'} token from the chaos bag.</li><li>Skip to _Resolution 5_.</li></ul>"
+      "title": "Kết thúc 2",
+      "body": "<p>_Resolution 2_: Bạn đã điều tra ra ngọn nguồn những hoạt động của giáo phái trong nhà kho, và dù bạn chọn để mặc cho bất kỳ quái vật nào ẩn nấp dưới độ sâu của các đường hầm còn sống sót, bạn chỉ có thể hy vọng rằng những nỗ lực của mình sẽ đủ để dập tắt tất cả chuyện này. Ít nhất thì bạn cũng có được một cái tên để lần theo — Howard Wilkes, chủ sở hữu của New Horizons, và là kẻ đứng đầu giáo phái đang ẩn náu dưới tầng sâu của nó.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã hoàn thành cuộc tìm kiếm của mình*.</li><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã để Zburamoarte sống sót*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Các điều tra viên có thể quyết định chi tổng cộng 2 {'{'}perPlayer{'}'} kinh nghiệm, theo nhóm, để loại bỏ 1 token {'{'}blood{'}'} khỏi chaos bag.</li><li>Chuyển tới _Kết thúc 5_.</li></ul>"
     },
     "resolution3": {
-      "title": "Kết thúc thứ ba",
-      "body": "<p>_Resolution 3_: After a grueling fight against the truly massive foe, you finally put the abomination down. This beast, this Zburamoarte, was the source of the infected blood used in the cult’s rituals, spreading the blood blight throughout all of Arkham via the tainted meat. With the source of the blood blight defeated, you hope that no others can fall to the same fate as Julia Stern and others within the New Horizons factory. The case isn’t over, however, as you learned that a man named Howard Wilkes, the owner of New Horizons, was also leading of the cult of Zburamoarte. It’s time to make him answer for his crimes.</p><ul><li>In your campaign log, record *the investigators completed their search*.</li><li>In your campaign log, record *the investigators defeated Zburamoarte*.</li><li>Remove 1 {'{'}blood{'}'} token from the chaos bag.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Skip to _Resolution 5_.</li></ul>"
+      "title": "Kết thúc 3",
+      "body": "<p>_Resolution 3_: Sau một trận chiến cam go chống lại kẻ thù khổng lồ thực sự, cuối cùng bạn cũng hạ gục được thứ quái thai ghê tởm này. Con quái vật này, Zburamoarte này, chính là cội nguồn của dòng máu nhiễm bệnh dùng trong các nghi lễ của giáo phái, reo rắc dịch bệnh máu ra khắp toàn bộ Arkham thông qua những mẻ thịt nhiễm độc. Với nguồn cơn của bệnh dịch máu đã bị tiêu diệt, bạn hy vọng rằng sẽ không còn ai khác phải chịu chung số phận như Julia Stern và những người khác bên trong nhà máy New Horizons. Dẫu vậy vụ án vẫn chưa kết thúc, khi bạn biết được rằng một người đàn ông tên Howard Wilkes, chủ sở hữu của New Horizons, cũng chính là kẻ lãnh đạo giáo phái Zburamoarte. Đã đến lúc bắt hắn phải trả giá cho tội ác của mình.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã hoàn thành cuộc tìm kiếm của mình*.</li><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã đánh bại Zburamoarte*.</li><li>Loại bỏ 1 token {'{'}blood{'}'} khỏi chaos bag.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Chuyển tới _Kết thúc 5_.</li></ul>"
     },
     "resolution4": {
-      "title": "Kết thúc thứ 4",
-      "body": "<p>_Resolution 4_: You are quickly overwhelmed by the cult, dragging you down into the caves while repeating the name “Zburamoarte, Zburamoarte, Zburamoarte…” Mercifully, you black out during the course of the cult’s rituals, and when you come to again, you are alone on the floor of the factory, the first light of morning peeking through the windows. You pick yourself up, stretch your aching joints, and make a swift exit.</p><ul><li>In your campaign log, record *the investigators were left to the cult’s mercy*.</li><li>Add 2 {'{'}blood{'}'} tokens to the chaos bag for the remainder of the campaign.</li><li>Each investigator who does not have The Blood Blight weakness becomes the bearer of a set-aside The Blood Blight weakness.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Chuyển tới <b>Resolution 5</b>.</li></ul>"
+      "title": "Kết thúc 4",
+      "body": "<p>_Resolution 4_: Bạn nhanh chóng bị giáo phái áp đảo, chúng lôi kéo bạn xuống các hang động trong khi liên tục lặp đi lặp lại cái tên “Zburamoarte, Zburamoarte, Zburamoarte…” May mắn thay, bạn ngất đi trong suốt quá trình nghi lễ của giáo phái diễn ra, và khi bạn tỉnh lại, bạn thấy mình đơn độc trên sàn nhà máy, những ánh ban mai đầu tiên đang rọi qua khung cửa sổ. Bạn gượng dậy, vươn vai thư giãn những khớp xương đau nhức, và nhanh chóng thoát ra ngoài.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã phó mặc cho sự định đoạt của giáo phái*.</li><li>Thêm 2 token {'{'}blood{'}'} vào chaos bag trong phần còn lại của chiến dịch.</li><li>Mỗi điều tra viên chưa có weakness The Blood Blight sẽ trở thành bearer của một weakness The Blood Blight đã để riêng.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Hãy tiến tới _Kết thúc 5_.</li></ul>"
     },
     "resolution5": {
-      "title": "Giải pháp thứ 5",
-      "body": "<p>_Resolution 5_: You regroup with Detective Reynolds, ready to investigate this Howard Wilkes, and make him answer for what’s been happening at his facility.</p><ul><li>If “_the investigators found a sheet of arcane symbols_,” any investigator may become the bearer of the set-aside Sanguine Song story asset.</li><li>If “_the investigators found forged permits_,” any investigator may become the bearer of the set-aside Forged Permit story asset.</li><li>Each investigator who ended the scenario with 2 {'{'}blood{'}'} tokens sealed on their investigator becomes the bearer of a set-aside The Blood Blight weakness if they are not already a bearer of it.</li><li>Release each sealed {'{'}blood{'}'} token and return them to the chaos bag.</li><li>Proceed to _Interlude: Friends in Low Places_.</li></ul>"
+      "title": "Kết thúc 5",
+      "body": "<p>_Resolution 5_: Bạn tập hợp lại với Thám tử Reynolds, sẵn sàng điều tra về Howard Wilkes này, và bắt hắn phải chịu trách nhiệm cho những gì đã xảy ra tại cơ sở của mình.</p><ul><li>Nếu “_các điều tra viên đã tìm thấy một trang ký tự huyền bí_,” bất kỳ điều tra viên nào cũng có thể trở thành bearer của story asset Sanguine Song đã để riêng.</li><li>Nếu “_các điều tra viên đã tìm thấy các giấy phép giả mạo_,” bất kỳ điều tra viên nào cũng có thể trở thành bearer của story asset Forged Permit đã để riêng.</li><li>Mỗi điều tra viên kết thúc kịch bản với 2 token {'{'}blood{'}'} bị seal trên thẻ điều tra viên của mình sẽ trở thành bearer của một weakness The Blood Blight đã để riêng nếu họ chưa phải là bearer của nó.</li><li>Giải phóng (release) từng token {'{'}blood{'}'} bị seal và trả chúng về chaos bag.</li><li>Hãy tiến tới _Màn chuyển tiếp: Bè Bạn Chốn Hạ Lưu_.</li></ul>"
     }
   }
 }

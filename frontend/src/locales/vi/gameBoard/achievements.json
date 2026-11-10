@@ -13,18 +13,18 @@
   "noneEarnedYet": "Chưa đạt được thành tựu nào",
   "progressLabel": "Tiến độ: {earned}/{total}",
   "campaigns": {
-    "06": "The Dream-Eaters",
-    "07": "The Innsmouth Conspiracy",
-    "08": "Edge of the Earth",
-    "09": "The Scarlet Keys",
     "10": "The Feast of Hemlock Vale",
     "11": "The Drowned City",
+    "13": "Children of Blood",
     "50": "Return to the Night of the Zealot",
     "51": "Return to the Dunwich Legacy",
     "52": "Return to The Path to Carcosa",
     "53": "Return to The Forgotten Age",
     "54": "Return to The Circle Undone",
-    "13": "Children of Blood"
+    "06": "The Dream-Eaters",
+    "07": "The Innsmouth Conspiracy",
+    "08": "Edge of the Earth",
+    "09": "The Scarlet Keys"
   },
   "entries": {
     "TheZealotsRevenge": {
@@ -950,80 +950,80 @@
       "text": "Chiến thắng chiến dịch *The Feast of Hemlock Vale* ở độ khó Expert"
     },
     "HideAndSeek": {
-      "name": "Hide and Seek",
-      "text": "Defeat Julia Stern before agenda 2a advances in River of Blood."
+      "name": "Trò Chơi Trốn Tìm",
+      "text": "Đánh bại Julia Stern trước khi agenda 2a advance trong River of Blood."
     },
     "FriendlyNeighborhoodInvestigator": {
-      "name": "Friendly Neighborhood Investigator",
-      "text": "Do not let a single Civilian enemy get defeated during River of Blood."
+      "name": "Điều Tra Viên Thân Thiện Của Khu Phố",
+      "text": "Không để một kẻ địch Civilian nào bị đánh bại trong River of Blood."
     },
     "TrophyCollector": {
-      "name": "Trophy Collector",
-      "text": "Add Fang of Zburamoarte to any investigator’s deck."
+      "name": "Kẻ Sưu Tầm Chiến Tích",
+      "text": "Thêm Fang of Zburamoarte vào bộ bài của bất kỳ điều tra viên nào."
     },
     "NoMeatSlabUnhooked": {
-      "name": "No Meat-Slab Unhooked",
-      "text": "Finish New Horizons with every location revealed, and with no clues remaining on locations."
+      "name": "Không Bỏ Sót Tảng Thịt Nào",
+      "text": "Hoàn thành New Horizons với mọi địa điểm được tiết lộ (revealed), và không còn manh mối nào trên các địa điểm."
     },
     "FilingPaperwork": {
-      "name": "Filing Paperwork",
-      "text": "Add either Forged Permit or Sanguine Song to any investigator’s deck."
+      "name": "Nộp Giấy Tờ Hồ Sơ",
+      "text": "Thêm Forged Permit hoặc Sanguine Song vào bộ bài của bất kỳ điều tra viên nào."
     },
     "ThatLlLearnHim": {
-      "name": "That’ll Learn Him",
-      "text": "Use the ability on Zburamoarte’s Lair to deal the killing blow to Zburamoarte in New Horizons."
+      "name": "Cho Hắn Một Bài Học",
+      "text": "Sử dụng năng lực trên Zburamoarte’s Lair để tung đòn kết liễu Zburamoarte trong New Horizons."
     },
     "SafetyInspector": {
-      "name": "Safety Inspector",
-      "text": "Do not let a single Civilian enemy get defeated during New Horizons."
+      "name": "Thanh Tra An Toàn",
+      "text": "Không để một kẻ địch Civilian nào bị đánh bại trong New Horizons."
     },
     "ThanksForYourVote": {
-      "name": "Thanks for Your Vote",
-      "text": "Add Charlie Kane to any investigator’s deck."
+      "name": "Cảm Ơn Lá Phiếu Của Bạn",
+      "text": "Thêm Charlie Kane vào bộ bài của bất kỳ điều tra viên nào."
     },
     "HellHathNoFury": {
-      "name": "Hell Hath No Fury",
-      "text": "Have Julia Stern deal the killing blow to Howard Wilkes in Blood Money."
+      "name": "Cơn Thịnh Nộ Của Người Đàn Bà",
+      "text": "Để Julia Stern tung đòn kết liễu Howard Wilkes trong Blood Money."
     },
     "LookOutBelow": {
-      "name": "Look Out Below",
-      "text": "Use the Balcony location’s ability to defeat Howard Wilkes in Blood Money."
+      "name": "Coi Chừng Phía Dưới",
+      "text": "Sử dụng năng lực của địa điểm Balcony để đánh bại Howard Wilkes trong Blood Money."
     },
     "APartyEveryoneCanEnjoy": {
-      "name": "A Party Everyone Can Enjoy",
-      "text": "Do not let a single Civilian enemy get defeated during Blood Money."
+      "name": "Bữa Tiệc Cho Mọi Người Cùng Vui",
+      "text": "Không để một kẻ địch Civilian nào bị đánh bại trong Blood Money."
     },
     "IfYouCantBeatThem": {
-      "name": "If You Can’t Beat Them…",
-      "text": "Complete the Blood Money scenario with each available copy of Suspicious Guest in the victory display."
+      "name": "Nếu Không Thể Đánh Bại Chúng…",
+      "text": "Hoàn thành kịch bản Blood Money với mọi bản sao Suspicious Guest khả dụng trong victory display."
     },
     "YouGotRedOnYou": {
-      "name": "You Got Red on You",
-      "text": "Seal 3 {blood} tokens on your investigator in a single round."
+      "name": "Máu Đỏ Dính Đầy Người Bạn",
+      "text": "Seal 3 token {blood} lên thẻ điều tra viên của bạn trong một hiệp đơn lẻ."
     },
     "DontForgetYourPPE": {
-      "name": "Don’t Forget Your PPE",
-      "text": "Finish Children of Blood with 0 {blood} tokens in the chaos bag."
+      "name": "Đừng Quên Đồ Bảo Hộ Lao Động",
+      "text": "Hoàn thành Children of Blood với 0 token {blood} trong chaos bag."
     },
     "BathedInBlood": {
-      "name": "Bathed in Blood",
-      "text": "Finish Children of Blood with 12 {blood} tokens in the chaos bag."
+      "name": "Tắm Trong Máu",
+      "text": "Hoàn thành Children of Blood với 12 token {blood} trong chaos bag."
     },
     "AndAllIGotWereTheseBloodyFangs": {
-      "name": "And All I Got Were These Bloody Fangs",
-      "text": "Unlock the Chosen of Zburamoarte campaign reward card."
+      "name": "Và Tất Cả Những Gì Tôi Nhận Được Là Chiếc Nanh Đẫm Máu Này",
+      "text": "Mở khóa lá bài phần thưởng chiến dịch Chosen of Zburamoarte."
     },
     "ItsPartOfMyBackstory": {
-      "name": "It’s Part of My Backstory",
-      "text": "Complete Children of Blood with the following investigators:",
+      "name": "Đó Là Một Phần Quá Khứ Của Tôi",
+      "text": "Hoàn thành Children of Blood với các điều tra viên sau:",
       "items": {
         "DanielaReyes": "Daniela Reyes",
         "MigueldelaCruz": "Miguel de la Cruz"
       }
     },
     "WaterfrontWetWork": {
-      "name": "Waterfront Wet Work",
-      "text": "Complete Children of Blood campaign on the following difficulties:",
+      "name": "Nhiệm Vụ Đẫm Máu Nơi Bến Cảng",
+      "text": "Hoàn thành chiến dịch Children of Blood ở các độ khó sau:",
       "items": {
         "Easy": "Dễ",
         "Standard": "Cơ bản",

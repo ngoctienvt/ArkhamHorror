@@ -1,0 +1,62 @@
+{
+  "fragmentOfCarcosa": {
+    "intro": {
+      "title": "Màn V: Fragment of Carcosa",
+      "body": "Không có thời gian để lãng phí. Như thể đó là phản xạ tự nhiên, bạn trang trí đền thờ tạm bợ bằng cách lắp một trong những mảnh vỡ lượng tử vào giữa. Một vài chiếc đĩa vàng thu được từ Mi-Go phải được đặt ở phía trước — căn chỉnh để tạo thành một đường thẳng hàng. Với các thành phần đã vào vị trí, bạn đọc to thông điệp không thể thốt nên lời từ Trái Đất:\n<center>\"Hãy để bình minh đỏ thắm đoán xem</center>\n<center>Chúng ta sẽ làm gì,</center>\n<center>Khi ánh sao xanh này lụi tàn</center>\n<center>Và mọi thứ kết thúc.\"</center>\nNhững chiếc đĩa vàng bắt đầu rung lên, lấy đà cho đến khi tất cả dựng đứng lên và bắt đầu lăn quanh đền thờ theo một hướng. Màu sắc của tạo tác lượng tử chuyển sang một ánh sáng chói lóa màu vàng trước khi phát sáng một màu đỏ rực rỡ và đậm đặc. Những chiếc đĩa quay vòng vòng trên bề mặt với tốc độ khác nhau nhưng ổn định, cho đến khi cuối cùng chúng chậm dần lại và đồng loạt đổ xuống. Sau đó, đột ngột như lúc bắt đầu, mảnh vỡ màu đỏ phun trào thành một màn sương khí tinh vân, làm bạn chói mắt trong cơn bão của nó.\nKhi thị lực của bạn trở lại, tất cả những gì còn lại là những chiếc đĩa vàng nằm rải rác ở nhiều vị trí khác nhau trên sàn. Bạn theo bản năng nhận ra đây là một sơ đồ của hệ mặt trời. Khi kiểm tra kỹ hơn, một tàn tích duy nhất của mảnh vỡ màu tím vẫn nằm giữa nơi mà bạn tin là quỹ đạo của Sao Mộc và Sao Thổ. K2-PS187 xác nhận rằng mô tả này chính xác với thời gian sao hiện tại — và bắt đầu vạch ra một lộ trình hướng tới tiểu hành tinh đó.\nTrên đường đến đó, bạn nghĩ về những thế giới khác nhau mà bạn đã ghé thăm và nhiều cuộc phiêu lưu mà bạn đã trải qua, cả ở thế giới này và thế giới của riêng bạn. Xuyên suốt mọi tương tác, mọi nhiệm vụ, là cảm giác hy vọng và lạc quan tiềm ẩn về tương lai. Tương lai này không đáng trở thành một con tốt khác cho vị vua điên, và bạn dự định sẽ ngăn chặn điều đó xảy ra.\nKhi bạn đến nơi, tiểu hành tinh không giống như những gì bạn đã mong đợi. Tiểu hành tinh hình quả trứng rộng khoảng 4 km ở điểm rộng nhất, và trông cực kỳ… bình thường. Màu vàng của nó gần với màu nâu đục hơn là màu vàng kim. Nó rải rác những miệng núi lửa và hốc đá, bị tàn phá bởi sự khắc nghiệt của không gian. Không chậm trễ, bạn mặc đồ bảo hộ và hạ cánh xuống bề mặt của Fragment, sẵn sàng đối mặt với Royal Princess of Carcosa…"
+    },
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set sau: <i>Fragment of Carcosa</i> và <i>Inhabitants of Carcosa</i> <i>(từ The Path to Carcosa)</i>. Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/dark-matter/sets/fragment-of-carcosa.png' /><img src='{setImgPath}/inhabitants-of-carcosa.png' /></section>",
+      "placeLocations": "Đưa các địa điểm Surface of Fragment và Abandoned Lander vào chơi.",
+      "startAt": "Mỗi điều tra viên bắt đầu chơi tại Surface of Fragment.",
+      "setAsideLocations": "Để riêng 6 địa điểm hai mặt, ngoài khu vực chơi.",
+      "setAsideStoryCards": "Để riêng 4 lá bài story một mặt (Delights, Arrival of the King, For You Alone và Lost Expedition), ngoài khu vực chơi.",
+      "setAsideCards": "Để riêng story asset Bottle of Whispers, kẻ địch Cave Dweller, kẻ địch Beast of Aldebaran, và các bản sao của Spawn of Hali ra ngoài khu vực chơi."
+    },
+    "tokens": {
+      "easyStandard": {
+        "skull": "-2. Nếu bạn thất bại khi đang ở địa điểm [[Cave]], nhận 1 sát thương.",
+        "cultist": "-2. Nếu bạn thất bại khi đang ở địa điểm [[Carcosa]], nhận 1 kinh hoàng.",
+        "tablet": "-1. Bạn phải chọn một: Rút thêm 1 token khác, hoặc gạch bỏ 1 dấu gạch cạnh “Ký ức” (Memories) của bạn.",
+        "elderThing": "-2. Nếu bạn đang ở địa điểm [[Carcosa]]: Thêm 1 doom lên agenda hiện tại, hoặc tự động thất bại bài kiểm tra kỹ năng này."
+      },
+      "hardExpert": {
+        "skull": "-3. Nếu bạn đang ở địa điểm [[Cave]], nhận 1 sát thương.",
+        "cultist": "-3. Nếu bạn đang ở địa điểm [[Carcosa]], nhận 1 kinh hoàng.",
+        "tablet": "-2. Bạn phải chọn một: Rút thêm 1 token khác, hoặc gạch bỏ 1 dấu gạch cạnh “Ký ức” (Memories) của bạn.",
+        "elderThing": "-3. Nếu bạn đang ở địa điểm [[Carcosa]]: Thêm 1 doom lên agenda hiện tại, hoặc tự động thất bại bài kiểm tra kỹ năng này."
+      }
+    },
+    "specialRules": [
+      {
+        "title": "Lật các địa điểm trong Fragment",
+        "body": "Trong màn chơi này, bạn có thể được hướng dẫn lật một địa điểm sang mặt kia. Khi điều này xảy ra, chỉ cần lật địa điểm đó, giữ nguyên tất cả token, attachment, điều tra viên, kẻ địch, và các lá bài khác trên cùng địa điểm đó (lúc này sẽ có một tên khác). Sau đó, thêm manh mối lên địa điểm đó cho đến khi đạt giá trị manh mối của nó.\nCác địa điểm có dòng \"Cannot be flipped.\" sẽ bỏ qua các hướng dẫn lật nó, và sẽ không ngăn cản các ability kích hoạt."
+      }
+    ],
+    "label": {
+      "tablet": {
+        "revealAnotherToken": "Rút thêm 1 token khác",
+        "crossOffMemory": "Gạch bỏ 1 vạch đếm bên cạnh “Ký ức” của bạn"
+      }
+    },
+    "resolutions": {
+      "noResolution": {
+        "title": "Không Đạt Được Kết Cục Nào",
+        "body": "Nếu mỗi điều tra viên đều bị đánh bại:",
+        "proceedToResolution1": "Nếu đang ở màn act 1 hoặc act 2, tiến tới <b>Kết Cục 1</b>.",
+        "proceedToResolution2": "Nếu đang ở màn act 3, tiến tới <b>Kết Cục 2</b>."
+      },
+      "resolution1": {
+        "title": "Kết Cục 1",
+        "body": "<p><b>Kết Cục 1:</b> Khi bạn cuối cùng cũng tỉnh giấc, ở đằng xa, những ngọn tháp kỳ dị của một thành phố méo mó vươn thẳng lên những tầng mây. Phía sau bạn, mặt nước tăm tối của một chiếc hồ phản chiếu ánh sáng chói lọi của hai mặt trời. Bạn gọi K2-PS187 để cầu cứu, nhưng lần này không có hồi đáp. Đây không phải là một mô phỏng khác; bạn đã bị giam cầm trong cõi Carcosa, không có lối thoát để cứu lấy hệ mặt trời.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>các điều tra viên bị mắc kẹt trong Carcosa</i>.</li><li>Mỗi điều tra viên bị <b>phát điên (insane)</b>.</li><li>Các điều tra viên thua chiến dịch.</li></ul>"
+      },
+      "resolution2": {
+        "title": "Kết Cục 2",
+        "body": "<p><b>Kết Cục 2:</b> Bạn thức dậy trong mồ hôi lạnh ngắt khi trở lại buồng ngủ đông. Trong khi bạn còn bối rối và mất phương hướng, K2-PS187 giải thích rằng bạn đã rơi vào hôn mê hơn 2 tháng sau khi bạn quyết định tiến vào tâm trí của chính mình. Trải nghiệm của bạn trên tiểu hành tinh đó, bản chất thực sự của Hastur — điều đó quá chân thực để có thể là tưởng tượng; nó hẳn đã được tôi luyện từ những mảnh ký ức của tên cultist. Bất kể hoàn cảnh ra sao, giờ đây bạn đã biết về sự diệt vong cận kề của hệ mặt trời, và hiểu điều mình phải làm: cứu càng nhiều người càng tốt trước thời khắc không thể tránh khỏi.</p><ul><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Thêm 2 vạch đếm dưới \"Impending Doom\" trong Nhật ký Chiến dịch của bạn.</li><li>Tiến tới <b>Màn VI: Starfall</b>.</li></ul>"
+      },
+      "resolution3": {
+        "title": "Kết Cục 3",
+        "body": "<p><b>Kết Cục 3:</b> Cuối cùng khi tập hợp lại trên tàu Tatterdemalion, tất cả những gì bạn có thể nghĩ đến là bạn đã có thể tiết kiệm được bao nhiêu thời gian giá như bạn nhớ ra mối đe dọa thực sự mà mình đang đối mặt. Mặt trời chỉ còn vài năm để chiếu sáng, và hầu hết nhân loại đều không hay biết về sự diệt vong cận kề. Đối mặt với sự diệt vong sắp tới này, bạn biết mình phải làm gì: cứu càng nhiều người càng tốt trước thời khắc không thể tránh khỏi.</p><ul><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Tiến tới <b>Màn VI: Starfall</b>.</li></ul>"
+      }
+    }
+  }
+}

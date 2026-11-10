@@ -1,0 +1,59 @@
+{
+  "lostQuantum": {
+    "resolutions": {
+      "noResolution": {
+        "title": "Không Đạt Được Kết Cục Nào",
+        "body": "<p class='basic'>_Nếu không đạt được kết cục nào (mỗi điều tra viên đã từ bỏ hoặc bị đánh bại), và một điều tra viên đã từ bỏ khi đang kiểm soát story asset Erwin Simmons:_ Tiến tới _Kết Cục 3_.</p><p class='basic'>_Nếu không đạt được kết cục nào (mỗi điều tra viên đã từ bỏ hoặc bị đánh bại), và các điều tra viên không từ bỏ khi đang kiểm soát story asset Erwin Simmons:_ Tiến tới _Kết Cục 1_.</p>"
+      },
+      "resolution1": {
+        "title": "Kết Cục 1",
+        "body": "<p>_Kết Cục 1:_ Khi cuối cùng cũng tỉnh táo lại, bạn và những người đồng hành đang ở bên trong Tatterdemalion, và Elbrus dường như đã biến mất — có thể bị lạc trong không gian và thời gian bên trong thế giới lượng tử. Bạn không nhớ nhiều về những gì đã xảy ra. Bất chấp những bằng chứng ban đầu chỉ ra điều ngược lại — cuối cùng đã có bằng chứng cho thấy thử thách này là có thật — những mảnh vỡ của các tinh thể mang đặc tính lượng tử đã được phát hiện trong khoang hàng hóa, những thứ mà có lẽ bạn đã mang về từ Elbrus. Vẫn không chắc tại sao các cultist lại đến, bạn chuẩn bị cho điểm đến tiếp theo, nơi cuối cùng có thể đưa ra một vài câu trả lời thay vì đặt ra thêm nhiều câu hỏi.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng *Trạm Elbrus đã bị lạc trong cõi lượng tử*.</li><li>Nếu chưa được ghi, ghi lại vào Nhật ký Chiến dịch của bạn rằng <i>bạn đã chứng kiến sự hỗn mang nguyên thủy.</i></li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Thêm 4 vạch đếm dưới \"Impending Doom\" trong Nhật ký Chiến dịch của bạn.</li><li>Quay lại _Tìm Kiếm Mảnh Vỡ (The Search for Fragment)_.</li></ul>"
+      },
+      "resolution2": {
+        "title": "Kết Cục 2",
+        "body": "<p>_Kết Cục 2:_ Nhà vật lý vô cùng biết ơn sự giúp đỡ của bạn. \"Tất cả những nghiên cứu quan trọng này — tạ ơn trời các bạn đã đến kịp lúc. Nếu bạn cần làm bất cứ điều gì ở các vùng lãnh thổ Colonial, tôi chắc chắn sẽ nói đỡ cho bạn vài lời.\" Với một cái gật đầu và một cái bắt tay ngượng ngùng, bạn rời khỏi cơ sở và trở về Tatterdemalion. Các cultist đã đánh cắp các mảnh lượng tử từ Elbrus, nhưng vì mục đích gì, bạn vẫn chưa rõ.</p><p>Bạn nhìn vào ánh sáng hư ảo của mảnh pha lê mà Erwin đã tặng bạn, tự hỏi về những hoàn cảnh kỳ lạ mà bạn đang vướng vào. Tuy nhiên, không có thời gian để lãng phí cho việc tự suy ngẫm — K2-PS187 đang chờ chỉ thị hướng đi tiếp theo của bạn.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng *Trạm Elbrus đã được ổn định hoàn toàn*.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Thêm 1 token {'{'}elderThing{'}'} vào túi chaos cho phần còn lại của chiến dịch vì đã thu hút sự chú ý của King in Yellow.</li><li>Thêm 1 vạch đếm dưới \"Impending Doom\" trong Nhật ký Chiến dịch của bạn.</li><li>Quay lại _Tìm Kiếm Mảnh Vỡ (The Search for Fragment)_.</li></ul>"
+      },
+      "resolution3": {
+        "title": "Kết Cục 3",
+        "body": "<p>_Kết Cục 3:_ Vài khoảnh khắc sau khi bạn trở về Tatterdemalion, Elbrus co sập vào trong giữa một mớ âm thanh hỗn độn cùng làn sương hư ảo và hoàn toàn biến mất. Nhà vật lý thở phào nhẹ nhõm. \"Tạ ơn trời các bạn đã đến kịp lúc. Thật đáng tiếc cho tất cả những nghiên cứu đã bị mất, nhưng ít nhất mọi người đều an toàn. Bây giờ xin hãy giải thích cho tôi tại sao chúng ta lại đang ở trên chính con tàu mà tôi nhớ là đã đến để cướp bóc cơ sở của chúng tôi.\" Bạn tóm tắt cho Erwin về nhiệm vụ của mình và thảo luận xem các cultist có thể có mục đích gì với các mảnh lượng tử. Nhà vật lý đề xuất một vài ý tưởng về vũ khí hoặc công cụ lượng tử - nhưng không có cái nào hợp lý cả. Dù sao đi nữa, anh ta sẵn sàng tham gia cùng bạn trong hành trình này — vì thiện chí hay vì tò mò, bạn không chắc chắn. Vẫn chưa rõ tại sao các cultist lại đến, bạn chuẩn bị cho điểm đến tiếp theo, nơi cuối cùng có thể đưa ra một vài câu trả lời thay vì đặt ra thêm nhiều câu hỏi.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng *Trạm Elbrus đã bị lạc trong cõi lượng tử*.</li><li>Một điều tra viên có thể thêm story asset Erwin Simmons *(Nhà Vật Lý Lượng Tử)* vào deck của họ. Lá bài này không tính vào giới hạn deck của điều tra viên đó.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Thêm 2 dấu gạch dưới \"Impending Doom\" trong Nhật ký Chiến dịch của bạn.</li><li>Quay lại _Tìm Kiếm Mảnh Vỡ (The Search for Fragment)_.</li></ul>"
+      }
+    },
+    "intro": {
+      "title": "Màn IIIa: Lost Quantum",
+      "body": "<p>\"Khi thế giới tận diệt, các cộng đồng khoa học và khai khoáng của nhiều quốc gia khác nhau nằm trong vành đai tiểu hành tinh giữa sao Hỏa và sao Mộc đã lập một hiệp ước — một lời hứa đảm bảo sự sống còn của nhân loại. […] The United Colonial Coalition bao gồm hai mươi thuộc địa, khác nhau rất nhiều về quy mô, dân số và mục đích. Một số thuộc địa chỉ tồn tại để khai khoáng, trong khi những thuộc địa khác tập trung vào nghiên cứu khoa học hoặc là các trung tâm kỹ thuật; những nơi này thường có ít hơn 200 cá nhân sinh sống. Các tiểu hành tinh khác đóng vai trò là trung tâm dân cư, chứa các trang trại thủy canh rộng lớn, trường đại học và khu vui chơi giải trí. Những nơi này có thể là nhà của hơn một nghìn cư dân…\"</p><p class='basic right'><right>—Maja, Information Archives</right></p><p>Khi bạn đến tiểu hành tinh, bạn bị thu hút bởi ánh sáng màu vân anh của Elbrus. Các vật liệu lượng tử chỉ mới được phát hiện gần đây, nhưng có thể nắm giữ các đặc tính then chốt có thể được sử dụng để chế tạo các thiết bị mà vật liệu cổ điển không thể làm được. Thật không may, các trường lượng tử do các vật liệu này tạo ra làm gián đoạn liên lạc vô tuyến truyền thống, khiến bạn không thể liên lạc với các nhà khoa học trên Elbrus. Không chần chừ thêm nữa, bạn và những người bạn đồng hành lên một trong những tàu đổ bộ và trôi về phía tiểu hành tinh…</p><p>Ánh cực quang màu tím lan rộng qua ô cửa sổ quan sát như dải sữa mờ ảo, lấp đầy căn phòng với sắc thái điện tích. Vectơ tiếp cận cuối cùng đưa bạn qua thẳng một trong những miệng núi lửa lớn hơn trên tiểu hành tinh. Máy tính tính toán quỹ đạo và bắt đầu cú hạ cánh cuối cùng xuống bề mặt đá gồ ghề. Đúng lúc đó, máy bộ đàm tầm ngắn nổ lách tách rồi vang lên giọng nói kinh hãi của một người đàn ông: “Hủy ngay quy trình hạ cánh! Hủy ngay! Trước khi—” Nhưng đã quá muộn. Đèn cảnh báo bắt đầu nhấp nháy điên cuồng khi con tàu xoay tròn mất kiểm soát. Bạn bám chặt vào bất cứ thứ gì có thể, nhưng con tàu càng lúc càng quay tít mù mịt cho đến khi tay bạn vung vẩy bất lực và bóng tối bao trùm...</p>"
+    },
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set sau: <i>Lost Quantum</i> và <i>Deep Space</i>. Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/dark-matter/sets/lost-quantum.png' /><img src='{imgPath}/homebrew/dark-matter/sets/deep-space.png' /></section>",
+      "setAsideErwinSimmons": "Để riêng cả hai bản sao của story asset Erwin Simmons ra ngoài khu vực chơi.",
+      "setAsideFeasterFromAfar": "Để riêng kẻ địch The Feaster from Afar (có mặt sau là scanning).",
+      "createScanningDeck": "Tạo scanning deck. Thực hiện việc này bằng cách lấy tất cả các lá bài encounter khác có biểu tượng ở dưới cùng mặt sau và xào chúng lại với nhau.",
+      "placeLandingCraft": "Tìm kiếm trong scanning deck địa điểm Landing Craft và đưa nó vào chơi.",
+      "startAt": "Mỗi điều tra viên bắt đầu chơi tại Landing Craft.",
+      "randomizeAgenda": "Xào ngẫu nhiên 3 phiên bản của agenda 1 với nhau để tạo thành agenda deck."
+    },
+    "tokens": {
+      "easyStandard": {
+        "skull": "-X. X là số lá bài encounter úp trong threat area của bạn.",
+        "cultist": "-X. X là một nửa số địa điểm trong màn chơi (làm tròn xuống).",
+        "tablet": "-1. Rút thêm 1 token khác. Nếu bạn thất bại, đặt lá bài trên cùng của chồng bài encounter úp vào threat area của bạn.",
+        "elderThing": "-3. Rút ngẫu nhiên 1 lá bài encounter úp trong threat area của bạn."
+      },
+      "hardExpert": {
+        "skull": "-X. X là số lá bài encounter úp trong threat area của bạn.",
+        "cultist": "-X. X là số địa điểm trong màn chơi.",
+        "tablet": "-2. Rút thêm 1 token khác. Nếu bạn thất bại, đặt lá bài trên cùng của chồng bài encounter úp vào threat area của bạn.",
+        "elderThing": "-4. Rút ngẫu nhiên 1 lá bài encounter úp trong threat area của bạn."
+      }
+    },
+    "specialRules": [
+      {
+        "title": "Các lá bài encounter úp",
+        "body": "Trong màn chơi này, bạn có thể được hướng dẫn đặt các lá bài encounter úp xuống vào threat area của bạn. Những lá bài này được coi là ngoài màn chơi (out of play), nhưng có thể được tham chiếu bởi các lá bài khác.\nKhi bạn phải rút bài từ chồng bài encounter, nếu cả chồng bài encounter và chồng bài bỏ đều trống, thay vào đó hãy rút một lá bài từ các lá bài encounter đang úp trong threat area của bạn. Nếu không có lá nào trong threat area của bạn, bạn bị đánh bại."
+      },
+      {
+        "title": "Manh mối & Địa điểm trong Cõi Lượng Tử (Quantum Realm)",
+        "body": "Trong màn chơi này, các địa điểm có thể rời khỏi khu vực chơi và quay lại khu vực chơi vào lúc khác. Khi một địa điểm rời khỏi khu vực chơi, bỏ (discard) tất cả các lá bài đính kèm và manh mối trên đó. Khi một địa điểm đi vào khu vực chơi, bất kể nó đã từng ở trong khu vực chơi trước đó hay chưa, hãy coi như bạn vừa khám phá (reveal) nó lần đầu tiên. Do đó, một số lượng manh mối bằng với giá trị manh mối của địa điểm đó sẽ được đặt lên địa điểm đó mỗi khi nó được reveal (từ token pool)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "unstuck": {
+    "heading": "Màn IV",
+    "name": "Thoát Khỏi Mắc Kẹt",
+    "intro": {
+      "title": "Màn IV: Thoát Khỏi Mắc Kẹt",
+      "body": "<p>Bạn rơi xuống. Mặc dù rơi có lẽ là từ không đúng &mdash; rơi ngụ ý rằng có một hướng di chuyển cụ thể, trong khi bạn chỉ đơn giản là đang không ở nơi bạn từng ở trước đây.</p><p>Trực giác mách bảo bạn hãy nhắm mắt lại, nhưng khi làm vậy, bạn vẫn thấy những bức tường của trường học nhấp nháy vào và ra khỏi tầm nhìn, được thay thế xen kẽ bởi một khu rừng tươi tốt, một thành phố với những ngọn tháp bằng kính cao chọc trời, và một sa mạc đá trống trải dưới bầu trời màu tím kỳ lạ.</p><p>Sau đó, một luồng ánh sáng đột ngột, đau đớn, và mọi thứ dừng lại.</p><p class='basic right'>Tiếp tục đến _Thiết lập_.</p>"
+    },
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set *Unstuck* và *Paradox*. Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/ages-unwound/sets/unstuck.png' /><img src='{imgPath}/homebrew/ages-unwound/sets/paradox.png' /></section>",
+      "setAside": "Đặt encounter set Paradox, các địa điểm The Timestream và Arkham, Massachusetts *(Present Day?)*, cùng mỗi bản sao của điểm yếu Time Runs Backwards sang một bên, ngoài màn chơi.",
+      "theRing": "Loại bỏ ngẫu nhiên một trong hai bản sao của mỗi địa điểm khác khỏi trò chơi.",
+      "removeOneVersion": "Các phiên bản bị loại bỏ được giữ sang một bên: agenda 3b sẽ hoán đổi một địa điểm lấy phiên bản bị loại bỏ của nó.",
+      "shuffleAndPlace": "Xáo trộn tám địa điểm còn lại với nhau và đặt chúng vào chơi theo một vòng tròn ngẫu nhiên. Sau đó, lật ngửa một địa điểm ngẫu nhiên.",
+      "shuffleElites": "Xáo trộn 4 kẻ địch [[Elite]] với nhau. Đặt 3 trong số chúng sang một bên, ngoài màn chơi, và đặt kẻ địch còn lại sang một bên, úp mặt, bên cạnh địa điểm chưa lật đối diện với địa điểm đã lật.",
+      "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch.",
+      "steppedIntoThePast": "Nếu các điều tra viên đã bước vào quá khứ, mỗi điều tra viên bắt đầu chơi tại Arkham, Massachusetts *(1914?)*.",
+      "steppedIntoTheFuture": "Nếu các điều tra viên đã bước vào tương lai, mỗi điều tra viên bắt đầu chơi tại A Disquieting Future.",
+      "fellToTheMyriad": "Nếu các điều tra viên gục ngã trước the Myriad, mỗi điều tra viên bắt đầu chơi tại một địa điểm [[Extradimensional]] ngẫu nhiên khác nhau.",
+      "addChaosToken": "Dựa trên mức độ khó của bạn, thêm token chaos sau vào túi chaos cho phần còn lại của chiến dịch: Easy: -2. Standard: -3. Hard: -4. Expert: -5."
+    },
+    "eagerSphinx": {
+      "label": {
+        "defeatEagerSphinx": "Đánh bại Eager Sphinx",
+        "drawTwoCards": "Rút 2 lá bài",
+        "gainThreeResources": "Nhận 3 tài nguyên"
+      }
+    },
+    "aerialBombardment": {
+      "label": {
+        "spendAnAction": "Chi 1 hành động",
+        "takeDamage": "Chịu {combat} sát thương",
+        "takeOneDamage": "Chịu 1 sát thương",
+        "discardRandomCard": "Bỏ ngẫu nhiên 1 lá bài từ tay bạn"
+      }
+    },
+    "darkMaledict": {
+      "label": {
+        "investigatorTakesHorror": "Chọn một điều tra viên để chịu {count} kinh hoàng",
+        "locationTakesDoom": "Đặt 1 doom lên địa điểm của bạn",
+        "healDamagedEnemy": "Chọn một kẻ địch bị sát thương và hồi 2 sát thương từ nó",
+        "eachInvestigatorDiscards": "Mỗi điều tra viên chọn và bỏ một lá bài từ tay họ"
+      }
+    },
+    "overwhelmingNumbers": {
+      "label": {
+        "doNotPlaceAClue": "Không đặt manh mối",
+        "testAgility": "Kiểm tra {agility} (4)",
+        "testCombat": "Kiểm tra {combat} (4)"
+      }
+    },
+    "resolutions": {
+      "investigatorDefeat": {
+        "title": "Điều Tra Viên Bị Đánh Bại",
+        "body": "<p>Bạn tỉnh lại trong một phòng giam ngập ánh trăng. Đầu bạn đau nhức như chưa từng thấy, và một đôi mắt đang quan sát bạn từ phía bên kia chấn song. Một người cai ngục, đang tựa vào một cây gậy nặng, lắc đầu. “Bạn đã ngã một cú khá đau đấy,” ông ta nói, không hề ác ý. “May mắn là có ai đó đã tìm thấy bạn trước khi băng đảng Sheldon tìm thấy.”</p><ul><li>Mỗi điều tra viên bị đánh bại nhận 1 bản sao của điểm yếu Time Runs Backwards và thêm nó vào bộ bài của họ. Lá bài này không tính vào kích thước bộ bài của điều tra viên đó.</li><li>Tiếp tục đến _Kết thúc 1_.</li></ul>"
+      },
+      "resolution1": {
+        "title": "Kết thúc 1",
+        "body": "<p>_Kết thúc 1_: Với đôi chân vững chãi trên mặt đất, bạn dành một khoảnh khắc để trấn tĩnh bản thân. Bạn nhận ra nơi này, nhưng không phải thời điểm này &mdash; đây là thành phố quê hương của bạn, nhưng ít nhất một thập kỷ trước khi bạn từng sống ở đây. Baxter đã nói gì nhỉ? Rằng Myriad đã lên kế hoạch viết lại dòng thời gian để phục vụ cho mục đích của chúng? Có lẽ điều đó sẽ giải thích cho chuyện này &mdash; nhưng nếu bạn muốn có bất kỳ hy vọng nào để ngăn chặn điều đó, bạn sẽ cần phải tìm một cách để đi trước các kế hoạch của chúng.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng *nghi thức đã đến gần*.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.</li></ul>"
+      }
+    }
+  }
+}

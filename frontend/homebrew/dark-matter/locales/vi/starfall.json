@@ -1,0 +1,76 @@
+{
+  "starfall": {
+    "intro": {
+      "title": "Màn VI: Starfall",
+      "body": "Không còn nghi ngờ gì nữa. Mặt trời đang trải qua sự tăng tốc chưa từng có trong quá trình phân rã lõi hydro của nó. K2-PS187 ước tính rằng chỉ còn vài năm nữa trước khi các phản ứng nhiệt hạch cung cấp năng lượng cho ngôi sao của chúng ta cạn kiệt nhiên liệu và tự sụp đổ, tạo ra một siêu tân tinh phóng xạ sẽ tiêu diệt mọi sự sống trong vòng vài năm ánh sáng. Bất cứ điều gì các cultist đã làm bên trong Fragment đều đã đẩy hệ mặt trời của chúng ta đến một kết cục sớm.\nHy vọng duy nhất của bạn bây giờ là thuyết phục phần còn lại của các thuộc địa khác nhau của nhân loại về sự diệt vong đang đến nhanh này và giúp họ thu thập các tài nguyên và công nghệ cần thiết để sống sót qua siêu tân tinh bằng mọi cách có thể. K2-PS187 thiết lập bảng điều khiển điều hướng trong khi bạn chuẩn bị tinh thần cho hành trình kéo dài nhiều tháng phía trước xuyên qua hệ mặt trời để cứu nhân loại.",
+      "proceedToAnotherPath": "Kiểm tra Nhật ký Chiến dịch. Nếu các điều tra viên <i>biết về Lời Nguyền Bỏ Ngai Vàng (Abjuration of the Throne)</i>, tiến tới <b>Một Con Đường Khác</b>.",
+      "skipToSetup": "Nếu không, chuyển sang phần <b>Thiết lập</b>."
+    },
+    "anotherPath": {
+      "title": "Một Con Đường Khác",
+      "body": "<p>Có lẽ còn một cách khác. Nghi lễ mà bạn đã thoáng thấy trong các sảnh đền của Tassilda sẽ mất nhiều tháng để chuẩn bị — và bạn vẫn chưa biết nó phải được thực hiện ở đâu, nhưng nếu khả thi, nó chắc chắn sẽ cho nhân loại đủ thời gian để phát triển công nghệ cần thiết nhằm sống sót. Bây giờ việc tìm kiếm địa điểm thực hiện nghi lễ lại là một vấn đề hoàn toàn khác…</p><ul><li>Tiến tới <b>Thiết lập</b>.</li></ul>"
+    },
+    "setup": {
+      "gatherSets": "Thu thập tất cả các lá bài từ các encounter set sau: <i>Starfall</i>, <i>Anachronism</i>, <i>Deep Space</i>, <i>Endtimes</i>, và <i>Agents of Yog-Sothoth</i>. Các set này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/dark-matter/sets/starfall.png' /><img src='{imgPath}/homebrew/dark-matter/sets/anachronism.png' /><img src='{imgPath}/homebrew/dark-matter/sets/deep-space.png' /><img src='{imgPath}/homebrew/dark-matter/sets/endtimes.png' /><img src='{setImgPath}/agents-of-yog.png' /></section>",
+      "setAsideHastursGaze": "Để riêng encounter set <i>Hastur's Gaze</i> sang một bên, ngoài khu vực chơi. Set này được biểu thị bằng biểu tượng sau:<section class='encounter-sets'><img src='{imgPath}/homebrew/dark-matter/sets/hasturs-gaze.png' /></section>",
+      "setAsideCards": "Để riêng các lá bài sau ra ngoài khu vực chơi: địa điểm The Cassilda, kẻ địch Domaag T'eel, kẻ địch Mi-Go Sentinel, kẻ địch Yithian Guard, và The Feaster from Afar.",
+      "setAsideAgenda": "Để riêng agenda Dark Matter và act Tassilda's Awakening, cũng như kẻ địch Tassilda, ra ngoài khu vực chơi.",
+      "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch của bạn:",
+      "elbrusStation": "Nếu <i>Trạm Elbrus đã được ổn định hoàn toàn</i>, để riêng story asset Ar-NO ra ngoài khu vực chơi. Nếu không, để riêng story asset Project Origami ra ngoài khu vực chơi.",
+      "nostalgiaII": "Nếu <i>Nostalgia II đã được cứu</i>, để riêng story asset Director Cixin ra ngoài khu vực chơi. Nếu không, để riêng story asset Last Hope ra ngoài khu vực chơi.",
+      "miGoAlliance": "Nếu <i>bạn đã liên minh với Mi-Go</i>, để riêng story asset Mi-Go Collector ra ngoài khu vực chơi. Nếu không, để riêng story asset Repairing the Threshold ra ngoài khu vực chơi.",
+      "createScanningDeck": "Tạo scanning deck. Việc này được thực hiện bằng cách lấy tất cả các lá bài encounter khác có biểu tượng ở dưới cùng mặt sau và xào chúng lại với nhau. (Bao gồm cả các lá bài ở trên chưa được để riêng.)",
+      "placeLocations": "Đưa các địa điểm sau vào chơi: The Tatterdemalion, Mars, Asteroid Belt và Pluto.",
+      "startAt": "Mỗi điều tra viên bắt đầu chơi tại The Tatterdemalion.",
+      "impendingDoom": "Với mỗi dấu gạch dưới mục \"Impending Doom\" trong Nhật ký Chiến dịch của bạn, bắt đầu màn chơi với thêm 1 doom trên agenda."
+    },
+    "tokens": {
+      "easyStandard": {
+        "skull": "-X. X là một nửa số địa điểm đã khám phá không có manh mối (làm tròn lên).",
+        "cultist": "-3. Nếu bạn thất bại từ 2 điểm trở lên, nhận 1 sát thương và 1 kinh hoàng.",
+        "tablet": "Tăng độ khó của bài kiểm tra kỹ năng này thêm 1. Rút thêm 1 token khác.",
+        "elderThing": "-3. Nếu bạn thất bại, bạn phải đặt 1 doom lên agenda hiện tại, hoặc nhận 1 kinh hoàng cho mỗi điểm bạn thất bại."
+      },
+      "hardExpert": {
+        "skull": "-X. X là một nửa số địa điểm trong màn chơi (làm tròn lên).",
+        "cultist": "-4. Nếu bạn thất bại từ 2 điểm trở lên, nhận 1 sát thương và 1 kinh hoàng.",
+        "tablet": "Tăng độ khó của bài kiểm tra kỹ năng này thêm 1. Rút thêm 1 token khác.",
+        "elderThing": "-4. Nếu bạn thất bại, bạn phải đặt 1 doom lên agenda hiện tại, hoặc nhận 1 kinh hoàng cho mỗi điểm bạn thất bại."
+      }
+    },
+    "resolutions": {
+      "noResolution": {
+        "title": "Không Đạt Được Kết Cục Nào",
+        "body": "<p><b>Nếu không đạt được kết cục nào (mỗi điều tra viên đã từ bỏ hoặc bị đánh bại):</b> Tiến tới <b>Kết Cục 1</b>.</p>"
+      },
+      "resolution1": {
+        "title": "Kết Cục 1",
+        "body": "<p><b>Kết Cục 1:</b> Một ánh sáng chói lòa chiếu rọi khắp Hệ Mặt Trời. Vụ nổ siêu tân tinh thảm khốc bức xạ xuyên qua khoảng không, hủy diệt mọi sự sống không được bảo vệ và tước đi bầu khí quyển quý giá của tất cả các thiên thể, để lại những thế giới cằn cỗi phía sau.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>mặt trời đã trở thành siêu tân tinh và quét sạch phần lớn hệ mặt trời</i>.</li><li>Nếu Repairing the Threshold nằm trong victory display, trong Nhật ký Chiến dịch của bạn, ghi rằng <i>Mi-Go đã trở về thế giới quê hương an toàn</i>.</li><li>Nếu Last Hope nằm trong victory display, trong Nhật ký Chiến dịch của bạn, ghi rằng <i>Hope đã được che chắn khỏi vụ nổ</i>. Những điều tra viên đã từ bỏ tại Hope đọc <b>Vượt Ngoài Hope</b>.</li><li>Nếu Project Origami nằm trong victory display, trong Nhật ký Chiến dịch của bạn, ghi rằng <i>UCC đã trốn thoát tới một thiên hà khác</i>. Những điều tra viên đã từ bỏ tại New Brooklyn đọc <b>Xa, Thật Xa</b>.</li><li>Nếu không có lá bài story nào kể trên nằm trong victory display, những điều tra viên còn lại phải đọc <b>Hồi Kết 1</b>. Nếu không, họ đọc <b>Hồi Kết 2</b>.</li></ul>"
+      },
+      "resolution2": {
+        "title": "Kết Cục 2",
+        "body": "<p><b>Kết Cục 2:</b> The Royal Princess of Carcosa gục ngã trước cuộc tấn công của bạn và lụi tàn ngay trước mắt bạn. Bạn đã đánh bại Tassilda, và nhờ đó đã ngăn chặn sự sụp đổ sớm của Mặt Trời. Đột nhiên có một mùi kinh khủng thoang thoảng xung quanh bạn, cuốn theo một luồng khí lạnh lẽo. Trước khi bất kỳ ai trong các bạn kịp phản ứng, một đám mây đen phát ra những tiếng lách tách cùng những tia năng lượng màu vàng và trắng phóng ra từ Mặt Trời, bao quanh toàn bộ con tàu. Bên trong đám mây này lơ lửng một sinh vật kinh hoàng. Nó khổng lồ, nhăn nheo và gù lưng, với hàng chục xúc tu, mỗi xúc tu có một chiếc nanh trông đầy hiểm độc. Đây chỉ có thể là sinh vật mà Tassilda đã nói đến, kẻ sinh thành ra ả, the Last King. Trong chớp mắt, thực thể gớm ghiếc khổng lồ đó bắt đầu bóp nát thân tàu. Trong những khoảnh khắc cuối cùng, mặc dù không thể tự cứu mình khỏi vụ nổ, bạn cảm thấy mãn nguyện — và được chuộc lỗi — bởi những gì bạn đã làm để cứu những người khác.</p><ul><li>Tiến tới <b>Hồi Kết 3</b>.</li></ul>"
+      }
+    },
+    "beyondHope": {
+      "title": "Vượt Ngoài Hope",
+      "body": "<p>Sau khi đợt mất điện cuối cùng cũng kết thúc, bạn và những người đồng hành rời khỏi các hầm trú ẩn dưới lòng đất của Hope để chứng kiến một dải khí rực rỡ đẹp như tranh vẽ, và một khối cầu màu trắng mờ nhạt — di sản còn sót lại của mặt trời. Các nhà nghiên cứu của thuộc địa đã khẳng định rằng lá chắn điện từ không thể nào bảo vệ toàn bộ hành tinh khỏi vụ nổ nếu không có đợt tăng vọt năng lượng bất ngờ nhưng được chào đón bắt nguồn từ các tàn tích của người ngoài hành tinh gần đó. Đây là bình minh của một khởi đầu mới cho nhân loại, kỷ nguyên của White Sun. Bạn sống nốt phần đời còn lại để giúp siêu đô thị tự duy trì và kể lại những câu chuyện kỳ ảo về cuộc đời bạn trên Trái Đất. Thế nhưng bạn tự hỏi, khi ngước nhìn ánh sáng của ngôi sao lùn trắng, bao lâu nữa thì nó cũng sẽ lụi tàn một cách tất yếu và nhân loại sẽ lại một lần nữa phải chạy trốn khỏi sự tuyệt diệt…</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng điều tra viên của bạn <i>đã sống nốt phần đời còn lại cùng với Hope</i>.</li><li>Các điều tra viên chiến thắng chiến dịch!</li><li>Tiến tới <b>Lời Kết (Epilogue)</b>.</li></ul>"
+    },
+    "farFarAway": {
+      "title": "Xa, Thật Xa",
+      "body": "<p>Các nhà khoa học của Sinai đã kích hoạt thiết bị bẻ cong không-thời gian chỉ vài khoảnh khắc trước vụ nổ. Thuộc địa New Brooklyn đã được dịch chuyển dọc theo các nếp gấp của không-thời gian, hướng tới một thiên hà mới, và một tương lai mới. Điểm đến — một hệ sao đôi đầy triển vọng với nhiều ngoại hành tinh — có vẻ an toàn và nằm ngoài tầm với của các Ancient One từ thế giới cũ. Bạn sống nốt phần đời còn lại để giúp nhân loại xây dựng các tiền đồn dưới bầu trời nguyên sơ của một ngôi nhà mới, một hành tinh mà những người định cư sẽ gọi là Paradise. Bạn kể lại những câu chuyện về cuộc đời mình trên Trái Đất cho con cháu, những câu chuyện sẽ trở thành truyện cổ tích và cuối cùng là truyền thuyết. Những cư dân trên thế giới mới này sống và làm việc cùng nhau trong hòa bình và thịnh vượng. Đây là bình minh của một khởi đầu mới cho nhân loại. Thế nhưng bạn tự hỏi, khi ngước nhìn ánh sáng của những ngôi sao mới, bao lâu nữa thì chúng cũng sẽ tất yếu lụi tàn và nhân loại sẽ lại một lần nữa phải chạy trốn khỏi sự tuyệt diệt…</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng điều tra viên của bạn <i>đã sống nốt phần đời còn lại trên Paradise</i>.</li><li>Các điều tra viên chiến thắng chiến dịch!</li><li>Tiến tới <b>Lời Kết (Epilogue)</b>.</li></ul>"
+    },
+    "theEnd1": {
+      "title": "Hồi Kết 1",
+      "body": "<p>Ánh sáng của siêu tân tinh nuốt chửng bầu trời và bao quanh bạn cùng những người đồng hành. Bất chấp mọi nỗ lực của bạn, bạn không thể chuộc lỗi và ngăn chặn sự diệt vong của nhân loại. Trong những khoảnh khắc cuối cùng, trước khi sóng xung kích tước đi bản thể vật chất của bạn, một bóng người trong chiếc váy vàng rách rưới hiện ra trong ánh sáng. Bạn quỳ gối trước bà và nắm lấy tay bà, khi Tassilda chào đón bạn vào vương quốc tăm tối của Carcosa.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>bạn đã trở lại những cung điện của Dim Carcosa</i>.</li><li>Mỗi điều tra viên bị <b>giết (killed)</b>.</li><li>Các điều tra viên thua chiến dịch.</li></ul>"
+    },
+    "theEnd2": {
+      "title": "Hồi Kết 2",
+      "body": "<p>Ánh sáng của vụ nổ siêu tân tinh nhấn chìm bầu trời và bao quanh bạn cùng những người đồng hành. Mặc dù không thể tự cứu mình khỏi vụ nổ, bạn vẫn cảm thấy mãn nguyện — và được chuộc lỗi — bởi những gì bạn đã làm để cứu người khác. Trong những khoảnh khắc cuối cùng, trước khi sóng xung kích tước đi bản thể vật chất của bạn, bạn nhắm mắt chấp nhận số mệnh khủng khiếp của mình.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng điều tra viên của bạn <i>đã bị cuốn vào vụ nổ siêu tân tinh</i>.</li><li>Mỗi điều tra viên bị <b>giết (killed)</b>.</li><li>Nếu tất cả điều tra viên đều đọc phần này, các điều tra viên thua chiến dịch.</li><li>Tiến tới <b>Lời Kết (Epilogue)</b>.</li></ul>"
+    },
+    "theEnd3": {
+      "title": "Hồi Kết 3",
+      "body": "<p>Một tràng pháo tay vang dội làm bạn giật mình tỉnh giấc. Đám đông trong nhà hát đứng dậy, reo hò không ngớt. Vài khán giả ở hàng ghế đầu đang ném hoa hồng cho các diễn viên trên sân khấu, những người đang cúi chào với nụ cười rạng rỡ trên khuôn mặt. Một cơn đau đầu dữ dội lan tỏa qua thái dương của bạn. Sao bạn lại quay về đây được? Bạn đã ở trong nhà hát suốt thời gian qua sao? Còn Tatterdemalion thì sao? K2-PS187? Fragment? …toàn bộ tương lai? Tất cả chỉ là một cơn ác mộng sao? Bạn rời khỏi khán phòng trước khi đám đông ùa ra làm điều tương tự. Sự chóng mặt và kiệt sức hành hạ các giác quan của bạn. Sức nặng của cuộc phiêu lưu dài đằng đẵng đang đè bẹp tâm trí bạn. Đến khi ra được tới sảnh, bạn đang phải lê lết trên mặt đất. Mặt đất… Trái Đất. Cuối cùng bạn đã về nhà. Vài suy nghĩ thoáng qua trong đầu bạn rằng đây có thể lại là một mô phỏng khác hoặc một trò lừa gạt của tâm trí, nhưng bạn không quan tâm nữa. Bạn chấp nhận điều đó. Ít nhất bây giờ, đã có hy vọng cho một tương lai tươi sáng hơn.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>các điều tra viên cuối cùng đã thoát khỏi nanh vuốt của Hastur và ngăn cản hắn trốn thoát khỏi nhà tù của hắn</i>.</li><li>Các điều tra viên chiến thắng chiến dịch.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li><i>Kinh nghiệm</i>: {xp}</li></ul></li><li>Mỗi điều tra viên có thể hồi phục tối đa 2 sang chấn tinh thần (mental trauma), vì giờ đây họ đã có hy vọng.</li><li>Trong Nhật ký Chiến dịch của bạn, ghi rằng <i>Hope đã được che chắn khỏi vụ nổ</i>, <i>UCC đã trốn thoát tới một thiên hà khác</i> và <i>Mi-Go đã trở về thế giới quê hương an toàn</i>.</li><li>Tiến tới <b>Lời Kết (Epilogue)</b>.</li></ul>"
+    }
+  }
+}
