@@ -26,6 +26,7 @@ from narration_text import Translations, collect_story
 
 FRONTEND = Path(__file__).resolve().parents[2]
 LOCALE_EN = FRONTEND / "src" / "locales" / "en"
+LOCALE_VI = FRONTEND / "src" / "locales" / "vi"
 OUT_ROOT = FRONTEND / "public" / "audio" / "narration"
 MANIFEST = OUT_ROOT / "manifest.json"
 
@@ -152,16 +153,21 @@ async def render(text: str, lang: str, out: Path, engine: str = "edge", voice: s
         await asyncio.sleep(PAUSE_BETWEEN_KEYS)
 
 
-def texts_for(lang: str, story: dict[str, list[str]], vi: Translations | None) -> dict[str, str]:
+def texts_for(lang: str, story: dict[str, list[str]], vi: Translations | None, vi_story: dict[str, list[str]] | None = None) -> dict[str, str]:
     """i18n key -> the text to speak in `lang`. A Vietnamese key is kept only
     when every one of its paragraphs has a translation."""
     if lang == "en":
         return {k: "\n\n".join(ps) for k, ps in story.items()}
     out, missing = {}, []
     for key, paragraphs in story.items():
-        translated = [vi.lookup(p) for p in paragraphs] if vi else [None]
-        if all(translated):
-            out[key] = "\n\n".join(translated)  # type: ignore[arg-type]
+        if vi_story and key in vi_story:
+            out[key] = "\n\n".join(vi_story[key])
+        elif vi:
+            translated = [vi.lookup(p) for p in paragraphs]
+            if all(translated):
+                out[key] = "\n\n".join(translated)  # type: ignore[arg-type]
+            else:
+                missing.append(key)
         else:
             missing.append(key)
     if missing:
@@ -195,16 +201,17 @@ async def main() -> int:
 
     po_files = [f for p in args.vi_po for f in (sorted(p.glob("*.po")) if p.is_dir() else [p])]
     vi = Translations(po_files) if po_files else None
+    vi_story = collect_story(LOCALE_VI, args.campaign) if "vi" in args.lang else None
 
     manifest = load_manifest()
     skipped: list[str] = []
     for lang in [l.strip() for l in args.lang.split(",") if l.strip()]:
-        if lang == "vi" and vi is None:
-            print("[vi] skipped: pass --vi-po with the arkham-cards-data translations")
+        if lang == "vi" and vi is None and not vi_story:
+            print("[vi] skipped: pass --vi-po with the arkham-cards-data translations or provide locale JSON in src/locales/vi")
             continue
         entries = manifest["languages"].setdefault(lang, {})
         engine, voice = (args.vi_engine, args.vi_voice) if lang == "vi" else ("edge", "")
-        for key, text in texts_for(lang, story, vi).items():
+        for key, text in texts_for(lang, story, vi, vi_story).items():
             h = text_hash(text, lang, engine, voice)
             out = OUT_ROOT / lang / f"{key}.mp3"
             if args.dry_run:

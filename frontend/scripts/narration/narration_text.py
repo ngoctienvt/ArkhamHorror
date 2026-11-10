@@ -21,7 +21,7 @@ STORY_SEGMENT = re.compile(
 SKIP_SEGMENTS = {
     "setup", "label", "labels", "tokens", "xp", "campaignlog", "title", "heading", "headings",
     "standalone", "slay", "checkenemies", "expeditionleader", "additionalrulesandclarifications",
-    "recommended", "failedeffect",
+    "recommended", "failedeffect", "checkcampaignlog", "tasks", "taskrewards",
 }
 
 # Paragraphs that are bookkeeping instructions even when written as prose.
@@ -35,6 +35,11 @@ INSTRUCTION_START = re.compile(
     r"read the (rules|relevant|following)|the lead investigator must|if neither|"
     r"cross (off|out)|if there are (any other non-story|\d+ or more progress)|"
     r"permanently remove|find the set-aside|"
+    r"before reading\b|if no resolution was reached\b|add act \d|place clues|place \d+ resources|continue playing|"
+    r"for each of the following|the myriad (raised|recruited|weaved)|put the .{0,60} into play\b|"
+    r"if you are playing the\b|the investigators must choose\b|"
+    r"if .{0,120}\b(is completed|must add|may add)\b|if ritual circle\b|if .{0,60} is in play:|"
+    r"\d+ points? if\b|the end of game points\b|[…\.]\s*the .{0,50} is not in the victory display|"
     r"advance the (act|agenda)|in order to set up|spawn the |you are now ready to proceed|"
     r"proceed as normal|[\w ’'.-]{1,40}\b(votes|abstains|remains eerily silent)\b)",
     re.I,
@@ -54,6 +59,8 @@ CHOICE_SEGMENT = re.compile(
     r"advance[A-Z]|spawn[A-Z]|readyToProceed$|finalActAndAgenda$|resumePlaying$|"
     r"isThereADifference$|noSay$|crossOut[A-Z]|nonStoryVictory$|"
     r"record[A-Z]|fiveOrMoreProgress$|task\d+[A-Z]|failedEffect$|"
+    r"search[A-Z]|downgrade[A-Z]|upgrade[A-Z]|advancedPenalty$|resourcesChoice$|"
+    r"skidsMaySwap$|nothingToHide$|evidence$|innocent$|coveredUp$|drivenInsane$|loseTheCampaign$|guestChoice$|"
     r"if[A-Z]|xp\d+$)"
 )
 # Speaker tags and bare names, not narration.
@@ -69,9 +76,10 @@ def locale_files(locale_root: Path, campaign: str) -> list[tuple[str, Path]]:
     if not root.exists():
         # Check homebrew campaigns (e.g. frontend/homebrew/dark-matter/locales/en)
         kebab = re.sub(r"(?<!^)(?=[A-Z])", "-", campaign).lower()
-        homebrew_root = locale_root.parents[2] / "homebrew" / kebab / "locales" / "en"
+        lang = locale_root.name
+        homebrew_root = locale_root.parents[2] / "homebrew" / kebab / "locales" / lang
         if not homebrew_root.exists():
-            homebrew_root = locale_root.parents[2] / "homebrew" / campaign / "locales" / "en"
+            homebrew_root = locale_root.parents[2] / "homebrew" / campaign / "locales" / lang
         if homebrew_root.exists():
             return [(campaign, f) for f in sorted(homebrew_root.glob("*.json"))]
         return []
@@ -96,7 +104,7 @@ def flatten(obj: dict, prefix: str) -> dict[str, str]:
 
 def is_story_key(key: str) -> bool:
     segments = key.split(".")
-    if any(s.lower() in SKIP_SEGMENTS for s in segments):
+    if any(s.lower() in SKIP_SEGMENTS for s in segments[1:]):
         return False
     if any(CHOICE_SEGMENT.match(s) for s in segments):
         return False
