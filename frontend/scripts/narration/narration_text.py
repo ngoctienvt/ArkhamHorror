@@ -20,7 +20,7 @@ STORY_SEGMENT = re.compile(
 # ...and none of its segments names rules or UI text.
 SKIP_SEGMENTS = {
     "setup", "label", "labels", "tokens", "xp", "campaignlog", "title", "heading", "headings",
-    "standalone", "slay", "checkenemies",
+    "standalone", "slay", "checkenemies", "expeditionleader",
 }
 
 # Paragraphs that are bookkeeping instructions even when written as prose.
