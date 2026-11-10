@@ -19,6 +19,7 @@ import json
 import subprocess
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 from narration_text import Translations, collect_story
@@ -139,7 +140,14 @@ async def render(text: str, lang: str, out: Path, engine: str = "edge", voice: s
             parts.append(part)
         staged = out.with_suffix(".part")
         master(parts, staged)
-        staged.replace(out)
+        for attempt in range(10):
+            try:
+                staged.replace(out)
+                break
+            except OSError:
+                if attempt == 9:
+                    raise
+                time.sleep(0.3)
     if engine == "edge":
         await asyncio.sleep(PAUSE_BETWEEN_KEYS)
 
