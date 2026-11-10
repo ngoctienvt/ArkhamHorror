@@ -223,10 +223,28 @@ const referenceCounters = computed(() => [
  * showing (the image path ends in the card code, with a trailing `b` for the back / hard side). The
  * Vietnamese card file still carries English for these cards, so a bundled translation wins there. */
 type TokenLine = { key: string; token: string; html: string }
-const referenceInfo = computed<{ heading: string; lines: TokenLine[] } | null>(() => {
+const parsedReference = computed(() => {
+  const hb = /homebrew\/([^/]+)\/cards\/([^/.]+?)(b?)\.[a-z0-9]+(?:\?.*)?$/i.exec(props.referenceImage ?? '')
+  if (hb) {
+    return { code: `:${hb[1]}:${hb[2]}`, side: hb[3] }
+  }
   const m = /(\d{5})(b?)\.[a-z0-9]+(?:\?.*)?$/i.exec(props.referenceImage ?? '')
-  if (!m) return null
-  const [, code, side] = m
+  if (m) {
+    return { code: m[1], side: m[2] }
+  }
+  return null
+})
+
+const referenceCardCode = computed(() => {
+  const parsed = parsedReference.value
+  if (parsed) return `${parsed.code}${parsed.side}`
+  return props.scenario?.reference
+})
+
+const referenceInfo = computed<{ heading: string; lines: TokenLine[] } | null>(() => {
+  const parsed = parsedReference.value
+  if (!parsed) return null
+  const { code, side } = parsed
   const card = cardInfo(code)
   const key = side === 'b' ? 'back_text' : 'text'
   const own = card?.[key] ?? ''
@@ -239,6 +257,10 @@ const referenceInfo = computed<{ heading: string; lines: TokenLine[] } | null>((
     const tok = /^\[(skull|cultist|tablet|elder_thing|auto_fail|elder_sign)\]:?\s*(.*)$/.exec(line)
     if (tok) lines.push({ key: `${code}-${lines.length}`, token: tok[1], html: replaceText(tok[2]) })
     else if (!lines.length) heading = plain(line)
+  }
+  if (locale.value === 'vi') {
+    if (/^Easy\s*\/\s*Standard/i.test(heading)) heading = 'Dễ / Tiêu chuẩn'
+    else if (/^Hard\s*\/\s*Expert/i.test(heading)) heading = 'Khó / Chuyên gia'
   }
   return { heading, lines }
 })
@@ -333,7 +355,7 @@ import GameIcon from '@/arkham/components/GameIcon.vue'
     </article>
     <article v-if="referenceImage" class="mission reference">
       <div class="body">
-        <img class="thumb thumb--portrait" :src="referenceImage" :data-image="referenceImage" :alt="t('locationMap.reference')" loading="lazy" />
+        <img class="thumb thumb--portrait" :src="referenceImage" :data-image="referenceImage" :data-card-code="referenceCardCode" :alt="t('locationMap.reference')" loading="lazy" />
         <div class="head">
           <span class="eyebrow">{{ t('locationMap.reference') }}<template v-if="referenceInfo?.heading"> · {{ referenceInfo.heading }}</template></span>
           <div class="head-aside">

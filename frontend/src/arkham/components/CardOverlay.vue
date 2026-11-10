@@ -1187,6 +1187,7 @@ watchEffect(() => {
   dbCardName.value = dbCardTypeName.value = dbCardFactionName.value = dbCardFactionCode.value = dbCardTraits.value = dbCardText.value = dbCardCustomizationText.value = dbCardFlavor.value = ''
   void store.dbCards.length
   void store.dbCardsIndex
+  void store.homebrewIndex.size
   const src = card.value
   if (!src) return
 
@@ -1195,11 +1196,17 @@ watchEffect(() => {
   let rawCode: string | null = directCode
   let tabooSuffix: string | undefined
 
-  const m = src.match(/\/cards\/c?([0-9a-zA-Z_-]+?)(?:_([a-zA-Z0-9]+))?\.(?:avif|jpg|jpeg|png|webp)(?:\?.*)?$/i)
-    || src.match(/([0-9a-zA-Z_-]+?)(?:_([a-zA-Z0-9]+))?\.(?:avif|jpg|jpeg|png|webp)(?:\?.*)?$/i)
-  if (m) {
-    if (!rawCode) rawCode = m[1]
-    tabooSuffix = m[2] ? `_${m[2]}` : undefined
+  const hb = src.match(/\/homebrew\/([^/]+)\/cards\/c?([0-9a-zA-Z_-]+?)(?:_([a-zA-Z0-9]+))?\.(?:avif|jpg|jpeg|png|webp)(?:\?.*)?$/i)
+  if (hb) {
+    if (!rawCode) rawCode = `:${hb[1]}:${hb[2]}`
+    tabooSuffix = hb[3] ? `_${hb[3]}` : undefined
+  } else {
+    const m = src.match(/\/cards\/c?([0-9a-zA-Z_-]+?)(?:_([a-zA-Z0-9]+))?\.(?:avif|jpg|jpeg|png|webp)(?:\?.*)?$/i)
+      || src.match(/([0-9a-zA-Z_-]+?)(?:_([a-zA-Z0-9]+))?\.(?:avif|jpg|jpeg|png|webp)(?:\?.*)?$/i)
+    if (m) {
+      if (!rawCode) rawCode = m[1]
+      tabooSuffix = m[2] ? `_${m[2]}` : undefined
+    }
   }
 
   if (!rawCode) return

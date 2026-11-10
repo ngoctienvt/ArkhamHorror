@@ -80,7 +80,7 @@
       "healHorror": "Hồi 1 kinh hoàng cho mỗi điều tra viên tại địa điểm của bạn"
     },
     "contamination": {
-      "discardAlly": "Bỏ (discard) asset [[Ally]] được đính kèm",
+      "discardAlly": "Loại bỏ asset [[Ally]] được đính kèm",
       "placeDoom": "Đặt 1 doom lên asset [[Ally]] được đính kèm"
     },
     "delights": {
@@ -92,8 +92,8 @@
       "removeElderSign": "Loại bỏ một token Elder Sign khỏi túi chaos"
     },
     "desync": {
-      "traumaAndExile": "Chịu 1 sang chấn tinh thần và thêm 1 vạch đếm bên cạnh “Ký ức” của bạn, sau đó lưu đày (exile) lá bài này",
-      "returnToDeck": "Nếu deck của bạn có từ 5 lá bài trở lên, xào lá bài này trở lại vào deck của bạn. Nếu không, bỏ (discard) nó"
+      "traumaAndExile": "Chịu 1 sang chấn tinh thần và thêm 1 vạch đếm bên cạnh “Ký ức” của bạn, sau đó exile lá bài này",
+      "returnToDeck": "Nếu deck của bạn có từ 5 lá bài trở lên, xào lá bài này trở lại vào deck của bạn. Nếu không, loại bỏ nó"
     },
     "evaSuit": {
       "doNotPutIntoPlay": "Không đưa EVA Suit vào chơi"
@@ -120,14 +120,14 @@
       "doNotPutIntoPlay": "Không đưa Medical Foam vào chơi"
     },
     "micrometeoroid": {
-      "discardEachEvent": "Bỏ (discard) từng lá bài event trên tay bạn"
+      "discardEachEvent": "Loại bỏ từng lá bài event trên tay bạn"
     },
     "mindMachineInterface": {
       "doNotPutIntoPlay": "Không đưa Mind-Machine Interface vào chơi"
     },
     "paleBlueDot": {
       "takeHorror": "Chịu 1 kinh hoàng",
-      "placeDoom": "Thêm 1 doom vào agenda hiện tại và bỏ (discard) lá bài này"
+      "placeDoom": "Thêm 1 doom vào agenda hiện tại và loại bỏ lá bài này"
     },
     "paradoxicalThreat": {
       "placeFacedown": "Đặt 3 lá bài trên cùng của chồng bài encounter úp vào threat area của bạn",

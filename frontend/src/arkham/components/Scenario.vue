@@ -2891,6 +2891,8 @@ async function addChaosToken(face: any){
                 <img
                   class="card"
                   :src="scenarioGuide"
+                  :data-card-code="scenario.reference"
+                  :data-image-id="scenario.reference"
                   :data-spent-keys="JSON.stringify(spentKeys)"
                   :data-depth="currentDepth"
                 />

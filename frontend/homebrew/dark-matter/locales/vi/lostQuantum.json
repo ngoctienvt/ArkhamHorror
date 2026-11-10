@@ -48,11 +48,11 @@
     "specialRules": [
       {
         "title": "Các lá bài encounter úp",
-        "body": "Trong màn chơi này, bạn có thể được hướng dẫn đặt các lá bài encounter úp xuống vào threat area của bạn. Những lá bài này được coi là ngoài màn chơi (out of play), nhưng có thể được tham chiếu bởi các lá bài khác.\nKhi bạn phải rút bài từ chồng bài encounter, nếu cả chồng bài encounter và chồng bài bỏ đều trống, thay vào đó hãy rút một lá bài từ các lá bài encounter đang úp trong threat area của bạn. Nếu không có lá nào trong threat area của bạn, bạn bị đánh bại."
+        "body": "Trong màn chơi này, bạn có thể được hướng dẫn đặt các lá bài encounter úp xuống vào threat area của bạn. Những lá bài này được coi là ngoài màn chơi, nhưng có thể được tham chiếu bởi các lá bài khác.\nKhi bạn phải rút bài từ chồng bài encounter, nếu cả chồng bài encounter và chồng bài bỏ đều trống, thay vào đó hãy rút một lá bài từ các lá bài encounter đang úp trong threat area của bạn. Nếu không có lá nào trong threat area của bạn, bạn bị đánh bại."
       },
       {
         "title": "Manh mối & Địa điểm trong Cõi Lượng Tử (Quantum Realm)",
-        "body": "Trong màn chơi này, các địa điểm có thể rời khỏi khu vực chơi và quay lại khu vực chơi vào lúc khác. Khi một địa điểm rời khỏi khu vực chơi, bỏ (discard) tất cả các lá bài đính kèm và manh mối trên đó. Khi một địa điểm đi vào khu vực chơi, bất kể nó đã từng ở trong khu vực chơi trước đó hay chưa, hãy coi như bạn vừa khám phá (reveal) nó lần đầu tiên. Do đó, một số lượng manh mối bằng với giá trị manh mối của địa điểm đó sẽ được đặt lên địa điểm đó mỗi khi nó được reveal (từ token pool)."
+        "body": "Trong màn chơi này, các địa điểm có thể rời khỏi khu vực chơi và quay lại khu vực chơi vào lúc khác. Khi một địa điểm rời khỏi khu vực chơi, loại bỏ tất cả các lá bài đính kèm và manh mối trên đó. Khi một địa điểm đi vào khu vực chơi, bất kể nó đã từng ở trong khu vực chơi trước đó hay chưa, hãy coi như bạn vừa khám phá nó lần đầu tiên. Do đó, một số lượng manh mối bằng với giá trị manh mối của địa điểm đó sẽ được đặt lên địa điểm đó mỗi khi nó được reveal (từ token pool)."
       }
     ]
   }
