@@ -81,18 +81,18 @@ Experience Arkham Horror LCG with custom-tailored, atmospheric overview maps:
 * Relics of the Past
 * Enthralling Encore
 
-## 🌐 Hướng dẫn Tự chơi & Host Online cùng bạn bè (Radmin VPN / ZeroTier / LAN)
+## 🌐 Play Solo or Host Online with Friends (Radmin VPN / ZeroTier / LAN)
 
-> **Dành cho người chơi muốn trải nghiệm ngay các tính năng độc quyền (Scene Maps 2.5D, Bản địa hóa Tiếng Việt, Lồng tiếng AI) mà không cần cài đặt phức tạp (không cần Docker, không cần build backend Haskell).**
+> **Quick start for players who want to experience the latest features (Interactive 2.5D Scene Maps, Vietnamese localization, AI narration) without setting up Docker or compiling the Haskell backend.**
 
-Dự án hỗ trợ chạy giao diện trực tiếp trên máy của bạn và kết nối mượt mà vào máy chủ công khai (`https://arkhamhorror.app`). Bạn và bạn bè có thể tạo tài khoản, lập phòng chơi chung, thấy được toàn bộ các bối cảnh bản đồ độc quyền và bản dịch mới nhất.
+This project allows serving the frontend locally while seamlessly connecting to the public game server (`https://arkhamhorror.app`). You and your friends can create accounts, host games, import decks, and experience all custom scene maps and localized content together.
 
 ---
 
-### 1. Chuẩn bị (Chỉ cần làm lần đầu)
-1. Cài đặt **[Node.js](https://nodejs.org/)** (khuyên dùng bản LTS v20 hoặc v22).
-2. Tải hoặc Clone repository này về máy.
-3. Mở terminal tại thư mục `frontend` và cài đặt các thư viện:
+### 1. Prerequisites (First Time Only)
+1. Install **[Node.js](https://nodejs.org/)** (v20 or v22 LTS recommended).
+2. Clone or download this repository.
+3. Open a terminal in the `frontend` folder and install dependencies:
    ```bash
    cd frontend
    npm install
@@ -100,52 +100,52 @@ Dự án hỗ trợ chạy giao diện trực tiếp trên máy của bạn và 
 
 ---
 
-### 2. Cách 1: Tự chơi một mình (Solo / Solitaire)
-Nếu chỉ muốn tự chơi hoặc khám phá trên máy tính của bạn:
-1. Mở Terminal / PowerShell trong thư mục `frontend`:
+### 2. Option A: Play Solo / Solitaire (Localhost)
+If you only want to play or explore on your own machine:
+1. Open a terminal in `frontend` and start the remote-connected dev server:
    ```bash
    npx vite --config vite.remote.config.mjs
    ```
-2. Mở trình duyệt web và truy cập: **`http://localhost:8080`** (hoặc port hiển thị trên terminal).
+2. Open your browser and navigate to: **`http://localhost:8080`**
 
 ---
 
-### 3. Cách 2: Mở Server Host Online chơi cùng bạn bè qua Radmin VPN / ZeroTier
+### 3. Option B: Host Online for Friends via Virtual LAN (Radmin VPN / ZeroTier)
 
-Bạn có thể chia sẻ máy chủ cho bạn bè cùng vào phòng chơi qua mạng LAN ảo (Radmin VPN hoặc ZeroTier) rất đơn giản:
+You can easily share your locally running instance with friends over a virtual LAN (Radmin VPN, ZeroTier, or local home network):
 
-#### Bước 3.1: Kết nối mạng LAN ảo (Host & Bạn bè)
-* Cả bạn (máy Host) và bạn bè đều cài đặt **[Radmin VPN](https://www.radmin-vpn.com/)** (hoặc **[ZeroTier](https://www.zerotier.com/)**).
-* Máy Host tạo một Mạng/Phòng (ví dụ: `Arkham-VN`), đặt mật khẩu và mời bạn bè tham gia vào cùng mạng đó.
-* Ghi lại địa chỉ IP ảo của máy Host trên Radmin/ZeroTier (ví dụ: `26.90.79.159`).
+#### Step 3.1: Connect to Virtual LAN (Host & Friends)
+* Both the host and friends install **[Radmin VPN](https://www.radmin-vpn.com/)** or **[ZeroTier](https://www.zerotier.com/)**.
+* The host creates a network/room (e.g. `Arkham-Party`) and friends join it.
+* Note down the host's virtual IPv4 address (e.g., `26.90.79.159`).
 
-#### Bước 3.2: Khởi động Server trên máy Host
-Có 2 cách khởi chạy trong thư mục `frontend\scripts`:
+#### Step 3.2: Start the Server on the Host Machine
+Under `frontend/scripts`, choose one of the launcher scripts:
 
-* **⚡ Chế độ Live Dev (Khuyên dùng - Khởi động ngay tức thì, cập nhật trực tiếp)**:
-  * Vào thư mục `frontend\scripts` và nhấp đúp vào: **`share-radmin-live.cmd`**
-  * *(Hoặc gõ lệnh trong terminal thư mục `frontend`: `npx vite --config vite.remote.config.mjs --host 0.0.0.0 --port 8090`)*
-  * *Ưu điểm*: Khởi động chỉ mất 1-2 giây, không cần build. Bất kỳ thay đổi code hay cập nhật dữ liệu thẻ bài sẽ tự động cập nhật ngay lập tức cho cả bạn và bạn bè mà không cần khởi động lại.
-  
-* **📦 Chế độ Production Build**:
-  * Vào thư mục `frontend\scripts` và nhấp đúp vào: **`share-radmin.cmd`**
-  * Script sẽ tự động đóng gói ứng dụng và host ổn định qua port `8090`.
+* **⚡ Live Dev Mode (Recommended — starts instantly, live updates)**:
+  * Double-click **`frontend/scripts/share-radmin-live.cmd`**
+  * *(Or run in terminal: `npx vite --config vite.remote.config.mjs --host 0.0.0.0 --port 8090`)*
+  * *Advantage*: Starts in 1–2 seconds with zero build wait. Any modifications to code or card data reload live without restarting the server.
 
-#### Bước 3.3: Vào phòng chơi
-* **Máy Host (bạn)**: Mở trình duyệt vào `http://localhost:8090` (hoặc `http://<IP_Radmin_Của_Bạn>:8090`).
-* **Bạn bè**: Mở trình duyệt và truy cập vào địa chỉ IP Radmin của máy Host:
-  👉 **`http://<IP_Radmin_Host>:8090`** *(ví dụ: `http://26.90.79.159:8090`)*
-* Tạo tài khoản (hoặc đăng nhập tài khoản ArkhamDB/ArkhamHorror), tạo bàn chơi và gửi mã phòng / mời bạn bè cùng vào chiến dịch!
+* **📦 Production Build Mode**:
+  * Double-click **`frontend/scripts/share-radmin.cmd`**
+  * Automatically builds the static bundle and serves it via Vite preview on port `8090`.
+
+#### Step 3.3: Join & Play
+* **Host**: Open your browser at `http://localhost:8090` (or `http://<Your_VPN_IP>:8090`).
+* **Friends**: Open their browser and go to the host's VPN IP:
+  👉 **`http://<Host_VPN_IP>:8090`** *(e.g. `http://26.90.79.159:8090`)*
+* Sign up or log in (ArkhamDB / ArkhamHorror accounts), create a campaign room, invite friends, and start playing!
 
 ---
 
-#### 💡 Mẹo xử lý sự cố (Troubleshooting):
-* **Bạn bè không load được trang**: Do Windows Firewall chặn kết nối bên ngoài vào port 8090. Trên máy Host, mở PowerShell bằng quyền Admin (**Run as Administrator**) và chạy lệnh sau để cho phép:
+#### 💡 Troubleshooting:
+* **Friends cannot connect / page does not load**: Windows Firewall might be blocking inbound connections on port 8090. On the host machine, open PowerShell as Administrator (**Run as Administrator**) and run:
   ```powershell
   New-NetFirewallRule -DisplayName "Arkham Server 8090" -Direction Inbound -Protocol TCP -LocalPort 8090 -Action Allow
   ```
-* **Muốn đổi cổng (Port)**:
-  Bạn có thể truyền thêm tham số `-Port` khi chạy qua PowerShell:
+* **Change Port**:
+  Pass the `-Port` parameter if you prefer a different port:
   ```powershell
   powershell -ExecutionPolicy Bypass -File frontend\scripts\share-radmin.ps1 dev -Port 8080
   ```
