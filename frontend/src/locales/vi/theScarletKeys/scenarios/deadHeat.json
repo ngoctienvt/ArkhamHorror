@@ -20,9 +20,9 @@
   "setup": {
     "beginPlay": "Mỗi điều tra viên bắt đầu chơi tại Marrakesh Railway Station.",
     "setOutOfPlay": "Đặt các lá bài sau sang một bên, out of play: kẻ địch Amaranth hai mặt, kẻ địch Razin Farhi, kẻ địch Khalid, cả hai bản sao của kẻ địch Ancient Raider, chìa khóa The Last Blossom, và lá bài story “Save the Civilians / Aftermath” hai mặt.",
+    "civilians": "Đối với mỗi địa điểm đang trong trò chơi, đặt số resource lên đó bằng số lượng điều tra viên cộng thêm một, dưới dạng civilians (*xem “Civilians,” bên dưới*). Sau đó, kiểm tra Nhật ký Chiến dịch:",
     "gatherSets": "Tập hợp tất cả các lá bài từ các bộ bài encounter sau: *Dead Heat*, *Scarlet Sorcery*, *Spreading Corruption*, *Ghouls*, và *Striking Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/dead-heat.png' /><img src='{setImgPath}/scarlet-sorcery.png' /><img src='{setImgPath}/spreading-corruption.png' /><img src='{setImgPath}/ghouls.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
     "placeLocations": "Đặt tất cả 5 địa điểm _Marrakesh_ vào chơi, chỉ sử dụng các phiên bản không phải _Abandoned_ của chúng. Để riêng phiên bản _Abandoned_ của mỗi địa điểm.",
-    "civilians": "Đối với mỗi địa điểm đang trong trò chơi, đặt số resource lên đó bằng số lượng điều tra viên cộng thêm một, dưới dạng civilians (*xem “Civilians,” bên dưới*). Sau đó, kiểm tra Nhật ký Chiến dịch:",
     "tenOrFewerTime": "Nếu có từ 10 _time_ trở xuống đã trôi qua, không có thay đổi nào được thực hiện.",
     "elevenToSeventeenTime": "Nếu 11–17 _time_ đã trôi qua, chọn 1 {'{'}perPlayer{'}'} civilian đồng đều nhất có thể giữa tất cả các địa điểm đang trong trò chơi. Những civilian đó bị slain.",
     "eighteentoTwentyFourTime": "Nếu 18–24 _time_ đã trôi qua, chọn 2 {'{'}perPlayer{'}'} civilian đồng đều nhất có thể giữa tất cả các địa điểm đang trong trò chơi. Những civilian đó bị slain.",

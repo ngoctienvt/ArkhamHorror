@@ -1001,9 +1001,14 @@ runInvestigatorMessage msg a@InvestigatorAttrs {..} = runQueueT $ case msg of
                 else Nothing
         _ -> Nothing
 
+    -- FAQ 2.25: a weakness and/or encounter card in hand resolves before a Dilemma, so
+    -- those are offered as their own ask first. Within each group the order is still the
+    -- player's choice.
+    let (dilemmas, others) = partition (\(card, _) -> Dilemma `member` toTraits card) choices
     when (notNull choices) do
       player <- getPlayer iid
-      push $ chooseOrRunOneAtATime player [targetLabel (toCardId card) [msg'] | (card, msg') <- choices]
+      let askFor cs = chooseOrRunOneAtATime player [targetLabel (toCardId card) [msg'] | (card, msg') <- cs]
+      pushAll $ [askFor others | notNull others] <> [askFor dilemmas | notNull dilemmas]
     pure a
   ShuffleDeck (Deck.InvestigatorDeck iid) | iid == investigatorId -> handleShuffleDeck a iid
   ShuffleDiscardBackIn iid | iid == investigatorId -> handleShuffleDiscardBackIn a iid
@@ -2089,6 +2094,8 @@ runInvestigatorMessage msg a@InvestigatorAttrs {..} = runQueueT $ case msg of
   InvestigatorKilled source iid | iid == investigatorId -> handleInvestigatorKilled a source iid
   MoveAllTo source lid | not (a ^. defeatedL || a ^. resignedL) -> handleMoveAllTo a source lid
   MoveToward target locationMatcher | isTarget a target -> handleMoveToward a target locationMatcher
+  ForcedMoveToward target locationMatcher
+    | isTarget a target -> handleForcedMoveToward a target locationMatcher
   MoveUntil lid target | isTarget a target -> handleMoveUntil a lid target
   MoveTo movement | isTarget a (moveTarget movement) -> handleMoveTo a movement
   SetMovement iid movement | iid == investigatorId -> handleSetMovement a iid movement

@@ -23,9 +23,9 @@
     "beginPlay": "Mỗi điều tra viên bắt đầu chơi tại Rainy London Streets.",
     "remainingLocations": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
     "setOutOfPlay": "Để riêng kẻ địch The Red-Gloved Man và key The Eye of Ravens ra ngoài khu vực chơi.",
+    "miniCards": "Tập hợp từng decoy mini-card và các mini-card sau: The Red-Gloved Man và Coterie Agents (A, B và C). Để riêng chúng ra ngoài khu vực chơi.",
     "gatherSets": "Tập hợp tất cả các lá bài từ các bộ bài encounter sau: *Riddles and Rain*, *Crimson Conspiracy*, *Dark Veiling*, *Outsiders*, *Shadow of a Doubt*, *Strange Happenings*, *Chilling Cold*, *Locked Doors*, và *The Midnight Masks*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/riddles-and-rain.png' /><img src='{setImgPath}/crimson-conspiracy.png' /><img src='{setImgPath}/dark-veiling.png' /><img src='{setImgPath}/outsiders.png' /><img src='{setImgPath}/shadow-of-a-doubt.png' /><img src='{setImgPath}/strange-happenings.png' /><img src='{setImgPath}/chilling-cold.png' /><img src='{setImgPath}/locked-doors.png' /><img src='{setImgPath}/midnight-masks.png' /></section> Khi tập hợp bộ bài encounter *The Midnight Masks*, chỉ lấy năm lá bài treachery (2x False Lead và 3x Hunting Shadow). Không lấy các lá bài vị trí, act, agenda và scenario reference từ bộ bài đó.",
-    "setSetsOutOfPlay": "Để riêng các bộ bài encounter *Crimson Conspiracy* và *Outsiders* ra ngoài khu vực chơi.",
-    "miniCards": "Tập hợp từng decoy mini-card và các mini-card sau: The Red-Gloved Man và Coterie Agents (A, B và C). Để riêng chúng ra ngoài khu vực chơi."
+    "setSetsOutOfPlay": "Để riêng các bộ bài encounter *Crimson Conspiracy* và *Outsiders* ra ngoài khu vực chơi."
   },
   "resolutions": {
     "resolution1": {
