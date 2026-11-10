@@ -40,7 +40,7 @@ INSTRUCTION_START = re.compile(
 TITLE_LINE_MAX_WORDS = 4
 # Rules text that can trail a story paragraph in the same <p>.
 RULES_ANYWHERE = re.compile(
-    r"chaos bag|campaign log|'\}|encounter set|\bproceed to (resolution|intro|interlude|epilogue)\b",
+    r"chaos bag|campaign log|'\}|encounter set|\bproceed to (resolution|intro|interlude|epilogue)\b|\binvestigators must decide\b",
     re.I,
 )
 # Choice labels (the option the player taps), interlude setup steps and
