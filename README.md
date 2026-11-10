@@ -1,6 +1,6 @@
 # Arkham Horror LCG
 
-![Screenshot](./docs/img/screenshot.png)
+![Scene Map Screenshot](./docs/img/scene-map.jpg)
 
 The goal of this project is to implement a web version of Arkham Horror with as
 many of the rules implemented as possible.
@@ -12,10 +12,23 @@ please file a bug.
 
 ## Features
 
+* **Interactive Scene Maps**: Immersive 2.5D architectural cutaway and isometric overview maps with investigator standees, real-time location nodes, and one-click actions. Toggle seamlessly between Scene Map and classic Card Board view. (See [Scene Maps Guide](./docs/scene-maps.md))
 * Multiplayer up to 4 players
 * Multiplayer solitaire
 * Tarot Readings
 * Deck import from ArkhamDB and arkham.build
+
+### 🗺️ Interactive Scene Maps (Bản đồ bối cảnh trực quan)
+
+![Interactive Scene Map](./docs/img/scene-map.jpg)
+
+Experience Arkham Horror LCG with custom-tailored, atmospheric overview maps:
+* **Immersive Architectural Perspectives**: 2.5D cross-sections (such as the *Historical Society* manor in *Echoes of the Past*, Clover Club in *The House Always Wins*, Hemlock House) and high-angle isometric landscapes.
+* **Live Game State**: Dynamic investigator standees with action-turn glow, real-time clues, shroud values, doom markers, and visual connection paths.
+* **Direct Interaction**: Move, investigate, and trigger location abilities directly from interactive location plates.
+* **Dual-View Freedom**: Switch instantly between the rich **Scene Map** and traditional **Card Board** at any time.
+
+👉 *Read the [Interactive Scene Maps Guide](./docs/scene-maps.md) for full details, touch controls, and supported scenarios.*
 
 ## Finished Content
 
