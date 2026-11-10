@@ -32,6 +32,7 @@ INSTRUCTION_START = re.compile(
     r"add (\d|one|two) |search each investigator|any one investigator|"
     r"the investigators must|check the |if .{0,120}\b(proceed|skip) to\b|"
     r"read the (rules|relevant|following)|the lead investigator must|if neither|"
+    r"cross (off|out)|if there are any other non-story cards|"
     r"advance the (act|agenda)|in order to set up|spawn the |you are now ready to proceed|"
     r"proceed as normal|[\w ’'.-]{1,40}\b(votes|abstains|remains eerily silent)\b)",
     re.I,
@@ -48,7 +49,9 @@ RULES_ANYWHERE = re.compile(
 # bonus-experience rules, not narration.
 CHOICE_SEGMENT = re.compile(
     r"^(proceedTo|done[A-Z]|sentencedTo|remove[A-Z]|put[A-Z]|move[A-Z]|flip[A-Z]|"
-    r"advance[A-Z]|spawn[A-Z]|readyToProceed$|finalActAndAgenda$|resumePlaying$|if[A-Z]|xp\d+$)"
+    r"advance[A-Z]|spawn[A-Z]|readyToProceed$|finalActAndAgenda$|resumePlaying$|"
+    r"isThereADifference$|noSay$|crossOut[A-Z]|nonStoryVictory$|"
+    r"if[A-Z]|xp\d+$)"
 )
 # Speaker tags and bare names, not narration.
 SPEAKER_NAME = re.compile(r"^Dr\. [A-Z]\w*( [A-Z]\w*)+$")
