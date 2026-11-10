@@ -4,13 +4,14 @@
 # server (see vite.remote.config.mjs), so friends use accounts on arkhamhorror.app.
 #
 # Usage (from anywhere):
+#   powershell -ExecutionPolicy Bypass -File scripts\share-radmin.ps1 dev       # live reload (no build, instant updates)
 #   powershell -ExecutionPolicy Bypass -File scripts\share-radmin.ps1 rebuild   # rebuild (default), then serve
 #   powershell -ExecutionPolicy Bypass -File scripts\share-radmin.ps1 start     # rebuild, then serve
 #   powershell -ExecutionPolicy Bypass -File scripts\share-radmin.ps1 serve     # serve existing build without rebuilding
 #   powershell -ExecutionPolicy Bypass -File scripts\share-radmin.ps1 stop
 #   powershell -ExecutionPolicy Bypass -File scripts\share-radmin.ps1 status
 param(
-  [ValidateSet('rebuild', 'start', 'serve', 'stop', 'status')][string]$Action = 'rebuild',
+  [ValidateSet('dev', 'live', 'rebuild', 'start', 'serve', 'stop', 'status')][string]$Action = 'rebuild',
   [int]$Port = 8090
 )
 
@@ -62,6 +63,16 @@ $rule = Get-NetFirewallRule -DisplayName "Arkham Radmin $Port" -ErrorAction Sile
 if (-not $rule) {
   Write-Host "NOTE: no firewall rule for port $Port. If friends cannot connect, run as admin:"
   Write-Host "  New-NetFirewallRule -DisplayName 'Arkham Radmin $Port' -Direction Inbound -Protocol TCP -LocalPort $Port -InterfaceAlias 'Radmin VPN' -Action Allow"
+}
+
+if ($Action -in @('dev', 'live')) {
+  Write-Host ""
+  Write-Host "Send friends this link: http://${ip}:$Port" -ForegroundColor Green
+  Write-Host "Dev Mode (Live): edits update immediately without rebuilding!" -ForegroundColor Cyan
+  Write-Host 'Press Ctrl+C (or close this window) to stop sharing.'
+  Write-Host ""
+  npx vite --config vite.remote.config.mjs --host 0.0.0.0 --port $Port --strictPort
+  return
 }
 
 Write-Host ""
