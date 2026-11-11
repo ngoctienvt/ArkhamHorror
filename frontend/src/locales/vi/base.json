@@ -421,7 +421,8 @@
     "retry": "Try again",
     "title": "Standalone Settings",
     "noSettings": "There are currently no standalone settings available for this scenario.",
-    "begin": "Begin"
+    "begin": "Đóng",
+    "open": "Tiểu sử nhân vật"
   },
   "campaignSettings": {
     "title": "Campaign Settings"
@@ -545,6 +546,18 @@
     "debug": "Debug"
   },
   "locationMap": {
+    "concealed": "{count} lá bị che giấu",
+    "concealedCard": "Lá bị che giấu",
+    "chooseConcealed": "Chọn lá bị che giấu tại {where}",
+    "offMap": {
+      "shadows": "Trong bóng tối",
+      "pursuit": "Truy đuổi",
+      "void": "Hư Không (The Void)",
+      "depths": "Vực Sâu (The Depths)",
+      "global": "Đang trong cuộc · không ở location",
+      "reference": "Cạnh thẻ tham chiếu"
+    },
+    "concealedInShadows": "trong bóng tối",
     "status": {
       "phase": {
         "CampaignPhase": "Chiến dịch",
@@ -565,7 +578,7 @@
           "EnemyAttacks": "{enemy} sắp tấn công {target}",
           "EnemyAttacked": "{enemy} vừa tấn công {target}"
         },
-        "choose": "Chọn {noun} để {action}",
+        "choose": "Chọn {noun} để {verb}",
         "and": " và ",
         "noun": {
           "location": "địa điểm",
@@ -822,18 +835,24 @@
         "constant": "Luôn có hiệu lực"
       }
     },
+    "link": {
+      "twoWay": "Đường đi 2 chiều",
+      "oneWay": "Đường đi 1 chiều (theo hướng mũi tên)",
+      "moveTo": "Di chuyển đến {name}"
+    },
     "legend": {
       "title": "Chú giải",
       "revealed": "Địa điểm đã lật",
       "unrevealed": "Địa điểm chưa lật",
       "here": "Bạn đang ở đây",
       "targetable": "Có thể chọn ngay lúc này",
-      "move": "Liền kề, bạn có thể di chuyển đến đây",
+      "move": "Đường đi: ↔ 2 chiều, → 1 chiều; màu xanh là có thể di chuyển theo đường này",
       "onEnter": "Có chuyện xảy ra khi bạn vào",
       "shroud": "Shroud (màu cam khi bị thay đổi)",
       "clues": "Clue còn lại / gốc in",
       "doom": "Doom trên địa điểm",
-      "details": "Mở chi tiết của địa điểm"
+      "movable": "Có thể di chuyển tới (viền và nút ↔ màu xanh)",
+      "details": "Bấm vào bảng tên để mở chi tiết địa điểm"
     },
     "overview": "Tổng quan",
     "closeUp": "Cận cảnh",
@@ -854,7 +873,22 @@
     "skipTriggers": "Bỏ qua việc kích hoạt",
     "assignDamage": "Gán sát thương vào đây",
     "assignHorror": "Gán kinh hoàng vào đây",
+    "chooseKey": "Chọn chìa khóa {key}",
+    "pendingPicks": "{count} lựa chọn cần làm trong panel",
+    "keyColor": {
+      "BlueKey": "xanh dương", "GreenKey": "xanh lá", "RedKey": "đỏ", "YellowKey": "vàng", "PurpleKey": "tím",
+      "BlackKey": "đen", "WhiteKey": "trắng", "UnrevealedKey": "úp"
+    },
+    "tokenChoice": {
+      "DamageToken": "Gán sát thương", "HorrorToken": "Gán kinh hoàng", "ClueToken": "Manh mối",
+      "ResourceToken": "Tài nguyên", "DoomToken": "Doom"
+    },
+    "targetKind": {
+      "enemy": "Kẻ địch", "location": "Địa điểm", "asset": "Asset", "event": "Event", "skill": "Skill",
+      "treachery": "Treachery", "story": "Cốt truyện", "scarletKey": "Scarlet Key", "investigator": "Điều tra viên", "key": "Chìa khóa"
+    },
     "section": {
+      "targets": "Chọn mục tiêu",
       "basic": "Cơ bản",
       "scenario": "Địa điểm & scenario",
       "enemies": "Kẻ địch",
@@ -882,13 +916,43 @@
     "hand": "Tay · {count}",
     "agenda": "Agenda",
     "doomCount": "Doom {count} / {max}",
-    "clueCount": "Clue {count} / {max}",
+    "clueCount": "Manh mối {count} / {max}",
     "advanceAct": "Advance Act",
     "actionUnavailable": "Hiện chưa dùng được",
-    "doomLeft": "Còn {n} doom nữa là advance",
-    "doomImminent": "Agenda có thể advance ở vòng tới",
-    "doomAdvancing": "Agenda sắp advance!",
-    "reference": "Thẻ tham chiếu",
+    "doomImminent": "Vòng tới advance",
+    "doomAdvancing": "Sắp advance!",
+    "missionAwaitingSetup": "Sẽ được đặt sau khi các điều tra viên chuẩn bị xong",
+    "reference": "Tham chiếu",
+    "doomElsewhere": "+{n} nơi khác",
+    "doomSources": "Doom đến từ",
+    "doomSourcesNone": "Chưa có doom nào",
+    "doomSource": { "agenda": "Agenda", "enemy": "Enemy", "location": "Location", "asset": "Asset", "treachery": "Treachery", "event": "Event", "investigator": "Investigator" },
+    "cluesNeeded": "Thiếu {n}",
+    "clueTotal": "{count} manh mối",
+    "clueHolders": "Manh mối đang có",
+    "clueHoldersNone": "Chưa ai có manh mối",
+    "clueHoldersOther": "Nguồn khác",
+    "deckPanel": {
+      "title": "Chồng bài & set aside",
+      "decks": "Chồng bài",
+      "cardsLeft": "Còn {n} lá",
+      "discard": "Discard",
+      "viewDiscard": "Xem các lá trong discard",
+      "emptyDiscard": "Discard đang trống",
+      "setAside": "Set aside",
+      "viewLarge": "Xem lớn",
+      "noDecks": "Kịch bản này không có chồng bài nào.",
+      "noSetAside": "Không có lá nào được set aside.",
+      "victoryDisplay": "Khu vực trưng bày thành tích",
+      "noVictory": "Chưa có lá nào trong khu vực trưng bày thành tích.",
+      "vengeance": "Vengeance {n}",
+      "openBoard": "Mở bàn bài đầy đủ",
+      "hint": "Phím tắt: K"
+    },
+    "collapseStrip": "Thu gọn thanh nhiệm vụ",
+    "expandStrip": "Mở rộng thanh nhiệm vụ",
+    "showMore": "Xem thêm",
+    "showLess": "Thu gọn",
     "dayCount": "Ngày {count}",
     "timeOfDay": {
       "Day": "Ban ngày",
@@ -2141,6 +2205,15 @@
     "ofWhichUncertain": "{n} stated as “…?”",
     "resolutionN": "Resolution {n}",
     "nPlayerPlus": "{n}+ players"
+  },
+  "investigatorIntro": {
+    "title": "Các điều tra viên",
+    "subtitle": "Chọn một nhân vật để đọc tiểu sử và nghe thuyết minh.",
+    "listen": "Nghe thuyết minh",
+    "stop": "Dừng thuyết minh",
+    "noStory": "Chưa có tiểu sử cho nhân vật này.",
+    "begin": "Đóng",
+    "open": "Tiểu sử nhân vật"
   },
   "toasts": {
     "dismiss": "Dismiss"

@@ -36,7 +36,7 @@ TRANSLATIONS_P4 = {
     # 09015: Darrell Simmons (TSK)
     "09015": {
         "subname": "Nhiếp ảnh gia",
-        "text": "[reaction] Sau khi bạn giải quyết một hiệu ứng của thẻ treachery hoặc kẻ địch tại địa điểm của bạn: Đặt 1 token chứng cứ (evidence) lên Darrell Simmons. (Giới hạn 1 lần mỗi vòng.)\nKhi một điều tra viên tại địa điểm của bạn thực hiện một bài kiểm tra skill: Chi 1 token evidence từ Darrell Simmons để giảm độ khó của bài kiểm tra đó đi 2.\nHiệu ứng [elder_sign]: +1. Đặt 1 token evidence lên Darrell Simmons.",
+        "text": "Bạn bắt đầu trò chơi với Darrell's Kodak trong khu vực chơi.\n[fast] Trong một bài kiểm tra skill tại địa điểm của bạn, chi 1 evidence từ một asset bạn kiểm soát: Giảm độ khó của bài kiểm tra này đi 2. (Giới hạn 1 lần mỗi bài kiểm tra.)\nHiệu ứng [elder_sign]: +1. Đặt 1 evidence lên một asset bạn kiểm soát.",
         "flavor": "\"Sự thật còn đen tối hơn bất kỳ ai trong chúng ta từng biết.\"",
         "back_text": "<b>Cỡ bộ bài</b>: 30.\n<b>Lựa chọn xây dựng bộ bài</b>: Các lá bài Survivor ([survivor]) cấp độ 0-5, các lá bài [[Camera]] và [[Tool]] cấp độ 0-4, các lá bài Neutral cấp độ 0-5.\n<b>Yêu cầu xây dựng bộ bài</b> (không tính vào cỡ bộ bài): Darrell's Kodak, Ruinous Chupacabra, 1 điểm yếu cơ bản ngẫu nhiên.",
         "back_flavor": "Ngay cả khi lớn lên ở Arkham, Darrell luôn nhận thức được rằng những bức ảnh của tờ báo địa phương Arkham Advertiser không chụp lại toàn bộ sự thật. Luôn mang theo chiếc máy ảnh Kodak bên mình, Darrell tìm kiếm những khoảnh khắc chân thực nhất của cuộc sống. Nhưng khi tráng ảnh trong phòng tối, anh bắt đầu nhận thấy những bóng ma ghê rợn, những xúc tu mờ ảo và những bóng hình kỳ dị ẩn hiện trong hậu cảnh của những bức ảnh phong cảnh bình thường. Chiếc máy ảnh của anh không chỉ ghi lại ánh sáng — nó đang chụp lại những bằng chứng xác thực về những thực thể vô hình đang xâm lấn thế giới."
@@ -44,7 +44,7 @@ TRANSLATIONS_P4 = {
     # 09018: Charlie Kane (TSK)
     "09018": {
         "subname": "Chính khách",
-        "text": "Bạn có thêm 2 slot [[Ally]].\nKhi một bài kiểm tra skill bạn đang thực hiện bắt đầu: Bạn có thể exhaust tối đa 2 asset [[Ally]] bạn kiểm soát. Với mỗi asset [[Ally]] bị exhaust theo cách này, hãy commit 1 biểu tượng skill in trên lá bài đó vào bài kiểm tra này.\nHiệu ứng [elder_sign]: +1. Ready 1 asset [[Ally]] bạn kiểm soát.",
+        "text": "Bạn có thêm 3 slot [[Ally]].\n[fast] Trong một bài kiểm tra skill bạn đang thực hiện, exhaust một asset [[Ally]] bạn kiểm soát: Trong bài kiểm tra này, bạn nhận +1 giá trị skill, cộng thêm +1 cho mỗi biểu tượng skill trên asset [[Ally]] đó trùng với loại của bài kiểm tra này.\nHiệu ứng [elder_sign]: +3. Ready một asset [[Ally]] tại địa điểm của bạn.",
         "flavor": "\"Mọi chuyện đều có thể thu xếp được. Vấn đề chỉ là các điều khoản có thể chấp nhận được hay không.\"",
         "back_text": "<b>Cỡ bộ bài</b>: 30.\n<b>Lựa chọn xây dựng bộ bài</b>: Các lá bài [[Ally]] cấp độ 0-5, các lá bài [[Item]] cấp độ 0-2, các lá bài Neutral cấp độ 0-5, các lá bài cấp độ 0-1 từ bất kỳ class nào khác.\n<b>Yêu cầu xây dựng bộ bài</b> (không tính vào cỡ bộ bài): Bonnie Walsh, Burden of Leadership, 1 điểm yếu cơ bản ngẫu nhiên.",
         "back_flavor": "Charlie Kane luôn tin vào sức mạnh của sự đàm phán, thỏa hiệp và các mối quan hệ liên minh. Là một chính khách lão luyện tại tòa thị chính, ông biết rõ mỗi người đều có một mức giá và một điểm yếu để thuyết phục. Nhưng khi những thế lực huyền bí bắt đầu thâm nhập vào các cấp chính quyền cao nhất và đe dọa sự an nguy của toàn bộ thành phố, Charlie nhận ra rằng chính trị thông thường không còn đủ sức cứu vãn tình thế. Bằng sức hút cá nhân và tài lãnh đạo kiệt xuất, ông tập hợp một liên minh gồm những cá nhân tài ba từ mọi tầng lớp để cùng nhau đối đầu với thế lực bóng tối tà ác."
@@ -53,7 +53,7 @@ TRANSLATIONS_P4 = {
     # 10001: Wilson Richards (FHV)
     "10001": {
         "subname": "Thợ Sửa chữa",
-        "text": "Bạn nhận được +1 cho mỗi chỉ số skill trong khi thực hiện một kích hoạt được in trên một asset [[Tool]].\n[reaction] Sau khi bạn kích hoạt một khả năng trên một asset [[Tool]] bạn kiểm soát: Bạn có thể bỏ qua 1 chi phí tài nguyên hoặc gỡ bỏ 1 hư hỏng khỏi asset đó. (Giới hạn 1 lần mỗi vòng.)\nHiệu ứng [elder_sign]: +1. Gỡ bỏ 1 hư hỏng khỏi một asset bạn kiểm soát.",
+        "text": "Giảm 1 chi phí tài nguyên của asset [[Tool]] đầu tiên bạn chơi mỗi vòng.\nBạn nhận +1 giá trị skill trong các bài kiểm tra skill trên asset [[Tool]].\nHiệu ứng [elder_sign]: +0. Bạn có thể đổi một asset [[Tool]] trong khu vực chơi của bạn với một asset [[Tool]] trên tay có chi phí in bằng hoặc thấp hơn.",
         "flavor": None,
         "back_text": "<b>Cỡ bộ bài</b>: 30.\n<b>Lựa chọn xây dựng bộ bài</b>: Các lá bài Guardian ([guardian]) cấp độ 0-5, các lá bài [[Tool]] cấp độ 0-4, các lá bài Neutral cấp độ 0-5.\n<b>Yêu cầu xây dựng bộ bài</b> (không tính vào cỡ bộ bài): Wilson's Toolbox, Faulty Equipment, 1 điểm yếu cơ bản ngẫu nhiên.",
         "back_flavor": "Wilson Richards là người có thể sửa chữa bất cứ thứ gì bị hỏng, từ một chiếc đồng hồ bỏ túi tinh xảo đến một cỗ máy cày nông nghiệp khổng lồ. Ông luôn mang theo hộp đồ nghề nặng trịch bên mình và sẵn sàng giúp đỡ bà con lối xóm tại Thung lũng Hemlock. Nhưng khi những hiện tượng kỳ quái bắt đầu biến dạng máy móc và những âm thanh ghê rợn phát ra từ lòng đất dưới thung lũng, Wilson nhận ra rằng có những vết nứt của thực tại mà cờ-lê và búa không thể hàn gắn được theo cách thông thường. Ông quyết tâm dùng những công cụ quen thuộc của mình để chiến đấu bảo vệ quê hương."
@@ -61,7 +61,7 @@ TRANSLATIONS_P4 = {
     # 10004: Kate Winthrop (FHV)
     "10004": {
         "subname": "Nhà Khoa học",
-        "text": "Bạn bắt đầu trò chơi với Flux Stabilizer lật ngửa mặt (Inactive).\n[action]: Di chuyển 1 manh mối từ Kate Winthrop sang một asset [[Science]] hoặc [[Tool]] bạn kiểm soát mà không có manh mối nào trên đó.\n<b>Forced</b> - Khi một asset bạn kiểm soát có manh mối trên đó rời khỏi màn chơi: Đặt manh mối của nó lên địa điểm của bạn.\nHiệu ứng [elder_sign]: +0. Bạn có thể di chuyển 1 manh mối từ một asset bạn kiểm soát trở lại Kate Winthrop.",
+        "text": "Bạn bắt đầu trò chơi với Flux Stabilizer lật ngửa mặt (Inactive).\n[fast]: Di chuyển 1 manh mối từ Kate Winthrop sang một asset [[Science]] hoặc [[Tool]] bạn kiểm soát mà không có manh mối nào trên đó.\n<b>Forced</b> - Khi một asset bạn kiểm soát có manh mối trên đó rời khỏi màn chơi: Đặt manh mối của nó lên địa điểm của bạn.\nHiệu ứng [elder_sign]: +0. Bạn có thể di chuyển 1 manh mối từ một asset bạn kiểm soát trở lại Kate Winthrop.",
         "flavor": None,
         "back_text": "<b>Cỡ bộ bài</b>: 30.\n<b>Lựa chọn xây dựng bộ bài</b>: Các lá bài Seeker ([seeker]) cấp độ 0-5, các lá bài [[Science]] và [[Tool]] cấp độ 0-4, các lá bài Neutral cấp độ 0-5.\n<b>Yêu cầu xây dựng bộ bài</b> (không tính vào cỡ bộ bài): Flux Stabilizer, Fail-Safe, 1 điểm yếu cơ bản ngẫu nhiên.",
         "back_flavor": "Tiến sĩ Kate Winthrop luôn tin tưởng tuyệt đối vào phương pháp khoa học thực nghiệm và những định luật vật lý. Làm việc tại phòng thí nghiệm sinh học của Đại học Miskatonic dưới sự hướng dẫn của Giáo sư Frank Morgan, cô đã phát triển thành công cỗ máy Ổn định Từ trường (Flux Stabilizer) — một thiết bị có khả năng phát hiện và làm gián đoạn các biến dạng không gian siêu nhiên. Khi những hiện tượng dị thường bùng phát tại Thung lũng Hemlock, Kate dẫn đầu đoàn khảo sát khoa học đến đây để thu thập dữ liệu thực địa. Với tinh thần khoa học bất khuất và các phát minh tân tiến, cô quyết tâm chứng minh rằng không có hiện tượng huyền bí nào nằm ngoài tầm giải thích và kiểm soát của trí tuệ con người."
@@ -69,7 +69,7 @@ TRANSLATIONS_P4 = {
     # 10009: Alessandra Zorzi (FHV)
     "10009": {
         "subname": "Nữ Bá tước",
-        "text": "[reaction] Sau khi bạn evade thành công một kẻ địch: Bạn có thể parley với kẻ địch đó như thể bạn đang engage với nó. (Giới hạn 1 lần mỗi vòng.)\nKẻ địch đang bị exhaust tại địa điểm của bạn không thể tấn công bạn trong giai đoạn Enemy.\nHiệu ứng [elder_sign]: +1. Tự động evade một kẻ địch tại địa điểm của bạn.",
+        "text": "Bạn có thể thực hiện thêm một hành động trong lượt của mình, hành động này chỉ được dùng để parley.\nHiệu ứng [elder_sign]: +2. Nếu thành công, chọn một kẻ địch không phải [[Elite]] tại địa điểm của bạn hoặc tại một địa điểm kết nối đã lật mặt. Tự động evade kẻ địch đó.",
         "flavor": "\"Tôi yêu một bữa tiệc tuyệt vời.\"",
         "back_text": "<b>Cỡ bộ bài</b>: 30.\n<b>Lựa chọn xây dựng bộ bài</b>: Các lá bài Rogue ([rogue]) cấp độ 0-5, các lá bài [[Parley]] cấp độ 0-4, các lá bài Neutral cấp độ 0-5.\n<b>Yêu cầu xây dựng bộ bài</b> (không tính vào cỡ bộ bài): Beguile, Well-Dressed, 1 điểm yếu cơ bản ngẫu nhiên.",
         "back_flavor": "Nữ Bá tước Alessandra Zorzi nổi tiếng khắp các vũ hội thượng lưu châu Âu với vẻ đẹp quý phái, tài ăn nói sắc sảo và sự quyến rũ chết người. Nhưng ít ai biết rằng đằng sau chiếc quạt lông vũ kiêu kỳ là một nhà đàm phán cự phách và một bậc thầy điều khiển tâm lý. Khi nhận được lời mời tham dự lễ hội huyền bí tại Thung lũng Hemlock, Alessandra nhanh chóng nhận ra đây không phải là một bữa tiệc xa hoa tầm thường. Giữa những nụ cười giả tạo và những ánh mắt nham hiểm, cô dùng nghệ thuật thuyết phục và sự tinh tế phi phàm để thao túng cả bạn lẫn thù, biến những kẻ săn mồi nguy hiểm thành những con rối trong bàn cờ của mình."
@@ -85,7 +85,7 @@ TRANSLATIONS_P4 = {
     # 10015: Hank Samson (FHV)
     "10015": {
         "subname": "Gã Làm nông",
-        "text": "Hank Samson không thể bị đánh bại bởi damage hoặc horror thông thường. Thay vào đó, khi anh nhận damage hoặc horror khiến vượt quá giới hạn sức khỏe hoặc tinh thần: Lật lá bài này sang một trong hai mặt thay thế của nó.\nHiệu ứng [elder_sign]: +1. Hồi phục 1 damage hoặc 1 horror từ Hank Samson hoặc một điều tra viên tại địa điểm của bạn.",
+        "text": "Bạn có thể được phân bổ damage/horror gây cho các asset [[Ally]] hoặc các điều tra viên khác tại địa điểm của bạn.\n[reaction] Khi bạn sắp bị đánh bại bởi damage và/hoặc horror: Thay vào đó, hồi phục toàn bộ damage và horror của bạn và đổi lá bài này với phiên bản [[Resolute]] bonded của nó, mặt nào ngửa cũng được.\nHiệu ứng [elder_sign]: +1.",
         "flavor": None,
         "back_text": "<b>Cỡ bộ bài</b>: 30.\n<b>Lựa chọn xây dựng bộ bài</b>: Các lá bài Survivor ([survivor]) cấp độ 0-5, các lá bài Neutral cấp độ 0-5.\n<b>Yêu cầu xây dựng bộ bài</b> (không tính vào cỡ bộ bài): \"Where's Pa?\", 1 điểm yếu cơ bản ngẫu nhiên.",
         "back_flavor": "Hank Samson là một chàng trai làm nông chất phác, khỏe mạnh với trái tim nhân hậu, sinh ra và lớn lên tại Thung lũng Hemlock. Cả cuộc đời anh gắn liền với đồng ruộng, mùa màng và đàn gia súc cùng người cha già kính yêu. Nhưng khi bóng tối ma quái bắt đầu tha hóa cây cỏ và những sinh vật biến dị xuất hiện trong đêm, cha anh đã mất tích một cách bí ẩn. Dù cơ thể có bị thương tích hay tâm trí có bị chấn động đến đâu, ý chí bảo vệ người thân và tìm lại cha luôn giữ cho đôi chân của Hank vững vàng trên mặt đất."
@@ -101,7 +101,7 @@ TRANSLATIONS_P4 = {
     # 10016b: Hank Samson (Warden side)
     "10016b": {
         "subname": "Gã Làm nông",
-        "text": "Bạn nhận được +2 [combat] trong khi tấn công một kẻ địch đã gây damage hoặc horror cho bạn hoặc một điều tra viên khác trong vòng này.\nHiệu ứng [elder_sign]: +2. Gây 1 damage lên một kẻ địch tại địa điểm của bạn.",
+        "text": "Bonded (Hank Samson).\nBạn không thể được hồi phục. Bạn có thể được phân bổ damage/horror gây cho các asset [[Ally]] hoặc các điều tra viên khác tại địa điểm của bạn.\n[reaction] Khi 1 hoặc nhiều damage được đặt lên bạn: Nhận 2 tài nguyên.\nHiệu ứng [elder_sign]: +1. Chuyển 1 damage từ Hank Samson sang một asset bạn kiểm soát.",
         "flavor": None,
         "back_text": "",
         "back_flavor": ""
@@ -118,7 +118,7 @@ TRANSLATIONS_P4 = {
     # 11001: Marion Tavares (TDC)
     "11001": {
         "subname": "Ngư dân Đánh cá",
-        "text": "[action] Chọn một tài sản hoặc phụ kiện tại địa điểm của bạn: Thu hồi nó về tay của bạn. (Giới hạn 1 lần mỗi vòng.)\n[reaction] Khi một asset được đưa vào màn chơi dưới quyền kiểm soát của bạn: Bạn có thể ready asset đó. (Giới hạn 1 lần mỗi vòng.)\nHiệu ứng [elder_sign]: +1. Ready một asset bạn kiểm soát.",
+        "text": "Bạn có ít hơn 1 slot tay.\n[reaction] Sau khi bạn chơi một sự kiện trong lượt của mình: Rút 1 lá bài. Sau đó, bạn có thể chơi một sự kiện khác. (Giới hạn 1 lần mỗi vòng.)\nHiệu ứng [elder_sign]: +1. Tìm trong 3 lá trên cùng của bộ bài một sự kiện và rút nó. Xáo bộ bài của bạn.",
         "flavor": "\"Mọi người trông cậy vào tôi để làm việc. Vài con cá kỳ lạ dưới nước chẳng thể thay đổi được điều đó.\"",
         "back_text": "<b>Cỡ bộ bài</b>: 30.\n<b>Lựa chọn xây dựng bộ bài</b>: Các lá bài Guardian ([guardian]) cấp độ 0-5, các lá bài [[Vehicle]] và [[Tool]] cấp độ 0-4, các lá bài Neutral cấp độ 0-5.\n<b>Yêu cầu xây dựng bộ bài</b> (không tính vào cỡ bộ bài): Tavares's Net, Sinking Feeling, 1 điểm yếu cơ bản ngẫu nhiên.",
         "back_flavor": "Marion Tavares đã dành cả cuộc đời mình gắn bó với chiếc tàu đánh cá ngoài khơi bờ biển Massachusetts. Sóng gió đại dương và những mẻ lưới nặng trĩu đã trui rèn nên một người phụ nữ can trường, không biết chùn bước trước bất kỳ cơn giông bão nào. Nhưng khi những tàn tích ngầm của một thành phố cổ xưa bắt đầu trồi lên từ đáy biển sâu và những sinh vật hình người nhớp nháp bao vây mạn thuyền, Marion biết rằng những công cụ đánh cá thông thường của cô nay phải trở thành vũ khí để bảo vệ mạng sống của chính mình và thủy thủ đoàn."

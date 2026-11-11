@@ -7,7 +7,7 @@ import type { Message } from '@/arkham/types/Message';
 import { MessageType } from '@/arkham/types/Message';
 import type { Game } from '@/arkham/types/Game';
 import * as ArkhamGame from '@/arkham/types/Game';
-import { chaosTokenImage } from '@/arkham/types/ChaosToken'
+import { keyToImage } from '@/arkham/keyImage'
 
 const props = defineProps<{
   keyToken: ArkhamKey
@@ -18,20 +18,6 @@ const props = defineProps<{
 const emit = defineEmits<{
   choose: [value: number]
 }>()
-
-const keyToImage = (k: ArkhamKey): string => {
-  switch (k.tag) {
-    case "TokenKey": return chaosTokenImage(k.contents.face)
-    case "BlueKey": return imgsrc("extra/the-innsmouth-conspiracy/keys/blue-key.jpg")
-    case "GreenKey": return imgsrc("extra/the-innsmouth-conspiracy/keys/green-key.jpg")
-    case "RedKey": return imgsrc("extra/the-innsmouth-conspiracy/keys/red-key.jpg")
-    case "YellowKey": return imgsrc("extra/the-innsmouth-conspiracy/keys/yellow-key.jpg")
-    case "PurpleKey": return imgsrc("extra/the-innsmouth-conspiracy/keys/purple-key.jpg")
-    case "BlackKey": return imgsrc("extra/the-innsmouth-conspiracy/keys/black-key.jpg")
-    case "WhiteKey": return imgsrc("extra/the-innsmouth-conspiracy/keys/white-key.jpg")
-    case "UnrevealedKey": return imgsrc("extra/the-innsmouth-conspiracy/keys/key-back.jpg")
-  }
-}
 
 const keyImage = computed<string>(() => keyToImage(props.keyToken))
 const dragging = ref(false)

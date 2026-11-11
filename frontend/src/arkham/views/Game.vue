@@ -364,6 +364,7 @@ useNarrative(game)
  * Read question, so the whole table hears the story at the same moment. */
 useNarration(game)
 
+
 /* A custom card someone else created shows up in the game payload before this
  * client has its def; refetch the game's custom cards when an unknown one
  * appears. */
@@ -3572,6 +3573,9 @@ onUnmounted(() => {
           </button>
         </div>
       </template>
+      <!-- The scene map's own controls (map / cards view, actions panel, legend, decks, mission
+           strip fold) are teleported here by LocationMap, so the board has one toolbar, not two. -->
+      <div id="game-bar-scene-slot" class="scene-slot"></div>
       <div v-if="isActualScenarioView" class="right">
         <!-- Not a button: there is nothing behind the number to open, and the
              count is read, not used. Hidden at zero so a table nobody is
@@ -5147,6 +5151,17 @@ header {
      group lands on its own line and takes the whole bar to two rows with it. */
   .right {
     display: flex;
+  }
+
+  /* Holds the scene controls LocationMap teleports in; takes the free middle of the bar. */
+  .scene-slot {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    align-items: center;
+    &:empty {
+      display: none;
+    }
   }
 
   .right .drawer-toggle {

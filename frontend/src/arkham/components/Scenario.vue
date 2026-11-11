@@ -23,9 +23,8 @@ import { type Game } from '@/arkham/types/Game';
 import { type Scenario, type GroupLayout, usesHardExpertReference } from '@/arkham/types/Scenario';
 import { type Story as StoryAttrs } from '@/arkham/types/Story';
 import { type Enemy } from '@/arkham/types/Enemy';
-import { type ConcealedCard } from '@/arkham/types/ConcealedCard';
+import { gridConcealedGroups, positionToGridArea, type ConcealedGroup } from '@/arkham/concealedCards';
 import ConcealedCardView from '@/arkham/components/ConcealedCard.vue';
-import { type Position } from '@/arkham/types/Placement';
 import { type Card, cardId, cardImage, referenceCard } from '@/arkham/types/Card';
 import { TarotCard, tarotCardImage } from '@/arkham/types/TarotCard';
 import { TokenType } from '@/arkham/types/Token';
@@ -1525,7 +1524,7 @@ const playerOrder = computed(() => props.game.playerOrder)
 // What only the card board can draw; the map says so rather than silently leaving it out.
 const boardOnlyContent = computed(() =>
   Boolean(barriers.value) || enemiesAsLocations.value.length > 0 || gridStories.value.length > 0 ||
-  gridConcealed.value.length > 0 || playerLocationZones.value.length > 0)
+  playerLocationZones.value.length > 0)
 const discards = computed<Card[]>(() => props.scenario.discard.map(c => ({ tag: 'EncounterCard', contents: c })))
 const playerLocationZones = computed(() => props.game.playerOrder.flatMap((investigatorId) => {
   const investigator = props.game.investigators[investigatorId]
@@ -1587,50 +1586,7 @@ const inTheShadowsInvestigators = computed(() => Object.values(props.game.invest
 const enemiesAsLocations = computed(() => enemyGroups.value.asLoc)
 const topEnemyInVoid = computed(() => enemyGroups.value.firstVoid)
 
-type ConcealedGroup = {
-  position: Position;
-  known: ConcealedCard[];
-  unknown: ConcealedCard[];
-};
-
-const positionToGridArea = function(pos: Position): string {
-  // convert to posxxyy, negative number gets prefixed with an n so pos (-1, 0) is posn0100, (0, -1) is pos00n01, and (-1, -1) would be posn01n01
-  const fmt = (n: number): string => {
-    const sign = n < 0 ? 'n' : '';
-    const abs = Math.abs(n);
-    const padded = abs.toString().padStart(2, '0'); // 0 -> "00", 5 -> "05", 12 -> "12"
-    return sign + padded;
-  };
-
-  return `pos${fmt(pos.x)}${fmt(pos.y)}`;  
-}
-
-const gridConcealed = computed<ConcealedGroup[]>(() => {
-  const concealedCards = props.scenario.meta?.concealedCards as [[number, number], string[]][] | undefined
-  if (!concealedCards) return []
-
-  const available = Object.values(props.game.concealed)
-  const availableIds = new Set(available.map(c => c.id))
-
-  const cardPosition: Record<string, Position> = {}
-  for (const [[x, y], cards] of concealedCards) {
-    const position = { x, y }
-    for (const cardId of cards) {
-      if (availableIds.has(cardId)) cardPosition[cardId] = position
-    }
-  }
-
-  const groups = new Map<string, ConcealedGroup>()
-  for (const card of available) {
-    const position = cardPosition[card.id]
-    if (!position) continue
-    const key = `${position.x}:${position.y}`
-    const group = groups.get(key) ?? groups.set(key, { position, known: [], unknown: [] }).get(key)!
-    ;(card.known ? group.known : group.unknown).push(card)
-  }
-
-  return [...groups.values()]
-})
+const gridConcealed = computed<ConcealedGroup[]>(() => gridConcealedGroups(props.game, props.scenario))
 
 function isHollow(m: ModifierType): m is Hollow {
   return m.tag === "Hollow"

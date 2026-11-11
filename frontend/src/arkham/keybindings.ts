@@ -24,6 +24,7 @@ export type ShortcutAction =
   | 'rotateLayout'
   | 'rotateLayoutCcw'
   | 'showOutOfPlay'
+  | 'viewDecks'
 
 /* Shortcuts that act on the card under the cursor instead of on the board.
  *
@@ -74,6 +75,7 @@ const DEFAULT_BINDINGS: Record<ShortcutAction, Binding> = {
   rotateLayout: { key: '>', display: ['>'] },
   rotateLayoutCcw: { key: '<', display: ['<'] },
   showOutOfPlay: { key: 'o', display: ['o'] },
+  viewDecks: { key: 'k', display: ['k'] },
 }
 
 /* Tabletop Simulator + SCE.

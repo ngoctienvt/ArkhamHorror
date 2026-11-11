@@ -116,7 +116,7 @@ export function useChoiceContext(game: () => Game) {
     if (withMessages.length === 1) return { sourceId, intent: verb.charAt(0).toUpperCase() + verb.slice(1) }
     const nouns = new Set(withMessages.map(choiceNoun))
     const noun = t(`locationMap.status.intent.noun.${nouns.size === 1 ? [...nouns][0] : 'option'}`)
-    return { sourceId, intent: t('locationMap.status.intent.choose', { noun, action: verb }) }
+    return { sourceId, intent: t('locationMap.status.intent.choose', { noun, verb }) }
   }
   // The whole context for one seat's pending question, or null when the engine already labelled it.
   function promptContext(pid: string): PromptContext | null {

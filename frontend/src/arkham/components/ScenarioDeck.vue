@@ -2,9 +2,10 @@
 import { computed, type ComputedRef } from 'vue';
 import { useDebug } from '@/arkham/debug';
 import type { Card } from '@/arkham/types/Card';
-import { cardImage, toCardContents } from '@/arkham/types/Card';
-import { cardImg, imgsrc } from '@/arkham/helpers';
+import { cardImage } from '@/arkham/types/Card';
+import { imgsrc } from '@/arkham/helpers';
 import { homebrewScenarioDeckDisplay } from '@/arkham/homebrewAssets';
+import { scenarioDeckImage } from '@/arkham/scenarioDeckImage';
 import { investigatorPortrait as portraitFor } from '@/arkham/cardImages';
 import { MessageType } from '@/arkham/types/Message'
 import * as ArkhamGame from '@/arkham/types/Game'
@@ -55,71 +56,7 @@ const revealedCards = computed(() => props.deck[1].map(card =>
 const showCards = () => emits('show', revealedCards, props.deck[0], false)
 const homebrewDisplay = computed(() => homebrewScenarioDeckDisplay(props.deck[0]))
 
-const homebrewBack = computed(() => {
-  const back = homebrewDisplay.value?.back
-  return back ? cardImg(back) : null
-})
-
-const deckImage = computed(() => {
-  if (homebrewDisplay.value?.image === 'player-back') {
-    return imgsrc("backs/back_player.jpg")
-  }
-
-  if (homebrewDisplay.value?.image === 'top-card-back') {
-    const topCard = props.deck[1][0]
-    if (topCard) {
-      const contents = toCardContents(topCard)
-      return imgsrc(cardImage({ ...contents, isFlipped: true, facedown: false }))
-    }
-    return homebrewBack.value ?? imgsrc("backs/back_encounter.jpg")
-  }
-
-  if (homebrewBack.value) return homebrewBack.value
-
-  switch(props.deck[0]) {
-    case 'UnknownPlacesDeck':
-      return imgsrc("cards/05134b.avif");
-    case 'ExhibitDeck':
-      return imgsrc("cards/02132b.avif");
-    case 'CosmosDeck':
-      return imgsrc("cards/05333b.avif");
-    case 'CatacombsDeck':
-      return imgsrc("cards/03247b.avif");
-    case 'TidalTunnelDeck':
-      return imgsrc("cards/07048b.avif");
-    case 'TekeliliDeck':
-      return imgsrc("backs/back_player.jpg");
-    case 'GuestDeck':
-      return imgsrc("backs/back_player.jpg");
-    case 'OtherworldDeck':
-      let topCard = props.deck[1][0];
-      if (topCard) {
-        return imgsrc(cardImage(topCard));
-      }
-    case 'WoodsDeck':
-      return imgsrc("cards/10612b.avif");
-    case 'CavernsDeck':
-      return imgsrc("cards/10577b.avif");
-    case 'EnemyDeck':
-      return imgsrc("backs/back_the_longest_night.jpg");
-    case 'AbyssDeck':
-      return imgsrc("cards/10670b.avif");
-    case 'CthulhuDeck':
-      return imgsrc("backs/back_cthulhu_deck.jpg");
-    case 'SummitDeck': {
-      // Summit locations and Open Sky have different backs. Show the actual
-      // top card facedown so returned Open Sky cards are visible on the deck.
-      const topCard = props.deck[1][0]
-      if (topCard) {
-        const contents = toCardContents(topCard)
-        return imgsrc(cardImage({ ...contents, isFlipped: true, facedown: false }))
-      }
-      return imgsrc("cards/11649b.avif")
-    }
-    default:
-      return imgsrc("backs/back_encounter.jpg");
-  }
-})
+const deckImage = computed(() => scenarioDeckImage(props.deck[0], props.deck[1]))
 
 const topOfDiscard = computed(() => {
   if (!props.discardPile || props.discardPile.length === 0) return null

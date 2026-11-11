@@ -8,6 +8,7 @@ import { investigatorPortrait } from '@/arkham/cardImages'
 import { useDbCardStore } from '@/stores/dbCards'
 import { asCardCode } from '@/arkham/types/Card';
 import type { CardContents } from '@/arkham/types/Card';
+import InvestigatorIntroModal from '@/arkham/components/InvestigatorIntroModal.vue'
 import DebugToggle from '@/arkham/components/debug/DebugToggle.vue'
 import { useDebug } from '@/arkham/debug'
 import { gainXpMessage, healTraumaMessage, spendXpMessage, sufferTraumaMessage, type TraumaKind } from '@/arkham/debugPlayer'
@@ -25,6 +26,9 @@ export interface Props {
 }
 
 const store = useDbCardStore()
+/* Optional backstory/narration viewer for this investigator; opens for this player only. */
+const showBackstory = ref(false)
+
 const props = withDefaults(defineProps<Props>(), {
   bonusXp: null,
   showExpand: true,
@@ -152,6 +156,12 @@ const deck = computed(() => {
           <span class="stat-value">{{ investigator.mentalTrauma }}</span>
           <button v-if="debugging" type="button" class="stat-step" v-tooltip="$t('debug.campaign.traumaHint')" @click="stepTrauma('mental', 1)">+</button>
         </div>
+        <button type="button" class="stat-chip stat-backstory" @click.stop="showBackstory = true">
+          <span class="stat-label">📖 {{ $t('investigatorIntro.open') }}</span>
+        </button>
+        <Teleport to="body">
+          <InvestigatorIntroModal v-if="showBackstory" :game="game" :initialId="investigator.id" @close="showBackstory = false" />
+        </Teleport>
         <DebugToggle v-if="showDebugToggle" :active="debugging" class="row-debug-toggle" @click="toggleDebug" />
       </div>
     </div>
@@ -174,6 +184,11 @@ const deck = computed(() => {
 </template>
 
 <style scoped>
+.stat-backstory {
+  margin-left: auto;
+  cursor: pointer;
+}
+
 /* ── Container ───────────────────────────────────────────── */
 
 .investigator {

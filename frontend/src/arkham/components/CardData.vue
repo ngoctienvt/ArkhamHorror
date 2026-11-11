@@ -5,6 +5,8 @@ export interface Props {
   factionName?: string | null
   factionCode?: string | null
   traits?: string | null
+  /** Keywords the card gained from modifiers (e.g. "Retaliate. Hunter"), kept as the standard English names. */
+  keywords?: string | null
   text?: string | null
   flavor?: string | null
   reversed?: boolean
@@ -36,6 +38,7 @@ defineProps<Props>()
           <p v-if="factionName">{{ factionName }}</p>
         </div>
       </div>
+      <p v-if="keywords" class="card-keywords">{{ keywords }}.</p>
       <div v-if="text" class="card-text">
         <p v-html="text"></p>
       </div>
@@ -47,62 +50,51 @@ defineProps<Props>()
 </template>
 
 <style scoped>
+/* The translated card text beside a card image, drawn like the text box printed on the card itself:
+ * cream parchment with dark ink, a brown frame and a deep shadow, so it reads clearly and stands apart
+ * from the dark green board it floats over. The faction colour is the accent stripe. It is as tall as its text instead of always matching
+ * the card and leaving an empty block below; the overlay takes no pointer events, so it grows rather
+ * than scrolls. */
 .card-data {
   position: relative;
-  width: 300px;
-  min-height: inherit;
-  overflow-y: auto;
-  margin-left: 2px;
-  border-radius: 12px;
+  width: 330px;
+  align-self: flex-start;
+  margin-left: 6px;
+  border-radius: 10px;
   font-family: Arial, sans-serif;
   white-space: pre-wrap;
   word-wrap: break-word;
-  aspect-ratio: var(--card-aspect, 0.705);
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
-  --panel-color: #808080;
-  --border-color: var(--panel-color);
   box-sizing: border-box;
+  background: radial-gradient(ellipse at 50% 35%, #f6eedb, #e9dcbc 85%);
+  border: 1px solid #7a5f3a;
+  border-top: 3px solid var(--panel-color);
+  box-shadow: 0 0 0 1px #000a, 0 10px 28px #000d, inset 0 0 18px #b8996033;
+  color: #1f1810;
+  --panel-color: #8a8f86;
+  --border-color: var(--panel-color);
 }
 
-.card-data.faction-guardian {
-  --panel-color: #1c6e9f;
-}
-.card-data.faction-seeker {
-  --panel-color: #ba6d2a;
-}
-.card-data.faction-rogue {
-  --panel-color: #1e6b24;
-}
-.card-data.faction-mystic {
-  --panel-color: #554c9e;
-}
-.card-data.faction-survivor {
-  --panel-color: #bd2330;
-}
-.card-data.faction-mythos {
-  --panel-color: #dbdbdb;
-  --border-color: #0a0a0a;
-}
+/* CardOverlay's own scoped `.card-data` rule (for its customization sheet) also reaches this root and
+ * gives it the card's aspect ratio; the doubled class wins so the panel stays as tall as its text. */
+.card-data.card-data { aspect-ratio: auto; min-height: 0; height: auto; }
 
-.card-data::-webkit-scrollbar {
-  width: 4px;
-}
-.card-data::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-}
+.card-data.faction-guardian { --panel-color: #3a96cf; }
+.card-data.faction-seeker { --panel-color: #e0913f; }
+.card-data.faction-rogue { --panel-color: #3fae4a; }
+.card-data.faction-mystic { --panel-color: #8a7ee0; }
+.card-data.faction-survivor { --panel-color: #e0454f; }
+.card-data.faction-mythos { --panel-color: #6b5233; }
 
 .card-data-header {
-  font-size: 1.0em;
-  font-family: sans-serif;
-  background-color: var(--panel-color);
-  color: #0a0a0a;
-  padding: 6px 8px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  padding: 8px 12px 6px;
+  font: 600 1.18em/1.25 var(--ui-serif, serif);
+  color: #1f1810;
   text-align: left;
+  background: #dccaa0;
+  border-bottom: 1px solid #7a5f3a66;
+  border-radius: 7px 7px 0 0;
 }
 
 .card-data-header p {
@@ -110,19 +102,15 @@ defineProps<Props>()
 }
 
 .card-data-body {
-  font-size: 0.9em;
+  font-size: 1em;
+  line-height: 1.32;
   font-family: serif;
-  flex: 1;
-  padding: 8px 10px;
-  background-color: #e6e6e6;
-  color: #0a0a0a;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  padding: 8px 12px 12px;
   text-align: left;
 }
 
 .card-data-body > *:not(:first-child) {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .card-data-body :deep(span[class$="-icon"]),
@@ -134,25 +122,35 @@ defineProps<Props>()
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9em;
+  color: #4d3d27;
 }
 
 .card-data-body .card-info p {
   margin: 0;
 }
 
+.card-data-body .card-keywords {
+  margin: 0;
+  font-weight: bold;
+  color: #1f1810;
+}
+
 .card-data-body .card-text {
-  border-color: var(--border-color);
-  border-left-width: 2px;
-  border-left-style: solid;
+  border-left: 2px solid var(--border-color);
+  color: #1f1810;
 }
 
 .card-data-body .card-text p {
-  margin: 0 8px;
+  margin: 0 10px;
 }
 
 .card-data-body .card-flavor {
-  font-size: 0.85em;
+  font-size: 0.92em;
   font-style: italic;
+  color: #4d3d27;
 }
 
 .card-data-body .card-flavor p {

@@ -1,0 +1,16 @@
+
+==== UNRESOLVED (14): own name in text differs from card name ====
+01000 'Random Basic Weakness' -> 'Điểm Yếu cơ Bản Ngẫu Nhiên' (en 1x, vi 0x): 'This is a placeholder random điểm yếu cơ bản\n You can replace it with a specific điểm yếu using the Special tab or click the random button to replace '
+02329 'Interstellar Traveler' -> 'Du Khách Giữa các vì Sao' (en 3x, vi 0x): '<b>Spawn</b> - Bất kỳ địa điểm [[Extradimensional]] nào.\nHunter.\n<b>Forced</b> - Khi Nhà du hành giữa các vì sao đi vào địa điểm: Lật 1 manh mối trên '
+03172 'Kitchen' -> 'Phòng Bếp' (en 2x, vi 1x): '[action] Nếu không có manh mối trên Phòng Bếp: Kiểm tra [willpower] (2). Nếu thành công, hãy nhớ rằng bạn đã “đốt lửa trong bếp”.'
+03321b 'The Pallid Mask' -> 'Chiếc Mặt Nạ Tái Nhợt' (en 3x, vi 2x): '<b>Revelation</b> - Đặt Chiếc Mặt Nạ Tái Nhợt vào chơi, dưới sự kiểm soát của điều tra viên chính. Xóa Người đàn ông đeo mặt nạ Pallid khỏi trò chơi. '
+70034 'The Rift' -> 'Rạn Nứt' (en 3x, vi 1x): '<blockquote><i>Với một tia sáng đột ngột, một vết nứt bắt đầu mở ra trên bức tường gần đó, năng lượng từ từ tập hợp lại thành hình dạng của một cánh c'
+70035 'The Vent' -> 'Lỗ Thông Hơi' (en 2x, vi 1x): '<blockquote><i>Bạn tìm thấy một trục thông gió mà qua đó bạn có thể nhét một số vật dụng quan trọng...</i></blockquote>\n<b>Revelation</b> - Đặt lỗ thô'
+06141b 'Unattainable Desires' -> 'Mong Muốn Không Thể Đạt Được' (en 1x, vi 0x): 'Đặt ngôi đền của những ham muốn không thể đạt được sang một bên địa điểm vào chơi.\nLật lại thẻ này.'
+85005 'Expose the Anomaly' -> 'Phơi Bày sự Bất Thường' (en 1x, vi 0x): '*Đạo luật này có ngưỡng manh mối toàn cầu <i>(xem trang 6 của quy tắc để biết chi tiết)</i>. Chỉ manh mối trên các bản sao của đạo luật này trong số t'
+85006 'Expose the Anomaly' -> 'Phơi Bày sự Bất Thường' (en 1x, vi 0x): '<b>Objective</b> - Khi bắt đầu vòng đấu, các điều tra viên có thể dành số lượng manh mối cần thiết, với tư cách là một nhóm, cho advance. <i>(Hãy cẩn '
+09588 'Accosted' -> 'Bị Tiếp Cận' (en 1x, vi 0x): '<b>Revelation</b> - Nếu không có các kẻ địch [[Cultist]] trong màn chơi thì nhận 1 damage và tích lũy surge. Nếu không, hãy tìm kẻ địch [[Cultist]] gầ'
+09701 'To the Tower' -> 'Tiến Tới Ngọn Tháp' (en 1x, vi 0x): 'Các địa điểm và các lá bài nhỏ concealed không thể được đặt liền kề với các địa điểm [[Tower]].\n<b>Objective</b> - Tìm một lối vào trong ngọn tháp nơi'
+88052a 'Grip of the Beyond' -> 'Sự Nắm Bắt của Beyond' (en 2x, vi 0x): '<b>Revelation</b> - Đặt sự vượt trội vào chơi vào threat area của bạn.\n<b>Forced</b> - Khi kết thúc lượt của bạn: nhận 2 damage. Giảm damage này đi 1 '
+88052b 'Grip of the Beyond' -> 'Sự Nắm Bắt của Beyond' (en 2x, vi 0x): '<b>Revelation</b> - Đặt sự vượt trội vào chơi vào threat area của bạn.\n<b>Forced</b> - Khi kết thúc lượt của bạn: nhận 2 damage. Giảm damage này đi 1 '
+88052c 'Grip of the Beyond' -> 'Sự Nắm Bắt của Beyond' (en 2x, vi 0x): '<b>Revelation</b> - Đặt sự vượt trội vào chơi vào threat area của bạn.\n<b>Forced</b> - Khi kết thúc lượt của bạn: nhận 2 damage. Giảm damage này đi 1 '

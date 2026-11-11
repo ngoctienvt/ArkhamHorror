@@ -26,6 +26,7 @@ import childrenOfBlood from '@/locales/vi/childrenOfBlood'
 import standalone from '@/locales/vi/standalone'
 import theLabyrinthsOfLunacyLog from '@/locales/vi/theLabyrinthsOfLunacy.json'
 import gameBoard from '@/locales/vi/gameBoard/gameBoard'
+import scenarioNames from '@/locales/vi/scenarioNames.json'
 
 export default
   { ...base
@@ -35,6 +36,7 @@ export default
   , ...label
   , label
   , log
+  , scenarioNames
   , nightOfTheZealot
   , theDunwichLegacy
   , thePathToCarcosa

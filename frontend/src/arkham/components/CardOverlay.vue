@@ -33,6 +33,7 @@ import { useI18n } from 'vue-i18n'
 const CARD_RATIO = 0.705        // width / height (portrait)
 const OVERLAY_W = 300           // base width (portrait) or height (sideways)
 const TAROT_H = 500             // fixed tarot height
+const MAP_INVESTIGATOR_W = 350  // an investigator figure on the map: its sideways card is shown this tall, big enough to read
 const VIEW_W = 1000             // stable viewBox width for percent → px mapping
 
 // Cache natural aspect ratios (width / height) to infer sideways when needed
@@ -66,6 +67,11 @@ const { t } = useI18n()
 
 const cardOverlay = ref<HTMLElement | null>(null)
 const hoveredElement = ref<HTMLElement | null>(null)
+/* Base overlay size: 300px, or bigger for an investigator figure on the map, whose sideways card is
+ * otherwise too small to read. Capped so the card still fits a short window. */
+const overlayBase = computed(() => hoveredElement.value?.closest('.standees .fig[data-investigator-mini]')
+  ? Math.max(OVERLAY_W, Math.min(MAP_INVESTIGATOR_W, Math.round(window.innerHeight * 0.6)))
+  : OVERLAY_W)
 const isMobile = ref(false)
 const overPopover = computed(() => !!hoveredElement.value?.closest('.v-popper__popper'))
 
@@ -577,12 +583,16 @@ let posRAF: number | null = null
 
 const getPosition = (el: HTMLElement): { top: number; left: number } => {
   const rect = el.getBoundingClientRect()
-  const width = sideways.value ? OVERLAY_W / CARD_RATIO : OVERLAY_W
-  const height = sideways.value ? OVERLAY_W : Math.round(OVERLAY_W / CARD_RATIO)
+  const base = overlayBase.value
+  const width = sideways.value ? base / CARD_RATIO : base
+  const height = sideways.value ? base : Math.round(base / CARD_RATIO)
 
   const gap = 2
   const hasCust = !!customizationsCard.value
-  const totalWidth = hasCust ? (width * 2 + gap) : width
+  /* The translated-text panel (CardData: 330px wide + 6px margin) sits beside the card, so it counts
+   * toward the overlay's width; without it a card near the right edge pushed its text off screen. */
+  const dataWidth = dbCardData.value ? 336 : 0
+  const totalWidth = (hasCust ? (width * 2 + gap) : width) + dataWidth
 
   if (el.dataset.overlayPosition === 'cursor-right' && lastPointer.value) {
     const cursorGap = 18
@@ -601,9 +611,14 @@ const getPosition = (el: HTMLElement): { top: number; left: number } => {
   const newTop = Math.max(0, bottom > window.innerHeight ? rect.bottom - height + window.scrollY - 40 : top)
 
   const rightSide = rect.left + window.scrollX + rect.width + 10
-  return (rightSide + totalWidth >= window.innerWidth)
-    ? { top: newTop, left: rect.left - totalWidth - 10 }
-    : { top: newTop, left: rightSide }
+  const viewportPad = 10
+  const minLeft = window.scrollX + viewportPad
+  const maxLeft = window.scrollX + window.innerWidth - totalWidth - viewportPad
+  // Right of the element when it fits, otherwise left of it; either way kept inside the window.
+  const desired = (rightSide + totalWidth >= window.scrollX + window.innerWidth)
+    ? rect.left + window.scrollX - totalWidth - 10
+    : rightSide
+  return { top: newTop, left: Math.max(minLeft, Math.min(desired, maxLeft)) }
 }
 
 watch([hoveredElement, sideways], ([el]) => {
@@ -617,9 +632,9 @@ watch([hoveredElement, sideways], ([el]) => {
  * ========================================================================== */
 
 const svgWidth = computed(() => (tarot.value ? Math.round(TAROT_H * CARD_RATIO)
-  : (sideways.value ? Math.round(OVERLAY_W / CARD_RATIO) : OVERLAY_W)))
+  : (sideways.value ? Math.round(overlayBase.value / CARD_RATIO) : overlayBase.value)))
 const svgHeight = computed(() => (tarot.value ? TAROT_H
-  : (sideways.value ? OVERLAY_W : Math.round(OVERLAY_W / CARD_RATIO))))
+  : (sideways.value ? overlayBase.value : Math.round(overlayBase.value / CARD_RATIO))))
 
 const viewH = computed(() => Math.round(VIEW_W / CARD_RATIO))
 const viewBox = computed(() => (sideways.value ? `0 0 ${viewH.value} ${VIEW_W}` : `0 0 ${VIEW_W} ${viewH.value}`))
@@ -663,6 +678,10 @@ const jsonDs = <T>(key: string): T => {
 const fight = ds('fight')
 const health = ds('health')
 const evade = ds('evade')
+/* 'bad' / 'good' when modifiers moved the stat off the printed value (see Enemy.vue). */
+const fightTrend = ds('fightTrend')
+const healthTrend = ds('healthTrend')
+const evadeTrend = ds('evadeTrend')
 const victory = ds('victory')
 const keywords = ds('keywords')
 const playingCardOverlay = ds('pc')
@@ -1085,7 +1104,14 @@ const dbCardText = ref<string>('')
 const dbCardFlavor = ref<string>('')
 const dbCardCustomizationText = ref<string>('')
 
+// Temporarily off: the translated-text panel is not shown for cards in hand (the scene's hand dock, the
+// board's hand row), where it covered the board. Flip to false to show it there again.
+const HIDE_CARD_DATA_IN_HAND = true
+const HAND_SELECTOR = '.in-hand, .hand-dock, .hand-area, .hand-area-IsMobile'
+const hoveringHand = computed(() => HIDE_CARD_DATA_IN_HAND && !!hoveredElement.value?.closest(HAND_SELECTOR))
+
 const dbCardData = computed<boolean>(() =>
+  !hoveringHand.value &&
   !!(dbCardName.value || dbCardTypeName.value || dbCardFactionName.value || dbCardTraits.value || dbCardText.value || dbCardCustomizationText.value || dbCardFlavor.value)
 )
 
@@ -1403,6 +1429,7 @@ watchEffect(() => {
       :factionName="dbCardFactionName"
       :factionCode="dbCardFactionCode"
       :traits="dbCardTraits"
+      :keywords="keywords"
       :text="dbCardText"
       :flavor="dbCardFlavor"
       :reversed="reversed"
@@ -1410,11 +1437,12 @@ watchEffect(() => {
     />
 
     <span class="swarm" v-if="swarm"><BugAntIcon aria-hidden="true" /></span>
-    <span class="fight" v-if="fight">{{ fight }}</span>
-    <span class="health" v-if="health">{{ health }}</span>
-    <span class="evade" v-if="evade">{{ evade }}</span>
+    <span class="fight" :class="fightTrend && `stat--${fightTrend}`" v-if="fight">{{ fight }}</span>
+    <span class="health" :class="healthTrend && `stat--${healthTrend}`" v-if="health">{{ health }}</span>
+    <span class="evade" :class="evadeTrend && `stat--${evadeTrend}`" v-if="evade">{{ evade }}</span>
     <span class="victory" v-if="victory">Victory {{ victory }}.</span>
-    <span class="keywords" v-if="keywords">{{ keywords }}.</span>
+    <!-- Keywords gained from modifiers. The text panel lists them itself when it is shown. -->
+    <span class="keywords" v-if="keywords && !dbCardData">{{ keywords }}.</span>
     <PoolItem class="depth" v-if="depth" type="resource" :amount="depth" />
 
     <div class="spent-keys" v-if="spentKeys.length > 0">
@@ -1495,6 +1523,21 @@ watchEffect(() => {
   top: 11%;
   left: 30%;
 }
+
+/* A stat modifiers moved: a coloured disc covers the printed number so the current one reads alone.
+ * Red when the change hurts the investigators, green when it helps. */
+.stat--bad, .stat--good {
+  min-width: 1.5em;
+  padding: 0 0.2em;
+  text-align: center;
+  border-radius: 999px;
+  border: 2px solid #000;
+  box-shadow: 0 0 6px #000c;
+}
+.stat--bad { background: #b3261e; }
+.stat--good { background: #2e7d32; }
+.fight.stat--bad, .fight.stat--good,
+.evade.stat--bad, .evade.stat--good { transform: translate(-25%, 0); }
 
 .health {
   font-size: 1.6em;
@@ -1578,7 +1621,10 @@ watchEffect(() => {
 .card-data-header {
   font-size: 1.0em;
   font-family: sans-serif;
-  background-color: var(--panel-color);
+  /* Dark theme like CardData: the faction colour is the top stripe, not a light fill. */
+  background-color: #1b2a22;
+  border-top: 3px solid var(--panel-color);
+  color: #fff4df;
   padding: 3% 15px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -1589,7 +1635,8 @@ watchEffect(() => {
   font-family: serif;
   flex: 1;
   padding: 15px;
-  background-color: rgba(212, 212, 212, 0.96);
+  background-color: #121c16f5;
+  color: #e8e3d0;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }

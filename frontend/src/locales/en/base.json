@@ -421,7 +421,8 @@
     "retry": "Try again",
     "title": "Standalone Settings",
     "noSettings": "There are currently no standalone settings available for this scenario.",
-    "begin": "Begin"
+    "begin": "Close",
+    "open": "Investigator backstories"
   },
   "campaignSettings": {
     "title": "Campaign Settings"
@@ -545,6 +546,18 @@
     "debug": "Debug"
   },
   "locationMap": {
+    "concealed": "{count} concealed card | {count} concealed cards",
+    "concealedCard": "Concealed card",
+    "chooseConcealed": "Choose the concealed card at {where}",
+    "offMap": {
+      "shadows": "In the shadows",
+      "pursuit": "Pursuit",
+      "void": "The Void",
+      "depths": "The Depths",
+      "global": "In play · no location",
+      "reference": "Next to the reference card"
+    },
+    "concealedInShadows": "the shadows",
     "status": {
       "phase": {
         "CampaignPhase": "Campaign", "InvestigationPhase": "Investigation phase", "EnemyPhase": "Enemy phase",
@@ -559,7 +572,7 @@
       "options": "{kind}: {options}",
       "intent": {
         "window": {"EnemyAttacks": "{enemy} is about to attack {target}", "EnemyAttacked": "{enemy} just attacked {target}"},
-        "choose": "Choose {noun} to {action}",
+        "choose": "Choose {noun} to {verb}",
         "and": " and ",
         "noun": {
           "location": "a location",
@@ -799,18 +812,24 @@
         "constant": "Always on"
       }
     },
+    "link": {
+      "twoWay": "Two-way path",
+      "oneWay": "One-way path (follow the arrow)",
+      "moveTo": "Move to {name}"
+    },
     "legend": {
       "title": "Legend",
       "revealed": "Revealed location",
       "unrevealed": "Unrevealed location",
       "here": "You are here",
       "targetable": "Can be chosen right now",
-      "move": "Adjacent, you can move here",
+      "move": "Path: ↔ two-way, → one-way; green means you can move along it",
       "onEnter": "Something happens when you enter",
       "shroud": "Shroud (orange when modified)",
       "clues": "Clues left / printed",
       "doom": "Doom on the location",
-      "details": "Open the location's details"
+      "movable": "You can move there (edge and ↔ button green)",
+      "details": "Click a plate to open the location's details"
     },
     "overview": "Overview",
     "closeUp": "Close-up",
@@ -831,7 +850,22 @@
     "skipTriggers": "Skip triggers",
     "assignDamage": "Assign damage here",
     "assignHorror": "Assign horror here",
+    "chooseKey": "Choose the {key} key",
+    "pendingPicks": "{count} choice to make in the panel | {count} choices to make in the panel",
+    "keyColor": {
+      "BlueKey": "blue", "GreenKey": "green", "RedKey": "red", "YellowKey": "yellow", "PurpleKey": "purple",
+      "BlackKey": "black", "WhiteKey": "white", "UnrevealedKey": "face-down"
+    },
+    "tokenChoice": {
+      "DamageToken": "Assign damage", "HorrorToken": "Assign horror", "ClueToken": "Clues",
+      "ResourceToken": "Resources", "DoomToken": "Doom"
+    },
+    "targetKind": {
+      "enemy": "Enemy", "location": "Location", "asset": "Asset", "event": "Event", "skill": "Skill",
+      "treachery": "Treachery", "story": "Story", "scarletKey": "Scarlet Key", "investigator": "Investigator", "key": "Key"
+    },
     "section": {
+      "targets": "Choose a target",
       "basic": "Basic",
       "scenario": "Location & scenario",
       "enemies": "Enemies",
@@ -862,10 +896,40 @@
     "clueCount": "Clue {count} / {max}",
     "advanceAct": "Advance Act",
     "actionUnavailable": "Can't be used right now",
-    "doomLeft": "{n} more doom to advance",
-    "doomImminent": "Agenda may advance next round",
-    "doomAdvancing": "Agenda is about to advance!",
-    "reference": "Reference card",
+    "doomImminent": "Advances next round",
+    "doomAdvancing": "Advancing!",
+    "missionAwaitingSetup": "Placed once investigator setup is done",
+    "reference": "Reference",
+    "doomElsewhere": "+{n} elsewhere",
+    "doomSources": "Doom from",
+    "doomSourcesNone": "No doom in play",
+    "doomSource": { "agenda": "Agenda", "enemy": "Enemy", "location": "Location", "asset": "Asset", "treachery": "Treachery", "event": "Event", "investigator": "Investigator" },
+    "cluesNeeded": "{n} short",
+    "clueTotal": "{count} clues",
+    "clueHolders": "Clues held",
+    "clueHoldersNone": "No one holds a clue yet",
+    "clueHoldersOther": "Other sources",
+    "deckPanel": {
+      "title": "Decks & set aside",
+      "decks": "Decks",
+      "cardsLeft": "{n} cards left",
+      "discard": "Discard",
+      "viewDiscard": "View the discard pile",
+      "emptyDiscard": "The discard pile is empty",
+      "setAside": "Set aside",
+      "viewLarge": "View large",
+      "noDecks": "This scenario has no decks.",
+      "noSetAside": "No cards are set aside.",
+      "victoryDisplay": "Victory display",
+      "noVictory": "No cards in the victory display yet.",
+      "vengeance": "Vengeance {n}",
+      "openBoard": "Open the full card board",
+      "hint": "Shortcut: K"
+    },
+    "collapseStrip": "Collapse mission bar",
+    "expandStrip": "Expand mission bar",
+    "showMore": "Show more",
+    "showLess": "Show less",
     "dayCount": "Day {count}",
     "timeOfDay": { "Day": "Daytime", "Night": "Night" },
     "health": "Health",
@@ -2088,6 +2152,15 @@
     "ofWhichUncertain": "{n} stated as \u201c\u2026?\u201d",
     "resolutionN": "Resolution {n}",
     "nPlayerPlus": "{n}+ players"
+  },
+  "investigatorIntro": {
+    "title": "The Investigators",
+    "subtitle": "Select an investigator to read their backstory and hear it narrated.",
+    "listen": "Listen to narration",
+    "stop": "Stop narration",
+    "noStory": "No backstory available for this investigator.",
+    "begin": "Close",
+    "open": "Investigator backstories"
   },
   "toasts": {
     "dismiss": "Dismiss"

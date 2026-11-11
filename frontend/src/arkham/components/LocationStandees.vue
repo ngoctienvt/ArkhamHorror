@@ -13,7 +13,7 @@ import { TokenType } from '@/arkham/types/Token'
 import { cardArt, cardImage, investigatorCardArt, portraitImage } from '@/arkham/cardImages'
 import { useCardNames } from '@/arkham/composables/useCardNames'
 import { spriteFor } from '@/arkham/sceneSprites'
-import { resolveCalculation } from '@/arkham/types/Calculation'
+import { enemyStat } from '@/arkham/enemyStats'
 import { ownInvestigator } from '@/arkham/ownInvestigator'
 import { useCardStore } from '@/stores/cards'
 import { investigatorMovementName } from '@/arkham/investigatorMovement'
@@ -47,6 +47,8 @@ type Fig = {
   cardImage: string
   health: Meter | null; sanity: Meter | null
 }
+/* A room only has space for a few enemy figures; the rest are listed in a "+N" badge instead of vanishing. */
+const MAX_ENEMY_FIGURES = 4
 const meter = (max: number, taken: number): Meter => ({ max, left: Math.max(0, max - taken) })
 const pct = (m: Meter) => (100 * m.left / Math.max(1, m.max)) + '%'
 
@@ -66,11 +68,12 @@ const figures = computed<Fig[]>(() => {
       health: meter(i.health, i.tokens[TokenType.Damage] ?? 0), sanity: meter(i.sanity, i.tokens[TokenType.Horror] ?? 0),
     }]
   })
-  const monsters = props.enemiesAt(l).slice(0, 4).flatMap((id): Fig[] => {
+  const monsters = props.enemiesAt(l).slice(0, MAX_ENEMY_FIGURES).flatMap((id): Fig[] => {
     const e = props.game.enemies[id]
     if (!e) return []
     const damage = (e.tokens[TokenType.Damage] ?? 0) + e.assignedDamage
-    const max = resolveCalculation(e.health, Object.keys(props.game.investigators).length)
+    /* Health after modifiers, so a "+2 health" effect lengthens the bar. */
+    const max = enemyStat(e, 'health', Object.keys(props.game.investigators).length)?.current ?? null
     const definition = cardStore.cards.find((card) => card.cardCode === e.cardCode)
     const art = cardArt(definition?.art ?? e.cardCode, e.flipped ? 'b' : '')
     return [{
@@ -96,6 +99,9 @@ const figures = computed<Fig[]>(() => {
   })
   return [...people, ...residents, ...monsters]
 })
+/* Enemies past the figure limit: named in the badge's tooltip, each clickable from its menu. */
+const extraEnemies = computed(() => props.enemiesAt(props.location).slice(MAX_ENEMY_FIGURES)
+  .flatMap((id) => props.game.enemies[id] ? [{ id, name: nameOf(props.game.enemies[id].cardCode) }] : []))
 // A figure can be dragged to a spot the player finds easier to follow; it still belongs to this location.
 const figKey = (id: string) => `${props.game.id}:${props.location.id}:${id}`
 const figShift = (id: string) => { const [x, y] = offsetOf(figKey(id)); return x || y ? `${x}px ${y}px` : undefined }
@@ -122,6 +128,7 @@ const actionable = (id: string) => targetIndex(id) !== -1 || optionsFor(id).leng
 /* In a reaction window a figure with something to use now pulses orange, like a ready card in hand. */
 const triggerWindow = computed(() => isTriggerWindow(choices.value))
 const openMenu = ref<string | null>(null)
+const MORE_MENU = '__more-enemies'
 function clickFig(f: Fig) {
   const id = f.id
   const target = targetIndex(id)
@@ -144,7 +151,7 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
 
 <template>
   <span class="standees">
-    <span v-for="f in figures" :key="f.id" class="fig" :class="[f.kind, f.tone, { you: f.you, exhausted: f.exhausted, actionable: actionable(f.id) || assignable(f), assign: assignable(f), trigger: triggerWindow && actionable(f.id), open: openMenu === f.id }]" :title="f.name"
+    <span v-for="f in figures" :key="f.id" class="fig" :class="[f.kind, f.tone, { you: f.you, exhausted: f.exhausted, actionable: actionable(f.id) || assignable(f), assign: assignable(f), trigger: triggerWindow && actionable(f.id), open: openMenu === f.id }]"
       :style="{ viewTransitionName: f.moveName, translate: figShift(f.id) }" @pointerdown="startFigDrag(f.id, $event)" :data-investigator-mini="f.kind === 'investigator' ? f.id : undefined" :data-fx-target="`${f.kind}-${f.id}`"
       :data-image="openMenu === f.id ? undefined : f.cardImage" @click.stop="clickFig(f)">
       <span v-if="assignable(f)" class="assign-bar" data-no-card-overlay @click.stop @pointerdown.stop>
@@ -164,6 +171,17 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
         :[CARD_FLIGHT_ATTR]="f.cardId" :style="cardFlightStyle(flightState, f.cardId)" />
       <span v-else class="crop portrait" role="img" :aria-label="f.name"
         :[CARD_FLIGHT_ATTR]="f.cardId" :style="[{ backgroundImage: `url(${f.art})` }, cardFlightStyle(flightState, f.cardId)]"></span>
+    </span>
+    <span v-if="extraEnemies.length" class="more-enemies" :class="{ open: openMenu === MORE_MENU, actionable: extraEnemies.some((e) => actionable(e.id)), trigger: triggerWindow && extraEnemies.some((e) => actionable(e.id)) }" data-no-card-overlay
+      :title="extraEnemies.map((e) => e.name).join(', ')" @click.stop="openMenu = openMenu === MORE_MENU ? null : MORE_MENU" @pointerdown.stop>
+      +{{ extraEnemies.length }}
+      <span v-if="openMenu === MORE_MENU" class="fig-menu" role="menu" @click.stop>
+        <template v-for="e in extraEnemies" :key="e.id">
+          <b class="fig-menu__name">{{ e.name }}</b>
+          <button v-if="targetIndex(e.id) !== -1" type="button" @click="pick(targetIndex(e.id))">{{ t('locationMap.info.chooseThis') }}</button>
+          <AbilityButton v-for="c in optionsFor(e.id)" :key="c.index" :game="game" :ability="c.contents" @choose="pick(c.index)" />
+        </template>
+      </span>
     </span>
   </span>
 </template>
@@ -229,6 +247,16 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
   background: #111815f5; border: 1px solid #e6c584aa; box-shadow: 0 6px 18px #000c;
   cursor: default; white-space: nowrap; filter: none;
 }
+.more-enemies {
+  position: relative; align-self: center; pointer-events: auto; cursor: pointer; filter: none;
+  display: inline-grid; place-items: center; min-width: 28px; height: 28px; padding: 0 6px; border-radius: 999px;
+  background: #2a0f0bee; border: 2px solid #ff6a1f; color: #ffd9c8; font: 700 12px/1 system-ui, sans-serif;
+}
+.more-enemies:hover, .more-enemies.open { background: #4a1a12; }
+/* A hidden enemy that can be picked or acted on lights the badge, so a required pick never hides behind it. */
+.more-enemies.actionable { border-color: #f2d27a; box-shadow: 0 0 8px 2px #f2d27a; }
+.more-enemies.trigger { border-color: #f39a4a; box-shadow: 0 0 8px 2px #f39a4a; }
+.more-enemies .fig-menu { cursor: default; }
 .fig-menu__name { font: 600 0.78rem var(--ui-serif, serif); color: #f0d9a8; text-align: center; }
 .fig-menu :deep(button) { width: 100%; }
 .crop { display: block; width: clamp(40px, 8cqh, 72px); aspect-ratio: 1; border-radius: 50%; border: 2px solid #d99e8e; background: #1a2620 no-repeat 50% 17% / 165% auto; }

@@ -27,6 +27,8 @@ import { useI18n } from 'vue-i18n';
 import useEmitter from '@/composable/useEmitter';
 import useHighlighter from '@/composable/useHighlighter';
 import Resources from '@/arkham/components/Resources.vue';
+import PoolItem from '@/arkham/components/PoolItem.vue';
+import { TokenType } from '@/arkham/types/Token';
 import Draw from '@/arkham/components/Draw.vue';
 import { IsMobile } from '@/arkham/isMobile';
 import { formatStat } from '@/arkham/statModel';
@@ -194,6 +196,22 @@ const showSkipAll = computed(() => {
 // when this investigator has no window of their own. "Skip All" (showSkipAll) is
 // a separate button that handles the other players' windows.
 const canSkipTriggers = computed(() => skipTriggersAction.value !== -1)
+
+// Scene mode tracks damage / horror on the investigator card's character art, since the
+// token-pool row (Resources) is hidden there. Pending assignments are included so
+// the count moves while damage is being dealt, matching Resources.vue.
+const sceneDamage = computed(() => (props.investigator.tokens[TokenType.Damage] || 0) + props.investigator.assignedHealthDamage - props.investigator.assignedHealthHeal)
+const sceneHorror = computed(() => (props.investigator.tokens[TokenType.Horror] || 0) + props.investigator.assignedSanityDamage - props.investigator.assignedSanityHeal)
+
+function investigatorTokenAction(tokenType: 'DamageToken' | 'HorrorToken') {
+  return computed(() => props.choices.findIndex((c) =>
+    c.tag === MessageType.COMPONENT_LABEL
+    && c.component?.tag === 'InvestigatorComponent'
+    && c.component.tokenType === tokenType
+    && c.component.investigatorId === id.value))
+}
+const sceneDamageAction = investigatorTokenAction('DamageToken')
+const sceneHorrorAction = investigatorTokenAction('HorrorToken')
 
 function skipTriggers() {
   if (skipTriggersAction.value === -1) return
@@ -553,7 +571,7 @@ const spadeInjury = computed(() => {
   </div>
   <div v-else class="player-container" v-bind="cardDrop">
     <div class="player-area">
-      <div class="player-card">
+      <div class="player-card" :class="{ 'player-card--scene': sceneMode }">
         <div v-if="!sceneMode" class="stats">
           <div class="willpower willpower-icon">{{ formatStat(willpower, investigator.willpower) }}</div>
           <div class="intellect intellect-icon">{{ formatStat(intellect, investigator.intellect) }}</div>
@@ -561,21 +579,36 @@ const spadeInjury = computed(() => {
           <div class="agility agility-icon">{{ formatStat(agility, investigator.agility) }}</div>
         </div>
         <div
-          v-if="!sceneMode || investigator.sealedChaosTokens.length > 0"
           class="investigator-image"
+          :class="{ 'investigator-image--scene': sceneMode }"
           :data-id="investigator.id"
           @drop="onDrop($event)"
           @dragover.prevent="dragover($event)"
           @dragenter.prevent
         >
           <img
-            v-if="!sceneMode"
             :class="{ 'investigator--can-interact': investigatorAction !== -1, 'trigger-ready': triggerReady, 'ability-target': isHighlighted || isAttackTarget }"
             class="card card--sideways"
             :src="image"
             :data-fx-fallback="`investigator-${investigator.id}`"
             @click="clicked"
           />
+          <div v-if="sceneMode" class="scene-health-sanity">
+            <PoolItem
+              type="health"
+              :amount="sceneDamage"
+              :tooltip="`${sceneDamage} / ${investigator.health}`"
+              :class="{ 'health--can-interact': sceneDamageAction !== -1 }"
+              @choose="sceneDamageAction !== -1 && $emit('choose', sceneDamageAction)"
+            />
+            <PoolItem
+              type="sanity"
+              :amount="sceneHorror"
+              :tooltip="`${sceneHorror} / ${investigator.sanity}`"
+              :class="{ 'sanity--can-interact': sceneHorrorAction !== -1 }"
+              @choose="sceneHorrorAction !== -1 && $emit('choose', sceneHorrorAction)"
+            />
+          </div>
           <span v-if="isBlanked" class="blanked-badge" :data-image-id="blankedCardCode"><font-awesome-icon icon="ban" /></span>
           <PendingDamageTokens
             v-if="!portrait"
@@ -640,8 +673,9 @@ const spadeInjury = computed(() => {
                 @close="debugging = false"
               />
             </template>
+            <!-- On the map view the investigator's own abilities and Skip Triggers are listed in the location action panel; clicking the card also activates its ability. -->
             <AbilityButton
-              v-for="ability in abilities"
+              v-for="ability in (sceneMode ? [] : abilities)"
               :key="ability.index"
               :ability="ability.contents"
               :game="game"
@@ -661,7 +695,7 @@ const spadeInjury = computed(() => {
               @click="showDevoured"
             >{{ $t('investigator.devouredCards', {count: devoured.length}) }}</button>
 
-            <span class="skip-triggers-group" :class="{ 'skip-triggers-group--paired': showSkipAll }">
+            <span v-if="!sceneMode" class="skip-triggers-group" :class="{ 'skip-triggers-group--paired': showSkipAll }">
               <button
                 :disabled="!canSkipTriggers || skipAllInProgress"
                 :data-game-actionable="canSkipTriggers && !skipAllInProgress || undefined"
@@ -1217,6 +1251,33 @@ i.action {
   left: 6px;
   z-index: var(--z-index-10);
   pointer-events: none;
+}
+
+/* Map view: the investigator card fills the side column, with damage / horror
+ * pools pinned to its lower corners so they read as tokens on the card. */
+/* .player-card sizes to min-content, which collapses a width:100% card to 0. */
+.player-card--scene {
+  width: 100%;
+}
+
+.investigator-image--scene {
+  width: 100%;
+}
+
+/* Sits on the character art, which fills the left part of a landscape investigator card. */
+.scene-health-sanity {
+  position: absolute;
+  top: 22%;
+  left: 6%;
+  width: 34%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+
+  > .poolItem {
+    pointer-events: auto;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8));
+  }
 }
 
 .investigator-image {

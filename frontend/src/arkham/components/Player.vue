@@ -1670,7 +1670,9 @@ function closeHand() {
 .player-cards--scene > .player { flex: none; align-self: stretch; align-items: center; padding: 6px 10px; }
 .player-cards--scene .player :deep(.investigator-and-deck) { display: flex; flex-flow: row wrap; justify-content: center; align-items: flex-start; gap: 6px; width: 176px; }
 .player-cards--scene .player :deep(.investigator-and-deck > .deck-container) { order: 0; }
-.player-cards--scene .player :deep(.investigator-and-deck > .discard) { order: 1; width: auto; }
+.player-cards--scene .player :deep(.investigator-and-deck > .discard) { order: 1; width: auto; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+/* The view-discard pill is sized to --card-width elsewhere, wider than this shrunken pile; hug the content so it sits under the card instead of across it. */
+.player-cards--scene .player :deep(.investigator-and-deck > .discard .cards-under-indicator) { width: auto !important; min-width: 0; max-width: none; position: static; }
 .player-cards--scene .player :deep(.investigator-and-deck > .discard .card) { max-height: 76px; width: auto; }
 .player-cards--scene .player :deep(.investigator-and-deck > .player-container) { order: 2; flex: 0 0 100%; }
 .player-cards--scene .player :deep(.player-container), .player-cards--scene .player :deep(.player-area) { display: block; }

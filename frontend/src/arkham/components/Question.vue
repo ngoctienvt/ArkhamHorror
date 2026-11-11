@@ -1894,6 +1894,9 @@ h2 {
 }
 
 .searched-cards {
+  /* The board's card size is a thumbnail; cards picked from a search or a
+   * looked-at pile need to be readable, so draw them larger here. */
+  --card-width: min(calc(5vw + 40px), 120px);
   flex-direction: column;
   align-items: stretch;
   gap: 12px;

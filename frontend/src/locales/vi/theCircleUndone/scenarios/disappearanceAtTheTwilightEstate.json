@@ -10,11 +10,11 @@
   },
   "intro": {
     "label": {
-      "returnToSkip": "Perform the above and skip playing _Disappearance at the Twilight Estate_.",
-      "playNormally": "Play _Disappearance at the Twilight Estate_ normally."
+      "returnToSkip": "Thực hiện các bước trên và bỏ qua việc chơi _Sự Biến Mất Tại Dinh Thự Twilight_.",
+      "playNormally": "Chơi _Sự Biến Mất Tại Dinh Thự Twilight_ bình thường."
     },
     "chooseInvestigator": "<ul><li>Mỗi người chơi phải chọn một trong những điều tra viên trung lập sau đây để điều khiển trong suốt giai đoạn mở đầu này: Gavriella Mizrah, Jerome Davids, Penny White hoặc Valentino Rivas. Trong suốt đoạn mở đầu này, bạn sẽ chơi qua câu chuyện của nhân vật này và đưa ra các lựa chọn sẽ quyết định số phận của họ. Điều tra viên bạn lựa chọn không ảnh hưởng trực tiếp đến bộ bài điều tra viên tiêu chuẩn của bạn, mặc dù kết quả của phần mở đầu sẽ ảnh hưởng đến câu chuyện.</li></ul>",
-    "title": "Prologue (Scenario 0): Disappearance at the Twilight Estate",
+    "title": "Phần Mở Đầu (Kịch Bản 0): Sự Biến Mất Tại Dinh Thự Twilight",
     "returnToChoice": "<p class='basic'>Instead of playing through Return to Disappearance at the Twilight Estate, the players may choose to do the following:</p><ul><li>Each player chooses one of the neutral prologue investigators, as normal. Then, that player draws a random tarot card from the Tarot Deck and refers to the list below to see what happened to that character, recording it in the Campaign Log where appropriate (adding up the total pieces of evidence left behind). The same card cannot be drawn for more than one character.<ul><li>0: *(character’s name) disappeared into the mist. 2 pieces of evidence were left behind.*</li><li>1–2: *(character’s name) disappeared into the mist. 0 pieces of evidence were left behind.*</li><li>3–6: *(character’s name) was claimed by specters. 3 pieces of evidence were left behind.*</li><li>7–9: *(character’s name) was claimed by specters. 5 pieces of evidence were left behind.*</li><li>10–12: *(character’s name) was pulled into the spectral realm. 2 pieces of evidence were left behind.*</li><li>13–16: *(character’s name) was pulled into the spectral realm. 4 pieces of evidence were left behind.*</li><li>17–18: *(character’s name) was pulled into the spectral realm. 6 pieces of evidence were left behind.*</li><li>19–20: *(character’s name) was taken by the watcher. 3 pieces of evidence were left behind.*</li><li>21: *(character’s name) was taken by the watcher. 5 pieces of evidence were left behind.*</li></ul></li></ul>",
     "TheFool0": "0: {name} disappeared into the mist. 2 pieces of evidence were left behind.",
     "TheMagicianI": "1–2: {name} disappeared into the mist. 0 pieces of evidence were left behind.",

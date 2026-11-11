@@ -21,7 +21,8 @@ let replayCurrent: () => void = () => {}
 let stopCurrent: () => void = () => {}
 
 let manifestPromise: Promise<NarrationManifest | null> | null = null
-function loadManifest(): Promise<NarrationManifest | null> {
+export const NARRATION_ROOT = ROOT
+export function loadManifest(): Promise<NarrationManifest | null> {
   manifestPromise ??= fetch(`${ROOT}/manifest.json`, { cache: 'no-cache' })
     .then((r) => (r.ok ? (r.json() as Promise<NarrationManifest>) : null))
     .catch(() => null)

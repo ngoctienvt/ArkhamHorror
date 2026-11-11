@@ -44,43 +44,32 @@ html.fit-screen .scenario-body--map .location-map .map-layout {
   min-height: 0;
 }
 
-/* The act / agenda / reference strip above the map: smaller type and art, no flavour text, so it
-   leaves the room to the map. A box that still has too much text scrolls inside itself. */
+/* The act / agenda / reference strip above the map: smaller type, so it leaves the room to the map.
+   Each panel's body still scrolls inside it (MissionStripPanel). */
 html.fit-screen .location-map .mission-strip {
   padding: 3px 6px;
   gap: 4px;
 }
 
 html.fit-screen .location-map .mission-strip .mission {
-  font-size: 11.5px;
-  line-height: 1.25;
-  gap: 6px;
-  padding: 3px 6px;
-  max-height: 112px;
-  overflow-y: auto;
-  scrollbar-width: thin;
+  max-height: 120px;
+  padding: 4px 8px 5px;
+  gap: 3px;
 }
 
-/* The strip sizes its headings and paragraphs in rem, so they ignore the font-size above. */
-html.fit-screen .location-map .mission-strip .mission h3 {
+html.fit-screen .location-map .mission-strip .mission__title {
   font-size: 12.5px;
 }
 
-html.fit-screen .location-map .mission-strip .mission p {
+html.fit-screen .location-map .mission-strip .mission__body p {
   font-size: 11px;
   line-height: 1.25;
 }
 
-html.fit-screen .location-map .mission-strip .flavor {
-  display: none;
-}
-
-html.fit-screen .location-map .mission-strip .thumb--landscape {
-  width: 64px;
-}
-
-html.fit-screen .location-map .mission-strip .thumb--portrait {
-  width: 40px;
+/* The map's controls stay on their own bar here (the game bar is hidden); keep its right end clear
+   of the floating exit button below. */
+html.fit-screen .location-map .map-bar {
+  padding-right: 44px;
 }
 
 /* The way back: the bar that holds the toggle is hidden, so a small floating control stays. */
@@ -91,10 +80,14 @@ html.fit-screen .location-map .mission-strip .thumb--portrait {
   z-index: var(--z-index-200, 200);
   display: grid;
   place-items: center;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  opacity: 0.45;
+  border: 1px solid #c6a87399;
+  border-radius: 6px;
+  background: #101a14e6;
+  color: #f0dfb5;
+  opacity: 0.75;
   transition: opacity 120ms ease;
 }
 

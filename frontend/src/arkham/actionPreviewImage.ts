@@ -25,6 +25,12 @@ export function entityImage(game: Game, id: string | null | undefined): string |
   return null
 }
 
+/** An investigator's own card, for an ability printed on it (unlike basic actions, it is about the investigator). */
+export function investigatorImage(game: Game, id: string | null | undefined): string | null {
+  const found = id ? game.investigators[id] : null
+  return found?.cardCode ? cardImage(found.cardCode) : null
+}
+
 function enemyAt(enemy: Enemy, locationId: string): boolean {
   return enemy.placement.tag === 'AtLocation' && enemy.placement.contents === locationId
 }

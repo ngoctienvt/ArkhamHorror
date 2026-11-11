@@ -34,6 +34,7 @@ import { Source } from '@/arkham/types/Source'
 import { isManifestedSpiritEnemy } from '@/arkham/spiritVisuals';
 import { type Card as ArkhamCard, toCardContents } from '@/arkham/types/Card';
 import { isUnvaluedCalculation } from '@/arkham/types/Calculation'
+import { enemyStat, type EnemyStatKey } from '@/arkham/enemyStats'
 import { useCardStore } from '@/stores/cards'
 
 const props = withDefaults(defineProps<{
@@ -323,17 +324,23 @@ const cannotBeDamagedCardCode = computed<string | null>(() => {
   return sourceCardCode(m.source, props.game)
 })
 
-const health = computed(() => {
-  return props.enemy.health?.tag == "Fixed" ? props.enemy.health.contents : null
-})
+/* A stat drawn over the card image. Unchanged printed numbers are already on the art, so only a "Fixed"
+ * value (not printed on the art) or a value modifiers moved gets drawn; a moved one carries its trend so
+ * the overlay can colour it. */
+const playerCount = computed(() => Object.keys(props.game.investigators).length)
+function overlayStat(key: EnemyStatKey) {
+  const stat = enemyStat(props.enemy, key, playerCount.value)
+  const fixed = props.enemy[key]?.tag === "Fixed"
+  if (!stat || (!fixed && stat.trend === null)) return { value: null, trend: undefined }
+  return { value: stat.current, trend: stat.trend === null ? undefined : (stat.bad ? 'bad' : 'good') }
+}
 
-const evade = computed(() => {
-  return props.enemy.evade?.tag == "Fixed" ? props.enemy.evade.contents : null
-})
-
-const fight = computed(() => {
-  return props.enemy.fight?.tag == "Fixed" ? props.enemy.fight.contents : null
-})
+const healthStat = computed(() => overlayStat('health'))
+const evadeStat = computed(() => overlayStat('evade'))
+const fightStat = computed(() => overlayStat('fight'))
+const health = computed(() => healthStat.value.value)
+const evade = computed(() => evadeStat.value.value)
+const fight = computed(() => fightStat.value.value)
 
 const gainedVictory = computed(() => {
   const {modifiers} = props.enemy
@@ -451,6 +458,9 @@ function onDrop(event: DragEvent) {
               :data-fight="fight"
               :data-evade="evade"
               :data-health="health"
+              :data-fight-trend="fightStat.trend"
+              :data-evade-trend="evadeStat.trend"
+              :data-health-trend="healthStat.trend"
               :data-damage="enemy.healthDamage"
               :data-horror="enemy.sanityDamage"
               :data-victory="gainedVictory"

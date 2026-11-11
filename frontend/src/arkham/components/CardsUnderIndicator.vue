@@ -480,10 +480,6 @@ onBeforeUnmount(() => finishDrag())
   cursor: grab;
 }
 
-.cards-under-popover__card-wrap.discard {
-  filter: grayscale(0.85);
-}
-
 .cards-under-popover__card-wrap :deep(.card),
 .cards-under-popover__card {
   width: calc(var(--card-width, 100px) * 1.1);

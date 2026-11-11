@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, onBeforeUnmount, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Game } from '@/arkham/types/Game'
 import type { Scenario } from '@/arkham/types/Scenario'
@@ -15,18 +15,23 @@ import {
   type LocationGraph, type Point,
 } from '@/arkham/locationGraph'
 import { gridSlotIndex } from '@/arkham/locationChoices'
-import LocationMapCanvas, { type MapMove, type RoomPlateSpot } from '@/arkham/components/LocationMapCanvas.vue'
+import LocationMapCanvas, { type ConcealedSpot, type MapMove, type RoomPlateSpot } from '@/arkham/components/LocationMapCanvas.vue'
+import { concealedAt, gridConcealedGroups, positionToGridArea } from '@/arkham/concealedCards'
+import { scenePanelOnlyCount } from '@/arkham/sceneTargetFallback'
 import LocationActionPanel from '@/arkham/components/LocationActionPanel.vue'
 import LocationHand from '@/arkham/components/LocationHand.vue'
 import { ownInvestigator } from '@/arkham/ownInvestigator'
 import LocationMissionStrip from '@/arkham/components/LocationMissionStrip.vue'
 import LocationInfoCard from '@/arkham/components/LocationInfoCard.vue'
 import LocationMapLegend from '@/arkham/components/LocationMapLegend.vue'
+import MapDeckPanel from '@/arkham/components/MapDeckPanel.vue'
+import { useMenu } from '@/composable/menu'
 import { arrangeMode, hasMapOffsets, resetMapOffsets } from '@/arkham/composables/useMapDrag'
 import { useMapViewport } from '@/arkham/composables/useMapViewport'
 import { MAP_ZOOM_ENABLED } from '@/arkham/mapViewport'
 import { useLocationInfo } from '@/arkham/composables/useLocationInfo'
 import { useTouchMode } from '@/arkham/composables/useTouchMode'
+import { fitScreenOn } from '@/arkham/composables/useFitScreen'
 
 const props = defineProps<{
   game: Game
@@ -58,6 +63,22 @@ const collapsedBar = computed(() => layoutClass.value === 'tablet-portrait')
 const panelBelow = computed(() => layoutClass.value === 'phone')
 const sheetExpanded = ref(false)
 const moreOpen = ref(false)
+/* The Deck drop-down. Registered in the View menu as well, which gives it its keyboard shortcut
+ * (Game.vue runs menu entries by their binding) and lists it in the shortcuts help. */
+const deckPanelOpen = ref(false)
+const { addEntry, removeEntry } = useMenu()
+onMounted(() => addEntry({
+  id: 'viewDecks', content: t('locationMap.deckPanel.title'), nested: 'view', section: 'panels',
+  binding: 'viewDecks', action: () => { deckPanelOpen.value = !deckPanelOpen.value },
+}))
+onBeforeUnmount(() => removeEntry('viewDecks'))
+/* The mission strip (agenda / act / reference) starts open; a player who folds it keeps it folded. */
+const missionCollapsed = useStorage('arkham:mission-strip-collapsed', false)
+/* The controls move into the game bar once its slot is on the page (see Game.vue), except in
+ * fit-to-screen, where the game bar is hidden and they would vanish with it. */
+const gameBarSlot = ref(false)
+onMounted(() => nextTick(() => { gameBarSlot.value = !!document.getElementById('game-bar-scene-slot') }))
+const barInGameBar = computed(() => gameBarSlot.value && !fitScreenOn.value)
 const choices = useGameChoices(() => props.game, () => props.playerId)
 
 // The same set the card board draws: attached locations still sit on the map, only ones taken off it are left out.
@@ -120,6 +141,29 @@ const gridSpots = computed(() => {
       return { label, x: anchor?.[0] ?? x, y: anchor?.[1] ?? (squeeze ? y * 0.8 : y), index: gridSlotIndex(choices.value, label) }
     })
 })
+
+// Concealed mini-cards in grid positions (Without a Trace, Congress of the Keys), drawn where that cell
+// sits on the map, the way gridSpots places an empty slot. One whose cell is not in the layout goes to
+// the bottom edge rather than vanishing, since a choice may still need it.
+const concealedSpots = computed<ConcealedSpot[]>(() => {
+  const groups = gridConcealedGroups(props.game, props.scenario)
+  if (groups.length === 0) return []
+  const spots = gridPositions(layout.value ?? [])
+  const squeeze = locations.value.some((l) => !(l.label in spots)) && locations.value.some((l) => l.label in spots)
+  return groups.map((group, i) => {
+    const label = positionToGridArea(group.position)
+    const at = spots[label]
+    const cards = [...group.unknown, ...group.known]
+    if (!at) return { key: label, x: 8 + ((i * 12) % 84), y: 94, cards }
+    return { key: label, x: at[0], y: squeeze ? at[1] * 0.8 : at[1], cards }
+  })
+})
+const concealedOf = (l: Location) => concealedAt(props.game, l)
+const mapLocationIds = computed(() => locations.value.map((l) => l.id))
+// Choices that only the action panel lists (cards the scene does not draw as clickable): reopen the panel
+// whenever such a question comes up, and badge the Actions button with how many there are.
+const panelOnlyCount = computed(() =>
+  scenePanelOnlyCount(props.game, choices.value, new Set(mapLocationIds.value), me.value?.id ?? null))
 
 const canvasSize = computed(() => {
   const rows = layout.value?.map((r) => r.trim().split(/\s+/)) ?? []
@@ -190,6 +234,7 @@ const inspectedConnections = computed(() => (inspected.value?.connectedLocations
   .map((id) => props.game.locations[id]).filter((l): l is Location => Boolean(l) && Boolean(graph.value[l.id]))
   .map((l) => { const info = infoOf(l); return { id: l.id, name: info.face.name, revealed: info.revealed } }))
 const panelOpen = ref(true)
+watch(() => panelOnlyCount.value > 0, (needed) => { if (needed) panelOpen.value = true }, { immediate: true })
 // The card sits in the top-right corner, left of the actions panel; focus goes back to the plate that opened it.
 const anchorEl = ref<HTMLElement | null>(null)
 
@@ -246,35 +291,52 @@ const views: LocationView[] = ['map', 'cards']
 
 <template>
   <section class="location-map" :data-input="inputMode" :data-layout="layoutClass" :data-arrange="arrangeMode" :aria-label="t('locationMap.title')">
-    <div class="map-bar">
-      <span class="views" role="tablist">
-        <button v-for="v in views" :key="v" class="view" :class="{ active: v === view }" role="tab"
-          :aria-selected="v === view" @click="settings.setLocationView(v)">{{ t(`locationMap.view.${v}`) }}</button>
-      </span>
-      <span v-if="boardOnlyContent" class="board-note">{{ t('locationMap.boardOnly') }}</span>
-      <button class="view" :class="{ active: panelOpen }" @click="panelOpen = !panelOpen">{{ t('locationMap.actions') }}</button>
-      <button v-if="isTouch" class="view arrange" :class="{ active: arrangeMode }" :aria-pressed="arrangeMode"
-        @click="arrangeMode = !arrangeMode">{{ t('locationMap.arrange') }}</button>
-      <button v-if="collapsedBar" class="view more" :class="{ active: moreOpen }" :aria-expanded="moreOpen"
-        :aria-label="t('locationMap.moreOptions')" @click.stop="moreOpen = !moreOpen">⋯</button>
-      <!-- On a tablet held upright the less-used buttons fold into the ⋯ menu so the bar stays on one line. -->
-      <div class="bar-extras" :class="{ collapsed: collapsedBar, open: moreOpen }" @click.stop>
-        <button class="view" :class="{ active: chaosBagShown }" :aria-pressed="chaosBagShown"
-          @click="emit('toggleChaosBag')">{{ t('gameBar.chaosBag') }}</button>
-        <button v-if="showOverview && roomPlates" class="view" :class="{ active: plateText }" :aria-pressed="plateText"
-          @click="plateText = !plateText">{{ plateText ? t('locationMap.marker.collapseAll') : t('locationMap.marker.expandAll') }}</button>
-        <button v-if="hasMapOffsets(game.id)" class="view" @click="resetMapOffsets(game.id)">{{ t('locationMap.resetLayout') }}</button>
-        <LocationMapLegend />
-        <button class="view decks" :class="{ active: decksShown }" @click="emit('toggleDecks')">{{ t('locationMap.decks') }}</button>
+    <!-- The map's controls live in the game bar (beside Campaign / View ...) so the board has one toolbar.
+         In fit-to-screen the game bar is hidden, so they stay here, above the mission strip.
+         Left: what the main area shows (segmented) and the action panel. Right: tools, then the strip fold. -->
+    <Teleport defer to="#game-bar-scene-slot" :disabled="!barInGameBar">
+    <div class="map-bar" :class="{ 'map-bar--in-game-bar': barInGameBar }" :data-input="inputMode">
+      <div class="bar-group">
+        <span class="views" role="tablist">
+          <button v-for="v in views" :key="v" class="view" :class="{ active: v === view }" role="tab"
+            :aria-selected="v === view" @click="settings.setLocationView(v)">{{ t(`locationMap.view.${v}`) }}</button>
+        </span>
+        <button class="view view--primary" :class="{ active: panelOpen }" :aria-pressed="panelOpen" @click="panelOpen = !panelOpen">{{ t('locationMap.actions') }}<span v-if="panelOnlyCount > 0" class="pending-badge" :aria-label="t('locationMap.pendingPicks', { count: panelOnlyCount })">{{ panelOnlyCount }}</span></button>
+        <button v-if="isTouch" class="view arrange" :class="{ active: arrangeMode }" :aria-pressed="arrangeMode"
+          @click="arrangeMode = !arrangeMode">{{ t('locationMap.arrange') }}</button>
+        <span v-if="boardOnlyContent" class="board-note">{{ t('locationMap.boardOnly') }}</span>
+      </div>
+      <div class="bar-group bar-group--tools">
+        <button v-if="collapsedBar" class="view more" :class="{ active: moreOpen }" :aria-expanded="moreOpen"
+          :aria-label="t('locationMap.moreOptions')" @click.stop="moreOpen = !moreOpen">⋯</button>
+        <!-- On a tablet held upright the less-used buttons fold into the ⋯ menu so the bar stays on one line. -->
+        <div class="bar-extras" :class="{ collapsed: collapsedBar, open: moreOpen }" @click.stop>
+          <button v-if="showOverview && roomPlates" class="view view--tool" :class="{ active: plateText }" :aria-pressed="plateText"
+            @click="plateText = !plateText">{{ plateText ? t('locationMap.marker.collapseAll') : t('locationMap.marker.expandAll') }}</button>
+          <button v-if="hasMapOffsets(game.id)" class="view view--tool" @click="resetMapOffsets(game.id)">{{ t('locationMap.resetLayout') }}</button>
+          <LocationMapLegend />
+          <!-- Deck: a drop-down with every deck, its discard and the set-aside cards (shortcut in the View menu). -->
+          <span class="deck-anchor">
+            <button class="view view--tool decks deck-panel-toggle" :class="{ active: deckPanelOpen || decksShown }" :aria-expanded="deckPanelOpen"
+              :title="t('locationMap.deckPanel.title')" @click="deckPanelOpen = !deckPanelOpen">{{ t('locationMap.decks') }}</button>
+            <MapDeckPanel v-if="deckPanelOpen" :game="game" :scenario="scenario" :playerId="playerId"
+              @choose="emit('choose', $event)" @close="deckPanelOpen = false" @openBoard="deckPanelOpen = false; emit('toggleDecks')" />
+          </span>
+        </div>
+        <button class="view view--icon" :aria-expanded="!missionCollapsed"
+          :title="missionCollapsed ? t('locationMap.expandStrip') : t('locationMap.collapseStrip')"
+          :aria-label="missionCollapsed ? t('locationMap.expandStrip') : t('locationMap.collapseStrip')"
+          @click="missionCollapsed = !missionCollapsed">{{ missionCollapsed ? '▾' : '▴' }}</button>
       </div>
     </div>
+    </Teleport>
     <p v-if="arrangeMode" class="arrange-hint" role="status">{{ t('locationMap.arrangeHint') }}</p>
-    <LocationMissionStrip :game="game" :scenario="scenario" :playerId="playerId" :referenceImage="referenceImage" @choose="emit('choose', $event)" />
+    <LocationMissionStrip :game="game" :scenario="scenario" :playerId="playerId" :referenceImage="referenceImage" :collapsed="missionCollapsed" @choose="emit('choose', $event)" />
     <div class="map-layout" :class="[view, { 'panel-open': panelOpen && !panelBelow, 'sheet-layout': sheetLayout }]" @click="inspectedId = null; moreOpen = false">
       <div id="scene-team-slot" class="team-slot"></div>
       <LocationMapCanvas :cutaway="cutaway" :roomPlates="roomPlates" :plateText="plateText" :illustrated-board="illustratedBoard" :game="game" :playerId="playerId" :locations="locations"
         :positions="positions" :links="links" :moves="moves" :gridSpots="gridSpots" :selectedId="selected?.id ?? null"
-        :enemiesAt="enemiesShownAt" :infoOf="infoOf" :width="canvasSize.width" :height="canvasSize.height" :viewport="viewport"
+        :enemiesAt="enemiesShownAt" :concealedAt="concealedOf" :concealedSpots="concealedSpots" :infoOf="infoOf" :width="canvasSize.width" :height="canvasSize.height" :viewport="viewport"
         @inspect="inspect" @choose="emit('choose', $event)" />
       <div v-if="canZoom" class="zoom-controls" role="group" :aria-label="t('locationMap.zoomReset')">
         <button type="button" :aria-label="t('locationMap.zoomIn')" :disabled="!viewport.canZoomIn.value" @click.stop="viewport.zoomIn()">+</button>
@@ -282,14 +344,14 @@ const views: LocationView[] = ['map', 'cards']
         <button type="button" :aria-label="t('locationMap.zoomReset')" :disabled="!viewport.zoomed.value" @click.stop="viewport.reset()">⟲</button>
       </div>
       <LocationActionPanel v-if="panelOpen && !panelBelow" class="action-overlay" :game="game" :playerId="playerId"
-        :location="panelLocation" :info="panelLocation ? infoOf(panelLocation) : null" :sheet="sheetLayout" :expanded="sheetExpanded"
+        :location="panelLocation" :info="panelLocation ? infoOf(panelLocation) : null" :mapLocationIds="mapLocationIds" :sheet="sheetLayout" :expanded="sheetExpanded"
         @toggleSheet="sheetExpanded = !sheetExpanded" @choose="emit('choose', $event)" @close="panelOpen = false" />
       <LocationInfoCard v-if="inspected" :game="game" :playerId="playerId" :location="inspected" :info="infoOf(inspected)"
-        :connections="inspectedConnections" :rightGap="panelOpen && !sheetLayout && !panelBelow ? 300 : 0" @choose="emit('choose', $event)"
+        :connections="inspectedConnections" :besidePanel="panelOpen && !sheetLayout && !panelBelow" @choose="emit('choose', $event)"
         @inspect="inspectById" @close="closeCard" />
     </div>
     <LocationActionPanel v-if="panelOpen && panelBelow" class="action-below" :game="game" :playerId="playerId"
-      :location="panelLocation" :info="panelLocation ? infoOf(panelLocation) : null" @choose="emit('choose', $event)" @close="panelOpen = false" />
+      :location="panelLocation" :info="panelLocation ? infoOf(panelLocation) : null" :mapLocationIds="mapLocationIds" @choose="emit('choose', $event)" @close="panelOpen = false" />
     <LocationHand :game="game" :playerId="playerId" @choose="emit('choose', $event)" />
   </section>
 </template>
@@ -298,10 +360,25 @@ const views: LocationView[] = ['map', 'cards']
 .location-map { display: flex; flex-direction: column; min-height: 380px; height: calc(100dvh - 60px - var(--hand-h, 0px)); flex: none; overflow: hidden; background: radial-gradient(ellipse at 50% 45%, #2c3a28, #0e1610 78%); }
 /* Touch sizing tokens for everything inside the scene map. With a mouse --tap-min is 0, so rules that use it change nothing. */
 .location-map { --tap-min: 0px; --tap-gap: 0px; --sheet-max: 56dvh; --sheet-peek: 28dvh; }
+/* Shared scene palette: every panel on the map (mission strip, tab bar, action panel) reads these so
+ * they stay one dark-and-brass theme instead of each hard-coding its own shades. */
+.location-map, .map-bar {
+  --surface-0: #16221b; --surface-1: #1f2d25; --surface-2: #283a30; --surface-3: #31463a;
+  --line: #c6a87355; --line-strong: #c6a873aa;
+  --text: #f2ecdc; --text-muted: #b6bfb0; --text-flavor: #cdd4c2; --heading: #fff6e4;
+  --accent-gold: #d9b878; --accent-gold-soft: #c6a87326;
+  --doom: #ff7a64; --doom-soft: #5a1a1466; --clue: #8fd0e4; --ready: #5fd88a; --ready-soft: #1f7a3d;
+  --radius: 6px; --radius-lg: 8px; --shadow: 0 2px 10px #0009; --shadow-pop: 0 8px 24px #000b;
+  /* Location states, read by the plates, the legend and the info card. */
+  --state-here: #ffe9a0; --state-move: #8fd19a; --state-target: #f2d27a; --state-hidden: #9a9d98;
+  --focus-ring: 2px solid #ffe9a0;
+  /* Widths the map keeps clear for the floating columns: the action panel on the right, the team on the left. */
+  --panel-w: 280px; --panel-gap: 12px; --team-w: 242px;
+}
 /* Tablets: the team becomes a strip across the top of the map instead of a column down the left, so the
  * map keeps its width; held upright, the action panel is a bottom sheet instead of a column on the right. */
 .location-map[data-layout^='tablet'] .team-slot { top: 8px; bottom: auto; left: 12px; right: 12px; width: auto; flex-direction: row; flex-wrap: wrap; gap: 6px; }
-.location-map[data-layout='tablet-landscape'] .map-layout.panel-open .team-slot { right: 324px; }
+.location-map[data-layout='tablet-landscape'] .map-layout.panel-open .team-slot { right: calc(var(--panel-w) + 2 * var(--panel-gap)); }
 .location-map[data-layout^='tablet'] .team-slot:not(:empty) ~ .map-scroll { padding-left: 0; padding-top: 56px; }
 .location-map[data-layout='tablet-portrait'] .map-layout.sheet-layout.panel-open > .map-scroll { padding-right: 0; padding-bottom: var(--sheet-peek); }
 .location-map[data-layout='tablet-portrait'] .action-overlay { left: 0; right: 0; top: auto; bottom: 0; width: auto; }
@@ -314,6 +391,7 @@ const views: LocationView[] = ['map', 'cards']
 .zoom-controls button:disabled { opacity: 0.4; }
 /* The ⋯ menu of a tablet held upright. */
 .bar-extras { display: contents; }
+.deck-anchor { position: relative; display: inline-flex; }
 .bar-extras.collapsed { display: none; }
 .bar-extras.collapsed.open { display: grid; gap: var(--tap-gap, 8px); position: absolute; right: 12px; top: calc(100% + 4px); z-index: 95; padding: 10px; background: #101a14; border: 1px solid #c6a873; border-radius: 8px; box-shadow: 0 10px 30px #000c; }
 .location-map[data-input='touch'] { --tap-min: 44px; --tap-gap: 8px; }
@@ -327,21 +405,39 @@ const views: LocationView[] = ['map', 'cards']
 .location-map[data-input='touch'] .map-bar,
 .location-map[data-input='touch'] .map-layout { user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
 .location-map[data-input='touch'] :deep(.info-card) { user-select: text; -webkit-user-select: text; -webkit-touch-callout: default; }
-.map-bar { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 5px 12px; background: #101a14; border-bottom: 1px solid #a68b5540; }
-.views { display: flex; gap: 4px; }
-.view { padding: 3px 12px; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; background: transparent; border: 1px solid #75836b66; border-radius: 4px; color: #b4bdab; cursor: pointer; }
-.view:hover { border-color: #e6c584; }
-.view.active { background: #c6a873; border-color: #c6a873; color: #191c16; font-weight: 650; }
-.board-note { font-size: 0.75rem; color: #d8b68c; }
+.map-bar { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 5px 12px; background: var(--surface-0); border-bottom: 1px solid var(--line); }
+.bar-group { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.bar-group--tools { gap: 4px; }
+/* The two views read as one segmented control: a shared frame, the chosen half filled brass. */
+.views { display: inline-flex; padding: 2px; gap: 2px; border: 1px solid var(--line-strong); border-radius: 6px; background: #0006; }
+.views .view { border-color: transparent; }
+.view { white-space: nowrap; padding: 3px 12px; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; background: transparent; border: 1px solid #75836b55; border-radius: 4px; color: #b4bdab; cursor: pointer; transition: background 0.15s, border-color 0.15s, color 0.15s; }
+.view:hover { border-color: var(--accent-gold); color: #e7dcc0; }
+.view:focus-visible { outline: 1px solid var(--accent-gold); outline-offset: 2px; }
+/* One active look for every toggle: brass fill, dark text. */
+.view.active { background: var(--accent-gold); border-color: var(--accent-gold); color: #191c16; font-weight: 650; }
+.view--primary { border-color: var(--line-strong); color: #e7dcc0; }
+.view--tool { border-color: transparent; }
+.view--icon { width: 28px; padding: 3px 0; font-size: 0.8rem; letter-spacing: 0; border-color: var(--line); }
+/* Inside the game bar: no strip of its own, it fills the bar's free middle, tools pushed right with a divider. */
+.map-bar--in-game-bar { flex: 1; min-width: 0; padding: 0 8px; background: transparent; border-bottom: 0; border-left: 1px solid #ffffff1a; }
+.map-bar--in-game-bar .view { padding: 2px 10px; font-size: 0.68rem; }
+.map-bar--in-game-bar .views { padding: 1px; }
+.map-bar[data-input='touch'] { flex-wrap: wrap; row-gap: var(--tap-gap); }
+.map-bar[data-input='touch'] .view { min-height: var(--tap-min); padding: 0 16px; font-size: 0.8rem; }
+.map-bar[data-input='touch'] { --tap-min: 44px; --tap-gap: 8px; }
+.bar-extras :deep(button) { font-size: 0.72rem; }
+.board-note { font-size: 0.72rem; color: #d8b68c; }
+.pending-badge { display: inline-grid; place-items: center; min-width: 16px; height: 16px; margin-left: 6px; padding: 0 4px; border-radius: 8px; background: #f2d27a; color: #191c16; font-size: 0.62rem; font-weight: 700; letter-spacing: 0; }
 .map-layout { position: relative; display: flex; flex: 1 1 300px; min-height: 300px; }
 .map-layout > .map-scroll { box-sizing: border-box; }
-.map-layout.panel-open > .map-scroll { padding-right: 300px; }
-.team-slot:not(:empty) ~ .map-scroll { padding-left: 212px; }
-.action-overlay { position: absolute; right: 12px; top: 12px; bottom: 12px; height: auto; z-index: 60; }
+.map-layout.panel-open > .map-scroll { padding-right: calc(var(--panel-w) + 2 * var(--panel-gap)); }
+.team-slot:not(:empty) ~ .map-scroll { padding-left: calc(var(--team-w) + var(--panel-gap)); }
+.action-overlay { position: absolute; right: var(--panel-gap); top: var(--panel-gap); bottom: var(--panel-gap); height: auto; z-index: 60; }
 .mini-map { position: absolute; left: 12px; bottom: 12px; z-index: 50; width: clamp(240px, 24vw, 380px); aspect-ratio: 4 / 3; padding: 6px; background: #0b130ee6; border: 1px solid #c6a873aa; border-radius: 8px; box-shadow: 0 6px 20px #000a; }
 .mini-map :deep(.map-scroll) { width: 100%; height: 100%; }
 .map-layout > :not(.team-slot):not(.action-overlay):not(.mini-map):not(.zoom-controls) { flex: 1; min-width: 0; }
-.team-slot { position: absolute; left: 12px; top: 84px; bottom: 12px; z-index: 55; width: 242px; display: flex; flex-direction: column; pointer-events: none; }
+.team-slot { position: absolute; left: 12px; top: 84px; bottom: 12px; z-index: 55; width: var(--team-w); display: flex; flex-direction: column; pointer-events: none; }
 @media (max-width: 800px) { .team-slot { width: calc(100% - 24px); bottom: auto; } }
 /* Phone: the action list follows the map in the page, full width, clear of the hand fixed at the bottom. */
 .location-map .action-below { position: static; flex: none; width: auto; max-height: none; margin: 8px 12px calc(12px + var(--hand-h, 0px)); overflow: visible; }

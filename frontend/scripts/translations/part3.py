@@ -45,7 +45,7 @@ TRANSLATIONS_P3 = {
     # 07001: Sister Mary (Innsmouth)
     "07001": {
         "subname": "Nữ tu",
-        "text": "Trước khi chuẩn bị túi hỗn mang trong quá trình thiết lập trò chơi: Thêm 2 token [bless] vào túi hỗn mang.\nKhi kết thúc giai đoạn Mythos: Thêm 1 token [bless] vào túi hỗn mang, hoặc 2 token [bless] nếu không có token [bless] nào trong túi hỗn mang.\nHiệu ứng [elder_sign]: +1. Thêm 1 token [bless] vào túi hỗn mang.",
+        "text": "Trong khi thiết lập, thêm 2 token [bless] vào túi hỗn mang.\n[reaction] Khi vòng kết thúc: Thêm 1 token [bless] vào túi hỗn mang.\nHiệu ứng [elder_sign]: +1. Nếu thành công, thêm 1 token [bless] vào túi hỗn mang.",
         "flavor": "\"Chúa hằng dõi theo bước đường tôi đi. Tôi được khoác lên mình tấm áo giáp của đức tin.\"",
         "back_text": "<b>Cỡ bộ bài</b>: 30.\n<b>Lựa chọn xây dựng bộ bài</b>: Các lá bài Guardian ([guardian]) cấp độ 0-5, các lá bài Mystic ([mystic]) cấp độ 0-2, các lá bài Neutral cấp độ 0-5, các lá bài có từ khóa \"bless\" cấp độ 0-5.\n<b>Yêu cầu xây dựng bộ bài</b> (không tính vào cỡ bộ bài): Guardian Angel, Crisis of Faith, 1 điểm yếu cơ bản ngẫu nhiên.",
         "back_flavor": "Càng tìm hiểu về những thế lực kỳ dị và huyền bí nơi trần thế, Sơ Mary càng thấy đức tin của mình trở nên kiên định hơn bao giờ hết. Là một nữ tu tận tụy tại Tu viện Thánh Maria ở Arkham, cô đã chứng kiến những điều mà người bình thường cho là điên rồ: những bóng đen biết cử động, những lời thì thầm từ hư vô và những linh hồn lạc lối rên rỉ dưới bóng đêm. Nhưng Mary không hề nao núng. Cô tin rằng Chúa đã dẫn lối cô đến vùng đất này để trở thành ngọn hải đăng xua tan bóng tối tà ác. Với tràng hạt mân côi và niềm tin bất diệt, cô dấn thân vào hang ổ quỷ dữ để cứu rỗi những linh hồn vô tội."

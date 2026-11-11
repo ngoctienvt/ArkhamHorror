@@ -1,4 +1,4 @@
-import { watch, onUnmounted } from 'vue'
+import { readonly, watch, onUnmounted } from 'vue'
 import { useStorage } from '@vueuse/core'
 
 /** The class on <html> that the layout CSS (styles/fit-screen.css) keys off. */
@@ -6,6 +6,9 @@ const FIT_SCREEN_CLASS = 'fit-screen'
 
 // Remembered across reloads: someone who wants the whole board in view wants it every game.
 const fitScreen = useStorage('arkham-fit-screen', false)
+
+/** Read-only view of the flag, for components that only need to know whether the game bar is hidden. */
+export const fitScreenOn = readonly(fitScreen)
 
 function toggle(): void {
   fitScreen.value = !fitScreen.value

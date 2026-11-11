@@ -57,6 +57,8 @@ export type CardDef = {
   options?: CardOption[];
   /* Behavioural markers from the card def's `cdTags`, e.g. "no-gameplay-effect". */
   tags?: string[];
+  /* Printed vengeance (The Forgotten Age); counted while the card sits in the victory display. */
+  vengeancePoints?: number | null;
 }
 
 const cardCostDecoder = JsonDecoder.oneOf<CardCost>([
@@ -118,6 +120,7 @@ export const cardDefDecoder = JsonDecoder.object<CardDef>(
     customizations: withDefault<CustomizationDef[]>([], JsonDecoder.array(JsonDecoder.tuple([JsonDecoder.string(), JsonDecoder.number()], 'CustomizationDef'), 'CustomizationDef[]')),
     options: withDefault<CardOption[]>([], JsonDecoder.array<CardOption>(cardOptionDecoder, 'CardOption[]')),
     tags: withDefault<string[]>([], JsonDecoder.array<string>(JsonDecoder.string(), 'string[]')),
+    vengeancePoints: withDefault(null, JsonDecoder.number()),
   },
   'CardDef',
 );

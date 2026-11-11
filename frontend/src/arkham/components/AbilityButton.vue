@@ -417,6 +417,14 @@ const abilityString = computed(() => {
   return toString(abilitySkills.value)
 })
 
+// A plain card action (no investigate/fight/evade/engage and no skill colour) only shows up
+// when it can be used right now, so it should not wear the grey default that reads as disabled.
+const isUsableNeutralAction = computed(() =>
+  labelType.value?.tag === "ActionAbility"
+  && isNeutralAbility.value
+  && abilitySkills.value === null
+  && boonTag.value === null)
+
 const classObject = computed(() => {
   if (isButtonText.value) {
     return {}
@@ -456,6 +464,7 @@ const classObject = computed(() => {
   const abilitySkillClass = abilitySkills.value ? `skill-${toClass(abilitySkills.value)}` : null
 
   return {
+    'usable-action-button': isUsableNeutralAction.value,
     'boon-button': boonTag.value !== null,
     'boon-button--icon': showBoonIcon.value,
     'zeroed-ability-button': isZeroedActionAbility.value && isNeutralAbility.value,
@@ -730,6 +739,15 @@ const classObject = computed(() => {
     content: "\0075";
     margin-right: 5px;
   }
+}
+
+/* Same green "usable" look as fast abilities and the Advance Act button. Declared after
+   .zeroed-ability-button so it wins; the zeroed variant keeps its dimmed glyph. */
+.usable-action-button {
+  background-color: #1f7a3d;
+  box-shadow: inset 0 0 0 1px #5fd88a, 0 0 8px #3ddc7a55;
+  color: #f1fff4;
+  &:hover { background-color: #279a4c; }
 }
 
 .forced-ability-button, button.forced-ability-button {

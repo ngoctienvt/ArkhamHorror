@@ -86,7 +86,7 @@ TRANSLATIONS_P5 = {
     # 90024: Parallel Roland Banks
     "90024": {
         "subname": "Đặc vụ Liên bang",
-        "text": "Bạn có thể chỉ định manh mối trên các lá bài bạn kiểm soát hoặc tại địa điểm của bạn để giải quyết các hiệu ứng của Directive.\n[reaction] Khi một vòng bắt đầu: Bạn có thể lật một lá bài Directive bạn kiểm soát.\nHiệu ứng [elder_sign]: +2. Khám phá 1 manh mối tại địa điểm của bạn hoặc đặt 1 manh mối từ ngân hàng token lên một Directive bạn kiểm soát.",
+        "text": "Khi xây dựng bộ bài, chọn 3 asset Directive khác nhau để thêm vào bộ bài của bạn.\n[fast]: Lật úp một asset Directive <i>(bỏ qua từ khóa permanent của nó)</i>. (Giới hạn 1 lần mỗi ván.)\nHiệu ứng [elder_sign]: +2. Chọn một asset Directive. Bạn có thể bỏ qua khả năng regulation của nó trong vòng này.",
         "flavor": "\"Nếu tôi khuấy động rắc rối, thưa Cảnh trưởng, đó là vì rắc rối đang chờ để được khuấy động.\"",
         "back_text": "<b>Cỡ bộ bài</b>: 30.\n<b>Lựa chọn xây dựng bộ bài</b>: Các lá bài Guardian ([guardian]) cấp độ 0-3, các lá bài [[Insight]] và [[Tactic]] cấp độ 0-3, các lá bài Neutral cấp độ 0-5.\n<b>Yêu cầu xây dựng bộ bài</b> (không tính vào cỡ bộ bài): Roland's .38 Special, Cover Up, 3 lá bài Directive, 1 điểm yếu cơ bản ngẫu nhiên.",
         "back_flavor": "Roland luôn tìm thấy sự an tâm trong quy trình và luật lệ. Nhưng gần đây, cuốn Sổ tay Đặc vụ Liên bang hoàn toàn trở nên vô dụng trước những vụ án mà anh được giao phó. Dù vậy, Roland biết rằng việc tuân thủ các chỉ thị chiến thuật nghiêm ngặt chính là ranh giới duy nhất ngăn cách anh khỏi sự sụp đổ hoàn toàn trước những nỗi kinh hoàng của thế giới ngầm."
@@ -118,7 +118,7 @@ TRANSLATIONS_P5 = {
     # 90059: Parallel Zoey Samaras
     "90059": {
         "subname": "Đầu bếp",
-        "text": "[reaction] Khi bạn tiêu diệt một kẻ địch: Đặt 1 token phước lành vào túi hỗn mang hoặc nhận 2 resource.\nHiệu ứng [elder_sign]: +2. Gây thêm 1 damage lên kẻ địch đang engage với bạn.",
+        "text": "[reaction] Sau khi bạn gây 1 damage trở lên lên một kẻ địch: Thêm 1 token [bless] vào túi hỗn mang. (Giới hạn 1 lần mỗi giai đoạn.)\n[fast] Trước khi bạn lật token hỗn mang trong một đòn tấn công, gỡ 3 token [bless] khỏi túi hỗn mang: Đòn tấn công này gây thêm +1 damage. (Giới hạn 1 lần mỗi vòng.)\nHiệu ứng [elder_sign]: +1 cho mỗi token [bless] trong túi hỗn mang.",
         "flavor": "\"Công việc của Người vẫn chưa hoàn thành đâu.\"",
         "back_text": "<b>Cỡ bộ bài</b>: 30.\n<b>Lựa chọn xây dựng bộ bài</b>: Các lá bài Guardian ([guardian]) cấp độ 0-5, các lá bài [[Blessed]] cấp độ 0-4, các lá bài Neutral cấp độ 0-5.\n<b>Yêu cầu xây dựng bộ bài</b> (không tính vào cỡ bộ bài): Zoey's Cross, Smite the Wicked, 1 điểm yếu cơ bản ngẫu nhiên.",
         "back_flavor": "Tiếng nói của Chúa vẫn vang vọng trong tâm trí Zoey, thúc giục cô thanh tẩy thế gian khỏi những tạo vật báng bổ. Cây thánh giá bạc trên cổ và con dao sắc lẹm trên tay, cô tiếp tục sứ mệnh thần thánh của mình mà không hề e sợ."
