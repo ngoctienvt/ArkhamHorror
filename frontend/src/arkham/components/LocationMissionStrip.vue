@@ -245,10 +245,17 @@ function doomState(p: MissionPanel): { level: 'warn' | 'critical'; text: string 
 /* One row per printed ability: a coloured edge says whether it can be used right now. */
 .ability { padding: 3px 8px; border-radius: 5px; border: 1px solid #ffffff18; border-left: 3px solid #6a716b; background: #ffffff08; }
 .ability__text { display: block; font-size: 0.76rem; line-height: 1.35; text-align: left; }
-.ability--usable { border-left-color: var(--ready, #5fd88a); background: #1f7a3d33; color: #effff3; cursor: pointer; }
-.ability--usable:hover { background: #1f7a3d66; }
+/* Usable: warm gold call-to-action so it never blends into the green act/agenda panel. */
+.ability--usable {
+  border: 1px solid #e8b860cc; border-left: 4px solid #ffc857;
+  background: linear-gradient(180deg, #5a3f12cc, #3d2a0bcc); color: #fff3d6; cursor: pointer;
+  box-shadow: 0 0 8px #ffb84455; animation: ability-glow 1.8s ease-in-out infinite;
+}
+.ability--usable:hover { background: linear-gradient(180deg, #7a5618, #54390f); box-shadow: 0 0 12px #ffc857aa; }
+@keyframes ability-glow { 50% { box-shadow: 0 0 12px 1px #ffc85788; } }
+.ability--usable .ability__text :deep(b), .ability--usable .ability__text :deep(strong) { color: #ffd98a; }
 .ability__use { all: unset; display: block; width: 100%; cursor: pointer; }
-.ability__use:focus-visible { outline: 1px solid var(--ready, #5fd88a); outline-offset: 2px; }
+.ability__use:focus-visible { outline: 1px solid #ffc857; outline-offset: 2px; }
 .ability--usable :deep(button) { background: transparent; border: 0; padding: 0; min-height: 0; color: inherit; cursor: pointer; }
 .ability--disabled { color: #a9b0aa; }
 .ability--disabled .ability__text :deep(img) { opacity: 0.5; filter: grayscale(1); }

@@ -10,6 +10,7 @@ import { useChoiceContext } from '@/arkham/composables/useChoiceContext'
 import { firstEngineAction } from '@/arkham/engine-message-actions'
 import { sourceEntityId } from '@/arkham/locationChoices'
 import { handleI18n } from '@/arkham/i18n'
+import { vehicleEnterExitMove } from '@/arkham/vehicle-enter-exit-ability'
 
 /** One investigator the game is waiting on: who, what they have to do, and whether it is only an open fast window. */
 export type StatusRow = { id: string; mine: boolean; who: string; text: string; detail: string | null; effect: string | null; window: boolean }
@@ -53,7 +54,7 @@ export function useGameStatusLines(game: () => Game, playerId: () => string) {
   }
 
   // A short name for one answer button, so an unlabelled question can still say what is on offer.
-  function describeChoice(m: Message): string | null {
+  function describeChoice(m: Message, investigatorId?: string): string | null {
     switch (m.tag) {
       case 'Label': case 'TooltipLabel': case 'SkillLabelWithLabel': case 'ScenarioLabel': case 'Done':
         return plainText(m.label) || null
@@ -67,6 +68,9 @@ export function useGameStatusLines(game: () => Game, playerId: () => string) {
       }
       case 'AbilityLabel': {
         const name = sourceName(m.ability.source)
+        // Vehicle enter / leave is a rules ability, not card text: say which way it goes.
+        const vehicle = vehicleEnterExitMove(game(), m.ability, investigatorId)
+        if (name && vehicle) return t(`locationMap.status.choice.${vehicle.kind}Vehicle`, { name })
         return name ? t('locationMap.status.choice.useAbility', { name }) : null
       }
       case 'CardLabel': return nameOf(m.cardCode)
@@ -83,8 +87,8 @@ export function useGameStatusLines(game: () => Game, playerId: () => string) {
   }
 
   // "A / B / C (+2)" from the distinct named answers, or null when none can be named.
-  function choicesSummary(choices: Message[]): string | null {
-    const names = [...new Set(choices.map(describeChoice).filter((n): n is string => !!n))]
+  function choicesSummary(choices: Message[], investigatorId?: string): string | null {
+    const names = [...new Set(choices.map((c) => describeChoice(c, investigatorId)).filter((n): n is string => !!n))]
     if (names.length === 0) return null
     const shown = names.slice(0, 3).join(' / ')
     return names.length > 3 ? `${shown} (+${names.length - 3})` : shown
@@ -138,7 +142,7 @@ export function useGameStatusLines(game: () => Game, playerId: () => string) {
       const tooltip = ArkhamGame.choicesTooltip(g, inv.playerId)
       const kindText = t(`locationMap.status.kind.${k.kind}`, t('locationMap.status.kind.default'))
       const bare = !k.label && !tooltip
-      const options = bare ? choicesSummary(k.choices) : null
+      const options = bare ? choicesSummary(k.choices, inv.id) : null
       const context = bare ? choicesContext(k.choices) : { sourceId: null, intent: null }
       const lead = context.intent ?? kindText.replace(/[.:]\s*$/, '')
       const what = k.label ? plainText(k.label) : tooltip ? plainText(tooltip)

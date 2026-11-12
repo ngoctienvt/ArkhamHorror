@@ -8,7 +8,7 @@ import { cardImage, portraitImage } from '@/arkham/cardImages'
 import { useCardNames } from '@/arkham/composables/useCardNames'
 import { ownInvestigator } from '@/arkham/ownInvestigator'
 import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
-import type { HemlockOverview } from '@/arkham/hemlock-overview'
+import { cosmosIslandAspect, cosmosIslandImage, type HemlockOverview } from '@/arkham/hemlock-overview'
 import { locationLinkDirection, mineDescentPassage, type Point } from '@/arkham/locationGraph'
 import LocationMarkerPlate from '@/arkham/components/LocationMarkerPlate.vue'
 import LocationStandees from '@/arkham/components/LocationStandees.vue'
@@ -76,12 +76,14 @@ const offsetKey = (id: string) => `${props.game.id}:${id}`
 // Where a plate is drawn: its scenario spot plus any shift the player dragged it by (never in the house cutaway).
 const pos = (id: string): Point => {
   const [x, y] = basePos(id)
-  if (props.cutaway || props.compact) return [x, y]
+  if (!canDrag.value) return [x, y]
   const [dx, dy] = offsetOf(offsetKey(id))
   return [x + dx, y + dy]
 }
 const arrowKey = (key: string) => `${props.game.id}:arrow:${key}`
-const canDrag = computed(() => !props.cutaway && !props.compact)
+// The Cosmos grid reflows as cards arrive, slide and leave, so a dragged offset would point at the wrong cell:
+// its cards stay in their grid cells, as on the card board.
+const canDrag = computed(() => !props.cutaway && !props.compact && !props.illustratedBoard?.islands)
 const startNodeDrag = (l: Location, event: PointerEvent) => {
   if (canDrag.value) beginDrag(event, offsetKey(l.id), 'pct', stage.value)
 }
@@ -120,6 +122,23 @@ const canvasStyle = computed(() => {
   const columns = Math.max(1, width / 150)
   return { '--location-width': `${87 / columns}%` }
 })
+/* Before the Black Throne pads its grid with a ring of open cells, so a cell is small and wide. Islands and
+ * placement spots are sized to one cell, so neither covers a neighbouring cell and a click lands where it looks. */
+const cosmosCell = computed(() => {
+  if (!props.illustratedBoard?.islands || !props.width || !props.height || !stageWidth.value || !stageHeight.value) return null
+  const width = (stageWidth.value / props.width) * 150 * 0.92
+  const height = (stageHeight.value / props.height) * 120 * 0.92
+  return { width, height }
+})
+/* A revealed location's 3:2 scene fills the cell's width up to 1.5x its height; the square rock keeps the
+ * small overhang its transparent margin allows. Either way the sprite stays inside its own cell. */
+const islandWidth = (l: Location): number => {
+  const cell = cosmosCell.value
+  if (!cell) return 0
+  return cosmosIslandAspect(l.cardCode, l.revealed) > 1
+    ? Math.min(cell.width, cell.height * 1.5)
+    : Math.min(cell.width, cell.height * 1.2)
+}
 // Match the card board, including enemy cards that also serve as locations.
 const locationImage = (l: Location) => cardImage(l.cardCode, l.revealed || l.enemyLocation ? '' : 'b')
 
@@ -175,7 +194,7 @@ const connectionArrows = computed(() => {
     // The player can slide an arrow along the line between the two plates (if it covers something), but never
     // off it, so it always sits between them and points straight from one to the other. Any sideways part of a
     // drag (or of an offset saved before this rule) is dropped, and it stays within the middle 60% of the line.
-    const [dx, dy] = props.compact ? [0, 0] : offsetOf(arrowKey(key))
+    const [dx, dy] = canDrag.value ? offsetOf(arrowKey(key)) : [0, 0]
     const along = Math.max(-0.3 * length, Math.min(0.3 * length, (dx * w * ux + dy * h * uy) / 100))
     const ax = x + (along * ux * 100) / w
     const ay = y + (along * uy * 100) / h
@@ -306,8 +325,18 @@ function tileClick(l: Location, event: MouseEvent) {
         <BarrierIcon class="barricade" />
         <span class="barrier-count" aria-hidden="true">{{ stray.count }}</span>
       </button>
-      <button v-for="spot in gridSpots" :key="spot.label" class="spot"
-        :style="{ left: spot.x + '%', top: spot.y + '%' }"
+      <template v-if="illustratedBoard?.islands && cosmosCell">
+        <img v-for="l in locations" :key="'island-' + l.id" class="island"
+          :src="cosmosIslandImage(illustratedBoard.islands, l.cardCode, l.revealed)"
+          :style="{ left: pos(l.id)[0] + '%', top: pos(l.id)[1] + '%', width: islandWidth(l) + 'px',
+            aspectRatio: cosmosIslandAspect(l.cardCode, l.revealed) }"
+          alt="" aria-hidden="true" draggable="false" />
+      </template>
+      <button v-for="spot in gridSpots" :key="spot.label" class="spot" :class="{ 'cosmos-spot': cosmosCell }"
+        :style="cosmosCell
+          ? { left: spot.x + '%', top: spot.y + '%', width: cosmosCell.width + 'px', height: cosmosCell.height + 'px',
+            backgroundImage: `url(${illustratedBoard?.islands}/cosmos.webp)` }
+          : { left: spot.x + '%', top: spot.y + '%' }"
         :aria-label="t('locationMap.placeHere')" @click="emit('choose', spot.index)">+</button>
       <LocationConcealedStack v-for="spot in concealedSpots ?? []" :key="'concealed-' + spot.key" class="concealed-spot"
         :style="{ left: spot.x + '%', top: spot.y + '%' }" :game="game" :playerId="playerId" :cards="spot.cards"
@@ -406,6 +435,17 @@ function tileClick(l: Location, event: MouseEvent) {
 .illustrated .node, .illustrated .spot { width: min(var(--location-width, 20%), 310px); min-height: 0; box-sizing: border-box; }
 .illustrated .node { overflow: visible; padding: 0; background: #101912d9; }
 .illustrated .node::after { display: none; }
+/* Cosmos sprites: a layer under the plates, centred on their cell; width and aspect ratio are set inline. */
+.island {
+  position: absolute; height: auto; translate: -50% -50%; max-width: none; object-fit: contain;
+  pointer-events: none; user-select: none; filter: drop-shadow(0 8px 14px #0009);
+}
+/* An open Cosmos cell a card can go into: a faint island exactly the size of its cell. */
+.illustrated .spot.cosmos-spot {
+  min-width: 0; min-height: 0; background: center / contain no-repeat; background-color: #e6c58412;
+  text-shadow: 0 0 6px #000; opacity: 0.85;
+}
+.illustrated .spot.cosmos-spot:hover { opacity: 1; background-color: #e6c58430; border-style: solid; }
 .illustrated .node :deep(.plate) { min-width: 0; }
 .illustrated .node :deep(.plate .name) { white-space: normal; overflow-wrap: anywhere; }
 .illustrated .spot { height: 100px; }

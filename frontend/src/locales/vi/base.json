@@ -1,4 +1,5 @@
 {
+  "cards": "Lá bài",
   "drewCard": "{iname} đã rút",
   "drewCards": "{iname} đã rút {count} lá bài",
   "serviceUnavailable": "Dịch vụ không khả dụng",
@@ -554,7 +555,7 @@
       "pursuit": "Truy đuổi",
       "void": "Hư Không (The Void)",
       "depths": "Vực Sâu (The Depths)",
-      "global": "Đang trong cuộc · không ở location",
+      "global": "Đang trong màn chơi",
       "reference": "Cạnh thẻ tham chiếu"
     },
     "concealedInShadows": "trong bóng tối",
@@ -661,7 +662,9 @@
         "engage": "Giao chiến với {name}",
         "skip": "Bỏ qua",
         "playCard": "Dùng lá {name}",
-        "useAbility": "Dùng khả năng {name}"
+        "useAbility": "Dùng khả năng {name}",
+        "enterVehicle": "Lên {name} (lên phương tiện)",
+        "leaveVehicle": "Rời {name} (xuống phương tiện)"
       },
       "doing": "Đang xử lý:",
       "turnOf": "Lượt của {name}",
@@ -820,6 +823,10 @@
         "flood": "Ngập nước: {value}",
         "brazier": "Lò than: {value}",
         "breaches": "Breach"
+      },
+      "floodLevels": {
+        "PartiallyFlooded": "Ngập một phần",
+        "FullyFlooded": "Ngập hoàn toàn"
       }
     },
     "about": {
