@@ -1,0 +1,13 @@
+Camera: a high-angle, near top-down bird's-eye game-map view, about 65-75 degrees looking down, like an illustrated tabletop board. NO horizon line, NO sky, NO moon, NO sunset, NO aurora: the ground plane fills the whole frame edge to edge. Each landmark is a separate compact structure seen from above, about 15-20% of the frame width, set on its own patch of ground with clear open space (paths, water, rock) between landmarks so a small round marker can sit at each entrance. Landmarks are spread evenly across the frame in the grid positions listed below; nothing important within 6% of the border. Do not make a cinematic vista or a single big hero object.
+
+Master Shot
+Create one 16:9 landscape digital oil painting, 1536×864 or larger, for the actual game map. Use near-orthographic projection. Near-overhead illustrated map of a single lush river valley with THREE clearly separate zones running from left to right. Treelines, fields and water fill the whole frame.
+
+Spatial Landmarks
+Attachment 1 Ulthar x20% y47%: compact warm steep-roof town with red pennants and exposed cobbled plaza as in the card. Attachment 2 Skai River x50% y54%: low arched stone bridge crossing a blue river between green grassy banks. The bridge landing is the clear pin spot. Attachment 3 Dylath-Leen x80% y47%: distinct dark basalt port on the right river outlet with narrow quays and black galleys. At least 30% frame width from center to center. No cat or human characters, keep the left plaza, center bridge and right quay equally prominent.
+Coordinates are measured from the left and top, and refer to the landmark’s visible entrance or landing. Leave visible clear unmarked ground at each anchor. Follow card paintings for subject and architecture. Keep the positions specified here. Strip card frame, text, icons and people.
+
+Lighting
+Amber, jade and blue-gray oil paint; even diffuse light across land and water.
+
+Avoid comic panels, split screen, multi-panel, grid, borders, frames, text labels, watermark, cartoonish, 3D plastic, people, drawn pins, wide-angle perspective and eye-level facades.

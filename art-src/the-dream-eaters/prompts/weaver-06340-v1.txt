@@ -1,0 +1,7 @@
+Master Shot
+A single high three-quarter angle Lovecraftian oil-painted game map sprite of Web Stairs. Landscape 3:2, 1536×1024, isolated on a fully transparent background with real alpha. Give this single location a distinct silhouette occupying roughly 80% of the canvas, with crisp edges at 150 pixels. Leave a small clear flat spot at lower center for a game standee.
+Spatial Landmarks
+Attachment 1 = authentic Web Stairs card illustration, use it as the authority for subject, texture, colors and shapes. Remove all card graphics and figures. Dark charcoal rocks form a recognizable ascending diagonal stair, laced with tightly spaced silvery parallel strands stretched across the exposed side.
+Lighting
+Painterly texture with a single strong accent drawn from the reference, neutral dark shading and no separate ground plane.
+Avoid comic panels, split screen, multi-panel, grid, borders, frames, text labels, watermark, cartoonish, 3D plastic, drop shadow, unrelated scenery and people. Avoid generic round islands and multiple unconnected pieces.

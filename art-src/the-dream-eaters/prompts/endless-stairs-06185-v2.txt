@@ -1,0 +1,7 @@
+Master Shot
+Draw ONE isolated game-map sprite, a steep three-quarter view of Mysterious Stairs 06185, landscape 3:2, 1536×1024, fully transparent PNG with actual alpha. The signature silhouette must read at a 150-pixel thumbnail. Occupy about 80% of the canvas. A small clear lower-center tread or patch supports a standee.
+Spatial Landmarks
+Attachment 1 is the actual location art 06185b. Use its materials, shapes and colors and omit printed card graphics. The six official paintings are identical. For this one sprite, take a clearly different segment or treatment of the illustrated masonry rather than drawing the complete staircase again. A narrow hooked flight hugging a tall, jagged crescent parapet on the left. Tall indigo wall is its dominant outline, with a small exposed descending flight running beside it. The wall and stair end after a quarter turn, no enclosed hole and no green glow.
+Lighting
+Classic Arkham Horror LCG digital oil paint, carefully defined edge lighting without a background. Avoid comic panels, split screen, multi-panel, grid, borders, frames, text labels, watermark, cartoonish, 3D plastic, people, shadows cast on a background, or generic round rocky platforms.
+

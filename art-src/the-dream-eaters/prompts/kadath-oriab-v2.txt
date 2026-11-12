@@ -1,0 +1,13 @@
+Camera: a high-angle, near top-down bird's-eye game-map view, about 65-75 degrees looking down, like an illustrated tabletop board. NO horizon line, NO sky, NO moon, NO sunset, NO aurora: the ground plane fills the whole frame edge to edge. Each landmark is a separate compact structure seen from above, about 15-20% of the frame width, set on its own patch of ground with clear open space (paths, water, rock) between landmarks so a small round marker can sit at each entrance. Landmarks are spread evenly across the frame in the grid positions listed below; nothing important within 6% of the border. Do not make a cinematic vista or a single big hero object.
+
+Master Shot
+Create one 16:9 landscape digital oil painting, 1536×864 or larger, for the actual game map. Use near-orthographic projection. Near-overhead illustrated map of the Isle of Oriab. Sea fills the margins on the right, island terrain fills the remaining frame. Three separately readable areas with a continuous network of paths and a steep diagonal coastline.
+
+Spatial Landmarks
+Attachment 1 Baharna x80% y55%: compact right-hand coastal port, twin beacon towers, porphyry wharf. Attachment 2 Mount Ngranek x49% y32%: isolated sharply folded ridge with the face as a carved rock relief on one slope; the viewer looks down onto its summit, with a flat approach below it. Attachment 3 Nameless Ruins x20% y62%: patch of black broken pillars and exposed sand, independent of the mountain. Around 30% frame width from center to center. Keep lots of visible coastline and open sand between the sites.
+Coordinates are measured from the left and top, and refer to the landmark’s visible entrance or landing. Leave visible clear unmarked ground at each anchor. Follow card paintings for subject and architecture. Keep the positions specified here. Strip card frame, text, icons and people.
+
+Lighting
+Soft amber highlights, dark slate and jade sea, diffuse oil-painted light.
+
+Avoid comic panels, split screen, multi-panel, grid, borders, frames, text labels, watermark, cartoonish, 3D plastic, people, drawn pins, wide-angle perspective and eye-level facades.

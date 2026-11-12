@@ -1,0 +1,7 @@
+Master Shot
+512×1024 tall transparent PNG game sprite. One long thin, jointed spider leg in direct overhead view, with its severed root exactly at bottom center on the lowest row of canvas, extending vertically and tapering to a pointed claw near the top. This is a radial limb to rotate from its attachment at the bottom edge. One continuous body, no torso or other limbs. Narrow silhouette, no bend past the central 40% width.
+Spatial Landmarks
+Attachments 1, 2, 3 = Atlach-Nacha leg cards in order, use the visible leg forms in 2 and 3 as authority, ignore all card layout, text and rock background. Jointed chitin, tapered bristles, irregular knuckles with ash olive-gray and dark olive-brown.
+Lighting
+Soft overhead lighting, oil-painted detail, transparent surroundings.
+Avoid comic panels, split screen, multi-panel, grid, borders, frames, text labels, watermark, cartoonish, 3D plastic, drop shadow, unrelated scenery and people.

@@ -1,0 +1,13 @@
+Camera: a high-angle, near top-down bird's-eye game-map view, about 65-75 degrees looking down, like an illustrated tabletop board. NO horizon line, NO sky, NO moon, NO sunset, NO aurora: the ground plane fills the whole frame edge to edge. Each landmark is a separate compact structure seen from above, about 15-20% of the frame width, set on its own patch of ground with clear open space (paths, water, rock) between landmarks so a small round marker can sit at each entrance. Landmarks are spread evenly across the frame in the grid positions listed below; nothing important within 6% of the border. Do not make a cinematic vista or a single big hero object.
+
+Master Shot
+Create one 16:9 landscape digital oil painting, 1536×864 or larger, for the actual game map. Use near-orthographic projection. One connected, decaying 18th-century Arkham house shown in oblique axonometric dollhouse cross-section, viewed DOWN from 70 degrees. Roof and front wall physically sliced away. Three floors are exposed as staggered slabs with visible interior floorboards and cross-sections of wall, like the cutaway in a tabletop board. The background is an overhead view of the graveyard ground all the way to the edges. The 15–20% rule applies to exposed rooms and pin spaces within the one house.
+
+Spatial Landmarks
+Attachment 1 Burial Ground x48% y82%: directly in front of the house, clear graveyard path and leaning slate stones. Attachment 2 Front Porch and Entryway x48% y63%: exposed plank deck and open center entry. Attachment 3 Upstairs Hallway x48% y42%: greenish narrow upper-floor hall with visible floor surface. Attachment 4 Attic x48% y20%: floor with old beams, roof cut open around it. Attachment 5 Unmarked Tomb x79% y81%: separate visible moss-covered stone slab to the right of the Burial Ground. Two matching generic closed doors x26%, x70% at y25%, on either side of the upper area, and two matching generic closed doors x26%, x70% at y62% on either side of the porch. Small clear floor pads immediately in front of each door. No exterior front elevation.
+Coordinates are measured from the left and top, and refer to the landmark’s visible entrance or landing. Leave visible clear unmarked ground at each anchor. Follow card paintings for subject and architecture. Keep the positions specified here. Strip card frame, text, icons and people.
+
+Lighting
+Muted charcoal and aged umber, cold violet shadows and subtle green where the hallway is lit, oil paint.
+
+Avoid comic panels, split screen, multi-panel, grid, borders, frames, text labels, watermark, cartoonish, 3D plastic, people, drawn pins, wide-angle perspective and eye-level facades.

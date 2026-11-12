@@ -1,0 +1,8 @@
+Master Shot
+Single location game sprite, landscape 3:2, 1536×1024 transparent PNG with actual alpha. High three-quarter view. One curved segment of worn fan-shaped dark blue stone stair steps coming out of and disappearing into soft teal wisps of fog, gently curved silhouette, easy to read at 150 pixels. Include a flat spot toward the lower center for a tiny standee.
+Spatial Landmarks
+Attachment 1 = unrevealed Mysterious Stairs card. Use the fan-shaped cyan-grey masonry and dark stone of its illustrated staircase. Generalized, low-detail shape. Remove all card graphics.
+Lighting
+Soft painterly cosmic noir, neutral slate and cyan. Compact fog only clinging to steps, clean transparent surroundings. Avoid humans, scenery, card frame, letters, watermark, generic round island, 3D plastic.
+
+

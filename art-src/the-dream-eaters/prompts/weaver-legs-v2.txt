@@ -1,0 +1,8 @@
+Master Shot
+512×1024 tall transparent PNG game sprite. One long thin, jointed spider leg in direct overhead view, with its severed root exactly at bottom center on the lowest row of canvas, extending vertically and tapering to a pointed claw near the top. This is a radial limb to rotate from its attachment at the bottom edge. One continuous body, no torso or other limbs. Narrow silhouette, no bend past the central 40% width.
+Spatial Landmarks
+Attachments 1, 2, 3 = Atlach-Nacha leg cards in order, use the visible leg forms in 2 and 3 as authority, ignore all card layout, text and rock background. Jointed chitin, tapered bristles, irregular knuckles with ash olive-gray and dark olive-brown.
+Lighting
+Soft overhead lighting, oil-painted detail, transparent surroundings.
+Avoid comic panels, split screen, multi-panel, grid, borders, frames, text labels, watermark, cartoonish, 3D plastic, drop shadow, unrelated scenery and people.
+Critical anatomical correction: the silhouette must look unmistakably like an arthropod leg, never like a branch or root. Five well-separated smooth tapering chitin segments, conspicuous bulbous articulated ball joints with dark flexible membranes, two sharply bent knees and a small hooked black tarsal claw with a few short bristles. Hard lacquered charcoal chitin with subtle dark reddish grooves. Zero bark, woodgrain, twigs, branch forks, loose spiky fibers or torn roots. The attachment end at bottom center is a clean rounded chitin socket. Show enough thickness so the kneecaps and angles read at 150 pixels.
