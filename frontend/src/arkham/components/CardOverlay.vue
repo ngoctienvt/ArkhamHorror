@@ -74,6 +74,9 @@ const overlayBase = computed(() => hoveredElement.value?.closest('.standees .fig
   : OVERLAY_W)
 const isMobile = ref(false)
 const overPopover = computed(() => !!hoveredElement.value?.closest('.v-popper__popper'))
+/* A modal whose whole point is showing cards sits on the modal layer, which
+ * outranks the preview. Such a modal marks itself and the preview clears it. */
+const overModal = computed(() => !!hoveredElement.value?.closest('[data-card-overlay-above]'))
 
 const playabilityData = ref<PlayabilityResponse | null>(null)
 let playabilityTimer: number | null = null
@@ -1281,7 +1284,7 @@ watchEffect(() => {
       class="card-overlay"
       ref="cardOverlay"
       :style="{ top: overlayPosition.top + 'px', left: overlayPosition.left + 'px'}"
-      :class="{ sideways, tarot, isMobile, overPopover }"
+      :class="{ sideways, tarot, isMobile, overPopover, overModal }"
     >
     <div class="card-image">
       <svg
@@ -1468,7 +1471,7 @@ watchEffect(() => {
     <span class="fight" :class="fightTrend && `stat--${fightTrend}`" v-if="fight">{{ fight }}</span>
     <span class="health" :class="healthTrend && `stat--${healthTrend}`" v-if="health">{{ health }}</span>
     <span class="evade" :class="evadeTrend && `stat--${evadeTrend}`" v-if="evade">{{ evade }}</span>
-    <span class="victory" v-if="victory">Victory {{ victory }}.</span>
+    <span class="victory" v-if="victory">{{ $t('gameUi.victory', { victory }) }}</span>
     <!-- Keywords gained from modifiers. The text panel lists them itself when it is shown. -->
     <span class="keywords" v-if="keywords && !dbCardData">{{ keywords }}.</span>
     <PoolItem class="depth" v-if="depth" type="resource" :amount="depth" />
@@ -1724,6 +1727,9 @@ watchEffect(() => {
 }
 .card-overlay.overPopover {
   z-index: var(--z-card-hover-overlay-over-popover);
+}
+.card-overlay.overModal {
+  z-index: var(--z-card-hover-overlay-over-modal);
 }
 
 .card-overlay.sideways {
