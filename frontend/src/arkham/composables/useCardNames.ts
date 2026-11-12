@@ -37,6 +37,17 @@ export function useCardInfo(): (code: string) => ArkhamDBCard | null {
   }
 }
 
+/** The English card record whatever the player's language: for reading rules text the client works out
+ * values from (the X on a reference card), which translations reword. Null until the English list loads. */
+export function useEnglishCardInfo(): (code: string) => ArkhamDBCard | null {
+  return (code: string) => {
+    if (!english.value && !loading) void loadEnglish()
+    const art = cardArt(code)
+    const bare = art.replace(/[a-z]$/, '')
+    return english.value?.get(art) ?? english.value?.get(`${art}a`) ?? english.value?.get(bare) ?? null
+  }
+}
+
 export function useCardNames(): (code: string) => string {
   const info = useCardInfo()
   return (code: string) => info(code)?.name ?? code

@@ -14,6 +14,8 @@ import { chaosTokenEffectKey } from '@/arkham/types/Scenario';
 import { useI18n } from 'vue-i18n';
 import { chaosTokenImage, compareTokenFaces, numericTokenFaces } from '@/arkham/types/ChaosToken';
 import { beginSealDrag, endCardDrag } from '@/arkham/debugCardDrop';
+import ChaosDrawAnimation from '@/arkham/components/ChaosDrawAnimation.vue';
+import { useChaosDraw } from '@/arkham/composables/useChaosDraw';
 
 const props = defineProps<{
   game: Game
@@ -37,6 +39,19 @@ const revealedChaosTokens = computed(() => {
 
   return props.game.skillTestChaosTokens;
 })
+
+/* While a draw is playing, its tokens stay in the bag as far as the panel is
+ * concerned; they land with the usual flip once it ends. */
+const chaosDraw = useChaosDraw()
+const heldBackTokens = computed(() =>
+  props.skillTest ? revealedChaosTokens.value.filter((token) => chaosDraw.isHeldBack(token.id)) : []
+)
+const shownChaosTokens = computed(() =>
+  heldBackTokens.value.length > 0
+    ? revealedChaosTokens.value.filter((token) => !chaosDraw.isHeldBack(token.id))
+    : revealedChaosTokens.value
+)
+const bagFaces = computed(() => props.chaosBag.chaosTokens.map((token) => token.face))
 
 const choices = computed(() => ArkhamGame.choices(props.game, props.playerId))
 const tokenAction = computed(() => choices.value.findIndex((c) => c.tag === MessageType.START_SKILL_TEST_BUTTON))
@@ -112,7 +127,7 @@ const choose = (idx: number) => emit('choose', idx)
            A token cancelled or returned shrinks away rather than blinking out. -->
       <TransitionGroup name="chaos-reveal">
         <Token
-          v-for="(revealedToken, i) in revealedChaosTokens"
+          v-for="(revealedToken, i) in shownChaosTokens"
           :key="revealedToken.id"
           :token="revealedToken"
           :playerId="playerId"
@@ -121,13 +136,21 @@ const choose = (idx: number) => emit('choose', idx)
           @choose="choose"
         />
       </TransitionGroup>
+      <ChaosDrawAnimation
+        v-if="chaosDraw.draw.value && heldBackTokens.length > 0"
+        :drawStyle="chaosDraw.draw.value.style"
+        :faces="heldBackTokens.map((token) => token.face)"
+        :bagFaces="bagFaces"
+        :run="chaosDraw.draw.value.run"
+        @skip="chaosDraw.finish"
+      />
       <button
-        v-if="tokenAction !== -1"
+        v-if="tokenAction !== -1 && !chaosDraw.isDrawing.value"
         type="button"
         class="draw-button"
         @click="choose(tokenAction)"
       >{{ $t('skillTest.confirm') }}</button>
-      <ChaosBagChoice v-if="chaosBag.choice && 'step' in chaosBag.choice && !game.skillTestResults" :choice="chaosBag.choice.step" :game="game" :playerId="playerId" @choose="choose" />
+      <ChaosBagChoice v-if="chaosBag.choice && 'step' in chaosBag.choice && !game.skillTestResults && !chaosDraw.isDrawing.value" :choice="chaosBag.choice.step" :game="game" :playerId="playerId" @choose="choose" />
     </div>
 
     <div v-if="showTokenGrid" class="token-preview" :class="{ 'token-preview--debug': canForceDraw }">

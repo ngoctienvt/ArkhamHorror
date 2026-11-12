@@ -23,6 +23,9 @@ export type SfxName =
   | 'token'
   | 'success'
   | 'fail'
+  // Played by the chaos token draw (chaosDrawReveal.ts), never picked from an update.
+  | 'bagShake'
+  | 'reelSpin'
 
 type TokenCounts = Partial<Record<string, number>>
 

@@ -606,9 +606,13 @@ const getPosition = (el: HTMLElement): { top: number; left: number } => {
     return { top, left }
   }
 
+  /* Keep the whole card inside the viewport with a margin below it. Hand cards sit at the
+   * bottom edge (often partly off screen), so anchoring to the element's bottom cut the
+   * overlay's footer off; clamp to the window instead. */
+  const edgePad = 24
   const top = rect.top + window.scrollY - 40
-  const bottom = top + height
-  const newTop = Math.max(0, bottom > window.innerHeight ? rect.bottom - height + window.scrollY - 40 : top)
+  const maxTop = window.scrollY + window.innerHeight - height - edgePad
+  const newTop = Math.max(window.scrollY + edgePad, Math.min(top, maxTop))
 
   const rightSide = rect.left + window.scrollX + rect.width + 10
   const viewportPad = 10
@@ -626,6 +630,24 @@ watch([hoveredElement, sideways], ([el]) => {
   if (posRAF !== null) cancelAnimationFrame(posRAF)
   posRAF = requestAnimationFrame(() => { overlayPosition.value = getPosition(el as HTMLElement) })
 }, { flush: 'post' })
+
+/* getPosition only knows the card's height; the translated-text panel beside it can be taller
+ * (a long agenda back) and arrives later. Measure the overlay as drawn and lift it to fit. */
+const fitOverlayToWindow = () => {
+  const el = cardOverlay.value
+  if (!el || !hoveredElement.value) return
+  const edgePad = 24
+  const maxTop = window.scrollY + window.innerHeight - el.offsetHeight - edgePad
+  const top = Math.max(window.scrollY + edgePad, Math.min(overlayPosition.value.top, maxTop))
+  if (top !== overlayPosition.value.top) overlayPosition.value = { ...overlayPosition.value, top }
+}
+const overlayResize = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(fitOverlayToWindow)
+watch(cardOverlay, (el, old) => {
+  if (old) overlayResize?.unobserve(old)
+  if (el) overlayResize?.observe(el)
+})
+watch(overlayPosition, () => requestAnimationFrame(fitOverlayToWindow), { flush: 'post' })
+onUnmounted(() => overlayResize?.disconnect())
 
 /* =============================================================================
  * SVG sizing & transforms
@@ -1097,6 +1119,8 @@ const skillItems = computed<SkillRender[]>(() => {
 
 const dbCardName = ref<string>('')
 const dbCardTypeName = ref<string>('')
+/* Acts and agendas print their story text above the rules; every other card prints flavor last. */
+const dbCardFlavorFirst = ref(false)
 const dbCardFactionName = ref<string>('')
 const dbCardFactionCode = ref<string>('')
 const dbCardTraits = ref<string>('')
@@ -1174,6 +1198,7 @@ const applyDbCard = (dbCard: ArkhamDBCard, needBack: boolean, tabooSuffix: strin
 
   dbCardName.value = name ? `${tabooSuffix ? '[Taboo] ' : ''}${name}` : ''
   dbCardTypeName.value = type ?? ''
+  dbCardFlavorFirst.value = dbCard.type_code === 'act' || dbCard.type_code === 'agenda'
   dbCardFactionName.value = faction ?? ''
   dbCardFactionCode.value = factionCode ?? ''
   dbCardTraits.value = traits ?? ''
@@ -1230,7 +1255,9 @@ watchEffect(() => {
     const m = src.match(/\/cards\/c?([0-9a-zA-Z_-]+?)(?:_([a-zA-Z0-9]+))?\.(?:avif|jpg|jpeg|png|webp)(?:\?.*)?$/i)
       || src.match(/([0-9a-zA-Z_-]+?)(?:_([a-zA-Z0-9]+))?\.(?:avif|jpg|jpeg|png|webp)(?:\?.*)?$/i)
     if (m) {
-      if (!rawCode) rawCode = m[1]
+      // A card drawn flipped keeps its front code in data-card-code; when the picture is that
+      // card's own 'b' face, the text should describe the back too.
+      if (!rawCode || m[1] === `${rawCode}b`) rawCode = m[1]
       tabooSuffix = m[2] ? `_${m[2]}` : undefined
     }
   }
@@ -1432,6 +1459,7 @@ watchEffect(() => {
       :keywords="keywords"
       :text="dbCardText"
       :flavor="dbCardFlavor"
+      :flavorFirst="dbCardFlavorFirst"
       :reversed="reversed"
       :upsideDown="upsideDown"
     />

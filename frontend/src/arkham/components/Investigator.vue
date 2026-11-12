@@ -573,10 +573,10 @@ const spadeInjury = computed(() => {
     <div class="player-area">
       <div class="player-card" :class="{ 'player-card--scene': sceneMode }">
         <div v-if="!sceneMode" class="stats">
-          <div class="willpower willpower-icon">{{ formatStat(willpower, investigator.willpower) }}</div>
-          <div class="intellect intellect-icon">{{ formatStat(intellect, investigator.intellect) }}</div>
-          <div class="combat combat-icon">{{ formatStat(combat, investigator.combat) }}</div>
-          <div class="agility agility-icon">{{ formatStat(agility, investigator.agility) }}</div>
+          <div class="willpower"><img class="stat-art" :src="imgsrc('icons/skills/willpower.png')" alt="" :title="'willpower'" />{{ formatStat(willpower, investigator.willpower) }}</div>
+          <div class="intellect"><img class="stat-art" :src="imgsrc('icons/skills/intellect.png')" alt="" :title="'intellect'" />{{ formatStat(intellect, investigator.intellect) }}</div>
+          <div class="combat"><img class="stat-art" :src="imgsrc('icons/skills/combat.png')" alt="" :title="'combat'" />{{ formatStat(combat, investigator.combat) }}</div>
+          <div class="agility"><img class="stat-art" :src="imgsrc('icons/skills/agility.png')" alt="" :title="'agility'" />{{ formatStat(agility, investigator.agility) }}</div>
         </div>
         <div
           class="investigator-image"
@@ -1015,7 +1015,7 @@ i.action {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.06rem;
+    gap: 0.2rem;
     padding-inline: 0.36rem;
     white-space: nowrap;
   }
@@ -1049,6 +1049,13 @@ i.action {
     }
   }
 
+}
+
+/* The painted skill icon leading each value in the stat strip. */
+.stat-art {
+  width: 1.35em;
+  height: 1.35em;
+  display: block;
 }
 
 .willpower {

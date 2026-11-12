@@ -12,7 +12,9 @@ import { chaosTokenEffectKey, symbolChaosTokenFaces } from '@/arkham/types/Scena
 import { Game } from '@/arkham/types/Game';
 import { Enemy } from '@/arkham/types/Enemy';
 import { Modifier, cannotCommitCardsToWords } from '@/arkham/types/Modifier';
-import { ChaosTokenFaceEffect, SkillTest, chaosTokenEffectParts } from '@/arkham/types/SkillTest';
+import { ChaosTokenFaceEffect, ChaosTokenValueEntry, SkillTest, chaosTokenEffectParts } from '@/arkham/types/SkillTest';
+import { formatModifier, valueBadge, type TokenTier } from '@/arkham/referenceTokenX';
+import TokenModifierBadge from '@/arkham/components/TokenModifierBadge.vue';
 import { AbilityLabel, AbilityMessage, Message } from '@/arkham/types/Message'
 import Draggable from '@/components/Draggable.vue';
 import Card from '@/arkham/components/Card.vue'
@@ -27,6 +29,8 @@ import { useI18n } from 'vue-i18n';
 import { chanceOfSuccess } from '@/arkham/chaosBagOdds';
 import { useAbilityCardText } from '@/arkham/composables/useAbilityCardText';
 import { sourceEntityId, kindOf, type AbilityKind } from '@/arkham/locationChoices';
+import { useChaosDraw } from '@/arkham/composables/useChaosDraw';
+import { useCardNames } from '@/arkham/composables/useCardNames';
 
 const debug = useDebug()
 const { t } = useI18n()
@@ -47,11 +51,26 @@ const normalizeSkill = (skill: string) => {
   }
 }
 
+/* Painted art for the four printed skills; anything else (wild…) keeps its font glyph. */
+const SKILL_ART = new Set(['willpower', 'intellect', 'combat', 'agility'])
+const skillImage = (skill: string): string | null =>
+  SKILL_ART.has(skill) ? imgsrc(`icons/skills/${skill}.png`) : null
+
+/* The panel takes the colour of the skill being tested (a single one; mixed or
+ * wild tests keep the neutral brass theme). */
+const themeClass = computed(() => {
+  const only = skills.value.length === 1 ? skills.value[0] : null
+  return only && ['willpower', 'intellect', 'combat', 'agility'].includes(only) ? `skill-test--${only}` : null
+})
+
 const skills = computed(() => {
   const { skillTest } = props
   return skillTest.skills.map(normalizeSkill)
 })
-const skillTestResults = computed(() => props.game.skillTestResults)
+/* While the drawn token is still in the bag (ChaosDrawAnimation), nothing that
+ * follows from it is shown: not the total, not the result, not its effects. */
+const { isDrawing } = useChaosDraw()
+const skillTestResults = computed(() => isDrawing.value ? null : props.game.skillTestResults)
 const emit = defineEmits(['choose'])
 const shouldRender = (mod: Modifier) => {
   const { type } = mod
@@ -100,6 +119,60 @@ const shouldRenderSkillTestModifier = (mod: Modifier) => {
 const modifiers = computed(() =>
   [...(props.game.investigators[props.skillTest.investigator]?.modifiers ?? []).
     filter(shouldRender), ...yourModifiers.value, ...(props.skillTest.modifiers ?? []).filter(shouldRenderSkillTestModifier)]) 
+
+/* How much a modifier adds to the tested skill, when it is a plain number. */
+function modifierAmount(mod: Modifier): number | null {
+  const { type } = mod
+  if (type.tag === 'SkillModifier' || type.tag === 'ActionSkillModifier')
+    return skills.value.includes(normalizeSkill(type.skillType)) ? type.value : null
+  if (type.tag === 'AnySkillValue') return type.contents
+  return null
+}
+
+/* With the "5 = 4 + 1" line showing, the numeric bonuses are already named there, so
+ * only the other effects (cancel, double difficulty…) keep a pill of their own. */
+const listedModifiers = computed(() =>
+  skillBreakdown.value ? modifiers.value.filter((mod) => modifierAmount(mod) === null) : modifiers.value)
+
+const cardName = useCardNames()
+
+/* The card a modifier comes from, by name ("Higher Education"), so each bonus says where it is from. */
+function modifierSourceName(mod: Modifier): string | null {
+  const code = modifierSource(mod)
+  return code ? cardName(code) : null
+}
+
+type BreakdownPart = { value: number; label: string }
+
+function committedShareLabel(): string {
+  const cards = committedCards.value
+  if (cards.length === 1) return cardName(Cards.toCardContents(cards[0]).cardCode)
+  if (cards.length > 1) return t('skillTest.breakdownCommitted')
+  return t('skillTest.breakdownOther')
+}
+
+/* "5 = 4 + 1": the printed skill plus each numeric bonus with its source. Only for a
+ * single-skill test on the investigator's own skill, before the token is resolved. */
+const skillBreakdown = computed<{ total: number; parts: BreakdownPart[] } | null>(() => {
+  if (skillTestResults.value !== null) return null
+  if (props.skillTest.baseValue.tag !== 'SkillBaseValue' || skills.value.length !== 1) return null
+  const investigator = props.game.investigators[props.skillTest.investigator]
+  const skill = skills.value[0]
+  if (!investigator || !(skill === 'willpower' || skill === 'intellect' || skill === 'combat' || skill === 'agility')) return null
+  const base = investigator[skill]
+  const bonuses = modifiers.value.flatMap((mod): BreakdownPart[] => {
+    const value = modifierAmount(mod)
+    return value === null || value === 0 ? [] : [{ value, label: modifierSourceName(mod) ?? t('skillTest.breakdownOther') }]
+  })
+  const total = skillValue.value
+  const unexplained = total - base - bonuses.reduce((sum, part) => sum + part.value, 0)
+  const parts = [{ value: base, label: t('skillTest.breakdownBase') }, ...bonuses]
+  // The client is not sent the committed cards' printed icons, but the engine's value
+  // already counts them: what is left over is their share. One card gets its name.
+  if (unexplained !== 0) parts.push({ value: unexplained, label: committedShareLabel() })
+  return parts.length > 1 ? { total, parts } : null
+})
+
 const committedCards = computed(() => props.skillTest.committedCards)
 const choices = computed(() => ArkhamGame.choices(props.game, props.playerId))
 const collectionSearch = computed(() => isCollectionSearch(props.game, props.playerId))
@@ -190,6 +263,18 @@ const committableCards = computed(() => {
   })
 })
 
+/* A mouse wheel over the commit row scrolls it sideways while it has room to move;
+ * at either end the wheel goes back to scrolling the panel. */
+function scrollRowSideways(event: WheelEvent) {
+  const row = event.currentTarget as HTMLElement
+  if (Math.abs(event.deltaY) <= Math.abs(event.deltaX) || row.scrollWidth <= row.clientWidth) return
+  const atStart = row.scrollLeft <= 0 && event.deltaY < 0
+  const atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 1 && event.deltaY > 0
+  if (atStart || atEnd) return
+  event.preventDefault()
+  row.scrollLeft += event.deltaY
+}
+
 async function choose(idx: number) {
   emit('choose', idx)
 }
@@ -234,7 +319,7 @@ const cardIsRevealed = (cardId: string | null | undefined) => {
   return location?.revealed ?? true
 }
 
-const targetCardRevealed = computed(() => cardIsRevealed(targetCardId.value))
+const targetCardRevealed = computed(() => !isFlippedAgendaCard(targetCardId.value) && cardIsRevealed(targetCardId.value))
 
 type SwarmEnemy = Omit<Enemy, "placement"> & {
   placement: { tag: "AsSwarm"; swarmHost: string; swarmCard: Cards.Card };
@@ -286,10 +371,28 @@ const sourceCard = computed(() => {
   if (props.skillTest.sourceCard === props.skillTest.targetCard) return null
   const card = props.game.cards[props.skillTest.sourceCard]
   if (targetCard.value === card) return null
-  return card
+  return card ? sideShown(card, props.skillTest.sourceCard) : card
 })
 
-const sourceCardRevealed = computed(() => cardIsRevealed(props.skillTest.sourceCard))
+/* A test made by an agenda's back side (e.g. 1b) runs while the agenda is flipped, or after the
+ * next agenda has already replaced it, but the card record still holds its front face. Show the
+ * back unless the agenda is still in play unflipped (an ability printed on its front side). */
+const sourceAgendaFlipped = computed(() => {
+  const { source } = props.skillTest
+  if (source.tag !== 'AgendaSource' || typeof source.contents !== 'string') return false
+  const agenda = props.game.agendas[source.contents]
+  return agenda ? agenda.flipped : true
+})
+
+/* The agenda's card, as the side it is on: the source slot, and the target slot when a test aimed
+ * at an investigator falls back to showing the source card there. */
+const isFlippedAgendaCard = (cardId: string | null | undefined) =>
+  !!cardId && cardId === props.skillTest.sourceCard && sourceAgendaFlipped.value
+const sideShown = (card: Cards.Card, cardId: string | null | undefined): Cards.Card =>
+  isFlippedAgendaCard(cardId) ? { tag: 'EncounterCard', contents: { ...Cards.toCardContents(card), isFlipped: true } } : card
+
+const sourceCardRevealed = computed(() => !isFlippedAgendaCard(props.skillTest.sourceCard) && cardIsRevealed(props.skillTest.sourceCard))
+const targetCardShown = computed(() => targetCard.value ? sideShown(targetCard.value, targetCardId.value) : null)
 
 const applyResultsAction = computed(() => {
   return choices.value.findIndex((c) => c.tag === "SkillTestApplyResultsButton");
@@ -325,6 +428,19 @@ const focusedChaosTokens = computed(() => {
   return props.game.focusedChaosTokens.filter((token) => !skillTestTokenIds.has(token.id))
 })
 
+/* The drawn token's value from the scenario's own rule ("-X. X is ...", already counted by the engine), for
+ * the badge beside its printed effect. Card effects on the face are listed in their own bars with their own
+ * values, so they are taken back out here rather than counted twice. Null when the server sent no breakdown. */
+function scenarioBadge(entry: ChaosTokenValueEntry | undefined): { label: string; tier: TokenTier } | null {
+  if (!entry) return null
+  if (entry.autoFail) return { label: t('locationMap.referenceX.autoFail'), tier: 'fail' }
+  if (entry.autoSuccess) return { label: t('locationMap.referenceX.autoSuccess'), tier: 'good' }
+  if (entry.value === null) return null
+  const fromCards = entry.effects.reduce((n, e) => n + (e.value ?? 0), 0)
+  const { modifier, tier } = valueBadge(entry.value - fromCards)
+  return modifier === null ? null : { label: formatModifier(modifier), tier }
+}
+
 const tokenEffects = computed(() => {
   const scenario = props.game.scenario
   const tokens = props.skillTest.resolvedChaosTokens.length > 0
@@ -338,7 +454,9 @@ const tokenEffects = computed(() => {
 
   // Cards that registered an effect on a face, from the engine's own breakdown.
   const cardEffects = new Map<TokenFace, ChaosTokenFaceEffect[]>()
+  const breakdown = new Map<TokenFace, ChaosTokenValueEntry>()
   for (const entry of props.skillTest.valueBreakdown?.tokens ?? []) {
+    breakdown.set(entry.face, entry)
     if (entry.effects.length > 0) cardEffects.set(entry.face, entry.effects)
   }
 
@@ -374,7 +492,7 @@ const tokenEffects = computed(() => {
       })
 
       if (!html && cards.length === 0) return []
-      return [{ face, image: chaosTokenImage(face), html, cards }]
+      return [{ face, image: chaosTokenImage(face), html, cards, badge: scenarioBadge(breakdown.get(face)) }]
     })
 })
 
@@ -419,7 +537,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
 
 <template>
   <Draggable
-    width="min(560px, calc(100vw - 32px))"
+    width="min(680px, calc(100vw - 32px))"
     avoid-selector=".concealed-card--can-interact, .location-cell--can-interact, .location-cell--can-interact .location-wrapper, .location-cell--can-interact .card-frame"
   >
     <template #handle>
@@ -432,7 +550,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
         >{{ $t('skillTest.winOdds', { n: winOdds }) }}</span>
       </h2>
     </template>
-    <div class="skill-test">
+    <div class="skill-test" :class="[{ 'skill-test--drawing': isDrawing }, themeClass]">
       <div class="steps">
         <div
           v-for="(s, i) in testSteps"
@@ -462,9 +580,9 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
           </div>
         </div>
         <Card
-          v-else-if="targetCard"
+          v-else-if="targetCardShown"
           :game="game"
-          :card="targetCard"
+          :card="targetCardShown"
           class="target-card"
           :revealed="targetCardRevealed"
           playerId=""
@@ -485,6 +603,9 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
                   @click="createModifier({tag: 'SkillTestTarget', contents: skillTest.id}, {tag: 'Difficulty', contents: -1})"
               >-</button>
               <span class="difficulty">{{skillTest.modifiedDifficulty}}</span>
+              <span v-if="skills.length > 0" class="stat__skills">
+                <i v-for="(skill, idx) in skills" :key="idx" :class="`${skill}-icon`" :style="{ color: `var(--${skill})` }" :title="skill"></i>
+              </span>
               <button
                   v-if="debug.active"
                   type="button"
@@ -492,17 +613,9 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
                   @click="createModifier({tag: 'SkillTestTarget', contents: skillTest.id}, {tag: 'Difficulty', contents: 1})"
               >+</button>
             </div>
-            <span class="stat__label">{{ $t('skillTest.difficultyLabel') }}</span>
           </div>
+          <!-- Both sides carry the tested skill's icon ("1 [book] vs 5 [book]"), so the comparison reads at a glance. -->
           <div class="vs">
-            <div v-if="skills.length > 0" class="skills">
-              <div v-for="(skill, idx) in skills" :key="idx" :class="`${skill}-icon ${skill}-skill`">
-                <span>{{skill}}</span>
-              </div>
-            </div>
-            <div v-else-if="skillTest.baseValue.tag === 'HalfResourcesOf'" class="half-resources">
-              <img :src="imgsrc(`tokens/resource.png`)" /> / 2
-            </div>
             <span class="vs__text">VS</span>
           </div>
           <div class="modified-skill stat">
@@ -514,6 +627,12 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
                   @click="adjustDebugSkillValue($event, -1)"
               >-</button>
               <span class="skill">{{skillValue}}</span>
+              <span v-if="skills.length > 0" class="stat__skills">
+                <i v-for="(skill, idx) in skills" :key="idx" :class="`${skill}-icon`" :style="{ color: `var(--${skill})` }" :title="skill"></i>
+              </span>
+              <span v-else-if="skillTest.baseValue.tag === 'HalfResourcesOf'" class="half-resources">
+                <img :src="imgsrc(`tokens/resource.png`)" /> / 2
+              </span>
               <button
                   v-if="debug.active"
                   type="button"
@@ -521,7 +640,6 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
                   @click="adjustDebugSkillValue($event, 1)"
               >+</button>
             </div>
-            <span class="stat__label">{{ $t('skillTest.skillValueLabel') }}</span>
           </div>
         </div>
         <div class="test-source">
@@ -553,7 +671,12 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
         <template v-for="effect in tokenEffects" :key="effect.face">
           <div class="token-effect">
             <div class="token-effect__token"><img :src="effect.image" /></div>
-            <div class="token-effect__text"><span v-if="effect.html" v-html="effect.html"></span></div>
+            <div class="token-effect__text">
+              <span v-if="effect.html" class="token-effect__line">
+                <TokenModifierBadge v-if="effect.badge" class="token-effect__badge" :label="effect.badge.label" :tier="effect.badge.tier" />
+                <span v-html="effect.html"></span>
+              </span>
+            </div>
           </div>
           <div
             v-for="(card, i) in effect.cards"
@@ -575,7 +698,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
       </div>
       <div v-if="committableCards.length > 0" class="committable">
         <h3 class="triggers__title">{{ $t('skillTest.committableCards') }}</h3>
-        <div class="committable__row">
+        <div class="committable__row" @wheel="scrollRowSideways">
           <button
             v-for="card in committableCards"
             :key="card.id"
@@ -604,9 +727,29 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
       </div>
       <!-- Bonuses already in force on this test (a weapon's +1 combat / +1 damage…), not commit options:
            labelled so they don't read as part of the commit row, and hovering one shows its source card. -->
-      <div v-if="modifiers.length > 0" class="modifiers">
-        <h3 class="triggers__title modifiers__title" :title="$t('skillTest.activeModifiersHint')">{{ $t('skillTest.activeModifiers') }}</h3>
-        <div v-for="(modifier, idx) in modifiers" :key="idx" class="modifier" :class="{ 'sideways': modifier.source.tag === 'InvestigatorSource' }" :data-image-id="modifierSource(modifier)">
+      <div v-if="modifiers.length > 0 || skillBreakdown" class="modifiers">
+        <h3 class="triggers__title modifiers__title" :title="$t('skillTest.activeModifiersHint')">{{ $t('skillTest.skillValueLabel') }}</h3>
+        <!-- "5 = 4 + 1": where the tested value comes from, each part named. -->
+        <div v-if="skillBreakdown" class="skill-breakdown">
+          <span class="skill-breakdown__part skill-breakdown__part--total">
+            <span class="skill-breakdown__chip">
+              <span class="skill-breakdown__num">{{ skillBreakdown.total }}</span>
+              <i :class="`${skills[0]}-icon`" :style="{ color: `var(--${skills[0]})` }"></i>
+            </span>
+          </span>
+          <span class="skill-breakdown__op">=</span>
+          <template v-for="(part, i) in skillBreakdown.parts" :key="i">
+            <span v-if="i > 0" class="skill-breakdown__op">{{ part.value < 0 ? '−' : '+' }}</span>
+            <span class="skill-breakdown__part">
+              <span class="skill-breakdown__chip">
+                <span class="skill-breakdown__num">{{ Math.abs(part.value) }}</span>
+                <i :class="`${skills[0]}-icon`" :style="{ color: `var(--${skills[0]})` }"></i>
+              </span>
+              <small class="skill-breakdown__label">{{ part.label }}</small>
+            </span>
+          </template>
+        </div>
+        <div v-for="(modifier, idx) in listedModifiers" :key="idx" class="modifier" :class="{ 'sideways': modifier.source.tag === 'InvestigatorSource' }" :data-image-id="modifierSource(modifier)">
           <template v-if="modifier.type.tag === 'CannotCommitCards'">
             <span>{{cannotCommitCardsToWords(modifier.type)}}</span>
           </template>
@@ -633,21 +776,24 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
           </template>
           <template v-if="modifier.type.tag === 'AddSkillValue'">
             <span>+</span>
-            <i
+            <img v-if="skillImage(normalizeSkill(modifier.type.contents))" class="skill-art skill-art--badge" :src="skillImage(normalizeSkill(modifier.type.contents))!" :alt="normalizeSkill(modifier.type.contents)" />
+            <i v-else
                :class="`${normalizeSkill(modifier.type.contents)}-icon`"
                class="skill-badge" :style="{ '--skill': `var(--${normalizeSkill(modifier.type.contents)})` }"
             ></i>
           </template>
           <template v-if="modifier.type.tag === 'SkillModifier'">
             <span>+{{modifier.type.value}}</span>
-            <i
+            <img v-if="skillImage(normalizeSkill(modifier.type.skillType))" class="skill-art skill-art--badge" :src="skillImage(normalizeSkill(modifier.type.skillType))!" :alt="normalizeSkill(modifier.type.skillType)" />
+            <i v-else
                :class="`${normalizeSkill(modifier.type.skillType)}-icon`"
                class="skill-badge" :style="{ '--skill': `var(--${normalizeSkill(modifier.type.skillType)})` }"
             ></i>
           </template>
           <template v-if="modifier.type.tag === 'ActionSkillModifier'">
             <span>+{{modifier.type.value}}</span>
-            <i
+            <img v-if="skillImage(normalizeSkill(modifier.type.skillType))" class="skill-art skill-art--badge" :src="skillImage(normalizeSkill(modifier.type.skillType))!" :alt="normalizeSkill(modifier.type.skillType)" />
+            <i v-else
                :class="`${normalizeSkill(modifier.type.skillType)}-icon`"
                class="skill-badge" :style="{ '--skill': `var(--${normalizeSkill(modifier.type.skillType)})` }"
             ></i>
@@ -689,6 +835,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
           <template v-if="modifier.type.tag === 'OtherModifier' && modifier.type.contents === 'CancelAnyChaosTokenAndDrawAnother'">
             <span class="text">{{ $t('modifier.cancelMatchingChaosTokens') }}</span>
           </template>
+          <span v-if="modifierSourceName(modifier)" class="modifier__source">{{ modifierSourceName(modifier) }}</span>
         </div>
       </div>
       <AbilityButton
@@ -758,13 +905,81 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
 }
 
 .skill-test {
-  font-size: 14px;
+  font-size: 16px;
+  /* Neutral inner sheet; the themed window shows as a coloured rim around it. */
+  background: #1f1f23;
+  margin: 0 6px 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Revealed chaos tokens: smaller inside the skill test panel only. */
+/* The panel is a window over the map: an opaque warm-dark body with a brass edge,
+ * so it no longer melts into the jungle art behind it. */
+/* Theme: only the outer window (frame, title bar, edge) takes the tested skill's
+ * colour; everything inside stays neutral grey so the cards and numbers read
+ * cleanly. Mixed / wild tests keep the brass frame. */
+:global(.draggable:has(.skill-test)) {
+  --st-body: #26262a;
+  --st-glow: rgba(255, 255, 255, 0.05);
+  --st-accent: #d9d6cf;
+  --st-accent-rgb: 217, 214, 207;
+  --st-accent-strong: #4b4b52;
+}
+:global(.draggable:has(.skill-test)) {
+  --st-panel: #2e2418;
+  --st-header-from: #4d3a20;
+  --st-header-to: #33261a;
+  --st-edge: rgba(216, 178, 110, 0.9);
+}
+:global(.draggable:has(.skill-test--willpower)) {
+  --st-panel: #1f3550;
+  --st-header-from: #2f5480;
+  --st-header-to: #213a58;
+  --st-edge: rgba(127, 178, 224, 0.9);
+}
+:global(.draggable:has(.skill-test--intellect)) {
+  --st-panel: #352549;
+  --st-header-from: #53386f;
+  --st-header-to: #3a2850;
+  --st-edge: rgba(198, 154, 214, 0.9);
+}
+:global(.draggable:has(.skill-test--combat)) {
+  --st-panel: #4a2420;
+  --st-header-from: #6e322a;
+  --st-header-to: #4f2722;
+  --st-edge: rgba(224, 144, 128, 0.9);
+}
+:global(.draggable:has(.skill-test--agility)) {
+  --st-panel: #1f4030;
+  --st-header-from: #2d6045;
+  --st-header-to: #22452f;
+  --st-edge: rgba(143, 214, 168, 0.9);
+}
+
+:global(.draggable:has(.skill-test)) {
+  background: var(--st-panel);
+  border: 2px solid var(--st-edge);
+  box-shadow: 0 0 0 1px #000, 0 12px 40px rgba(0, 0, 0, 0.85);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+:global(.draggable:has(.skill-test) > header) {
+  background: linear-gradient(180deg, var(--st-header-from), var(--st-header-to));
+  border-bottom: 1px solid var(--st-edge);
+}
+
+/* Everything below the bag waits for the drawn token: its effects, the result,
+ * the triggers it opens and the buttons that move past it. Committed cards and
+ * modifiers were there before the draw, so they stay. */
+.skill-test--drawing > .chaos-bag ~ :not(.committed-skills):not(.modifiers):not(.focused-chaos-tokens) {
+  display: none;
+}
+
+/* Revealed chaos tokens inside the skill test panel only. */
 .skill-test :deep(.token-container),
 .skill-test :deep(.token-container .token) {
-  width: min(68px, 16vw);
+  width: min(80px, 16vw);
 }
 
 .committable {
@@ -777,17 +992,24 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
 }
 
 .committable__row {
+  /* One row only; extra cards scroll sideways instead of stacking into a wall. */
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 6px 2px 8px; /* room for the hover lift and the scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--st-accent-rgb), 0.6) transparent;
 }
 
 /* Beats the panel-wide full-width button rule: a card is its own size. */
 .committable .committable__card {
-  width: calc(var(--card-width) * 1.1);
+  flex-shrink: 0;
+  width: calc(var(--card-width) * 1.25);
   padding: 0;
   background: transparent;
-  border: 2px solid rgba(216, 178, 110, 0.5);
+  border: 2px solid rgba(var(--st-accent-rgb), 0.45);
   border-radius: 7px;
   overflow: hidden;
   cursor: pointer;
@@ -797,8 +1019,8 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   &:hover {
     background: transparent;
     transform: translateY(-4px);
-    border-color: var(--select);
-    box-shadow: 0 0 12px rgba(216, 178, 110, 0.7);
+    border-color: var(--st-accent);
+    box-shadow: 0 0 12px rgba(var(--st-accent-rgb), 0.7);
   }
 
   img {
@@ -817,6 +1039,76 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   text-align: left;
 }
 
+/* "5 = 4 + 1" laid out as small parchment chips (the same look as the VS boxes),
+ * each with its source written underneath. */
+.skill-breakdown {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 6px 10px;
+  padding: 4px 4px 10px;
+}
+
+.skill-breakdown__part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.skill-breakdown__chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.2em;
+  padding: 0.2em 0.5em;
+  border-radius: 0.6em;
+  background: linear-gradient(180deg, #fbf4e2, #e6d6b2);
+  color: #2b2117;
+  border: 2px solid #8a7550;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  font-family: "Arkham";
+  font-size: 1.3em;
+  line-height: 1;
+  text-transform: none;
+
+  i { font-style: normal; }
+}
+
+.skill-breakdown__part--total .skill-breakdown__chip {
+  border-color: #2ec46b;
+  box-shadow: 0 0 10px rgba(46, 196, 107, 0.6), 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.skill-breakdown__op {
+  align-self: flex-start;
+  padding-top: 0.15em;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.4em;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.skill-breakdown__label {
+  max-width: 9em;
+  font-size: 0.7em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Which card a bonus pill comes from. */
+.modifier__source {
+  margin-left: 2px;
+  padding-left: 8px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 0.8em;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .modifiers__title { flex-basis: 100%; text-align: left; cursor: help; }
 
 .triggers__title {
@@ -824,7 +1116,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   font-size: 0.8em;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #d9c08a;
+  color: var(--st-accent);
 }
 
 .trigger {
@@ -832,9 +1124,9 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   flex-direction: column;
   gap: 2px;
   padding: 6px 10px;
-  background: rgba(23, 38, 31, 0.9);
+  background: rgba(0, 0, 0, 0.28);
   border: 1px solid rgba(255, 255, 255, 0.14);
-  border-left: 3px solid #c9a45c;
+  border-left: 3px solid var(--st-accent);
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.15s ease, border-color 0.15s ease;
@@ -910,8 +1202,8 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   gap: 10px;
   color: white;
   background:
-    radial-gradient(ellipse at center, rgba(90, 70, 35, 0.3), transparent 70%),
-    rgb(0, 0, 0, 0.62);
+    radial-gradient(ellipse at center, var(--st-glow), transparent 70%),
+    var(--st-body);
   backdrop-filter: blur(80px);
   -webkit-backdrop-filter: blur(80px); /* Safari support */
 }
@@ -934,48 +1226,64 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   gap: 6px;
 }
 
+/* Each side drawn like a skill box on an investigator card: a parchment frame
+ * holding a dark serif number and the skill's coloured icon ("1 [book] VS 5 [book]").
+ * The frame's edge says which side it is: red = to beat, green = the investigator. */
 .stat__value {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 5px;
+  align-items: baseline;
+  gap: 0.3em;
+  padding: 0.15em 0.55em 0.15em 0.65em;
+  border-radius: 0.9em;
+  background: linear-gradient(180deg, #fbf4e2, #e6d6b2);
+  color: #2b2117;
+  border: 5px solid var(--side, #3b2a1b);
+  box-shadow:
+    inset 0 0 0 2px #fff8e6,
+    0 0 0 2px rgba(0, 0, 0, 0.55),
+    0 0 18px var(--side-glow, transparent),
+    0 3px 8px rgba(0, 0, 0, 0.6);
 }
 
-.stat__label {
-  font-size: 0.72em;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.75);
-  white-space: nowrap;
-}
+.test-difficulty .stat__value { --side: #e0393b; --side-glow: rgba(224, 57, 59, 0.75); }
+.modified-skill .stat__value { --side: #2ec46b; --side-glow: rgba(46, 196, 107, 0.75); }
 
 .difficulty, .skill {
-  flex-shrink: 0;
-  color: white;
-  font-weight: 800;
-  font-size: 1.6em;
-  font-variant-numeric: tabular-nums;
+  /* The game's own card font: its digits and skill icons share one height, so
+   * the number and the icon beside it line up top and bottom. */
+  font-family: "Arkham";
+  font-size: 2.2em;
+  line-height: 1;
+}
+
+.skill-art {
+  display: block;
+  width: 1.9em;
+  height: 1.9em;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+
+  &.skill-art--badge {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.stat__skills {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.1em;
-  height: 2.1em;
-  border-radius: 50%;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
-  border: 3px solid rgba(255, 255, 255, 0.35);
-}
+  gap: 0.15em;
+  font-size: 2.2em;
+  line-height: 1;
+  text-transform: none;
 
-.difficulty {
-  background: radial-gradient(circle at 35% 30%, #d0423f, #6e0d0d 75%);
-  box-shadow: 0 0 14px rgba(200, 40, 40, 0.45), inset 0 -4px 8px rgba(0, 0, 0, 0.35);
-}
-
-.skill {
-  background: radial-gradient(circle at 35% 30%, #43b26a, #0d4f22 75%);
-  box-shadow: 0 0 14px rgba(40, 180, 90, 0.45), inset 0 -4px 8px rgba(0, 0, 0, 0.35);
+  i {
+    font-style: normal;
+  }
 }
 
 .portrait {
-  width: var(--card-width);
+  width: var(--skill-test-card-width);
   height: auto;
   border-radius: 5px;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.45);
@@ -989,8 +1297,8 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   background: rgba(0, 0, 0, 0.6);
 
   h2 {
-    background: rgba(24, 20, 14, 0.9);
-    color: #d9c9a3;
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--st-accent);
     font-size: 0.85em;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -1046,8 +1354,15 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   transition: background-color var(--motion-fast) var(--ease-out), color var(--motion-fast) var(--ease-out), filter var(--motion-fast) var(--ease-out);
   border: 0;
   padding: 10px;
-  background-color: var(--button-2);
-  color: #EEE;
+  /* Same cream action style as the other panel buttons (it used to paint light
+   * text over the cream gradient, which left the label unreadable). */
+  background: linear-gradient(180deg, #f3eee2, #ddd5c3);
+  color: #23211d;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  &:hover {
+    background: linear-gradient(180deg, #ffffff, #ebe4d3);
+  }
 }
 
 button:where(:not(.debug-stepper-button)) {
@@ -1058,11 +1373,15 @@ button:where(:not(.debug-stepper-button)) {
   transition: background-color var(--motion-fast) var(--ease-out), color var(--motion-fast) var(--ease-out), filter var(--motion-fast) var(--ease-out);
   border: 0;
   padding: 10px;
-  background-color: var(--select-dark-30);
+  /* Panel actions (Confirm, Skip triggers…) in the same cream as the number boxes:
+   * light on the dark sheet, dark text, so they read at a glance. */
+  background: linear-gradient(180deg, #f3eee2, #ddd5c3);
+  color: #23211d;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   &:hover {
-    background-color: var(--select-dark-20);
+    background: linear-gradient(180deg, #ffffff, #ebe4d3);
   }
-  color: #EEE;
 }
 
 .success {
@@ -1190,11 +1509,12 @@ i.iconSkillAgility {
     padding: 10px;
     margin: 0 !important;
     border-radius: 0;
-    background-color: var(--select-dark-30);
+    background: linear-gradient(180deg, #f3eee2, #ddd5c3);
+    color: #23211d;
+    font-weight: 700;
     &:hover {
-      background-color: var(--select-dark-20);
+      background: linear-gradient(180deg, #ffffff, #ebe4d3);
     }
-    color: #EEE;
   }
 }
 
@@ -1248,14 +1568,14 @@ i.iconSkillAgility {
   }
 
   .step.done {
-    background: rgba(216, 178, 110, 0.18);
-    color: rgba(240, 228, 200, 0.85);
+    background: rgba(var(--st-accent-rgb), 0.18);
+    color: rgba(255, 255, 255, 0.85);
   }
 
   .step.active {
-    background: linear-gradient(180deg, #d8b26e, #8f6c30);
+    background: linear-gradient(180deg, var(--st-accent), var(--st-accent-strong));
     color: white;
-    box-shadow: 0 0 10px rgba(216, 178, 110, 0.65);
+    box-shadow: 0 0 10px rgba(var(--st-accent-rgb), 0.6);
     transform: scale(1.06);
   }
 }
@@ -1265,8 +1585,8 @@ i.iconSkillAgility {
   align-items: center;
   gap: 10px;
   padding: 8px 14px;
-  background: rgba(32, 26, 16, 0.88);
-  color: #f3ead6;
+  background: rgba(0, 0, 0, 0.25);
+  color: #f1ede6;
   text-align: left;
   font-size: 0.95em;
   line-height: 1.35;
@@ -1282,8 +1602,8 @@ i.iconSkillAgility {
   flex-shrink: 0;
   padding: 2px 10px;
   border-radius: 999px;
-  background: rgba(216, 178, 110, 0.25);
-  border: 1px solid rgba(216, 178, 110, 0.6);
+  background: rgba(var(--st-accent-rgb), 0.2);
+  border: 1px solid rgba(var(--st-accent-rgb), 0.6);
   font-size: 0.8em;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -1482,6 +1802,18 @@ i.iconSkillAgility {
   }
 }
 
+/* The token's value now, ahead of its printed effect: "−3 · -X. X is the number of ...". */
+.token-effect__line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.token-effect__badge {
+  flex: none;
+  font-size: 12px;
+}
+
 /* One card's effect on the drawn token: its own full-width bar under the
    token's, so the effects read as add-ons stacked on it. A separate class
    rather than a .token-effect modifier, so the grid columns don't collide. */
@@ -1535,22 +1867,38 @@ i.iconSkillAgility {
 .test-source {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 5px;
 }
 
+/* Cards on both ends share one size and hug the numbers in the middle
+ * instead of drifting to the panel's corners. */
+.skill-test-contents {
+  --skill-test-card-width: calc(var(--card-width) * 1.15);
+}
+
+.target-card,
+.test-source {
+  --card-width: var(--skill-test-card-width);
+  width: auto;
+}
+
+.test-source { justify-self: end; }
 .target-card {
-  width: 100%;
-  align-items: flex-end;
+  justify-self: start;
   &.concealed {
-    width: 50%;
-    max-width: calc(var(--card-width) * 0.75);
+    width: var(--skill-test-card-width);
   }
 }
 
-.test-source {
-  width: 100%;
-  align-items: flex-start;
-}
+/* The investigator reads first: [Kate] [5 book] VS [1 book] [tested card].
+ * Done with `order` so the markup keeps its target → status → source sequence. */
+.test-source { order: 0; }
+.test-status { order: 1; }
+.target-card { order: 2; }
+.modified-skill { order: 0; }
+.vs { order: 1; }
+.test-difficulty { order: 2; }
 
 
 </style>

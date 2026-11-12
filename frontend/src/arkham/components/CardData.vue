@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { onBeforeUnmount, ref, watch } from 'vue'
+
 export interface Props {
   name?: string | null
   typeName?: string | null
@@ -9,11 +11,24 @@ export interface Props {
   keywords?: string | null
   text?: string | null
   flavor?: string | null
+  /** Show the flavor above the rules text, where acts and agendas print it. */
+  flavorFirst?: boolean
   reversed?: boolean
   upsideDown?: boolean
 }
 
 defineProps<Props>()
+
+/* The flavor fades out only when the window is too short for it and it was actually cut. */
+const flavorEl = ref<HTMLElement | null>(null)
+const flavorClipped = ref(false)
+const measure = () => { const el = flavorEl.value; flavorClipped.value = !!el && el.scrollHeight > el.clientHeight + 1 }
+const observer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(measure)
+watch(flavorEl, (el, old) => {
+  if (old) observer?.unobserve(old)
+  if (el) { observer?.observe(el); measure() }
+})
+onBeforeUnmount(() => observer?.disconnect())
 </script>
 
 <template>
@@ -39,10 +54,13 @@ defineProps<Props>()
         </div>
       </div>
       <p v-if="keywords" class="card-keywords">{{ keywords }}.</p>
+      <div v-if="flavor && flavorFirst" ref="flavorEl" class="card-flavor card-flavor--first" :class="{ clipped: flavorClipped }">
+        <p v-html="flavor"></p>
+      </div>
       <div v-if="text" class="card-text">
         <p v-html="text"></p>
       </div>
-      <div v-if="flavor" class="card-flavor">
+      <div v-if="flavor && !flavorFirst" ref="flavorEl" class="card-flavor" :class="{ clipped: flavorClipped }">
         <p v-html="flavor"></p>
       </div>
     </div>
@@ -79,6 +97,22 @@ defineProps<Props>()
 /* CardOverlay's own scoped `.card-data` rule (for its customization sheet) also reaches this root and
  * gives it the card's aspect ratio; the doubled class wins so the panel stays as tall as its text. */
 .card-data.card-data { aspect-ratio: auto; min-height: 0; height: auto; }
+
+/* Never taller than the window: the overlay can't scroll, so a long back side (agenda/act flavor)
+ * would run off the bottom. The rules text always shows in full; only the flavor gives way,
+ * fading out where it is cut. */
+.card-data { max-height: calc(100vh - 48px); }
+.card-data-body { display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+.card-data-body > * { flex-shrink: 0; }
+.card-data-body > .card-flavor {
+  flex-shrink: 1;
+  min-height: 3.5em;
+  overflow: hidden;
+}
+.card-data-body > .card-flavor.clipped {
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 2.5em), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 2.5em), transparent);
+}
 
 .card-data.faction-guardian { --panel-color: #3a96cf; }
 .card-data.faction-seeker { --panel-color: #e0913f; }

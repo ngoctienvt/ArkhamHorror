@@ -107,6 +107,18 @@ export function isLocalized(src: string) {
   return false
 }
 
+const LOCAL_TOKEN_ART_VERSION = 'antique-4'
+
+/* Redrawn token art that ships with the frontend (public/img/arkham) and so is
+ * served from this origin instead of the CDN's older copies. */
+const LOCAL_TOKEN_ART = [
+  /^chaos-tokens\/ct-[^/]+\.png$/,
+  /^tokens\/[^/]+\.png$/,
+  /^extra\/the-innsmouth-conspiracy\/keys\/[^/]+\.png$/,
+  /^(damage|horror|health)\.png$/,
+  /^icons\/skills\/[^/]+\.png$/,
+]
+
 /* `ignoreVariants` asks for the art the card itself names, rather than whatever
  * the player's art preferences would swap in: the card browser shows each
  * printing as it was printed, and the preference is about play. */
@@ -126,6 +138,9 @@ export function imgsrc(src: string, ignoreVariants = false): string {
   const path = src.replace(/^\//, '').replace(/^cards\/(.+)\.avif$/, (_, art: string) =>
     `cards/${reprintedArt(ignoreVariants ? art : variantArt(art, useSettings().useVariants))}.avif`
   )
+  // Bump LOCAL_TOKEN_ART_VERSION whenever this art changes so browsers drop cached copies.
+  if (LOCAL_TOKEN_ART.some((pattern) => pattern.test(path))) return `/img/arkham/${path}?v=${LOCAL_TOKEN_ART_VERSION}`
+
   const fullPath = `${store.assetHost}/img/arkham/${path}`
 
   if (isLocalized(src)) {

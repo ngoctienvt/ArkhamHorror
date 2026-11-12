@@ -15,6 +15,7 @@ import { useGameChoices } from '@/arkham/composables/useGameChoices';
 import type { AbilityLabel, AbilityMessage, Message } from '@/arkham/types/Message';
 import type { AbilityType } from '@/arkham/types/Ability';
 import { MessageType } from '@/arkham/types/Message';
+import { isDiscardChoice } from '@/arkham/discardChoice';
 import ScarletKey from '@/arkham/components/ScarletKey.vue';
 import DebugAsset from '@/arkham/components/debug/Asset.vue';
 import KeyToken from '@/arkham/components/Key.vue';
@@ -189,6 +190,8 @@ const canInteract = computed(() => abilities.value.length > 0 || cardAction.valu
 // In a reaction window the usable asset gets the strong trigger highlight.
 const triggerReady = computed(() => canInteract.value && isTriggerWindow(choices.value))
 const showDiscardMark = computed(() => props.discardToMakeRoom && cardAction.value !== -1)
+// Picking this asset discards it (slot overflow, effects): outline it in red.
+const isDiscardTarget = computed(() => cardAction.value !== -1 && isDiscardChoice(choices.value[cardAction.value]))
 const healthAction = computed(() => choices.value.findIndex(canAdjustHealth))
 const sanityAction = computed(() => choices.value.findIndex(canAdjustSanity))
 
@@ -463,7 +466,7 @@ function startDrag(event: DragEvent) {
           />
           <span class="deck-size">{{asset.spiritDeck.length}}</span>
         </div>
-        <div class="card-wrapper" :class="{ 'asset--can-interact': canInteract, 'asset--pending': pending, 'asset--doomed': doomed }">
+        <div class="card-wrapper" :class="{ 'asset--can-interact': canInteract, 'asset--discard': isDiscardTarget || showDiscardMark, 'asset--pending': pending, 'asset--doomed': doomed }">
           <MissingCardBadge :card-code="cardCode" />
           <span v-if="doomed && !showDiscardMark" class="doomed-mark" v-tooltip="'Will be defeated'">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -651,6 +654,23 @@ function startDrag(event: DragEvent) {
     border: 2px solid var(--select);
     cursor:pointer;
   }
+}
+
+.asset--discard.asset--can-interact {
+  img {
+    border-color: #e5383b;
+    box-shadow: 0 0 8px 2px rgba(229, 56, 59, 0.75);
+    animation: discard-pulse 1.1s ease-in-out infinite;
+  }
+}
+
+@keyframes discard-pulse {
+  0%, 100% { border-color: #e5383b; box-shadow: 0 0 8px 2px rgba(229, 56, 59, 0.75); }
+  50% { border-color: rgba(229, 56, 59, 0.35); box-shadow: 0 0 3px 1px rgba(229, 56, 59, 0.25); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .asset--discard.asset--can-interact img { animation: none; }
 }
 
 .asset--pending {

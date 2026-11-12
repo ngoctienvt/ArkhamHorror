@@ -154,6 +154,16 @@ import Menu from '@/components/Menu.vue'
 import Prompt from '@/components/Prompt.vue'
 import { sfxForUpdate } from '@/arkham/sfxEvents'
 import { playSfx } from '@/arkham/sfx'
+import { drawDurationMs, newlyDrawnTokenIds, splitSpoilerSfx } from '@/arkham/chaosDrawReveal'
+import { afterChaosDraw, finishChaosDraw, startChaosDraw, useChaosDraw } from '@/arkham/composables/useChaosDraw'
+import { boardHeldForSummary, skillTestLogEntries, trackSkillTest, type SkillTestTracker } from '@/arkham/skillTestSummary'
+import {
+  dismissSkillTestSummary,
+  setSkillTestSummaryLog,
+  showSkillTestSummary,
+  useSkillTestSummary,
+} from '@/arkham/composables/useSkillTestSummary'
+import { scaledMs } from '@/arkham/motion/motionTokens'
 
 interface GameCard {
   title: string
@@ -1480,15 +1490,67 @@ function cardsChangingZone(previous: Arkham.Game, current: Arkham.Game): string[
   return cardMoves(snapshotOf(previous), snapshotOf(current)).filter((id) => laidOutDestination(id))
 }
 
+/* A skill test token just came out of the bag: hold it back for the draw
+ * animation the player picked, and keep the sounds that would give the result
+ * away (the clack, success, fail) until it is shown. */
+function playUpdateSfxWithChaosDraw(previousGame: Arkham.Game | null, updatedGame: Arkham.Game) {
+  const sfx = sfxForUpdate(previousGame, updatedGame)
+  const style = settings.effectiveChaosDrawStyle
+  // The test ended (or was cancelled) under a draw still playing: show it now.
+  if (!updatedGame.skillTest) finishChaosDraw()
+  const drawn = style === 'off' ? [] : newlyDrawnTokenIds(previousGame, updatedGame)
+  if (drawn.length > 0 && style !== 'off') {
+    startChaosDraw(drawn, style, scaledMs(drawDurationMs(style, drawn.length), settings.motionSpeed))
+  }
+  if (soundsDisabled.value) return
+  if (drawn.length === 0 && !updatedGame.skillTest) {
+    playSfx(sfx)
+    return
+  }
+  const { now, afterReveal } = splitSpoilerSfx(sfx)
+  playSfx(drawn.length > 0 ? [style === 'bag' ? 'bagShake' : 'reelSpin', ...now] : now)
+  afterChaosDraw(() => playSfx(afterReveal))
+}
+
+/* Follows each skill test from start to end and, when one of this seat's tests
+ * finishes with a result, puts up its summary for the player to confirm. A new
+ * test starting replaces any summary still waiting: that one is history. */
+let skillTestTracker: SkillTestTracker | null = null
+function trackSkillTestSummary(previousGame: Arkham.Game | null, updatedGame: Arkham.Game) {
+  const { tracker, summary } = trackSkillTest(skillTestTracker, previousGame, updatedGame)
+  skillTestTracker = tracker
+  if (updatedGame.skillTest) dismissSkillTestSummary()
+  if (!summary || props.spectate) return
+  const mine = solo.value || investigatorBelongsToPlayer(updatedGame, summary.investigatorId, playerId.value ?? '')
+  if (mine) showSkillTestSummary(summary)
+}
+
+/* The server does not wait for the skill test summary: the update that ends a test
+ * already carries what came after it (an agenda advancing, the next question). While
+ * this seat's summary is up, the newest update waits here and the board stays as the
+ * test left it; confirming the summary applies it (see the watch on the summary). */
+let heldForSummary: { game: Arkham.Game; locked: boolean } | null = null
+const summaryForHold = useSkillTestSummary()
+
 function applyGameUpdate(updatedGame: Arkham.Game, locked: boolean) {
-  const nextGame = locked ? { ...updatedGame, question: {} } : updatedGame
+  if (heldForSummary) {
+    heldForSummary = { game: updatedGame, locked }
+    return
+  }
   const previousGame = game.value
+  trackSkillTestSummary(previousGame, updatedGame)
+  const holding = previousGame !== null && !updatedGame.skillTest && summaryForHold.summary.value !== null
+  if (holding) heldForSummary = { game: updatedGame, locked }
+  const nextGame = holding && previousGame
+    ? boardHeldForSummary(previousGame)
+    : locked ? { ...updatedGame, question: {} } : updatedGame
   const seq = ++applySeq
   /* Read before the blanking: a draw lives in the question, and the board needs
    * it precisely while an overlay has the question hidden -- that is when the
    * card flying out of the overlay needs a slot laid out to land in. */
-  const draws = pendingDraws(updatedGame, playerId.value ?? '')
-  if (!soundsDisabled.value) playSfx(sfxForUpdate(previousGame, updatedGame))
+  const draws = holding ? [] : pendingDraws(updatedGame, playerId.value ?? '')
+  // Held updates play their sounds when they are applied, not behind the summary.
+  if (!holding) playUpdateSfxWithChaosDraw(previousGame, updatedGame)
   const apply = async () => {
     if (seq !== applySeq) return
     clearPendingChoice()
@@ -2563,6 +2625,21 @@ const pendingConfirm = ref<{ index: number; step: number | undefined; request: A
 /* Answers the questions that have nothing to decide (a lone "draw encounter",
  * "apply results", a forced single choice) so the phases run on by themselves.
  * Real decisions still wait for the player. */
+// Neither the drawn token nor the summary of a finished test is answered over.
+const chaosDrawState = useChaosDraw()
+const skillTestSummaryState = useSkillTestSummary()
+/* What the log says happened inside the summarised test, refreshed as lines
+ * arrive (they can trail the update that ended the test). */
+watch([gameLog, () => skillTestSummaryState.summary.value?.testId], ([entries, testId]) => {
+  setSkillTestSummaryLog(testId ? skillTestLogEntries(entries, testId) : [])
+})
+// The summary confirmed (or cleared): the update held behind it reaches the board now.
+watch(() => skillTestSummaryState.summary.value, (summary) => {
+  if (summary || !heldForSummary) return
+  const { game: held, locked } = heldForSummary
+  heldForSummary = null
+  applyGameUpdate(held, locked)
+})
 const autopilot = useAutopilot({
   enabled: computed(() => settings.autopilot),
   question,
@@ -2582,6 +2659,8 @@ const autopilot = useAutopilot({
       drawSpotlight.value !== null ||
       pendingConfirm.value !== null ||
       fxBusy.value ||
+      chaosDrawState.isDrawing.value ||
+      skillTestSummaryState.summary.value !== null ||
       questionPlayerId.value !== playerId.value,
   ),
   hasRevealedCards: computed(() =>
@@ -3004,6 +3083,8 @@ provide(choicesTooltipByPlayerKey, choicesTooltipByPlayer)
 provide(gameIndexesKey, gameIndexes)
 provide('chooseDeck', chooseDeck)
 provide('chooseDeckList', chooseDeckList)
+// Lets a seat that already picked a deck take the pick back during deck selection.
+provide('undoDeckChoice', undo)
 provide('send', send)
 provide('choosePaymentAmounts', choosePaymentAmounts)
 provide('chooseAmounts', chooseAmounts)
@@ -3171,6 +3252,8 @@ onMounted(() => {
 
 onBeforeRouteLeave(() => close())
 onUnmounted(() => {
+  finishChaosDraw()
+  dismissSkillTestSummary()
   stopTrackingPresses?.()
   clearPendingChoice()
   document.removeEventListener('keydown', handleKeyPress)

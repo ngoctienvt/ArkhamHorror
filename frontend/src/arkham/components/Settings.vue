@@ -644,6 +644,22 @@ onBeforeUnmount(() => {
               <label for="opt-cosmicEmissaryAnimation-off">{{ $t('Off') }}</label>
             </div>
           </div>
+
+          <div class="toggle-row">
+            <div class="toggle-text">
+              <div class="toggle-name">{{$t('gameBar.viewSettingChaosDrawTitle')}}</div>
+              <div class="toggle-desc">{{$t('gameBar.viewSettingChaosDraw')}}</div>
+              <div class="toggle-scope">{{$t('gameBar.settings.scope.you')}}</div>
+            </div>
+            <div class="segmented toggle-control">
+              <input type="radio" id="opt-chaosDraw-bag" name="opt-chaosDraw" :checked="settings.chaosDrawStyle === 'bag'" @change="settings.setChaosDrawStyle('bag')" />
+              <label for="opt-chaosDraw-bag">{{ $t('gameBar.chaosDrawBag') }}</label>
+              <input type="radio" id="opt-chaosDraw-reel" name="opt-chaosDraw" :checked="settings.chaosDrawStyle === 'reel'" @change="settings.setChaosDrawStyle('reel')" />
+              <label for="opt-chaosDraw-reel">{{ $t('gameBar.chaosDrawReel') }}</label>
+              <input type="radio" id="opt-chaosDraw-off" name="opt-chaosDraw" :checked="settings.chaosDrawStyle === 'off'" @change="settings.setChaosDrawStyle('off')" />
+              <label for="opt-chaosDraw-off">{{ $t('Off') }}</label>
+            </div>
+          </div>
         </div>
       </section>
 

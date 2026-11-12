@@ -174,7 +174,7 @@ function doomState(p: MissionPanel): { level: 'warn' | 'critical'; text: string 
       </div>
       <AbilityButton v-for="c in p.choices" :key="c.index" :game="game" :ability="c.contents" @choose="emit('choose', c.index)" />
     </MissionStripPanel>
-    <MissionStripReference v-if="referenceImage" :game="game" :scenario="scenario" :reference-image="referenceImage" :compact="collapsed" />
+    <MissionStripReference v-if="referenceImage" :game="game" :scenario="scenario" :reference-image="referenceImage" :player-id="playerId" :compact="collapsed" />
     <MissionStripOffMap :game="game" :scenario="scenario" :playerId="playerId" :compact="collapsed" @choose="emit('choose', $event)" />
   </div>
 </template>

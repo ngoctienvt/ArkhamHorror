@@ -923,6 +923,13 @@
     "doomAdvancing": "Sắp advance!",
     "missionAwaitingSetup": "Sẽ được đặt sau khi các điều tra viên chuẩn bị xong",
     "reference": "Tham chiếu",
+    "referenceX": {
+      "value": "X = {x}",
+      "capped": "đã chạm giới hạn (đếm được {raw})",
+      "autoFail": "Tự động thất bại",
+      "autoSuccess": "Tự động thành công",
+      "poisoned": "Bạn đang bị nhiễm độc"
+    },
     "doomElsewhere": "+{n} nơi khác",
     "doomSources": "Doom đến từ",
     "doomSourcesNone": "Chưa có doom nào",

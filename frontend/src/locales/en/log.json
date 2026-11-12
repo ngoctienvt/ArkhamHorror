@@ -193,5 +193,6 @@
   "undoToHereConfirm": "Undo everything from this point on? The game goes back to just before \"{entry}\".",
   "undoToHereConfirmPlain": "Undo everything from this point on?",
   "usesAbility": "{investigator} uses {source}",
+  "mustDiscardDown": " must discard down to {count} cards",
   "noFurtherEffects": "No other effects were recorded"
 }

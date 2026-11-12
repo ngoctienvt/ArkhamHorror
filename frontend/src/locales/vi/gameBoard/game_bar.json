@@ -161,6 +161,11 @@
   "viewSettingMotionSpeed": "Tốc độ card, manh mối và các token khác di chuyển trên bàn. Tắt thì mọi thay đổi hiện ngay lập tức.",
   "motionSpeedNormal": "Bình thường",
   "motionSpeedFast": "Nhanh",
+  "viewSettingChaosDrawTitle": "Bốc chaos token",
+  "viewSettingChaosDraw": "Dừng một nhịp ngắn trước khi hiện chaos token, như thò tay vào túi khi chơi ngoài đời. Túi: túi lắc rồi một token úp mặt được rút ra. Vòng quay: các mặt token trong túi quay nhanh rồi chậm dần, dừng ở token rút được. Bấm vào animation để bỏ qua.",
+  "chaosDrawBag": "Túi",
+  "chaosDrawReel": "Vòng quay",
+  "chaosDrawSkip": "Bấm để lật ngay",
   "viewSettingPhaseBannerTitle": "Thông báo đổi phase",
   "viewSettingPhaseBanner": "Hiện một dải thông báo ngắn khi bắt đầu round hoặc phase mới.",
   "chaosBagStats": {

@@ -54,6 +54,8 @@
   "decksChosen": "Đã chọn {chosen}/{total} bộ bài",
   "seatNumber": "Điều tra viên {number}",
   "seatNoDeckYet": "Chưa chọn bộ bài nào",
+  "changeDeck": "Đổi bộ bài",
+  "changeDeckTooltip": "Hoàn tác lần chọn bộ bài gần nhất để chọn lại. Nếu người chơi khác đã chọn sau bạn, lựa chọn của họ sẽ bị hoàn tác trước.",
   "tabooList": "Danh sách Taboo: {tabooList}",
   "useExistingDeck": "Dùng Bộ bài đã có",
   "loadNewDeck": "Tải Bộ bài mới",

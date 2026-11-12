@@ -199,7 +199,7 @@ const listed = computed(() => sections.value
 .panel { display: flex; flex-direction: column; gap: 10px; width: var(--panel-w, 280px); max-height: 100%; overflow-y: auto; padding: 0 12px 12px; background: linear-gradient(180deg, var(--surface-1, #142019), var(--surface-0, #0d1611)); border: 1px solid var(--line-strong, #c6a87399); border-radius: var(--radius-lg, 8px); box-shadow: var(--shadow-pop, 0 8px 28px #000a); color: var(--text, #e8e3d0); scrollbar-width: thin; scrollbar-color: var(--line, #c6a87355) transparent; }
 /* The name and close button stay put while the actions scroll under them. */
 header { position: sticky; top: 0; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 0 -12px; padding: 10px 12px 8px; background: var(--surface-1, #142019); border-bottom: 1px solid var(--line, #c6a87340); }
-h3 { margin: 0; font: 600 1.25rem/1.2 var(--ui-serif); color: var(--heading, #fff4df); }
+h3 { margin: 0; min-width: 0; font: 600 1rem/1.2 var(--ui-serif); color: var(--heading, #fff4df); overflow-wrap: anywhere; }
 .close { flex: none; display: grid; place-items: center; background: transparent; border: 1px solid var(--line, #ffffff26); border-radius: var(--radius, 6px); color: var(--text-muted, #c9d0c3); padding: 4px; cursor: pointer; }
 .close:hover { border-color: var(--accent-gold, #d9b878); color: var(--heading, #fff); }
 .section { display: flex; flex-direction: column; gap: 5px; border-top: 1px solid #ffffff14; padding-top: 8px; }

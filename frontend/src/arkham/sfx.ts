@@ -148,6 +148,23 @@ const RECIPES: Record<SfxName, Recipe> = {
     hiss(c, t, { filter: 'highpass', from: 3000, peak: 0.25, decay: 0.05 })
     tone(c, t + 0.07, { type: 'triangle', from: 900, to: 600, peak: 0.12, decay: 0.05 })
   },
+  // A hand rummaging in a cloth bag: muffled rustles, tokens knocking inside.
+  bagShake: (c, t) => {
+    for (const dt of [0, 0.13, 0.27, 0.4, 0.55, 0.7]) {
+      hiss(c, t + dt, { filter: 'bandpass', from: 900 + Math.random() * 500, to: 450, q: 0.9, peak: 0.22, decay: 0.12, attack: 0.03 })
+    }
+    for (const dt of [0.08, 0.33, 0.6]) {
+      tone(c, t + dt, { type: 'triangle', from: 820 + Math.random() * 200, to: 520, peak: 0.07, decay: 0.05, filter: 1400 })
+    }
+  },
+  // A reel spinning down: ticks that start close together and spread out.
+  reelSpin: (c, t) => {
+    let at = 0
+    for (let i = 0; i < 16; i++) {
+      tone(c, t + at, { type: 'square', from: 1500, to: 1100, peak: 0.05, decay: 0.025, filter: 2600 })
+      at += 0.04 + i * i * 0.0011
+    }
+  },
   // Relief, but uneasy: a rising third, soft.
   success: (c, t) => {
     tone(c, t, { type: 'triangle', from: 330, peak: 0.28, decay: 0.9 })

@@ -74,6 +74,8 @@ import scenarioMetadata from '@/arkham/data/scenarios';
 import EncounterDeck from '@/arkham/components/EncounterDeck.vue';
 import VictoryDisplay from '@/arkham/components/VictoryDisplay.vue';
 import SkillTest from '@/arkham/components/SkillTest.vue';
+import SkillTestSummaryPanel from '@/arkham/components/SkillTestSummary.vue';
+import { useSkillTestSummary } from '@/arkham/composables/useSkillTestSummary';
 import ScenarioDeck from '@/arkham/components/ScenarioDeck.vue';
 import CthulhuBoard from '@/arkham/components/TheDrownedCity/CthulhuBoard.vue';
 import LocationCell from '@/arkham/components/LocationCell.vue';
@@ -2324,6 +2326,8 @@ const tarotCardAbility = (card: TarotCard) => {
 
 const victoryDisplay = computed(() => props.scenario.victoryDisplay)
 
+// The finished test's summary, held where the test panel was until confirmed.
+const skillTestSummary = useSkillTestSummary()
 const isMinimized_SkillTest = ref(false)
 provide('isMinimized_SkillTest', isMinimized_SkillTest)
 function minimize_SkillTest(isMinimized:boolean){
@@ -3014,6 +3018,11 @@ async function addChaosToken(face: any){
             @choose="choose"
         >
         </SkillTest>
+        <SkillTestSummaryPanel
+            v-else-if="skillTestSummary.summary.value"
+            :summary="skillTestSummary.summary.value"
+            @confirm="skillTestSummary.dismiss"
+        />
 
         <div v-if="showScenarioNotifierBar" class="scenario-badges" aria-label="Scenario reminders">
           <div

@@ -9,6 +9,7 @@ import type { Game } from '@/arkham/types/Game';
 import * as ArkhamGame from '@/arkham/types/Game';
 import type { AbilityLabel, AbilityMessage, Message } from '@/arkham/types/Message';
 import { MessageType } from '@/arkham/types/Message';
+import { isDiscardChoice } from '@/arkham/discardChoice';
 import AbilityButton from '@/arkham/components/AbilityButton.vue'
 import TokenPool from '@/arkham/components/TokenPool.vue'
 import { useDebug } from '@/arkham/debug'
@@ -135,6 +136,8 @@ const cardAction = computed(() => {
   if (!props.allowInteractions) return -1
   return choices.value.findIndex(canInteract)
 })
+// Picking this card throws it away: outline it in red so the player sees what is being asked.
+const isDiscardTarget = computed(() => cardAction.value !== -1 && isDiscardChoice(choices.value[cardAction.value]))
 
 function isAbility(v: Message): v is AbilityLabel {
   if (v.tag === MessageType.EVADE_LABEL || v.tag === MessageType.EVADE_LABEL_WITH_SKILL) {
@@ -266,7 +269,7 @@ function startDrag(event: DragEvent) {
       class="playing-card-overlay"
     />
     <img
-      :class="{'card--can-interact': cardAction !== -1, 'card--highlighted': isHighlighted && cardAction === -1, 'sideways': forceSideways, 'no-overlay': noOverlay}"
+      :class="{'card--can-interact': cardAction !== -1, 'card--discard': isDiscardTarget, 'card--highlighted': isHighlighted && cardAction === -1, 'sideways': forceSideways, 'no-overlay': noOverlay}"
       class="card"
       :src="image"
       :data-card-code="cardContents.cardCode"
@@ -324,6 +327,21 @@ function startDrag(event: DragEvent) {
 .card--can-interact {
   border: 2px solid var(--select);
   cursor: pointer;
+}
+
+.card--discard {
+  border-color: #e5383b;
+  box-shadow: 0 0 8px 2px rgba(229, 56, 59, 0.75);
+  animation: discard-pulse 1.1s ease-in-out infinite;
+}
+
+@keyframes discard-pulse {
+  0%, 100% { border-color: #e5383b; box-shadow: 0 0 8px 2px rgba(229, 56, 59, 0.75); }
+  50% { border-color: rgba(229, 56, 59, 0.35); box-shadow: 0 0 3px 1px rgba(229, 56, 59, 0.25); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card--discard { animation: none; }
 }
 
 .card--highlighted {

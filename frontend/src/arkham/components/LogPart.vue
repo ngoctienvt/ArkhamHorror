@@ -8,6 +8,7 @@
  * lines were hardcoded English.
  */
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { cardArt } from '@/arkham/cardImages'
 import { chaosTokenImage } from '@/arkham/types/ChaosToken'
 import { useDbCardStore } from '@/stores/dbCards'
@@ -19,6 +20,15 @@ import { investigatorClass, splitRunes, type CssClassFlags } from '@/arkham/help
 const props = defineProps<{ part: LogPart }>()
 
 const dbCards = useDbCardStore()
+const { t } = useI18n()
+
+/* A few engine lines arrive as plain English text (no i18n key), e.g. the
+ * hand-size prompt " must discard down to 8 cards". Map the known ones onto
+ * locale keys; anything else passes through unchanged. */
+function localizeText(text: string): string {
+  const m = /^ must discard down to (\d+) cards$/.exec(text)
+  return m ? t('log.mustDiscardDown', { count: Number(m[1]) }) : text
+}
 
 /* Skill glyphs come from the global classes in styles/icons.css, named
  * "<skill>-icon" as Investigator.vue and HistoryPanel.vue spell them. The
@@ -69,7 +79,7 @@ const plural = computed(() => {
        into segments rather than interpolated whole. See `splitRunes`: a card
        name arrives from card data, so `v-html` is not a trade worth making. -->
   <span v-if="part.tag === 'LogText'"
-    ><template v-for="(seg, i) in splitRunes(part.contents)" :key="i"
+    ><template v-for="(seg, i) in splitRunes(localizeText(part.contents))" :key="i"
       ><i v-if="seg.rune" class="log-rune" :class="`rune-${seg.rune}`" /><template v-else>{{
         seg.text
       }}</template></template

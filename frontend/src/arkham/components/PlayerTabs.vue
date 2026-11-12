@@ -83,6 +83,8 @@ const seats = computed(() => [...investigators.value, ...inactiveInvestigators.v
 
 /* A skill with every lasting modifier applied, shown as `5(4+1)` when it differs from the printed value. */
 type SkillKey = 'willpower' | 'intellect' | 'combat' | 'agility'
+const SKILL_KEYS: readonly SkillKey[] = ['willpower', 'intellect', 'combat', 'agility']
+
 function skillLabel(investigator: Investigator, key: SkillKey): string {
   const stat = computeStat(key, investigator[key], investigator.modifiers)
   return formatStat(stat.current, stat.printed)
@@ -546,7 +548,7 @@ watch(
         <span v-if="isMobile">{{ getInvestigatorName(investigator.name.title).split(' ')[0] }}</span>
         <span v-else>{{ getInvestigatorName(investigator.name.title) }}</span>
         <span v-if="sceneMode" class="tab-meta" :title="$t('locationMap.skillsAndActions')">
-          <b class="sk will">{{ skillLabel(investigator, 'willpower') }}</b><b class="sk int">{{ skillLabel(investigator, 'intellect') }}</b><b class="sk com">{{ skillLabel(investigator, 'combat') }}</b><b class="sk agi">{{ skillLabel(investigator, 'agility') }}</b>
+          <b v-for="key in SKILL_KEYS" :key="key" class="sk" :title="key"><img :src="imgsrc(`icons/skills/${key}.png`)" alt="" />{{ skillLabel(investigator, key) }}</b>
           <span class="pips" :aria-label="$t('locationMap.actionsLeft', { count: actionsLeft(investigator) })"><i v-for="n in actionTotal(investigator)" :key="n" class="pip" :class="{ none: n > actionsLeft(investigator) }"></i></span>
           <!-- Resources and clues held, kept in the always-visible tab: the panel under the card scrolls out of view. -->
           <span class="tok" :title="$t('locationMap.resources')"><GameIcon type="resource" /><b>{{ investigator.tokens[TokenType.Resource] || 0 }}</b></span>
@@ -640,8 +642,9 @@ watch(
 
 <style scoped>
 .tab-meta { display: inline-flex; align-items: center; gap: 3px; padding: 0 8px 0 0; }
-.tab-meta .sk { min-width: 17px; padding: 1px 3px; text-align: center; font: 700 0.7rem/1.2 system-ui, sans-serif; border-radius: 3px; color: #fff; }
-.sk.will { background: #3b6fb0; } .sk.int { background: #7b4aa8; } .sk.com { background: #b23a3a; } .sk.agi { background: #3d8a4d; }
+/* Each skill as its painted icon with the value beside it: [icon]4. */
+.tab-meta .sk { display: inline-flex; align-items: center; gap: 1px; margin-right: 3px; font: 700 0.8rem/1 system-ui, sans-serif; color: #fff; text-shadow: 0 1px 2px #000; }
+.tab-meta .sk img { width: 18px; height: 18px; display: block; }
 .tab-meta .tok { display: inline-flex; align-items: center; gap: 2px; margin-left: 6px; padding: 0 6px 0 2px; border-radius: 999px; background: #0007; font: 700 0.75rem/1.2 system-ui, sans-serif; color: #fff4df; }
 .tab-meta .tok :deep(.game-icon) { width: 16px; height: 16px; }
 .tab-meta .pips { display: inline-flex !important; gap: 2px; margin-left: 5px; padding: 0 !important; }

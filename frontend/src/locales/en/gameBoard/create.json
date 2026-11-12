@@ -54,6 +54,8 @@
   "decksChosen": "{chosen} of {total} decks chosen",
   "seatNumber": "Investigator {number}",
   "seatNoDeckYet": "No deck chosen yet",
+  "changeDeck": "Change deck",
+  "changeDeckTooltip": "Undo the last deck choice so you can pick again. If another player chose after you, their choice is undone first.",
   "tabooList": "Taboo List: {tabooList}",
   "useExistingDeck": "Use Existing Deck",
   "loadNewDeck": "Load New Deck",

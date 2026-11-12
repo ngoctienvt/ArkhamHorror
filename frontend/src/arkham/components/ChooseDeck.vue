@@ -84,6 +84,8 @@ const props = defineProps<{
 
 const chooseDeck = inject<(deckId: string, overlay?: any) => Promise<void>>('chooseDeck')
 const chooseDeckList = inject<(deckList: ArkhamDbDecklist) => Promise<void>>('chooseDeckList')
+const undoDeckChoice = inject<(() => Promise<void>) | undefined>('undoDeckChoice', undefined)
+const spectating = inject<{ value: boolean } | undefined>('spectate', undefined)
 const question = computed(() => props.game.question[props.playerId])
 const deckRequirements = computed(() => deckRequirementDescriptions(props.game.scenario?.id, {
   campaignId: props.game.campaign?.id,
@@ -557,6 +559,15 @@ const needsReply = computed(() => {
                   <span class="stat-value">{{ player.contents.sanity }}</span>
                 </span>
               </div>
+              <button
+                v-if="undoDeckChoice && !spectating?.value && player.id === playerId && game.gameState.tag === 'IsChooseDecks'"
+                type="button"
+                class="change-deck"
+                v-tooltip="$t('create.changeDeckTooltip')"
+                @click.prevent="undoDeckChoice()"
+              >
+                {{ $t('create.changeDeck') }}
+              </button>
             </div>
           </template>
           <template v-else-if="needsReply && player.id == playerId">
@@ -1002,6 +1013,23 @@ const needsReply = computed(() => {
   gap: 6px;
   margin-left: auto;
   flex-shrink: 0;
+}
+
+.change-deck {
+  flex-shrink: 0;
+  width: auto;
+  padding: 6px 12px;
+  font-size: 0.74em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(235, 235, 235, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover { background: rgba(235, 235, 235, 0.30); }
 }
 
 .portrait {

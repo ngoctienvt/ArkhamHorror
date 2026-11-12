@@ -5,18 +5,18 @@ TRANSLATIONS_TFA_ACTS_AGENDAS = {
     # 04044: Expedition into the Wild (Agenda 1)
     "04044": {
         "name": "Chuyến Thám Hiểm Vào Miền Hoang Dã",
-        "flavor": "Dưới sự dẫn đường của Alejandro Vela, bạn đã dựng trại sâu trong rừng mưa nhiệt đới miền nam Mexico. Nơi đây hoang sơ, nguy hiểm và tràn ngập những tiếng gầm gừ bí ẩn từ nơi rừng thẳm.",
-        "back_name": "Kẻ Xâm Nhập",
-        "back_text": "Spawn kẻ địch Ichtaca đang để riêng tại địa điểm của điều tra viên chính. Nếu Ichtaca đã có trong màn chơi, đặt 1 doom lên bà ấy thay thế.\nXáo trộn chồng bài encounter bỏ vào chồng bài encounter.",
-        "back_flavor": "Một mũi tên cắm phập vào thân cây ngay sát thái dương bạn! Một nhóm chiến binh bản địa xuất hiện từ lùm cây rậm rạp, dẫn đầu bởi một nữ thợ săn mang cung tên với ánh mắt sắc như dao cạo."
+        "flavor": "Đoàn thám hiểm của bạn đã tiến sâu vào những cánh rừng mưa miền nam Mexico để tìm kiếm một thành bang Aztec bị lãng quên. Điều gì đang chờ bạn khi bạn tiến sâu hơn vào khu rừng hoang dã này?",
+        "back_name": "Bầy Rắn Tấn Công!",
+        "back_text": "Xáo trộn chồng bài encounter bỏ và bộ encounter Agents of Yig đang để riêng vào chồng bài encounter.\nMỗi điều tra viên kiểm tra [willpower] (3). Mỗi điều tra viên thất bại thực hiện lần lượt như sau:\n- Nếu bạn đang bị nhiễm độc (poisoned), nhận 1 damage và 1 horror.\n- Nếu bạn không bị nhiễm độc, đưa một lá điểm yếu Poisoned đang để riêng vào threat area của bạn.",
+        "back_flavor": "Sau nhiều giờ thám hiểm và những nỗ lực vô ích nhằm vẽ bản đồ vùng hoang dã, bạn tin chắc có thứ gì đó đang theo dõi từng bước đi của mình, rình rập mọi cử động. Bóng dáng những sinh vật to lớn hình rắn trườn qua bụi rậm quanh bạn. Bạn cố lùi lại, nhưng chúng đã bao vây kín, rít lên từ mọi phía. Đột nhiên, vài hình thù trồi lên từ bụi cây: những sinh vật to cỡ người, thân rắn, tay cầm giáo và dao lởm chởm. Chúng hung tợn, tấn công bạn dữ dội. Bằng cách nào đó, bạn chạy thoát được đến nơi an toàn, dù cảm giác bị theo dõi vẫn còn đó. Dù sống sót qua cuộc chạm trán, bạn phải đối mặt với một sự thật trần trụi: nơi này là nhà của những sinh vật vượt ngoài sự hiểu biết của bạn."
     },
     # 04045: Intruders (Agenda 2)
     "04045": {
         "name": "Những Kẻ Xâm Nhập",
-        "flavor": "Người bản địa coi sự hiện diện của bạn là một sự báng bổ. Cả khu rừng nhiệt đới dường như đang trỗi dậy để tiêu diệt những kẻ xâm nhập.",
-        "back_name": "Rừng Rậm Thức Tỉnh",
-        "back_text": "Mỗi điều tra viên chưa resign bị bắt giữ hoặc bị đánh bại trong rừng rậm. <b>(→R2)</b>",
-        "back_flavor": "Tiếng trống trận dồn dập vang vọng khắp rừng sâu. Rắn độc và những loài thú ăn thịt bao vây khu trại của bạn, biến chuyến thám hiểm thành thảm kịch."
+        "flavor": "Sự háo hức ban đầu đã biến thành nỗi khiếp sợ. Nơi này chết chóc hơn bạn từng tưởng tượng rất nhiều. Cứ như thể chính khu rừng muốn đuổi bạn đi.",
+        "back_name": "Lạc Lối Vô Tận",
+        "back_text": "Mỗi điều tra viên bị đánh bại. Mỗi điều tra viên không bị nhiễm độc (poisoned) thêm một lá điểm yếu Poisoned đang để riêng vào bộ bài của mình.",
+        "back_flavor": "Bạn thấy mình bị mắc kẹt trong một vòng lặp bất tận, đi đi lại lại trên cùng một con đường trong rừng. Dù đi theo hướng nào, kết quả vẫn như nhau. Đã nhiều giờ trôi qua, có lẽ là nhiều ngày. Trong khi đó, bạn nghe thấy lũ sinh vật rắn rít lên trên những tán cây, chế giễu bạn từ xa. Cạn kiệt lương thực và kiệt sức vì thiếu ngủ, bạn gục xuống bên một thân cây mục nát. Mắt bạn mờ dần."
     },
     # 04046: Exploring the Rainforest (Act 1)
     "04046": {

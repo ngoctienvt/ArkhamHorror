@@ -900,6 +900,13 @@
     "doomAdvancing": "Advancing!",
     "missionAwaitingSetup": "Placed once investigator setup is done",
     "reference": "Reference",
+    "referenceX": {
+      "value": "X = {x}",
+      "capped": "limit reached (counted {raw})",
+      "autoFail": "Auto-fail",
+      "autoSuccess": "Auto-success",
+      "poisoned": "You are poisoned"
+    },
     "doomElsewhere": "+{n} elsewhere",
     "doomSources": "Doom from",
     "doomSourcesNone": "No doom in play",

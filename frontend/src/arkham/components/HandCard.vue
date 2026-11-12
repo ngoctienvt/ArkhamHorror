@@ -16,6 +16,7 @@ import { IsMobile } from '@/arkham/isMobile'
 import { useDebug } from '@/arkham/debug'
 import { useCardStore } from '@/stores/cards'
 import { CARD_FLIGHT_ATTR, useCardFlight } from '@/arkham/cardFlight'
+import { isDiscardChoice } from '@/arkham/discardChoice'
 
 export interface Props {
   game: Game
@@ -140,8 +141,12 @@ const prohibited = computed(
 // In a reaction window, a card that can be played or used right now stands out from the rest of the hand.
 const triggerReady = computed(() => isTriggerWindow(choices.value) && (cardAction.value !== -1 || abilities.value.length > 0))
 
+// Picking this card throws it away (hand-size check, "discard a card" effects): outline it in red.
+const isDiscardTarget = computed(() => cardAction.value !== -1 && isDiscardChoice(choices.value[cardAction.value]))
+
 const classObject = computed(() => {
   return {
+    'card--discard': isDiscardTarget.value,
     'card--can-interact': cardAction.value !== -1 || (isMobile.value && abilities.value.length > 0),
     'card--prohibited': prohibited.value,
     'trigger-ready': triggerReady.value,
@@ -389,6 +394,23 @@ function oilPaintEffect(canvas, radius, intensity) {
   cursor: pointer;
   filter: none;
   animation: none;
+}
+
+/* The game is asking for this card to be discarded. */
+.card--discard {
+  outline: 3px solid #e5383b;
+  outline-offset: -1px;
+  box-shadow: 0 0 10px 3px rgba(229, 56, 59, 0.8);
+  animation: discard-pulse 1.1s ease-in-out infinite;
+}
+
+@keyframes discard-pulse {
+  0%, 100% { outline-color: #e5383b; box-shadow: 0 0 10px 3px rgba(229, 56, 59, 0.8); }
+  50% { outline-color: rgba(229, 56, 59, 0.35); box-shadow: 0 0 3px 1px rgba(229, 56, 59, 0.25); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card--discard { animation: none; }
 }
 
 /* Readable at a glance without hiding the card: the art stays identifiable, it

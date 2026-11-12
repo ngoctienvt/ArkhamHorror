@@ -17,6 +17,11 @@ import {
   SPEED_FACTOR,
   type MotionSpeed,
 } from '@/arkham/motion/motionTokens'
+import {
+  DEFAULT_CHAOS_DRAW_STYLE,
+  isChaosDrawStyle,
+  type ChaosDrawStyle,
+} from '@/arkham/chaosDrawReveal'
 
 // Spoken story narration (pre-rendered intro/resolution audio). A browser
 // preference, so global: on unless explicitly turned off.
@@ -65,6 +70,9 @@ const AUTOPILOT_KEY = 'arkhamAutopilot'
 const COMBAT_FX_KEY = 'arkhamCombatFx'
 // How fast board animations run: normal, fast, or off. A browser preference.
 const MOTION_SPEED_KEY = 'arkhamMotionSpeed'
+// The beat before a chaos token is shown: the bag shakes, or a reel spins.
+// 'bag' unless the player picked another. A browser preference.
+const CHAOS_DRAW_STYLE_KEY = 'arkhamChaosDrawStyle'
 // A short banner when the round or phase changes. On unless turned off.
 const PHASE_BANNER_KEY = 'arkhamPhaseBanner'
 
@@ -361,6 +369,22 @@ export const useSettings = defineStore("settings", () => {
     }),
   )
 
+  const storedDrawStyle = localStorage.getItem(CHAOS_DRAW_STYLE_KEY)
+  const chaosDrawStyle = ref<ChaosDrawStyle>(
+    isChaosDrawStyle(storedDrawStyle) ? storedDrawStyle : DEFAULT_CHAOS_DRAW_STYLE,
+  )
+
+  function setChaosDrawStyle(style: ChaosDrawStyle) {
+    chaosDrawStyle.value = style
+    localStorage.setItem(CHAOS_DRAW_STYLE_KEY, style)
+  }
+
+  /* What actually plays: the pause holds the result back, so with animations
+   * off, or the OS asking for less motion, the token simply appears. */
+  const effectiveChaosDrawStyle = computed<ChaosDrawStyle>(() =>
+    motionLevel.value === 'off' || motionLevel.value === 'static' ? 'off' : chaosDrawStyle.value,
+  )
+
   const phaseBanner = ref(localStorage.getItem(PHASE_BANNER_KEY) !== 'false')
 
   function setPhaseBanner(enabled: boolean) {
@@ -421,6 +445,9 @@ export const useSettings = defineStore("settings", () => {
     motionSpeed,
     setMotionSpeed,
     motionLevel,
+    chaosDrawStyle,
+    setChaosDrawStyle,
+    effectiveChaosDrawStyle,
     phaseBanner,
     setPhaseBanner,
     confirmCardPlays,
