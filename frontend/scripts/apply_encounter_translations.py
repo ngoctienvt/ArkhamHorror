@@ -21,6 +21,7 @@ from acts_agendas_eote import TRANSLATIONS_EOTE_ACTS_AGENDAS
 from acts_agendas_tsk import TRANSLATIONS_TSK_ACTS_AGENDAS
 from acts_agendas_fhv import TRANSLATIONS_FHV_ACTS_AGENDAS
 from acts_agendas_standalones import TRANSLATIONS_STANDALONES_ACTS_AGENDAS
+from acts_agendas_extra import TRANSLATIONS_EXTRA_ACTS_AGENDAS
 
 def apply_translations(translation_dict, campaign_name="Batch"):
     print(f"Loading {CARDS_VI_FILE}...")
@@ -61,7 +62,7 @@ def apply_translations(translation_dict, campaign_name="Batch"):
     os.replace(tmp_file, CARDS_VI_FILE)
 
     print(f"Saved {CARDS_VI_FILE}. Rebuilding slim cards...")
-    res = subprocess.run(["node", str(SLIM_SCRIPT)], capture_output=True, text=True)
+    res = subprocess.run(["node", str(SLIM_SCRIPT), "cards_vi.json"], capture_output=True, text=True)
     if res.returncode != 0:
         print(f"Error rebuilding slim cards: {res.stderr}")
     else:
@@ -75,6 +76,9 @@ if __name__ == '__main__':
     if batch == "standalones":
         to_apply = TRANSLATIONS_STANDALONES_ACTS_AGENDAS
         name = "Standalones & Side Scenarios"
+    elif batch == "extra":
+        to_apply = TRANSLATIONS_EXTRA_ACTS_AGENDAS
+        name = "Extra Acts & Agendas (New Packs)"
     else:
         to_apply.update(TRANSLATIONS_CORE_ACTS_AGENDAS)
         to_apply.update(TRANSLATIONS_DUNWICH_ACTS_AGENDAS)
@@ -87,5 +91,6 @@ if __name__ == '__main__':
         to_apply.update(TRANSLATIONS_TSK_ACTS_AGENDAS)
         to_apply.update(TRANSLATIONS_FHV_ACTS_AGENDAS)
         to_apply.update(TRANSLATIONS_STANDALONES_ACTS_AGENDAS)
+        to_apply.update(TRANSLATIONS_EXTRA_ACTS_AGENDAS)
         name = "100% of ALL Acts & Agendas (All Campaigns + Standalones)"
     apply_translations(to_apply, name)

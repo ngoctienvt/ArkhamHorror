@@ -69,9 +69,11 @@ const outDir = path.join(publicDir, 'cards')
 
 if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true })
 
+const targetArg = process.argv[2]
 const sources = fs
   .readdirSync(publicDir)
   .filter(isCardDataFilename)
+  .filter((f) => !targetArg || f === targetArg)
 
 if (sources.length === 0) {
   console.error('No cards_*.json source files found in', publicDir)
