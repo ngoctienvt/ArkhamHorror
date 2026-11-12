@@ -24,7 +24,7 @@ for code, e in en.items():
         if not a: continue
         if f in ('name','back_name'): continue
         if a == b:
-            if re.sub(r'<[^>]+>|\(→R\d+\)|\s', '', a) and not re.fullmatch(r'(?i)(?:Tekeli-li[!\s]*)+', a):
+            if re.sub(r'<[^>]+>|\((?:→|&rarr;)R\d+\)|\s', '', a) and not re.fullmatch(r'(?i)(?:Tekeli-li[!\s]*)+', a):
                 out.append((code, f, 'untranslated'))
             continue
         if f.endswith('text'):

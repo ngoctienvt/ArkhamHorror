@@ -1,500 +1,842 @@
-# Gemini translations for Acts & Agendas: The Dunwich Legacy & Return to The Dunwich Legacy
+"""Translations for The Dunwich Legacy act and agenda cards."""
+from typing import Dict, Any
 
-TRANSLATIONS_DUNWICH_ACTS_AGENDAS = {
-    # === Extracurricular Activity ===
-    # 02042: Quiet Halls (Agenda 1)
-    "02042": {
-        "name": "Những Hành Lang Yên Ắng",
-        "flavor": "Bạn đã đến khuôn viên Đại học Miskatonic để tìm kiếm Giáo sư Warren Rice. Các lớp học đã kết thúc, và một sự im lặng kỳ bí bao trùm khắp sân trường.",
-        "back_name": "Có Thứ Gì Đó Đang Cựa Quậy",
-        "back_text": "Mỗi điều tra viên có từ 5 lá bài trở lên trong chồng bài bỏ của mình chịu 1 horror. Mỗi điều tra viên có từ 10 lá bài trở lên trong chồng bài bỏ chịu 2 horror thay vì 1.\nNếu người chơi đã hoàn thành The House Always Wins, advance trực tiếp sang agenda 2b. Nếu Extracurricular Activity là màn chơi đầu tiên trong chiến dịch, advance sang agenda 2a.",
-        "back_flavor": "Trường đại học tĩnh lặng như tờ. Những chiếc bóng uốn lượn quanh chân bạn khi bạn rảo bước, và bạn có cảm giác như có thứ gì đó đang bám theo từng bước chân mình. Liệu đó chỉ là do bạn tưởng tượng? Hay thực sự có kẻ nào đó — hoặc thứ gì đó — đang rình rập bạn?"
-    },
-    # 02043: Dead of Night (Agenda 2)
-    "02043": {
-        "name": "Giữa Đêm Khuya",
-        "text": "Số lượng bài tối đa trên tay của mỗi điều tra viên bị giảm đi 3 khi kiểm tra giới hạn bài trên tay trong giai đoạn Upkeep.",
-        "flavor": "Sự biến mất của Giáo sư Rice không phải là điều bất thường duy nhất tại trường đại học. Bạn không chắc chính xác chuyện gì đang diễn ra, nhưng bạn bắt đầu tin rằng Armitage đã đúng khi nhờ cậy sự giúp đỡ của bạn.",
-        "back_name": "Thí Nghiệm Đi Chệch Hướng",
-        "back_text": "Nếu địa điểm Dormitories chưa có trong màn chơi, đặt nó vào chơi.\nNếu The Experiment đang trong màn chơi, di chuyển nó 1 địa điểm về phía Dormitories.\nNếu The Experiment chưa có trong màn chơi, spawn nó tại Science Building.",
-        "back_flavor": "Một tiếng thét kinh hoàng vang vọng khắp khuôn viên trường, và nhiều sinh viên hốt hoảng tháo chạy từ phía đông đại học, nơi đặt tòa nhà Khoa học. Liệu sự hỗn loạn này có liên quan tới sự mất tích của Giáo sư Rice?"
-    },
-    # 02044: The Beast Unleashed (Agenda 3)
-    "02044": {
-        "name": "Quái Thú Xổng Chuồng",
-        "text": "<b>Forced</b> — Khi agenda này advance do đạt ngưỡng doom: Thay vào đó, loại bỏ toàn bộ doom trong màn chơi và di chuyển The Experiment 1 địa điểm về phía Dormitories.\n<b>Objective</b> — Nếu The Experiment bước vào Dormitories, advance.",
-        "flavor": "Một loài sinh vật hung tợn nào đó đang sổng ra ngoài. Dù nó là thứ gì đi nữa, có vẻ như nó đang nhắm thẳng về phía ký túc xá sinh viên.",
-        "back_name": "Không Kịp Nữa Rồi",
-        "back_text": "Mỗi điều tra viên lập tức chịu 3 horror. Sau đó, tiến hành <b>(→R4)</b>.",
-        "back_flavor": "Trước khi bạn kịp hành động, bạn nghe thấy những tiếng la hét thất thanh từ phía bắc khuôn viên trường. Bạn lao mình về phía có tiếng hét, tầm nhìn tối sầm lại theo từng bước chạy. Ngay khi sinh vật đó lọt vào tầm mắt, bạn cảm thấy bóng tối nuốt trọn lấy mình, và một thế lực vô hình kéo bạn ra khỏi ý thức. Mọi thứ chìm vào màn đêm, và bạn ngất lịm."
-    },
-    # 02045: After Hours (Act 1)
-    "02045": {
-        "name": "Sau Giờ Học",
-        "flavor": "Giáo sư Rice được nhìn thấy lần cuối cách đây vài giờ bởi một sinh viên của Armitage tại tòa nhà Nhân văn.",
-        "back_name": "Trưởng Ban Lao Công",
-        "back_text": "Xáo trộn chồng bài encounter bỏ và lá bài \"Jazz\" Mulligan đang để riêng vào chồng bài encounter.",
-        "back_flavor": "Bạn không tìm thấy Giáo sư Rice, nhưng một sinh viên mà bạn trò chuyện đã nhắc đến một người đàn ông kỳ lạ bước vào văn phòng của Rice. Không may là cánh cửa dẫn vào khu văn phòng giảng viên đã bị khóa chặt vào giờ này. Cậu sinh viên cho biết người trưởng ban lao công, \"Jazz\", có thể mở cửa cho bạn nếu bạn tìm được ông ấy."
-    },
-    # 02046: Rice's Whereabouts (Act 2)
-    "02046": {
-        "name": "Tung Tích Của Rice",
-        "text": "[action] Chi trả 1 manh mối: Bỏ 5 lá bài trên cùng của chồng bài encounter (10 lá trên cùng thay vì 5 nếu chỉ có 1 người chơi trong màn chơi).\n<b>Forced</b> — Nếu bạn bỏ \"Jazz\" Mulligan vì bất kỳ lý do gì, kích hoạt hiệu ứng revelation của ông ấy.\n<b>Objective</b> — Khi bạn nắm quyền kiểm soát \"Jazz\" Mulligan, advance.",
-        "flavor": "Lo lắng cho sự an nguy của Giáo sư Rice, bạn tìm kiếm người trưởng ban lao công, người có thể mở khóa các khu vực bị niêm phong trong trường.",
-        "back_name": "Sinh Vật Thí Nghiệm Đã Xổng Ra!",
-        "back_text": "Nếu địa điểm Alchemy Labs chưa có trong màn chơi, đặt nó vào chơi. Nếu bạn đang ở Agenda 1 hoặc 2, spawn The Experiment tại Alchemy Labs.\nNếu bạn đã hoàn thành The House Always Wins, đặt Alchemical Concoction đang để riêng vào chơi bên dưới Alchemy Labs. Nếu Extracurricular Activity là màn chơi đầu tiên của chiến dịch, thay vào đó loại bỏ Alchemical Concoction đang để riêng khỏi trò chơi.",
-        "back_flavor": "Bạn thuyết phục được \"Jazz\" rằng có điều gì đó rất bất thường đang xảy ra, và Giáo sư Rice có thể đang gặp nguy hiểm. Dù không đủ tin tưởng để giao chìa khóa cho bạn, ông ấy đồng ý đi cùng.\nBất thình lình, một tiếng va chạm chấn động vang lên từ tòa nhà Khoa học, và một sinh viên hớt hải lao về phía bạn. \"Cứu với!\" cậu ta gào lên. \"Có một con quái vật nào đó sổng chuồng trong phòng thí nghiệm hóa học! Em chỉ kịp nhìn thoáng qua nó thôi, nhưng...\" Cậu ta run rẩy. \"Em nghĩ nó đang hướng về phía ký túc xá! Các anh phải làm gì đó đi!\""
-    },
-    # 02047: Campus Safety (Act 3)
-    "02047": {
-        "name": "An Toàn Học Đường",
-        "text": "<b>Objective</b> — Nếu The Experiment bị đánh bại, advance.\n[action]: <b>Resign.</b> Tình thế đã vượt quá tầm kiểm soát của bạn. Bạn chạy trốn khỏi khuôn viên trường để bảo toàn tính mạng.",
-        "flavor": "Một sinh vật khổng lồ, dị dạng đang bò trườn trên khắp khuôn viên trường. Bạn phải ngăn chặn nó trước khi nó tàn sát mọi người!",
-        "back_name": "Dập Tắt Nguy Hiểm",
-        "back_text": "<b>(→R2)</b>",
-        "back_flavor": "Với một tiếng rên rỉ xé ruột, con quái thú ngã gục. Cơ thể nó bắt đầu sôi sục và tan chảy thành một bũng chất lỏng đen ngòm, bốc mùi hôi thối nồng nặc. Cả khuôn viên trường chìm vào tĩnh lặng, và bạn thở phào nhẹ nhõm khi biết hiểm họa đã được đẩy lùi."
-    },
-
-    # === The House Always Wins ===
-    # 02063: The Clover Club (Agenda 1)
-    "02063": {
-        "name": "Câu Lạc Bộ Clover",
-        "text": "Các kẻ địch [[Criminal]] không engage và không thể bị engage bởi các điều tra viên không mang đặc điểm [[Suspicious]].\n<b>Forced</b> — Khi có 1 hoặc nhiều doom được đặt lên một địa điểm: Đặt số doom đó lên agenda này thay thế.",
-        "flavor": "Bạn đã đến câu lạc bộ Clover để tìm Tiến sĩ Francis Morgan, một đồng nghiệp của Armitage có sở thích cờ bạc. Tiếng nhạc jazz êm dịu và tiếng trò chuyện râm ran chào đón bạn khi bước vào sòng bạc sang trọng.",
-        "back_name": "Bị Bắt Quả Tang!",
-        "back_text": "Mỗi điều tra viên nhận 1 lá bài [[Suspicious]] từ ngoài màn chơi và thêm nó vào khu vực đe dọa (threat area) của mình.\nNếu Clover Club Pit Boss đang trong màn chơi, nó engage với điều tra viên có nhiều manh mối nhất. Nếu không, spawn Clover Club Pit Boss tại Clover Club Lounge.",
-        "back_flavor": "Một trong những người chia bài nghi ngờ hành động của bạn và ra hiệu cho đám bảo kê của câu lạc bộ. Trước khi bạn kịp nhận ra, một gã đàn ông lực lưỡng với vẻ mặt bặm trợn bước đến chặn đường bạn. \"Có vẻ như các vị đang thọc mạch quá nhiều vào chuyện không phải của mình rồi đấy,\" gã gằn giọng."
-    },
-    # 02064: Underground Muscle (Agenda 2)
-    "02064": {
-        "name": "Đám Bảo Kê Ngầm",
-        "flavor": "Đám bảo kê của sòng bạc đang lùng sục bạn. Bạn phải cẩn trọng từng bước nếu không muốn bị tống cổ ra ngoài — hoặc tệ hơn nữa.",
-        "back_name": "Hỗn Loạn Bùng Nổ",
-        "back_text": "Spawn kẻ địch Abomination đang để riêng tại Clover Club Bar.\nMỗi kẻ địch [[Criminal]] nhận +1 fight và +1 evade.",
-        "back_flavor": "Một tiếng gầm phi nhân tính xé toạc bầu không khí náo nhiệt của câu lạc bộ. Cửa phòng VIP bật tung và một sinh vật kinh tởm lao ra, tàn sát bừa bãi cả đám xã hội đen lẫn khách chơi bài."
-    },
-    # 02065: Chaos in the Clover Club (Agenda 3)
-    "02065": {
-        "name": "Hỗn Loạn Tại Câu Lạc Bộ Clover",
-        "text": "<b>Forced</b> — Khi bắt đầu giai đoạn Enemy: Bỏ mỗi kẻ địch [[Criminal]] ở cùng địa điểm với một kẻ địch [[Abomination]].",
-        "flavor": "Giữa cơn hoảng loạn và hỗn loạn tột cùng, những sinh vật quái dị tấn công bất kỳ ai trong câu lạc bộ. Tiếng la hét vang vọng khắp các sảnh khi máu bắt đầu phun xối xả.",
-        "back_name": "Tòa Nhà Sụp Đổ",
-        "back_text": "<b>(→R4)</b>",
-        "back_flavor": "Khi những sinh vật gớm ghiếc tiếp tục hoành hành khắp câu lạc bộ, nền móng của tòa nhà rung chuyển và rạn nứt dữ dội. Bạn lao mình về phía lối thoát hiểm, nhưng bị vùi lấp trong đống đổ nát khi toàn bộ câu lạc bộ đổ sập."
-    },
-    # 02066: Beginner's Luck (Act 1)
-    "02066": {
-        "name": "Vận May Kẻ Mới Đến",
-        "text": "[reaction] Khi bạn tiết lộ một token hỗn mang: Bạn có thể coi token đó như thể nó là bất kỳ token nào khác trong túi hỗn mang. Nếu bạn làm vậy, hãy ghi nhớ rằng bạn đã \"gian lận\". (Giới hạn cả nhóm 1 lần mỗi vòng.)\n<b>Objective</b> — Khi các điều tra viên thu thập đủ số lượng manh mối cần thiết, họ phải lập tức chi trả chúng và advance.",
-        "flavor": "Bạn cần tìm Tiến sĩ Morgan. Câu lạc bộ đang chật ních người; có lẽ ai đó biết ông ấy đang ở đâu.",
-        "back_name": "Tay Chơi Lớn",
-        "back_text": "Đặt địa điểm Darkened Hall đang để riêng vào chơi.\nNếu đang ở Agenda 1, bỏ từng lá bài từ trên cùng của chồng bài encounter cho đến khi một kẻ địch [[Criminal]] bị bỏ, và spawn kẻ địch đó tại Darkened Hall.",
-        "back_flavor": "Sau khi dò hỏi nhiều con bạc và nhân viên phục vụ, có vẻ như Tiến sĩ Morgan đang có một chuỗi thắng ngoạn mục gần đây. Thay vì rút tiền thắng cược ra về, ông ta bị thuyết phục nâng cược gấp đôi. Ông được nhìn thấy lần cuối khi bước vào hành lang có người canh gác ở phía sau phòng đánh bài."
-    },
-    # 02067: Skin Game (Act 2)
-    "02067": {
-        "name": "Trò Chơi Cá Cược",
-        "text": "<b>Objective</b> — Chỉ các điều tra viên tại VIP Area mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
-        "flavor": "Tiến sĩ Morgan đang ở đâu đó trong khu vực riêng tư của câu lạc bộ, nơi chỉ dành cho khách VIP và ban quản lý. Nếu muốn tìm ông ấy, bạn sẽ phải lén lút lẻn vào hoặc thậm chí dùng vũ lực để mở đường.",
-        "back_name": "Số Phận Của Tiến Sĩ Morgan",
-        "back_text": "<b>Nếu người chơi chưa hoàn thành Extracurricular Activity:</b><blockquote><i>Bạn tìm thấy Tiến sĩ Morgan đang đánh bạc trong một phòng VIP... nhưng ông ấy dường như đang chơi bài với hai cái xác bất tỉnh, đồng tử giãn to như đang trong cơn mê. Ông không ngừng cười đùa, mỉm cười và trò chuyện với những \"người chơi\" kia.</i></blockquote>Đặt Dr. Francis Morgan đang để riêng vào chơi tại VIP Area. Advance sang Act 3a — \"All In\".<hr><b>Nếu người chơi đã hoàn thành Extracurricular Activity:</b><blockquote><em>Các phòng VIP ngổn ngang những thi thể bị cắn xé đẫm máu của những vị khách xấu số. Dường như không có bất kỳ dấu vết nào của Tiến sĩ Morgan. Bạn nghe thấy tiếng la hét và tiếng súng nổ từ khu vực chính của câu lạc bộ.</em></blockquote>Đặt Peter Clover đang để riêng vào chơi tại Clover Club Bar. Tìm trong chồng bài encounter (hoặc ngoài màn chơi) một kẻ địch [[Abomination]], và spawn nó tại Clover Club Bar. Advance sang Act 3a — \"Fold\".",
-        "back_flavor": None
-    },
-    # 02068: All In (Act 3a - v. I)
-    "02068": {
-        "name": "Tất Tay",
-        "text": "Khi Dr. Francis Morgan không bị kiểm soát bởi một người chơi, ông nhận thêm \"[action]: <b>Parley</b>. Kiểm tra [willpower] (3) để lay tỉnh Tiến sĩ Morgan khỏi cơn mê sảng. Nếu thành công, đặt 1 manh mối từ kho token lên ông ấy. Nếu có 1 [per_investigator] manh mối trên Dr. Francis Morgan, nắm quyền kiểm soát ông ấy.\"\n<b>Objective</b> — Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.",
-        "flavor": "Dù có hay không có Tiến sĩ Morgan, bạn cũng phải thoát khỏi nơi này. Thật nhanh chóng.",
-        "back_name": "An Toàn... Tạm Thời",
-        "back_text": "- Nếu một điều tra viên resign trong khi đang kiểm soát Dr. Francis Morgan, <b>(→R2)</b>\n- Ngược lại, <b>(→R1)</b>",
-        "back_flavor": "Bạn trốn thoát khỏi câu lạc bộ, cố gắng tỏ ra bình thường nhất có thể khi nhiều chiếc xe hơi đỗ xịch lại bên lề đường. Một nhóm đàn ông và phụ nữ với nét mặt nghiêm nghị bước ra, lao nhanh về phía lối vào nhà hàng để kiểm soát tình hình. Một người trong số họ nhìn chằm chằm vào bạn, tay đặt trên báng khẩu .38, nhưng may thay hắn lại dồn sự chú ý về phía đồng bọn và bước theo vào trong. Bạn thở phào nhẹ nhõm..."
-    },
-    # 02069: Fold (Act 3a - v. II)
-    "02069": {
-        "name": "Bỏ Bài",
-        "text": "Khi Peter Clover không bị kiểm soát bởi một người chơi, ông ta nhận thêm \"[action]: <b>Parley</b>. Kiểm tra [willpower] (3) để thuyết phục Peter đi theo bạn. Nếu thành công, đặt 1 manh mối từ kho token lên ông ấy. Nếu có 1 [per_investigator] manh mối trên Peter Clover, nắm quyền kiểm soát ông ta.\"\n<b>Objective</b> — Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.",
-        "flavor": "\"Rượu miễn phí cho bất kỳ ai đưa tôi thoát khỏi cái hố địa ngục này!\" Một người đàn ông hét lên từ quầy bar.",
-        "back_name": "Thoát Khỏi Câu Lạc Bộ",
-        "back_text": "- Nếu một điều tra viên resign trong khi đang kiểm soát Peter Clover, <b>(→R3)</b>\n- Ngược lại, <b>(→R1)</b>",
-        "back_flavor": "Bạn tìm đường tháo chạy ra những con phố Arkham trơn trượt dưới cơn mưa tầm tã."
-    },
-
-    # === The Miskatonic Museum ===
-    # 02119: Restricted Access (Agenda 1)
-    "02119": {
-        "name": "Khu Vực Hạn Chế",
-        "text": "<b>Forced</b> — Khi Hunting Horror vào chơi: Gắn bản sao Shadow-spawned đang để riêng vào nó, hoặc thêm 1 resource lên Shadow-spawned nếu nó đã được gắn.",
-        "flavor": "Tiến sĩ Armitage đã giao bản dịch tiếng Latin của cuốn Necronomicon cho cộng sự của mình, Harold Walsted, người phụ trách Bảo tàng Đại học Miskatonic. Lo sợ có kẻ vẫn đang săn lùng cuốn sách, bạn đến bảo tàng để thu hồi nó.",
-        "back_name": "Sinh Vật Hư Vô",
-        "back_text": "Nếu Hunting Horror đang trong màn chơi, thêm 1 doom lên nó.\nNếu Hunting Horror không có trong màn chơi, tìm kiếm trong chồng bài encounter, chồng bài bỏ và cõi hư vô (the void) để lấy Hunting Horror và spawn nó tại Museum Halls, nếu có thể. Xáo trộn chồng bài encounter bỏ vào chồng bài encounter.",
-        "back_flavor": "Từ trong bóng tối sâu thẳm của các sảnh bảo tàng, một sinh vật kinh hoàng trườn ra, thân dài ngoằng tựa loài rắn và di chuyển nhờ đôi cánh da đen kịt."
-    },
-    # 02120: Shadows Deepen (Agenda 2)
-    "02120": {
-        "name": "Bóng Đêm Dày Đặc",
-        "text": "<b>Forced</b> — Khi Hunting Horror vào chơi: Gắn bản sao Shadow-spawned đang để riêng vào nó, hoặc thêm 1 resource lên Shadow-spawned nếu nó đã được gắn.",
-        "flavor": "Những cái bóng trong bảo tàng ngày càng dài ra và tối sầm lại. Khi bóng tối chuyển dịch, chúng bắt đầu gợi lên hình thù gân guốc của một quái vật kỳ dị đang lướt nhanh nơi rìa nhận thức của bạn...",
-        "back_name": "Bị Săn Đuổi",
-        "back_text": "Nếu Hunting Horror đang trong màn chơi, thêm 1 doom lên nó.\nNếu Hunting Horror không có trong màn chơi, tìm kiếm trong chồng bài encounter, chồng bài bỏ và cõi hư vô (the void) để lấy Hunting Horror và spawn nó tại Museum Halls, nếu có thể. Xáo trộn chồng bài encounter bỏ vào chồng bài encounter.",
-        "back_flavor": "Sinh vật đó không hề buông tha, nó điên cuồng truy đuổi bạn khắp các ngóc ngách của bảo tàng."
-    },
-    # 02121: In Every Shadow (Agenda 3)
-    "02121": {
-        "name": "Trong Từng Bóng Tối",
-        "text": "<b>Forced</b> — Khi Hunting Horror vào chơi: Gắn bản sao Shadow-spawned đang để riêng vào nó, hoặc thêm 1 resource lên Shadow-spawned nếu nó đã được gắn.",
-        "flavor": "Sinh vật trong bảo tàng dường như ngày càng to lớn và đáng sợ hơn theo từng khoảnh khắc. Thân hình nó trườn từ bóng râm này sang bóng râm khác, mỗi góc phòng đều có thể là nơi ẩn nấp của con quái thú gớm ghiếc.",
-        "back_name": "Bị Trục Xuất",
-        "back_text": "Mỗi điều tra viên chưa resign bị đánh bại và chịu 1 sang chấn thể chất (physical trauma).",
-        "back_flavor": "Không có cách nào để tiêu diệt con quái vật trong bảo tàng, bạn buộc phải tháo chạy. Trong từng bóng đen của mỗi hành lang, thân hình trườn bò như rắn của mối kinh hoàng hiện rõ mồn một, cả bảo tàng như tối sầm lại trước sự hiện diện của nó. Khi bạn chạy tới lối ra, nó chặn đứng cửa và tấn công bạn bằng những chiếc răng nanh khủng khiếp. Bạn vừa kịp thoát thân với mạng sống của mình, nhưng chất độc của con quái thú sẽ để lại vết sẹo vĩnh viễn trên cơ thể bạn."
-    },
-    # 02122: Finding A Way Inside (Act 1)
-    "02122": {
-        "name": "Tìm Lối Vào Trong",
-        "flavor": "Thật không may, lối vào Bảo tàng đã bị khóa chặt vào giờ này. Một nhân viên bảo vệ lấp ló sau cửa sổ phía trước tòa nhà, hoàn toàn không để ý tới xung quanh. Có lẽ bạn có thể thu hút sự chú ý của anh ta và thuyết phục anh ta mở cửa cho bạn.",
-        "back_name": "Bước Vào Bảo Tàng",
-        "back_text": "<b>Nếu bạn chi trả manh mối để advance:</b><blockquote><i>Bạn tìm thấy ô cửa sổ gần người bảo vệ nhất và gõ thật mạnh để thu hút sự chú ý. Anh ta giật mình nhảy cẫng lên, rồi hé mở cửa sổ. \"Các người muốn gì?\" anh ta rụt rè hỏi. Bạn giải thích tình hình và cảnh báo rằng anh ta đang gặp nguy hiểm lớn. Anh ta thận trọng mở cửa trước bảo tàng, vừa lắc đầu ngao ngán: \"Đáng lẽ hôm nay tôi không phải đi làm ca này...\"</i></blockquote>Chọn một điều tra viên nắm quyền kiểm soát asset Adam Lynch đang để riêng. Tiết lộ Museum Halls. Advance sang Act 2a — \"Night at the Museum\".<hr><b>Nếu bạn thực hiện thành công khả năng [action] trên Museum Halls để advance:</b><blockquote><i>Bằng sức mạnh vượt trội, bạn phá tung cánh cửa bảo tàng, tạo ra tiếng động lớn. Người bảo vệ nhìn thấy bạn xông vào, hét lên trong sợ hãi và tháo chạy về phía sau bảo tàng.</i></blockquote>Cánh cửa dẫn vào Museum Halls đã bị phá hủy. Tiết lộ Museum Halls. Advance sang Act 2a — \"Breaking and Entering\".",
-        "back_flavor": None
-    },
-    # 02123: Night at the Museum (Act 2a - v. I)
-    "02123": {
-        "name": "Đêm Tại Bảo Tàng",
-        "text": "<b>Objective</b> — Nếu một điều tra viên bước vào Exhibit Hall (<i>Restricted Hall</i>), advance.",
-        "flavor": "Cuốn Necronomicon đang được cất giữ trong một Sảnh Hạn Chế ở đâu đó trong bảo tàng. Adam hầu như chẳng thạo đường sá nơi đây, và giật nảy mình trước từng tiếng cót két của tòa nhà cổ kính. \"Tôi mới bắt đầu làm việc ở đây từ tuần trước,\" anh ta phân trần. \"Các bạn bảo đang có rắc rối gì cơ?\" Bạn không nỡ kể cho anh ta nghe toàn bộ sự thật kinh hoàng.",
-        "back_name": "Số Phận Của Người Phụ Trách",
-        "back_text": "Tìm kiếm Hunting Horror trong chồng bài encounter, chồng bài bỏ, cõi hư vô và tất cả các khu vực chơi, sau đó spawn nó tại Museum Halls. Đặt 1 doom lên Hunting Horror.\nTìm kiếm trong chồng bài encounter và chồng bài bỏ lá bài Shadow-spawned đang để riêng và gắn nó vào Hunting Horror (hoặc thêm 1 resource lên Shadow-spawned nếu nó đã được gắn).\nNếu Harold Walsted đang để riêng, đặt ông ấy vào chơi tại Exhibit Hall (<i>Restricted Hall</i>).",
-        "back_flavor": "Khi bước vào Sảnh Hạn Chế, bạn thấy Harold Walsted đang bị trói gô trên sàn, miệng bị nhét giẻ. Trên chiếc bàn trưng bày bên cạnh ông ta, hộp kính bảo vệ cuốn Necronomicon đã bị đập vỡ vụn, và cuốn sách cổ không còn ở đó nữa!"
-    },
-    # 02124: Breaking and Entering (Act 2a - v. II)
-    "02124": {
-        "name": "Đột Nhập Trái Phép",
-        "text": "<b>Objective</b> — Nếu một điều tra viên bước vào Exhibit Hall (<i>Restricted Hall</i>), advance.",
-        "flavor": "Tiếng động khi bạn phá cửa chắc chắn đã đánh động bất kỳ thứ gì đang lẩn khuất bên trong bảo tàng. Bạn phải nhanh chóng tìm thấy cuốn Necronomicon trong Sảnh Hạn Chế trước khi quá muộn.",
-        "back_name": "Số Phận Của Người Phụ Trách",
-        "back_text": "Tìm kiếm Hunting Horror trong chồng bài encounter, chồng bài bỏ, cõi hư vô và tất cả các khu vực chơi, sau đó spawn nó tại Museum Halls. Đặt 1 doom lên Hunting Horror.\nTìm kiếm trong chồng bài encounter và chồng bài bỏ lá bài Shadow-spawned đang để riêng và gắn nó vào Hunting Horror (hoặc thêm 1 resource lên Shadow-spawned nếu nó đã được gắn).\nNếu Harold Walsted đang để riêng, đặt ông ấy vào chơi tại Exhibit Hall (<i>Restricted Hall</i>).",
-        "back_flavor": "Khi bước vào Sảnh Hạn Chế, bạn thấy Harold Walsted đang bị trói gô trên sàn, miệng bị nhét giẻ. Trên chiếc bàn trưng bày bên cạnh ông ta, hộp kính bảo vệ cuốn Necronomicon đã bị đập vỡ vụn, và cuốn sách cổ không còn ở đó nữa!"
-    },
-    # 02125: Searching for the Tome (Act 3)
-    "02125": {
-        "name": "Truy Tìm Cổ Thư",
-        "text": "<b>Objective</b> — Chỉ các điều tra viên tại Exhibit Hall (<i>Restricted Hall</i>) mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
-        "flavor": "Tên trộm không thể chạy xa được. Cuốn sách chắc chắn vẫn còn ở đâu đó trong căn phòng này hoặc các gian trưng bày lân cận.",
-        "back_name": "Cuốn Sách Cổ Thuộc Về Bạn",
-        "back_text": "<b>(→R1)</b>",
-        "back_flavor": "Sau một hồi tìm kiếm điên cuồng, bạn phát hiện cuốn Necronomicon bị giấu vội bên dưới một tấm bạt bọc đồ cổ. Bạn nhanh chóng nhét cuốn sách vào túi áo và tìm đường tháo chạy khỏi bảo tàng trước khi con quái thú bóng đêm nuốt chửng bạn."
-    },
-
-    # === The Essex County Express ===
-    # 02160: A Tear in Reality (Agenda 1)
-    "02160": {
-        "name": "Vết Rách Của Thực Tại",
-        "flavor": "Khi chuyến tàu tới Dunwich phanh gấp lại với một tiếng rít chói tai, bạn nhìn qua cửa sổ phía sau và kinh hoàng nhận thấy một vết rách khổng lồ trên bầu trời, tựa như một mảnh vải bị xé toạc. Không gian và thời gian xung quanh vết nứt bắt đầu méo mó dị thường.",
-        "back_name": "Bước Qua Cánh Cổng",
-        "back_text": "Loại bỏ địa điểm ngoài cùng bên trái khỏi màn chơi (hoặc đặt nó vào khu vực trưng bày thành tích nếu nó có Victory X và không còn manh mối trên đó). Mỗi điều tra viên tại địa điểm đó bị đánh bại. Mỗi kẻ địch và asset tại địa điểm đó bị bỏ.\nBỏ toàn bộ manh mối do các điều tra viên kiểm soát.",
-        "back_flavor": "Toa tàu cuối cùng bị kéo giật ngược về phía sau rồi bay bổng lên không trung, bị hút trọn vào vết rách thăm thẳm giữa trời. Những tiếng thét tuyệt vọng của hành khách câm bặt trong tích tắc."
-    },
-    # 02161: The Maw Widens (Agenda 2)
-    "02161": {
-        "name": "Miệng Vực Rộng Mở",
-        "flavor": "Lực hút từ vết nứt ngày càng dữ dội. Những mảnh kim loại, hành lý và các toa tàu phía sau bắt đầu rung lắc bần bật rồi bị xé toạc từng mảng lớn.",
-        "back_name": "Hút Vào Hư Không",
-        "back_text": "Loại bỏ địa điểm ngoài cùng bên trái khỏi màn chơi (hoặc đặt nó vào khu vực trưng bày thành tích nếu nó có Victory X và không còn manh mối trên đó). Mỗi điều tra viên tại địa điểm đó bị đánh bại. Mỗi kẻ địch và asset tại địa điểm đó bị bỏ.\nBỏ toàn bộ manh mối do các điều tra viên kiểm soát.",
-        "back_flavor": "Thêm một toa tàu nữa bị xé rách khỏi đường ray và nuốt chửng vào hư vô. Không khí xung quanh lạnh buốt và áp suất giảm mạnh khiến bạn khó thở."
-    },
-    # 02162: Rolling Backwards (Agenda 3)
-    "02162": {
-        "name": "Trôi Giật Lùi",
-        "flavor": "Cả đoàn tàu đang từ từ trôi ngược về phía vực sâu không đáy. Bạn phải chạy thật nhanh về phía đầu tàu trước khi các toa tiếp theo bị nuốt chửng!",
-        "back_name": "Hiểm Họa Rình Rập",
-        "back_text": "Loại bỏ địa điểm ngoài cùng bên trái khỏi màn chơi (hoặc đặt nó vào khu vực trưng bày thành tích nếu nó có Victory X và không còn manh mối trên đó). Mỗi điều tra viên tại địa điểm đó bị đánh bại. Mỗi kẻ địch và asset tại địa điểm đó bị bỏ.\nBỏ toàn bộ manh mối do các điều tra viên kiểm soát.",
-        "back_flavor": "Những tảng đá từ chân cầu bị bứng gốc và cuốn thẳng lên trời. Cảnh tượng tận thế đang hiện ra ngay trước mắt bạn."
-    },
-    # 02163: Drawn In (Agenda 4)
-    "02163": {
-        "name": "Bị Kéo Vào",
-        "flavor": "Đoàn tàu rung chuyển dữ dội. Một hành khách trẻ tuổi đập vỡ cửa sổ toa tàu và nhảy ra ngoài, nhưng trước khi chạm mặt nước sông bên dưới, anh ta bị một quái vật có cánh quắp lấy và mang đi mất dạng.",
-        "back_name": "Không Nơi Nào An Toàn",
-        "back_text": "Loại bỏ cả 2 địa điểm ngoài cùng bên trái khỏi màn chơi (hoặc đặt chúng vào khu vực trưng bày thành tích nếu có Victory X và không còn manh mối). Mỗi điều tra viên tại đó bị đánh bại. Mỗi kẻ địch và asset tại đó bị bỏ.\nBỏ toàn bộ manh mối do các điều tra viên kiểm soát.",
-        "back_flavor": "Hai toa tàu phía sau bắt đầu nóng chảy khi chúng bị bao trùm bởi luồng hơi nước siêu nhiệt. Kim loại biến dạng, và tiếng thét đau đớn của các hành khách vang lên xé lòng."
-    },
-    # 02164: Out of Time (Agenda 5)
-    "02164": {
-        "name": "Hết Thời Gian",
-        "flavor": "Vết rách trên bầu trời vặn xoắn và rung chuyển dữ dội, hoàn toàn biến dạng. Kích thước của nó giờ đây khổng lồ, như thể chuẩn bị phát nổ và nuốt chửng toàn bộ thế giới thực tại.",
-        "back_name": "Bị Hút Trọn",
-        "back_text": "Mỗi điều tra viên lập tức bị đánh bại và chịu 1 sang chấn tinh thần (mental trauma). <b>(→R2)</b>",
-        "back_flavor": "Cả cây cầu gãy vụn dưới áp lực khủng khiếp của cánh cổng. Thay vì rơi xuống sông, toàn bộ những toa tàu còn lại bị cuốn thẳng lên trời, lao vào tâm vết rách. Bạn bám chặt lấy sàn tàu trong nỗi kinh hoàng tột độ khi bị hút vào hư không. Rồi mọi thứ tối sầm lại."
-    },
-    # 02165: Run! (Act 1)
-    "02165": {
-        "name": "Chạy Đi!",
-        "text": "<b>Objective</b> — Nếu một điều tra viên bước vào Engine Car, lập tức advance.",
-        "flavor": "Đoàn tàu đã dừng lại trên một cây cầu bắc qua sông Miskatonic — rơi xuống dòng nước có thể sống sót, nhưng cơ hội là quá mong manh. Lựa chọn tốt nhất là tiến nhanh nhất có thể về toa đầu máy và khởi động lại đoàn tàu.",
-        "back_name": "Đôi Cánh Hơi Nước",
-        "back_text": "<b>Điều tra viên bước vào Engine Car đọc to đoạn sau:</b><blockquote><i>Một toa chở than chặn lối vào buồng lái đầu máy. Nuốt nỗi sợ hãi vào trong, bạn trèo ra ngoài cửa sổ và bò lên nóc toa tàu, cố gắng băng qua đống than đá. Chuyển động giật lùi liên tục của đoàn tàu khiến bạn khó giữ thăng bằng. Khi bạn đến gần, một sinh vật có cánh sà xuống từ trên cao, cơ thể nó cấu thành từ hơi nước nóng rực.</i></blockquote>Bạn phải quyết định (chọn một):\n- Kiểm tra [agility] (3) để né tránh sinh vật. Nếu thất bại, bạn nhảy quá đà và chỉ vừa kịp bám lấy thành tàu, lơ lửng giữa không trung. Dù kéo được mình lên, trải nghiệm kinh hoàng khiến bạn chịu 1 sang chấn tinh thần (mental trauma).\n- Kiểm tra [combat] (3) để chống chọi luồng nhiệt tột cùng. Nếu thất bại, sinh vật xuyên qua người bạn và thiêu đốt da thịt. Bạn chịu 1 sang chấn thể chất (physical trauma).",
-        "back_flavor": None
-    },
-    # 02166: Get the Engine Running! (Act 2)
-    "02166": {
-        "name": "Khởi Động Đầu Máy!",
-        "text": "<b>Objective</b> — Nếu không còn manh mối nào tại Engine Car, lập tự advance.",
-        "flavor": "Bạn đã đến được buồng lái đầu máy, nhưng giờ bạn phải khởi động lại động cơ để đoàn tàu có thể bứt tốc thoát khỏi lực hút kinh hoàng của cánh cổng!",
-        "back_name": "Lao Về Phía Trước",
-        "back_text": "<b>(→R1)</b>",
-        "back_flavor": "Động cơ rầm rầm gầm rú và bắt đầu chuyển bánh. Bạn xúc than điên cuồng vào buồng đốt và thở phào nhẹ nhõm khi thấy đoàn tàu đang lao vút về phía trước dọc theo đường ray, bỏ lại vực xoáy hủy diệt phía sau."
-    },
-    # 51026: Where There's Smoke (Return to Essex - Agenda 0)
-    "51026": {
-        "name": "Nơi Nào Có Khói",
-        "flavor": "Khi chuyến tàu tới Dunwich phanh gấp, bạn nhìn qua cửa sổ và thấy một vết rách khổng lồ trên bầu trời. Từ vết rách đó, một quái thú có cánh trồi ra, thét lên tiếng kêu chói tai và lao thẳng xuống đoàn tàu."
-    },
-    # 51027: A Tear in Reality (v.II) (Return to Essex - Agenda 1)
-    "51027": {
-        "name": "Vết Rách Của Thực Tại (v. II)",
-        "flavor": "Sức mạnh của cánh cổng càng lớn mạnh hơn trước sự hiện diện của quái thú có cánh. Nhiều toa tàu phía sau bị giật ngược lại, và những tiếng kim loại rạn nứt ghê rợn vang lên khi chúng bị đứt lìa.",
-        "back_name": "Tiếp Tục Di Chuyển!",
-        "back_text": "Loại bỏ địa điểm ngoài cùng bên trái khỏi màn chơi (hoặc đặt vào khu vực trưng bày thành tích nếu có Victory X và không còn manh mối). Mỗi điều tra viên tại đó bị đánh bại. Mỗi kẻ địch và asset tại đó bị bỏ.\nBỏ toàn bộ manh mối do các điều tra viên kiểm soát.",
-        "back_flavor": "Toa tàu sau cùng tách rời khi bị kéo lùi. Trước sự bàng hoàng của bạn, nó bay bổng khỏi đường ray và bị cánh cổng phía trên nuốt chửng."
-    },
-
-    # === Blood on the Altar ===
-    # 02196: Strange Disappearances (Agenda 1)
-    "02196": {
-        "name": "Những Vụ Mất Tích Kỳ Lạ",
-        "flavor": "Sự chào đón bạn tại Dunwich thật lạnh lẽo. Một loạt vụ mất tích bí ẩn khiến những người dân vốn đã xa lánh càng thêm căng thẳng. Hầu hết họ nhìn bạn bằng ánh mắt ngờ vực, và chẳng mấy ai chịu giúp đỡ cuộc điều tra. Ai biết chuyện gì sẽ xảy ra nếu bạn không sớm tìm ra nơi giam giữ những người mất tích...",
-        "back_name": "Hiến Tế Đầu Tiên",
-        "back_text": "Nếu có từ 3 nạn nhân tiềm năng (potential sacrifices) trở lên, ngẫu nhiên chọn một người và đặt bên dưới chồng bài agenda mà không được nhìn vào lá bài đó.",
-        "back_flavor": "Lũ chim đớp muỗi (whippoorwills) tụ tập dọc theo các mái nhà đầu hồi tại Dunwich và cất tiếng kêu mừng rỡ. Người dân Dunwich tin rằng sự xuất hiện của chúng báo trước cái chết cận kề. Liệu chúng đang khao khát cái chết của bạn? Hay nạn nhân là một ai khác?"
-    },
-    # 02197: The Old Ones Hunger (Agenda 2)
-    "02197": {
-        "name": "Các Đấng Cổ Xưa Đói Khát",
-        "flavor": "Khi mặt trời lặn, những người dân sợ hãi rút lui vào nhà và khóa chặt cửa. Rõ ràng là nhiều người trong số họ biết nhiều hơn những gì họ dám hé môi. Một cảm giác buồn nôn ùa đến khi bản chất thực sự của ngôi làng dần lộ rõ.",
-        "back_name": "Những Con Đường Hoang Vắng",
-        "back_text": "Nếu có từ 2 nạn nhân tiềm năng trở lên, ngẫu nhiên chọn một người và đặt bên dưới chồng bài agenda mà không được nhìn vào lá bài đó.",
-        "back_flavor": "Càng về đêm, càng nhiều chim đớp muỗi bay đến làng Dunwich. Cư dân trong làng, vốn khét tiếng mê tín, khiếp sợ trước sự hiện diện của lũ chim. Với những cánh cửa xung quanh đều đóng kín và cài then, bạn thấy mình hoàn toàn đơn độc trên những con phố của Dunwich."
-    },
-    # 02198: Feed the Beast (Agenda 3)
-    "02198": {
-        "name": "Nuôi Dưỡng Quái Thú",
-        "flavor": "Tiếng kêu nhịp nhàng đầy ma quái của lũ chim đớp muỗi xé toạc màn đêm. Nếu những lời mê tín ở Dunwich là đúng, khúc ca của chúng báo hiệu một cái chết đang cận kề... Nhưng là cho ai?",
-        "back_name": "Máu Trên Bàn Thờ",
-        "back_text": "Mỗi điều tra viên phải lập tức resign.",
-        "back_flavor": "Đàn chim đớp muỗi đã râm ran suốt đêm bỗng đồng loạt tản đi, như thể chúng vừa được thỏa mãn trước kết cục của sự việc."
-    },
-    # 02199: Searching for Answers (Act 1)
-    "02199": {
-        "name": "Tìm Kiếm Lời Giải",
-        "text": "<b>Objective</b> — Khi một điều tra viên bước vào The Hidden Chamber, advance.",
-        "flavor": "Những vụ mất tích trong thị trấn có thể liên quan tới các sự kiện tại Arkham. Bạn linh cảm điều khủng khiếp đang cận kề. Bạn phải tìm ra nơi những người mất tích bị giam giữ để phơi bày âm mưu này.",
-        "back_name": "Thứ Bị Che Giấu",
-        "back_text": "Tiết lộ mỗi địa điểm chưa được tiết lộ.\nDi chuyển toàn bộ manh mối trong màn chơi (bao gồm cả manh mối trên từng điều tra viên) tới The Hidden Chamber.\nSpawn kẻ địch Silas Bishop đang để riêng tại The Hidden Chamber.",
-        "back_flavor": "Bạn tìm được lối vào căn phòng bí mật nơi bạn tin rằng những người mất tích đang bị giam cầm, nhưng nỗi kinh hoàng ập vào mắt suýt làm bạn phát điên. Bị trói bằng những sợi xích sắt trong một góc khuất là một sinh vật quái dị không thể thốt nên lời mang khuôn mặt của một người đàn ông. Nó thở hổn hển và vùng vẫy muốn thoát ra khi nhận thấy bạn bước vào. Vô số miệng bao phủ khắp cơ thể con quái vật dính đầy máu tươi và mẩu thịt vụn, như thể nó vừa được cho ăn cách đây không lâu.\nVới một tiếng quác ghê tởm, con quái vật cất lời bằng cả bảy cái miệng: \"Ss... se... eth...?\" Rồi nó chồm tới chực tóm lấy bạn, làm đứt phựt vài mắt xích."
-    },
-    # 02200: The Chamber of the Beast (Act 2)
-    "02200": {
-        "name": "Căn Phòng Của Quái Thú",
-        "text": "<b>Objective</b> — Nếu Silas Bishop bị đánh bại: <b>(→R1)</b>\n<b>Objective</b> — Nếu không còn manh mối nào trong The Hidden Chamber, advance.",
-        "flavor": "Con quái thú đáng thương chồm tới với những cánh tay nhầy nhụa, vô số hàm răng ngoạm vào không khí vì đói. Kết liễu nó sẽ là một sự giải thoát nhân từ. Nhưng có lẽ còn điều gì khác cần khám phá về sinh vật này…",
-        "back_name": "Trục Xuất Sinh Vật",
-        "back_text": "Nếu The Necronomicon đang trong màn chơi: <b>(→R2)</b>\nNgược lại: <b>(→R3)</b>",
-        "back_flavor": "Bất chấp nguy hiểm, bạn dũng cảm đối mặt với sự hiện diện kinh tởm của con quái thú và điều tra kỹ lưỡng hơn trước khi hạ sát nó. Những gì bạn phát hiện đã xác nhận nỗi lo sợ tồi tệ nhất. Nhiều ghi chép trong nhật ký của \"Seth Bishop\" mô tả quá trình cho sinh vật ăn với những chi tiết rùng rợn — ban đầu là cà chua, rồi thú nhỏ, gia súc, và cuối cùng là 'vật hiến tế người'. Nhưng điều kinh hoàng nhất là Seth gọi con quái thú bằng chính cái tên: 'Silas'."
-    },
-
-    # === Undimensioned and Unseen ===
-    # 02237: Rampaging Creatures (Agenda 1)
-    "02237": {
-        "name": "Những Sinh Vật Cuồng Nộ",
-        "text": "<b>Forced</b> — Khi kết thúc giai đoạn Enemy: Di chuyển mỗi kẻ địch Brood of Yog-Sothoth một lần về phía một địa điểm ngẫu nhiên.",
-        "flavor": "Những báo cáo về các thực thể kinh hoàng tàn phá vùng nông thôn đã khiến người dân Dunwich hoảng loạn cực độ. Tệ hơn nữa, những sinh vật này dường như hoàn toàn vô hình trước mắt thường.",
-        "back_name": "Tai Họa Giáng Xuống",
-        "back_text": "Xáo trộn chồng bài encounter bỏ vào chồng bài encounter. Bỏ từng lá bài từ trên cùng của chồng bài encounter cho đến khi một kẻ địch bị bỏ. Spawn kẻ địch đó tại một địa điểm ngẫu nhiên.",
-        "back_flavor": "Những vết chân khổng lồ, nham nhở khoét sâu vào đất cát làng mạc. Những bức tường đá bị đập nát vụn và gia súc bị xé toạc thành từng mảnh."
-    },
-    # 02238: Biding Its Time (Agenda 2)
-    "02238": {
-        "name": "Chờ Đợi Thời Cơ",
-        "text": "<b>Forced</b> — Khi kết thúc giai đoạn Enemy: Di chuyển mỗi kẻ địch Brood of Yog-Sothoth một lần về phía một địa điểm ngẫu nhiên.",
-        "flavor": "Những thực thể vô hình tiếp tục lẩn khuất quanh những ngọn đồi của Dunwich. Bạn có thể nghe thấy những bước chân nặng nề làm rung chuyển mặt đất, dù chẳng thấy bóng dáng kẻ thù ở đâu.",
-        "back_name": "Tiếng Gầm Vang Dội",
-        "back_text": "Mỗi điều tra viên chịu 1 horror. Spawn một kẻ địch Brood of Yog-Sothoth đang để riêng tại một địa điểm ngẫu nhiên.",
-        "back_flavor": "Một tiếng gầm phi nhân tính rung chuyển cả thung lũng, làm vỡ kính các ngôi nhà và khiến người dân la hét trong kinh hoàng."
-    },
-    # 02239: Horrors Unleashed (Agenda 3)
-    "02239": {
-        "name": "Những Nỗi Kinh Hoàng Trỗi Dậy",
-        "text": "<b>Forced</b> — Khi kết thúc giai đoạn Enemy: Di chuyển mỗi kẻ địch Brood of Yog-Sothoth một lần về phía một địa điểm ngẫu nhiên.",
-        "flavor": "Lũ quái vật đã hoàn toàn mất kiểm soát. Không còn thời gian để do dự; bạn phải tìm cách làm chúng hiện hình và tiêu diệt chúng ngay lập tức!",
-        "back_name": "Dunwich Thất Thủ",
-        "back_text": "Mỗi điều tra viên lập tức chịu 2 sang chấn thể chất. Tiến hành <b>(→R3)</b>.",
-        "back_flavor": "Lũ quái vật giày xéo toàn bộ ngôi làng. Không còn gì có thể ngăn chặn sự tàn phá của chúng."
-    },
-    # 02240: Saracenic Script (Act 1)
-    "02240": {
-        "name": "Cổ Tự Saracen",
-        "text": "<b>Objective</b> — Chỉ các điều tra viên tại Dunwich Village mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
-        "flavor": "Để nhìn thấy và gây sát thương lên lũ quái vật, bạn cần một công thức ma thuật đặc biệt — thứ bột phấn của Ibn-Ghazi được mô tả trong các bản thảo cổ.",
-        "back_name": "Bột Phấn Của Ibn-Ghazi",
-        "back_text": "Đặt Esoteric Formula đang để riêng vào chơi dưới quyền kiểm soát của điều tra viên chính.\nSpawn 1 kẻ địch Brood of Yog-Sothoth đang để riêng tại Cold Spring Glen.",
-        "back_flavor": "Sau khi pha chế thành công thứ bột ma thuật theo công thức cổ xưa, bạn rắc bột vào không khí. Ngay lập tức, hình hài quái dị của một sinh vật khổng lồ với hàng trăm xúc tu ngoe nguẩy hiện ra mồn một trước mắt bạn!"
-    },
-    # 02241: They Must Be Destroyed! (Act 2)
-    "02241": {
-        "name": "Chúng Phải Bị Tiêu Diệt!",
-        "text": "<b>Objective</b> — Nếu không còn kẻ địch Brood of Yog-Sothoth nào trong màn chơi hoặc để riêng: <b>(→R1)</b>\n[action]: <b>Resign.</b> Bạn rút lui an toàn khỏi Dunwich.",
-        "flavor": "Với thứ bột phấn ma thuật trong tay, bạn đã có thể làm lộ diện và tấn công lũ quái thai của Yog-Sothoth. Hãy tiêu diệt chúng trước khi chúng san phẳng vùng đất này!",
-        "back_name": None,
-        "back_text": None,
-        "back_flavor": None
-    },
-
-    # === Where Doom Awaits ===
-    # 02275: Calling Forth the Old Ones (Agenda 1)
-    "02275": {
-        "name": "Hiệu Triệu Các Đấng Cổ Xưa",
-        "flavor": "Tại đỉnh Đồi Sentinel, một luồng ánh sáng u tối rực lên giữa trời đêm. Những kẻ tà giáo đang tiến hành nghi thức tối thượng để mở ra cánh cổng giữa các chiều không gian.",
-        "back_name": "Sấm Sét Rền Vang",
-        "back_text": "Mỗi điều tra viên tại Base of the Hill chịu 1 horror. Spawn 1 kẻ địch [[Cultist]] tại Ascending Path.",
-        "back_flavor": "Những tia sét đen ngoằn ngoèo đánh xuống sườn đồi, mùi ôzôn và lưu huỳnh nồng nặc lan tỏa trong không khí."
-    },
-    # 02276: Beckoning for Power (Agenda 2)
-    "02276": {
-        "name": "Kêu Cầu Quyền Năng",
-        "flavor": "Nghi thức sắp sửa hoàn tất. Bầu trời đêm trên đỉnh đồi xoáy tròn thành một cơn lốc đen khổng lồ, sẵn sàng nuốt chửng thực tại.",
-        "back_name": "Cánh Cổng Mở Ra",
-        "back_text": "Mỗi điều tra viên bị đánh bại và chịu 1 sang chấn tinh thần. <b>(→R2)</b>",
-        "back_flavor": "Không gian vỡ tan và cánh cổng liên chiều mở toang. Quyền năng cổ xưa tràn vào thế giới, nghiền nát tâm trí của bất kỳ ai dám chứng kiến."
-    },
-    # 02277: The Path to the Hill (Act 1)
-    "02277": {
-        "name": "Con Đường Lên Đồi",
-        "text": "<b>Objective</b> — Chỉ các điều tra viên tại Base of the Hill mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
-        "flavor": "Đồi Sentinel sừng sững trong đêm tối, được bao quanh bởi rừng cây rậm rạp và những dốc đá hiểm trở. Bạn phải tìm ra lối mòn dẫn lên đỉnh đồi.",
-        "back_name": "Đỉnh Đồi Trong Tầm Mắt",
-        "back_text": "Đặt địa điểm Ascending Path đang để riêng vào chơi. Tiết lộ Ascending Path.",
-        "back_flavor": "Bạn tìm thấy con đường mòn uốn lượn xuyên qua rừng rậm dẫn lên sườn đồi."
-    },
-    # 02278: Ascending the Hill (v. I) (Act 2)
-    "02278": {
-        "name": "Leo Lên Đỉnh Đồi (v. I)",
-        "text": "<b>Objective</b> — Chỉ các điều tra viên tại Ascending Path mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
-        "flavor": "Gió rít gào dữ dội khi bạn tiến lên cao hơn. Bậc thang đá cổ xưa trơn trượt dưới chân bạn.",
-        "back_name": "Tiếp Cận Bàn Thờ",
-        "back_text": "Đặt Sentinel Peak vào chơi. Tiết lộ Sentinel Peak. Spawn Seth Bishop tại Sentinel Peak.",
-        "back_flavor": "Bạn bước lên đỉnh đồi bằng phẳng và đối mặt với bàn thờ đá khổng lồ, nơi kẻ chủ mưu đang đứng đợi."
-    },
-    # 02279: Ascending the Hill (v. II) (Act 2)
-    "02279": {
-        "name": "Leo Lên Đỉnh Đồi (v. II)",
-        "text": "<b>Objective</b> — Chỉ các điều tra viên tại Ascending Path mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
-        "flavor": "Không gian xung quanh bạn bắt đầu bẻ cong kỳ lạ. Từng bước đi như nặng nề hơn dưới lực cản của ma thuật hắc ám.",
-        "back_name": "Tiếp Cận Bàn Thờ",
-        "back_text": "Đặt Sentinel Peak vào chơi. Tiết lộ Sentinel Peak. Spawn Seth Bishop tại Sentinel Peak.",
-        "back_flavor": "Bạn bước lên đỉnh đồi bằng phẳng và đối mặt với bàn thờ đá khổng lồ, nơi kẻ chủ mưu đang đứng đợi."
-    },
-    # 02280: Ascending the Hill (v. III) (Act 2)
-    "02280": {
-        "name": "Leo Lên Đỉnh Đồi (v. III)",
-        "text": "<b>Objective</b> — Chỉ các điều tra viên tại Ascending Path mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
-        "flavor": "Những tiếng thầm thì ma quái rót vào tai bạn, cố gắng làm lung lay ý chí và khiến bạn gục ngã trước khi lên tới đỉnh.",
-        "back_name": "Tiếp Cận Bàn Thờ",
-        "back_text": "Đặt Sentinel Peak vào chơi. Tiết lộ Sentinel Peak. Spawn Seth Bishop tại Sentinel Peak.",
-        "back_flavor": "Bạn bước lên đỉnh đồi bằng phẳng và đối mặt với bàn thờ đá khổng lồ, nơi kẻ chủ mưu đang đứng đợi."
-    },
-    # 02281: The Gate Opens (Act 3)
-    "02281": {
-        "name": "Cánh Cổng Mở Ra",
-        "text": "<b>Objective</b> — Nếu Seth Bishop bị đánh bại, advance.",
-        "flavor": "Seth Bishop đứng trước bàn tế lễ đá, cơ thể gã run lên bần bật trong cơn xuất thần cuồng loạn. Gã phải bị tiêu diệt trước khi kịp hoàn tất nghi thức!",
-        "back_name": "Cánh Cổng Liên Chiều",
-        "back_text": "<b>(→R1)</b>",
-        "back_flavor": "Seth Bishop gục ngã trên bàn thờ đá, nhưng vết rách không gian trên đỉnh đồi đã mở ra quá lớn. Một lực hút khủng khiếp kéo bạn xuyên qua cánh cổng, thẳng vào cõi hư vô vô tận!"
-    },
-
-    # === Lost in Time and Space ===
-    # 02312: All is One (Agenda 1)
-    "02312": {
-        "name": "Vạn Vật Là Một",
-        "flavor": "Bạn đang trôi dạt trong một chiều không gian vượt ngoài mọi quy luật vật lý. Không gian và thời gian hòa làm một thể, uốn lượn và biến chuyển khôn lường.",
-        "back_name": "Thực Tại Vỡ Vụn",
-        "back_text": "Mỗi điều tra viên ngẫu nhiên bỏ 1 lá bài trên tay. Bỏ lá bài trên cùng của chồng bài encounter.",
-        "back_flavor": "Những mảnh vỡ của các thế giới khác lướt qua bạn như những ảo ảnh chớp tắt."
-    },
-    # 02313: Past, Present and Future (Agenda 2)
-    "02313": {
-        "name": "Quá Khứ, Hiện Tại và Tương Lai",
-        "flavor": "Quá khứ, hiện tại và tương lai đồng hiện trước mắt bạn. Trí não con người không thể chịu đựng được sự vô tận này.",
-        "back_name": "Chuyển Dịch Không Gian",
-        "back_text": "Di chuyển mỗi điều tra viên tới một địa điểm kết nối ngẫu nhiên nếu có thể.",
-        "back_flavor": "Không gian xung quanh bạn lộn nhào, kéo bạn sang một vùng đất hoàn toàn xa lạ."
-    },
-    # 02314: Breaking Through (Agenda 3)
-    "02314": {
-        "name": "Xé Toạc Ranh Giới",
-        "flavor": "Yog-Sothoth đang tiến đến gần. Sự hiện diện vĩ đại của Ngài che kín cả bầu trời của chiều không gian kỳ dị này.",
-        "back_name": "Chìa Khóa và Cánh Cổng",
-        "back_text": "Spawn Yog-Sothoth tại The Edge of the Universe (hoặc Another Dimension nếu The Edge of the Universe chưa có trong màn chơi). Advance sang agenda 4a.",
-        "back_flavor": "Thực thể tối cao Yog-Sothoth hiện hữu — Ngài là Chìa Khóa, là Cánh Cổng, là Người Canh Giữ Ngưỡng Cửa."
-    },
-    # 02315: The End of All Things (Agenda 4)
-    "02315": {
-        "name": "Hồi Kết Của Vạn Vật",
-        "text": "<b>Forced</b> — Khi agenda này advance: Mỗi điều tra viên bị đánh bại và chịu 2 sang chấn tinh thần. Tiến hành <b>(→R2)</b>.",
-        "flavor": "Toàn bộ thực tại đang sụp đổ vào tâm điểm của Yog-Sothoth. Không còn gì có thể cứu vãn vũ trụ này nữa.",
-        "back_name": None,
-        "back_text": None,
-        "back_flavor": None
-    },
-    # 02316: Out of this World (Act 1)
-    "02316": {
-        "name": "Ngoài Thế Giới Này",
-        "text": "[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này và kích hoạt khả năng 'revelation' của nó.\n<b>Objective</b> — Nếu có 2 manh mối cho mỗi điều tra viên trên Another Dimension, advance.",
-        "flavor": "Bạn phải tìm cách định hướng trong cõi không gian vô định này để tìm lối về thực tại.",
-        "back_name": "Lối Đi Bí Mật",
-        "back_text": "Đặt địa điểm The Edge of the Universe đang để riêng vào chơi.",
-        "back_flavor": "Một đốm sáng mờ ảo xuất hiện nơi xa xăm, dẫn dắt bạn tiến về rìa vũ trụ."
-    },
-    # 02317: Into the Beyond (Act 2)
-    "02317": {
-        "name": "Tiến Vào Cõi Vô Tận",
-        "text": "[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này và kích hoạt khả năng 'revelation' của nó.\n<b>Objective</b> — Nếu một điều tra viên bước vào The Edge of the Universe, advance.",
-        "flavor": "Bạn tiếp tục dõi theo đốm sáng le lói, dù địa hình hiểm trở và biến ảo khôn lường khiến hành trình vô cùng gian nan.",
-        "back_name": "Rìa Của Vũ Trụ",
-        "back_text": "Spawn kẻ địch Yog-Sothoth đang để riêng tại The Edge of the Universe.",
-        "back_flavor": "Bạn chạm tới một khoảng không đen đặc vô tận, nơi mọi thực tại kết thúc. Ngay trước mắt bạn là một vết rách tí hon dẫn về đỉnh Đồi Sentinel. Bạn phải tìm cách đóng vết rách này vĩnh viễn!"
-    },
-    # 02318: Close the Rift (Act 3)
-    "02318": {
-        "name": "Đóng Vết Rách",
-        "text": "[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này và kích hoạt khả năng 'revelation' của nó.\n<b>Objective</b> — Chỉ các điều tra viên tại The Edge of the Universe mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
-        "flavor": "Những phiến đá kỳ dị khắc đầy cổ tự ma thuật. Khi tiến lại gần, một giọng nói xa lạ vang lên trong tâm trí bạn bằng ngôn ngữ cổ xưa.",
-        "back_name": "Hàn Gắn Vết Rách",
-        "back_text": "Loại bỏ The Edge of the Universe khỏi trò chơi. Đặt Tear Through Time vào chơi.",
-        "back_flavor": "Bạn thì thầm câu thần chú cổ xưa: \"Claude ostium...\" Vết rách không gian dần khép lại rồi biến mất hoàn toàn."
-    },
-    # 02319: Finding a New Way (Act 4)
-    "02319": {
-        "name": "Tìm Lối Đi Mới",
-        "text": "[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này và kích hoạt khả năng 'revelation' của nó.\n<b>Objective</b> — Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.",
-        "flavor": "Không còn vết rách để trở về, bạn phải lùng sục một lối thoát khác giữa những chiều không gian rạn nứt.",
-        "back_name": "Thực Tại Vẫy Gọi",
-        "back_text": "<b>(→R1)</b>",
-        "back_flavor": "Bạn tìm thấy một con đường trông quen thuộc và dấn bước. Vượt qua những cánh đồng bất tận và rừng rậm, cơ thể bạn kiệt sức và ngã gục trên nền cỏ quen thuộc của quê nhà."
-    },
-    # 51054: Breaking Through (v. II) (Return to Lost in Time - Agenda 3)
-    "51054": {
-        "name": "Xé Toạc Ranh Giới (v. II)",
-        "text": "<b>Forced</b> — Sau khi bạn bị di chuyển tới một địa điểm bởi hiệu ứng của lá bài encounter: Chịu 1 horror.",
-        "flavor": "Khắp chiều không gian biến dạng này, dù bạn đi tới đâu cũng thấy một bóng hình ám ảnh nơi xa xăm. Ban đầu nó tựa như một vầng trăng đen với vô vàn xúc tu ngoe nguẩy. Nhưng thời gian trôi qua, nó ngày một phình to...",
-        "back_name": "Chìa Khóa và Cánh Cổng (v. II)",
-        "back_text": "<b>Revelation</b> — Di chuyển Yog-Sothoth tới The Edge of the Universe (hoặc Another Dimension nếu The Edge of the Universe chưa có trong màn chơi). Loại bỏ Realms Beyond khỏi trò chơi và advance sang agenda 4a."
-    },
-    # 51055: Into the Beyond (v. II) (Return to Lost in Time - Act 2)
-    "51055": {
-        "name": "Tiến Vào Cõi Vô Tận (v. II)",
-        "text": "[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này và kích hoạt khả năng 'revelation' của nó.\n<b>Objective</b> — Nếu một điều tra viên bước vào The Edge of the Universe, advance.",
-        "flavor": "Bạn tiếp tục lần theo đốm sáng ma quái dẫn đường qua các tầng không gian hiểm trở.",
-        "back_name": "Vật Chứa Đang Chờ Đón",
-        "back_text": "Spawn kẻ địch Seth Bishop <i>(Thrall of Yog-Sothoth)</i> đang để riêng tại The Edge of the Universe.",
-        "back_flavor": "Bạn chạm tới rìa vũ trụ, nơi vết rách dẫn về Đồi Sentinel treo lơ lửng. Bất ngờ, một giọng nói từ bóng tối vang lên: \"Cút đi!\" Gương mặt biến dạng tột cùng của Seth Bishop lộ ra, da thịt gã bò lúc nhúc những đột biến kinh tởm: \"Ta là vật chứa của Ngài! Rời khỏi đây... hoặc chết!\""
-    }
-}
+TRANSLATIONS_DUNWICH_ACTS_AGENDAS: Dict[str, Dict[str, Any]] = {'02042': {'name': 'Những Dãy Hành Lang Tĩnh Lặng',
+           'text': '',
+           'flavor': 'Bạn đã đến khuôn viên Đại học Miskatonic để tìm kiếm Giáo sư Warren Rice. Các lớp học đã kết '
+                     'thúc, và một sự im lặng kỳ bí bao trùm không khí phía trên sân trường.',
+           'back_name': 'Có Thứ Gì Đó Cựa Mình',
+           'back_text': 'Mỗi điều tra viên có từ 5 lá bài trở lên trong chồng bài bỏ của mình chịu 1 horror. Mỗi điều '
+                        'tra viên có từ 10 lá bài trở lên trong chồng bài bỏ của mình chịu 2 horror thay vào đó.\n'
+                        'Nếu người chơi đã hoàn thành The House Always Wins, advance trực tiếp sang agenda 2b. Nếu '
+                        'Extracurricular Activity là kịch bản đầu tiên trong chiến dịch, advance sang agenda 2a.',
+           'back_flavor': 'Trường đại học im ắng như chết. Những bóng đen cuộn quanh chân bạn khi bạn bước đi, và bạn '
+                          'thề rằng có thứ gì đó đang bám theo từng bước chân của bạn. Đó chỉ là do bạn tưởng tượng? '
+                          'Hay thực sự có ai đó - hoặc thứ gì đó - đang rình rập bạn?'},
+ '02043': {'name': 'Nửa Đêm Thanh Vắng',
+           'text': 'Kích thước bàn tay tối đa của mỗi điều tra viên bị giảm đi 3 trong khi kiểm tra kích thước bàn tay '
+                   'của mình trong giai đoạn upkeep.',
+           'flavor': 'Sự biến mất của Giáo sư Rice không phải là điều bất thường duy nhất tại trường đại học. Bạn '
+                     'không chắc chắn chính xác điều gì đang diễn ra, nhưng bạn bắt đầu tin rằng Armitage đã đúng khi '
+                     'nhờ bạn giúp đỡ.',
+           'back_name': 'Một Thí Nghiệm Thất Bại',
+           'back_text': 'Nếu địa điểm Dormitories không ở trong màn chơi, đưa nó vào chơi.\n'
+                        'Nếu The Experiment đang ở trong màn chơi, di chuyển nó 1 địa điểm về phía Dormitories.\n'
+                        'Nếu The Experiment không ở trong màn chơi, spawn nó tại Science Building.',
+           'back_flavor': 'Một tiếng thét sợ hãi vang vọng khắp khuôn viên trường, và nhiều sinh viên tháo chạy khỏi '
+                          'khu phía đông của trường đại học, nơi có tòa nhà Science. Liệu sự hỗn loạn này có liên quan '
+                          'đến sự mất tích của Giáo sư Rice?'},
+ '02044': {'name': 'Quái Thú Xổng Chuồng',
+           'text': '<b>Forced</b> - Khi agenda này chuẩn bị advance do chạm ngưỡng doom threshold: Thay vào đó, loại '
+                   'bỏ toàn bộ doom trong màn chơi và di chuyển The Experiment 1 địa điểm về phía Dormitories.\n'
+                   '<b>Objective</b> - Nếu The Experiment tiến vào Dormitories, advance.',
+           'flavor': 'Một loại sinh vật hoang dã nào đó đang xổng chuồng. Bất kể nó là gì, dường như nó đang hướng về '
+                     'phía khu ký túc xá đại học.',
+           'back_name': 'Không Đủ Nhanh',
+           'back_text': 'Mỗi điều tra viên ngay lập tức chịu 3 horror. Sau đó, tiến tới <b>(→R4)</b>.',
+           'back_flavor': 'Trước khi bạn kịp hành động, bạn nghe thấy tiếng la hét từ phía bắc của khuôn viên trường. '
+                          'Bạn bắt đầu tìm đường về phía tiếng la hét, tầm nhìn của bạn tối sầm lại theo từng bước '
+                          'chân. Ngay khi sinh vật đó lọt vào tầm mắt, bạn cảm thấy bóng tối bao trùm lấy mình, và một '
+                          'lực kéo kéo bạn ra khỏi ý thức. Mọi thứ trở nên đen kịt, và bạn ngất lịm đi.'},
+ '02045': {'name': 'Sau Giờ Học',
+           'text': '',
+           'flavor': 'Giáo sư Rice được nhìn thấy lần cuối cách đây vài giờ bởi một trong những sinh viên của '
+                     'Armitage, trong tòa nhà Humanities.',
+           'back_name': 'Bác Lao Công Trưởng',
+           'back_text': 'Xáo trộn chồng bài encounter bỏ và "Jazz" Mulligan đang để riêng vào chồng bài encounter.',
+           'back_flavor': 'Bạn không thể tìm thấy Giáo sư Rice, nhưng một trong những sinh viên bạn nói chuyện đã nhắc '
+                          'đến một người đàn ông kỳ lạ bước vào văn phòng của Rice. Thật không may, cánh cửa dẫn vào '
+                          'các văn phòng khoa bị khóa vào giờ muộn này. Người sinh viên nói rằng bác lao công trưởng, '
+                          '"Jazz", có thể cho bạn vào, nếu bạn có thể tìm thấy ông ấy.'},
+ '02046': {'name': 'Tung Tích Của Rice',
+           'text': '[action] Chi trả 1 manh mối: Bỏ 5 lá bài trên cùng của chồng bài encounter (10 lá trên cùng thay '
+                   'vào đó nếu chỉ có 1 người chơi trong trò chơi).\n'
+                   '<b>Forced</b> - Nếu bạn bỏ "Jazz" Mulligan vì bất kỳ lý do gì, giải quyết hiệu ứng revelation của '
+                   'ông ấy.\n'
+                   '<b>Objective</b> - Khi bạn nắm quyền kiểm soát "Jazz" Mulligan, advance.',
+           'flavor': 'Lo lắng cho sự an toàn của Giáo sư Rice, bạn tìm kiếm bác lao công trưởng, người có thể mở cửa '
+                     'cho bạn vào những khu vực bị khóa trong khuôn viên trường.',
+           'back_name': 'The Experiment Đã Xổng Ra!',
+           'back_text': 'Nếu địa điểm Alchemy Labs không ở trong màn chơi, đưa nó vào chơi. Nếu bạn đang ở Agenda 1 '
+                        'hoặc 2, spawn The Experiment tại Alchemy Labs.\n'
+                        'Nếu bạn đã hoàn thành The House Always Wins, đưa Alchemical Concoction đang để riêng vào chơi '
+                        'bên dưới Alchemy Labs. Nếu Extracurricular Activity là kịch bản đầu tiên của chiến dịch, loại '
+                        'bỏ Alchemical Concoction đang để riêng khỏi trò chơi thay vào đó.',
+           'back_flavor': 'Bạn thuyết phục "Jazz" rằng có điều gì đó kỳ lạ đang diễn ra, và Giáo sư Rice có thể đang '
+                          'gặp nguy hiểm. Ông ấy không đủ tin tưởng để giao chìa khóa cho bạn, nhưng đồng ý đi cùng '
+                          'bạn.\n'
+                          'Đột nhiên, bạn nghe thấy một tiếng đổ vỡ phát ra từ tòa nhà Science, và một sinh viên lao '
+                          'về phía bạn. "Cứu với!" cậu kêu lên. "Có một loại động vật nào đó xổng chuồng trong phòng '
+                          'thí nghiệm hóa học! Cháu chỉ vừa thoáng nhìn thấy nó, nhưng..." Cậu rùng mình. "Cháu nghĩ '
+                          'nó đang hướng đến khu ký túc xá! Các bác phải làm gì đó đi!"'},
+ '02047': {'name': 'An Toàn Học Đường',
+           'text': '<b>Objective</b> - Tìm và hoàn thành một mục tiêu trên một lá bài encounter khác.',
+           'flavor': 'Bạn chỉ có vài khoảnh khắc để phản ứng. Bạn có thể cảnh báo các sinh viên trong khu ký túc xá và '
+                     'hộ tống họ đến nơi an toàn, hoặc tiếp tục nhiệm vụ tìm kiếm Giáo sư Rice trong các văn phòng '
+                     'khoa. Hoặc, có lẽ bạn có thể cố gắng tiêu diệt con quái thú đang đe dọa khuôn viên trường.',
+           'back_name': 'Cái Chết Của Quái Thú',
+           'back_text': '<b>(→R3)</b>',
+           'back_flavor': 'Sinh vật quái dị phát ra một tiếng thét khủng khiếp khi nó gục ngã trước những vết thương '
+                          'và đổ sụp xuống đất. Một mùi hôi thối bốc ra từ cái xác khi da thịt nó bắt đầu sủi bọt và '
+                          'sôi lên. Sự nhẹ nhõm của bạn chuyển thành ghê tởm khi cơ thể nó bắt đầu co lại và tan rã. '
+                          'Vài phút sau, cái xác gần như bốc hơi hoàn toàn thành một khối dính nhớp, và mùi hôi thối '
+                          'biến mất. Bên trong những tàn dư của cơ thể sinh vật, tất cả những gì bạn tìm thấy là một '
+                          'bộ xương - cấu trúc xương của một loài chó.'},
+ '02063': {'name': 'Clover Club',
+           'text': 'Mỗi kẻ địch [[Criminal]] nhận Aloof.\n'
+                   '<b>Forced</b> - Nếu một điều tra viên gây damage cho một kẻ địch [[Criminal]]: Ngay lập tức '
+                   'advance.',
+           'flavor': 'Bạn đã bước vào Sòng bạc Clover Club để tìm kiếm Tiến sĩ Morgan. Câu lạc bộ nhộn nhịp vào giờ '
+                     'muộn này, tràn ngập những khách quen muốn thư giãn và uống rượu, hoặc thử vận may lớn. Bạn dường '
+                     'như không gặp nhiều nguy hiểm.',
+           'back_name': 'Đúng Hướng',
+           'back_text': 'Xáo trộn chồng bài encounter bỏ vào chồng bài encounter.\n'
+                        'Nếu người chơi đã hoàn thành Extracurricular Activity, advance trực tiếp sang agenda 2b. Nếu '
+                        'The House Always Wins là kịch bản đầu tiên trong chiến dịch, advance sang agenda 2a.',
+           'back_flavor': 'Những câu hỏi thăm dò của bạn đã thu hút sự chú ý của nhiều người đàn ông - những tên côn '
+                          'đồ được thuê, nhìn bề ngoài là biết. "Francis không muốn bị quấy rầy đâu," một tên trong số '
+                          'chúng nói. "Chúng tôi khuyên các người nên rời khỏi đây trước khi chúng tôi buộc các người '
+                          'phải rời đi."'},
+ '02064': {'name': 'Côn Đồ Ngầm',
+           'text': '',
+           'flavor': 'Hầu hết những khách quen khác dường như không để ý đến những tên xã hội đen và côn đồ đang vây '
+                     'quanh bạn. Nhưng bạn nhận ra bản chất thực sự của điều này - bạn sắp bị ăn đòn tơi bời.',
+           'back_name': 'Hỗn Loạn Bất Ngờ',
+           'back_text': 'Spawn một kẻ địch ngẫu nhiên từ encounter set <em>Hideous Abominations</em> đang để riêng tại '
+                        'Clover Club Lounge. Xáo trộn phần còn lại của encounter set đó, encounter set <em>Striking '
+                        'Fear</em> đang để riêng, và chồng bài encounter bỏ vào chồng bài encounter.\n'
+                        'Di chuyển tất cả điều tra viên và các kẻ địch chưa engaged từ La Bella Luna đến Clover Club '
+                        'Lounge. Loại bỏ La Bella Luna khỏi trò chơi.',
+           'back_flavor': 'Bạn nghe thấy một tiếng đổ vỡ từ đâu đó bên ngoài và những tiếng thét đau đớn trong phòng '
+                          'chờ lounge. Một quái vật kinh hoàng phá tung lối vào câu lạc bộ, nghiền nát cầu thang và '
+                          'húc đổ cả dân xã hội đen lẫn khách chơi.'},
+ '02065': {'name': 'Hỗn Loạn Tại Clover Club',
+           'text': '<b>Forced</b> - Khi giai đoạn kẻ địch bắt đầu: Bỏ mỗi kẻ địch [[Criminal]] ở cùng địa điểm với một '
+                   'kẻ địch [[Abomination]].',
+           'flavor': 'Giữa cơn hỗn loạn và hoang mang, những quái vật kỳ lạ tấn công tất cả mọi người trong câu lạc '
+                     'bộ. Những tiếng la hét vang vọng khắp các hành lang khi máu bắt đầu bắn tung tóe.',
+           'back_name': 'Tòa Nhà Sụp Đổ',
+           'back_text': '<b>(→R4)</b>',
+           'back_flavor': 'Khi những quái vật kỳ lạ tiếp tục tàn phá câu lạc bộ, nền móng của tòa nhà rung chuyển và '
+                          'lắc lư dữ dội. Bạn tháo chạy về phía lối thoát hiểm, nhưng bạn bị kẹt trong đống đổ nát sụp '
+                          'xuống khi câu lạc bộ bị phá hủy hoàn toàn.'},
+ '02066': {'name': 'Vận May Kẻ Mới Chơi',
+           'text': '[reaction] Khi bạn tiết lộ một chaos token: Bạn có thể coi token đó như thể nó là bất kỳ token nào '
+                   'khác trong túi chaos. Nếu bạn làm vậy, hãy nhớ rằng bạn đã "gian lận" ("cheated"). (Giới hạn cả '
+                   'nhóm một lần mỗi vòng.)\n'
+                   '<b>Objective</b> - Khi các điều tra viên đã thu thập đủ số lượng manh mối cần thiết, họ phải ngay '
+                   'lập tức chi trả chúng và advance.',
+           'flavor': 'Bạn cần tìm Tiến sĩ Morgan. Câu lạc bộ đông nghẹt; có lẽ có ai đó biết ông ấy đang ở đâu.',
+           'back_name': 'Tay Chơi Lớn',
+           'back_text': 'Đưa Darkened Hall đang để riêng vào chơi.\n'
+                        'Nếu đang là Agenda 1, bỏ các lá bài từ trên cùng của chồng bài encounter cho đến khi một kẻ '
+                        'địch [[Criminal]] bị bỏ, và spawn kẻ địch đó tại Darkened Hall.',
+           'back_flavor': 'Sau khi nói chuyện với một số con bạc và nhân viên phục vụ, có vẻ như Tiến sĩ Morgan dạo '
+                          'này thắng khá đậm. Thay vì rút tiền thắng cược, ông đã bị thuyết phục cược gấp đôi. Ông '
+                          'được nhìn thấy lần cuối khi bước vào hành lang có người canh gác gần phía sau phòng chơi '
+                          'bài.'},
+ '02067': {'name': 'Trò Chơi Cá Cược',
+           'text': '<b>Objective</b> - Chỉ các điều tra viên trong VIP Area mới có thể cùng nhau chi trả số lượng manh '
+                   'mối cần thiết, theo nhóm, để advance.',
+           'flavor': 'Tiến sĩ Morgan đang ở đâu đó trong khu vực riêng tư của câu lạc bộ, nơi chỉ VIP và các quản lý '
+                     'câu lạc bộ mới được phép vào. Nếu bạn muốn tìm thấy ông ấy, bạn sẽ phải lẻn vào hoặc thậm chí '
+                     'chiến đấu mở đường vào.',
+           'back_name': 'Số Phận Của Tiến Sĩ Morgan',
+           'back_text': '<b>Nếu người chơi chưa hoàn thành Extracurricular Activity:</b><blockquote><i>Bạn tìm thấy '
+                        'Tiến sĩ Morgan đang đánh bạc trong một trong những phòng VIP... nhưng dường như ông đang chơi '
+                        'bài với hai thi thể bất tỉnh, đồng tử của ông giãn ra như đang trong cơn mê. Ông dường như '
+                        'không thể ngừng cười, mỉm cười và trò chuyện với những "người chơi" khác.</i></blockquote>Đưa '
+                        'Dr. Morgan đang để riêng vào chơi tại VIP Area. Advance sang Act 3a - "All In."\n'
+                        '<hr><b>Nếu người chơi đã hoàn thành Extracurricular Activity:</b><blockquote><em>Các phòng '
+                        'VIP tràn ngập những thi thể đẫm máu bị xé rách của những khách chơi bất hạnh. Dường như không '
+                        'có dấu vết nào của Tiến sĩ Morgan. Bạn nghe thấy tiếng la hét và tiếng súng nổ từ khu vực '
+                        'chính của câu lạc bộ.</em></blockquote>Đưa Peter Clover đang để riêng vào chơi tại Clover '
+                        'Club Bar. Tìm kiếm trong chồng bài encounter (hoặc ngoài màn chơi) một kẻ địch '
+                        '[[Abomination]], và spawn nó tại Clover Club Bar. Advance sang Act 3a - "Fold."',
+           'back_flavor': ''},
+ '02068': {'name': 'Tất Tay',
+           'text': 'Trong khi Dr. Morgan không bị kiểm soát bởi một người chơi, ông nhận "[action]: <b>Parley.</b> '
+                   'Kiểm tra [willpower] (3) để lay Tiến sĩ Morgan tỉnh khỏi cơn mê muội của ông. Nếu thành công, đặt '
+                   '1 manh mối từ ngân hàng token lên ông. Nếu có 1 [per_investigator] manh mối trên Dr. Morgan, nắm '
+                   'quyền kiểm soát ông."\n'
+                   '<b>Objective</b> - Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.',
+           'flavor': 'Có hay không có Tiến sĩ Morgan, bạn cũng phải thoát khỏi nơi này. Nhanh lên.',
+           'back_name': 'An Toàn... Hiện Tại Là Vậy',
+           'back_text': '- Nếu một điều tra viên resign với Dr. Francis Morgan dưới quyền kiểm soát của mình, '
+                        '<b>(→R2)</b>\n'
+                        '- Nếu không, <b>(→R1)</b>',
+           'back_flavor': 'Bạn thoát khỏi câu lạc bộ, cố gắng hết sức để trông kín đáo khi vài chiếc xe hơi tấp vào '
+                          'gần đường. Một số người đàn ông và phụ nữ mặt lạnh như tiền bước ra, chạy về phía lối vào '
+                          'nhà hàng để kiểm soát tình hình. Một người trong số họ nhìn chằm chằm vào bạn, tay đặt trên '
+                          'báng khẩu súng lục .38 của hắn, nhưng may mắn thay hắn quay sự chú ý trở lại phần còn lại '
+                          'của nhóm mình và theo họ vào câu lạc bộ. Bạn thở phào nhẹ nhõm...'},
+ '02069': {'name': 'Bỏ Bài',
+           'text': 'Trong khi Peter Clover không bị kiểm soát bởi một người chơi, ông nhận "[action]: <b>Parley.</b> '
+                   'Kiểm tra [willpower] (3) để thuyết phục Peter đi theo bạn. Nếu thành công, đặt 1 manh mối từ ngân '
+                   'hàng token lên ông. Nếu có 1 [per_investigator] manh mối trên Peter Clover, nắm quyền kiểm soát '
+                   'ông."\n'
+                   '<b>Objective</b> - Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.',
+           'flavor': '"Miễn phí đồ uống cho bất kỳ ai đưa tôi biến khỏi nơi quỷ quái này!" Một người đàn ông hét lên '
+                     'từ quầy bar.',
+           'back_name': 'Thoát Khỏi Câu Lạc Bộ',
+           'back_text': '- Nếu một điều tra viên resign với Peter Clover dưới quyền kiểm soát của mình, <b>(→R3)</b>\n'
+                        '- Nếu không, <b>(→R1)</b>',
+           'back_flavor': 'Bạn tìm đường hướng về những con phố trơn trượt vì mưa của Arkham.'},
+ '02119': {'name': 'Khu Vực Hạn Chế',
+           'text': '<b>Forced</b> - Khi Hunting Horror tiến vào chơi: Gắn bản sao Shadow-spawned đang để riêng vào nó, '
+                   'hoặc thêm 1 tài nguyên vào Shadow-spawned nếu nó đã được gắn.',
+           'flavor': 'Tiến sĩ Armitage đã giao bản dịch tiếng Latinh của cuốn The Necronomicon của trường đại học cho '
+                     'cộng sự của mình, Harold Walsted, người phụ trách Bảo tàng Đại học Miskatonic. Lo ngại rằng ai '
+                     'đó vẫn có thể đang truy lùng cuốn sách, bạn đã đến bảo tàng để thu hồi nó.',
+           'back_name': 'Sinh Vật Của Hư Không',
+           'back_text': 'Nếu Hunting Horror đang ở trong màn chơi, thêm 1 doom vào nó.\n'
+                        'Nếu Hunting Horror không ở trong màn chơi, tìm kiếm trong chồng bài encounter, chồng bài bỏ, '
+                        'và hư không (the void) Hunting Horror và spawn nó tại Museum Halls, nếu có thể. Xáo trộn '
+                        'chồng bài encounter bỏ vào chồng bài encounter.',
+           'back_flavor': 'Từ bóng tối của những dãy hành lang bảo tàng, một sinh vật khủng khiếp trườn ra, dài ngoằng '
+                          'và uốn lượn như rắn, được đẩy đi bởi đôi cánh da đen kịt.'},
+ '02120': {'name': 'Bóng Tối Sâu Thẳm Hơn',
+           'text': '<b>Forced</b> - Khi Hunting Horror tiến vào chơi: Gắn bản sao Shadow-spawned đang để riêng vào nó, '
+                   'hoặc thêm 1 tài nguyên vào Shadow-spawned nếu nó đã được gắn.',
+           'flavor': 'Những bóng đen trong bảo tàng lớn dần và trở nên tăm tối hơn. Khi những cái bóng dài ra và dịch '
+                     'chuyển, chúng bắt đầu gợi lên thân hình gân guốc của một sinh vật kỳ dị đang lao vút ở rìa nhận '
+                     'thức của bạn...',
+           'back_name': 'Bị Săn Đuổi Ráo Riết',
+           'back_text': 'Nếu Hunting Horror đang ở trong màn chơi, thêm 1 doom vào nó.\n'
+                        'Nếu Hunting Horror không ở trong màn chơi, tìm kiếm trong chồng bài encounter, chồng bài bỏ, '
+                        'và hư không (the void) Hunting Horror và spawn nó tại Museum Halls, nếu có thể. Xáo trộn '
+                        'chồng bài encounter bỏ vào chồng bài encounter.',
+           'back_flavor': 'Sinh vật không hề buông tha, truy đuổi bạn khắp bảo tàng.'},
+ '02121': {'name': 'Trong Mọi Góc Khuất',
+           'text': '<b>Forced</b> - Khi Hunting Horror tiến vào chơi: Gắn bản sao Shadow-spawned đang để riêng vào nó, '
+                   'hoặc thêm 1 tài nguyên vào Shadow-spawned nếu nó đã được gắn.',
+           'flavor': 'Sinh vật trong bảo tàng ngày càng lớn hơn và đáng sợ hơn theo từng khoảnh khắc trôi qua. Cơ thể '
+                     'của nó trườn từ bóng tối này sang bóng tối khác, mọi ngóc ngách của mọi căn phòng đều là nơi ẩn '
+                     'náu tiềm tàng của con quái thú ghê tởm.',
+           'back_name': 'Bị Đuổi Ra Ngoài',
+           'back_text': 'Mỗi điều tra viên chưa resign bị đánh bại và chịu 1 tổn thương thể chất.',
+           'back_flavor': 'Không có cách nào đánh bại sinh vật trong bảo tàng, bạn tháo chạy. Trong mọi góc khuất của '
+                          'mỗi hành lang, thân thể trườn bò của con quái vật rắn có thể được nhìn thấy, những dãy hành '
+                          'lang bảo tàng ngày càng tối tăm hơn với sự hiện diện của sinh vật này. Khi bạn đến lối vào, '
+                          'nó chặn cửa và tấn công bạn bằng những chiếc răng nanh khủng khiếp của nó. Bạn hầu như chỉ '
+                          'vừa đủ thoát khỏi tòa nhà để giữ lấy mạng sống, mặc dù ảnh hưởng từ nọc độc của sinh vật sẽ '
+                          'để lại vết sẹo mãi mãi.'},
+ '02122': {'name': 'Tìm Đường Vào Trong',
+           'text': '',
+           'flavor': 'Thật không may, lối vào Bảo tàng được khóa chặt vào giờ muộn này. Một nhân viên bảo vệ có thể '
+                     'nhìn thấy qua cửa sổ phía trước của tòa nhà, hoàn toàn không để ý đến xung quanh. Có lẽ bạn có '
+                     'thể tìm cách thu hút sự chú ý của anh ta và thuyết phục anh ta cho bạn vào.',
+           'back_name': 'Bước Vào Trong',
+           'back_text': '<b>Nếu bạn đã chi trả manh mối để advance:\n'
+                        '</b><blockquote><i>Bạn tìm thấy cửa sổ gần người bảo vệ nhất và gõ đủ to để thu hút sự chú ý '
+                        'của anh ta. Anh ta giật mình nhảy dựng lên, rồi mở hé cửa sổ. "Các người muốn gì?" anh ta rụt '
+                        'rè hỏi. Bạn giải thích tình hình cho anh ta và nói với anh ta rằng anh ta đang gặp nguy hiểm '
+                        'nghiêm trọng. Anh ta cẩn thận mở cửa trước của Bảo tàng, lắc đầu. "Đáng lẽ hôm nay tôi thậm '
+                        'chí còn không phải làm việc ở đây..."</i></blockquote>Chọn một điều tra viên để nắm quyền '
+                        'kiểm soát asset Adam Lynch đang để riêng. Lật mở Museum Halls. Advance sang Act 2a - "Night '
+                        'at the Museum."\n'
+                        '<hr><b>Nếu bạn đã thực hiện thành công khả năng [action] trên Museum Halls để advance:\n'
+                        '</b><blockquote><i>Với sức mạnh phi thường, bạn phá tung cánh cửa vào Bảo tàng, gây ra tiếng '
+                        'động đáng kể khi làm vậy. Nhân viên bảo vệ nhìn thấy bạn bước vào, kêu lên vì sợ hãi, và lao '
+                        'về phía sau của bảo tàng.</i></blockquote>Cánh cửa dẫn vào Museum Halls đã bị phá vỡ. Lật mở '
+                        'Museum Halls. Advance sang Act 2a - "Breaking and Entering."',
+           'back_flavor': ''},
+ '02123': {'name': 'Một Đêm Tại Bảo Tàng',
+           'text': '<b>Objective</b> - Nếu một điều tra viên tiến vào Exhibit Hall (<i>Restricted Hall</i>), advance.',
+           'flavor': 'Cuốn Necronomicon đang được lưu giữ trong một Phòng Hạn Chế Restricted Hall ở đâu đó trong bảo '
+                     'tàng. Adam hầu như không biết đường đi lối lại, và giật mình trước mỗi tiếng cọt kẹt của tòa nhà '
+                     'cũ. "Tôi mới bắt đầu làm việc ở đây tuần trước," anh giải thích. "Các bạn bảo có rắc rối gì đang '
+                     'xảy ra cơ?" Bạn không nỡ kể cho anh nghe toàn bộ câu chuyện.',
+           'back_name': 'Số Phận Của Người Quản Lý',
+           'back_text': 'Tìm kiếm trong chồng bài encounter, chồng bài bỏ, hư không (the void), và tất cả các khu vực '
+                        'chơi Hunting Horror, và đặt nó tại Exhibit Hall (<i>Restricted Hall</i>), ready.\n'
+                        'Advance sang Act 3a.',
+           'back_flavor': 'Khi bạn bước vào phòng hạn chế, bạn thấy người quản lý bảo tàng đang nằm trong một vũng '
+                          'máu, ruột gan ông bị văng tung tóe trong một cảnh tượng kỳ dị. Bụng bạn cồn cào và bạn phải '
+                          'cố kìm nén cơn buồn nôn. Bất kể thứ gì đã làm chuyện này, nó vẫn còn ở gần đây...'},
+ '02124': {'name': 'Đột Nhập Trái Phép',
+           'text': '<b>Objective</b> - Nếu một điều tra viên tiến vào Exhibit Hall (<i>Restricted Hall</i>), advance.',
+           'flavor': 'Cuốn Necronomicon đang được lưu giữ trong một Phòng Hạn Chế Restricted Hall ở đâu đó trong bảo '
+                     'tàng.',
+           'back_name': 'Số Phận Của Người Bảo Vệ',
+           'back_text': 'Chọn một điều tra viên để nắm quyền kiểm soát asset Harold Walsted đang để riêng.\n'
+                        'Tìm kiếm trong chồng bài encounter, chồng bài bỏ, hư không (the void), và tất cả các khu vực '
+                        'chơi Hunting Horror, và đặt nó tại Exhibit Hall (<i>Restricted Hall</i>), ready.\n'
+                        'Advance sang Act 3a.',
+           'back_flavor': 'Khi bạn bước vào Phòng Hạn Chế, bạn thấy người quản lý bảo tàng đang nắm chặt một bức tượng '
+                          'trang trí như thể nó là một chiếc gậy, bộ com-lê của ông dính đầy máu, vẻ mặt hoảng loạn. '
+                          'Người bảo vệ bạn nhìn thấy trước đó nằm trong một vũng máu gần đó, ruột gan anh ta văng '
+                          'tung tóe trong một cảnh tượng ghê rợn. Bụng bạn quặn thắt và bạn phải cố kìm nén cơn buồn '
+                          'nôn. "Tôi đã cố ngăn nó lại, nhưng..." người quản lý nói nhỏ, giọng run rẩy. Bất kể thứ gì '
+                          'đã làm chuyện này, nó vẫn còn ở gần đây...'},
+ '02125': {'name': 'Tìm Kiếm Cổ Thư',
+           'text': '<b>Objective</b> - Nếu không còn manh mối nào trong Exhibit Hall <i>(Restricted Hall)</i>, '
+                   'advance.',
+           'flavor': 'Ở đâu đó trong khu vực này là bản dịch tiếng Latinh của cuốn Necronomicon do Olaus Wormius thực '
+                     'hiện. Bạn phải tìm thấy nó và trốn thoát trong khi còn có thể!',
+           'back_name': 'The Necronomicon',
+           'back_text': 'Các điều tra viên phải quyết định (chọn một):\n'
+                        '- Nó quá nguy hiểm để giữ lại. Chúng ta phải phá hủy nó. <b>(→R1)</b>\n'
+                        '- Nó quá giá trị để phá hủy. Chúng ta phải giữ nó an toàn. <b>(→R2)</b>',
+           'back_flavor': 'Cuối cùng, bạn cũng tìm thấy chiếc hộp có khóa chứa cuốn Necronomicon.\n'
+                          'Cuốn sách cổ đồ sộ, dài hơn tám trăm trang, chứa đầy đủ các hình ảnh rùng rợn, công thức, '
+                          'bùa chú, lời tiên tri và mô tả về những sinh vật từ bên ngoài ngưỡng cửa không gian.\n'
+                          'Không còn nghi ngờ gì nữa, đó là một cuốn sách nguy hiểm... Nhưng những bí mật của nó có '
+                          'thể rất hữu ích.'},
+ '02160': {'name': 'Vết Rách Trong Thực Tại',
+           'text': '',
+           'flavor': 'Khi chuyến tàu đến Dunwich dừng lại một cách đột ngột rung chuyển, bạn nhìn ra ngoài cửa sổ phía '
+                     'sau và thấy một vết rách khổng lồ trên bầu trời, như một vết rách trên một mảnh vải. Vài toa tàu '
+                     'phía sau cùng bị kéo giật ngược trở lại, và có một tiếng nghiến kim loại khủng khiếp khi chúng '
+                     'bị tách rời. Các toa tàu lật nhào lên phía trên và tiến vào vết nứt rạn trên bầu trời. Những '
+                     'hành khách gần đó đang hoảng loạn, những người khác đang co ro trên ghế ngồi của mình, và một cụ '
+                     'ông đã ngất lịm đi vì sợ hãi.',
+           'back_name': 'Tiếp Tục Di Chuyển!',
+           'back_text': 'Loại bỏ địa điểm ngoài cùng bên trái khỏi trò chơi (hoặc đặt nó vào khu vực trưng bày thành '
+                        'tích nếu nó có Victory X và không có manh mối nào trên đó). Mỗi điều tra viên tại địa điểm đó '
+                        'bị đánh bại. Mỗi kẻ địch và asset tại địa điểm đó bị bỏ.\n'
+                        'Bỏ tất cả các manh mối do các điều tra viên kiểm soát.',
+           'back_flavor': 'Toa sau cùng của đoàn tàu tách rời ra khi bị kéo ngược trở lại. Trước sự kinh hoàng của '
+                          'bạn, nó bay bổng lên khỏi đường ray và bị cánh cổng phía trên bạn nuốt chửng.'},
+ '02161': {'name': 'Cái Miệng Rộng Ra',
+           'text': '',
+           'flavor': 'Vết rách ngày càng lớn hơn, và bạn có thể cảm thấy toa sau cùng của đoàn tàu đang rung lắc khi '
+                     'nó bị kéo ngược trở lại. Tình hình đe dọa bùng phát thành hỗn loạn khi nhiều hành khách nhận ra '
+                     'mối nguy hiểm mà họ đang gặp phải. Một số hành khách đang tìm chỗ trốn, trong khi những người '
+                     'khác đang chạy tán loạn khắp các khoang trong nỗi khiếp sợ.',
+           'back_name': 'Đừng Dừng Lại!',
+           'back_text': 'Loại bỏ địa điểm ngoài cùng bên trái khỏi trò chơi (hoặc đặt nó vào khu vực trưng bày thành '
+                        'tích nếu nó có Victory X và không có manh mối nào trên đó). Mỗi điều tra viên tại địa điểm đó '
+                        'bị đánh bại. Mỗi kẻ địch và asset tại địa điểm đó bị bỏ.\n'
+                        'Bỏ tất cả các manh mối do các điều tra viên kiểm soát.',
+           'back_flavor': 'Toa tàu tiếp theo bị xé toạc về phía sau với một lực dữ dội. Một người đàn ông trung niên '
+                          'bám vào bằng đầu ngón tay khi toa tàu bay không hề bị cản trở về phía vết nứt. Chỉ trong '
+                          'chốc lát, toa tàu bị nuốt chửng hoàn toàn, và người đàn ông buông tay thay vì bị kéo vào '
+                          'cõi hư không. Ông bắt đầu rơi xuống, nhưng bị lực hút của vết nứt tóm lấy và cuốn vào bên '
+                          'trong dù thế nào đi nữa.'},
+ '02162': {'name': 'Lăn Ngược Trở Lại',
+           'text': '',
+           'flavor': 'Lực kéo của vết nứt trên bầu trời dường như mạnh hơn, và toàn bộ đoàn tàu bắt đầu lăn ngược trở '
+                     'lại dọc theo đường ray. Những toa sau cùng của đoàn tàu bắt đầu rung bần bật, lực hút của vết '
+                     'nứt đe dọa tách rời chúng. Bạn phải thoát ra khỏi những toa tàu này nhanh nhất có thể!',
+           'back_name': 'Nó Đang Nhanh Hơn!',
+           'back_text': 'Loại bỏ từng địa điểm trong số hai địa điểm ngoài cùng bên trái khỏi trò chơi (hoặc đặt nó '
+                        'vào khu vực trưng bày thành tích nếu một trong hai có Victory X và không có manh mối nào trên '
+                        'đó). Mỗi điều tra viên tại những địa điểm đó bị đánh bại. Mỗi kẻ địch và asset tại những địa '
+                        'điểm đó bị bỏ.\n'
+                        'Bỏ tất cả các manh mối do các điều tra viên kiểm soát.',
+           'back_flavor': 'Hai toa tàu gần cánh cổng nhất bị cắt đứt khỏi phần còn lại của đoàn tàu bởi một luồng hơi '
+                          'nước nóng không thể tưởng tượng nổi, thứ cắt xuyên qua kim loại như dao cắt qua bơ. Các toa '
+                          'tàu bị hút lên trên và bay vào cánh cổng. Thứ gì đó phía trên đoàn tàu phát ra một tiếng '
+                          'rít khủng khiếp, mặc dù đối với tai bạn, nó giống như âm thanh the thé của một ống dẫn hơi '
+                          'bị vỡ.'},
+ '02163': {'name': 'Bị Cuốn Vào',
+           'text': '',
+           'flavor': 'Cánh cổng kêu lách tách đầy uy lực khi sức mạnh của nó tăng lên. Đất và đá từ rìa cây cầu phía '
+                     'sau bạn bị xé toạc khỏi mặt đất và cây cối bị bật rễ, bị cuốn vào cánh cổng. Một hành khách trẻ '
+                     'tuổi đập vỡ cửa sổ toa tàu của bạn và hét lên: "Chúng ta phải biến khỏi đây thôi!" Cậu nhảy ra '
+                     'khỏi cửa sổ, nhưng trước khi chạm xuống dòng sông bên dưới, cậu bị quắp trong móng vuốt của một '
+                     'sinh vật bay nhanh, và bị mang đi khuất tầm mắt. Một vệt hơi nước để lại sau đường bay của sinh '
+                     'vật.',
+           'back_name': 'Không Nơi Nào An Toàn',
+           'back_text': 'Loại bỏ từng địa điểm trong số hai địa điểm ngoài cùng bên trái khỏi trò chơi (hoặc đặt nó '
+                        'vào khu vực trưng bày thành tích nếu một trong hai có Victory X và không có manh mối nào trên '
+                        'đó). Mỗi điều tra viên tại những địa điểm đó bị đánh bại. Mỗi kẻ địch và asset tại những địa '
+                        'điểm đó bị bỏ.\n'
+                        'Bỏ tất cả các manh mối do các điều tra viên kiểm soát.',
+           'back_flavor': 'Hai toa tàu sau cùng bắt đầu tan chảy khi chúng chứa đầy hơi nước quá nhiệt. Kim loại bị '
+                          'biến dạng, và các hành khách bên trong gào thét trong đau đớn cùng cực. Các toa tàu bị xé '
+                          'toạc khỏi đường ray xe lửa cùng với các thanh tà vẹt và những mảng cầu phía sau bạn.'},
+ '02164': {'name': 'Hết Thời Gian',
+           'text': '',
+           'flavor': 'Vết rách trên bầu trời vặn vẹo và rung chuyển, hoàn toàn biến dạng. Kích thước của nó giờ đây '
+                     'khổng lồ, hình dạng của nó méo mó và dịch chuyển, như thể nó sắp sửa nổ tung.',
+           'back_name': 'Bị Hút Vào Trong',
+           'back_text': 'Mỗi điều tra viên ngay lập tức bị đánh bại và chịu 1 tổn thương tinh thần. <b>(&rarr;R2)</b>',
+           'back_flavor': 'Toàn bộ cây cầu nứt toác dưới áp lực của cánh cổng, và gãy vụn ra. Thay vì lao xuống sông, '
+                          'các toa tàu còn lại bị kéo lên trời, hướng về phía vết rách. Bạn bám chặt lấy để giữ lấy '
+                          'mạng sống và gào thét trong kinh hoàng khi bị kéo vào cánh cổng. Sau đó, mọi thứ tối đen '
+                          'như mực.'},
+ '02165': {'name': 'Chạy Đi!',
+           'text': '<b>Objective</b> - Nếu một điều tra viên tiến vào Engine Car, ngay lập tức advance.',
+           'flavor': 'Đoàn tàu đã dừng lại trên một cây cầu cao phía trên Sông Miskatonic - bạn có thể sống sót sau cú '
+                     'ngã, nhưng bạn không mấy lạc quan về cơ hội của mình. Lựa chọn tốt nhất của bạn là đến toa đầu '
+                     'máy nhanh nhất có thể và làm cho đoàn tàu chạy trở lại.',
+           'back_name': 'Đôi Cánh Bằng Hơi Nước',
+           'back_text': '<b>Điều tra viên tiến vào Engine Car đọc phần sau (thành tiếng):\n'
+                        '</b><blockquote><i>Một toa tiếp than chứa đầy than chặn đường bạn đến buồng lái đầu máy. Nuốt '
+                        'nỗi sợ hãi vào trong, bạn trèo ra khỏi cửa sổ gần đó và trèo lên nóc đoàn tàu, băng qua toa '
+                        'tiếp than. Chuyển động lùi đều đặn của đoàn tàu khiến bạn khó giữ thăng bằng. Khi bạn đến '
+                        'gần, một sinh vật có cánh lao vút xuống từ phía trên, cơ thể của nó cấu thành từ hơi nước '
+                        'nóng hổi.</i></blockquote>Bạn phải quyết định (chọn một):\n'
+                        '- Kiểm tra [agility] (3) để cố gắng né tránh sinh vật. Nếu bạn thất bại, bạn nhảy quá xa và '
+                        'chỉ vừa đủ bám vào thành tàu, treo lơ lửng để giữ mạng sống. Mặc dù bạn cố gắng kéo mình lên, '
+                        'nhưng trải nghiệm này thật kinh hoàng. Bạn chịu 1 tổn thương tinh thần.\n'
+                        '- Kiểm tra [combat] (3) để cố gắng chịu đựng sức nóng tột độ của sinh vật. Nếu bạn thất bại, '
+                        'sinh vật bay xuyên qua người bạn và sức nóng thiêu đốt bạn. Bạn chịu 1 tổn thương thể chất.',
+           'back_flavor': ''},
+ '02166': {'name': 'Khởi Động Đầu Máy Xe Lửa!',
+           'text': '<b>Objective</b> - Nếu không có manh mối nào trong Engine Car, ngay lập tức advance.',
+           'flavor': 'Bạn đã tìm cách đến được buồng lái đầu máy, nhưng giờ bạn phải khởi động lại động cơ để có thể '
+                     'chạy thoát khỏi lực hút của cánh cổng!',
+           'back_name': 'Chuyển Động Tiến Lên',
+           'back_text': '<b>(&rarr;R1)</b>',
+           'back_flavor': 'Đầu máy gầm lên sống lại và bắt đầu chuyển động. Bạn xúc than vào buồng đốt của đầu máy và '
+                          'cảm thấy nhẹ nhõm khi thấy đoàn tàu đang di chuyển về phía trước dọc theo đường ray một lần '
+                          'nữa.'},
+ '02196': {'name': 'Những Vụ Mất Tích Kỳ Lạ',
+           'text': '',
+           'flavor': 'Sự chào đón bạn ở Dunwich rất lạnh nhạt. Một chuỗi các vụ mất tích đã khiến người dân vốn đã xa '
+                     'cách càng thêm căng thẳng. Hầu hết họ nhìn bạn với sự nghi ngờ, và rất ít người sẵn lòng giúp đỡ '
+                     'trong cuộc điều tra của bạn. Ai biết được điều gì sẽ xảy ra nếu bạn không sớm tìm ra vị trí của '
+                     'những người dân thị trấn mất tích...',
+           'back_name': 'Máu Đầu Tiên',
+           'back_text': 'Nếu có từ 3 vật hiến tế tiềm năng trở lên, hãy chọn ngẫu nhiên một trong số họ và đặt lá bài '
+                        'đó bên dưới chồng bài agenda, mà không nhìn vào nó.',
+           'back_flavor': 'Những con chim whippoorwill tụ tập dọc theo những mái nhà kiểu gambrel của Dunwich và bắt '
+                          'đầu rít lên vui mừng. Người dân Dunwich tin rằng sự hiện diện của chim whippoorwill báo '
+                          'trước cái chết sắp xảy ra của một ai đó. Chúng khao khát cái chết của bạn chăng? Hay nạn '
+                          'nhân là một ai khác?'},
+ '02197': {'name': 'Cơn Đói Của Cổ Thần',
+           'text': '',
+           'flavor': 'Khi mặt trời lặn, những người dân thị trấn sợ hãi rút lui vào nhà của họ và khóa chặt cửa. Rõ '
+                     'ràng đối với bạn là nhiều người trong số họ biết nhiều hơn những gì họ đang nói ra. Một cảm giác '
+                     'buồn nôn quặn thắt trong bụng bạn khi bản chất thực sự của ngôi làng trở nên rõ ràng.',
+           'back_name': 'Những Con Phố Bị Bỏ Rơi',
+           'back_text': 'Nếu có từ 2 vật hiến tế tiềm năng trở lên, hãy chọn ngẫu nhiên một trong số họ và đặt lá bài '
+                        'đó bên dưới chồng bài agenda, mà không nhìn vào nó.',
+           'back_flavor': 'Nhiều chim whippoorwill hơn đổ xô về làng Dunwich khi màn đêm buông xuống. Những người dân '
+                          'thị trấn khác, vốn nổi tiếng mê tín, vô cùng khiếp sợ trước sự hiện diện của loài chim này. '
+                          'Với những cánh cửa xung quanh bạn đã đóng và khóa chặt, bạn thấy mình cô độc trên những con '
+                          'đường của Dunwich.'},
+ '02198': {'name': 'Nuôi Dưỡng Quái Thú',
+           'text': '',
+           'flavor': 'Tiếng kêu the the nhịp nhàng của lũ chim whippoorwill tràn ngập màn đêm. Nếu những điều mê tín '
+                     'của Dunwich là đúng, bài hát của chúng báo trước cái chết sắp ập đến... Nhưng là dành cho ai?',
+           'back_name': 'Máu Trên Bàn Thờ',
+           'back_text': 'Mỗi điều tra viên phải ngay lập tức resign.',
+           'back_flavor': 'Lũ chim whippoorwill kêu quang quác suốt đêm đồng loạt tản ra, như thể bằng cách nào đó '
+                          'chúng hài lòng với diễn biến của các sự kiện.'},
+ '02199': {'name': 'Tìm Kiếm Câu Trả Lời',
+           'text': '<b>Objective</b> - Khi một điều tra viên tiến vào The Hidden Chamber, advance.',
+           'flavor': 'Những vụ mất tích trong thị trấn có thể liên quan đến các sự kiện ở Arkham. Bạn nghi ngờ rằng có '
+                     'điều gì đó khủng khiếp đang diễn ra. Bạn phải tìm ra nơi những người dân thị trấn mất tích đang '
+                     'bị giam giữ để vạch trần âm mưu này.',
+           'back_name': 'Những Gì Đã Bị Che Giấu',
+           'back_text': 'Lật mở mỗi địa điểm chưa lật mở.\n'
+                        'Di chuyển toàn bộ manh mối trong màn chơi (bao gồm cả những manh mối trên mỗi điều tra viên) '
+                        'đến The Hidden Chamber.\n'
+                        'Spawn kẻ địch Silas Bishop đang để riêng tại The Hidden Chamber.',
+           'back_flavor': 'Bạn tìm được đường vào căn phòng bí mật nơi bạn tin rằng những người mất tích đang bị giam '
+                          'giữ, nhưng những điều kinh hoàng đối mặt với bạn ở đó làm xói mòn ranh giới tỉnh táo của '
+                          'bạn. Bị trói bằng xiềng xích trong một góc hẻo lánh của căn phòng là một sinh vật không thể '
+                          'gọi tên với khuôn mặt của một người đàn ông. Nó thở khò khè và vật lộn để giải thoát chính '
+                          'mình khi nhận thấy bạn bước vào. Vô số cái miệng bao phủ cơ thể sinh vật dính đầy máu và '
+                          'gân thịt, như thể nó vừa mới ăn gần đây.\n'
+                          'Với một tiếng kêu ộp ộp ghê tởm, sinh vật cất lời bằng bảy cái miệng: "Ss... se... eth...?" '
+                          'Sau đó nó chồm về phía trước như muốn tóm lấy bạn, và vài sợi xích của nó đứt tung.'},
+ '02200': {'name': 'Căn Phòng Của Quái Thú',
+           'text': '<b>Objective</b> - Nếu Silas Bishop bị đánh bại: <b>(→R1)\n'
+                   'Objective</b> - Nếu không còn manh mối nào trong Hidden Chamber, advance.',
+           'flavor': 'Con quái thú đáng thương chồm tới tóm lấy bạn bằng những cánh tay nhớp nháp, nhiều hàm răng của '
+                     'nó cắn lại vì đói khát. Giết chết nó sẽ là một sự giải thoát nhân từ. Nhưng có lẽ có điều gì '
+                     'khác cần khám phá về sinh vật này…',
+           'back_name': 'Trục Xuất Sinh Vật',
+           'back_text': 'Nếu The Necronomicon đang ở trong màn chơi: <b>(→R2)\n</b>Nếu không: <b>(→R3)</b>',
+           'back_flavor': 'Bất chấp nguy hiểm, bạn dũng cảm đối mặt với sự hiện diện kinh hoàng của con quái thú và '
+                          'điều tra thêm trước khi giết nó. Những gì bạn tìm thấy xác nhận những nghi ngờ tồi tệ nhất '
+                          'của bạn. Một số đoạn nhật ký do "Seth Bishop" viết mô tả quá trình cho sinh vật ăn chi tiết '
+                          'đến rùng mình - lúc đầu là cà chua, sau đó là thú săn nhỏ, rồi đến gia súc, và cuối cùng là '
+                          "'vật hiến tế người'. Nhưng phần đáng lo ngại nhất là Seth gọi sinh vật bằng tên: 'Silas'."},
+ '02237': {'name': 'Những Sinh Vật Cuồng Nộ',
+           'text': '<b>Forced</b> - Vào cuối giai đoạn kẻ địch: Di chuyển mỗi kẻ địch Brood of Yog-Sothoth một lần về '
+                   'phía một địa điểm ngẫu nhiên.',
+           'flavor': 'Những báo cáo về các thực thể đáng sợ tàn phá khắp vùng nông thôn đã khiến các công dân Dunwich '
+                     'hoảng loạn. Tồi tệ hơn, những sinh vật này dường như vô hình trước mắt thường.',
+           'back_name': 'Tai Họa Giáng Xuống',
+           'back_text': 'Xáo trộn chồng bài encounter bỏ vào chồng bài encounter.\n'
+                        'Spawn 1 trong những kẻ địch Brood of Yog-Sothoth đang để riêng tại một địa điểm ngẫu nhiên, '
+                        'nếu có thể.',
+           'back_flavor': 'Một chiếc xe bán tải cũ dừng lại dọc theo những con đường mòn phong sương của Dunwich. '
+                          'Người tài xế - Joe Osborn - gọi bạn qua cửa sổ vỡ phía người lái, động cơ xe vẫn đang nổ '
+                          'máy. "Nó ở trang trại nhà Erick!" ông hét lên. "Nó phá tan nát chỗ của họ rồi. Tội nghiệp '
+                          'Henry và Martha..."\n'
+                          'Bạn hỏi Osborn vị trí trang trại nhà Erick, và nó xác nhận nỗi sợ tồi tệ nhất của bạn. Để '
+                          'cuộc tấn công đó diễn ra gần đây, chắc chắn phải có nhiều quái vật hơn đang xổng chuồng.'},
+ '02238': {'name': 'Chờ Đợi Thời Cơ',
+           'text': '<b>Forced</b> - Vào cuối giai đoạn kẻ địch: Di chuyển mỗi kẻ địch Brood of Yog-Sothoth một lần về '
+                   'phía một địa điểm ngẫu nhiên.',
+           'flavor': 'Thỉnh thoảng một cơn gió, quét lên từ Cold Spring Glen, sẽ mang theo một chút mùi hôi thối khôn '
+                     'tả vào bầu không khí đêm nặng nề... Nhưng nỗi kinh hoàng được mong đợi đã không xuất hiện. Bất '
+                     'kể thứ gì ở dưới hẻm núi đều đang chờ đợi thời cơ, và Armitage nói với các đồng nghiệp rằng sẽ '
+                     'là tự sát nếu cố tấn công nó trong bóng tối.\n'
+                     '— H.P. Lovecraft, "The Dunwich Horror"',
+           'back_name': 'Không Nơi Ẩn Nấp',
+           'back_text': 'Xáo trộn chồng bài encounter bỏ vào chồng bài encounter.\n'
+                        '<hr><b>Nếu có một Brood of Yog-Sothoth đang để riêng, điều tra viên dẫn đầu đọc phần sau '
+                        '(thành tiếng):</b>\n'
+                        '<blockquote><i>Những đám mây bão ảm đạm cuộn xoáy trên đầu và một tấm màn mưa trút xuống vùng '
+                        'nông thôn. Khi cơn mưa rào ngày càng dữ dội, bạn lánh nạn trong một túp lều nửa đổ nát gần '
+                        'đó. Có một tia chớp lóe lên, và trong ánh sáng ngắn ngủi, bạn phát hiện ra hình bóng của một '
+                        'thứ gì đó to lớn trong mưa. Không báo trước, những cái cây ở xa uốn cong, mặc dù dường như '
+                        'không có gì uốn cong chúng. Khoảnh khắc sau, một lực với sức mạnh của một chiếc xe tải đâm '
+                        'sầm vào nơi trú ẩn của bạn.</i></blockquote>\n'
+                        'Spawn 1 trong những kẻ địch Brood of Yog-Sothoth đang để riêng tại địa điểm của điều tra viên '
+                        'dẫn đầu, nếu có thể. Sau đó, mỗi điều tra viên tại địa điểm đó kiểm tra [agility] (4). Con '
+                        'Brood of Yog-Sothoth mới spawn thực hiện một cuộc tấn công chống lại mỗi điều tra viên thất '
+                        'bại bài kiểm tra kỹ năng này.',
+           'back_flavor': ''},
+ '02239': {'name': 'Nỗi Kinh Hoàng Được Giải Phóng',
+           'text': 'Mỗi kẻ địch [[Abomination]] nhận +1 fight và +1 evade.\n'
+                   '<b>Forced</b> - Vào cuối giai đoạn kẻ địch: Di chuyển mỗi kẻ địch Brood of Yog-Sothoth một lần về '
+                   'phía một địa điểm ngẫu nhiên.',
+           'flavor': 'Không phải trò đùa khi theo dõi một thứ to lớn như một ngôi nhà mà người ta không thể nhìn thấy, '
+                     'nhưng lại mang tất cả sự độc ác hiểm độc của một con quỷ.\n'
+                     '— H.P. Lovecraft, "The Dunwich Horror"',
+           'back_name': 'Lên Những Ngọn Đồi',
+           'back_text': '<b>(→R1)</b>',
+           'back_flavor': 'Có một tiếng ầm ầm quái dị khắp vùng nông thôn, mặc dù không thể biết nguồn gốc của nó là '
+                          'những sinh vật bạn săn lùng hay chính những ngọn núi. Ngay sau đó, bạn tìm thấy nhiều dấu '
+                          'vết hơn của những sinh vật dẫn lên phía những ngọn đồi: một con đường rộng ba mươi foot gồm '
+                          'những bụi cây bị nghiền nát và cây cối bị gãy như que củi. Kiệt sức vì trận chiến, và màn '
+                          'đêm đang buông xuống nhanh chóng, bạn quyết định hướng tới nơi an toàn thay vì lần theo '
+                          'những dấu vết địa ngục này.'},
+ '02240': {'name': 'Chữ Viết Saracen',
+           'text': '<b>Objective</b> - Chỉ các điều tra viên tại Whateley Ruins mới có thể cùng nhau chi trả số lượng '
+                   'manh mối cần thiết, theo nhóm, để advance.',
+           'flavor': 'Những con quái vật xé toạc hạt Dunwich miễn nhiễm với các vũ khí truyền thống. Chỉ bằng cách đọc '
+                     'một câu thần chú đặc biệt, các sinh vật mới có thể bị đánh bại. Trước tiên, bạn phải tìm kiếm '
+                     'trong đống đổ nát của ngôi nhà của Wilbur Whateley để tìm các phần cuối cùng của bản văn thế '
+                     'giới khác.',
+           'back_name': 'Thu Được Công Thức',
+           'back_text': '<b>Kiểm tra Campaign Log. Nếu Dr. Armitage sống sót sau The Dunwich '
+                        'Legacy:</b><blockquote><i>"Đây rồi!" Armitage thở phào nhẹ nhõm, ghi lại những cụm từ cuối '
+                        'cùng của công thức. "Tôi đã dịch xong phần cuối cùng của nó." Ông rùng mình khi đưa cho bạn '
+                        'bản văn, những từ ngữ gợi lại ký ức về trận chiến của ông với sinh vật. "Tôi hy vọng đây là '
+                        'lần cuối cùng tôi phải đọc nó," ông thừa nhận. "Nhưng nếu chúng ta không làm gì, kết quả cuối '
+                        'cùng sẽ tồi tệ hơn rất, rất nhiều."</i></blockquote>Mỗi điều tra viên đưa 1 Esoteric Formula '
+                        'đang để riêng vào chơi.\n'
+                        '<b>Nếu Dr. Armitage được liệt kê dưới mục "Sacrificed to Yog-Sothoth":</b><blockquote><i>Sử '
+                        'dụng thông tin có trong tàn tích của ngôi nhà Whateley, bạn có thể chép lại phần còn lại của '
+                        'công thức mà trước đây Dr. Armitage đã sử dụng để tiêu diệt con thú đã quấy phá Dunwich. Tuy '
+                        'nhiên, nỗ lực này khiến bạn chậm mất vài giờ.</i></blockquote>Mỗi điều tra viên đưa 1 '
+                        'Esoteric Formula đang để riêng vào chơi. Đặt 1 doom lên agenda hiện tại.',
+           'back_flavor': ''},
+ '02241': {'name': 'Chúng Phải Bị Tiêu Diệt!',
+           'text': '<b>Objective</b> - Đánh bại càng nhiều kẻ địch Brood of Yog-Sothoth càng tốt. Nếu không còn bản '
+                   'sao nào của Brood of Yog-Sothoth trong màn chơi hoặc đang để riêng, advance.',
+           'flavor': 'Với công thức trong tay, cuối cùng bạn cũng có phương tiện để tiêu diệt những sinh vật đang tàn '
+                     'phá Dunwich... nhưng chỉ khi bạn có thể sống sót đủ lâu.',
+           'back_name': 'Bầy Con Đã Chấm Dứt',
+           'back_text': '<b>(→R2)</b>',
+           'back_flavor': 'Khi bạn hoàn thành câu thần chú, sinh vật ghê tởm kêu lên bằng một giọng khàn khàn, phi '
+                          'nhân tính. Nó ầm ầm và răng rắc, những âm tiết trong tiếng kêu ộp ộp của nó khác xa tiếng '
+                          'Anh. Khi tiếng kêu của nó dứt, sinh vật tự co rút lại, và rồi, không có chút cảnh báo nào, '
+                          'nó biến mất. Tất cả những gì còn lại là một mùi hôi thối và một vết ố kinh tởm làm hỏng '
+                          'thảm thực vật nơi con quái thú từng đứng.'},
+ '02275': {'name': 'Hiệu Triệu Các Cổ Thần',
+           'text': '',
+           'flavor': 'Khi bạn đến gần Sentinel Hill, bạn nghe thấy những nghi thức tiếng Latinh cổ xưa gầm vang khắp '
+                     'màn đêm. Thời điểm hành động đã đến. Nếu bạn không thể ngăn chặn những kẻ phù thủy ở Dunwich, ai '
+                     'biết được chúng có thể giải phóng những nỗi kinh hoàng nào lên thế giới?',
+           'back_name': 'Thế Giới Bị Biến Đổi',
+           'back_text': 'Xáo trộn chồng bài encounter bỏ vào chồng bài encounter.',
+           'back_flavor': 'Khi bạn khám phá những con đường xung quanh Sentinel Hill, tiếng tụng niệm trên đỉnh đồi '
+                          'dâng lên đến cao trào và mang một phẩm chất của thế giới khác, vang vọng qua những hàng cây '
+                          'như thể được mang đi bởi những dòng chảy vô hình.\n'
+                          'Thế giới bắt đầu thay đổi. Cỏ cây tan biến như đường trong tách trà. Một bầu trời bao la vô '
+                          'tận xẻ dọc thực tại bạn thấy trước mắt, và bạn cảm thấy bị lôi cuốn vào đó, kinh hãi và '
+                          'kính sợ. Quyền năng bí thuật bị bóp méo và thấm đẫm xung quanh bạn, tạo ra những biến đổi '
+                          'kỳ lạ trên mảnh đất.'},
+ '02276': {'name': 'Cầu Xin Sức Mạnh',
+           'text': '',
+           'flavor': 'Các Cổ Thần đã từng hiện hữu, các Cổ Thần đang hiện hữu, và các Cổ Thần sẽ mãi hiện hữu. Không '
+                     'phải trong những không gian chúng ta biết, mà là giữa chúng, Họ bước đi thanh thản và nguyên sơ, '
+                     'không chiều kích và vô hình trước mắt chúng ta. Yog-Sothoth biết cánh cổng. Yog-Sothoth là cánh '
+                     'cổng. Yog-Sothoth là chìa khóa và là người gác cổng. Quá khứ, hiện tại, tương lai, tất cả là một '
+                     'trong Yog-Sothoth. Ngài biết nơi các Cổ Thần đã đột phá vào thời xa xưa, và nơi Họ sẽ lại đột '
+                     'phá lần nữa. Ngài biết nơi Họ đã giẫm chân lên những cánh đồng của trái đất, và nơi Họ vẫn đang '
+                     'giẫm đạp, và tại sao không ai có thể chiêm ngưỡng Họ',
+           'back_name': 'Phần Thưởng Cho Sự Phục Vụ',
+           'back_text': '<b>(→R2)</b>',
+           'back_flavor': 'Tiếng tụng niệm đạt đến đỉnh điểm, và tại đỉnh của Sentinel Hill, một vết rách mở ra trên '
+                          'kết cấu của bầu trời, xé toạc các đám mây và cắt xuyên qua chính không khí.\n'
+                          'Bạn nhìn thấy một thực thể không thể miêu tả - những khối cầu, mắt, miệng, dịch nhầy - tràn '
+                          'ra từ vết nứt. Những kẻ phù thủy gọi tên nó khi hình dạng của nó thấm vào bầu trời, lan '
+                          'rộng ra phía trên mặt đất: "Ia! Ia! Yog-Sothoth! Ia! Ia! Yog-Sothoth!"\n'
+                          'Trước khi bài tụng niệm hân hoan của chúng có thể tiếp tục, chúng bị khối vật chất đang lớn '
+                          'dần bóp nghẹt, và không còn được nghe thấy nữa.\n'
+                          'Trước sự kinh hoàng của bạn, sự mở rộng của khối vật chất không hề dừng lại.'},
+ '02277': {'name': 'Con Đường Đến Ngọn Đồi',
+           'text': '<b>Objective</b> - Khi các điều tra viên đã thu thập đủ số lượng manh mối cần thiết, họ phải ngay '
+                   'lập tức chi trả chúng và advance.',
+           'flavor': 'Một năng lượng bí thuật rực rỡ lấp đầy không khí với một cơn lạnh buốt tận xương tủy. Năng lượng '
+                     'xoáy dọc theo con đường mòn bị nghiền nát trước mặt bạn, và thấm xuống vài con đường khác trước '
+                     'khi biến mất.',
+           'back_name': 'Một Vật Hiến Tế Đã Thực Hiện',
+           'back_text': 'Loại bỏ toàn bộ manh mối khỏi mỗi địa điểm trong màn chơi. Sự hiện diện bí thuật che giấu con '
+                        'đường xa hơn lên đồi đã mờ dần. Lật mở Ascending Path.',
+           'back_flavor': 'Trong cuộc tìm kiếm qua những con đường mòn trong rừng quanh chân đồi Sentinel Hill, bạn '
+                          'bắt gặp một cảnh tượng kinh ngạc. Một đàn cừu nằm chết trên mặt đất trong một bãi đất trống '
+                          'hẻo lánh, những xác chết đẫm máu của chúng được xếp theo một mô hình kỳ lạ nhưng cẩn thận. '
+                          'Bịt mũi trước mùi hôi thối của cái chết, bạn bước qua những con cừu bị xé xác trên đường '
+                          'đến trung tâm của đội hình kỳ quặc.\n'
+                          'Ở trung tâm đàn cừu là xác của một người đàn ông. Một viên ngọc trong suốt đã được ấn chặt '
+                          'vào trán ông ta, làm lún phần trước của hộp sọ. Đôi mắt ông mở to, khuôn mặt vặn vẹo trong '
+                          'một ảo ảnh sợ hãi, như thể đang cầu xin bạn thương xót. Dù biết rõ hơn, bạn vẫn kiểm tra '
+                          'mạch đập. Khi bạn chạm vào da người đàn ông, viên ngọc trên trán ông tan biến, và khu rừng '
+                          'xung quanh bạn dường như quang đãng trở lại.'},
+ '02278': {'name': 'Lên Đồi (bản I)',
+           'text': 'Manh mối không thể được đặt lên các địa điểm không phải [[Altered]].\n'
+                   '<b>Objective</b> - Khi một điều tra viên tiến vào Sentinel Peak, advance.',
+           'flavor': 'Khi bạn leo lên đồi, môi trường xung quanh bạn ngày càng trở nên kỳ lạ và thuộc về thế giới '
+                     'khác. Năng lượng bí thuật cảm thấy mạnh hơn nữa ở đây, nổ lách tách trong không khí và bò ran '
+                     'trên làn da bạn.',
+           'back_name': 'Phá Vỡ Mô Hình',
+           'back_text': 'Loại bỏ kẻ địch Seth Bishop đang để riêng khỏi trò chơi.',
+           'back_flavor': 'Đến gần đỉnh Sentinel Hill, bạn đối mặt với vài người dân Dunwich. Người đàn ông ở giữa '
+                          'vòng tròn của họ tụng niệm bằng tiếng Latinh trong khi những người khác cúi đầu tôn kính. '
+                          '"Seth Bishop?" bạn hỏi một cách phỏng đoán. Người đàn ông ở giữa ngước nhìn để đáp lại, xác '
+                          'nhận những nghi ngờ của bạn. Bạn van nài người đàn ông dừng sự điên rồ này lại, nhưng ông '
+                          'ta không trả lời. Bạn rút ra chiếc mặt dây chuyền chòm sao bằng bạc mà bạn tìm thấy trên '
+                          'thi thể của Silas và đưa cho Seth. "Đây là tất cả những gì chúng tôi tìm thấy về em trai '
+                          'ông," bạn hét lên át tiếng gió hú. "Đây có phải là số phận ông muốn cho chính mình không? '
+                          'Cho tất cả chúng ta?" Bạn ném chiếc mặt dây chuyền xuống đất. Choáng váng trước cảnh tượng '
+                          'đó, ông ta lảo đảo lùi lại và vấp ngã trong bài thần chú của mình, mắt mở to. Khi ông ngã '
+                          'xuống, bàn thờ phía sau ông nứt toác ra, và một luồng năng lượng tuôn ra từ tảng đá, xoáy '
+                          'vào một cánh cổng mở nuốt chửng người đàn ông. Bạn hầu như chỉ vừa kịp ghìm gót chân và bám '
+                          'vào một tảng đá gần đó để chống lại lực kéo của cánh cổng.'},
+ '02279': {'name': 'Lên Đồi (bản II)',
+           'text': 'Manh mối không thể được đặt lên các địa điểm không phải [[Altered]].\n'
+                   '<b>Objective</b> - Khi một điều tra viên tiến vào Sentinel Peak, advance.',
+           'flavor': 'Khi bạn leo lên đồi, môi trường xung quanh bạn ngày càng trở nên kỳ lạ và thuộc về thế giới '
+                     'khác. Năng lượng bí thuật cảm thấy mạnh hơn nữa ở đây, nổ lách tách trong không khí và bò ran '
+                     'trên làn da bạn.',
+           'back_name': 'Tra Chìa Khóa',
+           'back_text': 'Đưa kẻ địch Seth Bishop đang để riêng vào chơi tại Sentinel Peak.',
+           'back_flavor': 'Đến gần đỉnh Sentinel Hill, bạn đối mặt với vài người dân Dunwich. Người đàn ông ở giữa '
+                          'vòng tròn của họ phát ra một tiếng cười điên dại. Bạn nhận ra người đàn ông - Seth Bishop - '
+                          'từ lời miêu tả mà những người dân thị trấn đã cung cấp cho bạn trước đó. Phía sau ông, vài '
+                          'người đàn ông và phụ nữ khác cúi đầu tôn kính, tụng niệm bằng tiếng Latinh. "Chúng ta đã '
+                          'làm được!" ông cười khanh khách. "Chúng ta đã hoàn thành những gì Lão Whateley và thằng con '
+                          'hoang của lão không thể làm được!" Bạn nhìn trong sự ghê tởm khi đôi mắt ông mờ đi và giật '
+                          'giật, như thể ông đang đọc thứ gì đó vô hình. "Giờ tôi có thể thấy rồi… cuối cùng tôi cũng '
+                          'thấy rồi!" Ông giơ hai tay lên trời và bia đá của bàn thờ phía sau ông nứt toác ra. Một '
+                          'luồng năng lượng tuôn ra từ tảng đá, kết tụ thành hình dạng một cánh cổng mở. Seth bám chặt '
+                          'vào tảng đá trước mặt để tránh bị hút vào cánh cổng, nhưng vài người khác giật mình và bị '
+                          'kéo xuyên qua nó. Bạn hầu như chỉ vừa kịp ghìm gót chân và bám vào một tảng đá gần đó kịp '
+                          'lúc để chống lại lực kéo của cánh cổng. Seth đứng dậy, với vẻ mặt đầy tự hào.'},
+ '02280': {'name': 'Lên Đồi (bản III)',
+           'text': 'Manh mối không thể được đặt lên các địa điểm không phải [[Altered]].\n'
+                   '<b>Objective</b> - Khi một điều tra viên tiến vào Sentinel Peak, advance.',
+           'flavor': 'Khi bạn leo lên đồi, môi trường xung quanh bạn ngày càng trở nên kỳ lạ và thuộc về thế giới '
+                     'khác. Năng lượng bí thuật cảm thấy mạnh hơn nữa ở đây, nổ lách tách trong không khí và bò ran '
+                     'trên làn da bạn.',
+           'back_name': 'Ý Chí Biến Đổi',
+           'back_text': 'Đưa kẻ địch Seth Bishop đang để riêng vào chơi tại Sentinel Peak, với 1 [per_investigator] '
+                        'damage trên ông ta.',
+           'back_flavor': 'Đến gần đỉnh Sentinel Hill, bạn đối mặt với vài người dân Dunwich. Người đàn ông ở giữa '
+                          'vòng tròn của họ đang tuyệt vọng cố gắng hoàn thành một câu thần chú tiếng Latinh. "Nó '
+                          'không hiệu nghiệm, Seth!" một người đàn ông khác hét lên. "Chúng ta sẽ làm gì đây?" Người '
+                          'đàn ông ở giữa dừng bài tụng và rút ra một con dao thợ đóng giày. "Người cha yêu cầu một '
+                          'vật hiến tế bằng máu," ông tuyên bố, và khuôn mặt ông vặn vẹo thành một biểu cảm điên dại. '
+                          'Trước khi bạn kịp phản ứng, ông ta rạch cổ tay trái bằng con dao, khuỵu gối xuống trong đau '
+                          'đớn cùng cực. Bia đá của bàn thờ phía sau ông nứt toác ra. Một luồng năng lượng tuôn ra từ '
+                          'tảng đá, kết tụ thành hình dạng một cánh cổng mở. Seth bám chặt vào tảng đá trước mặt để '
+                          'tránh bị hút vào cánh cổng, nhưng vài người khác giật mình và bị kéo xuyên qua nó. Bạn hầu '
+                          'như chỉ vừa kịp ghìm gót chân và bám vào một tảng đá gần đó kịp lúc để chống lại lực kéo '
+                          'của cánh cổng. Seth đứng dậy, bị thương nhưng còn sống. Một vẻ mặt tự hào lan tỏa khắp '
+                          'khuôn mặt đau đớn của ông.'},
+ '02281': {'name': 'Cánh Cổng Mở Ra',
+           'text': '<b>Objective</b> - Chỉ các điều tra viên tại Sentinel Peak mới có thể cùng nhau chi trả số lượng '
+                   'manh mối cần thiết, theo nhóm, để advance.',
+           'flavor': 'Từ đống đổ nát của bia đá trên bàn thờ tại đỉnh đồi, một cánh cổng năng lượng sôi sục rực rỡ đã '
+                     'xuất hiện. Một lực như bão tố phun trào từ cánh cổng, uốn cong cây cối và kéo các mảnh vỡ vào '
+                     'trong đó. Tiếng gào thét của cơn cuồng phong át đi mọi âm thanh khác. Bằng cách nào đó, bạn phải '
+                     'tìm ra cách để đóng cánh cổng.',
+           'back_name': 'Nhìn Vào Vực Thẳm',
+           'back_text': '<b>(→R1)</b>',
+           'back_flavor': 'Bạn không biết làm thế nào để đóng cánh cổng đang cuộn xoáy trước mặt mình, và theo từng '
+                          'khoảnh khắc trôi qua, lực hút từ bên trong nó ngày càng mạnh mẽ hơn. Bạn lo sợ rằng bất kỳ '
+                          'thực thể nào mà những kẻ phù thủy đã triệu hồi từ cõi bên ngoài đang đến gần. Không còn '
+                          'thời gian để lãng phí, bạn quay sang cuốn sách mở trên bàn thờ đá, tuyệt vọng tìm kiếm câu '
+                          'trả lời.'},
+ '02312': {'name': 'Tất Cả Là Một',
+           'text': '<b>Forced</b> - Sau khi bạn bị di chuyển đến một địa điểm bởi một hiệu ứng lá bài encounter: Chịu '
+                   '1 horror.',
+           'flavor': 'Những con đường bằng âm thanh và màu sắc trải dài vô tận về mọi hướng, rải rác những công trình '
+                     'kiến trúc bất khả thi, và phủ đầy thảm thực vật kỳ dị của người ngoài hành tinh. Các đường nét '
+                     'giữa các vật thể lởm chởm và dịch chuyển, và làn da bạn cảm giác như thể đang bị lộn ngược từ '
+                     'trong ra ngoài.',
+           'back_name': 'Những Tiếng Vọng Quen Thuộc',
+           'back_text': 'Xáo trộn chồng bài encounter bỏ vào chồng bài encounter. Sau đó, bỏ các lá bài từ trên cùng '
+                        "cho đến khi một địa điểm bị bỏ. Điều tra viên dẫn đầu giải quyết hiệu ứng 'revelation' của "
+                        'địa điểm đó.\n'
+                        '<b>Kiểm tra Campaign Log. Nếu các điều tra viên không cứu được các sinh viên, hãy đọc phần '
+                        'sau:</b>\n'
+                        '"Một sinh vật giống chó khổng lồ, xa lạ trước mắt bạn nhưng lại quen thuộc, xuất hiện trước '
+                        'mặt bạn. Sinh vật lao về phía trước, và bạn chuẩn bị chống đỡ nó, nhưng trước sự ngạc nhiên '
+                        'của bạn, nó chạy xuyên qua bạn, hướng về một tòa nhà mà vài khoảnh khắc trước không hề ở phía '
+                        'sau bạn: Derby Hall từ Đại học Miskatonic. Sinh vật phá tung cửa trước của tòa nhà và bạn '
+                        'nghe thấy những tiếng thét hoảng loạn từ bên trong, theo sau là tiếng răng rắc của xương gãy '
+                        'và những tiếng kêu đau đớn."\n'
+                        'Mỗi điều tra viên chịu 1 horror, bất kể địa điểm của họ.',
+           'back_flavor': ''},
+ '02313': {'name': 'Quá Khứ, Hiện Tại và Tương Lai',
+           'text': '<b>Forced</b> - Sau khi bạn bị di chuyển đến một địa điểm bởi một hiệu ứng lá bài encounter: Chịu '
+                   '1 horror.',
+           'flavor': 'Khi bạn băng qua cõi giới này, bạn thỉnh thoảng thoáng thấy thực tại - những cảnh tượng từ những '
+                     'ký ức cũ, những viễn cảnh gần đây hơn từ vài ngày qua, và đôi khi thậm chí là những sự kiện mà '
+                     'bạn không nhớ là đã từng xảy ra…',
+           'back_name': 'Cái Giá Của Thất Bại',
+           'back_text': 'Xáo trộn chồng bài encounter bỏ vào chồng bài encounter. Sau đó, bỏ các lá bài từ trên cùng '
+                        "cho đến khi một địa điểm bị bỏ. Điều tra viên dẫn đầu giải quyết hiệu ứng 'revelation' của "
+                        'địa điểm đó.\n'
+                        '<b>Kiểm tra Campaign Log. Nếu có ít nhất một cái tên được ghi lại dưới mục "Sacrificed to '
+                        'Yog-Sothoth", hãy đọc phần sau:</b>\n'
+                        '"Bạn nghe thấy một giọng nói quen thuộc gọi tên bạn, và bạn bước vào một tòa nhà có hình thù '
+                        'bất khả thi bằng đá nứt nẻ. "Không… đừng!" giọng nói kêu lên. Bạn lao về phía giọng nói, '
+                        'xuống một dãy bậc thang dốc, hẹp. Khi chạm tới đáy, bạn thấy mình đang ở trong căn phòng bí '
+                        'mật từ Dunwich. Bị trói bằng xiềng xích, bạn nhìn thấy những người mà bạn đã không cứu được, '
+                        'đẫm máu và bị tàn tật. Một sinh vật mang khuôn mặt đàn ông đang ăn từ một xác chết trên mặt '
+                        'đất. Đầu của cái xác quay lại đối mặt với bạn, và một cơn đau nhói đâm vào tim bạn."\n'
+                        'Mỗi điều tra viên kiểm tra [willpower] (X), trong đó X là số lượng tên được ghi lại dưới mục '
+                        '"Sacrificed to Yog-Sothoth". Với mỗi điểm một điều tra viên thất bại, điều tra viên đó chịu 1 '
+                        'damage.',
+           'back_flavor': ''},
+ '02314': {'name': 'Đột Phá Xuyên Qua',
+           'text': '<b>Forced</b> - Sau khi bạn bị di chuyển đến một địa điểm bởi một hiệu ứng lá bài encounter: Chịu '
+                   '1 horror.',
+           'flavor': 'Xuyên suốt chiều không gian biến dạng này, bất kể bạn du hành đến đâu, đều có một hình thù ám '
+                     'ảnh ở phía xa. Ban đầu, nó xuất hiện như một chiếc đĩa, giống như một mặt trăng đen với nhiều '
+                     'cánh tay ngoe nguẩy. Nhưng khi thời gian trôi qua, bạn có thể nhận ra nó đang ngày càng lớn hơn '
+                     'và lớn hơn…',
+           'back_name': 'Chìa Khóa và Cánh Cổng',
+           'back_text': '<b>Revelation</b> - Spawn kẻ địch Yog-Sothoth đang để riêng tại The Edge of the Universe. Nếu '
+                        'The Edge of the Universe không ở trong màn chơi, spawn nó tại Another Dimension thay vào đó. '
+                        'Advance sang agenda 4a.',
+           'back_flavor': ''},
+ '02315': {'name': 'Hồi Kết Của Vạn Vật',
+           'text': '<b>Forced</b> - Sau khi bạn bị di chuyển bởi một hiệu ứng lá bài encounter: Chịu 1 horror.\n'
+                   '<b>Forced</b> - Nếu Yog-Sothoth bị đánh bại, <b>(→R3)</b>.',
+           'flavor': 'Hình thù ở phía xa đập tan các rào cản của chiều không gian này, nhiều cánh tay của nó vươn ra '
+                     'bao trùm mọi thứ bạn nhìn thấy. Thân thể của nó như một chất nhầy, phủ đầy mắt và miệng. Bạn cảm '
+                     'thấy nhỏ bé tầm thường, như một con bọ, bên cạnh vẻ hùng vĩ đáng sợ của sinh vật.',
+           'back_name': 'Yog-Sothoth Tấn Công!',
+           'back_text': 'Theo thứ tự lượt chơi, Yog-Sothoth tấn công mỗi điều tra viên trong màn chơi, bất kể địa điểm '
+                        'hiện tại của Yog-Sothoth. Sau đó, lật mặt agenda này trở lại mặt "a" của nó.',
+           'back_flavor': 'Tìm kiếm vết rạn nứt mà từ đó bạn đã tiến vào chiều không gian này, nỗi kinh hoàng ngoài '
+                          'không gian vung đòn dữ dội, nghiền nát toàn bộ các cõi giới trong sự kìm kẹp của nó.'},
+ '02316': {'name': 'Ngoài Thế Giới Này',
+           'text': '[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này '
+                   "và giải quyết khả năng 'revelation' của nó.",
+           'flavor': 'Bằng cách nào đó, bạn phải tìm đường băng qua vùng cảnh quan xa lạ này để tìm điểm giao thoa '
+                     'nexus đã được miêu tả trong cuốn sách của Lão Whateley.',
+           'back_name': 'Giao Điểm Của Các Chiều Không Gian',
+           'back_text': 'Đưa địa điểm The Edge of the Universe đang để riêng vào chơi.',
+           'back_flavor': 'Một ánh sáng lung linh ở đằng xa, và bạn tiến về phía nó để điều tra. Ánh sáng mỏng manh '
+                          'trôi xa khỏi bạn, lơ lửng qua các cánh cổng kỳ lạ của cõi giới, leo lên những cầu thang '
+                          'lượn vòng, và băng qua những rào cản mà bạn không thể vượt qua. Không nản lòng, bạn tiếp '
+                          'tục lần theo dấu vết của nó.'},
+ '02317': {'name': 'Tiến Vào Cõi Xa Xăm',
+           'text': '[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này '
+                   "và giải quyết khả năng 'revelation' của nó.\n"
+                   '<b>Objective</b> - Nếu một điều tra viên tiến vào The Edge of the Universe, advance.',
+           'flavor': 'Bạn tiếp tục lần theo vệt sáng mỏng manh, mặc dù địa hình hiểm trở khiến nó trở thành một mục '
+                     'tiêu khó đuổi theo.',
+           'back_name': 'Rìa Của Thế Giới',
+           'back_text': '',
+           'back_flavor': 'Bạn chạm tới một cõi hư không đen kịt dày đặc đến khó tin, và nhận ra rằng nơi này là nơi '
+                          'toàn bộ thực tại - tất cả những gì đang là và tất cả những gì sẽ mãi là - kết thúc. Ở trung '
+                          'tâm của nó, bạn nhìn thấy một vết rách nhỏ xíu, lơ lửng ngay ngoài tầm với. Khi bạn nhìn '
+                          'qua vết rách, bạn ngạc nhiên khi thấy đỉnh của Sentinel Hill. Bằng cách nào đó, bạn đã đến '
+                          'được phía bên kia của vết rách. Bây giờ bạn phải tìm cách đóng nó lại vĩnh viễn.'},
+ '02318': {'name': 'Đóng Vết Rách',
+           'text': '[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này '
+                   "và giải quyết khả năng 'revelation' của nó.\n"
+                   '<b>Objective</b> - Chỉ các điều tra viên tại The Edge of the Universe mới có thể cùng nhau chi trả '
+                   'số lượng manh mối cần thiết, theo nhóm, để advance.',
+           'flavor': 'Những hòn đá kỳ dị trên mặt đất được khắc một loại ấn phong nào đó. Đến gần chúng khiến một '
+                     'giọng nói vang vào tâm trí bạn, nói bằng một thứ ngôn ngữ ngoài hành tinh.',
+           'back_name': 'Hàn Gắn Vết Rách',
+           'back_text': 'Loại bỏ Edge of the Universe khỏi trò chơi.\n'
+                        'Đưa địa điểm Tear Through Time đang để riêng vào chơi.',
+           'back_flavor': 'Bạn hoàn toàn kiệt sức, không biết có thể làm gì để đóng vết rách lại. Nó quá xa để chạm '
+                          'tới, và không có gì bạn làm tạo ra bất kỳ tác dụng nào. Không có gì ở đây để hướng dẫn bạn '
+                          'ngoài những lời lẽ kỳ quái đang thấm vào tâm trí bạn. Ngay lúc đó, bạn nghe thấy một giọng '
+                          'nói quen thuộc trong dàn hợp xướng vang vọng, và cảm thấy mình bị thôi thúc phải lặp lại '
+                          'nó. "Claude ostium…" Ban đầu bạn thì thầm, những từ ngữ ở ngay đầu lưỡi bạn. Bạn nhắm mắt '
+                          'lại để tập trung, và tiếng vang ngày càng lớn hơn. Khi nó kết thúc và bạn mở mắt ra, bạn '
+                          'chỉ đối mặt với một vực thẳm đen như mực, và vết rách đã biến mất.'},
+ '02319': {'name': 'Tìm Một Con Đường Mới',
+           'text': '[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này '
+                   "và giải quyết khả năng 'revelation' của nó.\n"
+                   '<b>Objective</b> - Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.',
+           'flavor': 'Không có con đường rõ ràng nào để thoát khỏi chiều không gian này, bạn tìm kiếm một con đường '
+                     'khác.',
+           'back_name': 'Thực Tại Vẫy Gọi',
+           'back_text': '<b>(→R1)</b>',
+           'back_flavor': 'Bạn phát hiện ra một con đường trông có vẻ quen thuộc và đi theo nó. Ngay cả khi nhiệm vụ '
+                          'của bạn đã hoàn thành, giờ đây bạn hiểu rằng khi đóng vết rách lại, bạn có thể không bao '
+                          'giờ trở về nhà được nữa. Nỗi sợ bị lạc ở đây mãi mãi thúc đẩy bạn tiến về phía trước, qua '
+                          'một cổng tò vò dẫn vào một hành lang mọc um tùm cỏ dại. Một cánh cửa gỗ ẩm ướt dẫn bạn ra '
+                          'một khoang trời mưa phùn mỏng manh và bầu trời tối sầm. Xi măng biến thành sỏi, rồi đá cẩm '
+                          'thạch, rồi thép, rồi cỏ. Bạn băng qua những đồng cỏ dài đến khó tin và tìm đường qua những '
+                          'khu rừng rậm rạp trước khi sự mệt mỏi cuối cùng cũng ập đến. Cạn kiệt mọi năng lượng, bạn '
+                          'không thể đi tiếp được nữa. Cơ thể bạn ngã quỵ.'},
+ '51026': {'name': 'Nơi Có Khói',
+           'text': '',
+           'flavor': 'Khi chuyến tàu đến Dunwich dừng lại một cách đột ngột rung chuyển, bạn nhìn ra ngoài cửa sổ phía '
+                     'sau và thấy một vết rách khổng lồ trên bầu trời, như một vết rách trên một mảnh vải. Từ vết rách '
+                     'này, một quái thú có cánh xuất hiện. Nó phát ra một tiếng rít đau đớn và lao xuống đoàn tàu.',
+           'back_name': '',
+           'back_text': '',
+           'back_flavor': ''},
+ '51027': {'name': 'Vết Rách Trong Thực Tại (bản II)',
+           'text': '',
+           'flavor': 'Lực hút của cánh cổng mạnh lên với sự hiện diện của con quái thú có cánh. Vài toa tàu sau cùng '
+                     'bị kéo giật ngược trở lại, và có một tiếng nghiến kim loại khủng khiếp khi chúng bị tách rời. '
+                     'Các toa tàu lật nhào lên phía trên và tiến vào vết nứt rạn trên bầu trời. Những hành khách gần '
+                     'đó đang hoảng loạn, những người khác đang co ro trên ghế ngồi của mình, và một cụ ông đã ngất '
+                     'lịm đi vì sợ hãi.',
+           'back_name': 'Tiếp Tục Di Chuyển!',
+           'back_text': 'Loại bỏ địa điểm ngoài cùng bên trái khỏi trò chơi (hoặc đặt nó vào khu vực trưng bày thành '
+                        'tích nếu nó có Victory X và không có manh mối nào trên đó). Mỗi điều tra viên tại địa điểm đó '
+                        'bị đánh bại. Mỗi kẻ địch và asset tại địa điểm đó bị bỏ.\n'
+                        'Bỏ tất cả các manh mối do các điều tra viên kiểm soát.',
+           'back_flavor': 'Toa sau cùng của đoàn tàu bị tách ra khi bị kéo giật lùi lại. Trước sự kinh hoàng của '
+                          'bạn, nó nhấc bổng lên khỏi đường ray và bị cánh cổng phía trên bạn nuốt chửng.'},
+ '51054': {'name': 'Đột Phá Xuyên Qua (bản II)',
+           'text': '<b>Forced</b> - Sau khi bạn bị di chuyển đến một địa điểm bởi một hiệu ứng lá bài encounter: Chịu '
+                   '1 horror.',
+           'flavor': 'Xuyên suốt chiều không gian biến dạng này, bất kể bạn du hành đến đâu, đều có một hình thù ám '
+                     'ảnh ở phía xa. Ban đầu, nó xuất hiện như một chiếc đĩa, giống như một mặt trăng đen với nhiều '
+                     'cánh tay ngoe nguẩy. Nhưng khi thời gian trôi qua, bạn có thể nhận ra nó đang ngày càng lớn hơn '
+                     'và lớn hơn…',
+           'back_name': 'Chìa Khóa và Cánh Cổng (bản II)',
+           'back_text': '<b>Revelation</b> - Di chuyển Yog-Sothoth đến The Edge of the Universe (hoặc Another '
+                        'Dimension nếu The Edge of the Universe không ở trong màn chơi). Loại bỏ Realms Beyond khỏi '
+                        'trò chơi và advance sang agenda 4a. Bỏ qua nội dung trên Realms Beyond trong khi giải quyết '
+                        'khả năng này.',
+           'back_flavor': ''},
+ '51055': {'name': 'Tiến Vào Cõi Xa Xăm (bản II)',
+           'text': '[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này '
+                   "và giải quyết khả năng 'revelation' của nó.\n"
+                   '<b>Objective</b> - Nếu một điều tra viên tiến vào The Edge of the Universe, advance.',
+           'flavor': 'Bạn tiếp tục lần theo vệt sáng mỏng manh, mặc dù địa hình hiểm trở khiến nó trở thành một mục '
+                     'tiêu khó đuổi theo.',
+           'back_name': 'Vật Chứa Đang Chờ Đợi',
+           'back_text': 'Spawn kẻ địch Seth Bishop <i>(Thrall of Yog-Sothoth)</i> đang để riêng tại The Edge of the '
+                        'Universe.',
+           'back_flavor': 'Bạn chạm tới một cõi hư không đen kịt dày đặc đến khó tin, và nhận ra rằng nơi này là nơi '
+                          'toàn bộ thực tại - tất cả những gì đang là và tất cả những gì sẽ mãi là - kết thúc. Ở trung '
+                          'tâm của nó, bạn nhìn thấy một vết rách nhỏ xíu, lơ lửng ngay ngoài tầm với. Bằng cách nào '
+                          'đó, bạn đã đến được phía bên kia của cánh cổng phía trên Sentinel Hill.\n'
+                          'Ngay lúc đó, một giọng nói từ bóng tối phía xa gọi bạn: "Biến đi." Vệt sáng mỏng manh bạn '
+                          'đang đi theo vụt bay vào bóng tối. Khoảnh khắc sau, khuôn mặt biến dạng, vặn vẹo của Seth '
+                          'Bishop xuất hiện. Da thịt ông ta cựa quậy với một sự đột biến phi tự nhiên. Đôi mắt ông mở '
+                          'to, tràn ngập ác ý độc địa. "Biến đi! Giờ ta là vật chứa của ngài! Ta có tri thức của các '
+                          'cổ nhân! Giờ thì, cút đi… hoặc chết!" Ông ta cười khanh khách điên dại khi thân xác bị điều '
+                          'khiển, dị dạng của ông tập tễnh tiến về phía trước\n'
+                          'Bạn phải tìm cách đóng vết rách lại vĩnh viễn, nhưng trước tiên bạn phải đối phó với Seth - '
+                          'nghĩa là với sinh vật mà ông ta đã trở thành.'}}
