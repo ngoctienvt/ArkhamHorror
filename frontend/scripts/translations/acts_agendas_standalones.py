@@ -1,37 +1,6 @@
 # Gemini translations for Acts & Agendas: Standalones, Side Scenarios & Climax Scenarios
 
 TRANSLATIONS_STANDALONES_ACTS_AGENDAS = {
-    # === TCU: The Wages of Sin (Tarot Acts & Agendas) ===
-    "05162": {
-        "name": "THE HANGED MAN · XII",
-        "flavor": "Linh hồn của những kẻ bị treo cổ trong quá khứ trỗi dậy đòi nợ máu.",
-        "back_name": "Cái Chết Cận Kề",
-        "back_text": "Advance sang agenda 2.",
-        "back_flavor": "Những sợi dây thòng lọng ma quái đung đưa từ các cành cây trơ trụi."
-    },
-    "05163": {
-        "name": "Cái Chết Cận Kề",
-        "flavor": "Bóng tối bao trùm nghĩa trang Hang Treo.",
-        "back_name": "Chết Chìm Dưới Mộ Sâu",
-        "back_text": "Mỗi điều tra viên chưa resign bị bắt giữ. <b>(→R2)</b>",
-        "back_flavor": "Đất cát nghĩa trang phủ kín thân xác bạn."
-    },
-    "05164": {
-        "name": "Truy Tìm Kẻ Đã Khuất",
-        "text": "<b>Objective</b> — Thám hiểm nghĩa địa và tìm kiếm các oan hồn Heretic.",
-        "flavor": "Những tiếng khóc ai oán dẫn lối cho bạn giữa màn sương lạnh.",
-        "back_name": "Giải Oan Cho Kẻ Khuất",
-        "back_text": "Advance sang Act 2.",
-        "back_flavor": "Bạn tìm thấy nơi chôn cất của các phù thủy bị xử oan."
-    },
-    "05165": {
-        "name": "Truy Tìm Kẻ Sống Sót",
-        "text": "<b>Objective</b> — Đưa các linh hồn Heretic về nơi an nghỉ cuối cùng.\n[action]: <b>Advance.</b>",
-        "flavor": "Hóa giải hận thù ba thế kỷ bằng lòng nhân từ và sự thật.",
-        "back_name": "Linh Hồn Yên Nghỉ",
-        "back_text": "<b>(→R1)</b>",
-        "back_flavor": "Các linh hồn mỉm cười tan biến vào ánh sáng bình minh."
-    },
 
     # === TIC: The Lair of Dagon ===
     "07275": {
