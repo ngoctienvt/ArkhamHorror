@@ -1,0 +1,28 @@
+[
+  {
+    "code": "05127",
+    "type": "act",
+    "pack": "tsn",
+    "scenario": "The Secret Name",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Stopping the Ritual",
+      "text": "Nahab cannot leave the Site of the Sacrifice.\n<b>Forced</b> - When Nahab is defeated: Instead of discarding her, heal all damage from her, disengage her from all investigators, and exhaust her. She does not ready during the upkeep phase this round.\n<b>Objective</b> - If there is no doom on Nahab, advance.",
+      "flavor": "You part the seams of space-time and arrive at your destination. It is the same cramped attic, but in a different time. The room is dark save for a violet glow emanating from the far edge, where the floor falls into oblivion. From out of the abyss, the ancient crone and her familiar emerge...",
+      "back_name": "Ritual Averted",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "The ancient crone lets out a banshee's wail as you dismantle her unholy ritual. The room unfurls through space-time, the cramped, slanted walls unfolding to reveal the oblivion beyond. The creature who was once Keziah Mason croaks a loathsome curse as her shapeless form is pulled into the void. Bit by bit, the wood-paneled flooring below your feet breaks apart. Then you are ripped - the pull from the stars - a muddy alleyway - the flute in the woods - the roaring abyss - the gaze of the watcher - The Tower - a green hillside - the black vortex - the screams of the accused - the piper - three arrows - a sacrifice - a ringing bell - an ascension - and you emerge from the anomaly, crashing painfully onto the floor."
+    },
+    "vi_current": {
+      "name": "Dừng Nghi Thức",
+      "text": "Nahab không thể rời khỏi Địa điểm Hiến tế.\n<b>Forced</b> - Khi Nahab bị đánh bại: Thay vì loại bỏ cô ấy, hãy chữa lành tất cả damage từ cô ấy, disengage cho cô ấy khỏi tất cả các điều tra viên và exhaust cho cô ấy. Cô ấy không có ready trong giai đoạn Upkeep ở vòng này.\n<b>Objective</b> - Nếu không có doom trên Nahab, advance.",
+      "flavor": "Bạn chia cắt các đường nối của không-thời gian và đến đích. Vẫn là căn gác chật chội đó, nhưng ở một thời điểm khác. Căn phòng tối tăm, chỉ có ánh sáng tím phát ra từ rìa xa, nơi sàn nhà rơi vào quên lãng. Từ vực thẳm, bà già và người quen của bà xuất hiện...",
+      "back_name": "Ritual Averted",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "Bà già cổ xưa phát ra tiếng than khóc của nữ thần báo tử khi bạn dỡ bỏ nghi lễ xấu xa của bà ta. Căn phòng mở ra xuyên không-thời gian, những bức tường nghiêng, chật hẹp mở ra để lộ ra sự lãng quên phía sau. Sinh vật từng là Keziah Mason thốt ra một lời nguyền ghê tởm khi hình dạng không hình dạng của cô bị kéo vào khoảng không. Từng chút một, sàn ốp gỗ dưới chân bạn vỡ ra. Sau đó, bạn bị xé toạc - sức kéo từ các vì sao - một con hẻm lầy lội - tiếng sáo trong rừng - vực thẳm gầm rú - ánh nhìn của người quan sát - Tòa Tháp - sườn đồi xanh - cơn lốc đen - tiếng la hét của bị cáo - người thổi sáo - ba mũi tên - vật hiến tế - tiếng chuông rung - sự thăng thiên - và bạn thoát ra khỏi dị thường, rơi xuống sàn một cách đau đớn."
+    }
+  }
+]

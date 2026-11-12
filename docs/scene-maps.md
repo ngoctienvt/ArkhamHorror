@@ -19,6 +19,7 @@ Tính năng **Scene Map (Bản đồ toàn cảnh trực quan)** là một bư�
 ### 3. Thao tác tương tác trực tiếp (Direct Interactive Location Plates)
 - Từng phòng/địa điểm có bảng thông tin (Plate) tích hợp:
   - Hiển thị rõ số **Manh mối (Clues)**, **Độ che giấu (Shroud)**, số lượng **Doom** và kẻ thù hiện diện.
+  - Số manh mối còn lại nằm ngay trên mặt token và cập nhật theo ván chơi. Rê chuột lên token để xem số in gốc nếu có.
   - Các đường nối vàng (Connection Lines) trực quan hóa các đường đi hợp lệ giữa các phòng.
   - Các nút hành động tức thời: **"Di chuyển đến đây" (Move here)** hoặc **"Điều tra" (Investigate)** ngay trên bảng điều khiển vị trí mà không cần tìm kiếm thẻ trong tay hay danh sách dài.
 

@@ -43,3 +43,5 @@ Từ The Dream-Eaters, tạo một sprite riêng cho mỗi mã thẻ còn thiế
 
 Thẻ Roman Soldier dùng hình giữ chỗ. Sprite của mã này dựng một lính bộ binh riêng, dùng thẻ Determined General cùng campaign làm mẫu trang phục. Sprite Irregulars thể hiện đủ bốn người trong tranh gốc.
 
+Toàn bộ roster đã có file WebP và mapping cho 908 mã enemy và 112 mã investigator. Lô cuối tích hợp 47 mã standalone chính thức đã tạo từ lượt trước và 136 mã homebrew mới. Sprite Extradimensional Enemy dùng biểu tượng nhật thực trên thẻ giữ chỗ. Sprite Declan O’Doyle giữ trang phục và kiểu tóc, với khuôn mặt trong bóng tối để giảm chi tiết thương tích.
+

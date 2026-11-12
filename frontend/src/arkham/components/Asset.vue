@@ -778,8 +778,10 @@ function startDrag(event: DragEvent) {
 
 .pool {
   position: absolute;
-  top: 50%;
+  /* Over the card's art (its top half), not its text box. */
+  top: 10%;
   align-items: center;
+  justify-content: center;
   width: 100%;
   display: flex;
   flex-wrap: wrap;

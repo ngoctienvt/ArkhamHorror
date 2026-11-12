@@ -1,0 +1,132 @@
+[
+  {
+    "code": "54018",
+    "type": "act",
+    "pack": "rttcu",
+    "scenario": "Return to The Witching Hour",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "A Circle Unbroken",
+      "text": "<b>Objective</b> - <i>\"Perhaps we can learn more from them...\"</i> If there are more than 1 [per_investigator] exhausted [[Witch]] enemies at the Witches' Circle, investigators at the Witches' Circle may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "For what purpose have these people gathered? Are they the cause of the disturbances in these woods? And if so, what is their true goal?",
+      "back_name": "A Circle Forged",
+      "back_text": "<b>(→R5)</b>",
+      "back_flavor": "The hooded figures stand down once they realize you are not fighting them or working to disrupt their ritual. \"They are not the ones from before - the interlopers who interfered with our ritual,\" one of them says, pulling off her hood to reveal striking red hair that glows in the firelight. Embers dance around her fingers. \"Are you of the same mind as us, then?\" she asks.\n\"nNo, Erynn,\" the leader of the coven answers for you. \"They are lost.\" She studies you with harsh eyes. \"How came you here?\"\nYou explain how you awoke in the woods, how you were attacked by terrible creatures, and how you came to the center of this circle to discover the truth behind your ordeal.\n\"Anette, I think someone delivered them here,\" the red-haired witch named Erynn whispers, mystified.\n\"We should finish here while the circle remains closed. There may be others in these woods. Come, sisters. Let us continue our work,\" Anette says."
+    },
+    "vi_current": {
+      "name": "Một Vòng Tròn Không bị Gián Đoạn",
+      "text": "<b>Objective</b> - <i>\"Có lẽ chúng ta có thể học hỏi nhiều hơn từ họ...\"</i> Nếu có nhiều hơn 1 [per_investigator] exhausted các kẻ địch [[Witch]] tại Vòng tròn Phù thủy, các điều tra viên tại Vòng tròn Phù thủy có thể dành số lượng manh mối cần thiết, với tư cách là một nhóm, cho advance.",
+      "flavor": "Những người này tụ tập lại nhằm mục đích gì? Có phải chúng là nguyên nhân gây ra sự xáo trộn trong khu rừng này? Và nếu vậy, mục tiêu thực sự của họ là gì?",
+      "back_name": "A Circle Forged",
+      "back_text": "<b>(→R5)</b>",
+      "back_flavor": "Những nhân vật trùm đầu sẽ đứng xuống khi họ nhận ra rằng bạn không chiến đấu với họ hoặc làm gián đoạn nghi lễ của họ. “Họ không phải là những người trước đó - những kẻ đã can thiệp vào nghi lễ của chúng tôi,” một trong số họ nói, kéo mũ trùm đầu ra để lộ mái tóc đỏ nổi bật tỏa sáng trong ánh lửa. Than hồng nhảy múa xung quanh ngón tay của cô. “Vậy cậu có cùng suy nghĩ với chúng tôi không?” cô ấy hỏi.\n\"Không, Erynn,\" người đứng đầu hội trả lời cho bạn. \"Họ bị mất.\" Cô ấy nghiên cứu bạn bằng ánh mắt khắc nghiệt. \"Sao cậu lại tới đây?\"\nBạn giải thích cách bạn thức dậy trong rừng, cách bạn bị tấn công bởi những sinh vật khủng khiếp và cách bạn đến trung tâm vòng tròn này để khám phá sự thật đằng sau thử thách của mình.\n“Anette, tôi nghĩ ai đó đã đưa họ đến đây,” phù thủy tóc đỏ tên Erynn thì thầm, bối rối.\n\"Chúng ta nên kết thúc ở đây trong khi vòng tròn vẫn đóng. Có thể còn có những người khác trong khu rừng này. Hãy đến, các chị em. Chúng ta hãy tiếp tục công việc của mình,\" Anette nói."
+    }
+  },
+  {
+    "code": "54035",
+    "type": "act",
+    "pack": "rttcu",
+    "scenario": "Return to The Wages of Sin",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "In Pursuit of Answers",
+      "text": "Locations cannot be flipped to their [[Spectral]] side.",
+      "flavor": "You have come to Hangman's Hill to investigate reports over the last few nights of ghost sightings and strange activities in the woods. The witch named Erynn told you to meet her here...but for what purpose?",
+      "back_name": "The Barrier Crossed",
+      "back_text": "Spawn 1 set-aside Heretic enemy at each of the following locations: The Gallows, Heretics' Graves, Chapel Attic, and Chapel Crypt. Add 2 [per_investigator] clues to each location.\nPut the set-aside Erynn MacAoidh story asset into play at the Haunted Fields, under no player's control.\nEach investigator puts into play 1 set-aside Spectral Web asset, under their control.",
+      "back_flavor": "Soft chanting guides you to a gloomy clearing near the abandoned chapel. A circle of witchweed surrounds the clearing, swaying gently in the breeze. At the center of the clearing, a cloaked woman kneels before an unmarked grave, far from the rest of the graveyard. You watch in quiet for a few minutes while the woman sings an old, somber melody. It reminds you somewhat of a child's lullaby, with a dark gravity that betrays its purpose. As soon as the song ends, she turns to face you. You recognize Erynn by her crimson red hair and the dark circles that hang beneath her eyes. \"You again.\" She rises. \"Have you come here for answers, as I have?\""
+    },
+    "vi_current": {
+      "name": "Theo Đuổi Câu Trả Lời",
+      "text": "các địa điểm không thể lật sang phía [[Spectral]] của chúng.",
+      "flavor": "Bạn đã đến Hangman's Hill để điều tra các báo cáo về việc nhìn thấy ma và các hoạt động kỳ lạ trong rừng trong vài đêm qua. Mụ phù thủy tên Erynn bảo bạn gặp cô ấy ở đây...nhưng với mục đích gì?",
+      "back_name": "The Barrier Crossed",
+      "back_text": "Spawn 1 set-aside Heretic enemy at each of the following locations: The Gallows, Heretics' Graves, Chapel Attic, and Chapel Crypt. Add 2 [per_investigator] manh mối to each location.\nPut the set-aside Erynn MacAoidh story asset into play at the Haunted Fields, under no player's control.\nEach investigator puts into play 1 set-aside Spectral Web asset, under their control.",
+      "back_flavor": "Tiếng tụng kinh nhẹ nhàng sẽ hướng dẫn bạn đến một khu đất trống ảm đạm gần nhà nguyện bỏ hoang. Một vòng cỏ phù thủy bao quanh trảng trống, đung đưa nhẹ nhàng trong gió. Ở giữa khu đất trống, một người phụ nữ mặc áo choàng đang quỳ trước một ngôi mộ không tên, cách xa phần còn lại của nghĩa địa. Bạn im lặng xem trong vài phút trong khi người phụ nữ hát một giai điệu cổ xưa, u ám. Nó gợi cho bạn phần nào về bài hát ru của một đứa trẻ, với sức hấp dẫn đen tối phản bội mục đích của nó. Ngay khi bài hát kết thúc, cô ấy quay mặt về phía bạn. Bạn nhận ra Erynn bởi mái tóc đỏ thẫm và quầng thâm dưới mắt cô ấy. \"Lại là cậu.\" Cô ấy đứng dậy. “Anh có đến đây để tìm câu trả lời như tôi không?”"
+    }
+  },
+  {
+    "code": "54036",
+    "type": "act",
+    "pack": "rttcu",
+    "scenario": "Return to The Wages of Sin",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "In Pursuit of the Beyond",
+      "text": "[reaction] When you would \"banish\" a ghost: You may instead place it beneath Erynn MacAoidh, Heretic side faceup.\n[action] If you are at Erynn MacAoidh's location, spend 1 [per_investigator] clues: <b>Parley.</b> Choose a Heretic beneath her and place it beneath this act.\n<b>Objective</b> - Help Erynn find answers by placing Heretics beneath this act. If there are 3 beneath this act, advance.",
+      "flavor": "\"The spirits of my kin are restless,\" Erynn explains. \"But the knowledge they possess is too great to ignore. Please, help me learn from them.\"",
+      "back_name": "Questionable Motives",
+      "back_text": "<b>(→R3)</b>",
+      "back_flavor": "\"I...I do not know what to make of this,\" Erynn says as you ruminate on the discoveries you've made. The spirits were indeed roused by the presence of the creature in the mist, but it almost seemed to be guiding them. Commanding them. You ask Erynn what kind of creature could do such a thing.\n\"She was one of us, once. The greatest of us. And perhaps the most dangerous.\" She sighs. It all makes sense now. There is only one witch you know of who would inspire such reverence and such fear: Keziah Mason.\n\"Now Anette grasps at the forbidden knowledge she once held. This ritual... I am no longer sure we should go through with it. I fear I have been a fool this whole time.\" Her dark gaze meets yours, unwavering. \"Let me come with you. Perhaps together we can put a stop to this.\""
+    },
+    "vi_current": {
+      "name": "Theo Đuổi Cõi xa Hơn",
+      "text": "[reaction] Khi bạn \"trục xuất\" một hồn ma: Thay vào đó, bạn có thể đặt nó bên dưới Erynn MacAoidh, mặt đối mặt của Heretic.\n[action] Nếu bạn đang ở địa điểm của Erynn MacAoidh, hãy Tiêu 1 [per_investigator] manh mối: <b>Parley.</b> Chọn một Kẻ dị giáo bên dưới cô ấy và đặt nó bên dưới hành động này.\n<b>Objective</b> - Giúp Erynn tìm câu trả lời bằng cách đặt Kẻ dị giáo bên dưới hành động này. Nếu có 3 bên dưới hành động này, advance.",
+      "flavor": "Erynn giải thích: “Linh hồn của người thân của tôi không ngừng nghỉ. \"Nhưng kiến ​​thức họ sở hữu quá lớn để có thể bỏ qua. Xin hãy giúp tôi học hỏi từ họ.\"",
+      "back_name": "Questionable Motives",
+      "back_text": "<b>(→R3)</b>",
+      "back_flavor": "\"Tôi...tôi không biết phải làm gì với điều này,\" Erynn nói khi bạn ngẫm nghĩ về những khám phá mà mình đã thực hiện. Các linh hồn thực sự bị đánh thức bởi sự hiện diện của sinh vật trong màn sương, nhưng nó gần như đang dẫn đường cho họ. Chỉ huy họ. Bạn hỏi Erynn loại sinh vật nào có thể làm được điều đó.\n\"Cô ấy đã từng là một trong số chúng tôi. Người vĩ đại nhất trong chúng tôi. Và có lẽ là người nguy hiểm nhất.\" Cô thở dài. Bây giờ tất cả đều có ý nghĩa. Chỉ có một phù thủy duy nhất mà bạn biết có thể truyền cảm hứng cho sự tôn kính và nỗi sợ hãi đến vậy: Keziah Mason.\n\"Bây giờ Anette đã nắm bắt được những kiến ​​thức bị cấm mà cô ấy từng nắm giữ. Nghi thức này... Tôi không còn chắc chúng ta có nên trải qua nó nữa không. Tôi sợ rằng mình đã trở thành một kẻ ngốc suốt thời gian qua.\" Ánh mắt đen tối của cô ấy gặp ánh mắt của bạn, không hề dao động. \"Hãy để tôi đi cùng bạn. Có lẽ cùng nhau chúng ta có thể chấm dứt chuyện này.\""
+    }
+  },
+  {
+    "code": "54047",
+    "type": "act",
+    "pack": "rttcu",
+    "scenario": "Return to Union and Disillusion",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('05243', 'text'), ('54047', 'text')]",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Beyond the Mist (v. V)",
+      "text": "[fast] During a <b>circle</b> action, spend 1 clue: Reduce the difficulty of this skill test by 2.\n<b>Objective</b> - If each Unvisited Isle location in play is revealed and the brazier on each of them is lit, advance.",
+      "flavor": "You are close to the site of the binding ritual. You must light all the braziers to find the way. Then, all that is left to do is bait the watcher to the trap and bind it there.",
+      "back_name": "Erynn's Plot",
+      "back_text": "Reveal The Geist-Trap location. Move each investigator at an Unvisited Isle location to The Geist-Trap.\nSpawn the set-aside Anette Mason at The Geist-Trap, with 2 [per_investigator] damage on her.",
+      "back_flavor": "After nearly an hour spent searching through the dense mist, you finally arrive at the Lodge's ritual site to find it in chaos. Members of the Silver Twilight Lodge, in robes of blue and silver, are embroiled in battle with the witches. Anette turns her attention to you, shocked and angered at your arrival. \"You! What are you doing here?\" She calls to her coven: \"Sisters! We must not let them interfere!\"\n\"No, Anette,\" Erynn replies, standing by your side. \"You have gone too far this time. It is you we must stop.\" Unsure who to follow, the rest of the witches stand down as the two face off.\n\"You must complete the ritual!\" Carl Sanford commands you from across the clearing. \"It is the only way!\""
+    },
+    "vi_current": {
+      "name": "Bên Kia Màn Sương (v. V)",
+      "text": "[fast] Trong khi thực hiện hành động <b>circle</b>, hãy Tiêu 1 manh mối: Giảm độ khó của bài kiểm tra skill này xuống 2.\n<b>Objective</b> - Nếu mỗi Đảo chưa được ghé thăm địa điểm trong màn chơi lộ diện và lò than trên mỗi hòn đảo đó đều sáng, thì advance.",
+      "flavor": "Bạn đang ở gần nơi diễn ra nghi lễ trói buộc. Bạn phải thắp sáng tất cả các lò than để tìm đường. Sau đó, tất cả những gì còn lại phải làm là dụ người quan sát vào bẫy và trói nó vào đó.",
+      "back_name": "Erynn's Plot",
+      "back_text": "Reveal The Geist-Trap location. Move each investigator at an Unvisited Isle location to The Geist-Trap.\nSpawn the set-aside Anette Mason at The Geist-Trap, with 2 [per_investigator] damage on her.",
+      "back_flavor": "Sau gần một giờ tìm kiếm trong màn sương mù dày đặc, cuối cùng bạn cũng đến được địa điểm nghi lễ của Lodge và thấy nó đang hỗn loạn. Các thành viên của Silver Twilight Lodge, mặc áo choàng màu xanh và bạc, bị lôi kéo vào trận chiến với các phù thủy. Anette chuyển sự chú ý sang bạn, bị sốc và tức giận khi bạn đến. \"Bạn! Bạn đang làm gì ở đây?\" Cô ấy gọi đến hội đồng của mình: \"Các chị em! Chúng ta không được để họ can thiệp!\"\n\"Không, Anette,\" Erynn trả lời, đứng bên cạnh bạn. \"Lần này ngươi đã đi quá xa rồi. Chính là ngươi, chúng ta phải dừng lại.\" Không biết nên đi theo ai, những phù thủy còn lại đứng xuống khi cả hai đối đầu.\n\"Ngươi nhất định phải hoàn thành nghi thức!\" Carl Sanford ra lệnh cho bạn từ phía bên kia khu đất trống. \"Đó là cách duy nhất!\""
+    }
+  },
+  {
+    "code": "54057",
+    "type": "act",
+    "pack": "rttcu",
+    "scenario": "Return to Before the Black Throne",
+    "source_file": null,
+    "audit_flags": [
+      "flavor: dup [('05331', 'flavor'), ('54057', 'flavor')]",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "What Must Be Done (v. II)",
+      "text": "[action] Spend X clues: Draw the top X cards of the Cosmos. Choose one to put into play using its \"<b>Cosmos</b> -\" instructions, and move to it. Shuffle the rest back into the Cosmos.\n<b>Objective</b> - If the lead investigator is a The Black Throne and there are no clues on it, advance.",
+      "flavor": "You are close now. You can feel the churning and twisting of aeons in the emptiness around you. Here, in the nucleus of all things - the very center of chaos itself - your objective, and your ultimate fate, lie at hand.",
+      "back_name": "The End",
+      "back_text": "Check the Campaign Log.\n- If at least two of the following are true, you may proceed to <b>(→R2)</b>: <i>You accepted your fate</i>, <i>Mesmerizing Flute</i> is listed under \"Mementos Discovered,\" and <i>Ritual Components</i> is listed under \"Mementos Discovered.\"\n- If at least two of the following are true, you may proceed to <b>(→R3)</b>: <i>You rejected your fate</i>, <i>Scrap of Torn Shadow</i> is listed under \"Mementos Discovered,\" and <i>Wisp of Spectral Mist</i> is listed under \"Mementos Discovered.\"\n- If <i>Strange Incantation</i> and <i>Bloody Tree Carvings</i> are listed under \"Mementos Discovered,\" you may proceed to <b>(→R6)</b>\n- Otherwise, <b>(→R4)</b>.",
+      "back_flavor": "You stand on a precipice before the Black Throne and gaze up at the blind, voiceless monstrosity that is Azathoth. The mere sight of it causes your vision to blur and your body to shake uncontrollably. The monotonous piping is so loud now, it rattles your bones and causes blood to drip from your eyes and ears. Should Azathoth awaken, it will devour every world that ever was."
+    },
+    "vi_current": {
+      "name": "Điều Phải Làm (c. Ii)",
+      "text": "[action] Chi X manh mối: Rút các lá bài X trên cùng của Cosmos. Chọn một để đặt vào màn chơi bằng cách sử dụng hướng dẫn \"<b>Cosmos</b> -\" của nó và di chuyển đến đó. Xáo trộn phần còn lại vào Cosmos.\n<b>Objective</b> - Nếu điều tra viên chính là Ngai Đen và không có manh mối trên đó, thì đó là advance.",
+      "flavor": "Bây giờ bạn đang ở gần. Bạn có thể cảm nhận được sự khuấy động và vặn xoắn của vô số kiếp trong sự trống rỗng xung quanh bạn. Ở đây, trong trung tâm của vạn vật - chính là trung tâm của sự hỗn loạn - mục tiêu và số phận cuối cùng của bạn nằm trong tầm tay.",
+      "back_name": "The End",
+      "back_text": "Check the Campaign Log.\n- If at least two of the following are true, you may proceed to <b>(→R2)</b>: <i>You accepted your fate</i>, <i>Mesmerizing Flute</i> is listed under \"Mementos Discovered,\" and <i>Ritual Components</i> is listed under \"Mementos Discovered.\"\n- If at least two of the following are true, you may proceed to <b>(→R3)</b>: <i>You rejected your fate</i>, <i>Scrap of Torn Shadow</i> is listed under \"Mementos Discovered,\" and <i>Wisp of Spectral Mist</i> is listed under \"Mementos Discovered.\"\n- If <i>Strange Incantation</i> and <i>Bloody Tree Carvings</i> are listed under \"Mementos Discovered,\" you may proceed to <b>(→R6)</b>\n- Otherwise, <b>(→R4)</b>.",
+      "back_flavor": "Bạn đứng trên một vách đá trước ngai đen và nhìn lên sinh vật quái dị mù quáng, không có giọng nói đó là Azathoth. Chỉ cần nhìn thấy nó thôi cũng khiến tầm nhìn của bạn mờ đi và cơ thể bạn run rẩy không kiểm soát. Tiếng kêu đơn điệu bây giờ quá ồn ào, khiến xương cốt bạn rung lên và máu chảy ra từ mắt và tai bạn. Nếu Azathoth thức tỉnh, nó sẽ nuốt chửng mọi thế giới từng tồn tại."
+    }
+  }
+]

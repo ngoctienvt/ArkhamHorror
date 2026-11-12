@@ -1,0 +1,1079 @@
+[
+  {
+    "code": "08518",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "The Crash",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: dup [('08518', 'text'), ('08519', 'text'), ('08520', 'text')]",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.10",
+      "back_flavor: len ratio 0.11"
+    ],
+    "en": {
+      "name": "Cold Welcome",
+      "text": "<b>Forced</b> - After a location is entered by an investigator for the first time: Put into play each set-aside location connected to that location. <i>(Use the map in the Campaign Guide for reference.)</i>",
+      "flavor": "This isn't exactly how you imagined your first foray into the Antarctic wilds. The stinging cold and lashing, frozen winds will only get worse over time.",
+      "back_name": "Under the Ice",
+      "back_text": "Spawn a set-aside Skittering Nonsense at the lead investigator's location. Shuffle the remainder of the set-aside Skittering Nonsense enemies and the set-aside <i>Creatures in the Ice</i> encounter set into the encounter deck.",
+      "back_flavor": "\"Hold on! Come see this!\" one of the other team members shouts as you trudge ahead through the snow. You turn back and examine what they have found - a second set of tracks in the snow, but smaller, misshapen. Almost impossibly so.\n\"What in the hell could have made these tracks?\" one of your party asks. You stand dumbfounded. Very little wildlife exists out here in the frozen wastes. And these tracks match nothing you've ever seen before. Nothing you can even imagine.\nYou don't have to question what could make such tracks for long. A shape emerges from the erupting snow, twisted and deformed, like a splotch of ink spilled upon the canvas of reality. It makes a strange, almost familiar cry that is eaten by the howling wind: \"-li! -li!\" Then, with terrifying speed, it rushes toward you."
+    },
+    "vi_current": {
+      "name": "Sự Chào Đón Giá Lạnh",
+      "text": "<b>Forced</b> - Sau khi địa điểm được nhập bởi điều tra viên lần đầu tiên: Đặt vào màn chơi mỗi địa điểm riêng biệt được kết nối với địa điểm đó. <i>(Sử dụng bản đồ trong Hướng dẫn Chiến dịch để tham khảo.)</i>",
+      "flavor": "Máy bay thám hiểm rơi xuống Nam Cực giữa bão tuyết mịt mù. Xác máy bay bốc cháy trơ trọi giữa hoang nguyên băng giá vĩnh cửu.",
+      "back_name": "Tiến Vào Miền Tuyết Trắng",
+      "back_text": "Advance sang agenda 2.",
+      "back_flavor": "Gió bão gầm rít với nhiệt độ âm hàng chục độ C, đe dọa đóng băng bất kỳ ai chậm chân."
+    }
+  },
+  {
+    "code": "08519",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "The Crash",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: dup [('08518', 'text'), ('08519', 'text'), ('08520', 'text')]",
+      "back_text: nums en=[] vi=['3']",
+      "back_text: len ratio 0.22",
+      "back_flavor: len ratio 0.09"
+    ],
+    "en": {
+      "name": "Into the White",
+      "text": "<b>Forced</b> - After a location is entered by an investigator for the first time: Put into play each set-aside location connected to that location. <i>(Use the map in the Campaign Guide for reference.)</i>",
+      "flavor": "Something dwells beneath the ice. Something you've never seen or heard of before, not even in William Dyer's horrifying report. Something...unreal.",
+      "back_name": "It Dwells Inside",
+      "back_text": "Spawn the set-aside Terror of the Stars enemy at the revealed location with the highest shelter value.",
+      "back_flavor": "These things, these manifestations, they're not beasts or even alien creatures like those Dyer and Danforth encountered in their last expedition. You're not even sure they are entities at all. They have no shape, consisting of an almost proto-plasmic substance that seeps back into the ice when harmed or whenever you escape their clutches. Given the persistence of these entities and the inclement, deadly conditions of Antarctica, you know you won't survive the night without finding shelter.\nJust as you are pondering what your next move should be, the ice beneath you rumbles with tremendous force, letting out a terrifying groan. \"An earthquake?\" one of your party asks over the raucous noise.\n\"No, that's impossible,\" another replies. You share a dreadful glance. Could it be one of those...things?"
+    },
+    "vi_current": {
+      "name": "Tiến Vào Miền Tuyết Trắng",
+      "text": "<b>Forced</b> - Sau khi địa điểm được nhập bởi điều tra viên lần đầu tiên: Đặt vào màn chơi mỗi địa điểm riêng biệt được kết nối với địa điểm đó. <i>(Sử dụng bản đồ trong Hướng dẫn Chiến dịch để tham khảo.)</i>",
+      "flavor": "Tầm nhìn chỉ còn vài mét. Bạn phải nhanh chóng tìm thấy một hang đá hoặc nơi khuất gió để dựng trại.",
+      "back_name": "Thời Gian Cạn Dần",
+      "back_text": "Advance sang agenda 3.",
+      "back_flavor": "Đêm Nam Cực đang buông xuống nhanh chóng, mang theo cái lạnh chết người."
+    }
+  },
+  {
+    "code": "08520",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "The Crash",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: dup [('08518', 'text'), ('08519', 'text'), ('08520', 'text')]",
+      "flavor: len ratio 0.42",
+      "back_text: nums en=['1'] vi=['1', '2']",
+      "back_text: len ratio 0.16",
+      "back_flavor: len ratio 0.32"
+    ],
+    "en": {
+      "name": "Running Out of Time",
+      "text": "<b>Forced</b> - After a location is entered by an investigator for the first time: Put into play each set-aside location connected to that location. <i>(Use the map in the Campaign Guide for reference.)</i>",
+      "flavor": "The sun hangs low in the sky, but never sets. Your party is exhausted from the long, arduous day. Though the sky is never plunged into the dark of night, you know it's only a matter of time before you are forced to make camp.",
+      "back_name": "Forced into Shelter",
+      "back_text": "Each investigator, including those who are eliminated, shuffles the top card of the Tekeli-li deck into their deck.\nChoose a location in play with no clues on it. Each undefeated investigator moves to that location and immediately resigns. The higher that location's shelter value, the better. If the investigators cannot choose such a location, they must move to the Crash Site and immediately resign, even if they otherwise could not. <i>(Then, resolve the [[Objective]] on act 1a.)</i>",
+      "back_flavor": "You can go on no longer. It's not ideal, but you'll have to make do with the shelter you've found. You only hope that it's enough to keep your party from freezing... or worse."
+    },
+    "vi_current": {
+      "name": "Thời Gian Cạn Dần",
+      "text": "<b>Forced</b> - Sau khi địa điểm được nhập bởi điều tra viên lần đầu tiên: Đặt vào màn chơi mỗi địa điểm riêng biệt được kết nối với địa điểm đó. <i>(Sử dụng bản đồ trong Hướng dẫn Chiến dịch để tham khảo.)</i>",
+      "flavor": "Nhiệt độ giảm xuống mức khủng khiếp. Nếu không dựng trại ngay, cả đoàn thám hiểm sẽ chết cóng!",
+      "back_name": "Chết Cóng Giữa Bão Tuyết",
+      "back_text": "Mỗi điều tra viên chưa hoàn thành dựng trại chịu 1 physical trauma. <b>(→R2)</b>",
+      "back_flavor": "Bão tuyết nuốt chửng bạn vào tấm màn trắng xóa vĩnh cửu."
+    }
+  },
+  {
+    "code": "08521",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "The Crash",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: len ratio 0.40",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.28"
+    ],
+    "en": {
+      "name": "Search for a Camp Site",
+      "text": "[action] If each investigator is at the same location and that location has no clues on it: <b>Resign.</b> You set up camp. Each investigator resigns.\n<b>Objective</b> - Find somewhere safe to set up camp. If each undefeated investigator has resigned, advance. The higher the shelter value of the location they resigned at, the better.",
+      "flavor": "You're going to have to find a way back to camp, and soon...or you'll have to make due camping in the wilds.",
+      "back_name": "Under the Stars",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Exhausted and terrified by your ordeal, you decide this is as good a place as any to make camp for the night. Perhaps tomorrow you can salvage some kind of academic value out of this hellish journey, but for now such things seem trivial. Survival is the only thing on your mind."
+    },
+    "vi_current": {
+      "name": "Tìm Nơi Dựng Trại",
+      "text": "<b>Objective</b> — Thám hiểm các vùng tuyết xung quanh và tìm kiếm địa điểm an toàn để dựng căn cứ dã chiến.\n[action]: <b>Advance.</b>",
+      "flavor": "Bạn khiêng các thùng hàng tiếp tế còn sót lại và tìm đường qua các khe nứt băng nguy hiểm.",
+      "back_name": "Dựng Trại Thành Công",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn tìm thấy một vách đá che chắn kín gió và dựng thành công lều trại sinh tồn."
+    }
+  },
+  {
+    "code": "08523",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "Lost in the Night",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "back_text: nums en=[] vi=['1']",
+      "back_text: len ratio 0.34",
+      "back_flavor: len ratio 0.30"
+    ],
+    "en": {
+      "name": "A Harsh Wind Blows",
+      "flavor": "Several of your party have mysteriously vanished in the night. Without a sign of any struggle, you can only assume they left of their own accord...but why?",
+      "back_name": "Tracks in the Snow",
+      "back_text": "Choose a facedown encounter card beneath a location. Look at the other side of that card <i>(without resolving its text)</i>. Then return it facedown beneath that location.",
+      "back_flavor": "As you journey through the glacial wilds, you stumble across a set of tracks in the snow leading farther from camp. You pause and investigate further. Were these tracks made by one of your missing team members? Or by something more...monstrous?"
+    },
+    "vi_current": {
+      "name": "Gió Lạnh Rít Gào",
+      "flavor": "Một số thành viên trong đoàn thám hiểm đã mất tích giữa đêm tối. Bạn phải tổ chức đội cứu hộ ngay lập tức!",
+      "back_name": "Hàn Khí Đêm Đen",
+      "back_text": "Mỗi điều tra viên tại địa điểm không có trại chịu 1 horror.",
+      "back_flavor": "Bóng đêm bao trùm hoang nguyên băng giá với những âm thanh ai oán kì dị."
+    }
+  },
+  {
+    "code": "08524",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "Lost in the Night",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "back_text: nums en=[] vi=['3']",
+      "back_text: len ratio 0.13",
+      "back_flavor: len ratio 0.23"
+    ],
+    "en": {
+      "name": "The Chill of Night",
+      "flavor": "The low-hanging sun dimly illuminates the Antarctic night. Gray clouds cover the sky, threatening an icy storm.",
+      "back_name": "Tracks in the Snow",
+      "back_text": "Choose a facedown encounter card beneath a location. Look at the other side of that card <i>(without resolving its text)</i>. Then return it facedown beneath that location.",
+      "back_flavor": "As you journey through the glacial wilds, you stumble across a set of tracks in the snow leading farther from camp. You pause and investigate further. Were these tracks made by one of your missing team members? Or by something more...monstrous?"
+    },
+    "vi_current": {
+      "name": "Hàn Khí Của Màn Đêm",
+      "flavor": "Dấu chân trên tuyết đang bị bão xóa sạch. Thời gian để tìm người sống sót đang vơi dần.",
+      "back_name": "Điên Loạn và Cái Chết",
+      "back_text": "Advance sang agenda 3.",
+      "back_flavor": "Những bóng đen dị hợm lướt đi trên nền tuyết trắng xóa."
+    }
+  },
+  {
+    "code": "08525",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "Lost in the Night",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "flavor: len ratio 0.28",
+      "back_text: nums en=['1', '1'] vi=['2']",
+      "back_flavor: len ratio 0.14"
+    ],
+    "en": {
+      "name": "Madness and Death",
+      "flavor": "The storm grows closer, and with it looming in the sky, that damnable sound returns. It haunts you with its presence, worming its way into your mind. Is it the cause of this folly? This madness?",
+      "back_name": "Forced to Retreat",
+      "back_text": "Each remaining investigator is defeated and suffers 1 mental trauma.\n<b>(→R1)</b>",
+      "back_flavor": "As the night ends, the storm arrives in its full ferocity. Raging, icy winds and dense snowfall make your task impossible. You'll never find the remaining team members in these conditions, and even if you did...\nA hard lump of guilt and despair forms in your throat. There's no way they would survive in this storm, not without supplies or shelter. That you are forced to choose between your life and theirs is a burden you will surely carry with you for the rest of your life. And you'll be lucky if that's more than a couple of days."
+    },
+    "vi_current": {
+      "name": "Điên Loạn và Cái Chết",
+      "flavor": "Nỗi kinh hoàng từ bên dưới lớp băng bắt đầu thức giấc!",
+      "back_name": "Thảm Kịch Băng Giá",
+      "back_text": "Các thành viên mất tích bị coi là đã bỏ mạng. <b>(→R2)</b>",
+      "back_flavor": "Bạn chỉ tìm thấy những mảnh áo khoác rách nát vấy máu đông cứng trên tuyết."
+    }
+  },
+  {
+    "code": "08526",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "Lost in the Night",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=[]",
+      "text: icons en=['[action]', '[fast]', '[per_investigator]'] vi=['[action]']",
+      "text: len ratio 0.41",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.19"
+    ],
+    "en": {
+      "name": "The Lost Expedition",
+      "text": "[fast] Investigators at your location spend 1 [per_investigator] clues, as a group: Draw the encounter card beneath your location.\n[action] If you are at camp: <b>Resign.</b> You turn in for the night.\n<b>Objective</b> - Find as many missing expedition members as you can by adding them to the victory display, then head back to camp before daybreak. If each undefeated investigator has resigned, advance.",
+      "flavor": "You set out to search for the missing team members, hoping to find them before daybreak...",
+      "back_name": "Turning In",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "With night coming to a close, the storm approaches faster and faster. Soon, the weather will be too deadly for your search to continue. If anyone is still out there, you doubt they'll survive - and neither will you if you remain unsheltered any longer. You return to your camp, your heart heavy with guilt and and your mind addled by that foul noise that festers within."
+    },
+    "vi_current": {
+      "name": "Đoàn Thám Hiểm Mất Tích",
+      "text": "<b>Objective</b> — Tìm kiếm và giải cứu các thành viên đoàn thám hiểm đang bị kẹt giữa bão tuyết.\n[action]: <b>Resign.</b> Bạn đưa những người còn sống trở về khu trại.",
+      "flavor": "Bạn soi đèn bão lùng sục từng kẽ nứt băng để tìm kiếm tín hiệu cầu cứu.",
+      "back_name": "Giải Cứu Kịp Thời",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn đưa những đồng đội kiệt sức trở về lều sưởi ấm trước khi quá muộn."
+    }
+  },
+  {
+    "code": "08544",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "Seeping Nightmares",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "back_text: nums en=['1', '1', '1', '2'] vi=['2']",
+      "back_text: icons en=['[frost]'] vi=[]",
+      "back_text: len ratio 0.09",
+      "back_flavor: len ratio 0.46"
+    ],
+    "en": {
+      "name": "Manifestations of Evil",
+      "text": "<b>Forced</b> - When this agenda would advance, if there is at least 1 facedown card beneath a Seeping Nightmare: Instead of advancing this agenda, remove 2 doom from play and find the Seeping Nightmare with the most facedown cards beneath it. Choose one of the cards beneath it at random and spawn it at its location.",
+      "flavor": "Something stirs beneath the ice. Through the cracks, a vile ichor bubbles forth, its odor pungent and rancid.",
+      "back_name": "A Foul Air",
+      "back_text": "The lead investigator must decide (choose one):\n- Add 1 [frost] token to the chaos bag.\n- In player order, each investigator shuffles the top 2 cards of the Tekeli-li deck into their deck (each investigator who cannot takes 1 damage and 1 horror instead).",
+      "back_flavor": "This place is not what it seems. You feel as though you have trespassed somewhere ancient and terrible, and now its wrath is erupting all around you."
+    },
+    "vi_current": {
+      "name": "Hiện Thân Của Tà Ác",
+      "text": "<b>Forced</b> - Khi agenda này sẽ là advance, nếu có ít nhất 1 lá bài úp bên dưới Ác mộng đang úp mặt: Thay vì advancing trong agenda này, hãy loại bỏ 2 doom khỏi cuộc chơi và tìm Ác mộng đang úp mặt có nhiều lá bài úp nhất bên dưới nó. Chọn ngẫu nhiên một trong các thẻ bên dưới nó và spawn nó ở địa điểm.",
+      "flavor": "Những khối chất nhầy đen ngòm kỳ lạ bắt đầu rỉ ra từ bên dưới lớp băng vĩnh cửu, làm tan chảy đá và kim loại.",
+      "back_name": "Tầng Băng Sâu Thẳm",
+      "back_text": "Advance sang agenda 2.",
+      "back_flavor": "Mùi hôi thối nồng nặc của những sinh vật cổ đại bốc lên từ lòng đất."
+    }
+  },
+  {
+    "code": "08545",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "Seeping Nightmares",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "flavor: len ratio 0.27",
+      "back_text: nums en=['1'] vi=['2', '2']",
+      "back_flavor: len ratio 0.06"
+    ],
+    "en": {
+      "name": "Icy Depths",
+      "flavor": "The violent quakes have risen to a crescendo. Any second now, you feel as though the entire ice shelf could collapse, spilling you into the frigid ocean - or worse, if your theory about the underground source of these creatures is correct.",
+      "back_name": "Ice Shelf Collapse",
+      "back_text": "Each remaining investigator is defeated and suffers 1 physical trauma.",
+      "back_flavor": "Your only warning is a thin web of cracks that tears through the ice before your feet, and then a sudden explosion of mist and ink-like miasma erupts around you. The force slams you to the ground. You crawl desperately along the freezing-cold ice as the miasma reaches for you. An incomprehensible sound, like the rushing of a furious whirlwind, fills your ears. Then a thunderous crack, and you are falling - no, sliding - down along the ice toward the freezing cold waters below.\nIt is a wonder you are even still conscious. You summon all of your strength and cling to the ice shelf just before you plummet below. You finally haul yourself back over the edge, casting a panicked glance at the horizon, but there is no sign of any miasma or mist. The crack in the ice shelf extends for hundreds of feet in front of you, separating you from your pursuers. Somehow, you've unwittingly escaped...although you won't be forgetting that near-death experience anytime soon."
+    },
+    "vi_current": {
+      "name": "Tầng Băng Giá Sâu Thẳm",
+      "flavor": "Khu trại đang bị tấn công bởi những ảo ảnh kinh hoàng từ quá khứ!",
+      "back_name": "Khu Trại Thất Thủ",
+      "back_text": "Mỗi điều tra viên nhận 2 horror. <b>(→R2)</b>",
+      "back_flavor": "Cơn ác mộng nuốt chửng khu trại trong tiếng thét kinh hoàng."
+    }
+  },
+  {
+    "code": "08546",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "Seeping Nightmares",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: nums en=['0', '4'] vi=[]",
+      "text: len ratio 0.33",
+      "flavor: len ratio 0.36",
+      "back_text: nums en=['1', '2'] vi=['1']",
+      "back_text: len ratio 0.02",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Under Attack!",
+      "text": "Each [[Eidolon]] enemy gains <b>Victory 0.</b>\nThe camp gains: \"[action] Investigators at your location spend 4 clues, as a group: <b>Resign.</b>\"\n<b>Objective</b> - If there are no [[Eidolon]] enemies in play, advance.\n<b>Objective</b> - If each undefeated investigator has resigned, advance.",
+      "flavor": "Your camp has been discovered, and now the monsters prowling about the ice and snow are converging on your position. You have only two ways out of this nightmare: you must fight, or you must flee.",
+      "back_name": "The Last Breath",
+      "back_text": "<b>If there are no [[Eidolon]] enemies in play:</b>\n<blockquote><i>The last of the nightmarish creatures falls, its miasmatic body at once dissolving into inky, prismatic liquid and dissipating into wisps of gray mist filled with screaming shapes. Then, silence.</i></blockquote>\n<b>(→R1)</b>\n<b><hr>If the investigators advanced by resigning:</b>\n<blockquote><i>You follow a makeshift path through a jagged split in the ice shelf, making your way deeper into the mainland, toward the mountains. You don't know if these creatures can follow human tracks - or indeed if they need tracks at all in order to pursue you - but you take the time to cover them, regardless. Hopefully, with this shortcut you've found, you'll be safe...</i></blockquote>\n<b>(→R2)</b>"
+    },
+    "vi_current": {
+      "name": "Bị Tấn Công!",
+      "text": "<b>Objective</b> — Đẩy lùi những thực thể ác mộng đang bao vây khu trại.\n[action]: <b>Advance.</b>",
+      "flavor": "Súng trường và đuốc lửa là những vũ khí duy nhất để bảo vệ sự sống còn!",
+      "back_name": "Đẩy Lùi Ác Mộng",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Ngọn lửa xua tan lũ quái vật trở lại dưới đáy băng sâu."
+    }
+  },
+  {
+    "code": "08550",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "Fatal Mirage",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: dup [('08550', 'text'), ('08551', 'text'), ('08552', 'text')]",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.20",
+      "back_flavor: len ratio 0.32"
+    ],
+    "en": {
+      "name": "Ethereal Tangle (v. I)",
+      "text": "[fast] Take 1 horror: Move to the Prison of Memories.",
+      "flavor": "You find yourself trapped in an endless prison of distorted thought. Each door is another world to discover, another memory to explore...",
+      "back_name": "Fade Away",
+      "back_text": "Each remaining investigator is defeated and must shuffle the top card of the Tekeli-li deck into their deck.",
+      "back_flavor": "Bit by bit, your consciousness fades. You are lost in the ever-expanding weave of memories, your senses drowning in a deluge of thought and emotion. A jumbled cage of fear, doubt, and horror.\nWhen you finally awaken, only seconds have passed."
+    },
+    "vi_current": {
+      "name": "Rối Loạn Hư Ảo (v. I)",
+      "text": "[fast] nhận 1 horror: Di chuyển đến Nhà tù Ký ức.",
+      "flavor": "Bạn rơi vào một ảo ảnh siêu thực — một nhà tù tâm trí tái hiện những ký ức đau thương nhất của từng thành viên đoàn thám hiểm.",
+      "back_name": "Bẫy Ký Ức",
+      "back_text": "Advance sang agenda 2.",
+      "back_flavor": "Những bức tường băng phản chiếu lại những tội lỗi và nuối tiếc trong quá khứ."
+    }
+  },
+  {
+    "code": "08551",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "Fatal Mirage",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: dup [('08550', 'text'), ('08551', 'text'), ('08552', 'text')]",
+      "flavor: len ratio 0.59",
+      "back_text: nums en=['1', '2'] vi=['3']",
+      "back_text: len ratio 0.15",
+      "back_flavor: len ratio 0.17"
+    ],
+    "en": {
+      "name": "Ethereal Tangle (v. II)",
+      "text": "[fast] Take 1 horror: Move to the Prison of Memories.",
+      "flavor": "You once again find yourself trapped in an endless prison of distorted thought...",
+      "back_name": "Emotional Pull",
+      "back_text": "Each remaining investigator is defeated and must either suffer 1 mental trauma or shuffle the top 2 cards of the Tekeli-li deck into their deck.",
+      "back_flavor": "Again, your consciousness fades. You tumble through everlasting moments, empathy tugging your emotions in every direction at once. It is an ocean of bottomless thought, deep and dark and tenebrous.\nWhen you finally awaken, once again only seconds have passed."
+    },
+    "vi_current": {
+      "name": "Rối Loạn Hư Ảo (v. II)",
+      "text": "[fast] nhận 1 horror: Di chuyển đến Nhà tù Ký ức.",
+      "flavor": "Ảo ảnh ngày càng trở nên chân thực và nguy hiểm.",
+      "back_name": "Tâm Trí Vỡ Vụn",
+      "back_text": "Advance sang agenda 3.",
+      "back_flavor": "Lằn ranh giữa thực và ảo hoàn toàn biến mất."
+    }
+  },
+  {
+    "code": "08552",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "Fatal Mirage",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: dup [('08550', 'text'), ('08551', 'text'), ('08552', 'text')]",
+      "back_text: nums en=['1'] vi=['2', '2']",
+      "back_flavor: len ratio 0.20"
+    ],
+    "en": {
+      "name": "Ethereal Tangle (v. III)",
+      "text": "[fast] Take 1 horror: Move to the Prison of Memories.",
+      "flavor": "You once again find yourself trapped in an endless prison of distorted thought...",
+      "back_name": "Deconstruction",
+      "back_text": "Each remaining investigator is defeated and suffers 1 mental trauma.",
+      "back_flavor": "Your consciousness is dismantled, this time violently. It is as though your capacity to feel, to think, has been ripped to shreds by the incomprehensible depth of this awful prison. Infinite leagues apart, your every molecule struggles to remain you as your mind is usurped.\nWhen you finally awaken, a full day has passed."
+    },
+    "vi_current": {
+      "name": "Rối Loạn Hư Ảo (v. III)",
+      "text": "[fast] nhận 1 horror: Di chuyển đến Nhà tù Ký ức.",
+      "flavor": "Ảo ảnh chuẩn bị sụp đổ, chôn vùi tâm trí bạn vĩnh viễn!",
+      "back_name": "Mất Trí Nhớ Vĩnh Viễn",
+      "back_text": "Mỗi điều tra viên chịu 2 mental trauma. <b>(→R2)</b>",
+      "back_flavor": "Ý thức của bạn vĩnh viễn mắc kẹt trong chiếc gương băng ảo ảnh."
+    }
+  },
+  {
+    "code": "08553",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "Fatal Mirage",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: len ratio 0.35",
+      "flavor: len ratio 0.41",
+      "back_text: nums en=['1'] vi=['2']",
+      "back_flavor: len ratio 0.14"
+    ],
+    "en": {
+      "name": "Shadow of the Past (v. I)",
+      "text": "<b>Objective</b> - Confront your demons to strengthen your resolve. <i>(Hint: You may have more than one opportunity to advance this act. Until then, you are trapped. If you are running out of time and are given the chance to advance, consider taking it...)</i>",
+      "flavor": "In this strange, alternate reality, past memories and nightmares come to life. Is this place real or a figment of your imagination? Or perhaps both?",
+      "back_name": "Deeper Mysteries",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Understanding sets in. Dream though it may be, this place is like a nexus of minds - a place within the miasma where thought is material. Where madness is embodied.\nAs you ponder the deeper truths that might have taken shape in this maze of horrors, a door appears just in the periphery of your sight: the same door you once used to trap yourself in this hellish place.\nPerhaps there are more mysteries to discover here, but for now, you've seen enough. You open the door..."
+    },
+    "vi_current": {
+      "name": "Bóng Ma Quá Khứ (v. I)",
+      "text": "<b>Objective</b> — Tìm kiếm các kỷ vật và đối mặt với nỗi sợ sâu kín nhất để phá vỡ ảo ảnh.",
+      "flavor": "Những hình bóng thân quen xuất hiện và van nài sự cứu chuộc.",
+      "back_name": "Hóa Giải Quá Khứ",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Bạn đối diện với sự thật và giải thoát một linh hồn khỏi sự dằn vặt."
+    }
+  },
+  {
+    "code": "08554",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "Fatal Mirage",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: len ratio 0.28",
+      "flavor: len ratio 0.36",
+      "back_text: nums en=['1'] vi=['3']",
+      "back_flavor: len ratio 0.16"
+    ],
+    "en": {
+      "name": "Shadow of the Past (v. II)",
+      "text": "<b>Objective</b> - Confront your demons to strengthen your resolve. <i>(Hint: You may have more than one opportunity to advance this act. Until then, you are trapped. If you are running out of time and are given the chance to advance, consider taking it...)</i>",
+      "flavor": "In this strange, alternate reality, past memories and nightmares come to life. Is this place real or a figment of your imagination? Or perhaps both?",
+      "back_name": "Willing Victim",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Once again, as you wonder about the deeper significance this place holds, the exit appears before you, a door of solid oak that stands out within the mirage. Hallucination or not, it is your only way out of this strange place. Maybe the truth is out there, somewhere, but for now, it's safer to leave and return to reality. You open the door..."
+    },
+    "vi_current": {
+      "name": "Bóng Ma Quá Khứ (v. II)",
+      "text": "<b>Objective</b> — Thu thập các mảnh hồi ức để tìm lối thoát khỏi ảo ảnh.",
+      "flavor": "Từng mảnh ký ức ghép lại bức tranh về bi kịch Nam Cực.",
+      "back_name": "Thức Tỉnh Dần",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Mặt băng rạn nứt, ánh sáng thế giới thực le lói rọi vào."
+    }
+  },
+  {
+    "code": "08555",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "Fatal Mirage",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: icons en=[] vi=['[action]']",
+      "text: len ratio 0.48",
+      "flavor: len ratio 0.25",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.09"
+    ],
+    "en": {
+      "name": "Shadow of the Past (v. III)",
+      "text": "<b>Objective</b> - Confront your demons to strengthen your resolve. <i>(Hint: You may have more than one opportunity to advance this act. Until then, you are trapped. If you are running out of time and are given the chance to advance, consider taking it...)</i>",
+      "flavor": "In this strange, alternate reality, past memories and nightmares come to life. Is this place real or a figment of your imagination? Or perhaps both?",
+      "back_name": "Return to Reality",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "As you confront yet another memory locked inside this strange hallucination, you spot another door - not a wooden one or indeed any door made by human hands, but rather a colossal circular gate of rock with an elaborately carved slab of slate-gray stone blocking your way. Enigmatic glyphs wind around its frame, their meaning inscrutable. You step forward, place your hand upon the stone, and to your surprise, the door cracks open with an immense rumble.\nA layer of thick, prismatic miasma drips from the doorway as you peer inside. <i>Thum-thum. Thum-thum. Thum-thum.</i> The beating is tremendous. Something quivers and throbs on the other side, something hideous and enormous, like a beating heart. <i>Thum-thum. Thum-thum. Thum-thum.</i> The heart of the mountain. The heart of the mirage. Then the door slams open, tendrils of ichor slap around your wrists, and you are dragged, screaming, through the door-"
+    },
+    "vi_current": {
+      "name": "Bóng Ma Quá Khứ (v. III)",
+      "text": "<b>Objective</b> — Phá tan ảo ảnh cuối cùng và thức tỉnh trở lại thực tại.\n[action]: <b>Resign.</b> Bạn bước qua tấm gương vỡ.",
+      "flavor": "Hãy mở mắt ra và trở về với thực tại!",
+      "back_name": "Thoát Khỏi Ảo Ảnh",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn bàng hoàng tỉnh giấc giữa lều trại, thoát khỏi chiếc bẫy tâm trí kinh hoàng."
+    }
+  },
+  {
+    "code": "08597",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "To the Forbidden Peaks",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: dup [('08597', 'text'), ('08598', 'text')]",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.07",
+      "back_flavor: len ratio 0.28"
+    ],
+    "en": {
+      "name": "Forbidden Peaks",
+      "text": "<b>Forced</b> - After you move to a location: Return all of your clues to the token pool.",
+      "flavor": "You arrive at the foothills of the menacing mountain. The strange caves and odd formations at the mountain's summit beg to be explored.",
+      "back_name": "Re-Emergence",
+      "back_text": "Put the set-aside Terror of the Stars enemy into play at the highest level location with one or more investigators. Each investigator at that location loses control of all [[Expedition]] assets and places them at their location.\nRead <b>Scenario Interlude: Tragedy Strikes</b> in the Campaign Guide.",
+      "back_flavor": "The mountainside splits and erupts with snow. A storm of jagged ice shards bursts forth from the womb of the mountain. Behind it, the beast emerges: a whirlwind of mist; haunting, alien shapes; hideous effluvia. It sets its terrible gaze on your party and reaches for you with a tendril of miasma."
+    },
+    "vi_current": {
+      "name": "Những Đỉnh Núi Cấm",
+      "text": "<b>Forced</b> - Sau khi bạn chuyển đến địa điểm: Trả lại tất cả manh mối của bạn vào nhóm token.",
+      "flavor": "Dãy Núi Điên Loạn (Mountains of Madness) sừng sững chọc thủng tầng mây với độ cao không tưởng. Bạn bắt đầu hành trình leo núi sinh tử.",
+      "back_name": "Nỗi Kinh Hoàng Giáng Lâm",
+      "back_text": "Advance sang agenda 2.",
+      "back_flavor": "Gió lốc trên cao rít lên từng cơn như tiếng cười ngạo nghễ của các vị thần cổ đại."
+    }
+  },
+  {
+    "code": "08598",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "To the Forbidden Peaks",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: dup [('08597', 'text'), ('08598', 'text')]",
+      "flavor: len ratio 0.35",
+      "back_text: nums en=['1', '2'] vi=['2']",
+      "back_flavor: len ratio 0.14"
+    ],
+    "en": {
+      "name": "Terror Descends",
+      "text": "<b>Forced</b> - After you move to a location: Return all of your clues to the token pool.",
+      "flavor": "The once-flurrying snow has become a tempest of wind and heavy snowfall. If you don't make it across the peaks soon, you'll be forced to take shelter...or spend the rest of eternity as a frozen corpse along the mountainside.",
+      "back_name": "Terror Prevails",
+      "back_text": "If one or more investigators have resigned, proceed to <b>(→R1)</b>.\nOtherwise, proceed to <b>(→R2)</b>.",
+      "back_flavor": "The snowfall is so thick now that you can no longer see your destination, nor can you hear your companions' shouts over the howling wind. Every step takes the breath out of you. The air is so thin up here, it is a wonder you even have any breath to spare. You glance up at the blanket of white cast in an endless net overhead. Perhaps you were never close to the summit - just another trick of the eye, like everything else in this godforsaken place."
+    },
+    "vi_current": {
+      "name": "Nỗi Kinh Hoàng Giáng Xuống",
+      "text": "<b>Forced</b> - Sau khi bạn chuyển đến địa điểm: Trả lại tất cả manh mối của bạn vào nhóm token.",
+      "flavor": "Oxy loãng dần và những sinh vật có cánh bay lượn quanh các mỏm băng nhọn hoắt.",
+      "back_name": "Rơi Xuống Vực Sâu",
+      "back_text": "Mỗi điều tra viên bị trượt chân rơi xuống vực tuyết. <b>(→R2)</b>",
+      "back_flavor": "Bạn rơi tự do hàng ngàn mét xuống thung lũng băng giá vô tận."
+    }
+  },
+  {
+    "code": "08599",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "To the Forbidden Peaks",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.50"
+    ],
+    "en": {
+      "name": "Ascend the Mountain",
+      "text": "[action]: Take control of an [[Expedition]] asset at your location.\n<b>Objective</b> - Get to the top of the mountain. If each undefeated investigator has resigned, advance.",
+      "flavor": "Carrying as much expedition gear as you can, you must climb the imposing mountainside to unlock the secrets that lie on the other side.",
+      "back_name": "A City of Wonder",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "After a long and arduous journey up the mountainside, you've reached the forbidden peaks. You hope the pain and horror you've suffered along the way is behind you, but you fear that it will persist...and become relentless."
+    },
+    "vi_current": {
+      "name": "Leo Lên Đỉnh Núi",
+      "text": "<b>Objective</b> — Dùng rìu băng và dây thừng vượt qua các vách đá dựng đứng để lên tới đỉnh đèo.\n[action]: <b>Advance.</b>",
+      "flavor": "Từng nhát búa cắm chặt vào băng cứng, từng bước chân đòi hỏi sự tập trung tột độ.",
+      "back_name": "Vượt Qua Dãy Núi Điên Loạn",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn bước lên đỉnh đèo lộng gió và sững sờ ngắm nhìn quang cảnh bên kia: Thành Phố Cổ Đại của loài Elder Thing!"
+    }
+  },
+  {
+    "code": "08622",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "City of the Elder Things",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: nums en=['1', '3'] vi=['1', '1', '1', '3']",
+      "text: dup [('08622', 'text'), ('08623', 'text')]",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.31",
+      "back_flavor: len ratio 0.31"
+    ],
+    "en": {
+      "name": "Lurking Horrors",
+      "text": "[fast] During your turn, spend 1 clue: Look at the revealed side of a City Landscape in your column or row. (Limit once per round.)\n[fast] During your turn, spend 3 clues: Move to any location in your column or row. (Limit once per round.)",
+      "flavor": "The hidden alien city looms before you, ancient and enigmatic. What secrets - and terrors - lie in wait within?",
+      "back_name": "Awakened Monstrosities",
+      "back_text": "Read <b>Scenario Interlude: Gaze into Madness</b> in the Campaign Log.",
+      "back_flavor": "The walls of the city call to you in surreptitious whispers, ethereal songs indecipherable to human ears, and yet somehow familiar all the same. You try your best to shut them out, to make believe it is just your imagination, but not all of your companions are as successful..."
+    },
+    "vi_current": {
+      "name": "Những Mối Nguy Rình Rập",
+      "text": "[fast] Trong lượt của bạn, hãy Tiêu 1 manh mối: Nhìn vào mặt được hiển thị của Cảnh quan Thành phố trong cột hoặc hàng của bạn. (Giới hạn 1 lần mỗi vòng.)\n[fast] Trong lượt của bạn, hãy Tiêu 3 manh mối: Di chuyển đến bất kỳ địa điểm nào trong cột hoặc hàng của bạn. (Giới hạn 1 lần mỗi vòng.)",
+      "flavor": "Bạn bước vào thành phố khổng lồ xây dựng bằng đá đen hình sao năm cánh — công trình của loài Elder Thing hàng trăm triệu năm trước.",
+      "back_name": "Tà Khí Trỗi Dậy",
+      "back_text": "Advance sang agenda 2.",
+      "back_flavor": "Những bức tượng đá cổ bắt đầu dịch chuyển trong bóng tối của những tòa tháp khổng lồ."
+    }
+  },
+  {
+    "code": "08623",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "City of the Elder Things",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: nums en=['1', '3'] vi=['1', '1', '1', '3']",
+      "text: dup [('08622', 'text'), ('08623', 'text')]",
+      "back_text: len ratio 4.50",
+      "back_flavor: len ratio 0.16"
+    ],
+    "en": {
+      "name": "Doom from Below",
+      "text": "[fast] During your turn, spend 1 clue: Look at the revealed side of a City Landscape in your column or row. (Limit once per round.)\n[fast] During your turn, spend 3 clues: Move to any location in your column or row. (Limit once per round.)",
+      "flavor": "Below the darkened ice, more of the city lies trapped, encased and frozen in time. This is but the tip of the iceberg...",
+      "back_name": "Digging Too Deep",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "Your thoughts become convoluted, a tangle of fear, worry, and doubt. Danger lurks around every corner of this abominable place, but most dangerous of all is the growing feeling that you should not be here - that you should flee from this place and never return.\nAs the weather outside turns foul, you hole up in the relative safety of one of the city's towering structures. It is too late to return to camp. Your only hope is to take shelter within the alien city, hoping your presence goes unnoticed by the denizens that still prowl through its streets and ancient halls."
+    },
+    "vi_current": {
+      "name": "Diệt Vong Từ Bên Dưới",
+      "text": "[fast] Trong lượt của bạn, hãy Tiêu 1 manh mối: Nhìn vào mặt được hiển thị của Cảnh quan Thành phố trong cột hoặc hàng của bạn. (Giới hạn 1 lần mỗi vòng.)\n[fast] Trong lượt của bạn, hãy Tiêu 3 manh mối: Di chuyển đến bất kỳ địa điểm nào trong cột hoặc hàng của bạn. (Giới hạn 1 lần mỗi vòng.)",
+      "flavor": "Lũ quái vật Shoggoth — những nô lệ biến đổi gen của người Elder Thing — đang bò trườn lên từ các hầm chứa ngầm!",
+      "back_name": "Bị Nuốt Chửng",
+      "back_text": "Mỗi điều tra viên bị Shoggoth nghiền nát. <b>(→R2)</b>",
+      "back_flavor": "Âm thanh ghê tởm \"Tekeli-li! Tekeli-li!\" vang lên khi khối chất nhầy khổng lồ nuốt chửng bạn."
+    }
+  },
+  {
+    "code": "08624",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "City of the Elder Things",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: icons en=['[action]', '[action]', '[elder_thing]', '[tablet]'] vi=[]",
+      "text: len ratio 0.26",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.07",
+      "back_flavor: len ratio 0.09"
+    ],
+    "en": {
+      "name": "Sprawling City (v. I)",
+      "text": "[action] Spend two [elder_thing] keys: Remember that the team \"studied the history of the Elder Things.\"\n[action] Spend two [tablet] keys: Remember that the team \"discerned the origin of the Shoggoths.\"\n<b>Objective</b> - If the team has \"studied the history of the Elder Things\" and \"discerned the origin of the Shoggoths,\" advance.",
+      "flavor": "This is the discovery of a lifetime. Dyer's report was true - all of it. You must explore this alien civilization in order to learn more...",
+      "back_name": "Aeons-Long History",
+      "back_text": "Shuffle the set-aside <i>Shoggoths</i> encounter set and the encounter discard pile into the encounter deck.\nYou know the route into the undercity. Reveal the Hidden Tunnel.\nPut the set-aside Terror of the Stars enemy into play at the Hidden Tunnel, exhausted.",
+      "back_flavor": "What you have found is almost too wild to believe. According to the murals and records within the city, the \"Elder Things\" were travelers from the stars. They colonized the Earth long before the time of humanity, settling far and wide. And deep in the undercity beneath the tallest mountain, they created monstrous creatures - \"Shoggoths\" - to be their servants. But the Shoggoths rebelled against them and soon their civilization collapsed...\nSuddenly, a distant noise stops you and the other explorers in their tracks: a deep, bellowing roar that seems to come from somewhere far below. You dare not ponder what kind of monstrosity could have made such a hideous sound."
+    },
+    "vi_current": {
+      "name": "Thành Phố Trải Rộng (v. I)",
+      "text": "<b>Objective</b> — Thám hiểm các khu phố cổ và tìm kiếm lối vào Hầm Phong Ấn Tối Cao.",
+      "flavor": "Những bức tranh tường phù điêu kể lại lịch sử cuộc chiến giữa loài Elder Thing và Cthulhu.",
+      "back_name": "Phát Hiện Mới",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Bạn tìm thấy bản đồ hầm ngầm dẫn tới Trái Tim Của Sự Điên Loạn."
+    }
+  },
+  {
+    "code": "08625",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "City of the Elder Things",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: icons en=['[action]', '[action]', '[cultist]', '[elder_thing]'] vi=[]",
+      "text: len ratio 0.19",
+      "flavor: len ratio 0.42",
+      "back_text: nums en=['1'] vi=['2']",
+      "back_text: icons en=['[frost]'] vi=[]",
+      "back_text: len ratio 0.09"
+    ],
+    "en": {
+      "name": "Sprawling City (v. II)",
+      "text": "[action] Spend two [elder_thing] keys: Remember that the team \"studied the history of the Elder Things.\"\n[action] Spend two [cultist] keys: Remember that the team \"discovered a hidden power.\"\n<b>Objective</b> - If the team has \"studied the history of the Elder Things\" and \"discovered a hidden power,\" advance.",
+      "flavor": "This is the discovery of a lifetime. Dyer's report was true - all of it. You must explore this alien civilization in order to learn more...",
+      "back_name": "Aeons-Long History",
+      "back_text": "Shuffle the set-aside <i>Creatures in the Ice</i> encounter set and the encounter discard pile into the encounter deck.\nYou know the route into the undercity. Reveal the Hidden Tunnel.\nAdd 1 [frost] token to the chaos bag.",
+      "back_flavor": "What you have found is almost too wild to believe. According to the murals and records within the city, the \"Elder Things\" were travelers from the stars. They colonized the Earth long before the time of humanity, settling far and wide. And deep in the undercity beneath the tallest mountain, they found a dormant, primordial power - something so terrifying, they built a gateway to seal it within. But eventually, it began to escape, and their civilization collapsed...\nThere must be even more preposterous secrets buried deep below. You have to learn the truth of this ancient power, and in order to do so, you must find the secret passageway that will lead you deeper into the heart of the mountain."
+    },
+    "vi_current": {
+      "name": "Thành Phố Trải Rộng (v. II)",
+      "text": "<b>Objective</b> — Giải mã cổ tự trên các trụ đá năm cánh.",
+      "flavor": "Kiến trúc phi nhân loại làm rối loạn nhận thức không gian.",
+      "back_name": "Phát Hiện Mới",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Những gì bạn đã tìm thấy gần như quá hoang đường để có thể tin được. Theo những bức tranh tường và hồ sơ trong thành phố, \"Elder Things\" là những du khách đến từ các vì sao. Họ đã xâm chiếm Trái đất từ ​​rất lâu trước thời của loài người, định cư xa và rộng. Và sâu trong lòng thành phố bên dưới ngọn núi cao nhất, họ tìm thấy một sức mạnh nguyên thủy, không hoạt động - một thứ gì đó rất đáng sợ, họ đã xây dựng một cánh cổng để phong ấn nó bên trong. Nhưng cuối cùng, nó bắt đầu trốn thoát và nền văn minh của họ sụp đổ...\nChắc chắn còn có những bí mật phi lý hơn nữa được chôn sâu bên dưới. Bạn phải tìm hiểu sự thật về sức mạnh cổ xưa này, và để làm được điều đó, bạn phải tìm ra lối đi bí mật sẽ dẫn bạn vào sâu hơn trong lòng ngọn núi."
+    }
+  },
+  {
+    "code": "08626",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "City of the Elder Things",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: icons en=['[action]', '[action]', '[cultist]', '[tablet]'] vi=[]",
+      "text: len ratio 0.21",
+      "flavor: len ratio 0.49",
+      "back_text: nums en=['1'] vi=['2']",
+      "back_text: len ratio 0.07"
+    ],
+    "en": {
+      "name": "Sprawling City (v. III)",
+      "text": "[action] Spend two [tablet] keys: Remember that the team \"discerned the origin of the Shoggoths.\"\n[action] Spend two [cultist] keys: Remember that the team \"discovered a hidden power.\"\n<b>Objective</b> - If the team has \"discerned the origin of the Shoggoths\" and \"discovered a hidden power,\" advance.",
+      "flavor": "This is the discovery of a lifetime. Dyer's report was true - all of it. You must explore this alien civilization in order to learn more...",
+      "back_name": "Aeons-Long History",
+      "back_text": "Shuffle the set-aside <i>Shoggoths</i> encounter set and the encounter discard pile into the encounter deck.\nYou know the route into the undercity. Reveal the Hidden Tunnel.\nIn player order, each investigator draws 1 card from the top of the encounter deck.",
+      "back_flavor": "What you have found is almost too wild to believe. According to the murals and records within the city, a race of monstrous creatures known as \"Shoggoths\" were created to serve the masters of this city. The Shoggoths were sent deep into the undercity beneath the tallest mountain, where they would construct a gateway to seal some dormant, primordial power, something so terrifying even the Shoggoths' masters feared it. But the Shoggoths rebelled against them and let the seal decay, leading to the collapse of this ancient civilization...\nSuddenly, a distant noise stops you and the other explorers in their tracks: a deep, bellowing roar that seems to come from somewhere far below. You dare not ponder what kind of monstrosity could have made such a hideous sound."
+    },
+    "vi_current": {
+      "name": "Thành Phố Trải Rộng (v. III)",
+      "text": "<b>Objective</b> — Thu thập các mẫu thiết bị công nghệ cổ xưa.",
+      "flavor": "Những cỗ máy kỳ dị vẫn phát ra ánh sáng mờ nhạt sau hàng kỷ băng hà.",
+      "back_name": "Phát Hiện Mới",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Những gì bạn đã tìm thấy gần như quá hoang đường để có thể tin được. Theo những bức tranh tường và hồ sơ trong thành phố, một chủng tộc sinh vật quái dị được gọi là \"Shoggoths\" được tạo ra để phục vụ những chủ nhân của thành phố này. Các Shoggoth được gửi sâu vào thành phố bên dưới ngọn núi cao nhất, nơi họ sẽ xây dựng một cánh cổng để phong ấn một sức mạnh nguyên thủy, không hoạt động nào đó, một thứ đáng sợ đến mức ngay cả chủ nhân của Shoggoth cũng phải sợ hãi. Nhưng người Shoggoth đã nổi dậy chống lại họ và để phong ấn bị phân hủy, dẫn đến sự sụp đổ của nền văn minh cổ đại này...\nĐột nhiên, một tiếng động từ xa khiến bạn và những nhà thám hiểm khác dừng bước: một tiếng gầm sâu, gầm gừ dường như đến từ một nơi nào đó xa bên dưới. Bạn không dám tự hỏi loại quái vật nào lại có thể tạo ra âm thanh gớm ghiếc như vậy."
+    }
+  },
+  {
+    "code": "08627",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "City of the Elder Things",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: nums en=['1', '1', '1'] vi=[]",
+      "text: icons en=['[action]', '[cultist]'] vi=[]",
+      "text: len ratio 0.30",
+      "flavor: len ratio 0.38",
+      "back_text: nums en=['1'] vi=['3']",
+      "back_flavor: dup [('08627', 'back_flavor'), ('08628', 'back_flavor'), ('08629', 'back_flavor')]"
+    ],
+    "en": {
+      "name": "Pursuit of the Unknown (v. I)",
+      "text": "[action] Spend two [cultist] keys: Each investigator may heal 1 damage, 1 horror, and 1 trauma.\n<b>Objective</b> - If each undefeated investigator is at the Hidden Tunnel and it has no clues, advance.",
+      "flavor": "Somewhere in this sprawling web of icy streets and cyclopean structures lies an ancient gateway leading to the undercity beneath the great mountain. You'll have to find it if you wish to learn more...",
+      "back_name": "To the Undercity",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "The path, now clear, leads into a labyrinth of dark, treacherous tunnels. For good or ill, your rigorous journey is coming to an end. Taking a deep breath, you gather your courage and delve into the depths of the mountain."
+    },
+    "vi_current": {
+      "name": "Truy Tìm Bí Ẩn (v. I)",
+      "text": "<b>Objective</b> — Thâm nhập khu phòng thí nghiệm trung tâm.",
+      "flavor": "Nơi loài Elder Thing từng nuôi cấy mầm mống sự sống đầu tiên trên Trái Đất.",
+      "back_name": "Cánh Cổng Ngầm",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Con đường bây giờ đã thông thoáng, dẫn vào một mê cung gồm những đường hầm tối tăm, nguy hiểm. Dù tốt hay xấu, cuộc hành trình gian khổ của bạn sắp kết thúc. Hít một hơi thật sâu, bạn lấy hết can đảm và đi sâu vào lòng núi."
+    }
+  },
+  {
+    "code": "08628",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "City of the Elder Things",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: icons en=['[action]', '[tablet]'] vi=[]",
+      "text: len ratio 0.19",
+      "flavor: len ratio 0.30",
+      "back_text: nums en=['1'] vi=['3']",
+      "back_flavor: dup [('08627', 'back_flavor'), ('08628', 'back_flavor'), ('08629', 'back_flavor')]"
+    ],
+    "en": {
+      "name": "Pursuit of the Unknown (v. II)",
+      "text": "[action] Spend two [tablet] keys: Each investigator searches their deck for each Tekeli-li weakness, shuffles each of them into the Tekeli-li deck, then shuffles their deck.\n<b>Objective</b> - If each undefeated investigator is at the Hidden Tunnel and it has no clues, advance.",
+      "flavor": "Somewhere in this sprawling web of icy streets and cyclopean structures lies an ancient gateway leading to the undercity beneath the great mountain. You'll have to find it if you wish to learn more...",
+      "back_name": "To the Undercity",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "The path, now clear, leads into a labyrinth of dark, treacherous tunnels. For good or ill, your rigorous journey is coming to an end. Taking a deep breath, you gather your courage and delve into the depths of the mountain."
+    },
+    "vi_current": {
+      "name": "Truy Tìm Bí Ẩn (v. II)",
+      "text": "<b>Objective</b> — Vượt qua hàng rào an ninh sinh học.",
+      "flavor": "Các cảm biến năng lượng nhấp nháy ánh đỏ cảnh báo nguy hiểm.",
+      "back_name": "Cánh Cổng Ngầm",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Con đường bây giờ đã thông thoáng, dẫn vào một mê cung gồm những đường hầm tối tăm, nguy hiểm. Dù tốt hay xấu, cuộc hành trình gian khổ của bạn sắp kết thúc. Hít một hơi thật sâu, bạn lấy hết can đảm và đi sâu vào lòng núi."
+    }
+  },
+  {
+    "code": "08629",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "City of the Elder Things",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: icons en=['[action]', '[elder_thing]', '[elder_thing]'] vi=['[action]']",
+      "text: len ratio 0.27",
+      "flavor: len ratio 0.30",
+      "back_text: untranslated",
+      "back_flavor: dup [('08627', 'back_flavor'), ('08628', 'back_flavor'), ('08629', 'back_flavor')]"
+    ],
+    "en": {
+      "name": "Pursuit of the Unknown (v. III)",
+      "text": "<b>Forced</b> - When a [[Shoggoth]] or [[Elite]] enemy enters a location: Defeat each [[Elder Thing]] enemy at that location.\n[action] Spend two [elder_thing] keys: Remove each [elder_thing] token from the chaos bag.\n<b>Objective</b> - If each undefeated investigator is at the Hidden Tunnel and it has no clues, advance.",
+      "flavor": "Somewhere in this sprawling web of icy streets and cyclopean structures lies an ancient gateway leading to the undercity beneath the great mountain. You'll have to find it if you wish to learn more...",
+      "back_name": "To the Undercity",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "The path, now clear, leads into a labyrinth of dark, treacherous tunnels. For good or ill, your rigorous journey is coming to an end. Taking a deep breath, you gather your courage and delve into the depths of the mountain."
+    },
+    "vi_current": {
+      "name": "Truy Tìm Bí Ẩn (v. III)",
+      "text": "<b>Objective</b> — Kích hoạt thang máy ngầm dẫn xuống hầm tối.\n[action]: <b>Advance.</b>",
+      "flavor": "Thang máy từ từ chuyển động đưa bạn xuống trung tâm lòng đất.",
+      "back_name": "Hạ Xuống Hầm Ngầm",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Con đường bây giờ đã thông thoáng, dẫn vào một mê cung gồm những đường hầm tối tăm, nguy hiểm. Dù tốt hay xấu, cuộc hành trình gian khổ của bạn sắp kết thúc. Hít một hơi thật sâu, bạn lấy hết can đảm và đi sâu vào lòng núi."
+    }
+  },
+  {
+    "code": "08659",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "The Great Seal",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: dup [('08659', 'text'), ('08660', 'text'), ('08661', 'text')]",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.31",
+      "back_flavor: len ratio 0.17"
+    ],
+    "en": {
+      "name": "The Beating Heart",
+      "text": "<b>Forced</b> - If two or more activated seals are controlled by investigators at the same location: The latent energy stored within the seals fuses together, and the ensuing chain reaction sets off an electrostatic detonation that destroys all life on Earth. <b>(→R3)</b>",
+      "flavor": "Five darkened paths lead away from the gateway, through icy caverns and down vaulted corridors of smooth black stone. Quiet dread fills the ancient, dormant structure.",
+      "back_name": "Unknowable End",
+      "back_text": "Read <b>Scenario Interlude: The Final Straw</b> in the Campaign Guide.",
+      "back_flavor": "A dark, primordial energy seeps forth from the walls, the very same miasma that has haunted your every step throughout this doomed journey. You freeze in your tracks and back away. You've seen the kinds of hideous shapes it can take. The kinds of memories it conjures- foul and fair alike. But not everyone sees the mirage for what it truly is..."
+    },
+    "vi_current": {
+      "name": "Trái Tim Thổn Thức",
+      "text": "<b>Forced</b> - Nếu hai hoặc nhiều phong ấn được kích hoạt được điều khiển bởi các điều tra viên tại cùng một địa điểm: Năng lượng tiềm ẩn được lưu trữ trong các phong ấn sẽ hợp nhất với nhau và phản ứng dây chuyền tiếp theo sẽ tạo ra một vụ nổ tĩnh điện phá hủy mọi sự sống trên Trái đất. <b>(→R3)</b>",
+      "flavor": "Sâu dưới đáy thành phố là Hầm Phong Ấn Vĩ Đại (The Great Seal) — nơi giam giữ nguồn cơn của sự điên loạn vũ trụ.",
+      "back_name": "Khí Độc Lan Tỏa",
+      "back_text": "Advance sang agenda 2.",
+      "back_flavor": "Màn khí độc màu tím thoát ra từ các vết nứt trên con dấu đá."
+    }
+  },
+  {
+    "code": "08660",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "The Great Seal",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: dup [('08659', 'text'), ('08660', 'text'), ('08661', 'text')]",
+      "flavor: len ratio 0.46",
+      "back_text: nums en=['1', '1', '1', '2', '2', '2', '2', '3', '4', '6'] vi=['3']",
+      "back_text: icons en=['[seal_a]', '[seal_b]', '[seal_c]', '[seal_d]', '[seal_e]'] vi=[]",
+      "back_text: len ratio 0.03",
+      "back_flavor: len ratio 0.28"
+    ],
+    "en": {
+      "name": "The Miasma Beckons",
+      "text": "<b>Forced</b> - If two or more activated seals are controlled by investigators at the same location: The latent energy stored within the seals fuses together, and the ensuing chain reaction sets off an electrostatic detonation that destroys all life on Earth. <b>(→R3)</b>",
+      "flavor": "Eldritch whispers and the dribbling of inky miasma permeates the once-silent ruins. Something is reaching out to you from within its walls. Calling to you.",
+      "back_name": "Uncontrollable Power",
+      "back_text": "Check the seals controlled by each investigator (if a seal is not controlled by an investigator, skip it).\nThe investigator who controls the [seal_a] seal takes 1 damage (2 instead if the seal is activated).\nThe investigator who controls the [seal_b] seal discards 2 random cards from their hand (4 instead if the seal is activated).\nThe investigator who controls the [seal_c] seal takes 1 horror (2 instead if the seal is activated).\nThe investigator who controls the [seal_d] seal loses 1 action (2 instead if the seal is activated).\nThe investigator who controls the [seal_e] seal loses 3 resources (6 instead if the seal is activated).",
+      "back_flavor": "The seals pulse with dangerous electrostatic energy, filling the icy chambers with bright blue light. You struggle to contain the power within each seal as you move quickly to put them in their proper place."
+    },
+    "vi_current": {
+      "name": "Khí Độc Vẫy Gọi",
+      "text": "<b>Forced</b> - Nếu hai hoặc nhiều phong ấn được kích hoạt được điều khiển bởi các điều tra viên tại cùng một địa điểm: Năng lượng tiềm ẩn được lưu trữ trong các phong ấn sẽ hợp nhất với nhau và phản ứng dây chuyền tiếp theo sẽ tạo ra một vụ nổ tĩnh điện phá hủy mọi sự sống trên Trái đất. <b>(→R3)</b>",
+      "flavor": "Âm thanh đập thình thịch như nhịp tim khổng lồ dội lên từ tâm Trái Đất.",
+      "back_name": "Tiếng Gọi Của Điên Loạn",
+      "back_text": "Advance sang agenda 3.",
+      "back_flavor": "Những tiếng thầm thì ma quái xúi giục bạn đập vỡ phong ấn."
+    }
+  },
+  {
+    "code": "08661",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "The Great Seal",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: dup [('08659', 'text'), ('08660', 'text'), ('08661', 'text')]",
+      "flavor: len ratio 0.32",
+      "back_text: nums en=['1', '3'] vi=['3']",
+      "back_text: len ratio 0.38",
+      "back_flavor: len ratio 0.15"
+    ],
+    "en": {
+      "name": "Call of Madness",
+      "text": "<b>Forced</b> - If two or more activated seals are controlled by investigators at the same location: The latent energy stored within the seals fuses together, and the ensuing chain reaction sets off an electrostatic detonation that destroys all life on Earth. <b>(→R3)</b>",
+      "flavor": "The gateway stirs. Whatever is calling to you from within these walls, it hears your every word, your every footstep. It knows of your presence, of your hopes, of your fears. And it yearns to be free.",
+      "back_name": "Impure Expanse",
+      "back_text": "Each remaining investigator is defeated and must either suffer 1 mental trauma or shuffle the top 3 cards of the Tekeli-li deck into their deck.",
+      "back_flavor": "Before you can find and place all five seals, a tremendous noise fills the cavernous halls of the facility, and inky, prismatic miasma begins to seep from every inch of the walls and ceiling. Waves of creeping ichor and wafting black mist block every route but the one from which you came. You flee back to the gateway to escape or find another path forward, but by the time you reach the massive door, it is too late."
+    },
+    "vi_current": {
+      "name": "Tiếng Gọi Của Điên Loạn",
+      "text": "<b>Forced</b> - Nếu hai hoặc nhiều phong ấn được kích hoạt được điều khiển bởi các điều tra viên tại cùng một địa điểm: Năng lượng tiềm ẩn được lưu trữ trong các phong ấn sẽ hợp nhất với nhau và phản ứng dây chuyền tiếp theo sẽ tạo ra một vụ nổ tĩnh điện phá hủy mọi sự sống trên Trái đất. <b>(→R3)</b>",
+      "flavor": "Phong ấn sắp vỡ tung! Cơn ác mộng tột cùng sắp được giải phóng!",
+      "back_name": "Trái Đất Diệt Vong",
+      "back_text": "Thế giới chìm vào cơn điên loạn vĩnh cửu. <b>(→R3)</b>",
+      "back_flavor": "Thực thể bóng tối trỗi dậy và xé toạc Nam Cực thành từng mảnh."
+    }
+  },
+  {
+    "code": "08662",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "The Great Seal",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "flavor: len ratio 0.53",
+      "back_text: nums en=['1', '1', '2', '3'] vi=['2']",
+      "back_text: icons en=['[seal_a]', '[seal_b]', '[seal_c]', '[seal_d]', '[seal_e]'] vi=[]",
+      "back_text: len ratio 0.04",
+      "back_flavor: len ratio 0.14"
+    ],
+    "en": {
+      "name": "Dormancy",
+      "text": "<b>Objective</b> - If an activated seal is placed on The Gate of Y'quaa, advance.",
+      "flavor": "You have decided to explore the rest of this antediluvian complex in order to find the devices that fit this strange doorway.",
+      "back_name": "The First of Five",
+      "back_text": "Check which seal was just placed <i>(do not remove it)</i>.\nIf it was the [seal_a] seal, the investigator who placed it heals 1 damage.\nIf it was the [seal_b] seal, the investigator who placed it draws 2 cards.\nIf it was the [seal_c] seal, the investigator who placed it heals 1 horror.\nIf it was the [seal_d] seal, the investigator who placed it may take an additional action this turn.\nIf it was the [seal_e] seal, the investigator who placed it gains 3 resources.",
+      "back_flavor": "As soon as you set the seal into place, it locks into the door with an audible click. The energy stored within the seal reaches out, coursing through channels and grooves along the doorway, and lighting the entire chamber with an eerie glow. Perhaps if you can activate and place the remaining four seals, you can put a stop to this madness."
+    },
+    "vi_current": {
+      "name": "Ngủ Say",
+      "text": "<b>Objective</b> — Kích hoạt các trụ năng lượng để gia cố phong ấn.",
+      "flavor": "Các cột đá rune bắt đầu phát sáng khi hấp thụ năng lượng ma thuật.",
+      "back_name": "Gia Cố Phong Ấn",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Những vết nứt trên con dấu đá từ từ khép miệng."
+    }
+  },
+  {
+    "code": "08663",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "The Great Seal",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: icons en=[] vi=['[action]']",
+      "flavor: len ratio 0.36",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.41"
+    ],
+    "en": {
+      "name": "The Great Seal",
+      "text": "<b>Objective</b> - Place as many activated seals as you can on The Gate of Y'quaa before whatever is inside escapes. If all five seals have been placed, advance.",
+      "flavor": "Placing the first of the five seals has awoken a strange power within the facility. You believe if you can find and activate the remaining seals, they will aid in containing the thing that dwells on the other side of this gate...",
+      "back_name": "The Final Seal",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "The final seal locks into place. With a hum, power flows through the facility. Small orbs embedded in the ceiling begin to light, one by one. The realization dawns on you that this sanctuary is far more advanced than you could have ever imagined."
+    },
+    "vi_current": {
+      "name": "Phong Ấn Vĩ Đại",
+      "text": "<b>Objective</b> — Hoàn tất nghi thức hàn gắn Phong Ấn Vĩ Đại để cứu lấy nhân loại.\n[action]: <b>Advance.</b>",
+      "flavor": "Tập trung toàn bộ ý chí kiên định để đóng sập vĩnh viễn cánh cửa địa ngục Nam Cực!",
+      "back_name": "Phong Ấn Hoàn Tất",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Phong Ấn Vĩ Đại rực sáng rồi khóa chặt vĩnh cửu. Nam Cực trở lại vẻ bình yên giá lạnh vốn có của nó."
+    }
+  },
+  {
+    "code": "08671",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "Stirring in the Deep",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "flavor: len ratio 0.27",
+      "back_text: nums en=['1'] vi=[]",
+      "back_text: len ratio 0.04",
+      "back_flavor: len ratio 0.18"
+    ],
+    "en": {
+      "name": "The Seal Weakens",
+      "flavor": "Miasma has completely consumed this part of the facility. The walls and ceiling drip with polychromatic ooze, polar mist swirls through the halls, and the air shimmers with the insubstantial quality of a mirage. What manner of power is this? And how can you possibly hope to destroy it?",
+      "back_name": "It Emerges...",
+      "back_text": "Spawn 1 set-aside copy of The Nameless Madness enemy at the Mist-Pylon nearest to an investigator.\n<b><hr>Check the Campaign Log. <i>If the truth of the mirage eludes you:</i></b>\n<blockquote><i>You stare, dumbstruck, at the hideous phantasmagoria. The air shimmers with a dreamlike quality about its damnable form, an endless weave of intermingled nightmare and memory. The very sight of it drives you to your knees. It is the final truth. Reality was the mirage.</i></blockquote>\nEach investigator searches their deck for each copy of Tekeli-li and draws them one at a time in a random order, without placing them on the bottom of the Tekeli-li deck. After resolving all of them, shuffle each of them back into their bearer's deck.",
+      "back_flavor": "From the nameless depths at the very core of the Earth, the miasma's true form emerges. It is a shapeless thing, a creature of whirling mist and putrid ichor that screams and whispers and crawls and flies. It seeps through the walls and up from the ice; it is everywhere; it is everything."
+    },
+    "vi_current": {
+      "name": "Phong Ấn Yếu Đi",
+      "flavor": "Con quái thú Shoggoth khổng lồ cổ xưa nhất đang phá tung các cột trụ bảo vệ!",
+      "back_name": "Kẻ Vô Danh Thức Giấc",
+      "back_text": "Spawn kẻ địch Nameless Madness.",
+      "back_flavor": "Khối thịt nhầy nuốt chửng các cột chống đỡ hầm ngục."
+    }
+  },
+  {
+    "code": "08672",
+    "type": "agenda",
+    "pack": "eoec",
+    "scenario": "Stirring in the Deep",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "flavor: len ratio 0.46",
+      "back_text: nums en=['3', '4'] vi=['2']",
+      "back_text: len ratio 0.06",
+      "back_flavor: len ratio 0.39"
+    ],
+    "en": {
+      "name": "That Which Has No Name",
+      "text": "<b>Forced</b> - When 1 or more doom would be put into play, if there are any copies of The Nameless Madness still set aside: Instead, spawn 1 set-aside copy of The Nameless Madness at the location nearest to an investigator without a copy of that enemy that is connected to a location with a copy of that enemy.\n<b>Objective</b> - At the end of the round, if all 15 copies of The Nameless Madness are in play and not every Mist-Pylon is collapsed, advance this agenda.",
+      "flavor": "Tekeli-li! Tekeli-li! Tekeli-li! Tekeli-li! Tekeli-li! Tekeli-li! Tekeli-li! Tekeli-li! Tekeli-li! Tekeli-li!",
+      "back_name": "The Mountain Falls",
+      "back_text": "For each Mist-Pylon that is collapsed, set 3 copies of The Nameless Madness aside.\nEach investigator loses all of their clues.\nRemove each location except The Gate of Y'quaa from the game. Investigators and copies of The Nameless Madness are not defeated by this effect. All other cards at these locations are discarded.\nPut the 4 set-aside Titanic Ramp locations into play in a straight line to the right of The Gate of Y'quaa. Put the set-aside Hidden Tunnel location into play to the right of the rightmost Titanic Ramp. Place each investigator and each remaining copy of The Nameless Madness in play at the leftmost Titanic Ramp.\nRemove the act deck from the game and advance to the set-aside The Final Mirage. It is both the current act and the current agenda.",
+      "back_flavor": "It is too late. You cannot contain the creature that dwells beneath the mountain. All you can hope to do now is escape with your lives."
+    },
+    "vi_current": {
+      "name": "Kẻ Không Tên",
+      "text": "<b>Forced</b> - Khi 1 hoặc nhiều doom được đặt vào màn chơi, nếu có bất kỳ bản sao nào của The Nameless Madness vẫn được đặt sang một bên: Thay vào đó, spawn đặt riêng 1 bản sao của The Nameless Madness tại địa điểm gần nhất với điều tra viên mà không có bản sao của kẻ địch được kết nối với một địa điểm với bản sao của kẻ địch đó.\n<b>Objective</b> - Vào cuối vòng, nếu tất cả 15 bản của The Nameless Madness đều trong màn chơi và không phải mọi Mist-Pylon đều bị sập, thì advance sẽ thực hiện agenda này.",
+      "flavor": "Shoggoth chuẩn bị nghiền nát toàn bộ căn hầm ngầm!",
+      "back_name": "Sụp Đổ Toàn Diện",
+      "back_text": "Căn hầm đổ sập chôn vùi tất cả. <b>(→R2)</b>",
+      "back_flavor": "Đá tảng hàng trăm tấn đè bẹp mọi sinh linh bên dưới."
+    }
+  },
+  {
+    "code": "08673",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "Stirring in the Deep",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=[]",
+      "text: icons en=['[reaction]'] vi=[]",
+      "text: len ratio 0.22",
+      "back_text: nums en=['3', '4'] vi=['2']",
+      "back_text: len ratio 0.03",
+      "back_flavor: len ratio 0.26"
+    ],
+    "en": {
+      "name": "Collapse the Pylons",
+      "text": "Each revealed Mist-Pylon can be attacked as if it were an enemy. Its fight value is equal to its shroud value and its health is equal to its clue value. While it has no health remaining, it is collapsed <i>(it remains in play)</i>.\n[reaction] When you discover 1 or more clues at a Mist-Pylon, spend those clues: Deal that much damage to that Mist-Pylon.\n<b>Objective</b> - At the end of the round, if each Mist-Pylon is collapsed, advance this act.",
+      "flavor": "Five pylons hold this facility together. Your only hope is to destroy them - and everything else.",
+      "back_name": "Self-Destructions",
+      "back_text": "Set all but 3 copies of The Nameless Madness aside.\nEach investigator loses all of their clues.\nRemove each location except The Gate of Y'quaa from the game. Investigators and copies of The Nameless Madness are not defeated by this effect. All other cards at those locations are discarded.\nPut the 4 set-aside Titanic Ramp locations into play in a straight line to the right of The Gate of Y'quaa. Put the set-aside Hidden Tunnel location into play to the right of the rightmost Titanic Ramp. Place each investigator and each remaining copy of The Nameless Madness in play at the leftmost Titanic Ramp.\nRemove the agenda deck from the game and advance to the set-aside The Final Mirage. It is both the current act and the current agenda.",
+      "back_flavor": "The facility shakes to its very core. Without the Mist-Pylons powering the structure, the nameless entity that resides within is free - and its days are numbered, as are yours. The mountain groans and trembles, threatening to collapse all around you."
+    },
+    "vi_current": {
+      "name": "Đánh Sập Các Cột Trụ",
+      "text": "<b>Objective</b> — Đặt thuốc nổ đánh sập các cột trụ đá để chôn vùi con quái vật Shoggoth vĩnh viễn.",
+      "flavor": "Bạn kích hoạt kíp nổ thuốc nổ rồi lao mình về phía lối thoát!",
+      "back_name": "Kíp Nổ Kích Hoạt",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Những tiếng nổ long trời lở đất vang lên làm rung chuyển dãy núi."
+    }
+  },
+  {
+    "code": "08681",
+    "type": "act",
+    "pack": "eoec",
+    "scenario": "Stirring in the Deep",
+    "source_file": "acts_agendas_eote.py",
+    "audit_flags": [
+      "text: nums en=['1', '1'] vi=[]",
+      "text: icons en=[] vi=['[action]']",
+      "text: len ratio 0.58",
+      "flavor: presence en=0 vi=1",
+      "back_text: nums en=['1', '2', '3', '5', '5'] vi=['1']",
+      "back_text: len ratio 0.04",
+      "back_flavor: len ratio 0.42"
+    ],
+    "en": {
+      "name": "The Final Mirage",
+      "text": "The Nameless Madness gains hunter.\n<b>Forced</b> - When 1 or more doom would be put into play: Instead, spawn 1 set-aside copy of The Nameless Madness at the leftmost investigator's location.\n<b>Objective</b> - Run.",
+      "back_name": "Nameless Reckoning",
+      "back_text": "Check the Campaign Log.\n- If all 5 Mist-Pylons were collapsed and <i>Dr. Kensler has a plan</i>, proceed to <b>(→R1)</b>.\n- If all 5 Mist-Pylons were collapsed and <i>the truth of the mirage eludes you</i>, proceed to <b>(→R2)</b>.\n- Otherwise, proceed to <b>(→R3)</b>.",
+      "back_flavor": "You emerge from the tunnel, daylight blinding you as the sun peeks out from behind the jagged mountaintops in the distance. Behind you, the entity rushes toward the exit. You prepare yourself for the end, the wall of mist, miasma, and madness feeling much like an oncoming train."
+    },
+    "vi_current": {
+      "name": "Ảo Ảnh Cuối Cùng",
+      "text": "<b>Objective</b> — Thoát khỏi căn hầm đang sụp đổ và trở lại mặt tuyết trước khi lối ra bị bịt kín.\n[action]: <b>Advance.</b>",
+      "flavor": "Chạy mau! Toàn bộ dãy núi đang đổ sập sau lưng bạn!",
+      "back_name": "Sống Sót Khải Hoàn",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn phóng mình ra khỏi cửa hang ngay trước khi đá tảng bịt kín lối vào. Bạn đã sống sót trở về từ Dãy Núi Điên Loạn!"
+    }
+  }
+]

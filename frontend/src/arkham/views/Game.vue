@@ -86,6 +86,7 @@ import {
 import useEmitter from '@/composable/useEmitter'
 import { useDebug } from '@/arkham/debug'
 import EntityBrowser from '@/arkham/components/debug/EntityBrowser.vue'
+import ScenarioJump from '@/arkham/components/debug/ScenarioJump.vue'
 import { cardImg, imgsrc, isLocalized, isTypingTarget } from '@/arkham/helpers'
 import { cardImage, cardFaceImages, cardHasDistinctBack } from '@/arkham/cardImages'
 import { replaceText } from '@/arkham/cardTextFormat'
@@ -225,6 +226,7 @@ const props = withDefaults(defineProps<Props>(), { spectate: false })
 
 const debug = useDebug()
 const showEntityBrowser = ref(false)
+const showScenarioJump = ref(false)
 const emitter = useEmitter()
 const router = useRouter()
 const route = useRoute()
@@ -1066,6 +1068,11 @@ const gameOver = computed(() => game.value?.gameState.tag === 'IsOver')
 const advancingForDebug = ref(false)
 const canDebugAdvance = computed(() =>
   debug.active && !props.spectate && game.value?.gameState.tag === 'IsActive'
+)
+// Jumping only works mid-scenario in a campaign: between scenarios nothing
+// handles EndOfScenario, and in a standalone it ends the game.
+const canDebugJumpScenario = computed(() =>
+  canDebugAdvance.value && !!game.value?.campaign && !!game.value?.scenario
 )
 const debugActs = computed(() => Object.values(game.value?.acts ?? {})
   .filter((act) => ['A', 'C', 'E', 'G'].includes(act.sequence.side)))
@@ -3549,6 +3556,11 @@ onUnmounted(() => {
                 </button>
               </MenuItem>
             </template>
+            <MenuItem v-if="canDebugJumpScenario" v-slot="{ active }">
+              <button :class="{ active }" @click="showScenarioJump = true">
+                <FlagIcon aria-hidden="true" /> {{ $t('gameBar.debugJumpScenario') }}
+              </button>
+            </MenuItem>
             <MenuItem v-slot="{ active }">
               <button :class="{ active }" @click="showEntityBrowser = true">
                 <TableCellsIcon aria-hidden="true" /> {{ $t('gameBar.debugEntities') }}
@@ -4018,6 +4030,13 @@ onUnmounted(() => {
         :game="game"
         :playerId="playerId"
         @close="showEntityBrowser = false"
+      />
+    </Teleport>
+    <Teleport to="body">
+      <ScenarioJump
+        v-if="showScenarioJump && canDebugJumpScenario && game !== null"
+        :game="game"
+        @close="showScenarioJump = false"
       />
     </Teleport>
     <Teleport to="body">

@@ -1,0 +1,275 @@
+[
+  {
+    "code": "83002",
+    "type": "agenda",
+    "pack": "guardians",
+    "scenario": "The Eternal Slumber",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Jessie's Request",
+      "text": "[action] Investigators spend 1 [per_investigator] clues, as a group: Randomly spawn one of the enemies beneath the scenario reference card.",
+      "flavor": "Jessie Burke, a government agent who works in Egypt, has asked you to come to Cairo to help her solve a medical quandary. People all over Cairo, from all walks of life, are mysteriously falling into a wakeless slumber - including Jessie's husband and partner, John. It is up to you to get to the bottom of this strange phenomenon.",
+      "back_name": "They're on to You",
+      "back_text": "Find each [[Brotherhood]] enemy currently in play <i>(at a location or in an investigator's threat area)</i>. Place each of those enemies beneath the scenario reference card, out of play.\nShuffle each set-aside copy of Abyssal Revenant into the encounter deck, along with the encounter discard pile.\nAdd 1 strength to the abyss.\nIf it is act 1, advance the current act.",
+      "back_flavor": "You've found enough leads to confirm the existence of a shadowy organisation within Cairo, and perhaps the origin of the curse afflicting the city. However, despite your best efforts, the secret cabal has vanished from the city without a trace. You're going to need a lot more information if you are to cure this illness."
+    },
+    "vi_current": {
+      "name": "Yêu Cầu của Jessie",
+      "text": "[action] các điều tra viên Tiêu 1 [per_investigator] manh mối, thành một nhóm: spawn ngẫu nhiên một trong các kẻ địch bên dưới thẻ tham chiếu màn chơi.",
+      "flavor": "Jessie Burke, một đặc vụ chính phủ làm việc ở Ai Cập, đã nhờ bạn đến Cairo để giúp cô ấy giải quyết một tình thế khó khăn về y tế. Mọi người trên khắp Cairo, từ mọi tầng lớp xã hội, đang rơi vào một giấc ngủ không tỉnh táo một cách bí ẩn - bao gồm cả chồng và bạn đời của Jessie, John. Việc đi đến tận cùng của hiện tượng kỳ lạ này là tùy thuộc vào bạn.",
+      "back_name": "They're on to You",
+      "back_text": "Find each [[Brotherhood]] enemy currently trong màn chơi <i>(at a location or in an investigator's threat area)</i>. Place each of those enemies beneath the thẻ tham chiếu màn chơi, ngoài màn chơi.\nShuffle each set-aside copy of Abyssal Revenant into the chồng bài encounter, along with the chồng bài encounter bỏ.\nAdd 1 strength to the abyss.\nIf it is act 1, advance the current act.",
+      "back_flavor": "Bạn đã tìm thấy đủ manh mối để xác nhận sự tồn tại của một tổ chức mờ ám ở Cairo, và có lẽ là nguồn gốc của lời nguyền giáng xuống thành phố. Tuy nhiên, bất chấp những nỗ lực hết mình của bạn, nhóm bí mật đã biến mất khỏi thành phố không một dấu vết. Bạn sẽ cần nhiều thông tin hơn nếu muốn chữa khỏi căn bệnh này."
+    }
+  },
+  {
+    "code": "83003",
+    "type": "agenda",
+    "pack": "guardians",
+    "scenario": "The Eternal Slumber",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Curse of the Abyss",
+      "text": "<b>Forced</b> - If the strength of the abyss is 0: Set the strength of the abyss to 1. Each investigator draws 1 card and heals 1 horror.",
+      "flavor": "The sun rises over Cairo. Many more people within the city did not wake up this morning. A grim thought seizes your mind: Should you fall asleep, you too may never wake again. Having gotten little rest the previous night, you struggle to stay awake and continue your investigation…",
+      "back_name": "The Abyss Grows…",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\nAdd 1 strength to the abyss.",
+      "back_flavor": "As more and more fall victim to the curse that has infected Cairo, a silent terror grips the city. When night falls again, the streets are filled with a sudden panic. It starts with turmoil outside the hospital, as people demand to know what has happened to their loved ones and what the doctors are doing to solve the problem. Before long, rioting and looting erupt throughout the city. By midnight, the streets have descended into utter chaos."
+    },
+    "vi_current": {
+      "name": "Lời Nguyền của Vực Thẳm",
+      "text": "<b>Forced</b> - Nếu sức mạnh của vực thẳm là 0: Đặt sức mạnh của vực thẳm thành 1. Mỗi điều tra viên rút 1 lá bài và hồi 1 horror.",
+      "flavor": "Mặt trời mọc ở Cairo. Sáng nay còn nhiều người trong thành phố chưa thức dậy. Một ý nghĩ nghiệt ngã xâm chiếm tâm trí bạn: Nếu bạn ngủ quên, bạn cũng có thể không bao giờ tỉnh dậy nữa. Đêm hôm trước được nghỉ ngơi một chút, bạn cố gắng giữ tỉnh táo và tiếp tục cuộc điều tra…",
+      "back_name": "The Abyss Grows…",
+      "back_text": "Shuffle the chồng bài encounter bỏ into the chồng bài encounter.\nAdd 1 strength to the abyss.",
+      "back_flavor": "Khi ngày càng nhiều nạn nhân của lời nguyền đã lây nhiễm Cairo, một nỗi kinh hoàng thầm lặng bao trùm thành phố. Khi màn đêm lại buông xuống, đường phố lại tràn ngập sự hoảng loạn bất ngờ. Nó bắt đầu với sự hỗn loạn bên ngoài bệnh viện, khi mọi người yêu cầu được biết chuyện gì đã xảy ra với người thân của họ và các bác sĩ đang làm gì để giải quyết vấn đề. Chẳng bao lâu, bạo loạn và cướp bóc nổ ra khắp thành phố. Đến nửa đêm, đường phố trở nên hỗn loạn tột độ."
+    }
+  },
+  {
+    "code": "83004",
+    "type": "agenda",
+    "pack": "guardians",
+    "scenario": "The Eternal Slumber",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Garden of Shadows",
+      "text": "<b>Forced</b> - If the strength of the abyss is 0 or 1: Set the strength of the abyss to 2. Each investigator either draws 1 card or heals 1 horror.",
+      "flavor": "When morning comes, the city is silent once more. The hospital is overflowing with last night's victims, and many more comatose people fill the streets. You've evaded sleep for this long, but you can't go on much longer. Fatigue has inflicted its toll on your body and mind. If you don't act fast, you may be the spell's next victim.",
+      "back_name": "The Eternal Slumber",
+      "back_text": "Add 1 strength to the abyss.\nEach investigator who has not resigned is defeated and is <i>\"taken by the abyss.\"</i>",
+      "back_flavor": "You are too exhausted to go on. Your mind screams at your body to keep moving, but your muscles have betrayed you. You sink to the ground like a sack of bricks.\nYou resist with all your strength, but all it amounts to is a wiggling of your fingers. You feel as thought a heavy weight is pressed upon your head, and a dark cloak is thrown over your eyes.\nIf you fall asleep here, you are sure you'll never wake again. And yet, somehow, deep within your mind, you're too tired to care.\nYou yawn."
+    },
+    "vi_current": {
+      "name": "Khu Vườn Bóng Tối",
+      "text": "<b>Forced</b> - Nếu sức mạnh của vực thẳm là 0 hoặc 1: Đặt sức mạnh của vực thẳm thành 2. Mỗi điều tra viên rút 1 lá bài hoặc hồi 1 horror.",
+      "flavor": "Khi bình minh đến, thành phố lại im lặng. Bệnh viện tràn ngập những nạn nhân của đêm qua, và thêm nhiều người hôn mê tràn ra đường. Bạn đã trốn tránh giấc ngủ lâu như vậy, nhưng bạn không thể tiếp tục lâu hơn được nữa. Mệt mỏi đã gây tổn hại cho cơ thể và tâm trí của bạn. Nếu không hành động nhanh, bạn có thể là nạn nhân tiếp theo của bùa chú.",
+      "back_name": "Giấc Ngủ Vĩnh Cửu",
+      "back_text": "Add 1 strength to the abyss.\nEach investigator who has not resigned is defeated and is <i>\"taken by the abyss.\"</i>",
+      "back_flavor": "Bạn quá kiệt sức để tiếp tục. Tâm trí bạn kêu gọi cơ thể tiếp tục di chuyển, nhưng cơ bắp của bạn đã phản bội bạn. Bạn chìm xuống đất như một bao gạch.\nBạn chống cự bằng tất cả sức lực của mình, nhưng tất cả chỉ là một cái lắc lư của ngón tay. Bạn cảm thấy như có một sức nặng đè lên đầu bạn và một tấm áo choàng đen che phủ mắt bạn.\nNếu bạn ngủ quên ở đây, bạn chắc chắn sẽ không bao giờ tỉnh lại nữa. Tuy nhiên, bằng cách nào đó, sâu thẳm trong tâm trí, bạn quá mệt mỏi để quan tâm.\nBạn ngáp."
+    }
+  },
+  {
+    "code": "83005",
+    "type": "act",
+    "pack": "guardians",
+    "scenario": "The Eternal Slumber",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Curse of Endless Sleep",
+      "text": "<b>Forced</b> - After a [[Brotherhood]] enemy enters the victory display: Flip it over and resolve the text on its other side.\n<b>Objective</b> - Find as many [[Evidence]] cards as you can and add them to the victory display before the agenda advances. (If there are 6 [[Evidence]] cards in the victory display, advance.)",
+      "flavor": "As you scour Cairo for answers, you begin to suspect that Jessie's hunch was right. You're being tailed by shadowy figures throughout the city, and several of the people you interview want nothing to do with you. What are they hiding?",
+      "back_name": "Into the Desert",
+      "back_text": "Create the exploration deck by shuffling together each of the set-aside [[Expedition]] locations. Search the encounter deck and discard pile for 1 copy each of the following treachery cards: Terror Under the Pyramids, Swarm of Locusts, Abyssal Reach, Eclipse, and Sandstorm. Shuffle those cards into the exploration deck, then shuffle the encounter discard pile into the encounter deck.\nEach investigator loses each of his or her clues.\nRemove all clues from each [[Cairo]] location.",
+      "back_flavor": "You corner one of the organization's agents in a dark alleyway as he attempts to flee the city. \"It is too late to stop the prophecy,\" he says with a frightened expression. \"Please, just let me go.\" Seeing weakness in the man's heart, you tell him that he can help you stop what the organization is plotting, if he tells you everything he knows. \"The Brotherhood of the Beast believes they have found their vessel,\" he explains, stuttering nervously. \"Now they're giving their Chosen untold power. There's no way you can stop them!\" He struggles and breaks free from your grasp, fleeing back toward the main street. If you follow that man, perhaps he will lead you to the brotherhood's hideout…"
+    },
+    "vi_current": {
+      "name": "Lời Nguyền của Giấc Ngủ Bất Tận",
+      "text": "<b>Forced</b> - Sau kẻ địch [[Brotherhood]] nhập khu vực trưng bày thành tích: Lật nó lại và giải quyết văn bản ở mặt kia của nó.\n<b>Objective</b> - Tìm càng nhiều thẻ [[Evidence]] càng tốt và thêm chúng vào khu vực trưng bày thành tích trước agenda advances. (Nếu có 6 thẻ [[Evidence]] trong khu vực trưng bày thành tích, advance.)",
+      "flavor": "Khi lùng sục khắp Cairo để tìm câu trả lời, bạn bắt đầu nghi ngờ linh cảm của Jessie là đúng. Bạn đang bị theo dõi bởi những nhân vật mờ ám khắp thành phố và một số người bạn phỏng vấn không muốn liên quan gì đến bạn. Họ đang che giấu điều gì?",
+      "back_name": "Into the Desert",
+      "back_text": "Create the exploration deck by shuffling together each of the set-aside [[Expedition]] locations. Search the chồng bài encounter and chồng bài bỏ for 1 copy each of the following treachery cards: Terror Under the Pyramids, Swarm of Locusts, Abyssal Reach, Eclipse, and Sandstorm. Shuffle those cards into the exploration deck, then shuffle the chồng bài encounter bỏ into the chồng bài encounter.\nEach investigator loses each of his or her manh mối.\nRemove all manh mối from each [[Cairo]] location.",
+      "back_flavor": "You corner one of the organization's agents in a dark alleyway as he attempts to flee the city. \"It is too late to stop the prophecy,\" he says with a frightened expression. \"Please, just let me go.\" Seeing điểm yếu in the man's heart, you tell him that he can help you stop what the organization is plotting, if he tells you everything he knows. \"The Brotherhood of the Beast believes they have found their vessel,\" he explains, stuttering nervously. \"Now they're giving their Chosen untold power. There's no way you can stop them!\" He struggles and breaks free from your grasp, fleeing back toward the main street. If you follow that man, perhaps he will lead you to the brotherhood's hideout…"
+    }
+  },
+  {
+    "code": "83006",
+    "type": "act",
+    "pack": "guardians",
+    "scenario": "The Eternal Slumber",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Secrets in the Sand",
+      "text": "Clues cannot be placed on [[Cairo]] locations.\n[action] If you are at an [[Expedition]] location: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.",
+      "flavor": "You pursue the Brotherhood's agent west as he flees the city. Following his trail into the desert will be easier if you join the archaeological expedition currently underway.",
+      "back_name": "All for the Chosen",
+      "back_text": "Place 1 [per_investigator] damage tokens on each [[Cairo]] location. Until the end of the scenario, damage tokens on locations represent \"dreamers\" - victims who have been cursed with eternal slumber.\nPut the set-aside Neith enemy into play in the Streets of Cairo.",
+      "back_flavor": "You are unable to find the Brotherhood's hideout, but you are able to find the agent you interrogated in Cairo… Or at least, what remains of him. Inside the halls of an ancient temple dedicated to a long-forgotten pharaoh, the man's corpse has been placed upon a stone altar. His body is riddled with fresh stab wounds. You can't help but wonder if this was - in a way - your doing.\nInvestigating the body and the remainder of the half-buried temple yields a troubling discovery. As you suspected, the Brotherhood of the Beast is behind the curse afflicting Cairo. You find several passages describing the spell in greater detail - though these descriptions do not match what you have seen with your own eyes. The Brotherhood's tomes describe how to transport their victims to another realm, a place called the Abyss. A nightmarescape from which the dreamers cannot awaken. With each dreamer, their \"Chosen\" grows in strength…"
+    },
+    "vi_current": {
+      "name": "Bí Mật trong Cát",
+      "text": "Không thể đặt Manh mối trên các địa điểm [[Cairo]].\n[action] Nếu bạn đang ở địa điểm [[Expedition]]: <b>Explore.</b> Rút lá bài trên cùng của chồng bài khám phá. Nếu đó là địa điểm đang kết nối, hãy đặt nó vào màn chơi và di chuyển đến đó.",
+      "flavor": "Bạn truy đuổi đặc vụ của Brotherhood về phía tây khi anh ta chạy trốn khỏi thành phố. Lần theo dấu vết của anh ta vào sa mạc sẽ dễ dàng hơn nếu bạn tham gia chuyến thám hiểm khảo cổ hiện đang được tiến hành.",
+      "back_name": "All for the Chosen",
+      "back_text": "Place 1 [per_investigator] damage tokens on each [[Cairo]] location. Until the end of the scenario, damage tokens on locations represent \"dreamers\" - victims who have been cursed with eternal slumber.\nPut the set-aside Neith enemy into play in the Streets of Cairo.",
+      "back_flavor": "Bạn không thể tìm thấy nơi ẩn náu của Brotherhood, nhưng bạn có thể tìm thấy đặc vụ mà bạn đã thẩm vấn ở Cairo… Hoặc ít nhất, những gì còn lại của anh ta. Bên trong hội trường của một ngôi đền cổ kính dành riêng cho vị pharaoh đã bị lãng quên từ lâu, thi thể của người đàn ông này đã được đặt trên một bàn thờ bằng đá. Cơ thể anh ta đầy những vết đâm mới. Bạn không thể không tự hỏi liệu đây có phải là - theo một cách nào đó - việc bạn làm hay không.\nViệc điều tra thi thể và phần còn lại của ngôi đền bị chôn vùi một nửa mang lại một phát hiện đáng lo ngại. Đúng như bạn nghi ngờ, Brotherhood of the Beast đứng đằng sau lời nguyền giáng xuống Cairo. Bạn tìm thấy một số đoạn mô tả câu thần chú chi tiết hơn - mặc dù những mô tả này không khớp với những gì bạn đã tận mắt nhìn thấy. Sách của Brotherhood mô tả cách vận chuyển nạn nhân của họ đến một thế giới khác, nơi được gọi là Abyss. Một khung cảnh ác mộng mà những người mơ không thể thức tỉnh. Với mỗi người mơ mộng, “Người được chọn” của họ ngày càng mạnh mẽ…"
+    }
+  },
+  {
+    "code": "83007",
+    "type": "act",
+    "pack": "guardians",
+    "scenario": "The Eternal Slumber",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "The Hour of Judgment",
+      "text": "[action] If there is a dreamer at your location: Test [willpower] or [intellect] (X) to attempt to awaken a dreamer. X is the strength of the abyss. If you succeed, move a dreamer from your location to Neith, as damage.\n<b>Objective</b> - If Neith has no remaining health, advance.",
+      "flavor": "The final record you find describes a time of reaping, wherein a thousand dreamers will be sacrificed. Armed with the Brotherhood's knowledge, you believe you can reverse their curse before they claim the waking lives of every last man, woman, and child in Cairo.",
+      "back_name": "The Harbinger's End",
+      "back_text": "The investigators must decide (choose wisely):\n-<i>Destroy Neith once and for all.</i><br/>By choosing this option, you believe those still under the curse of eternal slumber will be freed. <b>(→R1)</b>\n- <i>Spare Neith and listen to what she has to say.</i><br/>By choosing this option, you believe you can learn more about the one Neith refers to as Xzharah. <b>(→R2)</b>",
+      "back_flavor": "With each of the dreamers you set free, the arcane power wielded by Neith fades. Before long, she has collapsed to her knees, the power completely drained from her body. However, even with the spells and records you found in the Brotherhood's temple, you're unable to awaken all of the victims; only those most recently put under the spell's sway. As for the remainder of the victims - including John Burke - their fate is inextricably tied to Neith. \"If you believe that this is the end, you deserve the fate Xzharah has in store for you,\" she warns you. \"Slay me and you will be next in line to die.\" You waver. But if she is allowed to live, those she has ensnared in sleep will never awaken. What is one life, compared to the lives of so many innocents?"
+    },
+    "vi_current": {
+      "name": "Giờ Phán Xét",
+      "text": "[action] Nếu có người mơ tại địa điểm của bạn: Kiểm tra [willpower] hoặc [intellect] (X) để cố gắng đánh thức người mơ. X là sức mạnh của vực thẳm. Nếu bạn thành công, hãy chuyển người mơ mộng từ địa điểm của bạn sang Neith, với tên gọi damage.\n<b>Objective</b> - Nếu Neith không còn máu, advance.",
+      "flavor": "Bản ghi cuối cùng bạn tìm thấy mô tả thời điểm gặt hái, trong đó hàng ngàn kẻ mộng mơ sẽ bị hiến tế. Được trang bị kiến ​​thức của Brotherhood, bạn tin rằng bạn có thể đảo ngược lời nguyền của họ trước khi họ cướp đi mạng sống của mọi người đàn ông, phụ nữ và trẻ em cuối cùng ở Cairo.",
+      "back_name": "The Harbinger's End",
+      "back_text": "The investigators must decide (choose wisely):\n-<i>Destroy Neith once and for all.</i><br/>By choosing this option, you believe those still under the curse of eternal slumber will be freed. <b>(→R1)</b>\n- <i>Spare Neith and listen to what she has to say.</i><br/>By choosing this option, you believe you can learn more about the one Neith refers to as Xzharah. <b>(→R2)</b>",
+      "back_flavor": "Với mỗi kẻ mộng mơ được bạn giải thoát, sức mạnh bí ẩn mà Neith nắm giữ sẽ mất dần. Chẳng bao lâu sau, cô khuỵu xuống, sức lực hoàn toàn rút cạn khỏi cơ thể. Tuy nhiên, ngay cả với những phép thuật và hồ sơ bạn tìm thấy trong ngôi đền của Brotherhood, bạn không thể đánh thức tất cả nạn nhân; chỉ những người gần đây nhất bị ảnh hưởng bởi bùa chú. Đối với những nạn nhân còn lại - bao gồm cả John Burke - số phận của họ gắn bó chặt chẽ với Neith. Cô ấy cảnh báo bạn: “Nếu bạn tin rằng đây là kết thúc, bạn xứng đáng nhận được số phận mà Xzharah đã dành sẵn cho bạn”. \"Giết ta đi, ngươi sẽ là người tiếp theo phải chết.\" Bạn dao động. Nhưng nếu cô ấy được phép sống, những người mà cô ấy đã nhốt trong giấc ngủ sẽ không bao giờ thức dậy. Một cuộc đời là gì khi so sánh với cuộc đời của rất nhiều người vô tội?"
+    }
+  },
+  {
+    "code": "83017",
+    "type": "agenda",
+    "pack": "guardians",
+    "scenario": "The Night's Usurper",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "The Brotherhood Bides Their Time",
+      "flavor": "With members of the Brotherhood still at large, your research had to be done in secret, away from prying eyes. Now that you are exposed, you know that anyone could be a spy for the secret cabal - even members of Winlock's expedition. It is a risk you must take in order to stop their plot. Regardless, knowing they could strike at any moment sets your nerves on edge. Sooner or later, they will show their hand, and you will have to be ready.",
+      "back_name": "The Brotherhood's Revenge",
+      "back_text": "In player order, each investigator takes a random [[Brotherhood]] enemy from under the scenario reference card and spawns it engaged with him or her, until either each of the enemies under the scenario reference card have been spawned, or each investigator has spawned an enemy in this way. Spawn each enemy still remaining under the scenario reference card, one at a time, at empty locations farthest from the Expedition Camp. <i>(Ignore all \"<b>Spawn</b>\" instructions on those enemies.)</i>\nShuffle the encounter discard pile into the encounter deck.\nAdd 1 strength to the abyss.",
+      "back_flavor": "Having found the perfect moment to strike, the remaining members of the Brotherhood ambush you in the night. \"For Nephren-Ka! For Xzharah!\" they cry out in exultation as they surround your camp. Their eyes are burning red with unnatural power, their muscles bulging and their veins pulsing with bizarre fluid. Nothing you say deters their attack, and you wonder if there is any humanity left in their minds at all."
+    },
+    "vi_current": {
+      "name": "Tình Anh em Chờ Đợi Thời Gian của họ",
+      "flavor": "Với các thành viên của Brotherhood vẫn đang lẩn trốn, nghiên cứu của bạn phải được thực hiện bí mật, tránh xa những con mắt tò mò. Bây giờ bạn đã bị lộ, bạn biết rằng bất kỳ ai cũng có thể là gián điệp cho tổ chức bí mật - ngay cả những thành viên trong đoàn thám hiểm của Winlock. Đó là một rủi ro bạn phải chấp nhận để ngăn chặn âm mưu của họ. Bất chấp điều đó, việc biết rằng chúng có thể tấn công bất cứ lúc nào sẽ khiến bạn căng thẳng. Sớm hay muộn họ sẽ ra tay và bạn sẽ phải sẵn sàng.",
+      "back_name": "The Brotherhood's Revenge",
+      "back_text": "In player order, each investigator takes a random [[Brotherhood]] enemy from under the thẻ tham chiếu màn chơi and spawns it engaged with him or her, until either each of the enemies under the thẻ tham chiếu màn chơi have been spawned, or each investigator has spawned an enemy in this way. Spawn each enemy still remaining under the thẻ tham chiếu màn chơi, one at a time, at empty locations farthest from the Expedition Camp. <i>(Ignore all \"<b>Spawn</b>\" instructions on those enemies.)</i>\nShuffle the chồng bài encounter bỏ into the chồng bài encounter.\nAdd 1 strength to the abyss.",
+      "back_flavor": "Sau khi tìm thấy thời điểm hoàn hảo để tấn công, các thành viên còn lại của Brotherhood phục kích bạn trong đêm. \"Vì Nephren-Ka! Vì Xzharah!\" chúng reo mừng khi vây quanh trại của ngươi. Đôi mắt của họ đỏ rực với sức mạnh phi tự nhiên, cơ bắp phồng lên và tĩnh mạch của họ đập rộn ràng với chất lỏng kỳ lạ. Không có gì bạn nói có thể ngăn cản cuộc tấn công của họ, và bạn tự hỏi liệu trong tâm trí họ có còn chút nhân tính nào không."
+    }
+  },
+  {
+    "code": "83018",
+    "type": "agenda",
+    "pack": "guardians",
+    "scenario": "The Night's Usurper",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Schemes in the Dark Beyond",
+      "text": "Investigators cannot <b>Parley</b> with [[Brotherhood]] enemies.\nEach [[Brotherhood]] enemy cannot be flipped over.\n<b>Forced</b> - After the 4th or 8th doom is placed on this agenda: Add 1 strength to the abyss.",
+      "flavor": "This sinister plot threatens not only our own world, but another. You have only one chance to stop them from achieving their goal. Now is the time for action.",
+      "back_name": "A Prophecy Fulfilled",
+      "back_text": "Each investigator is defeated.\nEach defeated investigator is <i>\"taken by the abyss.\"</i>\n<b>(→R1)</b>",
+      "back_flavor": "\"It is done.\" Xzharah plunges his blade into the last of the dreamers. Its starry surface, soaked in hot crimson blood, devours the victim's life force. \"With this soul, I am complete.\"\nThe abyss is plunged into a dreadful silence. None can question the authority and power of the realm's new lord. Uncouth creatures of darkness crawl forth from their pits to pay tribute to their master. As Xzharah surveys his domain, the mist coils about his feet with each step he takes. Countless winged creatures bow in servitude as he passes.\nThis world is his. Ours is next."
+    },
+    "vi_current": {
+      "name": "Những âm Mưu trong Bóng Tối Phía Sau",
+      "text": "các điều tra viên không thể <b>Parley</b> với các kẻ địch [[Brotherhood]].\nKhông thể lật từng kẻ địch [[Brotherhood]].\n<b>Forced</b> - Sau doom thứ 4 hoặc thứ 8 được đưa vào agenda này: Thêm 1 sức mạnh vào vực thẳm.",
+      "flavor": "Âm mưu độc ác này không chỉ đe dọa thế giới của chúng ta mà còn đe dọa thế giới khác. Bạn chỉ có một cơ hội để ngăn họ đạt được mục tiêu. Bây giờ là lúc để hành động.",
+      "back_name": "A Prophecy Fulfilled",
+      "back_text": "Each investigator is defeated.\nEach defeated investigator is <i>\"taken by the abyss.\"</i>\n<b>(→R1)</b>",
+      "back_flavor": "\"Xong rồi.\" Xzharah đâm lưỡi kiếm của mình vào kẻ mộng mơ cuối cùng. Bề mặt đầy sao của nó thấm đẫm máu đỏ thẫm nóng bỏng, nuốt chửng sinh lực của nạn nhân. \"Với tâm hồn này, tôi đã trọn vẹn.\"\nVực thẳm rơi vào sự im lặng đáng sợ. Không ai có thể nghi ngờ thẩm quyền và quyền lực của chúa tể mới của vương quốc. Những sinh vật bóng tối thô lỗ bò ra từ hố của chúng để tỏ lòng thành kính với chủ nhân của chúng. Khi Xzharah khảo sát lãnh địa của mình, sương mù cuộn quanh chân anh theo từng bước anh đi. Vô số sinh vật có cánh cúi đầu phục tùng khi anh ta đi qua.\nThế giới này là của anh ấy. Tiếp theo là của chúng tôi."
+    }
+  },
+  {
+    "code": "83019",
+    "type": "act",
+    "pack": "guardians",
+    "scenario": "The Night's Usurper",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('04044', 'text'), ('04045', 'text'), ('04207', 'text'), ('04208', 'text'), ('04345', 'text'), ('83019', 'text')]",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Search for the Gate",
+      "text": "[action]: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.",
+      "flavor": "With Winlock's support, the expedition is underway. But unlike the other archaeologists and researchers, you're not searching for ancient crypts or artifacts. You are after something older and far more dangerous: a place the others would not believe existed even if you told them.",
+      "back_name": "Construct of the Ancients",
+      "back_text": "Shuffle the set-aside Eldritch Gate into the exploration deck.",
+      "back_flavor": "It has been several weeks since you set forth from Cairo, but to your dismay, you have found no sign of the otherworldly gate to which the Brotherhood supposedly retreated. Just as you are considering returning to Cairo to conduct more research, you are summoned into Winlock's tent, where the weary expedition leader is examining a map of Egypt with calloused hands. \"Oh good, you're here,\" he says, fumbling through his pack for an old, half-burned tome, which he places on the table in front of you. \"Thought you might want to see what we found in that crypt to the south.\" You turn over the book, sifting through its charred pages, until you come to a map of the desert marked by Egyptian hieroglyphs. It is the same region depicted on the map in front of Winlock. \"See that, right there?\" He points to one of the hieroglyphs on the western side of the map. \"It means 'door'.\" With a hint of a smirk, he then points to the same spot on his larger map, marking your destination.\n\"That what you're looking for?\""
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Cổng",
+      "text": "[action]: <b>Explore.</b> Rút lá bài trên cùng của chồng bài khám phá. Nếu đó là địa điểm đang kết nối, hãy đặt nó vào màn chơi và di chuyển đến đó.",
+      "flavor": "Với sự hỗ trợ của Winlock, cuộc thám hiểm đang được tiến hành. Nhưng không giống như các nhà khảo cổ và nhà nghiên cứu khác, bạn không tìm kiếm các hầm mộ hoặc hiện vật cổ xưa. Bạn đang theo đuổi một thứ gì đó cũ hơn và nguy hiểm hơn nhiều: một nơi mà những người khác sẽ không tin là tồn tại ngay cả khi bạn nói với họ.",
+      "back_name": "Construct of the Ancients",
+      "back_text": "Shuffle the set-aside Eldritch Gate into the exploration deck.",
+      "back_flavor": "Đã vài tuần kể từ khi bạn khởi hành từ Cairo, nhưng thật thất vọng khi bạn không tìm thấy dấu hiệu nào về cánh cổng thế giới bên kia mà Brotherhood được cho là đã rút lui. Ngay khi bạn đang cân nhắc việc quay trở lại Cairo để tiến hành nghiên cứu thêm, bạn được triệu tập vào lều của Winlock, nơi người lãnh đạo đoàn thám hiểm mệt mỏi đang xem xét bản đồ Ai Cập với đôi bàn tay chai sạn. \"Ôi tốt, bạn đến rồi,\" anh ấy nói, lục lọi trong ba lô để tìm một cuốn sách cũ, cháy một nửa và đặt lên bàn trước mặt bạn. “Tôi nghĩ có lẽ anh muốn xem những gì chúng tôi tìm thấy trong hầm mộ phía nam.” Bạn lật cuốn sách, lướt qua những trang cháy đen, cho đến khi nhìn thấy bản đồ sa mạc được đánh dấu bằng chữ tượng hình Ai Cập. Đó chính là khu vực được mô tả trên bản đồ phía trước Winlock. \"Thấy chưa, ngay đó?\" Anh ta chỉ vào một trong những chữ tượng hình ở phía tây của bản đồ. \"Nó có nghĩa là 'cửa'.\" Với một nụ cười tự mãn, sau đó anh ấy chỉ vào cùng một vị trí trên bản đồ lớn hơn của mình, đánh dấu điểm đến của bạn.\n“Đó là thứ cậu đang tìm à?”"
+    }
+  },
+  {
+    "code": "83020",
+    "type": "act",
+    "pack": "guardians",
+    "scenario": "The Night's Usurper",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Into the Gate",
+      "text": "[action]: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.\n<b>Objective</b> - At the end of the round, if each undefeated investigator is at the Eldritch Gate and they spend the requisite number of clues, advance.",
+      "flavor": "Having sufficiently narrowed down the location of the gateway, you part ways with Winlock and his team. You don't want them following where you're going…",
+      "back_name": "Delve into Dreams",
+      "back_text": "Put the set-aside A Dream Betwixt location into play, revealed location side faceup. Move each investigator there and remove all other locations from the game. Spawn the set-aside Xzharah enemy in A Dream Betwixt, enemy side faceup. Shuffle each set-aside copy of Dreaded Shantak into the encounter deck, along with the encounter discard pile.\n<hr><b>If the Ancient Ankh asset is in play:</b>\n<blockquote><i>Your Ankh amulet glows with a blinding light, causing Xzharah to recoil. \"So, Neith has abandoned us!\" Xzharah hisses.</i></blockquote>\nExhaust Xzharah and disengage him from all investigators.",
+      "back_flavor": "Reality slips away as you cross the threshold of the gate. The sandy dunes fold into the foundation of the Earth, the firmament splits, and the colors of the world bleed into the archway. When next you open your eyes, you are in a place between worlds. At the opposite end of the corridor, a figure emerges from the doorway beyond, faceless and wielding a curved blade that pulses with dark power. \"You shall be my next sacrifice,\" his voice seethes."
+    },
+    "vi_current": {
+      "name": "Vào Cổng",
+      "text": "[action]: <b>Explore.</b> Rút lá bài trên cùng của chồng bài khám phá. Nếu đó là địa điểm đang kết nối, hãy đặt nó vào màn chơi và di chuyển đến nó.\n<b>Objective</b> - Khi kết thúc vòng đấu, nếu mỗi điều tra viên bất bại có mặt tại Cổng Eldritch và họ tiêu số lượng manh mối, advance cần thiết.",
+      "flavor": "Sau khi đã thu hẹp đủ vị trí của cổng, bạn chia tay Winlock và nhóm của anh ấy. Bạn không muốn họ theo dõi nơi bạn đang đến…",
+      "back_name": "Delve into Dreams",
+      "back_text": "Put the set-aside A Dream Betwixt location into play, revealed location side faceup. Move each investigator there and remove all other locations from the game. Spawn the set-aside Xzharah enemy in A Dream Betwixt, enemy side faceup. Shuffle each set-aside copy of Dreaded Shantak into the chồng bài encounter, along with the chồng bài encounter bỏ.\n<hr><b>If the Ancient Ankh asset is trong màn chơi:</b>\n<blockquote><i>Your Ankh amulet glows with a blinding light, causing Xzharah to recoil. \"So, Neith has abandoned us!\" Xzharah hisses.</i></blockquote>\nExhaust Xzharah and disengage him from all investigators.",
+      "back_flavor": "Thực tế trôi đi khi bạn bước qua ngưỡng cửa. Những cồn cát cuộn vào nền tảng của Trái đất, bầu trời tách ra và màu sắc của thế giới chảy vào cổng tò vò. Lần tiếp theo khi bạn mở mắt ra, bạn đang ở một nơi giữa các thế giới. Ở đầu đối diện của hành lang, một bóng người xuất hiện từ ngưỡng cửa phía sau, không có khuôn mặt và cầm một lưỡi kiếm cong phát ra sức mạnh bóng tối. “Em sẽ là vật hy sinh tiếp theo của anh,” giọng anh sôi sục."
+    }
+  },
+  {
+    "code": "83021",
+    "type": "act",
+    "pack": "guardians",
+    "scenario": "The Night's Usurper",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "The Night's Usurper",
+      "text": "<b>Objective</b> - <i>\"We have to find a way to stop him!\"</i> If Xzharah is exhausted, an investigator at his location may choose to advance. (Limit once per phase.)",
+      "flavor": "Xzharah is gathering his strength, slaying each and every dreamer who crosses between this realm and the Abyss beyond. When the last soul is his, who will be left to prevent his conquest?",
+      "back_name": "Defeating Xzharah",
+      "back_text": "If at least three of the following requirements are met, you may proceed to <b>(→R2)</b>. Otherwise, flip this act back to its \"a\" side.\n- Xzharah must have no remaining health.\n- Investigators must possess 3 [per_investigator] clues, as a group.\n- The strength of the abyss must be 4 or lower.\n- The investigators must have \"freed the nightgaunts,\" \"warned the denizens of Sarkomand,\" and \"pled for help.\"",
+      "back_flavor": "Xzharah cannot be stopped by means you alone possess. Perhaps if you learn more about the realm beyond the gateway, you can find a way to end this vile ritual."
+    },
+    "vi_current": {
+      "name": "Kẻ Chiếm Đoạt Bóng Đêm",
+      "text": "<b>Objective</b> - <i>\"Chúng ta phải tìm cách ngăn chặn anh ta!\"</i> Nếu Xzharah đang exhausted, điều tra viên tại địa điểm của anh ta có thể chọn advance. (Giới hạn một lần cho mỗi giai đoạn.)",
+      "flavor": "Xzharah đang tập hợp sức mạnh của mình, giết chết từng kẻ mộng mơ vượt qua giữa vương quốc này và Vực thẳm bên kia. Khi linh hồn cuối cùng là của anh, ai sẽ còn lại để ngăn cản sự chinh phục của anh?",
+      "back_name": "Defeating Xzharah",
+      "back_text": "If at least three of the following requirements are met, you may proceed to <b>(→R2)</b>. Otherwise, flip this act back to its \"a\" side.\n- Xzharah must have no remaining health.\n- Investigators must possess 3 [per_investigator] manh mối, as a group.\n- The strength of the abyss must be 4 or lower.\n- The investigators must have \"freed the nightgaunts,\" \"warned the denizens of Sarkomand,\" and \"pled for help.\"",
+      "back_flavor": "Xzharah không thể bị ngăn chặn bằng phương tiện mà chỉ một mình bạn sở hữu. Có lẽ nếu tìm hiểu thêm về thế giới bên kia cánh cổng, bạn có thể tìm ra cách kết thúc nghi lễ hèn hạ này."
+    }
+  }
+]

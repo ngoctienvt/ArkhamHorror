@@ -843,7 +843,8 @@
     "link": {
       "twoWay": "Two-way path",
       "oneWay": "One-way path (follow the arrow)",
-      "moveTo": "Move to {name}"
+      "moveTo": "Move to {name}",
+      "barriers": "1 barrier between {a} and {b} | {n} barriers between {a} and {b}"
     },
     "legend": {
       "title": "Legend",

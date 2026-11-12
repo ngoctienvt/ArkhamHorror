@@ -213,7 +213,8 @@ const choose = (index: number) => emits('choose', index)
 
 .pool {
   position: absolute;
-  top: 50%;
+  /* Over the card's art (its top half), not its text box. */
+  top: 10%;
   align-items: center;
   display: flex;
   align-self: flex-start;

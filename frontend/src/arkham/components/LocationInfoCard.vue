@@ -21,7 +21,8 @@ const props = defineProps<{
   location: Location
   info: MapLocationInfo
   /** The connected locations, by the name their face-up side shows. */
-  connections: { id: string; name: string; revealed: boolean }[]
+  /** Each connecting location, with the barriers standing on the link to it (In Too Deep; 0 elsewhere). */
+  connections: { id: string; name: string; revealed: boolean; barriers?: number }[]
   /** The actions panel is open on the right: the card sits to its left. */
   besidePanel: boolean
 }>()
@@ -60,8 +61,9 @@ function choose(index: number) {
 const onKey = (event: KeyboardEvent) => { if (event.key === 'Escape') emit('close') }
 onMounted(() => { window.addEventListener('keydown', onKey); card.value?.focus() })
 onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
-import GameIcon from '@/arkham/components/GameIcon.vue'
+import PoolItem from '@/arkham/components/PoolItem.vue'
 import SceneGlyph from '@/arkham/components/SceneGlyph.vue'
+import BarrierIcon from '@/arkham/components/BarrierIcon.vue'
 </script>
 
 <template>
@@ -80,8 +82,8 @@ import SceneGlyph from '@/arkham/components/SceneGlyph.vue'
       <span v-if="info.shroud" :class="{ modified: info.shroud.current !== info.shroud.printed }"
         :title="t('locationMap.marker.shroud') + (info.shroud.current !== info.shroud.printed ? ' · ' + t('locationMap.marker.printed', { n: info.shroud.printed }) : '')">
         <ShroudDisc :value="info.shroud.x ? 'X' : info.shroud.current" :modified="info.shroud.current !== info.shroud.printed" /><small class="lbl">{{ t('locationMap.marker.shroud') }}<template v-if="info.shroud.current !== info.shroud.printed"> · {{ t('locationMap.marker.printed', { n: info.shroud.printed }) }}</template></small></span>
-      <span :title="t('locationMap.clues')"><GameIcon type="clue" /> <b>{{ info.clues.left }}<template v-if="info.clues.printed !== null">/{{ info.clues.printed }}</template></b><small class="lbl">{{ t('locationMap.clues') }}</small></span>
-      <span v-if="info.doom" class="doom" :title="t('locationMap.doom')"><GameIcon type="doom" /> <b>{{ info.doom }}</b><small class="lbl">{{ t('locationMap.doom') }}</small></span>
+      <span class="token" :title="t('locationMap.clues')"><PoolItem type="clue" :amount="info.clues.printed !== null ? `${info.clues.left}/${info.clues.printed}` : info.clues.left" /><small class="lbl">{{ t('locationMap.clues') }}</small></span>
+      <span v-if="info.doom" class="token" :title="t('locationMap.doom')"><PoolItem type="doom" :amount="info.doom" /><small class="lbl">{{ t('locationMap.doom') }}</small></span>
       <span v-if="info.victory" :title="t('locationMap.info.victory')">VP <b>{{ info.victory }}</b></span>
       <span v-if="info.shroud && !info.shroud.x && me" class="compare" :title="t('locationMap.info.investigateCompare', { intellect: myIntellect?.value, shroud: info.shroud.current })">
         <span class="intellect-icon" aria-hidden="true"></span> {{ myIntellect?.label }} vs {{ info.shroud.current }}</span>
@@ -98,8 +100,10 @@ import SceneGlyph from '@/arkham/components/SceneGlyph.vue'
 
     <div v-if="connections.length" class="link-row" :aria-label="t('locationMap.info.connections')">
       <span class="arrow"><SceneGlyph name="move" /></span>
-      <button v-for="c in connections" :key="c.id" type="button" class="link-chip" :class="{ hidden: !c.revealed }" @click="emit('inspect', c.id)">
-        {{ c.revealed ? '●' : '?' }} {{ c.name }}</button>
+      <button v-for="c in connections" :key="c.id" type="button" class="link-chip" :class="{ hidden: !c.revealed, blocked: (c.barriers ?? 0) > 0 }"
+        :title="(c.barriers ?? 0) > 0 ? t('locationMap.link.barriers', { n: c.barriers, a: info.face.name, b: c.name }, c.barriers ?? 0) : undefined"
+        @click="emit('inspect', c.id)">
+        {{ c.revealed ? '●' : '?' }} {{ c.name }}<span v-if="(c.barriers ?? 0) > 0" class="barriers"><BarrierIcon class="icon" />{{ c.barriers }}</span></button>
     </div>
 
     <section v-if="hasAction" class="actions">
@@ -128,6 +132,9 @@ h3 { margin: 0; display: flex; gap: 6px; align-items: baseline; font: 600 1.05re
 .stats b { color: var(--heading); }
 .stats .modified b { color: #f5b26b; }
 .stats .doom b { color: var(--doom); }
+/* Clues and doom drawn as the same tokens the cards carry, count in the corner;
+   the extra right margin leaves room for that count, which hangs off the edge. */
+.stats .token { display: inline-flex; align-items: center; margin-right: 6px; --pool-token-width: 28px; font-size: 13px; }
 .stats .compare { margin-left: auto; color: var(--clue); }
 .text { margin: 0; line-height: 1.4; white-space: pre-line; }
 .flavor { margin: 0; white-space: pre-line; font-style: italic; color: var(--text-flavor); line-height: 1.4; }
@@ -138,6 +145,10 @@ h3 { margin: 0; display: flex; gap: 6px; align-items: baseline; font: 600 1.05re
 .link-chip { padding: 1px 8px; border: 1px solid var(--line-strong); border-radius: 999px; background: transparent; color: var(--text); font: inherit; cursor: pointer; }
 .link-chip.hidden { border-style: dashed; color: var(--text-muted); }
 .link-chip:hover { border-color: var(--state-here); }
+/* A link holding barriers: rust rim and a barricade with the count after the name. */
+.link-chip.blocked { border-color: #d9774f; }
+.link-chip .barriers { display: inline-flex; align-items: center; gap: 2px; margin-left: 6px; color: #d9774f; font-weight: 700; }
+.link-chip .barriers .icon { width: 14px; height: 14px; }
 .actions { display: grid; gap: 5px; }
 .act { display: flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-1); color: var(--text); font: inherit; font-weight: 600; text-align: left; cursor: pointer; }
 .act:hover { border-color: var(--accent-gold); background: var(--surface-2); }

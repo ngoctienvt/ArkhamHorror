@@ -30,6 +30,7 @@ import { arrangeMode, hasMapOffsets, resetMapOffsets } from '@/arkham/composable
 import { useMapViewport } from '@/arkham/composables/useMapViewport'
 import { MAP_ZOOM_ENABLED } from '@/arkham/mapViewport'
 import { useLocationInfo } from '@/arkham/composables/useLocationInfo'
+import { barrierCounts, barriersBetween } from '@/arkham/scenarioBarriers'
 import { useTouchMode } from '@/arkham/composables/useTouchMode'
 import { fitScreenOn } from '@/arkham/composables/useFitScreen'
 
@@ -38,7 +39,7 @@ const props = defineProps<{
   scenario: Scenario
   playerId: string
   view: Exclude<LocationView, 'cards'>
-  /** The scenario shows things only the card board can draw (barriers, enemies standing as locations, ...). */
+  /** The scenario shows things only the card board can draw (enemies standing as locations, grid stories, ...). */
   boardOnlyContent: boolean
   decksShown: boolean
   chaosBagShown: boolean
@@ -230,9 +231,14 @@ const inspected = computed(() => {
   const id = inspectedId.value
   return id && props.game.locations[id] && graph.value[id] ? props.game.locations[id] : null
 })
+// Barriers on links (In Too Deep): drawn on the link badges and counted on the info card's connection chips.
+const barriers = computed(() => barrierCounts(props.scenario.meta))
 const inspectedConnections = computed(() => (inspected.value?.connectedLocations ?? [])
   .map((id) => props.game.locations[id]).filter((l): l is Location => Boolean(l) && Boolean(graph.value[l.id]))
-  .map((l) => { const info = infoOf(l); return { id: l.id, name: info.face.name, revealed: info.revealed } }))
+  .map((l) => {
+    const info = infoOf(l)
+    return { id: l.id, name: info.face.name, revealed: info.revealed, barriers: barriersBetween(barriers.value, inspected.value!.id, l.id) }
+  }))
 const panelOpen = ref(true)
 watch(() => panelOnlyCount.value > 0, (needed) => { if (needed) panelOpen.value = true }, { immediate: true })
 // The card sits in the top-right corner, left of the actions panel; focus goes back to the plate that opened it.
@@ -336,7 +342,7 @@ const views: LocationView[] = ['map', 'cards']
       <div id="scene-team-slot" class="team-slot"></div>
       <LocationMapCanvas :cutaway="cutaway" :roomPlates="roomPlates" :plateText="plateText" :illustrated-board="illustratedBoard" :game="game" :playerId="playerId" :locations="locations"
         :positions="positions" :links="links" :moves="moves" :gridSpots="gridSpots" :selectedId="selected?.id ?? null"
-        :enemiesAt="enemiesShownAt" :concealedAt="concealedOf" :concealedSpots="concealedSpots" :infoOf="infoOf" :width="canvasSize.width" :height="canvasSize.height" :viewport="viewport"
+        :enemiesAt="enemiesShownAt" :concealedAt="concealedOf" :concealedSpots="concealedSpots" :infoOf="infoOf" :barriers="barriers" :width="canvasSize.width" :height="canvasSize.height" :viewport="viewport"
         @inspect="inspect" @choose="emit('choose', $event)" />
       <div v-if="canZoom" class="zoom-controls" role="group" :aria-label="t('locationMap.zoomReset')">
         <button type="button" :aria-label="t('locationMap.zoomIn')" :disabled="!viewport.canZoomIn.value" @click.stop="viewport.zoomIn()">+</button>

@@ -1,0 +1,1075 @@
+[
+  {
+    "code": "05044",
+    "type": "agenda",
+    "pack": "tcu",
+    "scenario": "Disappearance at the Twilight Estate",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "back_text: nums en=['1', '7'] vi=[]",
+      "back_text: len ratio 0.13",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "JUDGEMENT • XX",
+      "text": "<b>Forced</b> - After doom is placed on any card: Each investigator must either take 1 damage or 1 horror (2 damage or 2 horror instead if there is 5 or more doom in play).\n<b>Forced</b> - When any investigator is defeated, that investigator must advance this agenda. Do not remove any doom from this agenda when it advances.",
+      "flavor": "THERE IS NO ESCAPING FATE.\nHEAR THE CALL AND BE REBORN.",
+      "back_name": "Your Demise",
+      "back_text": "In the \"Missing Persons\" section of your Campaign Log, next to your character's profile, make a record of that character's fate, as follows. Then flip this agenda back over.\n- If you were defeated by The Spectral Watcher's attack, record <i>(character's name) was taken by the Watcher.</i>\n- If you were defeated by a [[Monster]] enemy's attack, record <i>(character's name) was claimed by specters.</i>\n- If there was 7 or more doom in play when this agenda advanced, and you were defeated by horror or damage dealt by the <b>Forced</b> ability on agenda 1a, record <i>(character's name) disappeared into the mist.</i>\n- If you were defeated by any other effect, record<i>(character's name) was pulled into the spectral realm.</i>"
+    },
+    "vi_current": {
+      "name": "Bóng Ma Quá Khứ",
+      "text": "<b>Forced</b> - Sau khi doom được đặt trên bất kỳ thẻ nào: Mỗi điều tra viên phải nhận 1 damage hoặc 1 horror (thay vào đó là 2 damage hoặc 2 horror nếu có 5 doom trong màn chơi trở lên).\n<b>Forced</b> - Khi bất kỳ điều tra viên nào bị đánh bại, điều tra viên đó phải advance agenda này. Không xóa bất kỳ doom nào khỏi agenda này khi nó là advances.",
+      "flavor": "Những hiện tượng tâm linh kỳ quái xảy ra dồn dập tại dinh thự.",
+      "back_name": "Bóng Tối Nuốt Chửng",
+      "back_text": "Toàn bộ các điều tra viên tiền truyện bị đánh bại. Tiến hành chuyển sang phần mở đầu chiến dịch.",
+      "back_flavor": "Mọi ngọn đèn vụt tắt. Chỉ còn lại bóng đen bao trùm dinh thự Twilight."
+    }
+  },
+  {
+    "code": "05051",
+    "type": "agenda",
+    "pack": "tcu",
+    "scenario": "The Witching Hour",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "back_text: nums en=['5'] vi=[]",
+      "back_text: len ratio 0.33",
+      "back_flavor: len ratio 0.10"
+    ],
+    "en": {
+      "name": "TEMPERANCE • XIV",
+      "flavor": "REMAIN CALM AND YOU MAY PEER INTO AN UNCERTAIN FUTURE.\nTHE BALANCE OF THE UNIVERSE HAS TILTED.\nYOU ARE THE FULCRUM.\nBE PATIENT, AND ALL WILL BE REVEALED.",
+      "back_name": "The Rite Commences",
+      "back_text": "Discard all but the last 5 cards from the encounter deck. The investigator with the most cards in his or her play area must draw the topmost [[Witch]] enemy in the encounter discard pile.",
+      "back_flavor": "The moon reaches the height of its arc in the night sky. The trees begin to shift and twist in the breeze, as though made of something other than solid matter. Dozens of birds suddenly scatter from every treetop. In the distance, you can hear a faint melody, the pitch blending in the wind.\nA cloaked figure emerges from the darkness beyond the brush, a vortex of magical energy coalescing at her feet. \"Are you the ones who have been meddling with our works?\" she wonders aloud, gazing at you suspiciously from underneath her thick hood. \"It is no matter. You are not welcome here,\" she threatens. \"Begone, or face the consequences.\""
+    },
+    "vi_current": {
+      "name": "Giờ Phù Thủy",
+      "flavor": "Bạn lạc bước giữa khu rừng Arkham lúc nửa đêm. Tiếng tụng niệm u uẩn của các phù thủy râm ran qua từng kẽ lá.",
+      "back_name": "Vòng Tròn Phù Thủy",
+      "back_text": "Spawn kẻ địch Witch of the Coven tại một địa điểm ngẫu nhiên.",
+      "back_flavor": "Những đốm lửa ma trơi xanh lét lập lòe quanh các gốc cây cổ thụ."
+    }
+  },
+  {
+    "code": "05052",
+    "type": "agenda",
+    "pack": "tcu",
+    "scenario": "The Witching Hour",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "flavor: len ratio 0.26",
+      "back_text: len ratio 0.15",
+      "back_text: dup [('05052', 'back_text'), ('05121', 'back_text'), ('06170', 'back_text'), ('07126', 'back_text'), ('10609', 'back_text')]",
+      "back_flavor: len ratio 0.18"
+    ],
+    "en": {
+      "name": "The Night Howls",
+      "text": "<b>Forced</b> - At the end of the round: Place 1 doom on this agenda for each [[Witch]] enemy at the Witches' Circle.",
+      "flavor": "As midnight draws nearer, the forest begins to take on another form. A canopy of darkness overtakes the stars. The wind picks up in intensity, its whistling echoing through the trees. A dangerous power gathers deep within the woods, drawing only the foul and the foolish.",
+      "back_name": "Reincarnation",
+      "back_text": "Each surviving investigator is defeated and must search the collection for a random basic [[Omen]] or [[Curse]] weakness and add it to his or her deck. Each investigator who cannot suffers 1 mental trauma instead.",
+      "back_flavor": "A column of lightning flashes in the sky, coupled with an earsplitting clap of thunder that resounds throughout the woods. The earth trembles, and the wind howls as it rushes all around you, intermingled with what sounds like the screaming and shrieking of somebody torn in anguish and misery. That is when the flutes begin to play."
+    },
+    "vi_current": {
+      "name": "Vũ Điệu Phù Thủy",
+      "text": "<b>Forced</b> - Khi kết thúc vòng đấu: Đặt 1 doom vào agenda này cho mỗi kẻ địch [[Witch]] tại Vòng tròn Phù thủy.",
+      "flavor": "Vũ điệu tế lễ của hội phù thủy ngày càng cuồng loạn dưới ánh trăng máu.",
+      "back_name": "Cơn Cuồng Loạn Bùng Nổ",
+      "back_text": "Mỗi điều tra viên nhận 1 horror.",
+      "back_flavor": "Những tiếng rít ma quái xé toạc màn đêm u tịch của khu rừng."
+    }
+  },
+  {
+    "code": "05053",
+    "type": "act",
+    "pack": "tcu",
+    "scenario": "The Witching Hour",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "flavor: len ratio 0.30",
+      "back_text: nums en=['1', '3', '4'] vi=['3']",
+      "back_text: icons en=['[agility]', '[willpower]'] vi=[]",
+      "back_text: len ratio 0.09",
+      "back_flavor: len ratio 0.27"
+    ],
+    "en": {
+      "name": "Lost in the Woods",
+      "text": "Locations in front of you are connected to one another. You cannot enter locations in front of other investigators.\n<b>Objective</b> - At the end of the round, investigators may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "You have awakened alone deep in the woods south of Arkham. The mysterious soothsayer is nowhere to be seen. You rise up from the muddy trail and try to find your bearings. An oppressive weight hangs in the air.",
+      "back_name": "Deeper into the Woods",
+      "back_text": "Each investigator must randomly choose 1 of the set-aside Arkham Woods locations, put it into play in front of him or her, and immediately move to that location (cannot be canceled).\nEach investigator spawns a set-aside Goat Spawn at his or her location (if there are 4 investigators in the game, the lead investigator spawns the set-aside Relentless Dark Young, and each other investigator spawns a set-aside Goat Spawn, instead). Each investigator then tests [willpower] or [agility] (3). Each investigator who succeeds exhausts that enemy and disengages from it.\nShuffle one of the set-aside copies of Daemonic Piping into the encounter deck. Place the other two copies in the encounter discard pile.",
+      "back_flavor": "As the rain lets up, a dense fog rolls in throughout the area. Soon all of the woods have vanished within the hazy fog. You call out for your companions, but none answer. You grope blindly in the haze, searching for something, anything to which you can cling."
+    },
+    "vi_current": {
+      "name": "Giờ Khắc Diệt Vong",
+      "text": "các địa điểm trước mặt bạn kết nối với nhau. Bạn không thể vào các địa điểm trước các điều tra viên khác.\n<b>Objective</b> - Khi kết thúc vòng đấu, các điều tra viên có thể dành số lượng manh mối cần thiết, với tư cách là một nhóm, cho advance.",
+      "flavor": "Thời khắc nghi thức hoàn tất đã điểm. Mẹ Phù Thủy sắp thức giấc!",
+      "back_name": "Bị Hiến Tế",
+      "back_text": "Mỗi điều tra viên bị bắt giữ để làm vật hiến tế. <b>(→R3)</b>",
+      "back_flavor": "Những nhánh cây biến thành bàn tay quỷ dữ trói chặt bạn vào bàn thờ đá."
+    }
+  },
+  {
+    "code": "05054",
+    "type": "act",
+    "pack": "tcu",
+    "scenario": "The Witching Hour",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: len ratio 0.38",
+      "flavor: len ratio 0.37",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.41",
+      "back_flavor: len ratio 0.13"
+    ],
+    "en": {
+      "name": "Witch Hauntings",
+      "text": "Locations in front of you are connected to one another. You cannot enter locations in front of other investigators.\n<b>Objective</b> - If a single investigator spends the requisite number of clues, advance.",
+      "flavor": "Whatever arcane rites are being practiced in these woods, they are attracting the attention of all manner of vile beasts, the likes of which you have never seen. Is this what the soothsayer was trying to warn you about?",
+      "back_name": "Strange Melodies",
+      "back_text": "For the remainder of the scenario, investigators may now enter locations in front of other investigators.",
+      "back_flavor": "As you scour the woods for answers - or a path that will lead you back home - you find yourself drawn off the beaten trail by a mesmerizing melody of silvery pipes. Deeper into the damp, hazy woodland you delve, searching for the source of the strange music. Finally, you come upon a foggy clearing, at the center of which lies a half-rotted tree stump. An old but delicately carved wooden flute lies atop the stump, silently beseeching you to approach. The moment you touch the instrument, the piping melody that lured you here is cut short, and the dense fog around you disperses with a sudden breeze."
+    },
+    "vi_current": {
+      "name": "Lạc Trong Rừng Sâu",
+      "text": "<b>Objective</b> — Thám hiểm khu rừng và tìm lại các điều tra viên bị phân tán.",
+      "flavor": "Khu rừng bị phù phép như một mê cung vô tận khiến bạn mất phương hướng hoàn toàn.",
+      "back_name": "Hội Ngộ Giữa Rừng",
+      "back_text": "Advance sang Act 2 — \"The Witches' Circle\".",
+      "back_flavor": "Bạn tìm thấy những người đồng hành đang chống chọi với lũ quái vật rừng sâu."
+    }
+  },
+  {
+    "code": "05055",
+    "type": "act",
+    "pack": "tcu",
+    "scenario": "The Witching Hour",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "flavor: len ratio 0.30",
+      "back_name: presence en=0 vi=1",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Paths into Twilight",
+      "text": "Locations in front of you are connected to one another.",
+      "flavor": "With the strange fog dispersed, you are now able to explore the woods. You are unable to find the main path that leads back to Uptown, but this is your chance to discover more about the ritual the witches are conducting."
+    },
+    "vi_current": {
+      "name": "Vòng Tròn Phù Thủy",
+      "text": "<b>Objective</b> — Đột kích vòng tròn tế lễ và phá vỡ nghi thức phù thủy.",
+      "flavor": "Ánh lửa ma trơi soi sáng bãi tế lễ nơi Anette Mason đang niệm chú.",
+      "back_name": "Phá Vỡ Phong Ấn",
+      "back_text": "Advance sang Act 3 — \"Escape the Woods\".",
+      "back_flavor": "Bạn hất tung vạc dầu tế lễ, làm gián đoạn câu thần chú đen tối của mụ phù thủy."
+    }
+  },
+  {
+    "code": "05056",
+    "type": "act",
+    "pack": "tcu",
+    "scenario": "The Witching Hour",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: icons en=[] vi=['[action]']",
+      "flavor: len ratio 0.20",
+      "back_text: nums en=['1', '2'] vi=['1']",
+      "back_text: len ratio 0.02",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "A Circle Unbroken",
+      "text": "Locations in front of you are connected to one another.\n<b>Objective</b> - If Anette Mason is defeated, advance.\n<b>Objective</b> - If there are no clues on the Witches' Circle, advance.",
+      "flavor": "You come across a clearing where a ritual circle has been constructed. Several hooded figures stand around it in a trance, unaware of your presence. Overlooking the ritual is a powerfully built woman who brandishes a long wavy dagger as she sees you approach. \"Leave this place at once!\" she commands.",
+      "back_name": "A Circle Undone",
+      "back_text": "<b>If you advanced by defeating Anette Mason:</b>\n<blockquote><i>\"Stop!\" the coven's leader yells in a commanding voice, grimacing from the wounds you've inflicted. You're not sure if she's speaking to you or to the hooded women surrounding you, but regardless, there is a sudden stillness in the clearing around the circle</i></blockquote>\n<b>(→R1)</b>\n<hr><b>If you advanced by discovering all of the clues in the Witches' Circle:</b>\n<blockquote><i>A loud crack echoes throughout the woods as you break the circle and reverse the witches' spell. \"No! They have broken the ritual!\" one of the witches screams as the spell's energy backfires. White-hot lightning strikes the center of the field, sending dirt and debris flying in every direction. You duck for cover.</i></blockquote>\n<b>(→R2)</b>"
+    },
+    "vi_current": {
+      "name": "Thoát Khỏi Khu Rừng",
+      "text": "<b>Objective</b> — Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.\n[action]: <b>Resign.</b> Bạn chạy thục mạng ra con đường lớn.",
+      "flavor": "Khu rừng đang sụp đổ và lũ phù thủy điên cuồng truy sát bạn!",
+      "back_name": "Trở Lại Arkham",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn thoát ra khỏi bìa rừng trong tiếng thở dốc, ánh đèn đường Arkham le lói đón chào."
+    }
+  },
+  {
+    "code": "05066",
+    "type": "agenda",
+    "pack": "tcu",
+    "scenario": "At Death's Doorstep",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "flavor: len ratio 0.60",
+      "back_text: nums en=['1', '3', '3', '3'] vi=['3']",
+      "back_text: icons en=['[per_investigator]', '[per_investigator]', '[per_investigator]'] vi=[]",
+      "back_text: len ratio 0.04"
+    ],
+    "en": {
+      "name": "JUSTICE • XI",
+      "text": "[[Silver Twilight]] enemies cannot be damaged or defeated.\n<b>Forced</b> - When you draw a [[Monster]] enemy: Instead of spawning it, set it aside, out of play, and place 1 doom on this agenda. This effect can cause this agenda to advance.",
+      "flavor": "BE TRUE TO YOURSELF, AND SEEK THE TRUTH IN OTHERS.\nBALANCE THE SCALES.\nYOU SHALL BE CALLED TO ACCOUNT FOR YOUR ACTIONS.",
+      "back_name": "Pulled into the Shadows",
+      "back_text": "If the investigators do not possess 3 [per_investigator] clues as a group, they lose all of their clues.\nIf the investigators possess at least 3 [per_investigator] clues as a group, they must spend 3 [per_investigator] clues and spawn the set-aside Josef Meiger enemy at the location other than the Entry Hall that is farthest from all investigators.\nOpen the Campaign Guide and proceed to <b>Interlude I: A Record of Those Lost</b>.\nOnce this interlude has been resolved, remove all clues from each location in play, and advance to act 1b.",
+      "back_flavor": "You have uncovered some of the evidence pertaining to the disappearances, but the truth has yet to be unveiled."
+    },
+    "vi_current": {
+      "name": "Cuộc Ám Ảnh Bắt Đầu",
+      "text": "các kẻ địch [[Silver Twilight]] không thể bị hư hại hoặc bị đánh bại.\n<b>Forced</b> - Khi bạn vẽ kẻ địch [[Monster]]: Thay vì spawning, hãy đặt nó sang một bên, ngoài màn chơi và đặt 1 doom lên agenda này. Hiệu ứng này có thể khiến agenda này advance.",
+      "flavor": "Những linh hồn oán than từ chiều không gian Spectral tràn vào dinh thự.",
+      "back_name": "Lãnh Địa Ma Ám",
+      "back_text": "Advance sang agenda 3.",
+      "back_flavor": "Cả dinh thự rung chuyển dữ dội dưới sức ép của các linh hồn cuồng nộ."
+    }
+  },
+  {
+    "code": "05067",
+    "type": "agenda",
+    "pack": "tcu",
+    "scenario": "At Death's Doorstep",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "back_text: nums en=['1', '2', '3', '3'] vi=['3']",
+      "back_text: len ratio 0.22",
+      "back_flavor: len ratio 0.11"
+    ],
+    "en": {
+      "name": "Over the Threshold",
+      "text": "Each [[Silver Twilight]] enemy gains <b>Victory 0</b>, and counts as an investigator for the purpose of determining where hunter enemies move during the enemy phase.\n<b>Forced</b> - After the 'hunter enemies move' step of the enemy phase: Each ready [[Spectral]] enemy deals its damage value to each [[Humanoid]] enemy at its location.",
+      "flavor": "Does this have something to do with the four missing persons? And if so, what does that mean for your survival?",
+      "back_name": "Escape, if You Can",
+      "back_text": "- If the investigators are at act 2, they are trapped inside the spectral realm. <b>(→R3)</b>\n- If the investigators are at act 3, they barely escape with their lives. Each investigator who has not resigned is defeated and suffers 1 physical trauma.",
+      "back_flavor": "The mist continues to seep through the walls and the foundation of the building, filling the manor's halls. Inside the mist, you cannot unsee the screaming faces, the twisting torment of the spirits trapped within. Their agony ripples throughout the corridors and pierces your mind. A bout of madness overtakes you. You must escape before you, too, are lost forever. Before you know it, you are running for the exit."
+    },
+    "vi_current": {
+      "name": "Cuộc Xâm Lăng Của Linh Hồn",
+      "text": "Mỗi kẻ địch [[Silver Twilight]] nhận được <b>Victory 0</b> và được tính là điều tra viên nhằm mục đích xác định vị trí hunter các kẻ địch di chuyển trong giai đoạn Enemy.\n<b>Forced</b> - Sau bước 'hunter các kẻ địch di chuyển' của giai đoạn Enemy: Mỗi kẻ địch đang ready [[Spectral]] xử lý giá trị damage của nó cho mỗi kẻ địch [[Humanoid]] tại địa điểm của nó.",
+      "flavor": "Cánh cổng cõi âm mở toang. Không còn nơi nào an toàn trong dinh thự.",
+      "back_name": "Chết Trong Dinh Thự",
+      "back_text": "Mỗi điều tra viên chưa resign bị bắt giữ. <b>(→R3)</b>",
+      "back_flavor": "Lũ ma quỷ xé toạc linh hồn bạn khỏi thể xác."
+    }
+  },
+  {
+    "code": "05068",
+    "type": "act",
+    "pack": "tcu",
+    "scenario": "At Death's Doorstep",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: len ratio 0.36",
+      "flavor: len ratio 0.30",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.08",
+      "back_flavor: len ratio 0.27"
+    ],
+    "en": {
+      "name": "Hidden Agendas",
+      "text": "<b>Objective</b> - Find information about the disappearances by discovering as many clues as you can. <i>(Do not advance until you are instructed.) (Hint: it may be worthwhile to investigate the last known locations of the missing persons.)</i>",
+      "flavor": "As you approach the patio of the Meiger estate, a man in an elegant suit checks your invitation at the door. Inside, guests mingle and chat with one another, but much of the conversation is awkward and terse. A silent tension has gripped the manor, and you are not sure why.",
+      "back_name": "Death Approaches",
+      "back_text": "Move each investigator and each enemy currently in the Entry Hall to the Victorian Halls.\nFor each location in play, find the set-aside [[Spectral]] version of that location and swap them <i>(all tokens and cards at the former location are now considered to be at the new location)</i>. If there is an investigator at that location, reveal it.\nIn player order, each investigator spawns one of the set-aside [[Monster]] enemies at his or her location, until each of the set-aside [[Monster]] enemies has been spawned.\nSpawn the set-aside The Spectral Watcher enemy in the Entry Hall. Shuffle the remainder of the set-aside <i>The Watcher</i> encounter set and the set-aside <i>Realm of Death</i> encounter set into the encounter deck, along with the encounter discard pile.",
+      "back_flavor": "Before you can investigate further, the building is suddenly plunged into icy darkness. All of the lights flicker once and are snuffed out. A thick, otherworldly mist begins to seep into the corridors, causing everything it touches to decay."
+    },
+    "vi_current": {
+      "name": "Thâm Nhập Hội Lodge",
+      "text": "<b>Objective</b> — Thu thập thông tin và tìm cách mở khóa cánh cửa dẫn vào hầm mộ bí mật.",
+      "flavor": "Bạn lén lút lục soát các căn phòng trong khi các thành viên hội Lodge đang làm lễ.",
+      "back_name": "Cánh Cửa Mật Mã",
+      "back_text": "Đặt địa điểm Secret Cavern vào màn chơi. Advance sang Act 2.",
+      "back_flavor": "Bạn tìm thấy cơ chế mở chiếc tủ tường dẫn xuống hầm ngầm cổ kính."
+    }
+  },
+  {
+    "code": "05069",
+    "type": "act",
+    "pack": "tcu",
+    "scenario": "At Death's Doorstep",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: presence en=0 vi=1",
+      "flavor: len ratio 0.18",
+      "back_text: nums en=[] vi=['3']",
+      "back_text: len ratio 0.34",
+      "back_flavor: len ratio 0.11"
+    ],
+    "en": {
+      "name": "The Spectral Realm",
+      "flavor": "In the blink of an eye, everything has changed. A sudden, oppressive silence fills the halls of Josef Meiger's manor. Gone is the din of idle chatter from the banquet hall, the clinking of glasses, the laughter of oblivious guests. Save for only you and several others, all of the people in the house have vanished without a trace. All that is left is the dark mist… and the beings that inhabit it.",
+      "back_name": "A Way Out",
+      "back_text": "The mist blocking your escape recedes. Reveal the Entry Hall.\nShuffle the encounter discard pile into the encounter deck.",
+      "back_flavor": "You find the corpse of one of the others trapped here - a member of the Silver Twilight Lodge, you surmise, although his outfit of blue and silver robes suggests something more esoteric. Gripped tightly in his withered hands is a small tome bearing the insignia of the Lodge. Browsing through its pages, you are surprised to find all manner of information regarding the mist and the creatures you have encountered, including a spell to \"release the bonds of death\" and escape the mist. How long has this man been here, studying this realm? Regardless, at least you have a way out now…"
+    },
+    "vi_current": {
+      "name": "Căn Phòng Bí Ẩn",
+      "text": "<b>Objective</b> — Khám phá các bí mật huyền học được cất giấu dưới hầm mộ.",
+      "flavor": "Hầm mộ ngầm dưới dinh thự chứa đầy sách ma thuật và biểu tượng phù thủy.",
+      "back_name": "Lời Khai Của Linh Hồn",
+      "back_text": "Advance sang Act 3 — \"Escape the Estate\".",
+      "back_flavor": "Một hồn ma hiện lên cảnh báo bạn về sự phản bội của Carl Sanford."
+    }
+  },
+  {
+    "code": "05070",
+    "type": "act",
+    "pack": "tcu",
+    "scenario": "At Death's Doorstep",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: icons en=[] vi=['[action]']",
+      "text: len ratio 0.45",
+      "flavor: len ratio 0.24",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.22"
+    ],
+    "en": {
+      "name": "Escape the Cage",
+      "text": "<b>Forced</b> - At the end of the round: Each [[Silver Twilight]] enemy in the Entry Hall escapes; place them beneath the Entry Hall, out of play. Move each ready [[Silver Twilight]] enemy with the aloof keyword once toward the Entry Hall.\n<b>Objective</b> - If each undefeated investigator has resigned, advance.",
+      "flavor": "Now that the mist has receded, you might be able to escape with your lives… but what about Josef Meiger and the other Lodge members left behind? Should you stay to make sure they escape, or flee while you have the chance?",
+      "back_name": "Alive… for Now",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Coming to this place was a terrible mistake. You had hoped to uncover evidence pertaining to the disappearances at the estate, not become victims yourselves. As you tear through the entry hall and slam through the manor's heavy front doors, you vow to put as much distance between you and the Meiger estate as you possible can. Unfortunately, your plan is quickly derailed…"
+    },
+    "vi_current": {
+      "name": "Thoát Khỏi Dinh Thự",
+      "text": "<b>Objective</b> — Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.\n[action]: <b>Resign.</b> Bạn thoát ra ngoài qua cánh cổng sắt.",
+      "flavor": "Dinh thự đang bị bao vây bởi cả giáo đồ lẫn bóng ma!",
+      "back_name": "Thoát Khỏi Cửa Tử",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn lao qua cổng dinh thự trong gang tấc khi cả tòa nhà chìm trong ánh lửa ma quái."
+    }
+  },
+  {
+    "code": "05121",
+    "type": "agenda",
+    "pack": "tsn",
+    "scenario": "The Secret Name",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "back_text: nums en=['3', '4'] vi=['1']",
+      "back_text: len ratio 0.07",
+      "back_text: dup [('05052', 'back_text'), ('05121', 'back_text'), ('06170', 'back_text'), ('07126', 'back_text'), ('10609', 'back_text')]",
+      "back_flavor: len ratio 0.16"
+    ],
+    "en": {
+      "name": "THE HERMIT • IX",
+      "text": "Each non-weakness enemy gets +1 health.\n[reaction] After you defeat Brown Jenkin or Nahab: Gain 1 clue from the token bank (2 clues instead if there are 3 or more investigators in the game).",
+      "flavor": "LOOK FOR ANSWERS WITHIN AND NOT WITHOUT.\nMANY PATHS LEAD TO THE SAME ANSWER.\nCONTEMPLATE THE GREATER TRUTH.",
+      "back_name": "Rats in the Walls",
+      "back_text": "If Brown Jenkin is in play, search the encounter deck and discard pile for a Swarm of Rats and spawn it in Brown Jenkin's location. If Brown Jenkin is not in play, search the encounter deck and discard pile for him and spawn it in the lead investigator's location.\nAdditionally, if there are 3 or 4 investigators in the game, search the encounter deck and discard pile for a Swarm of Rats and spawn it in any [[Witch House]] location.",
+      "back_flavor": "As you explore the old, dilapidated house, the telltale scratching and scurrying in the walls become louder and more frequent. Every now and again a fanged, furry creature darts across the wooden floor, scampering in and out of ratholes in the walls. You wonder if this house is more rat than wood."
+    },
+    "vi_current": {
+      "name": "Hình Học Vặn Vẹo",
+      "text": "Mỗi người không phải điểm yếu kẻ địch nhận +1 health.\n[reaction] Sau khi bạn đánh bại Brown Jenkin hoặc Nahab: Nhận 1 manh mối từ ngân hàng token (thay vào đó là 2 manh mối nếu có 3 các điều tra viên trở lên trong trò chơi).",
+      "flavor": "Các góc tường dường như nhọn hơn 90 độ, mở ra những lối đi vào các chiều không gian song song.",
+      "back_name": "Lạc Giữa Các Góc Không Gian",
+      "back_text": "Mỗi điều tra viên nhận 1 horror.",
+      "back_flavor": "Bạn bị hút qua một góc tường phi hình học Euclid."
+    }
+  },
+  {
+    "code": "05122",
+    "type": "agenda",
+    "pack": "tsn",
+    "scenario": "The Secret Name",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "flavor: len ratio 0.39",
+      "back_text: nums en=['1', '1', '2', '3'] vi=['2']",
+      "back_text: len ratio 0.21",
+      "back_flavor: len ratio 0.14"
+    ],
+    "en": {
+      "name": "The Familiar",
+      "text": "Each non-weakness enemy gets +2 health.\n[reaction] After you defeat Brown Jenkin or Nahab: Gain 1 clue from the token bank (2 clues instead if there are 3 or more investigators in the game).",
+      "flavor": "…the descriptions of the darting little furry object which served as her familiar were so painfully realistic despite their incredible details. - H. P. Lovecraft, <u>The Dreams in the Witch House</u>",
+      "back_name": "The Crone",
+      "back_text": "- If it is act 1, spawn the set-aside Nahab in Walter Gilman's Room.\n- If it is act 2, spawn the set-aside Nahab in Keziah's Room.\n- If it is act 3, place 1 doom on Nahab.\nShuffle both set-aside copies of Ghostly Presence into the encounter deck.\nFind Brown Jenkin (even if he is out of play) and place him in Nahab's current location.",
+      "back_flavor": "A dizzying violet light emerges from the crevices of the ramshackle house, behind cracks in the wooden paneling and underneath the floor, bathing you from every angle. An inhuman squeal mocks you as a figure emerges from the witch light. Only a hint of humanity remains in her crooked and broken form. The crone cackles with a nightmarish timbre, her voice echoing and resounding from the realm beyond."
+    },
+    "vi_current": {
+      "name": "Bàn Tay Của Keziah",
+      "text": "Mỗi người không phải điểm yếu kẻ địch nhận +2 health.\n[reaction] Sau khi bạn đánh bại Brown Jenkin hoặc Nahab: Nhận 1 manh mối từ ngân hàng token (thay vào đó là 2 manh mối nếu có 3 các điều tra viên trở lên trong trò chơi).",
+      "flavor": "Keziah Mason vung cây trượng phù thủy, chuẩn bị kéo linh hồn bạn vào cõi chết.",
+      "back_name": "Ký Vào Cuốn Sách Đen",
+      "back_text": "Mỗi điều tra viên bị bắt ký tên vào Sổ Đen Của Azathoth. <b>(→R2)</b>",
+      "back_flavor": "Tâm trí bạn đầu hàng trước quyền năng hắc ám nghìn năm."
+    }
+  },
+  {
+    "code": "05123",
+    "type": "agenda",
+    "pack": "tsn",
+    "scenario": "The Secret Name",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: nums en=['1', '2', '3', '3'] vi=[]",
+      "text: icons en=['[reaction]'] vi=[]",
+      "text: len ratio 0.45",
+      "flavor: len ratio 0.24",
+      "back_text: nums en=['1', '1', '2', '3', '4', '4'] vi=['2']",
+      "back_text: len ratio 0.43",
+      "back_flavor: len ratio 0.10"
+    ],
+    "en": {
+      "name": "The Witch Light",
+      "text": "Each non-weakness enemy gets +3 health.\n[reaction] After you defeat Brown Jenkin or Nahab: Gain 1 clue from the token bank (2 clues instead if there are 3 or more investigators in the game).",
+      "flavor": "In the dazzling violet light of dream the old woman and the fanged, furry thing came again and with a greater distinctness than on any former occasion. This time they actually reached him, and he felt the crone’s withered claws clutching at him. -H.P. Lovecraft, <u>The Dreams in the Witch House</u>",
+      "back_name": "An Awakening",
+      "back_text": "- If it is act 1 or 2, set Nahab aside, out of play, and place 4 doom on agenda 4a as it enters play.\n- If it is act 3, place 1 doom on Nahab.",
+      "back_flavor": "A sudden flash of violet light causes you to reel backwards. The spectral form of the crone is broken and shattered, but as you fall you can see a sinister grin play across her misshapen face. A jolt of pain surges through you as your head strikes the surface of the wall, and the witch's terrible grin is the last thing you see before everything goes black.\nWhen you awaken, the witch light is gone, but a vision is burned in your mind - the ancient crone, bent over a slanted floor, leering gleefully at a rotting book, a misshapen knife in her crooked fingers. Behind her, the twilight abyss extends into oblivion, and a gaping maw begins to close."
+    },
+    "vi_current": {
+      "name": "Điều Tra Ngôi Nhà Phù Thủy",
+      "text": "<b>Objective</b> — Tìm kiếm manh mối về cái tên bí mật trong các ghi chép của Keziah.",
+      "flavor": "Các ký hiệu toán học kỳ bí phủ kín khắp các bức tường phòng ngủ gác mái.",
+      "back_name": "Góc Tường Kỳ Lạ",
+      "back_text": "Đặt địa điểm Unknown Places vào màn chơi. Advance sang Act 2.",
+      "back_flavor": "Bạn phát hiện một khe nứt không gian dẫn thẳng ra ngoài vũ trụ."
+    }
+  },
+  {
+    "code": "05124",
+    "type": "agenda",
+    "pack": "tsn",
+    "scenario": "The Secret Name",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: nums en=['1', '2', '3', '4'] vi=[]",
+      "text: icons en=['[reaction]'] vi=[]",
+      "text: len ratio 0.44",
+      "flavor: len ratio 0.31",
+      "back_text: nums en=['1'] vi=['3']",
+      "back_flavor: len ratio 0.27"
+    ],
+    "en": {
+      "name": "Marked for Sacrifice",
+      "text": "Each non-weakness enemy gets +4 health.\n[reaction] After you defeat Brown Jenkin or Nahab: Gain 1 clue (2 clues instead if there are 3 or more investigators in the game).",
+      "flavor": "Either this house is truly haunted, or its strange angles and eerie light are playing tricks on your curse-addled mind. Are these ghostly visions real? Or echoes of the house’s gruesome past?",
+      "back_name": "A Dream in the Witch House",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Flashes of vision spark your memory as you are dragged along the dirty wooden floor. A foul ceremony - the house - Nahab - a rhythmic chant - the spiraling black vortex - a dark revelry - the Primal Chaos - a child's cries - a writhing tunnel inside your chest."
+    },
+    "vi_current": {
+      "name": "Bên Kia Bức Tường (Act 2)",
+      "text": "<b>Objective</b> — Thám hiểm cõi không gian kỳ dị và truy bắt Brown Jenkin.",
+      "flavor": "Con quỷ chuột thoăn thoắt lướt đi giữa các chiều không gian.",
+      "back_name": "Bắt Giữ Quỷ Chuột",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Bạn dồn được Brown Jenkin vào chân tường và bẻ gãy bùa hộ mệnh của nó."
+    }
+  },
+  {
+    "code": "05125",
+    "type": "act",
+    "pack": "tsn",
+    "scenario": "The Secret Name",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: len ratio 0.50",
+      "flavor: len ratio 0.19",
+      "back_text: nums en=[] vi=['1']",
+      "back_text: len ratio 0.03",
+      "back_flavor: len ratio 0.11"
+    ],
+    "en": {
+      "name": "Investigating the Witch House",
+      "text": "<b>Objective</b> - If each undefeated investigator is in Walter Gilman's Room, investigators may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "When you arrive at the old Witch House, you find it in a sorrier state than you imagined. Surrounded by a crooked picket fence, the house looks as though it may fall apart at any minute. The front door is locked, but you are able to easily enter through one of the windows after pulling apart the rotting wooden boards covering the shattered glass.",
+      "back_name": "Specter of the Past",
+      "back_text": "Swap Walter Gilman's Room with the set-aside Keziah's Room, taking its place <i>(all tokens and cards at the former location are now at the new location).</i> Remove each other location in play from the game.\nChoose an investigator to take control of the set-aside The Black Book asset. Shuffle both set-aside copies of Strange Geometry into the encounter deck.",
+      "back_flavor": "Standing in a dead man's room is disconcerting enough, but what you find within is enough to make you want to leave and never return. Walter Gilman's journal is filled with descriptions of his dreams and visions, each more terrifying and perplexing than the last. He mentions seeing the figure of Keziah Mason on more than one occasion, and at one point calls her by another name: \"Nahab.\" As soon as you read the name aloud, the nearby window shatters, and an all-too-familiar spectral mist invades the cramped space. When it recedes, everything about the room has changed. A work desk and an aged bookshelf occupy the far corner of Gilman's room, where his bed should be. The door you entered from is gone. Strange geometrical markings, drawn with a sticky red substance, cover the walls."
+    },
+    "vi_current": {
+      "name": "Cái Tên Bí Mật (Act 3 - v. I)",
+      "text": "<b>Objective</b> — Giải mã Cái Tên Bí Mật của Azathoth để phong ấn mụ phù thủy.",
+      "flavor": "Những âm thanh hỗn mang từ ngai vàng đen vang vọng trong tâm trí.",
+      "back_name": "Phong Ấn Phù Thủy",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn thốt lên cái tên bí mật, khiến Keziah thét lên kinh hoàng và tan biến vào hư không."
+    }
+  },
+  {
+    "code": "05126",
+    "type": "act",
+    "pack": "tsn",
+    "scenario": "The Secret Name",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: len ratio 0.60",
+      "flavor: len ratio 0.19",
+      "back_text: nums en=['1', '2', '2', '3', '4', '4'] vi=['1']",
+      "back_text: len ratio 0.03",
+      "back_flavor: len ratio 0.13"
+    ],
+    "en": {
+      "name": "Beyond the Witch House",
+      "text": "<b>Objective</b> - Only investigators in the Witch House Ruins may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "Among the books in this strange room is a black, nameless tome inscribed with dried red blood. It matches a description from Walter Gilman’s journal of a tome he names \"The Black Book.\" This room must be the haunt of Keziah Mason, from over 200 years ago. It is rumored that Keziah had discovered deep mathematical truths that allowed her to traverse space and time. Perhaps you can find a way out using this knowledge.",
+      "back_name": "A Profane Ritual",
+      "back_text": "Put the set-aside Site of the Sacrifice location into play.\n- If it is agenda 1, 2, or 3, find Nahab (even if she is out of play), place 2 doom on her, and place her at the Site of the Sacrifice.\n- If it is agenda 4, find Nahab (even if she is out of play) and place her at the Site of the Sacrifice. Move each doom from agenda 4a to Nahab.\nFind Brown Jenkin (even if he is out of play) and place him in Nahab's current location.",
+      "back_flavor": "Searching through the ruins, you find a rotting hole in the slanted ceiling, leading to a closed-off attic. Amidst the debris are crushed and splintered bones, some human and some... not. More of Keziah's awful tomes are scattered about, filled with pages of dark rituals and black spellcraft. On the floor, a circle has been carved - or perhaps gnawed - into the wood. At the center lies a spatter of dried blood and a jagged knife. What terrible rituals were performed in this profane space? Perhaps there is a way you can know for sure. You take the knife and prick your hand deep enough for blood to well in your palm. Using Keziah's formulae, you draw a pattern in the circle, and carve a path through time..."
+    },
+    "vi_current": {
+      "name": "Cái Tên Bí Mật (Act 3 - v. II)",
+      "text": "<b>Objective</b> — Đánh bại Keziah Mason trước khi bà ta hoàn tất nghi thức.",
+      "flavor": "Keziah bay lơ lửng giữa không trung, xung quanh là những luồng sét tím ma quái.",
+      "back_name": "Hạ Gục Phù Thủy",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Đòn tấn công quyết định hạ gục mụ phù thủy, giải phóng ngôi nhà khỏi lời nguyền ba thế kỷ."
+    }
+  },
+  {
+    "code": "05198",
+    "type": "agenda",
+    "pack": "fgg",
+    "scenario": "For the Greater Good",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "back_text: nums en=['5'] vi=['2']",
+      "back_text: len ratio 0.24",
+      "back_flavor: len ratio 0.07"
+    ],
+    "en": {
+      "name": "THE HIEROPHANT · V",
+      "text": "<b>Forced</b> - When you defeat a [[Silver Twilight]] enemy: You leave behind some evidence of the scuffle. Move 1 doom from each enemy at that location to the current agenda.",
+      "flavor": "ADAPT YOUR BELIEFS AND BE OPEN TO NEW TRUTHS.\nYOU ARE EXPECTED TO CONFORM.\nDO NOT STRAY FROM THE PATH.",
+      "back_name": "Meeting of Minds",
+      "back_text": "Discard the top 5 cards of the encounter deck. In player order, each investigator must draw a [[Cultist]] enemy discarded in this way.",
+      "back_flavor": "As you explore the building, you almost wander into a heated debate between several members of the Lodge in a nearby hallway. Seeing an opportunity to learn more, you hide and eavesdrop on the conversation. \"Mr. Sanford's orders are to complete the geist-trap at any cost,\" one of them says firmly. \"If that means we must put lives in danger, so be it. The good of the many outweigh the good of the few; you know this.\"\nAnother member, a woman, pounds her fist on the wall.\"No! Our first resort cannot be to spill blood. There must be another way.\"\n\"There is no time,\" the other responds, and there is a murmur of agreement among the rest. \"It is clear you do not have the will to proceed. Take her away. We will make her see for herself the sacrifices that must be made for the greater good.\"\n\"No! You can't do this!\" the woman yells. You wince as her screams echo down the corridor. What are they planning to do?"
+    },
+    "vi_current": {
+      "name": "Bí Mật Của Carl Sanford (Agenda 2)",
+      "text": "<b>Forced</b> - Khi bạn đánh bại kẻ địch [[Silver Twilight]]: Bạn để lại một số bằng chứng về vụ ẩu đả. Di chuyển 1 doom từ mỗi kẻ địch tại địa điểm đó vào agenda hiện tại.",
+      "flavor": "Carl Sanford đang chuẩn bị mở Hầm Chứa Bí Mật để chiếm đoạt chìa khóa liên chiều.",
+      "back_name": "Kẻ Độc Tài Trỗi Dậy",
+      "back_text": "Mỗi điều tra viên nhận 2 damage.",
+      "back_flavor": "Sức mạnh huyền bí của Sanford dâng trào làm nổ tung các bức tường."
+    }
+  },
+  {
+    "code": "05199",
+    "type": "agenda",
+    "pack": "fgg",
+    "scenario": "For the Greater Good",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "flavor: len ratio 0.40",
+      "back_text: nums en=[] vi=['3']",
+      "back_text: len ratio 0.27",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Ends and Means",
+      "text": "Each [[Silver Twilight]] enemy in a [[Sanctum]] location loses aloof.\n<b>Forced</b> - When you defeat a [[Silver Twilight]] enemy: You leave behind some evidence of the scuffle. Move 1 doom from each enemy at that location to the current agenda.",
+      "flavor": "The Lodge will resort to drastic measures in order to achieve their goals. If you don’t act quickly, blood will surely be shed.",
+      "back_name": "The Greater Good",
+      "back_text": "<b>Revelation</b> - Replace the act and agenda decks with The Greater Good. Spawn the set-aside Summoned Beast at the Puzzle Box's location (or any [[Sanctum]] location if the Puzzle Box is not in play) and remove the Puzzle Box from the game."
+    },
+    "vi_current": {
+      "name": "Hầm Ngục Tối Thượng (Agenda 3)",
+      "text": "Mỗi kẻ địch [[Silver Twilight]] trong địa điểm [[Sanctum]] sẽ mất aloof.\n<b>Forced</b> - Khi bạn đánh bại kẻ địch [[Silver Twilight]]: Bạn để lại một số bằng chứng về vụ ẩu đả. Di chuyển 1 doom từ mỗi kẻ địch tại địa điểm đó vào agenda hiện tại.",
+      "flavor": "Sanford sắp hoàn tất nghi thức chiếm đoạt thần lực.",
+      "back_name": "Lodge Thống Trị",
+      "back_text": "Mỗi điều tra viên bị hạ sát bởi ma thuật của Sanford. <b>(→R3)</b>",
+      "back_flavor": "Bạn gục ngã dưới chân bức tượng của các Đấng Cổ Xưa."
+    }
+  },
+  {
+    "code": "05200",
+    "type": "act",
+    "pack": "fgg",
+    "scenario": "For the Greater Good",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: presence en=0 vi=1",
+      "flavor: len ratio 0.22",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.28",
+      "back_flavor: len ratio 0.06"
+    ],
+    "en": {
+      "name": "Warm Welcome",
+      "flavor": "You have arrived at the Lodge’s manor in French Hill to see if they can help you piece together the evidence you’ve collected. Perhaps you can even speak with the president of the Lodge again. But as you approach the manor, you begin to wonder if this was a test of your loyalty all along.",
+      "back_name": "The Initiation",
+      "back_text": "If the Library is not in play, put it into play.\nSpawn the set-aside Nathan Wick enemy in the Library, <i>(Master of Initiation)</i> side faceup. Attach the set-aside Puzzle Box story asset to him.",
+      "back_flavor": "\"Ah, it's you.\" You are approached by a member of the Lodge whom you recognize: one of Carl Sanford's bodyguards from your previous meeting with the president. \"I regret to inform you that Mr. Sanford and the other members of the Lodge are busy with an important task at the moment. I would suggest you come back at a later time.\" You tell the man that your task is important, and offer to help in return for a meeting with Mr. Sanford. He considers you for a moment, then nods. \"All right. We are attempting to open a device which we believe will help us bind the revenant you encountered earlier. You'll want to speak with Nathan Wick if you want to help. You can find him in the library upstairs.\" You thank him and turn to leave, but he grabs your arm and stops you, adding one final warning: \"You should know that we intend to open this device at any cost. If you cannot stomach the consequences, once again, I suggest you leave.\""
+    },
+    "vi_current": {
+      "name": "Thâm Nhập Thánh Địa (Act 1)",
+      "text": "<b>Objective</b> — Thu thập các mảnh chìa khóa để mở cánh cửa dẫn vào Hầm Chứa.",
+      "flavor": "Các mảnh chìa khóa được cất giữ cẩn mật trong các phòng nghi lễ.",
+      "back_name": "Cánh Cửa Mở Ra",
+      "back_text": "Đặt địa điểm The Vault vào màn chơi. Advance sang Act 2.",
+      "back_flavor": "Cánh cửa thép khổng lồ nặng hàng tấn từ từ trượt mở."
+    }
+  },
+  {
+    "code": "05201",
+    "type": "act",
+    "pack": "fgg",
+    "scenario": "For the Greater Good",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: icons en=['[reaction]'] vi=[]",
+      "flavor: len ratio 0.26",
+      "back_text: nums en=['2'] vi=['3']",
+      "back_text: icons en=['[reaction]'] vi=[]",
+      "back_text: len ratio 0.10",
+      "back_flavor: len ratio 0.08"
+    ],
+    "en": {
+      "name": "Infiltrating the Lodge",
+      "text": "[reaction] After you evade an enemy: Remove all doom from it.",
+      "flavor": "The Lodge is up to something - you’re sure of it. You’re not sure exactly what their plans entail, but your suspicions have proven correct so far. You have decided to sneak into the Lodge’s manor in French Hill to learn what they are plotting.",
+      "back_name": "The Indoctrination",
+      "back_text": "If the Inner Sanctum is not in play, put it into play.\nSpawn the set-aside Nathan Wick enemy in the Inner Sanctum, <i>(Master of Indoctrination)</i> side faceup. Attach the set-aside Puzzle Box story asset to him.\nFor the remainder of the game, the current act gains \"[reaction] After you evade an enemy: Remove all doom from it.\" Place this card next to the act deck as a reminder, then advance to act 2a.",
+      "back_flavor": "At first, your investigation yields few answers. There is indeed a meeting of some sort happening at the manor tonight, though you're not sure why. Finally, you catch a break. On a nearby table, a written summons explains the reason for tonight's gathering:\n\"Our timetable has moved forward. We must complete the trap by midnight tonight. The device we found will aid us in binding the revenant, so it is imperative that we find a way to open it before the ceremony begins. We have no time to waste with prudence or cowardice. Report to Nathan Wick in the sanctum at once.\"\nYou are left with more questions than answers."
+    },
+    "vi_current": {
+      "name": "Bên Trong Hầm Chứa (Act 2)",
+      "text": "<b>Objective</b> — Đoạt lấy Cổ Vật Tối Thượng trước khi Sanford kịp chạm tay vào.",
+      "flavor": "Bên trong căn phòng là những cuộn da dê chứa bí thuật nghìn năm.",
+      "back_name": "Đoạt Cổ Vật",
+      "back_text": "Advance sang Act 3 — \"Escape the Lodge\".",
+      "back_flavor": "Bạn giật lấy cổ vật từ tay tên thủ lĩnh hội kín."
+    }
+  },
+  {
+    "code": "05202",
+    "type": "act",
+    "pack": "fgg",
+    "scenario": "For the Greater Good",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: icons en=[] vi=['[action]']",
+      "flavor: len ratio 0.25",
+      "back_text: nums en=[] vi=['1']",
+      "back_text: len ratio 0.01",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Obtaining the Device",
+      "text": "<b>Objective</b> - If Nathan Wick is added to the victory display by any means, choose an investigator to take control of the attached Puzzle Box, and advance.",
+      "flavor": "Whatever the Lodge is planning, it involves a \"device\" they will do anything to open. It seems a Lodge member by the name of Nathan Wick holds the device at the moment. One way or another, you have to get your hands on it.",
+      "back_name": "The Puzzle Box",
+      "back_text": "<b>If you advanced by defeating Nathan Wick:</b>\n<blockquote><i>You quickly pry the device from Nathan's hands and flee before you are noticed.</i></blockquote><hr><b>If you advanced by evading Nathan Wick:</b>\n<blockquote><i>You wait until Nathan is not looking, then sweep in and steal the device from the table next to him. You are long gone by the time he realizes it is missing.</i></blockquote><hr><b>If you advanced by parleying with Nathan Wick:</b>\n<blockquote><i>\"All right, listen,\" Nathan explains quietly. \"Truth is, there probably is a safer way for us to open the device. This building holds many secrets; more than you could possible know. But time is running thin, and Mr. Sanford wants it open by midnight. If you can open it before then, great. If not, well... If I were you, I wouldn't be around it when we try to force it open.\" He hands you the device and walks away, leaving you in silence.</i></blockquote>"
+    },
+    "vi_current": {
+      "name": "Thoát Khỏi Hội Lodge (Act 3)",
+      "text": "<b>Objective</b> — Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.\n[action]: <b>Resign.</b> Bạn thoát ra đường phố French Hill.",
+      "flavor": "Lũ giáo đồ điên cuồng truy đuổi bạn qua các con hẻm tối!",
+      "back_name": "Chiến Thắng Hội Kín",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn trốn thoát thành công cùng cổ vật quý giá trong tay."
+    }
+  },
+  {
+    "code": "05162",
+    "type": "agenda",
+    "pack": "wos",
+    "scenario": "The Wages of Sin",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.08",
+      "back_flavor: len ratio 0.19"
+    ],
+    "en": {
+      "name": "THE HANGED MAN · XII",
+      "flavor": "SURRENDER YOURSELF TO THE PATH OF SACRIFICE.\nCONSIDER THE GOOD OF ALL BEFORE YOU ACT.\nLET GO.",
+      "back_name": "Death's Descent",
+      "back_text": "Flip each location to its [[Spectral]] side.\nPut the set-aside The Spectral Watcher enemy into play at Hangman's Brook.\nShuffle the remainder of the set-aside <i>The Watcher</i> encounter set into the spectral encounter deck, along with the spectral discard pile.",
+      "back_flavor": "The sobs of the dead echo throughout the woods, accompanied by murmured promises and whispered threats. But when the spectral mist blots out the sky, all turns quiet and still. Your hair stands on end, and you begin to tremble. Every fiber of your being screams flight.\nThe hunter has smelled the blood of its prey, and now it has come to claim your fate."
+    },
+    "vi_current": {
+      "name": "THE HANGED MAN · XII",
+      "flavor": "Linh hồn của những kẻ bị treo cổ trong quá khứ trỗi dậy đòi nợ máu.",
+      "back_name": "Cái Chết Cận Kề",
+      "back_text": "Advance sang agenda 2.",
+      "back_flavor": "Những sợi dây thòng lọng ma quái đung đưa từ các cành cây trơ trụi."
+    }
+  },
+  {
+    "code": "05163",
+    "type": "agenda",
+    "pack": "wos",
+    "scenario": "The Wages of Sin",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: nums en=[] vi=['4']",
+      "flavor: len ratio 0.21",
+      "back_text: len ratio 4.50",
+      "back_flavor: len ratio 0.16"
+    ],
+    "en": {
+      "name": "Death's Approach",
+      "text": "Locations cannot be flipped to their non-[[Spectral]] side.",
+      "flavor": "Hangman’s Hill is plunged into darkness as the spectral mist invades every inch of the woods and the chapel. Somewhere in the mist, the watcher spies its prey with eyes as empty as graves.",
+      "back_name": "Death's Embrace",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "Light fades as the anomaly closes in around you. Trees, graves, walls - all is enveloped by the otherworldly mist. Deep in the murk, worlds away and yet drawing ever closer, the cold light of the watcher's gaze radiates before you. It is time for your reckoning."
+    },
+    "vi_current": {
+      "name": "Cái Chết Cận Kề",
+      "text": "<b>Objective</b> — Thám hiểm nghĩa địa và tìm kiếm các nấm mồ của 4 phù thủy bị treo cổ.",
+      "flavor": "Bóng tối bao trùm nghĩa trang Hang Treo.",
+      "back_name": "Chết Chìm Dưới Mộ Sâu",
+      "back_text": "Mỗi điều tra viên chưa resign bị bắt giữ. <b>(→R2)</b>",
+      "back_flavor": "Đất cát nghĩa trang phủ kín thân xác bạn."
+    }
+  },
+  {
+    "code": "05164",
+    "type": "act",
+    "pack": "wos",
+    "scenario": "The Wages of Sin",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "flavor: len ratio 0.22",
+      "back_text: nums en=['1', '1', '1', '2', '3'] vi=['2']",
+      "back_text: icons en=['[per_investigator]', '[per_investigator]'] vi=[]",
+      "back_text: len ratio 0.04",
+      "back_flavor: len ratio 0.09"
+    ],
+    "en": {
+      "name": "In Pursuit of the Dead",
+      "text": "Locations cannot be flipped to their [[Spectral]] side.",
+      "flavor": "You have come to Hangman’s Hill to investigate reports of ghost sightings and strange activity in the woods the last few nights, and to learn more about the witches who once hid in Arkham’s past - witches who have since emerged from the shadows in pursuit of some unholy purpose.",
+      "back_name": "The Barrier Between",
+      "back_text": "Spawn 1 set-aside Heretic enemy at each of the following locations: The Gallows, Heretics' Graves, Chapel Attic, and Chapel Crypt. Add 2 [per_investigator] clues to each of those locations. Add 1 [per_investigator] clues to each other location.\nCheck Campaign Log. If you have 3 or more mementos listed under \"Mementos Discovered:\" You understand the tragic lyrics behind the witch's song. Each investigator puts into play 1 set-aside Spectral Web asset, under his or her control.",
+      "back_flavor": "Soft chanting guides you to a gloomy clearing near the abandoned chapel. A circle of witchweed surrounds the clearing, swaying gently in the breeze. At the center of the clearing, a cloaked woman kneels in front of an unmarked grave, far from the remainder of the graveyard. You watch in quiet for a few minutes while the woman sings an old, somber melody. It reminds you somewhat of a child's lullaby - soothing, but with a dark gravity that betrays its purpose. As soon as the song ends, the woman's cloak dissolves into mist, and she vanishes in a swirl of shadows."
+    },
+    "vi_current": {
+      "name": "Truy Tìm Kẻ Đã Khuất",
+      "text": "<b>Objective</b> — Thám hiểm nghĩa địa và tìm kiếm các oan hồn Heretic.",
+      "flavor": "Những tiếng khóc ai oán dẫn lối cho bạn giữa màn sương lạnh.",
+      "back_name": "Giải Oan Cho Kẻ Khuất",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Bạn tìm thấy nơi chôn cất của các phù thủy bị xử oan."
+    }
+  },
+  {
+    "code": "05239",
+    "type": "agenda",
+    "pack": "uad",
+    "scenario": "Union and Disillusion",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "flavor: len ratio 0.59",
+      "back_text: nums en=['1', '1', '1', '1', '2'] vi=['1']",
+      "back_text: icons en=['[per_investigator]'] vi=[]",
+      "back_text: len ratio 0.05",
+      "back_flavor: len ratio 0.31"
+    ],
+    "en": {
+      "name": "THE LOVERS · VI",
+      "flavor": "YOU ARE AT A CROSSROADS.\nREFLECT ON THE CHOICES YOU HAVE MADE.\nYOU SHALL BE CONFRONTED WITH A TERRIBLE DILEMMA.",
+      "back_name": "Stolen Souls",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.<hr>\n<b>Check the \"Missing Persons\" section of the Campaign Log. If at least 1 character was <i>\"taken by the watcher,\"</i> read the following:</b>\n<blockquote><i>Beyond the spectral mist, an awful scream resounds through the woods. It is distant, as though heard through a pane of glass, but distinct enough for you to know it is real.</i></blockquote>\nFor each character who was <i>taken by the watcher,</i> place 1 resource on The Spectral Watcher, as a stolen soul (even if The Spectral Watcher is currently out of play).\nUntil the end of the scenario, The Spectral Watcher gains the following text: \"For each stolen soul on The Spectral Watcher, it gets +1 fight and +1 [per_investigator] health.\" Keep this card next to the agenda deck as a reminder, and advance to agenda 2a.",
+      "back_flavor": "The mist obscures the moon, plunging the woods into darkness. A flock of birds suddenly scatter from the treetops."
+    },
+    "vi_current": {
+      "name": "Dòng Chảy Oán Hờn (Agenda 2)",
+      "flavor": "Dòng nước sông Miskatonic cuộn sóng dữ dội quanh hòn đảo ma quái.",
+      "back_name": "Sóng Thần Linh Hồn",
+      "back_text": "Đặt 1 doom lên mỗi vạc đồng chưa thắp sáng.",
+      "back_flavor": "Lũ ma nước trỗi dậy bao vây bờ cát."
+    }
+  },
+  {
+    "code": "05240",
+    "type": "agenda",
+    "pack": "uad",
+    "scenario": "Union and Disillusion",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "flavor: len ratio 0.29",
+      "back_text: nums en=['1', '5'] vi=['2']",
+      "back_flavor: len ratio 0.08"
+    ],
+    "en": {
+      "name": "Crossroads of Fate",
+      "flavor": "As you continue through the woods, you notice the dark mist which has permeated the island is starting to drift away from the shoreline, toward the center of the island where the beacon of spectral energy still rises into the sky.",
+      "back_name": "A Victor Emerges",
+      "back_text": "Each surviving investigator is defeated and suffers 1 physical trauma.\n<b>(→R5)</b>",
+      "back_flavor": "A powerful gale sweeps through the island from its center, and the spectral pillar marking the site of the Lodge's ritual suddenly bursts outward. Dozens of specters and phantasmal shapes fly across the treetops and weave through the woods. You will never forget their shrieks, like hundreds of deathcries sounding at once.\nWith a final surge of power, the stone obelisk at the center of the island shatters. Trees bend from the tremendous force that is unleashed, and you are pummeled to the ground. Everything goes black."
+    },
+    "vi_current": {
+      "name": "Nghi Lễ Tối Hậu (Agenda 3)",
+      "flavor": "Thời gian không còn nhiều để thắp sáng các ngọn hải đăng tâm linh.",
+      "back_name": "Đảo Hoang Chìm Lắng",
+      "back_text": "Mỗi điều tra viên bị cuốn xuống đáy sông. <b>(→R2)</b>",
+      "back_flavor": "Hòn đảo chìm nghỉm dưới dòng nước đen ngòm."
+    }
+  },
+  {
+    "code": "05241",
+    "type": "act",
+    "pack": "uad",
+    "scenario": "Union and Disillusion",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: presence en=0 vi=1",
+      "flavor: len ratio 0.19",
+      "back_text: nums en=['1', '1'] vi=['2']",
+      "back_text: len ratio 0.03",
+      "back_flavor: len ratio 0.16"
+    ],
+    "en": {
+      "name": "The Unvisited Isle",
+      "flavor": "The foggy shores of the Unvisited Isle are barren and unwelcoming. Not a soul greets you as you draw closer to the island, save for the judging gaze of ghostly birds that observe you from the trees. In the distance, the pillar of spectral energy is rising into the clouds, a vortex of otherworldly mist spiraling about it.",
+      "back_name": "The Mist Returns",
+      "back_text": "Each investigator must randomly choose 1 of the set-aside Unvisited Isle locations, put it into play in front of him or her, and immediately move to that location (cannot be canceled). <i>If the investigators sided with the coven</i>, the brazier at each of those locations is already lit. Place a resource token on each of those locations to signify this.\nShuffle each of the story cards beneath the scenario reference card and deal 1 at random to each investigator until all of them have been dealt. In player order, resolve each of the dealt story cards.",
+      "back_flavor": "You venture deeper and deeper into the overgrown woods, a timid voice in the back of your mind urging you to flee this place and never return. The dark mist becomes so dense you can hardly see anything. You shout for any of your companions, but there is no response - just the sway of dying tree branches in the wind and the thump of your heart pounding in your chest"
+    },
+    "vi_current": {
+      "name": "Thắp Sáng Các Vạc Đồng (Act 1)",
+      "text": "<b>Objective</b> — Thám hiểm đảo và thắp sáng các vạc đồng tế lễ để xua tan màn sương ma quái.",
+      "flavor": "Mỗi vạc đồng cần một bài kiểm tra ý chí để thắp lửa linh hồn.",
+      "back_name": "Ánh Sáng Lan Tỏa",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Những ngọn lửa xanh bùng cháy soi rọi lối vào hang tế lễ."
+    }
+  },
+  {
+    "code": "05242",
+    "type": "act",
+    "pack": "uad",
+    "scenario": "Union and Disillusion",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "flavor: len ratio 0.27",
+      "back_text: nums en=[] vi=['1']",
+      "back_text: len ratio 0.02",
+      "back_flavor: len ratio 0.32"
+    ],
+    "en": {
+      "name": "Fated Souls",
+      "text": "Each investigator cannot leave the location in front of him or her.",
+      "flavor": "The trap set by the Silver Twilight Lodge has drawn the attention of the spectral realm and its inhabitants. One way or another, those who were trapped in the mist will end up here.",
+      "back_name": "From the Depths",
+      "back_text": "Spawn The Spectral Watcher at the Miskatonic River.\nShuffle each set-aside copy of Watcher's Grasp and Watcher's Gaze into the encounter deck, along with the encounter discard pile.\nReturn the location in front of each investigator to the center of the play area. (Investigators are no longer prevented from leaving their location.)\nPut the set-aside The Geist-Trap location into play. <i>If the investigators sided with the coven</i>, the brazier at The Geist-Trap is already lit. Place a resource token on it to signify this.",
+      "back_flavor": "Before long, the revenant arrives.\nIt rises from the depths of the Miskatonic River, unfazed by the water or the mist. Sensing fear and blood, it glides slowly toward the island with its arm outstretched. Its gaze brings dismay. Its grasp brings death."
+    },
+    "vi_current": {
+      "name": "Bên Dưới Hòn Đảo (Act 2)",
+      "text": "<b>Objective</b> — Thâm nhập hang ngầm và đối mặt với thực thể canh giữ.",
+      "flavor": "Hang đá ngầm vang vọng những tiếng gầm gừ cổ xưa.",
+      "back_name": "Cánh Cổng Thần Bí",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn vượt qua thử thách cuối cùng và khám phá ra bản chất thực sự của lời nguyền."
+    }
+  },
+  {
+    "code": "05326",
+    "type": "agenda",
+    "pack": "bbt",
+    "scenario": "Before the Black Throne",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: dup [('05326', 'text'), ('05327', 'text')]",
+      "back_text: nums en=[] vi=['3']",
+      "back_text: len ratio 0.03",
+      "back_flavor: len ratio 0.29"
+    ],
+    "en": {
+      "name": "WHEEL OF FORTUNE · X",
+      "text": "Each location is connected to each location adjacent to it.\nDo not remove doom from enemies when this agenda advances.",
+      "flavor": "ONE END IS ANOTHER BEGINNING.\nCHANGE IS THE ONLY CONSTANT.\nYOUR ULTIMATE FATE IS AT HAND.",
+      "back_name": "Rejoice, For the End is Near!",
+      "back_text": "Each [[Cultist]] enemy commits ritual suicide. Discard each [[Cultist]] enemy in play and move all doom from them to Azathoth.\nThe lead investigator must search the encounter deck and discard pile for a copy of Daemonic Piping and draw it.\n<hr><blockquote><i>Endless walkways and steps of black stone are the only routes which guide you to your destination. It is an impossible maze to navigate.</i></blockquote>\nCheck Campaign Log. If <i>Gilman's Journal</i> is listed under \"Mementos Discovered,\" you are able to find you way. Otherwise, you become hopelessly lost; each investigator must either move to the location to his or her left, or move the placement of his or her location once to the left (placing an empty space in the spot it previously occupied). A location cannot move more than once via this effect.",
+      "back_flavor": "Somehow, you're not the only human here. They are but mindless husks - almost entirely devoid of humanity, nothing but flesh, muscle, and bone, preserved for eternity in their single-minded passion, kneeling and chanting in foul worship: \"Azathoth! Azathoth! The end has come!\""
+    },
+    "vi_current": {
+      "name": "Cơn Cuồng Loạn Vũ Trụ (Agenda 2)",
+      "text": "Mỗi địa điểm được kết nối với mỗi địa điểm liền kề với nó.\nKhông xóa doom khỏi các kẻ địch khi có agenda advances này.",
+      "flavor": "Các thiên hà va chạm và nổ tung xung quanh bạn như những hạt bụi.",
+      "back_name": "Vũ Trụ Vỡ Tan",
+      "back_text": "Advance sang agenda 3.",
+      "back_flavor": "Thời gian và không gian không còn ý nghĩa trước ngai vàng của Thần Điên Khổng Lồ."
+    }
+  },
+  {
+    "code": "05327",
+    "type": "agenda",
+    "pack": "bbt",
+    "scenario": "Before the Black Throne",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: dup [('05326', 'text'), ('05327', 'text')]",
+      "flavor: len ratio 0.35",
+      "back_text: nums en=['1', '1', '4'] vi=['2']",
+      "back_text: icons en=['[willpower]'] vi=[]",
+      "back_text: len ratio 0.08",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "It Awaits",
+      "text": "Each location is connected to each location adjacent to it.\nDo not remove doom from enemies when this agenda advances.",
+      "flavor": "...the boundless daemon-sultan Azathoth, whose name no lips dare speak aloud, and who gnaws hungrily in inconceivable, unlighted chambers beyond time amidst the muffled, maddening beating of vile drums and the thin, monotonous whine of accursed flutes...\n- H. P. Lovecraft, <u>The Dream-Quest of Unknown Kadath</u>",
+      "back_name": "Gnawing Hungrily",
+      "back_text": "Each [[Cultist]] enemy commits ritual suicide. Discard each [[Cultist]] enemy in play and move all doom from them to Azathoth.\nThe lead investigator must search the encounter deck and discard pile for a copy of Daemonic Piping and draw it.\n<hr><blockquote><i>In this oblivion outside time, nothing is as it should be. The mist dances and churns around you. Laughter mocks you from beyond, and out from the dark nebulae emerges a familiar wraith, a being which should be long dead.</i></blockquote>\nCheck Campaign Log. If <i>Worn Crucifix</i> is listed under \"Mementos Discovered,\" the wraith recognizes the crucifix you stole from Walter Gilman's room and backs away slowly, slinking into the darkness beyond.\nOtherwise, the wraith attacks you; each investigator must test [willpower] (4). Each investigator who fails takes 1 damage and 1 horror."
+    },
+    "vi_current": {
+      "name": "Azathoth Thức Giấc (Agenda 3)",
+      "text": "Mỗi địa điểm được kết nối với mỗi địa điểm liền kề với nó.\nKhông xóa doom khỏi các kẻ địch khi có agenda advances này.",
+      "flavor": "Azathoth bắt đầu cựa mình. Nếu Ngài mở mắt, toàn bộ vũ trụ và thực tại sẽ biến mất như một giấc mơ thoáng qua!",
+      "back_name": "Vũ Trụ Tan Biến",
+      "back_text": "Toàn bộ vũ trụ bị xóa sổ. Chiến dịch thất bại hoàn toàn. <b>(→R2)</b>",
+      "back_flavor": "Mọi vật thể, mọi sinh linh, mọi dòng lịch sử tan thành hư vô."
+    }
+  },
+  {
+    "code": "05328",
+    "type": "agenda",
+    "pack": "bbt",
+    "scenario": "Before the Black Throne",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: len ratio 0.32",
+      "flavor: len ratio 0.29",
+      "back_text: nums en=['1'] vi=['2']",
+      "back_text: len ratio 0.02",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "The Final Countdown",
+      "text": "Each location is connected to each location adjacent to it.\nDo not remove doom from enemies when this agenda advances. (<i>Beware - the scenario will not end when this agenda advances, but the doom of the world will be close at hand.</i>)",
+      "flavor": "...that leering, tittering shantak coursed on impetuous and relentless, flapping its great slippery wings in malignant joy, and headed for those unhallowed pits whither no dreams reach... \n- H. P. Lovecraft, <u>The Dream-Quest of Unknown Kadath</u>",
+      "back_name": "Azathoth Stirs",
+      "back_text": "Each [[Cultist]] enemy commits ritual suicide. Discard each [[Cultist]] enemy in play and move all doom from them to Azathoth.\nThe lead investigator must search the encounter deck and discard pile for a copy of Daemonic Piping and draw it.\nThere is no longer an agenda deck, but the scenario is not over. Until the end of the scenario, doom that would be placed on the current agenda is instead placed on Azathoth, and all doom in play is considered to be on Azathoth.\n<hr><blockquote><i>You come across another circle of Azathoth's worshippers, led by a hooded, shapeless form which holds an ancient lantern high above its head. The lantern's dim grey light scarcely pierces the realm's darkness. Somehow, the phantom is familiar to you; some vague sense of kinship drives you onward.</i></blockquote>\nCheck Campaign Log. If <i>Corn Husk Doll</i> is listed under \"Mementos Discovered,\" the creature recognizes you, as well. It peers at you curiously, and the circle of prayer is silenced; remove 1 doom from Azathoth. Otherwise, the creature barely notices you, and the circle resumes its chanting."
+    },
+    "vi_current": {
+      "name": "Hành Trình Xuyên Khoảng Không (Act 1)",
+      "text": "<b>Objective</b> — Băng qua các mảnh vỡ thiên hà để tiếp cận Ngai Vàng Đen.",
+      "flavor": "Bạn phải vượt qua nỗi kinh hoàng vũ trụ để tiến tới trung tâm hỗn mang.",
+      "back_name": "Ngai Vàng Trong Tầm Mắt",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Trước mắt bạn là thực thể khổng lồ vô hình dung, ngự trị trên ngai vàng của hư không."
+    }
+  },
+  {
+    "code": "05329",
+    "type": "act",
+    "pack": "bbt",
+    "scenario": "Before the Black Throne",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: icons en=['[action]'] vi=[]",
+      "text: len ratio 0.26",
+      "flavor: len ratio 0.47",
+      "back_text: nums en=['2', '2', '5'] vi=['1']",
+      "back_text: len ratio 0.02",
+      "back_flavor: len ratio 0.29"
+    ],
+    "en": {
+      "name": "The Cosmos Beckons",
+      "text": "[action] Spend X clues: Draw the top X cards of the Cosmos. Choose one to put into play using its \"<b>Cosmos</b> -\" instructions, and move to it. Shuffle the rest back into the Cosmos.\n<b>Objective</b> - Only investigators at Hideous Palace may spend the requisite number of clues, as a group, to advance. (<i>Beware - any investigator who is not there will be killed.</i>)",
+      "flavor": "From the horizonless breach in the gaping maw of the sky, you have traveled an impossible distance, and yet you are still many leagues from the nighted throne where Azathoth stirs.",
+      "back_name": "Palace of the Old Ones",
+      "back_text": "Remove Cosmic Ingress from the game. Shuffle each empty space into its owner's deck and each location in play other than Hideous Palace into the Cosmos. Each investigator at those locations is left behind and is killed. Each enemy at those locations is shuffled into the top 5 cards of the encounter deck.\nTake the set-aside Court of the Great Old Ones and the top 2 cards of the Cosmos, and shuffle them so you cannot tell which is which. Then, put them into play along with empty space, as depicted in \"Location Placement for Act 2\" in the Campaign Guide.\nIn player order, each investigator draws the top card of the encounter deck.",
+      "back_flavor": "Your steed carries you through the entryway of the nightmarish palace, and you are surprised to find the halls inside to be as vast and cavernous as the empty space surrounding it. It is as though the doorway was but the threshold of another universe, as desolate and boundless as the last."
+    },
+    "vi_current": {
+      "name": "Ngăn Chặn Sự Thức Tỉnh (Act 2)",
+      "text": "<b>Objective</b> — Ru ngủ Azathoth hoặc phong ấn triều đình của Ngài trước khi tiếng sáo dứt hẳn.",
+      "flavor": "Tập trung toàn bộ ý chí kiên định cuối cùng của loài người để chống lại sự diệt vong!",
+      "back_name": "Giấc Ngủ Ngàn Thu",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Khúc sáo dịu dần, Azathoth chìm sâu trở lại giấc ngủ vĩnh hằng. Vũ trụ được cứu rỗi!"
+    }
+  },
+  {
+    "code": "05330",
+    "type": "act",
+    "pack": "bbt",
+    "scenario": "Before the Black Throne",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: len ratio 0.26",
+      "flavor: len ratio 0.26",
+      "back_text: nums en=['3', '3', '5'] vi=['1']",
+      "back_text: len ratio 0.02",
+      "back_flavor: len ratio 0.24"
+    ],
+    "en": {
+      "name": "In Azathoth's Domain",
+      "text": "[action] Spend X clues: Draw the top X cards of the Cosmos. Choose one to put into play using its \"<b>Cosmos</b> -\" instructions, and move to it. Shuffle the rest back into the Cosmos.\n<b>Objective</b> - Only investigators at Court of the Great Old Ones may spend the requisite number of clues, as a group, to advance. (<i>Beware - any investigator who is not there will be killed.</i>)",
+      "flavor": "Your bones shiver violently with the silent, still cold of this empty place. No light penetrates these black halls. No warmth reaches you, no breeze touches your skin. This must be what death feels like, you think morbidly.",
+      "back_name": "Nucleaus of the Universe",
+      "back_text": "Remove Hideous Palace from the game. Shuffle each empty space into its owner's deck and each location in play other than Court of the Great Old Ones into the Cosmos. Each investigator at those locations is left behind and is killed. Each enemy at those locations is shuffled into the top 5 cards of the encounter deck.\nTake the set-aside The Black Throne and the top 3 cards of the Cosmos, and shuffle them so you cannot tell which is which. Then, put them into play along with empty space, as depicted in \"Location Placement for Act 3\" in the Campaign Guide.\nIn player order, each investigator draws the top card of the encounter deck.",
+      "back_flavor": "The winged creature lands on a winding walkway of black stone, extending into a ceaseless horizon of pitched void. It takes some prodding and encouragement before your steed continues onward. Even the most dreadful of beasts are terrified of this place, it seems. Yet still, you can hear the mindless chanting of those who dwell closest to the daemon-sultan, the maddening whining of the pipers, the monotonous drum-beats which thrum endlessly in your mind..."
+    },
+    "vi_current": {
+      "name": "Cứu Rỗi Thực Tại (Act 3)",
+      "text": "<b>Objective</b> — Nhảy qua cánh cổng thời gian để trở về Trái Đất thân yêu.\n[action]: <b>Advance.</b>",
+      "flavor": "Thực tại đang tự phục hồi xung quanh bạn. Hãy trở về nhà!",
+      "back_name": "Bình Minh Trở Lại",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn mở mắt đón ánh bình minh ấm áp trên đường phố Arkham. Cơn ác mộng đã qua, và thế giới vẫn còn tiếp tục quay."
+    }
+  },
+  {
+    "code": "05285",
+    "type": "agenda",
+    "pack": "icc",
+    "scenario": "In the Clutches of Chaos",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "back_text: nums en=['3', '4'] vi=[]",
+      "back_text: len ratio 0.21",
+      "back_flavor: len ratio 0.25"
+    ],
+    "en": {
+      "name": "THE CHARIOT · VII",
+      "text": "<b>Forced</b> - When doom would be placed on this agenda: Instead, place 1 breach on a number of different random locations equal to 1 more than the number of investigators.\n<b>Forced</b> - When a breach would be placed on a location with 3 breaches: Instead, resolve an <b>incursion</b> at that location.",
+      "flavor": "THE CONQUEST HAS BEGUN.\nALL SHALL TREMBLE BEFORE THE HOST OF CHAOS.\nSUBMIT OR PERISH.",
+      "back_name": "The Final Incantation",
+      "back_text": "Check Campaign Log.\n- <i>If Anette Mason is possessed by evil</i>, <b>(→R3)</b>.\n- <i>If Carl Sanford possesses the secrets of the universe, </i><b>(→R4)</b>.",
+      "back_flavor": "The stars vanish in the night sky as the maw of the void swallows the horizon. The muffled beating of maddening drums and the thin whine of otherworldly flutes drift through the emptiness."
+    },
+    "vi_current": {
+      "name": "Cơn Điên Cuồng Loạn (Agenda 2)",
+      "text": "<b>Forced</b> - Khi đưa doom vào agenda này: Thay vào đó, hãy đặt 1 vi phạm vào một số các địa điểm ngẫu nhiên khác nhau bằng nhiều hơn số các điều tra viên 1 đơn vị.\n<b>Forced</b> - Khi một vi phạm được đặt trên địa điểm với 3 vi phạm: Thay vào đó, hãy giải quyết <b>incursion</b> tại địa điểm đó.",
+      "flavor": "Người dân Arkham phát điên và đập phá mọi thứ trên đường phố.",
+      "back_name": "Thành Phố Thất Thủ",
+      "back_text": "Đặt thêm token breach lên Arkham.",
+      "back_flavor": "Còi báo động hú vang giữa những tòa nhà đổ nát."
+    }
+  },
+  {
+    "code": "05287",
+    "type": "act",
+    "pack": "icc",
+    "scenario": "Music of the Damned",
+    "source_file": "acts_agendas_tcu.py",
+    "audit_flags": [
+      "text: nums en=['1', '3'] vi=[]",
+      "text: icons en=['[fast]'] vi=[]",
+      "flavor: len ratio 0.36",
+      "back_text: nums en=['1'] vi=['2']",
+      "back_flavor: len ratio 0.10"
+    ],
+    "en": {
+      "name": "Beyond the Grave",
+      "text": "[fast] Remove 3 breaches from this act: Place 1 clue on a random location.\n<b>Objective</b> - If Anette Mason is defeated, advance.",
+      "flavor": "This nightmare will not end until you stop the one behind it: Anette Mason and the spirit which possesses her. The world is falling apart all around you, and the coven is only bringing the end closer.",
+      "back_name": "The Living and the Dead",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Somehow, despite all odds, you have managed to defeat the resurrected spirit which torments Anette Mason. She passes out and collapses to the ground, but the revenant inside forces her eyes open and puppeteers her body in a lurid display. \"Fools!\" the ragged, disembodied voice of Keziah declares through Anette's lips as she rises once more. \"You are naught but insects. I have seen the truth. I have seen the face of Chaos itself, and you will soon be a part of it. Now, come; join me, kneel before the Black Throne, and be one with the universe!\"\nYou shudder as the words reach your ears. Nothing she says makes sense to you, but you can tell her intent is dark and wicked. \"Leave this place,\" you muster up the will to command, \"Go back to the beyond from which you were summoned, and never return.\""
+    },
+    "vi_current": {
+      "name": "Hàn Gắn Các Vết Nứt (Act 1)",
+      "text": "<b>Objective</b> — Chạy đua khắp các khu phố để đóng các vết nứt không gian trước khi quá muộn.",
+      "flavor": "Bạn phải dùng ma thuật và ý chí để hàn gắn những rách rưới của thực tại.",
+      "back_name": "Chặn Đứng Hỗn Mang",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Những vết nứt tạm thời khép lại nhưng nguồn gốc tà ác vẫn đang ở ngoài vũ trụ."
+    }
+  }
+]

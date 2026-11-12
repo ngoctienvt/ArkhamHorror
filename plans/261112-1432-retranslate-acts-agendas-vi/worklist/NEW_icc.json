@@ -1,0 +1,70 @@
+[
+  {
+    "code": "05286a",
+    "type": "act",
+    "pack": "icc",
+    "scenario": "Music of the Damned",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('05286a', 'text'), ('05288a', 'text')]",
+      "flavor: dup [('05286a', 'flavor'), ('05288a', 'flavor')]"
+    ],
+    "en": {
+      "name": "Dark Knowledge (v. I)",
+      "text": "[fast] Remove 3 breaches from this act: Place 1 clue on a random location.\n<b>Objective</b> - When the investigators have collected the requisite number of clues, they must immediately spend them and advance. When this act advances, move all of the breaches on it to the next act.",
+      "flavor": "The state of the city continues to decay. Breaches in reality begin to rip through the fabric of the Earth, and a faint melody of discordant pipes can be heard throughout the streets."
+    },
+    "vi_current": {
+      "name": "Kiến Thức Đen Tối (v. I)",
+      "text": "[fast] Xóa 3 vi phạm khỏi hành động này: Đặt 1 manh mối trên địa điểm ngẫu nhiên.\n<b>Objective</b> - Khi các điều tra viên đã thu thập đủ số lượng manh mối cần thiết, họ phải tiêu ngay số tiền đó và advance. Khi thực hiện hành động này advances, hãy chuyển tất cả các vi phạm trên hành động đó sang hành động tiếp theo.",
+      "flavor": "Tình trạng của thành phố tiếp tục suy tàn. Trên thực tế, những vi phạm bắt đầu xé toạc kết cấu của Trái đất và bạn có thể nghe thấy giai điệu mờ nhạt của những đường ống không hòa âm trên khắp các đường phố."
+    }
+  },
+  {
+    "code": "05288a",
+    "type": "act",
+    "pack": "icc",
+    "scenario": "Secrets of the Universe",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('05286a', 'text'), ('05288a', 'text')]",
+      "flavor: dup [('05286a', 'flavor'), ('05288a', 'flavor')]"
+    ],
+    "en": {
+      "name": "Dark Knowledge (v. II)",
+      "text": "[fast] Remove 3 breaches from this act: Place 1 clue on a random location.\n<b>Objective</b> - When the investigators have collected the requisite number of clues, they must immediately spend them and advance. When this act advances, move all of the breaches on it to the next act.",
+      "flavor": "The state of the city continues to decay. Breaches in reality begin to rip through the fabric of the Earth, and a faint melody of discordant pipes can be heard throughout the streets."
+    },
+    "vi_current": {
+      "name": "Kiến Thức Đen Tối (v. II)",
+      "text": "[fast] Xóa 3 vi phạm khỏi hành động này: Đặt 1 manh mối trên địa điểm ngẫu nhiên.\n<b>Objective</b> - Khi các điều tra viên đã thu thập đủ số lượng manh mối cần thiết, họ phải tiêu ngay số tiền đó và advance. Khi thực hiện hành động này advances, hãy chuyển tất cả các vi phạm trên hành động đó sang hành động tiếp theo.",
+      "flavor": "Tình trạng của thành phố tiếp tục suy tàn. Trên thực tế, những vi phạm bắt đầu xé toạc kết cấu của Trái đất và bạn có thể nghe thấy giai điệu mờ nhạt của những đường ống không hòa âm trên khắp các đường phố."
+    }
+  },
+  {
+    "code": "05289",
+    "type": "act",
+    "pack": "icc",
+    "scenario": "Secrets of the Universe",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "New World Order",
+      "text": "[fast] Remove 3 breaches from this act: Place 1 clue on a random location.\n<b>Objective</b> - If Carl Sanford is defeated, advance.",
+      "flavor": "This nightmare will not end until you overthrow the one behind it: Carl Sanford and the Order of the Silver Twilight. Even with the world falling apart all around you, the cult seems intent on continuing their plot to the bitter end.",
+      "back_name": "Of Gods and Mortals",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "Using force and ingenuity, you have managed to defeat Carl Sanford at his own game. The power he was drawing from surges painfully through him. \"You imbeciles,\" he spits, \"what do you think you have accomplished? We could have been immortal. Don't you understand? We could have been <i>gods</i>!\" he struggles to remain on his feet, his strength waning as he loses control of his power.\n\"At what cost?\" You reply, taking in the sight before you. \"You would have made us slaves, not gods. Slaves to your greed and the Order's power. I'd rather stay mortal than be your thrall.\"\n\"Then we will all perish,\" Carl responds bitterly. \"I could have made us into celestials. Instead we will be extinct. I hope you are satisfied.\""
+    },
+    "vi_current": {
+      "name": "Trật tự Thế Giới Mới",
+      "text": "[fast] Xóa 3 vi phạm khỏi hành động này: Đặt 1 manh mối trên địa điểm ngẫu nhiên.\n<b>Objective</b> - Nếu Carl Sanford bị đánh bại, advance.",
+      "flavor": "Cơn ác mộng này sẽ không kết thúc cho đến khi bạn lật đổ được kẻ đứng sau nó: Carl Sanford và Hội Chạng vạng Bạc. Ngay cả khi thế giới xung quanh bạn đang sụp đổ, giáo phái dường như vẫn có ý định tiếp tục âm mưu của mình cho đến tận cùng cay đắng.",
+      "back_name": "Of Gods and Mortals",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "Bằng vũ lực và sự khéo léo, bạn đã đánh bại được Carl Sanford trong chính trò chơi của hắn. Sức mạnh mà anh ta đang rút ra đang dâng lên trong anh ta một cách đau đớn. \"Đồ ngu ngốc,\" anh ta nhổ nước bọt, \"ngươi nghĩ mình đã đạt được điều gì? Chúng ta đã có thể bất tử. Các ngươi không hiểu sao? Chúng ta đã có thể là <i>gods</i>!\" anh ta cố gắng đứng vững trên đôi chân của mình, sức mạnh của anh ta suy yếu khi anh ta mất kiểm soát sức mạnh của mình.\n\"Với giá bao nhiêu?\" Bạn trả lời, ngắm nhìn khung cảnh trước mắt. \"Anh lẽ ra đã biến chúng tôi thành nô lệ chứ không phải thần thánh. Làm nô lệ cho lòng tham của anh và quyền lực của Hội. Tôi thà sống phàm trần còn hơn là nô lệ của anh.\"\n\"Vậy thì tất cả chúng ta sẽ chết,\" Carl cay đắng trả lời. \"Tôi có thể biến chúng tôi thành thiên nhân. Thay vào đó chúng tôi sẽ tuyệt chủng. Tôi hy vọng bạn hài lòng.\""
+    }
+  }
+]

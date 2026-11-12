@@ -241,8 +241,9 @@ h2.title {
   height: auto !important;
 }
 
+/* The count in the token's corner: about half the token tall, so the emblem stays visible. */
 .pool .poolItem span {
-  font-size: calc(var(--card-token-width) * 0.62) !important;
+  font-size: calc(var(--card-token-width) * 0.5) !important;
 }
 
 /* The per-card "Debug" opener sits directly beneath the card art, where it was

@@ -24,8 +24,13 @@ const textHtml = computed(() => props.size === 'room' && props.showText && props
 const flavorHtml = computed(() => props.size === 'room' && props.showText && props.info.face.flavor ? replaceText(props.info.face.flavor) : null)
 
 const showStats = computed(() => props.size !== 'compact' && props.info.revealed)
-// A "0/0" clue chip on a location that never had clues is noise; show it once clues exist or were printed.
-const showClues = computed(() => cluesLeft.value > 0 || (props.info.clues.printed ?? 0) > 0)
+const showClues = computed(() => props.size === 'compact'
+  ? cluesLeft.value > 0
+  : showStats.value && (cluesLeft.value > 0 || (props.info.clues.printed ?? 0) > 0))
+const clueLabel = computed(() => t('locationMap.marker.cluesValue', { n: cluesLeft.value }))
+const clueTitle = computed(() => props.info.clues.printed === null
+  ? clueLabel.value
+  : clueLabel.value + ' · ' + t('locationMap.marker.printed', { n: props.info.clues.printed }))
 
 const summary = computed(() => {
   const i = props.info
@@ -33,7 +38,7 @@ const summary = computed(() => {
   if (i.here) parts.push(t('locationMap.marker.youAreHere'))
   else if (i.adjacent) parts.push(t('locationMap.marker.adjacent'))
   if (i.shroud) parts.push(t('locationMap.marker.shroudValue', { n: i.shroud.x ? 'X' : i.shroud.current }))
-  if (i.clues.left) parts.push(t('locationMap.marker.cluesValue', { n: i.clues.left }))
+  if (showClues.value) parts.push(clueLabel.value)
   if (i.onEnter) parts.push(t('locationMap.marker.onEnter'))
   if (i.targetable) parts.push(t('locationMap.marker.targetable'))
   return parts.join(', ')
@@ -48,6 +53,7 @@ function onMain(event: Event) {
   else emit('inspect', anchorOf(event))
 }
 import GameIcon from '@/arkham/components/GameIcon.vue'
+import PoolItem from '@/arkham/components/PoolItem.vue'
 import ShroudDisc from '@/arkham/components/ShroudDisc.vue'
 import AttachmentChips from '@/arkham/components/AttachmentChips.vue'
 import type { Game } from '@/arkham/types/Game'
@@ -69,7 +75,8 @@ import type { Game } from '@/arkham/types/Game'
         <span class="name">{{ info.face.name }}</span>
         <span v-if="info.onEnter" class="warn" aria-hidden="true">⚠</span>
       </button>
-      <span v-if="showStats && showClues" class="chip clue" :class="{ empty: !cluesLeft }" :title="t('locationMap.clues')"><GameIcon type="clue" />{{ cluesLeft }}<small v-if="info.clues.printed">/{{ info.clues.printed }}</small></span>
+      <PoolItem v-if="showClues" type="clue" :amount="cluesLeft" class="clue-token"
+        :style="{ '--clue-digits': String(cluesLeft).length }" :title="clueTitle" aria-hidden="true" />
       <span v-if="showStats && info.doom" class="chip doom" :title="t('locationMap.doom')"><GameIcon type="doom" />{{ info.doom }}</span>
       <button v-if="size !== 'compact' && info.actions.move && !hideMove" class="go" type="button"
         :title="t('locationMap.marker.moveHere')" :aria-label="t('locationMap.marker.moveHere')"
@@ -83,7 +90,6 @@ import type { Game } from '@/arkham/types/Game'
       <p v-if="textHtml" class="text" v-html="textHtml"></p>
       <p v-if="flavorHtml" class="flavor" v-html="flavorHtml"></p>
     </div>
-    <span v-if="size === 'compact' && info.clues.left" class="mini-clue"><GameIcon type="clue" />{{ cluesLeft }}</span>
   </div>
 </template>
 
@@ -119,9 +125,15 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .main:hover .name { color: #fff3cf; }
 .chip { display: inline-flex; align-items: center; gap: 2px; flex: none; height: 1.5em; padding: 0 5px 0 3px; border-radius: 9px; background: #00000059; border: 1px solid #ffffff1a; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .chip :deep(.game-icon) { width: 1.15em; height: 1.15em; }
-.chip small { font-size: 0.85em; opacity: 0.65; }
-.chip.clue { color: #9fd3e6; }
-.chip.clue.empty { color: #7d8c90; }
+.head > .clue-token {
+  --pool-token-width: 1.75em; /* Same diameter as ShroudDisc. */
+  flex: none;
+  font-size: inherit;
+}
+.clue-token :deep(span) {
+  font-size: min(calc(var(--pool-token-width) * .62), calc(var(--pool-token-width) * 1.25 / var(--clue-digits)));
+  line-height: 1;
+}
 .chip.doom { color: #e0a595; }
 /* Move here: a small green pill at the end of the name line instead of a second row under it. */
 .go { display: inline-grid; place-items: center; flex: none; height: 1.5em; padding: 0 6px; border: 1px solid #8fd19a; border-radius: 9px; background: #1d3324; color: #d7ecd2; font-size: 11px; line-height: 1; }
@@ -135,8 +147,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .lore .flavor { font-style: italic; color: #c9bf9f; }
 .plate.compact { min-width: 0; max-width: 100%; padding: 1px 3px; gap: 0; font-size: 8px; border-radius: 4px; box-shadow: none; backdrop-filter: none; }
 .compact .name { font-size: 0.55rem; }
-.compact .main { min-height: 0; gap: 2px; }
-.mini-clue { color: #9fd3e6; font-size: 0.55rem; }
+.compact .head { display: grid; gap: 0; }
+.compact .main { min-height: 0; min-width: 0; gap: 2px; }
+.compact .clue-token { justify-self: center; }
 @media (max-width: 800px) {
   .plate.full .main { min-height: 44px; }
   .plate.full .go { min-height: 44px; }

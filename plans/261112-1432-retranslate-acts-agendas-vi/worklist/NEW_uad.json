@@ -1,0 +1,161 @@
+[
+  {
+    "code": "05243",
+    "type": "act",
+    "pack": "uad",
+    "scenario": "Union and Disillusion",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('05243', 'text'), ('54047', 'text')]"
+    ],
+    "en": {
+      "name": "Beyond the Mist (v. I)",
+      "text": "[fast] During a <b>circle</b> action, spend 1 clue: Reduce the difficulty of this skill test by 2.\n<b>Objective</b> - If each Unvisited Isle location in play is revealed and the brazier on each of them is lit, advance.",
+      "flavor": "You are close to the site of the binding ritual. You must light the braziers to find the way. Then, all that is left to do is bait the watcher to the trap and bind it there.",
+      "back_name": "Against the Witches",
+      "back_text": "Reveal The Geist-Trap location. Move each investigator at an Unvisited Isle location to The Geist-Trap.\nCheck Campaign Log. <i>If the witches' spell was cast</i>, spawn the set-aside Anette Mason at The Geist-Trap. <i>If the witches' spell was broken</i>, spawn 1 set-aside Coven Initiate at The Geist-Trap (2 instead if there are 3 or 4 investigators in the game).\nShuffle each remaining set-aside [[Witch]] enemy into the encounter deck, along with the encounter discard pile.",
+      "back_flavor": "After nearly an hour spent searching through the dense mist, you finally arrive at the site of the Lodge's ritual, only to find it in chaos. Members of the Silver Twilight Lodge, each wearing robes of blue and silver, are embroiled in battle with the witches. \"Complete the ritual!\" Carl Sanford commands you from across the clearing. \"It is the only way!\"\nAnette turns her attention to you, shocked and angered. \"You again! I warned you we would not show mercy if we met a second time.\" She calls to her coven: \"Sisters! We must not let them interfere this time. Do not let their circle close!\""
+    },
+    "vi_current": {
+      "name": "Bên Kia Sương mù (v. I)",
+      "text": "[fast] Trong khi thực hiện hành động <b>circle</b>, hãy Tiêu 1 manh mối: Giảm độ khó của bài kiểm tra skill này xuống 2.\n<b>Objective</b> - Nếu mỗi Đảo chưa được ghé thăm địa điểm trong màn chơi lộ diện và lò than trên mỗi hòn đảo đó đều sáng, thì advance.",
+      "flavor": "Bạn đang ở gần nơi diễn ra nghi lễ trói buộc. Bạn phải đốt lò than để tìm đường. Sau đó, tất cả những gì còn lại phải làm là dụ người quan sát vào bẫy và trói nó vào đó.",
+      "back_name": "Against the Witches",
+      "back_text": "Reveal The Geist-Trap location. Move each investigator at an Unvisited Isle location to The Geist-Trap.\nCheck Campaign Log. <i>If the witches' spell was cast</i>, spawn the set-aside Anette Mason at The Geist-Trap. <i>If the witches' spell was broken</i>, spawn 1 set-aside Coven Initiate at The Geist-Trap (2 instead if there are 3 or 4 investigators in the game).\nShuffle each remaining set-aside [[Witch]] enemy into the chồng bài encounter, along with the chồng bài encounter bỏ.",
+      "back_flavor": "Sau gần một giờ tìm kiếm trong màn sương mù dày đặc, cuối cùng bạn cũng đến được địa điểm diễn ra nghi lễ của Nhà nghỉ và thấy nó đang hỗn loạn. Các thành viên của Silver Twilight Lodge, mỗi người đều mặc áo choàng màu xanh và bạc, bị lôi kéo vào trận chiến với các phù thủy. \"Hoàn thành nghi thức!\" Carl Sanford ra lệnh cho bạn từ phía bên kia khu đất trống. \"Đó là cách duy nhất!\"\nAnette chuyển sự chú ý sang bạn, bị sốc và tức giận. \"Lại là anh! Tôi đã cảnh báo anh rằng chúng tôi sẽ không tỏ ra thương xót nếu gặp nhau lần thứ hai.\" Cô ấy gọi đến hội đồng của mình: \"Các chị em! Lần này chúng ta không được để họ can thiệp. Đừng để vòng tròn của họ khép lại!\""
+    }
+  },
+  {
+    "code": "05244",
+    "type": "act",
+    "pack": "uad",
+    "scenario": "Union and Disillusion",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('05244', 'text'), ('05245', 'text'), ('05246', 'text')]",
+      "flavor: dup [('05244', 'flavor'), ('05245', 'flavor'), ('05246', 'flavor')]"
+    ],
+    "en": {
+      "name": "Beyond the Mist (v. II)",
+      "text": "[fast] During a <b>circle</b> action, spend 1 clue: Reduce the difficulty of this skill test by 2.\n<b>Objective</b> - If each Unvisited Isle location in play is revealed and the brazier on each of them is unlit, advance.",
+      "flavor": "You are close to the site of the binding ritual. The braziers have already been lit, enabling the trap. You will have to unlight each of them in order to break the circle.",
+      "back_name": "Loyalty is Earned",
+      "back_text": "Reveal The Geist-Trap location. Move each investigator at an Unvisited Isle location to The Geist-Trap.\nRemove all [cultist] tokens from the chaos bag <i>(even if they are currently sealed on cards in play)</i> for the remainder of the campaign.",
+      "back_flavor": "After nearly an hour spent searching through the dense mist, you finally arrive at the site of the Lodge's ritual, only to find it in chaos. Members of the Silver Twilight Lodge, each wearing robes of blue and silver, are embroiled in battle with the witches. \"The ritual has neared completion!\" Carl Sanford yells to you from across the clearing. \"Bring the revenant here and end this!\"\nIt is now or never. Glaring at the man, you throw the unlit braziers you snuffed along the way onto the ground, breaking the delicate wards placed upon them. Immediately, the dark mist invades, and hungry shapes in the mist descend upon the unfortunate members of the Lodge. \"Traitor!\" one yells. You try to ignore their cries of agony as you proceed towards the center of the clearing."
+    },
+    "vi_current": {
+      "name": "Bên Kia Sương mù (câu Ii)",
+      "text": "[fast] Trong khi thực hiện hành động <b>circle</b>, hãy Tiêu 1 manh mối: Giảm độ khó của bài kiểm tra skill này xuống 2.\n<b>Objective</b> - Nếu mỗi Đảo chưa được viếng thăm địa điểm trong màn chơi lộ diện và lò than trên mỗi hòn đảo đó đều không sáng, thì advance.",
+      "flavor": "Bạn đang ở gần nơi diễn ra nghi lễ trói buộc. Lò than đã được thắp sáng, có thể đặt bẫy. Bạn sẽ phải thắp sáng từng cái một để phá vỡ vòng tròn.",
+      "back_name": "Loyalty is Earned",
+      "back_text": "Reveal The Geist-Trap location. Move each investigator at an Unvisited Isle location to The Geist-Trap.\nRemove all [cultist] tokens from the túi hỗn mang <i>(even if they are currently sealed on cards trong màn chơi)</i> for the remainder of the campaign.",
+      "back_flavor": "Sau gần một giờ tìm kiếm trong màn sương mù dày đặc, cuối cùng bạn cũng đến được địa điểm diễn ra nghi lễ của Nhà nghỉ và thấy nó đang hỗn loạn. Các thành viên của Silver Twilight Lodge, mỗi người đều mặc áo choàng màu xanh và bạc, bị lôi kéo vào trận chiến với các phù thủy. \"Nghi thức đã gần hoàn thành!\" Carl Sanford hét lên với bạn từ phía bên kia bãi đất trống. \"Mang kẻ tôn kính đến đây và kết thúc chuyện này!\"\nBây giờ hoặc không bao giờ. Liếc nhìn người đàn ông, bạn ném những chiếc lò than không sáng mà bạn đã tắt dọc đường xuống đất, làm vỡ những tấm chắn mỏng manh được đặt trên chúng. Ngay lập tức, màn sương mù đen tối xâm chiếm và những hình thù đói khát trong màn sương tấn công những thành viên bất hạnh của Hội. \"Kẻ phản bội!\" một người hét lên. Bạn cố gắng phớt lờ tiếng kêu đau đớn của họ khi tiến về phía trung tâm khu đất trống."
+    }
+  },
+  {
+    "code": "05245",
+    "type": "act",
+    "pack": "uad",
+    "scenario": "Union and Disillusion",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('05244', 'text'), ('05245', 'text'), ('05246', 'text')]",
+      "flavor: dup [('05244', 'flavor'), ('05245', 'flavor'), ('05246', 'flavor')]"
+    ],
+    "en": {
+      "name": "Beyond the Mist (v. III)",
+      "text": "[fast] During a <b>circle</b> action, spend 1 clue: Reduce the difficulty of this skill test by 2.\n<b>Objective</b> - If each Unvisited Isle location in play is revealed and the brazier on each of them is unlit, advance.",
+      "flavor": "You are close to the site of the binding ritual. The braziers have already been lit, enabling the trap. You will have to unlight each of them in order to break the circle.",
+      "back_name": "True Colors",
+      "back_text": "\nReveal The Geist-Trap location. Move each investigator at an Unvisited Isle location to The Geist-Trap.\nSpawn 1 set-aside Lodge Neophyte enemy at The Geist-Trap (2 instead if there are 3 or 4 investigators in the game). Shuffle the remainder of the set-aside <i>Silver Twilight Lodge</i> encounter set into the encounter deck, along with the encounter discard pile.\nCheck Campaign Log. <i>If Josef is alive and well</i>, spawn the set-aside Josef Meiger enemy at The Geist-Trap. Investigators cannot <b>parley</b> with Josef Meiger for the remainder of the game.",
+      "back_flavor": "After nearly an hour spent searching through the dense mist, you finally arrive at the site of the Lodge's ritual, only to find it in chaos. Members of the Silver Twilight Lodge, each wearing robes of blue and silver, are embroiled in battle with the witches. \"The ritual has neared completion!\" Carl Sanford yells to you from across the clearing. \"Bring the revenant here and end this!\" Glaring at the man, you refuse. \"So, at last you show your true colors. I thought that might be the case.\" The Lodge's enforcers turn on you without hesitation."
+    },
+    "vi_current": {
+      "name": "Bên Kia Màn Sương (câu Iii)",
+      "text": "[fast] Trong khi thực hiện hành động <b>circle</b>, hãy Tiêu 1 manh mối: Giảm độ khó của bài kiểm tra skill này xuống 2.\n<b>Objective</b> - Nếu mỗi Đảo chưa được viếng thăm địa điểm trong màn chơi lộ diện và lò than trên mỗi hòn đảo đó đều không sáng, thì advance.",
+      "flavor": "Bạn đang ở gần nơi diễn ra nghi lễ trói buộc. Lò than đã được thắp sáng, có thể đặt bẫy. Bạn sẽ phải thắp sáng từng cái một để phá vỡ vòng tròn.",
+      "back_name": "True Colors",
+      "back_text": "\nReveal The Geist-Trap location. Move each investigator at an Unvisited Isle location to The Geist-Trap.\nSpawn 1 set-aside Lodge Neophyte enemy at The Geist-Trap (2 instead if there are 3 or 4 investigators in the game). Shuffle the remainder of the set-aside <i>Silver Twilight Lodge</i> encounter set into the chồng bài encounter, along with the chồng bài encounter bỏ.\nCheck Campaign Log. <i>If Josef is alive and well</i>, spawn the set-aside Josef Meiger enemy at The Geist-Trap. Investigators cannot <b>parley</b> with Josef Meiger for the remainder of the game.",
+      "back_flavor": "Sau gần một giờ tìm kiếm trong màn sương mù dày đặc, cuối cùng bạn cũng đến được địa điểm diễn ra nghi lễ của Nhà nghỉ và thấy nó đang hỗn loạn. Các thành viên của Silver Twilight Lodge, mỗi người đều mặc áo choàng màu xanh và bạc, bị lôi kéo vào trận chiến với các phù thủy. \"Nghi thức đã gần hoàn thành!\" Carl Sanford hét lên với bạn từ phía bên kia bãi đất trống. \"Mang kẻ tôn kính đến đây và kết thúc chuyện này!\" Liếc nhìn người đàn ông, bạn từ chối. \"Vậy là cuối cùng thì cậu cũng lộ rõ ​​bản chất thật của mình. Tôi nghĩ có thể là như vậy.\" Những người thi hành án của Lodge tấn công bạn mà không do dự."
+    }
+  },
+  {
+    "code": "05246",
+    "type": "act",
+    "pack": "uad",
+    "scenario": "Union and Disillusion",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('05244', 'text'), ('05245', 'text'), ('05246', 'text')]",
+      "flavor: dup [('05244', 'flavor'), ('05245', 'flavor'), ('05246', 'flavor')]"
+    ],
+    "en": {
+      "name": "Beyond the Mist (v. IV)",
+      "text": "[fast] During a <b>circle</b> action, spend 1 clue: Reduce the difficulty of this skill test by 2.\n<b>Objective</b> - If each Unvisited Isle location in play is revealed and the brazier on each of them is unlit, advance.",
+      "flavor": "You are close to the site of the binding ritual. The braziers have already been lit, enabling the trap. You will have to unlight each of them in order to break the circle.",
+      "back_name": "Against the Lodge",
+      "back_text": "Reveal The Geist-Trap location. Move each investigator at an Unvisited Isle location to The Geist-Trap.\nShuffle the set-aside <i>Silver Twilight Lodge</i> encounter set into the encounter deck, along with the encounter discard pile.\nCheck Campaign Log. <i>If Josef is alive and well</i>, spawn the set-aside Josef Meiger enemy at The Geist-Trap. Investigators cannot <b>parley</b> with Josef Meiger for the remainder of the game.",
+      "back_flavor": "After nearly an hour spent searching through the dense mist, you finally arrive at the site of the Lodge's ritual, only to find it in chaos. Members of the Silver Twilight Lodge, each wearing robes of blue and silver, are embroiled in battle with the witches. \"The ritual has neared completion!\" Carl Sanford yells to you from across the clearing. \"Bring the revenant here and end this!\" Glaring at the man, you refuse. He looks surprised for a moment, then growls, \"So, you are on <u>their</u> side after all. How disappointing.\" He turns to his inner circle and commands, \"Kill them! Do not let them interfere!\""
+    },
+    "vi_current": {
+      "name": "Bên Kia Màn Sương (câu Iv)",
+      "text": "[fast] Trong khi thực hiện hành động <b>circle</b>, hãy Tiêu 1 manh mối: Giảm độ khó của bài kiểm tra skill này xuống 2.\n<b>Objective</b> - Nếu mỗi Đảo chưa được viếng thăm địa điểm trong màn chơi lộ diện và lò than trên mỗi hòn đảo đó đều không sáng, thì advance.",
+      "flavor": "Bạn đang ở gần nơi diễn ra nghi lễ trói buộc. Lò than đã được thắp sáng, có thể đặt bẫy. Bạn sẽ phải thắp sáng từng cái một để phá vỡ vòng tròn.",
+      "back_name": "Against the Lodge",
+      "back_text": "Reveal The Geist-Trap location. Move each investigator at an Unvisited Isle location to The Geist-Trap.\nShuffle the set-aside <i>Silver Twilight Lodge</i> encounter set into the chồng bài encounter, along with the chồng bài encounter bỏ.\nCheck Campaign Log. <i>If Josef is alive and well</i>, spawn the set-aside Josef Meiger enemy at The Geist-Trap. Investigators cannot <b>parley</b> with Josef Meiger for the remainder of the game.",
+      "back_flavor": "Sau gần một giờ tìm kiếm trong màn sương mù dày đặc, cuối cùng bạn cũng đến được địa điểm diễn ra nghi lễ của Nhà nghỉ và thấy nó đang hỗn loạn. Các thành viên của Silver Twilight Lodge, mỗi người đều mặc áo choàng màu xanh và bạc, bị lôi kéo vào trận chiến với các phù thủy. \"Nghi thức đã gần hoàn thành!\" Carl Sanford hét lên với bạn từ phía bên kia bãi đất trống. \"Mang kẻ tôn kính đến đây và kết thúc chuyện này!\" Liếc nhìn người đàn ông, bạn từ chối. Anh ấy có vẻ ngạc nhiên trong giây lát, rồi gầm gừ, \"Vậy, rốt cuộc thì anh cũng đứng về phía <u>của họ. </u>. Thật đáng thất vọng.\" Anh ta quay vào vòng trong của mình và ra lệnh, \"Giết chúng! Đừng để chúng can thiệp!\""
+    }
+  },
+  {
+    "code": "05247",
+    "type": "act",
+    "pack": "uad",
+    "scenario": "Union and Disillusion",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "The Binding Rite",
+      "text": "[fast] During a <b>circle</b> action, spend 1 clue: Reduce the difficulty of this skill test by 2.\n<b>Objective</b> - If The Spectral Watcher is defeated at The Geist-Trap while the brazier there is lit, advance.",
+      "flavor": "At the center of the clearing lies the spectral trap: a pillar of ghostly energy which swirls about a stone obelisk. Hundreds of phantasmal faces and a conglomeration of rotted limbs and flesh intertwine within, a revolting display of death and despair. An unlit silver brazier stands in front of the pillar, ready for you to act.",
+      "back_name": "Disillusion",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "The watcher wails in agony as the shadow-wreath around its form is pulled away, exposing its true form. You and the members of the Lodge surround the shattered soul to prevent it from escaping."
+    },
+    "vi_current": {
+      "name": "Nghi Thức Ràng Buộc",
+      "text": "[fast] Trong khi thực hiện hành động <b>circle</b>, hãy Tiêu 1 manh mối: Giảm độ khó của bài kiểm tra skill này xuống 2.\n<b>Objective</b> - Nếu Spectral Watcher bị đánh bại tại The Geist-Trap trong khi lò than ở đó đang sáng, advance.",
+      "flavor": "Ở trung tâm khu đất trống là cái bẫy quang phổ: một cột năng lượng ma quái xoay quanh một đài tưởng niệm bằng đá. Hàng trăm khuôn mặt ma quái và tập hợp các chi và thịt thối rữa đan xen bên trong, một màn trình diễn kinh tởm của cái chết và sự tuyệt vọng. Một lò than bạc chưa được thắp sáng đứng trước cây cột, sẵn sàng cho bạn hành động.",
+      "back_name": "Disillusion",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Người quan sát rên rỉ đau đớn khi vòng hoa bóng tối xung quanh hình dạng của nó bị kéo đi, để lộ hình dạng thật của nó. Bạn và các thành viên của Lodge bao vây linh hồn tan vỡ để ngăn nó trốn thoát."
+    }
+  },
+  {
+    "code": "05248",
+    "type": "act",
+    "pack": "uad",
+    "scenario": "Union and Disillusion",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "The Broken Rite",
+      "text": "[fast] During a <b>circle</b> action, spend 1 clue: Reduce the difficulty of this skill test by 2.\n<b>Objective</b> - If The Spectral Watcher is defeated at The Geist-Trap while the brazier there is unlit, advance.",
+      "flavor": "At the center of the clearing lies the spectral trap: a pillar of ghostly energy which swirls about a stone obelisk. Hundreds of phantasmal faces and a conglomeration of rotted limbs and flesh intertwine within, a revolting display of death and despair. A silver brazier stands in front of the pillar, its blue flame flickering in the wind.",
+      "back_name": "Union",
+      "back_text": "<b>(→R4)</b>",
+      "back_flavor": "As the blue flame of the brazier is snuffed out, the energy around the circle disperses. The shadow-wreath around the watcher's form is released, and the creature's true form surrounds the central pillar."
+    },
+    "vi_current": {
+      "name": "Nghi Thức bị Phá vỡ",
+      "text": "[fast] Trong khi thực hiện hành động <b>circle</b>, hãy Tiêu 1 manh mối: Giảm độ khó của bài kiểm tra skill này xuống 2.\n<b>Objective</b> - Nếu Spectral Watcher bị đánh bại tại The Geist-Trap trong khi lò than ở đó không sáng, advance.",
+      "flavor": "Ở trung tâm khu đất trống là cái bẫy quang phổ: một cột năng lượng ma quái xoay quanh một đài tưởng niệm bằng đá. Hàng trăm khuôn mặt ma quái và tập hợp các chi và thịt thối rữa đan xen bên trong, một màn trình diễn kinh tởm của cái chết và sự tuyệt vọng. Một lò than bạc đứng trước cây cột, ngọn lửa xanh bập bùng trong gió.",
+      "back_name": "Union",
+      "back_text": "<b>(→R4)</b>",
+      "back_flavor": "Khi ngọn lửa xanh của lò than tắt đi, năng lượng xung quanh vòng tròn sẽ phân tán. Vòng hoa bóng tối xung quanh hình dạng của người quan sát được giải phóng và hình dạng thật của sinh vật bao quanh cây cột trung tâm."
+    }
+  }
+]

@@ -91,6 +91,8 @@ import SealedChaosTokens from '@/arkham/components/SealedChaosTokens.vue';
 import { useGameChoices } from '@/arkham/composables/useGameChoices';
 import { setLocationOffset, resetLocationOffsets, updateGameRaw } from '@/arkham/api';
 import { useDebug, scenarioHasDebugOptions } from '@/arkham/debug'
+import { barrierCounts } from '@/arkham/scenarioBarriers'
+import BarrierIcon from '@/arkham/components/BarrierIcon.vue'
 import * as DebugMove from '@/arkham/debugCardMove'
 import * as DebugInPlay from '@/arkham/debugInPlay'
 import { useCardStore } from '@/stores/cards'
@@ -1250,7 +1252,7 @@ const isVertical = function(area: string) {
   return startLocation.label[startLocation.label.length - 1] !== endLocation.label[endLocation.label.length - 1]
 }
 
-const barriers = computed(() => props.scenario.meta?.barriers)
+const barriers = computed(() => barrierCounts(props.scenario.meta))
 
 function isAbility(v: Message): v is AbilityLabel {
   if (v.tag !== MessageType.ABILITY_LABEL) {
@@ -1524,8 +1526,9 @@ const scenarioDeckStyles = computed(() => {
 const players = computed(() => props.game.investigators)
 const playerOrder = computed(() => props.game.playerOrder)
 // What only the card board can draw; the map says so rather than silently leaving it out.
+// Barriers are drawn on the map's link badges, so they no longer need the card board.
 const boardOnlyContent = computed(() =>
-  Boolean(barriers.value) || enemiesAsLocations.value.length > 0 || gridStories.value.length > 0 ||
+  enemiesAsLocations.value.length > 0 || gridStories.value.length > 0 ||
   playerLocationZones.value.length > 0)
 const discards = computed<Card[]>(() => props.scenario.discard.map(c => ({ tag: 'EncounterCard', contents: c })))
 const playerLocationZones = computed(() => props.game.playerOrder.flatMap((investigatorId) => {
@@ -3284,7 +3287,7 @@ async function addChaosToken(face: any){
 
           <template v-if="barriers">
             <div v-for="[area, amount] in Object.entries(barriers)" :key="area" class="barrier" :class="{ vertical: isVertical(area) }" :style="{ 'grid-area': `barrier-${area}` }">
-              <img v-for="n in amount" :key="n" :src="imgsrc('tokens/resource.png')" />
+              <BarrierIcon v-for="n in amount" :key="n" class="barrier-glyph" />
               <button v-if="debug.active && (amount as number > 0)" @click="debug.send(game.id, {tag: 'ScenarioCountDecrementBy', contents: [{ 'tag': 'Barriers', 'contents': area.split('--') }, 1]})">x</button>
             </div>
           </template>
@@ -4589,8 +4592,12 @@ async function addChaosToken(face: any){
   align-self: flex-start;
   justify-content: center;
 
-  img {
+  /* One wooden barricade per barrier, in place of the resource tokens the rules use. */
+  .barrier-glyph {
     width: 20px;
+    height: 20px;
+    color: #d9774f;
+    filter: drop-shadow(0 1px 1px #000a);
   }
 
   &.vertical {
@@ -4598,9 +4605,6 @@ async function addChaosToken(face: any){
     height: 40px;
     width: 100px;
     justify-self: center;
-    img {
-      height: 20px;
-    }
   }
 }
 

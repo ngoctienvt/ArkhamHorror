@@ -1,0 +1,225 @@
+[
+  {
+    "code": "72002",
+    "type": "agenda",
+    "pack": "film_fatale",
+    "scenario": "Film Fatale",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Showbusiness As Usual",
+      "text": "As you walk with André, he mentions the trouble around the lot all started when the producer, Erika Strand, found the \"deal of the century\" on three props for the films. Ever since then, people have been acting strange, things have been disappearing, and the world just doesn't seem right.",
+      "back_name": "Call Time",
+      "back_text": "<b>If it is act 1a:</b>\n<blockquote><i>As you continue to investigate, the air around Lot C becomes heavy and sour. Something is happening.</i></blockquote>\nEach investigator takes 1 damage and 1 horror. Gather 1 random [[Prop]] asset beneath Central Lot and set it aside, out of play. Add each remaining [[Prop]] asset beneath Central Lot to the victory display.\nAdvance directly to act 1b.\n<hr>\n<b>Otherwise:</b>\n<blockquote><i>Your head spins. The world around you doesn't look quite right, although you can't say why, exactly.</i></blockquote>\nEach investigator tests their lowest skill (2). Each investigator who fails loses 2 resources and loses 1 action during their next turn.\nRemember \"the investigators made their call time.\""
+    },
+    "vi_current": {
+      "name": "Kinh Doanh Trình Diễn Như Thường lệ",
+      "text": "Khi bạn đi dạo với André, anh ấy đề cập đến những rắc rối xung quanh mọi chuyện bắt đầu khi nhà sản xuất Erika Strand tìm thấy \"thỏa thuận thế kỷ\" về ba đạo cụ cho bộ phim. Kể từ đó, mọi người hành động kỳ lạ, mọi thứ dần biến mất và thế giới dường như không còn ổn nữa.",
+      "back_name": "Call Time",
+      "back_text": "<b>If it is act 1a:</b>\n<blockquote><i>As you continue to investigate, the air around Lot C becomes heavy and sour. Something is happening.</i></blockquote>\nEach investigator takes 1 damage and 1 horror. Gather 1 random asset [[Prop]] beneath Central Lot and set it aside, ngoài màn chơi. Add each remaining asset [[Prop]] beneath Central Lot to the khu vực trưng bày thành tích.\nAdvance directly to act 1b.\n<hr>\n<b>Otherwise:</b>\n<blockquote><i>Your head spins. The world around you doesn't look quite right, although you can't say why, exactly.</i></blockquote>\nEach investigator tests their lowest skill (2). Each investigator who fails loses 2 resources and loses 1 action during their next turn.\nRemember \"the investigators made their call time.\""
+    }
+  },
+  {
+    "code": "72003",
+    "type": "agenda",
+    "pack": "film_fatale",
+    "scenario": "Film Fatale",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Colliding Realities",
+      "text": "<b>Forced</b> - The first time each round an investigator draws a copy of Bleeding Reality: After resolving its effects, that investigators draws the top card of the Reel deck.",
+      "flavor": "Reality continues to warp and bend. It isn't just one film coming to life: all three are blending together in pure chaos.",
+      "back_name": "The Silver Scream",
+      "back_text": "Each investigator is defeated and suffers 1 mental trauma.",
+      "back_flavor": "Whatever strange process was blending and warping realities seems to have ended. Lot C now contains a multitude of horrifying and fantastical worlds. Overhead, a swarm of bats flies under cover of dark storm clouds. A towering brontosaurus shambles out of a steaming prehistoric jungle and out onto a Saturnite landscape. Several extras pursue a hapless director into a silver rocket ship as werewolves howl atop rolling alien dunes. You look around wearily at the once hopeful Hollywood set, now filled with screams and chaos. Lot C is lost."
+    },
+    "vi_current": {
+      "name": "Thực tế va Chạm",
+      "text": "<b>Forced</b> - Lần đầu tiên mỗi vòng điều tra viên rút được một bản sao của Thực tế chảy máu: Sau khi giải quyết các hiệu ứng của nó, các điều tra viên đó sẽ rút lá bài trên cùng của chồng bài Reel.",
+      "flavor": "Thực tế tiếp tục cong vênh và uốn cong. Đây không chỉ là một bộ phim trở nên sống động: cả ba đều hòa quyện với nhau trong sự hỗn loạn thuần túy.",
+      "back_name": "The Silver Scream",
+      "back_text": "Each investigator is defeated and suffers 1 mental trauma.",
+      "back_flavor": "Quá trình kỳ lạ đang hòa trộn và bóp méo hiện thực dường như đã kết thúc. Lô C hiện chứa vô số thế giới kinh hoàng và kỳ ảo. Trên đầu, một đàn dơi bay dưới những đám mây bão đen tối. Một con khủng long Brontosaurus cao chót vót bước ra khỏi khu rừng thời tiền sử bốc hơi và tiến vào khung cảnh của sao Thổ. Một số nhân vật phụ truy đuổi vị đạo diễn kém may mắn trên con tàu tên lửa màu bạc trong khi người sói tru lên trên những cồn cát nhấp nhô của người ngoài hành tinh. Bạn mệt mỏi nhìn quanh bối cảnh Hollywood từng đầy hy vọng, giờ đây tràn ngập tiếng la hét và hỗn loạn. Lô C bị mất."
+    }
+  },
+  {
+    "code": "72004",
+    "type": "act",
+    "pack": "film_fatale",
+    "scenario": "Film Fatale",
+    "source_file": null,
+    "audit_flags": [
+      "back_flavor: untranslated"
+    ],
+    "en": {
+      "name": "André's Request",
+      "text": "Each Possessed Extra gains aloof.\n<b>Objective</b> - Investigate as many of the cursed props as you can. At the end of the round, if there are 2 or more [[Prop]] assets in the victory display, the investigators may advance.",
+      "flavor": "The mishaps that have plagued Lot C all seem to stem from several strange props. By tracking them down, you may be able to put a stop to these unfortunate events.",
+      "back_name": "Source of the Trouble",
+      "back_text": "Each investigator loses all of their clues.\nIf there are any remaining cards beneath Central Lot, set them aside, out of play.\nFind the set-aside André Patel story asset and put it into play under the control of any investigator. He does not take up an ally slot for the remainder of the scenario.\nProceed to <b>Interlude: Take Two</b> <i>(page 8)</i>.",
+      "back_flavor": "You rejoin André behind one of the film sets. Several accounts blame the recent spate of bad luck on several \"cursed\" props; two of them, however, seem to be nothing more than mundane items. The third prop, though, has mysteriously disappeared. Together, you and André resolve to search the film set for the missing prop."
+    },
+    "vi_current": {
+      "name": "Yêu Cầu của André",
+      "text": "Mỗi người sở hữu thêm sẽ nhận được aloof.\n<b>Objective</b> - Điều tra càng nhiều đạo cụ bị nguyền rủa càng tốt. Khi kết thúc vòng đấu, nếu có 2 các asset [[Prop]] trở lên trong khu vực trưng bày thành tích thì các điều tra viên có thể là advance.",
+      "flavor": "Những rủi ro xảy ra với Lô C dường như đều xuất phát từ một số đạo cụ kỳ lạ. Bằng cách theo dõi chúng, bạn có thể ngăn chặn những sự kiện không may này.",
+      "back_name": "Source of the Trouble",
+      "back_text": "Each investigator loses all of their manh mối.\nIf there are any remaining cards beneath Central Lot, set them aside, ngoài màn chơi.\nFind the set-aside André Patel story asset and put it into play under the control of any investigator. He does not take up an ally slot for the remainder of the scenario.\nProceed to <b>Interlude: Take Two</b> <i>(page 8)</i>.",
+      "back_flavor": "You rejoin André behind one of the film sets. Several accounts blame the recent spate of bad luck on several \"cursed\" props; two of them, however, seem to be nothing more than mundane items. The third prop, though, has mysteriously disappeared. Together, you and André resolve to search the film set for the missing prop."
+    }
+  },
+  {
+    "code": "72025",
+    "type": "act",
+    "pack": "film_fatale",
+    "scenario": "Cosmic Journey",
+    "source_file": null,
+    "audit_flags": [
+      "flavor: untranslated"
+    ],
+    "en": {
+      "name": "A Cosmic Journey",
+      "text": "Each Possessed Extra gets +2 health.\n<b>Objective</b> - Rebuild the telescope. When the round ends, if there are 3 shards on Helios Telescope, advance. <i>(Hint: Explore the cosmos to rebuild the telescope.)</i>",
+      "flavor": "As you float noiselessly through space, André mentions that the Telescope must have caused this madness. With nothing but Saturn and its moons in front of you, you have no other choice but to explore these celestial bodies.",
+      "back_name": "Return from the Cosmos",
+      "back_text": "Discard each enemy in play. Move each investigator to Space Set. Each investigator loses all of their clues.\nAdd each location with <b>victory X</b> and no clues on it to the victory display. Remove each [[Cosmos]] and [[Ritual Site]] card from the game. Put each set-aside [[Set]] location into play unrevealed, along with Central Lot, <i>(Blurred)</i> side faceup. Search the victory display for Saturnite Monarch and put it into play at Central Lot with its <i>(In An Alien Land)</i> side faceup.\nShuffle the top 2 cards of the Reel deck into the encounter deck, along with the encounter discard pile.\nAdd 1 [cultist], 1 [tablet], and 1 [elder_thing] to the chaos bag.\nPut the Helios Telescope story asset into play under the control of any investigator.",
+      "back_flavor": "You plummet through space until you land in Lot C. You have the telescope in hand, but you are not alone."
+    },
+    "vi_current": {
+      "name": "Hành Trình vũ Trụ",
+      "text": "Mỗi Sở hữu thêm nhận +2 health.\n<b>Objective</b> - Xây dựng lại kính thiên văn. Khi vòng đấu kết thúc, nếu có 3 mảnh trên Kính thiên văn Helios thì advance. <i>(Gợi ý: Khám phá vũ trụ để xây dựng lại kính thiên văn.)</i>",
+      "flavor": "As you float noiselessly through space, André mentions that the Telescope must have caused this madness. With nothing but Saturn and its moons in front of you, you have no other choice but to explore these celestial bodies.",
+      "back_name": "Return from the Cosmos",
+      "back_text": "Discard each enemy trong màn chơi. Move each investigator to Space Set. Each investigator loses all of their manh mối.\nAdd each location with <b>victory X</b> and no manh mối on it to the khu vực trưng bày thành tích. Remove each [[Cosmos]] and [[Ritual Site]] card from the game. Put each set-aside [[Set]] location into play unrevealed, along with Central Lot, <i>(Blurred)</i> side faceup. Search the khu vực trưng bày thành tích for Saturnite Monarch and put it into play at Central Lot with its <i>(In An Alien Land)</i> side faceup.\nShuffle the top 2 cards of the Reel deck into the chồng bài encounter, along with the chồng bài encounter bỏ.\nAdd 1 [cultist], 1 [tablet], and 1 [elder_thing] to the túi hỗn mang.\nPut the Helios Telescope story asset into play under the control of any investigator.",
+      "back_flavor": "Bạn lao thẳng vào không gian cho đến khi hạ cánh xuống Lô C. Bạn có kính thiên văn trong tay, nhưng bạn không đơn độc."
+    }
+  },
+  {
+    "code": "72026",
+    "type": "act",
+    "pack": "film_fatale",
+    "scenario": "Cosmic Journey",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "From Whence They Came",
+      "text": "Each Possessed Extra gets +2 health, +1 fight, +1 evade, and gains elusive and the [[Saturnite]] trait.\n[action] Spend 1 [per_investigator] clues, as a group: Place 1 shard on Helios Telescope.\n<b>Forced</b> - If Helios Telescope has no shards on it, advance.\n<b>Objective</b> - Dethrone the monarch. If the Saturnite Monarch is defeated, advance.",
+      "flavor": "The telescope's transporting beam may be able to send the Saturnites home, but the monarch is hellbent upon taking it.",
+      "back_name": "The Shattered Scope",
+      "back_text": "<b>If this act advanced via its forced effect:</b>\n<blockquote><i>The Monarch easily knocks you aside and snatches the telescope from your arms. It clicks rapidly at the militant Saturnites surrounding you. You don't understand what it has planned with this immense power, but you know it isn't good.</i></blockquote>\n<b>(→R1)</b>.\n<hr>\n<b>If this act advanced via its objective:</b>\n<blockquote><i>After only a short time with the Helios Telescope, you have begun to master its power. The Monarch falls to the floor, exhausted. You take aim and fire a fantastical beam at the Saturnite. With a shriek, the monarch and its subjects vanish, leaving nothing but memories.</i></blockquote>\nAdd the Helios Telescope to the victory display.\n<b>(→R2)</b>."
+    },
+    "vi_current": {
+      "name": "Họ Đến từ Đâu",
+      "text": "Mỗi Người được sở hữu thêm nhận +2 health, +1 chiến đấu, +1 evade và nhận được elusive cũng như đặc điểm [[Saturnite]].\n[action] Tiêu 1 [per_investigator] manh mối, theo nhóm: Đặt 1 mảnh trên Kính thiên văn Helios.\n<b>Forced</b> - Nếu Kính thiên văn Helios không có mảnh vỡ trên đó, đó là advance.\n<b>Objective</b> - Hạ bệ nhà vua. Nếu Quân chủ Sao Thổ bị đánh bại, advance.",
+      "flavor": "Chùm tia truyền tải của kính thiên văn có thể có thể đưa người Thổ tinh về nhà, nhưng nhà vua lại rất muốn lấy nó.",
+      "back_name": "The Shattered Scope",
+      "back_text": "<b>If this act advanced via its forced effect:</b>\n<blockquote><i>The Monarch easily knocks you aside and snatches the telescope from your arms. It clicks rapidly at the militant Saturnites surrounding you. You don't understand what it has planned with this immense power, but you know it isn't good.</i></blockquote>\n<b>(→R1)</b>.\n<hr>\n<b>If this act advanced via its objective:</b>\n<blockquote><i>After only a short time with the Helios Telescope, you have begun to master its power. The Monarch falls to the floor, exhausted. You take aim and fire a fantastical beam at the Saturnite. With a shriek, the monarch and its subjects vanish, leaving nothing but memories.</i></blockquote>\nAdd the Helios Telescope to the khu vực trưng bày thành tích.\n<b>(→R2)</b>."
+    }
+  },
+  {
+    "code": "72037",
+    "type": "act",
+    "pack": "film_fatale",
+    "scenario": "Forgotten Island",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "The Forgotten Island",
+      "text": "Each Possessed Extra gets +1 health, +1 evade, and gains alert.\n[fast] Investigators at the same [[Jungle]] location spend 1 [per_investigator] clues, as a group: Move 1 seal from Ruins of the Serpent King to Allosaurus.\n<b>Objective</b> - When the round ends, if each surviving investigator and the Staff of the Serpent are at Jungle Set, advance.",
+      "flavor": "You have found yourself in an actual tropical jungle. If the staff is behind these strange events, you should find it immediately.",
+      "back_name": "Return from the Jungle",
+      "back_text": "If the Allosaurus enemy is in play, set it aside out of play <i>(keeping all tokens and attachments)</i>. Discard each other enemy in play. Move each investigator to Jungle Set. Each investigator loses all of their clues.\nAdd each location with <b>victory X</b> and no clues on it to the victory display. Remove each [[Jungle]] location from the game. Put each set-aside [[Set]] location into play, unrevealed, along with Central Lot, <i>(Blurred)</i> side faceup. If the Allosaurus enemy is set aside, spawn it at Central Lot, <i>(Rampaging Predator)</i> side faceup.\nShuffle the top 2 cards of the Reel deck into the encounter deck, along with the encounter discard pile.\nAdd 1 [cultist], 1 [tablet], and 1 [elder_thing] to the chaos bag.",
+      "back_flavor": "Staff in hand, you rush headlong back up the hill and through the jungle where you first arrived, hoping to find your way back to Lot C."
+    },
+    "vi_current": {
+      "name": "Hòn Đảo bị Lãng Quên",
+      "text": "Mỗi Sở hữu thêm nhận +1 health, +1 evade và nhận alert.\n[fast] các điều tra viên tại cùng một địa điểm [[Jungle]] Tiêu 1 [per_investigator] manh mối, theo nhóm: Di chuyển 1 seal từ Ruins of the Serpent King sang Allosaurus.\n<b>Objective</b> - Khi vòng đấu kết thúc, nếu mỗi người sống sót điều tra viên và Trượng Rắn đều ở Bộ Rừng, advance.",
+      "flavor": "Bạn đã tìm thấy chính mình trong một khu rừng nhiệt đới thực sự. Nếu nhân viên đứng đằng sau những sự việc kỳ lạ này thì bạn nên tìm ra ngay.",
+      "back_name": "Return from the Jungle",
+      "back_text": "If the Allosaurus enemy is trong màn chơi, set it aside ngoài màn chơi <i>(keeping all tokens and attachments)</i>. Discard each other enemy trong màn chơi. Move each investigator to Jungle Set. Each investigator loses all of their manh mối.\nAdd each location with <b>victory X</b> and no manh mối on it to the khu vực trưng bày thành tích. Remove each [[Jungle]] location from the game. Put each set-aside [[Set]] location into play, unrevealed, along with Central Lot, <i>(Blurred)</i> side faceup. If the Allosaurus enemy is set aside, spawn it at Central Lot, <i>(Rampaging Predator)</i> side faceup.\nShuffle the top 2 cards of the Reel deck into the chồng bài encounter, along with the chồng bài encounter bỏ.\nAdd 1 [cultist], 1 [tablet], and 1 [elder_thing] to the túi hỗn mang.",
+      "back_flavor": "Với nhân viên trong tay, bạn lao thẳng lên đồi và băng qua khu rừng nơi bạn đến lần đầu, với hy vọng tìm được đường quay lại Lô C."
+    }
+  },
+  {
+    "code": "72038",
+    "type": "act",
+    "pack": "film_fatale",
+    "scenario": "Forgotten Island",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Destroy the Source",
+      "text": "Each Possessed Extra gets +2 health, +2 evade, and gains alert and the [[Dinosaur]] trait.\n[fast] Spend 1 [per_investigator] clues, as a group: Search the top 6 cards of the encounter deck for an enemy and spawn it at the location with the most investigators.\n<b>Objective</b> - Shatter the staff. If the Staff of the Serpent is defeated, advance.",
+      "flavor": "Prehistoric terrors have begun to overrun Lot C. The staff's power is warping reality. To end this nightmare, you must destroy it!",
+      "back_name": "Reality Restored",
+      "back_text": "<b>(→R3)</b>.",
+      "back_flavor": "You struggle to channel the staff's power back in on itself while dodging all manner of cinematic horrors brought to life. The golden serpent head stares at you menacingly, the green jewel in its mouth making your very bones vibrate. The sounds of dinosaur and alien insects and stalking creatures of the night rage around you in a tumultuous cacophony.\nAnd then the gem fractures, the sound of its crack echoes in your head like a thunderous crash. The other sounds fade away, and the staff dissolves into dust in your hands, blowing away on a wind you cannot feel."
+    },
+    "vi_current": {
+      "name": "Phá Hủy Nguồn",
+      "text": "Mỗi Sở hữu thêm nhận +2 health, +2 evade, đồng thời nhận được alert và đặc điểm [[Dinosaur]].\n[fast] Chi 1 [per_investigator] manh mối, theo nhóm: Tìm kiếm 6 lá bài hàng đầu của chồng bài encounter để tìm kẻ địch và spawn nó tại địa điểm có nhiều các điều tra viên nhất.\n<b>Objective</b> - Đập vỡ cây trượng. Nếu Quyền Trượng Rắn bị đánh bại, advance.",
+      "flavor": "Nỗi kinh hoàng thời tiền sử đã bắt đầu tràn ngập Lô C. Sức mạnh của đội trượng đang bóp méo hiện thực. Để kết thúc cơn ác mộng này, bạn phải tiêu diệt nó!",
+      "back_name": "Reality Restored",
+      "back_text": "<b>(→R3)</b>.",
+      "back_flavor": "Bạn đấu tranh để truyền lại sức mạnh của nhân viên trong khi né tránh mọi hình thức kinh hoàng trong điện ảnh. Đầu rắn vàng nhìn chằm chằm vào bạn đầy đe dọa, viên ngọc xanh trong miệng nó khiến xương cốt bạn rung lên. Âm thanh của khủng long, côn trùng ngoài hành tinh và những sinh vật rình rập trong đêm hoành hành xung quanh bạn trong một bản giao hưởng hỗn loạn.\nVà rồi viên đá quý vỡ ra, âm thanh vết nứt của nó vang vọng trong đầu bạn như tiếng sấm sét. Những âm thanh khác biến mất, và cây trượng tan thành bụi trong tay bạn, thổi bay theo cơn gió mà bạn không thể cảm nhận được."
+    }
+  },
+  {
+    "code": "72048",
+    "type": "act",
+    "pack": "film_fatale",
+    "scenario": "Abominable Contessa",
+    "source_file": null,
+    "audit_flags": [
+      "flavor: untranslated"
+    ],
+    "en": {
+      "name": "The Abominable Contessa",
+      "text": "Each Possessed Extra gets +1 fight, +1 health, and gains elusive.\nExhausted enemies cannot be damaged.\n<b>Objective</b> - When the round ends, if the Accursed Cape is in the victory display, advance.",
+      "flavor": "You and André have found yourselves trapped in a horror film... and you are the victims. You have to find the Contessa and wrest her cursed cape from her!",
+      "back_name": "Return from the Castle",
+      "back_text": "If The Contessa is in play, heal all damage from her and set her aside, out of play. Discard each enemy in play. Move each investigator to Gothic Set. Each investigator loses all of their clues.\nAdd each location with <b>victory X</b> and no clues on it to the victory display. Remove each [[Castle]] location from the game. Put each set-aside [[Set]] location into play, unrevealed, along with the Central Lot, <i>(Blurred)</i> side faceup.\nSearch all out-of-play areas for The Contessa and spawn her at the Central Lot, <i>(Enraged)</i> side faceup. Search the victory display for the Accursed Cape and attach it to her.\nShuffle the top 2 cards of the Reel deck into the encounter deck, along with the encounter discard pile.\nAdd 1 [cultist], 1 [tablet], and 1 [elder_thing] to the chaos bag.",
+      "back_flavor": "The Contessa vanishes into a cloud of bats. You find yourself back in Lot C, but things have grown stranger..."
+    },
+    "vi_current": {
+      "name": "Contessa Đáng Ghê Tởm",
+      "text": "Mỗi Sở hữu bổ sung nhận +1 fight, +1 health và nhận được elusive.\nExhausted các kẻ địch không thể bị hỏng.\n<b>Objective</b> - Khi vòng đấu kết thúc, nếu Áo choàng đáng nguyền rủa nằm trong khu vực trưng bày thành tích, advance.",
+      "flavor": "You and André have found yourselves trapped in a horror film... and you are the victims. You have to find the Contessa and wrest her cursed cape from her!",
+      "back_name": "Return from the Castle",
+      "back_text": "If The Contessa is trong màn chơi, heal all damage from her and set her aside, ngoài màn chơi. Discard each enemy trong màn chơi. Move each investigator to Gothic Set. Each investigator loses all of their manh mối.\nAdd each location with <b>victory X</b> and no manh mối on it to the khu vực trưng bày thành tích. Remove each [[Castle]] location from the game. Put each set-aside [[Set]] location into play, unrevealed, along with the Central Lot, <i>(Blurred)</i> side faceup.\nSearch all out-of-play areas for The Contessa and spawn her at the Central Lot, <i>(Enraged)</i> side faceup. Search the khu vực trưng bày thành tích for the Accursed Cape and attach it to her.\nShuffle the top 2 cards of the Reel deck into the chồng bài encounter, along with the chồng bài encounter bỏ.\nAdd 1 [cultist], 1 [tablet], and 1 [elder_thing] to the túi hỗn mang.",
+      "back_flavor": "Contessa biến mất thành một đám dơi. Bạn thấy mình quay trở lại Lô C, nhưng mọi thứ trở nên xa lạ hơn..."
+    }
+  },
+  {
+    "code": "72049",
+    "type": "act",
+    "pack": "film_fatale",
+    "scenario": "Abominable Contessa",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated",
+      "back_flavor: untranslated"
+    ],
+    "en": {
+      "name": "Bloodbath",
+      "text": "Each Possessed Extra gets +2 fight, +2 health, and gains patrol (The Contessa) and the [[Monster]] trait.\n[fast] Spend 1 clue: Deal 1 damage to an enemy at your location.\n<b>Objective</b> - Finish her! If The Contessa is defeated, advance.",
+      "flavor": "An unnatural darkness overtakes Lot C. The Contessa has reclaimed her cape! If you hope to survive, you will need to defeat her once and for all.",
+      "back_name": "The Sundered Cape",
+      "back_text": "<b>(→R4)</b>.",
+      "back_flavor": "\"Fools! I am darkness. I AM THE NIGHT!\" The Contessa bellows. The monstrous vampire claws at André as he struggles to pull the accursed cape off her. You hold her at bay until, with a final tug, André rips the cape in two. In a flash, sunlight cuts through the darkness overhead. The Contessa lets out one final scream, then explodes into a pile of grave dirt. All that is left of her is the blood red cape, torn to shreds."
+    },
+    "vi_current": {
+      "name": "Tắm Máu",
+      "text": "Mỗi Sở hữu bổ sung nhận +2 fight, +2 health và nhận được patrol (The Contessa) và đặc điểm [[Monster]].\n[fast] Chi 1 manh mối: Chia 1 damage cho kẻ địch tại địa điểm của bạn.\n<b>Objective</b> - Kết liễu cô ta! Nếu The Contessa bị đánh bại, advance.",
+      "flavor": "Một bóng tối bất thường bao trùm Lô C. Contessa đã lấy lại được áo choàng của mình! Nếu muốn sống sót, bạn sẽ cần phải đánh bại cô ta một lần và mãi mãi.",
+      "back_name": "The Sundered Cape",
+      "back_text": "<b>(→R4)</b>.",
+      "back_flavor": "\"Fools! I am darkness. I AM THE NIGHT!\" The Contessa bellows. The monstrous vampire claws at André as he struggles to pull the accursed cape off her. You hold her at bay until, with a final tug, André rips the cape in two. In a flash, sunlight cuts through the darkness overhead. The Contessa lets out one final scream, then explodes into a pile of grave dirt. All that is left of her is the blood red cape, torn to shreds."
+    }
+  }
+]

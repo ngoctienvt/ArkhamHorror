@@ -1,0 +1,29 @@
+[
+  {
+    "code": "05331",
+    "type": "act",
+    "pack": "bbt",
+    "scenario": "Before the Black Throne",
+    "source_file": null,
+    "audit_flags": [
+      "flavor: dup [('05331', 'flavor'), ('54057', 'flavor')]",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "What Must Be Done",
+      "text": "[action] Spend X clues: Draw the top X cards of the Cosmos. Choose one to put into play using its \"<b>Cosmos</b> -\" instructions, and move to it. Shuffle the rest back into the Cosmos.\n<b>Objective</b> - If the lead investigator is at The Black Throne and there are no clues on it, advance.",
+      "flavor": "You are close now. You can feel the churning and twisting of aeons in the emptiness around you. Here, in the nucleus of all things - the very center of chaos itself - your objective, and your ultimate fate, lie at hand.",
+      "back_name": "The End",
+      "back_text": "Check Campaign Log.\n- If at least two of the following are true, you may proceed to <b>(→R2)</b>: <i>You accepted your fate</i>, <i>Mesmirizing Flute</i> is listed under \"Mementos Discovered,\" and <i>Ritual Components</i> is listed under \"Mementos Discovered.\"\n- If at least two of the following are true, you may proceed to <b>(→R3)</b>: <i>You rejected your fate</i>, <i>Scrap of Torn Shadow</i> is listed under \"Mementos Discovered,\" and <i>Wisp of Spectral Mist</i> is listed under \"Mementos Discovered.\"\n- Otherwise, <b>(→R4)</b>.",
+      "back_flavor": "You stand on a precipice before the Black Throne and gaze up at the blind, voiceless monstronsity that is Azathoth. The mere sight of it causes your vision to blur and your body to shake uncontrollably. The monotonous piping is so loud now, it rattles your bones and nearly causes you to vomit from the force upon your insides. Blood drips from your eyes and your ears.\nShould Azathoth awaken, it will devour every world that ever was. You must act now, before it is too late."
+    },
+    "vi_current": {
+      "name": "Phải Làm gì",
+      "text": "[action] Chi X manh mối: Rút các lá bài X trên cùng của Cosmos. Chọn một để đặt vào màn chơi bằng cách sử dụng hướng dẫn \"<b>Cosmos</b> -\" của nó và di chuyển đến đó. Xáo trộn phần còn lại vào Cosmos.\n<b>Objective</b> - Nếu điều tra viên chính ở The Black Throne và không có manh mối trên đó, thì đó là advance.",
+      "flavor": "Bây giờ bạn đang ở gần. Bạn có thể cảm nhận được sự khuấy động và vặn xoắn của vô số kiếp trong sự trống rỗng xung quanh bạn. Ở đây, trong trung tâm của vạn vật - chính là trung tâm của sự hỗn loạn - mục tiêu và số phận cuối cùng của bạn nằm trong tầm tay.",
+      "back_name": "The End",
+      "back_text": "Check Campaign Log.\n- If at least two of the following are true, you may proceed to <b>(→R2)</b>: <i>You accepted your fate</i>, <i>Mesmirizing Flute</i> is listed under \"Mementos Discovered,\" and <i>Ritual Components</i> is listed under \"Mementos Discovered.\"\n- If at least two of the following are true, you may proceed to <b>(→R3)</b>: <i>You rejected your fate</i>, <i>Scrap of Torn Shadow</i> is listed under \"Mementos Discovered,\" and <i>Wisp of Spectral Mist</i> is listed under \"Mementos Discovered.\"\n- Otherwise, <b>(→R4)</b>.",
+      "back_flavor": "Bạn đứng trên một vách đá trước ngai đen và nhìn lên sinh vật quái dị mù quáng, không có giọng nói đó là Azathoth. Chỉ cần nhìn thấy nó thôi cũng khiến tầm nhìn của bạn mờ đi và cơ thể bạn run rẩy không kiểm soát. Tiếng kêu đơn điệu bây giờ quá ồn ào, khiến xương cốt bạn rung lên và gần như khiến bạn nôn mửa vì lực tác động lên bên trong. Máu chảy ra từ mắt và tai của bạn.\nNếu Azathoth thức tỉnh, nó sẽ nuốt chửng mọi thế giới từng tồn tại. Bạn phải hành động ngay bây giờ, trước khi quá muộn."
+    }
+  }
+]

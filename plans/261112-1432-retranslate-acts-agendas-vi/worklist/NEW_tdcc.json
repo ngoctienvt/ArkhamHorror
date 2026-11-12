@@ -1,0 +1,1096 @@
+[
+  {
+    "code": "11502",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "One Last Job",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11502', 'text'), ('11503', 'text')]"
+    ],
+    "en": {
+      "name": "Arkham Nightlife",
+      "text": "[reaction] After the last clue is discovered from an [[Arkham]] location: Discard the top 3 cards of the encounter deck. One at a time, spawn each [[Criminal]] enemy discarded this way at the nearest empty location.",
+      "flavor": "The moon casts long shadows that reach across the ground like searching fingers.\nYou've always seen this city as home, but tonight Arkham feels like another place entirely.",
+      "back_name": "Wrong Neighborhood",
+      "back_text": "Spawn 1 set-aside Gang Enforcer enemy engaged with the investigator with the most clues. Shuffle the encounter discard pile into the encounter deck.",
+      "back_flavor": "Moving quickly down the avenue to your next destination, you see a suspicious-looking woman in a long coat step out from a nearby alley. You turn down a side street to avoid her and nearly run into a man with a wicked scar running down his right cheek. He takes a drag from his cigarette, tosses it to the sidewalk, and glowers at you. You step back only to bump into the woman you saw before. She smiles.\n\"Where you goin', pal? We just wanna talk.\""
+    },
+    "vi_current": {
+      "name": "Cuộc Sống về Đêm của Arkham",
+      "text": "[reaction] Sau khi manh mối cuối cùng được phát hiện từ địa điểm [[Arkham]]: Loại bỏ 3 lá bài trên cùng của chồng bài encounter. Lần lượt, spawn, mỗi kẻ địch [[Criminal]] sẽ bị loại bỏ theo cách này tại địa điểm trống gần nhất.",
+      "flavor": "Trăng đổ bóng dài xuống mặt đất như những ngón tay đang tìm kiếm.\nBạn luôn coi thành phố này là nhà, nhưng tối nay Arkham có cảm giác như một nơi hoàn toàn khác.",
+      "back_name": "Wrong Neighborhood",
+      "back_text": "Spawn 1 set-aside Gang Enforcer enemy engaged with the investigator with the most manh mối. Shuffle the chồng bài encounter bỏ into the chồng bài encounter.",
+      "back_flavor": "Di chuyển nhanh xuống đại lộ để đến điểm đến tiếp theo, bạn thấy một người phụ nữ trông đáng ngờ mặc áo khoác dài bước ra từ con hẻm gần đó. Bạn rẽ vào một con đường phụ để tránh cô ấy và suýt đụng phải một người đàn ông có vết sẹo xấu xí chạy dọc má phải. Anh ta rít một hơi thuốc, ném nó xuống vỉa hè và trừng mắt nhìn bạn. Bạn lùi lại chỉ để va vào người phụ nữ mà bạn đã nhìn thấy trước đó. Cô ấy mỉm cười.\n\"Anh đi đâu thế, anh bạn? Chúng tôi chỉ muốn nói chuyện thôi.\""
+    }
+  },
+  {
+    "code": "11503",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "One Last Job",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11502', 'text'), ('11503', 'text')]",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Long Night",
+      "text": "[reaction] After the last clue is discovered from an [[Arkham]] location: Discard the top 3 cards of the encounter deck. One at a time, spawn each [[Criminal]] enemy discarded this way at the nearest empty location.",
+      "flavor": "Your every step is dogged by both the Sheldons and the O'Bannions. It seems like the two warring gangs have put aside their beef to end your investigation.",
+      "back_name": "Curiosity Killed the Cat",
+      "back_text": "Each surviving investigator is defeated and suffers 1 physical trauma.",
+      "back_flavor": "No matter where you go, there seems to be a mobster waiting in every back alley, standing casually on the street corner, or watching from shop windows and park benches. It's too dangerous to continue your search, so you head back to Tillinghast's shop. A mob of gangsters intercepts you just a block away. The largest among them steps toward you menacingly, a lit cigarette clenched in his teeth, as his mooks restrain you.\n\"Didn't anyone ever tell you that curiosity killed the cat?\" He leans down and puts his cigarette out on your cheek, then nods to his lackeys, who swiftly beat you down with brass knuckles, bare fists, and bricks.\nMessage received."
+    },
+    "vi_current": {
+      "name": "Đêm Dài",
+      "text": "[reaction] Sau khi manh mối cuối cùng được phát hiện từ địa điểm [[Arkham]]: Loại bỏ 3 lá bài trên cùng của chồng bài encounter. Lần lượt, spawn, mỗi kẻ địch [[Criminal]] sẽ bị loại bỏ theo cách này tại địa điểm trống gần nhất.",
+      "flavor": "Mỗi bước đi của bạn đều bị theo dõi bởi cả Sheldon và O'Bannions. Có vẻ như hai băng nhóm tham chiến đã gác lại thịt bò để kết thúc cuộc điều tra của bạn.",
+      "back_name": "Curiosity Killed the Cat",
+      "back_text": "Each surviving investigator is defeated and suffers 1 physical trauma.",
+      "back_flavor": "Bất kể bạn đi đâu, dường như luôn có một tên cướp đang rình rập ở mọi con hẻm, đứng thản nhiên ở góc phố hoặc quan sát từ cửa sổ các cửa hàng và ghế đá công viên. Sẽ quá nguy hiểm nếu tiếp tục tìm kiếm nên bạn quay lại cửa hàng của Tillinghast. Một đám côn đồ chặn bạn chỉ cách đó một dãy nhà. Người lớn nhất trong số họ bước về phía bạn một cách đầy đe dọa, điếu thuốc đang cháy được nghiến chặt trong răng khi những kẻ lừa đảo của anh ta kiềm chế bạn.\n“Chưa có ai nói với bạn rằng sự tò mò đã giết chết con mèo sao?” Anh ta cúi xuống và dụi điếu thuốc vào má bạn, rồi gật đầu với tay sai của mình, những kẻ nhanh chóng hạ gục bạn bằng đốt ngón tay đồng, nắm đấm trần và gạch.\nĐã nhận được tin nhắn."
+    }
+  },
+  {
+    "code": "11504",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "One Last Job",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11504', 'text'), ('11505', 'text')]",
+      "flavor: dup [('11504', 'flavor'), ('11505', 'flavor')]"
+    ],
+    "en": {
+      "name": "Questioning the Gangs",
+      "text": "*This act gets +1 [per_investigator] clue threshold.\n[fast] Spend X clues: <b>Parley.</b> Discard an engaged [[Criminal]] enemy with X remaining health at your location. Place 1 clue <i>(from the token pool)</i> on this act.\n<b>Objective</b> - At the end of the round, if the number of clues on this act equals or exceeds its clue threshold, advance.",
+      "flavor": "You need to find out what happened to Tillinghast's shipment. With the increased gang activity all over Rivertown, you think that checking in with the Sheldons and the O'Bannions is the best place to start."
+    },
+    "vi_current": {
+      "name": "Thẩm Vấn các Băng Nhóm",
+      "text": "*Hành động này nhận được +1 ngưỡng [per_investigator] manh mối.\n[fast] Chi tiêu X manh mối: <b>Parley.</b> Loại bỏ engaged kẻ địch [[Criminal]] với X lượng máu còn lại tại địa điểm của bạn. Đặt 1 manh mối <i>(từ nhóm token)</i> vào hành động này.\n<b>Objective</b> - Khi kết thúc vòng đấu, nếu số lượng manh mối của màn này bằng hoặc vượt quá ngưỡng manh mối của nó, thì advance.",
+      "flavor": "Anh cần tìm hiểu chuyện gì đã xảy ra với chuyến hàng của Tillinghast. Với hoạt động băng đảng ngày càng gia tăng trên khắp Rivertown, bạn nghĩ rằng việc liên hệ với Sheldons và O'Bannions là nơi tốt nhất để bắt đầu."
+    }
+  },
+  {
+    "code": "11505",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "One Last Job",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11504', 'text'), ('11505', 'text')]",
+      "flavor: dup [('11504', 'flavor'), ('11505', 'flavor')]"
+    ],
+    "en": {
+      "name": "Questioning the Gangs",
+      "text": "*This act gets +1 [per_investigator] clue threshold.\n[fast] Spend X clues: <b>Parley.</b> Discard an engaged [[Criminal]] enemy with X remaining health at your location. Place 1 clue <i>(from the token pool)</i> on this act.\n<b>Objective</b> - At the end of the round, if the number of clues on this act equals or exceeds its clue threshold, advance.",
+      "flavor": "You need to find out what happened to Tillinghast's shipment. With the increased gang activity all over Rivertown, you think that checking in with the Sheldons and the O'Bannions is the best place to start."
+    },
+    "vi_current": {
+      "name": "Thẩm Vấn các Băng Nhóm",
+      "text": "*Hành động này nhận được +1 ngưỡng [per_investigator] manh mối.\n[fast] Chi tiêu X manh mối: <b>Parley.</b> Loại bỏ engaged kẻ địch [[Criminal]] với X lượng máu còn lại tại địa điểm của bạn. Đặt 1 manh mối <i>(từ nhóm token)</i> vào hành động này.\n<b>Objective</b> - Khi kết thúc vòng đấu, nếu số lượng manh mối của màn này bằng hoặc vượt quá ngưỡng manh mối của nó, thì advance.",
+      "flavor": "Anh cần tìm hiểu chuyện gì đã xảy ra với chuyến hàng của Tillinghast. Với hoạt động băng đảng ngày càng gia tăng trên khắp Rivertown, bạn nghĩ rằng việc liên hệ với Sheldons và O'Bannions là nơi tốt nhất để bắt đầu."
+    }
+  },
+  {
+    "code": "11506",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "One Last Job",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "The Sheldon Gang",
+      "text": "Sadie Sheldon gains: \"[action] Spend up to 4 resources: <b>Parley.</b> Test [willpower] or [combat] (5). This test gets -1 difficulty for each resource spent as part of this action's cost. For each point you succeed by, place 1 of your clues on Sadie Sheldon.\"\n<b>Objective</b> - When damage is placed on Sadie Sheldon, advance.\n<b>Objective</b> - If there are 3 clues on Sadie Sheldon, advance.",
+      "flavor": "The Sheldons wound up with the shipment. It's up to you to either talk Sadie into a deal, or \"convince\" her it's not worth the trouble.",
+      "back_name": "O'Bannions Come Calling",
+      "back_text": "Spawn the set-aside Naomi O'Bannion and Gang Enforcer enemies at Hibb's Roadhouse. Search the encounter deck and discard pile for 1 copy of Gang Soldier and spawn it at Hibb's Roadhouse.\nIf there is at least 1 clue on Sadie Sheldon, place 2 damage on Naomi O'Bannion. Move up to 2 clues from Sadie Sheldon to any non-[[Elite]], [[Criminal]] enemies at Hibb's Roadhouse.\nEach enemy with clues on it disengages from each investigator and gains aloof <i>(while there are clues on it)</i>.",
+      "back_flavor": "Your negotiations are cut short as Naomi O'Bannion strides into Hibb's Roadhouse, accompanied by a pair of mobsters.\n\"That shipment is mine, Sadie\" she says coldly. You duck down as her goons pull out their rifles and spray the walls and furniture with a hail of bullets."
+    },
+    "vi_current": {
+      "name": "Băng Đảng Sheldon",
+      "text": "Sadie Sheldon đạt được: \"[action] Chi tiêu tối đa 4 resource: <b>Parley.</b> Kiểm tra [willpower] hoặc [combat] (5). Bài kiểm tra này có -1 độ khó cho mỗi resource được chi tiêu như một phần chi phí của hành động này. Đối với mỗi điểm bạn thành công, hãy đặt 1 trong số manh mối của bạn cho Sadie Sheldon.\"\n<b>Objective</b> - Khi damage được đặt trên Sadie Sheldon, advance.\n<b>Objective</b> - Nếu có 3 manh mối trên Sadie Sheldon, advance.",
+      "flavor": "Gia đình Sheldons đã hoàn thành chuyến hàng. Bạn có quyền nói chuyện với Sadie về một thỏa thuận hoặc \"thuyết phục\" cô ấy rằng điều đó không đáng phải bận tâm.",
+      "back_name": "O'Bannions Come Calling",
+      "back_text": "Spawn the set-aside Naomi O'Bannion and Gang Enforcer enemies at Hibb's Roadhouse. Search the chồng bài encounter and chồng bài bỏ for 1 copy of Gang Soldier and spawn it at Hibb's Roadhouse.\nIf there is at least 1 manh mối on Sadie Sheldon, place 2 damage on Naomi O'Bannion. Move up to 2 manh mối from Sadie Sheldon to any non-[[Elite]], [[Criminal]] enemies at Hibb's Roadhouse.\nEach enemy with manh mối on it disengages from each investigator and gains aloof <i>(while there are manh mối on it)</i>.",
+      "back_flavor": "Cuộc đàm phán của bạn bị gián đoạn khi Naomi O'Bannion sải bước vào Hibb's Roadhouse, cùng với hai tên cướp.\n\"Lô hàng đó là của tôi, Sadie\" cô lạnh lùng nói. Bạn cúi xuống khi bọn côn đồ của cô ấy rút súng trường ra và bắn một loạt đạn vào tường và đồ nội thất."
+    }
+  },
+  {
+    "code": "11507",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "One Last Job",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "The O'Bannion Gang",
+      "text": "Naomi O'Bannion gains: \"[action] Spend up to 4 resources: <b>Parley.</b> Test [intellect] or [agility] (5). This test gets -1 difficulty for each resource spent as part of this action's cost. For each point you succeed by, place 1 of your clues on Naomi O'Bannion.\"\n<b>Objective</b> - When damage is placed on Naomi O'Bannion, advance.\n<b>Objective</b> - If there are 3 clues on Naomi O'Bannion, advance.",
+      "flavor": "The O'Bannions nicked Tillinghast's shipment. It's up to you to either talk Naomi into a deal, or \"convince\" her it's not worth the trouble.",
+      "back_name": "Sheldons Come Calling",
+      "back_text": "Spawn the set-aside Sadie Sheldon and Gang Enforcer enemies at La Bella Luna. Search the encounter deck and discard pile for 1 copy of Gang Soldier and spawn it at La Bella Luna.\nIf there is at least 1 clue on Naomi O'Bannion, place 2 damage on Sadie Sheldon. Move up to 2 clues from Naomi O'Bannion to any non-[[Elite]], [[Criminal]] enemies at La Bella Luna.\nEach enemy with clues on it disengages from each investigator and gains aloof <i>(while there are clues on it)</i>.",
+      "back_flavor": "There is a sound of a struggle at the entrance to the swanky lounge, followed by a muffled scream. Sadie Sheldon bursts into La Bella Luna accompanied by several rough-and-tumble mooks. They crack their knuckles when they see you, and advance at Sheldon's signal."
+    },
+    "vi_current": {
+      "name": "Băng Đảng O'bannion",
+      "text": "Naomi O'Bannion đạt được: \"[action] Chi tiêu tối đa 4 resource: <b>Parley.</b> Kiểm tra [intellect] hoặc [agility] (5). Thử nghiệm này có -1 độ khó cho mỗi resource được sử dụng như một phần chi phí của hành động này. Với mỗi điểm bạn đạt được, hãy đặt 1 trong số manh mối của bạn cho Naomi O'Bannion.\"\n<b>Objective</b> - Khi damage được đặt trên Naomi O'Bannion, advance.\n<b>Objective</b> - Nếu có 3 manh mối trên Naomi O'Bannion, advance.",
+      "flavor": "Nhà O'Bannions đã đánh cắp chuyến hàng của Tillinghast. Bạn có quyền nói chuyện với Naomi về một thỏa thuận hoặc \"thuyết phục\" cô ấy rằng việc đó không đáng phải bận tâm.",
+      "back_name": "Sheldons Come Calling",
+      "back_text": "Spawn the set-aside Sadie Sheldon and Gang Enforcer enemies at La Bella Luna. Search the chồng bài encounter and chồng bài bỏ for 1 copy of Gang Soldier and spawn it at La Bella Luna.\nIf there is at least 1 manh mối on Naomi O'Bannion, place 2 damage on Sadie Sheldon. Move up to 2 manh mối from Naomi O'Bannion to any non-[[Elite]], [[Criminal]] enemies at La Bella Luna.\nEach enemy with manh mối on it disengages from each investigator and gains aloof <i>(while there are manh mối on it)</i>.",
+      "back_flavor": "Có tiếng vật lộn ở lối vào phòng khách sang trọng, sau đó là một tiếng hét bị bóp nghẹt. Sadie Sheldon xông vào La Bella Luna kèm theo một số trò đùa thô bạo và lộn xộn. Họ bẻ khớp ngón tay khi nhìn thấy bạn và tiến lên theo tín hiệu của Sheldon."
+    }
+  },
+  {
+    "code": "11508",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "One Last Job",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Face the Music",
+      "text": "Each [[Criminal]] enemy with clues on it gains aloof.\n[action] Remove 1 clue from a [[Criminal]] enemy at your location: <b>Parley.</b> That enemy deals its damage to another enemy at your location.\n<b>Objective</b> - When the round ends, if there is at least 1 [[Elite]] enemy in the victory display, advance.",
+      "flavor": "You've found yourself squarely in the center of a gang war!",
+      "back_name": "Gang Wars",
+      "back_text": "<b>(→R1)</b> <i>(page 5)</i>.",
+      "back_flavor": "As the conflict erupts into outright bloodshed, you locate a small crate labeled \"Tillinghast Endeavors\" in a back room. Keeping low to the ground, you scamper through the fight and back out to the cold evening air. The sound of shattering glass and heavy blows emanates from the building behind you.\n\"Aw, applesauce,\" says a voice above you. A compact figure clad in black slides down a rappelling line and removes their mask. \"I had a whole heist planned, you know. An informant. A <i>calling card</i>, even,\" Ruby says, tossing a yellow rose on the pavement. \"I didn't think you could just walk in and ask politely, but, well, I guess you won fair and square.\""
+    },
+    "vi_current": {
+      "name": "Đối Mặt với âm Nhạc",
+      "text": "Mỗi kẻ địch [[Criminal]] có manh mối trên đó sẽ tăng aloof.\n[action] Xóa 1 manh mối khỏi kẻ địch [[Criminal]] tại địa điểm của bạn: <b>Parley.</b> kẻ địch đó giao damage của nó cho kẻ địch khác tại địa điểm của bạn.\n<b>Objective</b> - Khi vòng đấu kết thúc, nếu có ít nhất 1 kẻ địch [[Elite]] trong khu vực trưng bày thành tích, advance.",
+      "flavor": "Bạn đã thấy mình là trung tâm của một cuộc chiến băng đảng!",
+      "back_name": "Gang Wars",
+      "back_text": "<b>(→R1)</b> <i>(page 5)</i>.",
+      "back_flavor": "Khi xung đột nổ ra dẫn đến đổ máu hoàn toàn, bạn tìm thấy một chiếc thùng nhỏ có nhãn \"Tillinghast Endeavors\" ở phòng sau. Giữ mình thấp xuống đất, bạn chạy nhanh qua cuộc chiến và quay trở lại với không khí lạnh lẽo của buổi tối. Âm thanh kính vỡ và những cú va chạm nặng nề phát ra từ tòa nhà phía sau bạn.\n\"Ồ, nước sốt táo,\" một giọng nói vang lên phía trên bạn. Một nhân vật nhỏ bé mặc đồ đen trượt xuống dây leo và tháo mặt nạ của họ. \"Tôi đã lên kế hoạch cho cả một vụ trộm, bạn biết đấy. Một người cung cấp thông tin. Thậm chí một thẻ gọi điện <i></i>,\" Ruby nói, ném một bông hồng vàng xuống vỉa hè. \"Tôi không nghĩ bạn có thể bước vào và hỏi một cách lịch sự, nhưng, tôi đoán bạn đã thắng một cách công bằng.\""
+    }
+  },
+  {
+    "code": "11518",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "The Western Wall",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Flooded Paths",
+      "text": "Each location is connected to each other location on the rows above and below it.\n<b>Forced</b> - When your turn begins, if you are at a fully flooded location, you struggle for air: When your turn ends, if you did not enter an unflooded or partially flooded location or decrease the flood level of your current location, take 5 direct damage.",
+      "flavor": "You can navigate a path through the crumbling ruins via small pockets of air.",
+      "back_name": "The Wrong Step",
+      "back_text": "Each surviving investigator is defeated and suffers 1 mental trauma.",
+      "back_flavor": "One wrong step sends you careening away from the ruined wall. As you look out into the abyssal darkness of the ocean depths, you have the illusion of drifting in the vastness of space. It is utterly serene. A sharp tug pulls your attention away: your line is caught on a falling chunk of foundation. Another sharp tug follows. You are drawn back to safety, but not without a heavy bruise and some wounded pride."
+    },
+    "vi_current": {
+      "name": "Đường Ngập Nước",
+      "text": "Mỗi địa điểm được kết nối với tất cả các địa điểm khác ở các hàng bên trên và bên dưới nó.\n<b>Forced</b> - Khi lượt của bạn bắt đầu, nếu bạn đang ở địa điểm bị ngập hoàn toàn, bạn sẽ phải cố gắng tìm không khí: Khi lượt của bạn kết thúc, nếu bạn không đi vào địa điểm không bị ngập hoặc ngập một phần hoặc giảm mực nước lũ của địa điểm hiện tại của bạn, hãy đi 5 direct damage.",
+      "flavor": "Bạn có thể định hướng một con đường xuyên qua đống đổ nát thông qua những túi không khí nhỏ.",
+      "back_name": "The Wrong Step",
+      "back_text": "Each surviving investigator is defeated and suffers 1 mental trauma.",
+      "back_flavor": "Một bước sai lầm sẽ khiến bạn nghiêng khỏi bức tường đổ nát. Khi nhìn vào bóng tối thăm thẳm của đáy đại dương sâu thẳm, bạn có ảo giác mình đang trôi dạt trong không gian bao la. Nó hoàn toàn thanh thản. Một lực kéo mạnh sẽ thu hút sự chú ý của bạn: dây câu của bạn vướng vào một mảng móng đang rơi xuống. Tiếp theo là một lực kéo mạnh khác. Bạn được kéo trở lại nơi an toàn, nhưng không phải không có vết bầm tím nặng nề và niềm kiêu hãnh bị tổn thương."
+    }
+  },
+  {
+    "code": "11519",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "The Western Wall",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Descend into the Abyss",
+      "text": "[fast] Spend 1 [per_investigator] clues, as a group: Decrease your location's flood level.\n<b>Objective</b> – Make your way to the sea floor! If each surviving investigator is at Obsidian Foundations, you may advance.",
+      "flavor": "A softly pulsing light at the base of the ancient foundations beckons you to the sea floor. You must proceed carefully.",
+      "back_name": "The Oceaen Depths",
+      "back_text": "<b>(→R1)</b> <i>(page 15)</i>.",
+      "back_flavor": "Andy Van Nortwick is the last to tumble into the ring of black columns at the base of the city. He looks out in awe at a shimmering energy field in the center of the underwater plaza. The field ripples around the columns like a persistent bubble, creating a pocket of breathable air. A long meandering tunnel winds from your position to the entrance of the underwater dome. You have reached the sea floor at last."
+    },
+    "vi_current": {
+      "name": "Rơi Xuống Vực Thẳm",
+      "text": "[fast] Tiêu 1 [per_investigator] manh mối, theo nhóm: Giảm mức lũ địa điểm của bạn.\n<b>Objective</b> – Tiến tới đáy biển! Nếu mỗi điều tra viên còn sống sót đều ở Obsidian Foundations, bạn có thể advance.",
+      "flavor": "Ánh sáng xung động nhẹ nhàng ở chân nền móng cổ xưa vẫy gọi bạn đến đáy biển. Bạn phải tiến hành cẩn thận.",
+      "back_name": "The Oceaen Depths",
+      "back_text": "<b>(→R1)</b> <i>(page 15)</i>.",
+      "back_flavor": "Andy Van Nortwick là người cuối cùng lao vào vòng cột đen ở chân thành phố. Anh kinh ngạc nhìn ra trường năng lượng lung linh ở trung tâm quảng trường dưới nước. Cánh đồng gợn sóng xung quanh các cột như bong bóng dai dẳng, tạo ra một túi không khí dễ thở. Một đường hầm dài uốn khúc uốn lượn từ vị trí của bạn đến lối vào mái vòm dưới nước. Cuối cùng bạn đã đến được đáy biển."
+    }
+  },
+  {
+    "code": "11520",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "The Western Wall",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Ascend the Wall",
+      "text": "[fast] Spend 1 [per_investigator] clues, as a group: Decrease your location's flood level.\n<b>Objective</b> – Make your way to the surface! If each surviving investigator is at Western Wall, you may advance.",
+      "flavor": "It is a steep climb up the crumbling wall, but if you step carefully, you should reach the surface in one piece.",
+      "back_name": "Return to the Surface",
+      "back_text": "<b>(→R2)</b> <i>(page 15)</i>.",
+      "back_flavor": "Ruby helps you up the slick black rocks to stand on the edge of what was once an ancient walkway. R'lyeh has risen noticeably since you arrived: the sunken western wall tower precariously over the turgid waters like an ancient citadel. The bay where you first made camp has receded as well. Not far off, you can see the <i>Cassandra</i> bob on the black waves. It won't be a long trek back to where you made landfall."
+    },
+    "vi_current": {
+      "name": "Lên Tường",
+      "text": "[fast] Tiêu 1 [per_investigator] manh mối, theo nhóm: Giảm mức lũ địa điểm của bạn.\n<b>Objective</b> – Hãy lên mặt nước! Nếu mỗi điều tra viên còn sống sót đều ở Western Wall, bạn có thể advance.",
+      "flavor": "Leo lên bức tường đổ nát là một chặng đường dốc, nhưng nếu bước cẩn thận, bạn sẽ chạm tới bề mặt nguyên vẹn.",
+      "back_name": "Return to the Surface",
+      "back_text": "<b>(→R2)</b> <i>(page 15)</i>.",
+      "back_flavor": "Ruby giúp bạn leo lên những tảng đá đen bóng để đứng trên rìa của nơi từng là lối đi cổ xưa. R'lyeh đã trỗi dậy đáng chú ý kể từ khi bạn đến: tòa tháp tường phía tây chìm chênh vênh trên mặt nước cuồn cuộn như một tòa thành cổ. Vịnh nơi bạn cắm trại lần đầu tiên cũng đã rút đi. Cách đó không xa, bạn có thể nhìn thấy <i>Cassandra</i> bồng bềnh trên làn sóng đen. Sẽ không phải là một chuyến đi dài để trở lại nơi bạn đã đổ bộ."
+    }
+  },
+  {
+    "code": "11537",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "The Drowned Quarter",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11537', 'text'), ('11538', 'text')]"
+    ],
+    "en": {
+      "name": "The Sunken Ruins",
+      "text": "<b>Forced</b> - When your turn begins, if you are at a fully flooded location, you struggle for air: When your turn ends, if you did not enter an unflooded or partially flooded location or decrease the flood level of your current location, take 5 direct damage.",
+      "flavor": "Chunks of R'lyeh's foundation continue to fall, threatening the seafloor dome."
+    },
+    "vi_current": {
+      "name": "Tàn Tích Chìm",
+      "text": "<b>Forced</b> - Khi lượt của bạn bắt đầu, nếu bạn đang ở địa điểm bị ngập hoàn toàn, bạn sẽ phải cố gắng tìm không khí: Khi lượt của bạn kết thúc, nếu bạn không đi vào địa điểm không bị ngập hoặc ngập một phần hoặc giảm mực nước lũ của địa điểm hiện tại của bạn, hãy đi 5 direct damage.",
+      "flavor": "Các khối móng của R'lyeh tiếp tục rơi xuống, đe dọa mái vòm dưới đáy biển."
+    }
+  },
+  {
+    "code": "11538",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "The Drowned Quarter",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11537', 'text'), ('11538', 'text')]",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Collapsing Dome",
+      "text": "<b>Forced</b> - When your turn begins, if you are at a fully flooded location, you struggle for air: When your turn ends, if you did not enter an unflooded or partially flooded location or decrease the flood level of your current location, take 5 direct damage.",
+      "flavor": "The dome won't hold up much longer against the barrage of falling rock.",
+      "back_name": "Après Toi, le Deluge",
+      "back_text": "Each surviving investigator is defeated and suffers 1 physical trauma.",
+      "back_flavor": "\"The dome could burst at any second. We have to get out!\" one of your expedition mates shouts, pointing to the sputtering energy field. You and the other expedition members sustain extensive injuries in your escape. You've just barely reached the entrance when you hear a loud crash. The shimmering energy field bursts like a bubble as the ocean finally overwhelms the ancient dome."
+    },
+    "vi_current": {
+      "name": "Mái Vòm Sụp đổ",
+      "text": "<b>Forced</b> - Khi lượt của bạn bắt đầu, nếu bạn đang ở địa điểm bị ngập hoàn toàn, bạn sẽ phải cố gắng tìm không khí: Khi lượt của bạn kết thúc, nếu bạn không đi vào địa điểm không bị ngập hoặc ngập một phần hoặc giảm mực nước lũ của địa điểm hiện tại của bạn, hãy đi 5 direct damage.",
+      "flavor": "Mái vòm sẽ không trụ được lâu nữa trước hàng loạt đá rơi xuống.",
+      "back_name": "Après Toi, le Deluge",
+      "back_text": "Each surviving investigator is defeated and suffers 1 physical trauma.",
+      "back_flavor": "\"Mái vòm có thể vỡ bất cứ lúc nào. Chúng ta phải thoát ra ngoài!\" một trong những người bạn cùng đoàn thám hiểm của bạn hét lên, chỉ vào trường năng lượng đang phun trào. Bạn và các thành viên đoàn thám hiểm khác bị thương nặng trong quá trình trốn thoát. Bạn vừa mới đến được lối vào thì nghe thấy một tiếng va chạm lớn. Trường năng lượng lung linh vỡ tung như bong bóng khi đại dương cuối cùng cũng tràn ngập mái vòm cổ kính."
+    }
+  },
+  {
+    "code": "11539",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "The Drowned Quarter",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Reactivate the Core",
+      "text": "Each location is connected to each location adjacent to it.\n[fast] Spend 1 [per_investigator] clues, as a group: Decrease your location's flood level.\n<b>Objective</b> – At the end of the round, if each surviving investigator is at Barrier Core <i>(Active)</i>, you may advance. <i>(Hint: Reactivate the Barrier Core by revealing and draining locations!)</i>",
+      "flavor": "You can't open the barrier core until the undersea dome is at least partially drained.",
+      "back_name": "The Sphere",
+      "back_text": "<b>If an investigator controls the Barrier Node:</b>\n<blockquote><i>The strange orb sends a ripple of energy throughout the orrery and the surrounding dome. By pulling the node free, you have stolen the only thing powering the dome. A tremor shakes the structure as the energy field up above begins to dissipate!</i></blockquote>\n<b>(→R1)</b> <i>(page 18)</i>.\n<hr><b>Otherwise:</b>\n<blockquote><i>The alien machinery hums with an otherworldly current. Overhead, a massive chunk of rock falls from the foundation and passes through the flickering energy field. The structure seems to have been stabilized.</i></blockquote>\n<b>(→R2)</b> <i>(page 18)</i>"
+    },
+    "vi_current": {
+      "name": "Kích Hoạt Lại Lõi",
+      "text": "Mỗi địa điểm được kết nối với mỗi địa điểm liền kề với nó.\n[fast] Tiêu 1 [per_investigator] manh mối, thành một nhóm: Giảm mức lũ địa điểm của bạn.\n<b>Objective</b> – Khi kết thúc vòng đấu, nếu mỗi điều tra viên sống sót đều ở Barrier Core <i>(Active)</i>, bạn có thể advance. <i>(Gợi ý: Kích hoạt lại Lõi rào cản bằng cách lộ ra và hút hết các địa điểm!)</i>",
+      "flavor": "Bạn không thể mở lõi rào chắn cho đến khi mái vòm dưới đáy biển ít nhất đã cạn nước một phần.",
+      "back_name": "The Sphere",
+      "back_text": "<b>If an investigator controls the Barrier Node:</b>\n<blockquote><i>The strange orb sends a ripple of energy throughout the orrery and the surrounding dome. By pulling the node free, you have stolen the only thing powering the dome. A tremor shakes the structure as the energy field up above begins to dissipate!</i></blockquote>\n<b>(→R1)</b> <i>(page 18)</i>.\n<hr><b>Otherwise:</b>\n<blockquote><i>The alien machinery hums with an otherworldly current. Overhead, a massive chunk of rock falls from the foundation and passes through the flickering energy field. The structure seems to have been stabilized.</i></blockquote>\n<b>(→R2)</b> <i>(page 18)</i>"
+    }
+  },
+  {
+    "code": "11554",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "The Apiary",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Stirring in the Dark",
+      "flavor": "You can hear the sound of slithering and gnashing teeth in the darkness. Something awful stirs in the bowels of R'lyeh. You would rather not stick around to find out what it actually is...",
+      "back_name": "Swallowed Whole",
+      "back_text": "Place clues on each location without <b>victory X</b> up to its clue value.\nShuffle the set-aside Grotesque Amalgam enemy with the encounter discard pile and place those cards on the bottom of the encounter deck.",
+      "back_flavor": "The tunnels branch and merge like blood vessels in a vast alien gullet. Every surface is covered in fleshy organic growths. What you first thought were tremors were the tunnels themselves: tightening and expanding like the muscles of a large trachea. As you round a corner, you see a nightmarish creature with sightless, buggy eyes slither out of sight."
+    },
+    "vi_current": {
+      "name": "Khuấy Động trong Bóng Tối",
+      "flavor": "Bạn có thể nghe thấy âm thanh trườn và nghiến răng trong bóng tối. Có điều gì đó khủng khiếp khuấy động trong lòng R'lyeh. Bạn thà không ở lại để tìm hiểu xem nó thực sự là gì...",
+      "back_name": "Swallowed Whole",
+      "back_text": "Place manh mối on each location without <b>victory X</b> up to its manh mối value.\nShuffle the set-aside Grotesque Amalgam enemy with the chồng bài encounter bỏ and place those cards on the bottom of the chồng bài encounter.",
+      "back_flavor": "Các đường hầm phân nhánh và hợp nhất như những mạch máu trong một cái thực quản rộng lớn của người ngoài hành tinh. Mọi bề mặt đều được bao phủ bởi sự tăng trưởng hữu cơ nhiều thịt. Điều đầu tiên bạn nghĩ đến là chấn động chính là các đường hầm: co lại và giãn ra giống như các cơ của một khí quản lớn. Khi bạn vòng qua một góc phố, bạn nhìn thấy một sinh vật ác mộng với đôi mắt bọ, mù lòa trườn ra khỏi tầm mắt."
+    }
+  },
+  {
+    "code": "11555",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "The Apiary",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Loathsome Parasites",
+      "text": "<b>Forced</b> - When doom is placed on this agenda, if there are no non-[[Elite]] enemies in play: Reveal cards from the top of the encounter deck until an enemy is revealed and spawn it (at an empty location, if able). Shuffle each other revealed card and place them on top of the encounter deck.",
+      "flavor": "Loathsome creatures emerge from every nook and cranny. If you don't escape soon, you have a feeling you'll become a permanent resident.",
+      "back_name": "Chewed Up",
+      "back_text": "Each investigator who has not resigned is defeated.",
+      "back_flavor": "A horde of stinking pustulous creatures chases you into a dark culvert. You hide within a fleshy fold of wall and hope for the best. After what feels like hours, the halls grow silent. Breathing a sigh of relief, you try to push the fold back only to find it has latched onto your arm with a sticky, gluey substance. As you try to pull away from it, the skin on your hand and arm sloughs off loosely, and with little pain. You stare in horror at your degloved palm. An orange tendril snakes past your ear to encircle your neck. You are being digested alive."
+    },
+    "vi_current": {
+      "name": "Ký Sinh Trùng Đáng Ghét",
+      "text": "<b>Forced</b> - Khi doom được đưa vào agenda này, nếu không có ai không phải các kẻ địch [[Elite]] trong màn chơi: Hiển thị các thẻ từ đầu chồng bài encounter cho đến khi kẻ địch được hiển thị và spawn nó (tại địa điểm trống, nếu có thể). Xáo trộn các thẻ đã được tiết lộ của nhau và đặt chúng lên trên chồng bài encounter.",
+      "flavor": "Những sinh vật đáng ghét xuất hiện từ mọi ngóc ngách. Nếu không sớm trốn thoát, bạn có cảm giác mình sẽ trở thành thường trú nhân.",
+      "back_name": "Chewed Up",
+      "back_text": "Each investigator who has not resigned is defeated.",
+      "back_flavor": "Một đám sinh vật có mủ hôi hám đuổi theo bạn vào một cái cống tối tăm. Bạn ẩn mình trong một bức tường đầy thịt và hy vọng điều tốt nhất. Sau khoảng thời gian như hàng giờ, hội trường trở nên im lặng. Thở phào nhẹ nhõm, bạn cố gắng đẩy nếp gấp ra sau thì phát hiện nó đã dính chặt vào cánh tay bạn bằng một chất dính như keo. Khi bạn cố gắng thoát ra khỏi nó, da trên bàn tay và cánh tay của bạn sẽ bong ra một cách lỏng lẻo và hơi đau. Bạn kinh hoàng nhìn chằm chằm vào lòng bàn tay bị thoái hóa của mình. Một tua màu cam bò qua tai bạn và quấn quanh cổ bạn. Bạn đang bị tiêu hóa sống."
+    }
+  },
+  {
+    "code": "11556",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "The Apiary",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Unsettling Signs",
+      "text": "[action] Spend 1 or more clues, as a group: For each clue spent, discard the top 5 cards (10 cards instead if there is 1 investigator) of the encounter deck and draw each location discarded by this effect.\n<b>Objective</b> - If each surviving investigator is at a [[Sanctum]] location, investigators may spend the requisite clues, as a group, to advance.<i>(Hint: you may not be able to explore further after you advance.)</i>",
+      "flavor": "The fleshy tunnels excrete a foul, waxy substance that burns the skin. Your destination lies deeper within the disgusting labyrinth.",
+      "back_name": "Heart of the Apiary",
+      "back_text": "<b>If each investigator is at Lost Campsite:</b>\n<blockquote><i>After searching the campsite, you find yourselves surrounded by robed figures holding torches, but no weapons. A soft-faced woman in a patchwork cloak emerges from the crowd. \"Please, don't be alarmed. We have no intention of harming you.\"</i></blockquote>\nEach investigator loses all of their clues.\nProceed to <b>Interlude: Lost Pilgrims</b> <i>(page 21)</i>.<hr><b>If each investigator is at Acidic Coelom:</b>\n<blockquote><i>You hear a hiss, then feel sharp, stinging pain in your back. As you lose consciousness, look around and see a prehensile limb buried in your spine.</i></blockquote>\nEach investigator loses all of their clues.\nProceed to <b>Interlude: The Hive Mind</b> <i>(page 22)</i>."
+    },
+    "vi_current": {
+      "name": "Dấu Hiệu Đáng lo Ngại",
+      "text": "[action] Chi 1 manh mối trở lên, theo nhóm: Với mỗi manh mối đã chi, hãy loại bỏ 5 lá bài trên cùng (thay vào đó là 10 lá bài nếu có 1 điều tra viên) của chồng bài encounter và rút mỗi địa điểm bị loại bỏ do hiệu ứng này.\n<b>Objective</b> - Nếu mỗi điều tra viên còn sống sót đều ở địa điểm [[Sanctum]], các điều tra viên có thể sử dụng manh mối cần thiết, với tư cách là một nhóm, cho advance.<i>(Gợi ý: bạn có thể không khám phá được thêm sau advance.)</i>.",
+      "flavor": "Các đường hầm thịt tiết ra chất sáp có mùi hôi làm bỏng da. Đích đến của bạn nằm sâu hơn trong mê cung kinh tởm.",
+      "back_name": "Heart of the Apiary",
+      "back_text": "<b>If each investigator is at Lost Campsite:</b>\n<blockquote><i>After searching the campsite, you find yourselves surrounded by robed figures holding torches, but no weapons. A soft-faced woman in a patchwork cloak emerges from the crowd. \"Please, don't be alarmed. We have no intention of harming you.\"</i></blockquote>\nEach investigator loses all of their manh mối.\nProceed to <b>Interlude: Lost Pilgrims</b> <i>(page 21)</i>.<hr><b>If each investigator is at Acidic Coelom:</b>\n<blockquote><i>You hear a hiss, then feel sharp, stinging pain in your back. As you lose consciousness, look around and see a prehensile limb buried in your spine.</i></blockquote>\nEach investigator loses all of their manh mối.\nProceed to <b>Interlude: The Hive Mind</b> <i>(page 22)</i>."
+    }
+  },
+  {
+    "code": "11557",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "The Apiary",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Lost Pilgrims",
+      "text": "Each [[Cultist]] enemy gains victory 0 and aloof.\n[action]: <b>Parley.</b> Test [intellect] (2) or [combat] (2). For each point you succeed by, move a different [[Cultist]] enemy at your location once in any direction.\n<b>Forced</b> - When the enemy phase ends: Each [[Cultist]] enemy takes 1 damage for each [[Stowaway]] enemy at its location.\n<b>Objective</b> - When the round ends, if there is a combined total of 5 or more [[Cultist]] cards in the victory display and/or under this act, you must advance.",
+      "flavor": "The campsite is under attack by alien parasites!",
+      "back_name": "Fate of the Pilgrims",
+      "back_text": "<b>If there are 3 or more </b><i>Cultist</i><b> cards under this act:</b>\n<blockquote><i>The tunnels buckle and spasm as you flee the apiary. You usher the last of the surviving pilgrims out as the alien parasites screech in primal rage behind you. You are safe... for now.</i></blockquote>\n<b>(→R1)</b> <i>(page 23)</i>.<hr><b>Otherwise:</b>\n<blockquote><i>The tunnels buckle and spasm as you flee the apiary. You hear the pilgrims' agonized screams behind you. Suddenly the screams stop, replaced by the sound of gnashing mouths and tearing flesh. You were one of the fortunate ones.</i></blockquote>\n<b>(→R2)</b> <i>(page 23)</i>."
+    },
+    "vi_current": {
+      "name": "Người Hành Hương Lạc Lối",
+      "text": "Mỗi kẻ địch [[Cultist]] giành được chiến thắng 0 và aloof.\n[action]: <b>Parley.</b> Kiểm tra [intellect] (2) hoặc [combat] (2). Đối với mỗi điểm bạn thành công, hãy di chuyển một kẻ địch [[Cultist]] khác tại địa điểm của bạn một lần theo bất kỳ hướng nào.\n<b>Forced</b> - Khi giai đoạn Enemy kết thúc: Mỗi kẻ địch [[Cultist]] mất 1 damage cho mỗi kẻ địch [[Stowaway]] tại địa điểm của nó.\n<b>Objective</b> - Khi vòng đấu kết thúc, nếu có tổng cộng từ 5 lá bài [[Cultist]] trở lên trong khu vực trưng bày thành tích và/hoặc theo màn này, bạn phải advance.",
+      "flavor": "Khu cắm trại đang bị tấn công bởi ký sinh trùng ngoài hành tinh!",
+      "back_name": "Fate of the Pilgrims",
+      "back_text": "<b>If there are 3 or more </b><i>Cultist</i><b> cards under this act:</b>\n<blockquote><i>The tunnels buckle and spasm as you flee the apiary. You usher the last of the surviving pilgrims out as the alien parasites screech in primal rage behind you. You are safe... for now.</i></blockquote>\n<b>(→R1)</b> <i>(page 23)</i>.<hr><b>Otherwise:</b>\n<blockquote><i>The tunnels buckle and spasm as you flee the apiary. You hear the pilgrims' agonized screams behind you. Suddenly the screams stop, replaced by the sound of gnashing mouths and tearing flesh. You were one of the fortunate ones.</i></blockquote>\n<b>(→R2)</b> <i>(page 23)</i>."
+    }
+  },
+  {
+    "code": "11558",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "The Apiary",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "The Hive Mind",
+      "text": "[fast] During your turn, place X clues on your location: Deal X damage to a non-[[Elite]] enemy at your location.\n<b>Forced</b> - When the round ends: Flip a coin. On heads, rotate Central Chamber once clockwise. On tails, rotate Central Chamber once counter-clockwise.\n<b>Objective</b> - If Mother is defeated, immediately advance.",
+      "flavor": "It doesn't live in the walls! It <i>is</i> the walls!",
+      "back_name": "Mother's Embrace",
+      "back_text": "<b>(→R3)</b> <i>(page 23)</i>.",
+      "back_flavor": "\"Hey, ugly! Eat this!\" Ruby shouts as she empties her pistol into the Mother's sagging flesh. The queen parasite screams in pain. Around you, the other stowaways chitter and squeal in tandem, then go limp as their mother expires. Ruby's face is wild as she stomps each of the parasites in turn, just to make sure they're dead. You examine the creatures' remains. Without the Mother to control them, the parasites are inert."
+    },
+    "vi_current": {
+      "name": "Tâm Trí tổ Ong",
+      "text": "[fast] Trong lượt của bạn, đặt X manh mối trên địa điểm của bạn: Chia X damage cho một quân kẻ địch không phải [[Elite]] tại địa điểm của bạn.\n<b>Forced</b> - Khi vòng kết thúc: Lật một đồng xu. Trên đầu, xoay Phòng Trung tâm một lần theo chiều kim đồng hồ. Ở phần đuôi, xoay Buồng trung tâm một lần ngược chiều kim đồng hồ.\n<b>Objective</b> - Nếu Mẹ bị đánh bại, ngay lập tức advance.",
+      "flavor": "Nó không sống trong tường! Nó <i>is</i> các bức tường!",
+      "back_name": "Mother's Embrace",
+      "back_text": "<b>(→R3)</b> <i>(page 23)</i>.",
+      "back_flavor": "\"Này, xấu xí! Ăn cái này đi!\" Ruby hét lên khi cô xả súng vào cơ thể chảy xệ của Người mẹ. Ký sinh trùng nữ hoàng hét lên trong đau đớn. Xung quanh bạn, những người trốn theo tàu khác cùng lúc ríu rít và kêu la, rồi khập khiễng khi mẹ của họ tắt thở. Khuôn mặt của Ruby rất hoang dã khi cô lần lượt dẫm nát từng con ký sinh trùng, chỉ để chắc chắn rằng chúng đã chết. Bạn kiểm tra hài cốt của các sinh vật. Không có Mẹ kiểm soát, lũ ký sinh sẽ trơ lì."
+    }
+  },
+  {
+    "code": "11588",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "The Grand Vault",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: icons en=['[agility]'] vi=[]"
+    ],
+    "en": {
+      "name": "Bowels of the City",
+      "text": "<b>Forced</b> - When your turn begins, if your location is fully flooded, you struggle for air: When your turn ends, if you did not enter a partially flooded or unflooded location during your turn, or decrease your location's flood level, take 5 direct damage.",
+      "flavor": "The oppressive darkness is filled with the sound of crushing, gnashing machinery.",
+      "back_name": "Relentless Pursuit",
+      "back_text": "Spawn the set-aside The Inescapable enemy at the lead investigator's location. Choose an investigator at that location to test [agility] (4). If they succeed, disengage The Inescapable from each investigator and exhaust it.\nShuffle each copy of the set-aside Still Behind You treachery and 1 random set-aside [[Star Spawn]] enemy, along with the encounter deck and discard pile, into the encounter deck.",
+      "back_flavor": "As you begin to make sense of the ever-shifting complex of maze-like corridors and chambers, a crack appears in one wall. The crack grows wider as two massive clawed hands push a hidden door open. A familiar imposing frame emerges from the darkness, glowering at you. Your tireless pursuer is here yet again."
+    },
+    "vi_current": {
+      "name": "Ruột của Thành Phố",
+      "text": "<b>Forced</b> - Khi lượt của bạn bắt đầu, nếu địa điểm của bạn bị ngập hoàn toàn, bạn sẽ phải cố gắng lấy không khí: Khi lượt của bạn kết thúc, nếu bạn không đi vào địa điểm bị ngập một phần hoặc không bị ngập trong lượt của mình hoặc giảm mức lũ của địa điểm, nhận 5 direct damage.",
+      "flavor": "Bóng tối ngột ngạt tràn ngập tiếng máy móc nghiến ngấu.",
+      "back_name": "Relentless Pursuit",
+      "back_text": "Spawn the set-aside The Inescapable enemy at the lead investigator's location. Choose an investigator at that location to Kiểm tra [] (4). If they succeed, disengage The Inescapable from each investigator and exhaust it.\nShuffle each copy of the set-aside Still Behind You treachery and 1 random set-aside [[Star Spawn]] enemy, along with the chồng bài encounter and chồng bài bỏ, into the chồng bài encounter.",
+      "back_flavor": "Khi bạn bắt đầu hiểu được sự phức tạp luôn thay đổi của các hành lang và căn phòng giống như mê cung, một vết nứt xuất hiện trên một bức tường. Vết nứt ngày càng rộng hơn khi hai bàn tay có móng vuốt khổng lồ đẩy cánh cửa ẩn mở ra. Một khung hình hùng vĩ quen thuộc hiện ra từ bóng tối, trừng mắt nhìn bạn. Người theo đuổi không mệt mỏi của bạn lại ở đây."
+    }
+  },
+  {
+    "code": "11589",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "The Grand Vault",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Devil in the Machine",
+      "text": "The Inescapable gets +1 [per_investigator] health.\nWhen The Inescapable moves via its hunter keyword, each location is considered to be connected to each adjacent location.\n<b>Forced</b> - When your turn begins, if your location is fully flooded, you struggle for air: When your turn ends, if you did not enter a partially flooded or unflooded location during your turn, or decrease your location's flood level, take 5 direct damage.",
+      "flavor": "This thing won't stop unless you find a way to put it down for good.",
+      "back_name": "From the Shadows",
+      "back_text": "Search all in- and out-of-play areas for each copy of the Still Behind You treachery. Shuffle these cards, the set-aside [[Star Spawn]] enemy, and the encounter discard pile, into the encounter deck.\nMove each unengaged Persistent Construct enemy in play to the Moving Platform, exhausted and unengaged.\nIf The Inescapable is in play, heal 1 [per_investigator] damage from it and move it once toward the nearest investigator. Each location is considered to be connected to each adjacent location during this movement.",
+      "back_flavor": "The incessant cacophony makes it difficult to hear anything, even the sound of your pursuer's footfalls. He could be lurking around any corner. It is only a matter of time before you are found."
+    },
+    "vi_current": {
+      "name": "Ác Quỷ trong cỗ Máy",
+      "text": "Không thể tránh khỏi nhận +1 health [per_investigator].\nKhi The Inescapable di chuyển thông qua từ khóa hunter, mỗi địa điểm được coi là được kết nối với mỗi địa điểm liền kề.\n<b>Forced</b> - Khi lượt của bạn bắt đầu, nếu địa điểm của bạn bị ngập hoàn toàn, bạn sẽ phải vật lộn để có không khí: Khi lượt của bạn kết thúc, nếu bạn không đi vào địa điểm bị ngập một phần hoặc không bị ngập trong lượt của mình hoặc giảm mức lũ địa điểm của bạn, hãy đi 5 direct damage.",
+      "flavor": "Chuyện này sẽ không dừng lại trừ khi bạn tìm ra cách để dập tắt nó vĩnh viễn.",
+      "back_name": "From the Shadows",
+      "back_text": "Search all in- and out-of-play areas for each copy of the Still Behind You treachery. Shuffle these cards, the set-aside [[Star Spawn]] enemy, and the chồng bài encounter bỏ, into the chồng bài encounter.\nMove each unengaged Persistent Construct enemy trong màn chơi to the Moving Platform, exhausted and unengaged.\nIf The Inescapable is trong màn chơi, heal 1 [per_investigator] damage from it and move it once toward the nearest investigator. Each location is considered to be connected to each adjacent location during this movement.",
+      "back_flavor": "Những tạp âm không ngừng khiến bạn khó có thể nghe thấy bất cứ điều gì, ngay cả tiếng bước chân của kẻ truy đuổi bạn. Anh ta có thể ẩn nấp ở bất kỳ góc nào. Chỉ là vấn đề thời gian trước khi bạn được tìm thấy."
+    }
+  },
+  {
+    "code": "11590",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "The Grand Vault",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Ever-Shifting Walls",
+      "text": "The Inescapable gets +2 [per_investigator] health.\nWhen The Inescapable moves via its hunter keyword, each location is considered to be connected to each adjacent location.\n<b>Forced</b> - When your turn begins, if your location is fully flooded, you struggle for air: When your turn ends, if you did not enter a partially flooded or unflooded location during your turn, or decrease your location's flood level, take 5 direct damage.",
+      "flavor": "With great effort and no small amount of luck, you may still be able to escape.",
+      "back_name": "Down Among the Gears",
+      "back_text": "Each surviving investigator who has not resigned is defeated and suffers 1 physical trauma.",
+      "back_flavor": "You find yourself trapped in a small cubic room. Dark water pours out of ancient sluices, rising to your waist, then chest, then neck. Your very bones seem to vibrate with the unceasing thrum of the heart of the city. Pushing panic aside, you press glowing nodes and panels in a futile attempt to drain the chamber, but to no result. Gulping a few last breaths, you dive down, searching for any way out. You just barely squeeze through a massive sluice, struggling against the current. At long last, you tumble out into a deep reservoir filled with icy black water. Below you, the silhouettes of star spawn swim slowly, inexorably toward you. They move without haste, for they know that there is no rush: you have no escape."
+    },
+    "vi_current": {
+      "name": "Những Bức Tường Luôn Thay Đổi",
+      "text": "Không thể tránh khỏi nhận +2 health [per_investigator].\nKhi The Inescapable di chuyển thông qua từ khóa hunter, mỗi địa điểm được coi là được kết nối với mỗi địa điểm liền kề.\n<b>Forced</b> - Khi lượt của bạn bắt đầu, nếu địa điểm của bạn bị ngập hoàn toàn, bạn sẽ phải vật lộn để có không khí: Khi lượt của bạn kết thúc, nếu bạn không đi vào địa điểm bị ngập một phần hoặc không bị ngập trong lượt của mình hoặc giảm mức lũ địa điểm của bạn, hãy đi 5 direct damage.",
+      "flavor": "Với nỗ lực rất lớn và một chút may mắn, bạn vẫn có thể trốn thoát.",
+      "back_name": "Down Among the Gears",
+      "back_text": "Each surviving investigator who has not resigned is defeated and suffers 1 physical trauma.",
+      "back_flavor": "Bạn thấy mình bị mắc kẹt trong một căn phòng hình khối nhỏ. Dòng nước sẫm màu chảy ra từ những cống cổ, dâng lên đến thắt lưng, rồi đến ngực, rồi đến cổ. Xương cốt của bạn dường như rung lên theo nhịp đập không ngừng của trái tim thành phố. Đẩy sự hoảng loạn sang một bên, bạn nhấn các nút và bảng phát sáng trong một nỗ lực vô ích để làm cạn kiệt căn phòng nhưng không có kết quả. Nuốt những hơi thở cuối cùng, bạn lao xuống, tìm mọi lối thoát. Bạn chỉ cần lách qua một cống lớn, vật lộn với dòng điện. Cuối cùng, bạn rơi vào một hồ chứa sâu chứa đầy nước đen đóng băng. Bên dưới bạn, bóng của các ngôi sao bơi chậm rãi, không thể lay chuyển về phía bạn. Họ di chuyển không vội vàng, vì họ biết rằng không có gì phải vội vàng: bạn không có lối thoát."
+    }
+  },
+  {
+    "code": "11591",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "The Grand Vault",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Careful Navigation",
+      "text": "[reaction] After the investigators have translated any 3 of the following glyphs ([tdc_rune_l], [tdc_rune_m], [tdc_rune_n], [tdc_rune_p], [tdc_rune_o]): Reveal the Sealed Chamber location. <i>(Hint: Each of these glyphs are found in this scenario.)</i>.\n<b>Objective</b> - When the round ends, if an investigator controls the Tidal Tablet story asset, advance.",
+      "flavor": "The machinery that serves as the beating heart of R'lyeh is alien in design, but not inscrutable. Thanks to all you've learned up to this point, you may be able to find your way through.",
+      "back_name": "Tablet of the Tides",
+      "back_text": "Increase the flood level of each location that can have its flood level increased.\nPlace clues on each revealed [[Vault]] location without <b>victory X</b> up to its clue threshold.",
+      "back_flavor": "With an undeniable sense of triumph, you pry the tablet from its resting place in the center of the chamber. It pulses in your hands in time to the thrumming machinery, sending ripples through the shallow water at your feet. Small tendrils of water snake upward to hang, suspended, around you. You wave the tablet once and watch the water on the floor rise and crash against the right wall of the chamber.\nSatisfied with your find, you prepare to leave. However, you wonder if there are any other mysteries you have yet to uncover at the very heart of R'lyeh..."
+    },
+    "vi_current": {
+      "name": "Điều Hướng Cẩn Thận",
+      "text": "[reaction] Sau khi các điều tra viên đã dịch 3 ký tự bất kỳ trong số các hình tượng sau ([tdc_rune_l], [tdc_rune_m], [tdc_rune_n], [tdc_rune_p], [tdc_rune_o]): Tiết lộ Phòng kín địa điểm. <i>(Gợi ý: Mỗi hình tượng này đều được tìm thấy trong kịch bản này.)</i>.\n<b>Objective</b> - Khi vòng đấu kết thúc, nếu điều tra viên điều khiển câu chuyện Tidal Tablet asset, advance.",
+      "flavor": "Bộ máy đóng vai trò là trái tim đang đập của R'lyeh có thiết kế xa lạ nhưng không khó hiểu. Nhờ tất cả những gì bạn đã học được cho đến thời điểm này, bạn có thể tìm được cách vượt qua.",
+      "back_name": "Tablet of the Tides",
+      "back_text": "Increase the flood level of each location that can have its flood level increased.\nPlace manh mối on each revealed [[Vault]] location without <b>victory X</b> up to its manh mối threshold.",
+      "back_flavor": "Với một cảm giác chiến thắng không thể phủ nhận, bạn cạy chiếc máy tính bảng ra khỏi vị trí nằm ở giữa căn phòng. Nó đập trong tay bạn theo nhịp của máy móc đang hoạt động, tạo ra những gợn sóng qua vùng nước nông dưới chân bạn. Những tua rắn nước nhỏ hướng lên trên treo lơ lửng xung quanh bạn. Bạn vẫy chiếc máy tính bảng một lần và quan sát nước trên sàn dâng lên và đập vào bức tường bên phải của căn phòng.\nHài lòng với phát hiện của mình, bạn chuẩn bị rời khỏi màn chơi. Tuy nhiên, bạn tự hỏi liệu còn bí ẩn nào khác mà bạn chưa khám phá ở trung tâm R'lyeh hay không..."
+    }
+  },
+  {
+    "code": "11592",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "The Grand Vault",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Back Through the Machine",
+      "text": "<b>Objective</b> - If each surviving investigator has resigned, advance.",
+      "flavor": "There is only one way in and one way out of the ancient vault, but your route back is fraught with danger. Frothing water continues to pour in, carried by the great waterworks from the rest of the city.",
+      "back_name": "Onward into Darkness",
+      "back_text": "Check your Campaign log.\n- <i>If the expedition headed west,</i> <b>(→R1)</b> <i>(page 27)</i>.\n- <i>If the expedition headed east,</i> <b>(→R2)</b> <i>(page 27)</i>.",
+      "back_flavor": "At long last, you reach the exit. After a short climb, you return to the towering precipice overlooking the ancient vault. There, you are surprised to find the other half of the expedition camped on the overlook, staring down at the churning machinery and turgid waters. Rather than press on, you and the others resolve to rest and share your findings as a group."
+    },
+    "vi_current": {
+      "name": "Quay Lại Máy",
+      "text": "<b>Objective</b> - Nếu mỗi điều tra viên còn sống đã resign, advance.",
+      "flavor": "Chỉ có một lối vào và một lối ra khỏi hầm cổ, nhưng đường trở về của bạn đầy rẫy nguy hiểm. Nước sủi bọt tiếp tục tràn vào, được mang theo bởi các công trình cấp nước lớn từ phần còn lại của thành phố.",
+      "back_name": "Onward into Darkness",
+      "back_text": "Check your Campaign log.\n- <i>If the expedition headed west,</i> <b>(→R1)</b> <i>(page 27)</i>.\n- <i>If the expedition headed east,</i> <b>(→R2)</b> <i>(page 27)</i>.",
+      "back_flavor": "Cuối cùng, bạn cũng đến được lối ra. Sau một đoạn leo núi ngắn, bạn quay trở lại vách núi cao chót vót nhìn ra mái vòm cổ kính. Ở đó, bạn ngạc nhiên khi thấy nửa còn lại của đoàn thám hiểm cắm trại trên tầm nhìn, nhìn chằm chằm vào máy móc đang hoạt động và vùng nước cuồn cuộn. Thay vì tiếp tục, bạn và những người khác quyết định nghỉ ngơi và chia sẻ những phát hiện của mình với tư cách một nhóm."
+    }
+  },
+  {
+    "code": "11613",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "Court of the Ancients",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Ruined Archives",
+      "flavor": "The massive tower rises above you, promising enticing knowledge and forbidden truths. However, the imminent peril of navigating the ancient, crumbling structure comes into sharp focus as a chunk of obsidian crashes down nearby. For all its grandeur, you are not safe here.",
+      "back_name": "Records of Alien Histories",
+      "back_text": "Shuffle each [[Omen]] and [[Glyph]] card in the encounter discard pile into the encounter deck.",
+      "back_flavor": "As supernatural winds howl outside, the tower groans and sways like an ancient tree weathering a storm. You steady yourself against a pillar, hoping to wait out the tremor. Suddenly, you feel the pillar loosen. Stepping away, you watch the intricately carved pillar tumble down to the bottom far below."
+    },
+    "vi_current": {
+      "name": "Lưu Trữ bị Hủy Hoại",
+      "flavor": "Tòa tháp khổng lồ nhô lên phía trên bạn, hứa hẹn mang đến những kiến ​​thức hấp dẫn và những sự thật bị cấm đoán. Tuy nhiên, mối nguy hiểm sắp xảy ra khi di chuyển trong công trình kiến ​​trúc cổ kính, đổ nát này trở nên rõ ràng hơn khi một khối đá hắc thạch rơi xuống gần đó. Với tất cả sự hùng vĩ của nó, bạn không an toàn ở đây.",
+      "back_name": "Records of Alien Histories",
+      "back_text": "Shuffle each [[Omen]] and [[Glyph]] card in the chồng bài encounter bỏ into the chồng bài encounter.",
+      "back_flavor": "Khi những cơn gió siêu nhiên hú lên bên ngoài, tòa tháp rên rỉ và lắc lư như một cây cổ thụ trước cơn bão. Bạn đứng vững trên một cây cột, hy vọng có thể chờ đợi cơn chấn động. Đột nhiên, bạn cảm thấy cây cột lỏng ra. Bước đi, bạn sẽ thấy cây cột được chạm khắc tinh xảo đổ xuống phía dưới xa bên dưới."
+    }
+  },
+  {
+    "code": "11614",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "Court of the Ancients",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Flooded Archives",
+      "text": "<b>Forced</b> - When your turn begins, if your location is fully flooded, you struggle for air: When your turn ends, if you did not enter an unflooded or partially flooded location during your turn, take 5 direct damage.",
+      "flavor": "The massive tower promises enticing knowledge and forbidden truths. However, the imminent peril of navigating the ancient, crumbling structure comes into sharp focus as a chunk of obsidian crashes down to the flooded depths below. For all its grandeur, you are not safe here.",
+      "back_name": "R'lyeh Rising",
+      "back_text": "Decrease the flood level of each location.\nShuffle each [[Omen]] and [[Glyph]] card in the encounter discard pile into the encounter deck.",
+      "back_flavor": "As supernatural winds howl outside, the tower groans and sways like an ancient tree weathering a storm. You steady yourself against a pillar, hoping to wait out the tremor. Suddenly, you feel the pillar loosen. Stepping away, you watch the intricately carved pillar tumble down to the bottom far below. You pause, waiting to hear a splash, but there is none. The water below has receded. The city continues to rise like a long-dead corpse from the sea depths."
+    },
+    "vi_current": {
+      "name": "Lưu Trữ Ngập Nước",
+      "text": "<b>Forced</b> - Khi lượt của bạn bắt đầu, nếu địa điểm của bạn bị ngập hoàn toàn, bạn sẽ phải cố gắng lấy không khí: Khi lượt của bạn kết thúc, nếu bạn không đi vào địa điểm không bị ngập hoặc ngập một phần trong lượt của mình, hãy đi 5 direct damage.",
+      "flavor": "Tòa tháp đồ sộ hứa hẹn mang đến những kiến ​​thức hấp dẫn và những sự thật bị cấm đoán. Tuy nhiên, mối nguy hiểm sắp xảy ra khi di chuyển trong công trình kiến ​​trúc cổ kính, đổ nát này trở nên rõ ràng hơn khi một khối đá hắc thạch rơi xuống vùng nước ngập sâu bên dưới. Với tất cả sự hùng vĩ của nó, bạn không an toàn ở đây.",
+      "back_name": "R'lyeh Rising",
+      "back_text": "Decrease the flood level of each location.\nShuffle each [[Omen]] and [[Glyph]] card in the chồng bài encounter bỏ into the chồng bài encounter.",
+      "back_flavor": "Khi những cơn gió siêu nhiên hú lên bên ngoài, tòa tháp rên rỉ và lắc lư như một cây cổ thụ trước cơn bão. Bạn đứng vững trên một cây cột, hy vọng có thể chờ đợi cơn chấn động. Đột nhiên, bạn cảm thấy cây cột lỏng ra. Bước đi, bạn sẽ thấy cây cột được chạm khắc tinh xảo đổ xuống phía dưới xa bên dưới. Bạn dừng lại, chờ nghe tiếng nước bắn tung tóe, nhưng không có. Nước bên dưới đã rút. Thành phố tiếp tục trỗi dậy như một xác chết từ đáy biển sâu."
+    }
+  },
+  {
+    "code": "11615",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "Court of the Ancients",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Unstable Foundations",
+      "text": "During the enemy phase, each location is considered to be connected to the location above and below it.\n<b>Forced</b> - After the Great Lift moves: Each investigator at the Great Lift must test [agility] (2). Each investigator who fails takes 1 damage.",
+      "flavor": "The tower groans as R'lyeh continues its slow ascent from the depths of the ocean.",
+      "back_name": "Unspeakable Knowledge",
+      "back_text": "Each surviving investigator who has not resigned is defeated and suffers 1 mental trauma.",
+      "back_flavor": "The tower shudders as all of R'lyeh continues to ascend. Ancient symbols on the court walls flash with blinding bright intensity. In your momentary blindness, you catch glimpses of blasphemous, hulking shapes of ancient creatures on what looks like a familiar black-sanded beach. An emerald sun reflects on oily black water of a distant alien shore. Every fiber of your being screams in protest as the sheer volume of history within the tower surges into your pitifully small mind all at once. Before you know it, you collapse on the stone floor and slip into a dark and restless slumber..."
+    },
+    "vi_current": {
+      "name": "Nền Móng Không ổn Định",
+      "text": "Trong giai đoạn Enemy, mỗi địa điểm được coi là được kết nối với địa điểm ở trên và dưới nó.\n<b>Forced</b> - Sau khi Great Lift di chuyển: Mỗi điều tra viên tại Great Lift phải kiểm tra [agility] (2). Mỗi điều tra viên thất bại sẽ nhận được 1 damage.",
+      "flavor": "Tòa tháp rên rỉ khi R'lyeh tiếp tục đi lên từ độ sâu của đại dương.",
+      "back_name": "Unspeakable Knowledge",
+      "back_text": "Each surviving investigator who has not resigned is defeated and suffers 1 mental trauma.",
+      "back_flavor": "Tòa tháp rung chuyển khi toàn bộ R'lyeh tiếp tục đi lên. Những biểu tượng cổ xưa trên các bức tường của tòa án nhấp nháy với cường độ sáng chói mắt. Trong sự mù quáng nhất thời của mình, bạn thoáng thấy những hình thù báng bổ, to lớn của những sinh vật cổ xưa trên nơi trông giống như một bãi biển cát đen quen thuộc. Mặt trời màu ngọc lục bảo phản chiếu trên làn nước đen ngòm của một bờ biển xa lạ. Từng thớ thịt trong cơ thể bạn đang gào thét phản đối khi khối lượng lịch sử khổng lồ bên trong tòa tháp đồng loạt tràn vào tâm trí nhỏ bé đáng thương của bạn. Trước khi bạn kịp nhận ra điều đó, bạn ngã gục xuống sàn đá và chìm vào giấc ngủ tăm tối và bồn chồn..."
+    }
+  },
+  {
+    "code": "11616",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "Court of the Ancients",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: icons en=['[agility]'] vi=[]"
+    ],
+    "en": {
+      "name": "Steps of Giants",
+      "text": "[action] Spend 1 [per_investigator] clues: Discard the top 5 cards of the encounter deck (8 cards instead if there is only 1 investigator). Draw 1 [[Glyph]] card discarded by this effect. Then, one at a time, draw each [[Omen]] card discarded by this effect.\n<b>Objective</b> - After the Great Lift flips to its <i>(Active)</i> side, immediately advance.",
+      "flavor": "The halls and tall ceilings are divided into massive stacks, like the shelves of a library. There is so much you could learn here.",
+      "back_name": "Tyrant Unleashed",
+      "back_text": "Spawn the set-aside Colossal Tyrant enemy at the Great Lift. Choose an investigator at the Great Lift to test [agility] (3). If they succeed, exhaust the Colossal Tyrant.",
+      "back_flavor": "Ancient gears, unused for millennia, grind to life with a gut-wrenching sound. The lift shudders erratically as a massive creature claws its way up through one of the holes in the floor. It would appear this monstrosity resided on the underside of the lift, and you have awakened it!"
+    },
+    "vi_current": {
+      "name": "Bước Chân của Người Khổng lồ",
+      "text": "[action] Tiêu 1 [per_investigator] manh mối: Bỏ 5 lá bài trên cùng của chồng bài encounter (thay vào đó là 8 lá bài nếu chỉ còn 1 điều tra viên). Rút 1 lá bài [[Glyph]] bị loại bỏ bởi hiệu ứng này. Sau đó, lần lượt rút từng lá bài [[Omen]] bị loại bỏ bởi hiệu ứng này.\n<b>Objective</b> - Sau khi Great Lift lật sang phía <i>(Hoạt động)</i>, ngay lập tức advance.",
+      "flavor": "Các hội trường và trần nhà cao được chia thành các ngăn lớn, giống như các kệ của thư viện. Có rất nhiều thứ bạn có thể học ở đây.",
+      "back_name": "Tyrant Unleashed",
+      "back_text": "Spawn the set-aside Colossal Tyrant enemy at the Great Lift. Choose an investigator at the Great Lift to Kiểm tra [] (3). If they succeed, exhaust the Colossal Tyrant.",
+      "back_flavor": "Những bánh răng cổ xưa, không được sử dụng trong nhiều thiên niên kỷ, vẫn hoạt động trở lại với âm thanh chói tai. Thang máy rung lắc thất thường khi một sinh vật to lớn đang bò lên qua một trong những cái lỗ trên sàn. Có vẻ như sinh vật quái dị này nằm ở mặt dưới của thang máy và bạn đã đánh thức nó!"
+    }
+  },
+  {
+    "code": "11617",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "Court of the Ancients",
+    "source_file": null,
+    "audit_flags": [
+      "flavor: dup [('11617', 'flavor'), ('11618', 'flavor')]",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Escape the Tower (v.I)",
+      "text": "[action] If you are at Twisting Catwalks: <b>Resign.</b>\n[action] Spend 1 [per_investigator] clues: Discard the top 5 cards of the encounter deck (8 cards instead if there is only 1 investigator). Draw 1 [[Glyph]] card discarded by this effect. Then, one at a time, draw each [[Omen]] card discarded by this effect.\n<b>Objective</b> - If each surviving investigator has resigned, advance.",
+      "flavor": "Your only hope is to find the relic, if you can, and get out before the entire tower crumbles around you!",
+      "back_name": "Take to the Skies",
+      "back_text": "<b>(→R1)</b> <i>(page 31)</i>.",
+      "back_flavor": "You reach the topmost floor of the tower and search for any way to escape from the collapsing structure. The paths down are choked with rubble. The openings in the ceiling seem to be your only hope..."
+    },
+    "vi_current": {
+      "name": "Thoát Khỏi Tòa Tháp (v.I)",
+      "text": "[action] Nếu bạn đang ở Twisting Catwalks: <b>Resign.</b>\n[action] Tiêu 1 [per_investigator] manh mối: Bỏ 5 lá bài trên cùng của chồng bài encounter (thay vào đó là 8 lá bài nếu chỉ còn 1 điều tra viên). Rút 1 lá bài [[Glyph]] bị loại bỏ bởi hiệu ứng này. Sau đó, lần lượt rút từng lá bài [[Omen]] bị loại bỏ bởi hiệu ứng này.\n<b>Objective</b> - Nếu mỗi điều tra viên còn sống đã resign, advance.",
+      "flavor": "Hy vọng duy nhất của bạn là tìm được di tích, nếu có thể, và thoát ra trước khi toàn bộ tòa tháp sụp đổ xung quanh bạn!",
+      "back_name": "Take to the Skies",
+      "back_text": "<b>(→R1)</b> <i>(page 31)</i>.",
+      "back_flavor": "Bạn lên đến tầng cao nhất của tòa tháp và tìm mọi cách để thoát khỏi cấu trúc đang sụp đổ. Những con đường đi xuống bị tắc nghẽn bởi đống đổ nát. Những khe hở trên trần nhà dường như là hy vọng duy nhất của bạn..."
+    }
+  },
+  {
+    "code": "11618",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "Court of the Ancients",
+    "source_file": null,
+    "audit_flags": [
+      "flavor: dup [('11617', 'flavor'), ('11618', 'flavor')]",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Escape the Tower (v.II)",
+      "text": "[action] If you are at East Antechamber: <b>Resign.</b>\n[action] Spend 1 [per_investigator] clues: Discard the top 5 cards of the encounter deck (8 cards instead if there is only 1 investigator). Draw 1 [[Glyph]] card discarded by this effect. Then, one at a time, draw each [[Omen]] card discarded by this effect.\n<b>Objective</b> - If each surviving investigator has resigned, advance.",
+      "flavor": "Your only hope is to find the relic, if you can, and get out before the entire tower crumbles around you!",
+      "back_name": "Climbing Ever Downward",
+      "back_text": "<b>(→R2)</b> <i>(page 31)</i>.",
+      "back_flavor": "You reach the bottom of this side of the tower and find a round dais that resembles some kind of door. As destruction rains down around you, the expedition members frantically press the glowing nodes and panels, hoping for a way out."
+    },
+    "vi_current": {
+      "name": "Thoát Khỏi Tòa Tháp (v.II)",
+      "text": "[action] Nếu bạn ở East Antechamber: <b>Resign.</b>\n[action] Tiêu 1 [per_investigator] manh mối: Bỏ 5 lá bài trên cùng của chồng bài encounter (thay vào đó là 8 lá bài nếu chỉ còn 1 điều tra viên). Rút 1 lá bài [[Glyph]] bị loại bỏ bởi hiệu ứng này. Sau đó, lần lượt rút từng lá bài [[Omen]] bị loại bỏ bởi hiệu ứng này.\n<b>Objective</b> - Nếu mỗi điều tra viên còn sống đã resign, advance.",
+      "flavor": "Hy vọng duy nhất của bạn là tìm được di tích, nếu có thể, và thoát ra trước khi toàn bộ tòa tháp sụp đổ xung quanh bạn!",
+      "back_name": "Climbing Ever Downward",
+      "back_text": "<b>(→R2)</b> <i>(page 31)</i>.",
+      "back_flavor": "Bạn đến chân bên này của tòa tháp và tìm thấy một cái bục tròn giống như một loại cửa. Khi sự hủy diệt đổ xuống xung quanh bạn, các thành viên đoàn thám hiểm điên cuồng nhấn vào các nút và bảng phát sáng, hy vọng tìm được lối thoát."
+    }
+  },
+  {
+    "code": "11641",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "Obsidian Canyons",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11641', 'text'), ('11642', 'text')]",
+      "flavor: dup [('11641', 'flavor'), ('11642', 'flavor')]",
+      "back_text: untranslated",
+      "back_flavor: dup [('11641', 'back_flavor'), ('11642', 'back_flavor')]"
+    ],
+    "en": {
+      "name": "Otherworldly Storms",
+      "text": "Each non-weakness enemy may enter or leave open sky as if it were a location.\nEach location is connected to each location <i>(and open sky)</i> adjacent to it.\n<b>Forced</b> - When an investigator's location would leave play: Move that investigator to any [[Central]] location. They take 2 direct damage.",
+      "flavor": "The clouds around R'lyeh crackle with alien energy as a storm picks up.",
+      "back_name": "Psychic Storm",
+      "back_text": "If the current storm intensity is 6+, each surviving investigator is defeated and suffers 1 physical trauma.\nOtherwise, add 1 resource to the current storm intensity.\nFlip this agenda.",
+      "back_flavor": "There is more to this storm than just bad weather. As the gales howl around you, the alien landscape buckles and shifts before your very eyes, blurring your vision. When you regain focus, the skyline looks unfamiliar."
+    },
+    "vi_current": {
+      "name": "Cơn Bão Thế Giới Khác",
+      "text": "Mỗi không phải điểm yếu kẻ địch có thể đi vào hoặc rời khỏi bầu trời mở như thể nó là địa điểm.\nMỗi địa điểm được kết nối với mỗi địa điểm <i>(và bầu trời mở)</i> liền kề với nó.\n<b>Forced</b> - Khi điều tra viên của địa điểm rời khỏi cuộc chơi: Di ​​chuyển điều tra viên đó tới bất kỳ địa điểm [[Central]] nào. Họ lấy 2 direct damage.",
+      "flavor": "Những đám mây xung quanh R'lyeh tỏa ra năng lượng ngoài hành tinh khi một cơn bão nổi lên.",
+      "back_name": "Psychic Storm",
+      "back_text": "If the current storm intensity is 6+, each surviving investigator is defeated and suffers 1 physical trauma.\nOtherwise, add 1 resource to the current storm intensity.\nFlip this agenda.",
+      "back_flavor": "Cơn bão này có nhiều điều hơn là thời tiết xấu. Khi những cơn gió mạnh gào thét xung quanh bạn, khung cảnh ngoài hành tinh uốn cong và thay đổi ngay trước mắt bạn, làm mờ tầm nhìn của bạn. Khi bạn lấy lại tiêu điểm, đường chân trời trông có vẻ xa lạ."
+    }
+  },
+  {
+    "code": "11642",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "Obsidian Canyons",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11641', 'text'), ('11642', 'text')]",
+      "flavor: dup [('11641', 'flavor'), ('11642', 'flavor')]",
+      "back_flavor: dup [('11641', 'back_flavor'), ('11642', 'back_flavor')]"
+    ],
+    "en": {
+      "name": "Encroaching Storms",
+      "text": "Each non-weakness enemy may enter or leave open sky as if it were a location.\nEach location is connected to each location <i>(and open sky)</i> adjacent to it.\n<b>Forced</b> - When an investigator's location would leave play: Move that investigator to any [[Central]] location. They take 2 direct damage.",
+      "flavor": "The clouds around R'lyeh crackle with alien energy as a storm picks up.",
+      "back_name": "Raging Gales",
+      "back_text": "If the current storm intensity is 6+, each surviving investigator is defeated and suffers 1 physical trauma.\nOtherwise, add 1 resource to the current storm intensity.\nDiscard cards from the top of the encounter deck until an enemy is discarded and spawn it at the lead investigator's location. If the current storm intensity is 3 or less, that enemy enters play exhausted and unengaged.\nFlip this agenda.",
+      "back_flavor": "There is more to this storm than just bad weather. As the gales howl around you, the alien landscape buckles and shifts before your very eyes, blurring your vision. When you regain focus, the skyline looks unfamiliar."
+    },
+    "vi_current": {
+      "name": "Bão Xâm Lấn",
+      "text": "Mỗi không phải điểm yếu kẻ địch có thể đi vào hoặc rời khỏi bầu trời mở như thể nó là địa điểm.\nMỗi địa điểm được kết nối với mỗi địa điểm <i>(và bầu trời mở)</i> liền kề với nó.\n<b>Forced</b> - Khi điều tra viên của địa điểm rời khỏi cuộc chơi: Di ​​chuyển điều tra viên đó tới bất kỳ địa điểm [[Central]] nào. Họ lấy 2 direct damage.",
+      "flavor": "Những đám mây xung quanh R'lyeh tỏa ra năng lượng ngoài hành tinh khi một cơn bão nổi lên.",
+      "back_name": "Raging Gales",
+      "back_text": "If the current storm intensity is 6+, each surviving investigator is defeated and suffers 1 physical trauma.\nOtherwise, add 1 resource to the current storm intensity.\nDiscard cards from the top of the chồng bài encounter until an enemy is discarded and spawn it at the lead investigator's location. If the current storm intensity is 3 or less, that enemy enters play exhausted and unengaged.\nFlip this agenda.",
+      "back_flavor": "Cơn bão này có nhiều điều hơn là thời tiết xấu. Khi những cơn gió mạnh gào thét xung quanh bạn, khung cảnh ngoài hành tinh uốn cong và thay đổi ngay trước mắt bạn, làm mờ tầm nhìn của bạn. Khi bạn lấy lại tiêu điểm, đường chân trời trông có vẻ xa lạ."
+    }
+  },
+  {
+    "code": "11643",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "Obsidian Canyons",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11643', 'text'), ('11645', 'text')]",
+      "flavor: dup [('11643', 'flavor'), ('11644', 'flavor'), ('11645', 'flavor')]"
+    ],
+    "en": {
+      "name": "Searching the Spires",
+      "text": "[action] Spend X clues: Reveal X cards from the bottom of the Summit deck. You may put 1 revealed location into play in an adjacent open sky and move to it. <i>(Place that open sky card and each other revealed card on top of the Summit deck in any order.)</i>\n<b>Objective</b> - If each surviving investigator is at Central Spire, advance.",
+      "flavor": "The alien skyline calls to you, brimming with ancient secrets.",
+      "back_name": "The Sprawl",
+      "back_text": "Spawn the set-aside The Inescapable enemy at Central Spire, exhausted and unengaged. Shuffle the rest of <i>The Inescapable</i> encounter set into the encounter deck, along with the encounter discard pile.\nRemove R'lyeh Streets from the game, ignoring its text box. Shuffle each open sky and [[Summit]] location in play except for Central Spire into the Summit deck. Each card and token at those locations is discarded.\nPut 5 of the set-aside open sky cards into play as shown in the Act 2 location placement diagram in the Campaign Guide <i>(page 36).</i> Fill each remaining row and column above, below, and to the right of Central Spire with the bottom card of the Summit deck until there are 3 rows and 5 columns.\nShuffle the set-aside Ancient Dome and Aerial Waterfall locations, along with each remaining set-aside open sky card, into the top 5 cards of the Summit deck.",
+      "back_flavor": "As you admire the skyline, you see the elephantine shape of a winged creature climbing up from below. You are being hunted."
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm các Ngọn Tháp",
+      "text": "[action] Chi X manh mối: Tiết lộ X thẻ từ cuối chồng bài Hội nghị thượng đỉnh. Bạn có thể đặt 1 địa điểm vào màn chơi được tiết lộ trên bầu trời mở liền kề và di chuyển đến đó. <i>(Đặt thẻ bầu trời mở đó và thẻ được tiết lộ lẫn nhau lên trên chồng bài Hội nghị thượng đỉnh theo thứ tự bất kỳ.)</i>\n<b>Objective</b> - Nếu mỗi điều tra viên sống sót đều ở Central Spire, advance.",
+      "flavor": "Đường chân trời ngoài hành tinh đang gọi bạn, chứa đầy những bí mật cổ xưa.",
+      "back_name": "The Sprawl",
+      "back_text": "Spawn the set-aside The Inescapable enemy at Central Spire, exhausted and unengaged. Shuffle the rest of <i>The Inescapable</i> encounter set into the chồng bài encounter, along with the chồng bài encounter bỏ.\nRemove R'lyeh Streets from the game, ignoring its text box. Shuffle each open sky and [[Summit]] location trong màn chơi except for Central Spire into the Summit deck. Each card and token at those locations is discarded.\nPut 5 of the set-aside open sky cards into play as shown in the Act 2 location placement diagram in the Campaign Guide <i>(page 36).</i> Fill each remaining row and column above, below, and to the right of Central Spire with the bottom card of the Summit deck until there are 3 rows and 5 columns.\nShuffle the set-aside Ancient Dome and Aerial Waterfall locations, along with each remaining set-aside open sky card, into the top 5 cards of the Summit deck.",
+      "back_flavor": "Khi chiêm ngưỡng đường chân trời, bạn sẽ thấy hình dáng giống con voi của một sinh vật có cánh đang bay lên từ bên dưới. Bạn đang bị săn lùng."
+    }
+  },
+  {
+    "code": "11644",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "Obsidian Canyons",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11644', 'text'), ('11647', 'text')]",
+      "flavor: dup [('11643', 'flavor'), ('11644', 'flavor'), ('11645', 'flavor')]",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "To the Ancient Dome!",
+      "text": "[action] Spend X clues: Reveal X cards from the bottom of the Summit deck. You may put 1 revealed location into play in an adjacent open sky and move to it. <i>(Place that open sky card and each other revealed card on top of the Summit deck in any order.)</i>\n<b>Objective</b> - If each surviving investigator has resigned, advance.",
+      "flavor": "The alien skyline calls to you, brimming with ancient secrets.",
+      "back_name": "Into the Ancient Court",
+      "back_text": "<b>(→R2)</b> <i>(page 37).</i>",
+      "back_flavor": "The otherworldly clouds churn above the ever-shifting skyline, glimmering with alien shapes. Ruby hangs over the edge of a skyscraper, laughing devilishly. \"Don't be scared! This is how you know you're alive!\" she shouts. Whatever she says next is drowned out by the crack of thunder, and a quickening gale. Ruby throws the end of her line to you and pulls herself to the top."
+    },
+    "vi_current": {
+      "name": "Đến Mái Vòm cổ Kính!",
+      "text": "[action] Chi X manh mối: Tiết lộ X thẻ từ cuối chồng bài Hội nghị thượng đỉnh. Bạn có thể đặt 1 địa điểm vào màn chơi được tiết lộ trên bầu trời mở liền kề và di chuyển đến đó. <i>(Đặt thẻ bầu trời mở đó và thẻ được tiết lộ lẫn nhau lên trên chồng bài Hội nghị thượng đỉnh theo thứ tự bất kỳ.)</i>\n<b>Objective</b> - Nếu mỗi điều tra viên còn sống đã resign, advance.",
+      "flavor": "Đường chân trời ngoài hành tinh đang gọi bạn, chứa đầy những bí mật cổ xưa.",
+      "back_name": "Into the Ancient Court",
+      "back_text": "<b>(→R2)</b> <i>(page 37).</i>",
+      "back_flavor": "Những đám mây ở thế giới khác bay lơ lửng trên bầu trời luôn thay đổi, lấp lánh những hình thù ngoài hành tinh. Ruby treo mình trên mép một tòa nhà chọc trời, cười một cách quỷ dị. \"Đừng sợ! Đây là cách bạn biết bạn còn sống!\" cô ấy hét lên. Bất cứ điều gì cô ấy nói tiếp theo đều bị át đi bởi tiếng sấm và một cơn gió giật ngày càng nhanh. Ruby ném đầu dây của mình cho bạn và kéo mình lên trên."
+    }
+  },
+  {
+    "code": "11645",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "Obsidian Canyons",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11643', 'text'), ('11645', 'text')]",
+      "flavor: dup [('11643', 'flavor'), ('11644', 'flavor'), ('11645', 'flavor')]"
+    ],
+    "en": {
+      "name": "Scouring the Spires",
+      "text": "[action] Spend X clues: Reveal X cards from the bottom of the Summit deck. You may put 1 revealed location into play in an adjacent open sky and move to it. <i>(Place that open sky card and each other revealed card on top of the Summit deck in any order.)</i>\n<b>Objective</b> - If each surviving investigator is at Central Spire, advance.",
+      "flavor": "The alien skyline calls to you, brimming with ancient secrets.",
+      "back_name": "Floating Skyline",
+      "back_text": "Remove R'lyeh Streets from the game, ignoring its text box. Shuffle each open sky and [[Summit]] location in play except for Central Spire into the Summit deck. Each card and token at those locations is discarded.\nPut 5 of the set-aside open sky cards into play as shown in the Act 2 location placement diagram in the Campaign Guide <i>(page 36).</i> Fill each remaining row and column above, below, and to the right of Central Spire with the bottom card of the Summit deck until there are 3 rows and 5 columns.\nShuffle the set-aside Floating Spire and Aerial Waterfall locations into the top 3 cards of the Summit deck.",
+      "back_flavor": "At the tower's apex, you see R'lyeh in total. Some ancient calamity leveled the city, sending a shockwave so strong that the twisted spires are bent like blades of grass. What could have caused such great destruction?"
+    },
+    "vi_current": {
+      "name": "Quét Sạch các Ngọn Tháp",
+      "text": "[action] Chi X manh mối: Tiết lộ X thẻ từ cuối chồng bài Hội nghị thượng đỉnh. Bạn có thể đặt 1 địa điểm vào màn chơi được tiết lộ trên bầu trời mở liền kề và di chuyển đến đó. <i>(Đặt thẻ bầu trời mở đó và thẻ được tiết lộ lẫn nhau lên trên chồng bài Hội nghị thượng đỉnh theo thứ tự bất kỳ.)</i>\n<b>Objective</b> - Nếu mỗi điều tra viên sống sót đều ở Central Spire, advance.",
+      "flavor": "Đường chân trời ngoài hành tinh đang gọi bạn, chứa đầy những bí mật cổ xưa.",
+      "back_name": "Floating Skyline",
+      "back_text": "Remove R'lyeh Streets from the game, ignoring its text box. Shuffle each open sky and [[Summit]] location trong màn chơi except for Central Spire into the Summit deck. Each card and token at those locations is discarded.\nPut 5 of the set-aside open sky cards into play as shown in the Act 2 location placement diagram in the Campaign Guide <i>(page 36).</i> Fill each remaining row and column above, below, and to the right of Central Spire with the bottom card of the Summit deck until there are 3 rows and 5 columns.\nShuffle the set-aside Floating Spire and Aerial Waterfall locations into the top 3 cards of the Summit deck.",
+      "back_flavor": "Ở đỉnh tháp, bạn nhìn thấy toàn bộ R'lyeh. Một tai họa cổ xưa nào đó đã san bằng thành phố, tạo ra một làn sóng xung kích mạnh đến mức những ngọn tháp xoắn lại uốn cong như những ngọn cỏ. Điều gì có thể gây ra sự hủy diệt lớn như vậy?"
+    }
+  },
+  {
+    "code": "11646",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "Obsidian Canyons",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Deadly Skies",
+      "text": "[action] Spend X clues: Reveal X cards from the bottom of the Summit deck. You may put 1 revealed location into play in an adjacent open sky and move to it. <i>(Place that open sky card and each other revealed card on top of the Summit deck in any order.)</i>\n<b>Objective</b> - If each surviving investigator is at Floating Spire, advance.",
+      "flavor": "A distant waterfall and gravity-defying spire beckon you onward.",
+      "back_name": "Defying Gravity",
+      "back_text": "Remove Central Spire from the game, ignoring its text box. Shuffle each open sky and [[Summit]] location in play aside from Floating Spire into the Summit deck. Each card and token at those locations is discarded.\nPut 5 of the set-aside open sky cards into play as shown in the Act 3 location placement diagram in the Campaign Guide <i>(page 36).</i> Fill each remaining row and column below and to the right of Floating Spire with the bottom card of the Summit deck until there are 4 rows and 5 columns.\nShuffle the set-aside Western Wall location into the top 3 cards of the Summit deck.",
+      "back_flavor": "A shattered frieze depicts a large, clawed implement holding two broken shards of a tower together. A tool like that might be a worthwhile acquisition for Tillinghast."
+    },
+    "vi_current": {
+      "name": "Bầu Trời Chết Chóc",
+      "text": "[action] Chi X manh mối: Tiết lộ X thẻ từ cuối chồng bài Hội nghị thượng đỉnh. Bạn có thể đặt 1 địa điểm vào màn chơi được tiết lộ trên bầu trời mở liền kề và di chuyển đến đó. <i>(Đặt thẻ bầu trời mở đó và thẻ được tiết lộ lẫn nhau lên trên chồng bài Hội nghị thượng đỉnh theo thứ tự bất kỳ.)</i>\n<b>Objective</b> - Nếu mỗi điều tra viên còn sống sót đều ở Tháp Nổi, advance.",
+      "flavor": "Một thác nước ở xa và ngọn tháp thách thức trọng lực đang vẫy gọi bạn tiến về phía trước.",
+      "back_name": "Defying Gravity",
+      "back_text": "Remove Central Spire from the game, ignoring its text box. Shuffle each open sky and [[Summit]] location trong màn chơi aside from Floating Spire into the Summit deck. Each card and token at those locations is discarded.\nPut 5 of the set-aside open sky cards into play as shown in the Act 3 location placement diagram in the Campaign Guide <i>(page 36).</i> Fill each remaining row and column below and to the right of Floating Spire with the bottom card of the Summit deck until there are 4 rows and 5 columns.\nShuffle the set-aside Western Wall location into the top 3 cards of the Summit deck.",
+      "back_flavor": "Một bức phù điêu bị vỡ mô tả một dụng cụ lớn có móng vuốt giữ hai mảnh vỡ của một tòa tháp lại với nhau. Một công cụ như thế có thể là một sự mua lại đáng giá đối với Tillinghast."
+    }
+  },
+  {
+    "code": "11647",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "Obsidian Canyons",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11644', 'text'), ('11647', 'text')]",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Return to the Shoreline",
+      "text": "[action] Spend X clues: Reveal X cards from the bottom of the Summit deck. You may put 1 revealed location into play in an adjacent open sky and move to it. <i>(Place that open sky card and each other revealed card on top of the Summit deck in any order.)</i>\n<b>Objective</b> - If each surviving investigator has resigned, advance.",
+      "flavor": "You can recognize the western wall in the distance where you made landfall.",
+      "back_name": "Back in One Piece",
+      "back_text": "<b>(→R1)</b> <i>(page 37).</i>",
+      "back_flavor": "A tremor nearly knocks you loose as you descend the treacherous spires. After several tense minutes, you finally descend to the streets. Andy sits on a glistening boulder, doing his best not to look shaken. \"Well. That's another half a dozen rolls of film gone,\" he sighs with a melancholy air. \"At least we're back in one piece. Well, mostly,\" he laughs, favoring his bandaged arm.\nAfter the rest of your group are gathered, you make your way back to the beach where you made landfall."
+    },
+    "vi_current": {
+      "name": "Trở về bờ Biển",
+      "text": "[action] Chi X manh mối: Tiết lộ X thẻ từ cuối chồng bài Hội nghị thượng đỉnh. Bạn có thể đặt 1 địa điểm vào màn chơi được tiết lộ trên bầu trời mở liền kề và di chuyển đến đó. <i>(Đặt thẻ bầu trời mở đó và thẻ được tiết lộ lẫn nhau lên trên chồng bài Hội nghị thượng đỉnh theo thứ tự bất kỳ.)</i>\n<b>Objective</b> - Nếu mỗi điều tra viên còn sống đã resign, advance.",
+      "flavor": "Bạn có thể nhận ra bức tường phía tây ở khoảng cách nơi bạn đổ bộ.",
+      "back_name": "Back in One Piece",
+      "back_text": "<b>(→R1)</b> <i>(page 37).</i>",
+      "back_flavor": "Một cơn chấn động gần như đánh gục bạn khi bạn đi xuống những ngọn tháp nguy hiểm. Sau vài phút căng thẳng, cuối cùng bạn cũng xuống đường. Andy ngồi trên một tảng đá lấp lánh, cố gắng hết sức để trông không bị rung chuyển. \"Chà. Nửa tá cuộn phim nữa đã hết rồi,\" anh thở dài với vẻ u sầu. \"Ít nhất thì chúng ta đã trở lại nguyên vẹn. Chà, gần như vậy,\" anh cười, chỉ vào cánh tay băng bó của mình.\nSau khi những người còn lại trong nhóm đã tập hợp xong, bạn quay trở lại bãi biển nơi bạn đã đổ bộ."
+    }
+  },
+  {
+    "code": "11674",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "Sepulchre of the Sleeper",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Beneath the City",
+      "text": "<b>Forced</b> - When doom would be placed on a card other than a story asset: Place 1 resource on the scenario reference card, as Disturbance, instead. If the current Disturbance is 6 or more (8 or more instead of there are exactly 1 or 2 investigators in the game), immediately advance (do not remove doom from cards in play).\n<b>Objective</b> - Prepare your artifacts for the final showdown!"
+    },
+    "vi_current": {
+      "name": "Bên Dưới Thành Phố",
+      "text": "<b>Forced</b> - Khi doom được đặt trên một thẻ không phải là câu chuyện asset: Thay vào đó, hãy đặt 1 resource trên thẻ tham chiếu màn chơi làm Quấy rối. Nếu Disturbance hiện tại từ 6 trở lên (8 trở lên thay vì có đúng 1 hoặc 2 các điều tra viên trong game), ngay lập tức advance (không loại bỏ doom khỏi thẻ trong màn chơi).\n<b>Objective</b> - Chuẩn bị hiện vật của bạn cho trận đấu cuối cùng!"
+    }
+  },
+  {
+    "code": "11675",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "Sepulchre of the Sleeper",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Cthulhu Awakened",
+      "text": "<b>Forced</b> - When doom is placed on this agenda: Each investigator takes 1 direct horror.\n[fast] During your turn, remove 1 doom from an [[Artifact]] asset you control: Cthulhu loses relentless and gets -1 fight and -1 evade until the end of the round. (Limit once per asset per round.)\n<b>Objective</b> - If you manage to defeat Cthulhu: <b>(→R1)</b> <i>(page 39)</i>",
+      "back_name": "Your Inevitable Doom",
+      "back_text": "Each surviving investigator is driven <b>insane</b>. Remove each of these investigators from your collection <i>(wrap them in an oilcloth along with each of their signatures, put them in a sea chest, and drop that sea chest in the ocean at the following coordinates: 47°9'S 126°43'W).</i>",
+      "back_flavor": "Against all odds, you have withstood the incredible and unstoppable tide that is Cthulhu, the ancient father or R'lyeh. Your tenacity has brought you to what you had hoped would be a stalemate.\nBut there is no stalemate against an ancient one."
+    },
+    "vi_current": {
+      "name": "Cthulhu Thức Tỉnh",
+      "text": "<b>Forced</b> - Khi doom được đưa vào agenda này: Mỗi điều tra viên chiếm 1 direct horror.\n[fast] Trong lượt của bạn, loại bỏ 1 doom khỏi asset [[Artifact]] mà bạn điều khiển: Cthulhu mất relentless và nhận -1 fight và -1 evade cho đến hết vòng. (Giới hạn một lần cho mỗi asset mỗi vòng.)\n<b>Objective</b> - Nếu bạn đánh bại được Cthulhu: <b>(→R1)</b> <i>(trang 39)</i>",
+      "back_name": "Your Inevitable Doom",
+      "back_text": "Each surviving investigator is driven <b>insane</b>. Remove each of these investigators from your collection <i>(wrap them in an oilcloth along with each of their signatures, put them in a sea chest, and drop that sea chest in the ocean at the following coordinates: 47°9'S 126°43'W).</i>",
+      "back_flavor": "Chống lại mọi khó khăn, bạn đã chống chọi được với cơn thủy triều đáng kinh ngạc và không thể ngăn cản đó là Cthulhu, người cha cổ xưa hay R'lyeh. Sự kiên trì của bạn đã đưa bạn đến điều mà bạn từng hy vọng sẽ là bế tắc.\nNhưng không có sự bế tắc chống lại một cái cổ xưa."
+    }
+  },
+  {
+    "code": "11683",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "The Doom of Arkham Part I",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "The Coming Storm",
+      "text": "[action]: <b>Resign.</b> You give up your search. \n<b>Forced -</b> When doom is placed on this agenda: Increase the flood level of the lead investigator's location.",
+      "flavor": "The downpour worsens. As the streets begin to flood, terrifying creatures emerge from the shadows: creatures that could only have come from R'lyeh.",
+      "back_name": "The Storm Arrives",
+      "back_text": "Each investigator who has not been eliminated immediately resigns.",
+      "back_flavor": "More and more unspeakable horrors rise out of the Miskatonic River. A strong current pulls you off your feet and carries you two blocks downstream. Grabbing a street lamp, you pull yourself to your feet as a tremor shakes the ground. Then another."
+    },
+    "vi_current": {
+      "name": "Cơn Bão Sắp Tới",
+      "text": "[action]: <b>Resign.</b> Bạn từ bỏ việc tìm kiếm của mình. \n<b>Forced -</b> Khi doom được đưa vào agenda này: Tăng mực nước lũ của điều tra viên chính's địa điểm.",
+      "flavor": "Cơn mưa như trút nước trở nên tồi tệ hơn. Khi đường phố bắt đầu ngập lụt, những sinh vật đáng sợ xuất hiện từ trong bóng tối: những sinh vật chỉ có thể đến từ R'lyeh.",
+      "back_name": "The Storm Arrives",
+      "back_text": "Each investigator who has not been eliminated immediately resigns.",
+      "back_flavor": "Ngày càng có nhiều nỗi kinh hoàng không thể diễn tả được nổi lên từ sông Miskatonic. Một dòng điện mạnh kéo bạn khỏi chân và cuốn bạn đi hai dãy nhà về phía hạ lưu. Nắm lấy một ngọn đèn đường, bạn đứng dậy khi một cơn chấn động làm rung chuyển mặt đất. Rồi cái khác."
+    }
+  },
+  {
+    "code": "11684",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "The Doom of Arkham Part I",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "The Phantom Shop",
+      "text": "[action] Investigators at your location spend 1 [per_investigator] clues, as a group: Draw the top card beneath your location. If it is an asset, take control of it. \n<b>Objective</b> - When the round ends, if an investigator at Tillinghast Esoterica controls at least 1 [[Artifact]] asset, the investigators may advance. <i>(Hint: Recover as many artifacts as possible!)</i>",
+      "flavor": "Conflicting accounts place Tillinghast Esoterica in locations across Arkham.",
+      "back_name": "Closed for Business",
+      "back_text": "<b>If the investigators control 5 or more <i>Artifact</i> assets:</b>\n<blockquote><i>\"I have worked too hard to see my plans undone,\" Randall seethes. Nightmarish shapes form around the antiquarian's head and shoulders as he grasps at you weakly. Pulse pounding, you run for the shop exit and barrel out into the street. When you turn to look, the shop door has vanished yet again.</i></blockquote>\n<b>(→R1)</b> <i>(page 46)</i>.\n<hr>\n<b>Otherwise:</b>\n<blockquote><i>\"You're too late!\" Randall wheezes, clutching his side. \"The destruction of Arkham is at hand and you are powerless to stop it.\" Nightmarish shapes form around the antiquarian's head and shoulders as tchotchkes and ancient tomes fly off the shelves and hang suspended mid-air. Your vision blurs, then you find yourself back on the street. The shop has vanished yet again.</i></blockquote>\nEach investigator earns 1 bonus experience.\n<b>(→R2)</b> <i>(page 46)</i>."
+    },
+    "vi_current": {
+      "name": "Cửa Hàng ma",
+      "text": "[action] các điều tra viên tại địa điểm của bạn chi 1 [per_investigator] manh mối, theo nhóm: Rút thẻ trên cùng bên dưới địa điểm của bạn. Nếu đó là asset, hãy kiểm soát nó. \n<b>Objective</b> - Khi vòng đấu kết thúc, nếu điều tra viên tại Tillinghast Esoterica điều khiển ít nhất 1 asset [[Artifact]] thì các điều tra viên có thể là advance. <i>(Gợi ý: Khôi phục càng nhiều hiện vật càng tốt!)</i>",
+      "flavor": "Các tài khoản xung đột đặt Tillinghast Esoterica ở các địa điểm trên khắp Arkham.",
+      "back_name": "Closed for Business",
+      "back_text": "<b>If the investigators control 5 or more <i>Artifact</i> assets:</b>\n<blockquote><i>\"I have worked too hard to see my plans undone,\" Randall seethes. Nightmarish shapes form around the antiquarian's head and shoulders as he grasps at you weakly. Pulse pounding, you run for the shop exit and barrel out into the street. When you turn to look, the shop door has vanished yet again.</i></blockquote>\n<b>(→R1)</b> <i>(page 46)</i>.\n<hr>\n<b>Otherwise:</b>\n<blockquote><i>\"You're too late!\" Randall wheezes, clutching his side. \"The destruction of Arkham is at hand and you are powerless to stop it.\" Nightmarish shapes form around the antiquarian's head and shoulders as tchotchkes and ancient tomes fly off the shelves and hang suspended mid-air. Your vision blurs, then you find yourself back on the street. The shop has vanished yet again.</i></blockquote>\nEach investigator earns 1 bonus experience.\n<b>(→R2)</b> <i>(page 46)</i>."
+    }
+  },
+  {
+    "code": "11689",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "The Doom of Arkham Part II",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "The Doom of Arkham",
+      "text": "<b>Forced</b> - When the enemy phase ends: Increase the flood level of Cthulhu's location and draw the top card of the Cthulhu deck.\n<b>Forced</b> - When the round ends: Each investigator at a fully flooded location takes 1 damage/horror.",
+      "flavor": "\"Turning and turning in the widening gyre\nThe falcon cannot hear the falconer;\nThings fall apart; the centre cannot hold;\nMere anarchy is loosed upon the world...\"\n- W.B. Yeats, <i>\"The Second Coming\"</i>",
+      "back_name": "Après Moi, le Déluge...",
+      "back_text": "Move Cthulhu to the nearest fully flooded location that is not [[Ruined]] and decrease that location's flood level. Discard each clue and attachment at that location, and swap it with its set-aside [[Ruined]] version, unrevealed side faceup.\nIf no location was swapped by this effect, draw the top card of the Cthulhu deck.\nIf there are 7 [[Ruined]] locations in play, each investigator is <b>killed</b>. Otherwise, place clues on each revealed location without <b>Victory X</b> up to its clue value. Shuffle 1 set-aside [[Star Spawn]] enemy into the encounter deck, along with the encounter discard pile.\nFlip this agenda.",
+      "back_flavor": "Floodwaters rise as Cthulhu and his denizens continue their assault. The fate of Arkham rests in your hands."
+    },
+    "vi_current": {
+      "name": "Sự Diệt Vong của Arkham",
+      "text": "<b>Forced</b> - Khi giai đoạn Enemy kết thúc: Tăng mức lũ địa điểm của Cthulhu và rút lá bài trên cùng của chồng bài Cthulhu.\n<b>Forced</b> - Khi vòng đấu kết thúc: Mỗi điều tra viên tại địa điểm bị ngập hoàn toàn sẽ mất 1 damage/horror.",
+      "flavor": "\"Quay đi quay lại trong vòng xoay mở rộng\nChim ưng không thể nghe thấy người nuôi chim ưng;\nMọi thứ sụp đổ; trung tâm không thể giữ được;\nTình trạng hỗn loạn đơn thuần đang lan tràn trên thế giới...\"\n- W.B. Yeats, <i>\"Sự tái lâm\"</i>",
+      "back_name": "Après Moi, le Déluge...",
+      "back_text": "Move Cthulhu to the nearest fully flooded location that is not [[Ruined]] and decrease that location's flood level. Discard each manh mối and attachment at that location, and swap it with its set-aside [[Ruined]] version, unrevealed side faceup.\nIf no location was swapped by this effect, draw the top card of the Cthulhu deck.\nIf there are 7 [[Ruined]] locations trong màn chơi, each investigator is <b>killed</b>. Otherwise, place manh mối on each revealed location without <b>Victory X</b> up to its manh mối value. Shuffle 1 set-aside [[Star Spawn]] enemy into the chồng bài encounter, along with the chồng bài encounter bỏ.\nFlip this agenda.",
+      "back_flavor": "Nước lũ dâng cao khi Cthulhu và cư dân của hắn tiếp tục tấn công. Số phận của Arkham nằm trong tay bạn."
+    }
+  },
+  {
+    "code": "11690",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "The Doom of Arkham Part II",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11690', 'text'), ('11691a', 'text')]"
+    ],
+    "en": {
+      "name": "Fight Back!",
+      "text": "[fast] During an attack at your location, spend 1 clue: That attack deals +1 damage. (Max once per attack.)\n<b>Objective</b> - When the round ends, if there are 3 [[Cthulhu]] enemies in the victory display, advance.",
+      "flavor": "With the others at your side, you must make a final stand to save Arkham!",
+      "back_name": "A Desperate Struggle",
+      "back_text": "Return each [[Cthulhu]] enemy in the victory display to its place on the Cthulhu Board, non-[[Enraged]] side faceup.\nIncrease Cthulhu's Rage by 1. If Cthulhu's Rage is 4 or less, flip back to act 1a.\nOtherwise, if Cthulhu's Rage is 5 or more, <b>(→R1)</b>.",
+      "back_flavor": "The ancient menace continues his rampage. Your attempts to draw his attention appear to be working. Perhaps if you hold out long enough, you can drive him out of Arkham... if only for now."
+    },
+    "vi_current": {
+      "name": "Đánh Lại!",
+      "text": "[fast] Trong một cuộc tấn công tại địa điểm của bạn, hãy tiêu 1 manh mối: Đòn tấn công đó gây +1 damage. (Tối đa một lần cho mỗi lần tấn công.)\n<b>Objective</b> - Khi vòng đấu kết thúc, nếu có 3 các kẻ địch [[Cthulhu]] trong khu vực trưng bày thành tích thì advance.",
+      "flavor": "Với những người khác ở bên cạnh, bạn phải đứng lên cuối cùng để cứu Arkham!",
+      "back_name": "A Desperate Struggle",
+      "back_text": "Return each [[Cthulhu]] enemy in the khu vực trưng bày thành tích to its place on the Cthulhu Board, non-[[Enraged]] side faceup.\nIncrease Cthulhu's Rage by 1. If Cthulhu's Rage is 4 or less, flip back to act 1a.\nOtherwise, if Cthulhu's Rage is 5 or more, <b>(→R1)</b>.",
+      "back_flavor": "Mối đe dọa cổ xưa tiếp tục cơn thịnh nộ của mình. Những nỗ lực của bạn nhằm thu hút sự chú ý của anh ấy dường như đang có hiệu quả. Có lẽ nếu bạn cầm cự đủ lâu, bạn có thể đuổi hắn ra khỏi Arkham... dù chỉ vào lúc này."
+    }
+  },
+  {
+    "code": "11691a",
+    "type": "act",
+    "pack": "tdcc",
+    "scenario": "The Doom of Arkham Part II",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('11690', 'text'), ('11691a', 'text')]"
+    ],
+    "en": {
+      "name": "Banish Him!",
+      "text": "[fast] During an attack at your location, spend 1 clue: That attack deals +1 damage. (Max once per attack.)\n<b>Objective</b> - When the round ends, if there are 3 [[Cthulhu]] enemies in the victory display, advance.",
+      "flavor": "By drawing Cthulhu's anger, you and your allies may be able to devise a way to seal the ancient one away!",
+      "back_name": "The Hour is at Hand",
+      "back_text": "Return each [[Cthulhu]] enemy in the victory display to its place on the Cthulhu Board, non-[[Enraged]] side faceup.\nIncrease Cthulhu's Rage by 1. If Cthulhu's Rage is 3 or less, flip back to act 1a. Otherwise, if Cthulhu's Rage is 4 or more:\n- Set Cthulhu's Rage to 5 (4 instead if there are 1 or 2 investigators). Flip each [[Cthulhu]] enemy to its [[Enraged]] side, ignoring its <b>Forced</b> effect.\n- Place clues on each revealed location without <b>Victory X</b> up to its clue value.\n- In player order, each investigator may take control of 1 set-aside [[Ally]] story asset. They do not take up an ally slot for the remainder of this scenario.\n- Advance the act and agenda deck to The Final Seal special agenda and place 1 [per_investigator] doom on it. It is both the current act and the current agenda.",
+      "back_flavor": "The ancient menace continues his rampage. Your attempts to draw his attention appear to be working. Hopefully, you've bought Andy enough time to find a way to seal the ancient one away."
+    },
+    "vi_current": {
+      "name": "Trục Xuất Anh Ta!",
+      "text": "[fast] Trong một cuộc tấn công tại địa điểm của bạn, hãy tiêu 1 manh mối: Đòn tấn công đó gây +1 damage. (Tối đa một lần cho mỗi lần tấn công.)\n<b>Objective</b> - Khi vòng đấu kết thúc, nếu có 3 các kẻ địch [[Cthulhu]] trong khu vực trưng bày thành tích thì advance.",
+      "flavor": "Bằng cách thu hút sự tức giận của Cthulhu, bạn và đồng minh của mình có thể nghĩ ra cách phong ấn Cthulhu cổ xưa!",
+      "back_name": "The Hour is at Hand",
+      "back_text": "Return each [[Cthulhu]] enemy in the khu vực trưng bày thành tích to its place on the Cthulhu Board, non-[[Enraged]] side faceup.\nIncrease Cthulhu's Rage by 1. If Cthulhu's Rage is 3 or less, flip back to act 1a. Otherwise, if Cthulhu's Rage is 4 or more:\n- Set Cthulhu's Rage to 5 (4 instead if there are 1 or 2 investigators). Flip each [[Cthulhu]] enemy to its [[Enraged]] side, ignoring its <b>Forced</b> effect.\n- Place manh mối on each revealed location without <b>Victory X</b> up to its manh mối value.\n- In player order, each investigator may take control of 1 set-aside [[Ally]] story asset. They do not take up an ally slot for the remainder of this scenario.\n- Advance the act and agenda deck to The Final Seal special agenda and place 1 [per_investigator] doom on it. It is both the current act and the current agenda.",
+      "back_flavor": "Mối đe dọa cổ xưa tiếp tục cơn thịnh nộ của mình. Những nỗ lực của bạn nhằm thu hút sự chú ý của anh ấy dường như đang có hiệu quả. Hy vọng rằng bạn đã cho Andy đủ thời gian để tìm cách phong ấn cổ vật đó đi."
+    }
+  },
+  {
+    "code": "11691b",
+    "type": "agenda",
+    "pack": "tdcc",
+    "scenario": "The Doom of Arkham Part II",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "The Final Seal",
+      "text": "[action] Spend 1 [per_investigator] clues, as a group, and place an [[Artifact]] asset you control in the victory display: Place 1 resource (<i>from the token pool</i>) on your location, as a sigil.\n<b>Forced</b> - When the enemy phase ends: Draw the top card of the Cthulhu deck.\n<b>Objective</b> - <i>Banish the awakened dreamer!</i> If each [[Cthulhu]] enemy is in the victory display and there are 5 locations with sigils on them, immediately advance.",
+      "back_name": "Ritual of Binding",
+      "back_text": "If this agenda advanced by reaching its doom threshold, each investigator is defeated. Otherwise, if there are 5 or fewer [[Ruined]] locations in play, <b>(→R2)</b> <i>(page 50)</i>. Otherwise, <b>(→R3)</b> <i>(page 51)</i>.",
+      "back_flavor": "A quickening gale stirs the black water at Cthulhu's sagging legs. As glowing green sigils alight on the awful dead god's arms and legs, he looses an ear-splitting roar that shatters windows and shakes the very foundations of the city. Hunched over nearby, Andy intones a string of guttural words, holding one shaking hand over a glowing artifact. \"It's working!\" Ruby shouts.\nAnother roar. The sound of gunfire echoes across the water as the Arkham police try in vain to draw his attention. You look up to see the ancient one himself staring down at you, his eyes glowing a vivid crimson. The behemoth raises one clawed hand overhead to crush you like an insect."
+    },
+    "vi_current": {
+      "name": "Con Dấu Cuối Cùng",
+      "text": "[action] Tiêu 1 [per_investigator] manh mối, theo nhóm và đặt một asset [[Artifact]] mà bạn kiểm soát trong khu vực trưng bày thành tích: Đặt 1 resource (<i>từ nhóm token</i>) trên địa điểm của bạn, làm dấu hiệu.\n<b>Forced</b> - Khi giai đoạn Enemy kết thúc: Rút lá bài trên cùng của chồng bài Cthulhu.\n<b>Objective</b> - <i>Xuất đi kẻ mộng mơ đã thức tỉnh!</i> Nếu mỗi kẻ địch [[Cthulhu]] nằm trong khu vực trưng bày thành tích và có 5 các địa điểm có dấu hiệu trên đó, ngay lập tức advance.",
+      "back_name": "Ritual of Binding",
+      "back_text": "If this agenda advanced by reaching its doom threshold, each investigator is defeated. Otherwise, if there are 5 or fewer [[Ruined]] locations trong màn chơi, <b>(→R2)</b> <i>(page 50)</i>. Otherwise, <b>(→R3)</b> <i>(page 51)</i>.",
+      "back_flavor": "Một cơn gió mạnh làm khuấy động dòng nước đen ở đôi chân chùng xuống của Cthulhu. Khi những dấu hiệu màu xanh lá cây phát sáng chiếu sáng trên tay và chân của vị thần chết khủng khiếp, anh ta phát ra một tiếng gầm đinh tai làm vỡ cửa sổ và làm rung chuyển cả nền móng của thành phố. Cúi người gần đó, Andy lẩm bẩm một chuỗi từ ngữ nghẹn ngào, một tay run rẩy cầm một hiện vật phát sáng. \"Nó đang hoạt động!\" Ruby hét lên.\nMột tiếng gầm khác. Âm thanh của tiếng súng vang vọng khắp mặt nước khi cảnh sát Arkham cố gắng thu hút sự chú ý của anh ta một cách vô ích. Bạn nhìn lên và thấy chính người xưa đang nhìn chằm chằm vào bạn, đôi mắt ông ta rực lên một màu đỏ thẫm sống động. Con quái vật giơ một bàn tay có móng vuốt lên trên để nghiền nát bạn như một con côn trùng."
+    }
+  }
+]

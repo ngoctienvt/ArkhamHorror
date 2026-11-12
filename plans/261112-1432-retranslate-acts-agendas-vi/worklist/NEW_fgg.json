@@ -1,0 +1,28 @@
+[
+  {
+    "code": "05203",
+    "type": "act",
+    "pack": "fgg",
+    "scenario": "For the Greater Good",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "The Four Keys",
+      "text": "<b>Objective</b> - If investigators at the same location control the Puzzle Box, the [skull] key, the [cultist] key, the [tablet] key, and the [elder_thing] key, advance.",
+      "flavor": "The \"device\" is nothing more than a locked puzzle box, just about large enough to hold a pair of shoes. The diagram on its surface depicts a broken pattern which can be manipulated to no apparent end, and there does not appear to be a keyhole of any kind.",
+      "back_name": "Opening the Box",
+      "back_text": "Check Campaign Log.\n- <i>If the investigators are members of the Lodge,</i> <b>(→R1)</b>.\n- Otherwise, <b>(→R2)</b>.",
+      "back_flavor": "Though the box itself seems to fight you at every turn, with all four key components in your possession, you finally manage to piece together how to open the contraption. First, you twist and contort the box's many mechanical devices until the image on its lid lines up perfectly with the diagram in your possession ([tablet]). Next, you chant the Latin incantation inscribed on the small wooden plaque you found ([cultist]). It takes a few tries to get it right, but eventually you hear a click as the surface of the wooden container shifts and changes. A round indentation has appeared on the side of the box, matching the size of your mysterious block onyx coin ([elder_thing]). As soon as you place the coin inside, another wooden panel opens on the other side, revealing a keyhole. Finally, you insert the key of bone ([skull]) into the keyhole and turn it. The lid begins to open, and suddenly the entirety of the room is engulfed in a rush of air as all light, color, sound, and matter is sucked into the box."
+    },
+    "vi_current": {
+      "name": "Bốn Chìa Khóa",
+      "text": "<b>Objective</b> - Nếu các điều tra viên cùng lúc địa điểm điều khiển Hộp xếp hình, phím [skull], phím [cultist], phím [tablet] và phím [elder_thing], advance.",
+      "flavor": "“Thiết bị” này không gì khác hơn là một chiếc hộp xếp hình có khóa, chỉ đủ lớn để chứa một đôi giày. Sơ đồ trên bề mặt của nó mô tả một mẫu bị hỏng có thể bị thao túng đến mức không rõ ràng và dường như không có bất kỳ loại lỗ khóa nào.",
+      "back_name": "Opening the Box",
+      "back_text": "Check Campaign Log.\n- <i>If the investigators are members of the Lodge,</i> <b>(→R1)</b>.\n- Otherwise, <b>(→R2)</b>.",
+      "back_flavor": "Mặc dù bản thân chiếc hộp dường như đang chiến đấu với bạn ở mọi lượt, nhưng với tất cả bốn thành phần chính mà bạn sở hữu, cuối cùng bạn cũng tìm được cách mở chiếc máy kỳ lạ này. Đầu tiên, bạn vặn và vặn nhiều thiết bị cơ khí của hộp cho đến khi hình ảnh trên nắp hộp khớp hoàn hảo với sơ đồ mà bạn sở hữu ([tablet]). Tiếp theo, bạn tụng câu thần chú tiếng Latinh được ghi trên tấm bảng gỗ nhỏ mà bạn tìm thấy ([cultist]). Phải mất vài lần cố gắng mới làm đúng, nhưng cuối cùng bạn nghe thấy tiếng tách khi bề mặt của thùng gỗ dịch chuyển và thay đổi. Một vết lõm tròn đã xuất hiện ở bên cạnh hộp, khớp với kích thước của đồng xu mã não khối bí ẩn của bạn ([elder_thing]). Ngay khi bạn đặt đồng xu vào bên trong, một tấm gỗ khác sẽ mở ra ở phía bên kia, để lộ lỗ khóa. Cuối cùng, bạn nhét chìa khóa xương ([skull]) vào lỗ khóa và xoay. Cái nắp bắt đầu mở ra và đột nhiên toàn bộ căn phòng chìm trong một luồng không khí dồn dập khi tất cả ánh sáng, màu sắc, âm thanh và vật chất đều bị hút vào trong hộp."
+    }
+  }
+]

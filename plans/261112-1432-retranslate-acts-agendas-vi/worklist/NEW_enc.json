@@ -1,0 +1,54 @@
+[
+  {
+    "code": "90095",
+    "type": "agenda",
+    "pack": "enc",
+    "scenario": "Enthralling Encore",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: icons en=['[per_investigator]', '[willpower]'] vi=['[per_investigator]']"
+    ],
+    "en": {
+      "name": "The Haunting of the Ward Theatre",
+      "text": "[fast] While at Sinister Soloist's location, discard 1 card of each class from your hand ([guardian], [seeker], [rogue], [mystic], and [survivor]): <b>Parley.</b> Automatically evade Sinister Soloist. Treat Sinister Soloist's text box as if it were blank (except for [[Traits]]) for the remainder of the round.",
+      "flavor": "The theatre is closed and quiet, as it has been since those days during the phantom production of <i>The King in Yellow</i>. As you take in your surroundings, you hear it again - the haunting violin. Someone is here, and they are keeping the memory of that production alive.",
+      "back_name": "Dirge of Dim Carcosa",
+      "back_text": "Place 1 resource on the scenario reference card, as a measure. Then if there are 5 or more measures, each investigator is defeated and suffers 1 mental trauma.\nOtherwise, each investigator must test [willpower](3). Each investigator who fails takes 1 horror and sets aside 1 non-permanent, non-weakness asset they control. Then, shuffle each asset set aside by this effect into the Props deck. If all investigators fail this test, remove 1[per_investigator] damage from Sinister Soloist.\nPlace clues on each revealed location, up to its clue value.\nShuffle the encounter discard pile into the encounter deck. Reset this agenda to agenda 1a.",
+      "back_flavor": "The soloist haunts your steps, ever present and always playing that maddening song. You feel the musical notes take root in your mind, threatening to pull you out of the theatre and into another world, one you think you've visited before..."
+    },
+    "vi_current": {
+      "name": "Nhà Hát Ám Ảnh của Phường",
+      "text": "[fast] Khi ở địa điểm của Sinister, hãy loại bỏ 1 lá bài của mỗi lớp từ tay bạn ([guardian], [seeker], [rogue], [mystic] và [survivor]): <b>Parley.</b> Tự động evade Sinister Soloist. Hãy coi hộp văn bản của Sinister Soloist như thể nó trống (ngoại trừ [[Traits]]) trong phần còn lại của vòng đấu.",
+      "flavor": "Rạp đóng cửa và yên tĩnh như thường lệ kể từ những ngày sản xuất phim ma <i>The King in Yellow</i>. Khi bạn quan sát xung quanh, bạn lại nghe thấy nó - tiếng vĩ cầm đầy ám ảnh. Ai đó đang ở đây và họ đang lưu giữ ký ức về quá trình sản xuất đó.",
+      "back_name": "Dirge of Dim Carcosa",
+      "back_text": "Place 1 resource on the thẻ tham chiếu màn chơi, as a measure. Then if there are 5 or more measures, each investigator is defeated and suffers 1 mental trauma.\nOtherwise, each investigator must Kiểm tra [](3). Each investigator who fails takes 1 horror and sets aside 1 non-permanent, non-điểm yếu asset they control. Then, shuffle each asset set aside by this effect into the Props deck. If all investigators fail this test, remove 1[per_investigator] damage from Sinister Soloist.\nPlace manh mối on each revealed location, up to its manh mối value.\nShuffle the chồng bài encounter bỏ into the chồng bài encounter. Reset this agenda to agenda 1a.",
+      "back_flavor": "Người nghệ sĩ độc tấu ám ảnh bước chân bạn, luôn hiện diện và luôn chơi bài hát điên cuồng đó. Bạn cảm thấy những nốt nhạc ăn sâu vào tâm trí, đe dọa kéo bạn ra khỏi rạp hát và đến một thế giới khác, nơi mà bạn nghĩ mình đã từng ghé thăm trước đây..."
+    }
+  },
+  {
+    "code": "90096",
+    "type": "act",
+    "pack": "enc",
+    "scenario": "Enthralling Encore",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Break Free from the Past",
+      "text": "[fast] Investigators at the same [[Private]] location spend 1 [per_investigator] clues, as a group: <b>Parley.</b> Reveal the top 3 cards of the Props deck and choose an investigator to draw 1 of them. Shuffle the remaining cards together and place them on the bottom of the Props deck.\n<b>Objective</b> - When Sinister Soloist is in the victory display, advance.",
+      "flavor": "The soloist stands on stage, their gangly arms moving with mechanical precision as they play the violin. Their face is shrouded in shadow, but their song follows you throughout the theatre.",
+      "back_name": "Final Bow",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "The soloist crumples before you, collapsing to the floor in a puff of acrid, black smoke and glowing embers, reeking of rosin. Your skin burns and your eyes water, forcing you to turn away. Coughing and waving your arms to clear the air, the smoke eventually dissipates. The soloist is nowhere to be seen. The theatre is quiet once again, as is your mind. Whatever unresolved business this stage held seems to be finished now. You turn and head back to the lobby, ready to put the Ward Theatre behind you for good."
+    },
+    "vi_current": {
+      "name": "Thoát Khỏi Quá Khứ",
+      "text": "[fast] các điều tra viên cùng địa điểm [[Private]] Tiêu 1 [per_investigator] manh mối, thành một nhóm: <b>Parley.</b> Lộ ra 3 lá bài trên cùng của chồng bài Đạo cụ và chọn một điều tra viên để rút 1 trong số chúng. Xáo trộn các lá bài còn lại với nhau và đặt chúng xuống đáy chồng bài Đạo cụ.\n<b>Objective</b> - Khi Sinister Soloist có mặt trong khu vực trưng bày thành tích, advance.",
+      "flavor": "Nghệ sĩ độc tấu đứng trên sân khấu, cánh tay cao lớn của họ di chuyển với độ chính xác cơ học khi họ chơi violin. Khuôn mặt của họ bị che khuất trong bóng tối, nhưng bài hát của họ vẫn theo bạn khắp rạp.",
+      "back_name": "Final Bow",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Người nghệ sĩ độc tấu ngã gục trước mặt bạn, ngã xuống sàn trong làn khói cay xè, khói đen và than hồng đang cháy, nồng nặc mùi nhựa thông. Da bạn bỏng rát và mắt bạn chảy nước, buộc bạn phải quay đi. Ho và vẫy tay để làm sạch không khí, khói cuối cùng cũng tan đi. Nghệ sĩ độc tấu không thấy đâu cả. Rạp hát lại trở nên yên tĩnh, tâm trí bạn cũng vậy. Bất cứ công việc kinh doanh nào chưa được giải quyết trong giai đoạn này dường như đã kết thúc. Bạn quay lại và quay trở lại tiền sảnh, sẵn sàng bỏ lại Nhà hát Ward phía sau bạn."
+    }
+  }
+]

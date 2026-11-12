@@ -1,18 +1,10 @@
 <script lang="ts" setup>
-import { runViewTransition } from '@/arkham/motion/viewTransitionGuard'
-import { computed, ref, nextTick, onUnmounted } from 'vue'
+import { computed } from 'vue'
 import PoolItem from '@/arkham/components/PoolItem.vue'
 import { customTokenSlug, type Token, type Tokens } from '@/arkham/types/Token'
 import { customSetToken } from '@/arkham/customCards'
 import { useDebug } from '@/arkham/debug'
 import { draggedOff, removeDragAttrs, type RemoveTarget } from '@/arkham/debugCardDrop'
-
-// Unique per TokenPool instance, so view-transition-names never collide between
-// different cards' pools.
-let tokenPoolUidCounter = 0
-const uid = tokenPoolUidCounter++
-const vtName = (key: string | number) =>
-  `tp-${uid}-${String(key).replace(/[^a-zA-Z0-9_-]/g, '-')}`
 
 export type TokenPoolItem = {
   key: string
@@ -173,371 +165,57 @@ const items = computed<DisplayItem[]>(() =>
   })
 )
 
-function itemStyle(item: DisplayItem, i: number) {
-  if (!clumped.value) return item.hidden ? { display: 'none' } : undefined
-  return {
-    '--token-index': i,
-    viewTransitionName: expanded.value ? undefined : vtName(item.key),
-    display: item.hidden || expanded.value ? 'none' : undefined,
-  }
-}
+const itemStyle = (item: DisplayItem) => item.hidden ? { display: 'none' } : undefined
 
-// When there are more tokens than fit comfortably, clump them into an
-// overlapping stack and fan them out into an auto-orienting shape on hover —
-// mirroring the sealed-chaos-token popover.
-const CLUMP_THRESHOLD = 2
-const clumped = computed(() => items.value.length > CLUMP_THRESHOLD)
-// Keep exactly-two-token pools side by side (the parent .pool wraps, which can
-// stack them vertically on narrow asset cards).
-const pairRow = computed(() => !clumped.value && items.value.length === 2)
-const expanded = ref(false)
-
-type ClumpLayout = {
-  positions: Array<{ '--token-x': string; '--token-y': string }>
-  width: number
-  height: number
-  shapePath: string
-}
-
-function tokenShapePath(points: Array<[number, number]>, closed: boolean) {
-  if (points.length === 0) return ''
-  if (points.length === 1) {
-    const [[x, y]] = points
-    return `M ${x - 1} ${y} a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0`
-  }
-  return `M ${points.map(([x, y]) => `${x} ${y}`).join(' L ')}${closed ? ' Z' : ''}`
-}
-
-/* Every token is drawn in a square cell of this size, centred on its layout
-   point. The token art itself is all different shapes and aspect ratios -- a
-   horror token is 25x22, a resource coin 25x28 -- so laying them out by their
-   top-left corner leaves their visual midpoints up to 4px apart and off the
-   blob's outline. The cell is what gets positioned; the art is centred inside
-   it. The overlay hands this number to the CSS as `--token-size` so the two
-   cannot drift apart. */
-const TOKEN_SIZE = 25
-
-const clumpLayout = computed<ClumpLayout>(() => {
-  const n = items.value.length
-  const tokenSize = TOKEN_SIZE
-  const padding = 18
-  /* A layout point is a token's CENTRE, so the margin clears half a cell on top
-     of the padding -- otherwise the first token hangs off the blob's edge. */
-  const margin = padding / 2 + tokenSize / 2
-  const step = 31
-  if (n <= 0) return { positions: [], width: tokenSize, height: tokenSize, shapePath: '' }
-
-  let points: Array<[number, number]>
-  let outline: Array<[number, number]>
-  let closed = true
-
-  if (n === 1) {
-    points = [[0, 0]]; outline = points; closed = false
-  } else if (n === 2) {
-    points = [[0, 0], [step, 0]]; outline = points; closed = false
-  } else if (n === 3) {
-    points = [[step / 2, 0], [0, step], [step, step]]; outline = points
-  } else if (n === 4) {
-    points = [[0, 0], [step, 0], [0, step], [step, step]]
-    outline = [[0, 0], [step, 0], [step, step], [0, step]]
-  } else {
-    const outerCount = n >= 7 ? n - 1 : n
-    const radius = step
-    const center = radius
-    const outer = Array.from({ length: outerCount }, (_, index): [number, number] => {
-      const angle = -Math.PI / 2 + (2 * Math.PI * index) / outerCount
-      return [center + radius * Math.cos(angle), center + radius * Math.sin(angle)]
-    })
-    points = n >= 7 ? [[center, center], ...outer] : outer
-    outline = outer
-  }
-
-  const minX = Math.min(...points.map(([x]) => x))
-  const minY = Math.min(...points.map(([, y]) => y))
-  const maxX = Math.max(...points.map(([x]) => x))
-  const maxY = Math.max(...points.map(([, y]) => y))
-  const positions = points.map(([x, y]) => ({
-    '--token-x': `${x - minX + margin}px`,
-    '--token-y': `${y - minY + margin}px`,
-  }))
-  const width = maxX - minX + tokenSize + padding
-  const height = maxY - minY + tokenSize + padding
-  const shapePoints = outline.map(([x, y]) => [x - minX + margin, y - minY + margin] as [number, number])
-
-  return { positions, width, height, shapePath: tokenShapePath(shapePoints, closed) }
-})
-
-// The expanded fan is teleported to <body> and positioned centered over the
-// collapsed stack, so it is never clipped by the scrollable player area.
-const anchorEl = ref<HTMLElement | null>(null)
-const overlayEl = ref<HTMLElement | null>(null)
-const overlayStyle = ref<Record<string, string>>({})
-let collapseTimer: ReturnType<typeof setTimeout> | null = null
-let pointerMoveHandler: ((e: PointerEvent) => void) | null = null
-
-// Toggle `expanded` inside a view transition so each token (which shares a
-// view-transition-name between its collapsed in-flow copy and its fanned overlay
-// copy) appears to glide into position. The in-flow tokens are hidden while
-// expanded so the names aren't duplicated.
-function setExpanded(open: boolean) {
-  void runViewTransition(async () => { expanded.value = open; await nextTick() })
-}
-
-function rectContains(r: DOMRect | undefined, x: number, y: number, pad = 6) {
-  return !!r && x >= r.left - pad && x <= r.right + pad && y >= r.top - pad && y <= r.bottom + pad
-}
-
-// Collapse is driven by the actual pointer position against the anchor/overlay
-// rects rather than mouseenter/leave. Those events are unreliable here: the
-// teleported overlay pops up under a stationary cursor and the view transition
-// briefly muddles hit-testing, which caused expand/collapse to flicker.
-function pointerWithin(x: number, y: number) {
-  return (
-    rectContains(anchorEl.value?.getBoundingClientRect(), x, y) ||
-    rectContains(overlayEl.value?.getBoundingClientRect(), x, y)
-  )
-}
-
-function attachPointerTracking() {
-  if (pointerMoveHandler) return
-  pointerMoveHandler = (e: PointerEvent) => {
-    if (pointerWithin(e.clientX, e.clientY)) {
-      if (collapseTimer) { clearTimeout(collapseTimer); collapseTimer = null }
-    } else if (!collapseTimer) {
-      collapseTimer = setTimeout(() => {
-        collapseTimer = null
-        setExpanded(false)
-        detachPointerTracking()
-      }, 120)
-    }
-  }
-  window.addEventListener('pointermove', pointerMoveHandler, { passive: true })
-}
-
-function detachPointerTracking() {
-  if (pointerMoveHandler) {
-    window.removeEventListener('pointermove', pointerMoveHandler)
-    pointerMoveHandler = null
-  }
-}
-
-function onEnter() {
-  if (!clumped.value || expanded.value) return
-  const el = anchorEl.value
-  if (el) {
-    const r = el.getBoundingClientRect()
-    const cx = r.left + r.width / 2
-    const cy = r.top + r.height / 2
-    const { width, height } = clumpLayout.value
-    overlayStyle.value = {
-      left: `${cx - width / 2}px`,
-      top: `${cy - height / 2}px`,
-      width: `${width}px`,
-      height: `${height}px`,
-      '--token-size': `${TOKEN_SIZE}px`,
-    }
-  }
-  setExpanded(true)
-  attachPointerTracking()
-}
-
-onUnmounted(() => {
-  if (collapseTimer) clearTimeout(collapseTimer)
-  detachPointerTracking()
-})
+/* Damage and horror are read together, so they share one row at the front of the
+ * pool instead of being split by the parent's wrap; every other token follows. */
+const WOUND_TYPES = new Set(['health', 'damage', 'sanity', 'horror'])
+const wounds = computed(() => items.value.filter((item) => WOUND_TYPES.has(item.type)))
+const others = computed(() => items.value.filter((item) => !WOUND_TYPES.has(item.type)))
 </script>
 
 <template>
-  <!-- In-flow: normal layout when few tokens, or a compact peeking stack when
-       clumped. This is the hover anchor. -->
-  <div
-    class="token-pool"
-    :class="{ 'token-pool--clumped': clumped, 'token-pool--row': pairRow }"
-    :style="clumped ? { '--token-count': items.length, '--token-size': `${TOKEN_SIZE}px` } : undefined"
-    ref="anchorEl"
-    @mouseenter="onEnter"
-  >
-    <PoolItem
-      v-for="(item, i) in items"
-      :key="item.key"
-      :type="item.type"
-      :amount="item.amount"
-      :tooltip="item.tooltip"
-      :image="item.image"
-      :class="item.class"
-      :style="itemStyle(item, i)"
-      v-bind="removeAttrs(item)"
-      @choose="emit('choose', item.key)"
-    />
-  </div>
-
-  <!-- Expanded fan, teleported to the top level so the scrollable player area
-       cannot clip it. Each token shares its in-flow copy's view-transition-name
-       so it appears to glide from the stack into the fan. -->
-  <Teleport to="body">
-    <div
-      v-if="clumped && expanded"
-      ref="overlayEl"
-      class="token-pool-overlay"
-      :style="overlayStyle"
-    >
-      <svg
-        class="token-pool-bg"
-        :viewBox="`0 0 ${clumpLayout.width} ${clumpLayout.height}`"
-        aria-hidden="true"
-      >
-        <path class="token-pool-bg-border" :d="clumpLayout.shapePath" />
-        <path class="token-pool-bg-fill" :d="clumpLayout.shapePath" />
-      </svg>
+  <!-- Every token lies on the card itself, in the parent .pool's flex layout, with
+       its count in its corner: no clumped stack or hover fan to open. -->
+  <div class="token-pool">
+    <div v-if="wounds.length" class="token-pool__wounds">
       <PoolItem
-        v-for="(item, i) in items"
+        v-for="item in wounds"
         :key="item.key"
         :type="item.type"
         :amount="item.amount"
         :tooltip="item.tooltip"
         :image="item.image"
         :class="item.class"
-        :style="{ ...clumpLayout.positions[i], viewTransitionName: vtName(item.key), display: item.hidden ? 'none' : undefined }"
+        :style="itemStyle(item)"
         v-bind="removeAttrs(item)"
         @choose="emit('choose', item.key)"
       />
     </div>
-  </Teleport>
+    <PoolItem
+      v-for="item in others"
+      :key="item.key"
+      :type="item.type"
+      :amount="item.amount"
+      :tooltip="item.tooltip"
+      :image="item.image"
+      :class="item.class"
+      :style="itemStyle(item)"
+      v-bind="removeAttrs(item)"
+      @choose="emit('choose', item.key)"
+    />
+  </div>
 </template>
 
 <style scoped>
-/* Not clumped: pass tokens straight into the parent .pool flex layout. */
 .token-pool {
   display: contents;
 }
 
-/* Exactly two tokens: keep them on one horizontal line. */
-.token-pool--row {
+.token-pool__wounds {
   display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
-}
-
-/* Clumped (collapsed): a compact peeking stack that acts as the hover anchor.
-   The box spans the whole stack (incl. the peek) and keeps its size even when
-   the tokens are hidden on expand, so the cursor never falls off the anchor. */
-.token-pool--clumped {
-  display: block;
-  position: relative;
-  width: calc(var(--token-size, 25px) + (var(--token-count, 1) - 1) * 5px);
-  height: var(--token-size, 25px);
-  pointer-events: auto;
-  overflow: visible;
-}
-
-.token-pool--clumped :deep(.poolItem) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: calc(1 + var(--token-index));
-  transform: translateX(calc(var(--token-index) * 5px));
-  /* Same square cell as the fan, so the peeking stack is even too. */
-  width: var(--token-size, 25px) !important;
-  height: var(--token-size, 25px) !important;
-  padding: 0 !important;
-  clip-path: none !important;
-  grid-template-columns: 100%;
-  grid-template-rows: 100%;
-}
-
-.token-pool--clumped :deep(.poolItem img) {
-  /* An absolute length, not 100%: a percentage height resolves against the grid
-     track, which is not always definite, and the art falls back to its intrinsic
-     aspect -- the uneven sizing this is here to remove. */
-  width: var(--token-size, 25px) !important;
-  height: var(--token-size, 25px) !important;
-  object-fit: contain;
-}
-</style>
-
-<style>
-/* Teleported to <body>, so these are intentionally global (not scoped). */
-.token-pool-overlay {
-  position: fixed;
-  z-index: var(--z-index-30000, 30000);
-  pointer-events: auto;
-  isolation: isolate;
-}
-
-/* The blob is a tiny polygon stroked very wide, drawn twice (rim, then body).
-   Both paints must be opaque and the whole svg composited once: with per-path
-   alpha the polygon's interior gets painted by four layers (each path's fill
-   *and* its stroke, which reaches all the way across) while the surrounding ring
-   gets two, which showed up as a hard-edged dark square between the tokens.
-   The colours below blend to the same result the alpha layers used to give
-   outside that square. */
-.token-pool-overlay .token-pool-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  pointer-events: none;
-  overflow: visible;
-  z-index: 0;
-  opacity: 0.82;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
-}
-
-.token-pool-overlay .token-pool-bg path {
-  fill: #1e1e1e;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.token-pool-overlay .token-pool-bg-border {
-  stroke: #a9acb3;
-  stroke-width: 46;
-}
-
-.token-pool-overlay .token-pool-bg-fill {
-  stroke: #1e1e1e;
-  stroke-width: 42;
-}
-
-/* `--token-x`/`--token-y` are the cell's CENTRE, so the cell is shifted back by
-   half itself. Every token then balances on its layout point whatever shape its
-   art is, which is what the per-token nudges used to approximate. */
-.token-pool-overlay .poolItem {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: var(--token-size, 25px) !important;
-  height: var(--token-size, 25px) !important;
-  padding: 0 !important;
-  clip-path: none !important;
-  grid-template-columns: 100%;
-  grid-template-rows: 100%;
-  transform: translate(var(--token-x), var(--token-y)) translate(-50%, -50%);
-}
-
-/* The doom token is dark and blends into the blob; trace it with a faint white
-   outline so it stays visible. */
-.token-pool-overlay .poolItem-doom img {
-  filter:
-    drop-shadow(1px 0 0 rgba(255, 255, 255, 0.25))
-    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.25))
-    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.25))
-    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.25));
-}
-
-/* Fit the art inside the square cell rather than fixing its width and letting
-   its height fall where it may: every token ends up the same size and centred. */
-.token-pool-overlay .poolItem img {
-  /* An absolute length, not 100%: a percentage height resolves against the grid
-     track, which is not always definite, and the art falls back to its intrinsic
-     aspect -- the uneven sizing this is here to remove. */
-  width: var(--token-size, 25px) !important;
-  height: var(--token-size, 25px) !important;
-  object-fit: contain;
-}
-
-.token-pool-overlay .poolItem span {
-  font-size: calc(var(--token-size, 25px) * 0.62) !important;
+  gap: 2px;
 }
 </style>

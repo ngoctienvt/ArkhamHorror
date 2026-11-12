@@ -1,0 +1,384 @@
+[
+  {
+    "code": "12106",
+    "type": "agenda",
+    "pack": "core_2026",
+    "scenario": "Spreading Flames",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('12106', 'text'), ('12107', 'text')]",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Past Curfew",
+      "text": "[action]: <b>Parley.</b> Test [intellect] (2). If you succeed, discard a Bystander enemy at your location.",
+      "flavor": "The campus is strangely quiet, and there is no sign of your friend. Hooded figures cross the quad as nervous students scurry under painfully bright streetlamps.",
+      "back_name": "Smoke on the Wind",
+      "back_text": "In player order, each investigator tests [willpower] (3). Each investigator who fails takes 1 horror.",
+      "back_flavor": "The wind carries the scent of smoke from across campus. A plume of flame rises from a nearby building."
+    },
+    "vi_current": {
+      "name": "Quá Giờ Giới Nghiêm",
+      "text": "[action]: <b>Parley.</b> Kiểm tra [intellect] (2). Nếu bạn thành công, hãy loại bỏ Người ngoài cuộc kẻ địch tại địa điểm của bạn.",
+      "flavor": "Khuôn viên trường yên tĩnh lạ thường và không có bóng dáng người bạn của bạn. Những người đội mũ trùm đầu băng qua sân trường khi những học sinh lo lắng hối hả chạy dưới ánh đèn đường sáng chói.",
+      "back_name": "Smoke on the Wind",
+      "back_text": "In player order, each investigator tests [willpower] (3). Each investigator who fails takes 1 horror.",
+      "back_flavor": "Gió mang mùi khói bay khắp khuôn viên trường. Một chùm lửa bốc lên từ một tòa nhà gần đó."
+    }
+  },
+  {
+    "code": "12107",
+    "type": "agenda",
+    "pack": "core_2026",
+    "scenario": "Spreading Flames",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('12106', 'text'), ('12107', 'text')]"
+    ],
+    "en": {
+      "name": "Lit Up",
+      "text": "[action]: <b>Parley.</b> Test [intellect] (2). If you succeed, discard a Bystander enemy at your location.",
+      "flavor": "The sky glows a faint orange as the flames spread.",
+      "back_name": "Uncontrollable Fire",
+      "back_text": "If they are still set aside, place 4 set-aside copies of Fire! in the encounter discard pile.\nIn player order, each investigator tests [agility] (3). Each investigator who fails takes 1 damage.",
+      "back_flavor": "Cinders fly through the air above Miskatonic University. The wail of a fire alarm resounds across the quad as dozens of frightened students flee the scene."
+    },
+    "vi_current": {
+      "name": "Thắp Sáng",
+      "text": "[action]: <b>Parley.</b> Kiểm tra [intellect] (2). Nếu bạn thành công, hãy loại bỏ Người ngoài cuộc kẻ địch tại địa điểm của bạn.",
+      "flavor": "Bầu trời rực lên một màu cam nhạt khi ngọn lửa lan rộng.",
+      "back_name": "Uncontrollable Fire",
+      "back_text": "If they are still set aside, place 4 set-aside copies of Fire! in the chồng bài encounter bỏ.\nIn player order, each investigator tests [agility] (3). Each investigator who fails takes 1 damage.",
+      "back_flavor": "Cinders bay trong không khí phía trên Đại học Miskatonic. Tiếng còi báo cháy vang lên khắp sân trường khi hàng chục học sinh sợ hãi chạy trốn khỏi hiện trường."
+    }
+  },
+  {
+    "code": "12108",
+    "type": "agenda",
+    "pack": "core_2026",
+    "scenario": "Spreading Flames",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Wild Flames",
+      "text": "[action]: <b>Parley.</b> Test [intellect] (2). If you succeed, discard a Bystander enemy at your location.\n<b>Forced</b> - After doom is placed on the agenda: The lead investigator draws the topmost copy of Fire! in the encounter discard pile ",
+      "flavor": "The campus is ablaze!",
+      "back_name": "Up in Flames",
+      "back_text": "Each surviving investigator who has not resigned is defeated and suffers 1 physical trauma.",
+      "back_flavor": "Thick, black smoke fills the air around you as you fall to your knees, coughing. Hazy dark shapes move somewhere beyond the roaring flames. Try as you might, you cannot pull yourself to safety. Your vision swims as you lose consciousness."
+    },
+    "vi_current": {
+      "name": "Ngọn Lửa Hoang dã",
+      "text": "[action]: <b>Parley.</b> Kiểm tra [intellect] (2). Nếu bạn thành công, hãy loại bỏ Người ngoài cuộc kẻ địch tại địa điểm của bạn.\n<b>Forced</b> - Sau khi doom được đưa vào agenda: điều tra viên chính rút ra bản sao cao nhất của Fire! trong chồng bài encounter bỏ",
+      "flavor": "Khuôn viên trường đang bốc cháy!",
+      "back_name": "Up in Flames",
+      "back_text": "Each surviving investigator who has not resigned is defeated and suffers 1 physical trauma.",
+      "back_flavor": "Làn khói đen dày đặc tràn ngập không khí xung quanh bạn khi bạn khuỵu gối xuống và ho. Những hình thù tối tăm mù mịt di chuyển đâu đó ngoài ngọn lửa đang ầm ầm. Dù cố gắng đến đâu, bạn cũng không thể kéo mình đến nơi an toàn. Tầm nhìn của bạn đảo lộn khi bạn mất ý thức."
+    }
+  },
+  {
+    "code": "12109",
+    "type": "act",
+    "pack": "core_2026",
+    "scenario": "Spreading Flames",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Where There's Smoke...",
+      "text": "<b>Objective</b> - At the end of the round, investigators may spend the requisite clues, as a group, to advance.",
+      "flavor": "You are searching the dormitories for any sign of your friend.",
+      "back_name": "...There's Fire",
+      "back_text": "Discard each enemy in play.\nPut the set-aside Dormitories and Miskatonic Quad locations into play. Spawn the set-aside Servant of Flame enemy at the Dormitories.\nAttach 1 set-aside copy of Fire! to Your Friend's Room. Place each other set-aside copy of Fire! in the encounter discard pile.",
+      "back_flavor": "You find your friend's satchel, scorched with a stylized emblem of an open palm. Wherever your friend is, you imagine they didn't go willingly. As you turn to leave, you are confronted by a masked figure wreathed in flame. As the room erupts into flames around you, they let out a chilling wail."
+    },
+    "vi_current": {
+      "name": "Ở Đâu có Khói...",
+      "text": "<b>Objective</b> - Khi kết thúc vòng đấu, các điều tra viên có thể dành manh mối cần thiết, với tư cách là một nhóm, cho advance.",
+      "flavor": "Bạn đang lục soát ký túc xá để tìm bất kỳ dấu hiệu nào của bạn mình.",
+      "back_name": "...There's Fire",
+      "back_text": "Discard each enemy trong màn chơi.\nPut the set-aside Dormitories and Miskatonic Quad locations into play. Spawn the set-aside Servant of Flame enemy at the Dormitories.\nAttach 1 set-aside copy of Fire! to Your Friend's Room. Place each other set-aside copy of Fire! in the chồng bài encounter bỏ.",
+      "back_flavor": "Bạn tìm thấy chiếc túi của bạn mình, bị cháy sém với biểu tượng cách điệu hình bàn tay mở. Dù bạn của bạn ở đâu, bạn cũng tưởng tượng rằng họ không tự nguyện đi. Khi bạn quay người rời khỏi màn chơi, bạn phải đối mặt với một nhân vật đeo mặt nạ đang chìm trong ngọn lửa. Khi căn phòng bùng cháy xung quanh bạn, họ phát ra một tiếng rên rỉ lạnh lẽo."
+    }
+  },
+  {
+    "code": "12110",
+    "type": "act",
+    "pack": "core_2026",
+    "scenario": "Spreading Flames",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Escape the Dorms",
+      "text": "<b>Objective</b> - If each undefeated investigator is at Miskatonic Quad, advance. <i>(Hint: Somcetimes it's better to run than to fight!)</i>",
+      "flavor": "A burning apparition stands between you and the exit. You must escape the dormitories!",
+      "back_name": "In the Open",
+      "back_text": "Search all in-play and all out-of-play areas for the Servant of Flame, heal all damage from them, and set them aside, out of play.\nDiscard each enemy in play.\nDiscard all tokens and attachments from Your Friend's Room and remove it from the game. Put each remaining set-aside location <i>(Orne Library, Science Hall, Warren Observatory)</i> into play.",
+      "back_flavor": "You emerge from the dormitories, lungs bursting, into the crisp autumn evening. Looking behind, there is no trace of your pursuer. You remember your friend planned to consult Miskatonic University's head librarian, Dr. Henry Armitage. He may be able to help you understand what is going on."
+    },
+    "vi_current": {
+      "name": "Thoát Khỏi ký Túc xá",
+      "text": "<b>Objective</b> - Nếu mỗi điều tra viên bất bại đều ở Miskatonic Quad, advance. <i>(Gợi ý: Đôi khi chạy vẫn tốt hơn là chiến đấu!)</i>",
+      "flavor": "Một bóng ma đang cháy đứng giữa bạn và lối ra. Bạn phải thoát khỏi ký túc xá!",
+      "back_name": "In the Open",
+      "back_text": "Search all in-play and all out-of-play areas for the Servant of Flame, heal all damage from them, and set them aside, ngoài màn chơi.\nDiscard each enemy trong màn chơi.\nDiscard all tokens and attachments from Your Friend's Room and remove it from the game. Put each remaining set-aside location <i>(Orne Library, Science Hall, Warren Observatory)</i> into play.",
+      "back_flavor": "Bạn bước ra khỏi ký túc xá, phổi vỡ òa, bước vào buổi tối mùa thu se lạnh. Nhìn lại phía sau, không có dấu vết của kẻ theo đuổi bạn. Bạn nhớ bạn của bạn đã lên kế hoạch hỏi ý kiến ​​thủ thư trưởng của Đại học Miskatonic, Tiến sĩ Henry Armitage. Anh ấy có thể giúp bạn hiểu chuyện gì đang xảy ra."
+    }
+  },
+  {
+    "code": "12111",
+    "type": "act",
+    "pack": "core_2026",
+    "scenario": "Spreading Flames",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Searching for Dr. Armitage",
+      "text": "<b>Objective</b> - At the end of the round, investigators at Orne Library may spend the requisite clues, as a group, to advance.",
+      "flavor": "Your friend had mentioned visiting the head librarian, Dr. Henry Armitage. With more and more strange figures arriving, you must scour the campus for his whereabouts.",
+      "back_name": "The Servant Unleashed",
+      "back_text": "Put the set-aside Dr. Henry Armitage story asset into play under any investigator's control. He does not take up an ally slot during this scenario.\nPut the set-aside Servant of Flame enemy into play at Miskatonic Quad. Place 3 [per_investigator] clues on Miskatonic Quad.\nThe lead investigator must search the encounter deck and discard pile for 1 [per_investigator] copies of Fire! and draw them. <i>(Shuffle the encounter deck if it was searched.)</i>",
+      "back_flavor": "You find Dr. Armitage barricaded in one of Orne Library's lecture halls.\n\"Some on campus have been acting strange lately, your friend among them. But all of that can wait. We must confront your pursuer and stop them before the entire campus burns!\" Dr. Armitage says."
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Tiến sĩ Armitage",
+      "text": "<b>Objective</b> - Khi kết thúc vòng thi, các điều tra viên tại Thư viện Orne có thể dành manh mối cần thiết, với tư cách là một nhóm, cho advance.",
+      "flavor": "Bạn của bạn đã đề cập đến việc đến thăm thủ thư trưởng, Tiến sĩ Henry Armitage. Với ngày càng nhiều nhân vật kỳ lạ xuất hiện, bạn phải lùng sục khắp khuôn viên trường để tìm tung tích của anh ta.",
+      "back_name": "The Servant Unleashed",
+      "back_text": "Put the set-aside Dr. Henry Armitage story asset into play under any investigator's control. He does not take up an ally slot during this scenario.\nPut the set-aside Servant of Flame enemy into play at Miskatonic Quad. Place 3 [per_investigator] manh mối on Miskatonic Quad.\nThe lead investigator must search the chồng bài encounter and chồng bài bỏ for 1 [per_investigator] copies of Fire! and draw them. <i>(Shuffle the chồng bài encounter if it was searched.)</i>",
+      "back_flavor": "Bạn tìm thấy Tiến sĩ Armitage đang bị rào chắn tại một trong những giảng đường của Thư viện Orne.\n\"Gần đây một số người trong trường có những hành động kỳ lạ, bạn của cậu cũng nằm trong số đó. Nhưng tất cả những điều đó có thể chờ đợi. Chúng ta phải đối đầu với kẻ truy đuổi cậu và ngăn chặn chúng trước khi toàn bộ khuôn viên trường bốc cháy!\" Tiến sĩ Armitage nói."
+    }
+  },
+  {
+    "code": "12112",
+    "type": "act",
+    "pack": "core_2026",
+    "scenario": "Spreading Flames",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Blaze of Glory",
+      "text": "[fast] Spend 1 [per_investigator] clues, as a group: Deal 1 [per_investigator] damage to an enemy at your location.\n[action]: <b>Resign.</b> You flee the burning campus. <i>(This does not provoke attacks of opportunity.)</i>\n<b>Objective</b> - If the Servant of Flame is defeated: Advance.",
+      "flavor": "Your fiery nemesis can't be allowed to hurt more innocents! With Dr. Armitage's help, perhaps you can stop them.",
+      "back_name": "A Flame, Doused",
+      "back_text": "<b>(→R1)</b> <i>(page 4)</i>",
+      "back_flavor": "Your nightmarish pursuer reels back, clutching both hands to their head, as if trying to pry their mask off. The sound of sirens in the distance grows louder. You turn to see a gaggle of terrified students rush past you. When you turn your attention back to your flaming nemesis, they have vanished into thin air."
+    },
+    "vi_current": {
+      "name": "Ngọn Lửa Vinh Quang",
+      "text": "[fast] Chi 1 [per_investigator] manh mối theo nhóm: Chia 1 [per_investigator] damage cho kẻ địch với số tiền địa điểm của bạn.\n[action]: <b>Resign.</b> Bạn chạy trốn khỏi khuôn viên trường đang cháy. <i>(Điều này không kích động đòn cơ hội.)</i>\n<b>Objective</b> - Nếu Người hầu của Lửa bị đánh bại: Advance.",
+      "flavor": "Kẻ thù bốc lửa của bạn không thể được phép làm tổn thương nhiều người vô tội hơn! Với sự giúp đỡ của Tiến sĩ Armitage, có lẽ bạn có thể ngăn chặn chúng.",
+      "back_name": "A Flame, Doused",
+      "back_text": "<b>(→R1)</b> <i>(page 4)</i>",
+      "back_flavor": "Kẻ truy đuổi ác mộng của bạn lùi lại, ôm cả hai tay vào đầu, như thể đang cố gắng cạy mặt nạ của họ ra. Tiếng còi báo động ở xa ngày càng lớn. Bạn quay lại thì thấy một nhóm học sinh đang sợ hãi lao qua bạn. Khi bạn hướng sự chú ý trở lại kẻ thù đang rực lửa của mình, chúng đã biến mất trong không khí."
+    }
+  },
+  {
+    "code": "12134",
+    "type": "agenda",
+    "pack": "core_2026",
+    "scenario": "Smoke and Mirrors",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('12134', 'text'), ('12135', 'text')]"
+    ],
+    "en": {
+      "name": "Arkham Alive",
+      "text": "[action]: <b>Resign.</b> You return to compare notes with Dr. Armitage on your friend's whereabouts.",
+      "flavor": "An unnatural haze fills the streets of Arkham. Some of the locals say the hills west of Arkham are burning. Despite the cool autumn weather, the city streets feel unnaturally warm as evening falls.",
+      "back_name": "Growing Flames",
+      "back_text": "One at a time, each investigator draws 1 copy of the set-aside Mark of Elokoss weakness. Each investigator is now the bearer of that weakness. <i>(Add that card to that investigator's deck, ignoring deckbuilding restrictions. It does not count toward that investigator's deck size.",
+      "back_flavor": "An itch you've done your best to ignore becomes unbearable. Pulling back your sleeve reveals a patch of peeling gray skin. Gingerly, you scratch the dead skin to reveal a smooth scar, almost as though you were branded. The scar resembles a hand with an unblinking eye inset into it. Touching it gives you a warm, heady feeling, like being drunk."
+    },
+    "vi_current": {
+      "name": "Arkham Sống",
+      "text": "[action]: <b>Resign.</b> Bạn quay lại để so sánh các ghi chú với Tiến sĩ Armitage về tung tích của bạn mình.",
+      "flavor": "Một đám mây mù bất thường tràn ngập đường phố Arkham. Một số người dân địa phương nói rằng những ngọn đồi phía tây Arkham đang bốc cháy. Bất chấp thời tiết mùa thu mát mẻ, đường phố trong thành phố lại có cảm giác ấm áp lạ thường khi màn đêm buông xuống.",
+      "back_name": "Growing Flames",
+      "back_text": "One at a time, each investigator draws 1 copy of the set-aside Mark of Elokoss điểm yếu. Each investigator is now the bearer of that điểm yếu. <i>(Add that card to that investigator's deck, ignoring deckbuilding restrictions. It does not count toward that investigator's deck size.",
+      "back_flavor": "Cơn ngứa mà bạn đã cố gắng hết sức để bỏ qua sẽ trở nên không thể chịu nổi. Kéo tay áo ra sau để lộ một mảng da xám xịt bong tróc. Một cách thận trọng, bạn gãi lớp da chết để lộ ra một vết sẹo mịn màng, gần như thể bạn đã được đóng dấu. Vết sẹo giống như một bàn tay với một con mắt không chớp được gắn vào đó. Chạm vào nó mang lại cho bạn cảm giác ấm áp, choáng váng, giống như đang say."
+    }
+  },
+  {
+    "code": "12135",
+    "type": "agenda",
+    "pack": "core_2026",
+    "scenario": "Smoke and Mirrors",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('12134', 'text'), ('12135', 'text')]",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Emergent Evils",
+      "text": "[action]: <b>Resign.</b> You return to compare notes with Dr. Armitage on your friend's whereabouts.",
+      "flavor": "Steam rises off of the wet pavement, as though the ground beneath it were actually burning.",
+      "back_name": "Outta Time",
+      "back_text": "Each investigator immediately resigns.",
+      "back_flavor": "You check your watch and realize it is already half past 11. Cursing, you hail a cab to make your way to Easttown."
+    },
+    "vi_current": {
+      "name": "Ác ma Mới Nổi",
+      "text": "[action]: <b>Resign.</b> Bạn quay lại để so sánh các ghi chú với Tiến sĩ Armitage về tung tích của bạn mình.",
+      "flavor": "Hơi nước bốc lên từ mặt đường ẩm ướt, như thể mặt đất bên dưới đang thực sự bốc cháy.",
+      "back_name": "Outta Time",
+      "back_text": "Each investigator immediately resigns.",
+      "back_flavor": "Bạn kiểm tra đồng hồ và nhận ra đã 11 giờ rưỡi. Nguyền rủa, bạn bắt taxi để đến Easttown."
+    }
+  },
+  {
+    "code": "12136",
+    "type": "act",
+    "pack": "core_2026",
+    "scenario": "Smoke and Mirrors",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Augurs of Flame",
+      "text": "[action] Spend 2 [per_investigator] clues, as a group: Draw the facedown card beneath your location.\n<b>Objective</b> - If there are a total of 6 [[Elite]] enemies in the victory display and/or under the act, advance. <i>(Hint: Either defeat the suspects by force or resolve their codex entries to generate leads for your investigation!)</i>",
+      "flavor": "You must find the whereabouts of the suspects on your friend's list.",
+      "back_name": "Back to Velma's",
+      "back_text": "<b>(→R1)</b> <i>(page 10)</i>",
+      "back_flavor": "Your search has turned up some interesting results. With all that you've learned, you and Dr. Armitage should have enough clues to find your friend's whereabouts. You hail a cab back to Easttown to discuss your findings."
+    },
+    "vi_current": {
+      "name": "Augurs của Ngọn Lửa",
+      "text": "[action] Chi 2 [per_investigator] manh mối, thành một nhóm: Rút lá bài úp xuống bên dưới địa điểm của bạn.\n<b>Objective</b> - Nếu có tổng cộng 6 các kẻ địch [[Elite]] trong khu vực trưng bày thành tích và/hoặc theo đạo luật, advance. <i>(Gợi ý: Dùng vũ lực đánh bại nghi phạm hoặc giải quyết các mục nhập mật mã của chúng để tạo ra manh mối cho cuộc điều tra của bạn!)</i>",
+      "flavor": "Bạn phải tìm ra tung tích của những kẻ tình nghi trong danh sách bạn bè của mình.",
+      "back_name": "Back to Velma's",
+      "back_text": "<b>(→R1)</b> <i>(page 10)</i>",
+      "back_flavor": "Tìm kiếm của bạn đã đưa ra một số kết quả thú vị. Với tất cả những gì bạn đã học được, bạn và Tiến sĩ Armitage sẽ có đủ manh mối để tìm ra tung tích của bạn mình. Bạn bắt taxi quay lại Easttown để thảo luận về những phát hiện của mình."
+    }
+  },
+  {
+    "code": "12169",
+    "type": "agenda",
+    "pack": "core_2026",
+    "scenario": "Queen of Ash",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('12169', 'text'), ('12170', 'text')]",
+      "back_text: icons en=['[willpower]'] vi=[]"
+    ],
+    "en": {
+      "name": "A Gathering",
+      "text": "Each enemy at a location with a copy of Fire! attached cannot be damaged.",
+      "flavor": "Chanting echoes through the fetid tunnels. The cult's rebirth is at hand!",
+      "back_name": "Flame in the Dark",
+      "back_text": "If the Servant of Flame enemy is set aside, spawn it at Underground Cistern.\nEach investigator must test [willpower] (4). Each investigator who fails takes 1 direct horror.",
+      "back_flavor": "From somewhere deep within the bowels of the city, a searing flame grows in intensity. Those who bear the mark of the queen arise to herald her return."
+    },
+    "vi_current": {
+      "name": "Một Cuộc tụ Họp",
+      "text": "Mỗi kẻ địch tại địa điểm có một bản sao của Fire! đính kèm không thể bị hư hỏng.",
+      "flavor": "Tiếng tụng kinh vang vọng qua các đường hầm hôi hám. Sự tái sinh của giáo phái đã đến gần!",
+      "back_name": "Flame in the Dark",
+      "back_text": "If the Servant of Flame enemy is set aside, spawn it at Underground Cistern.\nEach investigator must Kiểm tra [] (4). Each investigator who fails takes 1 direct horror.",
+      "back_flavor": "Từ đâu đó sâu trong lòng thành phố, một ngọn lửa thiêu đốt đang bùng lên dữ dội. Những người mang dấu ấn của nữ hoàng đứng lên báo trước sự trở lại của bà."
+    }
+  },
+  {
+    "code": "12170",
+    "type": "agenda",
+    "pack": "core_2026",
+    "scenario": "Queen of Ash",
+    "source_file": null,
+    "audit_flags": [
+      "text: dup [('12169', 'text'), ('12170', 'text')]",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "A Ritual",
+      "text": "Each enemy at a location with a copy of Fire! attached cannot be damaged.",
+      "flavor": "The air is choked with noxious smoke as the sounds of chanting grow louder.",
+      "back_name": "The Mother Arrives",
+      "back_text": "<b>If it is act 1:</b>\n<blockquote><i>Hungry flames spread through the tunnels, and the chants below intensify. You were too late to stop the summoning.</i></blockquote>\nReveal Underground Cistern and spawn Elokoss at it, <i>(Mother of Flame)</i> side faceup. Replace the current act and agenda with special agenda 3a: Brethren of Ash. It is both the current act and the current agenda.\n<hr>\n<b>Otherwise:</b>\n<blockquote><i>The ancient queen of ash awakens with a horrific wail.</i></blockquote>\nFlip Elokoss to her <i>(Mother of Flame)</i> side, keeping all damage and attachments on her. Replace the current act and agenda with special agenda 3a: Brethren of Ash. It is both the current act and the current agenda."
+    },
+    "vi_current": {
+      "name": "Một Nghi Thức",
+      "text": "Mỗi kẻ địch tại địa điểm có một bản sao của Fire! đính kèm không thể bị hư hỏng.",
+      "flavor": "Không khí ngột ngạt vì khói độc khi tiếng tụng kinh ngày càng lớn.",
+      "back_name": "The Mother Arrives",
+      "back_text": "<b>If it is act 1:</b>\n<blockquote><i>Hungry flames spread through the tunnels, and the chants below intensify. You were too late to stop the summoning.</i></blockquote>\nReveal Underground Cistern and spawn Elokoss at it, <i>(Mother of Flame)</i> side faceup. Replace the current act and agenda with special agenda 3a: Brethren of Ash. It is both the current act and the current agenda.\n<hr>\n<b>Otherwise:</b>\n<blockquote><i>The ancient queen of ash awakens with a horrific wail.</i></blockquote>\nFlip Elokoss to her <i>(Mother of Flame)</i> side, keeping all damage and attachments on her. Replace the current act and agenda with special agenda 3a: Brethren of Ash. It is both the current act and the current agenda."
+    }
+  },
+  {
+    "code": "12171",
+    "type": "agenda",
+    "pack": "core_2026",
+    "scenario": "Queen of Ash",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Brethren of Ash",
+      "text": "<b>Forced</b> - When doom would be placed on a card: Each investigator takes 1 direct damage, instead.\n<b>Forced</b> - If each remaining investigator is defeated: Advance.\n<b>Objective</b> - If Elokoss is defeated, <b>(→R1)</b> <i>(page 13)</i>.",
+      "back_name": "Out Like a Light",
+      "back_text": "Each investigator is <b>killed</b>.",
+      "back_flavor": "A knotted, claw-like hand grabs your arm as dozens more wrap around you, embracing you. The touch burns. You scream as a horrifying, toothy maw opens in Elokoss' belly.\n\"Don't worry. She only wants to honor you,\" says a familiar voice.\nYou look behind you to see your friend wearing the same black and red robes as the rest of the Brethren of Ash. They grin at you as tongues of flame billow out from the burning maw, enveloping you in a cocoon of fire. The last thing you hear as you are pulled into the white-hot inferno in Elokoss' chest is your friend - along with the rest of the cult - singing a lilting, off-key hymn for your rebirth."
+    },
+    "vi_current": {
+      "name": "Anh em của Ash",
+      "text": "<b>Forced</b> - Khi doom được đặt trên một thẻ: Thay vào đó, mỗi điều tra viên sẽ mất 1 direct damage.\n<b>Forced</b> - Nếu mỗi điều tra viên còn lại bị đánh bại: Advance.\n<b>Objective</b> - Nếu Elokoss bị đánh bại, <b>(→R1)</b> <i>(trang 13)</i>.",
+      "back_name": "Out Like a Light",
+      "back_text": "Each investigator is <b>killed</b>.",
+      "back_flavor": "Một bàn tay giống như móng vuốt thắt nút nắm lấy cánh tay bạn khi hàng chục bàn tay khác quấn quanh bạn, ôm lấy bạn. Cái chạm vào bỏng rát. Bạn hét lên khi một cái hàm đầy răng khủng khiếp mở ra trong bụng Elokoss.\n\"Đừng lo lắng. Cô ấy chỉ muốn tôn vinh bạn thôi,\" một giọng nói quen thuộc vang lên.\nBạn nhìn ra phía sau và thấy bạn mình mặc áo choàng đen và đỏ giống như những người anh em còn lại của Ash. Chúng cười toe toét với bạn khi những chiếc lưỡi lửa phóng ra từ cái miệng đang cháy, bao bọc bạn trong một cái kén lửa. Điều cuối cùng bạn nghe thấy khi bị kéo vào địa ngục nóng bỏng trong lồng ngực của Elokoss là bạn của bạn - cùng với những người còn lại trong giáo phái - đang hát một bài thánh ca du dương, lạc điệu về sự tái sinh của bạn."
+    }
+  },
+  {
+    "code": "12172",
+    "type": "act",
+    "pack": "core_2026",
+    "scenario": "Queen of Ash",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Search the Sewers",
+      "text": "<b>Objective</b> - When an investigator enters Underground Cistern, advance.",
+      "flavor": "The Brethren of Ash could be anywhere. You must search the sewers for the cult's ritual site if you hope to save your friend.",
+      "back_name": "The Ritual Site",
+      "back_text": "Spawn the set-aside Elokoss enemy at Underground Cistern, <i>(Faint Embers)</i> side faceup.\nThe investigator at Underground Cistern draws one of the set-aside Fire! treacheries.\nShuffle each other copy of Fire! into the encounter deck, along with the set-aside Queen's Knight and Herald of Flame enemies.\nPut the set-aside Sluice Control location into play.",
+      "back_flavor": "The chanting leads you through a labyrinth of tunnels to a dry cistern. Several dozen robed figures kneel before a burning birch tree, chanting. Your friend is among them. You must stop them before they sacrifice themselves for Elokoss!"
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Cống Rãnh",
+      "text": "<b>Objective</b> - Khi điều tra viên đi vào Bể chứa nước ngầm, advance.",
+      "flavor": "Huynh đệ Ash có thể ở bất cứ đâu. Bạn phải tìm kiếm địa điểm tổ chức nghi lễ của giáo phái trong cống rãnh nếu muốn cứu bạn mình.",
+      "back_name": "The Ritual Site",
+      "back_text": "Spawn the set-aside Elokoss enemy at Underground Cistern, <i>(Faint Embers)</i> side faceup.\nThe investigator at Underground Cistern draws one of the set-aside Fire! treacheries.\nShuffle each other copy of Fire! into the chồng bài encounter, along with the set-aside Queen's Knight and Herald of Flame enemies.\nPut the set-aside Sluice Control location into play.",
+      "back_flavor": "Việc tụng kinh dẫn bạn qua một mê cung đường hầm đến một bể chứa nước khô. Vài chục nhân vật mặc áo choàng quỳ trước cây bạch dương đang cháy và tụng kinh. Bạn của bạn nằm trong số đó. Bạn phải ngăn chặn chúng trước khi chúng hy sinh bản thân vì Elokoss!"
+    }
+  },
+  {
+    "code": "12173",
+    "type": "act",
+    "pack": "core_2026",
+    "scenario": "Queen of Ash",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Stop the Rite",
+      "text": "[fast] Spend 1 [per_investigator] clues, as a group: Discard a copy of Fire! at your location.\n<b>Forced</b> - When the round ends: Each [[Cultist]] enemy moves once toward Underground Cistern.\n<b>Objective/b> - If Elokoss is defeated, advance.",
+      "flavor": "You must stop the rite at any cost. You could scour the cistern for a means to stop the cult, or you could try to chop their profane idol to tinder!",
+      "back_name": "Crisis Averted",
+      "back_text": "<b>(→R1)</b> <i>(page 13)</i>.",
+      "back_flavor": "As you chop the burning tree to tinder, an unearthly howl fills the room. Ignoring it, you continue your attack, placing well-timed strike after well-timed strike to destroy the ancient evil. Eventually, the former effigy of the Brethren's goddess lies in pieces."
+    },
+    "vi_current": {
+      "name": "Dừng Nghi Thức",
+      "text": "[fast] Tiêu 1 [per_investigator] manh mối, theo nhóm: Loại bỏ một bản sao của Lửa! tại địa điểm của bạn.\n<b>Forced</b> - Khi vòng đấu kết thúc: Mỗi kẻ địch [[Cultist]] di chuyển một lần về phía Bể chứa nước ngầm.\n<b>Objective/b> - Nếu Elokoss bị đánh bại, advance.",
+      "flavor": "Bạn phải dừng nghi thức bằng bất cứ giá nào. Bạn có thể lùng sục trong bể chứa nước để tìm phương tiện ngăn chặn giáo phái, hoặc bạn có thể cố chặt thần tượng tục tĩu của họ để đốt lửa!",
+      "back_name": "Crisis Averted",
+      "back_text": "<b>(→R1)</b> <i>(page 13)</i>.",
+      "back_flavor": "Khi bạn chặt cây đang cháy để đốt lửa, một tiếng hú kinh hoàng tràn ngập căn phòng. Bỏ qua nó, bạn tiếp tục cuộc tấn công của mình, thực hiện đòn tấn công đúng lúc này đến đòn tấn công đúng lúc khác để tiêu diệt tà ác cổ xưa. Cuối cùng, hình nộm trước đây của nữ thần Brethren đã nằm thành từng mảnh."
+    }
+  }
+]

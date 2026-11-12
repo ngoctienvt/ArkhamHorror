@@ -21,6 +21,9 @@ import { clipBetweenBoxes, useMapPlateBoxes } from '@/arkham/composables/useMapP
 import type { MapViewport } from '@/arkham/composables/useMapViewport'
 import { MAP_ZOOM_ENABLED } from '@/arkham/mapViewport'
 import { CARD_FLIGHT_ATTR, cardFlightStyle, useCardFlightState } from '@/arkham/cardFlight'
+import { barrierKey, barriersBetween, blockedLinks, type BarrierCounts } from '@/arkham/scenarioBarriers'
+import { useDebug } from '@/arkham/debug'
+import BarrierIcon from '@/arkham/components/BarrierIcon.vue'
 
 export type MapMove = { id: string; name: string; path: string }
 export type GridSpot = { label: string; x: number; y: number; index: number }
@@ -58,6 +61,8 @@ const props = defineProps<{
   height?: number
   /** Pinch-zoom and pan of the stage; never on the house cutaway or the compact map. */
   viewport?: MapViewport
+  /** Barriers standing on links (In Too Deep), keyed by the two sorted location ids. */
+  barriers?: BarrierCounts | null
 }>()
 const emit = defineEmits<{
   (e: 'inspect', location: Location, anchor: HTMLElement): void
@@ -177,8 +182,17 @@ const connectionArrows = computed(() => {
     const move = linkMove(a, b)
     // A one-way arrow points the way the passage runs; a two-way one lies along the line.
     const rotation = angle + (direction === 'backward' ? Math.PI : 0)
+    const barriers = barriersBetween(props.barriers ?? null, a, b)
+    const barrierLabel = barriers > 0
+      ? t('locationMap.link.barriers', { n: barriers, a: props.infoOf(from).face.name, b: props.infoOf(to).face.name }, barriers)
+      : null
+    const linkLabel = move
+      ? t('locationMap.link.moveTo', { name: props.infoOf(locations.get(move.to)!).face.name })
+      : t(direction === 'both' ? 'locationMap.link.twoWay' : 'locationMap.link.oneWay')
     return [{
       key,
+      pair: [a, b] as [string, string],
+      barriers,
       x: ax,
       y: ay,
       // A faint guide from plate edge to plate edge through the badge, so it is clear which two rooms it joins.
@@ -186,18 +200,42 @@ const connectionArrows = computed(() => {
       rotation,
       both: direction === 'both',
       move,
-      label: move
-        ? t('locationMap.link.moveTo', { name: props.infoOf(locations.get(move.to)!).face.name })
-        : t(direction === 'both' ? 'locationMap.link.twoWay' : 'locationMap.link.oneWay'),
+      label: barrierLabel ? `${linkLabel} · ${barrierLabel}` : linkLabel,
     }]
   })
 })
 
+/* A barrier must never vanish from the map: a blocked pair whose link badge was not drawn (no link direction,
+ * plates that do not clip, ...) still gets a marker halfway between the two locations. */
+const strayBarriers = computed(() => {
+  if (props.cutaway || props.compact) return []
+  const drawn = new Set(connectionArrows.value.map((arrow) => barrierKey(...arrow.pair)))
+  const byId = new Map(props.locations.map((location) => [location.id, location]))
+  return blockedLinks(props.barriers ?? null).flatMap(({ a, b, key, count }) => {
+    const from = byId.get(a)
+    const to = byId.get(b)
+    if (drawn.has(key) || !from || !to || !props.positions[a] || !props.positions[b]) return []
+    const [x1, y1] = pos(a)
+    const [x2, y2] = pos(b)
+    return [{
+      key, pair: [a, b] as [string, string], count, x: (x1 + x2) / 2, y: (y1 + y2) / 2,
+      label: t('locationMap.link.barriers', { n: count, a: props.infoOf(from).face.name, b: props.infoOf(to).face.name }, count),
+    }]
+  })
+})
+
+const debug = useDebug()
+/** In debug mode a click on a barricade takes one barrier away, as the card board's x button does. */
+function removeBarrier(pair: [string, string]) {
+  debug.send(props.game.id, { tag: 'ScenarioCountDecrementBy', contents: [{ tag: 'Barriers', contents: [...pair].sort() }, 1] })
+}
+
 /** Locations whose move button now sits on a link, so their plate drops its own. */
 const movesOnLinks = computed(() => new Set(connectionArrows.value.flatMap((arrow) => (arrow.move ? [arrow.move.to] : []))))
 
-function arrowClick(arrow: { move: { index: number } | null }) {
+function arrowClick(arrow: { move: { index: number } | null; barriers: number; pair: [string, string] }) {
   if (arrow.move) emit('choose', arrow.move.index)
+  else if (debug.active && arrow.barriers > 0) removeBarrier(arrow.pair)
 }
 const ownId = () => ownInvestigator(props.game, props.playerId)?.id
 
@@ -236,7 +274,7 @@ function tileClick(l: Location, event: MouseEvent) {
             :x1="pos(a)[0]" :y1="pos(a)[1]" :x2="pos(b)[0]" :y2="pos(b)[1]" />
         </template>
         <template v-if="illustratedBoard">
-          <path v-for="arrow in connectionArrows" :key="'guide' + arrow.key" class="connection-guide" :class="{ movable: !!arrow.move }" :d="arrow.guide" />
+          <path v-for="arrow in connectionArrows" :key="'guide' + arrow.key" class="connection-guide" :class="{ movable: !!arrow.move, blocked: arrow.barriers > 0 }" :d="arrow.guide" />
         </template>
         <circle v-for="m in moves" :key="m.id" class="moving-enemy" r="1.4">
           <title>{{ m.name }}</title>
@@ -245,17 +283,28 @@ function tileClick(l: Location, event: MouseEvent) {
       </svg>
       <!-- Every link wears a badge saying which way it runs: a double arrow for two-way, a single one for one-way.
            When you can travel along it, the badge is the move button. -->
+      <!-- A link holding barriers shows a barricade instead of the arrow, with the count in the corner. A link
+           you can still travel (ignoring barriers) keeps the green move arrow, and still shows the count. -->
       <button v-for="arrow in connectionArrows" :key="arrow.key" type="button" class="connection-arrow"
-        :class="{ draggable: canDrag, movable: !!arrow.move, 'two-way': arrow.both }"
+        :class="{ draggable: canDrag, movable: !!arrow.move, 'two-way': arrow.both, blocked: arrow.barriers > 0 }"
         :style="{ left: arrow.x + '%', top: arrow.y + '%' }"
-        :aria-label="arrow.label" :tabindex="arrow.move ? 0 : -1" :aria-disabled="!arrow.move || undefined"
+        :aria-label="arrow.label" :title="arrow.barriers > 0 ? arrow.label : undefined"
+        :tabindex="arrow.move ? 0 : -1" :aria-disabled="!arrow.move || undefined"
         :data-game-actionable="arrow.move ? true : undefined"
         @pointerdown="canDrag && beginDrag($event, arrowKey(arrow.key), 'pct', stage)"
         @click.stop="arrowClick(arrow)">
-        <svg viewBox="0 0 40 16" aria-hidden="true" :style="{ rotate: arrow.rotation + 'rad' }">
+        <BarrierIcon v-if="arrow.barriers > 0 && !arrow.move" class="barricade" />
+        <svg v-else viewBox="0 0 40 16" aria-hidden="true" :style="{ rotate: arrow.rotation + 'rad' }">
           <path d="M4 8h32m-5-5 5 5-5 5" />
           <path v-if="arrow.both" d="m9 3-5 5 5 5" />
         </svg>
+        <span v-if="arrow.barriers > 0" class="barrier-count" aria-hidden="true">{{ arrow.barriers }}</span>
+      </button>
+      <button v-for="stray in strayBarriers" :key="'barrier-' + stray.key" type="button" class="connection-arrow blocked stray"
+        :style="{ left: stray.x + '%', top: stray.y + '%' }" :aria-label="stray.label" :title="stray.label" tabindex="-1"
+        @click.stop="debug.active && removeBarrier(stray.pair)">
+        <BarrierIcon class="barricade" />
+        <span class="barrier-count" aria-hidden="true">{{ stray.count }}</span>
       </button>
       <button v-for="spot in gridSpots" :key="spot.label" class="spot"
         :style="{ left: spot.x + '%', top: spot.y + '%' }"
@@ -428,6 +477,37 @@ function tileClick(l: Location, event: MouseEvent) {
   outline: none;
 }
 .connection-guide.movable { stroke: #a8e6b2d9; }
+/* Barricaded link: a rust badge with a wooden barricade, a solid rust guide, and the number of barriers in a
+ * chip on the badge's corner. It takes the pointer so its tooltip (who it blocks, how many) shows on hover. */
+.connection-guide.blocked { stroke: #d9774fcc; stroke-dasharray: none; stroke-width: 2.4; }
+.connection-guide.blocked.movable { stroke: #a8e6b2d9; stroke-dasharray: 5 6; }
+.connection-arrow.blocked {
+  pointer-events: auto;
+  background: #2a130be6;
+  border-color: #d9774f;
+  color: #f1c08f;
+  box-shadow: 0 0 0 1px #000a, 0 1px 6px #000c, 0 0 8px #d9774f55;
+}
+.connection-arrow.blocked.movable { background: #1d3324e6; border-color: #8fd19a; }
+.connection-arrow .barricade { width: 100%; height: 100%; }
+.connection-arrow .barrier-count {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  background: #b4462a;
+  border: 1px solid #ffd8b5;
+  color: #fff;
+  font: 700 11px/15px system-ui, sans-serif;
+  text-align: center;
+  box-shadow: 0 1px 3px #000c;
+  pointer-events: none;
+}
+.connection-arrow.stray { cursor: default; }
 .location-map[data-input='touch'] .connection-arrow.movable { width: var(--tap-min, 44px); height: var(--tap-min, 44px); }
 .descent .node {
   width: min(25%, 240px);

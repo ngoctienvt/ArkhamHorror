@@ -169,7 +169,7 @@ export function removeDragAttrs(target: RemoveTarget, token: string, count: numb
       event.stopPropagation()
       event.preventDefault()
       const beneath = document.elementsFromPoint(event.clientX, event.clientY).find(
-        (element) => !element.closest('.poolItem, .token-pool, .token-pool-overlay'),
+        (element) => !element.closest('.poolItem, .token-pool'),
       )
       beneath?.dispatchEvent(new MouseEvent('click', {
         bubbles: true,

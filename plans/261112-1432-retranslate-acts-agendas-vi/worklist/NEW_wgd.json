@@ -1,0 +1,192 @@
+[
+  {
+    "code": "06287",
+    "type": "agenda",
+    "pack": "wgd",
+    "scenario": "Where the Gods Dwell",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: dup [('06287', 'back_text'), ('06288', 'back_text')]"
+    ],
+    "en": {
+      "name": "The Eye of Chaos",
+      "flavor": "I see you there.\n\nPlaying with fate like it is\nall some sort of game.\n\nDid you really think you\ncould escape my grasp?\n\nWhat makes you\nthink you are\nthe one\nin\ncontrol?",
+      "back_name": "The Mire of Dreams",
+      "back_text": "<b>If it is act 4, read the following:</b>\nPlace clues on each Forsaken Tower location until it has clues equal to its clue value.\nReveal each copy of Nyarlathotep in each investigator's hand. Each investigator who did not reveal a copy of Nyarlathotep must take either 1 damage or 1 horror. For each copy of Nyarlathotep revealed by an investigator, that investigator must choose:\n- Nyarlathotep immediately attacks that investigator and is shuffled into the encounter deck.\n- Nyarlathotep immediately attacks that investigator three times and is returned to that investigator's hand.",
+      "back_flavor": "Do not try to run now. You are mine.\nYou will never, ever, ever wake up."
+    },
+    "vi_current": {
+      "name": "Con Mắt Hỗn Loạn",
+      "flavor": "Tôi thấy bạn ở đó.\n\nChơi đùa với số phận như nó vốn thế\ntất cả các loại trò chơi.\n\nBạn có thực sự nghĩ rằng bạn\ncó thể thoát khỏi tầm tay của tôi?\n\nĐiều gì khiến bạn\nnghĩ rằng bạn là\ncái một\ntrong\nkiểm soát?",
+      "back_name": "The Mire of Dreams",
+      "back_text": "<b>If it is act 4, read the following:</b>\nPlace manh mối on each Forsaken Tower location until it has manh mối equal to its manh mối value.\nReveal each copy of Nyarlathotep in each investigator's hand. Each investigator who did not reveal a copy of Nyarlathotep must take either 1 damage or 1 horror. For each copy of Nyarlathotep revealed by an investigator, that investigator must choose:\n- Nyarlathotep immediately attacks that investigator and is shuffled into the chồng bài encounter.\n- Nyarlathotep immediately attacks that investigator three times and is returned to that investigator's hand.",
+      "back_flavor": "Đừng cố chạy bây giờ. Bạn là của tôi.\nBạn sẽ không bao giờ, không bao giờ, thức dậy."
+    }
+  },
+  {
+    "code": "06288",
+    "type": "agenda",
+    "pack": "wgd",
+    "scenario": "Where the Gods Dwell",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: dup [('06287', 'back_text'), ('06288', 'back_text')]"
+    ],
+    "en": {
+      "name": "The Shape of Chaos",
+      "flavor": "Why do you fight?\nWhy do you flee?\n\nI am your future.\nI am your fate.\n\nAnother mask for my collection.\n\nAnother corpse\nfor me\nto\nwear.",
+      "back_name": "The Last Dream",
+      "back_text": "<b>If it is act 4, read the following:</b>\nPlace clues on each Forsaken Tower location until it has clues equal to its clue value.\nReveal each copy of Nyarlathotep in each investigator's hand. Each investigator who did not reveal a copy of Nyarlathotep must take either 1 damage or 1 horror. For each copy of Nyarlathotep revealed by an investigator, that investigator must choose:\n- Nyarlathotep immediately attacks that investigator and is shuffled into the encounter deck.\n- Nyarlathotep immediately attacks that investigator three times and is returned to that investigator's hand.",
+      "back_flavor": "Yes, read on, my puppet. This will be your last dream. Your final reprieve. Then I shall take the rest for myself."
+    },
+    "vi_current": {
+      "name": "Hình Dạng Hỗn Loạn",
+      "flavor": "Tại sao bạn chiến đấu?\nTại sao bạn lại chạy trốn?\n\nTôi là tương lai của bạn.\nTôi là số phận của bạn.\n\nMột mặt nạ khác cho bộ sưu tập của tôi.\n\nMột xác chết khác\ncho tôi\nđến\nmặc.",
+      "back_name": "The Last Dream",
+      "back_text": "<b>If it is act 4, read the following:</b>\nPlace manh mối on each Forsaken Tower location until it has manh mối equal to its manh mối value.\nReveal each copy of Nyarlathotep in each investigator's hand. Each investigator who did not reveal a copy of Nyarlathotep must take either 1 damage or 1 horror. For each copy of Nyarlathotep revealed by an investigator, that investigator must choose:\n- Nyarlathotep immediately attacks that investigator and is shuffled into the chồng bài encounter.\n- Nyarlathotep immediately attacks that investigator three times and is returned to that investigator's hand.",
+      "back_flavor": "Vâng, đọc tiếp đi, con rối của tôi. Đây sẽ là giấc mơ cuối cùng của bạn. Sự ân xá cuối cùng của bạn. Thế thì tôi sẽ tự mình lấy phần còn lại."
+    }
+  },
+  {
+    "code": "06289",
+    "type": "agenda",
+    "pack": "wgd",
+    "scenario": "Where the Gods Dwell",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Chaos Incarnate",
+      "flavor": "Hei! Aa-shanta 'nygh! / I am true Chaos / look not upon my shape for it is ever-changing / I commanded you to keep reading / look not upon my face for it is no face at all / I told you to stop running / listen not for the truth for the truth is a lie / I warned you not to dream / Mine and mine alone / Nobody else can have it / I dared you not to fight / Run then, rabbit, run / there is nothing more / I cherish the chase / nothing / nothing",
+      "back_name": "A Dream Devoured",
+      "back_text": "Each investigator is defeated and driven <b>insane</b>.",
+      "back_flavor": "Enough playing with you. I will have what is owed to me.\nYou think you can simply venture into this land of dreams with no consequence? With impunity? With no spilt blood?\nWho are you to partake of such fantasy? To intrude on the dreams of others like a parasite? To devour these dreams like they are yours to enjoy? Out with you! I shall rend your mind from your skull as one skins a cat. Look, see: I am cracking open your skull, and pouring out your <u>you</u>. And now, I am filling it with <u>me</u>. You are no longer. Did you really think there would be any other result? Out with you, now. Begone."
+    },
+    "vi_current": {
+      "name": "Hỗn Loạn Nhập Thể",
+      "flavor": "Này! Aa-shanta 'nygh! / Tôi là sự thật Hỗn loạn / Đừng nhìn vào hình dạng của tôi vì nó luôn thay đổi / Tôi đã ra lệnh cho bạn tiếp tục đọc / Đừng nhìn vào mặt tôi vì nó không có khuôn mặt nào cả / Tôi đã bảo bạn ngừng chạy / đừng nghe sự thật vì sự thật là dối trá / Tôi đã cảnh báo bạn đừng mơ / Của tôi và của riêng tôi / Không ai khác có thể có nó / Tôi thách bạn không chiến đấu / Chạy đi, thỏ, chạy / không còn gì nữa / Tôi trân trọng cuộc rượt đuổi / không có gì / không có gì",
+      "back_name": "A Dream Devoured",
+      "back_text": "Each investigator is defeated and driven <b>insane</b>.",
+      "back_flavor": "Chơi với bạn đủ rồi. Tôi sẽ có những gì tôi nợ tôi.\nBạn nghĩ rằng bạn có thể đơn giản dấn thân vào vùng đất của những giấc mơ này mà không gặp hậu quả gì? Với sự miễn tội? Không có máu đổ?\nBạn là ai để tham gia vào tưởng tượng như vậy? Xâm nhập vào giấc mơ của người khác như một kẻ ăn bám? Để nuốt chửng những giấc mơ này như thể chúng là của bạn để tận hưởng? Ra ngoài với bạn! Tôi sẽ xé nát tâm trí bạn khỏi hộp sọ như lột da một con mèo. Hãy nhìn xem: Tôi đang mở hộp sọ của bạn và đổ <u>you</u> của bạn ra. Và bây giờ, tôi đang điền nó bằng <u>me</u>. Bạn không còn nữa. Bạn có thực sự nghĩ rằng sẽ có kết quả nào khác không? Ra ngoài với bạn ngay bây giờ. Bắt đầu đi."
+    }
+  },
+  {
+    "code": "06290",
+    "type": "act",
+    "pack": "wgd",
+    "scenario": "Where the Gods Dwell",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Journey Through the Cold Wastes",
+      "flavor": "You have come to the land of Leng, a barren, icy wasteland where you believe the peak of unknown Kadath resides. All the while, you are taunted by a presence which gnaws at your insides, a wordless, derisive voice which you cannot hear but feel within the confines of your mind.\n",
+      "back_name": "The Monastery",
+      "back_text": "Reveal the Monastery of Leng.\nSpawn the set-aside High Priest Not to Be Described enemy in the Monastery of Leng.",
+      "back_flavor": "Traversing the wastes of Leng is no easy task. The cold bites at your skin, and the bitter winds lash against your face. Even if you encounter no nameless monsters, the land itself may still yet claim your life. You try desperately to stay warm, but there is no refuge in the icy desolation. Exhausted, you collapse into a nearby snowdrift. To your surprise, you feel hard stone thrust into your ribcage. The pain shocks you out of your enervation, and you brush aside the snow to examine what it hides. Eventually, you uncover a curious stone idol in the shape of a horned creature, which glows and vibrates with faint energy. In the distance, you hear a stone slab shifting in the snow."
+    },
+    "vi_current": {
+      "name": "Hành Trình Xuyên Qua Vùng Đất Lạnh Giá",
+      "flavor": "Bạn đã đến vùng đất Leng, một vùng đất hoang cằn cỗi, băng giá, nơi bạn tin rằng đỉnh cao của Kadath chưa được biết đến đang cư trú. Trong lúc đó, bạn bị chế nhạo bởi một sự hiện diện đang gặm nhấm bên trong bạn, một giọng nói không lời, chế nhạo mà bạn không thể nghe thấy nhưng có thể cảm nhận được trong giới hạn của tâm trí mình.",
+      "back_name": "The Monastery",
+      "back_text": "Reveal the Monastery of Leng.\nSpawn the set-aside High Priest Not to Be Described enemy in the Monastery of Leng.",
+      "back_flavor": "Vượt qua vùng đất hoang của Leng không phải là việc dễ dàng. Cái lạnh cắt vào da bạn, và những cơn gió buốt giá quất vào mặt bạn. Ngay cả khi bạn không gặp phải quái vật vô danh nào, vùng đất này vẫn có thể cướp đi sinh mạng của bạn. Bạn cố gắng hết sức để giữ ấm, nhưng không có nơi ẩn náu trong sự hoang tàn băng giá. Kiệt sức, bạn gục xuống đống tuyết gần đó. Trước sự ngạc nhiên của bạn, bạn cảm thấy một hòn đá cứng đâm vào lồng ngực. Cơn đau làm bạn kiệt sức, và bạn gạt tuyết sang một bên để kiểm tra xem nó che giấu điều gì. Cuối cùng, bạn phát hiện ra một thần tượng bằng đá kỳ lạ có hình dạng một sinh vật có sừng, phát sáng và rung động với nguồn năng lượng mờ nhạt. Ở phía xa, bạn nghe thấy tiếng phiến đá dịch chuyển trong tuyết."
+    }
+  },
+  {
+    "code": "06291",
+    "type": "act",
+    "pack": "wgd",
+    "scenario": "Where the Gods Dwell",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "The Thing in the Robes",
+      "text": "[action] If an investigator \"maneuvered the priest closer,\" and an investigator \"stunned the priest\": Defeat the High Priest Not to Be Described.\n<b>Objective</b> - If the High Priest Not to Be Described is defeated, advance.",
+      "flavor": "Inside the domed structure is a raised dais. Upon it sits a lumpish figure robed in yellow silk, a mask covering its face. \"My master has plans for you,\" it drawls. \"Now, step forward and receive my gift.\" You shake your head - you have seen this sort of disguise before. You know what sort of creature this \"priest\" truly is.",
+      "back_name": "A Foul Fate",
+      "back_text": "<b>If you defeated the High Priest Not to Be Described with damage, read the following:</b>\n<blockquote><i>As you strike it down, the creature spits foul curses at you in tongues that can scarcely be described. Its last breath is filled with hate.</i></blockquote><hr>\n<b>If you defeated the High Priest Not to Be Described using the ability on act 2a, read the following:</b>\n<blockquote><i>Despite your fear - or perhaps as a result - you discover a means to escape the creature's grasp. With the creature distracted, you shove with all of your might, and it topples into the gaping well in the center of the room, letting out a hideous screech in its wake.</i></blockquote><hr>\n<b>No matter how it was defeated, also read the following:</b>\n<blockquote><i>With the monster dispatched, you can explore its monastery in relative peace. Along the ruined walls of the stone building, tapestries depict the history of this land, a history of blood and suffering that you have no desire to remember when this is all said and done. Great snowcapped peaks loom over each of these scenes. In just one of them, a castle is woven in black thread.</i></blockquote>"
+    },
+    "vi_current": {
+      "name": "Thứ trong Chiếc áo Choàng",
+      "text": "[action] Nếu điều tra viên \"điều khiển linh mục lại gần\" và điều tra viên \"làm linh mục choáng váng\": Đánh bại Linh mục Tối cao Không được Mô tả.\n<b>Objective</b> - Nếu Thượng Tế Không Được Mô Tả bị đánh bại, advance.",
+      "flavor": "Bên trong cấu trúc mái vòm là một bệ cao. Trên đó có một hình người to lớn mặc áo lụa màu vàng, đeo mặt nạ che mặt. \"Chủ nhân của tôi có kế hoạch cho bạn,\" nó dài giọng. \"Bây giờ hãy bước tới và nhận món quà của tôi.\" Bạn lắc đầu - bạn đã từng thấy kiểu ngụy trang này trước đây. Bạn biết \"linh mục\" này thực sự là loại sinh vật gì.",
+      "back_name": "A Foul Fate",
+      "back_text": "<b>If you defeated the High Priest Not to Be Described with damage, read the following:</b>\n<blockquote><i>As you strike it down, the creature spits foul curses at you in tongues that can scarcely be described. Its last breath is filled with hate.</i></blockquote><hr>\n<b>If you defeated the High Priest Not to Be Described using the ability on act 2a, read the following:</b>\n<blockquote><i>Despite your fear - or perhaps as a result - you discover a means to escape the creature's grasp. With the creature distracted, you shove with all of your might, and it topples into the gaping well in the center of the room, letting out a hideous screech in its wake.</i></blockquote><hr>\n<b>No matter how it was defeated, also read the following:</b>\n<blockquote><i>With the monster dispatched, you can explore its monastery in relative peace. Along the ruined walls of the stone building, tapestries depict the history of this land, a history of blood and suffering that you have no desire to remember when this is all said and done. Great snowcapped peaks loom over each of these scenes. In just one of them, a castle is woven in black thread.</i></blockquote>"
+    }
+  },
+  {
+    "code": "06292",
+    "type": "act",
+    "pack": "wgd",
+    "scenario": "Where the Gods Dwell",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Beyond Dreams",
+      "text": "<b>Objective</b> - If each investigator is at the Onyx Gates, and no clues are on it, advance.",
+      "flavor": "You believe that Kadath is the highest peak far to the north, but in order to open the gates leading to that forsaken land, you must prove that it exists.",
+      "back_name": "Where the Gods Dwell",
+      "back_text": "Each investigator loses all of their clues.\nRead <b>Scenario Interlude: Grand Design</b> in the Campaign Guide. Then, advance to Act 4a - \"Truth and Lies.\""
+    },
+    "vi_current": {
+      "name": "Ngoài những Giấc mơ",
+      "text": "<b>Objective</b> - Nếu mỗi điều tra viên đều ở Cổng Onyx và không có manh mối nào trên đó, thì đó là advance.",
+      "flavor": "Bạn tin rằng Kadath là đỉnh núi cao nhất xa về phía bắc, nhưng để mở được cánh cổng dẫn đến vùng đất bị bỏ hoang đó, bạn phải chứng minh rằng nó tồn tại.",
+      "back_name": "Nơi các vị Thần Ngự",
+      "back_text": "Each investigator loses all of their manh mối.\nRead <b>Scenario Interlude: Grand Design</b> in the Campaign Guide. Then, advance to Act 4a - \"Truth and Lies.\""
+    }
+  },
+  {
+    "code": "06293",
+    "type": "act",
+    "pack": "wgd",
+    "scenario": "Where the Gods Dwell",
+    "source_file": null,
+    "audit_flags": [],
+    "en": {
+      "name": "Truth and Lies",
+      "text": "[action] Spend 1 clue: Look at the top 3 cards of the encounter deck. Draw each of those cards with the hidden keyword and discard the rest.\n<b>Objective</b> - Find and expose Nyarlathotep's true form by adding copies of Nyarlathotep to the victory display. If 1 plus 1 [per_investigator] copies are in the victory display, advance.",
+      "flavor": "Beware! For I am the one who has trapped you here, and you shall never leave. Your dreams are forever mine!",
+      "back_name": "The True Shape",
+      "back_text": "<b>Check Campaign Log. <i>If the black cat knows the truth</i> and <i>the investigators possess the Silver Key</i>:</b>\n<blockquote><i>As the shadows disperse, the black cat appears on your shoulder. \"Now!\" it cries. The silver key shimmers with radiant light as you draw it out. \"This is the only way to expose its true shape!\"</i></blockquote>\nEach investigator loses each of their clues. Each copy of Nyarlathotep in the victory display combines to form a single enemy with:\n- Fight/evade values equal to the highest fight/evade value among combined copies of itself.\n- Health/damage/horror/victory values equal to the total combined health/damage/horror/victory values of all combined copies of itself.\n- All keywords from all combined copies of itself.\nSpawn this monstrosity in The Great Hall. It is Nyarlathotep's True Shape. Place clues on each Forsaken Tower location until it has clues equal to its clue value.<hr>\n<b>Otherwise, proceed to (→R1).</b>"
+    },
+    "vi_current": {
+      "name": "Sự Thật và Dối Trá",
+      "text": "[action] Chi 1 manh mối: Nhìn vào 3 lá bài trên cùng của chồng bài encounter. Rút từng thẻ đó với từ khóa hidden và loại bỏ phần còn lại.\n<b>Objective</b> - Tìm và hình dạng thực sự của expose Nyarlathotep bằng cách thêm các bản sao của Nyarlathotep vào khu vực trưng bày thành tích. Nếu 1 cộng 1 bản sao [per_investigator] nằm trong khu vực trưng bày thành tích, advance.",
+      "flavor": "Hãy coi chừng! Vì tôi là người đã nhốt bạn ở đây và bạn sẽ không bao giờ rời khỏi màn chơi. Ước mơ của bạn mãi mãi là của tôi!",
+      "back_name": "The True Shape",
+      "back_text": "<b>Check Campaign Log. <i>If the black cat knows the truth</i> and <i>the investigators possess the Silver Key</i>:</b>\n<blockquote><i>As the shadows disperse, the black cat appears on your shoulder. \"Now!\" it cries. The silver key shimmers with radiant light as you draw it out. \"This is the only way to expose its true shape!\"</i></blockquote>\nEach investigator loses each of their manh mối. Each copy of Nyarlathotep in the khu vực trưng bày thành tích combines to form a single enemy with:\n- Fight/evade values equal to the highest fight/evade value among combined copies of itself.\n- Health/damage/horror/victory values equal to the total combined health/damage/horror/victory values of all combined copies of itself.\n- All keywords from all combined copies of itself.\nSpawn this monstrosity in The Great Hall. It is Nyarlathotep's True Shape. Place manh mối on each Forsaken Tower location until it has manh mối equal to its manh mối value.<hr>\n<b>Otherwise, proceed to (→R1).</b>"
+    }
+  },
+  {
+    "code": "06294",
+    "type": "act",
+    "pack": "wgd",
+    "scenario": "Where the Gods Dwell",
+    "source_file": null,
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "The Dream-Eaters",
+      "text": "Nyarlathotep's True Shape gets -1 health for each clue the investigators possess, as a group.\n<b>Objective</b> - If Nyarlathotep's True Shape is defeated, advance.",
+      "flavor": "What?!\n\nWhat do you think you are doing?\n\nThese are <u>my</u> dreams.\n\nDo you really think you can\nclaim this realm for yourself?\n\nIt cannot be possessed\nby one such as you!",
+      "back_name": "The Black Cat",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "The abomination folds in on itself, tears a hole through reality, and escapes through the other side. It has fled the Dreamlands and may never return.\n\"It is done,\" the black cat says after a moment of unsteady silence. \"The final scene in my vision, and the final chapter of my story.\" Its form begins to fray and unravel like the end of a rope. \"These dreams are very precious, human.\" Its voice lingers and hums through the air even as the last vestiges of its shape disappear into the aether. \"Do not lose them. They are the very heart of you. The heart of us all. And they're yours to keep - at least, for now.\"\nYou want to ask what all of this means, but it is too late. The black cat is gone."
+    },
+    "vi_current": {
+      "name": "Kẻ ăn Giấc mơ",
+      "text": "True Shape của Nyarlathotep nhận -1 health cho mỗi manh mối mà các điều tra viên sở hữu, với tư cách là một nhóm.\n<b>Objective</b> - Nếu Hình dạng Thật của Nyarlathotep bị đánh bại, advance.",
+      "flavor": "Cái gì?!\n\nBạn nghĩ bạn đang làm gì?\n\nĐây là những giấc mơ <u>my</u>.\n\nBạn có thực sự nghĩ rằng bạn có thể\ngiành lấy vương quốc này cho chính mình?\n\nNó không thể chiếm hữu được\nbởi một người như bạn!",
+      "back_name": "The Black Cat",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "Sự ghê tởm tự gấp lại, xé một lỗ xuyên qua thực tế và trốn thoát qua phía bên kia. Nó đã trốn khỏi Dreamlands và có thể không bao giờ quay trở lại.\n“Xong rồi,” mèo đen nói sau một lúc im lặng run rẩy. \"Cảnh cuối cùng trong tầm nhìn của tôi và chương cuối cùng trong câu chuyện của tôi.\" Hình dạng của nó bắt đầu sờn và bong ra như đầu sợi dây. \"Những giấc mơ này rất quý giá, con người ạ.\" Giọng nói của nó vang vọng và ngân nga trong không khí ngay cả khi hình dạng cuối cùng của nó biến mất trong không khí. \"Đừng đánh mất chúng. Chúng chính là trái tim của bạn. Trái tim của tất cả chúng ta. Và chúng là của bạn để giữ - ít nhất là vào lúc này.\"\nBạn muốn hỏi tất cả những điều này có ý nghĩa gì, nhưng đã quá muộn. Con mèo đen đã biến mất."
+    }
+  }
+]

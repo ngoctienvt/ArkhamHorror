@@ -4,7 +4,8 @@ import { imgsrc } from '@/arkham/helpers'
 
 export interface Props {
   type: string
-  amount?: number
+  /* A string for a count shown against its maximum, e.g. clues left "0/1". */
+  amount?: number | string
   tooltip?: string
   image?: string
 }
@@ -48,7 +49,6 @@ const image = computed(() => {
     width: var(--width);
   }
   padding: 2px;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .poolItem.poolItem-clue {
@@ -57,36 +57,45 @@ const image = computed(() => {
   }
 }
 
+/* The count sits in the token's lower-right corner, small and hanging slightly
+   off its edge, so it does not cover the emblem (the emblems are light: cream
+   clue, salmon heart, pale brain, so big centred digits blended into them). A
+   heavy dark outline keeps the digits readable over the token or the card art. */
 .poolItem {
   width: var(--width);
   display: grid;
-  place-items: center;
   color: black;
   font-weight: 900;
   font-size: 1.7em;
-  img { filter: drop-shadow(1px 1px 2px rgb(0, 0, 0)); }
   & > * {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
   }
-
+  /* A thin light rim traced around the token's silhouette, then a dark shadow,
+     so a token never sinks into the card art beneath it. Interactive states
+     (can-take, can-interact) replace this with their own magenta outline. */
   img {
     width: 100%;
+    filter:
+      drop-shadow(1px 0 0 #f4ead0) drop-shadow(-1px 0 0 #f4ead0)
+      drop-shadow(0 1px 0 #f4ead0) drop-shadow(0 -1px 0 #f4ead0)
+      drop-shadow(1px 2px 2px rgb(0, 0, 0, 0.9));
   }
 
   span {
-    font-family: "Arkham";
-    display: flex;
+    justify-self: end;
+    align-self: end;
+    translate: 18% 12%;
     position: relative;
-    color: #F0F0F0;
-    text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8), 0 -1px 0 rgba(0, 0, 0, 0.8), 0 1px 0 rgba(0, 0, 0, 0.8), -1px 0 0 rgba(0, 0, 0, 0.8);
-    font-size: 0.8em;
-    align-items: center;
-    justify-content: center;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    width: 1.2em;
-    height: auto;
+    z-index: 1;
+    color: #fff;
+    font: 800 0.5em/1 system-ui, "Segoe UI", sans-serif;
+    font-variant-numeric: tabular-nums;
+    text-shadow:
+      1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000,
+      1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      0 0 4px #000;
+    pointer-events: none;
   }
 }
 

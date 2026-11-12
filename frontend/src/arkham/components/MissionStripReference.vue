@@ -96,7 +96,9 @@ const info = computed<{ heading: string; lines: TokenLine[] } | null>(() => {
       const badge = tokenBadge(short, x, autoFail)
       const label = badge.tier === 'fail' ? t('locationMap.referenceX.autoFail')
         : badge.modifier !== null ? formatModifier(badge.modifier) : short
-      lines.push({ key: `${code}-${lines.length}`, token: tok[1], html: replaceText(tok[2]), plain, short, badge, label, hint: hintFor(x, autoFail) })
+      /* The value column already shows the printed modifier ("-X.", "-2."), so the effect text starts after it. */
+      const effect = short ? tok[2].replace(/^\s*[+\-−–]\s*(?:\d+|X)\s*\.?\s*/i, '') : tok[2]
+      lines.push({ key: `${code}-${lines.length}`, token: tok[1], html: replaceText(effect), plain, short, badge, label, hint: hintFor(x, autoFail) })
     }
     else if (!lines.length) heading = plainText(line)
   }
@@ -153,17 +155,19 @@ const cardTitle = computed(() => {
       <!-- Collapsed strip: one chip per chaos token (icon + modifier); hover / focus shows the full effect. -->
       <span v-for="l in compact ? info?.lines ?? [] : []" :key="l.key" class="token" tabindex="0" :aria-label="l.plain">
         <span class="token__icon"><ChaosTokenIcon :token="l.token" /></span>
-        <TokenModifierBadge v-if="l.label" class="token__mod" :label="l.label" :tier="l.badge.tier" :flash="flashing.has(l.key)" />
+        <span v-if="l.badge.tier === 'fail'" class="token__fail"><ChaosTokenIcon token="auto_fail" /></span>
+        <TokenModifierBadge v-else-if="l.label" class="token__mod" :label="l.label" :tier="l.badge.tier" :flash="flashing.has(l.key)" />
         <span class="token__pop" role="tooltip"><b v-if="l.hint" class="token__hint">{{ l.hint }}</b><span v-html="l.html"></span></span>
       </span>
     </template>
-    <!-- Open strip: the full effects, in as many columns as the panel's width allows. -->
+    <!-- Open strip: one plain row per token — icon, what it does now, then the rest of the effect text.
+         An automatic failure shows the auto-fail token itself instead of a word label. -->
     <ul v-if="info?.lines.length" class="tokens">
-      <li v-for="l in info.lines" :key="l.key">
+      <li v-for="l in info.lines" :key="l.key" :class="{ 'is-fail': l.badge.tier === 'fail' }">
         <span class="tokens__icon"><ChaosTokenIcon :token="l.token" /></span>
-        <!-- What the token does now, in its own column so the numbers line up and the text runs unbroken. -->
-        <span class="tokens__badge">
-          <TokenModifierBadge v-if="l.label" :label="l.label" :tier="l.badge.tier" :hint="l.hint" :flash="flashing.has(l.key)" />
+        <span class="tokens__value" :class="[`tokens__value--${l.badge.tier}`, { 'tokens__value--flash': flashing.has(l.key) }]" :title="l.hint || undefined">
+          <span v-if="l.badge.tier === 'fail'" class="tokens__fail-icon" :aria-label="l.label"><ChaosTokenIcon token="auto_fail" /></span>
+          <template v-else>{{ l.label }}</template>
         </span>
         <span class="tokens__effect" v-html="l.html"></span>
       </li>
@@ -174,10 +178,24 @@ const cardTitle = computed(() => {
 <style scoped>
 .chip { display: inline-flex; align-items: center; gap: 5px; padding: 1px 9px; border-radius: 999px; font-size: 0.7rem; color: #f0d9a8; background: #0006; border: 1px solid var(--line-strong, #c6a87399); white-space: nowrap; }
 .chip b { color: var(--heading, #fff4df); font-size: 0.82rem; }
-.tokens { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); column-gap: 12px; }
+/* Wide columns: one column in the usual panel width (the text reads in long lines, fewer rows to scroll),
+ * two only when the panel is really wide. */
+.tokens { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); column-gap: 16px; }
 .tokens li { display: flex; align-items: flex-start; gap: 6px; padding: 2px 0; font-size: 0.76rem; line-height: 1.35; }
-.tokens__icon { flex: none; width: 20px; height: 20px; }
-.tokens__effect { flex: 1; min-width: 0; text-align: justify; color: var(--text, #e8e3d0); }
+.tokens__icon { flex: none; width: 18px; height: 18px; }
+/* The value: plain bold number, same width for every row so the text lines up. */
+.tokens__value { flex: none; width: 2.2em; text-align: center; font-weight: 700; font-size: 0.82rem; font-variant-numeric: tabular-nums; color: var(--heading, #fff4df); }
+.tokens__value--bad { color: #f0a090; }
+.tokens__value--unknown { color: #c9b893; }
+.tokens__value--flash { animation: value-flash 0.9s ease-out; }
+@keyframes value-flash { 0% { color: #ffd27a; transform: scale(1.3); } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .tokens__value--flash { animation: none; } }
+.tokens__fail-icon { display: inline-block; width: 18px; height: 18px; vertical-align: middle; }
+.tokens__effect { flex: 1; min-width: 0; text-align: left; color: var(--text, #e8e3d0); }
+.tokens li.is-fail .tokens__effect { color: #f3c0b8; }
+.token__fail { flex: none; width: 16px; height: 16px; }
+/* A 0 is shown like any other number here, not faded. */
+.token__mod.badge--zero { color: var(--heading, #fff4df); border-color: #c6a87366; }
 /* Token chip with a popover holding the full effect text. */
 .token { position: relative; display: inline-flex; align-items: center; gap: 3px; padding: 1px 6px 1px 2px; border-radius: 999px; background: #0006; border: 1px solid #c6a87355; cursor: help; outline: none; }
 .token:focus-visible { box-shadow: 0 0 0 1px var(--accent-gold, #d9b878); }

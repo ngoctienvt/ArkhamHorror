@@ -838,7 +838,8 @@
     "link": {
       "twoWay": "Đường đi 2 chiều",
       "oneWay": "Đường đi 1 chiều (theo hướng mũi tên)",
-      "moveTo": "Di chuyển đến {name}"
+      "moveTo": "Di chuyển đến {name}",
+      "barriers": "{n} rào cản giữa {a} và {b}"
     },
     "legend": {
       "title": "Chú giải",

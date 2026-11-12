@@ -1,0 +1,1231 @@
+[
+  {
+    "code": "06040",
+    "type": "agenda",
+    "pack": "tde",
+    "scenario": "Beyond the Gates of Sleep",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.52",
+      "back_text: nums en=['1', '1', '1', '1', '2', '3', '3', '4'] vi=[]",
+      "back_text: icons en=['[willpower]'] vi=[]",
+      "back_text: len ratio 0.04",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Journey through the Gates",
+      "text": "<b>Forced</b> - When doom is placed on this agenda during the mythos phase, if any investigator is at a [[Steps]] location: Place 1 additional doom on this agenda.",
+      "flavor": "From your initial dream, you have been drawn into a familiar dreamscape: the same one that Virgil Gray traversed in his story in <u>Tales from Nevermore</u>. Is this real? Or is your mind simply conjuring what it expects to see?",
+      "back_name": "Trick of the Mind",
+      "back_text": "<b>If it is act 1, 2, or 3, read the following:</b>\n<i><blockquote>The steps begin to twist like a snake uncoiling from its sleep. You try to keep your balance, but there is nothing for you to cling to for safety as the stairs tilt and flip.</i></blockquote>\nEach surviving investigator is defeated and suffers 1 physical trauma. Each of those investigators may test [willpower] (3) before being defeated to remember that this is all a dream. Each investigator who succeeds is defeated and suffers 1 mental trauma, instead.<hr>\n<b>If it is act 4, read the following:</b>\n<i><blockquote>\"Help! Please! Anyone!\" The voice called out from the trees, far from the path. Normally, this sort of trick would not have fooled you, but the voice was too familiar to ignore. A loved one, perhaps, or someone you once failed in a time of need. It doesn't matter. It's too late now. You spin and look for the path, but it is nowhere to be found.</blockquote></i>\nRecord in your Campaign Log <i>the dreamers strayed from the path</i>. Each surviving investigator is defeated and suffers 1 mental trauma."
+    },
+    "vi_current": {
+      "name": "Hành Trình Qua Những Cánh Cổng",
+      "text": "<b>Forced</b> - Khi doom được đưa vào agenda này trong giai đoạn Mythos, nếu có điều tra viên nào ở địa điểm [[Steps]]: Đặt thêm 1 doom vào agenda này.",
+      "flavor": "Bạn chìm vào giấc ngủ sâu và thấy mình đang bước xuống Bảy Mươi Bậc Thang Của Giấc Ngủ Nhẹ, tiến tới Cánh Cổng Giấc Mơ.",
+      "back_name": "Trước Ngưỡng Cửa",
+      "back_text": "Spawn kẻ địch Kaman-Thah tại Cavern of Flame.",
+      "back_flavor": "Hai vị tu sĩ râu dài uy nghi Nasht và Kaman-Thah đứng gác trước lối vào Rừng Ma Quái."
+    }
+  },
+  {
+    "code": "06041",
+    "type": "act",
+    "pack": "tde",
+    "scenario": "Beyond the Gates of Sleep",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: len ratio 0.56",
+      "flavor: len ratio 0.27",
+      "back_text: nums en=['1'] vi=['2']",
+      "back_text: icons en=['[skull]'] vi=[]",
+      "back_text: len ratio 0.09",
+      "back_flavor: len ratio 0.22"
+    ],
+    "en": {
+      "name": "Entering the Dreamlands",
+      "text": "Do not draw cards from the encounter deck during the mythos phase.\n<b>Objective</b> - If an investigator enters The Cavern of Flame, immediately advance.",
+      "flavor": "The door leading out of your initial dream takes you to a stone staircase. Thousands of different stairways join together here, forming an incomprehensible nexus of steps where worlds and stories join together. Where the stairs meet, they form a single spiraling pathway descending deeper into the land of dreams.",
+      "back_name": "Priests of the Dreamlands",
+      "back_text": "Each investigator loses all of their clues.\nPut the set-aside Nasht and Kaman-Thah enemies into play in The Cavern of Flame.\nYour slumber grows deeper. Add 1 [skull] token to the chaos bag for the remainder of the campaign.",
+      "back_flavor": "At the center of the cavern is a pillar of flame flanked by two robed, bearded men. You recognize this scene from the writings of Virgil Gray. The priests, the cavern: it is all just as he described. Either you have ventured into the same dreamscape, or you are sharing in his delusions. \"You must be tested,\" one of the priests says enigmatically. \"Your ordeal will be great, and thus, so too will be your trial.\""
+    },
+    "vi_current": {
+      "name": "Bước Vào Cõi Mộng",
+      "text": "<b>Objective</b> — Thăm dò các bậc thang thần bí và diện kiến hai vị tu sĩ canh cổng.",
+      "flavor": "Không gian xung quanh biến đổi thành một thế giới thần tiên rực rỡ nhưng đầy bí ẩn.",
+      "back_name": "Thử Thách Của Các Tu Sĩ",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Nasht và Kaman-Thah yêu cầu bạn chứng minh sự thuần khiết của tâm hồn trước khi bước tiếp."
+    }
+  },
+  {
+    "code": "06042",
+    "type": "act",
+    "pack": "tde",
+    "scenario": "Beyond the Gates of Sleep",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.30",
+      "back_text: nums en=['1'] vi=['3']",
+      "back_text: icons en=['[skull]'] vi=[]",
+      "back_text: len ratio 0.08",
+      "back_flavor: len ratio 0.17"
+    ],
+    "en": {
+      "name": "The Trial of Nasht and Kaman-Thah",
+      "text": "Do not draw cards from the encounter deck during the mythos phase.\n<b>Objective</b> - If neither Nasht nor Kaman-Thah are in play, immediately advance.",
+      "flavor": "The barred golden gates beyond will not open for you. Only the priests can judge whether you are worthy to pass through to the steps below. They cross their weapons - a steel halberd and a silver scythe - in front of the gates.",
+      "back_name": "Beware the Road Ahead",
+      "back_text": "Each investigator loses all of their clues.\nPut the set-aside Seven Hundred Steps, Base of the Steps, and The Enchanted Path locations into play.\nYour slumber grows deeper. Add 1 [skull] token to the chaos bag for the remainder of the campaign.",
+      "back_flavor": "Satisfied that you are worthy to enter the Dreamlands, the priests step aside to let you pass, and the gate beyond opens. Before you step through, one of them grabs you by the wrist and gives you a final warning: \"Your journey shall take you beyond the lands of the gods. The eye of chaos is upon you now. Follow the path, and you shall be safe. But beware!\" He tightens his grip. \"Stray not from the path!\""
+    },
+    "vi_current": {
+      "name": "Thử Thách Của Nasht và Kaman-Thah",
+      "text": "<b>Objective</b> — Vượt qua bài kiểm tra của các tu sĩ để được phép hạ xuống Bảy Trăm Bậc Thang Lửa.",
+      "flavor": "Ngọn lửa thần bao bọc lấy các bậc đá dẫn sâu vào lòng đất cõi mộng.",
+      "back_name": "Cuộc Hạ Xuống Cuối Cùng",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Các tu sĩ mở cổng và ban phước lành cho hành trình thám hiểm của bạn."
+    }
+  },
+  {
+    "code": "06043",
+    "type": "act",
+    "pack": "tde",
+    "scenario": "Beyond the Gates of Sleep",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: len ratio 0.50",
+      "back_text: nums en=['1', '6'] vi=['4']",
+      "back_text: icons en=['[skull]'] vi=[]",
+      "back_text: len ratio 0.06",
+      "back_flavor: len ratio 0.24"
+    ],
+    "en": {
+      "name": "The Final Descent",
+      "text": "Do not draw cards from the encounter deck during the mythos phase.\n<b>Objective</b> - If each investigator is at The Enchanted Path, immediately advance.",
+      "flavor": "Spiraling stairs descend below for what seems like an infinity.",
+      "back_name": "Into Enchantment",
+      "back_text": "Each investigator loses all of their clues.\nYour slumber grows deeper. Add 1 [skull] token to the chaos bag for the remainder of the campaign.\nRemove each [[Steps]] location from the game.\nRandomly choose 6 of the set-aside Enchanted Woods locations to put into play. Remove the other copy from the game.\nShuffle all of the remaining set-aside scenario cards, except for Laboring Gug and Randolph Carter <i>(Expert Dreamer)</i>, to form the encounter deck. <i>(From now on, investigators draw cards from the encounter deck during each mythos phase, as normal.)</i>",
+      "back_flavor": "When you reach the base of the stairway, you find yourself in an otherworldly oak forest. The forest floor is thick with countless years of fallen leaves, and you are surrounded by glowing fungi of all shapes and sorts. The soil is pierced with gnarled roots, and the trees are strangled by invasive vines. A winding dirt path leads deeper into the woods."
+    },
+    "vi_current": {
+      "name": "Cuộc Hạ Xuống Cuối Cùng",
+      "text": "<b>Objective</b> — Băng qua Bảy Trăm Bậc Thang Lửa để bước vào Rừng Ma Quái.",
+      "flavor": "Hơi nóng của ngọn lửa ma thuật soi đường cho từng bước chân dấn sâu vào cõi mộng.",
+      "back_name": "Rừng Ma Quái",
+      "back_text": "Advance sang Act 4 — \"The Path\".",
+      "back_flavor": "Trước mắt bạn mở ra khu rừng Enchanted Wood ngập tràn ánh sáng lân tinh của loài Zoog."
+    }
+  },
+  {
+    "code": "06044",
+    "type": "act",
+    "pack": "tde",
+    "scenario": "Beyond the Gates of Sleep",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: icons en=[] vi=['[action]']",
+      "text: len ratio 0.52",
+      "back_text: nums en=['1', '2'] vi=['1']",
+      "back_text: len ratio 0.07",
+      "back_flavor: len ratio 0.10"
+    ],
+    "en": {
+      "name": "The Path",
+      "text": "<b>Forced</b> - After the first time any investigator enters an Enchanted Woods location: Record in your Campaign Log <i>the dreamers strayed from the path</i>.\n<b>Objective</b> - Only investigators at The Enchanted Path may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "All you have to do is stay on the path.",
+      "back_name": "New Visitors",
+      "back_text": "The investigators must decide (choose one):\n- Step back and watch this surreal scene play out. <b>(→R1)</b>\n- Interrupt the scarred cat and handle this yourself. <b>(→R2)</b>",
+      "back_flavor": "As you near the edge of the wood, more of the rodent-like creatures emerge, swarming out of burrows and honeycombed trees. Soon, the whole forest is alive with them. They surround you and chitter in a language you somehow understand: \"Intruders.\" \"They are with the cats.\" \"New dreamers.\" \"No, they followed the black cat.\" \"But the black cat is not here.\" \"We are many; they are few.\" Several of them emit low growls as they begin to close in. ust then, you hear a human voice call out, \"What is the meaning of all this?\" The owner of the voice is a blond young man with an unfazed expression. He is flanked by a pack of angry cats, each of whom falls into step beside him, save for one scarred old cat who takes the lead. You realize that the man speaks not to you, but to the creatures all around you, who slink backward as they are scolded. Then, to your ever-growing surprise, the scarred cat speaks: \"Your tribute is late!\""
+    },
+    "vi_current": {
+      "name": "Con Đường Mòn",
+      "text": "<b>Objective</b> — Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.\n[action]: <b>Resign.</b> Bạn đi theo con đường mòn xuyên qua rừng rậm.",
+      "flavor": "Những sinh vật Zoog tinh nghịch dõi theo bạn từ những tán cây nấm khổng lồ.",
+      "back_name": "Tiến Vào Cõi Mộng",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn an toàn bước vào thế giới kỳ vĩ của Dreamlands, sẵn sàng cho cuộc hành trình tìm kiếm Kadath."
+    }
+  },
+  {
+    "code": "06064",
+    "type": "agenda",
+    "pack": "tde",
+    "scenario": "Waking Nightmare",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.30",
+      "back_text: nums en=[] vi=['1']",
+      "back_text: len ratio 0.24",
+      "back_flavor: len ratio 0.11"
+    ],
+    "en": {
+      "name": "Halls of St. Mary's",
+      "flavor": "A heavy, ominous feeling haunts you as you explore St. Mary’s Hospital. Its halls are eerily dark and empty of everything but the occasional orderly making the late-night rounds. Lights flicker, and shadows seem to dart from corner to corner. The hospital’s maze of corridors has begun to take on an almost dreamlike haziness. You notice yet another spider crawling up your leg and brush it away, wondering what is causing them to appear so often.",
+      "back_name": "Unsettling Developments",
+      "back_text": "Shuffle the set-aside <i>Spiders</i> encounter set and each set-aside copy of Outbreak into the encounter deck, along with the encounter discard pile.\nDraw the set-aside The Infestation Begins story card and resolve its text.",
+      "back_flavor": "As you continue to explore the hospital, the oddities you have observed become more and more frequent. Thick, dark cobwebs now cover the corners of every room. Spiders crawl along the walls and the ceilings, emerging from seemingly nowhere and vanishing just as quickly. It's not just your imagination - an infestation of spiders has taken root within the hospital. And not just any spiders: they are larger than average, with long, jagged, barbed legs and great hairy abdomens. Perhaps even more worrying is the complete lack of hospital staff roaming the halls. Aside from several wary and frightened orderlies, you see no other staff members, not even any nurses or doctors. Where has everyone gone?"
+    },
+    "vi_current": {
+      "name": "Các Sảnh Bệnh Viện St. Mary",
+      "flavor": "Tại bệnh viện St. Mary ở thế giới thực, một dịch bệnh bí ẩn khiến các bệnh nhân rơi vào trạng thái hôn mê sâu và biến đổi dị thường.",
+      "back_name": "Bệnh Dịch Lan Tràn",
+      "back_text": "Đặt 1 doom lên mỗi địa điểm bị nhiễm khuẩn (Infested).",
+      "back_flavor": "Những mạng nhện dày đặc bắt đầu xuất hiện trên trần nhà và các khe thông gió."
+    }
+  },
+  {
+    "code": "06065",
+    "type": "agenda",
+    "pack": "tde",
+    "scenario": "Waking Nightmare",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.31",
+      "back_text: nums en=['1', '1'] vi=[]",
+      "back_text: icons en=['[cultist]', '[skull]'] vi=[]",
+      "back_text: len ratio 0.10",
+      "back_flavor: len ratio 0.15"
+    ],
+    "en": {
+      "name": "The Infestation Spreads",
+      "text": "<b>Forced</b> - At the end of the mythos phase: Make an infestation test.",
+      "flavor": "A monstrous presence has infested St. Mary’s. It lies inside the walls and watches you from all sides. In mere minutes, it has spun thick, sticky webbing throughout each of the rooms you visit. The lights are either flickering or out across the hospital, and some of the more advanced medical machinery is broken and covered in cobwebs.",
+      "back_name": "Hell Breaks Loose",
+      "back_text": "Find each Suspicious Orderly enemy in play and replace it with a set-aside Corrupted Orderly enemy <i>(it keeps its game state, all tokens, and all attachments)</i>.\nSearch the encounter deck and discard pile for each copy of Suspicious Orderly and remove them from the game.\nShuffle the set-aside <i>Agents of Atlach-Nacha</i> encounter set, each remaining set-aside Corrupted Orderly enemy, and the encounter discard pile into the encounter deck.\nAdd 1 [skull] token and 1 [cultist] token to the infestation bag.",
+      "back_flavor": "Suddenly, chaos breaks out in the hospital. THe sound of chittering and crashing emerges from the walls. In the darkness, you can barely make out the shapes of bizarre spiderlike creatures scurrying in the distance. As you round a corner, you spot an orderly writhing on the polished floor, convulsing violently as though possessed by an insidious force. You rush to his side and flip him onto his back... and find that nearly all of his face is covered in thick webbing, and his eyes are wide and glazed over. He does not react as you shake him."
+    },
+    "vi_current": {
+      "name": "Nhiễm Khuẩn Lan Rộng",
+      "text": "<b>Forced</b> - Khi kết thúc giai đoạn Mythos: Thực hiện kiểm tra sự phá hoại.",
+      "flavor": "Lũ nhện dị dạng trồi ra từ cơ thể các bệnh nhân hôn mê. Bệnh viện rơi vào tình trạng phong tỏa hoàn toàn.",
+      "back_name": "Cơn Ác Mộng Bùng Nổ",
+      "back_text": "Spawn kẻ địch Corrupted Orderly tại Emergency Room.",
+      "back_flavor": "Các bác sĩ và y tá bị ký sinh trùng điều khiển, tấn công bất kỳ ai còn tỉnh táo."
+    }
+  },
+  {
+    "code": "06066",
+    "type": "agenda",
+    "pack": "tde",
+    "scenario": "Waking Nightmare",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.38",
+      "back_text: nums en=['4', '8'] vi=['2']",
+      "back_flavor: len ratio 0.21"
+    ],
+    "en": {
+      "name": "Hospital of Horrors",
+      "text": "<b>Forced</b> - At the end of the mythos phase: Make an infestation test.\nEach [[Spider]] enemy at an infested location gets +1 fight and +1 evade.",
+      "flavor": "The entire building has become infested with a sinister evil - something that does not follow the laws of nature. You need to find some way to either stop it or to escape before it consumes you, too.",
+      "back_name": "Desperate Escape",
+      "back_text": "In your Campaign Log, record 8 tally marks next to \"Steps of the Bridge.\"\n<b>(→R4)</b>",
+      "back_flavor": "The infestation has claimed the hospital in its entirety. Not a single room has been left untouched. You race through its halls, searching desperately for a way out, and find only web-covered walls, victims wrapped in silken cocoons, and dead hospital staff hanging from the ceiling."
+    },
+    "vi_current": {
+      "name": "Bệnh Viện Kinh Hoàng",
+      "text": "<b>Forced</b> - Khi kết thúc giai đoạn Mythos: Thực hiện kiểm tra sự phá hoại.\nMỗi kẻ địch [[Spider]] tại địa điểm bị nhiễm khuẩn nhận +1 fight và +1 evade.",
+      "flavor": "Bệnh viện đã biến thành một tổ nhện khổng lồ. Không còn thời gian để do dự!",
+      "back_name": "Bệnh Viện Thất Thủ",
+      "back_text": "Mỗi điều tra viên chưa resign bị bắt giữ làm kén nhện. <b>(→R2)</b>",
+      "back_flavor": "Mạng nhện quấn chặt lấy bạn, kéo bạn vào giấc ngủ vĩnh viễn."
+    }
+  },
+  {
+    "code": "06067",
+    "type": "act",
+    "pack": "tde",
+    "scenario": "Waking Nightmare",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: presence en=0 vi=1",
+      "flavor: len ratio 0.37",
+      "back_text: nums en=['1', '2', '2', '3'] vi=['2']",
+      "back_text: len ratio 0.10",
+      "back_flavor: len ratio 0.18"
+    ],
+    "en": {
+      "name": "Looking for Answers",
+      "flavor": "Something is wrong with your companions, and while medical science has come far, it can’t account for what is happening to them. You’ve decided to take it upon yourself to figure out what is wrong and set things right.",
+      "back_name": "A Promising Lead",
+      "back_text": "Put the set-aside Stairwell and Basement Door locations into play.\nCheck the current agenda.\n- If it is agenda 2 or 3, make an infestation test.\n- If it is agenda 1, immediately advance to agenda 2.",
+      "back_flavor": "From hospital records and snippets of hushed conversation, you are able to glean that there was recently another patient in the hospital whose condition closely mirrored that of your friends. After being comatose for weeks, the patient abruptly and inexplicably awakened just this morning. Baffled, the doctors have quarantined the patient somewhere in the basement of the hospital, below the eastern ward."
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Lời Giải",
+      "text": "<b>Objective</b> — Thu thập hồ sơ bệnh án để tìm nguồn gốc của ca nhiễm đầu tiên.",
+      "flavor": "Hồ sơ của bệnh nhân số 0 có thể chứa chìa khóa để điều chế huyết thanh giải độc.",
+      "back_name": "Bệnh Nhân Bí Ẩn",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Bệnh nhân đầu tiên được chuyển tới từ khu cách ly đặc biệt dưới tầng hầm."
+    }
+  },
+  {
+    "code": "06068",
+    "type": "act",
+    "pack": "tde",
+    "scenario": "Waking Nightmare",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.42",
+      "back_text: nums en=[] vi=['3']",
+      "back_text: len ratio 0.32",
+      "back_flavor: len ratio 0.10"
+    ],
+    "en": {
+      "name": "Search for the Patient",
+      "text": "<b>Objective</b> - If an investigator controls Randolph Carter, advance.",
+      "flavor": "You need to learn where this mysterious patient is being kept. If you can find them and speak with them, perhaps they can provide some answers about what is happening to your friends.",
+      "back_name": "Carter's Statement",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.",
+      "back_flavor": "After some persuading, you manage to convince the blond-haired man to listen to your story. Once you explain to him what has happened to your companions, he shakes his head in solemn understanding. \"I knew this Virgil fellow would cause trouble. If only I had convinced him not to write that story...\" You ask him what he means, and he lets out a long sigh before elaborating: \"It's all true. All of it. The Dreamlands is real. And I believe that something is causing it to merge with the waking world. That's where all of this is coming from,\" he explains, motioning to the spiderwebs in the corners of the room. \"With your help, I may be able to temporarily stop the infestation from spreading. Then we can investigate this matter further.\" He rises from his cot and shakes your hand. \"My name is Randolph, by the way. Randolph Carter.\""
+    },
+    "vi_current": {
+      "name": "Truy Tìm Bệnh Nhân",
+      "text": "<b>Objective</b> — Thâm nhập khu cách ly và tìm kiếm bệnh nhân đầu tiên.",
+      "flavor": "Tầng hầm tối tăm và nồng nặc mùi thuốc sát trùng hòa lẫn dịch nhầy của nhện.",
+      "back_name": "Ngăn Chặn Dịch Bệnh",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Bạn tìm thấy ổ dịch trung tâm nơi những quả trứng nhện khổng lồ đang chuẩn bị nở!"
+    }
+  },
+  {
+    "code": "06069",
+    "type": "act",
+    "pack": "tde",
+    "scenario": "Waking Nightmare",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=[]",
+      "text: icons en=['[action]', '[per_investigator]', '[willpower]'] vi=['[action]']",
+      "text: len ratio 0.35",
+      "flavor: len ratio 0.57",
+      "back_text: nums en=['1', '2', '3'] vi=['1']",
+      "back_text: len ratio 0.04",
+      "back_flavor: len ratio 0.15"
+    ],
+    "en": {
+      "name": "Containing the Outbreak",
+      "text": "Each infested location gains: \"[action]: Test [willpower] (X) to attempt to seal the rift. X is this location's shroud. Investigators at this location may spend 1 [per_investigator] clues, as a group, to automatically succeed. If you succeed, replace the damage token on this location with a horror token. For the remainder of the game, this location cannot become infested.\"\n<b>Objective</b> - If there are no infested locations in play, advance.",
+      "flavor": "With the aid of Randolph Carter, you must attempt to close the rifts that have opened between the Dreamlands and the waking world.",
+      "back_name": "The Next Step",
+      "back_text": "Check Campaign Log.\n- <i>If Dr. Maheswaran joined the investigation</i> and she was in play when the scenario ended, <b>(→R1)</b>.\n- <i>If Dr. Maheswaran joined the investigation</i> and she was not in play when the scenario ended, <b>(→R2)</b>.\n- <i>If Dr. Maheswaran stayed with her patients</i> , <b>(→R3)</b>.",
+      "back_flavor": "<blockquote><i>With the final rift sealed, the infestation ceases, and the hospital returns to normal. \"Good work,\" Randolph says. \"Still, I believe this matter warrants further investigation. We do not know what caused this to happen.\" You remind him that there is also the matter of your companions, who still refuse to wake. \"Yes, of course— that too. Come, let us go somewhere private where we can discuss what our next step should be. Sadly, I do not believe there is anything more we can do to aid your friends here.\" You don't know if Randolph means \"here\" as in \"the hospital\" or\n\"here\" as in \"the waking world,\" but either way, it does not bode well for your companions.</i></blockquote>"
+    },
+    "vi_current": {
+      "name": "Khống Chế Dịch Bệnh",
+      "text": "<b>Objective</b> — Tiêu diệt nhện chúa hoặc vô trùng khu vực cách ly.\n[action]: <b>Resign.</b> Bạn kích hoạt hệ thống phun thuốc khử trùng và thoát ra ngoài.",
+      "flavor": "Hãy phá hủy toàn bộ các kén nhện trước khi chúng tràn ra đường phố Arkham!",
+      "back_name": "Kiểm Soát Bùng Phát",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Ngọn lửa khử trùng thiêu rụi lũ quái vật nhện. Bạn đưa những người sống sót ra xe cứu thương an toàn."
+    }
+  },
+  {
+    "code": "06120",
+    "type": "agenda",
+    "pack": "sfk",
+    "scenario": "The Search for Kadath",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: dup [('06120', 'text'), ('06121', 'text')]",
+      "back_text: len ratio 0.46",
+      "back_flavor: len ratio 0.09"
+    ],
+    "en": {
+      "name": "Journey Across the Dreamlands",
+      "text": "[action] If you are at a [[Port]] location: <b>Resign.</b> Venturing into the unknown has become too dangerous, so you return to safety with the information you've gathered.",
+      "flavor": "Despite the advice of the Dreamlands' inhabitants, you and your companions seek unknown Kadath, where the gods dwell.",
+      "back_name": "The Corsair's Pursuit",
+      "back_text": "Shuffle both set-aside Corsair of Leng enemies into the encounter deck, along with the encounter discard pile.",
+      "back_flavor": "Months have passed since you first set forth from Ulthar. Along the way, you have seen many fabulous places and met many strange and interesting people. Some have been helpful, giving you sage advice or pointing you in the right direction. Most, however, have regarded you with suspicion and wariness. Perhaps it is because you are a dreamer from the outside world, or perhaps it is because you are foolish and accursed enough to seek the forbidden places of the Dreamlands.\nBut it is the Corsairs who truly frighten you. Throughout your travels, you spot them pursuing you time and time again. \"Men of Leng,\" the inhabitants of the Dreamlands call them: satyr-like creatures with hooves instead of feet and great curved horns protruding from their foreheads. They sail on long, black galleys with black sails. You know not why they hunt for you relentlessly, and you are not keen to find out."
+    },
+    "vi_current": {
+      "name": "Hành Trình Khắp Cõi Mộng",
+      "text": "[action] Nếu bạn đang ở địa điểm [[Port]]: <b>Resign.</b> Việc mạo hiểm vào nơi chưa biết đã trở nên quá nguy hiểm, vì vậy bạn trở về nơi an toàn với thông tin bạn đã thu thập được.",
+      "flavor": "Bạn giương buồm trên sông Skai, bắt đầu chuyến thám hiểm vĩ đại khắp cõi Dreamlands để tìm đường tới ngọn núi thần Kadath.",
+      "back_name": "Những Kẻ Đeo Bám",
+      "back_text": "Spawn kẻ địch Corsair of Leng tại Cảng Dylath-Leen.",
+      "back_flavor": "Những tên cướp biển mang khuôn mặt dị dạng của vùng đất Leng bám theo thuyền bạn."
+    }
+  },
+  {
+    "code": "06121",
+    "type": "agenda",
+    "pack": "sfk",
+    "scenario": "The Search for Kadath",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: dup [('06120', 'text'), ('06121', 'text')]",
+      "flavor: len ratio 0.60",
+      "back_text: nums en=[] vi=['1']",
+      "back_flavor: len ratio 0.10"
+    ],
+    "en": {
+      "name": "Agents of the Outer Gods",
+      "text": "[action] If you are at a [[Port]] location: <b>Resign.</b> Venturing into the unknown has become too dangerous, so you return to safety with the information you've gathered.",
+      "flavor": "Perhaps seeking Kadath is an accursed venture after all. Even so, curiosity gnaws at your mind. What proof could the resting place of the gods hold for you?",
+      "back_name": "Captured!",
+      "back_text": "Each surviving investigator is defeated.",
+      "back_flavor": "You have evaded the Corsairs for weeks since their pursuit began. Each time they appear, you are able to slip through their grasp, but the noose grows tighter and tighter with each escape. Even so, you persist in the hope you can find Kadath before your luck runs out.\nHowever, even with all of the information you have uncovered, Kadath eludes you still, and the Corsairs are hot on your trail. You try to make your way to safety, but you have underestimated the lengths these creatures will go to in order to capture you. They have cut off all of your escape routes and have taken away all of your safe havens. There is nowhere left for you to run. Like pack hunters, they surround you..."
+    },
+    "vi_current": {
+      "name": "Tay Sai Của Outer Gods",
+      "text": "[action] Nếu bạn đang ở địa điểm [[Port]]: <b>Resign.</b> Việc mạo hiểm vào nơi chưa biết đã trở nên quá nguy hiểm, vì vậy bạn trở về nơi an toàn với thông tin bạn đã thu thập được.",
+      "flavor": "Các thế lực thần bí của cõi mộng đang tìm mọi cách ngăn cản bạn diện kiến các vị thần Cổ Xưa.",
+      "back_name": "Đêm Không Đáy",
+      "back_text": "Mỗi điều tra viên nhận 1 horror. Màn chơi kết thúc.",
+      "back_flavor": "Cơn bão bóng tối nuốt chửng con thuyền của bạn giữa biển khơi mộng ảo."
+    }
+  },
+  {
+    "code": "06122",
+    "type": "act",
+    "pack": "sfk",
+    "scenario": "The Search for Kadath",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.25",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.03",
+      "back_flavor: len ratio 0.53"
+    ],
+    "en": {
+      "name": "Kingdom of the Skai",
+      "text": "<b>Objective</b> - At the end of the round, investigators at a [[Port]] location may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "\"Over fertile plains rolling down to the Skai he saw the smoke of cottage chimneys, and on every hand were the hedges and ploughed fields and thatched roofs of a peaceful land.\"\n - H. P. Lovecraft, <u>The Dream-Quest of Unknown Kadath</u>",
+      "back_name": "To the Sea!",
+      "back_text": "Search the encounter deck, discard pile, and all play areas for Cats of Ulthar, each Pack of Vooniths, and each card from the <i>Zoogs</i> encounter set, and remove them from the game.\nShuffle each set-aside copy of Priest of a Thousand Masks into the encounter deck, along with the encounter discard pile.\nThe investigators must decide (choose one):\n- Visit the isle of Oriab to the south. Resolve <b>Oriab Setup</b> in the Campaign Guide.\n- Visit the ancient land of Mnar to the west. Resolve <b>Mnar Setup</b> in the Campaign Guide.\n- Visit the Forbidden Lands to the north. Resolve <b>Forbidden Lands Setup</b> in the Campaign Guide.\n- Visit the kingdom of the Timeless Realm to the east. Resolve <b>Timeless Realm Setup</b> in the Campaign Guide.",
+      "back_flavor": "You find a captain willing to grant you passage to the remote regions of the Dreamlands, wherein you may find signs from the gods to point you in the direction of Kadath."
+    },
+    "vi_current": {
+      "name": "Vương Quốc Sông Skai",
+      "text": "<b>Objective</b> — Du hành qua các thành phố ven sông Skai và tìm kiếm thông tin về Kadath.",
+      "flavor": "Thành phố đá cẩm thạch trắng soi bóng xuống làn nước êm đềm.",
+      "back_name": "Hòn Đảo Oriab",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Các thương nhân chỉ đường cho bạn tới hòn đảo đá lửa Oriab nơi ngọn núi Ngranek sừng sững."
+    }
+  },
+  {
+    "code": "06123",
+    "type": "act",
+    "pack": "sfk",
+    "scenario": "The Search for Kadath",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: nums en=['1', '10'] vi=[]",
+      "text: len ratio 0.31",
+      "flavor: len ratio 0.28",
+      "back_text: nums en=['1'] vi=['3']",
+      "back_text: len ratio 0.03",
+      "back_flavor: len ratio 0.27"
+    ],
+    "en": {
+      "name": "The Isle of Oriab",
+      "text": "<b>Objective</b> - Find and uncover as many Signs of the Gods in this region as you can. At the end of the round, if each investigator is at the same [[Port]] location, you may move to another region by advancing this act.\n<b>Objective</b> - If the investigators have uncovered 10 Signs of the Gods, proceed to <b>(→R1)</b>.",
+      "flavor": "To the south lies the small but thriving volcanic island of Oriab, dominated by the dormant volcano called Ngranek. The Bay of Baharna, marked by twin lighthouses, Thon and Thal, overlooks the Southern Sea.",
+      "back_name": "Where to?",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\nThe investigators must decide (choose one). You cannot choose a place you have already visited. If you have already visited each of the listed areas, proceed to <b>(→R1)</b>.\n- Visit the ancient land of Mnar to the west. Resolve <b>Mnar Setup</b> in the Campaign Guide.\n- Visit the Forbidden Lands to the north. Resolve <b>Forbidden Lands Setup</b> in the Campaign Guide.\n- Visit the kingdom of the Timeless Realm to the east. Resolve <b>Timeless Realm Setup</b> in the Campaign Guide.",
+      "back_flavor": "As you board your ship once again, you find the crew loading barrels of trade goods: furs, ore, exotic spices, and the like. \"We'll make a killing with these back on the mainland,\" the captain says, clapping your shoulder. \"Hope you found what you were looking for, too. Where do you want to head next?\""
+    },
+    "vi_current": {
+      "name": "Hòn Đảo Oriab",
+      "text": "<b>Objective</b> — Leo lên đỉnh núi Ngranek để chiêm ngưỡng chân dung các vị thần tạc trên vách đá.",
+      "flavor": "Vách đá dựng đứng hiểm trở đòi hỏi sự dũng cảm phi thường.",
+      "back_name": "Thành Phố Celephaïs",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Từ đỉnh núi, bạn nhìn thấy hướng đi tới thành phố hoa lệ Celephaïs của Vua Kuranes."
+    }
+  },
+  {
+    "code": "06124",
+    "type": "act",
+    "pack": "sfk",
+    "scenario": "The Search for Kadath",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: nums en=['1', '10'] vi=[]",
+      "text: len ratio 0.24",
+      "flavor: len ratio 0.21",
+      "back_text: nums en=['1'] vi=['4']",
+      "back_text: len ratio 0.03",
+      "back_flavor: len ratio 0.35"
+    ],
+    "en": {
+      "name": "The Doom That Came Before",
+      "text": "<b>Objective</b> - Find and uncover as many Signs of the Gods in this region as you can. At the end of the round, if each investigator is at the same [[Port]] location, you may move to another region by advancing this act.\n<b>Objective</b> - If the investigators have uncovered 10 Signs of the Gods, proceed to <b>(→R1)</b>.",
+      "flavor": "The ancient, fabled land of Mnar is one of the oldest regions in the Dreamlands, where wandering nomadic tribes settled city-states that grew in size and power over untold ages, until they became the metropolises that stand today.",
+      "back_name": "Where to?",
+      "back_text": "Search the encounter deck, discard pile, and all play areas for the Beings of Ib enemy and remove it from the game.\nShuffle the encounter discard pile into the encounter deck.\nThe investigators must decide (choose one). You cannot choose a place you have already visited. If you have already visited each of the listed areas, proceed to <b>(→R1)</b>.\n- Visit the isle of Oriab to the south. Resolve <b>Oriab Setup</b> in the Campaign Guide.\n- Visit the Forbidden Lands to the north. Resolve <b>Forbidden Lands Setup</b> in the Campaign Guide.\n- Visit the kingdom of the Timeless Realm to the east. Resolve <b>Timeless Realm Setup</b> in the Campaign Guide.",
+      "back_flavor": "Your options in this region exhausted, you make your way back to your ship. The captain orders the crew to get ready to leave port. \"Wasn't sure if you'd be back in time, but here you are,\" the captain says with a grin. \"Well? Where to?\""
+    },
+    "vi_current": {
+      "name": "Tai Họa Đã Giáng Xuống",
+      "text": "<b>Objective</b> — Thám hiểm tàn tích Sarnath và thu thập các cổ vật thời gian.",
+      "flavor": "Tàn tích cổ xưa hoang phế dưới ánh trăng u buồn.",
+      "back_name": "Manh Mối Núi Kadath",
+      "back_text": "Advance sang Act 4.",
+      "back_flavor": "Những ghi chép cổ hé lộ vị trí của Kadath nằm giữa vùng hoang địa băng giá phía bắc."
+    }
+  },
+  {
+    "code": "06125",
+    "type": "act",
+    "pack": "sfk",
+    "scenario": "The Search for Kadath",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: nums en=['1', '10'] vi=[]",
+      "text: len ratio 0.23",
+      "flavor: len ratio 0.32",
+      "back_text: nums en=['1'] vi=['5']",
+      "back_text: len ratio 0.03",
+      "back_flavor: len ratio 0.25"
+    ],
+    "en": {
+      "name": "Seek Out the Night",
+      "text": "<b>Objective</b> - Find and uncover as many Signs of the Gods in this region as you can. At the end of the round, if each investigator is at the same [[Port]] location, you may move to another region by advancing this act.\n<b>Objective</b> - If the investigators have uncovered 10 Signs of the Gods, proceed to <b>(→R1)</b>.",
+      "flavor": "From the relative safety of the fabulous city of Ilek-Vad, you may cross into the hellish and bizarre landscape of the Forbidden Lands. East of this barren and blasted landscape lie the lands which have been ravaged by the hordes of Night.",
+      "back_name": "Where to?",
+      "back_text": "Search the encounter deck, discard pile, and all play areas for the Horde of Night and Stalking Manticore enemies and remove each of them from the game.\nShuffle the encounter discard pile into the encounter deck.\nThe investigators must decide (choose one). You cannot choose a place you have already visited. If you have already visited each of the listed areas, proceed to <b>(→R1)</b>.\n- Visit the isle of Oriab to the south. Resolve <b>Oriab Setup</b> in the Campaign Guide.\n- Visit the ancient land of Mnar to the west. Resolve <b>Mnar Setup</b> in the Campaign Guide.\n- Visit the kingdom of the Timeless Realm to the east. Resolve <b>Timeless Realm Setup</b> in the Campaign Guide.",
+      "back_flavor": "You finally return to your ship, ready to leave this accursed land behind. \"Let's not tarry in this godsforsaken place any longer,\" the captain says, barking orders to his crew. \"Ilek-Vad may be a jewel, but the lands beyond are frought with danger. Pick a heading. Any heading. Just so long as it is far away from here.\""
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Màn Đêm",
+      "text": "<b>Objective</b> — Vượt qua Vùng Đất Leng để tìm đường tới đỉnh núi thần.",
+      "flavor": "Không khí lạnh buốt và những tu viện đá đen của Leng hiện ra trong sương mù.",
+      "back_name": "Chạm Tới Cổng Thần",
+      "back_text": "Advance sang Act 5.",
+      "back_flavor": "Bạn nhìn thấy bóng dáng mờ ảo của đỉnh Kadath nhô lên giữa những vì sao xa xôi."
+    }
+  },
+  {
+    "code": "06126",
+    "type": "act",
+    "pack": "sfk",
+    "scenario": "The Search for Kadath",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: nums en=['1', '10'] vi=[]",
+      "text: icons en=[] vi=['[action]']",
+      "text: len ratio 0.45",
+      "flavor: len ratio 0.31",
+      "back_text: len ratio 0.02",
+      "back_flavor: len ratio 0.26"
+    ],
+    "en": {
+      "name": "The King's Decree",
+      "text": "<b>Objective</b> - Find and uncover as many Signs of the Gods in this region as you can. At the end of the round, if each investigator is at the same [[Port]] location, you may move to another region by advancing this act.\n<b>Objective</b> - If the investigators have uncovered 10 Signs of the Gods, proceed to <b>(→R1)</b>.",
+      "flavor": "Much of the valley realm of Ooth-Nargai, ruled by the dreamer Kuranes, eludes the grasp of time. Nothing here ages or falls into disrepair. It is a realm of wonders and marvels - how many years might pass here before you even noticed?",
+      "back_name": "Where to?",
+      "back_text": "Search the encounter deck, discard pile, and all play areas for The Crawling Mist enemy and remove it from the game.\nShuffle the encounter discard pile into the encounter deck.\nThe investigators must decide (choose one). You cannot choose a place you have already visited. If you have already visited each of the listed areas, proceed to <b>(→R1)</b>.\n- Visit the isle of Oriab to the south. Resolve <b>Oriab Setup</b> in the Campaign Guide.\n- Visit the ancient land of Mnar to the west. Resolve <b>Mnar Setup</b> in the Campaign Guide.\n- Visit the Forbidden Lands to the north. Resolve <b>Forbidden Lands Setup</b> in the Campaign Guide.",
+      "back_flavor": "Your ship's crew grumbles in protest when you announce your intention to leave. \"Can you blame them?\" the captain leans in and says quietly as the crew prepares for the voyage. \"They would stay in port here forever if they could. But alas, the sea calls. So, where are we headed next?\""
+    },
+    "vi_current": {
+      "name": "Sắc Lệnh Của Nhà Vua",
+      "text": "<b>Objective</b> — Diện kiến Vua Kuranes tại Celephaïs để nhận chỉ dẫn cuối cùng.\n[action]: <b>Resign.</b> Bạn hoàn thành chuyến khảo sát cõi mộng.",
+      "flavor": "Vua Kuranes ngự trên ngai vàng mạ vàng, trao cho bạn lời khuyên sinh tử.",
+      "back_name": "Chuyến Thám Hiểm Kết Thúc",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn thu thập đủ manh mối để sẵn sàng cho cuộc chinh phục đỉnh cao Kadath."
+    }
+  },
+  {
+    "code": "06207",
+    "type": "agenda",
+    "pack": "dsm",
+    "scenario": "Dark Side of the Moon",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.32",
+      "back_text: len ratio 0.30",
+      "back_flavor: len ratio 0.18"
+    ],
+    "en": {
+      "name": "Silent Stirring",
+      "flavor": "The silence of this place is deafening. There is no wind whistling through the air, no chirping of birds, no idle sound of any kind. This is a dead world. Though you know danger lurks around every corner, you hear no sign of the beasts or the Corsairs who call this place home. You must remain even quieter in order to stay hidden.",
+      "back_name": "Throw Away the Key",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\nRaise each investigator's alarm level by 1.",
+      "back_flavor": "A single screech pierces the silence, and you instinctively duck for cover. You have seen these creatures before: horrid, eyeless monstrosities that fly alongside the Corsairs' black galleys. Terrible things of bone and leathery membranous skin.\nA flock circles and screeches overhead. Have you been spotted? It doesn't matter. You cannot stay here any longer."
+    },
+    "vi_current": {
+      "name": "Sự Thức Tỉnh Im Lặng",
+      "flavor": "Bị bắt giữ bởi lũ quái vật Moon-Beast, bạn bị đưa lên mặt tối của Mặt Trăng trên con tàu galleon đen ngòm.",
+      "back_name": "Báo Động Nổi Lên",
+      "back_text": "Đặt mức báo động (Alarm) lên 1.",
+      "back_flavor": "Tiếng gầm rít của lũ lính gác mặt trăng báo động cả thành phố cổ."
+    }
+  },
+  {
+    "code": "06208",
+    "type": "agenda",
+    "pack": "dsm",
+    "scenario": "Dark Side of the Moon",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.42",
+      "back_text: nums en=['1', '1'] vi=[]",
+      "back_text: len ratio 0.05",
+      "back_flavor: len ratio 0.22"
+    ],
+    "en": {
+      "name": "The Alarm Is Raised",
+      "flavor": "Your pace quickens as the creatures’ pursuit grows more frenzied with each passing minute. The silence you once cursed is broken; the awful piercing screeches that punctuate the night are even worse.",
+      "back_name": "Run, Rabbit, Run!",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\nRaise each investigator's alarm level by 1.\n<hr><b>Check Campaign Log. <i>If the investigators forced their way into the temple</i>, read the following:</b>\n<i><blockquote>...but nobody comes.</blockquote></i>\nThe lead investigator searches the encounter deck and discard pile for 1 copy of Cats from Saturn and draws it.\n<hr><b>Otherwise, read the following:</b>\n<i><blockquote>...and to your surprise, an army of cats lands in front of you, having leaped through the void of space itself. You recognize the cat at the head of the formation as the grey old cat with the scar you met months ago. \"Go, human!\" he yells. \"We will hold them off!\"</blockquote></i>",
+      "back_flavor": "Your escape route is cut off as a pack of lithe creatures surrounds you. At first glance, you believe them to be cats, but they are only vaguely catlike in shape. What you mistook for fur is more akin to a series of patterns, like strange filigrees. You silently pray for aid..."
+    },
+    "vi_current": {
+      "name": "Báo Động Được Kéo",
+      "flavor": "Lũ lính canh ráo riết lục soát từng ngóc ngách của thành phố đá đen trên Mặt Trăng.",
+      "back_name": "Vây Ráp Toàn Diện",
+      "back_text": "Tăng mức báo động lên mức tối đa.",
+      "back_flavor": "Những ngọn đuốc xanh lục thắp sáng bầu trời không trọng lực."
+    }
+  },
+  {
+    "code": "06209",
+    "type": "agenda",
+    "pack": "dsm",
+    "scenario": "Dark Side of the Moon",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.20",
+      "back_text: nums en=['1', '2', '3'] vi=['2']",
+      "back_text: len ratio 0.33",
+      "back_flavor: len ratio 2.66"
+    ],
+    "en": {
+      "name": "They Are Upon You!",
+      "text": "(Hint - The game will not end when this agenda advances... but the agents of Nyarlathotep will tighten their noose.)",
+      "flavor": "The entirety of the Moon’s denizens are raised against you now. Behind every corner, a group of Corsairs lies in wait, or a pack of hunting cats lurks to herd you toward its vicious masters. The skies above swarm with winged beasts and black galleys. If you cannot find a way back to Earth, you will surely be captured.",
+      "back_name": "Time to Kill",
+      "back_text": "Raise each investigator's alarm level by 1.\nEach investigator takes horror equal to half their alarm level (rounded up).\nReset the agenda deck to agenda 3a. Then, place 2 doom on that agenda.",
+      "back_flavor": "There is nowhere left to run."
+    },
+    "vi_current": {
+      "name": "Chúng Đã Bao Vây Bạn!",
+      "text": "(Gợi ý - Trò chơi sẽ không kết thúc khi agenda này là advances... nhưng các đặc vụ của Nyarlathotep sẽ thắt chặt thòng lọng của họ.)",
+      "flavor": "Không còn nơi nào để ẩn nấp! Lũ Moon-Beast đã khép chặt vòng vây!",
+      "back_name": "Bị Bắt Giữ Vĩnh Viễn",
+      "back_text": "Mỗi điều tra viên bị đưa làm nô lệ trên Mặt Trăng. <b>(→R2)</b>",
+      "back_flavor": "Bạn bị xích vào mái chèo của con tàu đen, trôi dạt vĩnh viễn giữa không gian."
+    }
+  },
+  {
+    "code": "06210",
+    "type": "act",
+    "pack": "dsm",
+    "scenario": "Dark Side of the Moon",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: len ratio 0.56",
+      "flavor: len ratio 0.39",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.06",
+      "back_flavor: len ratio 0.19"
+    ],
+    "en": {
+      "name": "In the Belly of the Moon-Beast",
+      "text": "<b>Objective</b> - Only investigators at the City of the Moon-Beasts may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "Virgil Gray is held captive somewhere in the vast, strange city of the moon-beasts. You must be quiet and cunning if you are to find him and escape unnoticed.",
+      "back_name": "Timely Rescue",
+      "back_text": "Choose an investigator at the City of the Moon-Beasts to take control of the set-aside Virgil Gray <i>(Truly Inspired)</i> story asset.\nCheck Campaign Log: <i>If Randolph was captured</i>, that card's owner puts the set-aside Randolph Carter <i>(Expert Dreamer)</i> story asset into their hand.",
+      "back_flavor": "After hours of weaving around leprous stone towers and searching high and low, you finally spot a group of shackled captives being led single file from the docks to who knows where. Luckily, they are guarded by only two of the foul Corsairs. You create a distraction loud enough to separate the pair, then sneak by in order to free the captives."
+    },
+    "vi_current": {
+      "name": "Trong Bụng Quái Thú Mặt Trăng",
+      "text": "<b>Objective</b> — Phá khóa buồng giam và tìm lại trang bị đã bị tịch thu.",
+      "flavor": "Bạn lợi dụng lúc lính canh sơ hở để bẻ gãy then cài cửa ngục.",
+      "back_name": "Khám Phá Mặt Trăng",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Bạn lấy lại được vũ khí và bước ra khỏi ngục tối trên Mặt Trăng."
+    }
+  },
+  {
+    "code": "06211",
+    "type": "act",
+    "pack": "dsm",
+    "scenario": "Dark Side of the Moon",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.25",
+      "back_text: nums en=[] vi=['3']",
+      "back_text: len ratio 0.09",
+      "back_flavor: len ratio 0.11"
+    ],
+    "en": {
+      "name": "Exploring the Moon",
+      "text": "<b>Objective</b> - Only investigators at the Temple of the Moon Lizard may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "Now that you are reunited, it is time to get off this rock. Randolph informs you that the light side of the Moon should be safe from the reach of the moon-beasts, who dwell only on this side. However, it is much too far for you to walk on foot. You’ll have to find another way to escape.",
+      "back_name": "Through the Center",
+      "back_text": "\nPut the set-aside Caverns Beneath the Moon <i>(Dark Side)</i> and The Black Core locations into play.\nSpawn the set-aside Moon Lizard at The Black Core, exhausted.\nShuffle the encounter discard pile into the encounter deck.",
+      "back_flavor": "While the majority of this temple is dedicated to an idol the moon-dwelling creatures refer to as the \"Moon Lizard,\" you also find several references to some kind of lake of primordial black ooze not far beneath the surface, that binds together the core of the Moon. \"These texts imply that the whole of the Moon's surface is connected by this 'core' across multiple dimensions. Perhaps we can use it to cross over to the Moon's other side,\" Randolph suggests.\n\"Or to the afterlife,\" Virgil adds.\n\"Yes, one or the other,\" Randolph replies nonchalantly. \"It is still our only option.\""
+    },
+    "vi_current": {
+      "name": "Khám Phá Mặt Trăng",
+      "text": "<b>Objective</b> — Thâm nhập cung điện của Moon-Beast và tìm kiếm con tàu để trốn thoát.",
+      "flavor": "Thành phố trên mặt tối của Mặt Trăng kỳ vĩ nhưng tràn ngập mùi tanh tưởi.",
+      "back_name": "Tâm Điểm Mặt Trăng",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Bạn phát hiện bến tàu nơi chiếc chiến thuyền galleon đang neo đậu."
+    }
+  },
+  {
+    "code": "06212",
+    "type": "act",
+    "pack": "dsm",
+    "scenario": "Dark Side of the Moon",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: len ratio 0.41",
+      "flavor: len ratio 0.35",
+      "back_text: nums en=[] vi=['4']",
+      "back_text: len ratio 0.15",
+      "back_flavor: len ratio 0.08"
+    ],
+    "en": {
+      "name": "The Moon's Core",
+      "text": "Clues cannot be discovered from The Black Core except as a result of a successful investigation.\n<b>Objective</b> - If each surviving investigator is at The Black Core and it has no clues on it, advance.",
+      "flavor": "You suspend your disbelief and descend beneath the Moon’s crust. In order to reach the other side of the Moon, you must make your way though its black core, a transdimensional fluid from which nightmares are born.",
+      "back_name": "To the Other Side",
+      "back_text": "Put the set-aside Caverns Beneath the Moon <i>(Light Side)</i>, Light Side of the Moon, and The White Ship locations into play.",
+      "back_flavor": "The lake of black ichor below the surface of the Moon is miles wide and bubbles with warm, noxious pockets of gas. Most of the lake bed is completely solid, and it seems for a moment that Randolph's plan is a dead end after all. Then, you take a final step, and your foot is caught by... nothing. Before you can react, you are yanked under the surface. You try to shout a warning to your companions, but your words are swallowed by the black core, along with the rest of your body. Your lungs barely have air. You struggle not to scream as you are carried by a fierce undertow. When you finally emerge, you are in another chamber just like the one you came from, only you can see a shaft of light piercing through the grey crust above you. Moments later, the rest of your party emerges. \"Did we make it?\" Virgil asks. \"Why, I thought that was the end, for sure. This will make for an exciting chapter!\""
+    },
+    "vi_current": {
+      "name": "Tâm Điểm Mặt Trăng",
+      "text": "<b>Objective</b> — Tiếp cận bến cảng mặt trăng trước khi đội quân quái vật kéo đến.",
+      "flavor": "Bạn chạy đua qua những cây cầu đá bắc qua các miệng hố mặt trăng khổng lồ.",
+      "back_name": "Cuộc Giải Cứu Bất Ngờ",
+      "back_text": "Advance sang Act 4.",
+      "back_flavor": "Một hạm đội tàu của Loài Mèo xứ Ulthar bất ngờ xuất hiện giải vây cho bạn!"
+    }
+  },
+  {
+    "code": "06213",
+    "type": "act",
+    "pack": "dsm",
+    "scenario": "Dark Side of the Moon",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: icons en=[] vi=['[action]']",
+      "flavor: len ratio 0.30",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.11"
+    ],
+    "en": {
+      "name": "Unexpected Rescue",
+      "text": "<b>Objective</b> - Find a way off the Moon. <i>(You will be instructed when to advance.)</i>",
+      "flavor": "The surface of the light side of the Moon is patrolled by ships that sail through the windless sky. One, however, looks different from the rest. Its hull is stark and shining, casting a white glow into the night. \"The White Ship!\" breathes Randolph.",
+      "back_name": "The Captain",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "With your party safely aboard the White Ship, you beseech its captain to leave the Moon at once. You have no desire to stay in this perilous place any longer than you have to. \"Not yet,\" the captain replies with an amiable smile. You plead with him, but he raises a hand in a gesture of silence, peering out into the distance. You squint against the light from the sun, which hangs static in the dark sky. There, miles away, you spot the thing that drew the captain's eye: a bird with many wings and even more colors, its feathers bright and vivid. It perches on a ruined stone structure and preens itself. Then, just as your patience is beginning to wear thin, it launches itself into space, and the captain pulls up the ship's anchor."
+    },
+    "vi_current": {
+      "name": "Cuộc Giải Cứu Bất Ngờ",
+      "text": "<b>Objective</b> — Nhảy lên tàu của Loài Mèo để thoát khỏi Mặt Trăng.\n[action]: <b>Resign.</b> Bạn bước lên tàu đồng minh.",
+      "flavor": "Loài mèo dũng cảm chiến đấu đẩy lùi lũ Moon-Beast để mở đường máu cho bạn!",
+      "back_name": "Trở Lại Cõi Mộng",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Con tàu chở bạn bay vút qua không gian, trở về bầu trời êm đềm của Dreamlands."
+    }
+  },
+  {
+    "code": "06169a",
+    "type": "agenda",
+    "pack": "tsh",
+    "scenario": "A Thousand Shapes of Horror",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.45",
+      "back_name: presence en=0 vi=1",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "The House with No Name",
+      "flavor": "The house that Randolph calls \"The Unnamable\" is not much to look at. The run-down seventeenth-century building has been abandoned for decades and has fallen into disrepair. Its door is scratched and pitted, most of the windowpanes are shattered, and rats crawl around the foundations."
+    },
+    "vi_current": {
+      "name": "Ngôi Nhà Vô Danh",
+      "flavor": "Tại Arkham, bạn đến điều tra ngôi nhà cổ không số trên đồi chôn cất — nơi ẩn náu của một thực thể mang ngàn hình dạng gớm ghiếc.",
+      "back_name": "Tiếng Động Sau Bức Tường",
+      "back_text": "Spawn kẻ địch The Unnamable tại Attic.",
+      "back_flavor": "Một khối thịt nhầy nhụa biến đổi hình dạng liên tục xé toạc trần nhà trồi xuống!"
+    }
+  },
+  {
+    "code": "06170",
+    "type": "agenda",
+    "pack": "tsh",
+    "scenario": "A Thousand Shapes of Horror",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.23",
+      "back_text: nums en=[] vi=['1']",
+      "back_text: len ratio 0.54",
+      "back_text: dup [('05052', 'back_text'), ('05121', 'back_text'), ('06170', 'back_text'), ('07126', 'back_text'), ('10609', 'back_text')]",
+      "back_flavor: len ratio 0.28"
+    ],
+    "en": {
+      "name": "The Thing with No Name",
+      "text": "Each Swarm of Rats gains swarming 1.\n<b>Forced</b> - At the start of your turn, if The Unnamable is ready and at your location: Test [willpower] (2). If you fail, it attacks you <i>(even if it is not engaged)</i>.",
+      "flavor": "You’ve felt an evil presence lurking here ever since you arrived. The entity defies all description. At times it appears formless; at others, it embodies myriad shapes and features. You can sometimes pick out a particular aspect - an eye, a horn, a blemish - but it disappears as soon as you focus on it.",
+      "back_name": "It Grows Bolder",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.",
+      "back_flavor": "Time is running short. The entity, which before had seemed content to loom and observe you from afar, now swells with power and pursues you with relentless ferocity. It writhes and thrashes, seemingly everywhere at once. You have to hurry and confront your fears, or you will never find your way into the Dreamlands."
+    },
+    "vi_current": {
+      "name": "Thứ Không Tên",
+      "text": "Mỗi Swarm của Chuột tăng thêm 1.\n<b>Forced</b> - Khi bắt đầu lượt của bạn, nếu Người không thể đặt tên đang ready và ở địa điểm của bạn: Kiểm tra [willpower] (2). Nếu bạn thất bại, nó sẽ tấn công bạn <i>(ngay cả khi nó không phải là engaged)</i>.",
+      "flavor": "Thực thể vô danh săn lùng bạn khắp các căn phòng cổ kính của ngôi nhà.",
+      "back_name": "Cơn Ác Mộng Bất Tận",
+      "back_text": "Mỗi điều tra viên nhận 1 horror.",
+      "back_flavor": "Hình thù của nó liên tục biến đổi thành những nỗi sợ hãi tồi tệ nhất trong tâm trí bạn."
+    }
+  },
+  {
+    "code": "06171",
+    "type": "agenda",
+    "pack": "tsh",
+    "scenario": "A Thousand Shapes of Horror",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.40",
+      "back_text: len ratio 5.25",
+      "back_flavor: len ratio 0.12"
+    ],
+    "en": {
+      "name": "The Dead with No Name",
+      "text": "Each Swarm of Rats gains swarming 2.\nThe Unnamable loses aloof and gains massive.\n<b>Forced</b> - At the start of your turn, if The Unnamable is ready and at your location: Test [willpower] (2). If you fail, it attacks you <i>(even if it is not engaged)</i>.",
+      "flavor": "\"There was a vortex of withering, ice-cold wind, and then the rattle of loose bricks and plaster; but I had mercifully fainted before I could learn what it meant.\"\n - H. P. Lovecraft, \"The Unnamable\"",
+      "back_name": "It Is Real",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "To your surprise, the most dreadful sound - the one that will forever burn in your memory of the night's events - is not the echoing, despondent cries of the unnamable monstrosity or the papery crunch of dry corpses being devoured in the graveyard. It is the simple creaking of a lattice window.\nRandolph turns rigid and pale. You realize the implication just after he recalls the sound. All of the window frames in the house had fallen long ago - all save for one. It was the attic window that kept hidden the accursed demonic darkness: the thing with no name. It reaches out for you."
+    },
+    "vi_current": {
+      "name": "Những Kẻ Chết Vô Danh",
+      "text": "Mỗi Swarm của Chuột tăng thêm 2.\nKhông thể đặt tên mất aloof và nhận được massive.\n<b>Forced</b> - Khi bắt đầu lượt của bạn, nếu Người không thể đặt tên đang ready và ở địa điểm của bạn: Kiểm tra [willpower] (2). Nếu bạn thất bại, nó sẽ tấn công bạn <i>(ngay cả khi nó không phải là engaged)</i>.",
+      "flavor": "Toàn bộ ngôi nhà bị bao trùm bởi linh hồn của những kẻ từng bỏ mạng tại nơi này.",
+      "back_name": "Chết Dưới Mộ Sâu",
+      "back_text": "Mỗi điều tra viên bị nuốt chửng bởi Thứ Không Tên. <b>(→R2)</b>",
+      "back_flavor": "Thực thể vô danh nuốt chửng thể xác bạn vào khối thịt nhầy nhụa của nó."
+    }
+  },
+  {
+    "code": "06172",
+    "type": "act",
+    "pack": "tsh",
+    "scenario": "A Thousand Shapes of Horror",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: len ratio 0.51",
+      "flavor: len ratio 0.25",
+      "back_text: nums en=['5'] vi=['2']",
+      "back_text: len ratio 0.02"
+    ],
+    "en": {
+      "name": "Searching the Unnamable",
+      "text": "<b>Objective</b> - Explore the house to find a way into the Dreamlands. <i>(Find and complete an objective on another scenario card to advance.)</i>",
+      "flavor": "You're still not sure exactly what you're meant to find inside the old house, but Randolph insists that you need to locate the \"key.\" Seems like you have no choice but to search the house and see what you can turn up.",
+      "back_name": "Into the Depths",
+      "back_text": "Set The Unnamable aside. It keeps all tokens and attachments.\nRemove each location from the game (or place it in the victory display if it has <b>Victory X</b> and no clues on it). Investigators are not defeated during this process. <i>(Other enemies and attachments at those locations are discarded.)</i>\nShuffle the set-aside Mysterious Stairs locations and put 5 of them into play in a vertical line. Remove the remaining Mysterious Stairs location from the game.\nPlace each investigator and the set-aside The Unnamable enemy at the topmost Mysterious Stairs location, revealing it.\nSearch the encounter deck and discard pile for both copies of Locked Door and both copies of Secrets in the Attic, and remove them from the game.\nShuffle each set-aside copy of Endless Descent into the encounter deck, along with the encounter discard pile.",
+      "back_flavor": "The tomb opens into a staircase that stretches deep underground before disappearing into darkness."
+    },
+    "vi_current": {
+      "name": "Lục Soát Ngôi Nhà Vô Danh",
+      "text": "<b>Objective</b> — Tìm kiếm chiếc chìa khóa dẫn xuống cầu thang ngầm bí mật.",
+      "flavor": "Những cuốn nhật ký cổ mủn nát nằm rải rác dưới sàn gỗ.",
+      "back_name": "Cầu Thang Bất Tận",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Một cánh cửa sập dưới sàn bật mở, để lộ cầu thang xoắn ốc dẫn sâu xuống lòng đất."
+    }
+  },
+  {
+    "code": "06173",
+    "type": "act",
+    "pack": "tsh",
+    "scenario": "A Thousand Shapes of Horror",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.49",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.13"
+    ],
+    "en": {
+      "name": "The Endless Stairs",
+      "text": "While the bottommost Mysterious Stairs location is revealed, it gains: \"[action]: <b>Resign.</b>\"\n<b>Objective</b> - Reach the bottom of the stairs. If each undefeated investigator has resigned, advance.",
+      "flavor": "The steps seem to descend forever. Every time you think you're nearing the end, you round another corner and see hundreds more.",
+      "back_name": "Forced Entry",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "The forlorn cries of the unnamable creature - whatever it is or once was - echo throughout the unnatural cavern from far above you. \"It cannot reach us down here,\" Randolph says, letting out a sigh of relief. It was a harrowing descent, but you are finally safe from the indescribable thing. Even so, your safety is fleeting. The stairway coils below you with no end in sight. Windows in the spire's stone wall overlook an endless landscape of rocky crags and barren peaks, dimly lit by a grey phosphorous light. You are still many miles above the floor of this subterranean world, and who knows what horrors you may find once you arrive?\n\"This is only the beginning,\" Randolph warns you. \"There is no turning back now. Are you ready to proceed?\""
+    },
+    "vi_current": {
+      "name": "Những Bậc Thang Bất Tận",
+      "text": "<b>Objective</b> — Chạy đua xuống cầu thang ngầm và phong ấn cánh cửa cõi chết.\n[action]: <b>Resign.</b> Bạn thoát ra nghĩa địa cổ phía sau ngôi nhà.",
+      "flavor": "Bậc thang đá xoắn ốc sâu hun hút dường như không có điểm dừng!",
+      "back_name": "Thoát Khỏi Nỗi Kinh Hoàng",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn đóng sập cánh cửa sắt ngầm và cài then sắt, nhốt vĩnh viễn Thứ Không Tên dưới lòng mộ địa."
+    }
+  },
+  {
+    "code": "06248",
+    "type": "agenda",
+    "pack": "pnr",
+    "scenario": "Point of No Return",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.33",
+      "back_text: nums en=['1'] vi=[]",
+      "back_text: len ratio 0.41",
+      "back_flavor: len ratio 0.41"
+    ],
+    "en": {
+      "name": "A Sinister Realm",
+      "flavor": "The Underworld is a cavernous realm, almost another world unto itself. Its ceiling is so far in the distance that it might as well be a somber, overcast sky. The walls of the caverns are dimly lit by a flickering grey light with no apparent source. You wander through the twisting catacombs in search of the way forward, but you can't shake the feeling that you're being followed.",
+      "back_name": "The Path Darkens",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\nPlace 1 damage on the scenario reference card.",
+      "back_flavor": "A sudden wave of pain and nausea passes over you, and for a brief moment, it seems the very fabric of reality is tearing apart. The feeling passes quickly, but it's obvious that something is not quite right."
+    },
+    "vi_current": {
+      "name": "Cõi Tăm Tối",
+      "flavor": "Bạn dấn thân xuống Thế Giới Ngầm (Underworld) — nơi trú ngụ của loài khổng lồ Gug và những bầy quái vật Ghast ăn thịt người.",
+      "back_name": "Quái Vật Bao Vây",
+      "back_text": "Spawn kẻ địch Gug Sentry tại Tower of Koth.",
+      "back_flavor": "Tiếng bước chân ầm ầm của những sinh vật bốn tay khổng lồ làm rung chuyển lòng hang."
+    }
+  },
+  {
+    "code": "06249",
+    "type": "agenda",
+    "pack": "pnr",
+    "scenario": "Point of No Return",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.49",
+      "back_text: nums en=['1', '1', '2', '2', '5'] vi=['2']",
+      "back_text: len ratio 0.16",
+      "back_flavor: len ratio 0.32"
+    ],
+    "en": {
+      "name": "Beset by Monsters",
+      "text": "(Hint - The game will not necessarily end when this agenda advances... but the stability of reality will continue to unravel.)",
+      "flavor": "As you continue to explore, the creatures of the Underworld grow agitated and begin to pursue you, as if compelled by some unseen force.",
+      "back_name": "The Weaver Approaches",
+      "back_text": "Each investigator must either discard 1 card at random from their hand or lose 2 resources.\nShuffle the encounter discard pile into the encounter deck.\nPlace 1 damage on the scenario reference card. Then:\n- If there are 5 or more damage tokens on the scenario reference card, proceed to <b>(→R2)</b>.\n- Otherwise, flip this agenda back over.",
+      "back_flavor": "Again you are shaken by a sudden feeling of instability as reality shifts and bends around you. The wave is more intense than before, and it seems to originate from the Sea of Pitch in the depths of the Underworld."
+    },
+    "vi_current": {
+      "name": "Bị Quái Thú Vây Hãm",
+      "text": "(Gợi ý - Trò chơi không nhất thiết phải kết thúc khi agenda này là advances... nhưng tính ổn định của thực tế sẽ tiếp tục được làm sáng tỏ.)",
+      "flavor": "Lũ quái vật thế giới ngầm ngửi thấy mùi thịt tươi của kẻ xâm nhập.",
+      "back_name": "Chết Dưới Lòng Đất",
+      "back_text": "Mỗi điều tra viên bị xé xác bởi loài Gug. <b>(→R2)</b>",
+      "back_flavor": "Bạn bị quái thú Gug nuốt chửng vào chiếc mồm dọc đầy răng nhọn hoắt."
+    }
+  },
+  {
+    "code": "06250",
+    "type": "act",
+    "pack": "pnr",
+    "scenario": "Point of No Return",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=[]",
+      "text: len ratio 0.41",
+      "flavor: len ratio 0.42",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.06",
+      "back_flavor: len ratio 0.07"
+    ],
+    "en": {
+      "name": "Entering the Underworld (v. I)",
+      "text": "<b>Forced</b> - After an enemy with 1 or more clues on it is defeated: Take control of each of those clues.\n<b>Objective</b> - Explore this region. <i>(You will be instructed when to advance.)</i>",
+      "flavor": "You have succeeded in reaching the Dreamlands, but this is not quite what you expected. You are in the Underworld, and it will take some work to find your bearings in this sinister place.",
+      "back_name": "A Mournful Ally",
+      "back_text": "Put each set-aside [[Vale]] location into play.\nFind each card from the <i>Ghouls</i> encounter set and the <i>Striking Fear</i> encounter set (even if they are out of play). Remove them from the game.\nShuffle the set-aside <i>Terror of the Vale</i> and <i>Nightgaunts</i> encounter sets into the encounter deck, along with the discard pile.",
+      "back_flavor": "You launch into a panicked explanation of everything that's happened to you. When the ghoul hears the name \"Randolph Carter,\" his demeanor changes. He asks what has become of Randolph, and you tell him of his friend's fate. Sadness overcomes the creature. He introduces himself as Richard Pickman, and tells you that Randolph was once his friend. He agrees to let you pass in peace, but not before giving you a warning: strange happenings have been occurring within the Underworld. He tells of dark forces spreading throughout the vale below the Plain of the Ghouls, of vile weavers that crawl along the cavern walls, and of a terrible howling cry that penetrates throughout the realm. All of it, he explains in gibbering speech, emanates from one place: an ocean of pitch in the realm's deepest layer."
+    },
+    "vi_current": {
+      "name": "Bước Vào Thế Giới Ngầm (v. I)",
+      "text": "<b>Objective</b> — Thám hiểm thành phố của loài Gug và tìm đường xuống Biển Đen.",
+      "flavor": "Những tòa tháp đá đen khổng lồ không cửa sổ vươn cao trong bóng tối vĩnh hằng.",
+      "back_name": "Hạ Xuống Biển Đen",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Bạn tìm thấy con đường mòn bí mật dẫn xuống bờ Biển Đen."
+    }
+  },
+  {
+    "code": "06251",
+    "type": "act",
+    "pack": "pnr",
+    "scenario": "Point of No Return",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=[]",
+      "text: len ratio 0.34",
+      "flavor: len ratio 0.30",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.04",
+      "back_flavor: len ratio 0.07"
+    ],
+    "en": {
+      "name": "Entering the Underworld (v. II)",
+      "text": "<b>Forced</b> - After an enemy with 1 or more clues on it is defeated: Take control of each of those clues.\n<b>Objective</b> - Find Richard Upton Pickman. <i>(You will be instructed when to advance.)</i>",
+      "flavor": "You have succeeded in reaching the Dreamlands, but this is not quite what you expected. You are in the Underworld, and it will take some work to find your bearings in this sinister place.",
+      "back_name": "An Unlikely Ally",
+      "back_text": "Choose an investigator to take control of the set-aside Richard Upton Pickman story asset. For the remainder of the scenario, if Richard Upton Pickman leaves play, remove him from the game.\nPut each set-aside [[Vale]] location into play.\nFind each card from the <i>Striking Fear</i> encounter set (even if they are out of play). Remove them from the game.\nShuffle the set-aside <i>Terror of the Vale</i> and <i>Nightgaunts</i> encounter sets into the encounter deck, along with the discard pile.",
+      "back_flavor": "Randolph gives a shout of recognition as the ghoul approaches. He and the creature shake hands and converse for a short while, after which he introduces you. \"This is the ghoul I spoke to you about. He is an old friend of mine, and he has offered to guide us through the Underworld. He has some dire news, however...\" Randolph goes on to explain: strange happenings have been occurring within the Underworld. He tells of dark forces spreading throughout the vale below the Plain of the Ghouls, of vile weavers that crawl along the cavern walls, and of a terrible howling cry that penetrates throughout the realm. All of it, he says, emanates from one place: an ocean of pitch in the realm's deepest layer."
+    },
+    "vi_current": {
+      "name": "Bước Vào Thế Giới Ngầm (v. II)",
+      "text": "<b>Objective</b> — Vượt qua nghĩa địa của loài Ghast để tìm lối thoát.",
+      "flavor": "Lũ quái vật nhợt nhạt nhảy nhót giữa các đống xương tàn.",
+      "back_name": "Hạ Xuống Biển Đen",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Bạn tìm thấy lối dẫn xuống bờ Biển Đen mênh mông."
+    }
+  },
+  {
+    "code": "06252",
+    "type": "act",
+    "pack": "pnr",
+    "scenario": "Point of No Return",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=[]",
+      "text: len ratio 0.41",
+      "flavor: len ratio 0.21",
+      "back_text: nums en=[] vi=['3']",
+      "back_text: len ratio 0.20",
+      "back_flavor: len ratio 0.09"
+    ],
+    "en": {
+      "name": "The Descent",
+      "text": "<b>Forced</b> - After an enemy with 1 or more clues on it is defeated: Take control of each of those clues.\n<b>Objective</b> - Find the way to the Sea of Pitch. <i>(You will be instructed when to advance.)</i>",
+      "flavor": "The way to the vale below is treacherous. You will have to climb down from a place Pickman calls \"the Crag of the Ghouls,\" where the creatures cast the discarded remains of their macabre meals. You can only imagine what the depths might be like.",
+      "back_name": "A Way Across",
+      "back_text": "Put each set-aside [[Depths]] location into play.\nShuffle the set-aside <i>Descent into the Pitch</i> and <i>Agents of Atlach-Nacha</i> encounter sets into the encounter deck, along with the discard pile.",
+      "back_flavor": "The hole becomes narrower and narrower as you make your way through to the other side of the stone wall. When you finally emerge, you find yourself at the shores of an enormous ocean of pitch-black tar. Webs of glowing, violet energy spread across its surface, filling you with an uneasy dread. Could this be related to the horrors you witnessed in St. Mary's Hospital? Just as you are beginning to wonder what to do next, you discover several rowboats of black wood moored in a nearby cove. The hull of each is carved with a strange insignia. Is this luck, or providence? Either way, you are determined to set off across the sea and trace this madness to its source."
+    },
+    "vi_current": {
+      "name": "Cuộc Hạ Xuống",
+      "text": "<b>Objective</b> — Thu thập manh mối tại các hầm mộ đá để tìm chiếc thuyền vượt biển.",
+      "flavor": "Bờ biển đen ngòm với làn nước tĩnh lặng như dầu sôi.",
+      "back_name": "Khoảng Không Đen Tối",
+      "back_text": "Advance sang Act 3 — \"The Black Expanse\".",
+      "back_flavor": "Một con thuyền không người lái trôi dạt vào bờ cát đón đợi bạn."
+    }
+  },
+  {
+    "code": "06253",
+    "type": "act",
+    "pack": "pnr",
+    "scenario": "Point of No Return",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=[]",
+      "text: icons en=[] vi=['[action]']",
+      "flavor: len ratio 0.54",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.15"
+    ],
+    "en": {
+      "name": "The Black Expanse",
+      "text": "<b>Forced</b> - After an enemy with 1 or more clues on it is defeated: Take control of each of those clues.\n<b>Objective</b> - Find the source of the distortion. <i>(You will be instructed when to advance.)</i>",
+      "flavor": "As you traverse the tar-like Sea of Pitch, you begin to discern patterns in the unearthly web that glows below its surface.",
+      "back_name": "Under the Sea of Pitch",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "A pit of fear grows in your chest as you gaze into the thick, dark water. This is the source. Whatever is below the surface of this sea, it holds the answer to everything that has transpired thus far in the waking world. Perhaps you can even find a way to save your friends. Or perhaps the ocean will simply swallow you alive. You have no way of knowing for certain. You stand and take a final breath, clenching your fists tightly. Then, you take a leap of faith."
+    },
+    "vi_current": {
+      "name": "Khoảng Không Đen Tối",
+      "text": "<b>Objective</b> — Chèo thuyền qua Biển Đen để tìm cổng dịch chuyển lên thế giới bên trên.\n[action]: <b>Resign.</b> Bạn cập bến bờ bên kia.",
+      "flavor": "Mặt nước đen thăm thẳm không đáy phản chiếu những bóng ma dĩ vãng.",
+      "back_name": "Vượt Qua Thế Giới Ngầm",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn bước lên cầu thang đá dẫn thẳng tới Cầu Tơ Nhện của Atlach-Nacha."
+    }
+  },
+  {
+    "code": "06334",
+    "type": "agenda",
+    "pack": "woc",
+    "scenario": "Weaver of the Cosmos",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: dup [('06334', 'text'), ('06335', 'text')]",
+      "flavor: len ratio 0.47",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.37",
+      "back_flavor: len ratio 0.12"
+    ],
+    "en": {
+      "name": "The Bridge of Webs",
+      "text": "*This agenda gets +2 [per_investigator] doom threshold.\n<b>Forced</b> - When this agenda advances: Do not remove doom from locations in play.",
+      "flavor": "This vast expanse of space is a bridge between the Dreamlands and reality, woven by a terrible spider creature that is the cause of all of the distortions you have experienced thus far. If you don’t find a way to stop it from completing the bridge, it will open the way for these horrors to enter the waking world.",
+      "back_name": "A Breath of Fresh Air",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.",
+      "back_flavor": "There is no air in this interdimensional space. Even in the bleak pits of the Underworld, you sensed cold wind coiling through the depths or warm, noxious gas rising from the Sea of Pitch. But here, there is nothing: no air, no atmosphere, no life whatsoever, save for you and the spiders whose work nears completion.\nJust as you are contemplating how anything can exist at all in this awful world between worlds, you hear a sound like the stretching and tearing of fabric. Then a rush of billowing air erupts all around you, filling the vastness of the realm like dust in a vacuum. This wind must be coming from somewhere, and that can only mean one thing: Worlds are starting to merge."
+    },
+    "vi_current": {
+      "name": "Cây Cầu Tơ Nhện",
+      "text": "*agenda này đạt ngưỡng +2 [per_investigator] doom.\n<b>Forced</b> - Khi agenda này advances: Không xóa doom khỏi các địa điểm trong màn chơi.",
+      "flavor": "Nhện Chúa Atlach-Nacha đang miệt mài dệt cây cầu tơ nhện nối liền Dreamlands và thế giới thực. Nếu cây cầu hoàn tất, hai thế giới sẽ sụp đổ vào nhau!",
+      "back_name": "Dấu Vết Uốn Lượn",
+      "back_text": "Advance sang agenda 2.",
+      "back_flavor": "Những sợi tơ nhện khổng lồ rung lên bần bật, kéo các chiều không gian lại gần nhau."
+    }
+  },
+  {
+    "code": "06335",
+    "type": "agenda",
+    "pack": "woc",
+    "scenario": "Weaver of the Cosmos",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: dup [('06334', 'text'), ('06335', 'text')]",
+      "flavor: len ratio 0.46",
+      "back_text: nums en=[] vi=['3']",
+      "back_text: len ratio 0.37",
+      "back_flavor: len ratio 0.14"
+    ],
+    "en": {
+      "name": "A Trail of Twists",
+      "text": "*This agenda gets +2 [per_investigator] doom threshold.\n<b>Forced</b> - When this agenda advances: Do not remove doom from locations in play.",
+      "flavor": "In this void between realities, there can be no hope or joy. Just the ceaseless toiling of spiders performing their great work, closer and closer to completion with each passing moment.",
+      "back_name": "Of Stars and Webs",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.",
+      "back_flavor": "A light flashes in the distance, beyond strands of ethereal webbing: an explosion thousands of light-years away. Radiant light ripples throughout the web-bridge. The silken threads reflect the luminescence of a shattered nebula. A brilliant shine burns your pupils. When the glow finally dims, the bridge is resplendent with cosmic energy. It is almost over now. Soon the bridge will connect the two worlds, and there will be nothing left but Atlach-Nacha and its horde."
+    },
+    "vi_current": {
+      "name": "Vết Tích Vặn Vẹo",
+      "text": "*agenda này đạt ngưỡng +2 [per_investigator] doom.\n<b>Forced</b> - Khi agenda này advances: Không xóa doom khỏi các địa điểm trong màn chơi.",
+      "flavor": "Thực tại bắt đầu hòa tan. Những mảng thành phố Arkham xuất hiện lơ lửng giữa cõi mộng.",
+      "back_name": "Thực Tại Đan Xen",
+      "back_text": "Advance sang agenda 3.",
+      "back_flavor": "Bầu trời rạn nứt thành những mạng lưới tơ nhện phát sáng chết người."
+    }
+  },
+  {
+    "code": "06336",
+    "type": "agenda",
+    "pack": "woc",
+    "scenario": "Weaver of the Cosmos",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "flavor: len ratio 0.46",
+      "back_text: len ratio 6.67",
+      "back_flavor: len ratio 0.16"
+    ],
+    "en": {
+      "name": "Realities Interwoven",
+      "text": "*This agenda gets +2 [per_investigator] doom threshold.",
+      "flavor": "In the distance, untold horizons away, stars glimmer and burn with the power of countless other worlds. The shimmering strands of web all around you pulse with the same light.",
+      "back_name": "Worlds Collide",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "There is a sudden rush of air and a snapping sound, like a thousand bones popping into place at once. The webs surrounding you all flicker with untold power, the air currents shifting back and forth to the same steady rhythm. At the far end of the void, the sun's light shines through - a literal light at the end of the tunnel that is Atlach-Nacha's realm. You watch with dread as the spiders infesting this place scurry, one by one, toward the light."
+    },
+    "vi_current": {
+      "name": "Thực Tại Đan Xen",
+      "text": "*agenda này đạt ngưỡng +2 [per_investigator] doom.",
+      "flavor": "Atlach-Nacha sắp đặt mũi dệt cuối cùng! Vũ trụ chuẩn bị bị kéo sụp vào vực thẳm!",
+      "back_name": "Hai Thế Giới Sụp Đổ",
+      "back_text": "Mỗi điều tra viên bị nghiền nát trong sự hợp nhất của hai thế giới. <b>(→R2)</b>",
+      "back_flavor": "Dreamlands và Trái Đất va chạm dữ dội rồi nổ tung thành mây bụi vũ trụ."
+    }
+  },
+  {
+    "code": "06337",
+    "type": "act",
+    "pack": "woc",
+    "scenario": "Weaver of the Cosmos",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: len ratio 0.38",
+      "flavor: len ratio 0.31",
+      "back_text: len ratio 0.49",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Journey Across the Bridge",
+      "text": "Each location is connected to each location above and below it.\n<b>Objective</b> - If each investigator is at the bottommost location, they may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "You realize now that you are no longer in the Dreamlands or the waking world, but somewhere else entirely: a stygian void wherein dwells the Weaver of the Cosmos. It is not just your world at stake, but the Dreamlands as well.",
+      "back_name": "The Edge of Dreams",
+      "back_text": "Read <b>Scenario Interlude: The Spider Queen</b> in the Campaign Guide. Then, advance to Act 2a - \"The Weaver of the Cosmos.\""
+    },
+    "vi_current": {
+      "name": "Hành Trình Qua Cây Cầu",
+      "text": "<b>Objective</b> — Băng qua mạng lưới tơ nhện khổng lồ để tiếp cận Nhện Chúa.",
+      "flavor": "Từng bước chân trên sợi tơ rung rinh lơ lửng trên vực thẳm không đáy.",
+      "back_name": "Diện Kiến Nhện Chúa",
+      "back_text": "Spawn Atlach-Nacha tại trung tâm cây cầu. Advance sang Act 2.",
+      "back_flavor": "Thực thể nhện khổng lồ với khuôn mặt người phụ nữ nở nụ cười ma quái nghênh chiến!"
+    }
+  },
+  {
+    "code": "06338",
+    "type": "act",
+    "pack": "woc",
+    "scenario": "Weaver of the Cosmos",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: nums en=['1', '3', '4'] vi=[]",
+      "text: icons en=['[action]'] vi=[]",
+      "text: len ratio 0.24",
+      "back_text: nums en=[] vi=['3']",
+      "back_text: len ratio 0.40",
+      "back_flavor: len ratio 0.18"
+    ],
+    "en": {
+      "name": "The Weaver of the Cosmos",
+      "text": "[action] Spend 1 clue: Deal 3 damage to an [[Ancient One]] enemy at your location.\n<b>Forced</b> - When the mythos phase begins: Reveal a random token from the chaos bag. If its modifier is negative, spin Atlach-Nacha clockwise X times. X is the token's negative modifier.\n<b>Objective</b> - If 4 Legs of Atlach-Nacha are in the victory display, advance.",
+      "flavor": "Atlach-Nacha is distracted by its mindless task. Now is your chance!",
+      "back_name": "The Queen's Wrath",
+      "back_text": "Flip Atlach-Nacha's center card over, to its enemy side. Place it at the location with the most doom in it.",
+      "back_flavor": "Having severed the wretched spider's legs and unraveled the webs it stood on, you hoped that this would send the thing careening into the endless void below. But as it falls, more thin, jagged legs erupt from below its abdomen, and it grips onto a nearby platform, just barely catching itself. The horrible maw, which extends down the length of its worm-like head, wrenches open. From it emerges a screech like a thousand nails on a chalkboard."
+    },
+    "vi_current": {
+      "name": "Thợ Dệt Vũ Trụ",
+      "text": "<b>Objective</b> — Đánh bại Atlach-Nacha và cắt đứt các sợi tơ kết nối hai thế giới.",
+      "flavor": "Tám chiếc chân nhện sắc như kiếm bén chém xé không gian xung quanh bạn!",
+      "back_name": "Cắt Đứt Mạng Lưới",
+      "back_text": "Advance sang Act 3 — \"The Scheme's Demise\".",
+      "back_flavor": "Nhện Chúa rít lên đau đớn khi những sợi tơ sinh mệnh của ả bị chặt đứt từng đoạn."
+    }
+  },
+  {
+    "code": "06339",
+    "type": "act",
+    "pack": "woc",
+    "scenario": "Weaver of the Cosmos",
+    "source_file": "acts_agendas_tde.py",
+    "audit_flags": [
+      "text: nums en=['1', '3'] vi=[]",
+      "text: len ratio 0.26",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.15"
+    ],
+    "en": {
+      "name": "The Scheme's Demise",
+      "text": "[action] Spend 1 clue: Deal 3 damage to an [[Ancient One]] enemy at your location.\n<b>Forced</b> - When the mythos phase begins: Reveal a random token from the chaos bag. If its modifier is negative, move Atlach-Nacha clockwise X times. X is the token's negative modifier.\n<b>Objective</b> - If Atlach-Nacha is defeated, advance.",
+      "flavor": "You are the last line of defense against the creatures that scheme to devour your world.",
+      "back_name": "Falling Down",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "The creature thrashes about violently as its webbing is ripped apart. The shimmer fades from the bridge's threads. In the distance, the cosmic array of lights winks out of existence, star by star. The spider's pained screech is deafening. You're not sure if it would be possible to kill a creature such as this, but you have done more harm to it in destroying its life's work than you could have ever done with bullets and blades.\nAs the woven threads of spider silk unravel, this realm's many suspended platforms of rock crumble and collapse into the endless aether below. You struggle to find something to stand on or grab hold of. Without the support of the web-bridge, the entire dimension collapses all around you.\nWith a final desperate screech that echoes throughout this world between worlds, Atlach-Nacha plunges into the eternal darkness below. You are quick to follow."
+    },
+    "vi_current": {
+      "name": "Âm Mưu Sụp Đổ",
+      "text": "<b>Objective</b> — Phong ấn vực thẳm và trở về thế giới thực.\n[action]: <b>Advance.</b>",
+      "flavor": "Cây cầu tơ nhện bắt đầu tan rã. Hãy nhảy qua cánh cổng trước khi nó sụp đổ!",
+      "back_name": "Vũ Trụ Được Tách Rời",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Cây cầu đứt lìa, hai thế giới tách rời an toàn. Bạn tỉnh lại trong căn phòng ngủ quen thuộc ở Arkham sau một giấc mộng dài kỳ vĩ."
+    }
+  }
+]

@@ -1,0 +1,1448 @@
+[
+  {
+    "code": "02042",
+    "type": "agenda",
+    "pack": "dwl",
+    "scenario": "Extracurricular Activity",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "back_text: nums en=['1', '10', '2', '2', '2', '5'] vi=['1', '1', '10', '2', '2', '2', '5']"
+    ],
+    "en": {
+      "name": "Quiet Halls",
+      "flavor": "You have arrived at the Miskatonic University campus in search of Professor Warren Rice. Classes are over, and a mysterious silence hangs in the air over the quad.",
+      "back_name": "Something Stirs",
+      "back_text": "Each investigator with 5 or more cards in his or her discard pile takes 1 horror. Each investigator with 10 or more cards in his or her discard pile takes 2 horror, instead.\nIf the players have completed The House Always Wins, advance directly to agenda 2b. If Extracurricular Activity is the first scenario in the campaign, advance to agenda 2a.",
+      "back_flavor": "The university is dead silent. The shadows coil about your feet as you walk, and you swear there is something following you with each step you take. Is it just your imagination? Or is there really someone - or something - stalking you?"
+    },
+    "vi_current": {
+      "name": "Những Hành Lang Yên Ắng",
+      "flavor": "Bạn đã đến khuôn viên Đại học Miskatonic để tìm kiếm Giáo sư Warren Rice. Các lớp học đã kết thúc, và một sự im lặng kỳ bí bao trùm khắp sân trường.",
+      "back_name": "Có Thứ Gì Đó Đang Cựa Quậy",
+      "back_text": "Mỗi điều tra viên có từ 5 lá bài trở lên trong chồng bài bỏ của mình chịu 1 horror. Mỗi điều tra viên có từ 10 lá bài trở lên trong chồng bài bỏ chịu 2 horror thay vì 1.\nNếu người chơi đã hoàn thành The House Always Wins, advance trực tiếp sang agenda 2b. Nếu Extracurricular Activity là màn chơi đầu tiên trong chiến dịch, advance sang agenda 2a.",
+      "back_flavor": "Trường đại học tĩnh lặng như tờ. Những chiếc bóng uốn lượn quanh chân bạn khi bạn rảo bước, và bạn có cảm giác như có thứ gì đó đang bám theo từng bước chân mình. Liệu đó chỉ là do bạn tưởng tượng? Hay thực sự có kẻ nào đó — hoặc thứ gì đó — đang rình rập bạn?"
+    }
+  },
+  {
+    "code": "02043",
+    "type": "agenda",
+    "pack": "dwl",
+    "scenario": "Extracurricular Activity",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "Dead of Night",
+      "text": "Each investigator's maximum hand size is reduced by 3 while checking his or her hand size during the upkeep phase.",
+      "flavor": "Professor Rice's disappearance isn't the only thing amiss at the university. You're unsure exactly what is going on, but you're starting to believe Armitage was right in asking for your help.",
+      "back_name": "An Experiment Gone Wrong",
+      "back_text": "If the Dormitories location is not in play, put it into play.\nIf The Experiment is in play, move it 1 location toward the Dormitories.\nIf The Experiment is not in play, spawn it in the Science Building.",
+      "back_flavor": "A cry of fear echoes through the campus, and several students flee from the eastern side of the university, where the Science building can be found. Could this commotion be linked to Professor Rice's disappearance?"
+    },
+    "vi_current": {
+      "name": "Giữa Đêm Khuya",
+      "text": "Số lượng bài tối đa trên tay của mỗi điều tra viên bị giảm đi 3 khi kiểm tra giới hạn bài trên tay trong giai đoạn Upkeep.",
+      "flavor": "Sự biến mất của Giáo sư Rice không phải là điều bất thường duy nhất tại trường đại học. Bạn không chắc chính xác chuyện gì đang diễn ra, nhưng bạn bắt đầu tin rằng Armitage đã đúng khi nhờ cậy sự giúp đỡ của bạn.",
+      "back_name": "Thí Nghiệm Đi Chệch Hướng",
+      "back_text": "Nếu địa điểm Dormitories chưa có trong màn chơi, đặt nó vào màn chơi.\nNếu The Experiment đang trong màn chơi, di chuyển nó 1 địa điểm về phía Dormitories.\nNếu The Experiment chưa có trong màn chơi, spawn nó tại Science Building.",
+      "back_flavor": "Một tiếng thét kinh hoàng vang vọng khắp khuôn viên trường, và nhiều sinh viên hốt hoảng tháo chạy từ phía đông đại học, nơi đặt tòa nhà Khoa học. Liệu sự hỗn loạn này có liên quan tới sự mất tích của Giáo sư Rice?"
+    }
+  },
+  {
+    "code": "02044",
+    "type": "agenda",
+    "pack": "dwl",
+    "scenario": "Extracurricular Activity",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "The Beast Unleashed",
+      "text": "<b>Forced</b> - When this agenda would advance by reaching its doom threshold: Instead, remove all doom in play and move The Experiment 1 location toward the Dormitories.\n<b>Objective</b> - If The Experiment enters the Dormitories, advance.",
+      "flavor": "Some kind of wild creature is on the loose. Whatever it is, it appears to be headed toward the university dormitories.",
+      "back_name": "Not Fast Enough",
+      "back_text": "Each investigator immediately takes 3 horror. Then, proceed to <b>(→R4)</b>.",
+      "back_flavor": "Before you are able to act, you hear screaming from the northern side of the campus. You begin to make your way toward the screaming, your vision darkening with each step. As soon as the creature enters sight, you feel the darkness overtake you, and a force pulls you out of your consciousness. Everything goes black, and you pass out."
+    },
+    "vi_current": {
+      "name": "Quái Thú Xổng Chuồng",
+      "text": "<b>Forced</b> — Khi agenda này advance do đạt ngưỡng doom: Thay vào đó, loại bỏ toàn bộ doom trong màn chơi và di chuyển The Experiment 1 địa điểm về phía Dormitories.\n<b>Objective</b> — Nếu The Experiment bước vào Dormitories, advance.",
+      "flavor": "Một loài sinh vật hung tợn nào đó đang sổng ra ngoài. Dù nó là thứ gì đi nữa, có vẻ như nó đang nhắm thẳng về phía ký túc xá sinh viên.",
+      "back_name": "Không Kịp Nữa Rồi",
+      "back_text": "Mỗi điều tra viên lập tức chịu 3 horror. Sau đó, tiến hành <b>(→R4)</b>.",
+      "back_flavor": "Trước khi bạn kịp hành động, bạn nghe thấy những tiếng la hét thất thanh từ phía bắc khuôn viên trường. Bạn lao mình về phía có tiếng hét, tầm nhìn tối sầm lại theo từng bước chạy. Ngay khi sinh vật đó lọt vào tầm mắt, bạn cảm thấy bóng tối nuốt trọn lấy mình, và một thế lực vô hình kéo bạn ra khỏi ý thức. Mọi thứ chìm vào màn đêm, và bạn ngất lịm."
+    }
+  },
+  {
+    "code": "02045",
+    "type": "act",
+    "pack": "dwl",
+    "scenario": "Extracurricular Activity",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "After Hours",
+      "flavor": "Professor Rice was last seen several hours ago by one of Armitage's students, in the Humanities building.",
+      "back_name": "The Head Janitor",
+      "back_text": "Shuffle the encounter discard pile and the set-aside \"Jazz\" Mulligan into the encounter deck.",
+      "back_flavor": "You were unable to find Professor Rice, but one of the students you spoke with mentioned a strange man entering Rice's office. Unfortunately, the door leading to the faculty offices is locked at this late hour. The student says that the head janitor, \"Jazz\", might be able to let you in, if you can find him."
+    },
+    "vi_current": {
+      "name": "Sau Giờ Học",
+      "flavor": "Giáo sư Rice được nhìn thấy lần cuối cách đây vài giờ bởi một sinh viên của Armitage tại tòa nhà Nhân văn.",
+      "back_name": "Trưởng Ban Lao Công",
+      "back_text": "Xáo trộn chồng bài encounter bỏ và lá bài \"Jazz\" Mulligan đang để riêng vào chồng bài encounter.",
+      "back_flavor": "Bạn không tìm thấy Giáo sư Rice, nhưng một sinh viên mà bạn trò chuyện đã nhắc đến một người đàn ông kỳ lạ bước vào văn phòng của Rice. Không may là cánh cửa dẫn vào khu văn phòng giảng viên đã bị khóa chặt vào giờ này. Cậu sinh viên cho biết người trưởng ban lao công, \"Jazz\", có thể mở cửa cho bạn nếu bạn tìm được ông ấy."
+    }
+  },
+  {
+    "code": "02046",
+    "type": "act",
+    "pack": "dwl",
+    "scenario": "Extracurricular Activity",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: nums en=['1', '1', '10', '5'] vi=['1', '1', '10', '5', '5']"
+    ],
+    "en": {
+      "name": "Rice's Whereabouts",
+      "text": "[action] Spend 1 clue: Discard the top 5 cards of the encounter deck (top 10 instead if there is only 1 player in the game).\n<b>Forced</b> - If you discard \"Jazz\" Mulligan for any reason, resolve his revelation effect.\n<b>Objective</b> - When you take control of \"Jazz\" Mulligan, advance.",
+      "flavor": "Concerned for Professor Rice's safety, you seek out the head janitor, who can let you into the locked sections of the campus.",
+      "back_name": "The Experiment Is Loose!",
+      "back_text": "If the Alchemy Labs location is not in play, put it into play. If you are at Agenda 1 or 2, spawn The Experiment in the Alchemy Labs.\nIf you have completed The House Always Wins, put the set-aside Alchemical Concoction into play underneath the Alchemy Labs. If Extracurricular Activity is the first scenario of the campaign, remove the set-aside Alchemical Concoction from the game, instead.",
+      "back_flavor": "You convince \"Jazz\" that something strange is going on, and that Professor Rice may be in danger. He doesn't trust you enough to hand you his keys, but agrees to come with you.\nAll of a sudden, you hear a crash coming from the Science building, and a student rushes toward you. \"Help!\" he cries. \"There's some kind of animal loose in the chem labs! I only barely caught a glimpse of it, but...\" He shudders. \"I think it's heading to the dorms! You've got to do something!\""
+    },
+    "vi_current": {
+      "name": "Tung Tích Của Rice",
+      "text": "[action] Chi trả 1 manh mối: Bỏ 5 lá bài trên cùng của chồng bài encounter (10 lá trên cùng thay vì 5 nếu chỉ có 1 người chơi trong màn chơi).\n<b>Forced</b> — Nếu bạn bỏ \"Jazz\" Mulligan vì bất kỳ lý do gì, kích hoạt hiệu ứng revelation của ông ấy.\n<b>Objective</b> — Khi bạn nắm quyền kiểm soát \"Jazz\" Mulligan, advance.",
+      "flavor": "Lo lắng cho sự an nguy của Giáo sư Rice, bạn tìm kiếm người trưởng ban lao công, người có thể mở khóa các khu vực bị niêm phong trong trường.",
+      "back_name": "Sinh Vật Thí Nghiệm Đã Xổng Ra!",
+      "back_text": "Nếu địa điểm Alchemy Labs chưa có trong màn chơi, đặt nó vào màn chơi. Nếu bạn đang ở Agenda 1 hoặc 2, spawn The Experiment tại Alchemy Labs.\nNếu bạn đã hoàn thành The House Always Wins, đặt Alchemical Concoction đang để riêng vào màn chơi bên dưới Alchemy Labs. Nếu Extracurricular Activity là màn chơi đầu tiên của chiến dịch, thay vào đó loại bỏ Alchemical Concoction đang để riêng khỏi trò chơi.",
+      "back_flavor": "Bạn thuyết phục được \"Jazz\" rằng có điều gì đó rất bất thường đang xảy ra, và Giáo sư Rice có thể đang gặp nguy hiểm. Dù không đủ tin tưởng để giao chìa khóa cho bạn, ông ấy đồng ý đi cùng.\nBất thình lình, một tiếng va chạm chấn động vang lên từ tòa nhà Khoa học, và một sinh viên hớt hải lao về phía bạn. \"Cứu với!\" cậu ta gào lên. \"Có một con quái vật nào đó sổng chuồng trong phòng thí nghiệm hóa học! Em chỉ kịp nhìn thoáng qua nó thôi, nhưng...\" Cậu ta run rẩy. \"Em nghĩ nó đang hướng về phía ký túc xá! Các anh phải làm gì đó đi!\""
+    }
+  },
+  {
+    "code": "02047",
+    "type": "act",
+    "pack": "dwl",
+    "scenario": "Extracurricular Activity",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: icons en=[] vi=['[action]']",
+      "text: len ratio 2.47",
+      "flavor: len ratio 0.51",
+      "back_text: nums en=['3'] vi=['2']",
+      "back_flavor: len ratio 0.52"
+    ],
+    "en": {
+      "name": "Campus Safety",
+      "text": "<b>Objective</b> - Find and complete an objective on another encounter card.",
+      "flavor": "You have only moments to react. You could warn the students in the dormitories and escort them to safety, or continue your task of searching the faculty offices for Professor Rice. Or, perhaps you could try to slay the beast that threatens the campus.",
+      "back_name": "The Beast's Death",
+      "back_text": "<b>(→R3)</b>",
+      "back_flavor": "The monstrous creature lets out a terrible shriek as it succumbs to its wounds and collapses onto the ground. A foul odor emanates from the corpse as its flesh begins to bubble and froth. Your relief turns to disgust as the body begins to shrink and disintegrate. Minutes later, the body has almost entirely evaporated into a sticky mass, and the awful odor has vanished. Inside the remnants of the creature's body, all you can find is a set of bones - the skeletal structure of a canine."
+    },
+    "vi_current": {
+      "name": "An Toàn Học Đường",
+      "text": "<b>Objective</b> — Nếu The Experiment bị đánh bại, advance.\n[action]: <b>Resign.</b> Tình thế đã vượt quá tầm kiểm soát của bạn. Bạn chạy trốn khỏi khuôn viên trường để bảo toàn tính mạng.",
+      "flavor": "Một sinh vật khổng lồ, dị dạng đang bò trườn trên khắp khuôn viên trường. Bạn phải ngăn chặn nó trước khi nó tàn sát mọi người!",
+      "back_name": "Dập Tắt Nguy Hiểm",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "Với một tiếng rên rỉ xé ruột, con quái thú ngã gục. Cơ thể nó bắt đầu sôi sục và tan chảy thành một bũng chất lỏng đen ngòm, bốc mùi hôi thối nồng nặc. Cả khuôn viên trường chìm vào tĩnh lặng, và bạn thở phào nhẹ nhõm khi biết hiểm họa đã được đẩy lùi."
+    }
+  },
+  {
+    "code": "02063",
+    "type": "agenda",
+    "pack": "dwl",
+    "scenario": "The House Always Wins",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: nums en=[] vi=['1']",
+      "back_text: nums en=['2', '2'] vi=['1']"
+    ],
+    "en": {
+      "name": "The Clover Club",
+      "text": "Each [[Criminal]] enemy gains Aloof.\n<b>Forced</b> - If an investigator deals damage to a [[Criminal]] enemy: Immediately advance.",
+      "flavor": "You have entered the Clover Club Casino in search of Dr. Morgan. The club is bustling at this late hour, filled with patrons looking to relax and drink, or make it big. You don't appear to be in much danger.",
+      "back_name": "On the Right Track",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\nIf the players have completed Extracurricular Activity, advance directly to agenda 2b. If The House Always Wins is the first scenario in the campaign, advance to agenda 2a.",
+      "back_flavor": "Your questioning has drawn the attention of several men - hired thugs, by the look of them. \"Francis doesn't want to be bothered,\" one of them says. \"We suggest you leave the premises before we force you to leave.\""
+    },
+    "vi_current": {
+      "name": "Câu Lạc Bộ Clover",
+      "text": "Các kẻ địch [[Criminal]] không engage và không thể bị engage bởi các điều tra viên không mang đặc điểm [[Suspicious]].\n<b>Forced</b> — Khi có 1 hoặc nhiều doom được đặt lên một địa điểm: Đặt số doom đó lên agenda này thay thế.",
+      "flavor": "Bạn đã đến câu lạc bộ Clover để tìm Tiến sĩ Francis Morgan, một đồng nghiệp của Armitage có sở thích cờ bạc. Tiếng nhạc jazz êm dịu và tiếng trò chuyện râm ran chào đón bạn khi bước vào sòng bạc sang trọng.",
+      "back_name": "Bị Bắt Quả Tang!",
+      "back_text": "Mỗi điều tra viên nhận 1 lá bài [[Suspicious]] từ ngoài màn chơi và thêm nó vào khu vực đe dọa (threat area) của mình.\nNếu Clover Club Pit Boss đang trong màn chơi, nó engage với điều tra viên có nhiều manh mối nhất. Nếu không, spawn Clover Club Pit Boss tại Clover Club Lounge.",
+      "back_flavor": "Một trong những người chia bài nghi ngờ hành động của bạn và ra hiệu cho đám bảo kê của câu lạc bộ. Trước khi bạn kịp nhận ra, một gã đàn ông lực lưỡng với vẻ mặt bặm trợn bước đến chặn đường bạn. \"Có vẻ như các vị đang thọc mạch quá nhiều vào chuyện không phải của mình rồi đấy,\" gã gằn giọng."
+    }
+  },
+  {
+    "code": "02064",
+    "type": "agenda",
+    "pack": "dwl",
+    "scenario": "The House Always Wins",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "back_text: nums en=[] vi=['1', '1']",
+      "back_text: len ratio 0.29"
+    ],
+    "en": {
+      "name": "Underground Muscle",
+      "flavor": "Most of the other patrons seem oblivious to the mobsters and goons closing in around you. But you recognize this for what it really is - you're about to get roughed up.",
+      "back_name": "Sudden Chaos",
+      "back_text": "Spawn a random enemy from the set-aside <em>Hideous Abominations</em> encounter set in Clover Club Lounge. Shuffle the rest of that encounter set, the set-aside <em>Striking Fear</em> encounter set, and the encounter discard pile into the encounter deck.\nMove all investigators and unengaged enemies from La Bella Luna to the Clover Club Lounge. Remove La Bella Luna from the game.",
+      "back_flavor": "You hear a crash from somewhere outside and screams of pain in the lounge. A terrible monstrosity smashes through the entrance to the club, crushing the stairwell and knocking over gangsters and patrons alike."
+    },
+    "vi_current": {
+      "name": "Đám Bảo Kê Ngầm",
+      "flavor": "Đám bảo kê của sòng bạc đang lùng sục bạn. Bạn phải cẩn trọng từng bước nếu không muốn bị tống cổ ra ngoài — hoặc tệ hơn nữa.",
+      "back_name": "Hỗn Loạn Bùng Nổ",
+      "back_text": "Spawn kẻ địch Abomination đang để riêng tại Clover Club Bar.\nMỗi kẻ địch [[Criminal]] nhận +1 fight và +1 evade.",
+      "back_flavor": "Một tiếng gầm phi nhân tính xé toạc bầu không khí náo nhiệt của câu lạc bộ. Cửa phòng VIP bật tung và một sinh vật kinh tởm lao ra, tàn sát bừa bãi cả đám xã hội đen lẫn khách chơi bài."
+    }
+  },
+  {
+    "code": "02065",
+    "type": "agenda",
+    "pack": "dwl",
+    "scenario": "The House Always Wins",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Chaos in the Clover Club",
+      "text": "<b>Forced</b> - At the start of the enemy phase: Discard each [[Criminal]] enemy in the same location as an [[Abomination]] enemy.",
+      "flavor": "Amidst the chaos and confusion, the strange abominations attack everyone in the club. Screams echo through the halls as the blood begins to spray.",
+      "back_name": "The Building Collapses",
+      "back_text": "<b>(→R4)</b>",
+      "back_flavor": "As the strange abominations continue to rampage through the club, the building's foundations shake and tremble. You flee toward the exit, but you are caught in the collapsing rubble as the club is destroyed."
+    },
+    "vi_current": {
+      "name": "Hỗn Loạn Tại Câu Lạc Bộ Clover",
+      "text": "<b>Forced</b> — Khi bắt đầu giai đoạn Enemy: Bỏ mỗi kẻ địch [[Criminal]] ở cùng địa điểm với một kẻ địch [[Abomination]].",
+      "flavor": "Giữa cơn hoảng loạn và hỗn loạn tột cùng, những sinh vật quái dị tấn công bất kỳ ai trong câu lạc bộ. Tiếng la hét vang vọng khắp các sảnh khi máu bắt đầu phun xối xả.",
+      "back_name": "Tòa Nhà Sụp Đổ",
+      "back_text": "<b>(→R4)</b>",
+      "back_flavor": "Khi những sinh vật gớm ghiếc tiếp tục hoành hành khắp câu lạc bộ, nền móng của tòa nhà rung chuyển và rạn nứt dữ dội. Bạn lao mình về phía lối thoát hiểm, nhưng bị vùi lấp trong đống đổ nát khi toàn bộ câu lạc bộ đổ sập."
+    }
+  },
+  {
+    "code": "02066",
+    "type": "act",
+    "pack": "dwl",
+    "scenario": "The House Always Wins",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: nums en=[] vi=['1']"
+    ],
+    "en": {
+      "name": "Beginner's Luck",
+      "text": "[reaction] When you reveal a chaos token: You may treat that token as if it were any other token in the chaos bag. If you do, remember that you have \"cheated.\" (Group limit once per round.)\n<b>Objective</b> - When the investigators have collected the requisite number of clues, they must immediately spend them and advance.",
+      "flavor": "You need to find Dr. Morgan. The club is packed; perhaps somebody knows where he is.",
+      "back_name": "High Roller",
+      "back_text": "Put the set-aside Darkened Hall into play.\nIf it is Agenda 1, discard cards from the top of the encounter deck until a [[Criminal]] enemy is discarded, and spawn that enemy in the Darkened Hall.",
+      "back_flavor": "After speaking to a number of gamblers and servers, it seems as though Dr. Morgan has had quite the run lately. Instead of cashing out his winnings, he was convinced to double down. He was last seen entering the guarded hall near the back of the cardroom."
+    },
+    "vi_current": {
+      "name": "Vận May Kẻ Mới Đến",
+      "text": "[reaction] Khi bạn tiết lộ một token hỗn mang: Bạn có thể coi token đó như thể nó là bất kỳ token nào khác trong túi hỗn mang. Nếu bạn làm vậy, hãy ghi nhớ rằng bạn đã \"gian lận\". (Giới hạn cả nhóm 1 lần mỗi vòng.)\n<b>Objective</b> — Khi các điều tra viên thu thập đủ số lượng manh mối cần thiết, họ phải lập tức chi trả chúng và advance.",
+      "flavor": "Bạn cần tìm Tiến sĩ Morgan. Câu lạc bộ đang chật ních người; có lẽ ai đó biết ông ấy đang ở đâu.",
+      "back_name": "Tay Chơi Lớn",
+      "back_text": "Đặt địa điểm Darkened Hall đang để riêng vào màn chơi.\nNếu đang ở Agenda 1, bỏ từng lá bài từ trên cùng của chồng bài encounter cho đến khi một kẻ địch [[Criminal]] bị bỏ, và spawn kẻ địch đó tại Darkened Hall.",
+      "back_flavor": "Sau khi dò hỏi nhiều con bạc và nhân viên phục vụ, có vẻ như Tiến sĩ Morgan đang có một chuỗi thắng ngoạn mục gần đây. Thay vì rút tiền thắng cược ra về, ông ta bị thuyết phục nâng cược gấp đôi. Ông được nhìn thấy lần cuối khi bước vào hành lang có người canh gác ở phía sau phòng đánh bài."
+    }
+  },
+  {
+    "code": "02067",
+    "type": "act",
+    "pack": "dwl",
+    "scenario": "The House Always Wins",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "Skin Game",
+      "text": "<b>Objective</b> - Only investigators in the VIP Area may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "Dr. Morgan is somewhere in the private section of the club, where only VIPs and the club's managers are allowed. If you are to find him, you're going to have to sneak or even fight your way in.",
+      "back_name": "Dr. Morgan's Fate",
+      "back_text": "<b>If the players have not yet completed Extracurricular Activity:</b><blockquote><i>You find Dr. Morgan gambling in one of the VIP rooms... but he appears to be playing cards with two unconscious bodies, his pupils dilated as though in a trance. He can't seem to stop laughing, smiling, and chatting with the other \"players.\"</i></blockquote>Put the set-aside Dr. Morgan into play in the VIP Area. Advance to Act 3a - \"All In.\"\n<hr><b>If the players have completed Extracurricular Activity:</b><blockquote><em>The VIP rooms are filled with the mangled and bloody bodies of unfortunate patrons. There doesn't appear to be any trace of Dr. Morgan. You hear screaming and gunfire from the main area of the club.</em></blockquote>Put the set-aside Peter Clover into play in the Clover Club Bar. Search the encounter deck (or out of play) for an [[Abomination]] enemy, and spawn it in the Clover Club Bar. Advance to Act 3a - \"Fold.\""
+    },
+    "vi_current": {
+      "name": "Trò Chơi Cá Cược",
+      "text": "<b>Objective</b> — Chỉ các điều tra viên tại VIP Area mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
+      "flavor": "Tiến sĩ Morgan đang ở đâu đó trong khu vực riêng tư của câu lạc bộ, nơi chỉ dành cho khách VIP và ban quản lý. Nếu muốn tìm ông ấy, bạn sẽ phải lén lút lẻn vào hoặc thậm chí dùng vũ lực để mở đường.",
+      "back_name": "Số Phận Của Tiến Sĩ Morgan",
+      "back_text": "<b>Nếu người chơi chưa hoàn thành Extracurricular Activity:</b><blockquote><i>Bạn tìm thấy Tiến sĩ Morgan đang đánh bạc trong một phòng VIP... nhưng ông ấy dường như đang chơi bài với hai cái xác bất tỉnh, đồng tử giãn to như đang trong cơn mê. Ông không ngừng cười đùa, mỉm cười và trò chuyện với những \"người chơi\" kia.</i></blockquote>Đặt Dr. Francis Morgan đang để riêng vào màn chơi tại VIP Area. Advance sang Act 3a — \"All In\".<hr><b>Nếu người chơi đã hoàn thành Extracurricular Activity:</b><blockquote><em>Các phòng VIP ngổn ngang những thi thể bị cắn xé đẫm máu của những vị khách xấu số. Dường như không có bất kỳ dấu vết nào của Tiến sĩ Morgan. Bạn nghe thấy tiếng la hét và tiếng súng nổ từ khu vực chính của câu lạc bộ.</em></blockquote>Đặt Peter Clover đang để riêng vào màn chơi tại Clover Club Bar. Tìm trong chồng bài encounter (hoặc ngoài màn chơi) một kẻ địch [[Abomination]], và spawn nó tại Clover Club Bar. Advance sang Act 3a — \"Fold\"."
+    }
+  },
+  {
+    "code": "02068",
+    "type": "act",
+    "pack": "dwl",
+    "scenario": "The House Always Wins",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "All In",
+      "text": "While Dr. Morgan is not controlled by a player, he gains \"[action]: <b>Parley.</b> Test [willpower] (3) to shake Dr. Morgan out of his daze. If you succeed, place 1 clue from the token bank on him. If there are 1 [per_investigator] clues on Dr. Morgan, take control of him.\"\n<b>Objective</b> - If each undefeated investigator has resigned, advance.",
+      "flavor": "With or without Dr. Morgan, you have to get out of here. Fast.",
+      "back_name": "Safe... For Now",
+      "back_text": "- If an investigator resigned with Dr. Francis Morgan under his or her control, <b>(→R2)</b>\n- Otherwise, <b>(→R1)</b>",
+      "back_flavor": "You escape the club, doing your best to look inconspicuous as several cars pull up near the street. A handful of grim-faced men and women exit, running toward the restaurant's entrance to take control of the situation. One of them catches your eye, his hand on the grip of his .38, but thankfully he turns his attention back to the rest of his crew and follows them into the club. You breathe a sigh of relief..."
+    },
+    "vi_current": {
+      "name": "Tất Tay",
+      "text": "Khi Dr. Francis Morgan không bị kiểm soát bởi một người chơi, ông nhận thêm \"[action]: <b>Parley</b>. Kiểm tra [willpower] (3) để lay tỉnh Tiến sĩ Morgan khỏi cơn mê sảng. Nếu thành công, đặt 1 manh mối từ kho token lên ông ấy. Nếu có 1 [per_investigator] manh mối trên Dr. Francis Morgan, nắm quyền kiểm soát ông ấy.\"\n<b>Objective</b> — Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.",
+      "flavor": "Dù có hay không có Tiến sĩ Morgan, bạn cũng phải thoát khỏi nơi này. Thật nhanh chóng.",
+      "back_name": "An Toàn... Tạm Thời",
+      "back_text": "- Nếu một điều tra viên resign trong khi đang kiểm soát Dr. Francis Morgan, <b>(→R2)</b>\n- Ngược lại, <b>(→R1)</b>",
+      "back_flavor": "Bạn trốn thoát khỏi câu lạc bộ, cố gắng tỏ ra bình thường nhất có thể khi nhiều chiếc xe hơi đỗ xịch lại bên lề đường. Một nhóm đàn ông và phụ nữ với nét mặt nghiêm nghị bước ra, lao nhanh về phía lối vào nhà hàng để kiểm soát tình hình. Một người trong số họ nhìn chằm chằm vào bạn, tay đặt trên báng khẩu .38, nhưng may thay hắn lại dồn sự chú ý về phía đồng bọn và bước theo vào trong. Bạn thở phào nhẹ nhõm..."
+    }
+  },
+  {
+    "code": "02069",
+    "type": "act",
+    "pack": "dwl",
+    "scenario": "The House Always Wins",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "Fold",
+      "text": "While Peter Clover is not controlled by a player, he gains \"[action]: <b>Parley.</b> Test [willpower] (3) to convince Peter to follow you. If you succeed, place 1 clue from the token bank on him. If there are 1 [per_investigator] clues on Peter Clover, take control of him.\"\n<b>Objective</b> - If each undefeated investigator has resigned, advance.",
+      "flavor": "\"Free drinks for whoever gets me the hell out of here!\" A man exclaims from the bar.",
+      "back_name": "Escaping the Club",
+      "back_text": "- If an investigator resigned with Peter Clover under his or her control, <b>(→R3)</b>\n- Otherwise, <b>(→R1)</b>",
+      "back_flavor": "You make your way toward the rain-slicked streets of Arkham."
+    },
+    "vi_current": {
+      "name": "Bỏ Bài",
+      "text": "Khi Peter Clover không bị kiểm soát bởi một người chơi, ông ta nhận thêm \"[action]: <b>Parley</b>. Kiểm tra [willpower] (3) để thuyết phục Peter đi theo bạn. Nếu thành công, đặt 1 manh mối từ kho token lên ông ấy. Nếu có 1 [per_investigator] manh mối trên Peter Clover, nắm quyền kiểm soát ông ta.\"\n<b>Objective</b> — Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.",
+      "flavor": "\"Rượu miễn phí cho bất kỳ ai đưa tôi thoát khỏi cái hố địa ngục này!\" Một người đàn ông hét lên từ quầy bar.",
+      "back_name": "Thoát Khỏi Câu Lạc Bộ",
+      "back_text": "- Nếu một điều tra viên resign trong khi đang kiểm soát Peter Clover, <b>(→R3)</b>\n- Ngược lại, <b>(→R1)</b>",
+      "back_flavor": "Bạn tìm đường tháo chạy ra những con phố Arkham trơn trượt dưới cơn mưa tầm tã."
+    }
+  },
+  {
+    "code": "02119",
+    "type": "agenda",
+    "pack": "tmm",
+    "scenario": "The Miskatonic Museum",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02119', 'text'), ('02120', 'text'), ('02121', 'text')]",
+      "back_text: dup [('02119', 'back_text'), ('02120', 'back_text')]"
+    ],
+    "en": {
+      "name": "Restricted Access",
+      "text": "<b>Forced</b> - When Hunting Horror enters play: Attach the set-aside copy of Shadow-spawned to it, or add 1 resource to Shadow-spawned if it is already attached.",
+      "flavor": "Dr. Armitage has given the university’s Latin translation of The Necronomicon to his associate, Harold Walsted, the curator of the Miskatonic University Museum. Worried that someone might still be after the book, you have gone to the museum to recover it.",
+      "back_name": "A Creature of the Void",
+      "back_text": "If Hunting Horror is in play, add 1 doom to it.\nIf Hunting Horror is not in play, search the encounter deck, discard pile, and the void for Hunting Horror and spawn it in Museum Halls, if able. Shuffle the encounter discard pile into the encounter deck.",
+      "back_flavor": "From the shadows of the museum halls, a terrible creature slithers forth, long and serpentine, and propelled by black leathery wings."
+    },
+    "vi_current": {
+      "name": "Khu Vực Hạn Chế",
+      "text": "<b>Forced</b> — Khi Hunting Horror vào màn chơi: Gắn bản sao Shadow-spawned đang để riêng vào nó, hoặc thêm 1 resource lên Shadow-spawned nếu nó đã được gắn.",
+      "flavor": "Tiến sĩ Armitage đã giao bản dịch tiếng Latin của cuốn Necronomicon cho cộng sự của mình, Harold Walsted, người phụ trách Bảo tàng Đại học Miskatonic. Lo sợ có kẻ vẫn đang săn lùng cuốn sách, bạn đến bảo tàng để thu hồi nó.",
+      "back_name": "Sinh Vật Hư Vô",
+      "back_text": "Nếu Hunting Horror đang trong màn chơi, thêm 1 doom lên nó.\nNếu Hunting Horror không có trong màn chơi, tìm kiếm trong chồng bài encounter, chồng bài bỏ và cõi hư vô (the void) để lấy Hunting Horror và spawn nó tại Museum Halls, nếu có thể. Xáo trộn chồng bài encounter bỏ vào chồng bài encounter.",
+      "back_flavor": "Từ trong bóng tối sâu thẳm của các sảnh bảo tàng, một sinh vật kinh hoàng trườn ra, thân dài ngoằng tựa loài rắn và di chuyển nhờ đôi cánh da đen kịt."
+    }
+  },
+  {
+    "code": "02120",
+    "type": "agenda",
+    "pack": "tmm",
+    "scenario": "The Miskatonic Museum",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02119', 'text'), ('02120', 'text'), ('02121', 'text')]",
+      "back_text: dup [('02119', 'back_text'), ('02120', 'back_text')]"
+    ],
+    "en": {
+      "name": "Shadows Deepen",
+      "text": "<b>Forced</b> - When Hunting Horror enters play: Attach the set-aside copy of Shadow-spawned to it, or add 1 resource to Shadow-spawned if it is already attached.",
+      "flavor": "The shadows in the museum grow and become darker. As the shadows lengthen and shift, they begin to suggest the sinewy body of an uncanny creature darting at the periphery of your awareness...",
+      "back_name": "Hunted Down",
+      "back_text": "If Hunting Horror is in play, add 1 doom to it.\nIf Hunting Horror is not in play, search the encounter deck, discard pile, and the void for Hunting Horror and spawn it in Museum Halls, if able. Shuffle the encounter discard pile into the encounter deck.",
+      "back_flavor": "The creature does not relent, pursuing you throughout the museum. "
+    },
+    "vi_current": {
+      "name": "Bóng Đêm Dày Đặc",
+      "text": "<b>Forced</b> — Khi Hunting Horror vào màn chơi: Gắn bản sao Shadow-spawned đang để riêng vào nó, hoặc thêm 1 resource lên Shadow-spawned nếu nó đã được gắn.",
+      "flavor": "Những cái bóng trong bảo tàng ngày càng dài ra và tối sầm lại. Khi bóng tối chuyển dịch, chúng bắt đầu gợi lên hình thù gân guốc của một quái vật kỳ dị đang lướt nhanh nơi rìa nhận thức của bạn...",
+      "back_name": "Bị Săn Đuổi",
+      "back_text": "Nếu Hunting Horror đang trong màn chơi, thêm 1 doom lên nó.\nNếu Hunting Horror không có trong màn chơi, tìm kiếm trong chồng bài encounter, chồng bài bỏ và cõi hư vô (the void) để lấy Hunting Horror và spawn nó tại Museum Halls, nếu có thể. Xáo trộn chồng bài encounter bỏ vào chồng bài encounter.",
+      "back_flavor": "Sinh vật đó không hề buông tha, nó điên cuồng truy đuổi bạn khắp các ngóc ngách của bảo tàng."
+    }
+  },
+  {
+    "code": "02121",
+    "type": "agenda",
+    "pack": "tmm",
+    "scenario": "The Miskatonic Museum",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02119', 'text'), ('02120', 'text'), ('02121', 'text')]"
+    ],
+    "en": {
+      "name": "In Every Shadow",
+      "text": "<b>Forced</b> - When Hunting Horror enters play: Attach the set-aside copy of Shadow-spawned to it, or add 1 resource to Shadow-spawned if it is already attached.",
+      "flavor": "The creature in the museum grows larger and more terrifying with each passing moment. Its body slithers from shadow to shadow, every corner of every room a potential hiding place for the hideous beast.",
+      "back_name": "Driven Out",
+      "back_text": "Each investigator who has not resigned is defeated and suffers 1 physical trauma.",
+      "back_flavor": "With no way of defeating the creature in the museum, you flee. In every shadow of every corridor, the serpentine horror’s slithering body can be seen, the museum halls growing darker with the creature’s presence. As you reach the entrance, it blocks the doorway and attacks you with its terrible fangs. You barely manage to escape the building with your life, though the effects of the creature’s venom will scar you forever."
+    },
+    "vi_current": {
+      "name": "Trong Từng Bóng Tối",
+      "text": "<b>Forced</b> — Khi Hunting Horror vào màn chơi: Gắn bản sao Shadow-spawned đang để riêng vào nó, hoặc thêm 1 resource lên Shadow-spawned nếu nó đã được gắn.",
+      "flavor": "Sinh vật trong bảo tàng dường như ngày càng to lớn và đáng sợ hơn theo từng khoảnh khắc. Thân hình nó trườn từ bóng râm này sang bóng râm khác, mỗi góc phòng đều có thể là nơi ẩn nấp của con quái thú gớm ghiếc.",
+      "back_name": "Bị Trục Xuất",
+      "back_text": "Mỗi điều tra viên chưa resign bị đánh bại và chịu 1 physical trauma (physical trauma).",
+      "back_flavor": "Không có cách nào để tiêu diệt con quái vật trong bảo tàng, bạn buộc phải tháo chạy. Trong từng bóng đen của mỗi hành lang, thân hình trườn bò như rắn của mối kinh hoàng hiện rõ mồn một, cả bảo tàng như tối sầm lại trước sự hiện diện của nó. Khi bạn chạy tới lối ra, nó chặn đứng cửa và tấn công bạn bằng những chiếc răng nanh khủng khiếp. Bạn vừa kịp thoát thân với mạng sống của mình, nhưng chất độc của con quái thú sẽ để lại vết sẹo vĩnh viễn trên cơ thể bạn."
+    }
+  },
+  {
+    "code": "02122",
+    "type": "act",
+    "pack": "tmm",
+    "scenario": "The Miskatonic Museum",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "Finding A Way Inside",
+      "flavor": "Unfortunately, the entrance to the Museum is kept locked at this late hour. A security guard is visible through the building’s front windows, oblivious to his surroundings. Perhaps you can find a way to get his attention and convince him to let you in.",
+      "back_name": "Gaining Entrance",
+      "back_text": "<b>If you spent clues to advance:\n</b><blockquote><i>You find the window nearest to the guard and tap it loud enough to get his attention. He gives a startled jump, then shifts open the window. “What do you want?” he asks timidly. You explain the situation to him and tell him he is in grave danger. He warily opens the front door to the Museum, shaking his head. “I wasn’t even supposed to be here today...”</i></blockquote>Choose an investigator to take control of the set-aside Adam Lynch asset. Reveal the Museum Halls. Advance to Act 2a - \"Night at the Museum.\"\n<hr><b>If you successfully performed the [action] ability on the Museum Halls to advance:\n</b><blockquote><i>With great strength, you break down the door to the Museum, making considerable noise as you do. The security guard sees you enter, cries out in fear, and rushes toward the back of the museum.</i></blockquote>The door leading into the Museum Halls is broken. Reveal the Museum Halls. Advance to Act 2a - \"Breaking and Entering.\""
+    },
+    "vi_current": {
+      "name": "Tìm Lối Vào Trong",
+      "flavor": "Thật không may, lối vào Bảo tàng đã bị khóa chặt vào giờ này. Một nhân viên bảo vệ lấp ló sau cửa sổ phía trước tòa nhà, hoàn toàn không để ý tới xung quanh. Có lẽ bạn có thể thu hút sự chú ý của anh ta và thuyết phục anh ta mở cửa cho bạn.",
+      "back_name": "Bước Vào Bảo Tàng",
+      "back_text": "<b>Nếu bạn chi trả manh mối để advance:</b><blockquote><i>Bạn tìm thấy ô cửa sổ gần người bảo vệ nhất và gõ thật mạnh để thu hút sự chú ý. Anh ta giật mình nhảy cẫng lên, rồi hé mở cửa sổ. \"Các người muốn gì?\" anh ta rụt rè hỏi. Bạn giải thích tình hình và cảnh báo rằng anh ta đang gặp nguy hiểm lớn. Anh ta thận trọng mở cửa trước bảo tàng, vừa lắc đầu ngao ngán: \"Đáng lẽ hôm nay tôi không phải đi làm ca này...\"</i></blockquote>Chọn một điều tra viên nắm quyền kiểm soát asset Adam Lynch đang để riêng. Tiết lộ Museum Halls. Advance sang Act 2a — \"Night at the Museum\".<hr><b>Nếu bạn thực hiện thành công khả năng [action] trên Museum Halls để advance:</b><blockquote><i>Bằng sức mạnh vượt trội, bạn phá tung cánh cửa bảo tàng, tạo ra tiếng động lớn. Người bảo vệ nhìn thấy bạn xông vào, hét lên trong sợ hãi và tháo chạy về phía sau bảo tàng.</i></blockquote>Cánh cửa dẫn vào Museum Halls đã bị phá hủy. Tiết lộ Museum Halls. Advance sang Act 2a — \"Breaking and Entering\"."
+    }
+  },
+  {
+    "code": "02123",
+    "type": "act",
+    "pack": "tmm",
+    "scenario": "The Miskatonic Museum",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02123', 'text'), ('02124', 'text')]",
+      "back_text: nums en=['3'] vi=['1', '1']",
+      "back_text: len ratio 2.56",
+      "back_text: dup [('02123', 'back_text'), ('02124', 'back_text')]",
+      "back_flavor: dup [('02123', 'back_flavor'), ('02124', 'back_flavor')]"
+    ],
+    "en": {
+      "name": "Night at the Museum",
+      "text": "<b>Objective</b> - If an investigator enters the Exhibit Hall (<i>Restricted Hall</i>), advance.",
+      "flavor": "The Necronomicon is being kept in a Restricted Hall somewhere in the museum. Adam barely knows his way around, and gives a startled jump at every creak of the old building. \"I just started here last week,\" he explains. \"What sort of trouble did you say was going on?\" You haven’t the heart to give him the full story.",
+      "back_name": "The Curator's Fate",
+      "back_text": "Search the encounter deck, discard pile, the void, and all play areas for Hunting Horror, and place it in the Exhibit Hall (<i>Restricted Hall</i>), ready.\nAdvance to Act 3a.",
+      "back_flavor": "When you enter the restricted hall, you find the curator of the museum lying in a pool of blood, his intestines strewn about in a grotesque display. Your stomach turns over and you resist the urge to vomit. Whatever did this, it’s still nearby..."
+    },
+    "vi_current": {
+      "name": "Đêm Tại Bảo Tàng",
+      "text": "<b>Objective</b> — Nếu một điều tra viên bước vào Exhibit Hall (<i>Restricted Hall</i>), advance.",
+      "flavor": "Cuốn Necronomicon đang được cất giữ trong một Sảnh Hạn Chế ở đâu đó trong bảo tàng. Adam hầu như chẳng thạo đường sá nơi đây, và giật nảy mình trước từng tiếng cót két của tòa nhà cổ kính. \"Tôi mới bắt đầu làm việc ở đây từ tuần trước,\" anh ta phân trần. \"Các bạn bảo đang có rắc rối gì cơ?\" Bạn không nỡ kể cho anh ta nghe toàn bộ sự thật kinh hoàng.",
+      "back_name": "Số Phận Của Người Phụ Trách",
+      "back_text": "Tìm kiếm Hunting Horror trong chồng bài encounter, chồng bài bỏ, cõi hư vô và tất cả các khu vực chơi, sau đó spawn nó tại Museum Halls. Đặt 1 doom lên Hunting Horror.\nTìm kiếm trong chồng bài encounter và chồng bài bỏ lá bài Shadow-spawned đang để riêng và gắn nó vào Hunting Horror (hoặc thêm 1 resource lên Shadow-spawned nếu nó đã được gắn).\nNếu Harold Walsted đang để riêng, đặt ông ấy vào màn chơi tại Exhibit Hall (<i>Restricted Hall</i>).",
+      "back_flavor": "Khi bước vào Sảnh Hạn Chế, bạn thấy Harold Walsted đang bị trói gô trên sàn, miệng bị nhét giẻ. Trên chiếc bàn trưng bày bên cạnh ông ta, hộp kính bảo vệ cuốn Necronomicon đã bị đập vỡ vụn, và cuốn sách cổ không còn ở đó nữa!"
+    }
+  },
+  {
+    "code": "02124",
+    "type": "act",
+    "pack": "tmm",
+    "scenario": "The Miskatonic Museum",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02123', 'text'), ('02124', 'text')]",
+      "flavor: len ratio 2.43",
+      "back_text: nums en=['3'] vi=['1', '1']",
+      "back_text: dup [('02123', 'back_text'), ('02124', 'back_text')]",
+      "back_flavor: len ratio 0.48",
+      "back_flavor: dup [('02123', 'back_flavor'), ('02124', 'back_flavor')]"
+    ],
+    "en": {
+      "name": "Breaking and Entering",
+      "text": "<b>Objective</b> - If an investigator enters the Exhibit Hall (<i>Restricted Hall</i>), advance.",
+      "flavor": "The Necronomicon is being kept in a Restricted Hall somewhere in the museum.",
+      "back_name": "The Guard's Fate",
+      "back_text": "Choose an investigator to take control of the set-aside Harold Walsted asset. \nSearch the encounter deck, discard pile, the void, and all play areas for Hunting Horror, and place it in the Exhibit Hall (<i>Restricted Hall</i>), ready.\nAdvance to Act 3a.",
+      "back_flavor": "When you enter the Restricted Hall, you find the curator of the museum clutching an ornate statue as if it were a club, his suit stained with blood, a panicked expression on his face. The security guard you saw earlier lies in a pool of blood nearby, his intestines strewn about in a grotesque display. Your stomach turns and you resist the urge to vomit. \"I tried to stop it, but...\" the curator says quietly, his voice quivering. Whatever did this, it’s still nearby..."
+    },
+    "vi_current": {
+      "name": "Đột Nhập Trái Phép",
+      "text": "<b>Objective</b> — Nếu một điều tra viên bước vào Exhibit Hall (<i>Restricted Hall</i>), advance.",
+      "flavor": "Tiếng động khi bạn phá cửa chắc chắn đã đánh động bất kỳ thứ gì đang lẩn khuất bên trong bảo tàng. Bạn phải nhanh chóng tìm thấy cuốn Necronomicon trong Sảnh Hạn Chế trước khi quá muộn.",
+      "back_name": "Số Phận Của Người Phụ Trách",
+      "back_text": "Tìm kiếm Hunting Horror trong chồng bài encounter, chồng bài bỏ, cõi hư vô và tất cả các khu vực chơi, sau đó spawn nó tại Museum Halls. Đặt 1 doom lên Hunting Horror.\nTìm kiếm trong chồng bài encounter và chồng bài bỏ lá bài Shadow-spawned đang để riêng và gắn nó vào Hunting Horror (hoặc thêm 1 resource lên Shadow-spawned nếu nó đã được gắn).\nNếu Harold Walsted đang để riêng, đặt ông ấy vào màn chơi tại Exhibit Hall (<i>Restricted Hall</i>).",
+      "back_flavor": "Khi bước vào Sảnh Hạn Chế, bạn thấy Harold Walsted đang bị trói gô trên sàn, miệng bị nhét giẻ. Trên chiếc bàn trưng bày bên cạnh ông ta, hộp kính bảo vệ cuốn Necronomicon đã bị đập vỡ vụn, và cuốn sách cổ không còn ở đó nữa!"
+    }
+  },
+  {
+    "code": "02125",
+    "type": "act",
+    "pack": "tmm",
+    "scenario": "The Miskatonic Museum",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "back_text: nums en=['1', '2'] vi=['1']",
+      "back_text: len ratio 0.07"
+    ],
+    "en": {
+      "name": "Searching for the Tome",
+      "text": "<b>Objective</b> - If there are no clues remaining in the Exhibit Hall <i>(Restricted Hall)</i>, advance.",
+      "flavor": "Somewhere in this area is Olaus Wormius’s Latin translation of the Necronomicon. You must find it and escape while you can!",
+      "back_name": "The Necronomicon",
+      "back_text": "The investigators must decide (choose one):\n- It's too dangerous to keep around. We must destroy it. <b>(→R1)</b>\n- It's too valuable to destroy. We must keep it safe.<b>(→R2)</b>",
+      "back_flavor": "At last, you find the locked case containing the Necronomicon.\nThe tome, over eight hundred pages in length, is filled with all manner of macabre imagery, formulae, spells, prophecies, and descriptions of creatures from beyond the threshold of space.\nWithout a doubt, it is a dangerous book... But its secrets could be very useful."
+    },
+    "vi_current": {
+      "name": "Truy Tìm Cổ Thư",
+      "text": "<b>Objective</b> — Chỉ các điều tra viên tại Exhibit Hall (<i>Restricted Hall</i>) mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
+      "flavor": "Tên trộm không thể chạy xa được. Cuốn sách chắc chắn vẫn còn ở đâu đó trong căn phòng này hoặc các gian trưng bày lân cận.",
+      "back_name": "Cuốn Sách Cổ Thuộc Về Bạn",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Sau một hồi tìm kiếm điên cuồng, bạn phát hiện cuốn Necronomicon bị giấu vội bên dưới một tấm bạt bọc đồ cổ. Bạn nhanh chóng nhét cuốn sách vào túi áo và tìm đường tháo chạy khỏi bảo tàng trước khi con quái thú bóng đêm nuốt chửng bạn."
+    }
+  },
+  {
+    "code": "02160",
+    "type": "agenda",
+    "pack": "tece",
+    "scenario": "The Essex County Express",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "flavor: len ratio 0.59",
+      "back_text: dup [('02160', 'back_text'), ('02161', 'back_text'), ('02162', 'back_text')]"
+    ],
+    "en": {
+      "name": "A Tear in Reality",
+      "flavor": "As the train to Dunwich comes to a jarring stop, you look out the window behind you and see an immense tear in the sky, like a rip in a piece of cloth. Several of the rearmost train cars are pulled backwards, and there is a dreadful metallic crunch as they are detached. The train cars topple upwards and into the rift in the sky. Nearby passengers are panicking, others are cowering in their seats, and one elderly man has fainted in fear.",
+      "back_name": "Keep Moving!",
+      "back_text": "Remove the leftmost location from the game (or place it in the victory display if it has Victory X and no clues on it). Each investigator at that location is defeated. Each enemy and asset at that location is discarded.\nDiscard all clues controlled by the investigators.",
+      "back_flavor": "The rearmost car of the train detaches as it is pulled backwards. To your horror, it rises off the tracks and is consumed by the gate above you."
+    },
+    "vi_current": {
+      "name": "Vết Rách Của Thực Tại",
+      "flavor": "Khi chuyến tàu tới Dunwich phanh gấp lại với một tiếng rít chói tai, bạn nhìn qua cửa sổ phía sau và kinh hoàng nhận thấy một vết rách khổng lồ trên bầu trời, tựa như một mảnh vải bị xé toạc. Không gian và thời gian xung quanh vết nứt bắt đầu méo mó dị thường.",
+      "back_name": "Bước Qua Cánh Cổng",
+      "back_text": "Loại bỏ địa điểm ngoài cùng bên trái khỏi màn chơi (hoặc đặt nó vào khu vực trưng bày thành tích nếu nó có Victory X và không còn manh mối trên đó). Mỗi điều tra viên tại địa điểm đó bị đánh bại. Mỗi kẻ địch và asset tại địa điểm đó bị bỏ.\nBỏ toàn bộ manh mối do các điều tra viên kiểm soát.",
+      "back_flavor": "Toa tàu cuối cùng bị kéo giật ngược về phía sau rồi bay bổng lên không trung, bị hút trọn vào vết rách thăm thẳm giữa trời. Những tiếng thét tuyệt vọng của hành khách câm bặt trong tích tắc."
+    }
+  },
+  {
+    "code": "02161",
+    "type": "agenda",
+    "pack": "tece",
+    "scenario": "The Essex County Express",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "flavor: len ratio 0.47",
+      "back_text: dup [('02160', 'back_text'), ('02161', 'back_text'), ('02162', 'back_text')]",
+      "back_flavor: len ratio 0.44"
+    ],
+    "en": {
+      "name": "The Maw Widens",
+      "flavor": "The tear grows larger, and you can feel the rearmost car of the train shaking as it is pulled backwards. The situation threatens to erupt into chaos as more passengers realize the danger they are in. Some passengers are looking for places to hide, while others are running about the compartments in terror.",
+      "back_name": "Don't Stop!",
+      "back_text": "Remove the leftmost location from the game (or place it in the victory display if it has Victory X and no clues on it). Each investigator at that location is defeated. Each enemy and asset at that location is discarded.\nDiscard all clues controlled by the investigators.",
+      "back_flavor": "The next train car is ripped backwards with violent force. A middle-aged man hangs from his fingertips as the car flies unhindered toward the rift. In moments, the car is consumed whole, and the man lets go rather than be pulled into the void. He starts to fall, but is caught by the rift's force and pulled inside it anyway."
+    },
+    "vi_current": {
+      "name": "Miệng Vực Rộng Mở",
+      "flavor": "Lực hút từ vết nứt ngày càng dữ dội. Những mảnh kim loại, hành lý và các toa tàu phía sau bắt đầu rung lắc bần bật rồi bị xé toạc từng mảng lớn.",
+      "back_name": "Hút Vào Hư Không",
+      "back_text": "Loại bỏ địa điểm ngoài cùng bên trái khỏi màn chơi (hoặc đặt nó vào khu vực trưng bày thành tích nếu nó có Victory X và không còn manh mối trên đó). Mỗi điều tra viên tại địa điểm đó bị đánh bại. Mỗi kẻ địch và asset tại địa điểm đó bị bỏ.\nBỏ toàn bộ manh mối do các điều tra viên kiểm soát.",
+      "back_flavor": "Thêm một toa tàu nữa bị xé rách khỏi đường ray và nuốt chửng vào hư vô. Không khí xung quanh lạnh buốt và áp suất giảm mạnh khiến bạn khó thở."
+    }
+  },
+  {
+    "code": "02162",
+    "type": "agenda",
+    "pack": "tece",
+    "scenario": "The Essex County Express",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "flavor: len ratio 0.54",
+      "back_text: dup [('02160', 'back_text'), ('02161', 'back_text'), ('02162', 'back_text')]",
+      "back_flavor: len ratio 0.32"
+    ],
+    "en": {
+      "name": "Rolling Backwards",
+      "flavor": "The pull of the rift in the sky seems to grow stronger, and the entire train begins to roll backwards along the tracks. The rearmost cars of the train begin to rattle, the force of the rift threatening to detach them. You must get out of these cars as fast as you can!",
+      "back_name": "It's Getting Faster!",
+      "back_text": "Remove each of the two leftmost locations from the game (or place it in the victory display if either one has Victory X and no clues on it). Each investigator at those locations is defeated. Each enemy and asset at those locations is discarded.\nDiscard all clues controlled by the investigators.",
+      "back_flavor": "Two of the train cars closest to the gate are severed from the rest of the train by a sheet of impossibly hot steam, which slices through metal like a knife through butter. The cars are sucked upwards and fly into the gate. Something above the train lets out a terrible screech, though to your ears it is like the shrill sound of a broken steam pipe."
+    },
+    "vi_current": {
+      "name": "Trôi Giật Lùi",
+      "flavor": "Cả đoàn tàu đang từ từ trôi ngược về phía vực sâu không đáy. Bạn phải chạy thật nhanh về phía đầu tàu trước khi các toa tiếp theo bị nuốt chửng!",
+      "back_name": "Hiểm Họa Rình Rập",
+      "back_text": "Loại bỏ địa điểm ngoài cùng bên trái khỏi màn chơi (hoặc đặt nó vào khu vực trưng bày thành tích nếu nó có Victory X và không còn manh mối trên đó). Mỗi điều tra viên tại địa điểm đó bị đánh bại. Mỗi kẻ địch và asset tại địa điểm đó bị bỏ.\nBỏ toàn bộ manh mối do các điều tra viên kiểm soát.",
+      "back_flavor": "Những tảng đá từ chân cầu bị bứng gốc và cuốn thẳng lên trời. Cảnh tượng tận thế đang hiện ra ngay trước mắt bạn."
+    }
+  },
+  {
+    "code": "02163",
+    "type": "agenda",
+    "pack": "tece",
+    "scenario": "The Essex County Express",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "flavor: len ratio 0.42",
+      "back_text: nums en=[] vi=['2']"
+    ],
+    "en": {
+      "name": "Drawn In",
+      "flavor": "The gate crackles with power as its strength increases. Dirt and rocks from the edge of the bridge behind you are torn from the ground and trees are uprooted, pulled in by the gate. One younger passenger smashes the window of your car and shouts, “We gotta get outta here!” He leaps out of the window, but before he lands in the river below, he is snatched in the talons of a swift flying creature, and carried out of sight. A trail of steam is left in the creature’s wake.",
+      "back_name": "Nowhere is Safe",
+      "back_text": "Remove each of the two leftmost locations from the game (or place it in the victory display if either one has Victory X and no clues on it). Each investigator at those locations is defeated. Each enemy and asset at those locations is discarded.\nDiscard all clues controlled by the investigators.",
+      "back_flavor": "The two rearmost train cars begin to melt as they are filled with superheated steam. The metal warps, and the passengers inside scream in agony. The cars are ripped from the train tracks along with rail slats and chunks of the bridge behind you."
+    },
+    "vi_current": {
+      "name": "Bị Kéo Vào",
+      "flavor": "Đoàn tàu rung chuyển dữ dội. Một hành khách trẻ tuổi đập vỡ cửa sổ toa tàu và nhảy ra ngoài, nhưng trước khi chạm mặt nước sông bên dưới, anh ta bị một quái vật có cánh quắp lấy và mang đi mất dạng.",
+      "back_name": "Không Nơi Nào An Toàn",
+      "back_text": "Loại bỏ cả 2 địa điểm ngoài cùng bên trái khỏi màn chơi (hoặc đặt chúng vào khu vực trưng bày thành tích nếu có Victory X và không còn manh mối). Mỗi điều tra viên tại đó bị đánh bại. Mỗi kẻ địch và asset tại đó bị bỏ.\nBỏ toàn bộ manh mối do các điều tra viên kiểm soát.",
+      "back_flavor": "Hai toa tàu phía sau bắt đầu nóng chảy khi chúng bị bao trùm bởi luồng hơi nước siêu nhiệt. Kim loại biến dạng, và tiếng thét đau đớn của các hành khách vang lên xé lòng."
+    }
+  },
+  {
+    "code": "02164",
+    "type": "agenda",
+    "pack": "tece",
+    "scenario": "The Essex County Express",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "Out of Time",
+      "flavor": "The rift in the sky twists and shakes, completely distorted. Its size is now massive, its shape warping and shifting, as if it is about to explode.",
+      "back_name": "Sucked In",
+      "back_text": "Each investigator is immediately defeated and takes 1 mental trauma. <b>(&rarr;R2)</b>",
+      "back_flavor": "The entire bridge cracks under the pressure of the gate, and breaks apart. Instead of plummeting into the river, the remaining train cars are pulled into the sky, toward the rift. You hang on for dear life and scream in horror as you are pulled into the gate. Then, everything goes black."
+    },
+    "vi_current": {
+      "name": "Hết Thời Gian",
+      "flavor": "Vết rách trên bầu trời vặn xoắn và rung chuyển dữ dội, hoàn toàn biến dạng. Kích thước của nó giờ đây khổng lồ, như thể chuẩn bị phát nổ và nuốt chửng toàn bộ thế giới thực tại.",
+      "back_name": "Bị Hút Trọn",
+      "back_text": "Mỗi điều tra viên lập tức bị đánh bại và chịu 1 mental trauma (mental trauma). <b>(→R2)</b>",
+      "back_flavor": "Cả cây cầu gãy vụn dưới áp lực khủng khiếp của cánh cổng. Thay vì rơi xuống sông, toàn bộ những toa tàu còn lại bị cuốn thẳng lên trời, lao vào tâm vết rách. Bạn bám chặt lấy sàn tàu trong nỗi kinh hoàng tột độ khi bị hút vào hư không. Rồi mọi thứ tối sầm lại."
+    }
+  },
+  {
+    "code": "02165",
+    "type": "act",
+    "pack": "tece",
+    "scenario": "The Essex County Express",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "Run!",
+      "text": "<b>Objective</b> - If an investigator enters the Engine Car, immediately advance.",
+      "flavor": "The train has stopped on a bridge high above the Miskatonic River - you might be able to survive the fall, but you don’t like your chances. Your best bet is to make your way to the engine car as fast as you can and get the train running again.",
+      "back_name": "Wings of Steam",
+      "back_text": "<b>The investigator entering the Engine Car reads the following (out loud):\n</b><blockquote><i>A tender car filled with coal blocks your way to the engine cab. Swallowing your fear, you climb out of the nearby window and clamber onto the roof of the train, making your way across the tender car. The steady backward motion of the train makes it difficult for you to keep your footing. As you get close, a winged creature swoops down from above, its body composed of piping hot steam.</i></blockquote>You must decide (choose one):\n- Test [agility] (3) to attempt to dodge the creature. If you fail, you leap too far and barely grip the side of the train, hanging on for dear life. Although you manage to pull yourself up, the experience is terrifying. You suffer 1 mental trauma.\n- Test [combat] (3) to attempt to endure the creature's extreme heat. If you fail, the creature flies through you and the heat burns you. You suffer 1 physical trauma."
+    },
+    "vi_current": {
+      "name": "Chạy Đi!",
+      "text": "<b>Objective</b> — Nếu một điều tra viên bước vào Engine Car, lập tức advance.",
+      "flavor": "Đoàn tàu đã dừng lại trên một cây cầu bắc qua sông Miskatonic — rơi xuống dòng nước có thể sống sót, nhưng cơ hội là quá mong manh. Lựa chọn tốt nhất là tiến nhanh nhất có thể về toa đầu máy và khởi động lại đoàn tàu.",
+      "back_name": "Đôi Cánh Hơi Nước",
+      "back_text": "<b>Điều tra viên bước vào Engine Car đọc to đoạn sau:</b><blockquote><i>Một toa chở than chặn lối vào buồng lái đầu máy. Nuốt nỗi sợ hãi vào trong, bạn trèo ra ngoài cửa sổ và bò lên nóc toa tàu, cố gắng băng qua đống than đá. Chuyển động giật lùi liên tục của đoàn tàu khiến bạn khó giữ thăng bằng. Khi bạn đến gần, một sinh vật có cánh sà xuống từ trên cao, cơ thể nó cấu thành từ hơi nước nóng rực.</i></blockquote>Bạn phải quyết định (chọn một):\n- Kiểm tra [agility] (3) để né tránh sinh vật. Nếu thất bại, bạn nhảy quá đà và chỉ vừa kịp bám lấy thành tàu, lơ lửng giữa không trung. Dù kéo được mình lên, trải nghiệm kinh hoàng khiến bạn chịu 1 mental trauma (mental trauma).\n- Kiểm tra [combat] (3) để chống chọi luồng nhiệt tột cùng. Nếu thất bại, sinh vật xuyên qua người bạn và thiêu đốt da thịt. Bạn chịu 1 physical trauma (physical trauma)."
+    }
+  },
+  {
+    "code": "02166",
+    "type": "act",
+    "pack": "tece",
+    "scenario": "The Essex County Express",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "Get the Engine Running!",
+      "text": "<b>Objective</b> - If there are no clues in the Engine Car, immediately advance.",
+      "flavor": "You’ve managed to make it to the engine cab, but now you have to get the engine started again so you can outrun the pulling force of the gate!",
+      "back_name": "Forward Motion",
+      "back_text": "<b>(&rarr;R1)</b>",
+      "back_flavor": "The engine roars to life and kicks into motion. You shovel coal into the engine's firebox and are relieved to see that the train is moving forward along the tracks once again."
+    },
+    "vi_current": {
+      "name": "Khởi Động Đầu Máy!",
+      "text": "<b>Objective</b> — Nếu không còn manh mối nào tại Engine Car, lập tự advance.",
+      "flavor": "Bạn đã đến được buồng lái đầu máy, nhưng giờ bạn phải khởi động lại động cơ để đoàn tàu có thể bứt tốc thoát khỏi lực hút kinh hoàng của cánh cổng!",
+      "back_name": "Lao Về Phía Trước",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Động cơ rầm rầm gầm rú và bắt đầu chuyển bánh. Bạn xúc than điên cuồng vào buồng đốt và thở phào nhẹ nhõm khi thấy đoàn tàu đang lao vút về phía trước dọc theo đường ray, bỏ lại vực xoáy hủy diệt phía sau."
+    }
+  },
+  {
+    "code": "02196",
+    "type": "agenda",
+    "pack": "bota",
+    "scenario": "Blood on the Altar",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "Strange Disappearances",
+      "flavor": "Your welcome in Dunwich has been cold. A string of disappearances has left the already aloof townsfolk on edge. Most of them look at you with distrust, and few are willing to help in your investigation. Who knows what will happen if you don’t find the location of the missing townsfolk soon...",
+      "back_name": "First Blood",
+      "back_text": "If there are 3 or more potential sacrifices, choose one of them at random and place it underneath the agenda deck, without looking at it.",
+      "back_flavor": "Whippoorwills gather along the gambrel roofs of Dunwich and begin to shriek in jubilation. The people of Dunwich believe that the presence of whippoorwills foreshadows somebody’s imminent death. Do they long for your death? Or is the victim someone else?"
+    },
+    "vi_current": {
+      "name": "Những Vụ Mất Tích Kỳ Lạ",
+      "flavor": "Sự chào đón bạn tại Dunwich thật lạnh lẽo. Một loạt vụ mất tích bí ẩn khiến những người dân vốn đã xa lánh càng thêm căng thẳng. Hầu hết họ nhìn bạn bằng ánh mắt ngờ vực, và chẳng mấy ai chịu giúp đỡ cuộc điều tra. Ai biết chuyện gì sẽ xảy ra nếu bạn không sớm tìm ra nơi giam giữ những người mất tích...",
+      "back_name": "Hiến Tế Đầu Tiên",
+      "back_text": "Nếu có từ 3 nạn nhân tiềm năng (potential sacrifices) trở lên, ngẫu nhiên chọn một người và đặt bên dưới chồng bài agenda mà không được nhìn vào lá bài đó.",
+      "back_flavor": "Lũ chim đớp muỗi (whippoorwills) tụ tập dọc theo các mái nhà đầu hồi tại Dunwich và cất tiếng kêu mừng rỡ. Người dân Dunwich tin rằng sự xuất hiện của chúng báo trước cái chết cận kề. Liệu chúng đang khao khát cái chết của bạn? Hay nạn nhân là một ai khác?"
+    }
+  },
+  {
+    "code": "02197",
+    "type": "agenda",
+    "pack": "bota",
+    "scenario": "Blood on the Altar",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "The Old Ones Hunger",
+      "flavor": "As the sun sets, the frightened townsfolk retreat into their homes and lock their doors. It is clear to you that many of them know more than they are letting on. A sickening feeling turns over in your stomach as the village’s true nature becomes clear.",
+      "back_name": "Abandoned Streets",
+      "back_text": "\nIf there are 2 or more potential sacrifices, choose one of them at random and place it underneath the agenda deck, without looking at it.",
+      "back_flavor": "More whippoorwills flock to Dunwich village as the night progresses. The other townsfolk, notoriously superstitious, are terrified by the birds’ presence. With the doors around you shut and locked, you find yourself alone in the streets of Dunwich."
+    },
+    "vi_current": {
+      "name": "Các Đấng Cổ Xưa Đói Khát",
+      "flavor": "Khi mặt trời lặn, những người dân sợ hãi rút lui vào nhà và khóa chặt cửa. Rõ ràng là nhiều người trong số họ biết nhiều hơn những gì họ dám hé môi. Một cảm giác buồn nôn ùa đến khi bản chất thực sự của ngôi làng dần lộ rõ.",
+      "back_name": "Những Con Đường Hoang Vắng",
+      "back_text": "Nếu có từ 2 nạn nhân tiềm năng trở lên, ngẫu nhiên chọn một người và đặt bên dưới chồng bài agenda mà không được nhìn vào lá bài đó.",
+      "back_flavor": "Càng về đêm, càng nhiều chim đớp muỗi bay đến làng Dunwich. Cư dân trong làng, vốn khét tiếng mê tín, khiếp sợ trước sự hiện diện của lũ chim. Với những cánh cửa xung quanh đều đóng kín và cài then, bạn thấy mình hoàn toàn đơn độc trên những con phố của Dunwich."
+    }
+  },
+  {
+    "code": "02198",
+    "type": "agenda",
+    "pack": "bota",
+    "scenario": "Blood on the Altar",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "Feed the Beast",
+      "flavor": "The rhythmic screeching of the whippoorwills fills the night. If the superstitions of Dunwich are correct, their song portends impending death... But for whom?",
+      "back_name": "Blood on the Altar",
+      "back_text": "Each investigator must immediately resign.",
+      "back_flavor": "The whippoorwills that have been cawing through the night scatter in unison, as if they are somehow satisfied with the turn of events."
+    },
+    "vi_current": {
+      "name": "Nuôi Dưỡng Quái Thú",
+      "flavor": "Tiếng kêu nhịp nhàng đầy ma quái của lũ chim đớp muỗi xé toạc màn đêm. Nếu những lời mê tín ở Dunwich là đúng, khúc ca của chúng báo hiệu một cái chết đang cận kề... Nhưng là cho ai?",
+      "back_name": "Máu Trên Bàn Thờ",
+      "back_text": "Mỗi điều tra viên phải lập tức resign.",
+      "back_flavor": "Đàn chim đớp muỗi đã râm ran suốt đêm bỗng đồng loạt tản đi, như thể chúng vừa được thỏa mãn trước kết cục của sự việc."
+    }
+  },
+  {
+    "code": "02199",
+    "type": "act",
+    "pack": "bota",
+    "scenario": "Blood on the Altar",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "Searching for Answers",
+      "text": "<b>Objective</b> - When an investigator enters The Hidden Chamber, advance.",
+      "flavor": "The disappearances in town may be related to the events in Arkham. You suspect that something awful is afoot. You must find where the missing townsfolk are being held in order to unveil this conspiracy.",
+      "back_name": "What Was Hidden",
+      "back_text": "Reveal each unrevealed location. \nMove all clues in play (including those on each investigator) to The Hidden Chamber.\nSpawn the set-aside Silas Bishop enemy in The Hidden Chamber.",
+      "back_flavor": "You find your way into the hidden chamber where you believe the missing folk are being held, but the horrors that confront you there fray the edges of your sanity. Bound by chains in a secluded corner of the room is an unspeakable creature with the face of a man. It wheezes and wrestles to free itself as it notices your entrance. The many mouths covering the creature’s body are covered in blood and gristles of meat, as though it were feeding recently.\nWith a hideous croak, the creature speaks with seven mouths.\"Ss... se... eth...?\" Then it lurches forward as though to grab you, and several of its chains snap."
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Lời Giải",
+      "text": "<b>Objective</b> — Khi một điều tra viên bước vào The Hidden Chamber, advance.",
+      "flavor": "Những vụ mất tích trong thị trấn có thể liên quan tới các sự kiện tại Arkham. Bạn linh cảm điều khủng khiếp đang cận kề. Bạn phải tìm ra nơi những người mất tích bị giam giữ để phơi bày âm mưu này.",
+      "back_name": "Thứ Bị Che Giấu",
+      "back_text": "Tiết lộ mỗi địa điểm chưa được tiết lộ.\nDi chuyển toàn bộ manh mối trong màn chơi (bao gồm cả manh mối trên từng điều tra viên) tới The Hidden Chamber.\nSpawn kẻ địch Silas Bishop đang để riêng tại The Hidden Chamber.",
+      "back_flavor": "Bạn tìm được lối vào căn phòng bí mật nơi bạn tin rằng những người mất tích đang bị giam cầm, nhưng nỗi kinh hoàng ập vào mắt suýt làm bạn phát điên. Bị trói bằng những sợi xích sắt trong một góc khuất là một sinh vật quái dị không thể thốt nên lời mang khuôn mặt của một người đàn ông. Nó thở hổn hển và vùng vẫy muốn thoát ra khi nhận thấy bạn bước vào. Vô số miệng bao phủ khắp cơ thể con quái vật dính đầy máu tươi và mẩu thịt vụn, như thể nó vừa được cho ăn cách đây không lâu.\nVới một tiếng quác ghê tởm, con quái vật cất lời bằng cả bảy cái miệng: \"Ss... se... eth...?\" Rồi nó chồm tới chực tóm lấy bạn, làm đứt phựt vài mắt xích."
+    }
+  },
+  {
+    "code": "02200",
+    "type": "act",
+    "pack": "bota",
+    "scenario": "Blood on the Altar",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "The Chamber of the Beast",
+      "text": "<b>Objective</b> - If Silas Bishop is defeated: <b>(→R1)\nObjective</b> - If there are no clues in the Hidden Chamber, advance.",
+      "flavor": "The pitiful beast lunges to grab you with slimy arms, its many jaws snapping in hunger. Killing it would be merciful. But perhaps there is something else to discover about this creature…",
+      "back_name": "Banishing the Creature",
+      "back_text": "If The Necronomicon is in play: <b>(→R2)\n</b>Otherwise: <b>(→R3)</b>",
+      "back_flavor": "Despite the danger, you brave the beast's horrifying presence and investigate further before killing it. What you find confirms your worst suspicions. Several journal entries written by a \"Seth Bishop\" describe the process of feeding the creature in horrifying detail - tomatoes at first, then small game, then cattle, and then finally 'human sacrifices'. But the most disturbing part is that Seth calls the creature by name: 'Silas.'"
+    },
+    "vi_current": {
+      "name": "Căn Phòng Của Quái Thú",
+      "text": "<b>Objective</b> — Nếu Silas Bishop bị đánh bại: <b>(→R1)</b>\n<b>Objective</b> — Nếu không còn manh mối nào trong The Hidden Chamber, advance.",
+      "flavor": "Con quái thú đáng thương chồm tới với những cánh tay nhầy nhụa, vô số hàm răng ngoạm vào không khí vì đói. Kết liễu nó sẽ là một sự giải thoát nhân từ. Nhưng có lẽ còn điều gì khác cần khám phá về sinh vật này…",
+      "back_name": "Trục Xuất Sinh Vật",
+      "back_text": "Nếu The Necronomicon đang trong màn chơi: <b>(→R2)</b>\nNgược lại: <b>(→R3)</b>",
+      "back_flavor": "Bất chấp nguy hiểm, bạn dũng cảm đối mặt với sự hiện diện kinh tởm của con quái thú và điều tra kỹ lưỡng hơn trước khi hạ sát nó. Những gì bạn phát hiện đã xác nhận nỗi lo sợ tồi tệ nhất. Nhiều ghi chép trong nhật ký của \"Seth Bishop\" mô tả quá trình cho sinh vật ăn với những chi tiết rùng rợn — ban đầu là cà chua, rồi thú nhỏ, gia súc, và cuối cùng là 'vật hiến tế người'. Nhưng điều kinh hoàng nhất là Seth gọi con quái thú bằng chính cái tên: 'Silas'."
+    }
+  },
+  {
+    "code": "02237",
+    "type": "agenda",
+    "pack": "uau",
+    "scenario": "Undimensioned and Unseen",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02237', 'text'), ('02238', 'text'), ('02239', 'text')]",
+      "back_text: nums en=['1'] vi=[]",
+      "back_flavor: len ratio 0.29"
+    ],
+    "en": {
+      "name": "Rampaging Creatures",
+      "text": "<b>Forced</b> - At the end of the enemy phase: Move each Brood of Yog-Sothoth enemy once toward a random location.",
+      "flavor": "Reports of terrifying entities wreaking havoc across the countryside have caused the citizens of Dunwich to panic. Worse, the creatures seem to be invisible to the naked eye.",
+      "back_name": "Calamity Strikes",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\nSpawn 1 of the set-aside Brood of Yog-Sothoth enemies at a random location, if able.",
+      "back_flavor": "An old pickup truck rolls to a stop along the weathered trails of Dunwich. The driver - Joe Osborn - calls out to you through a shattered driver-side window, the truck's engine still running. \"IT's over at the Ericks' farm!\" he shouts. \"Done blasted their place apart. Poor Henry and Martha...\"\nYou ask Osborn for the location of the Ericks' homestead, and it confirms your worst fear. For that attack to have occurred recently, there must be more of the monsters on the loose."
+    },
+    "vi_current": {
+      "name": "Những Sinh Vật Cuồng Nộ",
+      "text": "<b>Forced</b> — Khi kết thúc giai đoạn Enemy: Di chuyển mỗi kẻ địch Brood of Yog-Sothoth một lần về phía một địa điểm ngẫu nhiên.",
+      "flavor": "Những báo cáo về các thực thể kinh hoàng tàn phá vùng nông thôn đã khiến người dân Dunwich hoảng loạn cực độ. Tệ hơn nữa, những sinh vật này dường như hoàn toàn vô hình trước mắt thường.",
+      "back_name": "Tai Họa Giáng Xuống",
+      "back_text": "Xáo trộn chồng bài encounter bỏ vào chồng bài encounter. Bỏ từng lá bài từ trên cùng của chồng bài encounter cho đến khi một kẻ địch bị bỏ. Spawn kẻ địch đó tại một địa điểm ngẫu nhiên.",
+      "back_flavor": "Những vết chân khổng lồ, nham nhở khoét sâu vào đất cát làng mạc. Những bức tường đá bị đập nát vụn và gia súc bị xé toạc thành từng mảnh."
+    }
+  },
+  {
+    "code": "02238",
+    "type": "agenda",
+    "pack": "uau",
+    "scenario": "Undimensioned and Unseen",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02237', 'text'), ('02238', 'text'), ('02239', 'text')]",
+      "flavor: len ratio 0.52",
+      "back_text: nums en=['1', '4'] vi=['1']",
+      "back_text: icons en=['[agility]'] vi=[]",
+      "back_text: len ratio 0.13",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Biding Its Time",
+      "text": "<b>Forced</b> - At the end of the enemy phase: Move each Brood of Yog-Sothoth enemy once toward a random location.",
+      "flavor": "Once in a while a wind, sweeping up out of Cold Spring Glen, would bring a touch of ineffable foetor to the heavy night air... But the looked-for terror did not appear. Whatever was down there in the glen was biding its time, and Armitage told his colleagues it would be suicidal to try to attack it in the dark.\n-H.P. Lovecraft, \"The Dunwich Horror\"",
+      "back_name": "No Place to Hide",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\n<b><hr>If there is a set-aside Brood of Yog-Sothoth, the lead investigator reads the following (out loud):</b>\n<blockquote><i>Bleak storm clouds churn overhead and a blanket of rain pelts the countryside. As the downpour grows in intensity, you take refuge in a half-ruined shack nearby. There is a flash of lightning, and in the brief illumination, you spot the outline of something large in the rain. Without warning, the distant trees bend, though nothing seems to be bending them. Moments later, a force with the strength of a truck crashes into your refuge.</i></blockquote>\nSpawn 1 of the set-aside Brood of Yog-Sothoth enemies at the lead investigator's location, if able. Then, each investigator at that location tests [agility] (4). The newly spawned Brood of Yog-Sothoth makes an attack against each investigator who fails this skill test."
+    },
+    "vi_current": {
+      "name": "Chờ Đợi Thời Cơ",
+      "text": "<b>Forced</b> — Khi kết thúc giai đoạn Enemy: Di chuyển mỗi kẻ địch Brood of Yog-Sothoth một lần về phía một địa điểm ngẫu nhiên.",
+      "flavor": "Những thực thể vô hình tiếp tục lẩn khuất quanh những ngọn đồi của Dunwich. Bạn có thể nghe thấy những bước chân nặng nề làm rung chuyển mặt đất, dù chẳng thấy bóng dáng kẻ thù ở đâu.",
+      "back_name": "Tiếng Gầm Vang Dội",
+      "back_text": "Mỗi điều tra viên chịu 1 horror. Spawn một kẻ địch Brood of Yog-Sothoth đang để riêng tại một địa điểm ngẫu nhiên.",
+      "back_flavor": "Một tiếng gầm phi nhân tính rung chuyển cả thung lũng, làm vỡ kính các ngôi nhà và khiến người dân la hét trong kinh hoàng."
+    }
+  },
+  {
+    "code": "02239",
+    "type": "agenda",
+    "pack": "uau",
+    "scenario": "Undimensioned and Unseen",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: nums en=['1', '1'] vi=[]",
+      "text: dup [('02237', 'text'), ('02238', 'text'), ('02239', 'text')]",
+      "back_text: nums en=['1'] vi=['2', '3']",
+      "back_text: len ratio 6.08",
+      "back_flavor: len ratio 0.20"
+    ],
+    "en": {
+      "name": "Horrors Unleashed",
+      "text": "Each [[Abomination]] enemy gets +1 fight and +1 evade.\n<b>Forced</b> - At the end of the enemy phase: Move each Brood of Yog-Sothoth enemy once toward a random location.",
+      "flavor": "It was no joke tracking down something as big as a house that one could not see, but that had all the vicious malevolence of a daemon.\n-H.P. Lovecraft, \"The Dunwich Horror\"",
+      "back_name": "Into the Hills",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "There is a monstrous rumbling throughout the countryside, though it is impossible to tell whether its source is the creatures you hunt or the very mountains themselves. Soon after, you find more of the creatures' tracks leading up toward the hills: a thirty-foot path of crushed underbrush and trees snapped like twigs. Exhausted from battle, and with night fast approaching, you decide to head to safety rather than follow these hellish tracks."
+    },
+    "vi_current": {
+      "name": "Những Nỗi Kinh Hoàng Trỗi Dậy",
+      "text": "<b>Forced</b> — Khi kết thúc giai đoạn Enemy: Di chuyển mỗi kẻ địch Brood of Yog-Sothoth một lần về phía một địa điểm ngẫu nhiên.",
+      "flavor": "Lũ quái vật đã hoàn toàn mất kiểm soát. Không còn thời gian để do dự; bạn phải tìm cách làm chúng hiện hình và tiêu diệt chúng ngay lập tức!",
+      "back_name": "Dunwich Thất Thủ",
+      "back_text": "Mỗi điều tra viên lập tức chịu 2 physical trauma. Tiến hành <b>(→R3)</b>.",
+      "back_flavor": "Lũ quái vật giày xéo toàn bộ ngôi làng. Không còn gì có thể ngăn chặn sự tàn phá của chúng."
+    }
+  },
+  {
+    "code": "02240",
+    "type": "act",
+    "pack": "uau",
+    "scenario": "Undimensioned and Unseen",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "flavor: len ratio 0.55",
+      "back_text: nums en=['1', '1', '1'] vi=['1']",
+      "back_text: len ratio 0.17",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Saracenic Script",
+      "text": "<b>Objective</b> - Only investigators at Whateley Ruins may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "The monsters tearing through Dunwich county are immune to traditional weapons. Only by reciting a particular incantation can the creatures be defeated. First you must search the ruins of Wilbur Whateley’s home in order to find the final sections of the otherworldly script.",
+      "back_name": "Obtaining the Formula",
+      "back_text": "<b>Check Campaign Log. If Dr. Armitage survived The Dunwich Legacy:</b><blockquote><i>\"There!\" Armitage sighs a breath of relief, jotting down the last phrases of the formula. \"I have translated the last of it.\" He shudders as he hands you the script, the words conjuring forth memories of his battle with the creature. \"I hope this is the last time I'll have to read it,\" he admits. \"But if we do nothing, the end result will be much, much worse.\"</i></blockquote>Each investigator puts into play 1 set-aside Esoteric Formula.\n<b>If Dr. Armitage is listed under \"Sacrificed to Yog-Sothoth\":</b><blockquote><i>Using the information contained within the ruins of the Whateley homestead, you are able to transcribe the remainder of the formula previously used by Dr. Armitage to destroy the beast that plagued Dunwich. However, the endeavor sets you back several hours.</i></blockquote>Each investigator puts into play 1 set-aside Esoteric Formula. Place 1 doom on the current agenda."
+    },
+    "vi_current": {
+      "name": "Cổ Tự Saracen",
+      "text": "<b>Objective</b> — Chỉ các điều tra viên tại Dunwich Village mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
+      "flavor": "Để nhìn thấy và gây sát thương lên lũ quái vật, bạn cần một công thức ma thuật đặc biệt — thứ bột phấn của Ibn-Ghazi được mô tả trong các bản thảo cổ.",
+      "back_name": "Bột Phấn Của Ibn-Ghazi",
+      "back_text": "Đặt Esoteric Formula đang để riêng vào màn chơi dưới quyền kiểm soát của điều tra viên chính.\nSpawn 1 kẻ địch Brood of Yog-Sothoth đang để riêng tại Cold Spring Glen.",
+      "back_flavor": "Sau khi pha chế thành công thứ bột ma thuật theo công thức cổ xưa, bạn rắc bột vào không khí. Ngay lập tức, hình hài quái dị của một sinh vật khổng lồ với hàng trăm xúc tu ngoe nguẩy hiện ra mồn một trước mắt bạn!"
+    }
+  },
+  {
+    "code": "02241",
+    "type": "act",
+    "pack": "uau",
+    "scenario": "Undimensioned and Unseen",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: nums en=[] vi=['1']",
+      "text: icons en=[] vi=['[action]']",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "They Must Be Destroyed!",
+      "text": "<b>Objective</b> - Defeat as many Brood of Yog-Sothoth enemies as you can. If there are no copies of Brood of Yog-Sothoth in play or set aside, advance.",
+      "flavor": "With the formula in hand, you finally have the means to destroy the creatures wreaking havoc in Dunwich... but only if you can survive long enough.",
+      "back_name": "The Brood is Ended",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "As you complete the incantation, the foul creature cries out with a raucous, inhuman voice. It rumbles and cracks, the syllables of its croaking far from English. As its cry plays out, the creature shrinks upon itself, and then, with little warning, it is gone. All that remains is a foul stench and a repulsive mark that mars the vegetation where the beast once stood."
+    },
+    "vi_current": {
+      "name": "Chúng Phải Bị Tiêu Diệt!",
+      "text": "<b>Objective</b> — Nếu không còn kẻ địch Brood of Yog-Sothoth nào trong màn chơi hoặc để riêng: <b>(→R1)</b>\n[action]: <b>Resign.</b> Bạn rút lui an toàn khỏi Dunwich.",
+      "flavor": "Với thứ bột phấn ma thuật trong tay, bạn đã có thể làm lộ diện và tấn công lũ quái thai của Yog-Sothoth. Hãy tiêu diệt chúng trước khi chúng san phẳng vùng đất này!",
+      "back_name": "The Brood is Ended",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "Khi bạn hoàn thành câu thần chú, sinh vật hôi hám sẽ kêu lên với giọng khàn khàn và vô nhân đạo. Nó ầm ầm và rạn nứt, những âm tiết trong tiếng kêu của nó khác xa với tiếng Anh. Khi tiếng kêu của nó vang lên, sinh vật đó thu mình lại và biến mất mà không hề báo trước. Tất cả những gì còn lại là mùi hôi thối và dấu vết kinh tởm làm hoen ố thảm thực vật nơi con quái vật từng đứng."
+    }
+  },
+  {
+    "code": "02275",
+    "type": "agenda",
+    "pack": "wda",
+    "scenario": "Where Doom Awaits",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "back_text: nums en=[] vi=['1', '1']",
+      "back_flavor: len ratio 0.21"
+    ],
+    "en": {
+      "name": "Calling Forth the Old Ones",
+      "flavor": "As you approach Sentinel Hill, you hear ancient Latin rites bellowed across the night. The time for action has come. If you cannot stop the sorcerers in Dunwich, who knows what terrors they might unleash upon the world?",
+      "back_name": "The World is Altered",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.",
+      "back_flavor": "As you explore the paths surrounding Sentinel Hill, the chanting at the hilltop rises to a crescendo and takes an otherworldly quality, reverberating through the trees as if carried by unseen currents.\nThe world begins to change. The grass and trees dissolve like sugar in a cup of tea. A vast endless sky slices through the reality you see before you, and you feel drawn to it, terrified and awestruck. The arcane power becomes distorted and seeps around you, creating strange alterations in the land."
+    },
+    "vi_current": {
+      "name": "Hiệu Triệu Các Đấng Cổ Xưa",
+      "flavor": "Tại đỉnh Đồi Sentinel, một luồng ánh sáng u tối rực lên giữa trời đêm. Những kẻ tà giáo đang tiến hành nghi thức tối thượng để mở ra cánh cổng giữa các chiều không gian.",
+      "back_name": "Sấm Sét Rền Vang",
+      "back_text": "Mỗi điều tra viên tại Base of the Hill chịu 1 horror. Spawn 1 kẻ địch [[Cultist]] tại Ascending Path.",
+      "back_flavor": "Những tia sét đen ngoằn ngoèo đánh xuống sườn đồi, mùi ôzôn và lưu huỳnh nồng nặc lan tỏa trong không khí."
+    }
+  },
+  {
+    "code": "02276",
+    "type": "agenda",
+    "pack": "wda",
+    "scenario": "Where Doom Awaits",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "flavor: len ratio 0.24",
+      "back_text: nums en=['2'] vi=['1', '2']",
+      "back_text: len ratio 5.58",
+      "back_flavor: len ratio 0.24"
+    ],
+    "en": {
+      "name": "Beckoning for Power",
+      "flavor": "The Old Ones were, the Old Ones are, and the Old Ones shall be. Not in the spaces we know, but between them, They walk serene and primal, undimensioned and to us unseen. Yog-Sothoth knows the gate. Yog-Sothoth is the gate. Yog-Sothoth is the key and guardian of the gate. Past, present, future, all are one in Yog-Sothoth. He knows where the Old Ones broke through of old, and where They shall break through again. He knows where They have trod earth’s fields, and where They still tread them, and why no one can behold Them",
+      "back_name": "The Reward for Servitude",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "The chanting reaches its climax, and at the summit of Sentinel Hill, a tear opens across the fabric of the sky, parting the clouds and slicing through the very air itself.\nYou watch as an indescribable entity - spheres, eyes, mouths, ooze - pours out of the rift. The sorcerers call its name as its form seeps into the sky, spreading forth above the earth.\"Ia! Ia! Yog-Sothoth! Ia! Ia! Yog-Sothoth!\"\nBefore their jubilant chant can continue, they are smothered by the growing mass, and are heard no more.\nTo your horror, the expansion of the mass does not cease."
+    },
+    "vi_current": {
+      "name": "Kêu Cầu Quyền Năng",
+      "flavor": "Nghi thức sắp sửa hoàn tất. Bầu trời đêm trên đỉnh đồi xoáy tròn thành một cơn lốc đen khổng lồ, sẵn sàng nuốt chửng thực tại.",
+      "back_name": "Cánh Cổng Mở Ra",
+      "back_text": "Mỗi điều tra viên bị đánh bại và chịu 1 mental trauma. <b>(→R2)</b>",
+      "back_flavor": "Không gian vỡ tan và cánh cổng liên chiều mở toang. Quyền năng cổ xưa tràn vào thế giới, nghiền nát tâm trí của bất kỳ ai dám chứng kiến."
+    }
+  },
+  {
+    "code": "02277",
+    "type": "act",
+    "pack": "wda",
+    "scenario": "Where Doom Awaits",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "back_text: len ratio 0.59",
+      "back_flavor: len ratio 0.10"
+    ],
+    "en": {
+      "name": "The Path to the Hill",
+      "text": "<b>Objective</b> - When the investigators have collected the requisite number of clues, they must immediately spend them and advance.",
+      "flavor": "A vibrant arcane energy fills the air with a bone-rattling chill. The energy swirls along the crushed trail before you, and seeps down several other paths before disappearing.",
+      "back_name": "A Sacrifice Made",
+      "back_text": "Remove all clues from each location in play. The arcane presence masking the path further up the hill has faded. Reveal Ascending Path.",
+      "back_flavor": "During your search through the wooded paths around the base of Sentinel Hill, you come across a startling sight. A herd of sheep lays dead upon the ground in a secluded clearing, their bloodied carcasses placed in a strange but careful pattern. Holding your nose against the stench of death, you step over mangled sheep on your way to the center of the odd formation.\nIn the center of the sheep lies the corpse of a man. A clear jewel has been firmly pressed into his forehead, caving in the front of his skull. His eyes are wide, his face contorted in a vision of fear, as if beseeching you for mercy. Though you know better, you check for a pulse. As you touch the man's skin, the jewel in his forehead dissolves, and the woods around you seem to clear."
+    },
+    "vi_current": {
+      "name": "Con Đường Lên Đồi",
+      "text": "<b>Objective</b> — Chỉ các điều tra viên tại Base of the Hill mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
+      "flavor": "Đồi Sentinel sừng sững trong đêm tối, được bao quanh bởi rừng cây rậm rạp và những dốc đá hiểm trở. Bạn phải tìm ra lối mòn dẫn lên đỉnh đồi.",
+      "back_name": "Đỉnh Đồi Trong Tầm Mắt",
+      "back_text": "Đặt địa điểm Ascending Path đang để riêng vào màn chơi. Tiết lộ Ascending Path.",
+      "back_flavor": "Bạn tìm thấy con đường mòn uốn lượn xuyên qua rừng rậm dẫn lên sườn đồi."
+    }
+  },
+  {
+    "code": "02278",
+    "type": "act",
+    "pack": "wda",
+    "scenario": "Where Doom Awaits",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02278', 'text'), ('02279', 'text'), ('02280', 'text')]",
+      "flavor: len ratio 0.48",
+      "back_text: dup [('02278', 'back_text'), ('02279', 'back_text'), ('02280', 'back_text')]",
+      "back_flavor: len ratio 0.10",
+      "back_flavor: dup [('02278', 'back_flavor'), ('02279', 'back_flavor'), ('02280', 'back_flavor')]"
+    ],
+    "en": {
+      "name": "Ascending the Hill (v. I)",
+      "text": "Clues cannot be placed on non-[[Altered]] locations.\n<b>Objective</b> - When an investigator enters Sentinel Peak, advance.",
+      "flavor": "As you ascend the hill, the environment around you grows increasingly strange and otherworldly. The arcane energy feels even stronger here, crackling in the air and crawling on your skin.",
+      "back_name": "Trip the Pattern",
+      "back_text": "Remove the set-aside Seth Bishop enemy from the game.",
+      "back_flavor": "Approaching the peak of Sentinel Hill, you are confronted by several citizens of Dunwich. The man in the center of their circle chants in Latin while the others bow their heads in reverence. \"Seth Bishop?\" you ask presumptively. The man in the center raises his gaze in response, confirming your suspicions. You plead with the man to stop this madness, but he doesn't respond. You draw forth the silver constellation pendant you'd found on Silas's body and present it to Seth. \"This is all we found of your brother,\" you shout over the howling wind. \"Is this the fate you want for yourself? For all of us?\" You throw the pendant onto the ground. Staggered by the sight of it, he stumbles backwards and trips over his incantation, eyes widened. As he falls, the altar behind him splits open, and a torrent of energy pours from the stone, swirling into an open gate that swallows the man whole. You barely manage to dig your heels in and grab hold of a nearby rock to resist the pull of the gate."
+    },
+    "vi_current": {
+      "name": "Leo Lên Đỉnh Đồi (v. I)",
+      "text": "<b>Objective</b> — Chỉ các điều tra viên tại Ascending Path mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
+      "flavor": "Gió rít gào dữ dội khi bạn tiến lên cao hơn. Bậc thang đá cổ xưa trơn trượt dưới chân bạn.",
+      "back_name": "Tiếp Cận Bàn Thờ",
+      "back_text": "Đặt Sentinel Peak vào màn chơi. Tiết lộ Sentinel Peak. Spawn Seth Bishop tại Sentinel Peak.",
+      "back_flavor": "Bạn bước lên đỉnh đồi bằng phẳng và đối mặt với bàn thờ đá khổng lồ, nơi kẻ chủ mưu đang đứng đợi."
+    }
+  },
+  {
+    "code": "02279",
+    "type": "act",
+    "pack": "wda",
+    "scenario": "Where Doom Awaits",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02278', 'text'), ('02279', 'text'), ('02280', 'text')]",
+      "flavor: len ratio 0.59",
+      "back_text: dup [('02278', 'back_text'), ('02279', 'back_text'), ('02280', 'back_text')]",
+      "back_flavor: len ratio 0.09",
+      "back_flavor: dup [('02278', 'back_flavor'), ('02279', 'back_flavor'), ('02280', 'back_flavor')]"
+    ],
+    "en": {
+      "name": "Ascending the Hill (v. II)",
+      "text": "Clues cannot be placed on non-[[Altered]] locations.\n<b>Objective</b> - When an investigator enters Sentinel Peak, advance.",
+      "flavor": "As you ascend the hill, the environment around you grows increasingly strange and otherworldly. The arcane energy feels even stronger here, crackling in the air and crawling on your skin.",
+      "back_name": "Turn the Key",
+      "back_text": "Put the set-aside Seth Bishop enemy into play at Sentinel Peak.",
+      "back_flavor": "Approaching the peak of Sentinel Hill, you are confronted by several citizens of Dunwich. The man in the center of their circle lets out a crazed laugh. You recognize the man - Seth Bishop - from the description given to you by the townsfolk earlier. Behind him, several other men and women bow their heads in reverence, chanting in Latin. \"We've done it!\" he cackles. \"We've accomplished what Old Whateley and 'is git couldn't!\" You watch in revulsion as his eyes glaze over and twitch, as though he were reading something invisible. \"I can see now… I can finally see!\" He raises his hands to the sky and the headstone of the altar behind him splits open. A torrent of energy pours out of the stone, coalescing into the form of an open gate. Seth holds onto the stone in front of him to prevent himself from being sucked into the gate, but several of the others are startled and pulled through it. You barely manage to dig your heels in and grab hold of a nearby rock in time to resist the pull of the gate. Seth rises to his feet, wearing an expression of pride."
+    },
+    "vi_current": {
+      "name": "Leo Lên Đỉnh Đồi (v. II)",
+      "text": "<b>Objective</b> — Chỉ các điều tra viên tại Ascending Path mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
+      "flavor": "Không gian xung quanh bạn bắt đầu bẻ cong kỳ lạ. Từng bước đi như nặng nề hơn dưới lực cản của ma thuật hắc ám.",
+      "back_name": "Tiếp Cận Bàn Thờ",
+      "back_text": "Đặt Sentinel Peak vào màn chơi. Tiết lộ Sentinel Peak. Spawn Seth Bishop tại Sentinel Peak.",
+      "back_flavor": "Bạn bước lên đỉnh đồi bằng phẳng và đối mặt với bàn thờ đá khổng lồ, nơi kẻ chủ mưu đang đứng đợi."
+    }
+  },
+  {
+    "code": "02280",
+    "type": "act",
+    "pack": "wda",
+    "scenario": "Where Doom Awaits",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02278', 'text'), ('02279', 'text'), ('02280', 'text')]",
+      "back_text: nums en=['1'] vi=[]",
+      "back_text: icons en=['[per_investigator]'] vi=[]",
+      "back_text: dup [('02278', 'back_text'), ('02279', 'back_text'), ('02280', 'back_text')]",
+      "back_flavor: len ratio 0.10",
+      "back_flavor: dup [('02278', 'back_flavor'), ('02279', 'back_flavor'), ('02280', 'back_flavor')]"
+    ],
+    "en": {
+      "name": "Ascending the Hill (v. III)",
+      "text": "Clues cannot be placed on non-[[Altered]] locations.\n<b>Objective</b> - When an investigator enters Sentinel Peak, advance.",
+      "flavor": "As you ascend the hill, the environment around you grows increasingly strange and otherworldly. The arcane energy feels even stronger here, crackling in the air and crawling on your skin.",
+      "back_name": "Will the Change",
+      "back_text": "Put the set-aside Seth Bishop enemy into play at Sentinel Peak, with 1 [per_investigator] damage on him.",
+      "back_flavor": "Approaching the peak of Sentinel Hill, you are confronted by several citizens of Dunwich. The man in the center of their circle is desperately trying to complete a Latin incantation. \"It's not working, Seth!\" one of the other men cries out. \"What're we gonna do?\" The man in the center stops his chant and pulls out a cobbler's knife. \"The father demands a blood sacrifice,\" he declares, and his face twists into a crazed expression. Before you can react, he slits his left wrist with the knife, dropping to his knees in agony. The headstone of the altar behind him splits open. A torrent of energy pours out of the stone, coalescing into the form of an open gate. Seth holds onto the stone in front of him to prevent himself from being sucked into the gate, but several of the others are startled and pulled through it. You barely manage to dig your heels in and grab hold of a nearby rock in time to resist the pull of the gate. Seth rises, wounded but alive. An expression of pride spreads across his pained face."
+    },
+    "vi_current": {
+      "name": "Leo Lên Đỉnh Đồi (v. III)",
+      "text": "<b>Objective</b> — Chỉ các điều tra viên tại Ascending Path mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
+      "flavor": "Những tiếng thầm thì ma quái rót vào tai bạn, cố gắng làm lung lay ý chí và khiến bạn gục ngã trước khi lên tới đỉnh.",
+      "back_name": "Tiếp Cận Bàn Thờ",
+      "back_text": "Đặt Sentinel Peak vào màn chơi. Tiết lộ Sentinel Peak. Spawn Seth Bishop tại Sentinel Peak.",
+      "back_flavor": "Bạn bước lên đỉnh đồi bằng phẳng và đối mặt với bàn thờ đá khổng lồ, nơi kẻ chủ mưu đang đứng đợi."
+    }
+  },
+  {
+    "code": "02281",
+    "type": "act",
+    "pack": "wda",
+    "scenario": "Where Doom Awaits",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: len ratio 0.47",
+      "flavor: len ratio 0.49",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.57"
+    ],
+    "en": {
+      "name": "The Gate Opens",
+      "text": "<b>Objective</b> - Only investigators at Sentinel Peak may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "From the ruins of the headstone on the altar at the hill’s peak, a gateway of churning vibrant energy has appeared. A force like a hurricane erupts from the gate, bending trees and pulling debris into it. The howling of the gale drowns out all other sound. Somehow, you must find a way to close the gate.",
+      "back_name": "Peer Into the Abyss",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "You don't know how to close the swirling gate before you, and with each passing moment, the force from within it grows in strength. You fear that whatever entity the sorcerers have summoned from beyond approaches. With no time to spare, you turn to the open tome on the stone altar, desperate for answers."
+    },
+    "vi_current": {
+      "name": "Cánh Cổng Mở Ra",
+      "text": "<b>Objective</b> — Nếu Seth Bishop bị đánh bại, advance.",
+      "flavor": "Seth Bishop đứng trước bàn tế lễ đá, cơ thể gã run lên bần bật trong cơn xuất thần cuồng loạn. Gã phải bị tiêu diệt trước khi kịp hoàn tất nghi thức!",
+      "back_name": "Cánh Cổng Liên Chiều",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Seth Bishop gục ngã trên bàn thờ đá, nhưng vết rách không gian trên đỉnh đồi đã mở ra quá lớn. Một lực hút khủng khiếp kéo bạn xuyên qua cánh cổng, thẳng vào cõi hư vô vô tận!"
+    }
+  },
+  {
+    "code": "02312",
+    "type": "agenda",
+    "pack": "litas",
+    "scenario": "Lost in Time and Space",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02312', 'text'), ('02313', 'text'), ('02314', 'text')]",
+      "back_text: len ratio 0.12",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "All is One",
+      "text": "<b>Forced</b> - After you are moved to a location by an encounter card effect: Take 1 horror.",
+      "flavor": "Pathways of sound and color extend for an eternity in all directions, dotted with impossible architecture, and overgrown with alien wildlife. The lines between objects are jagged and shifting, and your skin feels as if it were inside out.",
+      "back_name": "Familiar Echoes",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck. Then, discard cards from the top until a location is discarded. The lead investigator resolves that location's 'revelation' effect.\n<b>Check Campaign Log. If the investigators failed to save the students, read the following:</b>\n\"A huge canine creature, alien to your eyes and yet familiar, appears before you. The creature rushes forward, and you prepare to fend it off, but to your surprise it runs through you, towards a building that wasn't behind you moments before: Derby Hall from the Miskatonic University. The creature bursts through the building's front door and you hear screams of panic from inside, followed by the crunch of snapping bones and cries of pain.\"\nEach investigator takes 1 horror, regardless of their location."
+    },
+    "vi_current": {
+      "name": "Vạn Vật Là Một",
+      "text": "<b>Forced</b> - Sau khi bạn được chuyển đến địa điểm do hiệu ứng thẻ chạm trán: nhận 1 horror.",
+      "flavor": "Bạn đang trôi dạt trong một chiều không gian vượt ngoài mọi quy luật vật lý. Không gian và thời gian hòa làm một thể, uốn lượn và biến chuyển khôn lường.",
+      "back_name": "Thực Tại Vỡ Vụn",
+      "back_text": "Mỗi điều tra viên ngẫu nhiên bỏ 1 lá bài trên tay. Bỏ lá bài trên cùng của chồng bài encounter.",
+      "back_flavor": "Những mảnh vỡ của các thế giới khác lướt qua bạn như những ảo ảnh chớp tắt."
+    }
+  },
+  {
+    "code": "02313",
+    "type": "agenda",
+    "pack": "litas",
+    "scenario": "Lost in Time and Space",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02312', 'text'), ('02313', 'text'), ('02314', 'text')]",
+      "flavor: len ratio 0.55",
+      "back_text: nums en=['1'] vi=[]",
+      "back_text: icons en=['[willpower]'] vi=[]",
+      "back_text: len ratio 0.08",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Past, Present and Future",
+      "text": "<b>Forced</b> - After you are moved to a location by an encounter card effect: Take 1 horror.",
+      "flavor": "As you cross this realm, you catch occasional glimpses of reality - scenes from old memories, more recent visions from the past few days, and sometimes even events that you do not remember ever happening…",
+      "back_name": "The Price of Failure",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck. Then, discard cards from the top until a location is discarded. The lead investigator resolves that location's 'revelation' effect.\n<b>Check Campaign Log. If at least one name is recorded under \"Sacrificed to Yog-Sothoth,\" read the following:</b>\n\"You hear a familiar voice calling out to you, and you enter an impossibly shaped building of cracked stone. \"No… don't!\" the voice cries. You rush toward the voice, down a set of steep, narrow stairs. Upon reaching the bottom, you find yourself in the hidden chamber from Dunwich. Bound by shackles, you see those you failed to save, bloodied and maimed. A creature with a man's face feeds from a corpse on the ground. The head of the corpse turns to face you, and a sharp pain stabs your heart.\"\nEach investigator tests [willpower] (X), where X is the number of names recorded under \"Sacrificed to Yog-Sothoth.\" For each point an investigator fails by, that investigator takes 1 damage."
+    },
+    "vi_current": {
+      "name": "Quá Khứ, Hiện Tại và Tương Lai",
+      "text": "<b>Forced</b> - Sau khi bạn được chuyển đến địa điểm do hiệu ứng thẻ chạm trán: nhận 1 horror.",
+      "flavor": "Quá khứ, hiện tại và tương lai đồng hiện trước mắt bạn. Trí não con người không thể chịu đựng được sự vô tận này.",
+      "back_name": "Chuyển Dịch Không Gian",
+      "back_text": "Di chuyển mỗi điều tra viên tới một địa điểm kết nối ngẫu nhiên nếu có thể.",
+      "back_flavor": "Không gian xung quanh bạn lộn nhào, kéo bạn sang một vùng đất hoàn toàn xa lạ."
+    }
+  },
+  {
+    "code": "02314",
+    "type": "agenda",
+    "pack": "litas",
+    "scenario": "Lost in Time and Space",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02312', 'text'), ('02313', 'text'), ('02314', 'text')]",
+      "flavor: len ratio 0.45",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Breaking Through",
+      "text": "<b>Forced</b> - After you are moved to a location by an encounter card effect: Take 1 horror.",
+      "flavor": "Throughout this warped dimension, no matter where you travel, there is a haunting shape in the distance. At first, it appears as a disc, like a black moon with many wriggling arms. But as time passes, you can tell it is growing larger and larger…",
+      "back_name": "The Key and the Gate",
+      "back_text": "<b>Revelation</b> - Spawn the set-aside Yog-Sothoth enemy at The Edge of the Universe. If The Edge of the Universe is not in play, spawn it in Another Dimension, instead. Advance to agenda 4a."
+    },
+    "vi_current": {
+      "name": "Xé Toạc Ranh Giới",
+      "text": "<b>Forced</b> - Sau khi bạn được chuyển đến địa điểm do hiệu ứng thẻ chạm trán: nhận 1 horror.",
+      "flavor": "Yog-Sothoth đang tiến đến gần. Sự hiện diện vĩ đại của Ngài che kín cả bầu trời của chiều không gian kỳ dị này.",
+      "back_name": "Chìa Khóa và Cánh Cổng",
+      "back_text": "Spawn Yog-Sothoth tại The Edge of the Universe (hoặc Another Dimension nếu The Edge of the Universe chưa có trong màn chơi). Advance sang agenda 4a.",
+      "back_flavor": "Thực thể tối cao Yog-Sothoth hiện hữu — Ngài là Chìa Khóa, là Cánh Cổng, là Người Canh Giữ Ngưỡng Cửa."
+    }
+  },
+  {
+    "code": "02315",
+    "type": "agenda",
+    "pack": "litas",
+    "scenario": "Lost in Time and Space",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: nums en=['1', '3'] vi=['2', '2']",
+      "flavor: len ratio 0.39"
+    ],
+    "en": {
+      "name": "The End of All Things",
+      "text": "<b>Forced</b> - After you are moved by an encounter card effect: Take 1 horror.\n<b>Forced</b> - If Yog-Sothoth is defeated, <b>(→R3)</b>.",
+      "flavor": "The shape in the distance smashes through the barriers of this dimension, its many arms reaching to envelop everything you see. Its body is like an ooze, covered in eyes and mouths. You feel insignificant, like a bug, next to the creature’s terrifying grandeur.",
+      "back_name": "Yog-Sothoth Attacks!",
+      "back_text": "In player order, Yog-Sothoth attacks each investigator in play, regardless of Yog-Sothoth's current location. Then, flip this agenda back to its \"a\" side.",
+      "back_flavor": "Seeking the rift from which you entered this dimension, the extradimensional horror lashes out, crushing entire realms within its grasp."
+    },
+    "vi_current": {
+      "name": "Hồi Kết Của Vạn Vật",
+      "text": "<b>Forced</b> — Khi agenda này advance: Mỗi điều tra viên bị đánh bại và chịu 2 mental trauma. Tiến hành <b>(→R2)</b>.",
+      "flavor": "Toàn bộ thực tại đang sụp đổ vào tâm điểm của Yog-Sothoth. Không còn gì có thể cứu vãn vũ trụ này nữa.",
+      "back_name": "Yog-Sothoth Attacks!",
+      "back_text": "In player order, Yog-Sothoth attacks each investigator trong màn chơi, regardless of Yog-Sothoth's current location. Then, flip this agenda back to its \"a\" side.",
+      "back_flavor": "Đang tìm kiếm khe nứt mà từ đó bạn bước vào chiều không gian này, nỗi kinh hoàng ngoài chiều không gian xuất hiện, nghiền nát toàn bộ thế giới trong tầm tay của nó."
+    }
+  },
+  {
+    "code": "02316",
+    "type": "act",
+    "pack": "litas",
+    "scenario": "Lost in Time and Space",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: nums en=['3'] vi=['2', '3']",
+      "back_flavor: len ratio 0.19"
+    ],
+    "en": {
+      "name": "Out of this World",
+      "text": "[action]: Discard the top 3 cards of the encounter deck. Choose a location discarded by this effect and resolve its 'revelation' ability.",
+      "flavor": "Somehow, you must find your way across this alien landscape in order to find the nexus that was described in Old Whateley’s tome.",
+      "back_name": "The Nexus of Dimensions",
+      "back_text": "Put the set-aside The Edge of the Universe location into play.",
+      "back_flavor": "A light shimmers in the distance, and you head toward it to investigate. The wispy light drifts away from you, floating through the realm's strange gateways, ascending looping staircases, and crossing through barriers you dared not cross earlier. With little chance of finding the nexus on your own, you follow the light, hoping it is guiding you in the right direction."
+    },
+    "vi_current": {
+      "name": "Ngoài Thế Giới Này",
+      "text": "[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này và kích hoạt khả năng 'revelation' của nó.\n<b>Objective</b> — Nếu có 2 manh mối cho mỗi điều tra viên trên Another Dimension, advance.",
+      "flavor": "Bạn phải tìm cách định hướng trong cõi không gian vô định này để tìm lối về thực tại.",
+      "back_name": "Lối Đi Bí Mật",
+      "back_text": "Đặt địa điểm The Edge of the Universe đang để riêng vào màn chơi.",
+      "back_flavor": "Một đốm sáng mờ ảo xuất hiện nơi xa xăm, dẫn dắt bạn tiến về rìa vũ trụ."
+    }
+  },
+  {
+    "code": "02317",
+    "type": "act",
+    "pack": "litas",
+    "scenario": "Lost in Time and Space",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02317', 'text'), ('51055', 'text')]",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: len ratio 0.47"
+    ],
+    "en": {
+      "name": "Into the Beyond",
+      "text": "[action]: Discard the top 3 cards of the encounter deck. Choose a location discarded by this effect and resolve its 'revelation' ability.\n<b>Objective</b> - If an investigator enters The Edge of the Universe, advance.",
+      "flavor": "You continue to follow the wisp of light, though the treacherous landscape makes it a difficult quarry to chase.",
+      "back_name": "The World's Edge",
+      "back_flavor": "You reach an impossibly dense pitch-black void, and realize that this place is where all of reality - all that is and all that ever will be - ends. In its center, you see a minuscule rift, suspended just out of reach. When you peer through the tear, you are surprised to see the peak of Sentinel Hill. Somehow, you've reached the other side of the rift. Now you must find a way to close it for good."
+    },
+    "vi_current": {
+      "name": "Tiến Vào Cõi Vô Tận",
+      "text": "[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này và kích hoạt khả năng 'revelation' của nó.\n<b>Objective</b> — Nếu một điều tra viên bước vào The Edge of the Universe, advance.",
+      "flavor": "Bạn tiếp tục dõi theo đốm sáng le lói, dù địa hình hiểm trở và biến ảo khôn lường khiến hành trình vô cùng gian nan.",
+      "back_name": "Rìa Của Vũ Trụ",
+      "back_text": "Spawn kẻ địch Yog-Sothoth đang để riêng tại The Edge of the Universe.",
+      "back_flavor": "Bạn chạm tới một khoảng không đen đặc vô tận, nơi mọi thực tại kết thúc. Ngay trước mắt bạn là một vết rách tí hon dẫn về đỉnh Đồi Sentinel. Bạn phải tìm cách đóng vết rách này vĩnh viễn!"
+    }
+  },
+  {
+    "code": "02318",
+    "type": "act",
+    "pack": "litas",
+    "scenario": "Lost in Time and Space",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "back_flavor: len ratio 0.19"
+    ],
+    "en": {
+      "name": "Close the Rift",
+      "text": "[action]: Discard the top 3 cards of the encounter deck. Choose a location discarded by this effect and resolve its 'revelation' ability.\n<b>Objective</b> - Only investigators at The Edge of the Universe may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "The unearthly stones on the ground are inscribed with some sort of seal. Approaching them causes a voice to enter your mind, speaking in an alien tongue.",
+      "back_name": "Mending the Tear",
+      "back_text": "Remove the Edge of the Universe from the game.\nPut the set-aside Tear Through Time location into play.",
+      "back_flavor": "You are utterly exhausted, with no idea as to what can be done to close the rift. It is too distant to touch, and nothing you do has any effect. There is nothing here to guide you apart from the unearthly words that are seeping into your mind. Just then, you hear a familiar voice within the echoing chorus, and feel yourself compelled to repeat it. \"Claude ostium…\" You whisper at first, the words on the tip of your tongue. You close your eyes to concentrate, and the echo grows louder. When it ends and you open your eyes, you face nothing but an inky abyss, and the tear has vanished."
+    },
+    "vi_current": {
+      "name": "Đóng Vết Rách",
+      "text": "[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này và kích hoạt khả năng 'revelation' của nó.\n<b>Objective</b> — Chỉ các điều tra viên tại The Edge of the Universe mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
+      "flavor": "Những phiến đá kỳ dị khắc đầy cổ tự ma thuật. Khi tiến lại gần, một giọng nói xa lạ vang lên trong tâm trí bạn bằng ngôn ngữ cổ xưa.",
+      "back_name": "Hàn Gắn Vết Rách",
+      "back_text": "Loại bỏ The Edge of the Universe khỏi trò chơi. Đặt Tear Through Time vào màn chơi.",
+      "back_flavor": "Bạn thì thầm câu thần chú cổ xưa: \"Claude ostium...\" Vết rách không gian dần khép lại rồi biến mất hoàn toàn."
+    }
+  },
+  {
+    "code": "02319",
+    "type": "act",
+    "pack": "litas",
+    "scenario": "Lost in Time and Space",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.28"
+    ],
+    "en": {
+      "name": "Finding a New Way",
+      "text": "[action]: Discard the top 3 cards of the encounter deck. Choose a location discarded by this effect and resolve its 'revelation' ability.\n<b>Objective</b> - If each undefeated investigator has resigned, advance.",
+      "flavor": "With no clear way out of this dimension, you seek another path.",
+      "back_name": "Reality Beckons",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "You discover a path that looks somewhat familiar and follow it. Even though your task is complete, you now understand that in closing the tear, you may never make it home. The fear of being lost here forever spurs you onward, through an archway leading into an overgrown corridor. A damp wooden door leads you out into a pocket of thin rain and dark sky. Cement turns to gravel, then marble, then steel, then grass. You cross impossibly long meadows and make your way through dense woods before fatigue finally sets in. Drained of all energy, you cannot go on any further. Your body gives out."
+    },
+    "vi_current": {
+      "name": "Tìm Lối Đi Mới",
+      "text": "[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này và kích hoạt khả năng 'revelation' của nó.\n<b>Objective</b> — Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.",
+      "flavor": "Không còn vết rách để trở về, bạn phải lùng sục một lối thoát khác giữa những chiều không gian rạn nứt.",
+      "back_name": "Thực Tại Vẫy Gọi",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn tìm thấy một con đường trông quen thuộc và dấn bước. Vượt qua những cánh đồng bất tận và rừng rậm, cơ thể bạn kiệt sức và ngã gục trên nền cỏ quen thuộc của quê nhà."
+    }
+  },
+  {
+    "code": "51026",
+    "type": "agenda",
+    "pack": "rtdwl",
+    "scenario": "Return to The Essex County Express",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "Where There's Smoke",
+      "flavor": "As the train to Dunwich comes to a jarring stop, you look out the window behind you and see an immense tear in the sky, like a rip in a piece of cloth. From this tear, a winged beast emerges. It lets out a painful screech and descends upon the train."
+    },
+    "vi_current": {
+      "name": "Nơi Nào Có Khói",
+      "flavor": "Khi chuyến tàu tới Dunwich phanh gấp, bạn nhìn qua cửa sổ và thấy một vết rách khổng lồ trên bầu trời. Từ vết rách đó, một quái thú có cánh trồi ra, thét lên tiếng kêu chói tai và lao thẳng xuống đoàn tàu."
+    }
+  },
+  {
+    "code": "51027",
+    "type": "agenda",
+    "pack": "rtdwl",
+    "scenario": "Return to The Essex County Express",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "flavor: len ratio 0.55"
+    ],
+    "en": {
+      "name": "A Tear in Reality (v.II)",
+      "flavor": "The force of the gate grows with the presence of the winged beast. Several of the rearmost train cars are pulled backward, and there is a dreadful metallic crunch as they are detached. The train cars topple upward and into the rift in the sky. Nearby passengers are panicking, others are cowering in their seats, and one elderly man has fainted in fear.",
+      "back_name": "Keep Moving!",
+      "back_text": "Remove the leftmost location from the game (or place it in the victory display if it has Victory X and no clues on it). Each investigator at that location is defeated. Each enemy and asset at that location is discarded.\nDiscard all clues controlled by the investigators.",
+      "back_flavor": "The rearmost car of the train detaches as it is pulled backward. To your horror, it rises off the tracks and is consumed by the gate above you."
+    },
+    "vi_current": {
+      "name": "Vết Rách Của Thực Tại (v. II)",
+      "flavor": "Sức mạnh của cánh cổng càng lớn mạnh hơn trước sự hiện diện của quái thú có cánh. Nhiều toa tàu phía sau bị giật ngược lại, và những tiếng kim loại rạn nứt ghê rợn vang lên khi chúng bị đứt lìa.",
+      "back_name": "Tiếp Tục Di Chuyển!",
+      "back_text": "Loại bỏ địa điểm ngoài cùng bên trái khỏi màn chơi (hoặc đặt vào khu vực trưng bày thành tích nếu có Victory X và không còn manh mối). Mỗi điều tra viên tại đó bị đánh bại. Mỗi kẻ địch và asset tại đó bị bỏ.\nBỏ toàn bộ manh mối do các điều tra viên kiểm soát.",
+      "back_flavor": "Toa tàu sau cùng tách rời khi bị kéo lùi. Trước sự bàng hoàng của bạn, nó bay bổng khỏi đường ray và bị cánh cổng phía trên nuốt chửng."
+    }
+  },
+  {
+    "code": "51054",
+    "type": "agenda",
+    "pack": "rtdwl",
+    "scenario": "Return to Lost in Time and Space",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [],
+    "en": {
+      "name": "Breaking Through (v. II)",
+      "text": "<b>Forced</b> - After you are moved to a location by an encounter card effect: Take 1 horror.",
+      "flavor": "Throughout this warped dimension, no matter where you travel, there is a haunting shape in the distance. At first, it appears as a disc, like a black moon with many wriggling arms. But as time passes, you can tell it is growing larger and larger…",
+      "back_name": "The Key and the Gate (v. II)",
+      "back_text": "<b>Revelation</b> - Move Yog-Sothoth to The Edge of the Universe (or Another Dimension if The Edge of the Universe is not in play). Remove Realms Beyond from the game and advance to agenda 4a. Ignore the text on Realms Beyond while resolving this ability."
+    },
+    "vi_current": {
+      "name": "Xé Toạc Ranh Giới (v. II)",
+      "text": "<b>Forced</b> — Sau khi bạn bị di chuyển tới một địa điểm bởi hiệu ứng của lá bài encounter: Chịu 1 horror.",
+      "flavor": "Khắp chiều không gian biến dạng này, dù bạn đi tới đâu cũng thấy một bóng hình ám ảnh nơi xa xăm. Ban đầu nó tựa như một vầng trăng đen với vô vàn xúc tu ngoe nguẩy. Nhưng thời gian trôi qua, nó ngày một phình to...",
+      "back_name": "Chìa Khóa và Cánh Cổng (v. II)",
+      "back_text": "<b>Revelation</b> — Di chuyển Yog-Sothoth tới The Edge of the Universe (hoặc Another Dimension nếu The Edge of the Universe chưa có trong màn chơi). Loại bỏ Realms Beyond khỏi trò chơi và advance sang agenda 4a."
+    }
+  },
+  {
+    "code": "51055",
+    "type": "act",
+    "pack": "rtdwl",
+    "scenario": "Return to Lost in Time and Space",
+    "source_file": "acts_agendas_dunwich.py",
+    "audit_flags": [
+      "text: dup [('02317', 'text'), ('51055', 'text')]",
+      "back_flavor: len ratio 0.33"
+    ],
+    "en": {
+      "name": "Into the Beyond (v. II)",
+      "text": "[action]: Discard the top 3 cards of the encounter deck. Choose a location discarded by this effect and resolve its 'revelation' ability.\n<b>Objective</b> - If an investigator enters The Edge of the Universe, advance.",
+      "flavor": "You continue to follow the wisp of light, though the treacherous landscape makes it a difficult quarry to chase.",
+      "back_name": "The Vessel Awaits",
+      "back_text": "Spawn the set-aside Seth Bishop <i>(Thrall of Yog-Sothoth)</i> enemy at The Edge of the Universe.",
+      "back_flavor": "You reach an impossibly dense pitch-black void, and realize that this place is where all of reality - all that is and all that ever will be - ends. In its center, you see a minuscule rift, suspended just out of reach. Somehow, you've reached the other side of the gateway above Sentinel Hill.\nJust then, a voice from the darkness beyond calls to you. \"Git out.\" The wisp of light you've been following flits into the darkness. Moments later, the warped, twisted face of Seth Bishop emerges. His skin crawls with an unnatural mutation. His eyes are wide, filled with a wicked malice. \"Git out! I am his vessel now! I'ave the knowledge of the elders! Now, leave… or die!\" He cackles madly as his enthralled, misshapen body limps forward\nYou must find a way to close the rift for good, but first you must deal with Seth - that is, with the creature he has become."
+    },
+    "vi_current": {
+      "name": "Tiến Vào Cõi Vô Tận (v. II)",
+      "text": "[action]: Bỏ 3 lá bài trên cùng của chồng bài encounter. Chọn một địa điểm bị bỏ bởi hiệu ứng này và kích hoạt khả năng 'revelation' của nó.\n<b>Objective</b> — Nếu một điều tra viên bước vào The Edge of the Universe, advance.",
+      "flavor": "Bạn tiếp tục lần theo đốm sáng ma quái dẫn đường qua các tầng không gian hiểm trở.",
+      "back_name": "Vật Chứa Đang Chờ Đón",
+      "back_text": "Spawn kẻ địch Seth Bishop <i>(Thrall of Yog-Sothoth)</i> đang để riêng tại The Edge of the Universe.",
+      "back_flavor": "Bạn chạm tới rìa vũ trụ, nơi vết rách dẫn về Đồi Sentinel treo lơ lửng. Bất ngờ, một giọng nói từ bóng tối vang lên: \"Cút đi!\" Gương mặt biến dạng tột cùng của Seth Bishop lộ ra, da thịt gã bò lúc nhúc những đột biến kinh tởm: \"Ta là vật chứa của Ngài! Rời khỏi đây... hoặc chết!\""
+    }
+  }
+]

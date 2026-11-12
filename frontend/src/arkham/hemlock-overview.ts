@@ -104,6 +104,7 @@ const boards = new Map([
   ['05238', 'the-circle-undone/union-and-disillusion'],
   ['05284', 'the-circle-undone/in-the-clutches-of-chaos'],
   ['05325', 'the-circle-undone/before-the-black-throne'],
+  ['54056', 'the-circle-undone/before-the-black-throne'],
 
   // The Innsmouth Conspiracy
   ['07041', 'the-innsmouth-conspiracy/the-pit-of-despair'],
@@ -379,21 +380,21 @@ const villageAnchors: Record<string, Point> = {
   '07073': [80, 28], // The House on Water Street
 
   // The Innsmouth Conspiracy — Scenario 3: In Too Deep
-  '07129': [15, 24], // Esoteric Order of Dagon
-  '07130': [22, 50], // Sawbone Alley
-  '07131': [45, 78], // Shoreward Slums
-  '07132': [70, 32], // The House on Water Street
-  '07133': [15, 85], // Innsmouth Jail
-  '07134': [32, 16], // New Church Green
-  '07135': [25, 36], // The Little Bookshop
-  '07136': [54, 50], // Fish Street Bridge
-  '07137': [34, 38], // First National Grocery
-  '07138': [82, 40], // Innsmouth Harbour
-  '07139': [44, 45], // Innsmouth Square
-  '07140': [12, 65], // Gilman House
-  '07141': [44, 14], // Marsh Refinery
-  '07142': [10, 32], // Railroad Station
-  '07143': [82, 75], // Desolate Coastline
+  '07129': [23, 22], // Esoteric Order of Dagon
+  '07130': [35, 66], // Sawbone Alley
+  '07131': [53, 83], // Shoreward Slums
+  '07132': [74, 27], // The House on Water Street
+  '07133': [26, 86], // Innsmouth Jail
+  '07134': [36, 20], // New Church Green
+  '07135': [18, 43], // The Little Bookshop
+  '07136': [60, 53], // Fish Street Bridge
+  '07137': [33, 40], // First National Grocery
+  '07138': [83, 46], // Innsmouth Harbour
+  '07139': [42, 51], // Innsmouth Square
+  '07140': [14, 71], // Gilman House
+  '07141': [51, 15], // Marsh Refinery
+  '07142': [8, 41], // Railroad Station
+  '07143': [84, 78], // Desolate Coastline
 
   // The Innsmouth Conspiracy — Scenario 4: Devil Reef
   '07168': [50, 52], // Churning Waters / Fishing Vessel

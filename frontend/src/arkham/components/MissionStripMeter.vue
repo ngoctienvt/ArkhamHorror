@@ -53,8 +53,7 @@ const pips = computed(() => {
 
 <style scoped>
 .meter { display: inline-flex; align-items: center; gap: 5px; min-width: 0; }
-.meter__icon { width: 14px; height: 14px; flex: none; }
-.bar { position: relative; display: block; width: 64px; height: 6px; border-radius: 3px; overflow: hidden; background: #ffffff18; box-shadow: inset 0 0 0 1px #ffffff14; }
+.meter__icon { width: 14px; height: 14px; flex: none; }.bar { position: relative; display: block; width: 64px; height: 6px; border-radius: 3px; overflow: hidden; background: #ffffff18; box-shadow: inset 0 0 0 1px #ffffff14; }
 .bar b { position: absolute; inset: 0 auto 0 0; transition: width 0.4s ease-out; }
 .meter--doom .bar__solid { background: var(--doom, #e0523f); box-shadow: 0 0 4px #ff5a4a88; }
 .meter--doom .bar__elsewhere { background: repeating-linear-gradient(45deg, #ff7a64aa 0 3px, #5a1a14aa 3px 6px); }
@@ -65,7 +64,9 @@ const pips = computed(() => {
 /* Doom from elsewhere: a ghost of the token in a dashed ring, so it reads as counted but not on the agenda. */
 .pip--elsewhere { box-shadow: inset 0 0 0 1px #ff8a7466; outline: 1px dashed #ff8a7488; outline-offset: -1px; }
 .pip--elsewhere .pip__token { opacity: 0.38; filter: grayscale(0.6); transform: scale(0.78); }
-.pip--empty { box-shadow: inset 0 0 0 1px #ffffff26; background: #00000033; }
+.pip--empty { background: #00000033; }
+/* Every doom slot on the track gets its own red ring, filled or not. */
+.pip:not(.pip--elsewhere) { box-shadow: inset 0 0 0 1px var(--doom, #e0523f); }
 .num { font-weight: 700; font-size: 0.8rem; font-variant-numeric: tabular-nums; color: var(--heading, #fff4df); }
 .num small { font-size: 0.68rem; font-weight: 500; color: var(--text-muted, #9aa597); }
 .num--bump { animation: bump 0.9s cubic-bezier(.2,1.6,.4,1) both; }

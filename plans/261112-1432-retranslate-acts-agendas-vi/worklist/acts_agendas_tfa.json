@@ -1,0 +1,2489 @@
+[
+  {
+    "code": "04044",
+    "type": "agenda",
+    "pack": "tfa",
+    "scenario": "The Untamed Wilds",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('04044', 'text'), ('04045', 'text'), ('04207', 'text'), ('04208', 'text'), ('04345', 'text'), ('83019', 'text')]"
+    ],
+    "en": {
+      "name": "Expedition into the Wild",
+      "text": "[action]: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.",
+      "flavor": "Your expedition has ventured far into the rainforests of southern Mexico in search of a forgotten Aztec city-state. What will you find when you head deeper into the untamed jungle?",
+      "back_name": "The Serpents Attack!",
+      "back_text": "Shuffle the encounter discard pile and the set-aside Agents of Yig encounter set into the encounter deck.\nEach investigator tests [willpower] (3). Each investigator who fails performs the following, in order:\n- If you are poisoned, take 1 damage and 1 horror.\n- If you are not poisoned, put a set-aside Poisoned weakness into play in your threat area.",
+      "back_flavor": "After hours of exploration and futile attempts to map out the wilds, you're convinced something is watching your progress, stalking your every move. The shapes of large serpentine creatures slither in the brush all around you. You try to back away, but the creatures have you completely surrounded, hissing at you from all sides. Suddenly, several shapes emerge from the brush: human-sized creatures with the bodies of serpents and arms wielding spears and jagged knives. The creatures are savage, attacking you fiercely. Somehow, you manage to flee to safety, though the sensation that you are being watched remains. Although you survive the encounter, you are confronted with a stark reality: this place is home to creatures beyond your understanding."
+    },
+    "vi_current": {
+      "name": "Chuyến Thám Hiểm Vào Miền Hoang Dã",
+      "text": "[action]: <b>Explore.</b> Rút lá bài trên cùng của chồng bài khám phá. Nếu đó là địa điểm đang kết nối, hãy đặt nó vào màn chơi và di chuyển đến đó.",
+      "flavor": "Đoàn thám hiểm của bạn đã tiến sâu vào những cánh rừng mưa miền nam Mexico để tìm kiếm một thành bang Aztec bị lãng quên. Điều gì đang chờ bạn khi bạn tiến sâu hơn vào khu rừng hoang dã này?",
+      "back_name": "Bầy Rắn Tấn Công!",
+      "back_text": "Xáo trộn chồng bài encounter bỏ và bộ encounter Agents of Yig đang để riêng vào chồng bài encounter.\nMỗi điều tra viên kiểm tra [willpower] (3). Mỗi điều tra viên thất bại thực hiện lần lượt như sau:\n- Nếu bạn đang bị nhiễm độc (poisoned), nhận 1 damage và 1 horror.\n- Nếu bạn không bị nhiễm độc, đưa một lá điểm yếu Poisoned đang để riêng vào threat area của bạn.",
+      "back_flavor": "Sau nhiều giờ thám hiểm và những nỗ lực vô ích nhằm vẽ bản đồ vùng hoang dã, bạn tin chắc có thứ gì đó đang theo dõi từng bước đi của mình, rình rập mọi cử động. Bóng dáng những sinh vật to lớn hình rắn trườn qua bụi rậm quanh bạn. Bạn cố lùi lại, nhưng chúng đã bao vây kín, rít lên từ mọi phía. Đột nhiên, vài hình thù trồi lên từ bụi cây: những sinh vật to cỡ người, thân rắn, tay cầm giáo và dao lởm chởm. Chúng hung tợn, tấn công bạn dữ dội. Bằng cách nào đó, bạn chạy thoát được đến nơi an toàn, dù cảm giác bị theo dõi vẫn còn đó. Dù sống sót qua cuộc chạm trán, bạn phải đối mặt với một sự thật trần trụi: nơi này là nhà của những sinh vật vượt ngoài sự hiểu biết của bạn."
+    }
+  },
+  {
+    "code": "04045",
+    "type": "agenda",
+    "pack": "tfa",
+    "scenario": "The Untamed Wilds",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('04044', 'text'), ('04045', 'text'), ('04207', 'text'), ('04208', 'text'), ('04345', 'text'), ('83019', 'text')]"
+    ],
+    "en": {
+      "name": "Intruders",
+      "text": "[action]: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.",
+      "flavor": "What was once excitement has turned to dread. This place is far deadlier than you could have imagined. It is as though the jungle itself wants you out.",
+      "back_name": "Endless Meandering",
+      "back_text": "Each investigator is defeated. Each investigator who is not poisoned adds a set-aside Poisoned weakness to his or her deck.",
+      "back_flavor": "You find yourself in an endless loop, traversing the same path through the jungle over and over again. No matter which direction you walk, the result is the same. It has been hours, perhaps even days. Meanwhile, you can hear the serpent creatures hissing in the trees, mocking you from afar. Out of food and exhausted from lack of sleep, you collapse against a half-rotted tree. Your vision becomes hazy."
+    },
+    "vi_current": {
+      "name": "Những Kẻ Xâm Nhập",
+      "text": "[action]: <b>Explore.</b> Rút lá bài trên cùng của chồng bài khám phá. Nếu đó là địa điểm đang kết nối, hãy đặt nó vào màn chơi và di chuyển đến đó.",
+      "flavor": "Sự háo hức ban đầu đã biến thành nỗi khiếp sợ. Nơi này chết chóc hơn bạn từng tưởng tượng rất nhiều. Cứ như thể chính khu rừng muốn đuổi bạn đi.",
+      "back_name": "Lạc Lối Vô Tận",
+      "back_text": "Mỗi điều tra viên bị đánh bại. Mỗi điều tra viên không bị nhiễm độc (poisoned) thêm một lá điểm yếu Poisoned đang để riêng vào bộ bài của mình.",
+      "back_flavor": "Bạn thấy mình bị mắc kẹt trong một vòng lặp bất tận, đi đi lại lại trên cùng một con đường trong rừng. Dù đi theo hướng nào, kết quả vẫn như nhau. Đã nhiều giờ trôi qua, có lẽ là nhiều ngày. Trong khi đó, bạn nghe thấy lũ sinh vật rắn rít lên trên những tán cây, chế giễu bạn từ xa. Cạn kiệt lương thực và kiệt sức vì thiếu ngủ, bạn gục xuống bên một thân cây mục nát. Mắt bạn mờ dần."
+    }
+  },
+  {
+    "code": "04046",
+    "type": "act",
+    "pack": "tfa",
+    "scenario": "The Untamed Wilds",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [],
+    "en": {
+      "name": "Exploring the Rainforest",
+      "text": "<b>Objective</b> - When the round ends, investigators at any non-[[Campsite]] locations may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "Today, you depart from your camp in order to find the ruins Alejandro seeks. That is, if they even exist…",
+      "back_name": "The Natives",
+      "back_text": "Put the set-aside Ichtaca enemy into play at the lead investigator's location.\nShuffle the encounter discard pile into the encounter deck.",
+      "back_flavor": "As you explore the dense jungle, you are suddenly confronted by several natives. At first glance, they appear to be warriors of an Aztec city-state: perhaps even the one you seek. But how could they have survived undiscovered for this long?\nEven with Alejandro's notes, you are barely able to translate what the warriors say, only that they call you \"intruder\" and implore you to leave the jungle at once. You try to explain that you are searching for the \"Eztli,\" which causes them to murmur and debate among themselves. Finally, one of them speaks to you in rudimentary Spanish. \"Ichtaca will know what to do with you, intruder.\" He blows on a decorated clay ocarina, producing a shrill note that echoes throughout the jungle. The warriors depart as suddenly as they arrived."
+    },
+    "vi_current": {
+      "name": "Khám Phá Rừng Nhiệt Đới",
+      "text": "<b>Objective</b> — Khi vòng chơi kết thúc, các điều tra viên ở bất kỳ địa điểm nào không phải [[Campsite]] có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
+      "flavor": "Hôm nay, bạn rời khu trại để tìm kiếm những tàn tích mà Alejandro hằng săn lùng. Đó là nếu chúng thực sự tồn tại…",
+      "back_name": "Người Bản Địa",
+      "back_text": "Đặt kẻ địch Ichtaca đang để riêng vào màn chơi tại địa điểm của điều tra viên chính.\nXáo trộn chồng bài encounter bỏ vào chồng bài encounter.",
+      "back_flavor": "Khi đang len lỏi qua khu rừng rậm rạp, bạn bất ngờ chạm trán với một nhóm người bản địa. Thoạt nhìn, họ giống như những chiến binh của một thành bang Aztec: thậm chí có thể chính là nơi bạn đang tìm kiếm. Nhưng làm sao họ có thể sinh tồn mà không bị phát hiện suốt ngần ấy thời gian?\nNgay cả khi có trong tay những ghi chép của Alejandro, bạn cũng chỉ vừa đủ hiểu những gì các chiến binh nói, họ gọi bạn là \"kẻ xâm nhập\" và yêu cầu bạn phải rời khỏi khu rừng ngay lập tức. Bạn cố gắng giải thích rằng mình đang tìm kiếm \"Eztli\", khiến họ bắt đầu xì xào và tranh luận với nhau. Cuối cùng, một người cất lời bằng tiếng Tây Ban Nha bập bõm: \"Ichtaca sẽ biết phải làm gì với ngươi, kẻ xâm nhập.\" Hắn thổi vào chiếc tù và ocarina bằng đất sét, phát ra âm thanh the thé vang vọng khắp khu rừng. Những chiến binh thoắt biến mất nhanh như khi họ xuất hiện."
+    }
+  },
+  {
+    "code": "04047",
+    "type": "act",
+    "pack": "tfa",
+    "scenario": "The Untamed Wilds",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=['1', '1', '3', '3']",
+      "text: icons en=['[per_investigator]'] vi=['[action]', '[agility]', '[intellect]', '[per_investigator]']",
+      "text: len ratio 2.10",
+      "flavor: len ratio 0.27",
+      "back_text: nums en=['1', '1', '1', '3', '3', '3', '3'] vi=['3', '3']",
+      "back_text: icons en=['[cultist]', '[per_investigator]', '[tablet]'] vi=[]",
+      "back_text: len ratio 0.16",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Huntress of the Eztli",
+      "text": "<b>Objective</b> - If Ichtaca is defeated, advance.\n<b>Objective</b> - If there are 1 [per_investigator] clues on Ichtaca, place her in the victory display and advance.",
+      "flavor": "\"I don't trust them,\" Alejandro says as soon as the natives are out of earshot. \"They mean to kill us, not aid us. If you think this 'Ichtaca' is going to help us find the ruins, be my guest. But I refuse to follow where she leads.\" You can feel the discomfort and confusion in Alejandro's voice. You can attempt to speak with Ichtaca, or you can take Alejandro's advice and fight your way to the ruins you seek.",
+      "back_name": "Ichtaca's Response",
+      "back_text": "<b>If Ichtaca has 1 [per_investigator] clues on her:</b>\n<blockquote><i>\"Interesting. You are not simply here to shed blood,\" Ichtaca says with a spark of wonder in her voice, and you are stunned to hear her speaking in perfect English.</i></blockquote>\nRemember that \"Ichtaca is leading the way.\" Add 1 [cultist] token to the chaos bag for the remainder of the campaign.\nShuffle the 3 set-aside [[Ruins]] locations into the exploration deck and advance to Act 3 - \"Search for the Ruins.\"\n<b><hr>If you defeated Ichtaca:</b>\n<blockquote><i>\"Fools!\" Ichtaca shouts to you with a pained voice. \"You do not understand the forces you are meddling with. If you truly wish to die, you will find the temple over the river to the south.\"</i></blockquote>\nRemember that \"you fought with Ichtaca.\" Choose an investigator to take control of the set-aside Alejandro Vela asset. Add 1 [tablet] token to the chaos bag for the remainder of the campaign.\nShuffle the 3 set-aside [[Ruins]] locations into the exploration deck and advance to Act 3a - \"The Guarded Ruins.\""
+    },
+    "vi_current": {
+      "name": "Nữ Thợ Săn Của Eztli",
+      "text": "Trong khi Ichtaca không bị kiểm soát, bà ấy nhận thêm: \"[action]: <b>Parley</b>. Kiểm tra [intellect] (3) hoặc [agility] (3) để thuyết phục Ichtaca rằng bạn không phải là mối đe dọa. Nếu thành công, đặt 1 manh mối từ kho token lên Ichtaca. Nếu có 1 [per_investigator] manh mối trên Ichtaca, advance.\"\n<b>Objective</b> — Nếu Ichtaca bị đánh bại, advance.",
+      "flavor": "Ichtaca tiến tới, giương cung nhắm thẳng vào tim bạn. Bạn phải thương lượng với bà ấy hoặc chuẩn bị chiến đấu!",
+      "back_name": "Thỏa Thuận Với Thợ Săn",
+      "back_text": "Nếu Ichtaca bị đánh bại: <b>Advance sang Act 3a — \"The Guarded Ruins\".</b>\nNếu bạn thương lượng thành công qua Parley: <b>Advance sang Act 3a — \"Search for the Ruins\".</b>",
+      "back_flavor": "Ánh mắt của Ichtaca dịu lại khi nhận ra bạn không mang ác ý, hoặc bà ta gục ngã trước những đòn tấn công tự vệ kiên quyết của bạn."
+    }
+  },
+  {
+    "code": "04048",
+    "type": "act",
+    "pack": "tfa",
+    "scenario": "The Untamed Wilds",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: icons en=[] vi=['[action]']",
+      "text: dup [('04048', 'text'), ('04049', 'text')]",
+      "flavor: len ratio 0.37",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Search for the Ruins",
+      "text": "Each Eztli Guardian enemy cannot attack or be attacked. Ignore the effects of each Arrows from the Trees treachery.\n<b>Objective</b> - Only investigators at the Ruins of Eztli can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "\"If I cannot dissuade you, so be it. Follow me, and I will lead you to the place you seek. But heed my warning: Disturb the ruins at your own risk. They have remained hidden for a reason.\" Alejandro warily keeps a safe distance from Ichtaca as she shows you the way.",
+      "back_name": "Discovery of a Lifetime",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "What you have found is beyond your wildest expectations. Despite their supposed age, the ruins appear preserved in time. Several aspects of the architecture are strangely futuristic. You set out to investigate at once."
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Tàn Tích",
+      "text": "<b>Objective</b> — Chỉ các điều tra viên tại Ruins of Eztli mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.\n[action]: <b>Resign.</b> Bạn rút lui an toàn về khu trại.",
+      "flavor": "Với sự hướng dẫn của Ichtaca, con đường dẫn tới tàn tích Eztli huyền thoại đã hé lộ giữa rừng già.",
+      "back_name": "Tàn Tích Cổ Đại",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Một kim tự tháp bậc thang bằng đá khổng lồ phủ đầy rêu phong sừng sững hiện ra trước mắt bạn. Lối vào ngôi đền đen ngòm như miệng một con quái thú đang chờ nuốt chửng những kẻ tò mò."
+    }
+  },
+  {
+    "code": "04049",
+    "type": "act",
+    "pack": "tfa",
+    "scenario": "The Untamed Wilds",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['1', '1'] vi=[]",
+      "text: icons en=[] vi=['[action]']",
+      "text: dup [('04048', 'text'), ('04049', 'text')]",
+      "back_text: nums en=['2'] vi=['1']"
+    ],
+    "en": {
+      "name": "The Guarded Ruins",
+      "text": "Each Eztli Guardian enemy gets +1 fight and +1 evade. Each Arrows from the Trees treachery gains surge.\n<b>Objective</b> - Only investigators at the Ruins of Eztli can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "Ichtaca swiftly retreats, and Alejandro places a hand on your shoulder. \"Thank you for taking my advice,\" he says, relieved. \"Now that she's gone, I'll take point from now on. I know the river she speaks of. Come, follow me!\"",
+      "back_name": "Discovery of a Lifetime",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "What you have found is beyond your wildest expectations. Despite their supposed age, the ruins appear preserved in time. Several aspects of the architecture are strangely futuristic. You set out to investigate at once."
+    },
+    "vi_current": {
+      "name": "Tàn Tích Được Canh Giữ",
+      "text": "<b>Objective</b> — Chỉ các điều tra viên tại Ruins of Eztli mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.\n[action]: <b>Resign.</b> Bạn rút lui an toàn về khu trại.",
+      "flavor": "Không có Ichtaca dẫn đường, bạn phải tự mình dò dẫm lần theo những dấu vết cổ xưa để tìm tới tàn tích trong khi chiến đấu với lũ thú hoang.",
+      "back_name": "Tàn Tích Cổ Đại",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn tìm thấy tàn tích của nền văn minh Eztli sau nhiều giờ lạc lối giữa rừng mưa. Cánh cổng đá nặng nề đang khép kín đón chờ bước chân người khám phá."
+    }
+  },
+  {
+    "code": "04055",
+    "type": "agenda",
+    "pack": "tfa",
+    "scenario": "The Doom of Eztli",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "back_text: nums en=[] vi=['1']",
+      "back_flavor: len ratio 0.19"
+    ],
+    "en": {
+      "name": "Something Stirs…",
+      "text": "*This agenda gets +1 [per_investigator] doom threshold.\n<b>Forced</b> - When this agenda advances: Do not remove doom from each location in play.",
+      "flavor": "Despite Ichtaca's warnings, you've entered the ruins of the temple in search of ancient knowledge and artifacts.",
+      "back_name": "The Ruins Awaken",
+      "back_text": "Spawn the set-aside Harbinger of Valusia at the location with the most doom.",
+      "back_flavor": "Just then, a sound thrums in the walls of the temple, a dull humming similar to that of a generator. Grooves in the walls and the ceiling flicker and start to glow. It is as though the temple is alive, and it senses your presence. The strange statues and carvings you've seen, coupled with the dim glow and the power coursing through the walls, makes it clear that this temple isn't Aztec in origin. In fact, it appears to be from an even older, more ancient civilization altogether. You feel as though you are an intruder in a world you cannot begin to understand. Confirming your worst fears, a loud hiss and rattling echoes throughout the temple. Whatever you just woke up, it's not happy to see you."
+    },
+    "vi_current": {
+      "name": "Có Thứ Gì Đó Đang Thức Tỉnh…",
+      "text": "*agenda này đạt ngưỡng +1 [per_investigator] doom.\n<b>Forced</b> - Khi agenda này advances: Không xóa doom khỏi mỗi địa điểm trong màn chơi.",
+      "flavor": "Bên trong ngôi đền Eztli, không khí lạnh lẽo và đặc quánh mùi cổ xưa. Những tiếng trườn bò xào xạc vang lên từ các khe nứt trên tường đá.",
+      "back_name": "Kẻ Gác Đền Thức Giấc",
+      "back_text": "Spawn kẻ địch Harbinger of Valusia đang để riêng tại Entry Hall. Đặt 1 doom lên nó.\nTiến hành kích hoạt báo động trong ngôi đền.",
+      "back_flavor": "Một tiếng gầm rít chói tai vang lên từ sâu thẳm ngôi đền! Một thực thể rắn khổng lồ mang giáp trụ cổ xưa trồi lên từ lòng đất tế lễ."
+    }
+  },
+  {
+    "code": "04056",
+    "type": "agenda",
+    "pack": "tfa",
+    "scenario": "The Doom of Eztli",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.40",
+      "back_text: nums en=[] vi=['2']",
+      "back_flavor: len ratio 0.33"
+    ],
+    "en": {
+      "name": "The Temple Warden",
+      "text": "*This agenda gets +1 [per_investigator] doom threshold.",
+      "flavor": "The serpent creature emerges from the shadows with terrifying speed. It is bedecked in ornate gold feathers, and it wields a golden spear, the blade tip unravaged by time. The rattle at the end of the creature's tail produces a tremendous noise as the creature hunts you throughout the ruins.",
+      "back_name": "Catastrophic Ruin",
+      "back_text": "Each investigator who has not resigned is defeated.",
+      "back_flavor": "The ruins groan and shake with anger. You are not wanted here. The walls and ceiling shift erratically, blocking off corridors and attempting to prevent your escape. Grooves in the stone are now glowing a vibrant red hue. A sinister hiss follows you throughout the temple. The realization dawns on you that you are not making it out of this place alive…"
+    },
+    "vi_current": {
+      "name": "Kẻ Canh Giữ Ngôi Đền",
+      "text": "*agenda này đạt ngưỡng +1 [per_investigator] doom.",
+      "flavor": "Harbinger of Valusia săn lùng từng kẻ xâm phạm. Ngôi đền bắt đầu rung chuyển và các bẫy chết người tự động kích hoạt.",
+      "back_name": "Hầm Ngục Sụp Đổ",
+      "back_text": "Mỗi điều tra viên chưa resign bị chôn vùi dưới đống đổ nát. <b>(→R2)</b>",
+      "back_flavor": "Trần đá của ngôi đền sụp đổ. Bạn bị nghiền nát dưới hàng tấn gạch đá cổ xưa khi cơn thịnh nộ của Eztli giáng xuống."
+    }
+  },
+  {
+    "code": "04057",
+    "type": "act",
+    "pack": "tfa",
+    "scenario": "The Doom of Eztli",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: icons en=['[action]'] vi=[]",
+      "flavor: len ratio 0.35",
+      "back_text: nums en=['1'] vi=[]",
+      "back_text: len ratio 0.15",
+      "back_flavor: len ratio 0.38"
+    ],
+    "en": {
+      "name": "Into the Ruins",
+      "text": "[action]: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.",
+      "flavor": "After your hellish journey through the jungle, the quiet solitude of the temple ruins sows paranoia in your mind. Serpent eyes glare at you from the darkness. Every drop of water and fallen pebble causes you to whirl about in search of danger… But the real danger is yet to come.",
+      "back_name": "Hidden Corridors",
+      "back_text": "Shuffle the set-aside Chamber of Time location into the exploration deck.\n<blockquote><i>As you pass the strange glyphs in the walls, the ruins groan and creak in protest, and the carvings glow ominously. Years of deterioration have faded the pattern of these glyphs, and the surrounding stones seep with a venomous pus. If only you had some way to restore these glyphs…</i></blockquote>\nCheck your supplies. If any investigator has chalk, remove this act from the game. Otherwise, place this act in the victory display. It gains <b>Vengeance 1</b>.",
+      "back_flavor": "The ruins are far more vast than even Alejandro had anticipated. Carvings in the walls and hieroglyphs etched into stone altars suggest the existence of a central chamber underground. Perhaps a hidden passageway will show you the way to this chamber - the very heart of the temple ruins."
+    },
+    "vi_current": {
+      "name": "Tiến Vào Tàn Tích",
+      "text": "<b>Objective</b> — Khám phá các căn phòng của ngôi đền và tìm kiếm phòng tế lễ trung tâm.",
+      "flavor": "Những bức phù điêu khắc hình người rắn và các vị thần cổ xưa dõi theo bạn trong ánh đuốc bập bùng.",
+      "back_name": "Căn Phòng Cổ Vật",
+      "back_text": "Đặt địa điểm Chamber of Time đang để riêng vào màn chơi. Tiết lộ Chamber of Time.",
+      "back_flavor": "Bạn bước vào căn phòng trung tâm, nơi đặt một cổ vật hình khối phát ra ánh sáng xanh lục ma mị: Relic of Ages."
+    }
+  },
+  {
+    "code": "04058",
+    "type": "act",
+    "pack": "tfa",
+    "scenario": "The Doom of Eztli",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: icons en=['[action]'] vi=[]",
+      "text: len ratio 0.50",
+      "back_text: nums en=[] vi=['3']",
+      "back_text: len ratio 0.21"
+    ],
+    "en": {
+      "name": "Magic and Science",
+      "text": "[action]: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.\n<b>Objective</b> - Only investigators in the Chamber of Time may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "Whatever is inside this central chamber must be very important; much care was taken to obscure its location.",
+      "back_name": "The Relic",
+      "back_text": "Choose an investigator in the Chamber of Time to take control of the Relic of Ages.\nMove the placement of each location to form a straight line, with the Chamber of Time on the left and the Entryway on the right. Each other location is placed from left to right in between these two locations, in order of how much doom is on them, from lowest to highest <i>(in the event of a tie, you may decide the order)</i>.\nUntil the end of the scenario, ignore all location connections. Instead, each location is connected to each location to its left and right.",
+      "back_flavor": "The relic hums with power and throbs in your hands. Energy from the device seeps into the corridors of the ruins, and the structure of the temple shifts."
+    },
+    "vi_current": {
+      "name": "Ma Thuật và Khoa Học",
+      "text": "<b>Objective</b> — Chỉ các điều tra viên tại Chamber of Time mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
+      "flavor": "Alejandro say mê nghiên cứu cổ vật trong khi bạn cảnh giới trước những hiểm họa vô hình đang rình rập.",
+      "back_name": "Cổ Vật Của Thời Đại",
+      "back_text": "Lấy Relic of Ages đang để riêng và trao nó cho điều tra viên chính. Kích hoạt báo động đền thờ! Advance sang Act 3.",
+      "back_flavor": "Ngay khi bạn nhấc Relic of Ages khỏi bệ đá, một tiếng còi báo động rền vang khắp các hầm ngục và toàn bộ ngôi đền bắt đầu sụp đổ!"
+    }
+  },
+  {
+    "code": "04059",
+    "type": "act",
+    "pack": "tfa",
+    "scenario": "The Doom of Eztli",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['1', '3'] vi=[]",
+      "text: icons en=[] vi=['[action]']",
+      "flavor: len ratio 0.59",
+      "back_text: nums en=['1', '3'] vi=['1']",
+      "back_text: len ratio 0.02"
+    ],
+    "en": {
+      "name": "Escape the Ruins",
+      "text": "While there are 3 or more vengeance points in the victory display, each [[Serpent]] enemy gets +1 evade.\n<b>Objective</b> - If each undefeated investigator has resigned, advance.",
+      "flavor": "The ruins are shuddering with a tremendous power. You fear that the structure may collapse if this keeps up. You have to escape with the relic!",
+      "back_name": "Avoiding Doom",
+      "back_text": "<b>If an investigator resigned with the Relic of Ages under his or her control:</b>\n<blockquote><i>The floor of the temple stops shaking, and the dull humming in the walls goes quiet. Without the relic in its chamber, the ruins appear to be sleeping once more. You still have no idea what the object is or what its purpose may be, but you dare not tarry any longer to find out.</i></blockquote>\n<b>(→R1)</b>\n<hr><b>Otherwise:</b>\n<blockquote><i>For a moment, the temple continues to shudder, the architecture twisting and contorting strangely. Pleased that it is once again whole, the temple then returns to its dormant state.</i></blockquote>\n<b>(→R3)</b>",
+      "back_flavor": "As soon as you cross the threshold of the entryway, something inside the temple begins to change…"
+    },
+    "vi_current": {
+      "name": "Thoát Khỏi Tàn Tích",
+      "text": "<b>Objective</b> — Nếu mỗi điều tra viên chưa bị đánh bại đã resign tại Entry Hall, advance.\n[action]: <b>Resign.</b> Bạn lao ra khỏi cửa vào của ngôi đền.",
+      "flavor": "Chạy mau! Cả ngôi đền đang đổ sập và Harbinger of Valusia đang đuổi sát nút sau lưng!",
+      "back_name": "Trở Lại Ánh Sáng",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn lao ra khỏi cửa đền ngay trước khi hàng ngàn tấn đá tảng đổ sập bịt kín lối vào. Bạn đã sống sót cùng cổ vật Relic of Ages trong tay!"
+    }
+  },
+  {
+    "code": "04114",
+    "type": "agenda",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('04114', 'text'), ('04115', 'text'), ('04116', 'text')]",
+      "back_text: nums en=['1', '2', '2'] vi=['1', '1']",
+      "back_text: len ratio 0.52",
+      "back_flavor: len ratio 0.27"
+    ],
+    "en": {
+      "name": "Three Fates",
+      "text": "[action]: <b>Resign.</b> You don't want to risk taking too long, so you head to safety with the information you've gathered.",
+      "flavor": "You have three tasks before you and a limited amount of time before the trail goes cold. Where do you search first?",
+      "back_name": "At The Sun's Peak",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\nIf there are only 2 act decks in play, place 1 doom on agenda 2a as it is revealed.",
+      "back_flavor": "The town is bustling as noon comes and goes. University students travel from class to class, businesspeople take breaks from their busy office lives, and in Easttown, Velma's Diner is abuzz with the lunch rush. Despite this veil of normality, the curtain has been lifted. You see this town for what it really is: an endless mire of secrets."
+    },
+    "vi_current": {
+      "name": "Ba Sợi Tơ Định Mệnh",
+      "text": "[action]: <b>Resign.</b> Bạn không muốn mạo hiểm mất quá nhiều thời gian, vì vậy bạn hãy đến nơi an toàn với thông tin bạn đã thu thập được.",
+      "flavor": "Trở về Arkham, những rắc rối mới ập đến từ nhiều hướng: Harlan Earnstone bị đe dọa, Alejandro biến mất bí ẩn, và Ichtaca cần sự giúp đỡ của bạn.",
+      "back_name": "Tấm Màn Hé Mở",
+      "back_text": "Mỗi điều tra viên nhận 1 horror. Spawn 1 kẻ địch [[Cultist]] tại Northside.",
+      "back_flavor": "Những bóng đen khoác áo choàng mang biểu tượng rắn bắt đầu lởn vởn khắp các góc phố Arkham."
+    }
+  },
+  {
+    "code": "04115",
+    "type": "agenda",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('04114', 'text'), ('04115', 'text'), ('04116', 'text')]",
+      "flavor: len ratio 0.35",
+      "back_text: nums en=['1', '1', '2', '2', '3', '3'] vi=['1']",
+      "back_text: len ratio 0.31",
+      "back_flavor: len ratio 0.18"
+    ],
+    "en": {
+      "name": "Behind the Curtain",
+      "text": "[action]: <b>Resign.</b> You don't want to risk taking too long, so you head to safety with the information you've gathered.",
+      "flavor": "This conspiracy runs much deeper than you had imagined. The more time you spend investigating these mysteries, the more you come to realize they are linked to one another. At the center of these secrets is an enigmatic organization, manipulating events behind the scenes...",
+      "back_name": "The Sun Sets",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\nIf there are only 2 act decks in play, place 1 doom on agenda 3a as it is revealed.\nIf there is only 1 act deck in play, place 2 doom on agenda 3a as it is revealed.",
+      "back_flavor": "The streets begin to empty as evening approaches. When the office buildings shut their doors, the clubs open theirs, in places both public and hidden from view. In downtown Arkham, the Ward Theatre is well lit and filled to capacity. The surrounding streets, however, are eerily quiet. Only soft footsteps from nearby alleyways hint at any sign of life, and a cold wind whistles through the air. The workday might have ended, but your work is far from over. The figures walking down the street start to fill you with a sense of dread instead of comfort."
+    },
+    "vi_current": {
+      "name": "Phía Sau Tấm Màn",
+      "text": "[action]: <b>Resign.</b> Bạn không muốn mạo hiểm mất quá nhiều thời gian, vì vậy bạn hãy đến nơi an toàn với thông tin bạn đã thu thập được.",
+      "flavor": "Tổ chức Hội Huynh Đệ Rắn (Brotherhood of the Beast) đang ráo riết hành động để đoạt lại cổ vật.",
+      "back_name": "Âm Mưu Thắt Chặt",
+      "back_text": "Đặt 1 doom lên mỗi kẻ địch mang đặc điểm [[Cultist]] hoặc [[Serpent]].",
+      "back_flavor": "Thời gian đang cạn dần. Bạn phải giải quyết cả ba nhiệm vụ trước khi chúng hoàn tất kế hoạch đen tối."
+    }
+  },
+  {
+    "code": "04116",
+    "type": "agenda",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('04114', 'text'), ('04115', 'text'), ('04116', 'text')]",
+      "flavor: len ratio 0.22",
+      "back_text: nums en=['1'] vi=[]",
+      "back_flavor: len ratio 0.37"
+    ],
+    "en": {
+      "name": "Hidden Entanglements",
+      "text": "[action]: <b>Resign.</b> You don't want to risk taking too long, so you head to safety with the information you've gathered.",
+      "flavor": "Who can you trust in this city of lies? Arkham may be safe from the perils of the jungle, but you are far from safe here. Each passing stranger in the dark of night could be a kidnapper, a thief, or a killer. Each glance they send your way could be the last thing you ever see.",
+      "back_name": "Night Passes",
+      "back_text": "Each surviving investigator is defeated and suffers 1 mental trauma.",
+      "back_flavor": "Midnight arrives, but your work is not done. You wander the streets of Arkham for hours, frustrated as the trails you have pursued grow cold over time. When the sun rises, fatigue has wreaked havoc on your body and mind."
+    },
+    "vi_current": {
+      "name": "Những Mối Tơ Vướng Mắc",
+      "text": "[action]: <b>Resign.</b> Bạn không muốn mạo hiểm mất quá nhiều thời gian, vì vậy bạn hãy đến nơi an toàn với thông tin bạn đã thu thập được.",
+      "flavor": "Đêm đã tàn. Những kẻ thù ẩn mặt chuẩn bị tung đòn quyết định.",
+      "back_name": "Định Mệnh Định Đoạt",
+      "back_text": "Màn chơi kết thúc ngay lập tức. Tiến hành kiểm tra kết quả các Act chưa hoàn thành.",
+      "back_flavor": "Bình minh lên trên thành phố Arkham, nhưng bóng tối của âm mưu vẫn chưa tan biến."
+    }
+  },
+  {
+    "code": "04117a",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.31",
+      "back_name: presence en=0 vi=1",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "The Relic Is Missing!",
+      "text": "<b>Objective</b> - Only investigators in Miskatonic University can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "The Eztli relic was last seen in its display case in the Eztli exhibit at the Miskatonic Museum. Ichtaca fears that the relic could be used for terrible purposes if left in the wrong hands. You must recover it!"
+    },
+    "vi_current": {
+      "name": "Cổ Vật Biến Mất!",
+      "text": "<b>Objective</b> — Điều tra Bảo tàng Miskatonic để tìm xem ai đã đánh cắp Relic of Ages.",
+      "flavor": "Bảo tàng bị đột nhập và tủ kính trưng bày cổ vật đã bị đập vỡ vụn!",
+      "back_name": "Lần Theo Dấu Vết",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Những dấu vết chất nhầy kỳ lạ dẫn bạn tới một hội kín tà giáo tại Downtown."
+    }
+  },
+  {
+    "code": "04118a",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.42",
+      "back_name: presence en=0 vi=1",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Harlan Is in Danger!",
+      "text": "<b>Objective</b> - Only investigators in Miskatonic University can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "Harlan has custody of the relic, but he believes he is being followed. The last time you heard from him, he was in his office at the university."
+    },
+    "vi_current": {
+      "name": "Harlan Gặp Nguy Hiểm!",
+      "text": "<b>Objective</b> — Đến giải cứu Harlan Earnstone tại văn phòng của ông trước khi lũ tà giáo sát hại ông.",
+      "flavor": "Một bức điện tín khẩn thiết báo rằng Harlan đang bị bao vây!",
+      "back_name": "Giải Cứu Kịp Thời",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Bạn đến kịp lúc để đẩy lui đám côn đồ mang phù hiệu rắn và cứu Harlan thoát chết trong gang tấc."
+    }
+  },
+  {
+    "code": "04119",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 0.50",
+      "text: dup [('04119', 'text'), ('04120', 'text')]",
+      "flavor: len ratio 0.17",
+      "back_text: nums en=['1', '1', '2', '3'] vi=['3']",
+      "back_text: icons en=['[per_investigator]', '[per_investigator]'] vi=[]",
+      "back_text: len ratio 0.06",
+      "back_flavor: len ratio 0.10"
+    ],
+    "en": {
+      "name": "At the Exhibit",
+      "text": "<b>Objective</b> - Only investigators in the Eztli Exhibit can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "One of the museum security guards, a man named Drew Walker, recognizes you from your prior work with Alejandro and Dr. Horowitz. \"Look, I ain’t supposed to be letting anybody into the exhibit... But the coppers don’t know from nothing when it comes to this hokum.\" He steps aside and lets you pass. \"If anybody asks, you slipped in while I was using the john, all right? Don’t take any wooden nickels.\"",
+      "back_name": "The Relic's Location",
+      "back_text": "Put the set-aside Town Hall location into play. If it was already in play, add add 1 [per_investigator] clues to it. Attach the set-aside Relic of Ages to the Town Hall.\nIf there are 2 or fewer act decks in play, add an additional 1 [per_investigator] clues to the Town Hall.\nAdvance to Act 3a - \"Find the Relic.\"",
+      "back_flavor": "You search the exhibit where the relic was to be on display, looking for signs of where it may have been taken. Though you find no concrete evidence, on the ground near the exhibit entrance, you do notice several recent scuff marks made by men's shoes. You ask Drew who was last to see the exhibit after Alejandro left. \"Some suits. Government types,\" he replies. \"They had clearing to see the exhibit from Mr. Walsted, the curator.\" It's far from proof of the relic's location, but it's a lead - hopefully one that will point you in the right direction."
+    },
+    "vi_current": {
+      "name": "Tại Khu Trưng Bày",
+      "text": "<b>Objective</b> — Tìm kiếm manh mối về nơi cổ vật bị đưa tới.",
+      "flavor": "Bạn lục tìm các hóa đơn và tài liệu vận chuyển trong phòng giám tuyển.",
+      "back_name": "Địa Điểm Cất Giấu",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Cổ vật đã được đưa tới một nhà kho bỏ hoang gần bờ sông!"
+    }
+  },
+  {
+    "code": "04120",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 0.50",
+      "text: dup [('04119', 'text'), ('04120', 'text')]",
+      "flavor: len ratio 0.15",
+      "back_text: nums en=['1', '2', '3'] vi=['3']",
+      "back_text: len ratio 0.04",
+      "back_flavor: len ratio 0.16"
+    ],
+    "en": {
+      "name": "At the Exhibit",
+      "text": "<b>Objective</b> - Only investigators in the Eztli Exhibit can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "One of the museum security guards, a man named Drew Walker, recognizes you from your prior work with Alejandro and Dr. Horowitz. \"Look, I ain’t supposed to be letting anybody into the exhibit... But the coppers don’t know from nothing when it comes to this hokum.\" He steps aside and lets you pass. \"If anybody asks, you slipped in while I was using the john, all right? Don’t take any wooden nickels.\"",
+      "back_name": "The Brotherhood's Plot",
+      "back_text": "Search the encounter deck, discard pile, and victory display for a Brotherhood Cultist and spawn it in the location farthest from all investigators. Heal all damage from each Brotherhood Cultist in play.\nAttach the set-aside Relic of Ages to the Brotherhood Cultist farthest from all investigators.\nIf there are 2 or fewer act decks in play, add 1 doom to the Brotherhood Cultist with the attached Relic of Ages.\nAdvance to Act 3a - \"Recover the Relic.\"",
+      "back_flavor": "You search the exhibit where the relic was to be on display, looking for signs of where it may have been taken. As you search, you notice a shadow crawling along the wall. It quickly flits out of sight, and heavy footsteps echo through the halls beyond the gallery. Could it be that the culprit is still here?\nYou give chase, but the hooded figure has a lead on you and quickly escapes from the museum. At least now you have a trail to follow - and you won't stop until the relic is yours again."
+    },
+    "vi_current": {
+      "name": "Tại Khu Trưng Bày",
+      "text": "<b>Objective</b> — Tìm kiếm manh mối về nơi cổ vật bị đưa tới.",
+      "flavor": "Bạn thẩm vấn những nhân chứng có mặt tại bảo tàng đêm hôm qua.",
+      "back_name": "Địa Điểm Cất Giấu",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Một nhân chứng khai rằng đã thấy những kẻ mặt rắn mang chiếc hộp đen ra bến tàu!"
+    }
+  },
+  {
+    "code": "04121",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=[]",
+      "text: icons en=['[per_investigator]'] vi=[]",
+      "text: dup [('04121', 'text'), ('04122', 'text')]",
+      "flavor: len ratio 0.50",
+      "back_text: nums en=['1', '2', '2', '3', '3', '4'] vi=['3']",
+      "back_text: len ratio 0.06",
+      "back_flavor: len ratio 0.15"
+    ],
+    "en": {
+      "name": "Harlan's Curse",
+      "text": "<b>Objective</b> - If there are 1 [per_investigator] clues on Harlan Earnstone: You must remove them and immediately advance.",
+      "flavor": "There is no sign of Harlan in his office, but one of the assistants in the administration building informs you that he took the day off and went to his home in Easttown.",
+      "back_name": "Safekeeping",
+      "back_text": "Attach the set-aside Relic of Ages to the Curiositie Shoppe.\nIf there are 2 or fewer act decks in play, search the encounter deck for 1 Acolyte (2 Acolytes instead if there are 3 or 4 investigators in the game). Spawn each searched-for Acolyte in the Curiositie Shoppe.\nAdvance to Act 3a - \"Find the Relic.\"",
+      "back_flavor": "Harlan finally snaps out of his daze, returning to his normal self. He tells you that he was accosted by several figures in brown robes, who asked him where he'd hidden the relic. They used some kind of hypnotism to pry the knowledge from him by force. He had no choice but to tell them the truth - that he'd brought the relic to the Curiositie Shoppe and gave it to one of his associates. If you make haste, perhaps you can reach the relic before the brown-robed figures do!"
+    },
+    "vi_current": {
+      "name": "Lời Nguyền Của Harlan",
+      "text": "<b>Objective</b> — Tìm thuốc giải hoặc phá giải bùa chú đang biến đổi thân thể Harlan thành rắn.",
+      "flavor": "Da của Harlan bắt đầu tróc vảy và mắt ông ta biến thành đồng tử dọc của loài bò sát!",
+      "back_name": "Phá Giải Bùa Chú",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Bạn kịp thời niệm chú hóa giải độc tố, giúp Harlan hồi phục nhân hình."
+    }
+  },
+  {
+    "code": "04122",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=[]",
+      "text: icons en=['[per_investigator]'] vi=[]",
+      "text: dup [('04121', 'text'), ('04122', 'text')]",
+      "flavor: len ratio 0.44",
+      "back_name: presence en=0 vi=1",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Harlan's Curse",
+      "text": "<b>Objective</b> - If there are 1 [per_investigator] clues on Harlan Earnstone: You must remove them and immediately advance.",
+      "flavor": "There is no sign of Harlan in his office, but one of the assistants in the administration building informs you that he took the day off and went to his home in Easttown."
+    },
+    "vi_current": {
+      "name": "Lời Nguyền Của Harlan",
+      "text": "<b>Objective</b> — Tìm thuốc giải hoặc phá giải bùa chú đang biến đổi thân thể Harlan thành rắn.",
+      "flavor": "Harlan quằn quại trong đau đớn khi chất độc ma thuật chạy khắp huyết quản.",
+      "back_name": "Phá Giải Bùa Chú",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Nhờ kiến thức y học và thảo dược, bạn đã khống chế thành công cơn co giật của Harlan."
+    }
+  },
+  {
+    "code": "04123",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['2'] vi=[]",
+      "text: len ratio 0.47",
+      "flavor: len ratio 0.51",
+      "back_text: nums en=['1', '1'] vi=[]",
+      "back_text: len ratio 0.05",
+      "back_text: dup [('04123', 'back_text'), ('04124', 'back_text')]",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Find the Relic",
+      "text": "While Relic of Ages is attached to a location, that location gets +2 shroud.\n<b>Objective</b> - If Relic of Ages is attached to a location with no remaining clues, advance.",
+      "flavor": "You believe you have discovered the relic’s whereabouts. Now, you must scour this place from bottom to top in order to find it.",
+      "back_name": "The Relic Is Found",
+      "back_text": "<b>If the Relic of Ages is attached to the Town Hall:</b>\n<blockquote><i>After an hour of searching Arkham's Town Hall, you notice a faint blue glow emanating from underneath the door to the city planner's office. You break into the office without being noticed. The relic is lying on his desk, along with a map of the city that is covered in strange markings and iconography. Why is it here?</i></blockquote>\nThe investigator nearest to the Town Hall takes control of the Relic of Ages. Remove the remainder of the \"a/b\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>.\n<hr><b>If the Relic of Ages is attached to the Curiositie Shoppe:\n</b><blockquote><i>Sure enough, the relic is tucked away in a corner of the shop's storage room, hidden from sight.</i></blockquote>\nThe investigator nearest to the Curiositie Shoppe takes control of the Relic of Ages. Remove the remainder of the \"a/b\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>."
+    },
+    "vi_current": {
+      "name": "Tìm Cổ Vật",
+      "text": "<b>Objective</b> — Đột nhập vào sào huyệt của lũ trộm và đoạt lại Relic of Ages.",
+      "flavor": "Cổ vật đang nằm trên bệ thờ của một giáo phái ngầm dưới lòng đất.",
+      "back_name": "Cổ Vật Trở Về",
+      "back_text": "Lấy lại Relic of Ages vào bộ sưu tập của đội điều tra.",
+      "back_flavor": "Bạn đánh bại tên thủ lĩnh giáo phái và đoạt lại khối cổ vật thời gian nguyên vẹn."
+    }
+  },
+  {
+    "code": "04124",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['2'] vi=[]",
+      "text: icons en=['[per_investigator]'] vi=[]",
+      "text: len ratio 0.45",
+      "back_text: nums en=['1', '1'] vi=[]",
+      "back_text: len ratio 0.05",
+      "back_text: dup [('04123', 'back_text'), ('04124', 'back_text')]",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Recover the Relic",
+      "text": "While Relic of Ages is attached to an enemy, that enemy gets +2 [per_investigator] health.\n<b>Objective</b> - If the enemy the Relic of Ages is attached to leaves play, advance.",
+      "flavor": "You’ve discovered who is carrying the relic. Now, you must secure it from them, whatever the cost!",
+      "back_name": "The Relic is Recovered",
+      "back_text": "<b>If the Relic of Ages was attached to a Brotherhood Cultist:</b>\n<blockquote><i>As the robed figure collapses, the relic falls out of his cloak, clattering to the ground and rolling to a stop nearby. It is pulsing with an odd glow, as though aware it is being searched for.</i></blockquote>\nThe investigator nearest to the Brotherhood Cultist's location takes control of the Relic of Ages. Remove the remainder of the \"a/b\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>.\n<hr><b>If the Relic of Ages was attached to Harlan Earnstone:</b>\n<blockquote><i>Harlan snaps out of his daze and collapses, holding his head in pain. \"What was I - ?\" His eyes widen as he realizes what he has done, and he pulls the relic out of his coat, offering it to you. \"T-take it!\" He says. \"You can keep it safer than I can.\"</i></blockquote>\nThe investigator nearest to Harlan Earnstone's location takes control of the Relic of Ages. Remove the remainder of the \"a/b\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>."
+    },
+    "vi_current": {
+      "name": "Thu Hồi Cổ Vật",
+      "text": "<b>Objective</b> — Đột kích chiếc xe chở cổ vật trước khi nó rời khỏi thành phố.",
+      "flavor": "Chiếc xe tải chở chiếc rương cổ đang chuẩn bị lăn bánh khỏi Arkham!",
+      "back_name": "Cổ Vật Trở Về",
+      "back_text": "Lấy lại Relic of Ages vào bộ sưu tập của đội điều tra.",
+      "back_flavor": "Bạn chặn đứng chiếc xe tải và thu hồi chiếc hòm chứa cổ vật an toàn."
+    }
+  },
+  {
+    "code": "04125a",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.31",
+      "back_name: presence en=0 vi=1",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Search for Alejandro",
+      "text": "<b>Objective</b> - Only investigators in Easttown can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "You’ve decided to search for Alejandro on your own, believing you will have a better shot at finding him without involving the police. His hotel is in Easttown, so you begin your search there."
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Alejandro",
+      "text": "<b>Objective</b> — Lần theo manh mối tại khách sạn nơi Alejandro lưu trú.",
+      "flavor": "Alejandro đã không trở về phòng khách sạn suốt hai ngày nay.",
+      "back_name": "Manh Mối Tại Ga Tàu",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Một tấm vé tàu rơi dưới gầm giường cho thấy ông ta đã tới nhà ga Arkham."
+    }
+  },
+  {
+    "code": "04126a",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "back_name: presence en=0 vi=1",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Missing Persons",
+      "text": "<b>Objective</b> - Only investigators in Easttown can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "Suspecting foul play, you’ve decided to go to the police to enlist their help in searching for Alejandro."
+    },
+    "vi_current": {
+      "name": "Người Mất Tích",
+      "text": "<b>Objective</b> — Dò hỏi cảnh sát và người dân về sự mất tích của Alejandro.",
+      "flavor": "Không một ai nhìn thấy vị giáo sư khả kính kể từ chiều hôm qua.",
+      "back_name": "Manh Mối Tại Ga Tàu",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Một người bán báo nhớ rõ đã thấy Alejandro bị hai gã mặc áo mưa ép lên xe tới nhà ga."
+    }
+  },
+  {
+    "code": "04127",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 0.57",
+      "text: dup [('04127', 'text'), ('04128a', 'text')]",
+      "flavor: len ratio 0.38",
+      "back_text: len ratio 0.06",
+      "back_flavor: len ratio 0.13"
+    ],
+    "en": {
+      "name": "At the Station",
+      "text": "<b>Objective</b> - Only investigators in the Arkham Police Station can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "The police station might be open to the public in theory, but getting your story heard by the proper authorities requires a bit more finesse than you imagined.",
+      "back_name": "In Shadowed Talons",
+      "back_text": "Search all in- and out-of-play areas for a Hunting Nightgaunt and spawn it in the location farthest from all investigators. Heal all damage from each Hunting Nightgaunt in play.\nAttach the set-aside Alejandro Vela to the Hunting Nightgaunt farthest from all investigators.\nAdvance to Act 3c - \"Alejandro's Plight.\"",
+      "back_flavor": "None of the police officers have seen Alejandro, and they don't seem interested in helping you find him. \"It's only been a couple days. He'll turn up,\" they say. They give excuses, trying to avoid filling out a report. Finally, just as you are about to leave in frustration, a homeless man being held for disorderly conduct grabs your elbow. \"I saw 'im!\" he drawls. \"The man you describe, I saw 'im in the sky, carried in its clutches...\" He describes a faceless winged creature while the officers nearby chuckle and roll their eyes. The man is clearly drunk... but could it be he's telling the truth?"
+    },
+    "vi_current": {
+      "name": "Tại Nhà Ga",
+      "text": "<b>Objective</b> — Lục soát các toa tàu hàng để tìm nơi giam giữ Alejandro.",
+      "flavor": "Nhà ga Arkham nhộn nhịp hành khách và những kiện hàng bí mật.",
+      "back_name": "Nhà Tù Của Alejandro",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Bạn nghe thấy tiếng gõ cầu cứu từ bên trong một toa tàu chở hàng bị niêm phong."
+    }
+  },
+  {
+    "code": "04128a",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 0.57",
+      "text: dup [('04127', 'text'), ('04128a', 'text')]",
+      "flavor: len ratio 0.39",
+      "back_name: presence en=0 vi=1",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "At the Station",
+      "text": "<b>Objective</b> - Only investigators in the Arkham Police Station can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "The police station might be open to the public in theory, but getting your story heard by the proper authorities requires a bit more finesse than you imagined."
+    },
+    "vi_current": {
+      "name": "Tại Nhà Ga",
+      "text": "<b>Objective</b> — Lục soát các toa tàu hàng để tìm nơi giam giữ Alejandro.",
+      "flavor": "Đám bảo vệ nhà ga có vẻ đã bị mua chuộc bởi một tổ chức mờ ám.",
+      "back_name": "Nhà Tù Của Alejandro",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Bạn hạ gục tên bảo vệ và giật lấy chùm chìa khóa toa hàng."
+    }
+  },
+  {
+    "code": "04129",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=[]",
+      "text: icons en=['[per_investigator]'] vi=[]",
+      "text: dup [('04129', 'text'), ('04130a', 'text')]",
+      "flavor: len ratio 0.21",
+      "back_text: len ratio 0.11",
+      "back_flavor: len ratio 0.11"
+    ],
+    "en": {
+      "name": "Friends in High Places",
+      "text": "<b>Objective</b> - If there are 1 [per_investigator] clues on Henry Deveau: You must remove them and immediately advance.",
+      "flavor": "You can’t get into Alejandro’s hotel room, so you decide to question several of the occupants in the neighboring rooms. One of them informs you that Alejandro has been meeting often with an acquaintance of his, a government official named Henry Deveau. They tend to meet nightly at Velma’s Diner. Perhaps you should pay Henry a visit?",
+      "back_name": "Henry's Information",
+      "back_text": "Put the set-aside Town Hall location into play, if it is not already in play.\nAttach the set-aside Alejandro Vela to the Town Hall.\nAdvance to Act 3c - \"Alejandro's Prison.\"",
+      "back_flavor": "Henry looks about anxiously, then leans forward and speaks in a hushed tone. \"All right, listen. I work downtown, as assistant to the city planner. He's a bit of a funny bird. Quiet type, big ideas, likes to hole up in his office for hours at a time.\" He rubs his hands together nervously. \"Don't know why he and Alejandro would ever be in the same room without my knowing - but last time I saw Alejandro, that's right where he was: walking down the hall with my boss, flanked by a couple of intimidating fellas in black suits.\" He gets up and puts on his coat, leaving two quarters on the table. \"You didn't hear this from me,\" he insists before departing."
+    },
+    "vi_current": {
+      "name": "Bạn Bè Nơi Quyền Quý",
+      "text": "<b>Objective</b> — Tận dụng các mối quan hệ xã hội để dò la nơi Alejandro bị giam cầm.",
+      "flavor": "Thị trưởng và cảnh sát trưởng dường như đang cố tình bưng bít vụ việc.",
+      "back_name": "Cảnh Báo Khẩn",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Một vị thẩm phán tha hóa hé lộ địa điểm nhà giam bí mật của Hội Huynh Đệ."
+    }
+  },
+  {
+    "code": "04130a",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=[]",
+      "text: icons en=['[per_investigator]'] vi=[]",
+      "text: dup [('04129', 'text'), ('04130a', 'text')]",
+      "flavor: len ratio 0.22",
+      "back_name: presence en=0 vi=1",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Friends in High Places",
+      "text": "<b>Objective</b> - If there are 1 [per_investigator] clues on Henry Deveau: You must remove them and immediately advance.",
+      "flavor": "You can’t get into Alejandro’s hotel room, so you decide to question several of the occupants in the neighboring rooms. One of them informs you that Alejandro has been meeting often with an acquaintance of his, a government official named Henry Deveau. They tend to meet nightly at Velma’s Diner. Perhaps you should pay Henry a visit?"
+    },
+    "vi_current": {
+      "name": "Bạn Bè Nơi Quyền Quý",
+      "text": "<b>Objective</b> — Tận dụng các mối quan hệ xã hội để dò la nơi Alejandro bị giam cầm.",
+      "flavor": "Những nhân vật quyền lực nhất Arkham có vẻ đều dính líu tới giáo phái rắn.",
+      "back_name": "Cảnh Báo Khẩn",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Bạn tìm được hồ sơ mật ghi lại vị trí giam giữ Alejandro tại ngoại ô."
+    }
+  },
+  {
+    "code": "04131",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['2'] vi=[]",
+      "text: len ratio 0.45",
+      "back_text: nums en=['1', '1'] vi=[]",
+      "back_text: len ratio 0.04",
+      "back_text: dup [('04131', 'back_text'), ('04132', 'back_text')]",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Alejandro's Prison",
+      "text": "While Alejandro Vela is attached to a location, that location gets +2 shroud.\n<b>Objective</b> - If Alejandro Vela is attached to a location with no remaining clues, advance.",
+      "flavor": "You believe that Alejandro is held captive somewhere in this location. You must rescue him!",
+      "back_name": "Alejandro Is Found",
+      "back_text": "<b>If Alejandro Vela is attached to the Train Tracks:</b>\n<blockquote><i>After searching up and down for nearly an hour, you hear a voice coming from one of the storage cars. Sealed inside is Alejandro, murmuring to himself. \"Thank goodness!\" he exclaims as you enter. \"I was just trying to figure out why they brought me here...\"</i></blockquote>\nThe investigator nearest to the Train Tracks takes control of Alejandro Vela. Remove the remainder of the \"c/d\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>.\n<hr><b>If Alejandro Vela is attached to the Town Hall:</b>\n<blockquote><i>You manage to slip into the basement of the town hall without being spotted. You find Alejandro in one of the basement offices. He isn't restrained, but he is overjoyed to see you. \"Thank goodness! They brought me here by force. Though I don't know why...\"</i></blockquote>\nThe investigator nearest to the Town Hall takes control of Alejandro Vela. Remove the remainder of the \"c/d\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>."
+    },
+    "vi_current": {
+      "name": "Nhà Tù Của Alejandro",
+      "text": "<b>Objective</b> — Phá khóa và giải thoát Alejandro trước khi tàu chuyển bánh.",
+      "flavor": "Alejandro đang bị trói chặt và bị bịt miệng bên trong toa xe tăm tối.",
+      "back_name": "Alejandro Được Tự Do",
+      "back_text": "Thêm Alejandro Vela vào đội ngũ đồng minh an toàn.",
+      "back_flavor": "Alejandro cảm ơn bạn rối rít và tiết lộ những thông tin cực kỳ quan trọng về cổ vật."
+    }
+  },
+  {
+    "code": "04132",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['2'] vi=[]",
+      "text: icons en=['[per_investigator]'] vi=[]",
+      "text: len ratio 0.37",
+      "flavor: len ratio 0.51",
+      "back_text: nums en=['1', '1'] vi=[]",
+      "back_text: len ratio 0.04",
+      "back_text: dup [('04131', 'back_text'), ('04132', 'back_text')]",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Alejandro's Plight",
+      "text": "While Alejandro Vela is attached to an enemy, that enemy gets +2 [per_investigator] health.\n<b>Objective</b> - If the enemy Alejandro Vela is attached to leaves play, advance.",
+      "flavor": "You believe you have discovered the identity of Alejandro’s kidnapper. Now you must fight to rescue your companion!",
+      "back_name": "Alejandro Is Rescued",
+      "back_text": "<b>If Alejandro Vela was attached to a Hunting Nightgaunt:</b>\n<blockquote><i>Alejandro collapses to the ground along with the winged creature's body. He coughs and rises to his feet, shaking. \"Th-that beast! It had me in its clutches...Who knows where it was taking me?\"</i></blockquote>\nThe investigator nearest to the Hunting Nightgaunt takes control of Alejandro Vela. Remove the remainder of the \"c/d\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>.\n<b><hr>If Alejandro Vela was attached to Henry Deveau:</b>\n<blockquote><i>Henry collapses to the ground, exhausted and bloodied. \"Wait! I... I'll tell you where to find Alejandro!\" He gives you an address in Rivertown, and you follow his directions. Inside the abandoned office building is Alejandro, not restrained but overjoyed to see you. \"Thank goodness! You have to get me out of here!\"</i></blockquote>\nThe investigator nearest to Henry Deveau takes control of Alejandro Vela. Remove the remainder of the \"c/d\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>."
+    },
+    "vi_current": {
+      "name": "Cảnh Ngộ Của Alejandro",
+      "text": "<b>Objective</b> — Đánh bại đám lính canh để giải cứu Alejandro.",
+      "flavor": "Lũ giáo đồ rắn chuẩn bị thủ tiêu vị giáo sư để bịt đầu mối!",
+      "back_name": "Alejandro Được Tự Do",
+      "back_text": "Thêm Alejandro Vela vào đội ngũ đồng minh an toàn.",
+      "back_flavor": "Bạn hạ gục tên đao phủ và cởi trói cho Alejandro trong gang tấc."
+    }
+  },
+  {
+    "code": "04133a",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.45",
+      "back_name: presence en=0 vi=1",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Trial of the Huntress",
+      "text": "<b>Objective</b> - Only investigators in Rivertown can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "Ichtaca told you not to follow her, though you can’t help but wonder what she is up to. You decide to pursue her as she heads down toward the riverside…"
+    },
+    "vi_current": {
+      "name": "Thử Thách Của Nữ Thợ Săn",
+      "text": "<b>Objective</b> — Cùng Ichtaca điều tra những hiện tượng siêu nhiên tại rừng Arkham.",
+      "flavor": "Ichtaca cảm nhận được sự ô uế đang lan tràn từ một hang động bí mật.",
+      "back_name": "Hang Động Bóng Tối",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Ichtaca dẫn bạn tới một hang đá sâu không đáy bốc lên mùi tử khí."
+    }
+  },
+  {
+    "code": "04134a",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 0.59",
+      "flavor: len ratio 0.45",
+      "back_name: presence en=0 vi=1",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "The Guardian's Inquiry",
+      "text": "<b>Objective</b> - Only investigators in Northside can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "Ichtaca tells you that she saw several Eztli artifacts on sale in the strange shop near the northwestern edge of the city. She wants to head in that direction to investigate further."
+    },
+    "vi_current": {
+      "name": "Cuộc Thẩm Vấn Của Người Giám Hộ",
+      "text": "<b>Objective</b> — Hỗ trợ Ichtaca tìm kiếm những cổ vật bị phân tán.",
+      "flavor": "Ichtaca muốn kiểm tra xem liệu bạn có đủ dũng cảm để đối mặt với bóng tối cổ xưa.",
+      "back_name": "Hang Động Bóng Tối",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Bạn đã chứng minh được lòng dũng cảm và Ichtaca đồng ý dẫn bạn vào hang quỷ."
+    }
+  },
+  {
+    "code": "04135",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 0.36",
+      "text: dup [('04135', 'text'), ('04136', 'text')]",
+      "back_text: nums en=['2', '2', '3'] vi=['3']",
+      "back_text: len ratio 0.04",
+      "back_flavor: len ratio 0.14",
+      "back_flavor: dup [('04135', 'back_flavor'), ('04136', 'back_flavor')]"
+    ],
+    "en": {
+      "name": "The Cave of Darkness",
+      "text": "<b>Objective</b> - Only investigators in the Black Cave can spend the requisite number of clues, as a group, to advance. There must be no clues remaining on the Black Cave in order to advance this act.",
+      "flavor": "You watched Ichtaca enter this abandoned cave on her own. What is she doing in such a strange place?",
+      "back_name": "Embroiled in Battle",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck. Discard cards from the top of the encounter deck until a [[Cultist]] enemy is discarded (2 [[Cultist]] enemies instead if there are 2 or fewer act decks remaining).\nSpawn those enemies in Black Cave <i>(instead of their normal spawn location)</i>. Until the end of the scenario, remember that those enemies are \"Ichtaca's prey.\"\nAdvance to Act 3e - \"The Brotherhood Is Revealed.\"",
+      "back_flavor": "As you search for your companion, a piercing cry echoes throughout the cave, spurring you onward. Deep within the cave, you find Ichtaca in the midst of a battle with several robed figures. She fires an arrow from her bow, striking one of the figures in its chest, then ducks behind an outcropping of rock as she sees you enter. A wave of eldritch energy strikes the place she had been standing moments prior, charring the ground. \"What are you doing here?\" she yells angrily."
+    },
+    "vi_current": {
+      "name": "Hang Động Bóng Tối",
+      "text": "<b>Objective</b> — Thám hiểm hang đá và tìm kiếm bàn tế lễ của loài rắn.",
+      "flavor": "Trong lòng hang sâu, tiếng rít của hàng ngàn con rắn vang lên ghê rợn.",
+      "back_name": "Hiện Tượng Kỳ Lạ",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Bạn phát hiện một cổ vật rắn bằng ngọc bích đang phát sáng ma mị."
+    }
+  },
+  {
+    "code": "04136",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 0.36",
+      "text: dup [('04135', 'text'), ('04136', 'text')]",
+      "back_text: len ratio 0.04",
+      "back_flavor: len ratio 0.14",
+      "back_flavor: dup [('04135', 'back_flavor'), ('04136', 'back_flavor')]"
+    ],
+    "en": {
+      "name": "The Cave of Darkness",
+      "text": "<b>Objective</b> - Only investigators in the Black Cave can spend the requisite number of clues, as a group, to advance. There must be no clues remaining on the Black Cave in order to advance this act.",
+      "flavor": "You watched Ichtaca enter this abandoned cave on her own. What is she doing in such a strange place?",
+      "back_name": "Tunnels in the Dark",
+      "back_text": "Put the set-aside Town Hall location into play, if it is not already in play. Remember that the Town Hall is \"Ichtaca's destination.\" For the remainder of the game, Black Cave and Town Hall are connected to one another.\nOne at a time, in player order, each investigator discards the top card of the encounter deck. Each investigator who discards a treachery card must draw that card.\nAdvance to Act 3e - \"Strange Occurrences.\"",
+      "back_flavor": "You track Ichtaca throughout the cave, echoing her movements closely while remaining hidden. She traverses the cavern with the expertise of a natural explorer, discovering paths you hadn't noticed at first. To your surprise, the dark tunnels ramp upwards, taking you closer to the surface. You hear Ichtaca open and close something metallic up ahead. When you catch up, you find a heavy iron grate above you leading into the basement of a building north of the cave's entrance."
+    },
+    "vi_current": {
+      "name": "Hang Động Bóng Tối",
+      "text": "<b>Objective</b> — Thám hiểm hang đá và tìm kiếm bàn tế lễ của loài rắn.",
+      "flavor": "Những bức vách hang khắc đầy hình tượng Yig — Cha Đẻ Của Loài Rắn.",
+      "back_name": "Hiện Tượng Kỳ Lạ",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Bạn phát hiện một cổ vật rắn bằng ngọc bích đang phát sáng ma mị."
+    }
+  },
+  {
+    "code": "04137a",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=[]",
+      "text: icons en=['[per_investigator]'] vi=[]",
+      "text: dup [('04137a', 'text'), ('04138', 'text')]",
+      "flavor: len ratio 0.35",
+      "back_name: presence en=0 vi=1",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Strange Relics",
+      "text": "<b>Objective</b> - If there are 1 [per_investigator] clues on Maria DeSilva: You must remove them and immediately advance.",
+      "flavor": "Inside the shop, an middle-aged woman wearing the height of fashion inspects the Eztli relics on display with admiration. How did those relics get here? And what does this woman know about all of this?"
+    },
+    "vi_current": {
+      "name": "Những Cổ Vật Kỳ Lạ",
+      "text": "<b>Objective</b> — Thu thập những mảnh vỡ cổ vật thời gian bị phân tán trong hang.",
+      "flavor": "Những mảnh đá phát ra từ trường kỳ lạ làm đảo lộn dòng chảy thời gian.",
+      "back_name": "Hội Huynh Đệ Lộ Diện",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Những kẻ mang mặt nạ rắn bước ra từ bóng tối phục kích bạn!"
+    }
+  },
+  {
+    "code": "04138",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['1'] vi=[]",
+      "text: icons en=['[per_investigator]'] vi=[]",
+      "text: dup [('04137a', 'text'), ('04138', 'text')]",
+      "flavor: len ratio 0.32",
+      "back_text: len ratio 0.07",
+      "back_flavor: len ratio 0.13",
+      "back_flavor: dup [('04137a', 'back_flavor'), ('04138', 'back_flavor')]"
+    ],
+    "en": {
+      "name": "Strange Relics",
+      "text": "<b>Objective</b> - If there are 1 [per_investigator] clues on Maria DeSilva: You must remove them and immediately advance.",
+      "flavor": "Inside the shop, an middle-aged woman wearing the height of fashion inspects the Eztli relics on display with admiration. How did those relics get here? And what does this woman know about all of this?",
+      "back_name": "Maria's Information",
+      "back_text": "Remember that both Downtown and Rivertown are \"Ichtaca's destinations.\"\nOne at a time, in player order, each investigator discards the top card of the encounter deck. Each investigator who discards a treachery card must draw that card.\nAdvance to Act 3e - \"Strange Occurrences.\"",
+      "back_flavor": "Maria takes a puff from her cigarette before responding to your questions. She tells you that she overheard some well-to-do patrons putting down several outrageously pricey bids on the Eztli artifacts. \"I don't even know where these artifacts came from, but those people seemed to know <u>exactly</u> what they were looking for,\" she claims. Perhaps if you follow this trail of money, you'll uncover more about this mysterious group that operates in Arkham's shadows…"
+    },
+    "vi_current": {
+      "name": "Những Cổ Vật Kỳ Lạ",
+      "text": "<b>Objective</b> — Thu thập những mảnh vỡ cổ vật thời gian bị phân tán trong hang.",
+      "flavor": "Không gian xung quanh các mảnh cổ vật bị bẻ cong một cách phi lý.",
+      "back_name": "Hội Huynh Đệ Lộ Diện",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Những kẻ mang mặt nạ rắn bước ra từ bóng tối phục kích bạn!"
+    }
+  },
+  {
+    "code": "04139",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 0.36",
+      "flavor: len ratio 0.47",
+      "back_text: nums en=['1', '1'] vi=[]",
+      "back_text: len ratio 0.05",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Strange Occurrences",
+      "text": "While you are at any of \"Ichtaca's destinations,\" the first treachery you draw from the encounter deck each round gains surge.\n<b>Objective</b> - If there are no clues remaining on each of \"Ichtaca's destinations,\" advance.",
+      "flavor": "Ichtaca has found the target of her investigation. The trail of the mysterious cult leads here. A thorough search of the area may reveal more...",
+      "back_name": "Uncovering the Conspiracy",
+      "back_text": "<b>If \"Ichtaca's destination\" was the Town Hall:</b>\n<blockquote><i>For some reason, the tunnels connect to a hidden passage in the basement of Arkham's town hall. You find Ichtaca in a dark room, browsing through several maps of the city. \"What are you doing here?\" she asks accusingly. \"No matter. You're here now. Help me read these documents and figure out what is going on here.\"</i></blockquote>\nThe investigator nearest to the Town Hall takes control of the set-aside Ichtaca <i>(The Forgotten Guardian)</i>. Remove the remainder of the \"e/f\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>.\n<hr><b>If \"Ichtaca's destinations\" were Downtown and Rivertown:</b>\n<blockquote><i>Using information from the bank, you track the bidders to a warehouse in Rivertown. Inside, you find a bounty of information about the Eztli relics and Alejandro's expedition.</i></blockquote>\nThe investigator nearest to Rivertown takes control of the set-aside Ichtaca <i>(The Forgotten Guardian)</i>. Remove the remainder of the \"e/f\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>."
+    },
+    "vi_current": {
+      "name": "Hiện Tượng Kỳ Quái",
+      "text": "<b>Objective</b> — Phong ấn bàn thờ cổ vật để ngăn chặn sự xâm lăng của loài rắn.",
+      "flavor": "Cánh cổng ngầm đang mở ra và lũ người rắn chuẩn bị tràn lên mặt đất!",
+      "back_name": "Phong Ấn Hang Động",
+      "back_text": "Đánh sập cửa hang và hoàn thành thử thách của Ichtaca.",
+      "back_flavor": "Bạn kích nổ thuốc súng chôn vùi vĩnh viễn bàn thờ ma quái dưới lòng đất."
+    }
+  },
+  {
+    "code": "04140",
+    "type": "act",
+    "pack": "tof",
+    "scenario": "Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['1', '1', '1'] vi=[]",
+      "text: icons en=['[per_investigator]'] vi=[]",
+      "text: len ratio 0.39",
+      "back_text: nums en=['1', '1', '1'] vi=[]",
+      "back_text: icons en=['[cultist]'] vi=[]",
+      "back_text: len ratio 0.06",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "The Brotherhood Is Revealed",
+      "text": "\"Ichtaca's prey\" each get +1 fight, +1 [per_investigator] health, and +1 evade while at a location with no clues on it.\n<b>Objective</b> - If each of \"Ichtaca's prey\" is no longer in play, advance.",
+      "flavor": "Ichtaca has found target of her hunt. The mysterious cult has been revealed - but what is their ultimate purpose?",
+      "back_name": "Close Call",
+      "back_text": "<b>If \"Ichtaca's prey\" were 1 or more [[cultist]] enemies:</b>\n<blockquote><i>The final robed figure drops to the ground, and you breathe a sigh of relief. Ichtaca recovers her arrows and searches the bodies for clues. \"Why did you follow me?\" she asks accusingly. \"No matter. What's done is done. Now to uncover what these cretins knew.\"</i></blockquote>\nThe investigator nearest to the Black Cave takes control of the set-aside Ichtaca <i>(The Forgotten Guardian)</i>. Remove the remainder of the \"e/f\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>.\n<hr><b>If \"Ichtaca's prey\" was Maria DeSilva:</b>\n<blockquote><i>You interrogate Maria while the angry Eztli warrior looms over her. \"Who do you work for? What is your purpose?\" Maria purses her lips tightly, then looks away, into the distance. \"I'll tell you what you need to know. I'll tell you about the Brotherhood.\"</i></blockquote>\nThe investigator nearest to Maria DeSilva takes control of the set-aside Ichtaca <i>(The Forgotten Guardian)</i>. Remove the remainder of the \"e/f\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>."
+    },
+    "vi_current": {
+      "name": "Hội Huynh Đệ Lộ Diện",
+      "text": "<b>Objective</b> — Tiêu diệt tên tư tế rắn đầu sỏ để đập tan âm mưu tà giáo.",
+      "flavor": "Tên tư tế rắn gầm lên man dại, triệu hồi sức mạnh của Yig để trừng phạt bạn!",
+      "back_name": "Chiến Thắng Nữ Thợ Săn",
+      "back_text": "Tiêu diệt tên tư tế rắn và củng cố liên minh vững chắc với Ichtaca.",
+      "back_flavor": "Ichtaca gật đầu khâm phục bản lĩnh của bạn. Bà trao cho bạn ấn tín của Eztli."
+    }
+  },
+  {
+    "code": "04162",
+    "type": "agenda",
+    "pack": "tbb",
+    "scenario": "The Boundary Beyond",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.40",
+      "back_text: nums en=['6'] vi=['1']",
+      "back_text: len ratio 0.10",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "The Boundary, Broken",
+      "flavor": "Ichtaca is already up and about when you awaken, donning her traditional armor, her bow on her back and a long blade at her side. \"Something is wrong,\" she states cryptically. \"I only meant to peer through the boundary…\"\nHer eyes are bloodshot, her face pale as a ghost. You suspect she hasn’t slept all night. \"It matters not. It is time you witnessed the fate that will befall humanity if we fail.\"",
+      "back_name": "The Harbinger's Pursuit",
+      "back_text": "<b>Check Campaign Log. <i>If the Harbinger is still alive:</i></b>\n<blockquote><i>Following no telltale flash of light, a sudden explosion of thunder blasts across the sky, causing you to jump in shock. As though drawn from the sound, a streak of silver lightning crashes down from the clouds, ripping a tear in the world before you. Through this tear, a familiar creature emerges. It hisses in anger and raises its gilded spear to attack.</i></blockquote>\nSearch the collection for the Harbinger of Valusia and spawn it at the location farthest from all investigators (if there are 6 or more tally marks under \"Yig's Fury\" in your Campaign Log, it enters play at the lead investigator's location, instead). It enters play with damage on it equal to the amount of damage recorded in parentheses in your Campaign Log."
+    },
+    "vi_current": {
+      "name": "Ranh Giới Vỡ Vụn",
+      "flavor": "Cổ vật Relic of Ages kích hoạt ngoài ý muốn, làm rách toạc bức màn ngăn cách giữa quá khứ và hiện tại. Thành phố Tenochtitlan cổ đại đang xâm lấn thế giới thực!",
+      "back_name": "Quá Khứ Va Chạm",
+      "back_text": "Mỗi điều tra viên chịu 1 horror. Tiến hành biến đổi các địa điểm sang quá khứ.",
+      "back_flavor": "Những tòa nhà hiện đại của Mexico City mờ dần, thay thế bằng những đền thờ đá đẫm máu của đế chế Aztec nghìn năm trước."
+    }
+  },
+  {
+    "code": "04163",
+    "type": "agenda",
+    "pack": "tbb",
+    "scenario": "The Boundary Beyond",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.17",
+      "back_text: nums en=['3', '3'] vi=['1']",
+      "back_text: len ratio 0.06",
+      "back_flavor: len ratio 0.14"
+    ],
+    "en": {
+      "name": "The Barrier Is Thin",
+      "flavor": "Ichtaca’s strength continues to wane as you journey through the strange vision. You’ve never seen her this troubled. She is often distracted, peering about as though any moment the answer will appear before her. From time to time, she mutters strange phrases to herself: \"…How could this have happened?…The answer will be with the ancients…Someone else is here, I know it…\"",
+      "back_name": "Vision of the Future",
+      "back_text": "Find each [[Tenochtitlán]] location in play with no clues on it. Add those locations to the victory display. Then, for each [[Present-Day]] location in play, search the exploration deck for a location with a matching location symbol in the upper-left corner and place it on top of that location, taking its place.\nEach investigator loses each of his or her clues.\nSpawn the set-aside Padma Amrita enemy in Templo Mayor.\nRemove the current act deck from the game. Put the set-aside act 3a and agenda 3a into play as the current act and agenda.",
+      "back_flavor": "The silver flashes of lightning become more frequent, and the sky starts to split open. Thunder rumbles in the distance, and you watch as the skylines of both cities - the Present-Day city and its ancient predecessor - are consumed in a giant stone maw. Six pillars surround the cavernous opening, each glowing vibrantly. A red hue erupts from the center of the opening, and the ground shakes with the force of an earthquake. \"We've seen enough. We must get out of here while we still can!\" Ichtaca shouts. For the first time since meeting her, you hear a telltale trembling in her voice."
+    },
+    "vi_current": {
+      "name": "Rào Chắn Mong Manh",
+      "flavor": "Hai dòng thời gian đan xen vào nhau tạo nên sự hỗn loạn tột cùng.",
+      "back_name": "Thời Không Đảo Lộn",
+      "back_text": "Đặt 1 doom lên mỗi địa điểm cổ đại.",
+      "back_flavor": "Tiếng la hét của các nạn nhân hiến tế cổ xưa vọng lại giữa tiếng còi xe hơi hiện đại."
+    }
+  },
+  {
+    "code": "04164",
+    "type": "agenda",
+    "pack": "tbb",
+    "scenario": "The Boundary Beyond",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.29",
+      "back_text: len ratio 5.17",
+      "back_flavor: len ratio 0.18"
+    ],
+    "en": {
+      "name": "Time Collapsing",
+      "flavor": "Alejandro’s former critic stands atop the steps of the main temple, her true self revealed to you. Silver streaks of lightning wind through her open arms. Coiled about her feet is an army of hissing cobras. \"Only the chosen can find the Nexus! Only I am worthy!\"",
+      "back_name": "Trapped in Time",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "\"Perhaps an eternity or two will quell your foolish desire to find the truth.\" Padma's laugh echoes across the sky as she steps through the rift atop the temple. \"Not that it matters much. Your kind will not be on this Earth much longer…\" She vanishes without a trace. You ask Ichtaca what your next course of action should be, but she too is gone. The storm suddenly quiets, and you are left in deafening silence."
+    },
+    "vi_current": {
+      "name": "Thời Gian Sụp Đổ",
+      "flavor": "Thực tại hoàn toàn vỡ vụn. Không gian và thời gian sụp đổ vào một điểm kỳ dị.",
+      "back_name": "Lạc Giữa Dòng Thời Gian",
+      "back_text": "Mỗi điều tra viên bị cuốn vào vết xoáy thời gian. <b>(→R2)</b>",
+      "back_flavor": "Bạn tan biến vào hư không, bị bỏ lại vĩnh viễn ở một kỷ nguyên không tên."
+    }
+  },
+  {
+    "code": "04165",
+    "type": "act",
+    "pack": "tbb",
+    "scenario": "The Boundary Beyond",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.17",
+      "back_text: nums en=['4'] vi=['2']",
+      "back_text: icons en=['[willpower]'] vi=[]",
+      "back_text: len ratio 0.11",
+      "back_flavor: len ratio 0.13"
+    ],
+    "en": {
+      "name": "Crossing the Threshold",
+      "text": "<b>Objective</b> - After the first [[Tenochtitlán]] location enters play by exploring successfully, advance.",
+      "flavor": "As you depart the hotel, you realize that the landscape of the city has been altered. Silver lightning crackles in the sky overhead, and the earth rumbles deep below your feet. Monstrous, polypous entities float just below the clouds. \"What is going on?\" you yell to Ichtaca over the whistling wind. \"What is this place?\"\n\"One future,\" she replies enigmatically.",
+      "back_name": "Into the Past",
+      "back_text": "The investigator who just put a [[Tenochtitlán]] location into play by exploring successfully must test [willpower] (4). If he or she fails, he or she must search the collection for a random basic [[Madness]] or [[Injury]] weakness and shuffle it into his or her deck.\n<i>(Note: Be aware that location connections are different on [[Tenochtitlán]] locations.)</i>",
+      "back_flavor": "In the distance, light seeps through a wide crack in the ground. As you approach it, you realize the chasm is not natural at all. Below, you see the sky, as if you were peering into a reflection of the clouds above. Wisps of grey smoke emerge from the chasm, giving off a familiar bittersweet scent. You step through and resist the urge to vomit as the world spins upside-down. When you open your eyes again, you are in another place. Not somewhere, but some<u>when</u>."
+    },
+    "vi_current": {
+      "name": "Bước Qua Ngưỡng Cửa",
+      "text": "<b>Objective</b> — Thám hiểm các địa điểm của Tenochtitlan cổ đại và thu thập manh mối để ổn định dòng thời gian.",
+      "flavor": "Bạn phải tìm ra nguồn gốc của sự biến dạng không-thời gian này.",
+      "back_name": "Quá Khứ và Hiện Tại",
+      "back_text": "Advance sang Act 2 — \"Past and Present\".",
+      "back_flavor": "Bạn nhận ra Padlock of Yoth đang giữ chặt các mỏ neo thời gian."
+    }
+  },
+  {
+    "code": "04166",
+    "type": "act",
+    "pack": "tbb",
+    "scenario": "The Boundary Beyond",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['6'] vi=[]",
+      "text: len ratio 0.38",
+      "back_text: nums en=['3', '3'] vi=['3']",
+      "back_text: len ratio 0.08",
+      "back_flavor: len ratio 0.10"
+    ],
+    "en": {
+      "name": "Past and Present",
+      "text": "<b>Objective</b> - Find paths to the Nexus by discovering all of the clues from as many different [[Tenochtitlán]] locations as you can before time runs out. If there are 6 [[Tenochtitlán]] locations in play with no clues on them, advance.",
+      "flavor": "Is this real, or a vision? Either way, the secrets of the ancients may hold the key to finding the Nexus of N’kai…",
+      "back_name": "Vision of the Future",
+      "back_text": "Add each [[Tenochtitlán]] location in play to the victory display. Then, for each [[Present-Day]] location in play, search the exploration deck for a location with a matching location symbol in the upper-left corner and place it on top of that location, taking its place.\nEach investigator loses each of his or her clues.\nSpawn the set-aside Padma Amrita enemy in Templo Mayor.\nRemove the current agenda deck from the game. Put the set-aside act 3a and agenda 3a into play as the current act and agenda.",
+      "back_flavor": "The silver flashes of lightning become more frequent, and the sky starts to split open. Thunder rumbles in the distance, and you watch as the skylines of both cities - the present-day city and its ancient predecessor - are consumed in a giant stone maw. Six pillars surround the cavernous opening, each glowing vibrantly. A red hue erupts from the center of the opening, and the ground shakes with the force of an earthquake. \"We've seen enough. We must get out of here while we still can!\" Ichtaca shouts. For the first time since meeting her, you hear trembling in her voice."
+    },
+    "vi_current": {
+      "name": "Quá Khứ và Hiện Tại",
+      "text": "<b>Objective</b> — Thu thập đủ manh mối tại các địa điểm cổ đại để mở đường trở về hiện tại.",
+      "flavor": "Những chiến binh báo đốm và tư tế rắn đang lùng sục khắp các con kênh cổ.",
+      "back_name": "Chuyến Đi Trở Về",
+      "back_text": "Advance sang Act 3 — \"The Return Trip\".",
+      "back_flavor": "Cánh cổng thời gian bắt đầu xoay tròn và ổn định trở lại."
+    }
+  },
+  {
+    "code": "04167",
+    "type": "act",
+    "pack": "tbb",
+    "scenario": "The Boundary Beyond",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: icons en=[] vi=['[action]']",
+      "flavor: len ratio 0.27",
+      "back_text: nums en=['1', '1'] vi=['1']",
+      "back_text: len ratio 0.01",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "The Return Trip",
+      "text": "<b>Objective</b> - If Padma Amrita is defeated, advance.\n<b>Objective</b> - If investigators in Templo Mayor spend the requisite number of clues, advance.",
+      "flavor": "Ichtaca points to the temple in the distance, shouting over the raging storm. \"It was her! She is the one trapping us here; she’s known all along!\" One way or another, if you want to get back home, you’ll have to slip through the rift Padma entered from.",
+      "back_name": "The Gateway Home",
+      "back_text": "<b>If Padma Amrita was defeated:</b>\n<blockquote><i>\"No! You fools!\" Padma drops to her knees, bleeding out from her wounds. She looks up into Ichtaca's eyes, pleading with her. \"How could you - ?\" She is about to say something else when Ichtaca silences her with an arrow fired into her lung. \"Go,\" says Ichtaca. \"I'll be right behind you.\" You shake off your fear and step through the rift.</i></blockquote>\n<b>(→R1)</b>\n<hr><b>If the investigators spent clues to advance:</b>\n<blockquote><i>\"No! Come back here!\" Padma screams as soon as she figures out your plan. \"You can't leave me here! I have been chosen!\" Ichtaca looks back at her with a pitying glance. The two of them share a knowing look for a short moment, and you hear Padma cry, \"How could you?\" Ichtaca pays her no heed, turning back to face you. \"Go. I'll be right behind you.\" You shake off your fear and step through the rift.</i></blockquote>\n<b>(→R1)</b>"
+    },
+    "vi_current": {
+      "name": "Chuyến Đi Trở Về",
+      "text": "<b>Objective</b> — Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.\n[action]: <b>Resign.</b> Bạn nhảy qua cánh cổng thời gian để trở về hiện tại.",
+      "flavor": "Cánh cổng sắp khép lại! Hãy nhanh chân quay trở về thời đại của bạn!",
+      "back_name": "Trở Lại Hiện Tại",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn ngã nhào ra nền đất khách sạn, mồ hôi đầm đìa và tim đập thình thịch khi dòng thời gian đóng sập lại sau lưng."
+    }
+  },
+  {
+    "code": "04207",
+    "type": "agenda",
+    "pack": "hote",
+    "scenario": "Pillars of Judgment",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('04044', 'text'), ('04045', 'text'), ('04207', 'text'), ('04208', 'text'), ('04345', 'text'), ('83019', 'text')]",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.05",
+      "back_flavor: len ratio 0.21"
+    ],
+    "en": {
+      "name": "The Jungle's Heart",
+      "text": "[action]: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.",
+      "flavor": "You are deep in the jungle now, surrounded on all sides by the uncharted wilderness. All around you, the rainforest sings, its lyrics found in every chirping insect, every serpent’s hiss, every snapping tree branch.",
+      "back_name": "Are We Alone?",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\nThe lead investigator chooses one investigator to be the group's lookout. That investigator checks his or her supplies. \nIf the lookout has binoculars, he or she is able to see the creature approaching and avoid it. The lookout suffers no ill effects.\nIf the lookout does not have binoculars, discard cards from the top of the encounter deck until an enemy is discarded. Spawn that enemy at the lookout's location.",
+      "back_flavor": "After exploring the rainforest for hours, you reach the top of a steep ridge, from which you can see much of the surrounding area. Uncanny winged creatures caw at you from above, circling over the cavern entrance like vultures waiting for their meal. From this vantage point, you may be able to see approaching threats as they traverse the brush below. If only you had something to help you see farther…"
+    },
+    "vi_current": {
+      "name": "Trái Tim Của Rừng Già",
+      "text": "[action]: <b>Explore.</b> Rút lá bài trên cùng của chồng bài khám phá. Nếu đó là địa điểm đang kết nối, hãy đặt nó vào màn chơi và di chuyển đến đó.",
+      "flavor": "Bạn đứng trước sáu cây cột đá khổng lồ canh giữ lối vào thế giới ngầm K'n-yan. Ánh nắng nhiệt đới gay gắt rọi xuống những tảng đá phủ đầy rêu phong.",
+      "back_name": "Mặt Trời Lặn",
+      "back_text": "Advance sang agenda 2.",
+      "back_flavor": "Hoàng hôn buông xuống rừng mưa, mang theo cái lạnh kỳ dị và những bóng ma rập rình."
+    }
+  },
+  {
+    "code": "04208",
+    "type": "agenda",
+    "pack": "hote",
+    "scenario": "Pillars of Judgment",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('04044', 'text'), ('04045', 'text'), ('04207', 'text'), ('04208', 'text'), ('04345', 'text'), ('83019', 'text')]",
+      "flavor: len ratio 0.44",
+      "back_text: nums en=[] vi=['1']",
+      "back_flavor: len ratio 0.10"
+    ],
+    "en": {
+      "name": "Setting Sun",
+      "text": "[action]: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.",
+      "flavor": "The day advances quickly. Through the thick canopy of trees, you can tell that the sun is starting to sink closer to the horizon. To the east, the sky grows dim. Soon the jungle will be covered in darkness, and you will have to stop and make camp for the night.",
+      "back_name": "Night Falls in the Jungle",
+      "back_text": "Each surviving investigator immediately resigns.",
+      "back_flavor": "Night comes swiftly, blanketing the rainforest in dim moonlight. The sounds of the jungle change as nocturnal creatures start to emerge. Soon, the air is filled with the buzzing and chirping of strange insects and even stranger beasts, the identity of which you are unable to&nbsp;determine.\nThe dangers of nighttime are too great to ignore, and the darkness makes it difficult for you to study the glyphs and patterns necessary to shift the pillars correctly. You have no choice but to set up camp and continue your exploration in the morning."
+    },
+    "vi_current": {
+      "name": "Mặt Trời Lặn",
+      "text": "[action]: <b>Explore.</b> Rút lá bài trên cùng của chồng bài khám phá. Nếu đó là địa điểm đang kết nối, hãy đặt nó vào màn chơi và di chuyển đến đó.",
+      "flavor": "Bóng tối bao trùm khu rừng. Nếu không mở được cánh cổng đá trước khi màn đêm buông xuống, lũ quái vật sẽ xé xác bạn.",
+      "back_name": "Bị Bỏ Lại Trong Đêm",
+      "back_text": "Mỗi điều tra viên chịu 1 horror trực tiếp. Màn chơi kết thúc thất bại.",
+      "back_flavor": "Lũ quái vật rừng sâu tràn ra từ bóng tối bao vây lấy bạn."
+    }
+  },
+  {
+    "code": "04209",
+    "type": "act",
+    "pack": "hote",
+    "scenario": "Pillars of Judgment",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: presence en=0 vi=1",
+      "flavor: len ratio 0.27",
+      "back_name: presence en=0 vi=1",
+      "back_text: presence en=0 vi=1",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Search for the Pattern",
+      "flavor": "Six stone pillars surround the entrance to the cavern, each carved with a series of uncanny grooves and hieroglyphs that form an intricate pattern. Touching them causes the grooves to glow brightly, and twisting them causes the patterns to shift and change. Perhaps these patterns match the glyphs found in other regions of the jungle?"
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Trật Tự",
+      "text": "<b>Objective</b> — Giải mã chuỗi ký tự trên sáu cây cột đá để kích hoạt cơ chế mở cổng.",
+      "flavor": "Mỗi cây cột mang một biểu tượng cổ xưa tượng trưng cho các vị thần và quái thú thời tiền sử.",
+      "back_name": "Miệng Hang Mở Ra",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Một tiếng rền vang vang lên từ lòng đất. Mặt đất nứt toác, để lộ lối vào lòng hang tối tăm."
+    }
+  },
+  {
+    "code": "04210",
+    "type": "act",
+    "pack": "hote",
+    "scenario": "Pillars of Judgment",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['1', '1', '2', '6'] vi=['2']",
+      "text: icons en=['[action]', '[per_investigator]'] vi=[]",
+      "text: len ratio 0.24",
+      "flavor: len ratio 0.25",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.17"
+    ],
+    "en": {
+      "name": "Opening the Maw",
+      "text": "[action] Investigators at the Mouth of K'n-yan spend 1 [per_investigator] clues, as a group: You solve one piece of the puzzle. Add 1 resource to the Mouth of K'n-yan, as a pillar token.\n<b>Objective</b> - Solve the puzzle of the six pillars in order to enter K'n-yan. If there are 6 pillar tokens on the Mouth of K'n-yan, advance to act 2b.",
+      "flavor": "You have discovered that the ruins within the jungle each bear a distinct pattern of glyphs, which match those found on the six pillars. As you turn the pillars to match these patterns, a serpentine creature descends from the clouds…",
+      "back_name": "Entering K'n-yan",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "With a deep rumbling that shakes the ground outside, something inside the cavern shifts. In a distinct sequence, the six obelisks slowly descend into the ground, twisting and turning. The serpent creature that guarded the cavern lets out a shriek of anger and hate before flying off and vanishing behind the treeline. One by one, the stone pillars disappear into the dirt, and the Earth stops shaking."
+    },
+    "vi_current": {
+      "name": "Mở Miệng Hang",
+      "text": "<b>Objective</b> — Bước vào lối vào hang K'n-yan để tiến vào phần 2 của màn chơi.",
+      "flavor": "Lối vào hầm ngục hun hút đang chờ đón bước chân thám hiểm.",
+      "back_name": "Tiến Vào Lòng Đất",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn bước xuống những bậc thang đá trơn trượt dẫn sâu vào lòng đất mẹ."
+    }
+  },
+  {
+    "code": "04211",
+    "type": "agenda",
+    "pack": "hote",
+    "scenario": "K'n-yan",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "back_text: nums en=['8'] vi=['2']",
+      "back_text: len ratio 0.03",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "The Lonely Caverns",
+      "text": "[action] If there are no clues on your location: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.\n<b>Forced</b> - When this agenda advances: Do not remove doom from each location in play.",
+      "flavor": "Though much of this cavern system is natural and untouched by humans, you are stunned to find signs of an ancient civilization that once inhabited the area.",
+      "back_name": "Serpents' Revenge",
+      "back_text": "<b>Check Campaign Log. <em>If the Harbinger is still alive:</em></b>\n<blockquote><i>From the entrance far behind you, a threatening hiss and an all-too-familiar rattling causes you to freeze in terror. You grip the nearest weapon you can find and turn in fright, hands trembling. How has it followed you this far? When will this awful hunt end?</i></blockquote>\nSearch the collection for the Harbinger of Valusia and spawn it at the location farthest from all investigators (if there are 8 or more tally marks under \"Yig's Fury\" in your Campaign Log, it enters play at the lead investigator's location, instead). It enters play with damage on it equal to the amount of damage recorded in parentheses in your Campaign Log."
+    },
+    "vi_current": {
+      "name": "Những Hang Động Cô Độc",
+      "text": "[action] Nếu không có manh mối trên địa điểm của bạn: <b>Explore.</b> Rút lá bài trên cùng của chồng bài khám phá. Nếu đó là địa điểm đang kết nối, hãy đặt nó vào màn chơi và di chuyển đến đó.\n<b>Forced</b> - Khi agenda này advances: Không xóa doom khỏi mỗi địa điểm trong màn chơi.",
+      "flavor": "Thế giới ngầm K'n-yan mở ra với những hang động khổng lồ được chiếu sáng bằng thứ lân tinh màu xanh lơ ma quái.",
+      "back_name": "Những Đôi Mắt Trong Bóng Tối",
+      "back_text": "Advance sang agenda 2.",
+      "back_flavor": "Vô số đôi mắt phát sáng đỏ ngầu dõi theo từng cử động của bạn từ các gờ đá cao."
+    }
+  },
+  {
+    "code": "04212",
+    "type": "agenda",
+    "pack": "hote",
+    "scenario": "K'n-yan",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.46",
+      "back_text: nums en=['1'] vi=['2']",
+      "back_flavor: len ratio 0.12"
+    ],
+    "en": {
+      "name": "Eyes in the Dark",
+      "text": "[action] If there are no clues on your location: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.\n*This agenda gets +1 [per_investigator] doom threshold.",
+      "flavor": "Bright-yellow eyes peer at you from all sides as you continue delving deeper into the cavern. The glowing orbs vanish as light is cast on them, reappearing as soon as the darkness returns.",
+      "back_name": "Crumbling Caverns",
+      "back_text": "Each surviving investigator is defeated and suffers 1 physical trauma.",
+      "back_flavor": "Without warning, a deafening crash echoes throughout the cave, and the ground under your feet rumbles with tremendous force. Stalactites and pieces of crumbling rock begin to fall from the ceiling of the cavern, striking the ground all around you and causing cracks to appear in the stone. \"We have to get out of here!\" you shout to Ichtaca, but by the time you realize what is coming, it is too late. The ground beneath your feet gives way, and suddenly you are falling, plummeting into the depths below…"
+    },
+    "vi_current": {
+      "name": "Những Đôi Mắt Trong Bóng Tối",
+      "text": "[action] Nếu không có manh mối trên địa điểm của bạn: <b>Explore.</b> Rút lá bài trên cùng của chồng bài khám phá. Nếu đó là địa điểm đang kết nối, hãy đặt nó vào màn chơi và di chuyển đến nó.\n*agenda này đạt ngưỡng +1 [per_investigator] doom.",
+      "flavor": "Cư dân của thế giới ngầm không hề chào đón người lạ. Chúng bắt đầu tổ chức cuộc đi săn.",
+      "back_name": "Nuốt Chửng",
+      "back_text": "Mỗi điều tra viên bị đánh bại bởi lũ quái vật ngầm. <b>(→R2)</b>",
+      "back_flavor": "Bầy quái vật K'n-yan tràn xuống xé toạc mọi hy vọng sống sót."
+    }
+  },
+  {
+    "code": "04213",
+    "type": "act",
+    "pack": "hote",
+    "scenario": "K'n-yan",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: presence en=0 vi=1",
+      "flavor: len ratio 0.50",
+      "back_text: nums en=['1'] vi=['2']",
+      "back_text: len ratio 0.03",
+      "back_flavor: len ratio 0.34"
+    ],
+    "en": {
+      "name": "Cavern of the Forgotten Age",
+      "flavor": "The vast underground caverns of K’n-yan are cold and all too quiet. Scattered, forsaken ruins lie undisturbed along your path to the Nexus of N’kai. What happened in this ancient and forgotten place? Were these ruins once occupied by humans? Or by a species far, far older?",
+      "back_name": "In Circles",
+      "back_text": "Shuffle Descent to Yoth into the exploration deck.\nThe lead investigator chooses one investigator to be the group's scout. That investigator checks his or her supplies. \nIf the scout has chalk, you are able to avoid traveling in circles. The scout suffers no ill effects. \nIf the scout does not have chalk, place 1 clue on each location in play (<i>from the token pool</i>). Then, if the scout is on a single-sided location, shuffle that location back into the exploration deck. Move each enemy and investigator that was at that location to a connecting location nearest to the Mouth of K'n-yan.",
+      "back_flavor": "With very few landmarks to spot along the dark and lonely tunnels, you must rely on your wits and navigation skills to make your way forward without getting lost. If only you had an easy way to mark the places you have already visited…"
+    },
+    "vi_current": {
+      "name": "Hang Động Của Kỷ Nguyên Lãng Quên",
+      "text": "<b>Objective</b> — Dò đường qua mê cung ngầm để tìm lối dẫn xuống vực sâu Yoth.",
+      "flavor": "Những công trình kiến trúc phi nhân loại sừng sững trong lòng đất chứng minh sự tồn tại của những nền văn minh cổ xưa hơn cả loài người.",
+      "back_name": "Hạ Xuống Bóng Tối",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Bạn tìm thấy một khe nứt khổng lồ tỏa ra hơi nóng rực đỏ dẫn xuống tầng sâu hơn."
+    }
+  },
+  {
+    "code": "04214",
+    "type": "act",
+    "pack": "hote",
+    "scenario": "K'n-yan",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 0.56",
+      "flavor: len ratio 0.24",
+      "back_text: nums en=['1', '2'] vi=['1']",
+      "back_text: len ratio 0.09",
+      "back_flavor: len ratio 0.27"
+    ],
+    "en": {
+      "name": "Descent into Dark",
+      "text": "<b>Objective</b> - If each surviving investigator is at the Descent to Yoth and there is no doom on it, you may advance.",
+      "flavor": "The deeper you descend into the cold darkness, the more you feel the crushing weight of the world above, and the dizzying reality of the world further below. You suddenly long for the surface and wonder if you will ever see the sky again.",
+      "back_name": "To Yoth",
+      "back_text": "Check Campaign Log. \n- <i>If the investigators rescued Alejandro:</i> <b>(→R1)</b>.\n- <i>If Alejandro is missing:</i> <b>(→R2)</b>.",
+      "back_flavor": "Before you lies an ornate and elaborately decorated doorway, a stone disc that has been rolled aside to unveil the hellish realm beyond. The caverns on the other side are bathed in a red glow. The serpent-themed statues and carvings along the walls inform you that you are on the right track."
+    },
+    "vi_current": {
+      "name": "Hạ Xuống Bóng Tối",
+      "text": "<b>Objective</b> — Vượt qua Kẻ Canh Giữ Vực Sâu để tiến xuống Yoth.",
+      "flavor": "Con đường duy nhất là đi xuống, sâu hơn nữa vào lòng đất.",
+      "back_name": "Cánh Cổng Của Yoth",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn tụt mình xuống vực thẳm đỏ rực, tiến vào lãnh địa của loài người rắn Yoth."
+    }
+  },
+  {
+    "code": "04238",
+    "type": "agenda",
+    "pack": "tcoa",
+    "scenario": "The City of Archives",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "back_text: nums en=['2', '9'] vi=['2']",
+      "back_text: len ratio 0.06",
+      "back_flavor: len ratio 0.28"
+    ],
+    "en": {
+      "name": "City of the Great Race",
+      "text": "Investigators cannot put [[Item]] assets into play (including [[Item]] weaknesses).",
+      "flavor": "Somehow you have awoken in a futuristic city, inhabited by odd alien creatures beyond your imagining. You must explore this strange place if you are to find a way out, but your new body is difficult to get used to.",
+      "back_name": "The Replicator",
+      "back_text": "Each investigator searches the top 9 cards of his or her deck for up to 2 [[Item]] assets and draws them. Shuffle each searched deck. <i>(Note: Investigators are now able to put [[Item]] assets into play.)</i>\nShuffle the encounter discard pile into the encounter deck.\nIf The Custodian is in play and not controlled by an investigator, move it to the location with the most clues on it.",
+      "back_flavor": "As you traverse these strange halls, you come across a chamber you hadn't noticed before. It is filled with trinkets and items of all kinds from various civilizations. Many of them match the descriptions you have given to the city's inhabitants - descriptions of the equipment you had on your person when you first encountered the creatures. Have they somehow replicated the objects you had with you? You take what you can find and continue exploring."
+    },
+    "vi_current": {
+      "name": "Thành Phố Của Đại Chủng Tộc",
+      "text": "các điều tra viên không thể đặt các asset [[Item]] vào màn chơi (bao gồm các điểm yếu [[Item]]).",
+      "flavor": "Bạn tỉnh dậy và kinh hoàng nhận ra ý thức của mình đã bị hoán đổi vào thân xác của một sinh vật hình nón khổng lồ nhiều xúc tu: một thành viên của Đại Chủng Tộc Yith! Bạn đang ở Pnakotus — thành phố lưu trữ vĩ đại của thời tiền sử.",
+      "back_name": "Ký Ức Đánh Mất",
+      "back_text": "Advance sang agenda 2.",
+      "back_flavor": "Những ký ức về cuộc sống loài người của bạn bắt đầu phai nhạt dần, thay thế bằng những tri thức vũ trụ lạnh lẽo của loài Yith."
+    }
+  },
+  {
+    "code": "04239",
+    "type": "agenda",
+    "pack": "tcoa",
+    "scenario": "The City of Archives",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "back_text: nums en=['2'] vi=['3']",
+      "back_text: len ratio 0.02",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Lost Memories",
+      "text": "Each investigator's maximum hand size is reduced by 2.",
+      "flavor": "Little by little, the memories of your former life are starting to fade. The most recent events are the first to disappear, but soon you begin to lose your grip on your human identity.",
+      "back_name": "Final Recollection",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\nIf The Custodian is in play and not controlled by an investigator, move it to the location with the most clues on it.\n<hr><b>Check your supplies. If an investigator has a pendant, that investigator reads the following:</b>\n<blockquote><i>As you spend more and more time in the alien city, your memories of the past continue to fade. Then, a spark of hope returns to you, and you recall an object you once carried with you, one that brought you comfort when times were tough. You sift through the objects the Yithians replicated from your descriptions, and there you find it: a pendant on a silver chain. As you hold it, your real identity comes flooding back.</i></blockquote>\nEach investigator with a pendant draws 2 cards. For the remainder of the scenario, each investigator with a pendant ignores any effect that would reduce his or her maximum hand size."
+    },
+    "vi_current": {
+      "name": "Ký Ức Đánh Mất",
+      "text": "Kích thước bàn tay tối đa của mỗi điều tra viên giảm đi 2.",
+      "flavor": "Bạn phải nhanh chóng tìm thấy thiết bị hoán đổi tâm trí trước khi bản ngã con người của bạn hoàn toàn biến mất!",
+      "back_name": "Nhân Tính Lụi Tàn",
+      "back_text": "Advance sang agenda 3.",
+      "back_flavor": "Bạn không còn nhớ rõ khuôn mặt của những người thân yêu. Bạn bắt đầu suy nghĩ và cảm nhận như một sinh vật Yithian thực thụ."
+    }
+  },
+  {
+    "code": "04240",
+    "type": "agenda",
+    "pack": "tcoa",
+    "scenario": "The City of Archives",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 3.12",
+      "back_text: nums en=[] vi=['3']",
+      "back_flavor: len ratio 0.34"
+    ],
+    "en": {
+      "name": "Humanity Fading",
+      "text": "Each investigator's maximum hand size is reduced by 4.",
+      "flavor": "How long has it been? Days? Weeks?\n\n…Years?",
+      "back_name": "Alien Existence",
+      "back_text": "Each surviving investigator is defeated.",
+      "back_flavor": "You forget all that you once were. Your name, and your humanity, are lost. However, the lost city of Pnakotus calls to you, its peaceful halls a treasure trove of knowledge more vast than anything your mind could have comprehended before your arrival here. Your purpose lost in the haze, you live out your days with the Great Race of Yith, until one day..."
+    },
+    "vi_current": {
+      "name": "Nhân Tính Lụi Tàn",
+      "text": "Kích thước bàn tay tối đa của mỗi điều tra viên giảm đi 4.",
+      "flavor": "Thời gian sắp hết. Nếu không hành động ngay, bạn sẽ vĩnh viễn bị mắc kẹt trong thân xác quái vật này tại quá khứ hàng triệu năm trước.",
+      "back_name": "Mắc Kẹt Vĩnh Hằng",
+      "back_text": "Mỗi điều tra viên bị mắc kẹt vĩnh viễn trong thân xác Yithian. <b>(→R3)</b>",
+      "back_flavor": "Ý thức con người của bạn hoàn toàn bị xóa sổ. Bạn trở thành một học giả Yithian vô cảm trong thư viện Pnakotus vĩnh hằng."
+    }
+  },
+  {
+    "code": "04241",
+    "type": "act",
+    "pack": "tcoa",
+    "scenario": "The City of Archives",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 2.19",
+      "back_text: nums en=[] vi=['2']",
+      "back_text: len ratio 0.06",
+      "back_flavor: len ratio 0.10"
+    ],
+    "en": {
+      "name": "Exploring Pnakotus",
+      "text": "Each copy of Yithian Observer gains aloof.",
+      "flavor": "Getting out of this strange city might be harder than you thought. Its halls are endless and filled with all manner of complex, futuristic machinery.",
+      "back_name": "Finding Your Way",
+      "back_text": "Put each set-aside location into play (Great Library, Laboratory of the Great Race, Yithian Orrery, Deconstuction Room, and Towers of Pnakotus).\nChoose one of those locations at random. Put the set-aside The Custodian asset into play at the randomly chosen location.\n<i>(Note: Each copy of Yithian Observer is no longer aloof.)</i>",
+      "back_flavor": "You explore the area near your interview chamber for some time, learning more of this city and its dwellers. It is a place of knowledge and research, inhabited by beings who call themselves the Great Race of Yith. For the most part, the Yithians allow you to explore the city without troubling you, though some of them follow you about and observe you with keen interest. As you pass through one of the city's meandering halls, you find a panel attached to the wall. It is a technological device you cannot hope to understand. As you stand in front of it, dumbfounded, one of your observers approaches cautiously. It extends one of its claw-appendages and manipulates the panel in a convoluted manner. To your surprise, the wall in front of you slides open to reveal another series of halls. The creature steps aside to let you pass."
+    },
+    "vi_current": {
+      "name": "Khám Phá Pnakotus",
+      "text": "<b>Objective</b> — Thích nghi với cơ thể mới và tìm đường tới khu vực lưu trữ hồ sơ tâm trí.",
+      "flavor": "Thân xác nón khổng lồ vụng về và kỳ dị, nhưng bạn phải học cách điều khiển nó để sinh tồn.",
+      "back_name": "Khu Vực Hạn Chế",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Bạn tìm thấy bản đồ của khu lưu trữ trung tâm, nơi cất giữ cỗ máy hoán chuyển linh hồn."
+    }
+  },
+  {
+    "code": "04242",
+    "type": "act",
+    "pack": "tcoa",
+    "scenario": "The City of Archives",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 0.32",
+      "back_text: nums en=[] vi=['3']",
+      "back_text: len ratio 0.03",
+      "back_flavor: len ratio 0.28"
+    ],
+    "en": {
+      "name": "Restricted Access",
+      "text": "<b>Objective</b> - If three of the following are true, you must advance:\n- An investigator \"found the process.\"\n- An investigator \"dissected an organ.\"\n- An investigator \"interviewed a subject.\"\n- An investigator \"realized what year it is.\"\n- An investigator \"activated the device.\"\n- An investigator controls The Custodian.",
+      "flavor": "You have to find a way back home. Surely if the Yithians can bring you to this place, there must be a way to return…",
+      "back_name": "The Process",
+      "back_text": "You no longer have to perform any of the following tasks. However, the more you have performed by the time the scenario ends, the easier the transition to your human body will be, and the less likely the process is to fail or backfire. <b>Be careful...</b>\nPlace this act in the victory display with this side faceup, as a reminder.\n- An investigator \"found the process.\"\n- An investigator \"dissected an organ.\"\n- An investigator \"interviewed a subject.\"\n- An investigator \"realized what year it is.\"\n- An investigator \"activated the device.\"\n- An investigator controls The Custodian.",
+      "back_flavor": "You believe you have discovered the process used by the Yithians to transport you here. But the truth is hard to accept. Your body was never brought to this place. Your mind has been transferred into the body of one of these creatures. Somewhere, in another place - in another time - one of the reviled creatures dwells in your body."
+    },
+    "vi_current": {
+      "name": "Khu Vực Hạn Chế",
+      "text": "<b>Objective</b> — Vượt qua hệ thống an ninh và lính gác Yithian để lấy lại hồ sơ cơ thể người của bạn.",
+      "flavor": "Những lính gác Yithian cầm súng điện từ tuần tra khắp các dãy hành lang kim loại khổng lồ.",
+      "back_name": "Tái Chiếm Bản Ngã",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Bạn tìm thấy ống chứa lưu trữ mẫu sóng não và định vị được vị trí thân xác con người của mình!"
+    }
+  },
+  {
+    "code": "04243",
+    "type": "act",
+    "pack": "tcoa",
+    "scenario": "The City of Archives",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['1', '1', '1', '10', '2', '2'] vi=[]",
+      "text: len ratio 0.42",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.27"
+    ],
+    "en": {
+      "name": "Repossession",
+      "text": "Each Yithian Observer gains hunter.\n[action] Spend 1 clue: <b>Draw.</b> Draw 2 cards instead of 1. If your hand exceeds your maximum hand size, draw 1 additional card.\n<b>Objective</b> - If each surviving investigator has 10 or more cards in his or her hand, immediately advance. <i>(Beware - remember to complete as many of the tasks listed on act 2b as you can.)</i>",
+      "flavor": "You have gathered the knowledge necessary to repossess your body, but before you can initiate the process, you must expand your mind.",
+      "back_name": "Back to the Future",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "The machine whirs with intense vibration. It has taken many hours to construct, and you have had to build it in secret, using the knowledge you have gathered from the various areas within the city. It is a strange device of rods, wheels, and glass, about the size of a small filing cabinet. A circular mirror in the center sends your alien reflection staring back at you.\nYou activate the device, and you feel a tugging on your psyche, stretching your consciousness across the aether of space and time. The memories come flooding back."
+    },
+    "vi_current": {
+      "name": "Tái Chiếm Thân Xác",
+      "text": "<b>Objective</b> — Kích hoạt cỗ máy hoán đổi tâm trí và đưa ý thức của cả nhóm trở lại thân xác con người.\n[action]: <b>Resign.</b> Bạn kéo cần gạt cỗ máy.",
+      "flavor": "Cỗ máy hoán chuyển linh hồn đang ở ngay trước mắt. Hãy khởi động nó để trở về thế giới thực tại!",
+      "back_name": "Trở Lại Làm Người",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Một luồng điện cực mạnh chạy dọc thần kinh! Bạn mở mắt và hít một hơi thở dài bằng phổi của con người. Bạn đã trở lại thân xác của chính mình!"
+    }
+  },
+  {
+    "code": "04278",
+    "type": "agenda",
+    "pack": "tdoy",
+    "scenario": "The Depths of Yoth",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "back_text: nums en=[] vi=['1']",
+      "back_text: len ratio 0.45",
+      "back_flavor: len ratio 0.30"
+    ],
+    "en": {
+      "name": "The Descent Begins",
+      "flavor": "Slowly and cautiously, you begin your descent into the red-litten caverns of Yoth. It is quiet, and only the crumbling of stone and your echoing footfalls can be heard in the tunnels surrounding you.",
+      "back_name": "City of the Damned",
+      "back_text": "Find the enemy that is in pursuit with the highest evade value, and spawn it in the location where the investigators began at this depth level.",
+      "back_flavor": "The serpents' ruins are ancient, decrepit, and devoid of life. Nearly all of their structures have collapsed, but evidence of their great cities remains, along with statues and idols of their gods. This realm must have been abandoned long ago."
+    },
+    "vi_current": {
+      "name": "Cuộc Hạ Xuống Bắt Đầu",
+      "flavor": "Bạn đặt chân xuống Yoth — tầng sâu đỏ rực của thế giới ngầm, lãnh địa của loài người rắn cổ xưa. Hơi nóng hầm hập và mùi lưu huỳnh bốc lên ngột ngạt.",
+      "back_name": "Tầng Sâu Hơn",
+      "back_text": "Hạ xuống tầng sâu tiếp theo của Yoth. Đặt 1 doom lên agenda mới.",
+      "back_flavor": "Mỗi bước đi xuống sâu hơn khiến không khí càng thêm nóng rát và nguy hiểm."
+    }
+  },
+  {
+    "code": "04279",
+    "type": "agenda",
+    "pack": "tdoy",
+    "scenario": "The Depths of Yoth",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.29",
+      "back_text: len ratio 0.10",
+      "back_text: dup [('04279', 'back_text'), ('04280', 'back_text'), ('04281', 'back_text'), ('04282', 'back_text'), ('04283', 'back_text')]",
+      "back_flavor: len ratio 0.22"
+    ],
+    "en": {
+      "name": "Horrific Descent",
+      "flavor": "Hisses begin to emanate from the tunnels all around you. Snake eyes glare at you from the dark as you attempt to avoid encountering the creatures that remain in this realm. You weave in and out of narrow tunnels and hide behind broken‑down walls and crumbling pillars.",
+      "back_name": "Fountain of Venom",
+      "back_text": "Find the enemy that is in pursuit with the highest evade value, and spawn it at the location where the investigators began at this depth level.\nCheck your supplies. If an investigator has a canteen, that investigator must decide: \n- <i>This could be useful.</i> Remember that you have \"collected a strange liquid.\"\n- <i>I'm not going anywhere near that.</i>You suffer no ill effects.",
+      "back_flavor": "You pass through a cracked earthen clearing that once might have been a plaza. Standing half-collapsed in the center of the plaza are the remains of a stone fountain, dry as a bone. At the very bottom of the fountain's basin is a glob of black syrupy ooze."
+    },
+    "vi_current": {
+      "name": "Hạ Xuống Kinh Hoàng",
+      "flavor": "Những tiếng thì thầm rít lên trong bóng tối. Lũ người rắn đang tổ chức bao vây.",
+      "back_name": "Tầng Sâu Hơn",
+      "back_text": "Hạ xuống tầng sâu tiếp theo của Yoth.",
+      "back_flavor": "Bóng tối đỏ rực như máu nuốt trọn lấy những kẻ dấn bước."
+    }
+  },
+  {
+    "code": "04280",
+    "type": "agenda",
+    "pack": "tdoy",
+    "scenario": "The Depths of Yoth",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.32",
+      "back_text: nums en=['1', '5'] vi=[]",
+      "back_text: icons en=['[agility]', '[combat]'] vi=[]",
+      "back_text: len ratio 0.06",
+      "back_text: dup [('04279', 'back_text'), ('04280', 'back_text'), ('04281', 'back_text'), ('04282', 'back_text'), ('04283', 'back_text')]",
+      "back_flavor: len ratio 0.21"
+    ],
+    "en": {
+      "name": "Endless Caverns",
+      "flavor": "You are convinced of it now: these caverns are without end. They must span the entirety of the subterranean layer of the Earth. Will you ever reach the Nexus? Will you ever make it home?",
+      "back_name": "Deep below the Earth",
+      "back_text": "Find the enemy that is in pursuit with the highest evade value, and spawn it at the location where the investigators began at this depth level.\nThe lead investigator chooses one investigator to be the group's scout. That investigator checks his or her supplies.\nIf the scout has rope, he or she is able to climb up with ease, and the investigators suffer no ill effects. \nIf the scout does not have rope, he or she must test [combat] or [agility] (5). If the performing investigator fails, he or she makes it to the top but suffers 1 physical trauma from the exhaustion of the climb.",
+      "back_flavor": "The path ahead is blocked by a sheer rock cliff. You start to search for a way around when suddenly, hisses and shrieks emerge from behind you, and the area is bathed in orange fire-light. The serpents are coming - one of you must climb to safety and pull the others up!"
+    },
+    "vi_current": {
+      "name": "Những Hang Động Bất Tận",
+      "flavor": "Mê cung hang động dường như kéo dài vô tận vào tâm Trái Đất.",
+      "back_name": "Tầng Sâu Hơn",
+      "back_text": "Hạ xuống tầng sâu tiếp theo của Yoth.",
+      "back_flavor": "Đá nóng chảy bắt đầu rỉ ra từ các khe nứt trên vách hang."
+    }
+  },
+  {
+    "code": "04281",
+    "type": "agenda",
+    "pack": "tdoy",
+    "scenario": "The Depths of Yoth",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.29",
+      "back_text: len ratio 0.17",
+      "back_text: dup [('04279', 'back_text'), ('04280', 'back_text'), ('04281', 'back_text'), ('04282', 'back_text'), ('04283', 'back_text')]",
+      "back_flavor: len ratio 0.13"
+    ],
+    "en": {
+      "name": "City of Blood",
+      "flavor": "The caverns are no longer quiet. The angry cries and rattling of serpent creatures is all around you now, urging you onward. The cavern’s unnatural red glow becomes more intense. In this red light, the cities of Yoth take on another guise - no longer a source of hidden knowledge, but a place of animosity that resents your mere presence.",
+      "back_name": "The Sleeper's Pursuit",
+      "back_text": "If the Harbinger of Valusia is set aside, move it to the pursuit area.\nFind the enemy that is in pursuit with the highest evade value, and spawn it at the location where the investigators began at this depth level.",
+      "back_flavor": "The shrill noise of hundreds of snake rattles suddenly erupts throughout the cavern. You have crossed into territory that humanity was never meant to enter. The earsplitting alarm pierces your eardrums and causes your ears to bleed. Your senses are overwhelmed, and you cover your ears in vain. You cannot hear your own thoughts. Finally the warning ends, and you are left with the uncontrollable urge to flee. However, you know that if you fled now, your actions would endanger all of humanity. Bravely - or perhaps foolishly - you press onward."
+    },
+    "vi_current": {
+      "name": "Thành Phố Máu",
+      "flavor": "Bạn tiến vào phế tích thành phố ngầm của người rắn. Nham thạch sôi sục thắp sáng những đền thờ cổ.",
+      "back_name": "Tầng Sâu Hơn",
+      "back_text": "Hạ xuống tầng sâu tiếp theo của Yoth.",
+      "back_flavor": "Cơn thịnh nộ của Yig ngày càng nặng nề bao trùm cả chiều sâu địa ngục."
+    }
+  },
+  {
+    "code": "04282",
+    "type": "agenda",
+    "pack": "tdoy",
+    "scenario": "The Depths of Yoth",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.39",
+      "back_text: len ratio 0.07",
+      "back_text: dup [('04279', 'back_text'), ('04280', 'back_text'), ('04281', 'back_text'), ('04282', 'back_text'), ('04283', 'back_text')]",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Fury That Shakes the Earth",
+      "text": "<b>Forced</b> - After the third doom is placed on this agenda: Find the enemy that is in pursuit with the highest evade value, and spawn it at the location where the investigators began at this depth level.",
+      "flavor": "The serpents have stirred up something much larger and more deadly than anything you have faced on this journey. Pale, sweaty, and terrified, you scurry for an exit - any exit.",
+      "back_name": "Yig Emerges",
+      "back_text": "Find the enemy that is in pursuit with the highest evade value, and spawn it at the location where the investigators began at this depth level.\n<hr><b>If Yig is set aside:</b>\n<blockquote><i>The ground shakes with each of the massive creature's steps. He crushes the stone beneath his mighty feet, tearing through walls with his clawed, scaly hands. He sets his hateful eyes on you, unhinging his jaw in a cruel display of hunger.</i></blockquote>\nSpawn Yig in the location where the investigators began at this depth level."
+    },
+    "vi_current": {
+      "name": "Cơn Thịnh Nộ Rung Chuyển Lòng Đất",
+      "text": "<b>Forced</b> - Sau khi doom thứ ba được đưa vào agenda này: Tìm kẻ địch đang theo đuổi với giá trị evade cao nhất và spawn nó tại địa điểm nơi các điều tra viên bắt đầu ở cấp độ sâu này.",
+      "flavor": "Mặt đất rung chuyển dữ dội! Yig — Cha Đẻ Của Loài Rắn — đã thức giấc!",
+      "back_name": "Tầng Sâu Hơn",
+      "back_text": "Hạ xuống tầng sâu tiếp theo của Yoth.",
+      "back_flavor": "Cả trần hang nứt toác và mưa đá nham thạch trút xuống đầu bạn."
+    }
+  },
+  {
+    "code": "04283",
+    "type": "agenda",
+    "pack": "tdoy",
+    "scenario": "The Depths of Yoth",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.45",
+      "back_text: len ratio 0.07",
+      "back_text: dup [('04279', 'back_text'), ('04280', 'back_text'), ('04281', 'back_text'), ('04282', 'back_text'), ('04283', 'back_text')]",
+      "back_flavor: len ratio 0.35"
+    ],
+    "en": {
+      "name": "The Red Depths",
+      "text": "<b>Forced</b> - After any amount of doom is placed on this agenda: Find the enemy that is in pursuit with the highest evade value, and spawn it at the location where the investigators began at this depth level.",
+      "flavor": "The deeper your descent, the brighter and more pervasive the red glow of the caverns becomes. If you didn’t know any better, you would think you were descending into the very depths of hell itself.",
+      "back_name": "The Serpents' Final Bite",
+      "back_text": "Find the enemy that is in pursuit with the highest evade value, and spawn it in the location where the investigators began at this depth level.\nUntil the end of the scenario, the current agenda gains: \"<b>Forced</b> - After any amount of doom is placed on the current agenda: Find the enemy that is in pursuit with the highest evade value, and spawn it in the location where the investigators began at this depth level.\"\nPlace this card in the pursuit area with this side faceup, as a reminder.",
+      "back_flavor": "Nothing can stop the denizens of Yoth. They emerge from hidden places all around you, hissing their foul curses. The caves are plunged into chaos as the serpents close in."
+    },
+    "vi_current": {
+      "name": "Tầng Sâu Đỏ Rực",
+      "text": "<b>Forced</b> - Sau khi đưa bất kỳ lượng doom nào vào agenda này: Tìm kẻ địch đang theo đuổi với giá trị evade cao nhất và spawn tại địa điểm nơi các điều tra viên bắt đầu ở cấp độ sâu này.",
+      "flavor": "Nhiệt độ lên tới mức thiêu đốt. Bạn phải tìm thấy cánh cổng Nexus trước khi bị nung chảy!",
+      "back_name": "Tầng Sâu Hơn",
+      "back_text": "Hạ xuống tầng sâu tiếp theo của Yoth.",
+      "back_flavor": "Bóng hình khổng lồ đầy vảy của Yig lướt qua trong biển lửa."
+    }
+  },
+  {
+    "code": "04284",
+    "type": "agenda",
+    "pack": "tdoy",
+    "scenario": "The Depths of Yoth",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 2.41",
+      "back_text: nums en=['1'] vi=['2']",
+      "back_text: len ratio 6.33",
+      "back_flavor: len ratio 0.15"
+    ],
+    "en": {
+      "name": "VENGEANCE",
+      "text": "<b>Forced</b> - At the end of the 'check doom threshold' step of the mythos phase: The investigators must draw 1 additional encounter card for each doom in play, in player order.\n<b>Objective</b> - If each investigator is defeated, advance this agenda.",
+      "flavor": "You never should have come here.",
+      "back_name": "The Chasm",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "The serpents chase you relentlessly through the tunnels and ruined cities of Yoth, giving you no quarter, no rest, no chance of escape. You cannot hope to hide from their uncanny senses, nor can you run for much longer. Desperate for any way to elude them - any way at all - you run to a nearby chasm. A lone narrow bridge spans the pit. Underneath is a bottomless black abyss that devours the red light of Yoth."
+    },
+    "vi_current": {
+      "name": "BÁO THÙ",
+      "text": "<b>Forced</b> - Khi kết thúc bước 'kiểm tra ngưỡng doom' của giai đoạn Mythos: các điều tra viên phải rút thêm 1 lá bài chạm trán cho mỗi doom trong màn chơi, theo thứ tự điều tra viên.\n<b>Objective</b> - Nếu mỗi điều tra viên bị đánh bại, advance agenda này.",
+      "flavor": "Không còn đường lui! Yig trực tiếp giáng lâm để trừng phạt những kẻ xâm phạm!",
+      "back_name": "Cơn Thịnh Nộ Của Yig",
+      "back_text": "Mỗi điều tra viên bị nghiền nát dưới cơn thịnh nộ của Thần Rắn. <b>(→R2)</b>",
+      "back_flavor": "Yig nuốt chửng bạn vào biển lửa đỏ rực của cõi Yoth vĩnh hằng."
+    }
+  },
+  {
+    "code": "04285",
+    "type": "act",
+    "pack": "tdoy",
+    "scenario": "The Depths of Yoth",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 0.38",
+      "flavor: len ratio 0.41",
+      "back_text: nums en=['1', '2', '4', '5'] vi=['1']",
+      "back_text: len ratio 0.01",
+      "back_flavor: presence en=0 vi=1"
+    ],
+    "en": {
+      "name": "Journey to the Nexus",
+      "text": "[action] If there are no clues on your location: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.\n<b>Objective</b> - At the end of the round, if investigators at Steps of Yoth possess the requisite number of clues, they may advance. <i>(Beware - any investigator who is not at Steps of Yoth will be defeated.)</i>",
+      "flavor": "Doubt and horror grew upon me as I wound still farther down the seemingly endless staircase. Would the thing never stop?- H. P. Lovecraft and Zealia Bishop, <u>The Mound</u>",
+      "back_name": "One Level Deeper",
+      "back_text": "Add 1 resource to the current depth level. If the current depth level is 5+ and you are playing in Campaign Mode, go to <b>(→R2)</b>.\nOtherwise, perform the following:\n- Each investigator who is not at Steps of Yoth is left behind and is defeated. Each surviving investigator loses each of his or her clues. \n- Move each enemy in play to the pursuit area.\n- Remove all doom from locations in play. Set each location in play and in the exploration deck aside, out of play. Investigators are not defeated during this process.\n- Draw a random set-aside location other than Steps of Yoth, put it into play, and place each surviving investigator at that location.\n- Create a new exploration deck consisting of Steps of Yoth and 4 other random set-aside locations. Shuffle the exploration deck.\n- Flip this act back over. Journey as deep as you can…"
+    },
+    "vi_current": {
+      "name": "Hành Trình Tới Nexus",
+      "text": "<b>Objective</b> — Thám hiểm các tầng hang và tìm đường tới Nexus of N'kai.\n[action]: <b>Resign.</b> Bạn leo thang dây rút lui an toàn về tầng trên.",
+      "flavor": "Mục tiêu duy nhất của bạn là sống sót và hạ xuống tầng sâu nhất: Nexus.",
+      "back_name": "Chạm Tới Điểm Hội Tụ",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Bạn nhảy qua dòng nham thạch cuối cùng và chạm tới cánh cổng dẫn vào cõi tối thượng N'kai."
+    }
+  },
+  {
+    "code": "04315",
+    "type": "agenda",
+    "pack": "sha",
+    "scenario": "Shattered Aeons",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('04315', 'text'), ('04316', 'text'), ('04317', 'text')]",
+      "flavor: len ratio 0.55",
+      "back_text: nums en=['1'] vi=['2']",
+      "back_text: len ratio 0.12",
+      "back_flavor: len ratio 0.21"
+    ],
+    "en": {
+      "name": "Threads of Time",
+      "text": "<b>Forced</b> - If an investigator with the Relic of Ages in his or her hand, deck, discard pile, or play area is eliminated: Immediately advance to agenda 3b.",
+      "flavor": "As you enter the grand chamber beyond the doorway, the Nexus stirs. The Earth quakes below you, and the wall chips and crumbles. Shards of stone float in midair above the Nexus. You are running out of time: Reality is starting to shatter all around you.",
+      "back_name": "The Spawn of N'Kai",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\nSpawn the set-aside Formless Spawn in the Nexus of N'kai.\nPlace this card in the victory display. It gains <b>Vengeance 1</b>.",
+      "back_flavor": "You are not the first to intrude in this abyssal pit. You were warned not to break the seal, and yet here you are. Now you face the consequences for your foolish transgression.\nThe <i>thing</i> emerges from the lightless void beyond the Nexus. It is a being of black polymorphic ichor, an animated viscous ooze that crawls along the ground with shapeless limbs and leaves a trail of smooth, dissolved stone in its wake."
+    },
+    "vi_current": {
+      "name": "Những Sợi Tơ Thời Gian",
+      "text": "<b>Forced</b> - Nếu một điều tra viên có Thánh tích Cổ đại trên tay, chồng bài, chồng bài bỏ hoặc khu vực chơi bị loại: Ngay lập tức advance sang agenda 3b.",
+      "flavor": "Tại Nexus of N'kai, các kỷ nguyên của Trái Đất vỡ vụn và giao thoa hỗn loạn. Bạn đang đứng giữa ngã tư của quá khứ, hiện tại và tương lai.",
+      "back_name": "Sợi Tơ Rung Động",
+      "back_text": "Advance sang agenda 2.",
+      "back_flavor": "Không gian xung quanh rạn nứt như kính vỡ, để lộ những thế giới xa lạ bên kia thực tại."
+    }
+  },
+  {
+    "code": "04316",
+    "type": "agenda",
+    "pack": "sha",
+    "scenario": "Shattered Aeons",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('04315', 'text'), ('04316', 'text'), ('04317', 'text')]",
+      "back_text: nums en=['1', '2'] vi=['3']",
+      "back_text: len ratio 0.08",
+      "back_flavor: len ratio 0.37"
+    ],
+    "en": {
+      "name": "Pendulous Threads",
+      "text": "<b>Forced</b> - If an investigator with the Relic of Ages in his or her hand, deck, discard pile, or play area is eliminated: Immediately advance to agenda 3b.",
+      "flavor": "Inside the Nexus, the interwoven\nthreads of ethereal light\nbegin to unravel, and reality\nunravels with it.",
+      "back_name": "The Nexus Falters",
+      "back_text": "Shuffle the encounter discard pile into the encounter deck.\nIf Formless Spawn is in play, place 2 doom on the Nexus of N'kai. If Formless Spawn is in the victory display, shuffle it into the encounter deck.\nPlace this card in the victory display. It gains <b>Vengeance 1</b>.",
+      "back_flavor": "The electrical currents coursing through the machinery of the Nexus begin to malfunction, sending a shower of sparks into the air. The portal ring overheats. Threads of ethereal light within the portal begin to snap."
+    },
+    "vi_current": {
+      "name": "Những Sợi Tơ Treo Lơ Lửng",
+      "text": "<b>Forced</b> - Nếu một điều tra viên có Thánh tích Cổ đại trên tay, chồng bài, chồng bài bỏ hoặc khu vực chơi bị loại: Ngay lập tức advance sang agenda 3b.",
+      "flavor": "Thời gian như một con lắc đung đưa giữa sự tồn vong và diệt vong hoàn toàn.",
+      "back_name": "Sợi Tơ Đứt Đoạn",
+      "back_text": "Advance sang agenda 3.",
+      "back_flavor": "Những dòng thời gian bắt đầu triệt tiêu lẫn nhau, xóa sổ hàng triệu năm lịch sử."
+    }
+  },
+  {
+    "code": "04317",
+    "type": "agenda",
+    "pack": "sha",
+    "scenario": "Shattered Aeons",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('04315', 'text'), ('04316', 'text'), ('04317', 'text')]",
+      "flavor: len ratio 0.16",
+      "back_text: len ratio 5.25",
+      "back_flavor: len ratio 0.12"
+    ],
+    "en": {
+      "name": "Snapped Threads",
+      "text": "<b>Forced</b> - If an investigator with the Relic of Ages in his or her hand, deck, discard pile, or play area is eliminated: Immediately advance to agenda 3b.",
+      "flavor": ".time shattered of purgatory endless awful this in forever lost is know you Everything .Terrifying .False .different are they but ,repeat on out play future and ,present ,past your from Moments .changed has continuity the ,blink you time Each .between in everything and ,reverse in ,order in out play actions Your .here got you how recall cannot you but ,occurred yet not have that things remember You .alter to continues time of flow The",
+      "back_name": "Shattered Aeons",
+      "back_text": "<b>(→R4)</b>",
+      "back_flavor": "The timeline collapses.\nReality dissolves before your very eyes. First to vanish is the environment around you: the matter blurs and thins into strings of light that fade into an empty void.\nNext comes your body: it disintegrates slowly and painlessly into hundreds of millions of subatomic particles, which diffuse throughout the vast emptiness.\nFinally, your cognition: your memories of events both real and unreal. Your hopes and dreams. Thoughts that never held any significance in the infinite scheme of the cosmos."
+    },
+    "vi_current": {
+      "name": "Những Sợi Tơ Đứt Vụn",
+      "text": "<b>Forced</b> - Nếu một điều tra viên có Thánh tích Cổ đại trên tay, chồng bài, chồng bài bỏ hoặc khu vực chơi bị loại: Ngay lập tức advance sang agenda 3b.",
+      "flavor": "Vũ trụ chuẩn bị tan biến vào cõi hư vô không tên. Mọi thứ sắp kết thúc!",
+      "back_name": "Hồi Kết Của Mọi Kỷ Nguyên",
+      "back_text": "Mỗi điều tra viên tan biến vào hư không vĩnh hằng. <b>(→R4)</b>",
+      "back_flavor": "Thời gian ngừng trôi. Vũ trụ tan thành cát bụi dưới chân bạn."
+    }
+  },
+  {
+    "code": "04318",
+    "type": "act",
+    "pack": "sha",
+    "scenario": "Shattered Aeons",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 0.30",
+      "flavor: len ratio 0.35",
+      "back_text: nums en=[] vi=['2']",
+      "back_flavor: len ratio 0.60"
+    ],
+    "en": {
+      "name": "Worlds Beyond",
+      "text": "<b>Forced</b> - When an enemy would spawn at an empty location and there are no empty locations in play: Reveal cards from the exploration deck until a location is revealed. Put that location into play and spawn that enemy there. Shuffle the exploration deck.",
+      "flavor": "The energies of the Nexus swirl in the ground below you, beckoning you to enter. Whether it is a thing of science or magic, you do not know. It is a gateway of sorts, that much you can tell... but a gateway to where?",
+      "back_name": "Return to Another Time",
+      "back_text": "Shuffle the set-aside A Pocket in Time location into the exploration deck.",
+      "back_flavor": "Each time you step through the Nexus, you get one step closer to your ultimate destination - a place that exists outside the boundaries of time and space..."
+    },
+    "vi_current": {
+      "name": "Những Thế Giới Bên Kia",
+      "text": "<b>Objective</b> — Thám hiểm các mảnh vỡ thời gian và tìm kiếm Relic of Ages.",
+      "flavor": "Bạn phải băng qua các kỷ nguyên tan vỡ để tìm lại cổ vật định hình thực tại.",
+      "back_name": "Tìm Kiếm Hội Huynh Đệ",
+      "back_text": "Advance sang Act 2 — \"Search for the Brotherhood\".",
+      "back_flavor": "Bạn phát hiện dấu vết của Alejandro và các tư tế tà giáo đang tiến hành nghi thức tối thượng."
+    }
+  },
+  {
+    "code": "04319",
+    "type": "act",
+    "pack": "sha",
+    "scenario": "Shattered Aeons",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.29",
+      "back_text: nums en=['3', '3'] vi=['3']",
+      "back_text: len ratio 0.08",
+      "back_flavor: len ratio 0.16"
+    ],
+    "en": {
+      "name": "Search for the Brotherhood",
+      "text": "<b>Objective</b> - If an investigator enters A Pocket in Time, advance.",
+      "flavor": "Somewhere deep within this nexus of worlds lies your objective: a place where timelines converge. You can see it in flashes of insight from beyond this reality. Windows into other timelines. A place carved out of time and space, where the Brotherhood no doubt resides.",
+      "back_name": "Gateways to Other Times",
+      "back_text": "Shuffle the set-aside [[Shattered]] locations into the exploration deck. Each investigator shuffles the topmost [[Hex]] treachery in the encounter discard pile into the exploration deck.\nCheck Campaign Log.\n- <i>If the relic is missing</i>, attach the set-aside Relic of Ages <i>(Unleash the Timestream)</i> to A Pocket in Time, under no investigator's control. Advance to Act 3a - \"The Yithian Relic.\"\n- <i>If the investigators found the missing relic</i>, advance to Act 3a - \"The Yithian Relic.\"",
+      "back_flavor": "What you see before you is truly staggering. Throughout these halls are hundreds of windows into places both ancient and futuristic: once-grand civilizations that came before even the earliest records of known history, and more still that have yet to be realized. The psychological weight of this discovery is almost more than your mind can bear. Humans are not the masters or caretakers of the Earth. They are merely a footnote in a much longer history - a history which is about to be revised."
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Hội Huynh Đệ",
+      "text": "<b>Objective</b> — Đột kích vị trí của Hội Huynh Đệ và ngăn chặn nghi thức hủy diệt thời gian.",
+      "flavor": "Lũ người rắn đang tập trung toàn bộ năng lượng để viết lại lịch sử nhân loại.",
+      "back_name": "Cổ Vật Của Người Yith",
+      "back_text": "Advance sang Act 3 — \"The Yithian Relic\".",
+      "back_flavor": "Bạn phá vỡ vòng tròn nghi thức và đoạt lấy Relic of Ages đang tỏa sáng chói lòa."
+    }
+  },
+  {
+    "code": "04320",
+    "type": "act",
+    "pack": "sha",
+    "scenario": "Shattered Aeons",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: icons en=['[action]', '[action]'] vi=[]",
+      "text: len ratio 0.25",
+      "back_text: nums en=['3'] vi=['4']",
+      "back_text: len ratio 0.08",
+      "back_flavor: len ratio 0.48"
+    ],
+    "en": {
+      "name": "The Yithian Relic",
+      "text": "[action]: Search your deck or discard pile for the Relic of Ages and add it to your hand. Shuffle your deck.\n[action] If the Relic of Ages is attached to your location and there are no clues on that location: Take control of the Relic of Ages.\n<b>Objective</b> - If an investigator controls the Relic of Ages, advance.",
+      "flavor": "If you intend to mend the shattered timelines, you will need to find the Relic of Ages and learn to harness its power.",
+      "back_name": "The Relic is the Key",
+      "back_text": "For the remainder of the scenario, if the Relic of Ages leaves play for any reason, shuffle each location attached to it into the exploration deck and reset the act deck to act 3a.\n<hr><b>Check Campaign Log. <i>If Ichtaca is set against you:</i></b>\n<blockquote><i>The thing that was once your companion slithers out of the darkness, hissing. \"Yig will have his way! Valusia will be returned to us!\"</i></blockquote>\nSpawn the set-aside Ichtaca <i>(Scion of Yig)</i> in the Nexus of N'kai.\n<hr><b><i>If Alejandro is set against you:</i></b>\n<blockquote><i>\"Fools! Are you blind?\" Alejandro motions to the worlds before him. \"Your kind stands no chance against the ravages of time.\"</i></blockquote>\nSpawn the set-aside Alejandro <i>(Or, Is He?)</i> in A Pocket in Time.",
+      "back_flavor": "In your hands, you hold the key to fixing all of this. It hums and vibrates with immense power - power that seems to grow and flourish as you visit other timelines."
+    },
+    "vi_current": {
+      "name": "Cổ Vật Của Người Yith",
+      "text": "<b>Objective</b> — Kích hoạt Relic of Ages để hàn gắn các dòng thời gian rạn nứt.",
+      "flavor": "Nắm giữ cổ vật trong tay, bạn phải đưa ra quyết định định đoạt số phận của toàn bộ vũ trụ.",
+      "back_name": "Ngã Rẽ Định Mệnh",
+      "back_text": "Tùy thuộc vào lựa chọn của bạn, advance sang Act 4 tương ứng.",
+      "back_flavor": "Một luồng sáng trắng lóa bao trùm toàn bộ Nexus khi cánh cổng thời gian mở ra."
+    }
+  },
+  {
+    "code": "04321",
+    "type": "act",
+    "pack": "sha",
+    "scenario": "Shattered Aeons",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['1', '3'] vi=[]",
+      "text: icons en=['[action]', '[intellect]', '[willpower]'] vi=[]",
+      "text: len ratio 0.24",
+      "flavor: len ratio 0.49",
+      "back_text: nums en=['1', '5'] vi=['1']",
+      "back_text: len ratio 0.05",
+      "back_flavor: len ratio 0.30"
+    ],
+    "en": {
+      "name": "Mend the Shatter",
+      "text": "[action] If you are at a [[Shattered]] location with no clues: Test [willpower] or [intellect] (3). If you succeed, attach your location facedown to the Relic of Ages. Each investigator and enemy at that location is moved to A Pocket in Time.\n<b>Objective</b> - If the number of locations attached to the Relic of Ages is equal to 1 plus the number of investigators who started the game, advance.",
+      "flavor": "Each window you step through seems to empower the relic. Once the artifact is fully powered, you can use it to mend the shattered timelines and prevent catastrophe.",
+      "back_name": "It Is Done",
+      "back_text": "- If Relic of Ages <i>(Repossess the Past)</i> is the version of the Relic of Ages that the investigators control, proceed to <b>(→R5)</b>.\n- If the investigators control any other version of the Relic of Ages, proceed to <b>(→R1)</b>.",
+      "back_flavor": "You manipulate the thrumming device in your hands with the skill and knowledge of one of the relic's ingenious inventors. It is as though your mind has suddenly become flooded with the knowledge of the ancients that came before you. Power seeps from the device's every aperture. Rays of blinding light shoot forth from cracks appearing on its surface. You only have one chance to restore these shattered realities - only one chance to make things right."
+    },
+    "vi_current": {
+      "name": "Hàn Gắn Vết Rách (Act 4 - v. I)",
+      "text": "<b>Objective</b> — Dùng sức mạnh của cổ vật để khôi phục lại trật tự tự nhiên của dòng thời gian.",
+      "flavor": "Bạn chọn hàn gắn vết thương của thời gian và đưa mọi thứ trở lại quỹ đạo vốn có.",
+      "back_name": "Thời Gian Khép Lại",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Các mảnh vỡ thời gian từ từ ghép lại hoàn chỉnh. Bạn tỉnh lại giữa rừng mưa nhiệt đới, nơi mọi vết tích siêu nhiên đã lùi vào dĩ vãng."
+    }
+  },
+  {
+    "code": "04322",
+    "type": "act",
+    "pack": "sha",
+    "scenario": "Shattered Aeons",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['3'] vi=[]",
+      "text: icons en=['[action]', '[intellect]', '[willpower]'] vi=[]",
+      "text: len ratio 0.24",
+      "flavor: len ratio 0.36",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.19"
+    ],
+    "en": {
+      "name": "Paradise Lost",
+      "text": "[action] If you are at a [[Shattered]] location with no clues: Test [willpower] or [intellect] (3). If you succeed, attach your location facedown to the Relic of Ages. Each investigator and enemy at that location is moved to A Pocket in Time.\n<b>Objective</b> - If Valusia is attached to the Relic of Ages, advance.",
+      "flavor": "Each window you step through seems to empower the relic. Once the artifact is fully powered, will you use it to restore the serpent civilization of Valusia to its former glory?",
+      "back_name": "Glory to Valusia",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "Ichtaca observes you with narrow yellow eyes as you manipulate the thrumming device in your hands. Power seeps from the device's every aperture. Rays of blinding light shoot forth from the cracks appearing on its surface. You watch as the boundary between timelines begins to mend, and the window closes, trapping you within the time and place you have chosen. Once the deed is done, the light fades from the artifact. Its humming ceases, and it never sounds again.\nA beautiful yellow sun rises over the lush kingdom of Valusia, and you wonder what to make of your new life."
+    },
+    "vi_current": {
+      "name": "Thiên Đường Đã Mất (Act 4 - v. II)",
+      "text": "<b>Objective</b> — Viết lại lịch sử để tạo ra một kỷ nguyên mới tươi đẹp hơn.",
+      "flavor": "Bạn sử dụng quyền năng cổ vật để xóa bỏ mọi đau khổ của quá khứ.",
+      "back_name": "Thế Giới Mới",
+      "back_text": "<b>(→R2)</b>",
+      "back_flavor": "Một thế giới mới tươi đẹp hiện ra, nhưng bạn nhận ra cái giá phải trả là sự tha hóa vĩnh viễn của nhân loại."
+    }
+  },
+  {
+    "code": "04323",
+    "type": "act",
+    "pack": "sha",
+    "scenario": "Shattered Aeons",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['3'] vi=[]",
+      "text: icons en=['[action]', '[intellect]', '[willpower]'] vi=[]",
+      "text: len ratio 0.25",
+      "flavor: len ratio 0.26",
+      "back_text: untranslated",
+      "back_flavor: len ratio 0.12"
+    ],
+    "en": {
+      "name": "Timelock",
+      "text": "[action] If you are at a [[Shattered]] location with no clues: Test [willpower] or [intellect] (3). If you succeed, attach your location facedown to the Relic of Ages. Each investigator and enemy at that location is moved to A Pocket in Time.\n<b>Objective</b> - If Pnakotus is attached to the Relic of Ages, advance.",
+      "flavor": "Each window you step through seems to empower the relic. Once the artifact is fully powered, will you use it to prevent the destruction of Pnakotus and the Yithians?",
+      "back_name": "Survival of Pnakotus",
+      "back_text": "<b>(→R3)</b>",
+      "back_flavor": "Alejandro studies your every move as you manipulate the thrumming device in your hands. Power seeps from the device's every aperture. Rays of blinding light shoot forth from the cracks appearing on its surface. You watch as the boundary between timelines begins to mend, and the window closes, trapping you within the time and place you have chosen. Once the deed is done, the light fades from the artifact. Its humming ceases, and it never sounds again.\n\"Come, my friend,\" Alejandro says stoically, motioning toward the tallest basalt tower of the city of endless archives. \"Now our work can truly begin.\""
+    },
+    "vi_current": {
+      "name": "Khóa Thời Gian (Act 4 - v. III)",
+      "text": "<b>Objective</b> — Đóng băng vĩnh viễn dòng thời gian để ngăn chặn sự diệt vong.",
+      "flavor": "Bạn chọn đóng băng khoảnh khắc này mãi mãi.",
+      "back_name": "Khoảnh Khắc Vĩnh Hằng",
+      "back_text": "<b>(→R3)</b>",
+      "back_flavor": "Mọi chuyển động dừng lại. Vũ trụ chìm vào một bức tranh tĩnh lặng vĩnh cửu."
+    }
+  },
+  {
+    "code": "04345",
+    "type": "act",
+    "pack": "sha",
+    "scenario": "Turn Back Time",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('04044', 'text'), ('04045', 'text'), ('04207', 'text'), ('04208', 'text'), ('04345', 'text'), ('83019', 'text')]",
+      "flavor: len ratio 0.42",
+      "back_text: len ratio 0.13",
+      "back_flavor: len ratio 0.51"
+    ],
+    "en": {
+      "name": "Into the Ruins Once Again",
+      "text": "[action]: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.",
+      "flavor": "Despite everything that has occurred since you were last here, the Eztli temple remains the same as it was when you first explored it, preserved in an echo of time. You use your memories to guide you, heading deeper into the ruins once more.",
+      "back_name": "Sleeping Corridors",
+      "back_text": "Shuffle the set-aside Chamber of Time location into the exploration deck.\nPlace this act in the victory display. It gains <b>Vengeance 2</b>.",
+      "back_flavor": "You pass by carvings in the walls and hieroglyphs etched into stone altars. The location of the relic's vault is already locked deep in your memory."
+    },
+    "vi_current": {
+      "name": "Tiến Vào Tàn Tích Một Lần Nữa",
+      "text": "[action]: <b>Explore.</b> Rút lá bài trên cùng của chồng bài khám phá. Nếu đó là địa điểm đang kết nối, hãy đặt nó vào màn chơi và di chuyển đến đó.",
+      "flavor": "Được trao cơ hội quay ngược thời gian, bạn trở lại tàn tích Eztli với toàn bộ tri thức của tương lai.",
+      "back_name": "Căn Phòng Của Những Tàn Tích",
+      "back_text": "Advance sang Act 2.",
+      "back_flavor": "Bạn tiến thẳng vào phòng tế lễ mà không vướng phải những cạm bẫy chết người."
+    }
+  },
+  {
+    "code": "04346",
+    "type": "act",
+    "pack": "sha",
+    "scenario": "Turn Back Time",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "back_text: nums en=['2', '296'] vi=['3']",
+      "back_text: len ratio 0.08",
+      "back_flavor: len ratio 0.11"
+    ],
+    "en": {
+      "name": "The Chamber of Still Remains",
+      "text": "[action]: <b>Explore.</b> Draw the top card of the exploration deck. If it is a connecting location, put it into play and move to it.\n<b>Objective</b> - Only investigators in the Chamber of Time may spend the requisite number of clues, as a group, to advance.",
+      "flavor": "In the central chamber deep within the core of the ruins, the relic awaits.",
+      "back_name": "Reversal",
+      "back_text": "Choose an investigator in the Chamber of Time to take control of the Relic of Ages.\nSearch the collection for Yig <i>(The Forgotten Age card #296)</i>. Spawn it in the Chamber of Time.\nPlace this act in the victory display. It gains <b>Vengeance 2</b>.",
+      "back_flavor": "The relic hums with power and throbs in your hands. Energy from the device seeps into the corridors of the ruins, and the structure of the temple shifts. However, this does not matter to you. Escaping with the relic is no longer your goal. You skillfully work the hidden components of the device once more, manipulating the very fabric of time in the environment around you. Determined to stop all of this from having ever occurred, you turn the clock back once more."
+    },
+    "vi_current": {
+      "name": "Căn Phòng Của Những Tàn Tích Còn Lại",
+      "text": "[action]: <b>Explore.</b> Rút lá bài trên cùng của chồng bài khám phá. Nếu đó là địa điểm đang kết nối, hãy đặt nó vào màn chơi và di chuyển đến nó.\n<b>Objective</b> - Chỉ các điều tra viên trong Phòng thời gian mới có thể dành số lượng manh mối cần thiết, với tư cách là một nhóm, cho advance.",
+      "flavor": "Harbinger of Valusia đang đứng đợi bạn, nhưng lần này bạn đã sẵn sàng.",
+      "back_name": "Khoảnh Khắc Định Mệnh",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Bạn giáng đòn quyết định hạ gục kẻ gác đền nghìn năm."
+    }
+  },
+  {
+    "code": "04347",
+    "type": "act",
+    "pack": "sha",
+    "scenario": "Turn Back Time",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: nums en=['3', '4'] vi=[]",
+      "text: icons en=['[action]', '[intellect]', '[willpower]'] vi=['[action]']",
+      "text: len ratio 0.39",
+      "flavor: len ratio 0.23",
+      "back_flavor: len ratio 0.37"
+    ],
+    "en": {
+      "name": "Moment of Doom",
+      "text": "Relic of Ages gains: \"[action]: Test [willpower] or [intellect] (4). If you succeed, flip a clue controlled by an investigator at your location to its doom side, and place it on your location. Then, deal 3 damage to Yig.\"\n<b>Objective</b> - If Yig is defeated, advance.",
+      "flavor": "You stand in the center of the relic’s vault, surrounded on all sides by slain Eztli warriors. The Father of Serpents stands before you, his hiss shaking you to your bones. This is where the Eztli made their last stand. Now, only you stand in the creature’s way.",
+      "back_name": "Yig's Fall",
+      "back_text": "<b>(→R1).</b>",
+      "back_flavor": "The creature roars in pain. His tail thrashes violently, crushing several pillars and sending you flying to the ground. He retreats with a hateful, rumbling hiss. You turn your attention back to the relic and the chamber that was built to preserve it. It is time to end this, once and for all. It is time to do what must be done."
+    },
+    "vi_current": {
+      "name": "Khoảnh Khắc Của Doom",
+      "text": "<b>Objective</b> — Phong ấn vĩnh viễn Relic of Ages và phá hủy ngôi đền Eztli.\n[action]: <b>Advance.</b>",
+      "flavor": "Đây là cơ hội cuối cùng để sửa chữa mọi sai lầm của lịch sử!",
+      "back_name": "Vận Mệnh Được Thay Đổi",
+      "back_text": "<b>(→R1)</b>",
+      "back_flavor": "Ngôi đền sụp đổ hoàn toàn, chôn vùi vĩnh viễn cổ vật thời gian dưới lòng đất sâu. Bạn đã cứu rỗi tương lai của nhân loại!"
+    }
+  },
+  {
+    "code": "53029",
+    "type": "act",
+    "pack": "rttfa",
+    "scenario": "Return to Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.23"
+    ],
+    "en": {
+      "name": "Search for the Meaning",
+      "text": "<b>Objective</b> - Only investigators in Rivertown can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "You decide to head to the estate of Marshall Hastings to learn more about the strange happenings mentioned in the <i>Advertiser</i>'s article. Perhaps this new development can shed light on your other recent troubles."
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Ý Nghĩa",
+      "text": "<b>Objective</b> - Chỉ các điều tra viên ở Rivertown mới có thể dành số lượng manh mối cần thiết, với tư cách là một nhóm, cho advance.",
+      "flavor": "Những điềm báo thời gian ngày càng trở nên rõ nét."
+    }
+  },
+  {
+    "code": "53030",
+    "type": "act",
+    "pack": "rttfa",
+    "scenario": "Return to Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.15"
+    ],
+    "en": {
+      "name": "Search for the Source",
+      "text": "<b>Objective</b> - Only investigators in Northside can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "In order to get to the bottom of this new development, you decide to search for the anonymous source of the <i>Advertiser</i>'s article. Perhaps if you head to its offices in Northside, you can inquire further - although you may have to grease a few palms to get the information you need."
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Cội Nguồn",
+      "text": "<b>Objective</b> - Chỉ các điều tra viên ở Northside mới có thể dành số lượng manh mối cần thiết, với tư cách là một nhóm, cho advance.",
+      "flavor": "Dấu vết dẫn thẳng tới dinh thự cổ ngoại ô."
+    }
+  },
+  {
+    "code": "53031",
+    "type": "act",
+    "pack": "rttfa",
+    "scenario": "Return to Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('53031', 'text'), ('53032', 'text')]",
+      "flavor: len ratio 0.27",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "The Overgrown Estate",
+      "text": "<b>Objective</b> - Only investigators at The Hastings Estate can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "When you arrive at the Hastings estate, you find it in a much sorrier state than was originally described. The rainforest has come to Arkham, claiming the manor and the surrounding area almost entirely.",
+      "back_name": "Sent from Another Time",
+      "back_text": "Search the collection for the Harbinger of Valusia <i>(The Sleeper Returns)</i> and spawn it at The Hastings Estate. It enters play with damage on it equal to the amount of damage recorded in parentheses in your Campaign Log. If there are 5 or fewer tally marks under \"Yig's Fury\" in your Campaign Log, it enters play exhausted.\nAdvance to Act 3g - \"Impossible Pursuit\".",
+      "back_flavor": "You scour the estate for clues but find nothing that wasn't already described in the <i>Advertiser</i>'s article. It's like your fears have come to life: the rainforest has indeed followed you all the way here to Arkham. After dreading this for so long, it's almost a relief to finally be able to confront it. Just then, a familiar rattling echoes through the halls of the manor. The dreadful sound makes your skin crawl. Surely, it couldn't be... could it?"
+    },
+    "vi_current": {
+      "name": "Dinh Thự U Uất",
+      "text": "<b>Objective</b> - Chỉ các điều tra viên tại The Hastings Estate mới có thể dành số lượng manh mối cần thiết, với tư cách là một nhóm, cho advance.",
+      "flavor": "Cỏ dại và dây leo bao phủ khắp khu biệt thự hoang tàn.",
+      "back_name": "Sent from Another Time",
+      "back_text": "Search the collection for the Harbinger of Valusia <i>(The Sleeper Returns)</i> and spawn it at The Hastings Estate. It enters play with damage on it equal to the amount of damage recorded in parentheses in your Campaign Log. If there are 5 or fewer tally marks under \"Yig's Fury\" in your Campaign Log, it enters play exhausted.\nAdvance to Act 3g - \"Impossible Pursuit\".",
+      "back_flavor": "Bạn lùng sục khu đất để tìm manh mối nhưng không tìm thấy gì chưa được mô tả trong bài viết của <i>Advertiser</i>. Giống như nỗi sợ hãi của bạn đã trở thành hiện thực: rừng nhiệt đới thực sự đã theo bạn đến tận Arkham. Sau khi lo sợ điều này quá lâu, thật nhẹ nhõm khi cuối cùng cũng có thể đối mặt với nó. Ngay sau đó, một tiếng lạch cạch quen thuộc vang vọng khắp các sảnh của trang viên. Âm thanh khủng khiếp khiến bạn nổi da gà. Chắc chắn là không thể nào... phải không?"
+    }
+  },
+  {
+    "code": "53032",
+    "type": "act",
+    "pack": "rttfa",
+    "scenario": "Return to Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('53031', 'text'), ('53032', 'text')]",
+      "flavor: len ratio 0.30"
+    ],
+    "en": {
+      "name": "The Overgrown Estate",
+      "text": "<b>Objective</b> - Only investigators at The Hastings Estate can spend the requisite number of clues, as a group, to advance.",
+      "flavor": "When you arrive at the Hastings estate, you find it in a much sorrier state than was originally described. The rainforest has come to Arkham, claiming the manor and the surrounding area almost entirely."
+    },
+    "vi_current": {
+      "name": "Dinh Thự U Uất",
+      "text": "<b>Objective</b> - Chỉ các điều tra viên tại The Hastings Estate mới có thể dành số lượng manh mối cần thiết, với tư cách là một nhóm, cho advance.",
+      "flavor": "Những cái bẫy chết người được giăng sẵn đón khách không mời."
+    }
+  },
+  {
+    "code": "53033",
+    "type": "act",
+    "pack": "rttfa",
+    "scenario": "Return to Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('53033', 'text'), ('53034', 'text')]",
+      "flavor: len ratio 0.18",
+      "back_text: untranslated"
+    ],
+    "en": {
+      "name": "Seeking Trouble",
+      "text": "<b>Objective</b> - If there are 1 [per_investigator] clues on Merle Garvin: You must remove them and immediately advance.",
+      "flavor": "You've learned the identity of the <i>Advertiser</i>'s source: a man named Merle Garvin, who recently returned from an expedition funded by none other than Marshall Hastings. He was last seen anxiously rummaging through the library at the university, though nobody is quite sure why.",
+      "back_name": "Sent from Another Time",
+      "back_text": "Search the collection for the Harbinger of Valusia <i>(The Sleeper Returns)</i> and spawn it at Merle Garvin's location. It enters play with damage on it equal to the amount of damage recorded in parentheses in your Campaign Log. If there are 5 or fewer tally marks under \"Yig's Fury\" in your Campaign Log, it enters play exhausted.\nAdvance to Act 3g - \"Impossible Pursuit\".",
+      "back_flavor": "When you finally track Mr. Garvin down and corner him, he is absolutely terrified - not of you, but of something else entirely. \"It's coming,\" he warns. \"It won't ever stop until all of us are dead. Please, you have to help me! You have to hide me!\" Before you can ask what it is that frightens him so, your unspoken question is answered by a familiar rattling. The dreadful sound makes your skin crawl. How could <i>it</i> be here in Arkham?"
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Rắc Rối",
+      "text": "<b>Objective</b> - Nếu có 1 [per_investigator] manh mối trên Merle Garvin: Bạn phải loại bỏ chúng và ngay lập tức advance.",
+      "flavor": "Những kẻ thù quen thuộc xuất hiện ở mọi khúc quanh.",
+      "back_name": "Sent from Another Time",
+      "back_text": "Search the collection for the Harbinger of Valusia <i>(The Sleeper Returns)</i> and spawn it at Merle Garvin's location. It enters play with damage on it equal to the amount of damage recorded in parentheses in your Campaign Log. If there are 5 or fewer tally marks under \"Yig's Fury\" in your Campaign Log, it enters play exhausted.\nAdvance to Act 3g - \"Impossible Pursuit\".",
+      "back_flavor": "Cuối cùng khi bạn lần ra ông Garvin và dồn ông ta vào chân tường, ông ta thực sự sợ hãi - không phải vì bạn mà vì một điều gì đó hoàn toàn khác. “Nó đang đến,” anh cảnh báo. \"Nó sẽ không bao giờ dừng lại cho đến khi tất cả chúng ta đều chết. Làm ơn, bạn phải giúp tôi! Bạn phải giấu tôi đi!\" Trước khi bạn có thể hỏi điều gì đã khiến anh ấy sợ hãi đến thế, câu hỏi ngầm của bạn đã được trả lời bằng một tiếng lạch cạch quen thuộc. Âm thanh khủng khiếp khiến bạn nổi da gà. Làm sao <i>it</i> có thể ở đây trong Arkham?"
+    }
+  },
+  {
+    "code": "53034",
+    "type": "act",
+    "pack": "rttfa",
+    "scenario": "Return to Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: dup [('53033', 'text'), ('53034', 'text')]",
+      "flavor: len ratio 0.16"
+    ],
+    "en": {
+      "name": "Seeking Trouble",
+      "text": "<b>Objective</b> - If there are 1 [per_investigator] clues on Merle Garvin: You must remove them and immediately advance.",
+      "flavor": "You've learned the identity of the <i>Advertiser</i>'s source: a man named Merle Garvin, who recently returned from an expedition funded by none other than Marshall Hastings. He was last seen anxiously rummaging through the library at the university, though nobody is quite sure why."
+    },
+    "vi_current": {
+      "name": "Tìm Kiếm Rắc Rối",
+      "text": "<b>Objective</b> - Nếu có 1 [per_investigator] manh mối trên Merle Garvin: Bạn phải loại bỏ chúng và ngay lập tức advance.",
+      "flavor": "Đám giáo đồ ráo riết săn lùng dấu vết của bạn."
+    }
+  },
+  {
+    "code": "53035",
+    "type": "act",
+    "pack": "rttfa",
+    "scenario": "Return to Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.33"
+    ],
+    "en": {
+      "name": "Discover the Truth",
+      "text": "<b>Objective</b> - If there are 1 [per_investigator] clues on Clinton Freeman: You must remove them and immediately advance.\n<b>Objective</b> - If Loading Docks is in play and there are no clues remaining on it: You must immediately advance.",
+      "flavor": "You're close to learning the truth behind this other expedition. What were they after, and why? Does this have anything to do with Ichtaca and the Eztli?",
+      "back_name": "Another Expedition",
+      "back_text": "<b>If Clinton Freeman is in play:</b>\n<blockquote><i>Mr. Freeman finally reveals to you the truth: that his expedition was partially funded by a mysterious \"philanthropist\" in Mexico City, in return for several relics. Curious - and worried - he and his partners offer to help you get to the bottom of this.</i></blockquote>\nThe investigator nearest to Clinton Freeman takes control of the set-aside Veda Whitsley. Remove the remainder of the \"g/h\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>.\n<hr><b>If Loading Docks is in play:</b>\n<blockquote><i>Thanks to Mr. Garvin's information, you discover that many of the expedition's finds are heading to a surprising destination: an unspecified recipient in Mexico City. Grateful for your assistance, several members of the expedition offer you their help.</i></blockquote>\nThe investigator nearest to the Loading Docks takes control of the set-aside Veda Whitsley. Remove the remainder of the \"g/h\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>."
+    },
+    "vi_current": {
+      "name": "Khám Phá Sự Thật",
+      "text": "<b>Objective</b> - Nếu có 1 [per_investigator] manh mối trên Clinton Freeman: Bạn phải loại bỏ chúng và ngay lập tức advance.\n<b>Objective</b> - Nếu Loading Docks là trong màn chơi và không còn manh mối trên đó: Bạn phải ngay lập tức advance.",
+      "flavor": "Bức tranh toàn cảnh về âm mưu nghìn năm dần hé lộ.",
+      "back_name": "Another Expedition",
+      "back_text": "<b>If Clinton Freeman is trong màn chơi:</b>\n<blockquote><i>Mr. Freeman finally reveals to you the truth: that his expedition was partially funded by a mysterious \"philanthropist\" in Mexico City, in return for several relics. Curious - and worried - he and his partners offer to help you get to the bottom of this.</i></blockquote>\nThe investigator nearest to Clinton Freeman takes control of the set-aside Veda Whitsley. Remove the remainder of the \"g/h\" act deck from the game. If another act card is trong màn chơi, continue playing. Otherwise, proceed to <b>(→R1)</b>.\n<hr><b>If Loading Docks is trong màn chơi:</b>\n<blockquote><i>Thanks to Mr. Garvin's information, you discover that many of the expedition's finds are heading to a surprising destination: an unspecified recipient in Mexico City. Grateful for your assistance, several members of the expedition offer you their help.</i></blockquote>\nThe investigator nearest to the Loading Docks takes control of the set-aside Veda Whitsley. Remove the remainder of the \"g/h\" act deck from the game. If another act card is trong màn chơi, continue playing. Otherwise, proceed to <b>(→R1)</b>."
+    }
+  },
+  {
+    "code": "53036",
+    "type": "act",
+    "pack": "rttfa",
+    "scenario": "Return to Threads of Fate",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.20"
+    ],
+    "en": {
+      "name": "Impossible Pursuit",
+      "text": "<b>Objective</b> - If the Harbinger of Valusia leaves play, advance.",
+      "flavor": "You never thought this creature would track you all the way to Arkham. Or perhaps it's just a figment of your imagination. A ghost in your mind. A shard of your subconscious, driving you away from this line of inquiry.",
+      "back_name": "Another Expedition",
+      "back_text": "The investigator nearest to the Harbinger of Valusia takes control of the set-aside Veda Whitsley.\nRemove the remainder of the \"g/h\" act deck from the game. If another act card is in play, continue playing. Otherwise, proceed to <b>(→R1)</b>.",
+      "back_flavor": "As quickly as it arrived, the serpent-thing is gone. You're still not sure if it was really there to begin with, but for the moment, it seems you are safe. Grateful for your assistance, several members of the other expedition offer you their help. Whether or not there was a link to the Eztli in the relics they found remains to be seen. Regardless, their expertise will surely be invaluable if creatures like this one continue to haunt your every step."
+    },
+    "vi_current": {
+      "name": "Cuộc Truy Đuổi Bất Khả Thi",
+      "text": "<b>Objective</b> - Nếu điềm báo Valusia rời khỏi cuộc chơi, advance.",
+      "flavor": "Chạy đua với chính dòng chảy của thời gian.",
+      "back_name": "Another Expedition",
+      "back_text": "The investigator nearest to the Harbinger of Valusia takes control of the set-aside Veda Whitsley.\nRemove the remainder of the \"g/h\" act deck from the game. If another act card is trong màn chơi, continue playing. Otherwise, proceed to <b>(→R1)</b>.",
+      "back_flavor": "Ngay khi nó đến, con rắn đã biến mất. Bạn vẫn không chắc liệu nó có thực sự ở đó ngay từ đầu hay không, nhưng hiện tại, có vẻ như bạn vẫn an toàn. Biết ơn sự giúp đỡ của bạn, một số thành viên của đoàn thám hiểm khác đề nghị giúp đỡ bạn. Liệu có mối liên hệ nào với Eztli trong di tích mà họ tìm thấy hay không thì vẫn còn phải xem. Dù thế nào đi nữa, chuyên môn của họ chắc chắn sẽ là vô giá nếu những sinh vật như thế này tiếp tục ám ảnh từng bước đi của bạn."
+    }
+  },
+  {
+    "code": "53046",
+    "type": "act",
+    "pack": "rttfa",
+    "scenario": "Return to Pillars of Judgment",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "flavor: len ratio 0.23"
+    ],
+    "en": {
+      "name": "A Familiar Pattern",
+      "text": "<b>Objective</b> - When the investigators have collected the requisite number of clues, they must immediately spend them and advance.",
+      "flavor": "Six stone pillars surround the entrance to the cavern, each carved with a series of uncanny grooves and hieroglyphs that form an intricate pattern. Touching them causes the grooves to glow brightly, and twisting them causes the patterns to shift and change. Perhaps these patterns match the glyphs found in other regions of the rainforest?"
+    },
+    "vi_current": {
+      "name": "Một Hoa Văn Quen Thuộc",
+      "text": "<b>Objective</b> - Khi các điều tra viên đã thu thập đủ số lượng manh mối cần thiết, họ phải tiêu ngay số tiền đó và advance.",
+      "flavor": "Những biểu tượng trên cột đá dường như trùng khớp với ghi chép của Alejandro."
+    }
+  },
+  {
+    "code": "53054",
+    "type": "act",
+    "pack": "rttfa",
+    "scenario": "Return to the City of Archives",
+    "source_file": "acts_agendas_tfa.py",
+    "audit_flags": [
+      "text: len ratio 0.18",
+      "flavor: presence en=0 vi=1",
+      "back_text: nums en=[] vi=['3']",
+      "back_text: len ratio 0.03",
+      "back_flavor: len ratio 0.21"
+    ],
+    "en": {
+      "name": "Unrestricted Access",
+      "text": "<b>Objective</b> - If three of the following are true, you must advance:\n- An investigator \"found the process.\"\n- An investigator \"dissected an organ.\"\n- An investigator \"interviewed a subject.\"\n- An investigator \"realized what year it is.\"\n- An investigator \"activated the device.\"\n- An investigator controls The Custodian.\n- An investigator \"read about Earth.\"\n- An investigator \"saw a familiar specimen.\"",
+      "back_name": "The Process",
+      "back_text": "You no longer have to perform any of the following tasks. However, the more you have performed by the time the scenario ends, the easier the transition to your human body will be, and the less likely the process is to fail or backfire. <b>Be careful...</b>\nPut this act into play with this side faceup as a reminder.\n- An investigator \"found the process.\"\n- An investigator \"dissected an organ.\"\n- An investigator \"interviewed a subject.\"\n- An investigator \"realized what year it is.\"\n- An investigator \"activated the device.\"\n- An investigator controls The Custodian.\n- An investigator \"read about Earth.\"\n- An investigator \"saw a familiar specimen.\"",
+      "back_flavor": "The truth is hard to accept. Your body was never brought to this place. Your mind has been transferred into the body of one of these creatures. Somewhere, in another place - in another time - one of the reviled creatures dwells <i>in your body</i>."
+    },
+    "vi_current": {
+      "name": "Tiếp Cận Không Hạn Chế",
+      "text": "<b>Objective</b> — Dùng chìa khóa mã hóa để mở toang kho lưu trữ tâm trí.",
+      "flavor": "Hệ thống máy tính cổ xưa nhấp nháy ánh sáng cho phép bạn truy cập dữ liệu tối mật.",
+      "back_name": "Tái Chiếm Bản Ngã",
+      "back_text": "Advance sang Act 3.",
+      "back_flavor": "Bạn tìm thấy ống chứa lưu trữ mẫu sóng não của mình!"
+    }
+  }
+]
