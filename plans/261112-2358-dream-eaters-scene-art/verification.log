@@ -1,0 +1,1540 @@
+✔ Weaver follows the span centers of the real backend Act 2 layout (4.1298ms)
+✔ Weaver uses live leg placement, falls back when meta is absent and keeps a clockwise body arc (1.1886ms)
+✔ Endless Descent recognizes the wrap and a subsequent shuffle of unrevealed cards (0.9772ms)
+✔ dynamic map faces and hidden backs select the shipped sprites (4.8044ms)
+✔ every playable Hemlock Vale board selects a shipped overview (17.3498ms)
+✔ Dream-Eaters selects the current board, including Kadath with every region in its layout (8.7627ms)
+✔ Written in Rock selects the rail board after the cave-in on either reference printing (1.7948ms)
+✔ Fate of the Vale changes backdrop only when the game lays out the nighttime village (1.9644ms)
+✔ the village anchors cover all eight landmarks on both printed faces (0.5151ms)
+✔ the house keeps the foyer and attic on their painted floors as the board changes (0.3926ms)
+✔ Night of the Zealot scenarios select their overview boards (0.1856ms)
+✔ Dunwich Legacy scenarios select their overview boards (0.1911ms)
+✔ The Scarlet Keys scenarios select their overview boards (0.2622ms)
+✔ The Path to Carcosa scenarios select their overview boards (0.607ms)
+✔ The Drowned City scenarios select their overview boards (0.2942ms)
+✔ Dark Matter scenarios select their overview boards (0.1308ms)
+✔ Ages Unwound scenarios select their overview boards (0.0842ms)
+✔ The Forgotten Age scenarios select their overview boards (0.1555ms)
+✔ The Circle Undone scenarios select their overview boards (0.2429ms)
+✔ The Innsmouth Conspiracy scenarios select their overview boards (0.218ms)
+✔ Edge of the Earth overview maps and location positions (0.1486ms)
+✔ Chapter 2 overview maps and location positions (0.1265ms)
+✔ Standalone / Side Stories select their overview boards and location positions (0.1658ms)
+✔ In Too Deep plates run west to east from left to right in every row (0.2003ms)
+✔ Island boards: Before the Black Throne and Devil Reef stand each location on its own sprite (0.093ms)
+✔ connection arrows show the actual direction regardless of endpoint order (4.8332ms)
+✔ links are undirected and deduplicated (1.2506ms)
+✔ one-sided connection data still yields a link (0.2173ms)
+✔ links to locations not in play are ignored (0.1931ms)
+✔ shortest path picks the fewest hops (0.3754ms)
+✔ path from a location to itself is that location (0.1483ms)
+✔ disconnected target gives an empty path (0.1757ms)
+✔ unknown endpoints give an empty path (0.1315ms)
+✔ blocked locations are routed around or make target unreachable (0.2439ms)
+✔ roster lists investigators and enemies at a location (0.3302ms)
+✔ the mine entrance uses painted chamber positions even when the grid has extra columns (0.9439ms)
+✔ the mine passage anchor is the same for either direction (0.1668ms)
+✔ grid layout centres each label in its cell, as percentages (0.2261ms)
+✔ grid layout uses the middle of a label spanning several cells (0.1458ms)
+✔ grid layout tolerates ragged rows and extra spaces (0.1307ms)
+✔ auto layout places every location inside the map, neighbours in later columns (0.4267ms)
+✔ auto layout never stacks two locations on one point (0.2811ms)
+✔ auto layout of an empty or single graph is safe (0.1776ms)
+✔ map positions follow the scenario grid by label and fall back to auto layout for the rest (0.2573ms)
+✔ map positions without a grid use auto layout for all (0.1712ms)
+✔ compactGridLayout collapses rows and columns the card board leaves empty (0.3359ms)
+✔ Cosmos: revealed locations have their own 3:2 sprite, face-down cards stand on the round rock (1.1941ms)
+✔ Devil Reef: each revealed location shows the sprite drawn after its card, face-down cards their back (0.2236ms)
+✔ Return to Devil Reef: Cave Mouth, Shrine to Hydra, the shared tunnel art and the second vessel (3.2099ms)
+✔ Devil Reef water rises over flooded revealed locations, never over the open sea or a card back (0.2234ms)
+✔ every sprite an island set refers to is a WebP file in public/ (21.1447ms)
+✔ the Fishing Vessel is drawn at its location with whoever is inside it (1.1386ms)
+✔ the boat turns its bow the way it sails and keeps it on a straight north/south move (0.1908ms)
+✔ keeps board targets the scene cannot click and drops those the scene already offers (2.2852ms)
+✔ a target whose card is gone is left out (0.1856ms)
+✔ a target already drawn as a clickable spider part stays off the fallback panel (0.2125ms)
+✔ lists investigator tokens the hidden token row would answer, but not your own take-a-resource (0.3129ms)
+✔ counts every choice only the panel can answer (0.2824ms)
+ℹ tests 58
+ℹ suites 0
+ℹ pass 58
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 485.2709
+
+> arkhamhorror@0.1.0 tc
+> vue-tsc --noEmit -p tsconfig.json --composite false
+
+
+> arkhamhorror@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ a partial campaign maps to the catalog part key it filters on (19685.151ms)
+✔ campaigns sort with Return Tos first, then in release order (19778.0556ms)
+✔ the full campaign and unknown shapes show every section (19752.6618ms)
+✔ asks before playing a card from hand, with no warning when nothing is engaged (2.0364ms)
+✔ a hand card offered outside the player window is a target, not a play (0.2295ms)
+✔ sees through a labelled player window (0.2504ms)
+✔ another seat's hand card is not this player's play (0.2565ms)
+✔ playing a non-Fast card while engaged with a ready enemy warns about it (0.2859ms)
+✔ Fast cards and Fight events do not provoke (0.2596ms)
+✔ with play confirmation off, a play only asks when it provokes (0.2795ms)
+✔ a provoking basic action warns only while a ready enemy is engaged (0.3795ms)
+✔ fight, evade, resign and parley never provoke (0.2403ms)
+✔ nested actions are flattened (0.2988ms)
+✔ drawing a card and taking a resource provoke (0.2051ms)
+✔ warnings off and plays off asks nothing (0.2177ms)
+✔ unknown card text is treated as provoking (0.1593ms)
+✔ the Ritual Circle ability-matching additional action decodes (20121.7706ms)
+✔ an act moving to the next stage of its deck is an advance (2.4892ms)
+✔ an agenda moving to the next step is an advance (0.2624ms)
+✔ act and agenda advancing in the same update are both reported (0.1996ms)
+✔ nothing changed, no earlier state, or a reload is not an advance (0.2ms)
+✔ going back (undo) is not an advance (0.351ms)
+✔ a different scenario (other deck) is not an advance (0.3202ms)
+✔ an agenda turning over is a back-only reading, before the next card exists (0.3779ms)
+✔ an act turning to its back side is a back-only reading (0.5553ms)
+✔ a card already flipped does not flip again (2.1371ms)
+✔ the advance after a read turn-over only shows the next card (0.3665ms)
+✔ the editor covers every Ages Unwound record exactly once (1336.5146ms)
+✔ exclusive outcomes clear the alternative and its time before recording the choice (359.6312ms)
+✔ unrecording clears all times; crossing out preserves the chosen time (334.8643ms)
+✔ school entrance and time destination must describe the same route (320.378ms)
+✔ the reported edited history highlights every conflicting record (221.5896ms)
+✔ Hound and ward outcomes are validated without banning later Backfire (337.3612ms)
+✔ all exclusive groups are checked, including preexisting invalid saves (310.64ms)
+✔ legacy keys normalize and crossed-out records do not invalidate the active history (263.6587ms)
+✔ the editor compiles through the Vue template compiler (90.3386ms)
+✔ a card pool export yields its pack name and every card (18615.3956ms)
+✔ a pack carries its own id, so a renamed pack still replaces its set (18940.8618ms)
+✔ a bare card array and a lone card both parse (19645.1624ms)
+✔ an investigator keeps its stats, class and both faces (13880.6132ms)
+✔ a player asset keeps cost, icons and slot (8715.4217ms)
+✔ a weakness lands on the player-side type for its kind (8082.9411ms)
+✔ ability text is never imported -- there is no field for it (7247.9801ms)
+✔ a card code is derived from the arkham.build id, not minted fresh (7207.4436ms)
+✔ a deck names the same cards the import stored (6349.7069ms)
+✔ an official card code is left exactly as it was (5919.8018ms)
+✔ an alternate front is rewritten inside the meta string (5287.009ms)
+✔ a short arkham.build id matches the code its card was imported under (5278.6431ms)
+✔ an undashed 32-character uuid is translated too (5482.3466ms)
+✔ the deck rewrite translates exactly the ids the importer recognises (6010.63ms)
+✔ portrait cropping leaves cards alone when it cannot run (5267.8726ms)
+✔ all revised faces resolve, without changing the other faces (888.0981ms)
+✔ preferences are ordered, fall through, and do not remap selected art (278.2646ms)
+✔ late metadata updates existing reactive image computations (376.1871ms)
+✔ the player preference persists and resolves both cardImage and raw Art paths (19348.5192ms)
+✔ draws from the encounter deck when it is the only place to draw from (1.8086ms)
+✔ applies skill test results when that is the only button (0.184ms)
+✔ starts the skill test when nothing can be committed (0.1406ms)
+✔ takes the one valid choice and ignores invalid ones (0.137ms)
+✔ unwraps a labelled question (0.2138ms)
+✔ leaves a real decision to the player (0.2121ms)
+✔ closes a player window when only end turn or done is left (0.1494ms)
+✔ keeps a player window open while anything can still be played (0.1162ms)
+✔ never answers story, flavor, or non choose-one questions (0.1715ms)
+✔ waits for the player while revealed cards are on screen (0.1958ms)
+✔ unknown lone choices stop as before (0.1425ms)
+✔ assigns a lone damage token through the source and label wrappers (0.2678ms)
+✔ assigns damage before horror when only the investigator can take either (0.1721ms)
+✔ stops when an asset could soak, another investigator is offered, or the label is not an assignment (0.1666ms)
+✔ a campaign overlay decodes off the campaign payload (842.6599ms)
+✔ card picker filters and sorts without changing answer indices (1044.0198ms)
+✔ collection searches use a separate modal during and outside skill tests (19933.344ms)
+✔ compact collection questions decode into indexed card choices and retain source highlighting (23231.3567ms)
+✔ card data filenames support a language-region suffix (0.8982ms)
+✔ card data filenames reject unrelated and unsafe paths (0.1667ms)
+✔ only known styles are accepted from storage (1.0533ms)
+✔ the first state and updates outside a skill test draw nothing (0.8668ms)
+✔ tokens new to this update are the ones drawn (0.3313ms)
+✔ the pause grows with extra tokens but is capped (0.1869ms)
+✔ a reel ends on the drawn face, never repeating a face back to back (0.3883ms)
+✔ a reel over an empty or one-face bag still lands (0.1726ms)
+✔ sounds that give the result away wait for the reveal (0.1941ms)
+✔ retains a clear curve despite changes in outward preference (101.5547ms)
+✔ switches when the current curve becomes obstructed (28.7408ms)
+✔ scales remembered curves with zoom and forgets removed connections (26.8969ms)
+✔ one-way arrow keeps its lane until another lane avoids more cards (9.0898ms)
+✔ returns a previously curved connection to straight after an obstruction moves (13.2765ms)
+✔ returns a one-way arrow to straight when routing no longer needs a bend (10.8515ms)
+✔ keeps steep-angle crossings straight and separates shallow crossings and shared lanes (40.2357ms)
+✔ an export names the set it came from (20750.0723ms)
+✔ an export of loose cards names no set (23078.8654ms)
+✔ an import reads the set the file names (19205.0363ms)
+✔ a file from before sets falls back to what its cards claim (11679.5346ms)
+✔ a file that names no set anywhere falls back to the file name (8843.5723ms)
+✔ a single card pasted on its own still imports (7874.1029ms)
+✔ anything without a card code is not a card (7789.2883ms)
+✔ unsuffixed runtime codes resolve split-card front translations (1280.3986ms)
+✔ a record filed under a "b" code wins its own key whatever the file order (918.4138ms)
+✔ the alias still describes a double-sided card's back (773.4552ms)
+✔ a Masked Carnevale-Goer never resolves to the enemy it hides (774.9094ms)
+✔ the goers are findable by the name the engine gives every one of them (1307.2112ms)
+✔ a name more than one card answers to resolves to nothing (342.1586ms)
+✔ homebrew cards resolve from their campaign file (563.6966ms)
+✔ a homebrew lookup fetches only its own campaign, on demand (802.7719ms)
+✔ drawing is a real draw from the investigator deck (730.31ms)
+✔ a random discard takes one card from hand to the discard pile (260.06ms)
+✔ trauma goes on the right track (274.3879ms)
+✔ gaining XP is reported to the breakdown, spending is its own message (277.5044ms)
+✔ a custom entry keeps exactly what was typed (250.1881ms)
+✔ only free-text keys outside the running homebrew campaign are editable (162.6743ms)
+✔ campaign log edits are single steps (185.7487ms)
+✔ a test passes on a tie and reports the margin (829.9433ms)
+✔ ties fail when told to (342.2619ms)
+✔ the modified skill never drops below zero (461.3114ms)
+✔ several tokens add up (276.0576ms)
+✔ auto-fail beats auto-success (297.7042ms)
+✔ two frost tokens are an automatic failure (271.5169ms)
+✔ an unknown value waits for the player, and an override fills it in (165.1085ms)
+✔ an override replaces an automatic result (182.1397ms)
+✔ reveal and return messages match the backend constructors (226.1063ms)
+✔ a skill test form encodes the DebugSkillTestSpec record (212.8078ms)
+✔ combined, fixed and plain tests encode their own shapes (384.7973ms)
+✔ the form says what is missing before it can start (859.8799ms)
+✔ the jump message ends the scenario with an override step after clearing the UI (18885.2387ms)
+✔ Night of the Zealot lists its three scenarios in order (21181.1958ms)
+✔ a Return To campaign lists the Return To scenario codes (18507.3761ms)
+✔ an unknown campaign has no entries (12080.9725ms)
+✔ releasing sends the whole token record (19975.5275ms)
+✔ releasing to the pool unseals, then returns the token to the pool, as one step (20617.8443ms)
+✔ sealing names the token by id and the card by target (18616.6325ms)
+✔ only pool faces can be released to the pool (11243.7081ms)
+✔ the picker groups the bag by face, in bag order (8632.0983ms)
+✔ Weaver follows the span centers of the real backend Act 2 layout (3.122ms)
+✔ Weaver uses live leg placement, falls back when meta is absent and keeps a clockwise body arc (0.846ms)
+✔ Endless Descent recognizes the wrap and a subsequent shuffle of unrevealed cards (0.536ms)
+✔ dynamic map faces and hidden backs select the shipped sprites (10.3823ms)
+✔ a forced enemy move names the mover and the card that asked (653.4378ms)
+✔ placing doom through the token sub-message reads amount, token and target (212.4481ms)
+✔ investigator damage reads damage and horror separately (283.4049ms)
+✔ a reaction window offering a hand card reads as playing that card, inside an enemy-attack window (381.3846ms)
+✔ bookkeeping messages before the action are skipped; unknown messages yield null (213.1119ms)
+✔ every answer button keeps its engine messages after decoding, not only TargetLabel (20440.3853ms)
+✔ reports damage and horror taken, with the hit staggered after the beat (2.5266ms)
+✔ an exhausting engaged enemy that hurt its investigator lunges first (0.3994ms)
+✔ doom on an agenda and a defeated enemy are reported; unchanged boards are quiet (0.2765ms)
+✔ snapshotOf reads tokens and pending assignments (0.5284ms)
+✔ investigating turns a location clue into a clue flying to the investigator standing there (0.5902ms)
+✔ two investigators gaining clues at the same location is ambiguous and falls back to floaters (0.4778ms)
+✔ mismatched amounts are not paired (0.3098ms)
+✔ clues spent with nowhere else to go fly to the only act (0.3099ms)
+✔ a clue lost while the act stays put is not a spend on the act (0.2491ms)
+✔ beats run in order: transfers, then the lunge, then the hit (0.5432ms)
+✔ doom on enemies and locations, and uses spent on assets, are reported (0.2328ms)
+✔ resources given from one investigator to another become a transfer (0.5142ms)
+✔ snapshotOf tracks card zones and cardMoves reports cards that changed zone on the table (0.5225ms)
+✔ a card drawn from the deck is a move from the deck to the hand (0.3634ms)
+✔ every playable Hemlock Vale board selects a shipped overview (13.3416ms)
+✔ Dream-Eaters selects the current board, including Kadath with every region in its layout (9.6061ms)
+✔ Written in Rock selects the rail board after the cave-in on either reference printing (2.1289ms)
+✔ Fate of the Vale changes backdrop only when the game lays out the nighttime village (2.0207ms)
+✔ the village anchors cover all eight landmarks on both printed faces (0.3654ms)
+✔ the house keeps the foyer and attic on their painted floors as the board changes (0.366ms)
+✔ Night of the Zealot scenarios select their overview boards (0.1843ms)
+✔ Dunwich Legacy scenarios select their overview boards (0.1903ms)
+✔ The Scarlet Keys scenarios select their overview boards (0.2336ms)
+✔ The Path to Carcosa scenarios select their overview boards (0.6144ms)
+✔ The Drowned City scenarios select their overview boards (0.3517ms)
+✔ Dark Matter scenarios select their overview boards (0.152ms)
+✔ Ages Unwound scenarios select their overview boards (0.1226ms)
+✔ The Forgotten Age scenarios select their overview boards (0.2016ms)
+✔ The Circle Undone scenarios select their overview boards (0.2043ms)
+✔ The Innsmouth Conspiracy scenarios select their overview boards (0.166ms)
+✔ Edge of the Earth overview maps and location positions (0.195ms)
+✔ Chapter 2 overview maps and location positions (0.1788ms)
+✔ Standalone / Side Stories select their overview boards and location positions (0.2041ms)
+✔ In Too Deep plates run west to east from left to right in every row (0.2121ms)
+✔ Island boards: Before the Black Throne and Devil Reef stand each location on its own sprite (0.1447ms)
+✔ an unscoped homebrew key formats without its campaign scope (20044.7149ms)
+✔ Circus Ex Mortis supplies a panel for its Destinies recorded set (24193.6834ms)
+✔ a card takes its printed number, with its back folded in ArkhamDB-style (2.0368ms)
+✔ markup is reduced to an attribute-free allowlist (0.4785ms)
+✔ several printings of one number are told apart by their backs (12.1989ms)
+✔ duplicate rows of one printing collapse to one record (1.1773ms)
+✔ engine cards arkham.build lacks still get their printed name (0.4693ms)
+✔ a card with a back does not get a second name-only record for its b side (0.3942ms)
+✔ a number arkham.build files under another card keeps the engine name, not the wrong text (0.6863ms)
+✔ a campaign arkham.build does not publish still gets every engine name (2.2837ms)
+✔ the Simplified Chinese importer writes a separate zh-cn locale by default (1.6779ms)
+✔ translation importer options require a value (0.6647ms)
+✔ translated text is merged without replacing gameplay metadata (0.5507ms)
+✔ equivalent reprints reuse an existing Simplified Chinese translation (0.3005ms)
+✔ split card sides reuse an unsuffixed translation (0.1862ms)
+✔ a local override replaces the upstream translation for that card only (0.1872ms)
+✔ an override never rides along on a reprint matched by identity (0.2561ms)
+✔ the checked-in zh-cn overrides only touch translated fields (100.6347ms)
+✔ loadOverrides returns an empty map for a locale with no override file (0.4676ms)
+✔ only the actual location owns an investigator movement transition name (560.9774ms)
+✔ Simplified Chinese browser locales select zh-cn (50.1278ms)
+✔ Traditional Chinese browser locales keep the existing zh language (5.8897ms)
+✔ regional non-Chinese locales use their base language (7.5091ms)
+✔ Simplified Chinese uses its own UI messages (7.1644ms)
+✔ bootstrap initializes Vue I18n with the normalized UI locale (1.5098ms)
+✔ language settings switch Vue I18n to the normalized UI locale (1.1901ms)
+✔ a plain icon placeholder survives translation and renders (20100.1768ms)
+✔ the hand-escaped spelling renders identically (20623.73ms)
+✔ an icon named by a parameter still renders (16640.3308ms)
+✔ homebrew icons and runes are escaped too (9522.661ms)
+✔ real named parameters are not escaped (8472.1512ms)
+✔ the Doom of Arkham Part II intro names the token it adds (#5597) (8162.4607ms)
+✔ a message vue-i18n cannot compile is left alone (7334.7811ms)
+[intlify] Not found 'destiny.atDeath'sDoorstep' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelIntervened' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelSharedHerDoubts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahIsSearchingForSimeon' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedHerFrustrations' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSawSomethingInTheMine' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahAndSimeonWereReunited' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSearchedThePearlRuins' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSurvived' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonDisappeared' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonHatchedAPlan' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].thePlanIsUnderway' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamTookHeart' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedHisLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamIsResolved' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].theSchemeIsInMotion' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedTheirAmbitions' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverAskedForHelp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverIsReclaimingTheirLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheStoryOfCaptainHemlock' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheTaleOfTheAnnabelleLee' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonFoundHisTreasure' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSavedYourAss' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedAGrudge' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].youBackedJudithUp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoReconciledWithHelen' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoDistractedTheBear' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoRejectedHisFamily' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoIsHavingSecondThoughts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.fateOfTheVale.codex.drRosaMarque.title' key in 'en' locale messages.
+[intlify] Not found 'circusExMortis.destiny.harm'sWay' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelIntervened' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelSharedHerDoubts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahIsSearchingForSimeon' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedHerFrustrations' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSawSomethingInTheMine' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahAndSimeonWereReunited' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSearchedThePearlRuins' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSurvived' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonDisappeared' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonHatchedAPlan' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].thePlanIsUnderway' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamTookHeart' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedHisLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamIsResolved' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].theSchemeIsInMotion' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedTheirAmbitions' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverAskedForHelp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverIsReclaimingTheirLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheStoryOfCaptainHemlock' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheTaleOfTheAnnabelleLee' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonFoundHisTreasure' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSavedYourAss' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedAGrudge' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].youBackedJudithUp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoReconciledWithHelen' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoDistractedTheBear' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoRejectedHisFamily' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoIsHavingSecondThoughts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.fateOfTheVale.codex.drRosaMarque.title' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelIntervened' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelSharedHerDoubts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahIsSearchingForSimeon' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedHerFrustrations' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSawSomethingInTheMine' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahAndSimeonWereReunited' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSearchedThePearlRuins' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSurvived' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonDisappeared' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonHatchedAPlan' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].thePlanIsUnderway' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamTookHeart' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedHisLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamIsResolved' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].theSchemeIsInMotion' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedTheirAmbitions' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverAskedForHelp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverIsReclaimingTheirLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheStoryOfCaptainHemlock' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheTaleOfTheAnnabelleLee' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonFoundHisTreasure' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSavedYourAss' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedAGrudge' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].youBackedJudithUp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoReconciledWithHelen' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoDistractedTheBear' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoRejectedHisFamily' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoIsHavingSecondThoughts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.fateOfTheVale.codex.drRosaMarque.title' key in 'en' locale messages.
+[intlify] Not found 'destiny.atDeath'sDoorstep' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelIntervened' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelSharedHerDoubts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahIsSearchingForSimeon' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedHerFrustrations' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSawSomethingInTheMine' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahAndSimeonWereReunited' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSearchedThePearlRuins' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSurvived' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonDisappeared' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonHatchedAPlan' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].thePlanIsUnderway' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamTookHeart' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedHisLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamIsResolved' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].theSchemeIsInMotion' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedTheirAmbitions' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverAskedForHelp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverIsReclaimingTheirLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheStoryOfCaptainHemlock' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheTaleOfTheAnnabelleLee' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonFoundHisTreasure' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSavedYourAss' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedAGrudge' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].youBackedJudithUp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoReconciledWithHelen' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoDistractedTheBear' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoRejectedHisFamily' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoIsHavingSecondThoughts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.fateOfTheVale.codex.drRosaMarque.title' key in 'en' locale messages.
+[intlify] Not found 'theDrownedCity.additionalRulesAndClarifications.floodTokens' key in 'en' locale messages.
+[intlify] Not found 'theDrownedCity.additionalRulesAndClarifications.artifacts' key in 'en' locale messages.
+[intlify] Not found 'theDrownedCity.additionalRulesAndClarifications.alienGlyphs' key in 'en' locale messages.
+[intlify] Not found 'theDrownedCity.newKeywords.body' key in 'en' locale messages.
+[intlify] Not found 'brethrenOfAsh.smokeAndMirrors.tooltips.arkhamAlive.resign' key in 'en' locale messages.
+[intlify] Not found 'circusExMortis.additionalRules.moonTokens' key in 'en' locale messages.
+[intlify] Not found 'circusExMortis.destiny.harm'sWay' key in 'en' locale messages.
+[intlify] Not found 'darkMatter.additionalRulesAndClarifications.scan' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'destiny.atDeath'sDoorstep' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelIntervened' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelSharedHerDoubts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahIsSearchingForSimeon' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedHerFrustrations' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSawSomethingInTheMine' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahAndSimeonWereReunited' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSearchedThePearlRuins' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSurvived' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonDisappeared' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonHatchedAPlan' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].thePlanIsUnderway' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamTookHeart' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedHisLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamIsResolved' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].theSchemeIsInMotion' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedTheirAmbitions' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverAskedForHelp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverIsReclaimingTheirLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheStoryOfCaptainHemlock' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheTaleOfTheAnnabelleLee' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonFoundHisTreasure' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSavedYourAss' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedAGrudge' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].youBackedJudithUp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoReconciledWithHelen' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoDistractedTheBear' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoRejectedHisFamily' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoIsHavingSecondThoughts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.fateOfTheVale.codex.drRosaMarque.title' key in 'en' locale messages.
+[intlify] Not found 'darkMatter.additionalRulesAndClarifications.scan' key in 'en' locale messages.
+[intlify] Not found 'darkMatter.additionalRulesAndClarifications.memories' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelIntervened' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelSharedHerDoubts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahIsSearchingForSimeon' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedHerFrustrations' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSawSomethingInTheMine' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahAndSimeonWereReunited' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSearchedThePearlRuins' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSurvived' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonDisappeared' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonHatchedAPlan' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].thePlanIsUnderway' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamTookHeart' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedHisLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamIsResolved' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].theSchemeIsInMotion' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedTheirAmbitions' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverAskedForHelp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverIsReclaimingTheirLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheStoryOfCaptainHemlock' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheTaleOfTheAnnabelleLee' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonFoundHisTreasure' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSavedYourAss' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedAGrudge' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].youBackedJudithUp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoReconciledWithHelen' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoDistractedTheBear' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoRejectedHisFamily' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoIsHavingSecondThoughts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.fateOfTheVale.codex.drRosaMarque.title' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelIntervened' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelSharedHerDoubts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahIsSearchingForSimeon' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedHerFrustrations' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSawSomethingInTheMine' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahAndSimeonWereReunited' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSearchedThePearlRuins' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSurvived' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonDisappeared' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonHatchedAPlan' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].thePlanIsUnderway' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamTookHeart' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedHisLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamIsResolved' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].theSchemeIsInMotion' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedTheirAmbitions' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverAskedForHelp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverIsReclaimingTheirLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheStoryOfCaptainHemlock' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheTaleOfTheAnnabelleLee' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonFoundHisTreasure' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSavedYourAss' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedAGrudge' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].youBackedJudithUp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoReconciledWithHelen' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoDistractedTheBear' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoRejectedHisFamily' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoIsHavingSecondThoughts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.fateOfTheVale.codex.drRosaMarque.title' key in 'en' locale messages.
+[intlify] Not found 'destiny.atDeath'sDoorstep' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'theScarletKeys.rules.civilians.title' key in 'en' locale messages.
+[intlify] Not found 'theScarletKeys.rules.civilians.body' key in 'en' locale messages.
+[intlify] Not found 'theScarletKeys.rules.choosingARandomLocation.title' key in 'en' locale messages.
+[intlify] Not found 'theScarletKeys.rules.choosingARandomLocation.body' key in 'en' locale messages.
+[intlify] Not found 'theScarletKeys.rules.replacingLocations.title' key in 'en' locale messages.
+[intlify] Not found 'theScarletKeys.rules.replacingLocations.body' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelIntervened' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelSharedHerDoubts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahIsSearchingForSimeon' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedHerFrustrations' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSawSomethingInTheMine' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahAndSimeonWereReunited' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSearchedThePearlRuins' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSurvived' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonDisappeared' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonHatchedAPlan' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].thePlanIsUnderway' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamTookHeart' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedHisLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamIsResolved' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].theSchemeIsInMotion' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedTheirAmbitions' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverAskedForHelp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverIsReclaimingTheirLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheStoryOfCaptainHemlock' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheTaleOfTheAnnabelleLee' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonFoundHisTreasure' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSavedYourAss' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedAGrudge' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].youBackedJudithUp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoReconciledWithHelen' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoDistractedTheBear' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoRejectedHisFamily' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoIsHavingSecondThoughts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].theGroupPerished' key in 'en' locale messages.
+✔ every icon placeholder the locales ship renders as an icon (13242.0526ms)
+✔ every i18n key the backend references resolves in the en locale (24126.5403ms)
+✔ locale markup uses complete HTML closing tags (274.4597ms)
+✔ locale message links keep ASCII key paths (271.2509ms)
+✔ locale markup has no stray bullet-glyph artifacts (261.9185ms)
+✔ locale markup opens every list with a list item (240.7328ms)
+✔ connection arrows show the actual direction regardless of endpoint order (1.6072ms)
+✔ links are undirected and deduplicated (1.1284ms)
+✔ one-sided connection data still yields a link (0.1885ms)
+✔ links to locations not in play are ignored (0.2005ms)
+✔ shortest path picks the fewest hops (0.3767ms)
+✔ path from a location to itself is that location (0.1718ms)
+✔ disconnected target gives an empty path (0.1598ms)
+✔ unknown endpoints give an empty path (0.1458ms)
+✔ blocked locations are routed around or make target unreachable (0.2888ms)
+✔ roster lists investigators and enemies at a location (0.35ms)
+✔ the mine entrance uses painted chamber positions even when the grid has extra columns (0.956ms)
+✔ the mine passage anchor is the same for either direction (0.1618ms)
+✔ grid layout centres each label in its cell, as percentages (0.1886ms)
+✔ grid layout uses the middle of a label spanning several cells (0.147ms)
+✔ grid layout tolerates ragged rows and extra spaces (0.1305ms)
+✔ auto layout places every location inside the map, neighbours in later columns (0.3084ms)
+✔ auto layout never stacks two locations on one point (0.2205ms)
+✔ auto layout of an empty or single graph is safe (0.1572ms)
+✔ map positions follow the scenario grid by label and fall back to auto layout for the rest (0.2462ms)
+✔ map positions without a grid use auto layout for all (0.1732ms)
+✔ compactGridLayout collapses rows and columns the card board leaves empty (0.3153ms)
+✔ an unrevealed location shows only its unrevealed side (1.5929ms)
+✔ a revealed location shows its revealed side, shroud, clues per player and victory (4.4705ms)
+✔ fixed clue values are not multiplied by the player count (0.3698ms)
+✔ a different unrevealed name is used instead of the revealed one (0.1996ms)
+✔ without a card record only the fallback name shows (0.2299ms)
+✔ shroud modifiers follow the engine order (0.3404ms)
+✔ forced enter effects are spotted, other forced effects are not (0.2036ms)
+✔ move and investigate are read from the ability actions, the rest kept in order (0.4382ms)
+✔ here and adjacent are relative to the viewing investigator (0.2365ms)
+✔ a location ability that moves elsewhere or investigates its own way is not the basic action (0.4354ms)
+✔ per-player shroud is multiplied and an X shroud is flagged (0.2418ms)
+✔ abilityActions reads printed and basic actions alike (0.196ms)
+✔ zooming never goes below 1 or above the maximum (1.105ms)
+✔ zooming keeps the point under the pivot where it was (0.2846ms)
+✔ the picture cannot be dragged off its frame (0.9395ms)
+✔ a view that is not zoomed cannot pan at all (0.3146ms)
+✔ zooming back out recentres a picture that was panned to an edge (0.2004ms)
+✔ spreading two fingers zooms in and moving them together pans (0.3048ms)
+✔ fingers pinched together zoom out, never below 1 (0.2173ms)
+✔ clamping repairs a viewport left stale by a smaller frame (0.1744ms)
+✔ the stage only gets a transform when zoomed or panned (0.1834ms)
+✔ investigator setup, before the scenario places its decks: awaiting (0.9251ms)
+✔ setup already placed the act and agenda: not awaiting (0.1904ms)
+✔ scenario under way with no act or agenda left (resolving): not awaiting (0.1513ms)
+✔ only one of the two placed: not awaiting (0.1458ms)
+✔ entryKeys walks composite, modified and list entries in reading order (6.1931ms)
+✔ storyKeysInPlay sees any player's Read, unwraps labels and de-duplicates (0.9938ms)
+✔ narrationTracks keeps only rendered keys and falls back to English (0.6952ms)
+✔ narration language defaults from the browser and rejects unknown stored values (0.6682ms)
+✔ every manifest entry has its mp3 on disk (882.5133ms)
+✔ groups every off-map card by zone, in order (2.0151ms)
+✔ nothing off the map gives no groups (0.2973ms)
+✔ put-back panel recognises only the put-back-on-top question (23942.873ms)
+✔ a target label keeps the messages it will run (16635.0248ms)
+✔ The Untamed Wilds: vengeance, locations (max 5) and exploration deck (max 5) (6.1085ms)
+✔ wrappers: twice, half rounded up and down, plus, minimum (0.4803ms)
+✔ traits, your location and the victory display (0.6707ms)
+✔ scenario counters are found by name (0.508ms)
+✔ an unreadable sentence, or a line with no X, gives null (0.2033ms)
+✔ most X sentences on the reference cards are read (95.1212ms)
+✔ a capped X reports the count before the cap (1.2472ms)
+✔ the badge carries the current modifier and how hard it hits (0.6059ms)
+✔ the poison line fails the test only while you are poisoned (0.3997ms)
+✔ barrier counts are read from scenario meta whichever way a link is named (560.6155ms)
+✖ scenario text uses locale keys instead of hardcoded English (1399.1037ms)
+✔ Cosmos: revealed locations have their own 3:2 sprite, face-down cards stand on the round rock (1.3644ms)
+✔ Devil Reef: each revealed location shows the sprite drawn after its card, face-down cards their back (1.0243ms)
+✔ Return to Devil Reef: Cave Mouth, Shrine to Hydra, the shared tunnel art and the second vessel (2.7274ms)
+✔ Devil Reef water rises over flooded revealed locations, never over the open sea or a card back (5.1044ms)
+✔ every sprite an island set refers to is a WebP file in public/ (17.7143ms)
+✔ the Fishing Vessel is drawn at its location with whoever is inside it (1.2481ms)
+✔ the boat turns its bow the way it sails and keeps it on a straight north/south move (0.1823ms)
+✔ generated sprites resolve by exact card code and load from public assets (680.2583ms)
+✔ an unregistered card or back falls through to its own card art (0.2405ms)
+✔ Hunting Nightgaunt and Screeching Byakhee do not share a sprite (0.2232ms)
+✔ rain density grows with the stage, has a ceiling and stops on an empty stage (1.6912ms)
+✔ rain stays sparse so it never distracts from the board: under 150 drops on a 1600×900 map (0.2803ms)
+✔ the whole rain starts on the stage, far drops before near ones (0.8255ms)
+✔ a drop falls down and blows right, and starts again above the top once it leaves the stage (0.9124ms)
+✔ lightning is rare: between 18 and 50 seconds apart (0.211ms)
+✔ keeps board targets the scene cannot click and drops those the scene already offers (1.9253ms)
+✔ a target whose card is gone is left out (0.5121ms)
+✔ a target already drawn as a clickable spider part stays off the fallback panel (0.3605ms)
+✔ lists investigator tokens the hidden token row would answer, but not your own take-a-resource (0.2713ms)
+✔ counts every choice only the panel can answer (0.2066ms)
+✔ first state and identical states are silent (1.299ms)
+✔ movement, damage, horror, clue and draw are detected (0.2934ms)
+✔ enemy damage is a hit, a vanished enemy is a defeat (0.2025ms)
+✔ phase or scenario change is a transition (0.3282ms)
+✔ skill test: token reveal, then success or failure (0.3321ms)
+✔ test_skillTestSummary_investigateSucceeds_reportsCluesAndMargin (6.3862ms)
+✔ test_skillTestSummary_committedCardLeavesHand_isNotCountedAsDraw (0.3093ms)
+✔ test_skillTestSummary_failedWithSkullHorror_reportsHorrorTaken (0.2694ms)
+✔ test_skillTestSummary_fightKillsEnemy_reportsDefeat (0.2851ms)
+✔ test_skillTestSummary_fightWoundsAndEvadeSucceeds_reportsEach (0.3392ms)
+✔ test_skillTestSummary_cancelledOrUnchanged_givesNoSummaryOrNoLines (0.2578ms)
+✔ test_skillTestSummary_backToBackTests_summariseTheLastOneFromItsOwnStart (0.2862ms)
+✔ test_skillTestSummary_forcedResult_usesEngineValue (0.161ms)
+✔ test_skillTestSummary_logEntries_keepOnlyTheTestsMemberLines (0.3237ms)
+✔ test_skillTestSummary_outcome_dropsPlayByPlayAndRefundsCosts (0.5671ms)
+✔ test_skillTestSummary_failPutsWeaknessInThreatArea_reportsTheCard (0.2614ms)
+✔ test_skillTestSummary_boardHeldForSummary_keepsBoardDropsTestAndQuestion (0.1556ms)
+✔ advances using HTTP state when no websocket update is delivered (1.6874ms)
+✔ a failed refresh retries the read without answering the next question (0.6208ms)
+✔ a lost PUT response checks whether the answer committed before retrying (0.2061ms)
+✔ retries an unsaved answer only while its settings question is still parked (0.2801ms)
+✔ does not resend when the recovery read also fails (0.4794ms)
+✔ a stat with no modifiers is its printed value and has no trend (1.5704ms)
+✔ enemy fight and evade add up and name their sources (0.3414ms)
+✔ a lowered enemy stat is good news, and the stat never goes below zero (0.1788ms)
+✔ a minimum on a modifier floors the result (0.1904ms)
+✔ shroud follows the engine order: base, shifts, override (0.2972ms)
+✔ shroud matches the location info model for the same modifiers (0.178ms)
+✔ investigator skills only take modifiers for their own skill, and raised skills are good news (0.2512ms)
+✔ the source of a modifier is found through wrapper sources (0.177ms)
+✔ effects are grouped by the card that granted them (0.3609ms)
+✔ a barricade or a locked door blocks entry (0.2916ms)
+✔ investigator stats count lasting asset bonuses but not ones an effect hands out for a turn or an attack (0.2545ms)
+✔ an enemy keeps counting effect modifiers, since they really change the enemy (0.1191ms)
+✔ a modified stat reads as its final value with the printed value and the change beside it (0.1278ms)
+✔ a board story read spotlights its story face and flips from its asset face (20897.5174ms)
+✔ target decoder accepts a BothTarget with two nested targets (1217.7977ms)
+▶ custom chaos bag decoding and inspection
+  ✔ new story state survives the decoder, including its debug override (2.1962ms)
+  ✔ legacy infestation state is inspectable before any engine messages (0.3971ms)
+  ✔ legacy predation state is inspectable before any engine messages (0.2118ms)
+  ✔ an exhausted bag remains inspectable (0.1321ms)
+  ✔ unrelated metadata is not mistaken for a bag (0.2098ms)
+  ✔ custom Fury token faces retain their slugs (0.1698ms)
+✔ custom chaos bag decoding and inspection (18766.7021ms)
+✔ phones are phones whatever the pointer (0.9392ms)
+✔ iPad sizes held upright are tablet-portrait (0.2314ms)
+✔ iPad sizes held sideways are tablet-landscape (0.5312ms)
+✔ a mouse-driven window of tablet width keeps the desktop layout (0.6102ms)
+✔ wide touch screens are desktop (0.2219ms)
+✔ touch input needs a coarse pointer and no hover (0.3809ms)
+✖ Chinese game creation translates every Ultimatum and Boon option (7.4558ms)
+✔ Chinese game board bundles the Ultimatums and Boons catalog (0.7056ms)
+✔ Chinese game creation translates the Morrigan weakness choice label (1.8412ms)
+✔ uploaded upgrade deck JSON is applied and submitted (100.8425ms)
+✔ an ArkhamDB export with a numeric id and no url is accepted (51.3845ms)
+✔ an arkham.build export without a url is accepted (14.88ms)
+✔ an alternate front in meta is used as the deck investigator (10.9174ms)
+✔ an empty alternate front falls back to the investigator code (25.5953ms)
+✔ invalid uploaded upgrade deck JSON is reported (13.5151ms)
+✔ uploaded upgrade deck JSON without investigator code is reported (6.392ms)
+✔ an error body is not treated as a decklist (6.9343ms)
+✔ Simplified Chinese Whispering Chaos cards reference their matching tower twice (3.2022ms)
+✔ Simplified Chinese loads its achievement catalog before any achievement view opens (18215.3367ms)
+✔ official and homebrew achievement names, descriptions and checklists resolve in Chinese (48.7619ms)
+✔ achievement translations preserve every official message and formatting token (4.985ms)
+✔ Simplified Chinese exposes translated achievements, history, and modifiers (16993.7469ms)
+✔ Simplified Chinese Hemlock Vale scenarios keep the namespaces used by the game (4.1103ms)
+✔ Simplified Chinese Hemlock Vale scenarios preserve campaign-level translations (1.9754ms)
+✔ Simplified Chinese exposes both Heart of the Elders parts and their return variants (1.6684ms)
+✔ Reference-sourced Chinese translations are exposed at their documented game paths (3.3549ms)
+✔ Simplified Chinese scenario locale covers most English scenario keys (132.2369ms)
+✔ Simplified Chinese scenario locale keeps locale keys language-neutral (56.2131ms)
+✔ Simplified Chinese locale does not import text from the English locale (7.589ms)
+✔ Simplified Chinese scenario strings do not fall back to English source text (110.2492ms)
+✔ Simplified Chinese scenario markup uses Chinese sentence endings and valid paragraph starts (54.0475ms)
+✔ Simplified Chinese scenario strings preserve source formatting tokens (128.1603ms)
+ℹ tests 378
+ℹ suites 0
+ℹ pass 376
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 142635.5322
+
+✖ failing tests:
+
+test at tests\scenarioLocalization.test.mjs:56:1
+✖ scenario text uses locale keys instead of hardcoded English (1399.1037ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + [
+  +   'Homebrew\\DarkMatter\\Scenarios\\InTheShadowOfEarth.hs:278',
+  +   'Homebrew\\DarkMatter\\Scenarios\\InTheShadowOfEarth.hs:286',
+  +   'Scenario\\Scenarios\\EdgeOfTheEarth\\FatalMirage.hs:285',
+  +   'Scenario\\Scenarios\\ThePathToCarcosa\\ThePallidMask.hs:49'
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (file:///D:/SteamLibrary/steamapps/common/Return%202%20Games/TouchMenuIcons/demo/arkham%20horror%20online/arkham%20horror%20online/frontend/tests/scenarioLocalization.test.mjs:102:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'Homebrew\\DarkMatter\\Scenarios\\InTheShadowOfEarth.hs:278', 'Homebrew\\DarkMatter\\Scenarios\\InTheShadowOfEarth.hs:286', 'Scenario\\Scenarios\\EdgeOfTheEarth\\FatalMirage.hs:285', 'Scenario\\Scenarios\\ThePathToCarcosa\\ThePallidMask.hs:49' ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests\ultimatumsAndBoonsZh.test.mjs:24:1
+✖ Chinese game creation translates every Ultimatum and Boon option (7.4558ms)
+  AssertionError [ERR_ASSERTION]: Chinese catalog must cover the same messages as English
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      'betaBadge',
+      'boons',
+      'currentlyDisabled',
+      'deckErrors.exile',
+  ...
+      'entries.BoonOfAthena.text',
+  -   'entries.BoonOfAtonement.name',
+  -   'entries.BoonOfAtonement.text',
+  -   'entries.BoonOfBliss.name',
+  -   'entries.BoonOfBliss.text',
+      'entries.BoonOfDestiny.name',
+      'entries.BoonOfDestiny.text',
+      'entries.BoonOfHades.name',
+      'entries.BoonOfHades.text',
+      'entries.BoonOfHermes.name',
+  ...
+      'entries.BoonOfTheChild.text',
+  -   'entries.BoonOfTheDance.name',
+  -   'entries.BoonOfTheDance.text',
+  -   'entries.BoonOfTheDreamer.name',
+  -   'entries.BoonOfTheDreamer.text',
+      'entries.BoonOfTheExplorer.name',
+      'entries.BoonOfTheExplorer.text',
+  -   'entries.BoonOfTheMiners.name',
+  -   'entries.BoonOfTheMiners.text',
+      'entries.BoonOfTheMorrigan.name',
+      'entries.BoonOfTheMorrigan.text',
+      'entries.BoonOfThoth.name',
+      'entries.BoonOfThoth.text',
+      'entries.UltimatumOfAgony.name',
+      'entries.UltimatumOfAgony.text',
+  -   'entries.UltimatumOfAmbuscade.name',
+  -   'entries.UltimatumOfAmbuscade.text',
+  -   'entries.UltimatumOfAnnoyance.name',
+  -   'entries.UltimatumOfAnnoyance.text',
+      'entries.UltimatumOfBrokenPromises.name',
+      'entries.UltimatumOfBrokenPromises.text',
+      'entries.UltimatumOfChaos.name',
+      'entries.UltimatumOfChaos.text',
+  -   'entries.UltimatumOfDeath.name',
+  -   'entries.UltimatumOfDeath.text',
+      'entries.UltimatumOfDisaster.name',
+      'entries.UltimatumOfDisaster.text',
+      'entries.UltimatumOfDread.name',
+      'entries.UltimatumOfDread.text',
+      'entries.UltimatumOfExile.name',
+  ...
+      'entries.UltimatumOfInduction.text',
+  -   'entries.UltimatumOfInvisibility.name',
+  -   'entries.UltimatumOfInvisibility.text',
+      'entries.UltimatumOfMalevolence.name',
+      'entries.UltimatumOfMalevolence.text',
+  -   'entries.UltimatumOfMultiplication.name',
+  -   'entries.UltimatumOfMultiplication.text',
+      'entries.UltimatumOfOrthodoxy.name',
+      'entries.UltimatumOfOrthodoxy.text',
+  -   'entries.UltimatumOfSpoilage.name',
+  -   'entries.UltimatumOfSpoilage.text',
+      'entries.UltimatumOfSurvival.name',
+      'entries.UltimatumOfSurvival.text',
+  -   'entries.UltimatumOfTheBrassCrown.name',
+  -   'entries.UltimatumOfTheBrassCrown.text',
+      'entries.UltimatumOfTheBrokenVeil.name',
+      'entries.UltimatumOfTheBrokenVeil.text',
+  -   'entries.UltimatumOfTheDrowned.name',
+  -   'entries.UltimatumOfTheDrowned.text',
+  -   'entries.UltimatumOfTheFaultyCarburetor.name',
+  -   'entries.UltimatumOfTheFaultyCarburetor.text',
+      'entries.UltimatumOfTheHighlander.name',
+      'entries.UltimatumOfTheHighlander.text',
+  -   'entries.UltimatumOfTheMan.name',
+  -   'entries.UltimatumOfTheMan.text',
+      'entries.UltimatumOfTheScream.name',
+      'entries.UltimatumOfTheScream.text',
+  -   'entries.UltimatumOfTheSleeper.name',
+  -   'entries.UltimatumOfTheSleeper.text',
+      'entries.UltimatumOfTheSpiral.name',
+      'entries.UltimatumOfTheSpiral.text',
+  -   'entries.UltimatumOfTheUnspeakableName.name',
+  -   'entries.UltimatumOfTheUnspeakableName.text',
+      'entries.UltimatumOfUltimatums.name',
+      'entries.UltimatumOfUltimatums.text',
+  -   'entries.UltimatumOfVenom.name',
+  -   'entries.UltimatumOfVenom.text',
+      'morrigan.instructions',
+      'morrigan.returnAction',
+      'morrigan.waiting',
+      'noneSelected',
+  -   'refractions',
+      'rolledThisGame',
+      'selectedCount',
+      'settingsToggleDescription',
+      'settingsToggleTitle',
+      'title',
+  
+      at TestContext.<anonymous> (file:///D:/SteamLibrary/steamapps/common/Return%202%20Games/TouchMenuIcons/demo/arkham%20horror%20online/arkham%20horror%20online/frontend/tests/ultimatumsAndBoonsZh.test.mjs:36:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [
+      'betaBadge',                                  'boons',
+      'currentlyDisabled',                          'deckErrors.exile',
+      'deckErrors.highlander',                      'deckErrors.induction',
+      'deckErrors.orthodoxy',                       'deckRequirements.chaos',
+      'deckRequirements.disaster',                  'deckRequirements.exile',
+      'deckRequirements.highlander',                'deckRequirements.induction',
+      'deckRequirements.orthodoxy',                 'deckbuildingBadge',
+      'entries.BoonOfAthena.name',                  'entries.BoonOfAthena.text',
+      'entries.BoonOfDestiny.name',                 'entries.BoonOfDestiny.text',
+      'entries.BoonOfHades.name',                   'entries.BoonOfHades.text',
+      'entries.BoonOfHermes.name',                  'entries.BoonOfHermes.text',
+      'entries.BoonOfOsiris.name',                  'entries.BoonOfOsiris.text',
+      'entries.BoonOfPersephone.name',              'entries.BoonOfPersephone.text',
+      'entries.BoonOfTheAncients.name',             'entries.BoonOfTheAncients.text',
+      'entries.BoonOfTheChild.name',                'entries.BoonOfTheChild.text',
+      'entries.BoonOfTheExplorer.name',             'entries.BoonOfTheExplorer.text',
+      'entries.BoonOfTheMorrigan.name',             'entries.BoonOfTheMorrigan.text',
+      'entries.BoonOfThoth.name',                   'entries.BoonOfThoth.text',
+      'entries.UltimatumOfAgony.name',              'entries.UltimatumOfAgony.text',
+      'entries.UltimatumOfBrokenPromises.name',     'entries.UltimatumOfBrokenPromises.text',
+      'entries.UltimatumOfChaos.name',              'entries.UltimatumOfChaos.text',
+      'entries.UltimatumOfDisaster.name',           'entries.UltimatumOfDisaster.text',
+      'entries.UltimatumOfDread.name',              'entries.UltimatumOfDread.text',
+      'entries.UltimatumOfExile.name',              'entries.UltimatumOfExile.text',
+      'entries.UltimatumOfFailure.name',            'entries.UltimatumOfFailure.text',
+      'entries.UltimatumOfFinality.name',           'entries.UltimatumOfFinality.text',
+      'entries.UltimatumOfForbiddenKnowledge.name', 'entries.UltimatumOfForbiddenKnowledge.text',
+      'entries.UltimatumOfHardship.name',           'entries.UltimatumOfHardship.text',
+      'entries.UltimatumOfInduction.name',          'entries.UltimatumOfInduction.text',
+      'entries.UltimatumOfMalevolence.name',        'entries.UltimatumOfMalevolence.text',
+      'entries.UltimatumOfOrthodoxy.name',          'entries.UltimatumOfOrthodoxy.text',
+      'entries.UltimatumOfSurvival.name',           'entries.UltimatumOfSurvival.text',
+      'entries.UltimatumOfTheBrokenVeil.name',      'entries.UltimatumOfTheBrokenVeil.text',
+      'entries.UltimatumOfTheHighlander.name',      'entries.UltimatumOfTheHighlander.text',
+      'entries.UltimatumOfTheScream.name',          'entries.UltimatumOfTheScream.text',
+      'entries.UltimatumOfTheSpiral.name',          'entries.UltimatumOfTheSpiral.text',
+      'entries.UltimatumOfUltimatums.name',         'entries.UltimatumOfUltimatums.text',
+      'morrigan.instructions',                      'morrigan.returnAction',
+      'morrigan.waiting',                           'noneSelected',
+      'rolledThisGame',                             'selectedCount',
+      'settingsToggleDescription',                  'settingsToggleTitle',
+      'title',                                      'ultimatums'
+    ],
+    expected: [
+      'betaBadge',                                   'boons',
+      'currentlyDisabled',                           'deckErrors.exile',
+      'deckErrors.highlander',                       'deckErrors.induction',
+      'deckErrors.orthodoxy',                        'deckRequirements.chaos',
+      'deckRequirements.disaster',                   'deckRequirements.exile',
+      'deckRequirements.highlander',                 'deckRequirements.induction',
+      'deckRequirements.orthodoxy',                  'deckbuildingBadge',
+      'entries.BoonOfAthena.name',                   'entries.BoonOfAthena.text',
+      'entries.BoonOfAtonement.name',                'entries.BoonOfAtonement.text',
+      'entries.BoonOfBliss.name',                    'entries.BoonOfBliss.text',
+      'entries.BoonOfDestiny.name',                  'entries.BoonOfDestiny.text',
+      'entries.BoonOfHades.name',                    'entries.BoonOfHades.text',
+      'entries.BoonOfHermes.name',                   'entries.BoonOfHermes.text',
+      'entries.BoonOfOsiris.name',                   'entries.BoonOfOsiris.text',
+      'entries.BoonOfPersephone.name',               'entries.BoonOfPersephone.text',
+      'entries.BoonOfTheAncients.name',              'entries.BoonOfTheAncients.text',
+      'entries.BoonOfTheChild.name',                 'entries.BoonOfTheChild.text',
+      'entries.BoonOfTheDance.name',                 'entries.BoonOfTheDance.text',
+      'entries.BoonOfTheDreamer.name',               'entries.BoonOfTheDreamer.text',
+      'entries.BoonOfTheExplorer.name',              'entries.BoonOfTheExplorer.text',
+      'entries.BoonOfTheMiners.name',                'entries.BoonOfTheMiners.text',
+      'entries.BoonOfTheMorrigan.name',              'entries.BoonOfTheMorrigan.text',
+      'entries.BoonOfThoth.name',                    'entries.BoonOfThoth.text',
+      'entries.UltimatumOfAgony.name',               'entries.UltimatumOfAgony.text',
+      'entries.UltimatumOfAmbuscade.name',           'entries.UltimatumOfAmbuscade.text',
+      'entries.UltimatumOfAnnoyance.name',           'entries.UltimatumOfAnnoyance.text',
+      'entries.UltimatumOfBrokenPromises.name',      'entries.UltimatumOfBrokenPromises.text',
+      'entries.UltimatumOfChaos.name',               'entries.UltimatumOfChaos.text',
+      'entries.UltimatumOfDeath.name',               'entries.UltimatumOfDeath.text',
+      'entries.UltimatumOfDisaster.name',            'entries.UltimatumOfDisaster.text',
+      'entries.UltimatumOfDread.name',               'entries.UltimatumOfDread.text',
+      'entries.UltimatumOfExile.name',               'entries.UltimatumOfExile.text',
+      'entries.UltimatumOfFailure.name',             'entries.UltimatumOfFailure.text',
+      'entries.UltimatumOfFinality.name',            'entries.UltimatumOfFinality.text',
+      'entries.UltimatumOfForbiddenKnowledge.name',  'entries.UltimatumOfForbiddenKnowledge.text',
+      'entries.UltimatumOfHardship.name',            'entries.UltimatumOfHardship.text',
+      'entries.UltimatumOfInduction.name',           'entries.UltimatumOfInduction.text',
+      'entries.UltimatumOfInvisibility.name',        'entries.UltimatumOfInvisibility.text',
+      'entries.UltimatumOfMalevolence.name',         'entries.UltimatumOfMalevolence.text',
+      'entries.UltimatumOfMultiplication.name',      'entries.UltimatumOfMultiplication.text',
+      'entries.UltimatumOfOrthodoxy.name',           'entries.UltimatumOfOrthodoxy.text',
+      'entries.UltimatumOfSpoilage.name',            'entries.UltimatumOfSpoilage.text',
+      'entries.UltimatumOfSurvival.name',            'entries.UltimatumOfSurvival.text',
+      'entries.UltimatumOfTheBrassCrown.name',       'entries.UltimatumOfTheBrassCrown.text',
+      'entries.UltimatumOfTheBrokenVeil.name',       'entries.UltimatumOfTheBrokenVeil.text',
+      'entries.UltimatumOfTheDrowned.name',          'entries.UltimatumOfTheDrowned.text',
+      'entries.UltimatumOfTheFaultyCarburetor.name', 'entries.UltimatumOfTheFaultyCarburetor.text',
+      'entries.UltimatumOfTheHighlander.name',       'entries.UltimatumOfTheHighlander.text',
+      'entries.UltimatumOfTheMan.name',              'entries.UltimatumOfTheMan.text',
+      'entries.UltimatumOfTheScream.name',           'entries.UltimatumOfTheScream.text',
+      ... 21 more items
+    ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+Assets: 32 WebP, dimensions and alpha verified. Leg root reaches the last pixel row.
+Chrome component smoke passed: 4 bridge cells, 8 ring cells, 4 legs, boss target click, 45-degree turn, clockwise crawl, 5 stairs and wrap animation. Checked plate overlap and boss hit testing at 390 px.
+Live game verification unavailable: no API listener on 127.0.0.1:3002.

@@ -1,4 +1,5 @@
 import type { Point } from './locationGraph'
+import { dreamEatersAnchors, dreamEatersArt } from './scene-anchors-the-dream-eaters'
 
 const boards = new Map([
   // Night of the Zealot
@@ -110,7 +111,8 @@ const boards = new Map([
   ['07041', 'the-innsmouth-conspiracy/the-pit-of-despair'],
   ['07056', 'the-innsmouth-conspiracy/the-vanishing-of-elina-harper'],
   ['07123', 'the-innsmouth-conspiracy/in-too-deep'],
-  ['07163', 'the-innsmouth-conspiracy/devil-reef'],
+  ['07163', 'the-innsmouth-conspiracy/devil-reef-sea'],
+  [':return-to-the-innsmouth-conspiracy:031', 'the-innsmouth-conspiracy/devil-reef-sea'],
   ['07198', 'the-innsmouth-conspiracy/horror-in-high-gear'],
   ['07231', 'the-innsmouth-conspiracy/a-light-in-the-fog'],
   ['07274', 'the-innsmouth-conspiracy/the-lair-of-dagon'],
@@ -387,17 +389,7 @@ const villageAnchors: Record<string, Point> = {
   '07142': [8, 34], // Railroad Station
   '07143': [84, 78], // Desolate Coastline
 
-  // The Innsmouth Conspiracy — Scenario 4: Devil Reef
-  '07168': [50, 52], // Churning Waters / Fishing Vessel
-  '07169': [50, 24], // Lonely Isle
-  '07170': [18, 76], // Hidden Cove
-  '07171': [78, 38], // Waveworn Island
-  '07172': [24, 32], // Salt Marshes
-  '07173': [82, 74], // Black Reef
-  '07174': [15, 62], // Bootlegger's Hideaway
-  '07175': [35, 52], // Deep One Grotto
-  '07176': [70, 56], // Cyclopean Ruins
-  '07177': [50, 68], // Temple of the Union
+  // The Innsmouth Conspiracy — Scenario 4: Devil Reef follows its growing grid (see ISLAND_FOLDERS).
 
   // The Innsmouth Conspiracy — Scenario 5: Horror in High Gear
   '07203': [76, 12], // Falcon Point Approach
@@ -1190,33 +1182,28 @@ export type HemlockOverview = {
   anchors?: Record<string, Point>
   /** Folder of floating-island sprites drawn under each location, for boards with no painted places. */
   islands?: string
+  /** Moving weather drawn over the painted background (rain, swell, fog, lightning); the picture stays still. */
+  weather?: 'storm-sea'
 }
 
-/* Before the Black Throne: the Cosmos is a grid that grows and reshuffles every act, so no spot can be
- * painted ahead of time. Each location instead stands on an island of its own, drawn under its plate. */
+/* Grids that grow or reshuffle during play (Before the Black Throne's Cosmos, Devil Reef as islands are
+ * explored) cannot be painted ahead of time. Each location instead stands on a sprite of its own, drawn under
+ * its plate; `scene-island-sprites.ts` picks the sprite from this folder. */
 const COSMOS_ISLANDS = 'img/scenes/the-circle-undone/cosmos'
-const COSMOS_SCENARIOS = new Set(['05325', '54056'])
-const COSMOS_ISLAND_CODES = new Set([
-  '05332', '05333', '05334', '05335', '05336', '05337', '05338', '05339', '05340', '54058', '54059', '54060',
+const DEVIL_REEF_ISLANDS = 'img/scenes/the-innsmouth-conspiracy/devil-reef'
+const ISLAND_FOLDERS = new Map([
+  ['05325', COSMOS_ISLANDS],
+  ['54056', COSMOS_ISLANDS],
+  ['07163', DEVIL_REEF_ISLANDS],
+  [':return-to-the-innsmouth-conspiracy:031', DEVIL_REEF_ISLANDS],
+])
+/* Boards whose sea is alive: Devil Reef is explored by boat through a storm. */
+const WEATHER = new Map<string, NonNullable<HemlockOverview['weather']>>([
+  ['07163', 'storm-sea'],
+  [':return-to-the-innsmouth-conspiracy:031', 'storm-sea'],
 ])
 
-/** The location's own 3:2 sprite once it is revealed; undefined while it should stand on the plain round rock. */
-function cosmosSpriteCode(cardCode: string, revealed: boolean): string | undefined {
-  const code = cardCode.replace(/^c/, '').replace(/[ab]$/, '')
-  return revealed && COSMOS_ISLAND_CODES.has(code) ? code : undefined
-}
-
-/** The sprite under a Cosmos location; a face-down card stands on the plain round rock. */
-export function cosmosIslandImage(folder: string, cardCode: string, revealed: boolean): string {
-  return `${folder}/${cosmosSpriteCode(cardCode, revealed) ?? 'cosmos'}.webp`
-}
-
-/** Width over height of that sprite: revealed locations are 3:2 scenes, the plain rock is square. */
-export function cosmosIslandAspect(cardCode: string, revealed: boolean): number {
-  return cosmosSpriteCode(cardCode, revealed) ? 3 / 2 : 1
-}
-
-export function hemlockOverview(id: string, reference: string, layout?: readonly string[] | null): HemlockOverview | undefined {
+export function hemlockOverview(id: string, reference: string, layout?: readonly string[] | null, activeLabels?: readonly string[]): HemlockOverview | undefined {
   const scenario = id.replace(/^c/, '')
   if (scenario === '10501') {
     // The reference flips when the cave-in replaces the caves with rails.
@@ -1226,14 +1213,18 @@ export function hemlockOverview(id: string, reference: string, layout?: readonly
   }
   // Some branches of the finale leave the Abyss and rebuild the village board.
   const isNightVale = scenario === '10651' && layout?.some((row) => row.trim().split(/\s+/).includes('diamond'))
-  const art = isNightVale ? 'hemlock-vale/vale-night' : boards.get(scenario)
+  const dreamArt = dreamEatersArt(scenario, layout, activeLabels)
+  const art = dreamArt ?? (isNightVale ? 'hemlock-vale/vale-night' : boards.get(scenario))
   if (!art) return undefined
+  const islands = dreamArt?.includes('/endless-stairs/') || dreamArt?.includes('/weaver/')
+    ? `img/scenes/${dreamArt.slice(0, dreamArt.lastIndexOf('/'))}` : ISLAND_FOLDERS.get(scenario)
   return {
     image: `img/scenes/${art}.webp`,
     fixedPassages: false,
     village: true,
     house: art.endsWith('hemlock-house'),
-    anchors: boardAnchors[art],
-    ...(COSMOS_SCENARIOS.has(scenario) ? { islands: COSMOS_ISLANDS } : {}),
+    anchors: dreamEatersAnchors[art] ?? boardAnchors[art],
+    ...(islands ? { islands } : {}),
+    ...(WEATHER.has(scenario) ? { weather: WEATHER.get(scenario) } : {}),
   }
 }

@@ -3,9 +3,15 @@ import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
 import ts from 'typescript'
 
-const source = readFileSync(new URL('../src/arkham/hemlock-overview.ts', import.meta.url), 'utf8')
-const js = ts.transpile(source, { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 })
-const { hemlockOverview, hemlockVillagePosition, hemlockHousePosition, cosmosIslandImage, cosmosIslandAspect } = await import('data:text/javascript;base64,' + Buffer.from(js).toString('base64'))
+function moduleUrl(filename, imports = {}) {
+  const source = readFileSync(new URL(`../src/arkham/${filename}.ts`, import.meta.url), 'utf8')
+  let js = ts.transpile(source, { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 })
+  for (const [path, url] of Object.entries(imports)) js = js.replace(`'${path}'`, JSON.stringify(url))
+  return 'data:text/javascript;base64,' + Buffer.from(js).toString('base64')
+}
+const { hemlockOverview, hemlockVillagePosition, hemlockHousePosition } = await import(moduleUrl('hemlock-overview', {
+  './scene-anchors-the-dream-eaters': moduleUrl('scene-anchors-the-dream-eaters'),
+}))
 
 const scenarios = {
   '10501': 'written-in-rock-descent',
@@ -34,6 +40,38 @@ test('every playable Hemlock Vale board selects a shipped overview', () => {
     expectWebp(hemlockOverview('c' + id, 'c' + id), art)
   }
   assert.equal(hemlockOverview('c01104', 'c01104'), undefined)
+})
+
+test('Dream-Eaters selects the current board, including Kadath with every region in its layout', () => {
+  const kadath = ['ulthar baharna kadatheron ilekVad celephaïs']
+  const cases = [
+    ['06063', [], [], 'waking-nightmare', ['06070', '06074', 'basementDoor2']],
+    ['06039', ['seventySteps enchantedWoods1'], ['seventySteps'], 'beyond-the-gates-steps', ['06045', '06049']],
+    ['06039', ['seventySteps enchantedWoods1'], ['enchantedWoods1'], 'beyond-the-gates-woods', ['06049', 'enchantedWoods6']],
+    ['06119', kadath, ['ulthar'], 'kadath-kingdom-of-the-skai', ['06127', '06129']],
+    ['06119', kadath, ['baharna'], 'kadath-oriab', ['06136', '06138']],
+    ['06119', kadath, ['kadatheron'], 'kadath-mnar', ['06130', '06131', '06132']],
+    ['06119', kadath, ['ilekVad'], 'kadath-forbidden-lands', ['06133', '06135']],
+    ['06119', kadath, ['celephaïs'], 'kadath-timeless-realm', ['06139', '06142', '06143']],
+    ['06168', ['frontPorchEntryway mysteriousStairs1'], ['frontPorchEntryway'], 'thousand-shapes-house', ['06174', 'upstairsDoorway2']],
+    ['06206', [], [], 'dark-side-of-the-moon', ['06214', '06223']],
+    ['06247', [], [], 'point-of-no-return', ['06053', 'seaOfPitch1', 'seaOfPitch4']],
+    ['06286', ['onyxGates'], ['onyxGates'], 'where-the-gods-dwell-leng', ['06298', '06299']],
+    ['06286', ['northTower'], ['northTower'], 'where-the-gods-dwell-towers', ['06299', 'northTower', 'westTower']],
+    ['06168', ['mysteriousStairs1'], ['mysteriousStairs1'], 'endless-stairs/bg', []],
+    ['06333', ['theGreatWeb1', 'theGreatWeb4'], ['theGreatWeb1', 'theGreatWeb4'], 'weaver/bg-bridge', []],
+    ['06333', ['theGreatWeb4', 'atlachNacha'], ['theGreatWeb4'], 'weaver/bg-ring', []],
+    ['06333', ['theGreatWeb4 theGreatWeb5'], ['theGreatWeb4', 'theGreatWeb5'], 'weaver/bg-ring', []],
+  ]
+  for (const [code, layout, placed, name, keys] of cases) {
+    const overview = hemlockOverview('c' + code, code, layout, placed)
+    assert.equal(overview?.image, `img/scenes/the-dream-eaters/${name}.webp`)
+    assert.equal(readFileSync(new URL(`../public/${overview.image}`, import.meta.url)).toString('ascii', 8, 12), 'WEBP')
+    assert.equal(overview.islands, keys.length ? undefined : overview.image.slice(0, overview.image.lastIndexOf('/')))
+    for (const key of keys) assert.ok(overview.anchors[key], key)
+  }
+  const hospital = hemlockOverview('06063', '06063')
+  assert.deepEqual(hemlockVillagePosition('c06075b', hospital.anchors, 'basementDoor2'), [62, 90])
 })
 
 test('Written in Rock selects the rail board after the cave-in on either reference printing', () => {
@@ -306,7 +344,7 @@ test('The Innsmouth Conspiracy scenarios select their overview boards', () => {
   assert.equal(hemlockOverview('c07041', 'c07041')?.image, 'img/scenes/the-innsmouth-conspiracy/the-pit-of-despair.webp')
   assert.equal(hemlockOverview('c07056', 'c07056')?.image, 'img/scenes/the-innsmouth-conspiracy/the-vanishing-of-elina-harper.webp')
   assert.equal(hemlockOverview('c07123', 'c07123')?.image, 'img/scenes/the-innsmouth-conspiracy/in-too-deep.webp')
-  assert.equal(hemlockOverview('c07163', 'c07163')?.image, 'img/scenes/the-innsmouth-conspiracy/devil-reef.webp')
+  assert.equal(hemlockOverview('c07163', 'c07163')?.image, 'img/scenes/the-innsmouth-conspiracy/devil-reef-sea.webp')
   assert.equal(hemlockOverview('c07198', 'c07198')?.image, 'img/scenes/the-innsmouth-conspiracy/horror-in-high-gear.webp')
   assert.equal(hemlockOverview('c07231', 'c07231')?.image, 'img/scenes/the-innsmouth-conspiracy/a-light-in-the-fog.webp')
   assert.equal(hemlockOverview('c07274', 'c07274')?.image, 'img/scenes/the-innsmouth-conspiracy/the-lair-of-dagon.webp')
@@ -317,8 +355,9 @@ test('The Innsmouth Conspiracy scenarios select their overview boards', () => {
   assert.deepEqual(hemlockVillagePosition('07052'), [77, 16]) // Sealed Exit
   assert.deepEqual(hemlockVillagePosition('07065'), [47, 52]) // Innsmouth Square
   assert.deepEqual(hemlockVillagePosition('07068'), [67, 52]) // Fish Street Bridge
-  assert.deepEqual(hemlockVillagePosition('07168'), [50, 52]) // Churning Waters
-  assert.deepEqual(hemlockVillagePosition('07171'), [78, 38]) // Waveworn Island
+  // Devil Reef follows its growing grid, so its locations have no painted spot.
+  assert.equal(hemlockVillagePosition('07168'), undefined) // Churning Waters
+  assert.equal(hemlockVillagePosition('07171'), undefined) // Waveworn Island
   assert.deepEqual(hemlockVillagePosition('07203'), [76, 12]) // Falcon Point Approach
   assert.deepEqual(hemlockVillagePosition('07241'), [48, 12]) // Lantern Room (Lighthouse)
   assert.deepEqual(hemlockVillagePosition('07247'), [68, 76]) // Shrine to Hydra
@@ -432,20 +471,12 @@ test('In Too Deep plates run west to east from left to right in every row', () =
   }
 })
 
-test('Before the Black Throne stands every Cosmos location on an island sprite', () => {
-  const folder = 'img/scenes/the-circle-undone/cosmos'
-  assert.equal(hemlockOverview('c05325', 'c05325')?.islands, folder)
-  assert.equal(hemlockOverview('c54056', 'c05325')?.islands, folder)
+test('Island boards: Before the Black Throne and Devil Reef stand each location on its own sprite', () => {
+  assert.equal(hemlockOverview('c05325', 'c05325')?.islands, 'img/scenes/the-circle-undone/cosmos')
+  assert.equal(hemlockOverview('c54056', 'c05325')?.islands, 'img/scenes/the-circle-undone/cosmos')
   assert.equal(hemlockOverview('c05284', 'c05284')?.islands, undefined)
-  assert.equal(cosmosIslandImage(folder, 'c05335', true), `${folder}/05335.webp`)
-  assert.equal(cosmosIslandImage(folder, 'c05335', false), `${folder}/cosmos.webp`)
-  assert.equal(cosmosIslandImage(folder, 'c99999', true), `${folder}/cosmos.webp`)
-  for (const code of ['05332', '05333', '05334', '05335', '05336', '05337', '05338', '05339', '05340', '54058', '54059', '54060', 'cosmos']) {
-    const bytes = readFileSync(new URL(`../public/${folder}/${code}.webp`, import.meta.url))
-    assert.equal(bytes.subarray(8, 12).toString('ascii'), 'WEBP', code)
-  }
-  // Revealed locations are 3:2 scenes; the face-down rock (and anything without a sprite) stays square.
-  assert.equal(cosmosIslandAspect('c05335', true), 3 / 2)
-  assert.equal(cosmosIslandAspect('c05335', false), 1)
-  assert.equal(cosmosIslandAspect('c99999', true), 1)
+  assert.equal(hemlockOverview('c07163', 'c07163')?.islands, 'img/scenes/the-innsmouth-conspiracy/devil-reef')
+  const returnTo = hemlockOverview('c:return-to-the-innsmouth-conspiracy:031', 'c:return-to-the-innsmouth-conspiracy:031')
+  assert.equal(returnTo?.islands, 'img/scenes/the-innsmouth-conspiracy/devil-reef')
+  assert.equal(returnTo?.image, 'img/scenes/the-innsmouth-conspiracy/devil-reef-sea.webp')
 })

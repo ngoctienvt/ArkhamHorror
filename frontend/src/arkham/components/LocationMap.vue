@@ -33,6 +33,7 @@ import { useLocationInfo } from '@/arkham/composables/useLocationInfo'
 import { barrierCounts, barriersBetween } from '@/arkham/scenarioBarriers'
 import { useTouchMode } from '@/arkham/composables/useTouchMode'
 import { fitScreenOn } from '@/arkham/composables/useFitScreen'
+import { dreamGridPositions, WEAVER_FOLDER, weaverEnemies, weaverEnemyIds } from '@/arkham/dream-eaters-scene-model'
 
 const props = defineProps<{
   game: Game
@@ -109,8 +110,18 @@ const illustratedBoard = computed(() => {
   }
   return hemlockOverview(
     props.scenario.id, props.scenario.reference, props.scenario.locationLayout,
+    locations.value.map((l) => l.label),
   )
 })
+
+const weaverRing = computed(() => illustratedBoard.value?.image.endsWith('/weaver/bg-ring.webp') === true)
+const dreamPositions = computed(() => dreamGridPositions(
+  illustratedBoard.value?.islands, props.scenario.locationLayout ?? [], weaverRing.value,
+))
+const weaver = computed(() => illustratedBoard.value?.islands === WEAVER_FOLDER && weaverRing.value
+  ? weaverEnemies(Object.values(props.game.enemies), locations.value) : undefined)
+const mapEnemySet = computed(() => weaverEnemyIds(weaver.value))
+const visibleEnemiesAt = (location: Location) => enemiesShownAt(location).filter((id) => !mapEnemySet.value.has(id))
 
 const layout = computed(() => {
   const rows = props.scenario.usesGrid || props.scenario.locationLayout ? props.scenario.locationLayout : null
@@ -128,6 +139,9 @@ const positions = computed<Record<string, Point>>(() => {
     return { [locations.value[0].id]: [50, 75] }
   }
   const fallback = mapPositions(graph.value, layout.value)
+  if (dreamPositions.value) return Object.fromEntries(locations.value.map((l) => [
+    l.id, dreamPositions.value?.[l.label] ?? fallback[l.id],
+  ]))
   if (illustratedBoard.value?.fixedPassages) return mineDescentPositions(graph.value, fallback)
   const board = illustratedBoard.value
   // The Cosmos has no painted places: every card sits in its grid cell, as on the card board.
@@ -175,7 +189,7 @@ const mapLocationIds = computed(() => locations.value.map((l) => l.id))
 // Choices that only the action panel lists (cards the scene does not draw as clickable): reopen the panel
 // whenever such a question comes up, and badge the Actions button with how many there are.
 const panelOnlyCount = computed(() =>
-  scenePanelOnlyCount(props.game, choices.value, new Set(mapLocationIds.value), me.value?.id ?? null))
+  scenePanelOnlyCount(props.game, choices.value, new Set(mapLocationIds.value), me.value?.id ?? null, mapEnemySet.value))
 
 const canvasSize = computed(() => {
   const rows = layout.value?.map((r) => r.trim().split(/\s+/)) ?? []
@@ -209,6 +223,8 @@ const roomPlates = computed<Record<string, RoomPlateSpot> | null>(() =>
 const overview = useStorage('arkham-scene-overview', true)
 // Card text and flavour on the room plates: all shown or all folded away, so a small room keeps space for its figures.
 const plateText = useStorage('arkham-room-plate-text', false)
+// Moving weather on boards that have it (Devil Reef's storm); a player can still it.
+const weather = useStorage('arkham-map-weather', true)
 const showOverview = computed(() =>
   props.view === 'map' || !!illustratedBoard.value || (cutaway.value !== null && overview.value)
 )
@@ -330,6 +346,8 @@ const views: LocationView[] = ['map', 'cards']
         <div class="bar-extras" :class="{ collapsed: collapsedBar, open: moreOpen }" @click.stop>
           <button v-if="showOverview && roomPlates" class="view view--tool" :class="{ active: plateText }" :aria-pressed="plateText"
             @click="plateText = !plateText">{{ plateText ? t('locationMap.marker.collapseAll') : t('locationMap.marker.expandAll') }}</button>
+          <button v-if="illustratedBoard?.weather" class="view view--tool" :class="{ active: weather }" :aria-pressed="weather"
+            @click="weather = !weather">{{ t('locationMap.weather') }}</button>
           <button v-if="hasMapOffsets(game.id)" class="view view--tool" @click="resetMapOffsets(game.id)">{{ t('locationMap.resetLayout') }}</button>
           <LocationMapLegend />
           <!-- Deck: a drop-down with every deck, its discard and the set-aside cards (shortcut in the View menu). -->
@@ -353,7 +371,7 @@ const views: LocationView[] = ['map', 'cards']
       <div id="scene-team-slot" class="team-slot"></div>
       <LocationMapCanvas :cutaway="cutaway" :roomPlates="roomPlates" :plateText="plateText" :illustrated-board="illustratedBoard" :game="game" :playerId="playerId" :locations="locations"
         :positions="positions" :links="links" :moves="moves" :gridSpots="gridSpots" :selectedId="selected?.id ?? null"
-        :enemiesAt="enemiesShownAt" :concealedAt="concealedOf" :concealedSpots="concealedSpots" :infoOf="infoOf" :barriers="barriers" :width="canvasSize.width" :height="canvasSize.height" :viewport="viewport"
+        :enemiesAt="visibleEnemiesAt" :concealedAt="concealedOf" :concealedSpots="concealedSpots" :infoOf="infoOf" :barriers="barriers" :width="canvasSize.width" :height="canvasSize.height" :viewport="viewport" :weather="weather" :weaver="weaver" :dreamPositions="dreamPositions"
         @inspect="inspect" @choose="emit('choose', $event)" />
       <div v-if="canZoom" class="zoom-controls" role="group" :aria-label="t('locationMap.zoomReset')">
         <button type="button" :aria-label="t('locationMap.zoomIn')" :disabled="!viewport.canZoomIn.value" @click.stop="viewport.zoomIn()">+</button>
@@ -361,14 +379,14 @@ const views: LocationView[] = ['map', 'cards']
         <button type="button" :aria-label="t('locationMap.zoomReset')" :disabled="!viewport.zoomed.value" @click.stop="viewport.reset()">⟲</button>
       </div>
       <LocationActionPanel v-if="panelOpen && !panelBelow" class="action-overlay" :game="game" :playerId="playerId"
-        :location="panelLocation" :info="panelLocation ? infoOf(panelLocation) : null" :mapLocationIds="mapLocationIds" :sheet="sheetLayout" :expanded="sheetExpanded"
+        :location="panelLocation" :info="panelLocation ? infoOf(panelLocation) : null" :mapLocationIds="mapLocationIds" :mapEnemyIds="mapEnemySet" :sheet="sheetLayout" :expanded="sheetExpanded"
         @toggleSheet="sheetExpanded = !sheetExpanded" @choose="emit('choose', $event)" @close="panelOpen = false" />
       <LocationInfoCard v-if="inspected" :game="game" :playerId="playerId" :location="inspected" :info="infoOf(inspected)"
         :connections="inspectedConnections" :besidePanel="panelOpen && !sheetLayout && !panelBelow" @choose="emit('choose', $event)"
         @inspect="inspectById" @close="closeCard" />
     </div>
     <LocationActionPanel v-if="panelOpen && panelBelow" class="action-below" :game="game" :playerId="playerId"
-      :location="panelLocation" :info="panelLocation ? infoOf(panelLocation) : null" :mapLocationIds="mapLocationIds" @choose="emit('choose', $event)" @close="panelOpen = false" />
+      :location="panelLocation" :info="panelLocation ? infoOf(panelLocation) : null" :mapLocationIds="mapLocationIds" :mapEnemyIds="mapEnemySet" @choose="emit('choose', $event)" @close="panelOpen = false" />
     <LocationHand :game="game" :playerId="playerId" @choose="emit('choose', $event)" />
   </section>
 </template>

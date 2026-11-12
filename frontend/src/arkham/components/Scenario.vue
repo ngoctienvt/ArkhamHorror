@@ -23,6 +23,7 @@ import { type Game } from '@/arkham/types/Game';
 import { type Scenario, type GroupLayout, usesHardExpertReference } from '@/arkham/types/Scenario';
 import { type Story as StoryAttrs } from '@/arkham/types/Story';
 import { type Enemy } from '@/arkham/types/Enemy';
+import { weaverEnemies, weaverEnemyIds } from '@/arkham/dream-eaters-scene-model';
 import { gridConcealedGroups, positionToGridArea, type ConcealedGroup } from '@/arkham/concealedCards';
 import ConcealedCardView from '@/arkham/components/ConcealedCard.vue';
 import { type Card, cardId, cardImage, referenceCard } from '@/arkham/types/Card';
@@ -1527,9 +1528,12 @@ const players = computed(() => props.game.investigators)
 const playerOrder = computed(() => props.game.playerOrder)
 // What only the card board can draw; the map says so rather than silently leaving it out.
 // Barriers are drawn on the map's link badges, so they no longer need the card board.
-const boardOnlyContent = computed(() =>
-  enemiesAsLocations.value.length > 0 || gridStories.value.length > 0 ||
-  playerLocationZones.value.length > 0)
+const boardOnlyContent = computed(() => {
+  if (gridStories.value.length || playerLocationZones.value.length) return true
+  if (props.scenario.id.replace(/^c/, '') !== '06333') return enemiesAsLocations.value.length > 0
+  const drawn = weaverEnemyIds(weaverEnemies(Object.values(props.game.enemies), Object.values(props.game.locations)))
+  return enemiesAsLocations.value.some((enemy) => !drawn.has(enemy.id))
+})
 const discards = computed<Card[]>(() => props.scenario.discard.map(c => ({ tag: 'EncounterCard', contents: c })))
 const playerLocationZones = computed(() => props.game.playerOrder.flatMap((investigatorId) => {
   const investigator = props.game.investigators[investigatorId]

@@ -911,6 +911,7 @@
     "threatArea": "Threat area",
     "playArea": "Khu vực chơi",
     "resetLayout": "Đặt lại bố cục",
+    "weather": "Thời tiết",
     "moreOptions": "Thêm",
     "arrange": "Sắp xếp",
     "arrangeHint": "Kéo thẻ địa điểm, nhân vật và mũi tên để đặt lại",
@@ -1006,7 +1007,11 @@
     "you": "Bạn",
     "clues": "Clue",
     "doom": "Doom",
-    "placeHere": "Đặt một địa điểm ở đây"
+    "placeHere": "Đặt một địa điểm ở đây",
+    "vehicle": {
+      "aboard": "{name}: {names} đang ở trên",
+      "empty": "{name}: không có ai trên"
+    }
   },
   "location": {
     "under": "Under ({count})"

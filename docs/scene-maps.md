@@ -44,6 +44,7 @@ Hệ thống Scene Map hiện đã được thiết kế và tích hợp cho h�
 | **Night of the Zealot** | *The Midnight Masks*, *The Devourer Below* |
 | **The Dunwich Legacy** | *Extracurricular Activity*, *The House Always Wins*, *The Miskatonic Museum*, *The Essex County Express*, *Blood on the Altar*, *Undimensioned and Unseen*, *Where Doom Awaits*, *Lost in Time and Space* |
 | **The Path to Carcosa** | *Curtain Call*, *The Last King*, *Echoes of the Past*, *The Unspeakable Oath*, *A Phantom of Truth*, *The Pallid Mask*, *Black Stars Rise*, *Dim Carcosa* |
+| **The Dream-Eaters** | *Beyond the Gates of Sleep*, *Waking Nightmare*, *The Search for Kadath*, *A Thousand Shapes of Horror*, *Dark Side of the Moon*, *Point of No Return*, *Where the Gods Dwell*, *Weaver of the Cosmos* |
 | **The Feast of Hemlock Vale** | *Vale Day / Night*, *Hemlock House*, *Silent Heath*, *Lost Sister*, *The Thing in the Depths*, *Twisted Hollow*, *The Longest Night*, *Fate of the Vale* |
 | **The Scarlet Keys** | *Riddles and Rain*, *Dead Heat*, *Sanguine Shadows*, *Dealings in the Dark*, *Dancing Mad*, *On Thin Ice*, *Dogs of War*, *Shades of Suffering*, *Without a Trace*, *Congress of the Keys* |
 | **Side Stories & Challenge** | *Murder at the Excelsior Hotel*, *The Curse of the Rougarou*, và các kịch bản ngoại truyện khác |
@@ -51,6 +52,8 @@ Hệ thống Scene Map hiện đã được thiết kế và tích hợp cho h�
 ---
 
 ## 🛠️ Quy trình tạo mới & Hiệu chỉnh toạ độ (For Contributors)
+
+The Search for Kadath đổi nền theo vùng đang chơi. Trong A Thousand Shapes of Horror, Endless Descent đổi vị trí các bậc thang theo lá. Weaver of the Cosmos chuyển từ cầu tơ dọc sang vòng tám ô, với thân và chân Atlach-Nacha tương tác được khi có lựa chọn tương ứng.
 
 Mỗi Scene Map được thiết kế dựa trên:
 1. **Lưới toạ độ Backend Haskell**: Đối chiếu ma trận `locationLayout` và danh sách kết nối trong `backend/arkham-api/library/Arkham/Scenario/Scenarios/`.

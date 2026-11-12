@@ -1,6 +1,6 @@
 # Devil Reef: scene map lưới động + thuyền là object
 
-Status: draft, chờ duyệt · Branch: main · Skill: `.agents/skills/arkham-dynamic-grid-scene/SKILL.md`
+Status: code done (2026-11-12), chờ kiểm tra lúc chơi · Branch: main · Skill: `.agents/skills/arkham-dynamic-grid-scene/SKILL.md`
 
 ## Mục tiêu
 

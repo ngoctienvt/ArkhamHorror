@@ -8,7 +8,13 @@ import { cardImage, portraitImage } from '@/arkham/cardImages'
 import { useCardNames } from '@/arkham/composables/useCardNames'
 import { ownInvestigator } from '@/arkham/ownInvestigator'
 import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
-import { cosmosIslandAspect, cosmosIslandImage, type HemlockOverview } from '@/arkham/hemlock-overview'
+import type { HemlockOverview } from '@/arkham/hemlock-overview'
+import { islandAspect, islandImage, islandSpotImage, islandWaterImage, vehicleSprite } from '@/arkham/scene-island-sprites'
+import { riders, sceneVehicles } from '@/arkham/scene-vehicle-model'
+import SceneVehicle from '@/arkham/components/SceneVehicle.vue'
+import SceneWeather from '@/arkham/components/SceneWeather.vue'
+import SceneAtlachNacha from '@/arkham/components/SceneAtlachNacha.vue'
+import { STAIRS_FOLDER, stairsRotation, type weaverEnemies } from '@/arkham/dream-eaters-scene-model'
 import { locationLinkDirection, mineDescentPassage, type Point } from '@/arkham/locationGraph'
 import LocationMarkerPlate from '@/arkham/components/LocationMarkerPlate.vue'
 import LocationStandees from '@/arkham/components/LocationStandees.vue'
@@ -17,7 +23,7 @@ import LocationEnemyChips from '@/arkham/components/LocationEnemyChips.vue'
 import type { ConcealedCard } from '@/arkham/types/ConcealedCard'
 import { investigatorMovementName } from '@/arkham/investigatorMovement'
 import { arrangeMode, beginDrag, offsetOf } from '@/arkham/composables/useMapDrag'
-import { clipBetweenBoxes, useMapPlateBoxes } from '@/arkham/composables/useMapPlateBoxes'
+import { clipBetweenBoxes, useMapPlateBoxes, type PlateBox } from '@/arkham/composables/useMapPlateBoxes'
 import type { MapViewport } from '@/arkham/composables/useMapViewport'
 import { MAP_ZOOM_ENABLED } from '@/arkham/mapViewport'
 import { CARD_FLIGHT_ATTR, cardFlightStyle, useCardFlightState } from '@/arkham/cardFlight'
@@ -55,6 +61,8 @@ const props = defineProps<{
   /** Whether the room plates show the card text and flavour. */
   plateText?: boolean
   illustratedBoard?: HemlockOverview
+  dreamPositions?: Record<string, Point>
+  weaver?: ReturnType<typeof weaverEnemies>
   /** Small version for the side column next to the scene. */
   compact?: boolean
   width?: number
@@ -63,6 +71,8 @@ const props = defineProps<{
   viewport?: MapViewport
   /** Barriers standing on links (In Too Deep), keyed by the two sorted location ids. */
   barriers?: BarrierCounts | null
+  /** Whether the player wants the board's moving weather (rain, swell, fog) when it has one. */
+  weather?: boolean
 }>()
 const emit = defineEmits<{
   (e: 'inspect', location: Location, anchor: HTMLElement): void
@@ -71,7 +81,10 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 const nameOf = useCardNames()
-const basePos = (id: string): Point => props.cutaway?.[id] ?? props.positions[id]
+const basePos = (id: string): Point => {
+  const at = props.cutaway?.[id] ?? props.positions[id]
+  return at ? spreadPoint(at) : at
+}
 const offsetKey = (id: string) => `${props.game.id}:${id}`
 // Where a plate is drawn: its scenario spot plus any shift the player dragged it by (never in the house cutaway).
 const pos = (id: string): Point => {
@@ -81,9 +94,19 @@ const pos = (id: string): Point => {
   return [x + dx, y + dy]
 }
 const arrowKey = (key: string) => `${props.game.id}:arrow:${key}`
-// The Cosmos grid reflows as cards arrive, slide and leave, so a dragged offset would point at the wrong cell:
-// its cards stay in their grid cells, as on the card board.
-const canDrag = computed(() => !props.cutaway && !props.compact && !props.illustratedBoard?.islands)
+// Plates and move buttons can be dragged aside on every full-size board. On a sprite board (Cosmos, Devil Reef)
+// only the plate moves: the grid reflows as cards arrive, slide and leave, so the sprites, water and vehicles stay
+// in their cells (`cellPos`) and the layout never changes; the offset is relative to the location's own cell.
+const canDrag = computed(() => !props.cutaway && !props.compact)
+/** The grid cell a location's sprite fills on a sprite board, ignoring any plate drag. */
+const cellPos = (id: string): Point => basePos(id)
+/** The standees under a dragged plate stay on the sprite: undo the plate's shift, in pixels of the stage. */
+const floorStyle = (l: Location): Record<string, string> | undefined => {
+  if (!props.illustratedBoard?.islands || !canDrag.value) return undefined
+  const [dx, dy] = offsetOf(offsetKey(l.id))
+  if (!dx && !dy) return undefined
+  return { translate: `${(-dx * stageWidth.value) / 100}px ${(-dy * stageHeight.value) / 100}px` }
+}
 const startNodeDrag = (l: Location, event: PointerEvent) => {
   if (canDrag.value) beginDrag(event, offsetKey(l.id), 'pct', stage.value)
 }
@@ -98,6 +121,12 @@ onMounted(() => {
 })
 onBeforeUnmount(() => unbindViewport?.())
 const { width: stageWidth, height: stageHeight } = useElementSize(stage)
+const dreamBoard = computed(() => props.illustratedBoard?.image.startsWith('img/scenes/the-dream-eaters/') === true)
+const spreadWeaver = computed(() => !!props.weaver && stageWidth.value > 0 && stageWidth.value <= 600)
+const spreadPoint = ([x, y]: Point): Point => spreadWeaver.value ? [50 + (x - 50) * 1.48, y] : [x, y]
+const dreamDisplayPositions = computed(() => props.dreamPositions && (spreadWeaver.value
+  ? Object.fromEntries(Object.entries(props.dreamPositions).map(([label, point]) => [label, spreadPoint(point)]))
+  : props.dreamPositions))
 // A new picture starts whole; a resized frame (rotation) must not keep an offset that now shows an empty border.
 watch(() => props.illustratedBoard?.image, () => props.viewport?.reset())
 watch([stageWidth, stageHeight], () => props.viewport?.refit())
@@ -125,20 +154,123 @@ const canvasStyle = computed(() => {
 /* Before the Black Throne pads its grid with a ring of open cells, so a cell is small and wide. Islands and
  * placement spots are sized to one cell, so neither covers a neighbouring cell and a click lands where it looks. */
 const cosmosCell = computed(() => {
-  if (!props.illustratedBoard?.islands || !props.width || !props.height || !stageWidth.value || !stageHeight.value) return null
+  if (!props.illustratedBoard?.islands || !stageWidth.value || !stageHeight.value) return null
+  if (props.dreamPositions) {
+    const stairs = props.illustratedBoard.islands === STAIRS_FOLDER
+    return { width: stageWidth.value * 0.18, height: stageHeight.value * (stairs ? 0.17 : 0.20) }
+  }
+  if (!props.width || !props.height) return null
   const width = (stageWidth.value / props.width) * 150 * 0.92
   const height = (stageHeight.value / props.height) * 120 * 0.92
   return { width, height }
 })
 /* A revealed location's 3:2 scene fills the cell's width up to 1.5x its height; the square rock keeps the
  * small overhang its transparent margin allows. Either way the sprite stays inside its own cell. */
+/* The location's plate (its buttons) sits on the top edge of the cell, never over the middle of the picture; the
+ * sprite fills the rest of the cell below it, where the standees hanging under the plate stand on it. */
+const PLATE_ROOM = 34
+/* On a small map the plate may overlap the sprite's top edge rather than squeeze the picture away. */
+const plateRoom = (cellHeight: number) => Math.min(PLATE_ROOM, cellHeight * (props.dreamPositions && stageWidth.value <= 600 ? 0.47 : 0.35))
 const islandWidth = (l: Location): number => {
   const cell = cosmosCell.value
   if (!cell) return 0
-  return cosmosIslandAspect(l.cardCode, l.revealed) > 1
-    ? Math.min(cell.width, cell.height * 1.5)
-    : Math.min(cell.width, cell.height * 1.2)
+  const room = Math.max(0, cell.height - plateRoom(cell.height))
+  return aspectOf(l) > 1
+    ? Math.min(cell.width, room * 1.5)
+    : Math.min(cell.width, room * 1.2)
 }
+/** Where a sprite (and its water) is drawn: centred across the cell, its top just under the plate. */
+const spriteStyle = (l: Location): Record<string, string | number> => {
+  const cell = cosmosCell.value
+  const [x, y] = cellPos(l.id)
+  const width = islandWidth(l)
+  const centre = cell ? -cell.height / 2 + plateRoom(cell.height) + width / aspectOf(l) / 2 : 0
+  return { left: `${x}%`, top: `calc(${y}% + ${centre}px)`, width: `${width}px`, aspectRatio: aspectOf(l) }
+}
+/* The painted part of a sprite stops a little inside its picture (soft, transparent edges), so a link is
+ * clipped to this share of the box to reach the land itself. */
+const SPRITE_EDGE = 0.8
+/** A sprite's box relative to its cell, in stage percent: on a sprite board links run sprite to sprite, not
+ * between the plates (which hang at the top of the cell and can be dragged aside). */
+const spriteBox = (l: Location): PlateBox | undefined => {
+  const cell = cosmosCell.value
+  if (!cell || !stageWidth.value || !stageHeight.value) return undefined
+  const width = islandWidth(l)
+  const height = width / aspectOf(l)
+  const centre = -cell.height / 2 + plateRoom(cell.height) + height / 2
+  return {
+    dx: 0,
+    dy: (centre / stageHeight.value) * 100,
+    hw: ((width / 2) * SPRITE_EDGE / stageWidth.value) * 100,
+    hh: ((height / 2) * SPRITE_EDGE / stageHeight.value) * 100,
+  }
+}
+/** The board's storm is drawn (it has one, the player has it on, and this is the full-size map). */
+const stormy = computed(() => !!props.illustratedBoard?.weather && !!props.weather && !props.compact && stageWidth.value > 0)
+/** On a sprite board the plate hangs from the top of its cell instead of being centred on it. */
+const nodeStyle = (l: Location): Record<string, string | number | undefined> => {
+  const [x, y] = pos(l.id)
+  const cell = cosmosCell.value
+  if (cell && props.illustratedBoard?.islands) {
+    return { left: `${x}%`, top: `calc(${y}% - ${cell.height / 2}px)`, translate: '-50% 0' }
+  }
+  return { left: `${x}%`, top: `${y}%`, zIndex: props.cutaway ? Math.round(y) : undefined }
+}
+const islandsFolder = computed(() => props.illustratedBoard?.islands ?? '')
+const aspectOf = (l: Location) => islandAspect(islandsFolder.value, l.cardCode, l.revealed)
+
+const stairSlots = computed(() => islandsFolder.value === STAIRS_FOLDER
+  ? props.locations.filter((l) => /^mysteriousStairs[1-5]$/.test(l.label))
+    .map(({ id, label, revealed }) => ({ id, label, revealed })) : [])
+let stairAnimations: Animation[] = []
+watch(stairSlots, (after, before) => {
+  stairAnimations.forEach((animation) => animation.cancel())
+  stairAnimations = []
+  const wrapped = stairsRotation(before, after)
+  const slots = props.dreamPositions
+  if (!wrapped || !slots || !stage.value || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  const previous = new Map(before.map((l) => [l.id, l]))
+  const current = new Map(after.map((l) => [l.id, l]))
+  for (const element of stage.value.querySelectorAll<HTMLElement>('[data-stair-tile]')) {
+    const id = element.dataset.stairTile ?? ''
+    const from = previous.get(id)
+    const to = current.get(id)
+    if (!from || !to || from.label === to.label) continue
+    if (id !== wrapped && Number(to.label.at(-1)) !== Number(from.label.at(-1)) - 1) continue
+    const [x0, y0] = slots[from.label]
+    const [x1, y1] = slots[to.label]
+    const shift = `translate(${(x0 - x1) * stageWidth.value / 100}px, ${(y0 - y1) * stageHeight.value / 100}px)`
+    const frames = id === wrapped
+      ? [{ transform: shift, opacity: 1 }, { transform: shift, opacity: 0, offset: 0.40 },
+        { transform: 'none', opacity: 0, offset: 0.41 }, { transform: 'none', opacity: 1 }]
+      : [{ transform: shift }, { transform: 'none' }]
+    stairAnimations.push(element.animate(frames, { duration: 500, easing: 'ease-in-out' }))
+  }
+}, { flush: 'post' })
+onBeforeUnmount(() => stairAnimations.forEach((animation) => animation.cancel()))
+/* Vehicles sailing between the cells (Devil Reef's Fishing Vessel), drawn below-right of their cell's centre so
+ * the plate stays readable. Whoever rides one stands on its deck instead of on the ground. */
+const vehicles = computed(() => {
+  if (!islandsFolder.value || !cosmosCell.value) return []
+  const here = new Set(props.locations.map((l) => l.id))
+  return sceneVehicles(props.game, (code) => vehicleSprite(islandsFolder.value, code)).filter((v) => here.has(v.locationId))
+})
+const aboard = computed(() => riders(vehicles.value))
+const vehicleWidth = computed(() => {
+  const cell = cosmosCell.value
+  return cell ? Math.min(cell.width, cell.height * 1.5) * 0.7 : 0
+})
+const vehiclePos = (locationId: string): Point => {
+  const cell = cosmosCell.value
+  const [x, y] = cellPos(locationId)
+  if (!cell || !stageWidth.value || !stageHeight.value) return [x, y]
+  return [x + ((cell.width * 0.2) / stageWidth.value) * 100, y + ((cell.height * 0.22) / stageHeight.value) * 100]
+}
+/** The location as drawn on the ground: without the investigators riding a vehicle there. */
+const onGround = (l: Location): Location =>
+  aboard.value.size && l.investigators.some((id) => aboard.value.has(id))
+    ? { ...l, investigators: l.investigators.filter((id) => !aboard.value.has(id)) }
+    : l
 // Match the card board, including enemy cards that also serve as locations.
 const locationImage = (l: Location) => cardImage(l.cardCode, l.revealed || l.enemyLocation ? '' : 'b')
 
@@ -175,7 +307,9 @@ const connectionArrows = computed(() => {
     if (!from || !to) return []
     const direction = locationLinkDirection(from, to)
     if (!direction) return []
-    const clipped = clipBetweenBoxes(pos(a), plateBoxes.value[a], pos(b), plateBoxes.value[b])
+    const clipped = cosmosCell.value
+      ? clipBetweenBoxes(cellPos(a), spriteBox(from), cellPos(b), spriteBox(to))
+      : clipBetweenBoxes(pos(a), plateBoxes.value[a], pos(b), plateBoxes.value[b])
     if (!clipped) return []
     const [x1, y1] = clipped.from
     const [x2, y2] = clipped.to
@@ -282,11 +416,12 @@ function tileClick(l: Location, event: MouseEvent) {
 
 <template>
   <div ref="scroller" class="map-scroll" :class="{ compact }">
-    <div class="map-canvas" :class="{ 'has-cutaway': cutaway, 'has-illustrated-board': illustratedBoard }" :style="canvasStyle">
-      <div ref="stage" class="map-stage" :class="{ cutaway, illustrated: illustratedBoard, descent, village: illustratedBoard?.village, house: illustratedBoard?.house }"
+    <div class="map-canvas" :class="{ 'has-cutaway': cutaway, 'has-illustrated-board': illustratedBoard, 'has-dream-board': dreamBoard }" :style="canvasStyle">
+      <div ref="stage" class="map-stage" :class="{ cutaway, illustrated: illustratedBoard, descent, village: illustratedBoard?.village, house: illustratedBoard?.house, 'dream-grid': dreamPositions, 'dream-static': dreamBoard && !dreamPositions }"
         :style="stageStyle">
       <img v-if="illustratedBoard" :key="illustratedBoard.image" class="board-art" :src="illustratedBoard.image"
         alt="" @error="hideFailedArt($event, illustratedBoard.image)" />
+      <SceneWeather v-if="stormy" :width="stageWidth" :height="stageHeight" />
       <svg v-if="!cutaway" class="map-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
         <template v-if="!illustratedBoard">
           <line v-for="[a, b] in links" :key="a + b"
@@ -326,28 +461,58 @@ function tileClick(l: Location, event: MouseEvent) {
         <span class="barrier-count" aria-hidden="true">{{ stray.count }}</span>
       </button>
       <template v-if="illustratedBoard?.islands && cosmosCell">
-        <img v-for="l in locations" :key="'island-' + l.id" class="island"
-          :src="cosmosIslandImage(illustratedBoard.islands, l.cardCode, l.revealed)"
-          :style="{ left: pos(l.id)[0] + '%', top: pos(l.id)[1] + '%', width: islandWidth(l) + 'px',
-            aspectRatio: cosmosIslandAspect(l.cardCode, l.revealed) }"
+        <!-- In a storm, surf breaks on every island: its own outline, turned to white foam and blurred, washes in
+             onto the shore and drains away, twice out of step. Drawn under the island, so only the rim shows. -->
+        <template v-if="stormy">
+          <template v-for="l in locations" :key="'surf-' + l.id">
+            <img v-for="n in 2" :key="n" class="surf" :class="'surf-' + n" :src="islandImage(illustratedBoard.islands, l.cardCode, l.revealed)"
+              :style="spriteStyle(l)" alt="" aria-hidden="true" draggable="false" />
+          </template>
+        </template>
+        <img v-for="l in locations" :key="'island-' + l.id" class="island" :class="{ targetable: infoOf(l).targetable }"
+          :src="islandImage(illustratedBoard.islands, l.cardCode, l.revealed)"
+          :style="spriteStyle(l)" :data-stair-tile="islandsFolder === STAIRS_FOLDER ? l.id : undefined"
           alt="" aria-hidden="true" draggable="false" />
+        <!-- A flooded location's water rises over its sprite, in the same frame. -->
+        <template v-for="l in locations" :key="'water-' + l.id">
+          <img v-if="islandWaterImage(illustratedBoard.islands, l.cardCode, l.revealed, l.floodLevel)" class="island water"
+            :src="islandWaterImage(illustratedBoard.islands, l.cardCode, l.revealed, l.floodLevel)"
+            :style="spriteStyle(l)"
+            alt="" aria-hidden="true" draggable="false" />
+        </template>
+        <!-- The card board's flood effect: a slowly turning body of water rising halfway up (partially flooded)
+             or over the whole place (fully flooded), cut to the shape of the location's sprite. -->
+        <template v-for="l in locations" :key="'flood-' + l.id">
+          <div v-if="l.floodLevel && l.floodLevel !== 'Unflooded'" class="flood-mask"
+            :style="{ ...spriteStyle(l),
+              '--sprite': `url(${islandImage(illustratedBoard.islands, l.cardCode, l.revealed)})` }"
+            aria-hidden="true">
+            <div class="wave" :class="l.floodLevel"></div>
+            <div class="wave swell" :class="l.floodLevel"></div>
+          </div>
+        </template>
+        <SceneVehicle v-for="v in vehicles" :key="'vehicle-' + v.id" :game="game" :playerId="playerId" :vehicle="v"
+          :x="vehiclePos(v.locationId)[0]" :y="vehiclePos(v.locationId)[1]" :width="vehicleWidth" @choose="emit('choose', $event)" />
       </template>
+      <SceneAtlachNacha v-if="weaver && dreamDisplayPositions && stageWidth && stageHeight" :game="game" :playerId="playerId"
+        :spider="weaver" :positions="dreamDisplayPositions" :width="stageWidth" :height="stageHeight" @choose="emit('choose', $event)" />
       <button v-for="spot in gridSpots" :key="spot.label" class="spot" :class="{ 'cosmos-spot': cosmosCell }"
         :style="cosmosCell
           ? { left: spot.x + '%', top: spot.y + '%', width: cosmosCell.width + 'px', height: cosmosCell.height + 'px',
-            backgroundImage: `url(${illustratedBoard?.islands}/cosmos.webp)` }
+            backgroundImage: `url(${islandSpotImage(islandsFolder)})` }
           : { left: spot.x + '%', top: spot.y + '%' }"
         :aria-label="t('locationMap.placeHere')" @click="emit('choose', spot.index)">+</button>
       <LocationConcealedStack v-for="spot in concealedSpots ?? []" :key="'concealed-' + spot.key" class="concealed-spot"
         :style="{ left: spot.x + '%', top: spot.y + '%' }" :game="game" :playerId="playerId" :cards="spot.cards"
         :size="compact ? 'compact' : 'full'" @choose="emit('choose', $event)" />
       <div v-for="l in locations" :key="l.id" class="node"
-        :class="{ draggable: canDrag,
+        :class="{ draggable: canDrag, 'stair-node': islandsFolder === STAIRS_FOLDER,
           here: infoOf(l).here, selected: l.id === selectedId,
           hidden: !l.revealed, targetable: infoOf(l).targetable,
         }"
-        :style="{ left: pos(l.id)[0] + '%', top: pos(l.id)[1] + '%', zIndex: cutaway ? Math.round(pos(l.id)[1]) : undefined }"
-        :data-id="l.id" @pointerdown="startNodeDrag(l, $event)" @click.stop="cutaway ? undefined : tileClick(l, $event)">
+        :style="nodeStyle(l)"
+        :data-id="l.id" :data-stair-tile="islandsFolder === STAIRS_FOLDER ? l.id : undefined"
+        @pointerdown="startNodeDrag(l, $event)" @click.stop="cutaway ? undefined : tileClick(l, $event)">
         <img v-if="!cutaway && !illustratedBoard" class="art" :src="locationImage(l)" alt="" loading="lazy" />
         <LocationStandees v-if="cutaway" :game="game" :playerId="playerId" :location="l" :enemiesAt="enemiesAt" @choose="emit('choose', $event)" />
         <LocationMarkerPlate v-if="!roomPlates?.[l.id]" :info="infoOf(l)" :size="compact ? 'compact' : 'full'" :game="game" :locationId="l.id"
@@ -358,11 +523,11 @@ function tileClick(l: Location, event: MouseEvent) {
           @inspect="emit('inspect', l, $event)" @choose="emit('choose', $event)" />
         <LocationConcealedStack v-if="concealedAt" class="node-concealed" :game="game" :playerId="playerId" :cards="concealedAt(l)"
           :size="compact ? 'compact' : 'full'" @choose="emit('choose', $event)" />
-        <div v-if="illustratedBoard" class="location-floor">
-          <LocationStandees :game="game" :playerId="playerId" :location="l" :enemiesAt="enemiesAt" @choose="emit('choose', $event)" />
+        <div v-if="illustratedBoard" class="location-floor" :style="floorStyle(l)">
+          <LocationStandees :game="game" :playerId="playerId" :location="onGround(l)" :enemiesAt="enemiesAt" @choose="emit('choose', $event)" />
         </div>
         <span v-else-if="!cutaway" class="occupants">
-          <img v-for="id in l.investigators" :key="id" class="figure" :class="{ you: id === ownId(), portrait: !compact }"
+          <img v-for="id in onGround(l).investigators" :key="id" class="figure" :class="{ you: id === ownId(), portrait: !compact }"
             :src="portraitImage(game.investigators[id]?.cardCode ?? '')" :alt="investigatorName(id)"
             :style="{ viewTransitionName: moveNameOf(id, l) }" :data-investigator-mini="compact ? undefined : id"
             :data-image="cardImage(game.investigators[id]?.cardCode ?? '')" />
@@ -392,6 +557,11 @@ function tileClick(l: Location, event: MouseEvent) {
 .map-scroll:has(.has-illustrated-board) { overflow: hidden; }
 .board-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; pointer-events: none; }
 .has-cutaway { container-type: size; }
+.has-dream-board { container-type: size; }
+.map-stage.dream-grid { inset: auto; left: 50%; top: 50%; translate: -50% -50%; width: min(100cqw, 177.777cqh); aspect-ratio: 16 / 9; }
+@container (max-width: 600px) {
+  .map-stage.dream-grid { width: min(100cqw, 133.333cqh); aspect-ratio: 4 / 3; }
+}
 .map-stage.cutaway { inset: auto; left: 50%; top: 50%; translate: -50% -50%; width: min(100cqw, 177.7cqh); aspect-ratio: 1672 / 941; border-radius: 6px; box-shadow: 0 0 40px #000a; }
 /* On the house the room is the picture: the people stand on its floor, its plate sits in a corner of it. */
 .cutaway .node { translate: -50% -100%; width: auto; height: auto; min-height: 0; padding: 0; background: transparent; border: 0; overflow: visible; align-items: center; justify-content: flex-end; gap: 3px; cursor: default; pointer-events: none; }
@@ -440,6 +610,64 @@ function tileClick(l: Location, event: MouseEvent) {
   position: absolute; height: auto; translate: -50% -50%; max-width: none; object-fit: contain;
   pointer-events: none; user-select: none; filter: drop-shadow(0 8px 14px #0009);
 }
+/* A cell the game asks you to pick (where to sail the boat, which island to explore) glows as a whole. */
+.island.targetable { filter: drop-shadow(0 0 10px #f2d27a) drop-shadow(0 8px 14px #0009); }
+.island.water { filter: none; transition: opacity 800ms ease-in-out; }
+@starting-style { .island.water { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .island.water { transition: none; } }
+/* Surf on the shore: the island's own silhouette as white foam, a little larger than the island and only along
+ * its lower rim (where it meets the sea; the top of the picture is the land seen from above). It rolls in from
+ * out at sea (larger, faint), reaches the rock, then drains away; the second wave follows half a beat later and
+ * slightly downwind, so the shore is never wrapped in one even ring. */
+.surf {
+  position: absolute; height: auto; translate: -50% -50%; max-width: none; object-fit: contain;
+  pointer-events: none; user-select: none; opacity: 0;
+  filter: brightness(0) invert(1) blur(2px);
+  -webkit-mask: linear-gradient(to bottom, transparent 38%, #000 72%);
+  mask: linear-gradient(to bottom, transparent 38%, #000 72%);
+  animation: surf-wash 5.2s ease-in-out infinite;
+}
+.surf-2 { animation-delay: -2.6s; animation-duration: 6.1s; margin-left: 3px; }
+@keyframes surf-wash {
+  0% { transform: scale(1.14, 1.2); opacity: 0; }
+  45% { transform: scale(1.05, 1.08); opacity: 0.32; }
+  62% { transform: scale(1.03, 1.05); opacity: 0.42; }
+  100% { transform: scale(1.06, 1.1); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .surf { display: none; } }
+/* Same water as a flooded card on the card board (Location.vue), masked to the sprite so it never spills
+ * onto the sea around the place. */
+.flood-mask {
+  position: absolute; translate: -50% -50%; overflow: hidden; pointer-events: none;
+  -webkit-mask: var(--sprite) center / contain no-repeat; mask: var(--sprite) center / contain no-repeat;
+}
+/* The card's water is a wide rounded block; turned on a wide 3:2 sprite its corners would sweep over the whole
+ * picture, so here it is a near-circle much wider than the sprite: turning, its top edge only ripples a little
+ * around the water line. `top` is that water line: below the picture (dry), half way, or just under the top
+ * edge when fully flooded, so the surface stays in view. A second, lighter swell turns the other way and the
+ * surface bobs up and down, so the water visibly moves at both levels. */
+.flood-mask .wave {
+  position: absolute; left: -100%; top: 110%; width: 300%; aspect-ratio: 1; border-radius: 45%;
+  background-color: #3f68c5; opacity: 0.4;
+  animation: flood-wave 30s linear infinite, flood-bob 4s ease-in-out infinite alternate;
+  transition: top 10s ease-out;
+}
+.flood-mask .wave.swell {
+  border-radius: 42%; background-color: #6f97e6; opacity: 0.3; margin-top: -1.5%;
+  animation: flood-wave 18s linear infinite reverse, flood-bob 3s ease-in-out -1.5s infinite alternate;
+}
+.flood-mask .wave.PartiallyFlooded {
+  top: 50%;
+  @starting-style { top: 110%; }
+}
+.flood-mask .wave.FullyFlooded {
+  top: 7%;
+  @starting-style { top: 110%; }
+}
+@keyframes flood-wave { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+/* The wave is 3× the sprite's width, so 1% of its own size is a few percent of the picture. */
+@keyframes flood-bob { from { translate: 0 0; } to { translate: 0 1.2%; } }
+@media (prefers-reduced-motion: reduce) { .flood-mask .wave { animation: none; transition: none; } }
 /* An open Cosmos cell a card can go into: a faint island exactly the size of its cell. */
 .illustrated .spot.cosmos-spot {
   min-width: 0; min-height: 0; background: center / contain no-repeat; background-color: #e6c58412;
@@ -592,4 +820,13 @@ function tileClick(l: Location, event: MouseEvent) {
 .illustrated .node :deep(.plate), .village .node :deep(.plate), .descent .node :deep(.plate), .house .node :deep(.plate) { min-width: 0; padding: 2px 5px; gap: 2px; }
 .illustrated .node :deep(.plate .main), .village .node :deep(.plate .main), .descent .node :deep(.plate .main), .house .node :deep(.plate .main) { min-height: 18px; gap: 4px; }
 .illustrated .node :deep(.plate .name), .village .node :deep(.plate .name), .descent .node :deep(.plate .name), .house .node :deep(.plate .name) { font-size: 0.76rem; }
+.dream-grid .node { max-width: min(24%, 180px); z-index: 5; }
+.dream-static .node { max-width: min(19%, 180px); }
+.dream-grid .node :deep(.plate .name), .dream-static .node :deep(.plate .name) { white-space: normal; overflow-wrap: anywhere; }
+@container (max-width: 600px) {
+  .dream-grid .node { max-width: 21%; }
+  .dream-grid .stair-node { max-width: 45%; }
+  .dream-grid .node :deep(.plate .name), .dream-static .node :deep(.plate .name) { font-size: 0.65rem; }
+  .dream-grid .stair-node :deep(.plate .name) { white-space: nowrap; }
+}
 </style>
