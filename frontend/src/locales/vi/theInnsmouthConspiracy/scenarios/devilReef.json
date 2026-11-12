@@ -75,16 +75,16 @@
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is the number of keys the investigators control.",
-      "cultist": "-2. If you fail and this is an attack or evasion attempt against a _Deep One_ enemy, it engages you. (If it is already engaged with you, it disengages first, then re-engages you.)",
-      "tablet": "-3. If you fail and you are not in a vehicle, chịu 1 damage.",
-      "elderThing": "-4. If you fail and your location has a key on it, chịu 1 horror."
+      "skull": "-X. X là số lượng chìa khóa (key) mà các điều tra viên điều khiển.",
+      "cultist": "-2. Nếu bạn thất bại và đây là một đòn tấn công hoặc nỗ lực né tránh chống lại kẻ địch _Deep One_, nó giao chiến với bạn. (Nếu nó đã giao chiến với bạn, nó rời giao chiến trước rồi giao chiến lại với bạn.)",
+      "tablet": "-3. Nếu bạn thất bại và bạn không ở trong một phương tiện (vehicle), nhận 1 sát thương.",
+      "elderThing": "-4. Nếu bạn thất bại và địa điểm của bạn có một chìa khóa trên đó, nhận 1 kinh hoàng."
     },
     "hardExpert": {
-      "skull": "-X. X is 1 more than the number of keys the investigators control.",
-      "cultist": "-3. If this is an attack or evasion attempt against a _Deep One_ enemy, it engages you. (If it is already engaged with you, it disengages first, then re-engages you.)",
-      "tablet": "-4. If you are not in a vehicle, chịu 1 damage.",
-      "elderThing": "-5. If your location has a key on it, chịu 1 horror."
+      "skull": "-X. X lớn hơn 1 so với số lượng chìa khóa (key) mà các điều tra viên điều khiển.",
+      "cultist": "-3. Nếu đây là một đòn tấn công hoặc nỗ lực né tránh chống lại kẻ địch _Deep One_, nó giao chiến với bạn. (Nếu nó đã giao chiến với bạn, nó rời giao chiến trước rồi giao chiến lại với bạn.)",
+      "tablet": "-4. Nếu bạn không ở trong một phương tiện (vehicle), nhận 1 sát thương.",
+      "elderThing": "-5. Nếu địa điểm của bạn có một chìa khóa trên đó, nhận 1 kinh hoàng."
     }
   },
   "label": {

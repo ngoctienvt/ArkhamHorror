@@ -121789,7 +121789,7 @@
     "code": "07163",
     "name": "Rạn San Hô Quỷ",
     "real_name": "Devil Reef",
-    "text": "Như một chi phí bổ sung để chơi Hallow, loại bỏ tối đa 10 token [bless] khỏi túi hỗn mang. Giảm chi phí tài nguyên của Hallow đi 1 cho mỗi token [bless] bị loại bỏ theo cách này.\nLoại bỏ 1 doom khỏi bất kỳ thẻ bài nào trong màn chơi. Xóa Hallow khỏi trò chơi.",
+    "text": "Dễ / Tiêu chuẩn\n[skull]: -X. X là số lượng chìa khóa (key) mà các điều tra viên điều khiển.\n[cultist]: -2. Nếu bạn thất bại và đây là một đòn tấn công hoặc nỗ lực né tránh chống lại kẻ địch [[Deep One]], nó giao chiến với bạn. (Nếu nó đã giao chiến với bạn, nó rời giao chiến trước rồi giao chiến lại với bạn.)\n[tablet]: -3. Nếu bạn thất bại và bạn không ở trong một phương tiện (vehicle), nhận 1 sát thương.\n[elder_thing]: -4. Nếu bạn thất bại và địa điểm của bạn có một chìa khóa trên đó, nhận 1 kinh hoàng.",
     "real_text": "Easy / Standard\n[skull]: -X. X is the number of keys the investigators control.\n[cultist]: -2. If you fail and this is an attack or evasion attempt against a [[Deep One]] enemy, it engages you. (If it is already engaged with you, it disengages first, then re-engages you.)\n[tablet]: -3. If you fail and you are not in a vehicle, take 1 damage.\n[elder_thing]: -4. If you fail and your location has a key on it, take 1 horror.",
     "quantity": 1,
     "health_per_investigator": false,

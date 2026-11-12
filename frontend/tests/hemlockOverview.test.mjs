@@ -5,7 +5,7 @@ import ts from 'typescript'
 
 const source = readFileSync(new URL('../src/arkham/hemlock-overview.ts', import.meta.url), 'utf8')
 const js = ts.transpile(source, { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 })
-const { hemlockOverview, hemlockVillagePosition, hemlockHousePosition } = await import('data:text/javascript;base64,' + Buffer.from(js).toString('base64'))
+const { hemlockOverview, hemlockVillagePosition, hemlockHousePosition, cosmosIslandImage, cosmosIslandAspect } = await import('data:text/javascript;base64,' + Buffer.from(js).toString('base64'))
 
 const scenarios = {
   '10501': 'written-in-rock-descent',
@@ -293,7 +293,7 @@ test('The Circle Undone scenarios select their overview boards', () => {
   assert.deepEqual(hemlockVillagePosition('05169'), [58, 16]) // The Gallows
   assert.deepEqual(hemlockVillagePosition('05216'), [88, 75]) // Inner Sanctum (Silver Twilight)
   assert.deepEqual(hemlockVillagePosition('05257'), [68, 75]) // The Geist-Trap
-  assert.deepEqual(hemlockVillagePosition('05333'), [73, 26]) // Hideous Palace (Azathoth)
+  assert.equal(hemlockVillagePosition('05333'), undefined) // Hideous Palace: the Cosmos follows its grid, not painted spots
 
   // In the Clutches of Chaos has its own Arkham anchors
   const chaos = hemlockOverview('c05284', 'c05284')?.anchors
@@ -417,4 +417,35 @@ test('Standalone / Side Stories select their overview boards and location positi
 
   const fortune = hemlockOverview('88001', 'reference')
   assert.deepEqual(hemlockVillagePosition('88011', fortune?.anchors), [48, 65])
+})
+
+test('In Too Deep plates run west to east from left to right in every row', () => {
+  // The scenario's grid rows, west to east (Skull counts locations east of you, Cultist pushes you east).
+  const rows = [
+    ['07142', '07129', '07134', '07141', '07132'],
+    ['07135', '07137', '07139', '07136', '07138'],
+    ['07130', '07140', '07133', '07131', '07143'],
+  ]
+  for (const row of rows) {
+    const xs = row.map((code) => hemlockVillagePosition(code)[0])
+    assert.deepEqual([...xs].sort((a, b) => a - b), xs, `row ${row.join(', ')} drawn as x ${xs.join(', ')}`)
+  }
+})
+
+test('Before the Black Throne stands every Cosmos location on an island sprite', () => {
+  const folder = 'img/scenes/the-circle-undone/cosmos'
+  assert.equal(hemlockOverview('c05325', 'c05325')?.islands, folder)
+  assert.equal(hemlockOverview('c54056', 'c05325')?.islands, folder)
+  assert.equal(hemlockOverview('c05284', 'c05284')?.islands, undefined)
+  assert.equal(cosmosIslandImage(folder, 'c05335', true), `${folder}/05335.webp`)
+  assert.equal(cosmosIslandImage(folder, 'c05335', false), `${folder}/cosmos.webp`)
+  assert.equal(cosmosIslandImage(folder, 'c99999', true), `${folder}/cosmos.webp`)
+  for (const code of ['05332', '05333', '05334', '05335', '05336', '05337', '05338', '05339', '05340', '54058', '54059', '54060', 'cosmos']) {
+    const bytes = readFileSync(new URL(`../public/${folder}/${code}.webp`, import.meta.url))
+    assert.equal(bytes.subarray(8, 12).toString('ascii'), 'WEBP', code)
+  }
+  // Revealed locations are 3:2 scenes; the face-down rock (and anything without a sprite) stays square.
+  assert.equal(cosmosIslandAspect('c05335', true), 3 / 2)
+  assert.equal(cosmosIslandAspect('c05335', false), 1)
+  assert.equal(cosmosIslandAspect('c99999', true), 1)
 })

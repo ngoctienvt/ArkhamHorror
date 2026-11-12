@@ -4,6 +4,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
 import { replaceText } from '@/arkham/cardTextFormat'
+import { imgsrc } from '@/arkham/helpers'
 
 /* The name plate a location wears on the map: its name, whether it is revealed, and the numbers that
  * matter at a glance, on one slim line so it hides as little of the painting as it can. Clicking it picks
@@ -32,6 +33,19 @@ const clueTitle = computed(() => props.info.clues.printed === null
   ? clueLabel.value
   : clueLabel.value + ' · ' + t('locationMap.marker.printed', { n: props.info.clues.printed }))
 
+/* Flood token (The Innsmouth Conspiracy): the model lists it in `extras` as `flood:<level>` when not unflooded. */
+const floodLevel = computed(() => {
+  const extra = props.info.extras.find((x) => x.startsWith('flood:'))
+  const level = extra?.slice('flood:'.length)
+  return level === 'FullyFlooded' || level === 'PartiallyFlooded' ? level : null
+})
+const floodSrc = computed(() => floodLevel.value
+  ? imgsrc(floodLevel.value === 'FullyFlooded' ? 'tokens/fully-flooded.png' : 'tokens/partially-flooded.png')
+  : null)
+const floodTitle = computed(() => floodLevel.value
+  ? t('locationMap.info.extra.flood', { value: t(`locationMap.info.floodLevels.${floodLevel.value}`) })
+  : '')
+
 const summary = computed(() => {
   const i = props.info
   const parts = [i.face.name, i.revealed ? t('locationMap.marker.revealed') : t('locationMap.marker.unrevealed')]
@@ -39,6 +53,7 @@ const summary = computed(() => {
   else if (i.adjacent) parts.push(t('locationMap.marker.adjacent'))
   if (i.shroud) parts.push(t('locationMap.marker.shroudValue', { n: i.shroud.x ? 'X' : i.shroud.current }))
   if (showClues.value) parts.push(clueLabel.value)
+  if (floodLevel.value) parts.push(floodTitle.value)
   if (i.onEnter) parts.push(t('locationMap.marker.onEnter'))
   if (i.targetable) parts.push(t('locationMap.marker.targetable'))
   return parts.join(', ')
@@ -77,6 +92,7 @@ import type { Game } from '@/arkham/types/Game'
       </button>
       <PoolItem v-if="showClues" type="clue" :amount="cluesLeft" class="clue-token"
         :style="{ '--clue-digits': String(cluesLeft).length }" :title="clueTitle" aria-hidden="true" />
+      <img v-if="floodSrc" :src="floodSrc" class="flood" :alt="floodTitle" :title="floodTitle" />
       <span v-if="showStats && info.doom" class="chip doom" :title="t('locationMap.doom')"><GameIcon type="doom" />{{ info.doom }}</span>
       <button v-if="size !== 'compact' && info.actions.move && !hideMove" class="go" type="button"
         :title="t('locationMap.marker.moveHere')" :aria-label="t('locationMap.marker.moveHere')"
@@ -135,6 +151,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   line-height: 1;
 }
 .chip.doom { color: #e0a595; }
+/* Flood token: the printed token art, the same height as the shroud disc so the line stays even. */
+.flood { flex: none; height: 1.75em; width: auto; filter: drop-shadow(0 1px 2px #000); }
+.compact .flood { height: 1.4em; justify-self: center; }
 /* Move here: a small green pill at the end of the name line instead of a second row under it. */
 .go { display: inline-grid; place-items: center; flex: none; height: 1.5em; padding: 0 6px; border: 1px solid #8fd19a; border-radius: 9px; background: #1d3324; color: #d7ecd2; font-size: 11px; line-height: 1; }
 .go:hover { background: #2f5a3a; color: #fff; box-shadow: 0 0 6px #5fd88a88; }

@@ -13,6 +13,8 @@ import { replaceIcons, formatContent } from '@/arkham/helpers';
 import { homebrewActionScope } from '@/arkham/homebrewData';
 import { handleI18n } from '@/arkham/i18n';
 import { useI18n } from 'vue-i18n';
+import { useCardNames } from '@/arkham/composables/useCardNames';
+import { vehicleEnterExitMove } from '@/arkham/vehicle-enter-exit-ability';
 
 const { t, te } = useI18n()
 const props = withDefaults(defineProps<{
@@ -202,12 +204,25 @@ const maybeFormat = function(body: string) {
 
 /* A homebrew campaign names its own actions in its own locale scope, so that
 text can live with the rest of the campaign rather than in the core locale. */
+// The vehicle rules ability (enter / leave) is not printed on the card: spell out which one it is.
+const cardName = useCardNames()
+const vehicleLabel = computed(() => {
+  const a = ability.value
+  const move = a ? vehicleEnterExitMove(props.game, a) : null
+  if (!a || !move) return null
+  const name = a.cardCode ? cardName(a.cardCode) : ''
+  const icon = a.type.tag === 'ActionAbility' ? `<span>${replaceIcons('{action}')}</span>` : ''
+  return `${icon}<span>${t(`locationMap.status.choice.${move.kind}Vehicle`, { name })}</span>`
+})
+
 const actionLabel = (action: Action) => {
   const key = homebrewActionScope(ability.value?.cardCode ?? null, action)
   return key && te(key) ? t(key) : t(action)
 }
 
 const abilityLabel = computed(() => {
+  if (vehicleLabel.value) return vehicleLabel.value
+
   // don't use isButtonText
   if (isButtonText.value && tooltip.value) {
     return tooltip.value.content

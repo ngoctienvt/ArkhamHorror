@@ -50,7 +50,11 @@ const attached = computed(() => [
   ...named(props.location.assets, props.game.assets),
   ...named(props.location.events, props.game.events),
 ])
-const extraLabel = (x: string) => t(`locationMap.info.extra.${x.split(':')[0]}`, { value: x.split(':')[1] ?? '' })
+const extraLabel = (x: string) => {
+  const [kind, value = ''] = x.split(':')
+  // Flood levels arrive as enum names (FullyFlooded…); show them translated.
+  return t(`locationMap.info.extra.${kind}`, { value: kind === 'flood' ? t(`locationMap.info.floodLevels.${value}`) : value })
+}
 const hasAction = computed(() => Boolean(props.info.actions.move || props.info.actions.investigate || props.info.actions.other.length || props.info.actions.selectIndex !== -1))
 
 function choose(index: number) {

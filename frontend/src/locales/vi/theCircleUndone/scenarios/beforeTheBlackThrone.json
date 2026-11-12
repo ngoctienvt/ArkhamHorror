@@ -12,13 +12,13 @@
   ],
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is half of the doom on Azathoth (rounded up), to a minimum of 2.",
+      "skull": "-X. X bằng một nửa số doom trên Azathoth (làm tròn lên), tối thiểu là 2.",
       "cultist": "Rút thêm một token khác. Nếu bạn thất bại, search the encounter deck and discard pile for a _Cultist_ enemy and draw it. Shuffle the encounter deck.",
       "tablet": "-2. Nếu bạn thất bại, Azathoth attacks you.",
       "elderThing": "-4. If your modified skill value for this test is 0, đặt 1 doom lên Azathoth."
     },
     "hardExpert": {
-      "skull": "-X. X is the amount of doom on Azathoth, to a minimum of 2.",
+      "skull": "-X. X bằng số doom trên Azathoth, tối thiểu là 2.",
       "cultist": "Rút thêm một token khác. Nếu bạn thất bại, search the encounter deck and discard pile for a _Cultist_ enemy and draw it. Shuffle the encounter deck.",
       "tablet": "-3. Nếu bạn thất bại, Azathoth attacks you.",
       "elderThing": "-6. If your modified skill value for this test is 0, đặt 1 doom lên Azathoth."
@@ -26,59 +26,59 @@
   },
   "tooltips": {
     "cosmicIngress": {
-      "ability": "Shuffle this location into the Cosmos, moving each investigator and enemy that was at this location to Cosmic Ingress"
+      "ability": "Xáo vị trí này vào Cosmos, di chuyển mỗi điều tra viên và kẻ địch đang ở vị trí này đến Cosmic Ingress"
     },
     "hideousPalace": {
-      "ability": "Shuffle this location into the Cosmos, moving each investigator and enemy that was at this location to Hideous Palace"
+      "ability": "Xáo vị trí này vào Cosmos, di chuyển mỗi điều tra viên và kẻ địch đang ở vị trí này đến Hideous Palace"
     },
     "courtOfTheGreatOldOnes": {
-      "ability": "Shuffle this location into the Cosmos, moving each investigator and enemy that was at this location to Court of the Great Old Ones"
+      "ability": "Xáo vị trí này vào Cosmos, di chuyển mỗi điều tra viên và kẻ địch đang ở vị trí này đến Court of the Great Old Ones"
     },
     "theBlackThrone": {
-      "haunted": "You must either place 1 doom on Azathoth, or Azathoth attacks you"
+      "haunted": "Bạn phải đặt 1 doom lên Azathoth, hoặc Azathoth tấn công bạn"
     },
     "windingGulf": {
-      "haunted": "Take 1 damage and 1 horror"
+      "haunted": "Nhận 1 damage và 1 horror"
     }
   },
   "label": {
-    "nightgauntSteed": "Remove 2 resources from the scenario reference card to have each investigator begin the game with a Nightgaunt Steed story asset in play?",
+    "nightgauntSteed": "Loại bỏ 2 tài nguyên khỏi thẻ tham chiếu màn chơi để mỗi điều tra viên bắt đầu ván chơi với một story asset Nightgaunt Steed trong khu vực chơi?",
     "itMustBeDone": "<i>“Nó phải được hoàn thành.”</i>",
     "iRefuse": "<i>“Tôi từ chối.\"</i>",
-    "moveUp": "Move Up",
-    "moveDown": "Move Down",
-    "moveLeft": "Move Left",
-    "moveRight": "Move Right",
-    "moveToLeftLocation": "Move to the location to your left",
-    "moveYourLocationLeftOnce": "Move the placement of your location once to the left",
-    "connectToTheRight": "Connect to the Right",
-    "connectAbove": "Connect Above",
-    "connectBelow": "Connect Below",
+    "moveUp": "Di chuyển lên",
+    "moveDown": "Di chuyển xuống",
+    "moveLeft": "Di chuyển sang trái",
+    "moveRight": "Di chuyển sang phải",
+    "moveToLeftLocation": "Di chuyển đến vị trí bên trái bạn",
+    "moveYourLocationLeftOnce": "Dời vị trí của bạn sang trái một ô",
+    "connectToTheRight": "Kết nối bên phải",
+    "connectAbove": "Kết nối phía trên",
+    "connectBelow": "Kết nối phía dưới",
     "dancersMist": {
-      "choice": "Lose 2 resources and connect to an adjacent location in a direction of your choice"
+      "choice": "Mất 2 tài nguyên và kết nối với một vị trí liền kề theo hướng bạn chọn"
     },
     "flightIntoOblivion": {
-      "choice": "Take 2 horror and connect to the topmost revealed location in a direction of your choice"
+      "choice": "Nhận 2 horror và kết nối với vị trí đã lật ở cao nhất theo hướng bạn chọn"
     },
-    "chooseWhereToConnect": "Choose where to connect",
+    "chooseWhereToConnect": "Chọn nơi kết nối",
     "theBlackThrone": {
-      "doom": "Place 1 doom on Azathoth",
-      "attack": "Azathoth attacks you"
+      "doom": "Đặt 1 doom lên Azathoth",
+      "attack": "Azathoth tấn công bạn"
     },
     "infinityOfDarkness": {
-      "choice": "Take 2 damage and connect to the bottommost revealed location in a direction of your choice"
+      "choice": "Nhận 2 damage và kết nối với vị trí đã lật ở thấp nhất theo hướng bạn chọn"
     },
     "ultimateChaos": {
-      "doom": "Place 1 Doom on Azathoth",
-      "attack": "Azathoth attacks you"
+      "doom": "Đặt 1 doom lên Azathoth",
+      "attack": "Azathoth tấn công bạn"
     },
     "whisperedBargain": {
-      "doom": "Place 1 Doom on Azathoth",
-      "attack": "Azathoth attacks you"
+      "doom": "Đặt 1 doom lên Azathoth",
+      "attack": "Azathoth tấn công bạn"
     },
     "windingGulf": {
-      "move": "Move to Winding Gulf",
-      "doNotMove": "Place 1 Doom on Azathoth"
+      "move": "Di chuyển đến Winding Gulf",
+      "doNotMove": "Đặt 1 doom lên Azathoth"
     },
     "whatMustBeDone": {
       "R2": "R2",
@@ -96,15 +96,15 @@
     "setLocationsAside": "Tìm vị trí Hideous Palace, Court of the Great Old Ones, và The Black Throne. (Chúng ở mặt để lộ của 3 lá vị trí \"Cosmos\".) Đặt những vị trí này một bên, ngoài khu vực chơi.",
     "placeStart": "Đặt vị trí Cosmic Ingress vào chơi. Mỗi điều tra viên bắt đầu chơi tại Cosmic Ingress.",
     "cosmos": "Xào những vị trí còn lại thành một chồng bài riêng biệt, với mặt Cosmoc ngửa lên. Chồng bài này gọi là Cosmos (xem “The Cosmos” phía dưới).",
-    "placeLocations": "Take the set-aside Hideous Palace and the top card of the Cosmos, and shuffle them so you cannot tell which is which. Then, put them into play along with facedown player cards from the top of the lead investigator’s deck, as depicted in “Location Placement for Setup / Act 1.” Facedown player cards represent empty space (*see “Empty Space” on the next page*).",
+    "placeLocations": "Lấy Hideous Palace đã đặt riêng và lá trên cùng của Cosmos, xáo chúng để bạn không biết lá nào là lá nào. Sau đó, đưa chúng vào khu vực chơi cùng các lá bài người chơi úp mặt lấy từ trên cùng bộ bài của điều tra viên chính, như minh họa trong “Bố trí vị trí cho Setup / Act 1”. Các lá bài người chơi úp mặt đại diện cho khoảng không trống (*xem “Empty Space” ở trang sau*).",
     "setAside": "Đặt kẻ địch Piper of Azathoth sang một bên, ngoài khu vực chơi.",
     "placeAzathoth": "Đặt Azathoth vào chơi kế bên chồng bài agenda. Trong phần còn lại của màn chơi, Azathoth được chơi, nhưng không ở vị trí cụ thể nào.",
     "thePathWindsBeforeYou": "Kiểm tra Nhật ký Chiến dịch. Đối với mỗi kiểm đếm được ghi bên cạnh con đường uốn lượn trước mặt bạn, hãy đặt 1 tài nguyên trên lá bài scenario reference.",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to Before the Black Throne*, *Unspeakable Fate*, and *Impending Evils*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-before-the-black-throne.png' /><img src='{setImgPath}/unspeakable-fate.png' /><img src='{setImgPath}/impending-evils.png' /></section>*Unspeakable Fate* replaces *Inexorable Fate* and *Impending Evils* replaces *Ancient Evils*. Remove the replaced sets from the game.",
-      "actDeck": "When building the act deck, replace the original version of act 3 with the new version from this encounter set. Remove the original version from the game.",
-      "cosmos": "When building the Cosmos, include the 3 new Cosmos locations from the *Return to Before the Black Throne* encounter set.",
-      "nightgauntSteed": "When the game begins, the investigators may remove 2 resources from the scenario reference card to have each investigator begin the game with a Nightgaunt Steed story asset in play. Remove each remaining Nightgaunt Steed from the game."
+      "actDeck": "Khi xây dựng chồng act, thay phiên bản gốc của act 3 bằng phiên bản mới trong bộ encounter này. Loại phiên bản gốc khỏi ván chơi.",
+      "cosmos": "Khi xây dựng Cosmos, thêm 3 vị trí Cosmos mới từ bộ encounter *Return to Before the Black Throne*.",
+      "nightgauntSteed": "Khi ván chơi bắt đầu, các điều tra viên có thể loại bỏ 2 tài nguyên khỏi thẻ tham chiếu màn chơi để mỗi điều tra viên bắt đầu ván chơi với một story asset Nightgaunt Steed trong khu vực chơi. Loại mỗi Nightgaunt Steed còn lại khỏi ván chơi."
     }
   },
   "theCosmos": {
@@ -117,10 +117,10 @@
   },
   "resolutions": {
     "xp": {
-      "resolution2": "Saved the universe from being devoured.",
-      "resolution3": "Saved the universe from being devoured.",
-      "resolution5": "Learned the innermost secrets of the Black Book.",
-      "resolution6": "Saved the universe from being devoured."
+      "resolution2": "Đã cứu vũ trụ khỏi bị nuốt chửng.",
+      "resolution3": "Đã cứu vũ trụ khỏi bị nuốt chửng.",
+      "resolution5": "Đã thấu hiểu những bí mật sâu kín nhất của Cuốn Sách Đen.",
+      "resolution6": "Đã cứu vũ trụ khỏi bị nuốt chửng."
     },
     "investigatorDefeat": {
       "title": "Điều tra viên bị hạ gục",

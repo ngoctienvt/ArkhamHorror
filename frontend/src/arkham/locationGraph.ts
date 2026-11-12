@@ -103,6 +103,18 @@ export function gridPositions(rows: string[]): Record<string, Point> {
   )
 }
 
+/**
+ * The grid as the card board draws it: rows and columns sized to their content, so a row or column
+ * holding none of `keep` (no card and no cell on offer) collapses away.
+ */
+export function compactGridLayout(rows: readonly string[], keep: ReadonlySet<string>): string[] {
+  const cells = rows.map((row) => row.trim().split(/\s+/))
+  const width = Math.max(0, ...cells.map((r) => r.length))
+  const keptRows = cells.filter((row) => row.some((label) => keep.has(label)))
+  const keptColumns = [...Array(width).keys()].filter((x) => keptRows.some((row) => keep.has(row[x] ?? '')))
+  return keptRows.map((row) => keptColumns.map((x) => row[x] ?? '.').join(' '))
+}
+
 /** Layered layout for locations without a grid: columns by distance from the first location of each cluster. */
 export function autoPositions(graph: LocationGraph): Record<string, Point> {
   const next = neighbours(graph)

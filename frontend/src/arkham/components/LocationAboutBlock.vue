@@ -43,7 +43,11 @@ const attached = computed(() => attachmentsOf(props.game, 'location', props.loca
   image: cardImage(a.cardCode),
   effectLines: a.effects.map((e) => effectLabel(e, t)),
 })))
-const extraLabel = (x: string) => t(`locationMap.info.extra.${x.split(':')[0]}`, { value: x.split(':')[1] ?? '' })
+const extraLabel = (x: string) => {
+  const [kind, value = ''] = x.split(':')
+  // Flood levels arrive as enum names (FullyFlooded…); show them translated.
+  return t(`locationMap.info.extra.${kind}`, { value: kind === 'flood' ? t(`locationMap.info.floodLevels.${value}`) : value })
+}
 
 const iconOf = (kind: LineKind) => (kind === 'action' || kind === 'fast' || kind === 'reaction') ? iconClasses[kind] : null
 </script>

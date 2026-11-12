@@ -342,17 +342,6 @@ const villageAnchors: Record<string, Point> = {
   '05256': [55, 38], // Unvisited Isle (Decayed Willow)
   '05257': [68, 75], // The Geist-Trap
 
-  // The Circle Undone — Scenario 8: Before the Black Throne
-  '05332': [21, 66], // Cosmic Ingress
-  '05333': [73, 26], // Hideous Palace
-  '05334': [73, 26], // Court of the Great Old Ones
-  '05335': [73, 26], // The Black Throne
-  '05336': [58, 70], // Dancer's Mist
-  '05337': [78, 80], // Flight into Oblivion
-  '05338': [10, 50], // Infinity of Darkness
-  '05339': [35, 75], // Cosmic Gate
-  '05340': [45, 52], // Pathway into Void
-
   // The Innsmouth Conspiracy — Scenario 1: The Pit of Despair
   '07047': [50, 52], // Unfamiliar Chamber
   '07048': [24, 75], // Bone-Ridden Pit
@@ -380,8 +369,10 @@ const villageAnchors: Record<string, Point> = {
   '07073': [80, 28], // The House on Water Street
 
   // The Innsmouth Conspiracy — Scenario 3: In Too Deep
+  // The scenario reads east/west from the grid (Skull counts locations east in your row, Cultist pushes you
+  // east), so each row runs west to east left to right: Sawbone Alley, Gilman House, Innsmouth Jail, ...
   '07129': [23, 22], // Esoteric Order of Dagon
-  '07130': [35, 66], // Sawbone Alley
+  '07130': [7, 87], // Sawbone Alley
   '07131': [53, 83], // Shoreward Slums
   '07132': [74, 27], // The House on Water Street
   '07133': [26, 86], // Innsmouth Jail
@@ -393,7 +384,7 @@ const villageAnchors: Record<string, Point> = {
   '07139': [42, 51], // Innsmouth Square
   '07140': [14, 71], // Gilman House
   '07141': [51, 15], // Marsh Refinery
-  '07142': [8, 41], // Railroad Station
+  '07142': [8, 34], // Railroad Station
   '07143': [84, 78], // Desolate Coastline
 
   // The Innsmouth Conspiracy — Scenario 4: Devil Reef
@@ -1197,6 +1188,32 @@ export type HemlockOverview = {
   village?: boolean
   house?: boolean
   anchors?: Record<string, Point>
+  /** Folder of floating-island sprites drawn under each location, for boards with no painted places. */
+  islands?: string
+}
+
+/* Before the Black Throne: the Cosmos is a grid that grows and reshuffles every act, so no spot can be
+ * painted ahead of time. Each location instead stands on an island of its own, drawn under its plate. */
+const COSMOS_ISLANDS = 'img/scenes/the-circle-undone/cosmos'
+const COSMOS_SCENARIOS = new Set(['05325', '54056'])
+const COSMOS_ISLAND_CODES = new Set([
+  '05332', '05333', '05334', '05335', '05336', '05337', '05338', '05339', '05340', '54058', '54059', '54060',
+])
+
+/** The location's own 3:2 sprite once it is revealed; undefined while it should stand on the plain round rock. */
+function cosmosSpriteCode(cardCode: string, revealed: boolean): string | undefined {
+  const code = cardCode.replace(/^c/, '').replace(/[ab]$/, '')
+  return revealed && COSMOS_ISLAND_CODES.has(code) ? code : undefined
+}
+
+/** The sprite under a Cosmos location; a face-down card stands on the plain round rock. */
+export function cosmosIslandImage(folder: string, cardCode: string, revealed: boolean): string {
+  return `${folder}/${cosmosSpriteCode(cardCode, revealed) ?? 'cosmos'}.webp`
+}
+
+/** Width over height of that sprite: revealed locations are 3:2 scenes, the plain rock is square. */
+export function cosmosIslandAspect(cardCode: string, revealed: boolean): number {
+  return cosmosSpriteCode(cardCode, revealed) ? 3 / 2 : 1
 }
 
 export function hemlockOverview(id: string, reference: string, layout?: readonly string[] | null): HemlockOverview | undefined {
@@ -1217,5 +1234,6 @@ export function hemlockOverview(id: string, reference: string, layout?: readonly
     village: true,
     house: art.endsWith('hemlock-house'),
     anchors: boardAnchors[art],
+    ...(COSMOS_SCENARIOS.has(scenario) ? { islands: COSMOS_ISLANDS } : {}),
   }
 }

@@ -1,4 +1,5 @@
 {
+  "cards": "Cards",
   "drewCard": "{iname} drew",
   "drewCards": "{iname} drew {count} cards",
   "serviceUnavailable": "Service Unavailable",
@@ -677,7 +678,7 @@
           "defeatInvestigator": "defeat {name}"
         }
       },
-      "choice": {"fight": "Fight {name}", "evade": "Evade {name}", "engage": "Engage {name}", "skip": "Skip", "playCard": "Play the card {name}", "useAbility": "Use {name}'s ability"},
+      "choice": {"fight": "Fight {name}", "evade": "Evade {name}", "engage": "Engage {name}", "skip": "Skip", "playCard": "Play the card {name}", "useAbility": "Use {name}'s ability", "enterVehicle": "Enter {name} (board the vehicle)", "leaveVehicle": "Leave {name} (get off the vehicle)"},
       "doing": "Resolving:",
       "turnOf": "{name}'s turn",
       "unknownSource": "an effect",
@@ -825,6 +826,10 @@
         "flood": "Flood: {value}",
         "brazier": "Brazier: {value}",
         "breaches": "Breaches"
+      },
+      "floodLevels": {
+        "PartiallyFlooded": "Partially flooded",
+        "FullyFlooded": "Fully flooded"
       }
     },
     "about": {

@@ -11,7 +11,7 @@ import { cardArt } from '@/arkham/cardImages'
 import { hemlockHousePosition, hemlockOverview, hemlockVillagePosition } from '@/arkham/hemlock-overview'
 import { useSettings, type LocationView } from '@/stores/settings'
 import {
-  gridPositions, locationLinks, mapPositions, mineDescentPositions, shortestPath,
+  compactGridLayout, gridPositions, locationLinks, mapPositions, mineDescentPositions, shortestPath,
   type LocationGraph, type Point,
 } from '@/arkham/locationGraph'
 import { gridSlotIndex } from '@/arkham/locationChoices'
@@ -112,7 +112,17 @@ const illustratedBoard = computed(() => {
   )
 })
 
-const layout = computed(() => props.scenario.usesGrid || props.scenario.locationLayout ? props.scenario.locationLayout : null)
+const layout = computed(() => {
+  const rows = props.scenario.usesGrid || props.scenario.locationLayout ? props.scenario.locationLayout : null
+  // The Cosmos pads its grid with a ring of open cells; keep only what the card board shows, which is the
+  // cards plus any cell a choice offers, so the map reads the same as the card board.
+  if (!rows || !illustratedBoard.value?.islands) return rows
+  const keep = new Set([
+    ...locations.value.map((l) => l.label),
+    ...rows.flatMap((row) => row.trim().split(/\s+/)).filter((label) => gridSlotIndex(choices.value, label) !== -1),
+  ])
+  return compactGridLayout(rows, keep)
+})
 const positions = computed<Record<string, Point>>(() => {
   if (isStudyOnly.value) {
     return { [locations.value[0].id]: [50, 75] }
@@ -120,7 +130,8 @@ const positions = computed<Record<string, Point>>(() => {
   const fallback = mapPositions(graph.value, layout.value)
   if (illustratedBoard.value?.fixedPassages) return mineDescentPositions(graph.value, fallback)
   const board = illustratedBoard.value
-  if (!board?.village && !board?.house) return fallback
+  // The Cosmos has no painted places: every card sits in its grid cell, as on the card board.
+  if ((!board?.village && !board?.house) || board.islands) return fallback
   return Object.fromEntries(locations.value.map((location) => [
     location.id,
     (board.house ? hemlockHousePosition(location.label) : hemlockVillagePosition(location.cardCode, board.anchors, location.label)) ?? fallback[location.id],

@@ -70,7 +70,7 @@ test('roster lists investigators and enemies at a location', () => {
   assert.deepEqual(locationRoster(g, 'nope'), { investigators: [], enemies: [] })
 })
 
-const { gridPositions, autoPositions, mapPositions, mineDescentPositions, mineDescentPassage } = await import(
+const { compactGridLayout, gridPositions, autoPositions, mapPositions, mineDescentPositions, mineDescentPassage } = await import(
   'data:text/javascript;base64,' + Buffer.from(js).toString('base64')
 )
 
@@ -145,4 +145,23 @@ test('map positions follow the scenario grid by label and fall back to auto layo
 test('map positions without a grid use auto layout for all', () => {
   const g = world(loc('a', ['b']), loc('b', ['a']))
   assert.equal(Object.keys(mapPositions(g, null)).length, 2)
+})
+
+test('compactGridLayout collapses rows and columns the card board leaves empty', () => {
+  // Act 1 of Before the Black Throne: a 5x5 grid padded around three cards.
+  const rows = [
+    'posn0102 pos0002 pos0102 pos0202 pos0302',
+    'posn0101 pos0001 pos0101 pos0201 pos0301',
+    'posn0100 pos0000 pos0100 pos0200 pos0300',
+    'posn01n01 pos00n01 pos01n01 pos02n01 pos03n01',
+    'posn01n02 pos00n02 pos01n02 pos02n02 pos03n02',
+  ]
+  assert.deepEqual(compactGridLayout(rows, new Set(['pos0000', 'pos0201', 'pos02n01'])), [
+    'pos0001 pos0201',
+    'pos0000 pos0200',
+    'pos00n01 pos02n01',
+  ])
+  // A cell on offer keeps its row and column, the way the card board shows a clickable empty position.
+  assert.deepEqual(compactGridLayout(rows, new Set(['pos0000', 'pos0100'])), ['pos0000 pos0100'])
+  assert.deepEqual(compactGridLayout(rows, new Set()), [])
 })
