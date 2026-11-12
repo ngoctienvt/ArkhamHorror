@@ -21,7 +21,10 @@ TRANSLATIONS_CORE_ACTS_AGENDAS = {
     "01107": {
         "name": "Chúng Đang Thoát Ra!",
         "text": "<b>Forced</b> — Khi kết thúc giai đoạn Enemy: Mỗi kẻ địch [[Ghoul]] chưa engage sẽ di chuyển 1 địa điểm về phía Parlor.\n<b>Forced</b> — Khi kết thúc vòng chơi: Đặt 1 doom lên agenda này cho mỗi kẻ địch [[Ghoul]] đang ở Hallway hoặc Parlor.",
-        "flavor": "Bạn nghe thấy một tiếng hú điên dại từ bên ngoài, và đột nhiên toàn bộ lũ sinh vật dồn sự chú ý về phía âm thanh đó. Chúng điên cuồng lao ra để trốn thoát khỏi căn nhà, phá tan các cánh cửa và cào xé mọi thứ ngáng đường."
+        "flavor": "Bạn nghe thấy một tiếng hú điên dại từ bên ngoài, và đột nhiên toàn bộ lũ sinh vật dồn sự chú ý về phía âm thanh đó. Chúng điên cuồng lao ra để trốn thoát khỏi căn nhà, phá tan các cánh cửa và cào xé mọi thứ ngáng đường.",
+        "back_name": "Lũ Ngạ Quỷ Thoát Ra",
+        "back_text": "- Nếu các điều tra viên đang ở Act 1 hoặc 2, họ bị mắc kẹt bên trong căn nhà và bị lũ ngạ quỷ xé xác. <b>(→R3)</b>\n- Nếu các điều tra viên đang ở Act 3, họ suýt soát thoát chết trong gang tấc, để mặc cho lũ ngạ quỷ tung hoành. Mỗi điều tra viên chưa resign bị đánh bại và chịu 1 sang chấn thể chất.",
+        "back_flavor": "Mặt đất bắt đầu rung chuyển và bạn có thể nhìn thấy những móng vuốt nhô lên từ lớp đất cát khi những sinh vật ma quái điên cuồng cào xới tìm đường thoát khỏi lòng đất xung quanh bạn. Bất cứ nơi nào bạn quay đầu nhìn, bạn đều thấy quái vật trồi lên từ lòng đất. Kinh hoàng tột độ, bạn bỏ chạy nhanh nhất có thể."
     },
     # 01108: Trapped (The Gathering - Act 1)
     "01108": {
@@ -71,16 +74,16 @@ TRANSLATIONS_CORE_ACTS_AGENDAS = {
         "flavor": "Bạn chỉ có một đêm duy nhất để tìm ra các thành viên của giáo phái này và vạch trần kế hoạch của chúng. Càng tìm thấy và thẩm vấn được nhiều thành viên giáo phái trước nửa đêm, cơ hội càng lớn.",
         "back_name": "Bí Mật Được Vạch Trần",
         "back_text": "<b>(→R1)</b>",
-        "back_flavor": "Bạn đã vạch trần thành công danh tính của tất cả các thành viên cấp cao trong giáo phái tại Arkham. Dù vậy, những gì bạn phát hiện ra chỉ càng làm tăng thêm nỗi kinh hoàng. Chúng đang chuẩn bị triệu hồi một thực thể cổ xưa khủng khiếp từ lòng đất sâu..."
+        "back_flavor": "Bạn đã vạch trần thành công danh tính của tất cả các thành viên cấp cao trong giáo phái tại Arkham. Kẻ đã bám theo bạn khắp thành phố vô cùng tận tụy với niềm tin của mình, cũng giống như Herman, người trông coi nghĩa trang. Những kẻ khác dường như đã bị ép buộc phải tiếp tay cho giáo phái. Ruth, người làm việc tại nhà xác, đã bị đe dọa rằng gia đình cô sẽ bị sát hại nếu cô không cung cấp thi thể tươi mới cho lũ ngạ quỷ. May mắn thay, bạn đã cố gắng giúp cô trốn thoát khỏi bệnh viện an toàn. Peter, vị giáo sư, đã phải được thuyết phục rằng sự dính líu của ông với giáo phái sẽ mang lại nhiều tai hại hơn là điều tốt. Nỗi ám ảnh của Victoria đối với các cổ vật huyền bí đã đẩy cô lún sâu vào mạng lưới của giáo phái. Khi bạn đối mặt với Drew trong viện tâm thần, hắn đã tấn công bạn — nhưng điều thú vị là hắn làm vậy vì nghĩ rằng chính bạn là một phần của giáo phái. Càng đào sâu vào âm mưu này, bạn càng nhận thấy rõ ràng rằng biết bao sinh mạng đã bị hủy hoại bởi nó."
     },
     # 01143: The Arkham Woods (The Devourer Below - Agenda 1)
     "01143": {
-        "name": "Rừng Arkham",
-        "text": "<b>Forced</b> — Khi agenda này advance: Đặt ngẫu nhiên 1 trong số các kẻ địch [[Cultist]] đang để riêng vào chơi tại Main Path. Sau đó, đặt 1 doom lên kẻ địch đó.",
-        "flavor": "Bạn lần theo những dấu vết dẫn sâu vào khu rừng phía nam Arkham. Không khí ở đây đặc quánh mùi chết chóc và u uất. Những hàng cây vặn vẹo như những cánh tay xương xẩu chực chờ vồ lấy bạn.",
-        "back_name": "Tiếng Hú Giữa Rừng Sâu",
-        "back_text": "Mỗi điều tra viên tại một địa điểm [[Woods]] phải chịu 1 horror.",
-        "back_flavor": "Một tiếng thét xé toạc màn đêm vọng khắp khu rừng. Từ nơi sâu thẳm của rừng rậm, hàng chục giọng nói ghê rợn đồng thanh đáp lại, phi nhân tính tựa tiếng chó săn sủa gắt nhưng lại rành rọt từng tiếng, lặp đi lặp lại một cái tên duy nhất:\n\"Umôrdhoth... Umôrdhoth... Umôrdhoth...\""
+        "name": "Khu Rừng Arkham",
+        "text": "",
+        "flavor": "Sau khi thẩm vấn các thành viên của âm mưu tà giáo bên trong Arkham, bạn biết được rằng chúng đang thực hiện một nghi thức báo thù để đáp trả việc một trong những hang ổ của chủ nhân chúng bị phá hủy. Bạn đã tiến vào khu rừng bên ngoài Arkham để cố gắng ngăn chặn chúng. Khu rừng dường như lạnh lẽo một cách phi tự nhiên, và chìm ngập trong một sự tĩnh lặng chết chóc.",
+        "back_name": "Cái Chết Cho Những Kẻ Xâm Nhập",
+        "back_text": "Xáo trộn chồng bài encounter bỏ vào chồng bài encounter và bỏ từng lá bài từ trên cùng cho đến khi một kẻ địch [[Monster]] bị bỏ. Spawn kẻ địch đó tại Main Path. Sau đó, đặt 1 doom lên kẻ địch đó.",
+        "back_flavor": "Vang vọng khắp khu rừng là một tiếng thét xé màn đêm. Từ nơi sâu thẳm hơn trong rừng, hàng chục giọng nói ghê rợn đồng thanh đáp lại lời hiệu triệu, phi nhân tính như tiếng chó săn sủa gắt nhưng lại rành rọt từng tiếng, lặp đi lặp lại một cái tên duy nhất:\n\"Umôrdhoth... Umôrdhoth... Umôrdhoth...\""
     },
     # 01144: The Ritual Begins (The Devourer Below - Agenda 2)
     "01144": {
@@ -88,7 +91,7 @@ TRANSLATIONS_CORE_ACTS_AGENDAS = {
         "text": "Mỗi kẻ địch nhận +1 fight và +1 evade.",
         "flavor": "\"Umôrdhoth... Umôrdhoth... Umôrdhoth...\"\nTiếng tụng niệm ngày càng dồn dập và dữ dội, vang vọng vào bầu không khí giá lạnh của màn đêm. Những đám mây thưa thớt trên bầu trời tụ lại dày đặc phía trên khu rừng Arkham, che khuất hoàn toàn ánh sáng mờ nhạt của những vì sao.",
         "back_name": "Ý Chí Của Umôrdhoth",
-        "back_text": "Theo thứ tự lượt chơi, mỗi điều tra viên phải kiểm tra [willpower] (6). Mỗi điều tra viên thất bại phải tìm trong bộ sưu tập của mình 1 điểm yếu cơ bản [[Madness]] ngẫu nhiên và thêm nó vào tay.",
+        "back_text": "Theo thứ tự lượt chơi, mỗi điều tra viên phải kiểm tra [willpower] (6). Mỗi điều tra viên thất bại phải tìm kiếm trong bộ sưu tập của mình một điểm yếu cơ bản [[Madness]] ngẫu nhiên và thêm nó vào tay.",
         "back_flavor": "Một sự hiện diện đen tối tiến đến gần, và bạn bị áp bức bởi những luồng áp lực vô hình khiến bạn phải khuỵu gối. Một thế lực khủng khiếp chực chờ xâm chiếm tâm trí và linh hồn bạn. Cổ họng bạn nghẹn lại và nước mắt trào ra khi cảm giác thiêu đốt chạy rát qua cơ thể."
     },
     # 01145: Vengeance Awaits (The Devourer Below - Agenda 3)
@@ -131,7 +134,7 @@ TRANSLATIONS_CORE_ACTS_AGENDAS = {
         "text": "<b>Objective</b> — Chỉ các điều tra viên tại Guest Hall mới có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
         "flavor": "Khi bạn lao tới điều tra, cánh cửa dẫn vào phòng làm việc biến mất ngay trước mắt, để lại một cánh cổng kỳ lạ dẫn đến một khu vực khác trong ngôi nhà. Chắc chắn phải có lý do khiến chuyện này xảy ra…",
         "back_name": "Phá Vỡ Bức Tường",
-        "back_text": "Đặt địa điểm Hole in the Wall đang để riêng vào chơi.<br/>Chọn một điều tra viên tại Guest Hall. Điều tra viên được chọn lập tức di chuyển vào Hole in the Wall và tiết lộ địa điểm này. Sau đó, họ phải kiểm tra [willpower]&nbsp;(4). Với mỗi điểm thất bại, họ phải ngẫu nhiên bỏ 1 lá bài trên tay.",
+        "back_text": "Đặt địa điểm Hole in the Wall đang để riêng vào chơi.<br/>Chọn một điều tra viên tại Guest Hall. Điều tra viên được chọn lập tức di chuyển vào Hole in the Wall và tiết lộ địa điểm này. Sau đó, họ phải kiểm tra [willpower]&nbsp;(4). Với mỗi điểm thất bại, họ phải ngẫu nhiên bỏ một lá bài trên tay.",
         "back_flavor": "Cách bố trí căn nhà khác xa so với cấu trúc thường ngày. Bằng cách nào đó, sảnh khách dường như tự xoay vòng lặp lại vô tận, khiến bạn mắc kẹt và không có cách nào bước vào hành lang chính gần cửa trước.<br/>Bạn nhận thấy bức tường ngăn giữa phòng ngủ dành cho khách và phòng tắm đã mục nát, loang lổ những vết máu khô lâu ngày. Không còn lối đi nào khác, bạn chỉ còn cách xông thẳng qua bức tường mục rỗng này."
     },
     # 50026a: Predator or Prey? (Return to The Midnight Masks - Agenda 1)
