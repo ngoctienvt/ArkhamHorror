@@ -1,0 +1,18 @@
+Master Shot and Spatial Landmarks
+16:9 widescreen, 1536x864. A 2.5D architectural cutaway of St. Mary's Hospital, Arkham, 1920s, at night, classic Lovecraftian cosmic noir digital oil painting, painterly like Arkham Horror LCG card art. One seamless building cut open like a dollhouse in cross-section, a faint sickly violet dream-rot and silken spider webbing creeping through the walls. Deep umber, charcoal, sickly yellow lamp light.
+
+The attached reference images are card illustrations of the real rooms; use them as the source for each room's look (shapes, furniture, dominant colors) and redraw them as rooms of ONE building. Ignore the card frames, banners, icons and text. Reference 1 = Waiting Room, 2 = Emergency Room, 3 = Experimental Therapies Ward, 4 = Records Office, 5 = Stairwell, 6 = Morgue (style reference only for the basement mood).
+
+Layout (left-to-right matches the grid of the game):
+- TOP FLOOR, CENTER-LEFT: the Records Office from reference 4, narrow aisles of overflowing wooden shelves stacked with brittle folders, partly waterlogged, ceiling collapsed.
+- MIDDLE FLOOR, CENTER-LEFT: the Waiting Room from reference 1, yellow walls, rows of upholstered chairs and a reception desk, anatomical brain posters, checkered floor.
+- MIDDLE FLOOR, FAR LEFT: the Emergency Room from reference 2, white tiled wall with blood spatter, iron hospital bed with stained sheet, wooden cabinet.
+- MIDDLE FLOOR, RIGHT: the Experimental Therapies Ward from reference 3, glowing orange curtains, black-and-white checkered floor, hanging lamp, strange electrical apparatus and cables.
+- BASEMENT, RIGHT-CENTER: the Stairwell from reference 5 (concrete stairs descending into darkness, an overturned wheelchair) connecting down from the ground floor.
+- BASEMENT: three IDENTICAL heavy grey steel doors in a dim stone corridor: one immediately LEFT of the stairwell, one directly BELOW the stairwell, one on the FAR RIGHT. The doors are plain and generic, no signs.
+The scene is a single seamless connected building; no comic panels, no borders, no text, no labels, no people, no watermark.
+
+
+Critical geometry: Make the basement taller, with a four-way T-shaped landing over TWO vertical levels. The stairwell ends at an UPPER basement landing at x=65%, y=72%. On the same upper basement level, place one closed gray door at x=48% and another closed gray door at x=83%. The third identical closed gray door belongs on the LOWER basement landing at x=65%, y=90%, on the same vertical line as the center of the stairs. Three doors total. The fifth attachment is a sheet: left is Stairwell, right is Morgue, for dark atmosphere. Follow the card references for furniture and colors.
+Lighting
+Warm gaslight through deep umber, purple-black exterior and dim stone. Avoid panels, lettering, watermark, people.

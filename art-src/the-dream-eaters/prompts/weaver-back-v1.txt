@@ -1,0 +1,7 @@
+Master Shot
+One simple isolated unrevealed game-map location sprite. Square, fully transparent outside the object. High three-quarter view. Painterly classic Arkham cosmic horror. One flat generic stretch of taut silk with an irregular sparse, diamond-like silhouette, simple threads and a small flat opaque patch near lower center for a standee. Keep a clean silhouette at 150 pixels.
+Spatial Landmarks
+Attachment 1 = actual unrevealed The Great Web card, use its diagonal overlapping lilac and silver filaments as the main visual reference. Attachment 2 = Web-Stairs, palette accent only. Strip all card framing and iconography. Generic web alone, no rock stairs, prison, towers, spiders, or landscape behind it.
+Lighting
+Soft dim lilac and pearly white highlights; no cast shadow or ground plane. Avoid text, logos, symbols, watermark, card frame, background sky, people, extra props.
+

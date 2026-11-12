@@ -914,6 +914,7 @@
     "threatArea": "Threat area",
     "playArea": "Play area",
     "resetLayout": "Reset layout",
+    "weather": "Weather",
     "moreOptions": "More",
     "arrange": "Arrange",
     "arrangeHint": "Drag plates, figures and arrows to place them",
@@ -1003,7 +1004,11 @@
     "you": "You",
     "clues": "Clues",
     "doom": "Doom",
-    "placeHere": "Place a location here"
+    "placeHere": "Place a location here",
+    "vehicle": {
+      "aboard": "{name}: {names} aboard",
+      "empty": "{name}: nobody aboard"
+    }
   },
   "location": {
     "under": "Under ({count})"

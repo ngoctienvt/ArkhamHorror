@@ -1,0 +1,13 @@
+Camera: a high-angle, near top-down bird's-eye game-map view, about 65-75 degrees looking down, like an illustrated tabletop board. NO horizon line, NO sky, NO moon, NO sunset, NO aurora: the ground plane fills the whole frame edge to edge. Each landmark is a separate compact structure seen from above, about 15-20% of the frame width, set on its own patch of ground with clear open space (paths, water, rock) between landmarks so a small round marker can sit at each entrance. Landmarks are spread evenly across the frame in the grid positions listed below; nothing important within 6% of the border. Do not make a cinematic vista or a single big hero object.
+
+Master Shot
+Create one 16:9 landscape digital oil painting, 1536×864 or larger, for the actual game map. Use near-orthographic projection. Near-overhead illustrated map of the Timeless Realm. Coast, jade water and dark mountain terraces fill the whole frame. The floating city is visible from above over the terrain, compact enough that the terrain and shadow are visible around it. Dreamland effects cling to each site locally.
+
+Spatial Landmarks
+Attachment 1 Celephaïs x26% y46%: compact golden marble coast-city, readable domes and open dock. Attachment 2 Serannian x26% y17%: distinct floating settlement on a compact fragment of rock hovering over the sea, with its shadow on the water; retain amber palace and a local fringe of pearly haze. Attachment 3 Hazuth-Kleg x26% y77%: separated ruin on a wooded mountain terrace with angular broken roofs. Attachment 4 Temple of Unattainable Desires x75% y77%: red flame-carved towers on their own low rock island, with an open entrance terrace. Attachment 5 City-Which-Appears-on-No-Map x75% y46%: compact ethereal teal distorted buildings grounded on a separate rocky headland, fading at their base into a local mist. Space between all five, no visible sky, clouds as backdrop, planet or giant magical object.
+Coordinates are measured from the left and top, and refer to the landmark’s visible entrance or landing. Leave visible clear unmarked ground at each anchor. Follow card paintings for subject and architecture. Keep the positions specified here. Strip card frame, text, icons and people.
+
+Lighting
+Jade sea, violet rock and clear localized amber, red, teal accents; richly painted oil.
+
+Avoid comic panels, split screen, multi-panel, grid, borders, frames, text labels, watermark, cartoonish, 3D plastic, people, drawn pins, wide-angle perspective and eye-level facades.

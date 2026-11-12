@@ -1,0 +1,9 @@
+Master Shot
+1024×1024 game sprite, genuine fully transparent background. One organic monstrous spider torso of Atlach-Nacha, viewed straight down at exactly 90 degrees, center anchored at the exact canvas center, with 12% clear margin. It is a compact revolvable circular silhouette, as close to 180-degree rotational symmetry as possible, with eight small symmetrical attachment facets but zero protruding limbs, legs or appendages.
+Spatial Landmarks
+Attachment 1 = original Atlach-Nacha illustration. Adapt its dark ridged carapace, hairs, ash-grey exoskeleton and crimson organic fissures to the top-down sprite. The carapace fills 76% of the square. No legs, no feet, no surrounding rocks.
+Lighting
+Diffuse top lighting without cast shadow or directional highlights. Dark red and green-gray oil-painted texture.
+Avoid comic panels, split screen, multi-panel, grid, borders, frames, text labels, watermark, cartoonish, 3D plastic, drop shadow, unrelated scenery and people.
+
+

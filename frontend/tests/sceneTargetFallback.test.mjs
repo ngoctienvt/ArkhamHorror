@@ -56,6 +56,11 @@ test('a target whose card is gone is left out', () => {
   assert.deepEqual(sceneFallbackTargets(game, [target('EnemyTarget', 'missing')], new Set()), [])
 })
 
+test('a target already drawn as a clickable spider part stays off the fallback panel', () => {
+  const choices = [target('EnemyTarget', 'leg'), target('EnemyTarget', 'e1')]
+  assert.deepEqual(sceneFallbackTargets(game, choices, new Set(), new Set(['leg'])).map((entry) => entry.id), ['e1'])
+})
+
 const { sceneFallbackTokens, scenePanelOnlyCount } = await import('data:text/javascript;base64,' + Buffer.from(js).toString('base64'))
 const component = (tag, investigatorId, tokenType) => ({ tag, component: { tag: 'InvestigatorComponent', investigatorId, tokenType } })
 

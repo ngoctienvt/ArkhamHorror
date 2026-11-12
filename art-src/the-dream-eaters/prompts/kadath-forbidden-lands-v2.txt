@@ -1,0 +1,13 @@
+Camera: a high-angle, near top-down bird's-eye game-map view, about 65-75 degrees looking down, like an illustrated tabletop board. NO horizon line, NO sky, NO moon, NO sunset, NO aurora: the ground plane fills the whole frame edge to edge. Each landmark is a separate compact structure seen from above, about 15-20% of the frame width, set on its own patch of ground with clear open space (paths, water, rock) between landmarks so a small round marker can sit at each entrance. Landmarks are spread evenly across the frame in the grid positions listed below; nothing important within 6% of the border. Do not make a cinematic vista or a single big hero object.
+
+Master Shot
+Create one 16:9 landscape digital oil painting, 1536×864 or larger, for the actual game map. Use near-orthographic projection. Near-overhead illustrated map of a cold violet desert beside the sea. Top surfaces of dunes, ridges and ocean fill the whole frame.
+
+Spatial Landmarks
+Attachment 1 Ilek-Vad x65% y44%: small golden cliff-city with glass turrets and a visible entry terrace on the right edge of its own coastal promontory. Attachment 2 Forbidden Lands x43% y58%: an isolated wind-sculpted amber ridge and obelisk cluster in open sand, with a plain flat approach. Attachment 3 Zulan-Thek x17% y40%: separate angular violet stone citadel with recessed lanes, viewed into the courtyard from above. Keep centers separated by about 25% frame width. Each landmark sits on a terrain patch with a clear pin spot.
+Coordinates are measured from the left and top, and refer to the landmark’s visible entrance or landing. Leave visible clear unmarked ground at each anchor. Follow card paintings for subject and architecture. Keep the positions specified here. Strip card frame, text, icons and people.
+
+Lighting
+Muted lavender sand and a warm amber-rock accent, silver water. Diffuse painterly light without any visible source.
+
+Avoid comic panels, split screen, multi-panel, grid, borders, frames, text labels, watermark, cartoonish, 3D plastic, people, drawn pins, wide-angle perspective and eye-level facades.

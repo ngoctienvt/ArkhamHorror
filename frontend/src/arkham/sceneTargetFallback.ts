@@ -3,7 +3,7 @@
  *
  * Question.vue leaves out every "choose this card" choice whose card is drawn on the card board, since the
  * board makes that card clickable. The scene map draws far less of the board: enemies on a plain map are
- * a count, enemies that are locations (Atlach-Nacha's legs), stories in a grid cell (Red Sunrise),
+ * a count, enemies with no scene control, stories in a grid cell (Red Sunrise),
  * locations in a play area, cards in the Void / pursuit / shadows, or anything attached to a location are
  * not clickable there. Without this list such a choice could not be answered without switching views.
  *
@@ -58,7 +58,7 @@ function inPlayerZone(game: Game, placement: Placement | null | undefined, depth
 }
 
 /** Every target choice the scene map cannot otherwise answer, with the card each one is about. */
-export function sceneFallbackTargets(game: Game, choices: readonly Message[], mapLocationIds: ReadonlySet<string>): FallbackTarget[] {
+export function sceneFallbackTargets(game: Game, choices: readonly Message[], mapLocationIds: ReadonlySet<string>, mapEnemyIds?: ReadonlySet<string>): FallbackTarget[] {
   const result: FallbackTarget[] = []
   choices.forEach((choice, index) => {
     if ((choice.tag as string) !== TARGET_LABEL) return
@@ -67,6 +67,7 @@ export function sceneFallbackTargets(game: Game, choices: readonly Message[], ma
     const pool = POOLS.find(([t]) => t === tag)
     if (!pool) return
     const [, kind, key] = pool
+    if (kind === 'enemy' && mapEnemyIds?.has(contents)) return
     const entity = (game[key] as unknown as Record<string, Placed> | undefined)?.[contents]
     if (!entity) return
     // The scene draws no investigator card, so picking an investigator is always listed.
@@ -101,7 +102,7 @@ export function sceneFallbackTokens(choices: readonly Message[], myInvestigatorI
 
 /** How many choices only the scene's action panel can answer: board targets, investigator tokens, concealed
  * cards and keys. While it is above zero the map keeps the panel open, so closing it never hides the question. */
-export function scenePanelOnlyCount(game: Game, choices: readonly Message[], mapLocationIds: ReadonlySet<string>, myInvestigatorId: string | null): number {
+export function scenePanelOnlyCount(game: Game, choices: readonly Message[], mapLocationIds: ReadonlySet<string>, myInvestigatorId: string | null, mapEnemyIds?: ReadonlySet<string>): number {
   const concealedOrKey = choices.filter((choice) => {
     const tag = choice.tag as string
     if (tag === 'KeyLabel') return true
@@ -109,5 +110,5 @@ export function scenePanelOnlyCount(game: Game, choices: readonly Message[], map
     const contents = (choice as TargetLabel).target.contents
     return typeof contents === 'string' && contents in (game.concealed ?? {})
   }).length
-  return sceneFallbackTargets(game, choices, mapLocationIds).length + sceneFallbackTokens(choices, myInvestigatorId).length + concealedOrKey
+  return sceneFallbackTargets(game, choices, mapLocationIds, mapEnemyIds).length + sceneFallbackTokens(choices, myInvestigatorId).length + concealedOrKey
 }

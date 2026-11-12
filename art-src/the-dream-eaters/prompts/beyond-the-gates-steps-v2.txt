@@ -1,0 +1,13 @@
+Camera: a high-angle, near top-down bird's-eye game-map view, about 65-75 degrees looking down, like an illustrated tabletop board. NO horizon line, NO sky, NO moon, NO sunset, NO aurora: the ground plane fills the whole frame edge to edge. Each landmark is a separate compact structure seen from above, about 15-20% of the frame width, set on its own patch of ground with clear open space (paths, water, rock) between landmarks so a small round marker can sit at each entrance. Landmarks are spread evenly across the frame in the grid positions listed below; nothing important within 6% of the border. Do not make a cinematic vista or a single big hero object.
+
+Master Shot
+Create one 16:9 landscape digital oil painting, 1536×864 or larger, for the actual game map. Use near-orthographic projection. A near-overhead map of a terraced slope of natural stone with 5 discrete traversable landmarks. They sit on staggered elevations within the same seamless terrain, separated by clear ground. Use small stair segments and five distinct flats. The view reads as a tabletop game board, with cliff tops and terraces dominating the entire image.
+
+Spatial Landmarks
+Attachment 1 Seventy Steps x47% y16%: compact pale stone arch with a short fan of carved steps on its own landing. Attachment 2 Cavern of Flame x75% y31%: recessed shrine and a small amber cavern entrance, opening cut into a ledge and visible from above. Attachment 3 Seven Hundred Steps x49% y45%: a long zigzag switchback stone stair traversing a distinct patch of terraced rock; its own small footprint, fully separate from the Seventy Steps. Attachment 4 Base of the Steps x49% y65%: wide open ochre flagstone landing and short final stair with unmistakable standee space. Attachment 5 Enchanted Path x50% y84%: gnarled roots forming a woodland entrance with a clear trail crossing, matching the retained Woods art. Use the paintings for masonry, shapes and colors, with bare stone between the five. No giant spiral, continuous single staircase, distant mountains, clouds or skyline.
+Coordinates are measured from the left and top, and refer to the landmark’s visible entrance or landing. Leave visible clear unmarked ground at each anchor. Follow card paintings for subject and architecture. Keep the positions specified here. Strip card frame, text, icons and people.
+
+Lighting
+Rich jade forest edge, muted silver on stone, concentrated amber flame inside the shrine, dreamlike oil painting.
+
+Avoid comic panels, split screen, multi-panel, grid, borders, frames, text labels, watermark, cartoonish, 3D plastic, people, drawn pins, wide-angle perspective and eye-level facades.

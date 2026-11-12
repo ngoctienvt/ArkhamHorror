@@ -1,0 +1,6 @@
+Master Shot
+Draw ONE isolated game-map sprite, a steep three-quarter view of Cosmic Web, landscape 3:2, 1536×1024, fully transparent PNG with actual alpha. The signature silhouette must read at a 150-pixel thumbnail. Occupy about 80% of the canvas. A small clear lower-center tread or patch supports a standee.
+Spatial Landmarks
+Attachment 1 is the actual location art 06341. Use its materials, shapes and colors and omit printed card graphics. A flat fuchsia starburst web like the reference, with eight irregular HOT MAGENTA taut filaments radiating from one bright braided center and diverging sharply into transparent space. Tiny ochre ledge at bottom only. The luminous star-shaped threads are the whole silhouette.
+Lighting
+Classic Arkham Horror LCG digital oil paint, carefully defined edge lighting without a background. Avoid comic panels, split screen, multi-panel, grid, borders, frames, text labels, watermark, cartoonish, 3D plastic, people, shadows cast on a background, or generic round rocky platforms.

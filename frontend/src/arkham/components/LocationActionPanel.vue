@@ -32,6 +32,7 @@ const props = defineProps<{
   game: Game; playerId: string; location: Location | null; info?: MapLocationInfo | null
   /** Locations drawn on the map: picking one of them is done on its plate, so the panel leaves those out. */
   mapLocationIds?: string[]
+  mapEnemyIds?: ReadonlySet<string>
   /** Drawn as a bottom sheet (tablet held upright): a grab bar on top folds and unfolds it. */
   sheet?: boolean
   expanded?: boolean
@@ -146,7 +147,7 @@ const sections = computed(() => {
         break
     }
   })
-  for (const target of sceneFallbackTargets(props.game, choices.value, new Set(props.mapLocationIds ?? []))) {
+  for (const target of sceneFallbackTargets(props.game, choices.value, new Set(props.mapLocationIds ?? []), props.mapEnemyIds)) {
     rows.targets.push({ index: target.index, group: t(`locationMap.targetKind.${target.kind}`), label: nameOf(target.code),
       contents: null, sourceId: null, kind: null, text: null, image: cardImage(target.art, target.side), variant: null })
   }
