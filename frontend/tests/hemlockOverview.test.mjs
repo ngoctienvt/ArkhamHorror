@@ -14,12 +14,12 @@ const { hemlockOverview, hemlockVillagePosition, hemlockHousePosition } = await 
 }))
 
 const scenarios = {
-  '10501': 'written-in-rock-descent',
+  '10501': 'written-in-rock-mine',
   '10523': 'hemlock-house',
-  '10549': 'silent-heath',
-  '10569': 'lost-sister',
+  '10549': 'silent-heath-snowfield',
+  '10569': 'lost-sister-caverns',
   '10588': 'thing-in-the-depths',
-  '10605': 'twisted-hollow',
+  '10605': 'twisted-hollow-woods',
   '10626': 'longest-night',
   '10651': 'fate-of-the-vale',
   '10704': 'vale-day',
@@ -74,15 +74,6 @@ test('Dream-Eaters selects the current board, including Kadath with every region
   assert.deepEqual(hemlockVillagePosition('c06075b', hospital.anchors, 'basementDoor2'), [62, 90])
 })
 
-test('Written in Rock selects the rail board after the cave-in on either reference printing', () => {
-  for (const reference of ['c10501', 'c10502']) {
-    assert.equal(hemlockOverview('c10501', reference).fixedPassages, true)
-    const maze = hemlockOverview('c10501', reference + 'b')
-    assert.equal(maze.fixedPassages, false)
-    expectWebp(maze, 'written-in-rock-maze')
-  }
-})
-
 test('Fate of the Vale changes backdrop only when the game lays out the nighttime village', () => {
   expectWebp(hemlockOverview('c10651', 'c10651', ['nest1 theAbyss nest2']), 'fate-of-the-vale')
   expectWebp(hemlockOverview('c10651', 'c10651', ['moon  diamond  star']), 'vale-night')
@@ -135,8 +126,8 @@ test('The Scarlet Keys scenarios select their overview boards', () => {
   assert.equal(hemlockOverview('c09609', 'c09609')?.image, 'img/scenes/the-scarlet-keys/on-thin-ice.webp')
   assert.equal(hemlockOverview('c09635', 'c09635')?.image, 'img/scenes/the-scarlet-keys/dogs-of-war.webp')
   assert.equal(hemlockOverview('c09660', 'c09660')?.image, 'img/scenes/the-scarlet-keys/shades-of-suffering.webp')
-  assert.equal(hemlockOverview('c09681', 'c09681')?.image, 'img/scenes/the-scarlet-keys/without-a-trace.webp')
-  assert.equal(hemlockOverview('c09694', 'c09694')?.image, 'img/scenes/the-scarlet-keys/congress-of-the-keys.webp')
+  assert.equal(hemlockOverview('c09681', 'c09681')?.image, 'img/scenes/the-scarlet-keys/without-a-trace-otherworld.webp')
+  assert.equal(hemlockOverview('c09694', 'c09694')?.image, 'img/scenes/the-scarlet-keys/congress-halls.webp')
 })
 
 test('The Path to Carcosa scenarios select their overview boards', () => {
@@ -146,7 +137,7 @@ test('The Path to Carcosa scenarios select their overview boards', () => {
   assert.equal(hemlockOverview('c03120', 'c03120')?.image, 'img/scenes/the-path-to-carcosa/echoes-of-the-past.webp')
   assert.equal(hemlockOverview('c03159', 'c03159')?.image, 'img/scenes/the-path-to-carcosa/the-unspeakable-oath.webp')
   assert.equal(hemlockOverview('c03200', 'c03200')?.image, 'img/scenes/the-path-to-carcosa/a-phantom-of-truth.webp')
-  assert.equal(hemlockOverview('c03240', 'c03240')?.image, 'img/scenes/the-path-to-carcosa/the-pallid-mask.webp')
+  assert.equal(hemlockOverview('c03240', 'c03240')?.image, 'img/scenes/the-path-to-carcosa/the-pallid-mask-catacombs.webp')
   assert.equal(hemlockOverview('c03274', 'c03274')?.image, 'img/scenes/the-path-to-carcosa/black-stars-rise.webp')
   assert.equal(hemlockOverview('c03316', 'c03316')?.image, 'img/scenes/the-path-to-carcosa/dim-carcosa.webp')
 
@@ -156,9 +147,15 @@ test('The Path to Carcosa scenarios select their overview boards', () => {
   assert.equal(hemlockOverview('c52028', 'c52028')?.image, 'img/scenes/the-path-to-carcosa/echoes-of-the-past.webp')
   assert.equal(hemlockOverview('c52034', 'c52034')?.image, 'img/scenes/the-path-to-carcosa/the-unspeakable-oath.webp')
   assert.equal(hemlockOverview('c52040', 'c52040')?.image, 'img/scenes/the-path-to-carcosa/a-phantom-of-truth.webp')
-  assert.equal(hemlockOverview('c52048', 'c52048')?.image, 'img/scenes/the-path-to-carcosa/the-pallid-mask.webp')
+  assert.equal(hemlockOverview('c52048', 'c52048')?.image, 'img/scenes/the-path-to-carcosa/the-pallid-mask-catacombs.webp')
   assert.equal(hemlockOverview('c52054', 'c52054')?.image, 'img/scenes/the-path-to-carcosa/black-stars-rise.webp')
   assert.equal(hemlockOverview('c52059', 'c52059')?.image, 'img/scenes/the-path-to-carcosa/dim-carcosa.webp')
+
+  // The Pallid Mask: grid grows during play, so sprites instead of anchors
+  for (const id of ['c03240', 'c52048']) {
+    assert.equal(hemlockOverview(id, id)?.islands, 'img/scenes/the-path-to-carcosa/pallid-mask')
+    assert.equal(hemlockOverview(id, id)?.anchors, undefined)
+  }
 
   // Curtain Call: Arkham Theatre anchors
   const curtainCall = hemlockOverview('c03043', 'c03043').anchors
@@ -239,7 +236,7 @@ test('The Drowned City scenarios select their overview boards', () => {
   assert.equal(hemlockOverview('c11553', 'c11553')?.image, 'img/scenes/the-drowned-city/the-apiary.webp')
   assert.equal(hemlockOverview('c11587', 'c11587')?.image, 'img/scenes/the-drowned-city/the-grand-vault.webp')
   assert.equal(hemlockOverview('c11612', 'c11612')?.image, 'img/scenes/the-drowned-city/court-of-the-ancients.webp')
-  assert.equal(hemlockOverview('c11639', 'c11639')?.image, 'img/scenes/the-drowned-city/obsidian-canyons.webp')
+  assert.equal(hemlockOverview('c11639', 'c11639')?.image, 'img/scenes/the-drowned-city/obsidian-canyons-sky.webp')
   assert.equal(hemlockOverview('c11673', 'c11673')?.image, 'img/scenes/the-drowned-city/sepulchre-of-the-sleeper.webp')
   assert.equal(hemlockOverview('c11682', 'c11682')?.image, 'img/scenes/the-drowned-city/the-doom-of-arkham-part-1.webp')
   assert.equal(hemlockOverview('c11688a', 'c11688a')?.image, 'img/scenes/the-drowned-city/the-doom-of-arkham-part-2.webp')

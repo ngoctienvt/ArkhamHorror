@@ -1,0 +1,17 @@
+Pallid Mask sprites: one line per card = main subject + dominant colours (read from the real card art).
+03247 Gate to Hell: tilted stone slab/doorway tomb, two torches flaming, yellow-orange light in a gap, cold blue-grey stone. accent: amber
+03248 Stone Archways: long vaulted brick corridor, row of dark arches both sides, bright white-yellow glow at the end, orange brick. accent: orange
+03249 Crypt of the Sepulchral Lamp: wall of skulls niche behind a burning brazier/lamp bowl, orange fire, grey-blue pillars. accent: fire orange
+03250 Bone-Filled Cavern: floor heaped with bones and a skull, brown-orange cave, tiny green glow far end. accent: green
+03251 Well of Souls: circular spiral of skulls and bones radiating from a dark centre hole, blue-gold. accent: gold/blue
+03252 Candlelit Tunnels: curved red-orange rock tunnel studded with many small candle flames. accent: red-orange
+03253 Labyrinth of Bones: huge cylindrical pillar of bones in a blue-black chamber, toxic green mist at right. accent: toxic green
+03254 Narrow Shaft: black rock wall with a round vertical shaft glowing white-blue like an eclipse ring. accent: electric blue
+03255 Shivering Pools: flooded stone corridor, pale teal mist, yellow-lit walls, water floor. accent: teal
+03256 Blocked Passage: corridor choked with a pile of skulls and bones, candle lights behind, blue-teal gloom with yellow candles. accent: teal-blue+yellow
+03257 Tomb of Shadows: vast ossuary hall, long rows of tiny candles on the floor, tall dark stone monolith at right, golden light. accent: gold
+52049 Secret Passage: wooden-framed shelves of skulls (ossuary wall) and a dark side passage, brown-grey, fog. accent: brown
+52050 Mound of Bones: big heap of bones and skulls under dark arched niches, purple-violet gloom. accent: violet
+52051 Research Site: large skull resting on an old book and unrolled map, skull-lined wall behind, amber-brown. accent: parchment amber
+52052 Sea of Skulls: tunnel of packed skulls, huge bright yellow-orange sun-like light at the end, red-orange. accent: blazing yellow
+back (Catacombs back): swirling red-orange smoke tendril with a skull head over a dim catacomb wall.

@@ -7,6 +7,9 @@ import { choicesFor, selectLocationIndex, type EntityChoice } from '@/arkham/loc
 import { ownInvestigator } from '@/arkham/ownInvestigator'
 import { buildLocationInfo, type LocationInfo } from '@/arkham/locationInfoModel'
 
+/** Scenario-only locations that have no printed card record, so the map names them itself. */
+const UNPRINTED_NAMES: Readonly<Record<string, string>> = { xsky: 'Open Sky' }
+
 export type MapLocationInfo = LocationInfo<EntityChoice['contents']>
 
 /** Builds the map's view of a location from the live game, card records and offered choices. */
@@ -27,7 +30,7 @@ export function useLocationInfo(
     return buildLocationInfo(l, {
       front,
       ownBack,
-      fallbackName: front?.name ?? code,
+      fallbackName: front?.name ?? UNPRINTED_NAMES[code] ?? code,
       playerCount: Object.keys(game().investigators).length,
       myLocationId: ownInvestigator(game(), playerId())?.location ?? null,
       enemyCount: enemiesAt(l).length,

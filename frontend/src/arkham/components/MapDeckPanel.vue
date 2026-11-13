@@ -86,7 +86,7 @@ onBeforeUnmount(() => { document.removeEventListener('pointerdown', onPointerDow
       <h4 class="deck-panel__heading">{{ t('locationMap.deckPanel.decks') }}</h4>
       <p v-if="!decks.length" class="deck-panel__empty">{{ t('locationMap.deckPanel.noDecks') }}</p>
       <div v-for="d in decks" :key="d.key" class="deck-row">
-        <img class="deck-row__back" :src="d.back" alt="" loading="lazy" />
+        <img class="deck-row__back" :src="d.back" :data-image="d.back" alt="" loading="lazy" />
         <div class="deck-row__info">
           <span class="deck-row__name">{{ d.name }}</span>
           <span class="deck-row__count">{{ t('locationMap.deckPanel.cardsLeft', { n: d.count }) }}</span>
