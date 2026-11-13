@@ -9,7 +9,7 @@ import { useCardNames } from '@/arkham/composables/useCardNames'
 import { ownInvestigator } from '@/arkham/ownInvestigator'
 import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
 import type { HemlockOverview } from '@/arkham/hemlock-overview'
-import { islandAspect, islandImage, islandSpotImage, islandWaterImage, vehicleSprite } from '@/arkham/scene-island-sprites'
+import { islandAspect, islandImage, islandRails, islandSpotImage, islandWaterImage, vehicleSprite } from '@/arkham/scene-island-sprites'
 import { riders, sceneVehicles } from '@/arkham/scene-vehicle-model'
 import { roadAdvanced, roadSlides, type RoadGrid } from '@/arkham/high-gear-road-model'
 import SceneVehicle from '@/arkham/components/SceneVehicle.vue'
@@ -591,6 +591,15 @@ function tileClick(l: Location, event: MouseEvent) {
         <img v-for="g in roadGhosts" :key="'ghost-' + g.id" class="island road-ghost" :src="g.src"
           :style="{ left: g.x + '%', top: g.y + '%', width: g.width + 'px', aspectRatio: 1.5, '--drift': -(stageWidth / (roadGrid?.columns ?? 1)) + 'px' }"
           alt="" aria-hidden="true" draggable="false" />
+        <!-- Mine rails: one arm per track printed on a revealed rail tile, turned to its side, over the sprite. -->
+        <template v-for="l in locations" :key="'rails-' + l.id">
+          <template v-if="islandRails(illustratedBoard.islands, l.cardCode, l.revealed)">
+            <img v-for="turn in islandRails(illustratedBoard.islands, l.cardCode, l.revealed)?.turns" :key="turn" class="island rail-arm"
+              :src="islandRails(illustratedBoard.islands, l.cardCode, l.revealed)?.src"
+              :style="{ ...spriteStyle(l), aspectRatio: 1, width: islandWidth(l) * 0.5 + 'px', rotate: turn + 'deg' }"
+              alt="" aria-hidden="true" draggable="false" />
+          </template>
+        </template>
         <!-- A flooded location's water rises over its sprite, in the same frame. -->
         <template v-for="l in locations" :key="'water-' + l.id">
           <img v-if="islandWaterImage(illustratedBoard.islands, l.cardCode, l.revealed, l.floodLevel)" class="island water"
@@ -736,6 +745,7 @@ function tileClick(l: Location, event: MouseEvent) {
 @keyframes road-leave { from { opacity: 1; } to { opacity: 0; transform: translateX(var(--drift)); } }
 @media (prefers-reduced-motion: reduce) { .island.road-ghost { display: none; } }
 .island.targetable { filter: drop-shadow(0 0 10px #f2d27a) drop-shadow(0 8px 14px #0009); }
+.island.rail-arm { filter: none; opacity: 0.9; }
 .island.water { filter: none; transition: opacity 800ms ease-in-out; }
 @starting-style { .island.water { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .island.water { transition: none; } }

@@ -116,6 +116,7 @@ const illustratedBoard = computed(() => {
   return hemlockOverview(
     props.scenario.id, props.scenario.reference, props.scenario.locationLayout,
     locations.value.map((l) => l.label),
+    locations.value.map((l) => l.cardCode),
   )
 })
 

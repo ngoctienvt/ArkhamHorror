@@ -33,10 +33,11 @@ const boards = new Map([
   ['10679a', 'hemlock-vale/vale-day'],
   ['10679b', 'hemlock-vale/vale-night'],
   ['10523', 'hemlock-vale/hemlock-house'],
-  ['10549', 'hemlock-vale/silent-heath'],
-  ['10569', 'hemlock-vale/lost-sister'],
+  ['10501', 'hemlock-vale/written-in-rock-mine'],
+  ['10549', 'hemlock-vale/silent-heath-snowfield'],
+  ['10569', 'hemlock-vale/lost-sister-caverns'],
   ['10588', 'hemlock-vale/thing-in-the-depths'],
-  ['10605', 'hemlock-vale/twisted-hollow'],
+  ['10605', 'hemlock-vale/twisted-hollow-woods'],
   ['10626', 'hemlock-vale/longest-night'],
   ['10651', 'hemlock-vale/fate-of-the-vale'],
 
@@ -49,8 +50,8 @@ const boards = new Map([
   ['09609', 'the-scarlet-keys/on-thin-ice'],
   ['09635', 'the-scarlet-keys/dogs-of-war'],
   ['09660', 'the-scarlet-keys/shades-of-suffering'],
-  ['09681', 'the-scarlet-keys/without-a-trace'],
-  ['09694', 'the-scarlet-keys/congress-of-the-keys'],
+  ['09681', 'the-scarlet-keys/without-a-trace-otherworld'],
+  ['09694', 'the-scarlet-keys/congress-halls'],
 
   // The Path to Carcosa & Return to The Path to Carcosa
   ['03043', 'the-path-to-carcosa/curtain-call'],
@@ -63,8 +64,8 @@ const boards = new Map([
   ['52034', 'the-path-to-carcosa/the-unspeakable-oath'],
   ['03200', 'the-path-to-carcosa/a-phantom-of-truth'],
   ['52040', 'the-path-to-carcosa/a-phantom-of-truth'],
-  ['03240', 'the-path-to-carcosa/the-pallid-mask'],
-  ['52048', 'the-path-to-carcosa/the-pallid-mask'],
+  ['03240', 'the-path-to-carcosa/the-pallid-mask-catacombs'],
+  ['52048', 'the-path-to-carcosa/the-pallid-mask-catacombs'],
   ['03274', 'the-path-to-carcosa/black-stars-rise'],
   ['52054', 'the-path-to-carcosa/black-stars-rise'],
   ['03316', 'the-path-to-carcosa/dim-carcosa'],
@@ -77,7 +78,7 @@ const boards = new Map([
   ['11553', 'the-drowned-city/the-apiary'],
   ['11587', 'the-drowned-city/the-grand-vault'],
   ['11612', 'the-drowned-city/court-of-the-ancients'],
-  ['11639', 'the-drowned-city/obsidian-canyons'],
+  ['11639', 'the-drowned-city/obsidian-canyons-sky'],
   ['11673', 'the-drowned-city/sepulchre-of-the-sleeper'],
   ['11682', 'the-drowned-city/the-doom-of-arkham-part-1'],
   ['11688a', 'the-drowned-city/the-doom-of-arkham-part-2'],
@@ -794,20 +795,6 @@ const villageAnchors: Record<string, Point> = {
   '11620': [62, 86], // East Antechamber
   '11623': [84, 86], // Ancient Altar
 
-  // The Drowned City — Scenario 7: Obsidian Canyons
-  '11650': [18, 24], // Floating Spire
-  '11659': [40, 24], // Dazzling Skyline
-  '11660': [62, 24], // Aerial Waterfall
-  '11652': [84, 24], // Ancient Dome
-  '11658': [28, 52], // Ancient Canyons
-  '11649': [50, 52], // Central Spire
-  '11661': [72, 52], // Magnetic Spires
-  '11648': [18, 80], // R'lyeh Streets
-  '11655': [40, 80], // Obsidian Cliffs
-  '11656': [62, 80], // Suspended Reef
-  '11662': [84, 80], // Glyph Orrery
-  '11651': [50, 16], // Western Wall (Canyons)
-
   // The Drowned City — Scenario 8: Sepulchre of the Sleeper
   '11677': [50, 18], // Story of Ambition
   '11681': [20, 38], // Story of the Voyage
@@ -1150,6 +1137,14 @@ const DEVIL_REEF_ISLANDS = 'img/scenes/the-innsmouth-conspiracy/devil-reef'
 const PIT_ISLANDS = 'img/scenes/the-innsmouth-conspiracy/pit'
 const MAELSTROM_ISLANDS = 'img/scenes/the-innsmouth-conspiracy/maelstrom'
 const FOG_ISLANDS = 'img/scenes/the-innsmouth-conspiracy/fog'
+const PALLID_MASK_ISLANDS = 'img/scenes/the-path-to-carcosa/pallid-mask'
+const OBSIDIAN_CANYONS_ISLANDS = 'img/scenes/the-drowned-city/obsidian-canyons'
+const LOST_SISTER_ISLANDS = 'img/scenes/hemlock-vale/lost-sister'
+const TWISTED_HOLLOW_ISLANDS = 'img/scenes/hemlock-vale/twisted-hollow'
+const WRITTEN_IN_ROCK_ISLANDS = 'img/scenes/hemlock-vale/written-in-rock'
+const SILENT_HEATH_ISLANDS = 'img/scenes/hemlock-vale/silent-heath'
+const WITHOUT_A_TRACE_ISLANDS = 'img/scenes/the-scarlet-keys/without-a-trace'
+const CONGRESS_ISLANDS = 'img/scenes/the-scarlet-keys/congress-of-the-keys'
 export const HIGH_GEAR_ISLANDS = 'img/scenes/the-innsmouth-conspiracy/high-gear'
 const ISLAND_FOLDERS = new Map([
   ['05325', COSMOS_ISLANDS],
@@ -1162,6 +1157,15 @@ const ISLAND_FOLDERS = new Map([
   [':return-to-the-innsmouth-conspiracy:048', MAELSTROM_ISLANDS],
   ['07231', FOG_ISLANDS],
   [':return-to-the-innsmouth-conspiracy:039', FOG_ISLANDS],
+  ['03240', PALLID_MASK_ISLANDS],
+  ['52048', PALLID_MASK_ISLANDS],
+  ['11639', OBSIDIAN_CANYONS_ISLANDS],
+  ['10569', LOST_SISTER_ISLANDS],
+  ['10605', TWISTED_HOLLOW_ISLANDS],
+  ['10501', WRITTEN_IN_ROCK_ISLANDS],
+  ['10549', SILENT_HEATH_ISLANDS],
+  ['09681', WITHOUT_A_TRACE_ISLANDS],
+  ['09694', CONGRESS_ISLANDS],
   ['07198', HIGH_GEAR_ISLANDS],
   [':return-to-the-innsmouth-conspiracy:035', HIGH_GEAR_ISLANDS],
 ])
@@ -1171,18 +1175,18 @@ const WEATHER = new Map<string, NonNullable<HemlockOverview['weather']>>([
   [':return-to-the-innsmouth-conspiracy:031', 'storm-sea'],
 ])
 
-export function hemlockOverview(id: string, reference: string, layout?: readonly string[] | null, activeLabels?: readonly string[]): HemlockOverview | undefined {
+/* Congress of the Keys: the red halls of Act 1 give way to the Otherworld once the tower stands. */
+const CONGRESS_TOWER = new Set(['09712', '09713', '09714'])
+const towerStands = (cardCodes?: readonly string[]) =>
+  !!cardCodes?.some((code) => CONGRESS_TOWER.has(code.replace(/^c/, '').replace(/^(\d{5})[abc]$/, '$1')))
+
+export function hemlockOverview(id: string, reference: string, layout?: readonly string[] | null, activeLabels?: readonly string[], cardCodes?: readonly string[]): HemlockOverview | undefined {
   const scenario = id.replace(/^c/, '')
-  if (scenario === '10501') {
-    // The reference flips when the cave-in replaces the caves with rails.
-    const fixedPassages = !reference.endsWith('b')
-    const art = fixedPassages ? 'written-in-rock-descent' : 'written-in-rock-maze'
-    return { image: `img/scenes/hemlock-vale/${art}.webp`, fixedPassages, village: true }
-  }
   // Some branches of the finale leave the Abyss and rebuild the village board.
   const isNightVale = scenario === '10651' && layout?.some((row) => row.trim().split(/\s+/).includes('diamond'))
   const dreamArt = dreamEatersArt(scenario, layout, activeLabels)
-  const art = dreamArt ?? (isNightVale ? 'hemlock-vale/vale-night' : boards.get(scenario))
+  const isTower = scenario === '09694' && towerStands(cardCodes)
+  const art = dreamArt ?? (isNightVale ? 'hemlock-vale/vale-night' : isTower ? 'the-scarlet-keys/congress-otherworld' : boards.get(scenario))
   if (!art) return undefined
   const islands = dreamArt?.includes('/endless-stairs/') || dreamArt?.includes('/weaver/')
     ? `img/scenes/${dreamArt.slice(0, dreamArt.lastIndexOf('/'))}` : ISLAND_FOLDERS.get(scenario)

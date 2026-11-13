@@ -6,6 +6,8 @@
 
 export type FloodLevel = 'Unflooded' | 'PartiallyFlooded' | 'FullyFlooded'
 
+export type RailDirection = 'North' | 'East' | 'South' | 'West'
+
 type IslandSet = {
   faces: readonly string[]
   /** File name (without folder or extension) of the sprite under this location. */
@@ -18,6 +20,8 @@ type IslandSet = {
   water?: { PartiallyFlooded: string; FullyFlooded: string; dry: ReadonlySet<string> }
   /** Sprites of vehicles that sail between the cells, by card code. */
   vehicles?: Readonly<Record<string, string>>
+  /** Rail arm drawn over a revealed location for each track it carries, and where each card's tracks run. */
+  rails?: { arm: string; directions: Readonly<Record<string, readonly RailDirection[]>> }
 }
 
 /** Card code without the `c` prefix or a double-sided card's a/b/c suffix. */
@@ -167,6 +171,99 @@ const highGear: IslandSet = {
   vehicles: { '07211': '07211', '07212': '07212' },
 }
 
+/* The Pallid Mask: every Catacombs shares one face-down back; the start location is revealed when placed.
+ * Return to's four extra Catacombs (52049-52052) have their own sprites. */
+const pallidMask: IslandSet = {
+  ...spriteSet(own([...range(3247, 3257), ...range(52049, 52052)]), [], 'back'),
+  square: new Set(), // the back is a flat 3:2 slab trimmed to its edges, so links reach it
+  spot: 'back',
+}
+
+/* Obsidian Canyons: every unrevealed Summit shares one back, Open Sky is a faint tile that is never flipped,
+ * and the two Athenaeums share one painting. R'lyeh Streets and Glyph Orrery are single-sided. */
+const obsidianCanyons: IslandSet = {
+  ...spriteSet(
+    { ...own([...range(11648, 11653), ...range(11655, 11662)]), '11654': '11653', xsky: 'open-sky' },
+    [],
+    'summit-back',
+    ['11648', '11662', 'xsky'],
+  ),
+  square: new Set(['summit-back']),
+  spot: 'summit-back',
+}
+
+/* Written in Rock: caves (Act 1) show the Cavern back, rail tiles (after the cave-in) the Rail Tunnel back; Control
+ * Station and Rail Exit are single-sided. The mine cart is a vehicle on the rails. Both backs are flat 3:2 slabs. */
+const writtenInRockBase = spriteSet(own([...range(10508, 10516), ...range(10716, 10720)]), [[range(10510, 10516), 'rail-back']], 'cavern-back', ['10508', '10509'])
+/* The tracks printed on each rail card (the backend's `railIcons`); A and B printings differ, so the code keeps its
+ * suffix. North is up the grid, as the server's `GridUp`. */
+const ROCK_RAILS: Readonly<Record<string, readonly RailDirection[]>> = {
+  '10508': ['North', 'East'], '10509': ['South'],
+  '10510a': ['North', 'West'], '10510b': ['North', 'West'],
+  '10511a': ['East', 'South'], '10511b': ['East', 'South'],
+  '10512a': ['East', 'West'], '10512b': ['North', 'South'],
+  '10513a': ['East', 'West'], '10513b': ['North', 'East', 'South'],
+  '10514a': ['East', 'South', 'West'], '10514b': ['North', 'East', 'South'],
+  '10515': ['North', 'East', 'South', 'West'], '10516': ['North', 'South'],
+}
+const writtenInRock: IslandSet = {
+  ...writtenInRockBase,
+  rails: { arm: 'rail-arm', directions: ROCK_RAILS },
+  faces: [...writtenInRockBase.faces, 'rail-back'], // listed so every file is checked and preloaded
+  square: new Set(),
+  spot: 'cavern-back',
+  vehicles: { '10507': 'mine-cart' },
+}
+
+/* The Silent Heath: the three start locations and the three lairs are always face up; caves are placed face down. */
+const silentHeath: IslandSet = {
+  ...spriteSet(own([...range(10555, 10560), ...range(10716, 10720)]), [], 'cavern-back', range(10555, 10560)),
+  square: new Set(),
+  spot: 'cavern-back',
+}
+
+/* The City of Remnants (Without a Trace, Congress of the Keys): the four Otherworld cards share one face-down back;
+ * A/B/C printings share a painting (baseCode drops the suffix). */
+const REMNANTS = own(range(9747, 9750))
+const withoutATrace: IslandSet = {
+  ...spriteSet({ ...own(['09688', '09689']), ...REMNANTS }, [], 'remnants-back', ['09688']),
+  square: new Set(),
+  spot: 'remnants-back',
+}
+
+/* Congress of the Keys: Lair and Sanctum printings share a painting; the Coterie Sanctuaries are placed face down
+ * with their own back, the Remnants with the shared one. The Scarlet Halls and the Knotted Tower are always up. */
+const congressBase = spriteSet(
+    {
+      ...own(['09704', '09706', '09708', '09710', '09712', '09713', '09714']),
+      '09705': '09704', '09707': '09706', '09709': '09708', '09711': '09710',
+      ...REMNANTS,
+    },
+    [[range(9706, 9711), 'sanctuary-back']],
+    'remnants-back',
+    ['09704', '09705', '09712'],
+  )
+const congressOfTheKeys: IslandSet = {
+  ...congressBase,
+  faces: [...congressBase.faces, 'sanctuary-back'], // listed so every file is checked and preloaded
+  square: new Set(),
+  spot: 'remnants-back',
+}
+
+/* The Lost Sister: every unrevealed cave shares one back; Akwan is single-sided. */
+const lostSister: IslandSet = {
+  ...spriteSet(own([...range(10575, 10582), ...range(10716, 10720)]), [], 'back', ['10575']),
+  square: new Set(['back']),
+  spot: 'back',
+}
+
+/* The Twisted Hollow: every unrevealed Western Woods shares one back (revealed empty Dark woods flip back). */
+const twistedHollow: IslandSet = {
+  ...spriteSet(own(range(10612, 10621)), [], 'back'),
+  square: new Set(['back']),
+  spot: 'back',
+}
+
 const weaverFaces = ['06340', '06341', '06342', '06343', '06344', '06345']
 const stairsFaces = ['06183', '06184', '06185', '06186', '06187', '06188']
 const weaver: IslandSet = {
@@ -189,6 +286,14 @@ const ISLAND_SETS: Readonly<Record<string, IslandSet>> = {
   'img/scenes/the-innsmouth-conspiracy/maelstrom': maelstrom,
   'img/scenes/the-innsmouth-conspiracy/fog': fog,
   'img/scenes/the-innsmouth-conspiracy/high-gear': highGear,
+  'img/scenes/the-path-to-carcosa/pallid-mask': pallidMask,
+  'img/scenes/the-drowned-city/obsidian-canyons': obsidianCanyons,
+  'img/scenes/hemlock-vale/lost-sister': lostSister,
+  'img/scenes/hemlock-vale/written-in-rock': writtenInRock,
+  'img/scenes/hemlock-vale/silent-heath': silentHeath,
+  'img/scenes/the-scarlet-keys/without-a-trace': withoutATrace,
+  'img/scenes/the-scarlet-keys/congress-of-the-keys': congressOfTheKeys,
+  'img/scenes/hemlock-vale/twisted-hollow': twistedHollow,
   'img/scenes/the-dream-eaters/weaver': weaver,
   'img/scenes/the-dream-eaters/endless-stairs': stairs,
 }
@@ -226,6 +331,15 @@ export function vehicleSprite(folder: string, cardCode: string): string | undefi
   return name ? spriteFile(folder, name) : undefined
 }
 
+/** The tracks to draw over this location's sprite (rotated rail arms), or none when it has no rails or is face down. */
+export function islandRails(folder: string, cardCode: string, revealed: boolean): { src: string; turns: number[] } | undefined {
+  const rails = ISLAND_SETS[folder]?.rails
+  const code = cardCode.replace(/^c/, '')
+  const directions = rails?.directions[code] ?? rails?.directions[baseCode(code)]
+  if (!rails || !directions || !(revealed || code === '10508' || code === '10509')) return undefined
+  return { src: spriteFile(folder, rails.arm), turns: directions.map((d) => ({ North: 0, East: 90, South: 180, West: 270 })[d]) }
+}
+
 /** Whether this location has a sprite of its own on this board (not just a card back or a stray rock). */
 export function hasOwnIsland(folder: string, cardCode: string): boolean {
   const set = ISLAND_SETS[folder]
@@ -235,6 +349,6 @@ export function hasOwnIsland(folder: string, cardCode: string): boolean {
 /** Every file an island set refers to, so a test can check each one exists. */
 export function islandSetFiles(folder: string): string[] {
   const set = setOf(folder)
-  const names = new Set([...set.faces, ...set.square, set.spot, ...Object.values(set.water ?? {}).filter((v): v is string => typeof v === 'string'), ...Object.values(set.vehicles ?? {})])
+  const names = new Set([...set.faces, ...set.square, set.spot, ...Object.values(set.water ?? {}).filter((v): v is string => typeof v === 'string'), ...Object.values(set.vehicles ?? {}), ...(set.rails ? [set.rails.arm] : [])])
   return [...names].map((name) => spriteFile(folder, name))
 }

@@ -180,3 +180,24 @@ test('High Gear slides: a new column enters on the right, the rear columns leave
   assert.equal(roadAdvanced(still), false)
   assert.deepEqual(still.shifting, [])
 })
+
+const MASK = 'img/scenes/the-path-to-carcosa/pallid-mask'
+
+test('The Pallid Mask: each Catacombs has its own face, one shared back, Return to extras included', () => {
+  for (const code of ['03247', '03248', '03249', '03250', '03251', '03252', '03253', '03254', '03255', '03256', '03257', '52049', '52050', '52051', '52052']) {
+    assert.equal(islandImage(MASK, `c${code}`, true), `${MASK}/${code}.webp`, code)
+    assert.equal(islandImage(MASK, `c${code}`, false), `${MASK}/back.webp`, code)
+    assert.ok(hasOwnIsland(MASK, `c${code}`), code)
+  }
+  assert.equal(islandAspect(MASK, 'c03250', true), 3 / 2)
+  assert.equal(islandAspect(MASK, 'c03250', false), 3 / 2)
+  assert.equal(islandSpotImage(MASK), `${MASK}/back.webp`)
+  assert.equal(islandWaterImage(MASK, 'c03255', true, 'FullyFlooded'), undefined)
+  assert.equal(islandSetFiles(MASK).length, 16)
+  for (const file of islandSetFiles(MASK)) {
+    const bytes = readFileSync(new URL(`../public/${file}`, import.meta.url))
+    assert.equal(bytes.subarray(8, 12).toString('ascii'), 'WEBP', file)
+  }
+  const board = readFileSync(new URL('../public/img/scenes/the-path-to-carcosa/the-pallid-mask-catacombs.webp', import.meta.url))
+  assert.equal(board.subarray(8, 12).toString('ascii'), 'WEBP')
+})

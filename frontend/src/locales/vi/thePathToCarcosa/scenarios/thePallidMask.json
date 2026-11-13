@@ -25,12 +25,12 @@
   },
   "label": {
     "chooseWhoReadsActII": "Đọc Act II",
-    "doneChoosingWhoReadsActII": "Done choosing who will read Act II",
-    "above": "Place Above",
-    "below": "Place Below",
-    "right": "Place to the Right",
-    "left": "Place to the Left",
-    "doneReadingActII": "Done having investigators read Act II"
+    "doneChoosingWhoReadsActII": "Xong, đã chọn người đọc Act II",
+    "above": "Đặt phía trên",
+    "below": "Đặt phía dưới",
+    "right": "Đặt bên phải",
+    "left": "Đặt bên trái",
+    "doneReadingActII": "Xong, các điều tra viên đã đọc Act II"
   },
   "remembered": {
     "youOpenedASecretPassageway": "You opened a secret passageway."
