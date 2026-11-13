@@ -5,7 +5,7 @@ import ts from 'typescript'
 
 const source = readFileSync(new URL('../src/arkham/offMapCards.ts', import.meta.url), 'utf8')
 const js = ts.transpile(source, { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 })
-const { offMapGroups } = await import('data:text/javascript;base64,' + Buffer.from(js).toString('base64'))
+const { offMapGroups, isolatedLocationIds } = await import('data:text/javascript;base64,' + Buffer.from(js).toString('base64'))
 
 const at = (tag, contents) => ({ placement: { tag, contents } })
 const game = {
@@ -45,4 +45,30 @@ test('groups every off-map card by zone, in order', () => {
 test('nothing off the map gives no groups', () => {
   const plain = { enemies: { e: at('AtLocation', 'l1') }, investigators: {}, locations: {}, stories: {}, assets: {}, treacheries: {} }
   assert.deepEqual(offMapGroups(plain, null), [])
+})
+
+test('a location on no grid cell and with no connection goes to the reference box', () => {
+  const layout = ['gate stairs', '. cells2']
+  const locations = {
+    l1: { label: 'gate', placement: null, connectedLocations: ['l2'] },
+    l2: { label: 'stairs', placement: null, connectedLocations: ['l1'] },
+    cells: { label: 'holdingCells', placement: null, connectedLocations: [] },
+    linked: { label: 'extra', placement: null, connectedLocations: ['l1'] },
+    reached: { label: 'extra2', placement: null, connectedLocations: [] },
+    aside: { label: 'aside', placement: { tag: 'OutOfPlay' }, connectedLocations: [] },
+  }
+  locations.l1.connectedLocations.push('reached')
+  assert.deepEqual(isolatedLocationIds(locations, layout), ['cells'])
+  const game = { enemies: {}, investigators: {}, stories: {}, assets: {}, treacheries: {}, locations }
+  const groups = offMapGroups(game, { locationLayout: layout, meta: {} })
+  assert.deepEqual(groups.find((g) => g.kind === 'reference').locations, ['cells'])
+})
+
+test('isolation needs a grid layout and a label: a lone Study or an unlabelled card is not isolated', () => {
+  const lone = { study: { label: 'study', placement: null, connectedLocations: [] } }
+  assert.deepEqual(isolatedLocationIds(lone, null), [])
+  assert.deepEqual(isolatedLocationIds(lone, []), [])
+  assert.deepEqual(isolatedLocationIds({ x: { label: '', placement: null, connectedLocations: [] } }, ['a b']), [])
+  assert.deepEqual(isolatedLocationIds({ c: { label: 'cosmos', placement: null, connectedLocations: [] } }, ['a b']), [])
+  assert.deepEqual(isolatedLocationIds({ s: { label: 'study', placement: null, connectedLocations: [] } }, ['study']), [])
 })

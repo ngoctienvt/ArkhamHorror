@@ -10,6 +10,9 @@ import type { Point } from '@/arkham/locationGraph'
 import type { Enemy } from '@/arkham/types/Enemy'
 import type { Game } from '@/arkham/types/Game'
 import { MessageType } from '@/arkham/types/Message'
+import { enemyStat } from '@/arkham/enemyStats'
+import GameIcon from '@/arkham/components/GameIcon.vue'
+import { TokenType } from '@/arkham/types/Token'
 
 const props = defineProps<{
   game: Game
@@ -21,28 +24,50 @@ const props = defineProps<{
 }>()
 const emit = defineEmits<{ choose: [index: number] }>()
 const nameOf = useCardNames()
+/* Damage taken over health left, so the legs and the body show how close they are to dying. */
+function wound(enemy: Enemy): { left: number; max: number; pct: number } | null {
+  const max = enemyStat(enemy, 'health', Object.keys(props.game.investigators).length)?.current
+  if (max === undefined) return null
+  const taken = (enemy.tokens[TokenType.Damage] || 0) + enemy.assignedDamage
+  const left = Math.max(0, max - taken)
+  return { left, max, pct: max > 0 ? (100 * left) / max : 0 }
+}
+/* A point a little way along the leg, in the open space between the web centre and the plate. */
+const LEG_REACH = 0.58
+const alongLeg = ([x, y]: Point): Point => [50 + (x - 50) * LEG_REACH, 50 + (y - 50) * LEG_REACH]
 const choices = useGameChoices(() => props.game, () => props.playerId)
 const bodyButton = ref<HTMLButtonElement | null>(null)
 const at = (step: number) => props.positions[WEB_RING[step]] ?? webRingPoint(step)
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
-const turn = (to: number, from: number) => ((to - from) % 360 + 360) % 360
-const rotation = ref(props.spider.rotation)
-watch(() => props.spider.rotation, (to) => { rotation.value += turn(to, rotation.value) })
 
-const legGeometry = computed(() => props.spider.legs.map(({ enemy, step, base }) => {
+const legGeometry = computed(() => props.spider.legs.map(({ enemy, step }) => {
   const [x, y] = at(step)
   const dx = (x - 50) * props.width / 100
   const dy = (y - 50) * props.height / 100
-  const expected = base * 45 + rotation.value
-  const actual = Math.atan2(dx, -dy) * 180 / Math.PI
-  return { enemy, angle: expected + turn(actual, expected - 180) - 180, length: Math.hypot(dx, dy) * 0.80 }
+  const angle = Math.atan2(dx, -dy) * 180 / Math.PI
+  const [bx, by] = alongLeg([x, y])
+  return { enemy, angle, start: [bx, by] as Point, length: Math.hypot(dx, dy) * (1 - LEG_REACH) * 0.85 }
 }))
 
+/* The creature looks between two legs, never along one, so the legs read as pointing at the locations.
+ * Of the gaps between neighbouring legs, the one closest to straight up is used, so it never leans far. */
+const faceAngle = computed(() => {
+  const angles = legGeometry.value.map((leg) => leg.angle).sort((a, b) => a - b)
+  if (angles.length < 2) return 0
+  const gaps = angles.map((a, i) => {
+    const next = i + 1 < angles.length ? angles[i + 1] : angles[0] + 360
+    return Math.round((a + next) / 2 * 100) / 100
+  })
+  const wrap = (a: number) => ((a + 180) % 360 + 360) % 360 - 180
+  return gaps.map(wrap).reduce((best, a) => Math.abs(a) < Math.abs(best) ? a : best)
+})
 const narrow = computed(() => props.width <= 600)
+const spiderSize = computed(() => Math.min(props.height, props.width) * 0.52)
 const onWeb = ([x, y]: Point): Point => [x, Math.min(95, y + (narrow.value ? 8 : 4))]
 const bodyPoint = computed<Point>(() => props.spider.bodyStep < 0 ? [50, 50] : onWeb(at(props.spider.bodyStep)))
-const bodySize = computed(() => Math.min(props.height, props.width)
-  * (props.spider.bodyStep < 0 ? 0.22 : narrow.value ? 0.095 : 0.11))
+// The whole creature, facing the viewer: large in the middle of the web, small when it stands on a location.
+const bodySize = computed(() => props.spider.bodyStep < 0
+  ? spiderSize.value * 0.95 : Math.min(props.height, props.width) * (narrow.value ? 0.13 : 0.16))
 let crawl: Animation | undefined
 watch(() => props.spider.bodyStep, (to, from) => {
   crawl?.cancel()
@@ -76,22 +101,27 @@ function interact(event: MouseEvent, enemy: Enemy) {
 </script>
 
 <template>
-  <button v-for="{ enemy, length, angle } in legGeometry" :key="enemy.id" type="button" class="spider-part leg"
+  <button v-for="{ enemy, length, angle, start } in legGeometry" :key="enemy.id" type="button" class="spider-part leg"
     :class="{ actionable: actionable(enemy) }" :aria-label="nameOf(enemy.cardCode)"
     :data-game-actionable="actionable(enemy) || undefined"
     :data-image="cardImage(enemy.cardCode)" :data-card-code="enemy.cardCode" :data-fx-target="`enemy-${enemy.id}`"
-    :style="{ height: length + 'px', rotate: angle + 'deg' }"
-    @pointerdown.stop @click.stop="interact($event, enemy)">
-    <img :src="`${WEAVER_FOLDER}/legs.webp`" alt="" draggable="false" />
-  </button>
+    :style="{ left: start[0] + '%', top: start[1] + '%', height: length + 'px', rotate: angle + 'deg' }"
+    @pointerdown.stop @click.stop="interact($event, enemy)" />
+  <template v-for="{ enemy, step } in spider.legs" :key="`wound-${enemy.id}`">
+    <button v-if="wound(enemy)" type="button" class="wound" :class="{ actionable: actionable(enemy) }" :title="nameOf(enemy.cardCode)"
+      :data-image="cardImage(enemy.cardCode)" :data-card-code="enemy.cardCode" @pointerdown.stop @click.stop="interact($event, enemy)"
+      :style="{ left: alongLeg(at(step))[0] + '%', top: alongLeg(at(step))[1] + '%' }">
+      <template v-for="w in [wound(enemy)!]" :key="0"><span class="chip-info"><span class="track"><i :style="{ width: w.pct + '%' }"></i></span><em><GameIcon type="health" /> {{ w.left }}/{{ w.max }}</em></span></template>
+    </button>
+  </template>
   <button v-if="spider.body" ref="bodyButton" type="button" class="spider-part body"
     :class="{ actionable: actionable(spider.body) }" :aria-label="nameOf(spider.body.cardCode)"
     :data-game-actionable="actionable(spider.body) || undefined"
     :data-image="cardImage(spider.body.cardCode, spider.body.flipped ? 'b' : '')"
     :data-card-code="spider.body.cardCode" :data-fx-target="`enemy-${spider.body.id}`"
-    :style="{ left: bodyPoint[0] + '%', top: bodyPoint[1] + '%', width: bodySize + 'px', rotate: rotation + 'deg' }"
+    :style="{ left: bodyPoint[0] + '%', top: bodyPoint[1] + '%', width: bodySize + 'px' }"
     @pointerdown.stop @click.stop="interact($event, spider.body)">
-    <img :src="`${WEAVER_FOLDER}/atlach-nacha.webp`" alt="" draggable="false" />
+    <img :src="`${WEAVER_FOLDER}/atlach-nacha-front.webp`" :style="{ rotate: faceAngle + 'deg' }" alt="" draggable="false" />
   </button>
   <Teleport to="body">
     <div v-if="menu" class="spider-menu-backdrop" @click.self="menu = null" @keydown.esc="menu = null">
@@ -105,12 +135,20 @@ function interact(event: MouseEvent, enemy: Enemy) {
 <style scoped>
 .spider-part { position: absolute; margin: 0; border: 0; padding: 0; background: transparent; }
 .spider-part img { display: block; pointer-events: none; }
-.spider-part.actionable { cursor: pointer; filter: drop-shadow(0 0 5px #f2d27a); }
+.spider-part.actionable { cursor: pointer; }
+.body.actionable { filter: drop-shadow(0 0 5px #f2d27a); }
 .spider-part:focus-visible { outline: 2px solid #f2d27a; }
-.leg { left: 50%; bottom: 50%; width: max(20px, 3%); translate: -50% 0; transform-origin: 50% 100%; transition: rotate 500ms ease-in-out; z-index: 3; }
-.leg img { position: absolute; bottom: 0; left: 50%; translate: -50% 0; height: 100%; }
+.leg { width: max(20px, 3%); translate: -50% -100%; transform-origin: 50% 100%; z-index: 5; }
+/* a dashed red line from the health chip to the location the leg stands on */
+.leg::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 0; translate: -50% 0; border-left: 3px dashed #e5484d; filter: drop-shadow(0 0 3px rgba(229, 72, 77, 0.8)); pointer-events: none; }
 .body { translate: -50% -50%; aspect-ratio: 1; transition: rotate 500ms ease-in-out; z-index: 4; }
-.body img { width: 100%; }
+.body img { width: 100%; transition: rotate 500ms ease-in-out; }
+.wound { position: absolute; translate: -50% -50%; z-index: 6; display: flex; align-items: center; gap: 5px; min-width: 76px; padding: 2px 7px; border-radius: 8px; text-align: left; background: rgba(23, 21, 33, 0.88); border: 1px solid #c8aa69; color: #ff9b87; font: 700 12px/1.3 sans-serif; cursor: pointer; }
+.wound.actionable { border-color: #f2d27a; box-shadow: 0 0 8px #f2d27a; }
+.wound .chip-info { display: grid; gap: 3px; flex: 1; min-width: 0; }
+.wound .track { flex: 1; min-width: 16px; height: 4px; background: #5b5a54; border-radius: 3px; overflow: hidden; }
+.wound .track i { display: block; height: 100%; background: currentColor; }
+.wound em { font-style: normal; flex: none; white-space: nowrap; color: #fff4df; }
 .spider-menu-backdrop { position: fixed; inset: 0; z-index: 220; }
 .spider-menu { position: absolute; display: grid; gap: 4px; width: min(18rem, 100vw); max-height: 12rem; overflow: auto; padding: 6px; background: #171521; border: 1px solid #c8aa69; border-radius: 6px; }
 @media (prefers-reduced-motion: reduce) { .leg, .body { transition: none; } }

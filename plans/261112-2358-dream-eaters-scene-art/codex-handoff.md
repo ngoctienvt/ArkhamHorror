@@ -132,7 +132,7 @@ Xem [overlay điểm neo từ code](../../art-src/the-dream-eaters/review/static
 
 ### Kiểm tra tích hợp
 
-Thân Atlach-Nacha dùng PNG v2 và prompt v2. Tâm canvas xuất trùng phần đầu-ngực. Xem [bản ghép thân và chân ở 0° và 45°](../../art-src/the-dream-eaters/review/atlach-nacha-rotation-preview.jpg).
+Atlach-Nacha dùng tranh nguyên con `weaver-atlach-nacha-full-v2-2048.png`, dựng theo reference đầu sọ xanh đen của người dùng và lá 06346. Game dùng thân và bốn lớp chân tách từ tranh này để giữ hình dáng riêng và cho phép ẩn từng chân. `weaver/legs.webp` là sprite chân đơn v3. Vast Web và mặt úp The Great Web dùng v2. Xem [bản ghép xoay và ẩn chân](../../art-src/the-dream-eaters/review/atlach-nacha-rotation-preview.jpg).
 
 - Đủ 32 WebP. Đã kiểm tra kích thước xuất, alpha của sprite và gốc chân ở hàng pixel cuối.
 - 58 test Scene Map qua, `vue-tsc` qua. Bộ test frontend chạy 378 test, 376 qua. Hai lỗi còn lại nằm ở chuỗi kịch bản Haskell và danh mục Ultimatum/Boon tiếng Trung. [Log kiểm tra](verification.log).

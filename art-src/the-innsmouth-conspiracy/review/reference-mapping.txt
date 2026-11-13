@@ -1,0 +1,49 @@
+pit|07047|07047|Tall copper-brown wet rock folds enclose a deep narrow fissure, like a broken upright horseshoe. Dark green-black shallow water in the cleft.
+pit|07048|07048|Broad sloping charcoal-mauve rock hollow, with a long pale rib cage and heap of ivory bones and skulls clustered inside.
+pit|07049|07049|Low ragged mound of dead fish, glistening scales and sharp fins on slick purple-blue rock. Deep blood-red wet reflections.
+pit|07050|07050|Tall stepped cave altar in a steep triangular silhouette, crowned by a small carved fish-faced idol and lit by hot amber candles.
+pit|07051|07051|Long bank of carved rock niches holding weathered green-bronze stone idols, with an azure-teal water ledge beneath.
+pit|07052|07052|Round tilted masonry shaft with a large square-mesh iron grille across its mouth. Ice-blue swirling water and a muted bronze ring.
+maelstrom|07319|07319|Deep seafloor chasm with hanging knife-like stalactites and cobalt-blue spires rising from its sunken basin. Sawtooth silhouette.
+maelstrom|07320|07320|Teal-green underwater vortex above narrow curved cyclopean ruins with bright gold-orange bioluminescent dashes defining its spiral.
+maelstrom|07321|07321|Tall pale green carved walls, a white-lit arch and a tilted broken stone disc in front. Pale mint and mother-of-pearl.
+maelstrom|07322|07322|Jagged carved columns lean over a great heap of gilt treasure and branching golden coral. Wide bottom-heavy silhouette, old gold accent.
+maelstrom|07323|07323|Broad steps through two uneven banks of undersea rock into successive arch-shaped recesses. Electric blue light and vermilion coral shelves.
+maelstrom|07324|07324|Single very tall slender stone statue lifting a carved arm, beside a steep rock face. Indigo-violet accent and narrow silhouette.
+maelstrom|07325|07325|Broad tiered stone temple terraces supporting enormous square columns at distinct heights. Steel-blue with lilac undersea light.
+maelstrom|07326|07326|Fan-shaped chamber with radial channels converging toward a raised circular aperture. Acid-green light follows the channels.
+maelstrom|07327|07327|Two uneven rows of faceted black onyx guardian statues lining a shallow stair, edged in pale aqua light.
+maelstrom|07328|07328|Long narrow causeway framed by bulky spiny columns and bent stone ribs in a dark vaulted hall. Deep navy and lapis. Omit Dagon.
+maelstrom|07329|07329|Pale cyan-white curtain of falling water between heavy tall stone pillars, spilling onto a fan of dark steps. Omit Hydra.
+maelstrom|yhanthlei-back|07321b|Plain pale blue-green paving with worn submerged surfaces and soft silty edges.
+maelstrom|sanctum-back|07324b|Dark olive-black stone tile with a narrow carved outer ledge catching olive glints and a flat plain center.
+fog|07239|07239|Wet wrought-iron gate between rain-dark masonry walls with a small gatehouse wall and ochre trim. Slate gray coastal fog.
+fog|07240|07240|Exposed winding metal stair wraps around a circular lighthouse shaft, with a thin rust-orange rail and cold gray iron treads.
+fog|07241|07241|Compact polygonal glass lantern room framed in metal, lit lemon yellow against cold sea-green condensation.
+fog|07242|07242|Sharp diagonally jutting coastal cliff with tiny lighthouse glint at the far tip. Slate blue rock and broken surf in cold fog.
+fog|07243|07243|Cutaway of dark timber cottage with open door, two windows and short interior stairs. Cream light and chestnut wood.
+fog|07244b|07244b|Heavy planked basement door slightly ajar against an angular surround, with a very thin bright orange slit and dark stone threshold.
+fog|07244|07244|Upper industrial grotto with a silver-gray platform and upright supports around a broad near-white reflection in a shallow pool. High left ledge.
+fog|07245|07245|Lower industrial grotto with a narrow channel between slanted moss-gray rock and a broken row of supports to the right. Muted gray-green.
+fog|07246|07246|Final industrial grotto with two steep steel-blue rock fins enclosing a broad flooded depression. Icy light down into the pit.
+fog|07247|07247|Pale carved stone Hydra idol perched on a squat dark crag, with mossy yellow-olive light and two small jagged rocks.
+fog|07248|07248|Clustered unhatched blue-gray eggs on a wet stone shelf beside a glowing fissure. Burnished gold-orange and thin pale cool water.
+fog|07249|07249|Round reflecting pool bordered by rock and a large round brass sluice grille. Cyan water, dark cave rock and dull bronze.
+fog|07250|07250|Narrow row of tall wet library shelves and ladder, with a dark hall and dark copper-red light along the spines.
+fog|07251|07251|Curved iron pipes, platform rails, old pump housings and bare amber bulbs inside a wide busy machine silhouette.
+fog|07252b|07252b|Curved bank of four barred cell openings in rough masonry, above a short dusty gray-yellow floor. Cold bars and small overhead glints.
+high-gear|07203|07203|Coastal approach across a steep mossy gray headland with pale green-yellow grass and a tiny off-road lighthouse glint.
+high-gear|07204|07204a|Narrow road beneath cobalt-lit pines, a patch of moonlight and tall shadows. Omit visible moon and sky.
+high-gear|07205|07205a|Road wedged between a dark violet cliff face and a low teal seaward drop with hints of cold ocean spray.
+high-gear|07206|07206a|Clear oblique dirt-road fork amid pale fog-gray tree trunks. Gray-ochre ruts and a bare shoulder.
+high-gear|07207|07207a|Four-way crossing on a low exposed slope with scattered leaf litter and silvery blue ridges. Transverse exits in the middle.
+high-gear|07208|07208a|Sharp sideways switchback returning to the regular road ports, in cold lavender light between a raised forest bank and tiny unmarked posts.
+high-gear|07209|07209a|Empty windswept road between leafless interlaced branches. Faint smoke-gray light between trunks and pale bare shoulder.
+high-gear|07210|07210|Long curving detour through a dense bank of trees on a slope. Deep indigo-violet trees and a low stretch of dirt.
+high-gear|mud-tracks|036|Twin puddled wheel ruts in wet dirt, flanked by misty olive conifers and a slender period telegraph pole. Gray-green accent.
+high-gear|straight-section|037|Straight exposed dirt track edged with low yellow-green grass. Soft off-road amber glow along the grass from the card. Omit pavement.
+high-gear|road-back|07204ab|Plain anonymous track beneath soft blue fog with small subdued ochre trees at one edge. Keep both ports clearly visible.
+high-gear|07211|07211a|Front points RIGHT. Low glossy black touring car with swept fenders, round white headlamps and fine silver trim. Empty seats.
+high-gear|07212|07212a|Front points RIGHT. Tall midnight-blue box-cabin sedan with broad bodywork and bright amber headlamps. Empty seats.
+actors|07213|07213|Front points LEFT. Narrow dark 1920s pursuing car with curved fenders and amber headlamps. Small occupant leaning from the near window, secondary to the car.
+actors|07214|07214|Front points LEFT. High-sided blue-charcoal panel van with boxy cab and icy round headlamps. Cracked side cargo door with a small armed silhouette inside.

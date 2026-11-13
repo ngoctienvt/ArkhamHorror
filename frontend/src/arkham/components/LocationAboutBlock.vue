@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { locationExtraLabel } from '@/arkham/locationExtraLabel'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Game } from '@/arkham/types/Game'
@@ -43,11 +44,7 @@ const attached = computed(() => attachmentsOf(props.game, 'location', props.loca
   image: cardImage(a.cardCode),
   effectLines: a.effects.map((e) => effectLabel(e, t)),
 })))
-const extraLabel = (x: string) => {
-  const [kind, value = ''] = x.split(':')
-  // Flood levels arrive as enum names (FullyFlooded…); show them translated.
-  return t(`locationMap.info.extra.${kind}`, { value: kind === 'flood' ? t(`locationMap.info.floodLevels.${value}`) : value })
-}
+const extraLabel = (x: string) => locationExtraLabel(x, t)
 
 const iconOf = (kind: LineKind) => (kind === 'action' || kind === 'fast' || kind === 'reaction') ? iconClasses[kind] : null
 </script>

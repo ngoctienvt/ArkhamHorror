@@ -575,6 +575,7 @@
     "debug": "Debug"
   },
   "locationMap": {
+    "showMap": "Show map",
     "concealed": "{count} concealed card | {count} concealed cards",
     "concealedCard": "Concealed card",
     "chooseConcealed": "Choose the concealed card at {where}",
@@ -822,6 +823,7 @@
       "investigate": "Investigate",
       "extra": {
         "keys": "Keys: {value}",
+        "key": "{value} key",
         "seals": "Seals: {value}",
         "flood": "Flood: {value}",
         "brazier": "Brazier: {value}",
@@ -863,6 +865,7 @@
       "clues": "Clues left / printed",
       "doom": "Doom on the location",
       "movable": "You can move there (edge and ↔ button green)",
+      "lane": "Gold rail: every location on it connects directly to the others",
       "details": "Click a plate to open the location's details"
     },
     "overview": "Overview",
@@ -888,7 +891,7 @@
     "pendingPicks": "{count} choice to make in the panel | {count} choices to make in the panel",
     "keyColor": {
       "BlueKey": "blue", "GreenKey": "green", "RedKey": "red", "YellowKey": "yellow", "PurpleKey": "purple",
-      "BlackKey": "black", "WhiteKey": "white", "UnrevealedKey": "face-down"
+      "BlackKey": "black", "WhiteKey": "white", "UnrevealedKey": "face-down", "TokenKey": "token"
     },
     "tokenChoice": {
       "DamageToken": "Assign damage", "HorrorToken": "Assign horror", "ClueToken": "Clues",

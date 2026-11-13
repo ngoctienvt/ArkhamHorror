@@ -199,3 +199,67 @@ export function mineDescentPositions(
     MINE_DESCENT_ANCHORS[location.label ?? ''] ?? fallback[id],
   ]))
 }
+
+/**
+ * Locations in a straight line that all connect to each other (a row joined by "LocationInRow", say).
+ * Drawing every pair stacks the long links on top of the short ones: their badges land on the middle
+ * locations. So a link A–C is folded away when another location B sits on the segment between them and
+ * A–B and B–C are links too; what is left is one link per gap plus a `lane` (its two far ends and members)
+ * that the map draws as one rail, so the row reads as "all joined".
+ * `foldable` says whether a link may be folded (two-way, no barriers on it); others always stay.
+ */
+export function foldRowLinks(
+  links: readonly [string, string][],
+  at: (id: string) => Point | undefined,
+  foldable: (a: string, b: string) => boolean,
+  tolerance = 1.5,
+): { links: [string, string][]; lanes: { ends: [string, string]; members: string[] }[] } {
+  const key = (a: string, b: string) => (a < b ? `${a}|${b}` : `${b}|${a}`)
+  const linked = new Set(links.map(([a, b]) => key(a, b)))
+  const ids = [...new Set(links.flat())]
+  const folded = new Set<string>()
+  const parent = new Map<string, string>()
+  const root = (id: string): string => {
+    const p = parent.get(id) ?? id
+    if (p === id) return id
+    const r = root(p)
+    parent.set(id, r)
+    return r
+  }
+  const join = (a: string, b: string) => parent.set(root(a), root(b))
+  for (const [a, c] of links) {
+    const pa = at(a)
+    const pc = at(c)
+    if (!pa || !pc || !foldable(a, c)) continue
+    const [dx, dy] = [pc[0] - pa[0], pc[1] - pa[1]]
+    const length = Math.hypot(dx, dy)
+    if (length === 0) continue
+    const between = ids.filter((b) => {
+      if (b === a || b === c || !linked.has(key(a, b)) || !linked.has(key(b, c))) return false
+      const pb = at(b)
+      if (!pb) return false
+      const t = ((pb[0] - pa[0]) * dx + (pb[1] - pa[1]) * dy) / (length * length)
+      const off = Math.abs((pb[0] - pa[0]) * dy - (pb[1] - pa[1]) * dx) / length
+      return t > 0.02 && t < 0.98 && off <= tolerance
+    })
+    if (!between.length) continue
+    folded.add(key(a, c))
+    for (const b of between) { join(a, b); join(b, c) }
+  }
+  const groups = new Map<string, string[]>()
+  for (const id of parent.keys()) {
+    const r = root(id)
+    groups.set(r, [...(groups.get(r) ?? []), id])
+  }
+  const lanes = [...groups.values()].map((members) => {
+    let ends: [string, string] = [members[0], members[1]]
+    let best = -1
+    for (const a of members) for (const b of members) {
+      const [pa, pb] = [at(a)!, at(b)!]
+      const d = Math.hypot(pa[0] - pb[0], pa[1] - pb[1])
+      if (a < b && d > best) { best = d; ends = [a, b] }
+    }
+    return { ends, members: [...members].sort() }
+  })
+  return { links: links.filter(([a, b]) => !folded.has(key(a, b))), lanes }
+}

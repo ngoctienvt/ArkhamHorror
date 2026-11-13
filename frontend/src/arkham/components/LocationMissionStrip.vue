@@ -14,13 +14,19 @@ import MissionStripReference from '@/arkham/components/MissionStripReference.vue
 import MissionStripAttachedThumb from '@/arkham/components/MissionStripAttachedThumb.vue'
 import MissionStripOffMap from '@/arkham/components/MissionStripOffMap.vue'
 import { missionAwaitingSetup } from '@/arkham/missionStripSetup'
+import type { Location } from '@/arkham/types/Location'
+import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
 
 /* The current agenda(s), act(s) and the scenario reference card as one row of panels above the map.
  * Each panel's header line holds "ACT 1 / 3 · Title", the status (doom track / clue track + advance)
  * and a small card thumbnail; below it the scrolling card text with its usable abilities.
  * `collapsed` keeps only the header line. */
-const props = defineProps<{ game: Game; scenario: Scenario; playerId: string; referenceImage?: string; collapsed?: boolean }>()
-const emit = defineEmits<{ (e: 'choose', index: number): void }>()
+const props = defineProps<{
+  game: Game; scenario: Scenario; playerId: string; referenceImage?: string; collapsed?: boolean
+  /** Lets the off-map box draw an isolated location as its sprite (see MissionStripOffMap). */
+  sprites?: { folder: string; infoOf: (l: Location) => MapLocationInfo; enemiesAt: (l: Location) => string[] }
+}>()
+const emit = defineEmits<{ (e: 'choose', index: number): void; (e: 'inspect', location: Location, anchor: HTMLElement | null): void }>()
 
 const { t } = useI18n()
 const { panels, totalDoom, doomLeft, changes } = useMissionStripPanels(() => props.game, () => props.scenario, () => props.playerId)
@@ -175,7 +181,8 @@ function doomState(p: MissionPanel): { level: 'warn' | 'critical'; text: string 
       <AbilityButton v-for="c in p.choices" :key="c.index" :game="game" :ability="c.contents" @choose="emit('choose', c.index)" />
     </MissionStripPanel>
     <MissionStripReference v-if="referenceImage" :game="game" :scenario="scenario" :reference-image="referenceImage" :player-id="playerId" :compact="collapsed" />
-    <MissionStripOffMap :game="game" :scenario="scenario" :playerId="playerId" :compact="collapsed" @choose="emit('choose', $event)" />
+    <MissionStripOffMap :game="game" :scenario="scenario" :playerId="playerId" :compact="collapsed" :sprites="sprites"
+      @choose="emit('choose', $event)" @inspect="(l, anchor) => emit('inspect', l, anchor)" />
   </div>
 </template>
 

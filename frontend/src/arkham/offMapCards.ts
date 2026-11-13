@@ -5,7 +5,8 @@
  *   Without a Trace / Congress of the Keys waiting in the shadows (left / middle / right);
  * - enemies in the pursuit zone, and the top enemy of the Void or of The Depths;
  * - global enemies, stories and assets (in play, at no location);
- * - treacheries lying next to the scenario reference card.
+ * - treacheries lying next to the scenario reference card;
+ * - locations in play that no grid cell holds and no connection reaches (A Light in the Fog's Holding Cells).
  *
  * Import-free at runtime (types only), so tests/offMapCards.test.mjs can load it without the Vue toolchain.
  */
@@ -25,6 +26,26 @@ export interface OffMapGroup {
 }
 
 type Placed = { placement?: { tag: string; contents?: unknown } | null }
+
+type LocationLike = {
+  label?: string
+  placement?: { tag: string } | null
+  connectedLocations?: readonly string[]
+}
+
+/**
+ * Locations on a board with a grid layout that stand outside it: their label is on no cell and nothing connects
+ * to or from them, so the map has nowhere to put them. Boards with no layout have none (a lone Study is not one).
+ */
+export function isolatedLocationIds(locations: Record<string, LocationLike> | undefined, layout: readonly string[] | null | undefined): string[] {
+  if (!layout?.length) return []
+  const cells = new Set(layout.flatMap((row) => row.trim().split(/\s+/)))
+  const placed = Object.entries(locations ?? {}).filter(([, l]) => l.placement == null || l.placement.tag === 'AttachedToLocation')
+  const reached = new Set(placed.flatMap(([, l]) => l.connectedLocations ?? []))
+  return placed
+    .filter(([id, l]) => l.label && l.label !== 'cosmos' && !cells.has(l.label) && !(l.connectedLocations?.length) && !reached.has(id))
+    .map(([id]) => id)
+}
 
 const ORDER: OffMapKind[] = ['shadows', 'pursuit', 'void', 'depths', 'global', 'reference']
 
@@ -58,6 +79,7 @@ export function offMapGroups(game: Game, scenario: Scenario | null | undefined):
   at('global').stories = idsWhere(game.stories as unknown as Record<string, Placed>, isGlobal)
   at('global').assets = idsWhere(game.assets as unknown as Record<string, Placed>, isGlobal)
 
+  at('reference').locations = isolatedLocationIds(game.locations as unknown as Record<string, LocationLike>, scenario?.locationLayout)
   at('reference').treacheries = idsWhere(game.treacheries as unknown as Record<string, Placed>, (p) => p.tag === 'NextToScenarioReference')
 
   return ORDER.map(at).filter((g) => g.locations.length + g.enemies.length + g.investigators.length + g.stories.length + g.assets.length + g.treacheries.length > 0)

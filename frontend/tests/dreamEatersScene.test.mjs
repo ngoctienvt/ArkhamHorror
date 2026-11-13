@@ -67,3 +67,8 @@ test('dynamic map faces and hidden backs select the shipped sprites', () => {
     }
   }
 })
+
+test('Atlach-Nacha is one front-facing image; the leg cards are hit areas, not sprites', () => {
+  const file = readFileSync(new URL(`../public/${WEAVER_FOLDER}/atlach-nacha-front.webp`, import.meta.url))
+  assert.equal(file.toString('ascii', 8, 12), 'WEBP')
+})
