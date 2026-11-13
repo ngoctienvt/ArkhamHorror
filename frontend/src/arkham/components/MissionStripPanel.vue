@@ -71,7 +71,8 @@ const flavorOpen = ref(false)
 .mission--act { --tone: #86c0d2; --tone-text: #b5e0ee; }
 .mission--reference { --tone: #c6a873; --tone-text: var(--accent-gold, #d9b878); }
 
-.mission__head { display: flex; align-items: flex-start; gap: 8px; min-width: 0; min-height: 24px; }
+/* flex: none keeps a wrapped header (eyebrow, title and chips on three lines) from being squeezed under its body. */
+.mission__head { flex: none; display: flex; align-items: flex-start; gap: 8px; min-width: 0; min-height: 24px; }
 .mission__lead { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 3px 10px; }
 /* Eyebrow and title share a line when the title fits beside it; otherwise the whole title moves under
  * the eyebrow at full width instead of squeezing into a narrow column next to it. */

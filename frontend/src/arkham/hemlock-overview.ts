@@ -36,9 +36,11 @@ const boards = new Map([
   ['10501', 'hemlock-vale/written-in-rock-mine'],
   ['10549', 'hemlock-vale/silent-heath-snowfield'],
   ['10569', 'hemlock-vale/lost-sister-caverns'],
-  ['10588', 'hemlock-vale/thing-in-the-depths'],
+  // The Thing in the Depths: a fixed 3x3 grid (TheThingInTheDepths.hs). Locations are shuffled into the cells and flip to
+  // Open Water in place, so each is a sprite over an empty swamp (ISLAND_FOLDERS), not a painted place.
+  ['10588', 'hemlock-vale/thing-in-the-depths-swamp'],
   ['10605', 'hemlock-vale/twisted-hollow-woods'],
-  ['10626', 'hemlock-vale/longest-night'],
+  ['10626', 'hemlock-vale/longest-night-fields'],
   ['10651', 'hemlock-vale/fate-of-the-vale'],
 
   // The Scarlet Keys
@@ -1143,6 +1145,8 @@ const LOST_SISTER_ISLANDS = 'img/scenes/hemlock-vale/lost-sister'
 const TWISTED_HOLLOW_ISLANDS = 'img/scenes/hemlock-vale/twisted-hollow'
 const WRITTEN_IN_ROCK_ISLANDS = 'img/scenes/hemlock-vale/written-in-rock'
 const SILENT_HEATH_ISLANDS = 'img/scenes/hemlock-vale/silent-heath'
+const LONGEST_NIGHT_ISLANDS = 'img/scenes/hemlock-vale/longest-night'
+const THING_IN_THE_DEPTHS_ISLANDS = 'img/scenes/hemlock-vale/thing-in-the-depths'
 const WITHOUT_A_TRACE_ISLANDS = 'img/scenes/the-scarlet-keys/without-a-trace'
 const CONGRESS_ISLANDS = 'img/scenes/the-scarlet-keys/congress-of-the-keys'
 export const HIGH_GEAR_ISLANDS = 'img/scenes/the-innsmouth-conspiracy/high-gear'
@@ -1164,6 +1168,8 @@ const ISLAND_FOLDERS = new Map([
   ['10605', TWISTED_HOLLOW_ISLANDS],
   ['10501', WRITTEN_IN_ROCK_ISLANDS],
   ['10549', SILENT_HEATH_ISLANDS],
+  ['10626', LONGEST_NIGHT_ISLANDS],
+  ['10588', THING_IN_THE_DEPTHS_ISLANDS],
   ['09681', WITHOUT_A_TRACE_ISLANDS],
   ['09694', CONGRESS_ISLANDS],
   ['07198', HIGH_GEAR_ISLANDS],

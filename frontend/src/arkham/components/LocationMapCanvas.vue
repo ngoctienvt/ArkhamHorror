@@ -97,19 +97,12 @@ const pos = (id: string): Point => {
   return [x + dx, y + dy]
 }
 const arrowKey = (key: string) => `${props.game.id}:arrow:${key}`
-// Plates and move buttons can be dragged aside on every full-size board. On a sprite board (Cosmos, Devil Reef)
-// only the plate moves: the grid reflows as cards arrive, slide and leave, so the sprites, water and vehicles stay
-// in their cells (`cellPos`) and the layout never changes; the offset is relative to the location's own cell.
+// Plates and move buttons can be dragged aside on every full-size board. On a sprite board the whole location moves
+// with its plate (sprite, water, rails, vehicles, standees and links); the offset is relative to the location's own
+// cell, so the grid can still reflow as cards arrive, slide and leave.
 const canDrag = computed(() => !props.cutaway && !props.compact)
-/** The grid cell a location's sprite fills on a sprite board, ignoring any plate drag. */
-const cellPos = (id: string): Point => basePos(id)
-/** The standees under a dragged plate stay on the sprite: undo the plate's shift, in pixels of the stage. */
-const floorStyle = (l: Location): Record<string, string> | undefined => {
-  if (!props.illustratedBoard?.islands || !canDrag.value) return undefined
-  const [dx, dy] = offsetOf(offsetKey(l.id))
-  if (!dx && !dy) return undefined
-  return { translate: `${(-dx * stageWidth.value) / 100}px ${(-dy * stageHeight.value) / 100}px` }
-}
+/** Where a location's sprite is drawn on a sprite board: its cell plus any shift the player dragged it by. */
+const cellPos = (id: string): Point => pos(id)
 const startNodeDrag = (l: Location, event: PointerEvent) => {
   if (canDrag.value) beginDrag(event, offsetKey(l.id), 'pct', stage.value)
 }
@@ -243,7 +236,7 @@ const roadFrame = computed(() => {
   const points: Record<string, Point> = {}
   const sprites: Record<string, { src: string; width: number }> = {}
   for (const l of props.locations) {
-    points[l.id] = cellPos(l.id)
+    points[l.id] = basePos(l.id) // the road's slide ignores a plate drag
     sprites[l.id] = { src: islandImage(islandsFolder.value, l.cardCode, l.revealed), width: islandWidth(l) }
   }
   return { points, sprites }
@@ -318,6 +311,7 @@ const vehicles = computed(() => {
   const here = new Set(props.locations.map((l) => l.id))
   return sceneVehicles(props.game, (code) => vehicleSprite(islandsFolder.value, code)).filter((v) => here.has(v.locationId))
 })
+const vehicleIds = computed(() => new Set(vehicles.value.map((vehicle) => vehicle.id)))
 /** Vehicles sharing a location (both of High Gear's cars start on the same tile) are spread side by side. */
 const vehicleSlots = computed(() => {
   const seen = new Map<string, number>()
@@ -642,7 +636,7 @@ function tileClick(l: Location, event: MouseEvent) {
         :data-id="l.id" :data-stair-tile="islandsFolder === STAIRS_FOLDER ? l.id : undefined" :data-road-tile="roadGrid ? l.id : undefined"
         @pointerdown="startNodeDrag(l, $event)" @click.stop="cutaway ? undefined : tileClick(l, $event)">
         <img v-if="!cutaway && !illustratedBoard" class="art" :src="locationImage(l)" alt="" loading="lazy" />
-        <LocationStandees v-if="cutaway" :game="game" :playerId="playerId" :location="l" :enemiesAt="enemiesAt" @choose="emit('choose', $event)" />
+        <LocationStandees v-if="cutaway" :game="game" :playerId="playerId" :location="l" :enemiesAt="enemiesAt" :vehicle-ids="vehicleIds" @choose="emit('choose', $event)" />
         <LocationMarkerPlate v-if="!roomPlates?.[l.id]" :info="infoOf(l)" :size="compact ? 'compact' : 'full'" :game="game" :playerId="playerId" :locationId="l.id"
           :hideMove="movesOnLinks.has(l.id)"
           :data-fx-target="`location-${l.id}`"
@@ -651,8 +645,8 @@ function tileClick(l: Location, event: MouseEvent) {
           @inspect="emit('inspect', l, $event)" @choose="emit('choose', $event)" />
         <LocationConcealedStack v-if="concealedAt" class="node-concealed" :game="game" :playerId="playerId" :cards="concealedAt(l)"
           :size="compact ? 'compact' : 'full'" @choose="emit('choose', $event)" />
-        <div v-if="illustratedBoard" class="location-floor" :style="floorStyle(l)">
-          <LocationStandees :game="game" :playerId="playerId" :location="onGround(l)" :enemiesAt="enemiesAt" @choose="emit('choose', $event)" />
+        <div v-if="illustratedBoard" class="location-floor">
+          <LocationStandees :game="game" :playerId="playerId" :location="onGround(l)" :enemiesAt="enemiesAt" :vehicle-ids="vehicleIds" @choose="emit('choose', $event)" />
         </div>
         <span v-else-if="!cutaway" class="occupants">
           <img v-for="id in onGround(l).investigators" :key="id" class="figure" :class="{ you: id === ownId(), portrait: !compact }"
@@ -660,6 +654,7 @@ function tileClick(l: Location, event: MouseEvent) {
             :style="{ viewTransitionName: moveNameOf(id, l) }" :data-investigator-mini="compact ? undefined : id"
             :data-image="cardImage(game.investigators[id]?.cardCode ?? '')" />
           <LocationEnemyChips :game="game" :playerId="playerId" :location="l" :enemiesAt="enemiesAt" :compact="compact" @choose="emit('choose', $event)" />
+          <LocationStandees story-assets-only :game="game" :playerId="playerId" :location="l" :enemiesAt="enemiesAt" @choose="emit('choose', $event)" />
         </span>
       </div>
       <template v-for="l in locations" :key="'plate-' + l.id">
@@ -718,6 +713,9 @@ function tileClick(l: Location, event: MouseEvent) {
 .node::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 45%, #07100bc0); z-index: 0; pointer-events: none; }
 .node > :not(.art) { position: relative; z-index: 1; }
 .occupants { display: flex; gap: 4px; flex-wrap: wrap; font-size: 0.85rem; font-weight: 700; text-shadow: 0 1px 3px #000; }
+.node:has(.story-assets-only) { overflow: visible; }
+.node:has(.story-assets-only) .art, .node:has(.story-assets-only)::after { border-radius: inherit; }
+.node:has(.story-assets-only .fig.open) { z-index: 50; }
 .figure { width: clamp(26px, 3vw, 40px); aspect-ratio: 1; border-radius: 50%; object-fit: cover; object-position: 50% 20%; border: 2px solid #c9dab1; background: #09100c; }
 .figure.you { border-color: #ffe9a0; box-shadow: 0 0 8px #ffe9a0; }
 /* Concealed mini-cards: in a location's tile under its plate, or on their own in an empty grid position. */
@@ -727,6 +725,7 @@ function tileClick(l: Location, event: MouseEvent) {
 .compact .node, .compact .spot { width: 64px; height: 42px; min-height: 0; padding: 2px; }
 .compact .figure { width: 14px; border-width: 1px; }
 .compact .occupants { font-size: 0.55rem; gap: 2px; }
+.compact .node:has(.story-assets-only) { height: auto; min-height: 42px; }
 @media (max-width: 800px) {
   .node { width: 128px; min-height: 96px; }
   .spot { width: 128px; height: 96px; }

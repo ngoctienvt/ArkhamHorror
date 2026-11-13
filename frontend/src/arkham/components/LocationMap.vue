@@ -35,6 +35,7 @@ import { useLocationInfo } from '@/arkham/composables/useLocationInfo'
 import { barrierCounts, barriersBetween } from '@/arkham/scenarioBarriers'
 import { useTouchMode } from '@/arkham/composables/useTouchMode'
 import { fitScreenOn } from '@/arkham/composables/useFitScreen'
+import { isOffGrid } from '@/arkham/written-in-rock-caves'
 import { dreamGridPositions, WEAVER_FOLDER, weaverEnemies, weaverEnemyIds } from '@/arkham/dream-eaters-scene-model'
 
 const props = defineProps<{
@@ -90,7 +91,8 @@ const placedLocations = computed(() => Object.values(props.game.locations)
   .filter((l) => (l.placement === null || l.placement.tag === 'AttachedToLocation') && l.label !== 'cosmos'))
 // Locations on no grid cell and with no connection (Holding Cells) lie in the off-map box beside the reference card.
 const isolatedIds = computed(() => new Set(isolatedLocationIds(props.game.locations, props.scenario.locationLayout)))
-const locations = computed(() => placedLocations.value.filter((l) => !isolatedIds.value.has(l.id)))
+const locations = computed(() => placedLocations.value.filter((l) => !isolatedIds.value.has(l.id)
+  && !isOffGrid(props.scenario.id, props.scenario.locationLayout, l.label)))
 
 const enemiesAt = (l: Location) => l.enemies.filter((id) => props.game.enemies[id]?.placement.tag === 'AtLocation')
 
@@ -167,8 +169,22 @@ const positions = computed<Record<string, Point>>(() => {
 })
 // Holding Cells is reached only by being captured: the card data lets Lantern Room link to it, but no road leads there.
 const NO_ROAD_CARDS = new Set(['c07252b'])
+// Court of the Ancients: Unstable Foundations joins every room to the ones above and below it for the enemy phase and
+// tags those joins "do not draw" (the card board honours that; they are not roads of the tower). Only this scenario
+// hides tagged joins: elsewhere the tag also marks real roads (A Light in the Fog's row rails, the Western Wall).
+const HIDE_TAGGED_LINKS = new Set(['11612'])
+const hiddenLinkKeys = computed(() => {
+  if (!HIDE_TAGGED_LINKS.has(props.scenario.id.replace(/^c/, ''))) return new Set<string>()
+  return new Set(Object.values(props.game.locations).flatMap((l) => l.modifiers.flatMap((m) => {
+    const type = (m as { type?: { tag?: string; contents?: unknown } }).type
+    if (type?.tag !== 'DoNotDrawConnection' || !Array.isArray(type.contents)) return []
+    const [a, b] = type.contents as [string, string]
+    return [`${a}:${b}`, `${b}:${a}`]
+  })))
+})
 const links = computed(() => locationLinks(graph.value).filter(([a, b]) =>
-  ![a, b].some((id) => NO_ROAD_CARDS.has(props.game.locations[id]?.cardCode ?? ''))))
+  !hiddenLinkKeys.value.has(`${a}:${b}`)
+  && ![a, b].some((id) => NO_ROAD_CARDS.has(props.game.locations[id]?.cardCode ?? ''))))
 
 // Empty grid slots a choice can fill (placing a location), drawn as dashed outlines.
 const gridSpots = computed(() => {

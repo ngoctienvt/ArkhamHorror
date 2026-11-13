@@ -26,7 +26,8 @@ type IslandSet = {
 
 /** Card code without the `c` prefix or a double-sided card's a/b/c suffix. */
 function baseCode(cardCode: string): string {
-  return cardCode.replace(/^c/, '').replace(/^(\d{5})[abc]$/, '$1')
+  const code = cardCode.replace(/^c/, '')
+  return OPEN_WATER_FACES.includes(code) ? code : code.replace(/^(\d{5})[abc]$/, '$1')
 }
 
 /** `<folder>/<name>.webp`; a name may climb into a sibling folder (`../devil-reef/07102`) to share its sprite. */
@@ -120,6 +121,8 @@ function spriteSet(
 const range = (from: number, to: number): string[] =>
   Array.from({ length: to - from + 1 }, (_, i) => String(from + i).padStart(5, '0'))
 const own = (codes: readonly string[]): Record<string, string> => Object.fromEntries(codes.map((c) => [c, c]))
+/** The Thing in the Depths' Open Water cards: they keep their `b`, since `a` and `b` are different pictures there. */
+const OPEN_WATER_FACES: readonly string[] = range(10593, 10599).map((code) => `${code}b`)
 const sharedWater = (dry: readonly string[] = []) => ({ ...SHARED_WATER, dry: new Set(dry) })
 
 /* The Pit of Despair: the cave the investigators wake in is face up; every other card is a Tidal Tunnel until
@@ -251,6 +254,25 @@ const congressOfTheKeys: IslandSet = {
 }
 
 /* The Lost Sister: every unrevealed cave shares one back; Akwan is single-sided. */
+/* The Longest Night: The Farmhouse is always face up; the five Atwood Farm buildings start face down on one farm
+ * back, the Outer Fields on one field back. */
+const longestNight: IslandSet = {
+  ...spriteSet(own(range(10630, 10640)), [[range(10631, 10635), 'farm-back']], 'field-back', ['10630']),
+  square: new Set(),
+  spot: 'field-back',
+}
+/* The Thing in the Depths: each bog location (a) has a separate Open Water card on its other side (b) that replaces it
+ * in the same cell, so the b codes keep their suffix (see baseCode) and each has a sprite of its own. No location is
+ * ever face down; a card of another scenario (debug-placed) gets the plain water patch `back`. */
+const thingInTheDepthsLand = range(10593, 10599)
+const thingInTheDepths: IslandSet = {
+  ...spriteSet(
+    own([...thingInTheDepthsLand, ...OPEN_WATER_FACES]), [], 'back',
+    [...thingInTheDepthsLand, ...OPEN_WATER_FACES],
+  ),
+  square: new Set(),
+  spot: 'back',
+}
 const lostSister: IslandSet = {
   ...spriteSet(own([...range(10575, 10582), ...range(10716, 10720)]), [], 'back', ['10575']),
   square: new Set(['back']),
@@ -289,6 +311,8 @@ const ISLAND_SETS: Readonly<Record<string, IslandSet>> = {
   'img/scenes/the-path-to-carcosa/pallid-mask': pallidMask,
   'img/scenes/the-drowned-city/obsidian-canyons': obsidianCanyons,
   'img/scenes/hemlock-vale/lost-sister': lostSister,
+  'img/scenes/hemlock-vale/longest-night': longestNight,
+  'img/scenes/hemlock-vale/thing-in-the-depths': thingInTheDepths,
   'img/scenes/hemlock-vale/written-in-rock': writtenInRock,
   'img/scenes/hemlock-vale/silent-heath': silentHeath,
   'img/scenes/the-scarlet-keys/without-a-trace': withoutATrace,

@@ -13,6 +13,7 @@ Tính năng **Scene Map (Bản đồ toàn cảnh trực quan)** là một bư�
 - **Góc nhìn toàn cảnh từ trên cao (High-Angle Bird's-Eye / Isometric)**: Dành cho các kịch bản ngoại cảnh, đường phố thị trấn Arkham, bờ biển Innsmouth, nghĩa trang u ám, khu rừng cấm hay các chiều không gian siêu thực.
 
 ### 2. Standee nhân vật động (Dynamic Investigator Standees)
+- Story Asset hình người hoặc thú có sprite sẽ xuất hiện dưới dạng standee khi đặt tại hoặc gắn vào địa điểm. Khi chuyển vào khu vực chơi của một điều tra viên, lá bài chỉ hiển thị trong khu vực chơi đó. Bấm vào standee để chọn lá bài hoặc mở các khả năng hiện có.
 - Điều tra viên không còn là tên bài khô khan mà xuất hiện dưới dạng **Standee nhân vật** đứng trực tiếp tại vị trí địa điểm.
 - **Hiệu ứng viền sáng (Action Glow)**: Nhân vật đang trong lượt hành động sẽ có viền sáng nổi bật, giúp theo dõi trạng thái bàn chơi trong các ván chơi nhiều người (Multiplayer) dễ dàng.
 

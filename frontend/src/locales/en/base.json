@@ -1013,7 +1013,8 @@
     "placeHere": "Place a location here",
     "vehicle": {
       "aboard": "{name}: {names} aboard",
-      "empty": "{name}: nobody aboard"
+      "empty": "{name}: nobody aboard",
+      "facing": {"north": "Facing north", "east": "Facing east", "south": "Facing south", "west": "Facing west"}
     }
   },
   "location": {

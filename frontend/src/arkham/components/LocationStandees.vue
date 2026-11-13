@@ -12,11 +12,14 @@ import type { Game } from '@/arkham/types/Game'
 import type { Location } from '@/arkham/types/Location'
 import { TokenType } from '@/arkham/types/Token'
 import { cardArt, cardImage, investigatorCardArt, portraitImage } from '@/arkham/cardImages'
+import { imgsrc } from '@/arkham/helpers'
 import { useCardNames } from '@/arkham/composables/useCardNames'
-import { spriteFor } from '@/arkham/sceneSprites'
+import { spriteFor, storyAssetSpriteFor } from '@/arkham/sceneSprites'
+import { sceneLocationAssets } from '@/arkham/scene-location-assets'
 import { enemyStat } from '@/arkham/enemyStats'
 import { ownInvestigator } from '@/arkham/ownInvestigator'
 import { useCardStore } from '@/stores/cards'
+import { useDbCardStore } from '@/stores/dbCards'
 import { investigatorMovementName } from '@/arkham/investigatorMovement'
 import { beginDrag, offsetOf } from '@/arkham/composables/useMapDrag'
 import { CARD_FLIGHT_ATTR, cardFlightStyle, useCardFlightState } from '@/arkham/cardFlight'
@@ -33,11 +36,16 @@ import { CARD_FLIGHT_ATTR, cardFlightStyle, useCardFlightState } from '@/arkham/
  * - `cardId` on an enemy's picture: where a revealed card lands (cardFlight.ts).
  *   On the picture rather than the figure, which already holds the movement name.
  * - `data-investigator-mini` + `.portrait`: the smoke puff's anchor. */
-const props = defineProps<{ game: Game; playerId: string; location: Location; enemiesAt: (l: Location) => string[] }>()
+const props = defineProps<{
+  game: Game; playerId: string; location: Location; enemiesAt: (l: Location) => string[]
+  storyAssetsOnly?: boolean
+  vehicleIds?: ReadonlySet<string>
+}>()
 const emit = defineEmits<{ (e: 'choose', index: number): void }>()
 
 const nameOf = useCardNames()
 const cardStore = useCardStore()
+const dbCards = useDbCardStore()
 const flightState = useCardFlightState()
 
 type Fig = {
@@ -46,15 +54,22 @@ type Fig = {
   /* The whole card, for the card overlay on hover. */
   cardImage: string
   health: Meter | null; sanity: Meter | null
+  storyAsset?: boolean
 }
 /* A room only has space for a few enemy figures; the rest are listed in a "+N" badge instead of vanishing. */
 const MAX_ENEMY_FIGURES = 4
 const meter = (max: number, taken: number): Meter => ({ max, left: Math.max(0, max - taken) })
+const failedSprites = ref(new Set<string>())
+function fallbackFromSprite(src: string | null) {
+  if (!src) return
+  failedSprites.value.add(src)
+  if (import.meta.env.DEV) console.debug('[Arkham map] Story Asset sprite unavailable', src)
+}
 
 const figures = computed<Fig[]>(() => {
   const l = props.location
   const mine = ownInvestigator(props.game, props.playerId)?.id
-  const people = l.investigators.flatMap((id): Fig[] => {
+  const people = (props.storyAssetsOnly ? [] : l.investigators).flatMap((id): Fig[] => {
     const i = props.game.investigators[id]
     if (!i) return []
     const art = investigatorCardArt(i)
@@ -67,7 +82,7 @@ const figures = computed<Fig[]>(() => {
       health: meter(i.health, i.tokens[TokenType.Damage] ?? 0), sanity: meter(i.sanity, i.tokens[TokenType.Horror] ?? 0),
     }]
   })
-  const monsters = props.enemiesAt(l).slice(0, MAX_ENEMY_FIGURES).flatMap((id): Fig[] => {
+  const monsters = (props.storyAssetsOnly ? [] : props.enemiesAt(l).slice(0, MAX_ENEMY_FIGURES)).flatMap((id): Fig[] => {
     const e = props.game.enemies[id]
     if (!e) return []
     const damage = (e.tokens[TokenType.Damage] ?? 0) + e.assignedDamage
@@ -83,23 +98,35 @@ const figures = computed<Fig[]>(() => {
       health: max === null ? null : meter(max, damage), sanity: null,
     }]
   })
-  /* Character assets (residents, allies) standing at the location: anything with health or sanity printed. */
-  const residents = l.assets.flatMap((id): Fig[] => {
-    const a = props.game.assets[id]
-    if (!a || (a.health === null && a.sanity === null)) return []
+  const assets = sceneLocationAssets(l, props.game.assets).flatMap((a): Fig[] => {
+    const { id } = a
+    if (props.vehicleIds?.has(id)) return []
     const definition = cardStore.cards.find((card) => card.cardCode === a.cardCode)
-    const art = cardArt(definition?.art ?? a.cardCode, a.flipped ? 'b' : '')
+    const front = cardArt(definition?.art ?? a.cardCode)
+    const storySprite = storyAssetSpriteFor(a.cardCode) ?? storyAssetSpriteFor(front)
+    const storyAsset = storySprite !== null
+    if (!storyAsset && (props.storyAssetsOnly || (a.health === null && a.sanity === null))) return []
+    let art: string | null = cardArt(front, a.flipped ? 'b' : '')
+    if (storyAsset && a.flipped) {
+      const backCode = front.endsWith('a') ? `${front.slice(0, -1)}b` : `${front}b`
+      const back = dbCards.getDbCard(backCode)
+      art = definition?.otherSide ?? (definition?.doubleSided || back?.code === backCode || back?.double_sided ? backCode : null)
+    }
+    const image = art ? cardImage(art) : imgsrc('backs/back_player.jpg')
+    const src = !a.flipped && storySprite ? storySprite : art ? spriteFor(art) : null
+    const name = storyAsset && a.flipped ? (art ? nameOf(art) : '') : nameOf(a.cardCode)
     return [{
-      id, kind: 'asset', tone: 'asset', name: nameOf(a.cardCode), src: spriteFor(art), art: cardImage(art), you: false, exhausted: a.exhausted,
-      moveName: undefined, cardId: a.cardId, cardImage: cardImage(art), note: null,
+      id, kind: 'asset', tone: 'asset', name, src: src && !failedSprites.value.has(src) ? src : null,
+      art: image, you: false, exhausted: a.exhausted, storyAsset,
+      moveName: undefined, cardId: a.cardId, cardImage: image, note: null,
       health: a.health === null ? null : meter(a.health, (a.tokens[TokenType.Damage] ?? 0) + a.assignedHealthDamage),
       sanity: a.sanity === null ? null : meter(a.sanity, (a.tokens[TokenType.Horror] ?? 0) + a.assignedSanityDamage),
     }]
   })
-  return [...people, ...residents, ...monsters]
+  return [...people, ...assets, ...monsters]
 })
 /* Enemies past the figure limit: named in the badge's tooltip, each clickable from its menu. */
-const extraEnemies = computed(() => props.enemiesAt(props.location).slice(MAX_ENEMY_FIGURES)
+const extraEnemies = computed(() => props.storyAssetsOnly ? [] : props.enemiesAt(props.location).slice(MAX_ENEMY_FIGURES)
   .flatMap((id) => props.game.enemies[id] ? [{ id, name: nameOf(props.game.enemies[id].cardCode) }] : []))
 // A figure can be dragged to a spot the player finds easier to follow; it still belongs to this location.
 const figKey = (id: string) => `${props.game.id}:${props.location.id}:${id}`
@@ -149,7 +176,7 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
 </script>
 
 <template>
-  <span class="standees">
+  <span v-if="figures.length || extraEnemies.length" class="standees" :class="{ 'story-assets-only': storyAssetsOnly }">
     <span v-for="f in figures" :key="f.id" class="fig" :class="[f.kind, f.tone, { you: f.you, exhausted: f.exhausted, actionable: actionable(f.id) || assignable(f), assign: assignable(f), trigger: triggerWindow && actionable(f.id), open: openMenu === f.id }]"
       :style="{ viewTransitionName: f.moveName, translate: figShift(f.id) }" @pointerdown="startFigDrag(f.id, $event)" :data-investigator-mini="f.kind === 'investigator' ? f.id : undefined" :data-fx-target="`${f.kind}-${f.id}`"
       :data-image="openMenu === f.id ? undefined : f.cardImage" @click.stop="clickFig(f)">
@@ -164,8 +191,9 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
       <FigureVitalsHud v-if="f.health || f.sanity" :health="f.health" :sanity="f.sanity" />
       <span v-else-if="f.note" class="hud"><span class="meter hp"><GameIcon type="damage" /> {{ f.note }}</span></span>
       <img v-if="f.src" class="figure portrait" :src="f.src" :alt="f.name" draggable="false"
+        @error="f.storyAsset && fallbackFromSprite(f.src)"
         :[CARD_FLIGHT_ATTR]="f.cardId" :style="cardFlightStyle(flightState, f.cardId)" />
-      <span v-else class="crop portrait" role="img" :aria-label="f.name"
+      <span v-else class="crop portrait" :class="{ 'story-asset-crop': f.storyAsset }" role="img" :aria-label="f.name"
         :[CARD_FLIGHT_ATTR]="f.cardId" :style="[{ backgroundImage: `url(${f.art})` }, cardFlightStyle(flightState, f.cardId)]"></span>
     </span>
     <span v-if="extraEnemies.length" class="more-enemies" :class="{ open: openMenu === MORE_MENU, actionable: extraEnemies.some((e) => actionable(e.id)), trigger: triggerWindow && extraEnemies.some((e) => actionable(e.id)) }" data-no-card-overlay
@@ -256,6 +284,13 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
 .fig-menu__name { font: 600 0.78rem var(--ui-serif, serif); color: #f0d9a8; text-align: center; }
 .fig-menu :deep(button) { width: 100%; }
 .crop { display: block; width: clamp(40px, 8cqh, 72px); aspect-ratio: 1; border-radius: 50%; border: 2px solid #d99e8e; background: #1a2620 no-repeat 50% 17% / 165% auto; }
+.story-asset-crop { border-radius: 24% 24% 16% 16%; }
+.story-assets-only { display: inline-flex; flex-wrap: wrap; gap: 3px; }
+.story-assets-only .figure { height: clamp(26px, 3vw, 40px); }
+.story-assets-only .crop { width: clamp(26px, 3vw, 40px); border-width: 2px; }
+.compact .story-assets-only .figure { height: 18px; }
+.compact .story-assets-only .crop { width: 18px; border-width: 1px; }
+.compact .story-assets-only :deep(.hud) { display: none; }
 .hud { display: grid; gap: 2px; min-width: 56px; padding: 3px 5px; background: #111815ef; border: 1px solid #9f8d605c; border-radius: 4px; font: 600 10px/1.15 system-ui, sans-serif; white-space: nowrap; text-shadow: none; }
 .hud .meter { display: flex; align-items: center; gap: 3px; font-variant-numeric: tabular-nums; }
 .hud .meter.hp { color: #ff9b87; }
