@@ -164,7 +164,10 @@ const positions = computed<Record<string, Point>>(() => {
     (board.house ? hemlockHousePosition(location.label) : hemlockVillagePosition(location.cardCode, board.anchors, location.label)) ?? fallback[location.id],
   ]))
 })
-const links = computed(() => locationLinks(graph.value))
+// Holding Cells is reached only by being captured: the card data lets Lantern Room link to it, but no road leads there.
+const NO_ROAD_CARDS = new Set(['c07252b'])
+const links = computed(() => locationLinks(graph.value).filter(([a, b]) =>
+  ![a, b].some((id) => NO_ROAD_CARDS.has(props.game.locations[id]?.cardCode ?? ''))))
 
 // Empty grid slots a choice can fill (placing a location), drawn as dashed outlines.
 const gridSpots = computed(() => {
