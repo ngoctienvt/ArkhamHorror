@@ -42,14 +42,17 @@ instance RunMessage TheWeaverOfTheCosmos where
       push (RequestChaosTokens (toSource attrs) (Just iid) (Reveal 1) SetAside)
       pure a
     RequestedChaosTokens source (Just iid) tokens | isSource attrs source -> do
-      for_ tokens \token -> do
-        ChaosTokenValue _ tokenMod <- getChaosTokenValue iid token.face ()
-        case tokenMod of
-          NegativeModifier n -> do
-            atlachNacha <- selectJust $ IncludeOmnipotent $ enemyIs Enemies.atlachNacha
-            push $ HandleAbilityOption iid (toSource atlachNacha) n
-          _ -> pure ()
-      push $ ResetChaosTokens source
+      -- The tokens are still focused here, so the prompt lets the player see what was drawn
+      -- before Atlach-Nacha reacts to it.
+      continue iid do
+        for_ tokens \token -> do
+          ChaosTokenValue _ tokenMod <- getChaosTokenValue iid token.face ()
+          case tokenMod of
+            NegativeModifier n -> do
+              atlachNacha <- selectJust $ IncludeOmnipotent $ enemyIs Enemies.atlachNacha
+              push $ HandleAbilityOption iid (toSource atlachNacha) n
+            _ -> pure ()
+        push $ ResetChaosTokens source
       pure a
     UseThisAbility _ (isSource attrs -> True) 3 -> do
       advanceVia #other attrs attrs

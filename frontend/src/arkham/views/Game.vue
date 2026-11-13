@@ -146,6 +146,8 @@ import EventActAdvanceBarrier from '@/arkham/components/EventActAdvanceBarrier.v
 import StandaloneScenario from '@/arkham/components/StandaloneScenario.vue'
 import StoryQuestion from '@/arkham/components/StoryQuestion.vue'
 import AchievementToast from '@/arkham/components/AchievementToast.vue'
+import ChaosRevealPopup from '@/arkham/components/ChaosRevealPopup.vue'
+import { lastSeq, revealsAfter, type ChaosReveal } from '@/arkham/chaosRevealLog'
 import AdvanceReader from '@/arkham/components/AdvanceReader.vue'
 import { advancesBetween, type AdvanceReading } from '@/arkham/advanceReading'
 import { achievementEntryScope } from '@/arkham/achievements'
@@ -2640,6 +2642,25 @@ const skillTestSummaryState = useSkillTestSummary()
 watch([gameLog, () => skillTestSummaryState.summary.value?.testId], ([entries, testId]) => {
   setSkillTestSummaryLog(testId ? skillTestLogEntries(entries, testId) : [])
 })
+/* A token revealed outside a skill test (an act's Forced ability) is gone from the table before the
+ * client gets a state to draw, so it is put up from the log line instead. The first log seen is
+ * history and never plays; a skill test shows its own tokens. */
+const chaosReveal = ref<ChaosReveal | null>(null)
+let revealSeen: number | null = null
+watch(gameLog, (entries) => {
+  if (revealSeen === null) {
+    if (entries.length > 0) revealSeen = lastSeq(entries)
+    return
+  }
+  const fresh = revealsAfter(entries, revealSeen)
+  revealSeen = Math.max(revealSeen, lastSeq(entries))
+  if (fresh.length === 0 || game.value?.skillTest) return
+  chaosReveal.value = {
+    seq: fresh[fresh.length - 1].seq,
+    investigator: fresh[fresh.length - 1].investigator,
+    faces: fresh.flatMap((reveal) => reveal.faces),
+  }
+})
 // The summary confirmed (or cleared): the update held behind it reaches the board now.
 watch(() => skillTestSummaryState.summary.value, (summary) => {
   if (summary || !heldForSummary) return
@@ -3945,6 +3966,7 @@ onUnmounted(() => {
           :playerId="playerId"
           @choose="choose"
         />
+        <ChaosRevealPopup :reveal="chaosReveal" @close="chaosReveal = null" />
         <div
           id="game-log-sidebar"
           class="sidebar"
