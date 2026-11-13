@@ -556,7 +556,7 @@
       "pursuit": "Truy đuổi",
       "void": "Hư Không (The Void)",
       "depths": "Vực Sâu (The Depths)",
-      "global": "Đang trong màn chơi",
+      "global": "In Play",
       "reference": "Cạnh thẻ tham chiếu"
     },
     "concealedInShadows": "trong bóng tối",
@@ -1013,7 +1013,8 @@
     "placeHere": "Đặt một địa điểm ở đây",
     "vehicle": {
       "aboard": "{name}: {names} đang ở trên",
-      "empty": "{name}: không có ai trên"
+      "empty": "{name}: không có ai trên",
+      "facing": {"north": "Hướng bắc", "east": "Hướng đông", "south": "Hướng nam", "west": "Hướng tây"}
     }
   },
   "location": {

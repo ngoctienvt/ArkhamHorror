@@ -1032,6 +1032,227 @@ const SPRITE_BY_CODE: Record<string, string> = {
 
 export function spriteFor(code: string): string | null {
   const art = cardArt(code)
-  if (!Object.hasOwn(SPRITE_BY_CODE, art)) return null
+  if (!Object.hasOwn(SPRITE_BY_CODE, art)) return storyAssetSpriteFor(art)
   return `img/scenes/actors/${SPRITE_BY_CODE[art]}.webp`
+}
+
+// Only card codes with a character or creature standee belong here. Keep this separate from the
+// actor lookup so a sprite for an item or enemy does not create an asset standee.
+const STORY_ASSET_SPRITES: Record<string, string> = {
+  '01117': '01117', // Lita Chantler
+  '02040': '02040', // Henry Armitage
+  '02060': '02060', // Jazz Mulligan
+  '02061': '02061', // Warren Rice
+  '02079': '02079', // Peter Clover
+  '02080': '02080', // Francis Morgan
+  '02138': '02138', // Harold Walsted
+  '02139': '02139', // Adam Lynch
+  '02179': '02179', // Helpless Passenger
+  '02217': '02217', // Zebulon Whateley
+  '02218': '02218', // Earl Sawyer
+  '03076a': '03076a', // Constance Dumaine
+  '03077': '03077', // Jordan Perry
+  '03078': '03078', // Ishimaru Haruko
+  '03079': '03079', // Sebastien Moreau
+  '03080': '03080', // Ashleigh Clarke
+  '03141': '03141', // Mr. Peabody
+  '03182a': '03182a', // Daniel Chesterfield
+  '04051': '04051', // Alejandro Vela
+  '04118b': '04118b', // Harlan Earnstone
+  '04125b': '04125b', // Henry Deveau
+  '04134b': '04134b', // Maria DeSilva
+  '04147': '04147', // Ichtaca
+  '05227': '05227', // August Lindquist
+  '05258': '05258', // Gavriella Mizrah
+  '05259': '05259', // Jerome Davids
+  '05260': '05260', // Penny White
+  '05261': '05261', // Valentino Rivas
+  '06059': '06059', // Randolph Carter
+  '06079': '06059',
+  '06080': '06080', // Shivani Maheswaran
+  '06144': '06144', // Virgil Gray
+  '06224': '06144',
+  '06266': '06266', // Richard Upton Pickman
+  '07082': '07082', // Thomas Dawson
+  '07083': '07083', // Elina Harper
+  '07150': '07150', // Joe Sargant
+  '08587': '08714', // William Dyer
+  '08588': '08715', // Danforth
+  '08589': '08716', // Eliyah Ashevak
+  '08590': '08717', // Mala Sinha
+  '08591': '08718', // Avery Claypool
+  '08592': '08719', // James Fredericks
+  '08593': '08720', // Amy Kensler
+  '08594': '08721', // Roald Ellsworth
+  '08595': '08722', // Takada Hiroko
+  '08714': '08714',
+  '08715': '08715',
+  '08716': '08716',
+  '08717': '08717',
+  '08718': '08718',
+  '08719': '08719',
+  '08720': '08720',
+  '08721': '08721',
+  '08722': '08722',
+  '08738': '08738', // Anyu
+  '09557b': '09557b', // La Chica Roja
+  '09584': '09584', // Ece Şahin
+  '09607b': '09607b', // Desiderio Delgado Álvarez
+  '09625b': '09625b', // Thorne
+  '09654b': '09654b', // The Claret Knight
+  '09692': '09692', // The Red-Gloved Man
+  '09693': '09693', // Aliki Zoni Uperetria
+  '09762': '09762', // Inspector Flint
+  '09763': '09763', // Agent Ari Quinn
+  '09764': '09764', // Dewi Irawan
+  '10566': '10566', // Crystal Remains, the Child
+  '10567': '10567', // Crystal Remains, the Father
+  '10568': '10568', // Crystal Remains, the Mother
+  '10641': '10641', // The Captives
+  '10642': '10642', // Ajax
+  '10693': '10693', // Mother Rachel
+  '10694': '10694', // Leah Atwood
+  '10695': '10695', // Simeon Atwood
+  '10696': '10696', // William Hemlock
+  '10697': '10697', // River Hawthorne
+  '10698': '10698', // Gideon Mizrah
+  '10699': '10699', // Judith Park
+  '10700': '10700', // Theo Peters
+  '10701': '10701', // Bertie Musgrave
+  '10702': '10702', // Rosa Marquez
+  '10703': '10703', // Helen Peters
+  '11568': '11568', // Maria Rivera
+  '11687': '11687', // John Raymond Legrasse
+  '11765': '11765', // Ruby Standish
+  '11766': '11766', // Andy Van Nortwick
+  '12115': '02040', // Henry Armitage, Core 2026
+  '13029': '13029', // Detective Reynolds
+  '13093a': '13093a', // Chosen of Zburamoarte
+  '13093b': '13093a',
+  '13105': '13105', // Charlie Kane
+  '04256': '04256', // The Custodian
+  '06225': '06225', // The Captain
+  '51031': '51031', // Engineer
+  '51052': '51052', // Naomi O'Bannion
+  '52025': '52025', // Dianne Devine
+  '52026': '52026', // Party Guest
+  '53030b': '53030b', // Merle Garvin
+  '53032b': '53032b', // Clinton Freeman
+  '53037': '53037', // Veda Whitsley
+  '54041': '54041', // Erynn MacAoidh
+  '54061': '54061', // Nightgaunt Steed
+  // The Midwinter Gala guests
+  '71016': '71016',
+  '71017': '71017',
+  '71018': '71018',
+  '71019': '71019',
+  '71022': '71022',
+  '71023': '71023',
+  '71024': '71024',
+  '71025': '71025',
+  '71028': '71028',
+  '71029': '71029',
+  '71030': '71030',
+  '71031': '71031',
+  '71034': '71034',
+  '71035': '71035',
+  '71036': '71036',
+  '71037': '71037',
+  '71040': '71040',
+  '71041': '71041',
+  '71042': '71042',
+  '71043': '71043',
+  '72024': '72024', // Andre Patel
+  '73013': '73013', // Albrecht Husserl
+  '73014': '73014', // Elias Husserl Jr.
+  '73015': '73015', // Eugene Peel
+  '73016': '73016', // Lina Husserl
+  '73017': '73017', // Matilde Correa
+  '73018': '73018', // Vicar Yang
+  '73034': '73034', // Josephine Husserl
+  '73035': '73035', // Adele Husserl
+  '73036': '73036', // Gladys Washington
+  '73037': '73037', // Charles Tamm
+  '73049': '73049', // Aziza Steer, Has a Bone to Pick
+  '73059': '73059', // Aziza Steer, Hardboiled
+  '81019': '81019', // Lady Esprit
+  '82017b': '82021b', // The Masked Carnevale-Goers share printed art.
+  '82018b': '82021b',
+  '82019b': '82021b',
+  '82020b': '82021b',
+  '82021': '82021', // Innocent Reveler
+  '82021b': '82021b',
+  '82022': '82022', // Abbess Allegria Di Biase
+  '83055': '83055', // John & Jessie Burke
+  '83058': '83058', // Summoned Nightgaunt
+  '84008': '84008', // Sergeant Monroe
+  '85025': '85025', // University Chemist
+  '85030': '85030', // Pet Oozeling
+  '85032': '85032', // Lt. Wilson Stewart
+  '87012': '87012', // Thomas Corrigan
+  '87013': '87013', // Mary Zielinski
+  '87014': '87014', // Nikola Tesla
+  '87021': '87012',
+  '87022': '87013',
+  '87023': '87023', // Ezra Graves
+  '87030': '87012',
+  '87031': '87013',
+  '87036b': '87036b', // Edwin Bennet
+  '87037b': '87036b',
+  '88028': '88028', // The Face
+  '88028b': '88028',
+  '88029': '88029', // The Muscle
+  '88029b': '88029',
+  '88030': '88030', // The Thief
+  '88030b': '88030',
+  '88031': '88031', // The Grifter
+  '88031b': '88031',
+  '88032': '88032', // Isamara Ordoñez
+  '88032b': '88032',
+  '88044': '88032',
+  '89019': '89019', // G-Men
+  // Homebrew Story Assets use the same namespaced card codes as the game.
+  ':against-the-wendigo:022b': '_against-the-wendigo_022b',
+  ':against-the-wendigo:027b': '_against-the-wendigo_027b',
+  ':against-the-wendigo:031': '_against-the-wendigo_031',
+  ':against-the-wendigo:040': '_against-the-wendigo_040',
+  ':circus-ex-mortis:019c': '_circus-ex-mortis_019c',
+  ':circus-ex-mortis:059b': '_circus-ex-mortis_059b',
+  ':circus-ex-mortis:060b': '_circus-ex-mortis_059b',
+  ':circus-ex-mortis:061b': '_circus-ex-mortis_059b',
+  ':circus-ex-mortis:062b': '_circus-ex-mortis_059b',
+  ':circus-ex-mortis:063b': '_circus-ex-mortis_059b',
+  ':circus-ex-mortis:064b': '_circus-ex-mortis_059b',
+  ':circus-ex-mortis:096': '_circus-ex-mortis_096',
+  ':circus-ex-mortis:097': '_circus-ex-mortis_097',
+  ':circus-ex-mortis:256': '_circus-ex-mortis_256',
+  ':consternation-on-the-constellation:038': '_consternation-on-the-constellation_038',
+  ':dark-matter:094': '_dark-matter_094',
+  ':dark-matter:095': '_dark-matter_095',
+  ':dark-matter:130': '_dark-matter_130',
+  ':dark-matter:131': '_dark-matter_131',
+  ':dark-matter:132': '_dark-matter_132',
+  ':dark-matter:133': '_dark-matter_133',
+  ':dark-matter:135': '_dark-matter_135',
+  ':dark-matter:271': '_dark-matter_271',
+  ':dark-matter:305': '_dark-matter_305', // Laika
+  ':night-of-vespers:032': '_night-of-vespers_032',
+  ':night-of-vespers:033': '_night-of-vespers_033',
+  ':return-to-the-innsmouth-conspiracy:025': '_return-to-the-innsmouth-conspiracy_025',
+  ':return-to-the-innsmouth-conspiracy:026': '_return-to-the-innsmouth-conspiracy_026',
+  ':return-to-the-innsmouth-conspiracy:027': '_return-to-the-innsmouth-conspiracy_027',
+  ':the-fall-of-the-house-of-usher:051': '_the-fall-of-the-house-of-usher_051',
+  ':the-fall-of-the-house-of-usher:052': '_the-fall-of-the-house-of-usher_052',
+  ':the-legend-of-sleepy-hollow:013': '_the-legend-of-sleepy-hollow_013',
+  ':the-masque-of-the-red-death:023': '_the-masque-of-the-red-death_023',
+  ':the-phantom-of-the-opera:024': '_the-phantom-of-the-opera_024',
+  ':the-phantom-of-the-opera:025': '_the-phantom-of-the-opera_025',
+  ':the-strange-case-of-dr-jekyll-and-mr-hyde:020': '_the-strange-case-of-dr-jekyll-and-mr-hyde_020',
+  ':the-symphony-of-erich-zann:044': '_the-symphony-of-erich-zann_044',
+}
+
+export function storyAssetSpriteFor(code: string): string | null {
+  const art = cardArt(code)
+  if (!Object.hasOwn(STORY_ASSET_SPRITES, art)) return null
+  return `img/scenes/actors/${STORY_ASSET_SPRITES[art]}.webp`
 }

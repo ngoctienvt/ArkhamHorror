@@ -3,7 +3,7 @@
  * tests can load it on its own. */
 
 type Placement = { tag: string; contents?: unknown }
-type AssetLike = { id: string; cardCode: string; placement: Placement }
+type AssetLike = { id: string; cardCode: string; placement: Placement; modifiers?: ReadonlyArray<{ type?: unknown }> }
 type InvestigatorLike = { id: string; placement: Placement }
 export type VehicleGameLike = {
   assets: Readonly<Record<string, AssetLike>>
@@ -19,6 +19,8 @@ export type SceneVehicle = {
   image: string
   /** Investigators inside it, in the game's order. */
   passengers: string[]
+  /** Clockwise degrees the server turns the sprite (0 east, 90 south, 180 west, 270 north), for a vehicle with a facing (the Mine Cart). */
+  facing?: number
 }
 
 /** Every vehicle at a location that has a sprite on this board (`spriteOf` returns undefined for the rest). */
@@ -27,9 +29,20 @@ export function sceneVehicles(game: VehicleGameLike, spriteOf: (cardCode: string
   for (const asset of Object.values(game.assets)) {
     const image = spriteOf(asset.cardCode)
     if (!image || asset.placement.tag !== 'AtLocation' || typeof asset.placement.contents !== 'string') continue
-    vehicles.push({ id: asset.id, cardCode: asset.cardCode, locationId: asset.placement.contents, image, passengers: passengersOf(game, asset.id) })
+    vehicles.push({ id: asset.id, cardCode: asset.cardCode, locationId: asset.placement.contents, image, passengers: passengersOf(game, asset.id), ...facingOf(asset) })
   }
   return vehicles
+}
+
+/** The facing the server gives a vehicle through its `Rotated` UI modifier, if any. */
+export function facingOf(asset: AssetLike): { facing?: number } {
+  for (const modifier of [...(asset.modifiers ?? [])].reverse()) {
+    const type = modifier.type as { tag?: string; contents?: { tag?: string; contents?: unknown } } | undefined
+    if (type?.tag === 'UIModifier' && type.contents?.tag === 'Rotated' && typeof type.contents.contents === 'number') {
+      return { facing: ((type.contents.contents % 360) + 360) % 360 }
+    }
+  }
+  return {}
 }
 
 /** Investigators whose placement is inside this vehicle. */

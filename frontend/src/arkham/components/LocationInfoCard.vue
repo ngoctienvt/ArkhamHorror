@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { locationExtraLabel } from '@/arkham/locationExtraLabel'
+import { sceneLocationAssets } from '@/arkham/scene-location-assets'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Game } from '@/arkham/types/Game'
@@ -48,7 +49,7 @@ const named = (ids: string[], pool: Record<string, { cardCode: string }>) =>
 // Investigators and enemies stand on the map already; only what lies on the location itself is listed.
 const attached = computed(() => [
   ...named(props.location.treacheries, props.game.treacheries),
-  ...named(props.location.assets, props.game.assets),
+  ...sceneLocationAssets(props.location, props.game.assets).map(({ id, cardCode }) => ({ id, name: nameOf(cardCode) })),
   ...named(props.location.events, props.game.events),
 ])
 const extraLabel = (x: string) => locationExtraLabel(x, t)

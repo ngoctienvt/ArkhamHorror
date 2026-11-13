@@ -9,7 +9,7 @@ const load = async (file) => {
   return import('data:text/javascript;base64,' + Buffer.from(js).toString('base64'))
 }
 const { islandImage, islandAspect, islandSpotImage, islandWaterImage, vehicleSprite, islandSetFiles } = await load('scene-island-sprites.ts')
-const { sceneVehicles, passengersOf, riders, headingAfterMove } = await load('scene-vehicle-model.ts')
+const { sceneVehicles, passengersOf, riders, headingAfterMove, facingOf } = await load('scene-vehicle-model.ts')
 
 const COSMOS = 'img/scenes/the-circle-undone/cosmos'
 const REEF = 'img/scenes/the-innsmouth-conspiracy/devil-reef'
@@ -104,4 +104,13 @@ test('the boat turns its bow the way it sails and keeps it on a straight north/s
   assert.equal(headingAfterMove(50, 30, 'right'), 'left')
   assert.equal(headingAfterMove(30, 50, 'left'), 'right')
   assert.equal(headingAfterMove(50, 50, 'left'), 'left')
+})
+
+test('a vehicle the server rotates (the Mine Cart) carries its facing in degrees', () => {
+  const rotated = (degrees) => ({ id: 'a', cardCode: 'c10507', placement: { tag: 'AtLocation', contents: 'l' }, modifiers: [{ type: { tag: 'UIModifier', contents: { tag: 'Rotated', contents: degrees } } }] })
+  assert.deepEqual(facingOf(rotated(270)), { facing: 270 })
+  assert.deepEqual(facingOf(rotated(-90)), { facing: 270 })
+  assert.deepEqual(facingOf({ id: 'a', cardCode: 'c07178', placement: { tag: 'AtLocation', contents: 'l' } }), {})
+  const [cart] = sceneVehicles({ assets: { a: rotated(90) }, investigators: {} }, () => 'mine-cart.webp')
+  assert.equal(cart.facing, 90)
 })

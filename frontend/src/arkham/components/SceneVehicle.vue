@@ -42,6 +42,14 @@ const actionable = computed(() => targetIndex.value !== -1 || options.value.leng
 
 const heading = ref<'left' | 'right'>('right')
 watch(() => props.x, (to, from) => { if (!props.faceRight) heading.value = headingAfterMove(from, to, heading.value) })
+/* A vehicle the server gives a facing (the Mine Cart) shows it: the sprite turns east or west, and a small arrow
+ * on it points the way it will move (north and south keep the sprite as it was). */
+const FACING_NAMES: Record<number, string> = { 0: 'east', 90: 'south', 180: 'west', 270: 'north' }
+const facingName = computed(() => props.vehicle.facing === undefined ? undefined : FACING_NAMES[props.vehicle.facing])
+watch(() => props.vehicle.facing, (facing) => {
+  if (facing === 180) heading.value = 'left'
+  else if (facing === 0) heading.value = 'right'
+}, { immediate: true })
 
 const ownId = computed(() => ownInvestigator(props.game, props.playerId)?.id)
 const passengerName = (id: string) => nameOf(props.game.investigators[id]?.cardCode ?? id)
@@ -92,6 +100,12 @@ onBeforeUnmount(() => window.removeEventListener('click', close))
     :data-game-actionable="actionable || undefined" :data-fx-target="`asset-${vehicle.id}`"
     @pointerdown.stop @click.stop="click">
     <img class="hull" :class="{ left: heading === 'left' }" :src="vehicle.image" alt="" draggable="false" />
+    <svg v-if="facingName" class="facing" viewBox="0 0 40 40" role="img" :aria-label="t('locationMap.vehicle.facing.' + facingName)"
+      :style="{ rotate: vehicle.facing + 'deg' }">
+      <title>{{ t('locationMap.vehicle.facing.' + facingName) }}</title>
+      <circle cx="20" cy="20" r="18.5" class="facing__disc" />
+      <path d="M7 15.5h14V8l13 12-13 12v-7.5H7z" class="facing__arrow" />
+    </svg>
     <span v-if="crew.length" class="deck" :style="{ height: deckHeight }">
       <span v-for="p in crew" :key="p.id" class="rider" :class="{ standee: p.sprite }">
         <FigureVitalsHud :health="p.health" :sanity="p.sanity" />
@@ -120,6 +134,13 @@ onBeforeUnmount(() => window.removeEventListener('click', close))
   filter: drop-shadow(0 6px 10px #000a); transition: transform 300ms ease-in-out;
 }
 .hull.left { transform: scaleX(-1); }
+/* The facing note: a large round gold badge with a bold arrow laid over the left of the cart, clear of the riders standing at its middle, turned to the way it faces. */
+.facing {
+  position: absolute; left: 14%; top: 44%; translate: -50% -50%; width: 38px; height: 38px; z-index: 1; opacity: 0.92; pointer-events: none;
+  filter: drop-shadow(0 2px 4px #000c); transition: rotate 300ms ease-in-out;
+}
+.facing__disc { fill: #f2d27a; stroke: #3a2a06; stroke-width: 2.5; }
+.facing__arrow { fill: #1c1405; stroke: #fff4d0; stroke-width: 1; stroke-linejoin: round; }
 .vehicle.actionable .hull { filter: drop-shadow(0 0 6px #f2d27a) drop-shadow(0 6px 10px #000a); }
 .vehicle:focus-visible { outline: 2px solid #f2d27a; outline-offset: 2px; border-radius: 6px; }
 /* Passengers stand on the planked deck of the sprite: feet on its floor (about two thirds down the picture),
