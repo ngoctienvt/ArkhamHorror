@@ -5,6 +5,7 @@ import { useGameChoices } from '@/arkham/composables/useGameChoices'
 import { choicesFor } from '@/arkham/locationChoices'
 import AbilityButton from '@/arkham/components/AbilityButton.vue'
 import GameIcon from '@/arkham/components/GameIcon.vue'
+import FigureVitalsHud, { type Meter } from '@/arkham/components/FigureVitalsHud.vue'
 import { useI18n } from 'vue-i18n'
 import { assignIndex, isTriggerWindow } from '@/arkham/triggerWindow'
 import type { Game } from '@/arkham/types/Game'
@@ -39,7 +40,6 @@ const nameOf = useCardNames()
 const cardStore = useCardStore()
 const flightState = useCardFlightState()
 
-type Meter = { left: number; max: number }
 type Fig = {
   id: string; kind: 'investigator' | 'enemy' | 'asset'; tone: string; name: string; src: string | null; art: string; you: boolean; exhausted: boolean; note: string | null
   moveName: string | undefined; cardId: string | undefined
@@ -50,7 +50,6 @@ type Fig = {
 /* A room only has space for a few enemy figures; the rest are listed in a "+N" badge instead of vanishing. */
 const MAX_ENEMY_FIGURES = 4
 const meter = (max: number, taken: number): Meter => ({ max, left: Math.max(0, max - taken) })
-const pct = (m: Meter) => (100 * m.left / Math.max(1, m.max)) + '%'
 
 const figures = computed<Fig[]>(() => {
   const l = props.location
@@ -162,10 +161,7 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
         <b class="fig-menu__name">{{ f.name }}</b>
         <AbilityButton v-for="c in optionsFor(f.id)" :key="c.index" :game="game" :ability="c.contents" @choose="pick(c.index)" />
       </span>
-      <span v-if="f.health || f.sanity" class="hud">
-        <span v-if="f.health" class="meter hp"><GameIcon type="health" /><span class="track"><i :style="{ width: pct(f.health) }"></i></span><b>{{ f.health.left }}/{{ f.health.max }}</b></span>
-        <span v-if="f.sanity" class="meter sanity"><GameIcon type="sanity" /><span class="track"><i :style="{ width: pct(f.sanity) }"></i></span><b>{{ f.sanity.left }}/{{ f.sanity.max }}</b></span>
-      </span>
+      <FigureVitalsHud v-if="f.health || f.sanity" :health="f.health" :sanity="f.sanity" />
       <span v-else-if="f.note" class="hud"><span class="meter hp"><GameIcon type="damage" /> {{ f.note }}</span></span>
       <img v-if="f.src" class="figure portrait" :src="f.src" :alt="f.name" draggable="false"
         :[CARD_FLIGHT_ATTR]="f.cardId" :style="cardFlightStyle(flightState, f.cardId)" />

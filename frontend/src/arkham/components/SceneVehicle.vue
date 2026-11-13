@@ -11,6 +11,8 @@ import { choicesFor } from '@/arkham/locationChoices'
 import { ownInvestigator } from '@/arkham/ownInvestigator'
 import { headingAfterMove, type SceneVehicle } from '@/arkham/scene-vehicle-model'
 import AbilityButton from '@/arkham/components/AbilityButton.vue'
+import FigureVitalsHud from '@/arkham/components/FigureVitalsHud.vue'
+import { TokenType } from '@/arkham/types/Token'
 
 /* A vehicle sailing between the cells of a scene map (Devil Reef's Fishing Vessel). Whoever is aboard stands
  * on its deck. Clicking it offers what the server currently allows with it: board or leave, sail it, or pick
@@ -50,7 +52,10 @@ const crew = computed(() => props.vehicle.passengers.flatMap((id) => {
   if (!i) return []
   const art = investigatorCardArt(i)
   const sprite = spriteFor(art) ?? (i.form.tag === 'RegularForm' ? spriteFor(i.art) : null)
-  return [{ id, name: nameOf(i.cardCode), sprite, src: sprite ?? portraitImage(i.cardCode), card: cardImage(art), you: id === ownId.value }]
+  // Health and sanity left, over each rider's head, as for anyone standing in a location.
+  const health = { max: i.health, left: Math.max(0, i.health - (i.tokens[TokenType.Damage] ?? 0)) }
+  const sanity = { max: i.sanity, left: Math.max(0, i.sanity - (i.tokens[TokenType.Horror] ?? 0)) }
+  return [{ id, name: nameOf(i.cardCode), sprite, src: sprite ?? portraitImage(i.cardCode), card: cardImage(art), you: id === ownId.value, health, sanity }]
 }))
 const label = computed(() => {
   const aboard = props.vehicle.passengers.map(passengerName).join(', ')
@@ -88,8 +93,11 @@ onBeforeUnmount(() => window.removeEventListener('click', close))
     @pointerdown.stop @click.stop="click">
     <img class="hull" :class="{ left: heading === 'left' }" :src="vehicle.image" alt="" draggable="false" />
     <span v-if="crew.length" class="deck" :style="{ height: deckHeight }">
-      <img v-for="p in crew" :key="p.id" class="passenger" :class="{ standee: p.sprite, you: p.you }"
-        :src="p.src" :alt="p.name" :data-image="p.card" :data-investigator-mini="p.id" draggable="false" />
+      <span v-for="p in crew" :key="p.id" class="rider" :class="{ standee: p.sprite }">
+        <FigureVitalsHud :health="p.health" :sanity="p.sanity" />
+        <img class="passenger" :class="{ standee: p.sprite, you: p.you }"
+          :src="p.src" :alt="p.name" :data-image="p.card" :data-investigator-mini="p.id" draggable="false" />
+      </span>
     </span>
   </button>
   <Teleport to="body">
@@ -120,10 +128,17 @@ onBeforeUnmount(() => window.removeEventListener('click', close))
   position: absolute; left: 50%; bottom: 33%; translate: -50% 0; max-width: 40%; display: flex; align-items: flex-end;
   justify-content: center; pointer-events: none; filter: drop-shadow(1px 3px 2px #000c);
 }
+/* Each rider is its figure with the health / sanity bars floating above its head. */
+.rider { position: relative; height: 100%; display: flex; align-items: flex-end; justify-content: center; min-width: 0; }
+.rider :deep(.hud) {
+  position: absolute; bottom: 100%; left: 50%; translate: -50% -2px; z-index: 1; pointer-events: none;
+  min-width: 0; padding: 2px 3px; font-size: 9px;
+}
+.rider :deep(.hud .track) { width: 14px; }
 .passenger { pointer-events: auto; min-width: 0; }
 /* Neighbours overlap a little, like a crowd on a small deck. */
 .passenger.standee { height: 100%; width: auto; }
-.passenger.standee + .passenger.standee { margin-left: -18%; }
+.rider.standee + .rider.standee { margin-left: -18%; }
 .passenger.standee.you { filter: drop-shadow(0 0 4px #ffe9a0); }
 .passenger:not(.standee) {
   height: 45%; aspect-ratio: 1; border-radius: 50%; object-fit: cover; object-position: 50% 20%;
