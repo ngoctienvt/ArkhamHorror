@@ -1,0 +1,1 @@
+{"status":"ok","route":"local:codex-cli","artifact":"art-src\\written-in-rock\\gen\\rail-arm-v1\\generated.png","sha256":"4a081f8577bd8d0e1299d623f5d8025630d6f79391feefdf5fcb741172737264","estimateUsd":0.0,"kind":"image","label":"Codex (local CLI)","model":"codex-image_gen","job":"art-src\\written-in-rock\\gen\\rail-arm-v1\\job.json","verifiedBefore":true}

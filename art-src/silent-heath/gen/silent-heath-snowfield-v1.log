@@ -1,0 +1,1 @@
+{"status":"ok","route":"local:codex-cli","artifact":"art-src\\silent-heath\\gen\\silent-heath-snowfield-v1\\generated.png","sha256":"d70d84c46c8ceedc89e11598765975edc61be9a0bf81923378df748c8b2e0fe7","estimateUsd":0.0,"kind":"image","label":"Codex (local CLI)","model":"codex-image_gen","job":"art-src\\silent-heath\\gen\\silent-heath-snowfield-v1\\job.json","verifiedBefore":true}

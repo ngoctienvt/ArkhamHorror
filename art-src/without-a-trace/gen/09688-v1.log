@@ -1,0 +1,1 @@
+{"status":"ok","route":"local:codex-cli","artifact":"art-src\\without-a-trace\\gen\\09688-v1\\generated.png","sha256":"ba2a7c8f3c71070ec6b78e32fe83fee24037819facda747585f88b25d041f29d","estimateUsd":0.0,"kind":"image","label":"Codex (local CLI)","model":"codex-image_gen","job":"art-src\\without-a-trace\\gen\\09688-v1\\job.json","verifiedBefore":true}
