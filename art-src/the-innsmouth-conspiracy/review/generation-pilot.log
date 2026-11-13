@@ -1,0 +1,2 @@
+error: local:codex-cli: PROVIDER_ERROR: the Codex CLI exited with an error (Error: Unknown feature flag: sleep_tool) (run 72f5396df8ec46b3a8e6c654dc52e765)
+{"status":"ok","route":"local:codex-cli","artifact":"art-src\\the-innsmouth-conspiracy\\gen\\pit-of-despair-caverns-v3\\generated.png","sha256":"4a1b37d3236d1b60258707da1d430997872ebfdf28a03afd15b9bbcafb8eb068","estimateUsd":0.0,"kind":"image","label":"Codex (local CLI)","model":"codex-image_gen","job":"art-src\\the-innsmouth-conspiracy\\gen\\pit-of-despair-caverns-v3\\job.json","verifiedBefore":false}

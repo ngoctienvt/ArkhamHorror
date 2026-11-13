@@ -1,0 +1,64 @@
+The Pit of Despair
+07047 — Vách đá thẳng đứng ôm khe hang sâu, nâu đồng ẩm.
+07048 — Xương sườn và sọ chất đống trong hõm đá nghiêng, trắng ngà trên đá xám tím.
+07049 — Vây và xác cá ken thành gò, nền lam tím với vệt đỏ thẫm.
+07050 — Bệ đá nhiều bậc với tượng trên đỉnh và nến hai bên, hổ phách cháy.
+07051 — Hàng tượng đục trong hốc dọc vách đá, nước lam ngọc và tượng đồng xanh.
+07052 — Song sắt mắt vuông bịt giếng tròn với nước xoáy, lam băng nhạt và viền đồng.
+
+Into the Maelstrom
+07319 — Hố chìm tua nhũ và măng đá nhọn, lam cobalt tối.
+07320 — Xoáy nước mở trên những dải tàn tích, xanh ngọc lục bảo với đốm vàng cam.
+07321 — Vòm cao trên hành lang đá có phù điêu và đĩa nghiêng, xanh bạc hà với ánh ngọc trai.
+07322 — Đống châu báu và san hô giữa các trụ chạm khắc chìm, vàng kim trên nền lam.
+07323 — Dãy hốc đá và bậc sâu dẫn vào lối sáng, xanh điện với san hô cam đỏ.
+07324 — Tượng đá cao mảnh giơ cánh tay bên vách dựng, lam tím chàm.
+07325 — Sàn đền nhiều tầng và hàng cột vuông to, xanh thép với ánh tím oải hương.
+07326 — Sàn chia các tia hội tụ vào vòng sáng, xanh lục axit.
+07327 — Hàng tượng đen bất động dọc lối bậc đá, đen mã não với vệt xanh ngọc nhạt.
+07328 — Sảnh đá xanh đen quanh đường dẫn hẹp và các cột có gai, xanh navy.
+07329 — Dải nước sáng như rèm trút xuống bệ giữa cột đá, trắng xanh lam.
+07321b — Vết tích thành chìm trong nước mù, lục lam nhạt.
+07324b — Khối tháp thành bậc thang sau mái vòm, xanh ô liu trên đá đen.
+
+A Light in the Fog
+07239 — Cổng song sắt và tường nhà gác ướt mưa, xám chì với điểm sơn vàng đất.
+07240 — Cầu thang xoắn kim loại ôm giếng tròn, xám lạnh với tay vịn cam gỉ.
+07241 — Lồng kính đèn nhiều mặt, vàng chanh nhạt xuyên sương xanh.
+07242 — Vách đá nghiêng lao xuống biển, lam phiến đá dưới mây giông và đèn xa.
+07243 — Cửa mở, cửa sổ và cầu thang gỗ, nâu hạt dẻ với ánh vàng kem.
+07244b — Cánh cửa ván nặng hé, khe sáng cam rực trên nền đá tối.
+07244 — Hốc đá công nghiệp, sàn nước và trụ quanh luồng sáng trắng; bạc xám.
+07245 — Cùng tranh với tầng trên, vách đá và trụ gãy bao nước; xanh lục xám từ vùng bóng.
+07246 — Cùng tranh với tầng trên, vách đá nhọn quanh trũng sâu; xanh thép tối từ vùng bóng.
+07247 — Tượng Hydra bằng đá nhạt trồi trên nền đá đen, lục ô liu vàng úa.
+07248 — Cụm trứng tròn trên nền ướt và khe đá hắt sáng, vàng cam với ánh lam nhạt.
+07249 — Bể trung tâm, vòm đá và cửa cống tròn, xanh cyan với đồng thẫm.
+07250 — Lối hẹp dọc các giá sách và thang, đỏ đồng sẫm.
+07251 — Mạng ống, lan can và bóng đèn trong phòng máy, hổ phách sáng.
+07252b — Dãy cửa phòng giam bằng song sắt trong tường đá thô, xám vàng bụi.
+
+Horror in High Gear
+07203 — Đường cắt qua sườn dốc đá ven biển và mảng cỏ, xanh rêu vàng nhạt.
+07204a — Dải đường hẹp dưới tán thông, xanh cobalt trong ánh trăng.
+07205a — Đường kẹp giữa mặt đá dựng và biển, xanh ngọc biển và tím đá.
+07206a — Hai nhánh giữa thân cây thẳng, xám sương với đất vàng xám.
+07207a — Các nhánh cắt nhau trên gò trống, trắng bạc trên đất lam lạnh.
+07208a — Khúc ngoặt có taluy và cọc nhỏ bên rừng tối, tím oải hương lạnh.
+07209a — Đường trống giữa hai hàng cây đan cành trụi, xám khói nhạt.
+07210 — Đường vòng uốn qua rừng dày trên sườn dốc, chàm tím.
+036 — Rãnh bánh sâu đầy nước giữa hàng thông và cột điện, xanh lục xám.
+037 — Đường thẳng dọc dải cỏ, với vệt sáng từ đường cong cạnh bên, vàng đất và xanh nhạt.
+07204ab — Đường sương xanh với khoảnh cây sáng vàng ở rìa.
+07211a — Xe mui thấp đen bóng, chắn bùn cong, đèn tròn trắng và các chi tiết crom bạc.
+07212a — Sedan xanh sẫm thân cao, cabin hộp, đèn vàng cam.
+07213 — Xe tối thân hẹp dưới ánh vàng, chắn bùn cong và cửa cạnh tài xế.
+07214 — Van cabin vuông màu xanh than, đèn tròn với ánh bạc lạnh.
+
+Ghi chú duyệt
+- 07047 và 07048: dùng v2 để tách bóng dáng khe chữ V và gò xương thấp.
+- 07245 và 07246: dùng v2. Ba tầng Sunken Grotto có cùng tranh gốc, nên dùng bố cục và ánh sáng khác nhau để nhận ra trên lưới.
+- Nền Pit: hai lượt khởi động lỗi cấu hình CLI. Dùng kết quả v3 từ CLI đi kèm Codex Desktop.
+- Codex xuất nền gốc 1672×941 và hai mặt sau vuông 1254×1254. WebP xuất đúng kích thước trong plan. PNG thô giữ nguyên trong gen.
+- High Gear: căn cao độ và chiều rộng 11 cặp mép ở bước xuất WebP, lấy kết cấu mặt đường từ Falcon Point Approach. Địa hình và đường ở phần giữa lấy từ từng PNG gốc.
+- Straight Section: dùng v2 để mặt đường chính thẳng từ mép này sang mép kia. Giữ ánh vàng bên bờ theo tranh.
