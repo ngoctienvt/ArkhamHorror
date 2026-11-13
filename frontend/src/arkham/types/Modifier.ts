@@ -62,6 +62,7 @@ export type ModifierType
   | CannotPerformSkillTest
   | GainVictory
   | ActionCostSetToModifier
+  | DoomThresholdModifier
   | OtherModifier
   | RemoveTrait
   | UIModifier
@@ -291,6 +292,11 @@ export type AsIfInHand = {
 export type AsIfInHandFor = {
   tag: "AsIfInHandFor" | "AsIfInHandForPlay"
   contents: unknown
+}
+
+export type DoomThresholdModifier = {
+  tag: "DoomThresholdModifier"
+  contents: number
 }
 
 export type OtherModifier = {
@@ -587,6 +593,10 @@ const modifierTypeDecoder = JsonDecoder.oneOf<ModifierType>([
     tag: JsonDecoder.literal('CannotSpendLastActions'),
     contents: JsonDecoder.number(),
   }, 'CannotSpendLastActions'),
+  JsonDecoder.object<DoomThresholdModifier>({
+    tag: JsonDecoder.literal('DoomThresholdModifier'),
+    contents: JsonDecoder.number(),
+  }, 'DoomThresholdModifier'),
   JsonDecoder.object({
     tag: JsonDecoder.string()
   }, 'OtherModifier').map(({tag}) => ({ tag: 'OtherModifier', contents: tag})),

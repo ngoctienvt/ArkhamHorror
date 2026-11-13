@@ -5,13 +5,19 @@ import { useI18n } from 'vue-i18n'
 import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
 import { replaceText } from '@/arkham/cardTextFormat'
 import { imgsrc } from '@/arkham/helpers'
+import { type ArkhamKey, keyToId } from '@/arkham/types/Key'
+import KeyToken from '@/arkham/components/Key.vue'
+import { locationExtraLabel } from '@/arkham/locationExtraLabel'
 
 /* The name plate a location wears on the map: its name, whether it is revealed, and the numbers that
  * matter at a glance, on one slim line so it hides as little of the painting as it can. Clicking it picks
  * the location when a choice asks for one, otherwise opens its info card. Hovering the location shows the
  * card itself with its translated text (CardOverlay), so the plate carries no info button of its own. */
 /* `hideMove`: the map draws this location's move button on the link leading to it instead. */
-const props = withDefaults(defineProps<{ info: MapLocationInfo; size?: 'full' | 'compact' | 'room'; showText?: boolean; game?: Game; locationId?: string; hideMove?: boolean }>(), { size: 'full', showText: false, hideMove: false })
+const props = withDefaults(defineProps<{ info: MapLocationInfo; size?: 'full' | 'compact' | 'room'; showText?: boolean; game?: Game; playerId?: string; locationId?: string; hideMove?: boolean }>(), { size: 'full', showText: false, hideMove: false })
+/* Keys lying here (a gold key on a revealed location...), as on the card board: clicking one answers a choice
+ * that asks for that key. */
+const keys = computed<ArkhamKey[]>(() => (props.game && props.locationId ? props.game.locations[props.locationId]?.keys : null) ?? [])
 /* Clues still here on screen while they fly off to the investigator who found them. */
 const cluesLeft = computed(() =>
   props.locationId ? heldCount(`location-${props.locationId}`, 'clue', props.info.clues.left) : props.info.clues.left,
@@ -92,6 +98,8 @@ import type { Game } from '@/arkham/types/Game'
       </button>
       <PoolItem v-if="showClues" type="clue" :amount="cluesLeft" class="clue-token"
         :style="{ '--clue-digits': String(cluesLeft).length }" :title="clueTitle" aria-hidden="true" />
+      <KeyToken v-for="k in keys" :key="keyToId(k)" :keyToken="k" :game="game" :playerId="playerId" class="plate-key"
+        :title="locationExtraLabel(`key:${k.tag}`, t)" @choose="emit('choose', $event)" />
       <img v-if="floodSrc" :src="floodSrc" class="flood" :alt="floodTitle" :title="floodTitle" />
       <span v-if="showStats && info.doom" class="chip doom" :title="t('locationMap.doom')"><GameIcon type="doom" />{{ info.doom }}</span>
       <button v-if="size !== 'compact' && info.actions.move && !hideMove" class="go" type="button"
@@ -152,6 +160,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 .chip.doom { color: #e0a595; }
 /* Flood token: the printed token art, the same height as the shroud disc so the line stays even. */
+.plate-key { flex: none; width: auto; height: 1.6em; filter: drop-shadow(0 1px 2px #000); }
+.compact .plate-key { height: 1.3em; justify-self: center; }
 .flood { flex: none; height: 1.75em; width: auto; filter: drop-shadow(0 1px 2px #000); }
 .compact .flood { height: 1.4em; justify-self: center; }
 /* Move here: a small green pill at the end of the name line instead of a second row under it. */

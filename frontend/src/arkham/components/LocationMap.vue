@@ -8,7 +8,9 @@ import { useGameChoices } from '@/arkham/composables/useGameChoices'
 import { useCardNames } from '@/arkham/composables/useCardNames'
 import { useStorage } from '@vueuse/core'
 import { cardArt } from '@/arkham/cardImages'
-import { hemlockHousePosition, hemlockOverview, hemlockVillagePosition } from '@/arkham/hemlock-overview'
+import { HIGH_GEAR_ISLANDS, hemlockHousePosition, hemlockOverview, hemlockVillagePosition } from '@/arkham/hemlock-overview'
+import { readRoadLayout, roadPositions } from '@/arkham/high-gear-road-model'
+import { isolatedLocationIds } from '@/arkham/offMapCards'
 import { useSettings, type LocationView } from '@/stores/settings'
 import {
   compactGridLayout, gridPositions, locationLinks, mapPositions, mineDescentPositions, shortestPath,
@@ -84,8 +86,11 @@ const barInGameBar = computed(() => gameBarSlot.value && !fitScreenOn.value)
 const choices = useGameChoices(() => props.game, () => props.playerId)
 
 // The same set the card board draws: attached locations still sit on the map, only ones taken off it are left out.
-const locations = computed(() => Object.values(props.game.locations)
+const placedLocations = computed(() => Object.values(props.game.locations)
   .filter((l) => (l.placement === null || l.placement.tag === 'AttachedToLocation') && l.label !== 'cosmos'))
+// Locations on no grid cell and with no connection (Holding Cells) lie in the off-map box beside the reference card.
+const isolatedIds = computed(() => new Set(isolatedLocationIds(props.game.locations, props.scenario.locationLayout)))
+const locations = computed(() => placedLocations.value.filter((l) => !isolatedIds.value.has(l.id)))
 
 const enemiesAt = (l: Location) => l.enemies.filter((id) => props.game.enemies[id]?.placement.tag === 'AtLocation')
 
@@ -123,7 +128,11 @@ const weaver = computed(() => illustratedBoard.value?.islands === WEAVER_FOLDER 
 const mapEnemySet = computed(() => weaverEnemyIds(weaver.value))
 const visibleEnemiesAt = (location: Location) => enemiesShownAt(location).filter((id) => !mapEnemySet.value.has(id))
 
+// Horror in High Gear: tiles span several rows of a column, so the road has its own reader (not compactGridLayout).
+const roadGrid = computed(() => illustratedBoard.value?.islands === HIGH_GEAR_ISLANDS
+  ? readRoadLayout(props.scenario.locationLayout) : undefined)
 const layout = computed(() => {
+  if (roadGrid.value) return null
   const rows = props.scenario.usesGrid || props.scenario.locationLayout ? props.scenario.locationLayout : null
   // The Cosmos pads its grid with a ring of open cells; keep only what the card board shows, which is the
   // cards plus any cell a choice offers, so the map reads the same as the card board.
@@ -139,6 +148,10 @@ const positions = computed<Record<string, Point>>(() => {
     return { [locations.value[0].id]: [50, 75] }
   }
   const fallback = mapPositions(graph.value, layout.value)
+  if (roadGrid.value) {
+    const road = roadPositions(roadGrid.value)
+    return Object.fromEntries(locations.value.map((l) => [l.id, road[l.label] ?? fallback[l.id]]))
+  }
   if (dreamPositions.value) return Object.fromEntries(locations.value.map((l) => [
     l.id, dreamPositions.value?.[l.label] ?? fallback[l.id],
   ]))
@@ -185,7 +198,7 @@ const concealedSpots = computed<ConcealedSpot[]>(() => {
   })
 })
 const concealedOf = (l: Location) => concealedAt(props.game, l)
-const mapLocationIds = computed(() => locations.value.map((l) => l.id))
+const mapLocationIds = computed(() => placedLocations.value.map((l) => l.id))
 // Choices that only the action panel lists (cards the scene does not draw as clickable): reopen the panel
 // whenever such a question comes up, and badge the Actions button with how many there are.
 const panelOnlyCount = computed(() =>
@@ -234,7 +247,7 @@ const myLocation = computed(() => me.value?.location ?? null)
 const selectedId = ref<string | null>(null)
 const selected = computed(() => {
   const id = selectedId.value
-  if (id && props.game.locations[id] && graph.value[id]) return props.game.locations[id]
+  if (id && props.game.locations[id] && (graph.value[id] || isolatedIds.value.has(id))) return props.game.locations[id]
   const mine = myLocation.value
   if (mine && graph.value[mine]) return props.game.locations[mine]
   return locations.value[0] ?? null
@@ -247,7 +260,7 @@ const neighbours = computed(() => (selected.value?.connectedLocations ?? [])
 
 const buildInfo = useLocationInfo(() => props.game, () => props.playerId, () => choices.value, enemiesShownAt)
 // Built once per update, so every plate, the scene and the card read the same snapshot.
-const infos = computed(() => new Map(locations.value.map((l) => [l.id, buildInfo(l)])))
+const infos = computed(() => new Map(placedLocations.value.map((l) => [l.id, buildInfo(l)])))
 const infoOf = (l: Location) => infos.value.get(l.id) ?? buildInfo(l)
 // The action panel describes where you stand (or the selected location when you stand nowhere).
 const panelLocation = computed<Location | null>(() => props.game.locations[myLocation.value ?? ''] ?? selected.value ?? null)
@@ -256,7 +269,7 @@ const panelLocation = computed<Location | null>(() => props.game.locations[myLoc
 const inspectedId = ref<string | null>(null)
 const inspected = computed(() => {
   const id = inspectedId.value
-  return id && props.game.locations[id] && graph.value[id] ? props.game.locations[id] : null
+  return id && props.game.locations[id] && (graph.value[id] || isolatedIds.value.has(id)) ? props.game.locations[id] : null
 })
 // Barriers on links (In Too Deep): drawn on the link badges and counted on the info card's connection chips.
 const barriers = computed(() => barrierCounts(props.scenario.meta))
@@ -366,12 +379,14 @@ const views: LocationView[] = ['map', 'cards']
     </div>
     </Teleport>
     <p v-if="arrangeMode" class="arrange-hint" role="status">{{ t('locationMap.arrangeHint') }}</p>
-    <LocationMissionStrip :game="game" :scenario="scenario" :playerId="playerId" :referenceImage="referenceImage" :collapsed="missionCollapsed" @choose="emit('choose', $event)" />
+    <LocationMissionStrip :game="game" :scenario="scenario" :playerId="playerId" :referenceImage="referenceImage" :collapsed="missionCollapsed"
+      :sprites="illustratedBoard?.islands ? { folder: illustratedBoard.islands, infoOf, enemiesAt: visibleEnemiesAt } : undefined"
+      @choose="emit('choose', $event)" @inspect="inspect" />
     <div class="map-layout" :class="[view, { 'panel-open': panelOpen && !panelBelow, 'sheet-layout': sheetLayout }]" @click="inspectedId = null; moreOpen = false">
       <div id="scene-team-slot" class="team-slot"></div>
       <LocationMapCanvas :cutaway="cutaway" :roomPlates="roomPlates" :plateText="plateText" :illustrated-board="illustratedBoard" :game="game" :playerId="playerId" :locations="locations"
         :positions="positions" :links="links" :moves="moves" :gridSpots="gridSpots" :selectedId="selected?.id ?? null"
-        :enemiesAt="visibleEnemiesAt" :concealedAt="concealedOf" :concealedSpots="concealedSpots" :infoOf="infoOf" :barriers="barriers" :width="canvasSize.width" :height="canvasSize.height" :viewport="viewport" :weather="weather" :weaver="weaver" :dreamPositions="dreamPositions"
+        :enemiesAt="visibleEnemiesAt" :concealedAt="concealedOf" :concealedSpots="concealedSpots" :infoOf="infoOf" :barriers="barriers" :width="canvasSize.width" :height="canvasSize.height" :viewport="viewport" :weather="weather" :weaver="weaver" :dreamPositions="dreamPositions" :roadGrid="roadGrid"
         @inspect="inspect" @choose="emit('choose', $event)" />
       <div v-if="canZoom" class="zoom-controls" role="group" :aria-label="t('locationMap.zoomReset')">
         <button type="button" :aria-label="t('locationMap.zoomIn')" :disabled="!viewport.canZoomIn.value" @click.stop="viewport.zoomIn()">+</button>

@@ -91,10 +91,16 @@ export function useMissionStripPanels(game: () => Game, scenario: () => Scenario
 
   /* The agenda's real threshold comes from the server (a fixed number, or per investigator); the card
    * database only has it for some cards, so it is the fallback. */
-  function doomLimit(threshold: GameValue | null | undefined, fallback: number | null): number | null {
-    if (threshold?.tag === 'Static') return threshold.contents
-    if (threshold?.tag === 'PerPlayer') return threshold.contents * players()
-    return fallback
+  function doomLimit(id: string, threshold: GameValue | null | undefined, fallback: number | null): number | null {
+    let base: number | null = fallback
+    if (threshold?.tag === 'Static') base = threshold.contents
+    else if (threshold?.tag === 'PerPlayer') base = threshold.contents * players()
+    if (base === null) return null
+    // Effects such as "+2 doom threshold per investigator" are modifiers on the agenda, not part of its printed value.
+    return game().modifiers
+      .filter(([target]) => target.tag === 'AgendaTarget' && target.contents === id)
+      .flatMap(([, mods]) => mods)
+      .reduce((acc, m) => (m.type.tag === 'DoomThresholdModifier' ? Math.max(0, acc + m.type.contents) : acc), base)
   }
 
   function clueLimit(advanceCost: unknown, offered: EntityChoice[], card: ArkhamDBCard | null): number | null {
@@ -155,7 +161,7 @@ export function useMissionStripPanels(game: () => Game, scenario: () => Scenario
           .filter((line) => line.trim() && !LINE_KIND.some(([re, k]) => (k === 'action' || k === 'fast') && re.test(line)))
           .join('\n'),
       ),
-      doom, doomMax: kind === 'agenda' ? doomLimit(threshold, card?.doom ?? null) : null,
+      doom, doomMax: kind === 'agenda' ? doomLimit(id, threshold, card?.doom ?? null) : null,
       clues: kind === 'act' ? game().totalClues : null,
       clueMax: kind === 'act' ? clueLimit(advanceCost, entityChoices, card) : null,
       advanceIndex: objectiveChoice?.index ?? (targetIndex !== -1 ? targetIndex : null),

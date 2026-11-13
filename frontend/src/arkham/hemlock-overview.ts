@@ -108,15 +108,19 @@ const boards = new Map([
   ['54056', 'the-circle-undone/before-the-black-throne'],
 
   // The Innsmouth Conspiracy
-  ['07041', 'the-innsmouth-conspiracy/the-pit-of-despair'],
+  ['07041', 'the-innsmouth-conspiracy/pit-of-despair-caverns'],
+  [':return-to-the-innsmouth-conspiracy:018', 'the-innsmouth-conspiracy/pit-of-despair-caverns'],
   ['07056', 'the-innsmouth-conspiracy/the-vanishing-of-elina-harper'],
   ['07123', 'the-innsmouth-conspiracy/in-too-deep'],
   ['07163', 'the-innsmouth-conspiracy/devil-reef-sea'],
   [':return-to-the-innsmouth-conspiracy:031', 'the-innsmouth-conspiracy/devil-reef-sea'],
-  ['07198', 'the-innsmouth-conspiracy/horror-in-high-gear'],
-  ['07231', 'the-innsmouth-conspiracy/a-light-in-the-fog'],
+  ['07198', 'the-innsmouth-conspiracy/horror-in-high-gear-moor'],
+  [':return-to-the-innsmouth-conspiracy:035', 'the-innsmouth-conspiracy/horror-in-high-gear-moor'],
+  ['07231', 'the-innsmouth-conspiracy/a-light-in-the-fog-cliffs'],
+  [':return-to-the-innsmouth-conspiracy:039', 'the-innsmouth-conspiracy/a-light-in-the-fog-cliffs'],
   ['07274', 'the-innsmouth-conspiracy/the-lair-of-dagon'],
-  ['07311', 'the-innsmouth-conspiracy/into-the-maelstrom'],
+  ['07311', 'the-innsmouth-conspiracy/into-the-maelstrom-abyss'],
+  [':return-to-the-innsmouth-conspiracy:048', 'the-innsmouth-conspiracy/into-the-maelstrom-abyss'],
 
   // The Edge of the Earth
   ['08501a', 'the-edge-of-the-earth/ice-and-death-part-1'],
@@ -344,17 +348,6 @@ const villageAnchors: Record<string, Point> = {
   '05256': [55, 38], // Unvisited Isle (Decayed Willow)
   '05257': [68, 75], // The Geist-Trap
 
-  // The Innsmouth Conspiracy — Scenario 1: The Pit of Despair
-  '07047': [50, 52], // Unfamiliar Chamber
-  '07048': [24, 75], // Bone-Ridden Pit
-  '07049': [76, 75], // Fish Graveyard
-  '07050': [65, 52], // Altar to Dagon
-  '07051': [29, 40], // Idol Chamber
-  '07052': [77, 16], // Sealed Exit
-  '07102': [50, 28], // Underwater Cavern / Tidal Tunnel
-  '07103': [50, 28], // Tidal Pool / Tidal Tunnel
-  '07104': [50, 28], // Underground River / Tidal Tunnel
-
   // The Innsmouth Conspiracy — Scenario 2: The Vanishing of Elina Harper
   '07065': [47, 52], // Innsmouth Square
   '07068': [67, 52], // Fish Street Bridge
@@ -389,33 +382,9 @@ const villageAnchors: Record<string, Point> = {
   '07142': [8, 34], // Railroad Station
   '07143': [84, 78], // Desolate Coastline
 
-  // The Innsmouth Conspiracy — Scenario 4: Devil Reef follows its growing grid (see ISLAND_FOLDERS).
-
-  // The Innsmouth Conspiracy — Scenario 5: Horror in High Gear
-  '07203': [76, 12], // Falcon Point Approach
-  '07204': [14, 58], // Dimly Lit Road
-  '07205': [26, 38], // Cliffside Road
-  '07206': [50, 44], // Fork in the Road
-  '07207': [58, 48], // Intersection
-  '07208': [68, 55], // Tight Turn
-  '07209': [56, 30], // Desolate Road
-  '07210': [78, 65], // Long Way Around
-
-  // The Innsmouth Conspiracy — Scenario 6: A Light in the Fog
-  '07239': [14, 32], // Falcon Point Gatehouse
-  '07240': [48, 38], // Lighthouse Stairwell
-  '07241': [48, 12], // Lantern Room
-  '07242': [74, 30], // Falcon Point Cliffside
-  '07243': [36, 32], // Lighthouse Keeper's Cottage
-  '07244': [48, 60], // Sunken Grotto (Upper Depths)
-  '07245': [80, 75], // Sunken Grotto (Lower Depths)
-  '07246': [88, 85], // Sunken Grotto (Final Depths)
-  '07247': [68, 76], // Shrine to Hydra
-  '07248': [10, 80], // Deep One Nursery
-  '07249': [42, 88], // The Moon Room
-  '07250': [60, 60], // Sunken Archives
-  '07251': [32, 58], // Pump Room
-  '07252': [24, 75], // Holding Cells
+  // The Innsmouth Conspiracy — Scenarios 1, 4, 5, 6 and 8 (the Pit of Despair, Devil Reef, Horror in High Gear,
+  // A Light in the Fog, Into the Maelstrom) place locations during play: each stands on a sprite of its own
+  // (see ISLAND_FOLDERS), so no card has an anchor here.
 
   // The Innsmouth Conspiracy — Scenario 7: The Lair of Dagon
   '07283': [50, 68], // Grand Entryway
@@ -427,19 +396,6 @@ const villageAnchors: Record<string, Point> = {
   '07289': [50, 18], // Hall of Silence
   '07290': [50, 85], // Doorway to the Depths
   '07291': [50, 93], // Lair of Dagon
-
-  // The Innsmouth Conspiracy — Scenario 8: Into the Maelstrom
-  '07319': [58, 85], // Dark Abyss
-  '07320': [50, 50], // Gateway to Y'ha-nthlei
-  '07321': [50, 68], // Sunken Halls
-  '07322': [85, 52], // Vault of Riches
-  '07323': [68, 50], // Undersea Corridors
-  '07324': [34, 58], // Statues in the Deep
-  '07325': [18, 50], // Submerged Temple
-  '07326': [30, 42], // Syzygy Chamber
-  '07327': [30, 78], // Onyx Guardians
-  '07328': [24, 25], // Lair of Dagon (Sanctuary of Father Dagon)
-  '07329': [78, 25], // Lair of Hydra (High Temple of Mother Hydra)
 
   // Edge of the Earth — Scenario 1, 2, 3: Ice and Death (Parts 1, 2, 3)
   '08502': [50, 58], // Crash Site
@@ -1191,11 +1147,23 @@ export type HemlockOverview = {
  * its plate; `scene-island-sprites.ts` picks the sprite from this folder. */
 const COSMOS_ISLANDS = 'img/scenes/the-circle-undone/cosmos'
 const DEVIL_REEF_ISLANDS = 'img/scenes/the-innsmouth-conspiracy/devil-reef'
+const PIT_ISLANDS = 'img/scenes/the-innsmouth-conspiracy/pit'
+const MAELSTROM_ISLANDS = 'img/scenes/the-innsmouth-conspiracy/maelstrom'
+const FOG_ISLANDS = 'img/scenes/the-innsmouth-conspiracy/fog'
+export const HIGH_GEAR_ISLANDS = 'img/scenes/the-innsmouth-conspiracy/high-gear'
 const ISLAND_FOLDERS = new Map([
   ['05325', COSMOS_ISLANDS],
   ['54056', COSMOS_ISLANDS],
   ['07163', DEVIL_REEF_ISLANDS],
   [':return-to-the-innsmouth-conspiracy:031', DEVIL_REEF_ISLANDS],
+  ['07041', PIT_ISLANDS],
+  [':return-to-the-innsmouth-conspiracy:018', PIT_ISLANDS],
+  ['07311', MAELSTROM_ISLANDS],
+  [':return-to-the-innsmouth-conspiracy:048', MAELSTROM_ISLANDS],
+  ['07231', FOG_ISLANDS],
+  [':return-to-the-innsmouth-conspiracy:039', FOG_ISLANDS],
+  ['07198', HIGH_GEAR_ISLANDS],
+  [':return-to-the-innsmouth-conspiracy:035', HIGH_GEAR_ISLANDS],
 ])
 /* Boards whose sea is alive: Devil Reef is explored by boat through a storm. */
 const WEATHER = new Map<string, NonNullable<HemlockOverview['weather']>>([

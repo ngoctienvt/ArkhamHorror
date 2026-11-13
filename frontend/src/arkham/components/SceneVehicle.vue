@@ -25,6 +25,8 @@ const props = defineProps<{
   y: number
   /** Width of the sprite in pixels; the 3:2 picture sets the height. */
   width: number
+  /** The vehicle always drives to the right, even when the map slides under it (Horror in High Gear's cars). */
+  faceRight?: boolean
 }>()
 const emit = defineEmits<{ (e: 'choose', index: number): void }>()
 
@@ -37,7 +39,7 @@ const options = computed(() => choicesFor(choices.value, props.vehicle.id))
 const actionable = computed(() => targetIndex.value !== -1 || options.value.length > 0)
 
 const heading = ref<'left' | 'right'>('right')
-watch(() => props.x, (to, from) => { heading.value = headingAfterMove(from, to, heading.value) })
+watch(() => props.x, (to, from) => { if (!props.faceRight) heading.value = headingAfterMove(from, to, heading.value) })
 
 const ownId = computed(() => ownInvestigator(props.game, props.playerId)?.id)
 const passengerName = (id: string) => nameOf(props.game.investigators[id]?.cardCode ?? id)

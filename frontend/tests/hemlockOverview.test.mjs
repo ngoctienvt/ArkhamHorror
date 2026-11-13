@@ -341,30 +341,43 @@ test('The Circle Undone scenarios select their overview boards', () => {
 })
 
 test('The Innsmouth Conspiracy scenarios select their overview boards', () => {
-  assert.equal(hemlockOverview('c07041', 'c07041')?.image, 'img/scenes/the-innsmouth-conspiracy/the-pit-of-despair.webp')
+  assert.equal(hemlockOverview('c07041', 'c07041')?.image, 'img/scenes/the-innsmouth-conspiracy/pit-of-despair-caverns.webp')
   assert.equal(hemlockOverview('c07056', 'c07056')?.image, 'img/scenes/the-innsmouth-conspiracy/the-vanishing-of-elina-harper.webp')
   assert.equal(hemlockOverview('c07123', 'c07123')?.image, 'img/scenes/the-innsmouth-conspiracy/in-too-deep.webp')
   assert.equal(hemlockOverview('c07163', 'c07163')?.image, 'img/scenes/the-innsmouth-conspiracy/devil-reef-sea.webp')
-  assert.equal(hemlockOverview('c07198', 'c07198')?.image, 'img/scenes/the-innsmouth-conspiracy/horror-in-high-gear.webp')
-  assert.equal(hemlockOverview('c07231', 'c07231')?.image, 'img/scenes/the-innsmouth-conspiracy/a-light-in-the-fog.webp')
+  assert.equal(hemlockOverview('c07198', 'c07198')?.image, 'img/scenes/the-innsmouth-conspiracy/horror-in-high-gear-moor.webp')
+  assert.equal(hemlockOverview('c07231', 'c07231')?.image, 'img/scenes/the-innsmouth-conspiracy/a-light-in-the-fog-cliffs.webp')
   assert.equal(hemlockOverview('c07274', 'c07274')?.image, 'img/scenes/the-innsmouth-conspiracy/the-lair-of-dagon.webp')
-  assert.equal(hemlockOverview('c07311', 'c07311')?.image, 'img/scenes/the-innsmouth-conspiracy/into-the-maelstrom.webp')
+  assert.equal(hemlockOverview('c07311', 'c07311')?.image, 'img/scenes/the-innsmouth-conspiracy/into-the-maelstrom-abyss.webp')
 
+  // The four scenarios that place locations during play stand each on a sprite of its own, in the original and
+  // in Return to, and keep no per-card anchor.
+  const IC = 'img/scenes/the-innsmouth-conspiracy'
+  const RT = ':return-to-the-innsmouth-conspiracy:'
+  for (const [ids, folder, board] of [
+    [['c07041', `c${RT}018`], 'pit', 'pit-of-despair-caverns'],
+    [['c07311', `c${RT}048`], 'maelstrom', 'into-the-maelstrom-abyss'],
+    [['c07231', `c${RT}039`], 'fog', 'a-light-in-the-fog-cliffs'],
+    [['c07198', `c${RT}035`], 'high-gear', 'horror-in-high-gear-moor'],
+  ]) {
+    for (const id of ids) {
+      const overview = hemlockOverview(id, id)
+      assert.equal(overview?.islands, `${IC}/${folder}`, id)
+      assert.equal(overview?.image, `${IC}/${board}.webp`, id)
+      assert.equal(overview?.anchors, undefined, id)
+    }
+  }
+  for (const code of ['07047', '07052', '07102', '07203', '07209', '07239', '07252', '07319', '07329']) {
+    assert.equal(hemlockVillagePosition(code), undefined, code)
+  }
   // Verify village anchors for key TIC locations
-  assert.deepEqual(hemlockVillagePosition('07047'), [50, 52]) // Unfamiliar Chamber
-  assert.deepEqual(hemlockVillagePosition('07052'), [77, 16]) // Sealed Exit
   assert.deepEqual(hemlockVillagePosition('07065'), [47, 52]) // Innsmouth Square
   assert.deepEqual(hemlockVillagePosition('07068'), [67, 52]) // Fish Street Bridge
   // Devil Reef follows its growing grid, so its locations have no painted spot.
   assert.equal(hemlockVillagePosition('07168'), undefined) // Churning Waters
   assert.equal(hemlockVillagePosition('07171'), undefined) // Waveworn Island
-  assert.deepEqual(hemlockVillagePosition('07203'), [76, 12]) // Falcon Point Approach
-  assert.deepEqual(hemlockVillagePosition('07241'), [48, 12]) // Lantern Room (Lighthouse)
-  assert.deepEqual(hemlockVillagePosition('07247'), [68, 76]) // Shrine to Hydra
   assert.deepEqual(hemlockVillagePosition('07289'), [50, 18]) // Hall of Silence
   assert.deepEqual(hemlockVillagePosition('07283'), [50, 68]) // Grand Entryway
-  assert.deepEqual(hemlockVillagePosition('07320'), [50, 50]) // Gateway to Y'ha-nthlei
-  assert.deepEqual(hemlockVillagePosition('07328'), [24, 25]) // Lair of Dagon (Sanctuary)
 })
 
 test('Edge of the Earth overview maps and location positions', () => {

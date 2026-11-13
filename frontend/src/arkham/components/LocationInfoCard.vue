@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { locationExtraLabel } from '@/arkham/locationExtraLabel'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Game } from '@/arkham/types/Game'
@@ -50,11 +51,7 @@ const attached = computed(() => [
   ...named(props.location.assets, props.game.assets),
   ...named(props.location.events, props.game.events),
 ])
-const extraLabel = (x: string) => {
-  const [kind, value = ''] = x.split(':')
-  // Flood levels arrive as enum names (FullyFlooded…); show them translated.
-  return t(`locationMap.info.extra.${kind}`, { value: kind === 'flood' ? t(`locationMap.info.floodLevels.${value}`) : value })
-}
+const extraLabel = (x: string) => locationExtraLabel(x, t)
 const hasAction = computed(() => Boolean(props.info.actions.move || props.info.actions.investigate || props.info.actions.other.length || props.info.actions.selectIndex !== -1))
 
 function choose(index: number) {

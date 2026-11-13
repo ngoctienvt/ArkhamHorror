@@ -547,6 +547,7 @@
     "debug": "Debug"
   },
   "locationMap": {
+    "showMap": "Xem bản đồ",
     "concealed": "{count} lá bị che giấu",
     "concealedCard": "Lá bị che giấu",
     "chooseConcealed": "Chọn lá bị che giấu tại {where}",
@@ -819,6 +820,7 @@
       "investigate": "Điều tra",
       "extra": {
         "keys": "Chìa khóa: {value}",
+        "key": "Chìa khóa {value}",
         "seals": "Seal: {value}",
         "flood": "Ngập nước: {value}",
         "brazier": "Lò than: {value}",
@@ -860,6 +862,7 @@
       "clues": "Clue còn lại / gốc in",
       "doom": "Doom trên địa điểm",
       "movable": "Có thể di chuyển tới (viền và nút ↔ màu xanh)",
+      "lane": "Đường ray vàng: mọi địa điểm trên đó nối thẳng với nhau, đi được tới bất kỳ chỗ nào",
       "details": "Bấm vào bảng tên để mở chi tiết địa điểm"
     },
     "overview": "Tổng quan",
@@ -885,7 +888,7 @@
     "pendingPicks": "{count} lựa chọn cần làm trong panel",
     "keyColor": {
       "BlueKey": "xanh dương", "GreenKey": "xanh lá", "RedKey": "đỏ", "YellowKey": "vàng", "PurpleKey": "tím",
-      "BlackKey": "đen", "WhiteKey": "trắng", "UnrevealedKey": "úp"
+      "BlackKey": "đen", "WhiteKey": "trắng", "UnrevealedKey": "úp", "TokenKey": "token"
     },
     "tokenChoice": {
       "DamageToken": "Gán sát thương", "HorrorToken": "Gán kinh hoàng", "ClueToken": "Manh mối",

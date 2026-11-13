@@ -39,7 +39,7 @@ export type InfoLocation = {
   investigators: string[]
   enemies: string[]
   connectedLocations: string[]
-  keys: unknown[]
+  keys: { tag: string }[]
   seals: unknown[]
   floodLevel: string | null
   brazier: string | null
@@ -184,7 +184,8 @@ export function buildLocationInfo<C>(l: InfoLocation, ctx: LocationInfoContext<C
   }
 
   const extras: string[] = []
-  if (l.keys.length) extras.push(`keys:${l.keys.length}`)
+  // One line per key, named by its colour ("Yellow key"), not a bare count.
+  for (const k of l.keys) extras.push(`key:${k.tag}`)
   if (l.seals.length) extras.push(`seals:${l.seals.length}`)
   if (l.floodLevel && l.floodLevel !== 'Unflooded') extras.push(`flood:${l.floodLevel}`)
   if (l.brazier) extras.push(`brazier:${l.brazier}`)

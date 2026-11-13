@@ -6,7 +6,7 @@ import ts from 'typescript'
 // locationGraph.ts is import-free on purpose so it can be loaded here without the Vue toolchain.
 const source = readFileSync(new URL('../src/arkham/locationGraph.ts', import.meta.url), 'utf8')
 const js = ts.transpile(source, { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 })
-const { locationLinks, locationLinkDirection, shortestPath, locationRoster } = await import(
+const { locationLinks, locationLinkDirection, shortestPath, locationRoster, foldRowLinks } = await import(
   'data:text/javascript;base64,' + Buffer.from(js).toString('base64')
 )
 
@@ -164,4 +164,49 @@ test('compactGridLayout collapses rows and columns the card board leaves empty',
   // A cell on offer keeps its row and column, the way the card board shows a clickable empty position.
   assert.deepEqual(compactGridLayout(rows, new Set(['pos0000', 'pos0100'])), ['pos0000 pos0100'])
   assert.deepEqual(compactGridLayout(rows, new Set()), [])
+})
+
+const pairsOf = (ids) => ids.flatMap((a, i) => ids.slice(i + 1).map((b) => [a, b]))
+const keyOf = ([a, b]) => [a, b].sort().join('-')
+
+test('a row of 4 that all connect keeps one link per gap and forms one lane', () => {
+  const at = { a: [10, 50], b: [35, 50], c: [60, 50], d: [85, 50] }
+  const { links, lanes } = foldRowLinks(pairsOf(['a', 'b', 'c', 'd']), (id) => at[id], () => true)
+  assert.deepEqual(links.map(keyOf).sort(), ['a-b', 'b-c', 'c-d'])
+  assert.equal(lanes.length, 1)
+  assert.deepEqual(lanes[0].members, ['a', 'b', 'c', 'd'])
+  assert.deepEqual([...lanes[0].ends].sort(), ['a', 'd'])
+})
+
+test('a column folds the same way', () => {
+  const at = { a: [50, 10], b: [50, 40], c: [50, 70] }
+  const { links, lanes } = foldRowLinks(pairsOf(['a', 'b', 'c']), (id) => at[id], () => true)
+  assert.deepEqual(links.map(keyOf).sort(), ['a-b', 'b-c'])
+  assert.equal(lanes.length, 1)
+})
+
+test('a link with no location between its ends stays', () => {
+  const at = { a: [10, 50], b: [30, 50], c: [70, 50] }
+  const { links, lanes } = foldRowLinks([['a', 'b'], ['b', 'c']], (id) => at[id], () => true)
+  assert.equal(links.length, 2)
+  assert.equal(lanes.length, 0)
+})
+
+test('the long link stays when the middle location is not joined to both ends', () => {
+  const at = { a: [10, 50], b: [50, 50], c: [90, 50] }
+  const { links } = foldRowLinks([['a', 'b'], ['a', 'c']], (id) => at[id], () => true)
+  assert.equal(links.length, 2)
+})
+
+test('a link that may not fold (one-way, barriers) stays', () => {
+  const at = { a: [10, 50], b: [50, 50], c: [90, 50] }
+  const { links, lanes } = foldRowLinks(pairsOf(['a', 'b', 'c']), (id) => at[id], (x, y) => keyOf([x, y]) !== 'a-c')
+  assert.equal(links.length, 3)
+  assert.equal(lanes.length, 0)
+})
+
+test('locations dragged off the line keep their long link', () => {
+  const at = { a: [10, 50], b: [50, 70], c: [90, 50] }
+  const { links } = foldRowLinks(pairsOf(['a', 'b', 'c']), (id) => at[id], () => true)
+  assert.equal(links.length, 3)
 })

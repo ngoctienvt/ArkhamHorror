@@ -17,6 +17,7 @@ const ENTRIES: Entry[] = [
   { key: 'movable', swatch: 'movable' },
   { key: 'targetable', swatch: 'targetable' },
   { key: 'move', glyph: '↔' },
+  { key: 'lane', glyph: '═' },
   { key: 'onEnter', glyph: '⚠' },
   { key: 'shroud', icon: 'shroud' },
   { key: 'clues', icon: 'clue' },

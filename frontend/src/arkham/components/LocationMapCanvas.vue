@@ -11,11 +11,12 @@ import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
 import type { HemlockOverview } from '@/arkham/hemlock-overview'
 import { islandAspect, islandImage, islandSpotImage, islandWaterImage, vehicleSprite } from '@/arkham/scene-island-sprites'
 import { riders, sceneVehicles } from '@/arkham/scene-vehicle-model'
+import { roadAdvanced, roadSlides, type RoadGrid } from '@/arkham/high-gear-road-model'
 import SceneVehicle from '@/arkham/components/SceneVehicle.vue'
 import SceneWeather from '@/arkham/components/SceneWeather.vue'
 import SceneAtlachNacha from '@/arkham/components/SceneAtlachNacha.vue'
 import { STAIRS_FOLDER, stairsRotation, type weaverEnemies } from '@/arkham/dream-eaters-scene-model'
-import { locationLinkDirection, mineDescentPassage, type Point } from '@/arkham/locationGraph'
+import { foldRowLinks, locationLinkDirection, mineDescentPassage, type Point } from '@/arkham/locationGraph'
 import LocationMarkerPlate from '@/arkham/components/LocationMarkerPlate.vue'
 import LocationStandees from '@/arkham/components/LocationStandees.vue'
 import LocationConcealedStack from '@/arkham/components/LocationConcealedStack.vue'
@@ -62,6 +63,8 @@ const props = defineProps<{
   plateText?: boolean
   illustratedBoard?: HemlockOverview
   dreamPositions?: Record<string, Point>
+  /** Horror in High Gear: the road's columns and rows; tiles fill one column and two rows each, side by side. */
+  roadGrid?: RoadGrid
   weaver?: ReturnType<typeof weaverEnemies>
   /** Small version for the side column next to the scene. */
   compact?: boolean
@@ -155,6 +158,10 @@ const canvasStyle = computed(() => {
  * placement spots are sized to one cell, so neither covers a neighbouring cell and a click lands where it looks. */
 const cosmosCell = computed(() => {
   if (!props.illustratedBoard?.islands || !stageWidth.value || !stageHeight.value) return null
+  if (props.roadGrid) {
+    // A road tile is as wide as its column and two of the six rows high; neighbours touch, so the road is one strip.
+    return { width: stageWidth.value / props.roadGrid.columns, height: (stageHeight.value * 2) / props.roadGrid.rows }
+  }
   if (props.dreamPositions) {
     const stairs = props.illustratedBoard.islands === STAIRS_FOLDER
     return { width: stageWidth.value * 0.18, height: stageHeight.value * (stairs ? 0.17 : 0.20) }
@@ -169,11 +176,14 @@ const cosmosCell = computed(() => {
 /* The location's plate (its buttons) sits on the top edge of the cell, never over the middle of the picture; the
  * sprite fills the rest of the cell below it, where the standees hanging under the plate stand on it. */
 const PLATE_ROOM = 34
+/** Road tiles are drawn a touch wider than their column so the soft edges overlap into one road. */
+const ROAD_OVERLAP = 1.04
 /* On a small map the plate may overlap the sprite's top edge rather than squeeze the picture away. */
 const plateRoom = (cellHeight: number) => Math.min(PLATE_ROOM, cellHeight * (props.dreamPositions && stageWidth.value <= 600 ? 0.47 : 0.35))
 const islandWidth = (l: Location): number => {
   const cell = cosmosCell.value
   if (!cell) return 0
+  if (props.roadGrid) return cell.width * ROAD_OVERLAP
   const room = Math.max(0, cell.height - plateRoom(cell.height))
   return aspectOf(l) > 1
     ? Math.min(cell.width, room * 1.5)
@@ -184,7 +194,7 @@ const spriteStyle = (l: Location): Record<string, string | number> => {
   const cell = cosmosCell.value
   const [x, y] = cellPos(l.id)
   const width = islandWidth(l)
-  const centre = cell ? -cell.height / 2 + plateRoom(cell.height) + width / aspectOf(l) / 2 : 0
+  const centre = cell && !props.roadGrid ? -cell.height / 2 + plateRoom(cell.height) + width / aspectOf(l) / 2 : 0
   return { left: `${x}%`, top: `calc(${y}% + ${centre}px)`, width: `${width}px`, aspectRatio: aspectOf(l) }
 }
 /* The painted part of a sprite stops a little inside its picture (soft, transparent edges), so a link is
@@ -197,7 +207,7 @@ const spriteBox = (l: Location): PlateBox | undefined => {
   if (!cell || !stageWidth.value || !stageHeight.value) return undefined
   const width = islandWidth(l)
   const height = width / aspectOf(l)
-  const centre = -cell.height / 2 + plateRoom(cell.height) + height / 2
+  const centre = props.roadGrid ? 0 : -cell.height / 2 + plateRoom(cell.height) + height / 2
   return {
     dx: 0,
     dy: (centre / stageHeight.value) * 100,
@@ -211,6 +221,10 @@ const stormy = computed(() => !!props.illustratedBoard?.weather && !!props.weath
 const nodeStyle = (l: Location): Record<string, string | number | undefined> => {
   const [x, y] = pos(l.id)
   const cell = cosmosCell.value
+  if (cell && props.roadGrid) {
+    // The plate sits on the top edge of its road tile.
+    return { left: `${x}%`, top: `calc(${y}% - ${islandWidth(l) / aspectOf(l) / 2}px)`, translate: '-50% 0' }
+  }
   if (cell && props.illustratedBoard?.islands) {
     return { left: `${x}%`, top: `calc(${y}% - ${cell.height / 2}px)`, translate: '-50% 0' }
   }
@@ -218,6 +232,55 @@ const nodeStyle = (l: Location): Record<string, string | number | undefined> => 
 }
 const islandsFolder = computed(() => props.illustratedBoard?.islands ?? '')
 const aspectOf = (l: Location) => islandAspect(islandsFolder.value, l.cardCode, l.revealed)
+
+/* Horror in High Gear: driving on adds a column on the right and drops the ones behind. The new tiles slide in
+ * from the right, the tiles left behind fade out to the left (a ghost of each, since the card is already gone),
+ * the rest move to their new place, and the backdrop drifts a little with them. Reduced motion: it just jumps. */
+type RoadGhost = { id: string; src: string; x: number; y: number; width: number }
+const roadGhosts = ref<RoadGhost[]>([])
+const roadFrame = computed(() => {
+  if (!props.roadGrid) return { points: {} as Record<string, Point>, sprites: {} as Record<string, { src: string; width: number }> }
+  const points: Record<string, Point> = {}
+  const sprites: Record<string, { src: string; width: number }> = {}
+  for (const l of props.locations) {
+    points[l.id] = cellPos(l.id)
+    sprites[l.id] = { src: islandImage(islandsFolder.value, l.cardCode, l.revealed), width: islandWidth(l) }
+  }
+  return { points, sprites }
+})
+const ROAD_SLIDE_MS = 500
+let roadAnimations: Animation[] = []
+let ghostTimer: ReturnType<typeof setTimeout> | null = null
+watch(roadFrame, (after, before) => {
+  roadAnimations.forEach((animation) => animation.cancel())
+  roadAnimations = []
+  if (!props.roadGrid || !stage.value || !stageWidth.value || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { roadGhosts.value = []; return }
+  const slides = roadSlides(before.points, after.points)
+  const px = (dx: number, dy: number) => `translate(${(dx * stageWidth.value) / 100}px, ${(dy * stageHeight.value) / 100}px)`
+  const tiles = (id: string) => [...stage.value!.querySelectorAll<HTMLElement>(`[data-road-tile="${id}"]`)]
+  const options = { duration: ROAD_SLIDE_MS, easing: 'ease-in-out' }
+  for (const { id, dx, dy } of slides.shifting) {
+    for (const element of tiles(id)) roadAnimations.push(element.animate([{ transform: px(dx, dy) }, { transform: 'none' }], options))
+  }
+  const column = 100 / props.roadGrid.columns
+  for (const id of slides.entering) {
+    for (const element of tiles(id)) {
+      roadAnimations.push(element.animate([{ transform: px(column, 0), opacity: 0 }, { transform: 'none', opacity: 1 }], options))
+    }
+  }
+  if (roadAdvanced(slides)) {
+    const art = stage.value.querySelector<HTMLElement>('.board-art')
+    art?.animate([{ transform: px(column * 0.5, 0) }, { transform: 'none' }], { ...options, duration: ROAD_SLIDE_MS * 1.6 })
+  }
+  roadGhosts.value = slides.leaving.flatMap((id) => {
+    const sprite = before.sprites[id]
+    const [x, y] = before.points[id]
+    return sprite ? [{ id, src: sprite.src, x, y, width: sprite.width }] : []
+  })
+  if (ghostTimer) clearTimeout(ghostTimer)
+  if (roadGhosts.value.length) ghostTimer = setTimeout(() => { roadGhosts.value = [] }, ROAD_SLIDE_MS)
+}, { flush: 'post' })
+onBeforeUnmount(() => { roadAnimations.forEach((animation) => animation.cancel()); if (ghostTimer) clearTimeout(ghostTimer) })
 
 const stairSlots = computed(() => islandsFolder.value === STAIRS_FOLDER
   ? props.locations.filter((l) => /^mysteriousStairs[1-5]$/.test(l.label))
@@ -255,15 +318,32 @@ const vehicles = computed(() => {
   const here = new Set(props.locations.map((l) => l.id))
   return sceneVehicles(props.game, (code) => vehicleSprite(islandsFolder.value, code)).filter((v) => here.has(v.locationId))
 })
+/** Vehicles sharing a location (both of High Gear's cars start on the same tile) are spread side by side. */
+const vehicleSlots = computed(() => {
+  const seen = new Map<string, number>()
+  const total = new Map<string, number>()
+  for (const v of vehicles.value) total.set(v.locationId, (total.get(v.locationId) ?? 0) + 1)
+  return new Map(vehicles.value.map((v) => {
+    const index = seen.get(v.locationId) ?? 0
+    seen.set(v.locationId, index + 1)
+    return [v.id, { index, count: total.get(v.locationId) ?? 1 }] as const
+  }))
+})
 const aboard = computed(() => riders(vehicles.value))
 const vehicleWidth = computed(() => {
   const cell = cosmosCell.value
+  if (cell && props.roadGrid) return cell.width * 0.4
   return cell ? Math.min(cell.width, cell.height * 1.5) * 0.7 : 0
 })
-const vehiclePos = (locationId: string): Point => {
+const vehiclePos = (locationId: string, vehicleId = ''): Point => {
   const cell = cosmosCell.value
   const [x, y] = cellPos(locationId)
   if (!cell || !stageWidth.value || !stageHeight.value) return [x, y]
+  if (props.roadGrid) {
+    const slot = vehicleSlots.value.get(vehicleId) ?? { index: 0, count: 1 }
+    const along = (slot.index - (slot.count - 1) / 2) * cell.width * 0.34
+    return [x + (along / stageWidth.value) * 100, y + ((cell.height * 0.12) / stageHeight.value) * 100]
+  }
   return [x + ((cell.width * 0.2) / stageWidth.value) * 100, y + ((cell.height * 0.22) / stageHeight.value) * 100]
 }
 /** The location as drawn on the ground: without the investigators riding a vehicle there. */
@@ -298,10 +378,43 @@ function linkMove(a: string, b: string): { index: number; to: string } | null {
   return null
 }
 
+/* A row whose locations all connect to each other draws one link per gap plus a rail along the row, instead of
+ * every pair (whose long links would stack on the short ones and drop their badges onto the middle locations).
+ * Only two-way links without barriers fold, and only while the locations really sit in a line. */
+const rowLinks = computed(() => {
+  const byId = new Map(props.locations.map((location) => [location.id, location]))
+  const at = (id: string): Point | undefined => {
+    if (!props.positions[id] && !props.cutaway?.[id]) return undefined
+    return cosmosCell.value ? cellPos(id) : pos(id)
+  }
+  const foldable = (a: string, b: string) => {
+    const from = byId.get(a)
+    const to = byId.get(b)
+    return !!from && !!to && locationLinkDirection(from, to) === 'both' && barriersBetween(props.barriers ?? null, a, b) === 0
+  }
+  return foldRowLinks(props.links, at, foldable)
+})
+/* Inside a row the rail is the whole picture: its gaps get no dashed guide or arrow badge. A gap holding barriers
+ * keeps its badge so the barricade still shows; moving along the row uses each plate's own move button. */
+const drawnLinks = computed(() => {
+  const lanes = rowLinks.value.lanes.map((lane) => new Set(lane.members))
+  return rowLinks.value.links.filter(([a, b]) =>
+    !lanes.some((lane) => lane.has(a) && lane.has(b)) || barriersBetween(props.barriers ?? null, a, b) > 0)
+})
+/** One rail per row of mutually connected locations, centre to centre (the sprites and plates cover its ends). */
+const laneRails = computed(() => {
+  if (props.cutaway || props.compact) return []
+  return rowLinks.value.lanes.map(({ ends: [a, b], members }) => {
+    const [x1, y1] = cosmosCell.value ? cellPos(a) : pos(a)
+    const [x2, y2] = cosmosCell.value ? cellPos(b) : pos(b)
+    return { key: members.join('|'), d: `M${x1} ${y1}L${x2} ${y2}` }
+  })
+})
+
 const connectionArrows = computed(() => {
   if (props.cutaway || props.compact) return []
   const locations = new Map(props.locations.map((location) => [location.id, location]))
-  return props.links.flatMap(([a, b]) => {
+  return drawnLinks.value.flatMap(([a, b]) => {
     const from = locations.get(a)
     const to = locations.get(b)
     if (!from || !to) return []
@@ -424,9 +537,10 @@ function tileClick(l: Location, event: MouseEvent) {
       <SceneWeather v-if="stormy" :width="stageWidth" :height="stageHeight" />
       <svg v-if="!cutaway" class="map-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
         <template v-if="!illustratedBoard">
-          <line v-for="[a, b] in links" :key="a + b"
+          <line v-for="[a, b] in drawnLinks" :key="a + b"
             :x1="pos(a)[0]" :y1="pos(a)[1]" :x2="pos(b)[0]" :y2="pos(b)[1]" />
         </template>
+        <path v-for="rail in laneRails" :key="'lane' + rail.key" class="lane-rail" :d="rail.d" />
         <template v-if="illustratedBoard">
           <path v-for="arrow in connectionArrows" :key="'guide' + arrow.key" class="connection-guide" :class="{ movable: !!arrow.move, blocked: arrow.barriers > 0 }" :d="arrow.guide" />
         </template>
@@ -472,6 +586,10 @@ function tileClick(l: Location, event: MouseEvent) {
         <img v-for="l in locations" :key="'island-' + l.id" class="island" :class="{ targetable: infoOf(l).targetable }"
           :src="islandImage(illustratedBoard.islands, l.cardCode, l.revealed)"
           :style="spriteStyle(l)" :data-stair-tile="islandsFolder === STAIRS_FOLDER ? l.id : undefined"
+          :data-road-tile="roadGrid ? l.id : undefined" alt="" aria-hidden="true" draggable="false" />
+        <!-- Road tiles that were left behind fade away to the left while the road slides on. -->
+        <img v-for="g in roadGhosts" :key="'ghost-' + g.id" class="island road-ghost" :src="g.src"
+          :style="{ left: g.x + '%', top: g.y + '%', width: g.width + 'px', aspectRatio: 1.5, '--drift': -(stageWidth / (roadGrid?.columns ?? 1)) + 'px' }"
           alt="" aria-hidden="true" draggable="false" />
         <!-- A flooded location's water rises over its sprite, in the same frame. -->
         <template v-for="l in locations" :key="'water-' + l.id">
@@ -492,7 +610,8 @@ function tileClick(l: Location, event: MouseEvent) {
           </div>
         </template>
         <SceneVehicle v-for="v in vehicles" :key="'vehicle-' + v.id" :game="game" :playerId="playerId" :vehicle="v"
-          :x="vehiclePos(v.locationId)[0]" :y="vehiclePos(v.locationId)[1]" :width="vehicleWidth" @choose="emit('choose', $event)" />
+          :x="vehiclePos(v.locationId, v.id)[0]" :y="vehiclePos(v.locationId, v.id)[1]" :width="vehicleWidth" :faceRight="!!roadGrid"
+          @choose="emit('choose', $event)" />
       </template>
       <SceneAtlachNacha v-if="weaver && dreamDisplayPositions && stageWidth && stageHeight" :game="game" :playerId="playerId"
         :spider="weaver" :positions="dreamDisplayPositions" :width="stageWidth" :height="stageHeight" @choose="emit('choose', $event)" />
@@ -511,11 +630,11 @@ function tileClick(l: Location, event: MouseEvent) {
           hidden: !l.revealed, targetable: infoOf(l).targetable,
         }"
         :style="nodeStyle(l)"
-        :data-id="l.id" :data-stair-tile="islandsFolder === STAIRS_FOLDER ? l.id : undefined"
+        :data-id="l.id" :data-stair-tile="islandsFolder === STAIRS_FOLDER ? l.id : undefined" :data-road-tile="roadGrid ? l.id : undefined"
         @pointerdown="startNodeDrag(l, $event)" @click.stop="cutaway ? undefined : tileClick(l, $event)">
         <img v-if="!cutaway && !illustratedBoard" class="art" :src="locationImage(l)" alt="" loading="lazy" />
         <LocationStandees v-if="cutaway" :game="game" :playerId="playerId" :location="l" :enemiesAt="enemiesAt" @choose="emit('choose', $event)" />
-        <LocationMarkerPlate v-if="!roomPlates?.[l.id]" :info="infoOf(l)" :size="compact ? 'compact' : 'full'" :game="game" :locationId="l.id"
+        <LocationMarkerPlate v-if="!roomPlates?.[l.id]" :info="infoOf(l)" :size="compact ? 'compact' : 'full'" :game="game" :playerId="playerId" :locationId="l.id"
           :hideMove="movesOnLinks.has(l.id)"
           :data-fx-target="`location-${l.id}`"
           :[CARD_FLIGHT_ATTR]="l.cardId" :style="cardFlightStyle(flightState, l.cardId)"
@@ -537,7 +656,7 @@ function tileClick(l: Location, event: MouseEvent) {
       <template v-for="l in locations" :key="'plate-' + l.id">
         <div v-if="roomPlates?.[l.id]" class="room-plate" :class="{ selected: l.id === selectedId }" :data-id="l.id"
           :style="{ left: roomPlates[l.id].x + '%', top: roomPlates[l.id].y + '%', width: roomPlates[l.id].width + '%' }">
-          <LocationMarkerPlate :info="infoOf(l)" size="room" :showText="plateText" :game="game" :locationId="l.id"
+          <LocationMarkerPlate :info="infoOf(l)" size="room" :showText="plateText" :game="game" :playerId="playerId" :locationId="l.id"
             :data-fx-target="`location-${l.id}`"
             :[CARD_FLIGHT_ATTR]="l.cardId" :style="cardFlightStyle(flightState, l.cardId)"
             :data-image="locationImage(l)" :data-card-code="l.cardCode" @inspect="emit('inspect', l, $event)" @choose="emit('choose', $event)" />
@@ -571,6 +690,8 @@ function tileClick(l: Location, event: MouseEvent) {
 .map-links { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
 .map-links line { stroke: #b2996399; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
 /* Dark under-stroke first (via drop-shadow) so the pale dashes read on light and dark parts of the painting. */
+/* A row of locations that all connect to each other: one gold rail under the whole row. */
+.lane-rail { fill: none; stroke: #e9c46a99; stroke-width: 6; stroke-linecap: round; vector-effect: non-scaling-stroke; filter: drop-shadow(0 0 3px #000); }
 .connection-guide { fill: none; stroke: #f6dc9cb3; stroke-width: 1.8; stroke-dasharray: 5 6; stroke-linecap: round; vector-effect: non-scaling-stroke; filter: drop-shadow(0 0 1.5px #000); }
 .moving-enemy { fill: #eeab78; filter: drop-shadow(0 0 2px #f37045); }
 .node { position: absolute; translate: -50% -50%; width: clamp(140px, 19%, 240px); height: auto; min-height: clamp(96px, 27%, 170px); padding: 5px; border: 1px solid #7c8d6277; border-radius: 6px; background: #1e2b20; color: #e5e2d4; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; text-align: left; cursor: pointer; }
@@ -611,6 +732,9 @@ function tileClick(l: Location, event: MouseEvent) {
   pointer-events: none; user-select: none; filter: drop-shadow(0 8px 14px #0009);
 }
 /* A cell the game asks you to pick (where to sail the boat, which island to explore) glows as a whole. */
+.island.road-ghost { animation: road-leave 500ms ease-in forwards; }
+@keyframes road-leave { from { opacity: 1; } to { opacity: 0; transform: translateX(var(--drift)); } }
+@media (prefers-reduced-motion: reduce) { .island.road-ghost { display: none; } }
 .island.targetable { filter: drop-shadow(0 0 10px #f2d27a) drop-shadow(0 8px 14px #0009); }
 .island.water { filter: none; transition: opacity 800ms ease-in-out; }
 @starting-style { .island.water { opacity: 0; } }
