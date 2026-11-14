@@ -4,7 +4,9 @@ import type { Scenario } from '@/arkham/types/Scenario'
 import type { GameValue } from '@/arkham/types/Location'
 import { MessageType } from '@/arkham/types/Message'
 import type { ArkhamDBCard } from '@/stores/dbCards'
-import { cardImage } from '@/arkham/cardImages'
+import { cardImage, resolvedSideArt } from '@/arkham/cardImages'
+import { cardImg } from '@/arkham/helpers'
+import { toCardContents } from '@/arkham/types/Card'
 import { useCardInfo } from '@/arkham/composables/useCardNames'
 import { useGameChoices } from '@/arkham/composables/useGameChoices'
 import { choicesFor, kindOf, LINE_KIND, type EntityChoice } from '@/arkham/locationChoices'
@@ -39,7 +41,11 @@ export type MissionPanel = {
   doom: number | null; doomMax: number | null
   clues: number | null; clueMax: number | null; advanceIndex: number | null
   choices: EntityChoice[]; actions: ActionRow[]; attached: AttachedCard[]
+  /** The most recently resolved card of this deck, as the side it was resolved on (the back). */
+  completed: CompletedCard[]
 }
+
+export type CompletedCard = { key: string; code: string; src: string }
 
 /** How a meter's value just changed, so the pips between the two counts can animate. */
 export type MeterChange = { from: number; to: number }
@@ -168,6 +174,10 @@ export function useMissionStripPanels(game: () => Game, scenario: () => Scenario
       choices: entityChoices.filter((c) => !['action', 'fast'].includes(kindOf(c.contents) ?? '') && c.index !== objectiveChoice?.index),
       actions: actionRows(printed, entityChoices, id),
       attached: attachedTo(kind, id, deckId === firstDeck.value[kind]),
+      completed: (stack[1] ?? []).slice(-1).map((done) => {
+        const contents = toCardContents(done)
+        return { key: `${kind}${deckId}-done-${contents.id ?? contents.cardCode}`, code: contents.cardCode, src: cardImg(resolvedSideArt(contents.art || contents.cardCode.replace(/^c/, ''))) }
+      }),
     }
   }
 

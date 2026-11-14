@@ -8,8 +8,10 @@ import { cardImage, portraitImage } from '@/arkham/cardImages'
 import { useCardNames } from '@/arkham/composables/useCardNames'
 import { ownInvestigator } from '@/arkham/ownInvestigator'
 import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
-import type { HemlockOverview } from '@/arkham/hemlock-overview'
+import { museumExhibitArt, type HemlockOverview } from '@/arkham/hemlock-overview'
+import { essexTrainArt, hasLocationArt } from '@/arkham/scene-location-art'
 import { islandAspect, islandImage, islandRails, islandSpotImage, islandWaterImage, vehicleSprite } from '@/arkham/scene-island-sprites'
+import { showsSceneLandmark } from '@/arkham/revealed-scene-positions'
 import { riders, sceneVehicles } from '@/arkham/scene-vehicle-model'
 import { roadAdvanced, roadSlides, type RoadGrid } from '@/arkham/high-gear-road-model'
 import SceneVehicle from '@/arkham/components/SceneVehicle.vue'
@@ -65,6 +67,7 @@ const props = defineProps<{
   dreamPositions?: Record<string, Point>
   /** Horror in High Gear: the road's columns and rows; tiles fill one column and two rows each, side by side. */
   roadGrid?: RoadGrid
+  hiddenLocationArt?: string
   weaver?: ReturnType<typeof weaverEnemies>
   /** Small version for the side column next to the scene. */
   compact?: boolean
@@ -92,9 +95,12 @@ const offsetKey = (id: string) => `${props.game.id}:${id}`
 // Where a plate is drawn: its scenario spot plus any shift the player dragged it by (never in the house cutaway).
 const pos = (id: string): Point => {
   const [x, y] = basePos(id)
-  if (!canDrag.value) return [x, y]
+  const staggered = essexTrain.value && stageWidth.value > 0 && stageWidth.value <= 650
+    && Math.round((x - 22) / 11) % 2 === 0
+  const plateY = staggered && stageHeight.value > 0 ? y - (3800 / stageHeight.value) : y
+  if (!canDrag.value) return [x, plateY]
   const [dx, dy] = offsetOf(offsetKey(id))
-  return [x + dx, y + dy]
+  return [x + dx, plateY + dy]
 }
 const arrowKey = (key: string) => `${props.game.id}:arrow:${key}`
 // Plates and move buttons can be dragged aside on every full-size board. On a sprite board the whole location moves
@@ -103,6 +109,19 @@ const arrowKey = (key: string) => `${props.game.id}:arrow:${key}`
 const canDrag = computed(() => !props.cutaway && !props.compact)
 /** Where a location's sprite is drawn on a sprite board: its cell plus any shift the player dragged it by. */
 const cellPos = (id: string): Point => pos(id)
+const museumExhibits = computed(() => props.illustratedBoard?.museumExhibits
+  ? props.locations.flatMap(({ id, cardCode, revealed }) => {
+    const src = museumExhibitArt(cardCode, revealed)
+    return src ? [{ id, src }] : []
+  })
+  : [])
+const sceneArt = computed(() => props.illustratedBoard?.image.slice('img/scenes/'.length, -'.webp'.length))
+const essexTrain = computed(() => sceneArt.value === 'the-dunwich-legacy/essex-county-rails')
+const locationVignettes = computed(() => {
+  const art = sceneArt.value
+  if (!art || essexTrain.value) return []
+  return props.locations.filter((location) => hasLocationArt(art, location))
+})
 const startNodeDrag = (l: Location, event: PointerEvent) => {
   if (canDrag.value) beginDrag(event, offsetKey(l.id), 'pct', stage.value)
 }
@@ -143,7 +162,7 @@ const canvasStyle = computed(() => {
   const width = props.width ?? 450
   if (!props.illustratedBoard) return { minWidth: `${Math.min(width, 900)}px` }
   // An illustrated board is a picture: it always fits the available area, so it never needs scrolling.
-  if (descent.value || props.illustratedBoard.village || props.illustratedBoard.house) return undefined
+  if (descent.value || props.illustratedBoard.village) return undefined
   const columns = Math.max(1, width / 150)
   return { '--location-width': `${87 / columns}%` }
 })
@@ -348,6 +367,18 @@ const onGround = (l: Location): Location =>
 // Match the card board, including enemy cards that also serve as locations.
 const locationImage = (l: Location) => cardImage(l.cardCode, l.revealed || l.enemyLocation ? '' : 'b')
 
+// A portrait that fails to load falls back once to the investigator's card art (cropped by the figure's
+// object-fit); if that fails too the broken-image alt text is hidden rather than left showing.
+function fallbackFigureArt(event: Event, fallbackSrc: string) {
+  const image = event.currentTarget as HTMLImageElement
+  if (image.dataset.fellBack === '1') {
+    image.style.visibility = 'hidden'
+    return
+  }
+  image.dataset.fellBack = '1'
+  image.src = fallbackSrc
+}
+
 function hideFailedArt(event: Event, code: string) {
   const image = event.currentTarget as HTMLImageElement
   image.hidden = true
@@ -524,10 +555,31 @@ function tileClick(l: Location, event: MouseEvent) {
 <template>
   <div ref="scroller" class="map-scroll" :class="{ compact }">
     <div class="map-canvas" :class="{ 'has-cutaway': cutaway, 'has-illustrated-board': illustratedBoard, 'has-dream-board': dreamBoard }" :style="canvasStyle">
-      <div ref="stage" class="map-stage" :class="{ cutaway, illustrated: illustratedBoard, descent, village: illustratedBoard?.village, house: illustratedBoard?.house, 'dream-grid': dreamPositions, 'dream-static': dreamBoard && !dreamPositions }"
+      <div ref="stage" class="map-stage" :class="{ cutaway, illustrated: illustratedBoard, descent, village: illustratedBoard?.village, 'essex-train': essexTrain, 'reveal-landmarks': hiddenLocationArt || illustratedBoard?.revealRoomAnchors, 'dream-grid': dreamPositions, 'dream-static': dreamBoard && !dreamPositions }"
         :style="stageStyle">
-      <img v-if="illustratedBoard" :key="illustratedBoard.image" class="board-art" :src="illustratedBoard.image"
+      <img v-if="illustratedBoard" :key="illustratedBoard.image" class="board-art" :class="{ spectral: illustratedBoard.spectral }" :src="illustratedBoard.image"
         alt="" @error="hideFailedArt($event, illustratedBoard.image)" />
+      <template v-if="essexTrain">
+        <img v-for="location in locations" :key="`${location.id}:${essexTrainArt(location)}`"
+          class="essex-train-car" :src="essexTrainArt(location)" :style="{ left: basePos(location.id)[0] + '%' }"
+          alt="" draggable="false" @error="hideFailedArt($event, essexTrainArt(location))" />
+      </template>
+      <div v-for="location in locationVignettes" :key="location.id" class="scene-location-art"
+        :style="{ left: basePos(location.id)[0] + '%', top: basePos(location.id)[1] + '%' }" aria-hidden="true">
+        <img v-if="location.revealed" :key="location.cardCode" :src="locationImage(location)"
+          alt="" draggable="false" @error="hideFailedArt($event, location.cardCode)" />
+      </div>
+      <template v-if="illustratedBoard?.museumExhibits">
+        <img v-for="exhibit in museumExhibits" :key="exhibit.id" class="museum-exhibit-art" :src="exhibit.src"
+          :style="{ left: pos(exhibit.id)[0] + '%', top: pos(exhibit.id)[1] + '%' }"
+          alt="" aria-hidden="true" draggable="false" @error="hideFailedArt($event, exhibit.src)" />
+      </template>
+      <template v-if="hiddenLocationArt">
+        <img v-for="location in locations.filter((l) => !showsSceneLandmark(l))" :key="location.id"
+          class="hidden-location-art" :src="hiddenLocationArt"
+          :style="{ left: pos(location.id)[0] + '%', top: pos(location.id)[1] + '%' }"
+          alt="" aria-hidden="true" draggable="false" />
+      </template>
       <SceneWeather v-if="stormy" :width="stageWidth" :height="stageHeight" />
       <svg v-if="!cutaway" class="map-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
         <template v-if="!illustratedBoard">
@@ -651,6 +703,7 @@ function tileClick(l: Location, event: MouseEvent) {
         <span v-else-if="!cutaway" class="occupants">
           <img v-for="id in onGround(l).investigators" :key="id" class="figure" :class="{ you: id === ownId(), portrait: !compact }"
             :src="portraitImage(game.investigators[id]?.cardCode ?? '')" :alt="investigatorName(id)"
+            @error="fallbackFigureArt($event, cardImage(game.investigators[id]?.cardCode ?? ''))"
             :style="{ viewTransitionName: moveNameOf(id, l) }" :data-investigator-mini="compact ? undefined : id"
             :data-image="cardImage(game.investigators[id]?.cardCode ?? '')" />
           <LocationEnemyChips :game="game" :playerId="playerId" :location="l" :enemiesAt="enemiesAt" :compact="compact" @choose="emit('choose', $event)" />
@@ -679,6 +732,33 @@ function tileClick(l: Location, event: MouseEvent) {
 .has-illustrated-board { min-height: 0; }
 .map-scroll:has(.has-illustrated-board) { overflow: hidden; }
 .board-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; pointer-events: none; }
+.board-art.spectral { filter: sepia(.3) hue-rotate(160deg) saturate(.65) brightness(.86); }
+.essex-train-car {
+  position: absolute; top: 64.5%; width: 11.15%; translate: -50% -100%; pointer-events: none;
+  filter: drop-shadow(0 2px 2px #000a);
+}
+.scene-location-art {
+  position: absolute; width: min(11%, 155px); aspect-ratio: 2.25;
+  translate: -50% -14%; pointer-events: none; overflow: hidden;
+  border-radius: 45% 45% 23% 23% / 25% 25% 24% 24%;
+  background: radial-gradient(ellipse at center, #222e31d9 32%, #10151888 64%, transparent 74%);
+}
+.scene-location-art img {
+  position: absolute; display: block; width: 112%; max-width: none; height: auto; top: -22%; left: -6%;
+}
+.scene-location-art img[hidden] { display: none; }
+.museum-exhibit-art {
+  position: absolute; width: min(13%, 175px); translate: -50% -24%; pointer-events: none;
+  filter: drop-shadow(0 4px 8px #0009);
+}
+.hidden-location-art {
+  position: absolute; z-index: 1; width: min(12%, 120px); translate: -50% -30%;
+  pointer-events: none; filter: drop-shadow(0 2px 5px #000);
+}
+.reveal-landmarks .node { z-index: 5; }
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-landmarks .node:not(:active) { transition: left 300ms ease, top 300ms ease; }
+}
 .has-cutaway { container-type: size; }
 .has-dream-board { container-type: size; }
 .map-stage.dream-grid { inset: auto; left: 50%; top: 50%; translate: -50% -50%; width: min(100cqw, 177.777cqh); aspect-ratio: 16 / 9; }
@@ -934,25 +1014,32 @@ function tileClick(l: Location, event: MouseEvent) {
 }
 .village .node.selected { outline: none; }
 .village .node.selected :deep(.plate) { outline: 2px solid #e6c584; outline-offset: 2px; }
-.house .node, .house .spot { width: min(22%, 180px); }
 /* Player-chosen sizes (Settings): location buttons/plates and character figures. */
 .node, .spot, .room-plate { scale: var(--location-scale, 1); }
 .room-plate { transform-origin: 0 0; }
 .cutaway .node { scale: 1; transform-origin: 50% 100%; }
 .cutaway .node :deep(.standees) { scale: var(--figure-scale, 1); transform-origin: 50% 100%; }
 .figure { zoom: var(--figure-scale, 1); }
-.house .location-illustration { max-height: 75px; }
 /* Fingers: readable health and sanity bars, and a bigger reach for the empty-slot buttons. */
 .location-map[data-input='touch'] .location-floor :deep(.hud) { font-size: 11px; }
 .location-map[data-input='touch'] .spot { min-height: var(--tap-min); min-width: var(--tap-min); }
 /* On painted boards a plate is only as wide as its name and stats need, so it covers as little of the picture as possible.
  * The name stays on one line (one slim row hides less of the painting than two); past 280px it is cut with an ellipsis
  * and the full name is on the location card shown on hover. */
-.illustrated .node, .village .node, .descent .node, .house .node { width: max-content; max-width: 280px; }
-.illustrated .node :deep(.plate .name), .village .node :deep(.plate .name), .descent .node :deep(.plate .name), .house .node :deep(.plate .name) { white-space: nowrap; overflow-wrap: normal; }
-.illustrated .node :deep(.plate), .village .node :deep(.plate), .descent .node :deep(.plate), .house .node :deep(.plate) { min-width: 0; padding: 2px 5px; gap: 2px; }
-.illustrated .node :deep(.plate .main), .village .node :deep(.plate .main), .descent .node :deep(.plate .main), .house .node :deep(.plate .main) { min-height: 18px; gap: 4px; }
-.illustrated .node :deep(.plate .name), .village .node :deep(.plate .name), .descent .node :deep(.plate .name), .house .node :deep(.plate .name) { font-size: 0.76rem; }
+.illustrated .node, .village .node, .descent .node { width: max-content; max-width: 280px; }
+.illustrated .node :deep(.plate .name), .village .node :deep(.plate .name), .descent .node :deep(.plate .name) { white-space: nowrap; overflow-wrap: normal; }
+.illustrated .node :deep(.plate), .village .node :deep(.plate), .descent .node :deep(.plate) { min-width: 0; padding: 2px 5px; gap: 2px; }
+.illustrated .node :deep(.plate .main), .village .node :deep(.plate .main), .descent .node :deep(.plate .main) { min-height: 18px; gap: 4px; }
+.illustrated .node :deep(.plate .name), .village .node :deep(.plate .name), .descent .node :deep(.plate .name) { font-size: 0.76rem; }
+.essex-train .node { max-width: 10.5%; }
+.essex-train .node :deep(.plate) { width: 100%; box-sizing: border-box; }
+.essex-train .node :deep(.plate .name) { white-space: normal; overflow-wrap: anywhere; }
+.essex-train .node :deep(.head) { flex-wrap: wrap; }
+@media (max-width: 650px) {
+  .essex-train .node { max-width: 19%; }
+  .essex-train .connection-arrow:not(.movable):not(.blocked) { display: none; }
+  .essex-train .node :deep(.plate .name) { font-size: .59rem; }
+}
 .dream-grid .node { max-width: min(24%, 180px); z-index: 5; }
 .dream-static .node { max-width: min(19%, 180px); }
 .dream-grid .node :deep(.plate .name), .dream-static .node :deep(.plate .name) { white-space: normal; overflow-wrap: anywhere; }

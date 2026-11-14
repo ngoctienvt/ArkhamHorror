@@ -1,8 +1,10 @@
 import type { Point } from './locationGraph'
+import type { LogContents, LogKey } from './types/Log'
 import { dreamEatersAnchors, dreamEatersArt } from './scene-anchors-the-dream-eaters'
 
 const boards = new Map([
   // Night of the Zealot
+  ['50011', 'night-of-the-zealot/return-to-the-gathering'],
   ['01120', 'night-of-the-zealot/midnight-masks'],
   ['50025', 'night-of-the-zealot/midnight-masks'],
   ['01142', 'night-of-the-zealot/devourer-below'],
@@ -11,28 +13,27 @@ const boards = new Map([
   // The Dunwich Legacy (Season 2)
   ['02041', 'the-dunwich-legacy/extracurricular-activity'],
   ['51012', 'the-dunwich-legacy/extracurricular-activity'],
-  ['02062', 'the-dunwich-legacy/the-house-always-wins'],
-  ['51016', 'the-dunwich-legacy/the-house-always-wins'],
-  ['02118', 'the-dunwich-legacy/the-miskatonic-museum'],
-  ['51025', 'the-dunwich-legacy/the-miskatonic-museum'],
-  ['02159', 'the-dunwich-legacy/the-essex-county-express'],
-  ['51031', 'the-dunwich-legacy/the-essex-county-express'],
+  ['02062', 'the-dunwich-legacy/return-to-the-house-always-wins'],
+  ['51015', 'the-dunwich-legacy/return-to-the-house-always-wins'],
+  ['02118', 'the-dunwich-legacy/return-to-the-miskatonic-museum'],
+  ['51020', 'the-dunwich-legacy/return-to-the-miskatonic-museum'],
+  ['02159', 'the-dunwich-legacy/essex-county-rails'],
+  ['51025', 'the-dunwich-legacy/essex-county-rails'],
   ['02195', 'the-dunwich-legacy/blood-on-the-altar'],
   ['51032', 'the-dunwich-legacy/blood-on-the-altar'],
-  ['51036', 'the-dunwich-legacy/blood-on-the-altar'],
   ['02236', 'the-dunwich-legacy/undimensioned-and-unseen'],
   ['51041', 'the-dunwich-legacy/undimensioned-and-unseen'],
   ['02274', 'the-dunwich-legacy/where-doom-awaits'],
   ['51047', 'the-dunwich-legacy/where-doom-awaits'],
   ['02311', 'the-dunwich-legacy/lost-in-time-and-space'],
-  ['51051', 'the-dunwich-legacy/lost-in-time-and-space'],
+  ['51053', 'the-dunwich-legacy/lost-in-time-and-space'],
 
   // The Feast of Hemlock Vale
   ['10704', 'hemlock-vale/vale-day'],
   ['10677a', 'hemlock-vale/vale-day'],
   ['10679a', 'hemlock-vale/vale-day'],
   ['10679b', 'hemlock-vale/vale-night'],
-  ['10523', 'hemlock-vale/hemlock-house'],
+  ['10523', 'hemlock-vale/hemlock-house-reveal'],
   ['10501', 'hemlock-vale/written-in-rock-mine'],
   ['10549', 'hemlock-vale/silent-heath-snowfield'],
   ['10569', 'hemlock-vale/lost-sister-caverns'],
@@ -56,12 +57,12 @@ const boards = new Map([
   ['09694', 'the-scarlet-keys/congress-halls'],
 
   // The Path to Carcosa & Return to The Path to Carcosa
-  ['03043', 'the-path-to-carcosa/curtain-call'],
-  ['52014', 'the-path-to-carcosa/curtain-call'],
+  ['03043', 'the-path-to-carcosa/return-to-curtain-call'],
+  ['52014', 'the-path-to-carcosa/return-to-curtain-call'],
   ['03061', 'the-path-to-carcosa/the-last-king'],
   ['52021', 'the-path-to-carcosa/the-last-king'],
-  ['03120', 'the-path-to-carcosa/echoes-of-the-past'],
-  ['52028', 'the-path-to-carcosa/echoes-of-the-past'],
+  ['03120', 'the-path-to-carcosa/return-to-echoes-of-the-past'],
+  ['52028', 'the-path-to-carcosa/return-to-echoes-of-the-past'],
   ['03159', 'the-path-to-carcosa/the-unspeakable-oath'],
   ['52034', 'the-path-to-carcosa/the-unspeakable-oath'],
   ['03200', 'the-path-to-carcosa/a-phantom-of-truth'],
@@ -70,13 +71,13 @@ const boards = new Map([
   ['52048', 'the-path-to-carcosa/the-pallid-mask-catacombs'],
   ['03274', 'the-path-to-carcosa/black-stars-rise'],
   ['52054', 'the-path-to-carcosa/black-stars-rise'],
-  ['03316', 'the-path-to-carcosa/dim-carcosa'],
-  ['52059', 'the-path-to-carcosa/dim-carcosa'],
+  ['03316', 'the-path-to-carcosa/return-to-dim-carcosa'],
+  ['52059', 'the-path-to-carcosa/return-to-dim-carcosa'],
 
   // The Drowned City
   ['11501', 'the-drowned-city/one-last-job'],
   ['11517', 'the-drowned-city/the-western-wall'],
-  ['11536', 'the-drowned-city/the-drowned-quarter'],
+  ['11536', 'the-drowned-city/the-drowned-quarter-reveal'],
   ['11553', 'the-drowned-city/the-apiary'],
   ['11587', 'the-drowned-city/the-grand-vault'],
   ['11612', 'the-drowned-city/court-of-the-ancients'],
@@ -88,25 +89,43 @@ const boards = new Map([
 
   // The Forgotten Age
   ['04043', 'the-forgotten-age/the-untamed-wilds'],
+  ['53016', 'the-forgotten-age/the-untamed-wilds'],
   ['04054', 'the-forgotten-age/the-doom-of-eztli'],
+  ['53017', 'the-forgotten-age/the-doom-of-eztli'],
   ['04113', 'the-forgotten-age/threads-of-fate'],
+  ['53028', 'the-forgotten-age/threads-of-fate'],
   ['04161', 'the-forgotten-age/the-boundary-beyond'],
+  ['53038', 'the-forgotten-age/the-boundary-beyond'],
   ['04205a', 'the-forgotten-age/heart-of-the-elders-part-1'],
+  ['53045', 'the-forgotten-age/heart-of-the-elders-part-1'],
   ['04205b', 'the-forgotten-age/heart-of-the-elders-part-2'],
+  ['53048', 'the-forgotten-age/heart-of-the-elders-part-2'],
   ['04237', 'the-forgotten-age/the-city-of-archives'],
+  ['53053', 'the-forgotten-age/the-city-of-archives'],
   ['04277', 'the-forgotten-age/the-depths-of-yoth'],
+  ['53059', 'the-forgotten-age/the-depths-of-yoth'],
   ['04314', 'the-forgotten-age/shattered-aeons'],
+  ['53061', 'the-forgotten-age/shattered-aeons'],
   ['04344', 'the-forgotten-age/turn-back-time'],
+  ['53066', 'the-forgotten-age/turn-back-time'],
 
   // The Circle Undone
-  ['05043', 'the-circle-undone/disappearance-at-the-twilight-estate'],
+  ['05043', 'the-circle-undone/return-to-the-twilight-estate'],
   ['05050', 'the-circle-undone/the-witching-hour'],
-  ['05065', 'the-circle-undone/at-deaths-doorstep'],
+  ['54017', 'the-circle-undone/the-witching-hour'],
+  ['05065', 'the-circle-undone/return-to-the-twilight-estate'],
+  ['54024', 'the-circle-undone/return-to-the-twilight-estate'],
+  ['54016', 'the-circle-undone/return-to-the-twilight-estate'],
   ['05120', 'the-circle-undone/the-secret-name'],
+  ['54029', 'the-circle-undone/the-secret-name'],
   ['05161', 'the-circle-undone/the-wages-of-sin'],
-  ['05197', 'the-circle-undone/for-the-greater-good'],
+  ['54034', 'the-circle-undone/the-wages-of-sin'],
+  ['05197', 'the-circle-undone/return-to-for-the-greater-good'],
+  ['54042', 'the-circle-undone/return-to-for-the-greater-good'],
   ['05238', 'the-circle-undone/union-and-disillusion'],
+  ['54046', 'the-circle-undone/union-and-disillusion'],
   ['05284', 'the-circle-undone/in-the-clutches-of-chaos'],
+  ['54049', 'the-circle-undone/in-the-clutches-of-chaos'],
   ['05325', 'the-circle-undone/before-the-black-throne'],
   ['54056', 'the-circle-undone/before-the-black-throne'],
 
@@ -114,7 +133,9 @@ const boards = new Map([
   ['07041', 'the-innsmouth-conspiracy/pit-of-despair-caverns'],
   [':return-to-the-innsmouth-conspiracy:018', 'the-innsmouth-conspiracy/pit-of-despair-caverns'],
   ['07056', 'the-innsmouth-conspiracy/the-vanishing-of-elina-harper'],
+  [':return-to-the-innsmouth-conspiracy:022', 'the-innsmouth-conspiracy/the-vanishing-of-elina-harper'],
   ['07123', 'the-innsmouth-conspiracy/in-too-deep'],
+  [':return-to-the-innsmouth-conspiracy:028', 'the-innsmouth-conspiracy/in-too-deep'],
   ['07163', 'the-innsmouth-conspiracy/devil-reef-sea'],
   [':return-to-the-innsmouth-conspiracy:031', 'the-innsmouth-conspiracy/devil-reef-sea'],
   ['07198', 'the-innsmouth-conspiracy/horror-in-high-gear-moor'],
@@ -122,6 +143,7 @@ const boards = new Map([
   ['07231', 'the-innsmouth-conspiracy/a-light-in-the-fog-cliffs'],
   [':return-to-the-innsmouth-conspiracy:039', 'the-innsmouth-conspiracy/a-light-in-the-fog-cliffs'],
   ['07274', 'the-innsmouth-conspiracy/the-lair-of-dagon'],
+  [':return-to-the-innsmouth-conspiracy:043', 'the-innsmouth-conspiracy/the-lair-of-dagon'],
   ['07311', 'the-innsmouth-conspiracy/into-the-maelstrom-abyss'],
   [':return-to-the-innsmouth-conspiracy:048', 'the-innsmouth-conspiracy/into-the-maelstrom-abyss'],
 
@@ -202,6 +224,10 @@ const villageAnchors: Record<string, Point> = {
   '01126': [50, 82], // Southside (Historical Society)
   '01127': [50, 82], // Southside (Ma's Boarding House)
   '01124': [82, 82], // Your House
+  '50027': [82, 18], // Easttown (Arkham Police Station)
+  '50028': [18, 18], // Northside (Train Station)
+  '50029': [18, 50], // Miskatonic University (Museum)
+  '50030': [50, 50], // Rivertown (Abandoned Warehouse)
   // The Forgotten Age — Scenario 1: The Untamed Wilds
   '04050': [73, 27], // Expedition Camp
   '04071': [50, 48], // Rope Bridge
@@ -314,6 +340,7 @@ const villageAnchors: Record<string, Point> = {
 
   // The Circle Undone — Scenario 4: The Wages of Sin
   '05166': [40, 82], // Hangman's Brook
+  '54037': [40, 82], // Hangman's Brook (Return to)
   '05167': [50, 42], // Haunted Fields
   '05168': [78, 46], // Abandoned Chapel
   '05169': [58, 16], // The Gallows
@@ -398,6 +425,8 @@ const villageAnchors: Record<string, Point> = {
   '07288': [82, 42], // Hall of Rebirth
   '07289': [50, 18], // Hall of Silence
   '07290': [50, 85], // Doorway to the Depths
+  ':return-to-the-innsmouth-conspiracy:044': [50, 85],
+  ':return-to-the-innsmouth-conspiracy:045': [50, 85],
   '07291': [50, 93], // Lair of Dagon
 
   // Edge of the Earth — Scenario 1, 2, 3: Ice and Death (Parts 1, 2, 3)
@@ -507,16 +536,6 @@ const villageAnchors: Record<string, Point> = {
   '12148': [18, 80], // Uptown: Ye Olde Magick Shoppe
   '12153': [50, 80], // Southside
   '12154': [82, 80], // French Hill
-
-  // Brethren of Ash — Scenario 3: Queen of Ash
-  '12175': [50, 16], // Sluice Control
-  '12174': [50, 36], // Underground Cistern
-  '12182': [50, 84], // Sewer Culvert
-  '12183': [12, 56], // Sewer Tunnels (Infested Pipes)
-  '12184': [32, 56], // Sewer Tunnels (Overgrown Tunnels)
-  '12185': [50, 56], // Sewer Tunnels (Flooded Crypt)
-  '12186': [68, 56], // Sewer Tunnels (Smuggler's Cache)
-  '12187': [88, 56], // Sewer Tunnels (Toxic Waste Pit)
 
   // Children of Blood — Scenario 1: River of Blood
   '13016': [54, 48], // Erwin Bridge (Dawn)
@@ -665,26 +684,6 @@ const villageAnchors: Record<string, Point> = {
   ':ages-unwound:229': [74, 27], // Classroom 3
   ':ages-unwound:230': [33, 34], // Principal's Office
 
-  // Ages Unwound — Scenario 4: Unstuck (Temporal Vortex)
-  ':ages-unwound:085': [45, 50], // The Timestream (Center Vortex)
-  ':ages-unwound:086': [58, 48], // Arkham, Massachusetts (Center Street)
-  ':ages-unwound:081': [48, 16], // Millions of Years Ago (Top)
-  ':ages-unwound:082': [48, 16], // Millions of Years Ago (Top)
-  ':ages-unwound:071': [73, 21], // A World at War (Top-Right)
-  ':ages-unwound:072': [73, 21], // A World at War (Top-Right)
-  ':ages-unwound:079': [88, 43], // Heart of an Empire (Right)
-  ':ages-unwound:080': [88, 43], // Heart of an Empire (Right)
-  ':ages-unwound:077': [81, 75], // Banks of the Nile (Bottom-Right)
-  ':ages-unwound:078': [81, 75], // Banks of the Nile (Bottom-Right)
-  ':ages-unwound:073': [56, 82], // An Earth Long Dead (Bottom)
-  ':ages-unwound:074': [56, 82], // An Earth Long Dead (Bottom)
-  ':ages-unwound:075': [30, 78], // Arkham, Massachusetts (Bottom-Left)
-  ':ages-unwound:076': [30, 78], // Arkham, Massachusetts (Bottom-Left)
-  ':ages-unwound:069': [14, 56], // A Disquieting Future (Left)
-  ':ages-unwound:070': [14, 56], // A Disquieting Future (Left)
-  ':ages-unwound:083': [24, 24], // The Tatterdemalion (Top-Left)
-  ':ages-unwound:084': [24, 24], // The Tatterdemalion (Top-Left)
-
   // Ages Unwound — Scenario 5: A Year to Plan (Global Travel Map)
   ':ages-unwound:111': [31, 20], // Arkham, Massachusetts
   ':ages-unwound:112': [11, 20], // San Francisco
@@ -731,30 +730,6 @@ const villageAnchors: Record<string, Point> = {
 
   // The Drowned City — Scenario 1: One Last Job uses its own anchors (see boardAnchors).
 
-  // The Drowned City — Scenario 2: The Western Wall
-  '11530': [50, 16], // Western Wall
-  '11521': [50, 34], // Slick Steps
-  '11522': [35, 52], // Eroded Shelf
-  '11523': [65, 52], // Precarious Climb
-  '11524': [20, 70], // Deadly Pass
-  '11526': [50, 70], // Sunken Stairway
-  '11525': [80, 70], // Shallow Den
-  '11527': [20, 88], // Drowned Shanty
-  '11529': [50, 88], // Obsidian Foundations
-  '11528': [80, 88], // Shattered Ruins
-  '11532': [50, 88], // Undersea Vault
-
-  // The Drowned City — Scenario 3: The Drowned Quarter
-  '11540': [50, 52], // Barrier Core
-  '11541': [20, 24], // Abyssal Trench
-  '11542': [50, 24], // Drowned Acropolis (Ephemeral Ruins)
-  '11543': [80, 80], // Drowned Acropolis (Collapsed Ruins)
-  '11544': [20, 52], // Blasted Ruins (Sunken Circle)
-  '11545': [80, 52], // Blasted Ruins (Crumbling Edifices)
-  '11546': [80, 24], // Coral Reef (Statuary Garden)
-  '11547': [50, 80], // Coral Reef (Feeding Grounds)
-  '11548': [20, 80], // Ancient Gallery
-
   // The Drowned City — Scenario 4: The Apiary
   '11579': [50, 15], // Hidden Vault
   '11562': [50, 32], // Growing Fields
@@ -770,19 +745,6 @@ const villageAnchors: Record<string, Point> = {
   '11563': [88, 86], // Churning Chasm
   '11567': [50, 92], // Lost Campsite
   '11571': [50, 92], // Acidic Coelom
-
-  // The Drowned City — Scenario 5: The Grand Vault
-  '11600': [32, 22], // Obsidian Bulwark
-  '11601': [50, 22], // Sluice Control
-  '11602': [68, 22], // Grime-Covered Gears
-  '11593': [14, 52], // The Great Stair
-  '11594': [32, 52], // Moving Platform
-  '11595': [50, 52], // Core of the Vault
-  '11598': [68, 52], // Chamber of Records (Arm)
-  '11599': [68, 52], // Chamber of Records (Earth)
-  '11604': [86, 52], // Chamber of the Tablet
-  '11596': [32, 82], // Shrouded Cistern
-  '11603': [50, 82], // Inscrutable Apparatus
 
   // The Drowned City — Scenario 6: Court of the Ancients
   '11621': [22, 20], // Twisting Catwalks
@@ -822,22 +784,193 @@ const villageAnchors: Record<string, Point> = {
 // Boards that reuse cards from another scenario (e.g. the Midnight Masks Arkham districts)
 // but arrange them differently, so the shared anchors would contradict the real connections.
 const boardAnchors: Record<string, Record<string, Point>> = {
-  // Curtain Call: Arkham Theatre (Lobby, Auditorium, Balcony, Backstage, Doorways)
-  'the-path-to-carcosa/curtain-call': {
-    lobbyDoorway1: [8, 20],
-    lobbyDoorway3: [8, 48],
-    lobbyDoorway2: [8, 80],
-    lobby: [19, 70],
-    balcony: [38, 42],
-    theatre: [57, 66],
-    backstage: [82, 74],
-    backstageDoorway1: [91, 20],
-    backstageDoorway3: [91, 52],
-    backstageDoorway2: [91, 82],
-    '03048': [57, 66], // Theatre
-    '03049': [19, 70], // Lobby
-    '03050': [38, 42], // Balcony
-    '03051': [82, 74], // Backstage
+  'night-of-the-zealot/devourer-below': {
+    mainPath: [51, 45], ritualSite: [50, 83],
+    '01149': [51, 45], '01156': [50, 83],
+    woods1: [21, 30], woods2: [77, 28], woods3: [25, 69], woods4: [78, 65],
+  },
+  'the-dunwich-legacy/extracurricular-activity': {
+    '02048': [49, 53], '02049': [22, 34], '02050': [84, 54], '02051': [21, 83],
+    '02052': [48, 86], '02053': [48, 32], '02054': [59, 37], '02055': [59, 37],
+    '02056': [78, 31], '02057': [78, 85], '51013': [11, 51],
+  },
+  'the-dunwich-legacy/blood-on-the-altar': {
+    '02201': [50, 57], '51033': [50, 57],
+    '02202': [38, 38], '02203': [38, 38], '51034': [38, 38],
+    '02204': [19, 83], '02205': [19, 83], '51035': [19, 83],
+    '02206': [74, 62], '02207': [74, 62], '51036': [74, 62],
+    '02208': [18, 58], '02209': [18, 58], '51037': [18, 58],
+    '02210': [20, 29], '02211': [20, 29], '51038': [20, 29],
+    '02212': [75, 33], '02213': [75, 33], '51039': [75, 33],
+  },
+  'the-dunwich-legacy/undimensioned-and-unseen': {
+    '02242': [22, 75], '02243': [22, 75], // Dunwich Village
+    '02244': [19, 41], '02245': [19, 41], // Cold Spring Glen
+    '02246': [49, 76], '02247': [49, 76], // Ten-Acre Meadow
+    '02248': [49, 31], '02249': [49, 31], // Blasted Heath
+    '02250': [80, 43], '02251': [80, 43], // Whateley Ruins
+    '02252': [81, 72], '02253': [81, 72], // Devil's Hop Yard
+  },
+  'the-dunwich-legacy/where-doom-awaits': {
+    baseOfTheHill: [22, 80], ascendingPath: [48, 63], sentinelPeak: [73, 32],
+    divergingPath1: [12, 47], divergingPath2: [26, 53], divergingPath3: [37, 40],
+    alteredPath1: [56, 84], alteredPath2: [72, 65], alteredPath3: [87, 53],
+    '02282': [22, 80], '51048': [22, 80], '02283': [48, 63], '51049': [48, 63],
+    '02284': [73, 32],
+  },
+  'the-forgotten-age/the-boundary-beyond': {
+    circle: [45, 80], triangle: [18, 33], star: [78, 50],
+    diamond: [25, 65], square: [52, 56], heart: [90, 80],
+    '53039': [45, 80], '53040': [52, 56], '53041': [18, 33],
+    '53042': [25, 65], '53043': [90, 80], '53044': [78, 50],
+    '04174': [45, 80], '04175': [45, 80], '04176': [52, 56], '04177': [52, 56],
+    '04178': [18, 33], '04179': [18, 33], '04180': [25, 65], '04181': [25, 65],
+    '04182': [90, 80], '04183': [90, 80], '04184': [78, 50], '04185': [78, 50],
+  },
+  'the-forgotten-age/heart-of-the-elders-part-1': {
+    '04206': [53, 72], mouthOfKnYan: [53, 72],
+  },
+  'the-forgotten-age/the-city-of-archives': {
+    yithianOrrery: [21, 19], laboratoryOfTheGreatRace: [53, 19], deconstructionRoom: [82, 21],
+    towersOfPnakotus: [11, 45], hallsOfPnakotusNorthernCorridors: [53, 34],
+    hallsOfPnakotusWesternCorridors: [30, 46], hallsOfPnakotusEasternCorridors: [73, 46],
+    greatLibrary: [20, 71], hallsOfPnakotusSouthernCorridors: [47, 66], cyclopeanVaults: [74, 66],
+    alienConservatory: [51, 86],
+    interviewRoom1: [94, 32], interviewRoom2: [94, 42], interviewRoom3: [94, 53],
+    '04248': [53, 34], '04249': [73, 46], '04250': [30, 46], '04251': [20, 71],
+    '04252': [21, 19], '04253': [53, 19], '04254': [82, 21], '04255': [11, 45],
+    '53055': [47, 66], '53056': [74, 66], '53057': [51, 86],
+  },
+  'the-forgotten-age/shattered-aeons': {
+    shoresOfRlyeh: [13, 15], betweenWorlds1: [36, 14], betweenWorlds2: [27, 60],
+    atlantis: [56, 13], ruinsOfNewYork: [74, 34], cityOfTheUnseen: [27, 35],
+    nexusOfNkai: [50, 44], nexusOfNlai: [50, 44], aPocketInTime: [59, 51],
+    valusia: [83, 53], pnakotus: [87, 15], yuggoth: [12, 55], mu: [39, 61],
+    plateauOfLeng: [63, 60], ultimaThule: [16, 80], greatHallOfCeleano: [48, 84], buenosAires: [78, 84],
+    '04324': [50, 44], '04327': [12, 55], '04328': [13, 15], '04329': [27, 35],
+    '04330': [59, 51], '04331': [74, 34], '04332': [39, 61], '04333': [56, 13],
+    '04334': [87, 15], '04335': [83, 53], '04336': [63, 60],
+    '53062': [48, 84], '53063': [78, 84], '53064': [16, 80],
+  },
+  'the-dunwich-legacy/lost-in-time-and-space': {
+    anotherDimension: [51, 51], realmsBeyond: [34, 70], tearThroughTime: [53, 76],
+    theEdgeOfTheUniverse: [47, 91], unstableVortex: [61, 39], toweringLuminosity: [89, 40],
+    indecipherableStairs: [66, 73], stepsOfYhagharl: [77, 78], dimensionalDoorway: [22, 48],
+    endlessBridge1: [25, 31], endlessBridge2: [9, 41], prismaticCascade1: [76, 43], prismaticCascade2: [83, 58],
+    tearThroughSpace1: [62, 17], tearThroughSpace2: [40, 16], tearThroughSpace3: [19, 20], tearThroughSpace4: [84, 23],
+  },
+  'the-circle-undone/the-secret-name': {
+    strangeGeometry1: [91, 48], strangeGeometry2: [90, 70],
+    decrepitDoor1: [11, 57], decrepitDoor2: [36, 59], decrepitDoor3: [25, 75],
+    unknownPlaces1: [68, 22], unknownPlaces2: [80, 18], unknownPlaces3: [91, 23], unknownPlaces4: [51, 18],
+    unknownPlaces5: [58, 87], unknownPlaces6: [72, 88], unknownPlaces7: [85, 88],
+    libraryOfEbla: [42, 89], templeOfRlyeh: [50, 72], the9thWard: [78, 48], thePriceManor: [95, 87],
+    '54030': [50, 72], '54031': [95, 87], '54032': [78, 48], '54033': [42, 89],
+  },
+  'the-circle-undone/the-witching-hour': {
+    witchesCircle: [50, 60],
+    woods1: [49, 18], woods2: [18, 45], woods3: [82, 46], wood4: [29, 79], woods4: [29, 79], woods5: [71, 79],
+  },
+  'the-circle-undone/union-and-disillusion': {
+    unvisitedIsle1: [18, 48], unvisitedIsle2: [82, 48],
+    unvisitedIsle3: [32, 32], unvisitedIsle4: [75, 32], unvisitedIsle5: [45, 66], unvisitedIsle6: [55, 38],
+  },
+  'night-of-the-zealot/return-to-the-gathering': {
+    study: [19, 50], guestHall: [41, 52], holeInTheWall: [59, 51], parlor: [80, 51],
+    bedroom: [34, 28], attic: [66, 28], bathroom: [32, 71], cellar: [58, 72],
+    farAboveYourHouse: [54, 10], deepBelowYourHouse: [66, 88],
+    '50013': [19, 50], '50014': [41, 52], '50015': [34, 28], '50016': [32, 71],
+    '50017': [59, 51], '50018': [66, 28], '50019': [54, 10], '50020': [58, 72], '50021': [66, 88],
+  },
+  'the-path-to-carcosa/return-to-echoes-of-the-past': {
+    thirdFloor1: [26, 24], quietHalls2: [49, 23], thirdFloor2: [72, 24],
+    secondFloor1: [25, 43], quietHalls1: [49, 43], secondFloor2: [73, 43], hiddenLibrary: [92, 42],
+    groundFloor1: [22, 65], entryHall: [48, 65], groundFloor2: [76, 65],
+    basement1: [31, 79], quietHalls3: [39, 91], basement2: [47, 79],
+    '03127': [48, 65], '03131': [49, 43], '03135': [49, 23], '03139': [92, 42],
+    '52029': [39, 91], '52030': [20, 92], '52031': [60, 92], '52032': [85, 92],
+  },
+  'the-dunwich-legacy/return-to-the-house-always-wins': {
+    moon: [17, 29], circle: [16, 53], triangle: [48, 37], square: [49, 69],
+    diamond: [72, 55], heart: [16, 81],
+    backHallDoorway1: [70, 27], backHallDoorway2: [79, 47], backHallDoorway3: [74, 64],
+    '02070': [17, 29], '02071': [16, 53], '02072': [49, 69], '02073': [48, 37], '02074': [72, 55],
+    '02075': [91, 48], '02076': [82, 26], '02077': [95, 27], '51016': [16, 53], '51017': [16, 81],
+  },
+  'the-path-to-carcosa/return-to-dim-carcosa': {
+    darkSpires: [51, 16], depthsOfDemhe: [45, 28], recessesOfYourOwnMind: [89, 20],
+    dimStreets: [16, 42], palaceOfTheKing: [57, 48], ruinsOfCarcosa: [87, 45],
+    theThroneRoom: [15, 73], bleakPlains: [49, 69], stageOfTheWardTheatre: [85, 76],
+    shoresOfHali: [54, 89],
+    '03325': [54, 89], // Shores of Hali
+    '03326': [49, 69], '03326c': [49, 69], // Bleak Plains
+    '03327': [87, 45], '03327c': [87, 45], '03327e': [87, 45], // Ruins of Carcosa
+    '03328': [16, 42], '03328c': [16, 42], '03328e': [16, 42], // Dim Streets
+    '03329': [45, 28], '03329c': [45, 28], // Depths of Demhe
+    '03330': [51, 16], '03331': [57, 48], // Dark Spires, Palace of the King
+    '52060': [57, 48], '52061': [89, 20], '52062': [15, 73], '52063': [85, 76],
+  },
+  'the-circle-undone/return-to-the-twilight-estate': {
+    office: [53, 29], billiardsRoom: [13, 55], trophyRoom: [30, 54], victorianHalls: [48, 55],
+    masterBedroom: [76, 54], balcony: [92, 55], entryHall: [47, 84], wineCellar: [78, 83],
+    '05071': [47, 84], '05072': [48, 55], '05073': [30, 54], '05074': [13, 55],
+    '05075': [76, 54], '05076': [92, 55], '05077': [53, 29],
+    '05078': [47, 84], '05079': [48, 55], '05080': [30, 54], '05081': [13, 55],
+    '05082': [76, 54], '05083': [92, 55], '05084': [53, 29],
+    '54027': [78, 83], '54028': [78, 83],
+  },
+  'the-dunwich-legacy/return-to-the-miskatonic-museum': {
+    hall1: [19, 59], hall2: [19, 40], hall3: [37, 22], hall4: [62, 22], hall5: [80, 40], hall6: [80, 59],
+    museumHalls: [50, 59], museumEntrance: [50, 86],
+    administrationOffice: [20, 83], securityOffice: [80, 83],
+    '02126': [50, 86], '02127': [50, 59],
+    '02128': [80, 83], '02129': [80, 83], '02130': [20, 83], '02131': [20, 83],
+  },
+  'the-circle-undone/return-to-for-the-greater-good': {
+    lodgeGates: [36, 14], lobby: [44, 43], lodgeCellar: [17, 61],
+    library: [75, 41], lounge: [16, 42], hiddenPassageway: [51, 63], lodgeCatacombs: [76, 60],
+    vault: [11, 88], innerSanctum: [77, 88],
+    sanctumDoorway1: [93, 45], sanctumDoorway2: [93, 65], sanctumDoorway3: [93, 90],
+    '05204': [36, 14], '05205': [36, 14], '05206': [44, 43], '05207': [44, 43],
+    '05208': [17, 61], '05209': [17, 61], '05210': [16, 42], '05211': [11, 88],
+    '05212': [75, 41], '05213': [76, 60], '05214': [95, 61], '05215': [95, 35], '05216': [77, 88],
+    '54043': [16, 42], '54044': [31, 88], '54045': [52, 88],
+  },
+  'side-stories/murder-at-the-excelsior-hotel': {
+    hotelRoof: [45, 20],
+    room245: [81, 21],
+    room212: [16, 41],
+    secondFloorHall: [46, 41],
+    room225: [74, 41],
+    suiteBalcony: [91, 41],
+    restaurant: [17, 67],
+    foyer: [47, 67],
+    office: [84, 67],
+    basement: [49, 89],
+  },
+  'the-path-to-carcosa/return-to-curtain-call': {
+    lobby: [16, 62],
+    balcony: [37, 50],
+    theatre: [55, 66],
+    backstage: [80, 63],
+    lobbyDoorway1: [7, 55],
+    lobbyDoorway2: [26, 55],
+    lobbyDoorway3: [17, 55],
+    backstageDoorway1: [72, 55],
+    backstageDoorway2: [95, 55],
+    backstageDoorway3: [85, 55],
+    '03049': [55, 66], // Theatre
+    '03050': [16, 62], // Lobby
+    '03051': [37, 50], // Balcony
+    '03052': [80, 63], // Backstage
+    '03053': [9, 38], // Lighting Box
+    '03054': [9, 88], // Box Office
+    '03055': [24, 88], // Green Room
+    '03056': [75, 38], // Dressing Room
+    '03057': [91, 38], // Rehearsal Room
+    '03058': [75, 88], // Trap Room
+    '52018': [23, 38], // Theatre Lounge
+    '52019': [90, 88], // Prop Shop
   },
   // The Last King: Ward Family Manor (Dining Room, Gallery, Courtyard, Ballroom, Living Room, Foyer)
   'the-path-to-carcosa/the-last-king': {
@@ -847,30 +980,12 @@ const boardAnchors: Record<string, Record<string, Point>> = {
     ballroom: [24, 66],
     livingRoom: [78, 62],
     foyer: [50, 84],
-    '03066': [50, 84], // Foyer
-    '03067': [58, 36], // Courtyard
-    '03068': [78, 62], // Living Room
-    '03069': [24, 66], // Ballroom
-    '03070': [22, 22], // Dining Room
-    '03071': [82, 18], // Gallery
-  },
-  // Echoes of the Past: Georgian manor 3-floor architectural cutaway
-  // 3rd Floor (Attic/Offices), 2nd Floor (Quiet Halls mezzanine/Library), Ground Floor (Entry Hall foyer/Exhibits)
-  'the-path-to-carcosa/echoes-of-the-past': {
-    groundFloor1: [15, 80],
-    entryHall: [42, 80],
-    groundFloor2: [70, 80],
-    secondFloor1: [15, 52],
-    quietHalls1: [41, 52],
-    secondFloor2: [64, 52],
-    hiddenLibrary: [77, 52],
-    thirdFloor1: [16, 28],
-    quietHalls2: [39, 28],
-    thirdFloor2: [64, 28],
-    '03127': [42, 80], // Entry Hall
-    '03131': [41, 52], // Quiet Halls (2nd Floor)
-    '03135': [39, 28], // Quiet Halls (3rd Floor)
-    '03139': [77, 52], // Hidden Library
+    '03070': [50, 84], // Foyer
+    '03074': [58, 36], // Courtyard
+    '03072': [78, 62], // Living Room
+    '03071': [24, 66], // Ballroom
+    '03075': [22, 22], // Dining Room
+    '03073': [82, 18], // Gallery
   },
   // The Unspeakable Oath: Arkham Asylum (Courtyard/Garden, Facilities, Subterranean Confinement)
   'the-path-to-carcosa/the-unspeakable-oath': {
@@ -886,12 +1001,12 @@ const boardAnchors: Record<string, Record<string, Point>> = {
     patientConfinement3: [52, 84],
     patientConfinement4: [68, 84],
     patientConfinement2: [84, 84],
-    '03170': [10, 52], // Kitchen
-    '03171': [32, 52], // Mess Hall
-    '03172': [88, 52], // Infirmary
-    '03173': [62, 25], // Yard
-    '03174': [38, 25], // Garden
-    '03175': [12, 84], // Basement Hall
+    '03172': [10, 52], // Kitchen
+    '03173': [32, 52], // Mess Hall
+    '03174': [88, 52], // Infirmary
+    '03175': [62, 25], // Yard
+    '03176': [38, 25], // Garden
+    '03177': [12, 84], // Basement Hall
     '03168': [52, 52], // Western Wing
     '03169': [69, 52], // Eastern Wing
   },
@@ -907,16 +1022,18 @@ const boardAnchors: Record<string, Record<string, Point>> = {
     leMarais: [68, 38],
     notreDame: [74, 71],
     pèreLachaiseCemetery: [88, 22],
-    '03206': [10, 16], // Grand Guignol
-    '03207': [21, 41], // Opéra Garnier
-    '03208': [12, 74], // Gare d'Orsay
+    '03211': [10, 16], // Grand Guignol
+    '03212': [21, 41], // Opéra Garnier
+    '03213': [21, 41], // Opéra Garnier
+    '03214': [12, 74], // Gare d'Orsay
     '03209': [38, 18], // Montmartre
-    '03210': [68, 38], // Le Marais
-    '03211': [74, 71], // Notre-Dame
-    '03212': [52, 57], // Gardens of Luxembourg
-    '03213': [68, 16], // Canal Saint-Martin
-    '03214': [88, 22], // Père Lachaise Cemetery
-    '03215': [42, 88], // Montparnasse
+    '03217': [68, 38], // Le Marais
+    '03218': [68, 38], // Le Marais
+    '03219': [74, 71], // Notre-Dame
+    '03220': [52, 57], // Gardens of Luxembourg
+    '03216': [68, 16], // Canal Saint-Martin
+    '03215': [88, 22], // Père Lachaise Cemetery
+    '03208': [42, 88], // Montparnasse
   },
   // Black Stars Rise: Mont Saint-Michel Fortress & Abbey
   'the-path-to-carcosa/black-stars-rise': {
@@ -931,36 +1048,43 @@ const boardAnchors: Record<string, Record<string, Point>> = {
     grandRue: [70, 62],
     abbeyTower: [31, 82],
     porteDeLAvancée: [76, 84],
-    '03284': [28, 16], // Cloister
-    '03285': [20, 25], // Knights' Hall
-    '03286': [60, 22], // North Tower
-    '03287': [47, 25], // Abbey Church
-    '03288': [82, 46], // Outer Wall
-    '03289': [17, 54], // Chapel of St. Aubert
+    '03294': [28, 16], // Cloister
+    '03295': [20, 25], // Knights' Hall
+    '03287': [60, 22], // North Tower
+    '03288': [60, 22], // North Tower
+    '03291': [47, 25], // Abbey Church
+    '03285': [82, 46], // Outer Wall
+    '03286': [82, 46], // Outer Wall
+    '03296': [17, 54], // Chapel of St. Aubert
+    '03297': [17, 54], // Chapel of St. Aubert
     '03290': [49, 56], // Broken Steps
-    '03291': [34, 50], // Chœur Gothique
-    '03292': [70, 62], // Grand Rue
-    '03293': [31, 82], // Abbey Tower
-    '03294': [76, 84], // Porte de l'Avancée
+    '03292': [34, 50], // Chœur Gothique
+    '03293': [34, 50], // Chœur Gothique
+    '03284': [70, 62], // Grand Rue
+    '03298': [31, 82], // Abbey Tower
+    '03299': [31, 82], // Abbey Tower
+    '03283': [76, 84], // Porte de l'Avancée
   },
   // One Last Job mirrors the scenario's 3x3 card grid exactly, so the map reads like the table:
   //   .            La Bella Luna   Hibb's Roadhouse
   //   Northside    Downtown        Easttown
   //   Tillinghast  Miskatonic U.   Rivertown
   'the-forgotten-age/threads-of-fate': {
-    '04128': [30, 20], // Train Tracks
-    '04143': [55, 20], // Town Hall
-    '04126': [80, 20], // Police Station
-    '04142': [12, 50], // Curiositie Shoppe
-    '01134': [30, 50], // Northside
-    '01130': [50, 50], // Downtown (First Bank)
-    '01131': [50, 50], // Downtown (Asylum)
-    '01132': [70, 50], // Easttown
-    '04141': [88, 50], // Velma's Diner
-    '04117': [25, 82], // Eztli Exhibit
-    '01129': [48, 82], // Miskatonic University
-    '01125': [72, 82], // Rivertown
-    '04133': [90, 82], // Black Cave
+    '04128': [18, 15], // Train Tracks
+    '04143': [47, 17], // Town Hall
+    '04126': [64, 15], // Police Station
+    '04142': [8, 42], // Curiositie Shoppe
+    '01134': [26, 23], // Northside
+    '01130': [50, 27], // Downtown (First Bank)
+    '01131': [50, 27], // Downtown (Asylum)
+    '01132': [84, 39], // Easttown
+    '04141': [86, 30], // Velma's Diner
+    '04117': [10, 65], // Eztli Exhibit
+    '01129': [28, 59], // Miskatonic University
+    '01125': [56, 49], // Rivertown
+    '04133': [95, 54], // Black Cave
+    '53034': [66, 85], // Loading Docks
+    '53029': [85, 70], // The Hastings Estate
   },
   'the-circle-undone/in-the-clutches-of-chaos': {
     '05302': [13, 28], // Hangman's Hill
@@ -979,6 +1103,8 @@ const boardAnchors: Record<string, Record<string, Point>> = {
     '05291': [62, 82], // French Hill
     '05303': [90, 40], // Silver Twilight Lodge
     '05305': [90, 40], // Silver Twilight Lodge
+    '54050': [62, 82], '54051': [75, 58], '54052': [35, 72],
+    '54053': [15, 62], '54054': [20, 80], '54055': [48, 52],
   },
       'side-stories/curse-of-the-rougarou': {
     '81008': [80, 24], // Garden District (New Orleans)
@@ -1102,29 +1228,32 @@ const boardAnchors: Record<string, Record<string, Point>> = {
   },
 }
 
-export function hemlockVillagePosition(code: string, anchors?: Record<string, Point>, label?: string): Point | undefined {
+export function hemlockVillagePosition(
+  code: string, anchors?: Record<string, Point>, label?: string, preferCard = false,
+): Point | undefined {
   const key = code.replace(/^c/, '').replace(/[ab]$/, '')
-  return (label ? anchors?.[label] : undefined) ?? anchors?.[key] ?? villageAnchors[key]
+  const labelAnchor = label ? anchors?.[label] : undefined
+  const cardAnchor = anchors?.[key]
+  return (preferCard ? cardAnchor ?? labelAnchor : labelAnchor ?? cardAnchor) ?? villageAnchors[key]
 }
 
-const houseRows: Record<string, number> = {
-  '03': 13, '02': 31, '01': 50, '00': 75, n01: 92,
-}
+const museumExhibits = new Set(['02132', '02133', '02134', '02135', '02136', '02137', '51021', '51022'])
 
-export function hemlockHousePosition(label: string): Point | undefined {
-  const cell = /^pos(n01|00|01)(n01|00|01|02|03)$/.exec(label)
-  if (!cell) return undefined
-  const [, column, row] = cell
-  if ((row === '03' || row === 'n01') && column !== '00') return undefined
-  return [column === 'n01' ? 18 : column === '01' ? 82 : 50, houseRows[row]]
+export function museumExhibitArt(cardCode: string, revealed: boolean): string | undefined {
+  const code = cardCode.replace(/^c/, '').replace(/[ab]$/, '')
+  if (revealed && museumExhibits.has(code)) {
+    return `img/scenes/the-dunwich-legacy/museum-exhibits/${code}.webp`
+  }
 }
 
 export type HemlockOverview = {
   image: string
   fixedPassages: boolean
   village?: boolean
-  house?: boolean
   anchors?: Record<string, Point>
+  revealRoomAnchors?: boolean
+  museumExhibits?: boolean
+  spectral?: boolean
   /** Folder of floating-island sprites drawn under each location, for boards with no painted places. */
   islands?: string
   /** Moving weather drawn over the painted background (rain, swell, fog, lightning); the picture stays still. */
@@ -1170,6 +1299,7 @@ const ISLAND_FOLDERS = new Map([
   ['10549', SILENT_HEATH_ISLANDS],
   ['10626', LONGEST_NIGHT_ISLANDS],
   ['10588', THING_IN_THE_DEPTHS_ISLANDS],
+  ['85001', 'img/scenes/side-stories/blob'],
   ['09681', WITHOUT_A_TRACE_ISLANDS],
   ['09694', CONGRESS_ISLANDS],
   ['07198', HIGH_GEAR_ISLANDS],
@@ -1186,22 +1316,43 @@ const CONGRESS_TOWER = new Set(['09712', '09713', '09714'])
 const towerStands = (cardCodes?: readonly string[]) =>
   !!cardCodes?.some((code) => CONGRESS_TOWER.has(code.replace(/^c/, '').replace(/^(\d{5})[abc]$/, '$1')))
 
-export function hemlockOverview(id: string, reference: string, layout?: readonly string[] | null, activeLabels?: readonly string[], cardCodes?: readonly string[]): HemlockOverview | undefined {
+export function hemlockOverview(
+  id: string, reference: string, layout?: readonly string[] | null, activeLabels?: readonly string[],
+  cardCodes?: readonly string[], log?: Pick<LogContents, 'recorded' | 'recordedCounts'> | null,
+): HemlockOverview | undefined {
   const scenario = id.replace(/^c/, '')
   // Some branches of the finale leave the Abyss and rebuild the village board.
   const isNightVale = scenario === '10651' && layout?.some((row) => row.trim().split(/\s+/).includes('diamond'))
   const dreamArt = dreamEatersArt(scenario, layout, activeLabels)
   const isTower = scenario === '09694' && towerStands(cardCodes)
-  const art = dreamArt ?? (isNightVale ? 'hemlock-vale/vale-night' : isTower ? 'the-scarlet-keys/congress-otherworld' : boards.get(scenario))
+  let art = dreamArt ?? boards.get(scenario)
+  if (isNightVale) art = 'hemlock-vale/vale-night'
+  if (isTower) art = 'the-scarlet-keys/congress-otherworld'
+  if (art === 'night-of-the-zealot/midnight-masks') {
+    const burned = ({ tag, contents }: LogKey) =>
+      tag === 'NightOfTheZealotKey' && contents === 'YourHouseHasBurnedToTheGround'
+    if (log?.recorded.some(burned) || log?.recordedCounts.some(([key]) => burned(key))) {
+      art = 'night-of-the-zealot/midnight-masks-burned'
+    }
+  }
   if (!art) return undefined
+  const estate = art === 'the-circle-undone/return-to-the-twilight-estate'
+  const spectral = estate && (
+    ['05043', '54016'].includes(scenario)
+    || cardCodes?.some((code) => /^(?:c)?(?:0507[89]|0508[0-4]|54028)$/.test(code))
+  )
   const islands = dreamArt?.includes('/endless-stairs/') || dreamArt?.includes('/weaver/')
     ? `img/scenes/${dreamArt.slice(0, dreamArt.lastIndexOf('/'))}` : ISLAND_FOLDERS.get(scenario)
   return {
     image: `img/scenes/${art}.webp`,
     fixedPassages: false,
     village: true,
-    house: art.endsWith('hemlock-house'),
     anchors: dreamEatersAnchors[art] ?? boardAnchors[art],
+    ...(['the-path-to-carcosa/return-to-curtain-call', 'the-path-to-carcosa/return-to-echoes-of-the-past',
+      'the-dunwich-legacy/return-to-the-house-always-wins', 'the-circle-undone/return-to-for-the-greater-good',
+    ].includes(art) ? { revealRoomAnchors: true } : {}),
+    ...(art === 'the-dunwich-legacy/return-to-the-miskatonic-museum' ? { museumExhibits: true } : {}),
+    ...(spectral ? { spectral: true } : {}),
     ...(islands ? { islands } : {}),
     ...(WEATHER.has(scenario) ? { weather: WEATHER.get(scenario) } : {}),
   }

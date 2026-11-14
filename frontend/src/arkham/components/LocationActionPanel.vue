@@ -49,6 +49,7 @@ type SectionKey = AbilitySection | 'targets'
 const SECTIONS: SectionKey[] = ['targets', 'basic', 'scenario', 'enemies', 'inPlay', 'other']
 const { lookup, attachText } = useAbilityCardText(() => props.game)
 
+const ownedIds = computed(() => new Set(Object.values(props.game.investigators).filter((i) => i.playerId === props.playerId).map((i) => i.id)))
 const handIds = computed(() => new Set((me.value?.hand ?? []).map(cardId)))
 
 type Row = {
@@ -140,7 +141,8 @@ const sections = computed(() => {
           contents: null, sourceId: null, kind: null, text: null, image: keyToImage(choice.key), variant: null })
         break
       case MessageType.END_TURN_BUTTON:
-        if (choice.investigatorId === mine) plain('basic', index, null, t('locationMap.endTurn'), 'end')
+        // These are already this player's choices, so match any investigator they control, not only the first.
+        if (ownedIds.value.has(choice.investigatorId) || choice.investigatorId === mine) plain('basic', index, null, t('locationMap.endTurn'), 'end')
         break
       case MessageType.SKIP_TRIGGERS_BUTTON:
         if (choice.investigatorId === mine) plain('basic', index, null, t('locationMap.skipTriggers'))
@@ -172,11 +174,12 @@ const listed = computed(() => sections.value
 <template>
   <aside class="panel" :class="{ sheet, expanded }" :aria-label="t('locationMap.actions')">
     <button v-if="sheet" class="grab" type="button" :aria-expanded="expanded" :aria-label="t('locationMap.sheetHandle')" @click="emit('toggleSheet')"><span aria-hidden="true"></span></button>
+    <div class="body">
     <header>
       <h3>{{ location ? nameOf(location.cardCode) : t('locationMap.actions') }}</h3>
       <button class="close" :aria-label="t('locationMap.close')" @click="emit('close')"><SceneGlyph name="close" /></button>
     </header>
-    <LocationAboutBlock v-if="location && info" :game="game" :location="location" :info="info" />
+    <LocationAboutBlock v-if="location && info" :game="game" :playerId="playerId" :location="location" :info="info" />
     <p v-if="sections.length === 0" class="empty">{{ t('locationMap.noActions') }}</p>
     <section v-for="s in listed" :key="s.key" class="section" :class="`section--${s.key}`">
       <h4>{{ s.title }}</h4>
@@ -189,15 +192,20 @@ const listed = computed(() => sections.value
         <AbilityButton v-else-if="r.contents" class="row" :data-image="r.image ?? undefined" :game="game" :ability="r.contents" @choose="emit('choose', r.index)" />
       </template>
     </section>
-    <footer v-if="endTurn" class="foot">
+    </div>
+    <!-- Always present; greyed out while the server is not offering End Turn. A div, not <footer>:
+         base.css pins every <footer> to the bottom of the viewport for the site footer. -->
+    <div class="foot">
       <span v-if="me" class="actions-left">{{ t('locationMap.actionsLeft', { count: me.remainingActions }) }}</span>
-      <button type="button" class="end-turn" @click="emit('choose', endTurn.index)">{{ endTurn.label }}</button>
-    </footer>
+      <button type="button" class="end-turn" :disabled="!endTurn" :data-game-actionable="endTurn ? true : undefined" @click="endTurn && emit('choose', endTurn.index)">{{ endTurn?.label ?? t('locationMap.endTurn') }}</button>
+    </div>
   </aside>
 </template>
 
 <style scoped>
-.panel { display: flex; flex-direction: column; gap: 10px; width: var(--panel-w, 280px); max-height: 100%; overflow-y: auto; padding: 0 12px 12px; background: linear-gradient(180deg, var(--surface-1, #142019), var(--surface-0, #0d1611)); border: 1px solid var(--line-strong, #c6a87399); border-radius: var(--radius-lg, 8px); box-shadow: var(--shadow-pop, 0 8px 28px #000a); color: var(--text, #e8e3d0); scrollbar-width: thin; scrollbar-color: var(--line, #c6a87355) transparent; }
+.panel { display: flex; flex-direction: column; width: var(--panel-w, 280px); max-height: 100%; overflow: hidden; padding: 0; background: linear-gradient(180deg, var(--surface-1, #142019), var(--surface-0, #0d1611)); border: 1px solid var(--line-strong, #c6a87399); border-radius: var(--radius-lg, 8px); box-shadow: var(--shadow-pop, 0 8px 28px #000a); color: var(--text, #e8e3d0); }
+/* Only the body scrolls; the end-turn footer is a fixed flex child so it can never float over the action rows. */
+.body { display: flex; flex-direction: column; gap: 10px; flex: 1 1 auto; min-height: 0; overflow-y: auto; padding: 0 12px 12px; scrollbar-width: thin; scrollbar-color: var(--line, #c6a87355) transparent; }
 /* The name and close button stay put while the actions scroll under them. */
 header { position: sticky; top: 0; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 0 -12px; padding: 10px 12px 8px; background: var(--surface-1, #142019); border-bottom: 1px solid var(--line, #c6a87340); }
 h3 { margin: 0; min-width: 0; font: 600 1rem/1.2 var(--ui-serif); color: var(--heading, #fff4df); overflow-wrap: anywhere; }
@@ -209,10 +217,11 @@ h4 { margin: 0 0 2px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14
 .section--basic { display: grid; grid-template-columns: 1fr 1fr; }
 .section--basic > * { grid-column: 1 / -1; }
 .section--basic > .row--half { grid-column: auto; text-align: center; justify-content: center; }
-.foot { position: sticky; bottom: 0; z-index: 1; display: flex; align-items: center; gap: 8px; margin: auto -12px -12px; padding: 8px 12px 10px; background: var(--surface-0, #0d1611); border-top: 1px solid var(--line, #c6a87340); }
-.actions-left { flex: 1; font-size: 0.74rem; color: var(--text-muted, #b6bfb0); }
+.foot { flex: none; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0; padding: 8px 12px 10px; background: var(--surface-0, #0d1611); border-top: 1px solid var(--line, #c6a87340); }
+.actions-left { flex: 1 1 auto; min-width: 0; font-size: 0.74rem; color: var(--text-muted, #b6bfb0); }
 .end-turn { flex: none; padding: 7px 14px; border-radius: var(--radius, 6px); border: 1px solid #e0915a99; background: #3a241666; color: #ffd9b8; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: background 0.15s, border-color 0.15s; }
-.end-turn:hover { background: #3a2416; border-color: #e0915a; }
+.end-turn:disabled { opacity: 0.45; cursor: not-allowed; }
+.end-turn:hover:not(:disabled) { background: #3a2416; border-color: #e0915a; }
 .end-turn:focus-visible { outline: var(--focus-ring, 2px solid #ffe9a0); outline-offset: 2px; }
 /* Group headings take their section's colour: red only for enemies, brass for cards in play. */
 h5 { margin: 4px 0 0; font-size: 0.72rem; color: var(--text-flavor, #cdd4c2); font-weight: 600; }

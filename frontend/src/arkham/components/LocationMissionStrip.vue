@@ -98,6 +98,7 @@ function doomState(p: MissionPanel): { level: 'warn' | 'critical'; text: string 
       :card-code="p.code"
       :flavor="p.flavor"
       :compact="collapsed"
+      :completed="p.completed"
       :weight="textWeight(p.flavor, p.textHtml, ...p.actions.map((a) => a.html))"
     >
       <!-- Agenda: the doom track fills to all doom in play; the dashed pips are doom off the agenda card. -->

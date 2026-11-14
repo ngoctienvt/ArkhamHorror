@@ -56,6 +56,18 @@ Hệ thống Scene Map hiện đã được thiết kế và tích hợp cho h�
 
 The Search for Kadath đổi nền theo vùng đang chơi. Trong A Thousand Shapes of Horror, Endless Descent đổi vị trí các bậc thang theo lá. Weaver of the Cosmos chuyển từ cầu tơ dọc sang vòng tám ô, với thân và chân Atlach-Nacha tương tác được khi có lựa chọn tương ứng.
 
+The Midnight Masks đổi sang ảnh nhà cháy rụi khi Campaign Log ghi nhận kết quả đốt nhà ở The Gathering. Murder at the Excelsior Hotel dùng mặt cắt khách sạn với điểm neo cho cả 10 địa điểm. The Blob That Ate Everything dùng ảnh riêng cho từng lá, đặt theo ô thực tế trên lưới Blackwater.
+
+Curtain Call, Echoes of the Past và Dim Carcosa dùng chung tranh toàn cảnh cho bản gốc và Return to. Khi lật Lobby Doorway hoặc Backstage Doorway, nhãn chuyển từ cửa chung vào đúng phòng trong tranh. Hidden Library có điểm riêng khi được đưa vào ván. Các lá Dim Carcosa thay thế nhau trong cùng một khu vực dùng chung điểm neo. Scene Map chỉ đặt nhãn cho các địa điểm đang có trên bàn.
+
+The House Always Wins, The Miskatonic Museum, For the Greater Good và các màn Twilight Estate chia sẻ tranh giữa bản gốc và Return to. Twilight Estate đổi sắc độ khi chuyển spectral. The Miskatonic Museum có sáu ô triển lãm, hiện vật xuất hiện tại ô đã chia khi lật lá. Return to The Gathering dùng mặt cắt nhà riêng có các phòng bổ sung.
+
+The Essex County Express dùng tranh cầu cao qua sông Miskatonic, với khe nứt trên trời phía sau đoàn tàu. Mỗi toa xuất hiện theo ô đang có trên Card Board và được lấy khỏi Scene Map khi game gỡ ô đó. Khoang hành khách, toa ăn, toa ngủ, toa khách hạng sang, toa hàng và toa hành lý hiện nội thất khi được lật. Hai bản dùng chung nền.
+
+The Forgotten Age dùng chung tranh giữa bản gốc và Return to theo từng màn. Tranh mới có Loading Docks và Hastings Estate, các phòng bổ sung của Pnakotus và ba vùng Return to của Shattered Aeons. Heart of the Elders I đi qua rừng tới cửa hang. Các ô Explore và các nhóm xáo có thể hiển thị phần minh họa trên lá đã lật.
+
+The Western Wall, The Drowned Quarter, The Grand Vault, Queen of Ash, Hemlock House, Unstuck và Electric Nightmare dùng tranh toàn cảnh có địa danh cố định. Lá úp dùng hình chung tại điểm tạm dựa trên bố cục đã xáo. Khi lật, lá nhận điểm đúng địa danh, lá úp đang chiếm điểm đó được bố trí lại, và đường nối được vẽ theo kết nối của ván.
+
 Mỗi Scene Map được thiết kế dựa trên:
 1. **Lưới toạ độ Backend Haskell**: Đối chiếu ma trận `locationLayout` và danh sách kết nối trong `backend/arkham-api/library/Arkham/Scenario/Scenarios/`.
 2. **Quy chuẩn mỹ thuật & Prompt**: Xem chi tiết tại hướng dẫn [.agents/skills/arkham-overview-art/SKILL.md](../.agents/skills/arkham-overview-art/SKILL.md).

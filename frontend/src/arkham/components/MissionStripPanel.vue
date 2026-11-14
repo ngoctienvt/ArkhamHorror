@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import type { CompletedCard } from '@/arkham/composables/useMissionStripPanels'
 
 /* The shared frame of every mission-strip panel (agenda, act, reference card). Everything that has to be
  * read every turn lives on one header line, so the strip stays short:
@@ -20,6 +21,8 @@ defineProps<{
   compact?: boolean
   /** Share of the strip's width (see textWeight); panels with more text get wider. */
   weight?: number
+  /** The last resolved card of this deck, shown on its resolved side right under the header's thumbnail. */
+  completed?: CompletedCard[]
 }>()
 /* Flavor shows two lines; a click (or Enter) unfolds the rest in place. */
 const flavorOpen = ref(false)
@@ -48,6 +51,9 @@ const flavorOpen = ref(false)
       />
       </div>
     </header>
+    <div v-if="completed?.length" class="mission__done" role="list" :aria-label="eyebrow">
+      <img v-for="d in completed" :key="d.key" role="listitem" :src="d.src" :data-image="d.src" :data-card-code="d.code" alt="" loading="lazy" />
+    </div>
     <div v-if="!compact && ($slots.default || flavor)" class="mission__body">
       <p v-if="flavor" class="mission__flavor" :class="{ 'mission__flavor--open': flavorOpen }" :title="flavorOpen ? undefined : flavor"
         role="button" tabindex="0" :aria-expanded="flavorOpen"
@@ -88,6 +94,11 @@ const flavorOpen = ref(false)
 .mission__thumb--portrait { width: 17px; }
 .mission__attached { flex: none; display: flex; gap: 3px; }
 .mission__attached :deep(img) { height: 24px; width: auto; border-radius: 3px; border: 1px solid #c9887a99; cursor: zoom-in; }
+
+/* The last resolved card of this deck, right under the header's thumbnail (right-aligned with it). */
+.mission__done { flex: none; display: flex; justify-content: flex-end; gap: 4px; }
+.mission__done img { height: 34px; width: auto; border-radius: 3px; border: 1px solid var(--line-strong, #c6a87399); cursor: zoom-in; opacity: 0.9; }
+.mission__done img:hover { opacity: 1; }
 
 /* The body scrolls inside the panel, so the header always stays in view. */
 .mission__body { display: flex; flex-direction: column; gap: 3px; min-height: 0; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #c6a87366 transparent; }

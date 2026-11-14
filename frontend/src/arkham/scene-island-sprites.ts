@@ -301,6 +301,12 @@ const stairs: IslandSet = {
   spot: 'back',
 }
 
+const blob: IslandSet = {
+  ...spriteSet(own([...range(85010, 85020), ...range(89006, 89009)]), [], 'back'),
+  square: new Set(),
+  spot: 'back',
+}
+
 const ISLAND_SETS: Readonly<Record<string, IslandSet>> = {
   'img/scenes/the-circle-undone/cosmos': cosmos,
   'img/scenes/the-innsmouth-conspiracy/devil-reef': devilReef,
@@ -320,6 +326,7 @@ const ISLAND_SETS: Readonly<Record<string, IslandSet>> = {
   'img/scenes/hemlock-vale/twisted-hollow': twistedHollow,
   'img/scenes/the-dream-eaters/weaver': weaver,
   'img/scenes/the-dream-eaters/endless-stairs': stairs,
+  'img/scenes/side-stories/blob': blob,
 }
 
 const setOf = (folder: string): IslandSet => ISLAND_SETS[folder] ?? cosmos

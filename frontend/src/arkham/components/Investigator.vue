@@ -681,9 +681,8 @@ const spadeInjury = computed(() => {
               :game="game"
               @click="$emit('choose', ability.index)"
               />
-            <!-- On the map view, End Turn lives in the action list panel instead; the classic card view has no such list, so it keeps the button here. -->
+            <!-- Kept in both views: on the map view the action panel also lists End Turn, but that panel can be closed or hidden, and the turn must stay endable. -->
             <button
-            v-if="settingsStore.locationView === 'cards'"
             :class="{ active: endTurnAction !== -1 && investigator.remainingActions <= blockedActions }"
             :disabled="endTurnAction == -1"
             :data-game-actionable="endTurnAction !== -1 || undefined"

@@ -8,7 +8,9 @@ import { useGameChoices } from '@/arkham/composables/useGameChoices'
 import { useCardNames } from '@/arkham/composables/useCardNames'
 import { useStorage } from '@vueuse/core'
 import { cardArt } from '@/arkham/cardImages'
-import { HIGH_GEAR_ISLANDS, hemlockHousePosition, hemlockOverview, hemlockVillagePosition } from '@/arkham/hemlock-overview'
+import { HIGH_GEAR_ISLANDS, hemlockOverview, hemlockVillagePosition } from '@/arkham/hemlock-overview'
+import { essexTrainPosition, hiddenChamberPosition } from '@/arkham/scene-location-art'
+import { hiddenSceneArt, revealedScenePositions } from '@/arkham/revealed-scene-positions'
 import { readRoadLayout, roadPositions } from '@/arkham/high-gear-road-model'
 import { isolatedLocationIds } from '@/arkham/offMapCards'
 import { useSettings, type LocationView } from '@/stores/settings'
@@ -79,6 +81,8 @@ onMounted(() => addEntry({
 onBeforeUnmount(() => removeEntry('viewDecks'))
 /* The mission strip (agenda / act / reference) starts open; a player who folds it keeps it folded. */
 const missionCollapsed = useStorage('arkham:mission-strip-collapsed', false)
+// Team panel is hidden by default so the scene map gets the full width.
+const teamHidden = useStorage('arkham:team-panel-hidden', true)
 /* The controls move into the game bar once its slot is on the page (see Game.vue), except in
  * fit-to-screen, where the game bar is hidden and they would vanish with it. */
 const gameBarSlot = ref(false)
@@ -119,10 +123,12 @@ const illustratedBoard = computed(() => {
     props.scenario.id, props.scenario.reference, props.scenario.locationLayout,
     locations.value.map((l) => l.label),
     locations.value.map((l) => l.cardCode),
+    props.game.campaign?.log ?? props.scenario.standaloneCampaignLog,
   )
 })
 
 const weaverRing = computed(() => illustratedBoard.value?.image.endsWith('/weaver/bg-ring.webp') === true)
+const hiddenLocationArt = computed(() => hiddenSceneArt(props.scenario.id))
 const dreamPositions = computed(() => dreamGridPositions(
   illustratedBoard.value?.islands, props.scenario.locationLayout ?? [], weaverRing.value,
 ))
@@ -160,12 +166,21 @@ const positions = computed<Record<string, Point>>(() => {
   ]))
   if (illustratedBoard.value?.fixedPassages) return mineDescentPositions(graph.value, fallback)
   const board = illustratedBoard.value
-  // The Cosmos has no painted places: every card sits in its grid cell, as on the card board.
-  if ((!board?.village && !board?.house) || board.islands) return fallback
-  return Object.fromEntries(locations.value.map((location) => [
+  if (hiddenLocationArt.value) return revealedScenePositions(props.scenario.id, locations.value, fallback) ?? fallback
+  if (!board?.village || board.islands) return fallback
+  const essex = board.image.endsWith('/essex-county-rails.webp')
+  const placed = Object.fromEntries(locations.value.map((location) => [
     location.id,
-    (board.house ? hemlockHousePosition(location.label) : hemlockVillagePosition(location.cardCode, board.anchors, location.label)) ?? fallback[location.id],
+    (essex ? essexTrainPosition(location.label) : hemlockVillagePosition(
+      location.cardCode, board.anchors, location.label, board.revealRoomAnchors && location.revealed,
+    )) ?? fallback[location.id],
   ]))
+  if (board.image.endsWith('/blood-on-the-altar.webp')) {
+    const chamber = locations.value.find((location) => cardArt(location.cardCode) === '02214')
+    const entrance = chamber?.connectedLocations.find((id) => placed[id])
+    if (chamber && entrance) placed[chamber.id] = hiddenChamberPosition(placed[entrance])
+  }
+  return placed
 })
 // Holding Cells is reached only by being captured: the card data lets Lantern Room link to it, but no road leads there.
 const NO_ROAD_CARDS = new Set(['c07252b'])
@@ -196,7 +211,7 @@ const gridSpots = computed(() => {
   return Object.entries(spots)
     .filter(([label]) => !used.has(label) && gridSlotIndex(choices.value, label) !== -1)
     .map(([label, [x, y]]) => {
-      const anchor = (illustratedBoard.value?.house ? hemlockHousePosition(label) : undefined) ?? illustratedBoard.value?.anchors?.[label]
+      const anchor = illustratedBoard.value?.anchors?.[label]
       return { label, x: anchor?.[0] ?? x, y: anchor?.[1] ?? (squeeze ? y * 0.8 : y), index: gridSlotIndex(choices.value, label) }
     })
 })
@@ -403,14 +418,15 @@ const views: LocationView[] = ['map', 'cards']
       :sprites="illustratedBoard?.islands ? { folder: illustratedBoard.islands, infoOf, enemiesAt: visibleEnemiesAt } : undefined"
       @choose="emit('choose', $event)" @inspect="inspect" />
     <div class="map-layout" :class="[view, { 'panel-open': panelOpen && !panelBelow, 'sheet-layout': sheetLayout }]" @click="inspectedId = null; moreOpen = false">
-      <div id="scene-team-slot" class="team-slot"></div>
+      <div id="scene-team-slot" class="team-slot" :class="{ 'team-slot--hidden': teamHidden }"></div>
       <LocationMapCanvas :cutaway="cutaway" :roomPlates="roomPlates" :plateText="plateText" :illustrated-board="illustratedBoard" :game="game" :playerId="playerId" :locations="locations"
         :positions="positions" :links="links" :moves="moves" :gridSpots="gridSpots" :selectedId="selected?.id ?? null"
-        :enemiesAt="visibleEnemiesAt" :concealedAt="concealedOf" :concealedSpots="concealedSpots" :infoOf="infoOf" :barriers="barriers" :width="canvasSize.width" :height="canvasSize.height" :viewport="viewport" :weather="weather" :weaver="weaver" :dreamPositions="dreamPositions" :roadGrid="roadGrid"
+        :enemiesAt="visibleEnemiesAt" :concealedAt="concealedOf" :concealedSpots="concealedSpots" :infoOf="infoOf" :barriers="barriers" :width="canvasSize.width" :height="canvasSize.height" :viewport="viewport" :weather="weather" :weaver="weaver" :dreamPositions="dreamPositions" :roadGrid="roadGrid" :hiddenLocationArt="hiddenLocationArt"
         @inspect="inspect" @choose="emit('choose', $event)" />
       <div v-if="canZoom" class="zoom-controls" role="group" :aria-label="t('locationMap.zoomReset')">
         <button type="button" :aria-label="t('locationMap.zoomIn')" :disabled="!viewport.canZoomIn.value" @click.stop="viewport.zoomIn()">+</button>
         <button type="button" :aria-label="t('locationMap.zoomOut')" :disabled="!viewport.zoomed.value" @click.stop="viewport.zoomOut()">−</button>
+        <button type="button" :aria-label="t('locationMap.team')" :aria-pressed="!teamHidden" :title="t('locationMap.team')" @click.stop="teamHidden = !teamHidden">👥</button>
         <button type="button" :aria-label="t('locationMap.zoomReset')" :disabled="!viewport.zoomed.value" @click.stop="viewport.reset()">⟲</button>
       </div>
       <LocationActionPanel v-if="panelOpen && !panelBelow" class="action-overlay" :game="game" :playerId="playerId"
@@ -449,7 +465,7 @@ const views: LocationView[] = ['map', 'cards']
  * map keeps its width; held upright, the action panel is a bottom sheet instead of a column on the right. */
 .location-map[data-layout^='tablet'] .team-slot { top: 8px; bottom: auto; left: 12px; right: 12px; width: auto; flex-direction: row; flex-wrap: wrap; gap: 6px; }
 .location-map[data-layout='tablet-landscape'] .map-layout.panel-open .team-slot { right: calc(var(--panel-w) + 2 * var(--panel-gap)); }
-.location-map[data-layout^='tablet'] .team-slot:not(:empty) ~ .map-scroll { padding-left: 0; padding-top: 56px; }
+.location-map[data-layout^='tablet'] .team-slot:not(:empty):not(.team-slot--hidden) ~ .map-scroll { padding-left: 0; padding-top: 56px; }
 .location-map[data-layout='tablet-portrait'] .map-layout.sheet-layout.panel-open > .map-scroll { padding-right: 0; padding-bottom: var(--sheet-peek); }
 .location-map[data-layout='tablet-portrait'] .action-overlay { left: 0; right: 0; top: auto; bottom: 0; width: auto; }
 /* Arrange mode and the zoom buttons. */
@@ -502,7 +518,8 @@ const views: LocationView[] = ['map', 'cards']
 .map-layout { position: relative; display: flex; flex: 1 1 300px; min-height: 300px; }
 .map-layout > .map-scroll { box-sizing: border-box; }
 .map-layout.panel-open > .map-scroll { padding-right: calc(var(--panel-w) + 2 * var(--panel-gap)); }
-.team-slot:not(:empty) ~ .map-scroll { padding-left: calc(var(--team-w) + var(--panel-gap)); }
+.team-slot--hidden { display: none; }
+.team-slot:not(:empty):not(.team-slot--hidden) ~ .map-scroll { padding-left: calc(var(--team-w) + var(--panel-gap)); }
 .action-overlay { position: absolute; right: var(--panel-gap); top: var(--panel-gap); bottom: var(--panel-gap); height: auto; z-index: 60; }
 .mini-map { position: absolute; left: 12px; bottom: 12px; z-index: 50; width: clamp(240px, 24vw, 380px); aspect-ratio: 4 / 3; padding: 6px; background: #0b130ee6; border: 1px solid #c6a873aa; border-radius: 8px; box-shadow: 0 6px 20px #000a; }
 .mini-map :deep(.map-scroll) { width: 100%; height: 100%; }

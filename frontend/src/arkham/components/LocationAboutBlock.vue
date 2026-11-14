@@ -19,7 +19,7 @@ import SceneGlyph from '@/arkham/components/SceneGlyph.vue'
  * action. Its face-up traits, numbers, every printed line tagged by kind (forced, action, reaction, fast,
  * objective, or always-on), the flavour, and what lies on it (treacheries first: those are what bite).
  * Display only; nothing here sends a choice. */
-const props = defineProps<{ game: Game; location: Location; info: MapLocationInfo }>()
+const props = defineProps<{ game: Game; playerId: string; location: Location; info: MapLocationInfo }>()
 
 const { t } = useI18n()
 const nameOf = useCardNames()
@@ -59,6 +59,7 @@ const iconOf = (kind: LineKind) => (kind === 'action' || kind === 'fast' || kind
       <span :title="t('locationMap.clues')"><GameIcon type="clue" /> <b>{{ info.clues.left }}<template v-if="info.clues.printed !== null">/{{ info.clues.printed }}</template></b></span>
       <span v-if="info.doom" class="doom" :title="t('locationMap.doom')"><GameIcon type="doom" /> <b>{{ info.doom }}</b></span>
       <span v-if="info.victory" :title="t('locationMap.info.victory')">VP <b>{{ info.victory }}</b></span>
+      <LocationTokenStrip :game="game" :playerId="playerId" :location="location" />
     </div>
 
     <ul v-if="lines.length" class="lines">

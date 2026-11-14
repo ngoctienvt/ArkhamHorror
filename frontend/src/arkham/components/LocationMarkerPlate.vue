@@ -17,7 +17,8 @@ import { locationExtraLabel } from '@/arkham/locationExtraLabel'
 const props = withDefaults(defineProps<{ info: MapLocationInfo; size?: 'full' | 'compact' | 'room'; showText?: boolean; game?: Game; playerId?: string; locationId?: string; hideMove?: boolean }>(), { size: 'full', showText: false, hideMove: false })
 /* Keys lying here (a gold key on a revealed location...), as on the card board: clicking one answers a choice
  * that asks for that key. */
-const keys = computed<ArkhamKey[]>(() => (props.game && props.locationId ? props.game.locations[props.locationId]?.keys : null) ?? [])
+const location = computed(() => (props.game && props.locationId ? props.game.locations[props.locationId] : null) ?? null)
+const keys = computed<ArkhamKey[]>(() => location.value?.keys ?? [])
 /* Clues still here on screen while they fly off to the investigator who found them. */
 const cluesLeft = computed(() =>
   props.locationId ? heldCount(`location-${props.locationId}`, 'clue', props.info.clues.left) : props.info.clues.left,
@@ -75,6 +76,7 @@ function onMain(event: Event) {
 }
 import GameIcon from '@/arkham/components/GameIcon.vue'
 import PoolItem from '@/arkham/components/PoolItem.vue'
+import LocationTokenStrip from '@/arkham/components/LocationTokenStrip.vue'
 import ShroudDisc from '@/arkham/components/ShroudDisc.vue'
 import AttachmentChips from '@/arkham/components/AttachmentChips.vue'
 import type { Game } from '@/arkham/types/Game'
@@ -102,6 +104,8 @@ import type { Game } from '@/arkham/types/Game'
         :title="locationExtraLabel(`key:${k.tag}`, t)" @choose="emit('choose', $event)" />
       <img v-if="floodSrc" :src="floodSrc" class="flood" :alt="floodTitle" :title="floodTitle" />
       <span v-if="showStats && info.doom" class="chip doom" :title="t('locationMap.doom')"><GameIcon type="doom" />{{ info.doom }}</span>
+      <LocationTokenStrip v-if="size !== 'compact' && game && playerId && location" :game="game" :playerId="playerId" :location="location"
+        @choose="emit('choose', $event)" />
       <button v-if="size !== 'compact' && info.actions.move && !hideMove" class="go" type="button"
         :title="t('locationMap.marker.moveHere')" :aria-label="t('locationMap.marker.moveHere')"
         @click.stop="emit('choose', info.actions.move.index)"><span aria-hidden="true">↔</span></button>

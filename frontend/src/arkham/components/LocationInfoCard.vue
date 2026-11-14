@@ -13,6 +13,7 @@ import { computeStat, formatStat } from '@/arkham/statModel'
 import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
 import AbilityButton from '@/arkham/components/AbilityButton.vue'
 import ShroudDisc from '@/arkham/components/ShroudDisc.vue'
+import LocationTokenStrip from '@/arkham/components/LocationTokenStrip.vue'
 
 /* One location's face-up side in a corner of the map, out of the way of the figures: its numbers, text and
  * flavour, what is attached to it, where it leads, and the actions the server offers for it right now (only
@@ -87,6 +88,7 @@ import BarrierIcon from '@/arkham/components/BarrierIcon.vue'
       <span class="token" :title="t('locationMap.clues')"><PoolItem type="clue" :amount="info.clues.printed !== null ? `${info.clues.left}/${info.clues.printed}` : info.clues.left" /><small class="lbl">{{ t('locationMap.clues') }}</small></span>
       <span v-if="info.doom" class="token" :title="t('locationMap.doom')"><PoolItem type="doom" :amount="info.doom" /><small class="lbl">{{ t('locationMap.doom') }}</small></span>
       <span v-if="info.victory" :title="t('locationMap.info.victory')">VP <b>{{ info.victory }}</b></span>
+      <LocationTokenStrip :game="game" :playerId="playerId" :location="location" class="strip" />
       <span v-if="info.shroud && !info.shroud.x && me" class="compare" :title="t('locationMap.info.investigateCompare', { intellect: myIntellect?.value, shroud: info.shroud.current })">
         <span class="intellect-icon" aria-hidden="true"></span> {{ myIntellect?.label }} vs {{ info.shroud.current }}</span>
     </section>

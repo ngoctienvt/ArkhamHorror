@@ -16,7 +16,6 @@ import { gameLocalStorageKey } from '@/arkham/localStorage';
 import { IsMobile } from '@/arkham/isMobile';
 import { useDbCardStore } from '@/stores/dbCards'
 import { useSettings } from '@/stores/settings'
-import SceneSeatCard from '@/arkham/components/SceneSeatCard.vue'
 import GameIcon from '@/arkham/components/GameIcon.vue'
 import { TokenType } from '@/arkham/types/Token'
 import { computeStat, formatStat } from '@/arkham/statModel'
@@ -43,10 +42,15 @@ const uiLock = inject<Ref<boolean>>('uiLock', ref(false))
 const switchInvestigator = inject<((i: string) => void)>('switchInvestigator')
 const hasChoices = (iid: string) => ArkhamGame.choices(props.game, iid).length > 0
 const isWaiting = (investigator: Investigator) => props.playerOrder.length > 1 && investigator.playerId in props.game.question
-const investigators = computed(() => 
-  props.playerOrder.filter(iid => !props.game.investigators[iid]?.eliminated).map(iid => props.players[iid])
+// The viewer's own investigator always leads the row (stable for the rest), so it stays leftmost in multiplayer.
+const ownFirst = (list: Investigator[]) => [
+  ...list.filter((i) => i.playerId === props.playerId),
+  ...list.filter((i) => i.playerId !== props.playerId),
+]
+const investigators = computed(() =>
+  ownFirst(props.playerOrder.filter(iid => !props.game.investigators[iid]?.eliminated).map(iid => props.players[iid]))
 )
-const inactiveInvestigators = computed(() => props.playerOrder.filter(iid => props.game.investigators[iid]?.eliminated ?? false).map(iid => props.players[iid]))
+const inactiveInvestigators = computed(() => ownFirst(props.playerOrder.filter(iid => props.game.investigators[iid]?.eliminated ?? false).map(iid => props.players[iid])))
 const lead = computed(() => `url('${imgsrc(`tokens/lead-investigator.png`)}')`)
 
 /* Actions the investigator can still take: the regular ones plus every unspent additional action (Leo De Luca,
@@ -78,8 +82,6 @@ const actionTotal = (i: Investigator) => Math.max(actionTotals.value[i.id] ?? 3,
 const { isMobile } = IsMobile();
 const store = useDbCardStore()
 const sceneMode = computed(() => useSettings().locationView !== 'cards')
-// Teammates only: your own investigator stays in the player area under the map.
-const seats = computed(() => [...investigators.value, ...inactiveInvestigators.value].filter((i) => i.playerId !== props.playerId))
 
 /* A skill with every lasting modifier applied, shown as `5(4+1)` when it differs from the printed value. */
 type SkillKey = 'willpower' | 'intellect' | 'combat' | 'agility'
@@ -589,16 +591,6 @@ watch(
     </ul>
     <slot />
     </div>
-    <Teleport defer to="#scene-team-slot" :disabled="!sceneMode">
-      <div v-if="sceneMode && seats.length" class="team-overlay" role="group" :aria-label="$t('locationMap.team')">
-        <SceneSeatCard v-for="i in seats" :key="i.id" :game="game" :investigator="i"
-          :selected="i.playerId === selectedTab"
-          :active="i.id === activePlayerId" :lead="i.id === game.leadInvestigatorId"
-          :hasActions="hasActions(i)" :waiting="isWaiting(i)" :eliminated="i.eliminated"
-          :solo="!!solo" :canSwitch="hasSwitch(i)" :switchable="i.playerId !== playerId"
-          @select="selectTab(i.playerId)" @perspective="selectTabExtended(i.playerId)" />
-      </div>
-    </Teleport>
     <Tab
       v-for="investigator in investigators"
       :key="investigator.id"

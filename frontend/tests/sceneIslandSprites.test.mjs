@@ -15,6 +15,22 @@ const COSMOS = 'img/scenes/the-circle-undone/cosmos'
 const REEF = 'img/scenes/the-innsmouth-conspiracy/devil-reef'
 const RT = ':return-to-the-innsmouth-conspiracy:'
 
+test('Blob has a sprite for every location, including ELSE, and a shared hidden face', () => {
+  const folder = 'img/scenes/side-stories/blob'
+  const codes = [
+    '85010', '85011', '85012', '85013', '85014', '85015', '85016', '85017',
+    '85018', '85019', '85020', '89006', '89007', '89008', '89009',
+  ]
+  assert.equal(islandSetFiles(folder).length, codes.length + 1)
+  for (const code of codes) {
+    assert.equal(islandImage(folder, `c${code}`, true), `${folder}/${code}.webp`)
+    assert.equal(islandImage(folder, `c${code}`, false), `${folder}/back.webp`)
+  }
+  for (const src of islandSetFiles(folder)) {
+    assert.equal(readFileSync(new URL(`../public/${src}`, import.meta.url)).toString('ascii', 8, 12), 'WEBP')
+  }
+})
+
 test('Cosmos: revealed locations have their own 3:2 sprite, face-down cards stand on the round rock', () => {
   assert.equal(islandImage(COSMOS, 'c05335', true), `${COSMOS}/05335.webp`)
   assert.equal(islandImage(COSMOS, 'c05335', false), `${COSMOS}/cosmos.webp`)

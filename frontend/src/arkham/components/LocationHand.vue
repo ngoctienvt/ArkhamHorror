@@ -4,6 +4,8 @@ import { useI18n } from 'vue-i18n'
 import type { Game } from '@/arkham/types/Game'
 import { ownInvestigator } from '@/arkham/ownInvestigator'
 import HandCard from '@/arkham/components/HandCard.vue'
+import Treachery from '@/arkham/components/Treachery.vue'
+import EnemyView from '@/arkham/components/Enemy.vue'
 import { useSortedHand } from '@/arkham/composables/useSortedHand'
 
 /* The hand, fixed to the bottom of the browser window like the offline demo: every card is shown at once,
@@ -15,6 +17,15 @@ const emit = defineEmits<{ (e: 'choose', index: number): void }>()
 const { t } = useI18n()
 const me = computed(() => ownInvestigator(props.game, props.playerId))
 const hand = useSortedHand(() => me.value?.hand ?? [])
+/* Cards held in hand that are not in `investigator.hand`: a Hidden treachery (e.g. Visions in Your Mind)
+ * or an enemy kept in hand. They live in the game's treacheries/enemies with a hand placement. */
+const inHand = (p: { tag: string; contents?: unknown }) =>
+  (p.tag === 'HiddenInHand' || p.tag === 'StillInHand') && p.contents === me.value?.id
+const hiddenTreacheries = computed(() =>
+  me.value ? Object.values(props.game.treacheries).filter((t) => inHand(t.placement)) : [])
+const hiddenEnemies = computed(() =>
+  me.value ? Object.values(props.game.enemies).filter((e) => inHand(e.placement)) : [])
+const handCount = computed(() => hand.value.length + hiddenTreacheries.value.length + hiddenEnemies.value.length)
 const dock = ref<HTMLElement | null>(null)
 let observer: ResizeObserver | null = null
 // Other overlays keep clear of the hand through this variable.
@@ -33,10 +44,16 @@ onBeforeUnmount(() => { observer?.disconnect(); document.documentElement.style.r
 
 <template>
   <Teleport to="body">
-    <div v-if="me && hand.length" ref="dock" class="hand-dock" :aria-label="t('locationMap.hand', { count: hand.length })">
+    <div v-if="me && handCount" ref="dock" class="hand-dock" :aria-label="t('locationMap.hand', { count: handCount })">
       <div class="cards">
         <div v-for="(card, i) in hand" :key="i" class="slot">
           <HandCard :card="card" :game="game" :ownerId="me.id" :playerId="playerId" @choose="emit('choose', $event)" />
+        </div>
+        <div v-for="enemy in hiddenEnemies" :key="enemy.id" class="slot">
+          <EnemyView :enemy="enemy" :game="game" :playerId="playerId" @choose="emit('choose', $event)" />
+        </div>
+        <div v-for="treachery in hiddenTreacheries" :key="treachery.id" class="slot">
+          <Treachery :treachery="treachery" :game="game" :playerId="playerId" :isInHand="true" @choose="emit('choose', $event)" />
         </div>
       </div>
     </div>
@@ -49,5 +66,8 @@ onBeforeUnmount(() => { observer?.disconnect(); document.documentElement.style.r
 .cards { display: flex; justify-content: center; gap: 6px; margin-bottom: calc(-0.4 * 1.4 * 130px); max-width: 100%; padding: 0 8px; box-sizing: border-box; }
 .slot { pointer-events: auto; flex: 0 1 130px; min-width: 0; transition: transform 0.15s; }
 @media (hover: hover) { .slot:hover { transform: translateY(calc(-0.4 * 1.4 * 130px - 6px)); } }
-.slot :deep(.card) { width: 100%; min-width: 0; }
+.slot :deep(.card) { width: 100%; min-width: 0; max-width: none; }
+/* Treachery/Enemy size themselves with --card-width and wrap in fit-content; stretch them to the slot like HandCard. */
+.slot > :deep(.treachery), .slot > :deep(.enemy), .slot > :deep(.enemy--outer) { width: 100%; }
+.slot :deep(.treachery-face) { width: 100%; }
 </style>
