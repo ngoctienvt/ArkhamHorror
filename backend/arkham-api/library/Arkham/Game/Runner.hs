@@ -1071,8 +1071,45 @@ runGameMessage msg g = case msg of
     pure g
   InvestigatorsMulligan -> do
     iids <- getInvestigatorsInOrder
-    for_ (reverse iids) \iid -> do
-      pushAll [InvestigatorMulligan iid, After (InvestigatorMulligan iid)]
+    -- Every seat with something to swap decides at the same time, behind a
+    -- barrier. A seat's answer is one-shot (the cards it swaps plus "done"), so
+    -- its sub-flow never parks; the discards and the redraw are deferred until
+    -- every seat has chosen. Seats with nothing to swap just finish.
+    seats <- fmap catMaybes $ for iids \iid -> do
+      pid <- getPlayer iid
+      unable <- hasModifier iid CannotMulligan
+      hand <- field Investigator.InvestigatorHand iid
+      let excluded = maybe [] (attr investigatorExcludeFromMulligan) (Map.lookup iid (gameInvestigators g))
+          swappable =
+            [ toCardId card
+            | card <- hand
+            , toCardId card `notElem` excluded
+            , cdCanReplace (toCardDef card)
+            ]
+      pure $ if unable || null swappable then Nothing else Just (iid, pid, swappable)
+    let pids = map (\(_, pid, _) -> pid) seats
+    if length seats >= 2 && length (nub pids) == length pids
+      then do
+        -- Everything still queued behind the mulligan waits for the whole table,
+        -- so it moves into the barrier as its continuation.
+        rest <- peekQueue
+        clearQueue
+        bid <- getId
+        let seated = map (\(iid, _, _) -> iid) seats
+            skipped = [FinishedWithMulligan iid | iid <- iids, iid `notElem` seated]
+            slot (iid, pid, cardIds) =
+              ( pid
+              , ChooseSome
+                  $ Label
+                    "$label.doneWithMulligan"
+                    [DeferPastSimultaneousAsk pid [FinishedWithMulligan iid], SeatResolved bid pid]
+                  : [ TargetLabel (CardIdTarget cid) [DeferPastSimultaneousAsk pid [DiscardCard iid GameSource cid]]
+                    | cid <- cardIds
+                    ]
+              )
+        push $ BeginSimultaneousAsk bid JoinAll (mapFromList $ map slot seats) (skipped <> rest)
+      else for_ (reverse iids) \iid -> do
+        pushAll [InvestigatorMulligan iid, After (InvestigatorMulligan iid)]
     pure g
   InvestigatorMulligan iid -> pure $ g & activeInvestigatorIdL .~ iid
   Will msg'@(ResolveChaosToken token tokenFace iid) -> do

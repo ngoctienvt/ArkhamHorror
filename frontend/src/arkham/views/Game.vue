@@ -3016,7 +3016,7 @@ function sendMulliganChoice(idx: number) {
 watch(
   [() => game.value?.question, mulliganRunning],
   () => {
-    if (game.value && playerId.value) advanceMulligan(game.value, playerId.value, sendMulliganChoice)
+    if (game.value && playerId.value) advanceMulligan(game.value, playerId.value, sendMulliganChoice, chooseOrdered)
   },
 )
 

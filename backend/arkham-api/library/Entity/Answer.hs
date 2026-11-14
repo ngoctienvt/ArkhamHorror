@@ -772,7 +772,12 @@ handleAnswerPure game@Game {..} playerId = \case
           (unhandled "Player not being asked")
           ( \q -> case resolveOrdered q (orChoices response) of
               Nothing -> unhandled "Wrong question type"
-              Just msgs -> finish msgs
+              Just msgs
+                -- A barrier seat only leaves the barrier through SeatResolved; an
+                -- answer that skipped it would consume the slot and strand the table.
+                | isJust (barrierSeat playerId game) && not (any isSeatResolved msgs) ->
+                    unhandled "Answer does not finish this seat"
+                | otherwise -> finish msgs
           )
           $ Map.lookup playerId gameQuestion
  where
@@ -809,6 +814,10 @@ handleAnswerPure game@Game {..} playerId = \case
     QuestionWithSource _ _ q' -> resolveOrdered q' order
     ChooseOneAtATime msgs -> pick msgs
     ChooseOneAtATimeWithAuto _ msgs -> pick msgs
+    -- Any subset of a "choose some" question, in the order given, in one answer.
+    -- Each index may be named once. Mulligan uses this: the cards to swap, then done.
+    ChooseSome msgs
+      | not (null order) && nub order == order -> traverse (fmap uiToRun . (msgs !!?)) order
     _ -> Nothing
    where
     pick msgs
@@ -972,6 +981,13 @@ handleAnswerPure game@Game {..} playerId = \case
       Nothing -> [Ask playerId $ f $ DropDown qs]
       Just (_, msg) -> [msg]
     _ -> error "Wrong question type"
+
+-- | Does this answer's message list hand the seat back to its barrier?
+isSeatResolved :: Message -> Bool
+isSeatResolved = \case
+  Run inner -> any isSeatResolved inner
+  SeatResolved {} -> True
+  _ -> False
 
 extract :: Int -> [a] -> (Maybe a, [a])
 extract n xs = let a = xs !!? n in (a, [x | (i, x) <- zip [0 ..] xs, i /= n])

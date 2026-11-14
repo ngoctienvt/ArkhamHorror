@@ -16,6 +16,9 @@ export type MulliganPick = { card: ArkhamCard, id: string, index: number }
 export type MulliganQuestion = {
   picks: MulliganPick[]
   doneIndex: number
+  /* True when the table mulligans together: this seat's answer is a single
+   * one-shot ordered answer (swapped cards, then done) instead of a chain. */
+  simultaneous: boolean
 }
 
 function runs(messages: unknown[] | undefined, tag: string): boolean {
@@ -35,6 +38,7 @@ export function mulliganQuestion(game: Game, playerId: string): MulliganQuestion
   const hand = new Map(investigator.hand.map((card) => [toCardContents(card).id, card]))
 
   let doneIndex = -1
+  let simultaneous = false
   const picks: MulliganPick[] = []
 
   for (let index = 0; index < choices.length; index += 1) {
@@ -43,19 +47,20 @@ export function mulliganQuestion(game: Game, playerId: string): MulliganQuestion
       const messages = (choice as { messages?: unknown[] }).messages
       if (runs(messages, 'FinishedWithMulligan') || choice.label.includes('doneWithMulligan')) {
         doneIndex = index
+        simultaneous = runs(messages, 'DeferPastSimultaneousAsk') || runs(messages, 'SeatResolved')
         continue
       }
       return null
     }
     if (choice.tag !== MessageType.TARGET_LABEL) return null
     if (choice.target.tag !== 'CardIdTarget' || typeof choice.target.contents !== 'string') return null
-    if (!runs(choice.messages, 'DiscardCard')) return null
+    if (!runs(choice.messages, 'DiscardCard') && !runs(choice.messages, 'DeferPastSimultaneousAsk')) return null
     const card = hand.get(choice.target.contents)
     if (!card) return null
     picks.push({ card, id: choice.target.contents, index })
   }
 
-  return doneIndex === -1 ? null : { picks, doneIndex }
+  return doneIndex === -1 ? null : { picks, doneIndex, simultaneous }
 }
 
 /** Card ids the player has marked for replacement, in the order they were marked. */
@@ -96,7 +101,12 @@ export function startMulligan() {
 /* Sends the next answer of a confirmed mulligan, if one is due. `send` receives
  * the choice index. Safe to call on every question update: it only acts when a
  * mulligan is running and the question has moved on from the last answer. */
-export function advanceMulligan(game: Game, playerId: string, send: (index: number) => void) {
+export function advanceMulligan(
+  game: Game,
+  playerId: string,
+  send: (index: number) => void,
+  sendOrdered?: (indices: number[]) => void,
+) {
   if (!mulliganRunning.value) return
 
   // Between answers the question can be momentarily empty; wait it out.
@@ -116,6 +126,17 @@ export function advanceMulligan(game: Game, playerId: string, send: (index: numb
   }
 
   sentAgainst = signature
+
+  // Mulliganing together: one answer carries every swapped card and then done.
+  if (q.simultaneous && sendOrdered) {
+    const wanted = queue.value.filter((id) => q.picks.some((p) => p.id === id))
+    // The seat is done once this answer lands, so nothing stays "running": a
+    // rejected answer restores the question and the player simply tries again.
+    resetMulligan()
+    sendOrdered([...wanted.map((id) => q.picks.find((p) => p.id === id)!.index), q.doneIndex])
+    return
+  }
+
   if (next === undefined) {
     send(q.doneIndex)
     return
