@@ -43,11 +43,11 @@ for c in sorted(vi_dirs):
     if not story_en or not story_vi:
         continue
     voice = CAMPAIGN_VOICES.get(c, "Mỹ Duyên")
-    
+
     matches_vieneu = 0
     matches_edge = 0
     stale_keys = []
-    
+
     for k in sorted(story_en.keys()):
         if k not in story_vi:
             continue
@@ -62,7 +62,7 @@ for c in sorted(vi_dirs):
             stale_keys.append((k, "matches_edge_not_vieneu"))
         else:
             stale_keys.append((k, f"curr={curr}, exp_v={h_v}"))
-            
+
     total_vieneu += matches_vieneu
     total_stale += len(stale_keys)
     results[c] = {
