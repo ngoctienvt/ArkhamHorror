@@ -1,5 +1,6 @@
 import { ref } from 'vue'
 import { cardArt } from '@/arkham/cardImages'
+import { fetchCardFile } from '@/arkham/fetch-card-file'
 import { useDbCardStore, type ArkhamDBCard } from '@/stores/dbCards'
 
 /* Card names and text for the map and scene views.
@@ -13,9 +14,7 @@ let loading = false
 async function loadEnglish() {
   loading = true
   try {
-    const response = await fetch('cards/cards_en.json')
-    if (!response.ok) return
-    const cards = (await response.json()) as ArkhamDBCard[]
+    const cards = await fetchCardFile<ArkhamDBCard[]>('cards_en.json')
     english.value = new Map(cards.map((c) => [c.code, c]))
   } catch {
     // Names are cosmetic; keep showing codes if the file cannot be had.

@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { fetchCardFile } from '@/arkham/fetch-card-file'
 import { homebrewCampaignOf, loadHomebrewCampaignCards } from '@/arkham/homebrewCardData'
 
 export interface ArkhamDBCard {
@@ -179,22 +180,9 @@ export const useDbCardStore = defineStore("dbCards", {
       // Document-relative on purpose: routing is hash-based, so this resolves
       // against the app's own directory and keeps working when the offline
       // package serves it from a subdirectory.
-      const path = `/cards/cards_${lang}.json`.replace(/^\//, '')
-      const response = await fetch(path)
-
-      if (!response.ok) {
-        throw new Error(`${path}: ${response.status} ${response.statusText}`)
-      }
-
-      // The dev server and the SPA fallback answer a missing file with
-      // index.html, which only fails once it hits JSON.parse. Say what is
-      // actually wrong instead.
-      const contentType = response.headers.get('content-type') ?? ''
-      if (!contentType.includes('json')) {
-        throw new Error(`${path}: expected JSON, got ${contentType || 'no content type'}`)
-      }
-
-      const data = await response.json() as ArkhamDBCard[]
+      // The SPA fallback answers a missing file with index.html; the helper
+      // checks the content type and retries against the app base URL.
+      const data = await fetchCardFile<ArkhamDBCard[]>(`cards_${lang}.json`)
 
       if (this.lang !== lang) return
 

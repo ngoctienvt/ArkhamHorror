@@ -4,6 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+    <!-- Routing is hash-based and the app loads art/data by document-relative paths (img/..., cards/...).
+         The server answers any path with index.html, so a link such as /games/<id> would resolve those
+         paths under /games/ and receive HTML (broken scene art, card names shown as codes). Move such a
+         URL back to the app root before anything loads, keeping the hash route. -->
+    <script>
+      (function () {
+        var m = location.pathname.match(/^(.*\/)games\/[^/]+\/?$/)
+        if (m) history.replaceState(null, '', m[1] + location.search + location.hash)
+      })()
+    </script>
     <link rel="icon" href="/favicon.ico">
     <title>Arkham Horror</title>
   </head>
