@@ -194,5 +194,6 @@
   "undoToHereConfirmPlain": "Hoàn tác mọi thứ từ thời điểm này trở đi?",
   "usesAbility": "{investigator} dùng {source}",
   "mustDiscardDown": " phải bỏ bớt bài xuống còn {count} lá",
-  "noFurtherEffects": "Không có hiệu ứng nào khác được ghi lại"
+  "noFurtherEffects": "Không có hiệu ứng nào khác được ghi lại",
+  "triggersForcedAbility": "{investigator} kích hoạt một khả năng Forced trên {source}"
 }

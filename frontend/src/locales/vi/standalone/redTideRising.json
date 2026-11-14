@@ -34,12 +34,12 @@
     "actAgendaDeck": "Loại bỏ tất cả các lá bài act và agenda của bộ encounter *The Vanishing of Elina Harper* khỏi trò chơi. Xây dựng chồng bài act và agenda chỉ sử dụng các lá bài act và agenda mới được cung cấp trong bộ encounter *Red Tide Rising*.",
     "placeLocations": "Đưa các địa điểm sau vào chơi: Innsmouth Square, Marsh Refinery, Innsmouth Harbour, Fish Street Bridge, First National Grocery, Gilman House, và The Little Bookshop.",
     "leadsDeck": "Prepare the Leads deck: find the 6 unique enemies with the _Suspect_ trait and the 6 single-sided locations with the _Hideout_ trait, and shuffle these 12 cards together to form the Leads deck. Place it near the scenario reference card.",
-    "drawLead": "Rút lá bài trên cùng của chồng bài Leads, giải quyết khả năng revelation của nó.",
+    "drawLead": "Rút lá trên cùng của chồng bài Leads, giải quyết khả năng revelation của nó. Nếu là vị trí, Wendy Adams bắt đầu ở vị trí đó. Nếu là kẻ địch, Wendy Adams bắt đầu ở vị trí của kẻ địch đó. Mỗi điều tra viên khác bắt đầu ở Innsmouth Square.",
     "setAsideMonsters": "Để riêng mỗi kẻ địch [[Monster]] sau ra ngoài cuộc chơi: Winged One và cả hai bản sao của Hunting Nightgaunt.",
     "setAsideAngryMob": "Set Angry Mob aside, out of play.",
     "adjustments": "Depending on the number of investigators (treat the number of investigators as 1 higher if playing Hard difficulty, and 2 higher if playing Expert): 2 investigators, begin with 1 doom on agenda 1; 3 investigators, begin with 2 doom on agenda 1; 4 investigators, shuffle 1 random set-aside _Monster_ enemy into the Leads deck.",
     "removeStoryAssets": "Loại bỏ các story asset Thomas Dawson và Elina Harper khỏi trò chơi.",
-    "mysteriousPhoto": "Wendy Adams có thể chọn mặt nào của nó khi được đưa vào chơi.",
+    "mysteriousPhoto": "Đưa asset story hai mặt Mysterious Photo vào chơi, dưới sự kiểm soát của Wendy Adams. Wendy Adams có thể chọn mặt nào của nó vào chơi. Mysterious Photo không thể rời cuộc chơi trừ khi Wendy Adams bị loại.",
     "shuffleRemainder": "Xáo trộn các lá bài encounter còn lại để tạo thành chồng bài encounter."
   },
   "label": {

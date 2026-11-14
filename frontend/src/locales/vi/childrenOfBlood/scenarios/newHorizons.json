@@ -88,5 +88,11 @@
       "title": "Kết thúc 5",
       "body": "<p>_Resolution 5_: Bạn tập hợp lại với Thám tử Reynolds, sẵn sàng điều tra về Howard Wilkes này, và bắt hắn phải chịu trách nhiệm cho những gì đã xảy ra tại cơ sở của mình.</p><ul><li>Nếu “_các điều tra viên đã tìm thấy một trang ký tự huyền bí_,” bất kỳ điều tra viên nào cũng có thể trở thành bearer của story asset Sanguine Song đã để riêng.</li><li>Nếu “_các điều tra viên đã tìm thấy các giấy phép giả mạo_,” bất kỳ điều tra viên nào cũng có thể trở thành bearer của story asset Forged Permit đã để riêng.</li><li>Mỗi điều tra viên kết thúc kịch bản với 2 token {'{'}blood{'}'} bị seal trên thẻ điều tra viên của mình sẽ trở thành bearer của một weakness The Blood Blight đã để riêng nếu họ chưa phải là bearer của nó.</li><li>Giải phóng (release) từng token {'{'}blood{'}'} bị seal và trả chúng về chaos bag.</li><li>Hãy tiến tới _Màn chuyển tiếp: Bè Bạn Chốn Hạ Lưu_.</li></ul>"
     }
+  },
+  "remembered": {
+    "theInvestigatorsFoundForgedPermits": "Các điều tra viên đã tìm thấy giấy phép giả.",
+    "theInvestigatorsFoundASheetOfArcaneSymbols": "Các điều tra viên đã tìm thấy một tờ giấy chép các ký hiệu huyền bí.",
+    "theInvestigatorsFoundTheManagersKeys": "Các điều tra viên đã tìm thấy chìa khóa của quản lý.",
+    "theInvestigatorsStoleTheManagersKeys": "Các điều tra viên đã lấy trộm chìa khóa của quản lý."
   }
 }

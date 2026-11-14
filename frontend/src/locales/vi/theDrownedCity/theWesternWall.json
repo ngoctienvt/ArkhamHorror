@@ -54,7 +54,7 @@
     "removeWalkways": "Tập hợp các địa điểm [[Walkway]] khác và loại bỏ ngẫu nhiên hai địa điểm khỏi trò chơi.",
     "beginAtWesternWall": "Mỗi điều tra viên bắt đầu chơi tại Western Wall.",
     "beginAtObsidianFoundations": "Each investigator begins play at Obsidian Foundations.",
-    "removeTheInescapable": "Loại bỏ tập bài encounter <i>The Inescapable</i> khỏi trò chơi.",
+    "removeTheInescapable": "Kiểm tra Campaign Log của bạn. Nếu _sinh vật đã bị đánh bại_, loại bỏ bộ encounter _The Inescapable_ khỏi game.",
     "setAsideCoralStarSpawn": "Tìm kẻ địch Coral Star Spawn trong tập encounter *Star Spawn* và để riêng ngoài cuộc chơi. Loại bỏ mọi lá bài khác trong tập encounter *Star Spawn* khỏi trò chơi.",
     "addFloodTokens": "Thêm token lũ lụt vào kho chứa token.",
     "buildEncounterDeck": "Xào các lá bài encounter còn lại để xây dựng chồng bài encounter.",

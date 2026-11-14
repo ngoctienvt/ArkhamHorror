@@ -35,7 +35,7 @@
     "placeLocations": "Chọn ngẫu nhiên một trong hai vị trí Downtown và một trong hai vị trí Southside và đặt chúng vào chơi. Loại bỏ các phiên bản khác của Downtown và Southside khỏi trò chơi. Sau đó, đặt các vị trí Northside, Easttown, Rivertown, St. Mary’s Hospital, Graveyard, Miskatonic University, và Arkham Police Station vào chơi.",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Arkham Police Station.",
     "conspirators": "Xáo trộn 9 kẻ địch [[Cultist]] từ các tập bài encounter <i>the Cult of Umôrdhoth</i> và <i>Dark Cult</i> lại với nhau, sau đó đặt một trong số những kẻ địch đó úp xuống bên dưới mỗi vị trí đang chơi, như một kẻ âm mưu.",
-    "returnToConspirators": "Bạn có thể tùy chọn tập hợp các lá bài có trong chồng bài encounter <i>Return to the Cult of Umôrdhoth</i>, nếu bộ sưu tập của bạn có chúng.",
+    "returnToConspirators": "<section style='display: flex; flex-direction: row; gap: 1em;'>Bạn có thể tùy chọn tập hợp thêm các lá bài thuộc bộ encounter *Return to the Cult of Umôrdhoth*, nếu bộ sưu tập của bạn có. Bộ này được biểu thị bằng biểu tượng bên phải. Nếu làm vậy, hãy xáo 3 lá từ bộ encounter này cùng 9 kẻ địch _Cultist_ ở trên, rồi loại bỏ ngẫu nhiên 3 trong 12 lá đó khỏi game mà không xem. Sau đó đặt úp một kẻ địch còn lại dưới mỗi vị trí đang trong cuộc chơi, như một kẻ đồng mưu (conspirator).<section class='encounter-sets' style='flex-shrink: 0'><img src='{setImgPath}/return-cult.png' align='right' /></section></section>",
     "rolandClue": "Roland Banks bắt đầu trò chơi với 1 manh mối (từ token pool)."
   },
   "label": {

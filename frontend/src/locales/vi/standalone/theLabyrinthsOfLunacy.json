@@ -25,7 +25,7 @@
   },
   "setup": {
     "gatherSets": "Gather all cards from <i>The Labyrinths of Lunacy</i> encounter set. This set is indicated by this icon:<section class='encounter-sets'><img src='{setImgPath}/in-the-labyrinths-of-lunacy.png'></section>",
-    "singleGroup": "Bởi vì bạn đang chơi chế độ <i>Single Group</i>, tập hợp tất cả lá bài ở trong bộ encounter <i>Single Group</i>.",
+    "singleGroup": "Vì bạn đang chơi ở <i>Chế độ Single Group</i>, tập hợp tất cả lá bài từ bộ encounter <i>Single Group</i>, được biểu thị bằng biểu tượng này:<section class='encounter-sets'><img src='{setImgPath}/single-group.png'></section> Loại bỏ tất cả lá bài của bộ encounter <i>Epic Multiplayer</i> khỏi game.",
     "actDeckGroupA": "Xây dựng bộ bài Act chỉ bằng các phiên bản Nhóm A của Act 1 và 2. Loại bỏ các phiên bản Act khác khỏi màn chơi.",
     "actDeckGroupB": "Xây dựng bộ bài Act chỉ bằng các phiên bản Nhóm B của Act 1 và 2. Loại bỏ các phiên bản Act khác khỏi màn chơi.",
     "actDeckGroupC": "Xây dựng bộ bài Act chỉ bằng các phiên bản Nhóm C của Act 1 và 2. Loại bỏ các phiên bản Act khác khỏi màn chơi.",

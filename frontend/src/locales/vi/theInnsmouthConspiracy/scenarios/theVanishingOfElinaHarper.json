@@ -34,7 +34,7 @@
     "title": "Scenario Interlude: The Accusation",
     "instructions": "<p class='basic'>Using the knowledge you’ve gathered, you must make an accusation in an attempt to locate who has kidnapped Elina Harper and where she is hidden. In order to make this accusation, the players must choose one Suspect enemy and one Hideout location from among the options listed on the Finding Agent Harper reference card.</p><p class='basic'>Note the Suspect cannot be an enemy who is currently in play or in the victory display, nor can the Hideout be a location that is currently in play. Use this information to narrow down your choices.</p>",
     "accusationMade": "Once the accusation has been made, do the following:",
-    "reveal": "Để lộ kẻ địch [[Suspect]] và vị trí [[Hideout]] nằm bên dưới lá bài Finding Agent Harper.",
+    "reveal": "Lật kẻ địch Suspect và vị trí Hideout đang úp dưới Finding Agent Harper. Trong Campaign Log, dưới “Possible Suspects / Possible Hideouts”, khoanh tròn tên của kẻ địch Suspect và vị trí Hideout đúng.",
     "neither": "If neither card matches your accusation, the investigators are on the wrong track and must immediately resign.",
     "one": "If only one of the two cards matches your accusation, the investigators are partially correct and may proceed, but they have angered the citizens of Innsmouth during their careless investigation. Flip over the Finding Agent Harper reference card and spawn the enemy on its other side at the Innsmouth Square.",
     "both": "If both cards match your accusation, the investigators are correct and may proceed.",

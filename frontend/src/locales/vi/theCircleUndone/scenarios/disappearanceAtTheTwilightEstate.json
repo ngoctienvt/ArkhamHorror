@@ -47,7 +47,7 @@
   },
   "setup": {
     "theSpectralRealm": "<section class='note-green'><h1>The Spectral Realm</h1><p>_Note_: This scenario only uses the seven locations with the _Spectral_ trait. Do not set up this scenario using any locations without the _Spectral_ trait!</p></section>",
-    "gatherSets": "Khi tập hợp chồng bài encounter <i>At Death’s Doorstep</i>, chỉ tập hợp 7 vị trí [[Spectral]] từ chồng bài enconuter đó. Không tập hợp bất kỳ lá bài nào khác từ chồng bài encounter này.",
+    "gatherSets": "Tập hợp tất cả lá bài từ các bộ encounter sau: *Disappearance at the Twilight Estate*, *At Death’s Doorstep*, *Inexorable Fate*, *Realm of Death*, *Spectral Predators*, *Trapped Spirits*, *The Watcher* và *Chilling Cold*. Các bộ này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/disappearance-at-the-twilight-estate.png' /><img src='{setImgPath}/at-deaths-doorstep.png' /><img src='{setImgPath}/inexorable-fate.png' /><img src='{setImgPath}/realm-of-death.png' /><img src='{setImgPath}/spectral-predators.png' /><img src='{setImgPath}/trapped-spirits.png' /><img src='{setImgPath}/the-watcher.png' /><img src='{setImgPath}/chilling-cold.png' /></section>Khi tập hợp bộ encounter *At Death’s Doorstep*, chỉ lấy bảy vị trí _Spectral_ của bộ đó. Không lấy bất kỳ lá nào khác của bộ encounter đó.",
     "placeLocations": "Đặt 7 vị trí [[Spectral]] vào màn chơi.",
     "theSpectralWatcher": "Đặt kẻ địch The Spectral Watcher vào chơi tại vị trí Entry Hall.",
     "investigatorSetup": "Each player follows the setup instructions on the back of his or her investigator card.",

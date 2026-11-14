@@ -34,7 +34,7 @@
     },
     {
       "title": "Veiled",
-      "body": "<p class='basic'>Nhiều vị trí trong trường hợp này có từ khóa veiled. Từ khóa này thể hiện rằng một vị trí chứa truyền thuyết hoặc sự hỗ trợ chưa rõ mà các điều tra viên phải tìm kiếm trước khi nó có thể được sử dụng cho họ.</p><p class='basic'>Là một khả năng [fast], một điều tra viên tại một địa điểm veiled không có manh mối ở trên nó có thể lật vị trí đó, giải quyết nội dung ở phía bên kia của nó.</p>"
+      "body": "<p class='basic'>Nhiều vị trí trong scenario này có từ khóa veiled. Từ khóa này biểu thị rằng vị trí chứa tri thức hoặc sự trợ giúp chưa được biết, mà các điều tra viên phải tìm ra trước khi chúng có ích với họ.</p><p class='basic'>Như một khả năng {fast}, một điều tra viên ở một vị trí veiled không có manh mối có thể lật vị trí đó lại, giải quyết phần chữ ở mặt bên kia.</p>"
     }
   ],
   "tokens": {

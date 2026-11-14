@@ -78,7 +78,7 @@
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to The Unspeakable Oath*, *Maddening Delusions*, *Decaying Reality*, and *Hastur’s Envoys*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-unspeakable-oath.png' /><img src='{setImgPath}/maddening-delusions.png' /><img src='{setImgPath}/decaying-reality.png' /><img src='{setImgPath}/hasturs-envoys.png' /></section>*Maddening Delusions* replaces *Delusions*, *Decaying Reality* replaces *Decay & Filth*, and *Hastur’s Envoys* replaces *Agents of Hastur*. Remove the replaced sets from the game.",
       "setAside": "Also set the Host of Insanity enemy and the Radical Treatment treachery aside, out of play.",
-      "act2": "Sự nghi ngờ"
+      "act2": "Khi xác định dùng phiên bản act 2 nào, không làm theo hướng dẫn chuẩn bị gốc. Thay vào đó, loại bỏ các phiên bản gốc của act 2 khỏi game và kiểm tra Campaign Log. Nếu bạn có _Conviction_ nhiều hơn (hoặc bằng) _Doubt_, dùng Act 2—*The Really Bad Ones (v. III)* mới. Nếu bạn có _Doubt_ nhiều hơn _Conviction_, dùng Act 2—*The Really Bad Ones (v. IV)* mới."
     }
   },
   "tooltips": {

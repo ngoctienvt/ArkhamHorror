@@ -67,7 +67,7 @@
     },
     "carlSanfordPossessesTheSecretsOfTheUniverse": {
       "checkCampaignLog": "Carl Sanford sở hữu những bí mật của vũ trụ.",
-      "gatherSets": "Khi tập hợp bộ bài encounter <i>The Midnight Masks</i>, chỉ tập hợp 5 lá bài treachery (2 lá False Lead và 3 lá Hunting Shadow). Không tập hợp các lá bài khác từ bộ encounter đó",
+      "gatherSets": "Tập hợp tất cả lá bài từ các bộ encounter bổ sung sau: *Secrets of the Universe*, *Silver Twilight Lodge*, *Striking Fear* và *The Midnight Masks*. Các bộ này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/secrets-of-the-universe.png' /><img src='{setImgPath}/silver-twilight-lodge.png' /><img src='{setImgPath}/striking-fear.png' /><img src='{setImgPath}/midnight-masks.png' /></section>Khi tập hợp bộ encounter The Midnight Masks, chỉ lấy 5 lá treachery (2x False Lead và 3x Hunting Shadow). Không lấy bất kỳ lá nào khác của bộ encounter đó.",
       "actDeck": "Khi xây dựng chồng bài act, sử dụng Act 1a—“Dark Knowledge (v. II)” and Act 2a—“New World Order.”",
       "placeLocations": "Đặt Silver Twilight Lodge *(Where It All Ends)* và Hangman’s Hill *(Shrouded in Mystery)* vào chơi."
     },

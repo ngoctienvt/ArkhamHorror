@@ -40,7 +40,7 @@
     "rubyLostTheBet": "In your Campaign Log, record *Ruby lost the bet*.",
     "rubyWonTheBet": "In your Campaign Log, record *Ruby won the bet*.",
     "victory": "Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory của các lá bài trong vùng trưng bày thành tích.",
-    "discoveredAnAlienLanguage": "Các điều tra viên đã khám phá ra một ngôn ngữ ngoài hành tinh.",
+    "discoveredAnAlienLanguage": "Nếu các điều tra viên đã khám phá ra một ngôn ngữ ngoài hành tinh, bạn khám phá ra ký tự này:<section class='encounter-sets'><img src='{setImgPath}/../extra/the-drowned-city/runes/a.png' /></section>Trong Campaign Log, ghi “Depths” dưới {'{'}runeA{'}'} trong bảng ghi ký tự. Ký tự này đã được dịch.",
     "proceed": "Proceed to _Interlude I: An Offer You Can’t Refuse_"
   }
 }

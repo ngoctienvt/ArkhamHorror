@@ -45,11 +45,11 @@
     "act2": {
       "instructions": "Tùy thuộc vào các trường hợp xảy ra, một phiên bản khác của lá Act 2 sẽ được sử dụng trong màn chơi này. Các phiên bản khác của Act 2 được bỏ ra khỏi màn chơi hoàn toàn.",
       "v1": "Check Campaign Log. If *the investigators restored Silas Bishop*, use Act 2—Ascending the Hill (v. I)",
-      "v2": "các điều tra viên thất bại trong việc lấy lại cuốn sách Necronomicon.",
+      "v2": "Nếu những điều trên không đúng, kiểm tra Campaign Log. Nếu *các điều tra viên đã thất bại trong việc thu hồi Necronomicon*, hoặc nếu *Necronomicon đã bị đánh cắp*, dùng Act 2—Ascending the Hill (v. II)",
       "v3": "If neither of the above are true, use Act 2—Ascending the Hill (v. III)"
     },
     "addDoom": "Check Campaign Log. *For each Brood of Yog-Sothoth that escaped into the wild*, add 1 doom to agenda 1a.",
-    "hideousAbominations": "các điều tra viên giúp Silas Bishop thoát khỏi nỗi thống khổ.",
+    "hideousAbominations": "Kiểm tra Campaign Log. Nếu *các điều tra viên đã giúp Silas Bishop thoát khỏi nỗi thống khổ*, tàn tích thân xác của sinh vật đã đột biến và lớn lên tại Sentinel Hill. Đưa 1 kẻ địch “Conglomeration of Spheres” từ bộ encounter Hideous Abominations vào chơi tại Ascending Path. Xáo phần còn lại của bộ đó vào encounter deck. Bộ này được biểu thị bằng biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/hideous-abominations.png' /></section>",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to Where Doom Awaits*, *Erratic Fear*, *Resurgent Evils*, and *Creeping Cold*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-where-doom-awaits.png' /><img src='{setImgPath}/erratic-fear.png' /><img src='{setImgPath}/resurgent-evils.png' /><img src='{setImgPath}/creeping-cold.png' /></section>*Erratic Fear* replaces *Striking Fear*, *Resurgent Evils* replaces *Ancient Evils*, and *Creeping Cold* replaces *Chilling Cold*. Remove the replaced sets from the game.",
       "placeLocations": "Put Base of the Hill (*Warped and Twisted*), Ascending Path (*Warped and Twisted*), and Sentinel Peak into play. Each investigator begins play at Base of the Hill.",

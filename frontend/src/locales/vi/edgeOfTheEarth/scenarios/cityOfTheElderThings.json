@@ -56,9 +56,9 @@
     "eliyah": "Eliyah Ashevak",
     "ellsworth": "Roald Ellsworth",
     "dyer": "William Dyer",
-    "group1": "Mỗi đồng đội từ nhóm này được chọn để đồng hành cùng điều tra viên vào màn chơi với một lần sử dụng thêm.",
-    "group2": "Mỗi đồng đội từ nhóm này được chọn để đồng hành cùng điều tra viên vào màn chơi với một lần sử dụng thêm.",
-    "group3": "Mỗi đồng đội từ nhóm này được chọn để đồng hành cùng điều tra viên vào màn chơi với một lần sử dụng thêm.",
+    "group1": "Nếu cột bên trái (Nhóm Một) có nhiều thành viên còn sống nhất, nhóm bỏ phiếu mạo hiểm tiến vào trung tâm thành phố, nơi có những công trình vĩ đại nhất. Mỗi đồng đội từ nhóm này được chọn để đồng hành cùng một điều tra viên sẽ vào chơi với thêm một lần sử dụng. Tiếp tục đến _Setup (v. I)_.",
+    "group2": "Nếu cột giữa (Nhóm Hai) có nhiều thành viên còn sống nhất, nhóm bỏ phiếu đi dọc sống núi, hướng đến vùng đất mà Dyer và Danforth chưa từng khám phá. Mỗi đồng đội từ nhóm này được chọn để đồng hành cùng một điều tra viên sẽ vào chơi với thêm một lần sử dụng. Tiếp tục đến _Setup (v. II)_.",
+    "group3": "Nếu cột bên phải (Nhóm Ba) có nhiều thành viên còn sống nhất, nhóm bỏ phiếu lần theo dấu vết của những sinh vật đã tàn sát các Elder Thing. Mỗi đồng đội từ nhóm này được chọn để đồng hành cùng một điều tra viên sẽ vào chơi với thêm một lần sử dụng. Tiếp tục đến _Setup (v. III)_.",
     "tied": "If two or more columns are tied for the most, the lead investigator casts the tiebreaking vote and may decide between the tied options. (*Resolve the above bullet as if that chosen group had the most team members still alive.*)"
   },
   "interlude": {

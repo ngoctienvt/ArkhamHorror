@@ -5,7 +5,7 @@
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: <i>Enthralling Encore, Curtain Call, Decay and Filth, Delusions, Hauntings, Ghouls, Striking Fear,</i> và <i>Rats</i>. Mỗi set này ngoại trừ Enthralling Encore đều có thể được tìm thấy trong Core Set và <i>The Path to Carcosa Campaign Expansion</i>.",
-    "propsDeck": "Tạo chồng bài Props. Thực hiện việc này bằng cách tìm trong bộ sưu tập của bạn 3 lá bài asset cấp 0 không có trait [[Ally]] từ mỗi class ([guardian],[seeker],[rogue],[mystic] và [survivor]), để có tổng cộng 15 lá bài (không trùng lặp, nếu có thể). Xào các lá bài này lại với nhau để tạo thành chồng bài Props. Đặt chồng bài này gần lá bài scenario reference.",
+    "propsDeck": "Tạo chồng bài Props. Thực hiện bằng cách tìm trong bộ sưu tập của bạn 3 lá asset cấp 0 không phải Ally cho mỗi class ({'{'}guardian{'}'}, {'{'}seeker{'}'}, {'{'}rogue{'}'}, {'{'}mystic{'}'} và {'{'}survivor{'}'}), tổng cộng 15 lá (không trùng lặp nếu có thể). Xáo các lá này lại để tạo thành chồng bài Props. Đặt chồng bài này gần lá scenario reference. (Dùng danh sách gợi ý từ tờ luật đính kèm: Physical Training, First Aid, Machete, Old Book of Lore, Hyperawareness, Medical Texts, Burglary, Pickpocketing, Hard Knocks, Holy Rosary, Scrying, Arcane Studies, Baseball Bat, Rabbit's Foot và Dig Deep.)",
     "removeCards": "Loại bỏ The Man in the Pallid Mask và Royal Emissary khỏi trò chơi.",
     "setAside": "Đặt mỗi bản sao của Lobby Doorway và mỗi bản sao của Backstage Doorway sang một bên, ngoài khu vực chơi.",
     "placeLocations": "Đặt các địa điểm Theatre, Lobby, Balcony, và Backstage vào khu vực chơi.",

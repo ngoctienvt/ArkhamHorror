@@ -37,7 +37,7 @@
   },
   "intro": {
     "title": "Màn VI: Chiếc Mặt Nạ Nhợt Nhạt",
-    "readIntro1": "bạn đã không thoát khỏi cái nhìn của bóng ma.",
+    "readIntro1": "Kiểm tra Campaign Log. *Nếu bạn đã không thoát khỏi ánh nhìn của bóng ma*, hoặc *nếu bạn không tìm được Nigel*: Đọc _Intro 1_.",
     "readIntro2": "bạn đã tìm thấy Nigel Engram.",
     "intro1": "<p>_Intro 1_: Bạn bị đánh thức bởi không khí bẩn, hôi thối và bụi trong cổ họng của mình. Bạn đang nằm trên một phiến đá lạnh bên trong một đường ngầm không ánh sáng. Bạn đến đây bằng cách nào? Và \"đây\" chính xác là ở đâu? Một cơn rùng mình chạy dọc cơ thể và da gà bạn dựng đứng. Đứng dậy, bạn quan sát môi trường xung quanh mình. Các bộ xương trang trí trên các bức tường và trần nhà xung quanh bạn, các đầu lâu há miệng nhìn lại bạn ở khắp mọi nơi bạn nhìn tới.</p><ul><li>bạn tỉnh dậy bên trong hầm mộ.</li></ul>",
     "intro2": "<p>_Intro 2_: Tài liệu ở nhà của Nigel Engram không trả lời được câu hỏi nào của bạn về vở kịch Vị Vua Áo Vàng, nhưng nó gợi ý về nơi bạn nên đến tiếp theo. Tấm bản đổ cũ nát bạn tìm thấy ở trên bàn cà phê của ông ấy mô tả một phần của Hầm mộ Paris khét tiếng. Một căn phòng cụ thể trên bản đồ đã được khoanh tròn bằng bút, và bên cạnh nó viết: \"Chìa khóa để mở Con Đường nằm ở đây!\". Bạn nuốt nỗi sợ của mình và tiến thẳng đến lối vào hầm mộ bên dưới đường Rue de la Tombe-Issoire.</p><ul><li>bạn đã tự mình bước vào hầm mộ.</li></ul>",
@@ -50,8 +50,8 @@
     "setAside": "Tìm lá bài Tomb of Shadows và Blocked Passage (mỗi lá là mặt để lộ của một vị trí Catacombs). Đặt chúng một bên, ngoài khu vực chơi.",
     "start": {
       "instructions": "Kiểm tra Nhật ký Chiến dịch.",
-      "awoke": "bạn tỉnh dậy bên trong hầm mộ.",
-      "entered": "bạn đã tự mình bước vào hầm mộ."
+      "awoke": "*Nếu bạn tỉnh dậy bên trong hầm mộ*: Đưa một vị trí Catacombs ngẫu nhiên (khác Tomb of Shadows hoặc Blocked Passage đang để sang một bên) vào chơi, mặt Catacombs ngửa lên. Trong phần còn lại của scenario, vị trí đó được gọi là “vị trí bắt đầu”. Đặt một token resource lên vị trí này để đánh dấu đó là vị trí bắt đầu. _Chưa đặt các điều tra viên ở đây_.",
+      "entered": "*Nếu bạn tự mình bước vào hầm mộ*: Tìm The Gate to Hell (đó là mặt đã lật của một vị trí Catacombs). Đưa The Gate to Hell vào chơi, mặt Catacombs ngửa lên. Trong phần còn lại của scenario, The Gate to Hell được gọi là “vị trí bắt đầu”. Đặt một token resource lên The Gate to Hell để đánh dấu đó là vị trí bắt đầu. _Chưa đặt các điều tra viên ở đây_."
     },
     "catacombs": {
       "instructions": "Đặt tất cả các vị trí khác một bên tạo thành \"Chồng bài Catacombs.\" (Chồng bài Hầm mộ). Để làm điều này, thực hiện điều sau:",

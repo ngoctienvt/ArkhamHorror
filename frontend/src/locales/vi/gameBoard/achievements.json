@@ -9,7 +9,7 @@
   "gameDeleted": "Ván chơi đã bị xóa",
   "viewGame": "Xem ván chơi",
   "settingsToggleTitle": "Bật thành tựu",
-  "settingsToggleDescription": "Theo dõi và mở khóa thành tựu trong quá trình chơi.",
+  "settingsToggleDescription": "Theo dõi các thành tựu chính thức của chiến dịch này khi bạn chơi. Các thành tựu mở khóa được ghi vào tài khoản của bạn và hiển thị trong Campaign Log.",
   "noneEarnedYet": "Chưa đạt được thành tựu nào",
   "progressLabel": "Tiến độ: {earned}/{total}",
   "campaigns": {
@@ -1034,8 +1034,8 @@
   },
   "clearCampaign": "Xóa thành tựu chiến dịch",
   "clearOne": "Xóa thành tựu này",
-  "clearCampaignConfirm": "Bạn có chắc chắn muốn xóa tất cả thành tựu cho chiến dịch này không?",
-  "clearOneConfirm": "Bạn có chắc chắn muốn xóa thành tựu này không?",
+  "clearCampaignConfirm": "Xóa tất cả thành tựu đã đạt của {campaign}? Hành động này không thể hoàn tác.",
+  "clearOneConfirm": "Xóa thành tựu “{name}”? Hành động này không thể hoàn tác.",
   "parts": {
     "theDreamQuest": "The Dream-Quest",
     "theWebOfDreams": "The Web of Dreams"

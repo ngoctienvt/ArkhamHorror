@@ -50,14 +50,14 @@
     "act2": {
       "instructions": "Check Campaign Log. Depending on the following circumstances, a different version of Act 2 should be used in this scenario. Each other version of Act 2 is removed from the game.",
       "v1": "Sự nghi ngờ",
-      "v2": "Sự nghi ngờ",
-      "v3": "Sự nghi ngờ",
-      "choose": "Sự nghi ngờ"
+      "v2": "Nếu bạn có tổng cộng 6 hoặc nhiều hơn Doubt và Conviction, và bạn có nhiều _Doubt_ hơn _Conviction_, dùng Act 2—Search For the Stranger (v. II)",
+      "v3": "Nếu bạn có tổng cộng 6 hoặc nhiều hơn Doubt và Conviction, và bạn có nhiều _Conviction_ hơn _Doubt_, dùng Act 2—Search For the Stranger (v. III)",
+      "choose": "Nếu bạn có tổng cộng 6 hoặc nhiều hơn _Doubt_ và _Conviction_, và _Doubt_ bằng đúng _Conviction_, bạn có thể chọn dùng Act 2—Search For the Stranger (v. II) hoặc Act 2—Search For the Stranger (v. III)"
     },
     "chooseLocations": "Randomly put 1 copy of Bleak Plains, 1 copy of Dim Streets, 1 copy of Ruins of Carcosa, and 1 copy of Depths of Demhe into play. (See next page for suggested location placement.) Set each other copy of Bleak Plains, Dim Streets, Ruins of Carcosa and Depths of Demhe aside, out of play.",
     "placeLocations": {
       "instructions": "Đặt Shores of Hali, Dark Spires, và Palace of the King vào khu vực chơi.",
-      "startAtShoresOfHali": "bạn đã mở con đường phía dưới.",
+      "startAtShoresOfHali": "Kiểm tra Campaign Log. *Nếu bạn đã mở con đường bên dưới*, mỗi điều tra viên bắt đầu ở Shores of Hali.",
       "startAtDarkSpires": "bạn đã mở con đường phía trên."
     },
     "theManInThePallidMask": "Người mang điểm yếu The Man in the Pallid Mask tìm lá bài này trong bộ bài của mình và đặt nó một bên, ngoài khu vực chơi.",
@@ -72,7 +72,7 @@
     "takeHorror": "Mỗi điều tra viên nhận chấn thương tinh thần trực tiếp tương ứng nửa số tinh thần của mình, làm tròn xuống (*không thể bị ngăn chặn*). Chấn thương tinh thần này không thể làm bạn bị hạ gục (xem phần \"Tinh thần ở trong Địa hạt Carcosa\" bên dưới).",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to Dim Carcosa*, *Maddening Delusions*, *Hastur’s Envoys*, and *Neurotic Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-dim-carcosa.png' /><img src='{setImgPath}/maddening-delusions.png' /><img src='{setImgPath}/hasturs-envoys.png' /><img src='{setImgPath}/neurotic-fear.png' /></section>*Maddening Delusions* replaces *Delusions*, *Hastur’s Envoys* replaces *Agents of Hastur*, and *Neurotic Fear* replaces *Striking Fear*. Remove the replaced sets from the game.",
-      "placeLocations": "Bản gốc",
+      "placeLocations": "Loại bỏ vị trí Palace of the King gốc khỏi game và thay bằng Palace of the King mới (*Hastur’s Domain*). Tiếp tục phần chuẩn bị vị trí như bình thường.",
       "setAside": "Also set the following new locations aside, out of play: Recesses of Your Own Mind, The Throne Room, and Stage of the Ward Theatre.",
       "additionalRule": "For the duration of this scenario, the following additional rule applies: Hastur’s health cannot be reduced to less than 2 per investigator unless any investigator _knows the secret_."
     }

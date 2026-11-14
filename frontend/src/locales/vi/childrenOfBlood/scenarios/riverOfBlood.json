@@ -63,5 +63,8 @@
       "tablet": "-3. Nếu bạn đang ở một địa điểm _Lair_, chịu 1 horror.",
       "elderThing": "-4. Nếu có từ 1 token {'{'}blood{'}'} (*máu*) trở lên bị seal trên thẻ điều tra viên của bạn, sau khi bài kiểm tra này được xử lý, hãy release 1 trong những token đó và chịu 1 direct damage."
     }
+  },
+  "remembered": {
+    "theInvestigatorsFoundASacrificialDagger": "Các điều tra viên đã tìm thấy một con dao hiến tế."
   }
 }

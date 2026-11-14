@@ -36,11 +36,11 @@
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: <section class='encounter-sets grid'><div><img src='{setImgPath}/smoke-and-mirrors.png' /><span>Smoke and Mirrors</span></div><div><img src='{setImgPath}/arcane-lock.png' /><span>Arkane Lock</span></div><div><img src='{setImgPath}/arkham.png' /><span>Arkham</span></div><div><img src='{setImgPath}/bad-weather.png' /><span>Bad Weather</span></div><div><img src='{setImgPath}/dead-ends.png' /><span>Dead Ends</span></div><div><img src='{setImgPath}/flying-terrors.png' /><span>Flying Terrors</span></div><div><img src='{setImgPath}/gangs-of-arkham.png' /><span>Gangs of Arkham</span></div><div><img src='{setImgPath}/people-of-arkham.png' /><span>People of Arkham</span></div><div><img src='{setImgPath}/whippoorwills2026.png' /><span>Whippoorwills</span></div></section>",
-    "placeLocations": "Đặt các vị trí Northside, Easttown, Merchant District, Waterfront District, Southside, và French Hill vào chơi.",
+    "placeLocations": "Chọn ngẫu nhiên một trong hai vị trí Downtown và một trong hai vị trí Uptown rồi đưa chúng vào chơi. Loại bỏ các phiên bản Downtown và Uptown còn lại khỏi game. Đưa các vị trí Northside, Easttown, Merchant District, Waterfront District, Southside và French Hill vào chơi. Mỗi điều tra viên bắt đầu ở Miskatonic University.",
     "setOutOfPlay": "Tập hợp tất cả các lá bài trong bộ encounter <b>People of Arkham</b>. Chọn ngẫu nhiên một lá và đặt sang một bên, ngoài cuộc chơi, mà không được nhìn. Xào các lá bài còn lại trong bộ đó cùng với kẻ địch Servant of Flame, sau đó đặt 1 lá úp mặt xuống dưới mỗi vị trí Northside, Downtown, Southside, French Hill, Uptown, và Waterfront District.",
     "checkCampaignLog": "Check your campaign log.",
     "miskatonicUniversityBurned": "Đặt Miskatonic University <i>(In Flames)</i> vào chơi và loại bỏ bản sao còn lại của Miskatonic University khỏi trò chơi.",
-    "savedMiskatonicUniversity": "các điều tra viên đã cứu Miskatonic University.",
+    "savedMiskatonicUniversity": "*Nếu các điều tra viên đã cứu Miskatonic University*, đưa Miskatonic University (*Quiet Campus*) vào chơi và loại bỏ bản sao Miskatonic University còn lại khỏi game. Đặt 1 doom lên agenda.",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Miskatonic University.",
     "placeDoom": "Đặt 1 doom lên agenda cho mỗi điều tra viên trong trò chơi.",
     "bearerOfDrHenryArmitage": "Nếu một điều tra viên là người sở hữu story asset Dr. Henry Armitage, hãy tìm ông ấy trong bộ bài của họ và đưa vào chơi dưới quyền kiểm soát của người sở hữu. Ông ấy không chiếm một khe ally trong màn chơi này.",
@@ -64,13 +64,13 @@
     "noResolution": {
       "title": "No Resolution",
       "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Trên chuyến taxi đến Velma's Diner, bạn suy ngẫm về tất cả những gì mình đã biết được. Thật không may, cuộc tìm kiếm của bạn mang lại nhiều manh mối nhưng lại có rất ít kết quả chắc chắn. Bạn chỉ có thể hy vọng Dr. Armitage có kết quả khả quan hơn.</p>",
-      "harbingerOfElokoss": "Lật kẻ địch từ bộ encounter <b>People of Arkham</b> đã được set aside lúc bắt đầu trò chơi. Đây là danh tính thực sự của kẻ địch Servant of Flame, một sứ giả của Elokoss.",
-      "drawnCard": "Tập hợp mọi kẻ địch [[Elite]] đang trên bàn chơi và/hoặc nằm dưới một địa điểm khi kịch bản kết thúc và xào úp chúng lại với nhau cùng với sứ giả của Elokoss, sau đó rút ngẫu nhiên một trong số chúng.",
-      "isHarbinger": "các điều tra viên đã phát hiện ra tung tích của giáo phái.",
+      "harbingerOfElokoss": "Lật kẻ địch thuộc bộ encounter _People of Arkham_ đã được để sang một bên từ đầu game. Đây là danh tính thật của kẻ địch Servant of Flame, một sứ giả của Elokoss. Trong Campaign Log, ghi lại *{name} là sứ giả của Elokoss*.",
+      "drawnCard": "Tập hợp mọi kẻ địch _Elite_ đang trong cuộc chơi và/hoặc nằm dưới một vị trí khi kịch bản kết thúc, xáo úp chúng cùng với sứ giả của Elokoss, rồi rút ngẫu nhiên một lá. {name} đã được rút. Nếu kẻ địch được rút…",
+      "isHarbinger": "…là sứ giả của Elokoss, ghi lại *các điều tra viên đã phát hiện ra nơi ẩn náu của giáo phái* trong Campaign Log.",
       "otherwise": "…is any other enemy, record *the investigators failed in their search* in your campaign log.",
-      "servantOfFlame": "Nếu kẻ địch Servant of Flame đang ở trong victory display:",
-      "victory": "Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.",
-      "proceed": "Nếu kẻ địch Servant of Flame nằm dưới act khi kịch bản kết thúc:"
+      "servantOfFlame": "Nếu kẻ địch Servant of Flame nằm trong victory display, ghi lại *các điều tra viên đã giết Servant of Flame* trong Campaign Log.",
+      "victory": "Mỗi điều tra viên nhận kinh nghiệm bằng giá trị _victory X_ của mỗi lá bài trong victory display, cộng thêm 1 kinh nghiệm thưởng cho mỗi kẻ địch nằm dưới act khi kịch bản kết thúc.",
+      "proceed": "Nếu kẻ địch Servant of Flame nằm dưới act khi kịch bản kết thúc, chuyển sang _Resolution 2_. Nếu không, tiếp tục đến _Scenario III: Queen of Ash_."
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
@@ -115,7 +115,7 @@
     },
     "sgtEarlMonroe": {
       "title": "{'{'}codex{'}'} Codex 4: Sgt. Earl Monroe",
-      "body": "<p>Khi nhắc đến \"Brethren of Ash,\" viên cảnh sát vung dùi cui và bảo bạn tốt nhất nên chõ mũi vào chỗ khác. Bạn chuẩn bị tinh thần cho một cuộc chiến.</p><p class='basic right'>Hồi 1 damage.</p><p class='basic right'>Đặt 1 resource <i>(từ token pool)</i> lên Sgt. Earl Monroe, xem như một lead.</p>",
+      "body": "<p>Vừa nghe nhắc đến “Brethren of Ash”, viên cảnh sát vung dùi cui và bảo bạn tốt nhất nên chõ mũi vào chỗ khác. Bạn chuẩn bị tinh thần cho một cuộc ẩu đả.</p><p class='basic right'>Hồi 1 sát thương.</p><p class='basic right'>Đặt 1 resource (*từ kho token*) lên Sgt. Earl Monroe, như một manh mối (lead). Nếu trên gã có 1 {'{'}perPlayer{'}'} lead, hãy đọc tiếp. Nếu không, bất kỳ điều tra viên nào cũng có thể kích hoạt codex này một lần nữa.</p>",
       "success": "@:brethrenOfAsh.smokeAndMirrors.codex.sgtEarlMonroe.body <hr><p>Cuối cùng, Monroe cũng nhượng bộ. \"Được rồi, được rồi,\" viên cảnh sát nhổ ra chút máu trong khi xoa xoa gò má bầm tím.</p><p>\"Có vài người trong số họ đã đến gặp tôi sau khi chúng tôi ghi nhận vụ mất tích thứ ba. Họ khăng khăng rằng những người mất tích đã tự nguyện làm vậy. Khi tôi nói rằng tôi vẫn chưa bị thuyết phục, họ đã đưa tôi đến một trong những cuộc họp của họ ở gần bến tàu. Có điều gì đó thực sự kỳ quái về toàn bộ chuyện này. Có gì đó không ổn với đôi mắt của họ, giống như họ bị thôi miên hay gì đó.\" Viên cảnh sát quay đi trong sự hối hận. \"Họ đã trả tiền để tôi giữ im lặng. Tôi không tự hào gì về điều đó. Đừng nói với ai về chuyện này—tôi, tôi hứa từ nay trở đi tôi sẽ sống ngay thẳng.\"</p><p class='basic right'>Bạn đã thẩm vấn thành công nghi phạm này.</p><p class='basic right'>Đặt Sgt. Earl Monroe bên dưới lá act.</p>"
     },
     "abigailForeman": {

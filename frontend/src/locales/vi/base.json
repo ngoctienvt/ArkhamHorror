@@ -104,7 +104,7 @@
   "ChooseOne": "Chọn một",
   "Choose": "Chọn",
   "setup": "Thiết lập",
-  "addToken": "Thêm token",
+  "addToken": "Thêm 1 token {'{'}{token}{'}'} vào chaos bag cho đến hết chiến dịch.",
   "token": {
     "Aether": "Aether",
     "AlarmLevel": "Mức độ Báo động",
@@ -321,7 +321,7 @@
     "syncDeck": "Đồng bộ bộ bài",
     "syncFailed": "Không thể đồng bộ bộ bài này",
     "changeUrl": "Đổi URL bộ bài",
-    "changeUrlHelp": "Trỏ bộ bài này tới URL ArkhamDB hoặc arkham.build khác.",
+    "changeUrlHelp": "Chỉ bộ bài này tới một URL ArkhamDB hoặc arkham.build khác. Bộ bài sẽ được tải lại từ đó, vì vậy hãy dùng cách này để quay về bộ bài bạn đã xây dựng sau khi chiến dịch nâng cấp nó — hoặc khi URL hiện tại không còn tồn tại.",
     "changeUrlSave": "Đổi và nạp lại",
     "deckUrl": "URL bộ bài",
     "urlChanged": "Đã đổi URL bộ bài",
@@ -395,7 +395,10 @@
     "campaignCards": "Campaign",
     "bothCards": "Both",
     "chapter1": "Chapter 1",
-    "chapter2": "Chapter 2"
+    "chapter2": "Chapter 2",
+    "chapter": "Chương của lá bài",
+    "hideSets": "Ẩn các bộ bài",
+    "showSets": "Hiện các bộ bài"
   },
   "cardDetails": {
     "close": "Close",
@@ -480,7 +483,10 @@
     "earnedCards": "Earned Cards",
     "showModifiers": "Show Modifiers",
     "expand": "Expand",
-    "collapse": "Collapse"
+    "collapse": "Collapse",
+    "setTaboo": "Đặt danh sách taboo",
+    "noTaboo": "Không dùng danh sách taboo",
+    "tabooError": "Không thể đổi danh sách taboo"
   },
   "treachery": {
     "discard": "Discard",
@@ -887,16 +893,34 @@
     "chooseKey": "Chọn chìa khóa {key}",
     "pendingPicks": "{count} lựa chọn cần làm trong panel",
     "keyColor": {
-      "BlueKey": "xanh dương", "GreenKey": "xanh lá", "RedKey": "đỏ", "YellowKey": "vàng", "PurpleKey": "tím",
-      "BlackKey": "đen", "WhiteKey": "trắng", "UnrevealedKey": "úp", "TokenKey": "token"
+      "BlueKey": "xanh dương",
+      "GreenKey": "xanh lá",
+      "RedKey": "đỏ",
+      "YellowKey": "vàng",
+      "PurpleKey": "tím",
+      "BlackKey": "đen",
+      "WhiteKey": "trắng",
+      "UnrevealedKey": "úp",
+      "TokenKey": "token"
     },
     "tokenChoice": {
-      "DamageToken": "Gán sát thương", "HorrorToken": "Gán kinh hoàng", "ClueToken": "Manh mối",
-      "ResourceToken": "Tài nguyên", "DoomToken": "Doom"
+      "DamageToken": "Gán sát thương",
+      "HorrorToken": "Gán kinh hoàng",
+      "ClueToken": "Manh mối",
+      "ResourceToken": "Tài nguyên",
+      "DoomToken": "Doom"
     },
     "targetKind": {
-      "enemy": "Kẻ địch", "location": "Địa điểm", "asset": "Asset", "event": "Event", "skill": "Skill",
-      "treachery": "Treachery", "story": "Cốt truyện", "scarletKey": "Scarlet Key", "investigator": "Điều tra viên", "key": "Chìa khóa"
+      "enemy": "Kẻ địch",
+      "location": "Địa điểm",
+      "asset": "Asset",
+      "event": "Event",
+      "skill": "Skill",
+      "treachery": "Treachery",
+      "story": "Cốt truyện",
+      "scarletKey": "Scarlet Key",
+      "investigator": "Điều tra viên",
+      "key": "Chìa khóa"
     },
     "section": {
       "targets": "Chọn mục tiêu",
@@ -945,7 +969,15 @@
     "doomElsewhere": "+{n} nơi khác",
     "doomSources": "Doom đến từ",
     "doomSourcesNone": "Chưa có doom nào",
-    "doomSource": { "agenda": "Agenda", "enemy": "Enemy", "location": "Location", "asset": "Asset", "treachery": "Treachery", "event": "Event", "investigator": "Investigator" },
+    "doomSource": {
+      "agenda": "Agenda",
+      "enemy": "Enemy",
+      "location": "Location",
+      "asset": "Asset",
+      "treachery": "Treachery",
+      "event": "Event",
+      "investigator": "Investigator"
+    },
     "cluesNeeded": "Thiếu {n}",
     "clueTotal": "{count} manh mối",
     "clueHolders": "Manh mối đang có",
@@ -1014,7 +1046,12 @@
     "vehicle": {
       "aboard": "{name}: {names} đang ở trên",
       "empty": "{name}: không có ai trên",
-      "facing": {"north": "Hướng bắc", "east": "Hướng đông", "south": "Hướng nam", "west": "Hướng tây"}
+      "facing": {
+        "north": "Hướng bắc",
+        "east": "Hướng đông",
+        "south": "Hướng nam",
+        "west": "Hướng tây"
+      }
     }
   },
   "location": {
@@ -1473,6 +1510,15 @@
       },
       "start": "Start test",
       "testActive": "A skill test is already in progress"
+    },
+    "earnedCards": {
+      "title": "Nhận một lá story",
+      "remove": "Lấy lại lá này cho phần còn lại của chiến dịch",
+      "search": "Tìm mọi lá có thể nhận theo tên hoặc mã",
+      "loading": "Đang tải các lá bài…",
+      "empty": "Không có lá nào có thể nhận khớp với tìm kiếm.",
+      "thisScenario": "Scenario này",
+      "thisCampaign": "Chiến dịch này"
     }
   },
   "customizations": {
@@ -2241,5 +2287,115 @@
   },
   "toasts": {
     "dismiss": "Dismiss"
+  },
+  "gameUi": {
+    "chooseTokensToCancel": "Chọn token để hủy | Chọn các token để hủy",
+    "chooseTokensToIgnore": "Chọn token để bỏ qua | Chọn các token để bỏ qua",
+    "chooseTokensToResolve": "Chọn token để giải quyết | Chọn các token để giải quyết",
+    "unhandledTokenChoice": "Lựa chọn token chưa được xử lý, vui lòng báo lỗi kèm theo:",
+    "selectTaskToPreview": "Chọn một task để xem trước lá bài của nó.",
+    "storyCardsNextToAct": "{count} lá story cạnh act",
+    "storyCardsClickToView": "Các lá story ({count}) — nhấp để xem",
+    "storyCards": "Các lá story ({count})",
+    "swarmCards": "Các lá Swarm ({count})",
+    "victory": "Victory {victory}.",
+    "viewUnderworldMarket": "Xem thứ tự đã biết của Underworld Market",
+    "underworldMarket": "Underworld Market",
+    "cardsUnderneath": "Các lá nằm bên dưới",
+    "replicating": "Đang sao chép",
+    "pendingCount": "{count} đang chờ",
+    "mainStreet": "Main Street",
+    "readyCount": "{count} sẵn sàng"
+  },
+  "adminDashboard": {
+    "statsLabel": "Thống kê admin",
+    "currentUsers": "Người dùng hiện tại",
+    "activeUsers": "Người dùng hoạt động (14 ngày)",
+    "activeGames": "Ván đang chơi",
+    "finishedGames": "Ván đã kết thúc",
+    "statsError": "Không thể tải thống kê admin.",
+    "loadingActive": "Đang tải các ván đang chơi…",
+    "activeError": "Không thể tải các ván đang chơi.",
+    "noActive": "Không có ván nào đang chơi.",
+    "activeCount": "Số ván đang chơi",
+    "finishedCount": "Số ván đã kết thúc",
+    "recentActive": "Các ván đang chơi gần đây",
+    "fromLast": "trong 20 ván gần nhất",
+    "recentActiveCount": "Số ván đang chơi gần đây",
+    "loadingRecent": "Đang tải các ván gần đây…",
+    "recentError": "Không thể tải các ván gần đây.",
+    "noRecentActive": "Không có ván nào đang chơi gần đây.",
+    "recentFinished": "Các ván đã kết thúc gần đây",
+    "recentFinishedCount": "Số ván đã kết thúc gần đây",
+    "dropJson": "Thả tệp JSON vào đây",
+    "orChooseFile": "hoặc nhấp để chọn tệp",
+    "noPlayerIds": "Không tìm thấy playerIds.",
+    "parseFailed": "Không phân tích được JSON: {message}",
+    "loadingContent": "Đang tải nội dung admin…"
+  },
+  "adminRooms": {
+    "lookupTitle": "Tra cứu phòng",
+    "lookupFailed": "Không thể tra cứu {id}: {error}",
+    "openRooms": "Các phòng đang mở",
+    "openRoomsCount": "Số phòng đang mở",
+    "lastUpdated": "Cập nhật lần cuối",
+    "noGameRow": "Không có dòng game (đã xóa)",
+    "forceClose": "Buộc đóng",
+    "actionFailed": "{action} thất bại: {error}",
+    "probeResult": "{live} phản hồi, {dead} không phản hồi.",
+    "confirmForceClose": "Đóng phòng này bất kể kết quả thăm dò?",
+    "socketBreakdown": "{players} người chơi / {watchers} người xem",
+    "redisTally": "Số đếm Redis",
+    "tallyWatching": "{count} đang xem",
+    "driftHint": "số đếm trừ socket thực",
+    "podsHolding": "Các pod đang giữ",
+    "podsAnswering": "trong {count} pod phản hồi",
+    "gameLastUpdated": "Game cập nhật lần cuối",
+    "driftDiagnosis": "Redis đếm {count} socket không ai giữ — một replica đã chết khi chúng còn gắn vào. Phần dư đó bị coi là một người chơi đang ngồi, nên lệnh quét phòng bỏ hoang không bao giờ đóng phòng này. Quét sẽ xóa số đếm cũng như các socket.",
+    "unansweredDiagnosis": "{count} socket không phản hồi thăm dò. Máy khách của chúng đã mất; các kết nối ở trạng thái nửa mở và sẽ giữ phòng mở vô thời hạn.",
+    "connections": "Các kết nối",
+    "noConnections": "Không pod nào đang giữ socket cho game này.",
+    "ago": "{duration} trước",
+    "overflowed": " (đã tràn)",
+    "noSeats": "Không có người chơi nào được ghi nhận cho game này.",
+    "notConnected": "không kết nối"
+  },
+  "adminArchives": {
+    "title": "Các ván đã lưu trữ",
+    "disabled": "đã tắt — chưa cấu hình bucket",
+    "schedule": "hằng đêm · giữ {months} tháng · {batch} ván mỗi {pause}s cho đến khi xong",
+    "manualOnly": "chỉ thủ công — tác vụ hằng đêm đang tắt",
+    "runTitleNightly": "Lưu trữ mọi ván quá thời hạn giữ, theo từng lô, cho đến khi không còn ván nào",
+    "runTitleManual": "Tác vụ hằng đêm đang tắt, nhưng thao tác này vẫn lưu trữ mọi ván quá thời hạn",
+    "sweepAll": "Quét toàn bộ phần tồn đọng",
+    "loading": "Đang tải thống kê lưu trữ…",
+    "runAnyway": "Vẫn chạy",
+    "archiveOne": "Lưu trữ một ván",
+    "archiveHint": "Một mã ván — lấy từ danh sách ván trên dashboard, hoặc từ trang admin của một ván. Thao tác này bỏ qua thời hạn giữ, nên đây là cách để lưu trữ một ván bạn đã chọn, nhấn Undo trong đó và xem lịch sử quay lại. Không có gì bị xóa cho đến khi bản đã tải lên được tải xuống lại và kiểm tra.",
+    "archiving": "Đang lưu trữ…",
+    "archiveIt": "Lưu trữ",
+    "archiveAnyway": "Vẫn lưu trữ",
+    "gamesArchived": "Số ván đã lưu trữ",
+    "stepsOffloaded": "Số bước đã chuyển đi",
+    "inBucket": "Trong bucket",
+    "lastSweep": "Lần quét cuối",
+    "archivedLastDay": "Đã lưu trữ trong 24 giờ qua",
+    "restoredLastWeek": "Đã khôi phục trong 7 ngày qua",
+    "restoresRunning": "Khôi phục đang chạy",
+    "broughtBack": "Đã đưa về (tổng)",
+    "failedRestores": "Khôi phục thất bại",
+    "stepsEver": "Số bước từng được lưu trữ",
+    "colLastPlayed": "Chơi lần cuối",
+    "empty": "Chưa có gì được lưu trữ.",
+    "loadError": "Không thể tải thống kê lưu trữ.",
+    "sweepStarted": "Đã bắt đầu quét. Nó chạy theo từng lô cho đến khi hết phần tồn đọng, nên mất hàng giờ chứ không phải vài phút.",
+    "sweepRecent": "Một lần quét đã chạy trong giờ qua.",
+    "sweepFailed": "Không thể bắt đầu quét.",
+    "notGameId": "Đó không giống một mã ván.",
+    "archived": "Đã lưu trữ “{game}”: {steps} bước, {size} đã lưu. Nhấn Undo trong ván đó để lấy lại.",
+    "archiveFailed": "Không thể lưu trữ ván đó.",
+    "restoreStarted": "Đã bắt đầu khôi phục. Nó chạy ngầm; hãy làm mới sau giây lát.",
+    "restoreFailed": "Không thể bắt đầu khôi phục đó.",
+    "took": " (mất {duration})"
   }
 }

@@ -60,7 +60,7 @@
       "stormIntensity": "Đặt 1 resource lên lá bài scenario reference dưới Storm Intensity.",
       "starSpawn": "Xào các kẻ địch từ bộ encounter *Star Spawn* và loại bỏ ngẫu nhiên 2 kẻ địch khỏi trò chơi.",
       "setCardsAside": "Set the double-sided Sky Relic{'{'}runeF{'}'} story asset, Eroded Frieze{'{'}runeE{'}'} treachery, and the Obsidian Claw story asset aside, out of play.",
-      "checkCampaignLogInescapable": "Loại bỏ tập bài encounter <i>The Inescapable</i> khỏi trò chơi.",
+      "checkCampaignLogInescapable": "Kiểm tra Campaign Log của bạn. *Nếu sinh vật đã bị đánh bại*, loại bỏ bộ encounter *The Inescapable* khỏi game. Nếu không, cho kẻ địch The Inescapable xuất hiện (spawn) ở vị trí xa nhất so với mọi điều tra viên, trong trạng thái exhausted.",
       "chooseExpeditionAsset": "Theo thứ tự người chơi, mỗi người chơi có thể chọn 1 asset [[Artifact]] đã giành được hoặc 1 asset [[Item]] từ tập bài encounter <i>Expedition</i> để bắt đầu in play dưới quyền kiểm soát của họ.",
       "buildEncounterDeck": "Xào các lá bài encounter còn lại để xây dựng chồng bài encounter.",
       "readyToBegin": "Bây giờ bạn đã sẵn sàng để bắt đầu."

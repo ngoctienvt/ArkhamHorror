@@ -33,8 +33,8 @@
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to The Last King*, *Decaying Reality*, and *Delusory Evils*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-last-king.png' /><img src='{setImgPath}/decaying-reality.png' /><img src='{setImgPath}/delusory-evils.png' /></section>*Decaying Reality* replaces *Decay & Filth* and *Delusory Evils* replaces *Ancient Evils*. Remove the replaced sets from the game.",
       "agendaDeck": "Remove Agenda 1a—*Fashionably Late* from the game and replace it with the new Agenda 1a—*Better Never Than Late*.",
-      "dianneDevine": "Bản gốc",
-      "sickeningReality": "Bản gốc",
+      "dianneDevine": "Loại bỏ Dianne Devine gốc (*Mercurial and Mischievous*) khỏi game và thay cô bằng phiên bản mới của Dianne Devine (*Hiding an Oath Unspoken*).",
+      "sickeningReality": "Đặt 3 lá Sickening Reality mới dưới lá scenario reference cùng với 5 lá gốc, tổng cộng 8 lá.",
       "setAside": "Also set the Shocking Display treachery aside, out of play."
     }
   },

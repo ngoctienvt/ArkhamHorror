@@ -157,8 +157,8 @@
     "tasks": {
       "title": "Tasks for End of Game Scoring",
       "body": "<p>The following is a list of tasks used to tally your score.</p>",
-      "manorsWithNoClues": "<b>1</b> điểm cho mỗi vị trí [[Manor]] đã lật không có manh mối.",
-      "guestAssetsControlled": "<b>1</b> điểm cho mỗi asset [[Guest]] được điều tra viên kiểm soát.",
+      "manorsWithNoClues": "<div class='task'>_1_ điểm cho mỗi vị trí _*Manor*_ đã lật không còn manh mối.<span class='tally'>{count}</span></div>",
+      "guestAssetsControlled": "<div class='task'>_1_ điểm cho mỗi asset _Guest_ do các điều tra viên kiểm soát.<span class='tally'>{count}</span></div>",
       "noSpellboundInPlay": "<div class='task'>_4_ points if no spellbound cards are in play.<span class='tally'>{count}</span></div>",
       "agenda1AOr2A": "<div class='task'>_5_ points if agenda 1a or agenda 2a is in play.<span class='tally'>{count}</span></div>",
       "bloodlessManInVictory": "<div class='task'>_4_ points if The Bloodless Man is in the victory display.<span class='tally'>{count}</span></div>",
@@ -169,7 +169,7 @@
       "horrorBonus": "<div class='task'><span>_3_ points if no investigator has been defeated and there is 2 {'{'}perPlayer{'}'} or less horror on the investigators, as a group.</span><span class='tally'>{count}</span></div>",
       "hardMode": "<div class='task'>_3_ points if you are playing on Hard difficulty mode.<span class='tally'>{count}</span></div>",
       "expertMode": "<div class='task'>_6_ points if you are playing on Expert difficulty mode.<span class='tally'>{count}</span></div>",
-      "factionBonus": "Điểm cuối game trên lá bài story của faction bạn.",
+      "factionBonus": "<div class='task'>Điểm cuối game trên lá story của phe bạn.<span class='tally'>{count}</span></div>",
       "total": "<div class='right task'>_Total:_ <span class='tally'>{count}</span></div>"
     }
   }

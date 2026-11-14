@@ -40,7 +40,7 @@
     },
     "noResolution": {
       "title": "No Resolution",
-      "body": "Mỗi điều tra viên đã Resign (từ bỏ) trước Act 3 hoặc bị hạ gục"
+      "body": "<div class='resolution'><p class='basic'>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui trước Act 3 hoặc bị hạ gục)_: Bạn chỉ vừa kịp thoát khỏi câu lạc bộ còn sống. Chuyển sang _Resolution 1._</p></div>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",

@@ -73,7 +73,7 @@
     "begin": "Bây giờ bạn đã sẵn sàng để bắt đầu."
   },
   "interlude": {
-    "instructions": "Thêm một token “0” vào chaos bag và chọn một [[Prop]] để sang một bên, ngoài khu vực chơi.",
+    "instructions": "Kiểm tra victory display. Nếu có ba asset Prop trong victory display, thêm một token “0” vào chaos bag và chọn một Prop để để sang một bên, ngoài cuộc chơi. Sau đó, nếu…",
     "heliosTelescope": "…the Helios Telescope is not in the victory display, proceed to _A Cosmic Journey_",
     "staffOfTheSerpent": "…the Staff of the Serpent is not in the victory display, proceed to _The Forgotten Island_",
     "accursedCape": "…the Accursed Cape is not in the victory display, proceed to _The Abominable Contessa_.",
