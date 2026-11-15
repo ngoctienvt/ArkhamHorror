@@ -8,6 +8,7 @@
     "determineInvestigatorsModifiedSkillValueStep": "Déterminez la valeur de compétence modifiée de l’investigateur.",
     "determineSuccessOrFailureOfSkillTestStep": "Déterminez la réussite/l’échec du test de compétence.",
     "applySkillTestResultsStep": "Appliquez les résultats du test de compétence.",
-    "skillTestEndsStep": "Fin du test de compétence."
+    "skillTestEndsStep": "Fin du test de compétence.",
+    "boostWindowSkipped": "Fast window before committing was skipped: you only had skill boosts (\"+X for this test\"). Use them in the {'{'}fast{'}'} window after committing."
 
 }

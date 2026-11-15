@@ -8,5 +8,6 @@
     "determineInvestigatorsModifiedSkillValueStep": "Determina el valor de habilidad modificado del investigador.",
     "determineSuccessOrFailureOfSkillTestStep": "Determina éxito/fracaso de la prueba de habilidad.",
     "applySkillTestResultsStep": "Aplica los resultados de la prueba de habilidad.",
-    "skillTestEndsStep": "Termina la prueba de habilidad."
+    "skillTestEndsStep": "Termina la prueba de habilidad.",
+    "boostWindowSkipped": "Fast window before committing was skipped: you only had skill boosts (\"+X for this test\"). Use them in the {'{'}fast{'}'} window after committing."
 }

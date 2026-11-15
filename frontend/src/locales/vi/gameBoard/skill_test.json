@@ -16,6 +16,7 @@
   "stepOf": "Bước {n}/{total}",
   "fastWindowBeforeCommit": "Cửa sổ {'{'}fast{'}'}: dùng bài hoặc khả năng fast trước khi commit bài.",
   "fastWindowBeforeReveal": "Cửa sổ {'{'}fast{'}'}: cơ hội cuối dùng hiệu ứng fast trước khi lật chaos token.",
+  "boostWindowSkipped": "Đã tự bỏ qua cửa sổ {'{'}fast{'}'} trước khi commit vì bạn chỉ có ability bơm chỉ số (\"+X cho test này\"). Hãy dùng chúng ở cửa sổ {'{'}fast{'}'} sau khi commit.",
   "difficultyLabel": "Độ khó",
   "skillValueLabel": "Chỉ số của bạn",
   "winOdds": "Thắng {n}%",

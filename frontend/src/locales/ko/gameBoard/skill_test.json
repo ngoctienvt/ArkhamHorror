@@ -11,5 +11,6 @@
   "applySkillTestResultsStep": "능력 테스트의 결과를 적용합니다.",
   "skillTestEndsStep": "능력 테스트가 끝납니다.",
   "skipTriggersActiveNotice": "격발 건너뛰기가 켜져 있습니다 — 이 테스트와 무관한 신속 격발은 숨겨집니다.",
-  "skipTriggersAdjust": "조정"
+  "skipTriggersAdjust": "조정",
+  "boostWindowSkipped": "Fast window before committing was skipped: you only had skill boosts (\"+X for this test\"). Use them in the {'{'}fast{'}'} window after committing."
 }

@@ -9,5 +9,6 @@
     "applySkillTestResultsStep": "Ergebnisse der Fertigkeitsprobe anwenden.",
     "skillTestEndsStep": "Fertigkeitsprobe endet.",
     "skipTriggersActiveNotice": "Trigger überspringen ist aktiviert — schnelle Trigger, die nichts mit dieser Probe zu tun haben, werden nicht angezeigt.",
-    "skipTriggersAdjust": "Anpassen"
+    "skipTriggersAdjust": "Anpassen",
+    "boostWindowSkipped": "Fast window before committing was skipped: you only had skill boosts (\"+X for this test\"). Use them in the {'{'}fast{'}'} window after committing."
 }

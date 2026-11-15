@@ -117,6 +117,8 @@ import { allowsTravel } from '@/arkham/motion/motionTokens'
 import { cardMoves, snapshotOf } from '@/arkham/gameDeltaFx'
 import { customCardDef, isCustomCardCode } from '@/arkham/customCards'
 import * as Message from '@/arkham/types/Message'
+import { boostOnlyFastWindowSkip } from '@/arkham/skill-boost-fast-window-auto-skip'
+import { boostOnlySkippedTests, markBoostOnlySkipped } from '@/arkham/boost-window-skipped-tests'
 import type { Phase } from '@/arkham/types/Phase'
 import { type Question } from '@/arkham/types/Question'
 import type { Source } from '@/arkham/types/Source'
@@ -1343,6 +1345,17 @@ const skipAllAvailable = computed(() => {
 })
 
 const skipAllInProgress = computed(() => skipAllPending.value.size > 0)
+
+// Pass the pre-commit fast window by itself when it only offers skill boosts. Once per
+// test: after an undo back into that window the player gets to see it.
+watch([game, processing, playerId], ([g, busy, pid]) => {
+  if (!g || busy || props.spectate || !pid || !g.skillTest) return
+  if (boostOnlySkippedTests.value.has(g.skillTest.id)) return
+  const idx = boostOnlyFastWindowSkip(g.skillTest.step, ArkhamGame.choices(g, pid))
+  if (idx === -1) return
+  markBoostOnlySkipped(g.skillTest.id)
+  void choose(idx)
+})
 
 function setGameQuestion(question: Record<string, Question>) {
   if (!game.value) return

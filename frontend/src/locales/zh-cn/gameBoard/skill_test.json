@@ -11,5 +11,6 @@
   "skipTriggersActiveNotice": "已开启‘跳过触发器’：与本次检定无关的快速触发效果已被隐藏。",
   "skipTriggersAdjust": "更改",
   "expandPanel": "展开技能检定",
-  "collapsePanel": "收起技能检定"
+  "collapsePanel": "收起技能检定",
+  "boostWindowSkipped": "Fast window before committing was skipped: you only had skill boosts (\"+X for this test\"). Use them in the {'{'}fast{'}'} window after committing."
 }

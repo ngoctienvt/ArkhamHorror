@@ -16,6 +16,7 @@
   "stepOf": "Step {n}/{total}",
   "fastWindowBeforeCommit": "{'{'}fast{'}'} Player window: play fast cards or abilities before committing cards.",
   "fastWindowBeforeReveal": "{'{'}fast{'}'} Player window: last chance for fast effects before the chaos token is revealed.",
+  "boostWindowSkipped": "Fast window before committing was skipped: you only had skill boosts (\"+X for this test\"). Use them in the {'{'}fast{'}'} window after committing.",
   "difficultyLabel": "Difficulty",
   "skillValueLabel": "Your value",
   "winOdds": "Win {n}%",

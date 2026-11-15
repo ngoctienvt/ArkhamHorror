@@ -214,6 +214,8 @@ export type Ability = {
   index: number
   target: Target | null
   basic: boolean
+  // The engine's raw SkillTestMatcher for abilities that only matter during some skill tests.
+  wantsSkillTest: unknown
 }
 
 const displayAsDecoder = JsonDecoder.oneOf<DisplayAs>([
@@ -230,7 +232,8 @@ export const abilityDecoder = JsonDecoder.object<Ability>(
     displayAs: JsonDecoder.nullable(displayAsDecoder),
     index: JsonDecoder.number(),
     target: JsonDecoder.nullable(targetDecoder),
-    basic: JsonDecoder.optional(JsonDecoder.boolean()).map((v) => v ?? false)
+    basic: JsonDecoder.optional(JsonDecoder.boolean()).map((v) => v ?? false),
+    wantsSkillTest: JsonDecoder.optional(JsonDecoder.succeed()).map((v) => v ?? null)
   }, 'Ability')
 
 export type AbilityRef = {

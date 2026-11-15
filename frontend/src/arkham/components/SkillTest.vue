@@ -31,6 +31,7 @@ import { useAbilityCardText } from '@/arkham/composables/useAbilityCardText';
 import { sourceEntityId, kindOf, type AbilityKind } from '@/arkham/locationChoices';
 import { useChaosDraw } from '@/arkham/composables/useChaosDraw';
 import { useCardNames } from '@/arkham/composables/useCardNames';
+import { boostOnlySkippedTests } from '@/arkham/boost-window-skipped-tests';
 
 const debug = useDebug()
 const { t } = useI18n()
@@ -521,6 +522,11 @@ const testSteps = [
 const currentStepIndex = computed(() => testSteps.findIndex((s) => s.step === props.skillTest.step))
 const currentStep = computed(() => testSteps[currentStepIndex.value] ?? null)
 
+// Explains why the pre-commit fast window went by on its own, until the token is revealed.
+const boostWindowSkipped = computed(() =>
+  boostOnlySkippedTests.value.has(props.skillTest.id)
+  && ['CommitCardsFromHandToSkillTestStep', 'SkillTestFastWindow2'].includes(props.skillTest.step))
+
 
 /* Chance to win against what is left in the bag, shown beside the title until
  * the test has a result. */
@@ -577,6 +583,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
         </span>
         <span class="step-caption__text" v-html="formatContent($t(currentStep.key))" />
       </div>
+      <p v-if="boostWindowSkipped" class="boost-skip-note" v-html="formatContent($t('skillTest.boostWindowSkipped'))" />
       <div class="skill-test-contents">
         <div v-if="swarmEnemy || deckCardEnemy" class="target-card swarming">
           <div class="swarm">
@@ -1122,6 +1129,17 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
 }
 
 .modifiers__title { flex-basis: 100%; text-align: left; cursor: help; }
+
+.boost-skip-note {
+  margin: 4px 12px;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #f3e2a6;
+  background: rgba(0, 0, 0, 0.45);
+  border-left: 3px solid #ffd640;
+  border-radius: 4px;
+}
 
 .triggers__title {
   margin: 0;
