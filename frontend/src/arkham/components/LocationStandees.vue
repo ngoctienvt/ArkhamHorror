@@ -54,8 +54,17 @@ type Fig = {
   /* The whole card, for the card overlay on hover. */
   cardImage: string
   health: Meter | null; sanity: Meter | null
+  /* Tokens other than damage / horror sitting on the figure (clues moved onto an enemy, doom, resources, ...), shown under its bar. */
+  tokens?: FigToken[]
   storyAsset?: boolean
 }
+type FigToken = { type: string; amount: number; icon: 'clue' | 'doom' | 'resource' | null }
+const ICONS: Record<string, FigToken['icon']> = { Clue: 'clue', Doom: 'doom', Resource: 'resource' }
+/* Damage and horror already show in the health / sanity bar. */
+const figTokens = (tokens: Record<string, number | undefined>): FigToken[] => Object.entries(tokens)
+  .filter(([type, amount]) => type !== TokenType.Damage && type !== TokenType.Horror && (amount ?? 0) > 0)
+  .map(([type, amount]) => ({ type, amount: amount ?? 0, icon: ICONS[type] ?? null }))
+const tokenLabel = (type: string) => type.replace(/^custom:/, '').replace(/([a-z])([A-Z])/g, '$1 $2')
 /* A room only has space for a few enemy figures; the rest are listed in a "+N" badge instead of vanishing. */
 const MAX_ENEMY_FIGURES = 4
 const meter = (max: number, taken: number): Meter => ({ max, left: Math.max(0, max - taken) })
@@ -95,7 +104,7 @@ const figures = computed<Fig[]>(() => {
       moveName: e.placement.tag === 'AtLocation' ? `enemy-${id}` : undefined,
       cardId: e.placement.tag === 'AtLocation' ? e.cardId : undefined, cardImage: cardImage(art),
       note: max === null ? `${damage} dmg` : null,
-      health: max === null ? null : meter(max, damage), sanity: null,
+      health: max === null ? null : meter(max, damage), sanity: null, tokens: figTokens(e.tokens),
     }]
   })
   const assets = sceneLocationAssets(l, props.game.assets).flatMap((a): Fig[] => {
@@ -190,6 +199,11 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
       </span>
       <FigureVitalsHud v-if="f.health || f.sanity" :health="f.health" :sanity="f.sanity" />
       <span v-else-if="f.note" class="hud"><span class="meter hp"><GameIcon type="damage" /> {{ f.note }}</span></span>
+      <span v-if="f.tokens?.length" class="fig-tokens">
+        <span v-for="tk in f.tokens" :key="tk.type" class="fig-token" :title="`${tokenLabel(tk.type)}: ${tk.amount}`">
+          <GameIcon v-if="tk.icon" :type="tk.icon" /><template v-else>{{ tokenLabel(tk.type) }}</template> <b>{{ tk.amount }}</b>
+        </span>
+      </span>
       <img v-if="f.src" class="figure portrait" :src="f.src" :alt="f.name" draggable="false"
         @error="f.storyAsset && fallbackFromSprite(f.src)"
         :[CARD_FLIGHT_ATTR]="f.cardId" :style="cardFlightStyle(flightState, f.cardId)" />
@@ -291,6 +305,10 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
 .compact .story-assets-only .figure { height: 18px; }
 .compact .story-assets-only .crop { width: 18px; border-width: 1px; }
 .compact .story-assets-only :deep(.hud) { display: none; }
+.fig-tokens { display: flex; flex-wrap: wrap; justify-content: center; gap: 3px; max-width: 90px; }
+.fig-token { display: inline-flex; align-items: center; gap: 2px; padding: 1px 5px; background: #111815ef; border: 1px solid #9f8d605c; border-radius: 999px; font: 600 10px/1.2 system-ui, sans-serif; color: #f0d9a8; white-space: nowrap; text-shadow: none; }
+.fig-token b { color: #fff4df; }
+.compact .fig-tokens { display: none; }
 .hud { display: grid; gap: 2px; min-width: 56px; padding: 3px 5px; background: #111815ef; border: 1px solid #9f8d605c; border-radius: 4px; font: 600 10px/1.15 system-ui, sans-serif; white-space: nowrap; text-shadow: none; }
 .hud .meter { display: flex; align-items: center; gap: 3px; font-variant-numeric: tabular-nums; }
 .hud .meter.hp { color: #ff9b87; }
