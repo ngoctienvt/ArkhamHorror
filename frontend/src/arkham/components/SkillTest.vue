@@ -138,6 +138,13 @@ const cardName = useCardNames()
 
 /* The card a modifier comes from, by name ("Higher Education"), so each bonus says where it is from. */
 function modifierSourceName(mod: Modifier): string | null {
+  // A tarot card has no card code: name the arcana and its facing ("The Hierophant • V (ngược)"),
+  // otherwise a -1 from a reversed card would show up with no explanation at all.
+  const tarot = mod.source.tag === 'TarotSource' ? mod.source.contents : null
+  if (tarot && typeof tarot === 'object') {
+    const { arcana, facing } = tarot
+    return t('skillTest.tarotSource', { arcana: t(`tarot.${arcana}`), facing: t(facing === 'Reversed' ? 'skillTest.tarotReversed' : 'skillTest.tarotUpright') })
+  }
   const code = modifierSource(mod)
   return code ? cardName(code) : null
 }
@@ -783,7 +790,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
             ></i>
           </template>
           <template v-if="modifier.type.tag === 'SkillModifier'">
-            <span>+{{modifier.type.value}}</span>
+            <span :class="{ 'modifier__negative': modifier.type.value < 0 }">{{ modifier.type.value > 0 ? '+' : '' }}{{ modifier.type.value }}</span>
             <img v-if="skillImage(normalizeSkill(modifier.type.skillType))" class="skill-art skill-art--badge" :src="skillImage(normalizeSkill(modifier.type.skillType))!" :alt="normalizeSkill(modifier.type.skillType)" />
             <i v-else
                :class="`${normalizeSkill(modifier.type.skillType)}-icon`"
@@ -791,7 +798,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
             ></i>
           </template>
           <template v-if="modifier.type.tag === 'ActionSkillModifier'">
-            <span>+{{modifier.type.value}}</span>
+            <span :class="{ 'modifier__negative': modifier.type.value < 0 }">{{ modifier.type.value > 0 ? '+' : '' }}{{ modifier.type.value }}</span>
             <img v-if="skillImage(normalizeSkill(modifier.type.skillType))" class="skill-art skill-art--badge" :src="skillImage(normalizeSkill(modifier.type.skillType))!" :alt="normalizeSkill(modifier.type.skillType)" />
             <i v-else
                :class="`${normalizeSkill(modifier.type.skillType)}-icon`"
@@ -1100,6 +1107,11 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
 }
 
 /* Which card a bonus pill comes from. */
+.modifier__negative {
+  color: #ff6b5e;
+  font-weight: 700;
+}
+
 .modifier__source {
   margin-left: 2px;
   padding-left: 8px;
