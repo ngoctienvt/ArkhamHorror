@@ -859,7 +859,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
         <div v-for="trigger in triggers" :key="trigger.index" class="trigger" @click="choose(trigger.index)">
           <span v-if="trigger.name" class="trigger__name">{{ trigger.name }}</span>
           <AbilityTextRow v-if="trigger.text" class="trigger__line" :kind="trigger.kind" :html="trigger.text" @choose="choose(trigger.index)" @click.stop />
-          <AbilityButton v-else class="trigger__button" :game="game" :ability="trigger.contents" @choose="choose(trigger.index)" @click.stop />
+          <AbilityButton v-else class="trigger__button" :game="game" :ability="trigger.contents" :tooltipIsButtonText="true" @choose="choose(trigger.index)" @click.stop />
         </div>
       </div>
 
@@ -1136,16 +1136,19 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   flex-direction: column;
   gap: 2px;
   padding: 6px 10px;
-  background: rgba(0, 0, 0, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-left: 3px solid var(--st-accent);
+  /* Yellow glow so a usable trigger stands out from the rest of the panel. */
+  background: rgba(230, 197, 60, 0.16);
+  border: 1px solid rgba(255, 214, 64, 0.85);
+  border-left: 3px solid #ffd640;
   border-radius: 6px;
+  box-shadow: 0 0 8px rgba(255, 214, 64, 0.45);
   cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 
   &:hover {
-    background: rgba(33, 53, 41, 0.95);
-    border-color: #e6c584;
+    background: rgba(230, 197, 60, 0.3);
+    border-color: #ffe27a;
+    box-shadow: 0 0 12px rgba(255, 214, 64, 0.7);
   }
 
   .trigger__button, .trigger__button:hover:not(:disabled) {

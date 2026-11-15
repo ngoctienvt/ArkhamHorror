@@ -6,7 +6,12 @@ import { replaceText } from '@/arkham/cardTextFormat'
 export type AbilitySection = 'basic' | 'scenario' | 'enemies' | 'inPlay' | 'other'
 
 /** Anything that carries an ability's source card and printed kind, and gets that card's line of text. */
-export type TextRow = { sourceId: string | null; kind: AbilityKind | null; text: string | null }
+export type TextRow = { sourceId: string | null; kind: AbilityKind | null; text: string | null; contents?: unknown }
+
+// The 1-based number the engine gives an ability on its card, or 0 when the row carries none.
+function abilityIndex(row: TextRow): number {
+  return (row.contents as { ability?: { index?: number } } | null | undefined)?.ability?.index ?? 0
+}
 
 type Known = { id: string; cardCode?: string; revealed?: boolean }
 
@@ -42,7 +47,9 @@ export function useAbilityCardText(game: () => Game) {
     if (!entity) return []
     const card = cardInfo(entity.cardCode ?? entity.id)
     const text = (entity.revealed === false ? card?.back_text : card?.text) ?? ''
-    return text.split(/\n|<br\s*\/?>/i).flatMap((line) => {
+    return text.split(/\n|<br\s*\/?>/i).flatMap((raw) => {
+      // Abilities a card grants or gains are printed inside quotes ("[fast] Spend 1 resource: ...").
+      const line = raw.trim().replace(/^["“]/, '').replace(/["”]$/, '')
       const kind = LINE_KIND.find(([re]) => re.test(line))?.[1]
       // The ability button already shows the leading action icon, so don't repeat it in the hint.
       return kind ? [{ kind, html: replaceText(line.trim()).replace(/^\s*<span class="[\w-]+-icon"><\/span>\s*:?\s*/, '') }] : []
@@ -57,9 +64,17 @@ export function useAbilityCardText(game: () => Game) {
       const key = `${row.sourceId}|${row.kind}`
       const nth = seen.get(key) ?? 0
       seen.set(key, nth + 1)
-      const lines = printedLines(row.sourceId).filter((l) => l.kind === row.kind)
+      const printed = printedLines(row.sourceId)
+      const lines = printed.filter((l) => l.kind === row.kind)
       const total = rows.filter((r) => r.sourceId === row.sourceId && r.kind === row.kind).length
-      if (lines.length === total) row.text = lines[nth].html
+      if (lines.length === total) {
+        row.text = lines[nth].html
+        continue
+      }
+      // Only some of the card's abilities are offered (e.g. Physical Training's other skill is hidden
+      // during this test): fall back to the ability's number, which follows the printed order.
+      const byIndex = printed[abilityIndex(row) - 1]
+      if (byIndex?.kind === row.kind) row.text = byIndex.html
     }
     return rows
   }
