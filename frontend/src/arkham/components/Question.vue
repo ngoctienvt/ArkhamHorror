@@ -21,6 +21,7 @@ import type { Game } from '@/arkham/types/Game';
 import ExchangeTokens from '@/arkham/components/ExchangeTokens.vue';
 import ChaosBagChoice from '@/arkham/components/ChaosBagChoice.vue';
 import FormattedEntry from '@/arkham/components/FormattedEntry.vue';
+import StoryIllustration from '@/arkham/components/StoryIllustration.vue';
 import QuestionChoices from '@/arkham/components/QuestionChoices.vue';
 import CardImage from '@/arkham/components/CardImage.vue';
 import CardPoolPicker from '@/arkham/components/CardPoolPicker.vue';
@@ -985,10 +986,12 @@ const useCardPicker = computed(() => cardLabels.value.every(({ choice }) => !cho
       <div v-if="readCards.length > 0" class="story-with-card">
         <img :src="cardCodeImage(cardCode)" v-for="cardCode in readCards" :key="cardCode" class="card no-overlay" />
         <div>
+          <StoryIllustration :campaign-id="game.campaign?.id" :entries="question.flavorText.body" />
           <FormattedEntry v-for="(paragraph, index) in question.flavorText.body" :key="index" :entry="paragraph" />
         </div>
       </div>
       <div v-else class="intro-text-body">
+        <StoryIllustration :campaign-id="game.campaign?.id" :entries="question.flavorText.body" />
         <FormattedEntry v-for="(paragraph, index) in question.flavorText.body" :key="index" :entry="paragraph" />
       </div>
     </div>
@@ -2232,6 +2235,10 @@ h2 {
 .story-with-card {
   display: flex;
   gap: 10px;
+
+  > div {
+    min-width: 0;
+  }
 }
 
 .question-label:has(> .question-image) {

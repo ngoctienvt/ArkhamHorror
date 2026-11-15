@@ -10,6 +10,7 @@ import Token from '@/arkham/components/Token.vue';
 import { useI18n } from 'vue-i18n';
 import FormattedEntry from '@/arkham/components/FormattedEntry.vue';
 import CardImage from '@/arkham/components/CardImage.vue';
+import StoryIllustration from '@/arkham/components/StoryIllustration.vue';
 
 export interface Props {
   game: Game
@@ -195,6 +196,7 @@ const flippableCard = (cardCode: string) => {
           <Token v-for="(focusedToken, index) in focusedChaosTokens" :key="index" :token="focusedToken" :playerId="playerId" :game="game" @choose="() => {}" />
         </section>
         <div class="entry-body">
+          <StoryIllustration :campaign-id="game.campaign?.id" :entries="question.flavorText.body" />
           <img :src="cardImage(cardCode)" v-for="cardCode in readCards" class="card no-overlay" />
           <FormattedEntry v-for="(paragraph, index) in question.flavorText.body" :key="index" :entry="paragraph" />
         </div>
