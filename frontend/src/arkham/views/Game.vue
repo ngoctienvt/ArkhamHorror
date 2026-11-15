@@ -159,7 +159,8 @@ import { sfxForUpdate } from '@/arkham/sfxEvents'
 import { playSfx } from '@/arkham/sfx'
 import { drawDurationMs, newlyDrawnTokenIds, splitSpoilerSfx } from '@/arkham/chaosDrawReveal'
 import { afterChaosDraw, finishChaosDraw, startChaosDraw, useChaosDraw } from '@/arkham/composables/useChaosDraw'
-import { boardHeldForSummary, skillTestLogEntries, trackSkillTest, type SkillTestTracker } from '@/arkham/skillTestSummary'
+import { isRollback } from '@/arkham/undoRollback'
+import { boardHeldForSummary,skillTestLogEntries, trackSkillTest, type SkillTestTracker } from '@/arkham/skillTestSummary'
 import {
   dismissSkillTestSummary,
   setSkillTestSummaryLog,
@@ -1473,8 +1474,11 @@ const qPop = () => {
   }
   return resultQueue.value[qHead++]
 }
+/* Counts the game updates the socket has delivered, so an undo can tell whether
+ * the one it is waiting for ever came (see `resyncIfUndoNeverLanded`). */
+let gameUpdatesSeen = 0
 let decoding = false
-let pendingUpdate: { payload: string; queued: boolean } | null = null
+let pendingUpdate:{ payload: string; queued: boolean } | null = null
 
 function entitiesMoved(previous: Arkham.Game, current: Arkham.Game) {
   const placementChanged = (
@@ -1544,7 +1548,27 @@ function trackSkillTestSummary(previousGame: Arkham.Game | null, updatedGame: Ar
 let heldForSummary: { game: Arkham.Game; locked: boolean } | null = null
 const summaryForHold = useSkillTestSummary()
 
+/* Client-side state that follows the game forward and means nothing once history
+ * is rewound. A test the undo removes would otherwise read as one that just ended
+ * (its summary pops up and holds the undo's update behind it), a "skip all" still
+ * running would answer the restored question by itself, and a reading that was
+ * queued would be remembered as already shown when the act advances again. */
+function dropRolledBackUiState() {
+  heldForSummary = null
+  skillTestTracker = null
+  dismissSkillTestSummary()
+  finishChaosDraw()
+  skipAllPending.value = new Set()
+  // Before the reset: it forgets who owns the lock without letting go of it.
+  releaseAdvanceLock()
+  resetAdvances()
+}
+
 function applyGameUpdate(updatedGame: Arkham.Game, locked: boolean) {
+  /* An undo arrives as an ordinary update, and only the seat that pressed Undo
+   * went through `runUndo`: every other seat or tab finds out here. */
+  const rolledBack = isRollback(game.value, updatedGame)
+  if (rolledBack) dropRolledBackUiState()
   if (heldForSummary) {
     heldForSummary = { game: updatedGame, locked }
     return
@@ -1562,7 +1586,9 @@ function applyGameUpdate(updatedGame: Arkham.Game, locked: boolean) {
    * card flying out of the overlay needs a slot laid out to land in. */
   const draws = holding ? [] : pendingDraws(updatedGame, playerId.value ?? '')
   // Held updates play their sounds when they are applied, not behind the summary.
-  if (!holding) playUpdateSfxWithChaosDraw(previousGame, updatedGame)
+  // A rewind is compared against nothing: the tokens of a test it lands back in
+  // were drawn long ago, and nothing just happened to make a sound about.
+  if (!holding) playUpdateSfxWithChaosDraw(rolledBack ? null : previousGame, updatedGame)
   const apply = async () => {
     if (seq !== applySeq) return
     clearPendingChoice()
@@ -2130,6 +2156,7 @@ const handleResult = (result: ServerResult) => {
       // the UI lock, so the table behind it reflects the current situation instead
       // of freezing on the pre-revelation state (issue #4817). Keep it queued so
       // the pending question is only restored once every revelation is dismissed.
+      gameUpdatesSeen += 1
       const queued = uiLock.value
       if (queued) qPush(result)
       scheduleApplyUpdate(result.contents, queued)
@@ -2611,20 +2638,40 @@ async function runUndo(call: (gameId: string) => Promise<void>) {
   const oldQuestion = game.value?.question
   if (game.value) setGameQuestion({})
   resultQueue.value = []
-  resetAdvances()
+  qHead = 0
+  /* Whatever summary or held update is pending belongs to the history being
+   * undone, so it is dropped -- but kept at hand, because a refused undo leaves
+   * that history standing and the held update is then still the newest state. */
+  const held = heldForSummary
+  dropRolledBackUiState()
   gameCard.value = null
   tarotCards.value = []
   clearDrawSpotlight()
   uiLock.value = false
+  const updatesBefore = gameUpdatesSeen
   try {
     await call(props.gameId)
+    void resyncIfUndoNeverLanded(updatesBefore)
   } catch (e) {
     processing.value = false
-    if (game.value && oldQuestion) setGameQuestion(oldQuestion)
+    if (held) applyGameUpdate(held.game, held.locked)
+    else if (game.value && oldQuestion) setGameQuestion(oldQuestion)
     if (!noticeArchive(e)) console.log(e)
   } finally {
     undoLock.value = false
   }
+}
+
+/* The server has rewound the game by the time an undo request answers, and the
+ * restored state comes over the socket, not in the response. This seat has blanked
+ * its question for the round trip, so if that one message is lost (the server
+ * drops updates for a room whose socket is between connections) the board sits on
+ * the old state with nothing to answer until a reload. Give the socket a moment,
+ * then fetch the state a reload would have fetched. */
+const UNDO_UPDATE_GRACE_MS = 2000
+async function resyncIfUndoNeverLanded(updatesBefore: number) {
+  await wait(UNDO_UPDATE_GRACE_MS)
+  if (gameUpdatesSeen === updatesBefore) await resyncGame()
 }
 
 async function undo() {
