@@ -2,31 +2,10 @@
   "brethrenOfAsh": {
     "total_keys": 20,
     "voice": "Đức Trí",
-    "matches_vieneu": 15,
+    "matches_vieneu": 20,
     "matches_edge": 0,
-    "stale_count": 5,
-    "stale_keys": [
-      [
-        "brethrenOfAsh.queenOfAsh.intro.addTokens",
-        "curr=None, exp_v=addb506fab72"
-      ],
-      [
-        "brethrenOfAsh.queenOfAsh.intro.intro2",
-        "curr=adcd09b834fd, exp_v=c535ac09ed66"
-      ],
-      [
-        "brethrenOfAsh.queenOfAsh.intro.intro3",
-        "curr=716c2aefcf7f, exp_v=7c5e06df53fb"
-      ],
-      [
-        "brethrenOfAsh.queenOfAsh.resolutions.noResolution.body",
-        "curr=f49465ababa5, exp_v=a5bc6cefc915"
-      ],
-      [
-        "brethrenOfAsh.smokeAndMirrors.intro.body",
-        "curr=b591b9fa835d, exp_v=1a641ed686f9"
-      ]
-    ]
+    "stale_count": 0,
+    "stale_keys": []
   },
   "childrenOfBlood": {
     "total_keys": 24,
@@ -39,9 +18,9 @@
   "edgeOfTheEarth": {
     "total_keys": 152,
     "voice": "Đức Trí",
-    "matches_vieneu": 70,
+    "matches_vieneu": 91,
     "matches_edge": 0,
-    "stale_count": 82,
+    "stale_count": 61,
     "stale_keys": [
       [
         "edgeOfTheEarth.cityOfTheElderThings.interlude.danforth",
@@ -100,60 +79,8 @@
         "curr=c706f7473121, exp_v=d95a7a675ec2"
       ],
       [
-        "edgeOfTheEarth.interlude1.ashevakIsAlive",
-        "curr=d50be372f26b, exp_v=e7389524be5e"
-      ],
-      [
-        "edgeOfTheEarth.interlude1.claypoolIsAlive",
-        "curr=1f20cdcf5467, exp_v=b725fc78b380"
-      ],
-      [
-        "edgeOfTheEarth.interlude1.cookieIsAlive",
-        "curr=e2830ce4cf2a, exp_v=940ddcdce9db"
-      ],
-      [
-        "edgeOfTheEarth.interlude1.danforthIsAlive",
-        "curr=3191b12452ad, exp_v=31ca5f1207e7"
-      ],
-      [
         "edgeOfTheEarth.interlude1.danforthIsCrossedOut",
         "curr=None, exp_v=004b370e54fa"
-      ],
-      [
-        "edgeOfTheEarth.interlude1.ellsworthIsAlive",
-        "curr=9adc7045d1f4, exp_v=1ce24d814bf2"
-      ],
-      [
-        "edgeOfTheEarth.interlude1.ellsworthIsCrossedOut",
-        "curr=4fa021343808, exp_v=2c193ad989c1"
-      ],
-      [
-        "edgeOfTheEarth.interlude1.kenslerIsAlive",
-        "curr=f26957715ab9, exp_v=1eff6f9df7a6"
-      ],
-      [
-        "edgeOfTheEarth.interlude1.restfulNight1.body",
-        "curr=e1dab35a27f0, exp_v=5f9822f612d7"
-      ],
-      [
-        "edgeOfTheEarth.interlude1.restfulNight2.body",
-        "curr=3cc571731db4, exp_v=5c05aa6a662b"
-      ],
-      [
-        "edgeOfTheEarth.interlude1.restfulNight3.body",
-        "curr=a4334b191983, exp_v=cb100cb35188"
-      ],
-      [
-        "edgeOfTheEarth.interlude1.sinhaIsAlive",
-        "curr=33781663a69c, exp_v=c9e9f10988f4"
-      ],
-      [
-        "edgeOfTheEarth.interlude1.takadaIsAlive",
-        "curr=3deecfc2e05b, exp_v=a5acaa64153f"
-      ],
-      [
-        "edgeOfTheEarth.interlude1.williamDyerIsAlive",
-        "curr=77edae19c9d9, exp_v=ba3d58335a68"
       ],
       [
         "edgeOfTheEarth.interlude2.ashevakIsAlive",
@@ -168,10 +95,6 @@
         "curr=b1ebfe26c7f4, exp_v=1309f21ffc0c"
       ],
       [
-        "edgeOfTheEarth.interlude2.danforthIsAlive",
-        "curr=b6bf685926eb, exp_v=037af598e2b9"
-      ],
-      [
         "edgeOfTheEarth.interlude2.ellsworthIsAlive",
         "curr=9adc7045d1f4, exp_v=1ce24d814bf2"
       ],
@@ -184,20 +107,8 @@
         "curr=4fa021343808, exp_v=2c193ad989c1"
       ],
       [
-        "edgeOfTheEarth.interlude2.endlessNight3.body",
-        "curr=f196455ef9c9, exp_v=0acdf0627aa3"
-      ],
-      [
-        "edgeOfTheEarth.interlude2.endlessNight4.body",
-        "curr=660c0c4223ce, exp_v=fcdadec97182"
-      ],
-      [
         "edgeOfTheEarth.interlude2.kenslerIsAlive",
         "curr=79c61d6063ec, exp_v=d3ff58d46222"
-      ],
-      [
-        "edgeOfTheEarth.interlude2.kenslerIsAliveAndSharingResearch",
-        "curr=6adcfca9ca26, exp_v=23d091853cc5"
       ],
       [
         "edgeOfTheEarth.interlude2.sinhaIsAlive",
@@ -206,10 +117,6 @@
       [
         "edgeOfTheEarth.interlude2.takadaIsAlive",
         "curr=4fa805d719c3, exp_v=6eeb7c35d620"
-      ],
-      [
-        "edgeOfTheEarth.interlude2.williamDyerIsAlive",
-        "curr=949d7e91a0a1, exp_v=f035a99b8ad4"
       ],
       [
         "edgeOfTheEarth.interlude3.ashevakIsAlive",
@@ -270,18 +177,6 @@
       [
         "edgeOfTheEarth.interlude3.williamDyerIsAlive",
         "curr=142d7b294fb1, exp_v=cb6e288a0271"
-      ],
-      [
-        "edgeOfTheEarth.prologue1.body",
-        "curr=2244662de257, exp_v=1b4a147b557d"
-      ],
-      [
-        "edgeOfTheEarth.prologue2.body",
-        "curr=7d70c87be505, exp_v=2d8364b32db7"
-      ],
-      [
-        "edgeOfTheEarth.prologue3.body",
-        "curr=f1066987ff6b, exp_v=f76397bc2f4f"
       ],
       [
         "edgeOfTheEarth.theHeartOfMadness.part1.interlude.ashevak.saved",
@@ -410,7 +305,7 @@
     "total_keys": 16,
     "voice": "Mỹ Duyên",
     "matches_vieneu": 0,
-    "matches_edge": 14,
+    "matches_edge": 16,
     "stale_count": 16,
     "stale_keys": [
       [
@@ -419,7 +314,7 @@
       ],
       [
         "nightOfTheZealot.theDevourerBelow.intro.body",
-        "curr=a2c3d5a35cdb, exp_v=ab380937bf8e"
+        "matches_edge_not_vieneu"
       ],
       [
         "nightOfTheZealot.theDevourerBelow.resolutions.noResolution.body",
@@ -459,7 +354,7 @@
       ],
       [
         "nightOfTheZealot.theMidnightMasks.intro1",
-        "curr=73ba1f86efb8, exp_v=dda550386ddd"
+        "matches_edge_not_vieneu"
       ],
       [
         "nightOfTheZealot.theMidnightMasks.intro2",
@@ -907,539 +802,32 @@
   "theDreamEaters": {
     "total_keys": 109,
     "voice": "Đức Trí",
-    "matches_vieneu": 58,
+    "matches_vieneu": 109,
     "matches_edge": 0,
-    "stale_count": 51,
-    "stale_keys": [
-      [
-        "theDreamEaters.aThousandShapesOfHorror.intro1.body",
-        "curr=dbffe988c66a, exp_v=50b52a5b3661"
-      ],
-      [
-        "theDreamEaters.aThousandShapesOfHorror.intro4.body",
-        "curr=33f4d0cbbd56, exp_v=f10b7c2d453c"
-      ],
-      [
-        "theDreamEaters.beyondTheGatesOfSleep.resolutions.noResolution.body",
-        "curr=3bf80ab549aa, exp_v=57bb0e9fb690"
-      ],
-      [
-        "theDreamEaters.beyondTheGatesOfSleep.resolutions.resolution1.body",
-        "curr=5ec967717efa, exp_v=af98421390be"
-      ],
-      [
-        "theDreamEaters.darkSideOfTheMoon.intro1.body",
-        "curr=5a8777acfed9, exp_v=1639b7da8cd3"
-      ],
-      [
-        "theDreamEaters.darkSideOfTheMoon.intro2.body",
-        "curr=7c7492d7bef8, exp_v=95f084c6fb33"
-      ],
-      [
-        "theDreamEaters.flavorText.allCaptured.body",
-        "curr=c535644fdc90, exp_v=e12101f92f63"
-      ],
-      [
-        "theDreamEaters.flavorText.campaignStructure.body",
-        "curr=None, exp_v=73843210064f"
-      ],
-      [
-        "theDreamEaters.flavorText.epilogue12.body",
-        "curr=5dfe3311a9cf, exp_v=706e85168322"
-      ],
-      [
-        "theDreamEaters.flavorText.epilogue15.body",
-        "curr=ac4f2678e330, exp_v=f2fc37066586"
-      ],
-      [
-        "theDreamEaters.flavorText.epilogue4.body",
-        "curr=c0eaebd43c53, exp_v=7b1dd50c8efe"
-      ],
-      [
-        "theDreamEaters.flavorText.epilogue5.body",
-        "curr=4cfeb3d83ae6, exp_v=ad49ed5948f8"
-      ],
-      [
-        "theDreamEaters.flavorText.epilogue8.body",
-        "curr=9c0e708e7b15, exp_v=42188658b706"
-      ],
-      [
-        "theDreamEaters.flavorText.epilogueMatrix.body",
-        "curr=None, exp_v=73993a2540c3"
-      ],
-      [
-        "theDreamEaters.flavorText.nowWhereWasI.body",
-        "curr=None, exp_v=ce7c000a2d79"
-      ],
-      [
-        "theDreamEaters.flavorText.prologue.body",
-        "curr=082685233b4f, exp_v=1a729e692dbe"
-      ],
-      [
-        "theDreamEaters.flavorText.prologueOpening.body",
-        "curr=530fd49a392b, exp_v=5b68899fb4e5"
-      ],
-      [
-        "theDreamEaters.flavorText.searchingForTheTruth.body",
-        "curr=1bafb59f9bfd, exp_v=c905954bc0ed"
-      ],
-      [
-        "theDreamEaters.flavorText.sharedTheKnowledgeStory.body",
-        "curr=5cc67cfb9065, exp_v=08e85eba6e33"
-      ],
-      [
-        "theDreamEaters.flavorText.theBlackCat1.body",
-        "curr=f65d1400e4c3, exp_v=1c9f6d9811f2"
-      ],
-      [
-        "theDreamEaters.flavorText.theBlackCatDeliveredNewsOfYourPlight.body",
-        "curr=9cbbb536e811, exp_v=b5c34943dedc"
-      ],
-      [
-        "theDreamEaters.flavorText.theBlackCatSharedKnowledgeOfTheDreamlands.body",
-        "curr=b3b964ad6ac7, exp_v=a8ab572620e8"
-      ],
-      [
-        "theDreamEaters.flavorText.theBlackCatWarnedTheOthers.body",
-        "curr=9f6eb536d6b9, exp_v=6181d63dcfb6"
-      ],
-      [
-        "theDreamEaters.flavorText.theGreatOnes1Searching.body",
-        "curr=ef53b8bc96ad, exp_v=12faf906b480"
-      ],
-      [
-        "theDreamEaters.flavorText.theGreatOnes2Part2.body",
-        "curr=None, exp_v=bcace3ef67e5"
-      ],
-      [
-        "theDreamEaters.flavorText.theGreatOnes2Searching.body",
-        "curr=e85ab3d3056a, exp_v=ead5390a56c3"
-      ],
-      [
-        "theDreamEaters.flavorText.theGreatOnes2TheSilverKey.body",
-        "curr=28b9fa7abc11, exp_v=b84684cbb70c"
-      ],
-      [
-        "theDreamEaters.flavorText.wheresBlondie.body",
-        "curr=98316f880c9d, exp_v=56e38feedcf9"
-      ],
-      [
-        "theDreamEaters.flavorText.youAreOnYourOwn.body",
-        "curr=514eb6a6a4fc, exp_v=7033765543b3"
-      ],
-      [
-        "theDreamEaters.pointOfNoReturn.intro1.body",
-        "curr=f09e90de959d, exp_v=eaadd38ed38e"
-      ],
-      [
-        "theDreamEaters.pointOfNoReturn.intro2.body",
-        "curr=0bca0ea37f7b, exp_v=293a276293e7"
-      ],
-      [
-        "theDreamEaters.theSearchForKadath.flavorText.intro1.body",
-        "curr=c21ac7d5db08, exp_v=c08df06a5da9"
-      ],
-      [
-        "theDreamEaters.theSearchForKadath.flavorText.intro10.body",
-        "curr=08374a472734, exp_v=79d6f28df85a"
-      ],
-      [
-        "theDreamEaters.theSearchForKadath.flavorText.intro11.body",
-        "curr=4dd21f6f8e6c, exp_v=66c2ff984a98"
-      ],
-      [
-        "theDreamEaters.theSearchForKadath.flavorText.intro2.body",
-        "curr=a15f9e8415b2, exp_v=b73b06a7b217"
-      ],
-      [
-        "theDreamEaters.theSearchForKadath.flavorText.intro3.body",
-        "curr=db5114ac664e, exp_v=6dafc00af4eb"
-      ],
-      [
-        "theDreamEaters.theSearchForKadath.flavorText.intro4.body",
-        "curr=eb8064beab54, exp_v=0a2807ead934"
-      ],
-      [
-        "theDreamEaters.theSearchForKadath.flavorText.intro5.body",
-        "curr=7039502d3705, exp_v=0ef21473c782"
-      ],
-      [
-        "theDreamEaters.theSearchForKadath.flavorText.intro9.body",
-        "curr=0831cfa70656, exp_v=50f3bf15b461"
-      ],
-      [
-        "theDreamEaters.theSearchForKadath.flavorText.investigatorDefeat.body",
-        "curr=None, exp_v=b01786cbd0e8"
-      ],
-      [
-        "theDreamEaters.theSearchForKadath.resolutions.resolution1.body",
-        "curr=None, exp_v=369082a71dc2"
-      ],
-      [
-        "theDreamEaters.wakingNightmare.flavorText.intro1.body",
-        "curr=a5eec93d55e7, exp_v=08d9b313aaa1"
-      ],
-      [
-        "theDreamEaters.wakingNightmare.flavorText.intro3.body",
-        "curr=1d69e1337e57, exp_v=494af6fac911"
-      ],
-      [
-        "theDreamEaters.wakingNightmare.resolutions.noResolution.body",
-        "curr=02d9bf6007fe, exp_v=753ff5973bba"
-      ],
-      [
-        "theDreamEaters.wakingNightmare.resolutions.resolution4.body",
-        "curr=f6e009664609, exp_v=f4fe1a1f3d5f"
-      ],
-      [
-        "theDreamEaters.weaverOfTheCosmos.resolutions.noResolution.body",
-        "curr=ade116fbe780, exp_v=fe32e7624c6e"
-      ],
-      [
-        "theDreamEaters.weaverOfTheCosmos.resolutions.resolution2.body",
-        "curr=b818afeef3a8, exp_v=b15e06482aad"
-      ],
-      [
-        "theDreamEaters.weaverOfTheCosmos.resolutions.resolution5.body",
-        "curr=36fb4ba50156, exp_v=b9f27bb53a3d"
-      ],
-      [
-        "theDreamEaters.whereTheGodsDwell.intro1.body",
-        "curr=d1f0f0baf8fa, exp_v=450af2426e46"
-      ],
-      [
-        "theDreamEaters.whereTheGodsDwell.intro2.body",
-        "curr=None, exp_v=adcd7dfe4910"
-      ],
-      [
-        "theDreamEaters.whereTheGodsDwell.resolutions.resolution2.body",
-        "curr=88668b74fcde, exp_v=9ddc6cdda9e8"
-      ]
-    ]
+    "stale_count": 0,
+    "stale_keys": []
   },
   "theDrownedCity": {
     "total_keys": 157,
     "voice": "Mỹ Duyên",
-    "matches_vieneu": 98,
+    "matches_vieneu": 157,
     "matches_edge": 0,
-    "stale_count": 59,
-    "stale_keys": [
-      [
-        "theDrownedCity.courtOfTheAncients.intro.plumbTheDepths.body",
-        "curr=c8a61d0f3cba, exp_v=c4b103f8ac50"
-      ],
-      [
-        "theDrownedCity.courtOfTheAncients.intro.plumbTheDepths.choose",
-        "curr=None, exp_v=e0176c725bf6"
-      ],
-      [
-        "theDrownedCity.courtOfTheAncients.intro.plumbTheDepths.memories",
-        "curr=efcd660a0985, exp_v=53749ec2cb70"
-      ],
-      [
-        "theDrownedCity.courtOfTheAncients.intro.plumbTheDepths.reflection",
-        "curr=None, exp_v=6e573f8a9ec5"
-      ],
-      [
-        "theDrownedCity.courtOfTheAncients.intro.resolvePlumbTheDepths",
-        "curr=None, exp_v=1a02d57c1683"
-      ],
-      [
-        "theDrownedCity.interludes.anOfferYouCantRefuse.accept",
-        "curr=None, exp_v=c7072980d335"
-      ],
-      [
-        "theDrownedCity.interludes.anOfferYouCantRefuse.chooseTask",
-        "curr=None, exp_v=f6e6652c60c9"
-      ],
-      [
-        "theDrownedCity.interludes.anOfferYouCantRefuse.interlude2",
-        "curr=None, exp_v=590b1d564a3e"
-      ],
-      [
-        "theDrownedCity.interludes.anOfferYouCantRefuse.interlude3",
-        "curr=b0ef781be6d9, exp_v=09355a5f97f0"
-      ],
-      [
-        "theDrownedCity.interludes.anOfferYouCantRefuse.task.doNoHarm.body",
-        "curr=None, exp_v=7a8da0a21d4d"
-      ],
-      [
-        "theDrownedCity.interludes.anOfferYouCantRefuse.task.dreamsOfDestruction.body",
-        "curr=None, exp_v=947d3418c181"
-      ],
-      [
-        "theDrownedCity.interludes.anOfferYouCantRefuse.task.goodMoney.body",
-        "curr=f51fe7d5d74d, exp_v=8843546b9d72"
-      ],
-      [
-        "theDrownedCity.interludes.anOfferYouCantRefuse.task.noPlaceLikeHome.body",
-        "curr=ffa77cca3974, exp_v=44be48ef5d39"
-      ],
-      [
-        "theDrownedCity.interludes.anOfferYouCantRefuse.task.plumbTheDepths.body",
-        "curr=None, exp_v=bb20283228f1"
-      ],
-      [
-        "theDrownedCity.interludes.anOfferYouCantRefuse.task.proveYourWorth.body",
-        "curr=None, exp_v=b17b9615fa89"
-      ],
-      [
-        "theDrownedCity.interludes.anOfferYouCantRefuse.task.toeTheLine.body",
-        "curr=None, exp_v=4676eb3ec434"
-      ],
-      [
-        "theDrownedCity.interludes.anOfferYouCantRefuse.task.walkInFaith.body",
-        "curr=None, exp_v=a1fb0ce981b8"
-      ],
-      [
-        "theDrownedCity.interludes.epilogue.epilogue2.body",
-        "curr=None, exp_v=ef1071d98afb"
-      ],
-      [
-        "theDrownedCity.interludes.epilogue.epilogue3.body",
-        "curr=None, exp_v=44473f703449"
-      ],
-      [
-        "theDrownedCity.interludes.expeditionToRlyeh.easternExpedition",
-        "curr=536eb04563a3, exp_v=ebcde67feaad"
-      ],
-      [
-        "theDrownedCity.interludes.returnToArkham.gainTaskExperience",
-        "curr=None, exp_v=d10de11819db"
-      ],
-      [
-        "theDrownedCity.interludes.returnToArkham.resolveTasks",
-        "curr=None, exp_v=0e9fb7c118aa"
-      ],
-      [
-        "theDrownedCity.interludes.theAwakening.awakening1",
-        "curr=None, exp_v=5203d3ba6452"
-      ],
-      [
-        "theDrownedCity.obsidianCanyons.intro.dreamsOfDestruction.body",
-        "curr=None, exp_v=2a6e73d00f7a"
-      ],
-      [
-        "theDrownedCity.obsidianCanyons.intro.dreamsOfDestruction.choose",
-        "curr=None, exp_v=e0176c725bf6"
-      ],
-      [
-        "theDrownedCity.obsidianCanyons.intro.dreamsOfDestruction.sorrow",
-        "curr=None, exp_v=2a6e73d00f7a"
-      ],
-      [
-        "theDrownedCity.obsidianCanyons.intro.dreamsOfDestruction.vision",
-        "curr=None, exp_v=2a6e73d00f7a"
-      ],
-      [
-        "theDrownedCity.obsidianCanyons.intro.obsidianCanyons3",
-        "curr=adf559633d5d, exp_v=4179406ea41f"
-      ],
-      [
-        "theDrownedCity.obsidianCanyons.intro.proveYourWorth.choose",
-        "curr=None, exp_v=e0176c725bf6"
-      ],
-      [
-        "theDrownedCity.obsidianCanyons.intro.proveYourWorth.trustTheirHandiwork",
-        "curr=None, exp_v=bcc9a38900b7"
-      ],
-      [
-        "theDrownedCity.obsidianCanyons.intro.resolveTasks",
-        "curr=None, exp_v=dc9ce63bd3e7"
-      ],
-      [
-        "theDrownedCity.oneLastJob.intro.body1",
-        "curr=None, exp_v=bc34d8c0b74f"
-      ],
-      [
-        "theDrownedCity.oneLastJob.intro.body2",
-        "curr=019212907766, exp_v=2f34ec4bc33f"
-      ],
-      [
-        "theDrownedCity.sepulchreOfTheSleeper.intro.layItToRest",
-        "curr=None, exp_v=f22dd632ffb9"
-      ],
-      [
-        "theDrownedCity.sepulchreOfTheSleeper.intro.sepulchreOfTheSleeper2",
-        "curr=6a34de6bb01c, exp_v=302b3aa1a806"
-      ],
-      [
-        "theDrownedCity.theApiary.intro.apiary1Andy",
-        "curr=b49c420af46a, exp_v=ac17b35d7798"
-      ],
-      [
-        "theDrownedCity.theApiary.intro.apiary1Cavern",
-        "curr=4b116e8885b2, exp_v=6db6372bc6fe"
-      ],
-      [
-        "theDrownedCity.theApiary.intro.resolveWalkInFaith",
-        "curr=None, exp_v=9035f0e4766f"
-      ],
-      [
-        "theDrownedCity.theApiary.intro.walkInFaith.choose",
-        "curr=None, exp_v=e0176c725bf6"
-      ],
-      [
-        "theDrownedCity.theApiary.resolutions.investigatorDefeat.killed",
-        "curr=7267fb69f112, exp_v=633378187036"
-      ],
-      [
-        "theDrownedCity.theApiary.resolutions.investigatorDefeat.storyAssets",
-        "curr=None, exp_v=2c7275e2a241"
-      ],
-      [
-        "theDrownedCity.theApiary.resolutions.noResolution.grislyMask",
-        "curr=None, exp_v=6378f729f8a3"
-      ],
-      [
-        "theDrownedCity.theApiary.resolutions.resolution1.grislyMask",
-        "curr=None, exp_v=6378f729f8a3"
-      ],
-      [
-        "theDrownedCity.theApiary.resolutions.resolution2.grislyMask",
-        "curr=None, exp_v=6378f729f8a3"
-      ],
-      [
-        "theDrownedCity.theApiary.resolutions.resolution3.grislyMask",
-        "curr=None, exp_v=6378f729f8a3"
-      ],
-      [
-        "theDrownedCity.theDoomOfArkhamPartII.intro.lastStand",
-        "curr=None, exp_v=dee1a639f092"
-      ],
-      [
-        "theDrownedCity.theDoomOfArkhamPartII.resolutions.resolution2.body",
-        "curr=0e6554c20666, exp_v=0eeec2f19949"
-      ],
-      [
-        "theDrownedCity.theDoomOfArkhamPartII.resolutions.resolution3.body",
-        "curr=0bf4def0ab64, exp_v=923c43b5a956"
-      ],
-      [
-        "theDrownedCity.theDrownedQuarter.intro.noPlaceLikeHome.choose",
-        "curr=None, exp_v=e0176c725bf6"
-      ],
-      [
-        "theDrownedCity.theDrownedQuarter.intro.resolveNoPlaceLikeHome",
-        "curr=None, exp_v=55f0cc1c8b99"
-      ],
-      [
-        "theDrownedCity.theDrownedQuarter.resolutions.resolution1.body",
-        "curr=bf13ec4ed2c9, exp_v=f462da5068f4"
-      ],
-      [
-        "theDrownedCity.theGrandVault.intro.grandVault3",
-        "curr=5d025ae18692, exp_v=010af98de5b2"
-      ],
-      [
-        "theDrownedCity.theGrandVault.intro.resolveToeTheLine",
-        "curr=None, exp_v=9a6ca47f004b"
-      ],
-      [
-        "theDrownedCity.theGrandVault.intro.toeTheLine.body",
-        "curr=None, exp_v=48cf4f048c00"
-      ],
-      [
-        "theDrownedCity.theGrandVault.intro.toeTheLine.choose",
-        "curr=None, exp_v=e0176c725bf6"
-      ],
-      [
-        "theDrownedCity.theGrandVault.intro.toeTheLine.reflection",
-        "curr=None, exp_v=48cf4f048c00"
-      ],
-      [
-        "theDrownedCity.theGrandVault.resolutions.goodMoney.choose",
-        "curr=None, exp_v=e0176c725bf6"
-      ],
-      [
-        "theDrownedCity.theWesternWall.intro.doNoHarm.choose",
-        "curr=None, exp_v=e0176c725bf6"
-      ],
-      [
-        "theDrownedCity.theWesternWall.intro.resolveDoNoHarm",
-        "curr=None, exp_v=589e8f8c58e0"
-      ]
-    ]
+    "stale_count": 0,
+    "stale_keys": []
   },
   "theDunwichLegacy": {
     "total_keys": 54,
     "voice": "Đức Trí",
-    "matches_vieneu": 38,
+    "matches_vieneu": 54,
     "matches_edge": 0,
-    "stale_count": 16,
-    "stale_keys": [
-      [
-        "theDunwichLegacy.bloodOnTheAltar.resolutions.resolution2.body",
-        "curr=29a91915f95c, exp_v=ebbe9afbcd21"
-      ],
-      [
-        "theDunwichLegacy.epilogue.epilogue2",
-        "curr=86d7fe7f2f93, exp_v=cf9a5e9f7f86"
-      ],
-      [
-        "theDunwichLegacy.interlude1.armitagesFate1",
-        "curr=None, exp_v=31ca67b5257d"
-      ],
-      [
-        "theDunwichLegacy.lostInTimeAndSpace.resolutions.defeated",
-        "curr=None, exp_v=d900df1c0db7"
-      ],
-      [
-        "theDunwichLegacy.lostInTimeAndSpace.resolutions.resolution1.body",
-        "curr=cb19ded1fa2f, exp_v=35d27e2163fd"
-      ],
-      [
-        "theDunwichLegacy.prologue.body",
-        "curr=dbdf3e43001a, exp_v=2969110d8804"
-      ],
-      [
-        "theDunwichLegacy.theEssexCountyExpress.resolutions.defeat",
-        "curr=None, exp_v=ad8ee545db86"
-      ],
-      [
-        "theDunwichLegacy.theEssexCountyExpress.resolutions.resolution1.body",
-        "curr=5680088da936, exp_v=6e189bc3735e"
-      ],
-      [
-        "theDunwichLegacy.theHouseAlwaysWins.resolutions.noResolution.body",
-        "curr=None, exp_v=7027e494ad69"
-      ],
-      [
-        "theDunwichLegacy.theHouseAlwaysWins.resolutions.resolution4.body",
-        "curr=3a02b8be0567, exp_v=575caed06b10"
-      ],
-      [
-        "theDunwichLegacy.theMiskatonicMuseum.intro.body",
-        "curr=8b3e01d9a642, exp_v=dd5666699e74"
-      ],
-      [
-        "theDunwichLegacy.theMiskatonicMuseum.intro.part1.body",
-        "curr=743e3915b838, exp_v=e04064f40309"
-      ],
-      [
-        "theDunwichLegacy.theMiskatonicMuseum.intro.part2.body",
-        "curr=4ef0ae5edbba, exp_v=365d021c9bfe"
-      ],
-      [
-        "theDunwichLegacy.whereDoomAwaits.intro.body",
-        "curr=8e64f64ba5d9, exp_v=f9aa2739a7ea"
-      ],
-      [
-        "theDunwichLegacy.whereDoomAwaits.intro.otherwise",
-        "curr=None, exp_v=a767ce37dcfe"
-      ],
-      [
-        "theDunwichLegacy.whereDoomAwaits.intro.part1.body",
-        "curr=538afd7c8f26, exp_v=a158d63f61b7"
-      ]
-    ]
+    "stale_count": 0,
+    "stale_keys": []
   },
   "theFeastOfHemlockVale": {
     "total_keys": 123,
     "voice": "Mỹ Duyên",
     "matches_vieneu": 0,
-    "matches_edge": 60,
+    "matches_edge": 123,
     "stale_count": 123,
     "stale_keys": [
       [
@@ -1464,11 +852,11 @@
       ],
       [
         "theFeastOfHemlockVale.epilogue.epilogue2",
-        "curr=41f6772b8ff9, exp_v=d7867e4a2c23"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.epilogue.epilogue3",
-        "curr=69e9b90a140b, exp_v=208f41df051c"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.fateOfTheVale.interlude.fateOfTheVale1",
@@ -1492,19 +880,19 @@
       ],
       [
         "theFeastOfHemlockVale.fateOfTheVale.intro.body",
-        "curr=d6df6b02071a, exp_v=0cbbd3e01080"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.fateOfTheVale.resolutions.noResolution.body",
-        "curr=041b8a544b5a, exp_v=163b7ee02483"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.fateOfTheVale.resolutions.resolution1.body",
-        "curr=8d3e16804534, exp_v=fb27495c4c8a"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.fateOfTheVale.resolutions.resolution2.body",
-        "curr=5453f84514a0, exp_v=13fcd1881e41"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.fateOfTheVale.resolutions.resolution3.body",
@@ -1520,27 +908,27 @@
       ],
       [
         "theFeastOfHemlockVale.hemlockHouse.intro.intro1.body",
-        "curr=0430d1b06d9e, exp_v=1fc2f58ba2eb"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.hemlockHouse.intro.intro2.body",
-        "curr=4c506dd48a62, exp_v=8ba5b896a259"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.hemlockHouse.intro.intro3.body",
-        "curr=cfdf5840e432, exp_v=03574228a8fc"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.hemlockHouse.intro.intro4.body",
-        "curr=874d16d7b50a, exp_v=dabbe05bc0e3"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.hemlockHouse.resolutions.noResolution.body",
-        "curr=e9628cd4a521, exp_v=a85b94cfd16d"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.hemlockHouse.resolutions.resolution1.body",
-        "curr=c4f0df6f00db, exp_v=9de7a32cfda0"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.hemlockHouse.resolutions.resolution2.body",
@@ -1552,15 +940,15 @@
       ],
       [
         "theFeastOfHemlockVale.prelude.theSecondEvening.resolution1.body",
-        "curr=80c1c8d5e3a8, exp_v=2f808ad5d0a6"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude.theSecondEvening.resolution2.body",
-        "curr=32cdc56d125a, exp_v=af274645388a"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude.theSecondEvening.resolution3.body",
-        "curr=59092163f29c, exp_v=fcacf87d7b12"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude.theSecondEvening.resolution4.body",
@@ -1568,7 +956,7 @@
       ],
       [
         "theFeastOfHemlockVale.prelude.theSecondEvening.resolution5.body",
-        "curr=56104f3090da, exp_v=f668ca1dd292"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude.theSecondEvening.resolution6.body",
@@ -1576,7 +964,7 @@
       ],
       [
         "theFeastOfHemlockVale.prelude1.intro.intro1",
-        "curr=0a7b94bcb7fc, exp_v=832123f73fdd"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude1.intro.intro2",
@@ -1588,11 +976,11 @@
       ],
       [
         "theFeastOfHemlockVale.prelude1.intro.intro4",
-        "curr=1fd3eaef56c7, exp_v=7a7f66812fe4"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude1.resolutions.resolution1.body",
-        "curr=3fd2d3e8da84, exp_v=9d88b17b4c0f"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude2.intro.body",
@@ -1616,15 +1004,15 @@
       ],
       [
         "theFeastOfHemlockVale.prelude2.resolutions.resolution3.body",
-        "curr=68ac58c06f3a, exp_v=08c95ef6da67"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude3.intro.intro1",
-        "curr=c7a8feb38b96, exp_v=5d66248df6ec"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude3.intro.intro2",
-        "curr=4f19c09f370c, exp_v=6abe799a3afe"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude3.intro.intro3",
@@ -1632,7 +1020,7 @@
       ],
       [
         "theFeastOfHemlockVale.prelude3.resolutions.noResolution.body",
-        "curr=19d7437a35b0, exp_v=93cc6037f92e"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude3.resolutions.resolution1.body",
@@ -1644,27 +1032,27 @@
       ],
       [
         "theFeastOfHemlockVale.prelude4.intro.intro1",
-        "curr=2d93309bf7c4, exp_v=dc32ee33b40a"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude4.intro.intro2",
-        "curr=ac5bd4afcbd1, exp_v=0200fdb3b83b"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude4.intro.intro3",
-        "curr=f06d57f6287d, exp_v=231fbb76822c"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude4.intro.intro4",
-        "curr=1b133202f075, exp_v=d0d6ac23feb3"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude4.intro.intro5",
-        "curr=0765bf9151b2, exp_v=827b2abf7935"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude4.resolutions.noResolution.body",
-        "curr=d86298ab9f11, exp_v=639def492bda"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.prelude4.resolutions.resolution1.body",
@@ -1688,15 +1076,15 @@
       ],
       [
         "theFeastOfHemlockVale.theLongestNight.intro.intro1",
-        "curr=f696f1750e39, exp_v=dc54572a3306"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLongestNight.intro.intro2",
-        "curr=23ad2b4484d6, exp_v=4bc940af60c9"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLongestNight.intro.intro3",
-        "curr=c90214e38872, exp_v=4ea848019a20"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLongestNight.intro.intro4",
@@ -1704,19 +1092,19 @@
       ],
       [
         "theFeastOfHemlockVale.theLongestNight.intro.intro5",
-        "curr=96fbc912a2ce, exp_v=29a21c3b3f56"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLongestNight.intro.intro6",
-        "curr=51fd1f40b92f, exp_v=5be9810aa7de"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLongestNight.intro.intro7",
-        "curr=b6c6587a5579, exp_v=5b6a8f5f8509"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLongestNight.intro.intro8",
-        "curr=ecef7d574110, exp_v=8ce98c7f879e"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLongestNight.resolutions.investigatorDefeat.body",
@@ -1736,7 +1124,7 @@
       ],
       [
         "theFeastOfHemlockVale.theLongestNight.resolutions.resolution4.body",
-        "curr=84824a9b48d6, exp_v=01176ac20c23"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLostSister.intro.intro1",
@@ -1744,27 +1132,27 @@
       ],
       [
         "theFeastOfHemlockVale.theLostSister.intro.intro2",
-        "curr=b08e728dfe03, exp_v=6722cb54799b"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLostSister.intro.intro3",
-        "curr=42889cc7b8d5, exp_v=9344174795f9"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLostSister.intro.intro4",
-        "curr=12ead087544d, exp_v=a1217da69b6c"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLostSister.intro.intro5",
-        "curr=1bb3e7784916, exp_v=599a8208adf9"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLostSister.resolutions.noResolution.body",
-        "curr=ec7540e92e68, exp_v=16f7310ee58c"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLostSister.resolutions.resolution1.body",
-        "curr=5502a41d4641, exp_v=588a98612b76"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theLostSister.resolutions.resolution2.body",
@@ -1780,27 +1168,27 @@
       ],
       [
         "theFeastOfHemlockVale.theSilentHeath.intro.intro1.body",
-        "curr=941cb7a862e0, exp_v=905968ec869f"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theSilentHeath.intro.intro2.body",
-        "curr=632f628267a0, exp_v=2d9ece0e164f"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theSilentHeath.intro.intro3.body",
-        "curr=96e0f3ecfcb4, exp_v=c6a244fe4f2f"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theSilentHeath.intro.intro4.body",
-        "curr=1dd1b0eba491, exp_v=db27801b8907"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theSilentHeath.intro.intro5.body",
-        "curr=789e5e2ec9fd, exp_v=8afe9278744a"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theSilentHeath.resolutions.noResolution.body",
-        "curr=663dd3b8dd23, exp_v=b12240e304d0"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theSilentHeath.resolutions.resolution1.body",
@@ -1824,35 +1212,35 @@
       ],
       [
         "theFeastOfHemlockVale.theThingInTheDepths.intro.intro2",
-        "curr=bc7fa04d1873, exp_v=ec69654b5b9c"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theThingInTheDepths.intro.intro3",
-        "curr=642880be5c72, exp_v=10c98ba1a2a2"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theThingInTheDepths.intro.intro4",
-        "curr=a35e938614dc, exp_v=c1405ec6c43a"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theThingInTheDepths.intro.intro5",
-        "curr=ed515f5cf5f0, exp_v=810e04d89127"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theThingInTheDepths.intro.intro6",
-        "curr=79ddc4cc4a87, exp_v=6d0287f8c836"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theThingInTheDepths.intro.intro7",
-        "curr=3a9ee0ce0baf, exp_v=9571e4818881"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theThingInTheDepths.intro.intro8",
-        "curr=1909e5528339, exp_v=62b4b0ce4c22"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theThingInTheDepths.resolutions.noResolution.body",
-        "curr=2f3e92d5e3b5, exp_v=54d958d02a49"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theThingInTheDepths.resolutions.resolution1.body",
@@ -1876,19 +1264,19 @@
       ],
       [
         "theFeastOfHemlockVale.theTwistedHollow.intro.intro1",
-        "curr=9ee56ebf7446, exp_v=1a1c51e92161"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theTwistedHollow.intro.intro2",
-        "curr=83ce69ef53c5, exp_v=e10fb69c3ed7"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theTwistedHollow.intro.intro3",
-        "curr=735d6a0d180c, exp_v=012578858d0e"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theTwistedHollow.resolutions.noResolution.body",
-        "curr=3fe10da632a5, exp_v=9fa37d08e384"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.theTwistedHollow.resolutions.resolution1.body",
@@ -1904,11 +1292,11 @@
       ],
       [
         "theFeastOfHemlockVale.writtenInRock.intro.body",
-        "curr=a6750d4db113, exp_v=c1b7fbc38577"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.writtenInRock.resolutions.noResolution.body",
-        "curr=3b54174f103d, exp_v=ce3ac12c6324"
+        "matches_edge_not_vieneu"
       ],
       [
         "theFeastOfHemlockVale.writtenInRock.resolutions.resolution1.body",
@@ -1939,532 +1327,18 @@
   "theForgottenAge": {
     "total_keys": 154,
     "voice": "Đức Trí",
-    "matches_vieneu": 74,
+    "matches_vieneu": 154,
     "matches_edge": 0,
-    "stale_count": 80,
-    "stale_keys": [
-      [
-        "theForgottenAge.epilogue.body",
-        "curr=430e2fdd64ce, exp_v=02c0d027ba1c"
-      ],
-      [
-        "theForgottenAge.heartOfTheElders.part1.intro.intro1",
-        "curr=993b0de7b7c3, exp_v=29054b658699"
-      ],
-      [
-        "theForgottenAge.heartOfTheElders.part1.intro.intro2",
-        "curr=None, exp_v=c0aa841e6076"
-      ],
-      [
-        "theForgottenAge.heartOfTheElders.part1.intro.intro3",
-        "curr=None, exp_v=e218544ac41e"
-      ],
-      [
-        "theForgottenAge.heartOfTheElders.part1.intro.intro4",
-        "curr=None, exp_v=dd3f81c5a1fb"
-      ],
-      [
-        "theForgottenAge.heartOfTheElders.part1.resolutions.resolution2.body",
-        "curr=None, exp_v=16dfb8bb4802"
-      ],
-      [
-        "theForgottenAge.heartOfTheEldersPart1.part1.intro.intro1",
-        "curr=993b0de7b7c3, exp_v=29054b658699"
-      ],
-      [
-        "theForgottenAge.heartOfTheEldersPart1.part1.intro.intro2",
-        "curr=None, exp_v=c0aa841e6076"
-      ],
-      [
-        "theForgottenAge.heartOfTheEldersPart1.part1.intro.intro3",
-        "curr=None, exp_v=e218544ac41e"
-      ],
-      [
-        "theForgottenAge.heartOfTheEldersPart1.part1.intro.intro4",
-        "curr=None, exp_v=dd3f81c5a1fb"
-      ],
-      [
-        "theForgottenAge.heartOfTheEldersPart1.part1.resolutions.resolution2.body",
-        "curr=None, exp_v=16dfb8bb4802"
-      ],
-      [
-        "theForgottenAge.heartOfTheEldersPart2.part1.intro.intro1",
-        "curr=993b0de7b7c3, exp_v=29054b658699"
-      ],
-      [
-        "theForgottenAge.heartOfTheEldersPart2.part1.intro.intro2",
-        "curr=None, exp_v=c0aa841e6076"
-      ],
-      [
-        "theForgottenAge.heartOfTheEldersPart2.part1.intro.intro3",
-        "curr=None, exp_v=e218544ac41e"
-      ],
-      [
-        "theForgottenAge.heartOfTheEldersPart2.part1.intro.intro4",
-        "curr=None, exp_v=dd3f81c5a1fb"
-      ],
-      [
-        "theForgottenAge.heartOfTheEldersPart2.part1.resolutions.resolution2.body",
-        "curr=None, exp_v=16dfb8bb4802"
-      ],
-      [
-        "theForgottenAge.interlude1.blanket",
-        "curr=None, exp_v=63eeebb2466a"
-      ],
-      [
-        "theForgottenAge.interlude1.eyesInTheDark",
-        "curr=None, exp_v=bfaa474c4940"
-      ],
-      [
-        "theForgottenAge.interlude1.medicine",
-        "curr=6cae742edd8d, exp_v=c2b48ae337ad"
-      ],
-      [
-        "theForgottenAge.interlude1.provisions",
-        "curr=d683340e9520, exp_v=d4ef3f60f7a2"
-      ],
-      [
-        "theForgottenAge.interlude1.thePoisonSpreads",
-        "curr=None, exp_v=d5d1868985ac"
-      ],
-      [
-        "theForgottenAge.interlude1.tossingAndTurning",
-        "curr=None, exp_v=cece920060b4"
-      ],
-      [
-        "theForgottenAge.interlude2.expeditionsEnd1",
-        "curr=68ff195ebde9, exp_v=1cf4d12d6f40"
-      ],
-      [
-        "theForgottenAge.interlude2.expeditionsEnd2",
-        "curr=00b9e4195861, exp_v=3ec9e8e40f33"
-      ],
-      [
-        "theForgottenAge.interlude2.expeditionsEnd3",
-        "curr=9c1bc8d6b9a5, exp_v=7118972f11b2"
-      ],
-      [
-        "theForgottenAge.interlude2.expeditionsEnd4",
-        "curr=None, exp_v=13bb30a2cc90"
-      ],
-      [
-        "theForgottenAge.interlude2.expeditionsEnd5",
-        "curr=None, exp_v=624e7f22707e"
-      ],
-      [
-        "theForgottenAge.interlude3.aPathDiscovered",
-        "curr=c1e86bc5e481, exp_v=a9d1dfc62d87"
-      ],
-      [
-        "theForgottenAge.interlude3.faithRestored",
-        "curr=2006ae96d8dc, exp_v=276d18b7cf10"
-      ],
-      [
-        "theForgottenAge.interlude3.gas",
-        "curr=a551e81b7951, exp_v=3155328ee6cd"
-      ],
-      [
-        "theForgottenAge.interlude3.map",
-        "curr=None, exp_v=4700ca247b4a"
-      ],
-      [
-        "theForgottenAge.interlude3.medicine",
-        "curr=6cae742edd8d, exp_v=c2b48ae337ad"
-      ],
-      [
-        "theForgottenAge.interlude3.provisions",
-        "curr=d683340e9520, exp_v=d4ef3f60f7a2"
-      ],
-      [
-        "theForgottenAge.interlude3.thePoisonSpreads",
-        "curr=None, exp_v=d05ed20166cd"
-      ],
-      [
-        "theForgottenAge.interlude4.aMindRecovered",
-        "curr=840164d0e157, exp_v=cee6d24c362b"
-      ],
-      [
-        "theForgottenAge.interlude4.blanket",
-        "curr=None, exp_v=619373dcec8f"
-      ],
-      [
-        "theForgottenAge.interlude4.chalk",
-        "curr=None, exp_v=3dde3ad85265"
-      ],
-      [
-        "theForgottenAge.interlude4.checkAMindRecovered.theCustodianWasUnderControl",
-        "curr=19cf5c726a45, exp_v=ff2eb3c2e92c"
-      ],
-      [
-        "theForgottenAge.interlude4.doNotUseMedicine",
-        "curr=None, exp_v=3f0fb352792a"
-      ],
-      [
-        "theForgottenAge.interlude4.foreverLost",
-        "curr=87da67efd455, exp_v=966ab81dc20d"
-      ],
-      [
-        "theForgottenAge.interlude4.medicine",
-        "curr=6cae742edd8d, exp_v=c2b48ae337ad"
-      ],
-      [
-        "theForgottenAge.interlude4.provisions",
-        "curr=d683340e9520, exp_v=d4ef3f60f7a2"
-      ],
-      [
-        "theForgottenAge.interlude4.thePoisonSpreads",
-        "curr=None, exp_v=e2256ea85c72"
-      ],
-      [
-        "theForgottenAge.interlude4.tossingAndTurning",
-        "curr=None, exp_v=05c30d14b22d"
-      ],
-      [
-        "theForgottenAge.interlude5.growingConcern",
-        "curr=None, exp_v=d5153c9b2e19"
-      ],
-      [
-        "theForgottenAge.interlude5.theAbyss",
-        "curr=80250ea31faf, exp_v=a750e9e1b84f"
-      ],
-      [
-        "theForgottenAge.interlude5.torches",
-        "curr=3e0f363f2f69, exp_v=0723d50b2f63"
-      ],
-      [
-        "theForgottenAge.interlude5.torchlight",
-        "curr=c8a7dafb5ba3, exp_v=1f30d22b3f64"
-      ],
-      [
-        "theForgottenAge.prologue.earthIsNotOurs.body",
-        "curr=None, exp_v=2463e66506c7"
-      ],
-      [
-        "theForgottenAge.shatteredAeons.intro.intro5",
-        "curr=da3c0effa254, exp_v=9ca579b49f85"
-      ],
-      [
-        "theForgottenAge.shatteredAeons.resolutions.resolution1.body",
-        "curr=12e2006f07cf, exp_v=c46694c87794"
-      ],
-      [
-        "theForgottenAge.shatteredAeons.resolutions.resolution4.body",
-        "curr=0183efbee9a1, exp_v=24738811ad99"
-      ],
-      [
-        "theForgottenAge.shatteredAeons.storyCards.body",
-        "curr=None, exp_v=04d60976227e"
-      ],
-      [
-        "theForgottenAge.theBoundaryBeyond.intro.gas.instructions",
-        "curr=a551e81b7951, exp_v=3155328ee6cd"
-      ],
-      [
-        "theForgottenAge.theBoundaryBeyond.intro.ichtaca.silentJourney",
-        "curr=a86c6626ee00, exp_v=b02d1ed88369"
-      ],
-      [
-        "theForgottenAge.theCityOfArchives.intro.intro2",
-        "curr=d3a108c31a79, exp_v=527d08fdafe9"
-      ],
-      [
-        "theForgottenAge.theCityOfArchives.intro.intro3",
-        "curr=8b61f16c969e, exp_v=7d290d8092ec"
-      ],
-      [
-        "theForgottenAge.theCityOfArchives.resolutions.noResolution.body",
-        "curr=01a6d8883018, exp_v=b0067a9700b9"
-      ],
-      [
-        "theForgottenAge.theDepthsOfYoth.intro.intro2",
-        "curr=ca77078bbc9e, exp_v=2991f25be17e"
-      ],
-      [
-        "theForgottenAge.theDepthsOfYoth.intro.intro6",
-        "curr=None, exp_v=4551163f773d"
-      ],
-      [
-        "theForgottenAge.theDepthsOfYoth.intro.intro8",
-        "curr=0eabf25732c3, exp_v=4cf524a666ae"
-      ],
-      [
-        "theForgottenAge.theDoomOfEztli.intro.intro1",
-        "curr=f8786f9363aa, exp_v=cbdab16cd175"
-      ],
-      [
-        "theForgottenAge.theDoomOfEztli.intro.intro2",
-        "curr=bebc05df2fe3, exp_v=25e3ffecf827"
-      ],
-      [
-        "theForgottenAge.theDoomOfEztli.resolutions.defeated.body",
-        "curr=None, exp_v=1b18ca2b76a6"
-      ],
-      [
-        "theForgottenAge.theDoomOfEztli.resolutions.resolution1.body",
-        "curr=615e2c7d0c49, exp_v=0477f15d774b"
-      ],
-      [
-        "theForgottenAge.theDoomOfEztli.resolutions.resolution2.body",
-        "curr=92541ef3ee3e, exp_v=9ace27e4ab87"
-      ],
-      [
-        "theForgottenAge.theDoomOfEztli.resolutions.resolution3.body",
-        "curr=44c038ad821b, exp_v=92dfe26ae08b"
-      ],
-      [
-        "theForgottenAge.theDoomOfEztli.resolutions.resolution4.body",
-        "curr=14c6b6ea7f94, exp_v=f61504b4b6b7"
-      ],
-      [
-        "theForgottenAge.theDoomOfEztli.resolutions.resolution5.body",
-        "curr=c6111e837b97, exp_v=09e9f5b8509f"
-      ],
-      [
-        "theForgottenAge.theUntamedWilds.resolutions.resolution1.body",
-        "curr=0189de10cf61, exp_v=cd671e5a54e4"
-      ],
-      [
-        "theForgottenAge.theUntamedWilds.resolutions.resolution2.body",
-        "curr=7b93ec159701, exp_v=4024af420d2e"
-      ],
-      [
-        "theForgottenAge.threadsOfFate.intro.intro2",
-        "curr=c5ae0e0529b8, exp_v=1e496aef78ea"
-      ],
-      [
-        "theForgottenAge.threadsOfFate.intro.intro3",
-        "curr=None, exp_v=aeb52a1afc39"
-      ],
-      [
-        "theForgottenAge.threadsOfFate.intro.intro7",
-        "curr=None, exp_v=ae979fc68b67"
-      ],
-      [
-        "theForgottenAge.threadsOfFate.resolutions.resolution1.checkCompletedActs",
-        "curr=None, exp_v=aadf33d83d4c"
-      ],
-      [
-        "theForgottenAge.threadsOfFate.resolutions.resolution1.outline",
-        "curr=None, exp_v=246827e754b0"
-      ],
-      [
-        "theForgottenAge.turnBackTime.intro.intro1",
-        "curr=a7412b7c82b6, exp_v=a9767e583472"
-      ],
-      [
-        "theForgottenAge.turnBackTime.intro.intro2",
-        "curr=f9ebae8f9630, exp_v=800094a60dfc"
-      ],
-      [
-        "theForgottenAge.turnBackTime.resolutions.noResolution.body",
-        "curr=94179303c375, exp_v=a88f99cbf04f"
-      ],
-      [
-        "theForgottenAge.turnBackTime.resolutions.resolution1.body",
-        "curr=f55f22ed8812, exp_v=114dd16b6bba"
-      ]
-    ]
+    "stale_count": 0,
+    "stale_keys": []
   },
   "theInnsmouthConspiracy": {
     "total_keys": 89,
     "voice": "Mỹ Duyên",
-    "matches_vieneu": 41,
+    "matches_vieneu": 89,
     "matches_edge": 0,
-    "stale_count": 48,
-    "stale_keys": [
-      [
-        "theInnsmouthConspiracy.aLightInTheFog.resolutions.resolution4.body",
-        "curr=e2b421571e14, exp_v=9e44dc1b1f0a"
-      ],
-      [
-        "theInnsmouthConspiracy.devilReef.intro1.body",
-        "curr=None, exp_v=64331b6416f0"
-      ],
-      [
-        "theInnsmouthConspiracy.devilReef.intro3.body",
-        "curr=e1f4d9736e51, exp_v=a6667618aa10"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.epilogue1.body",
-        "curr=b82c817140d2, exp_v=fca4ba260282"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.epilogue2.body",
-        "curr=8ed4c57adc1a, exp_v=a38719d25991"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.flashback15.body",
-        "curr=284ac7a7c127, exp_v=ea6904407b80"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.aBattleWithAHorrifyingDevil",
-        "curr=808496149d60, exp_v=0347ade15927"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.aConversationWithMrMoore",
-        "curr=4937f140b96e, exp_v=909dc203361d"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.aDealWithJoeSargent",
-        "curr=53dc22a05845, exp_v=c25e9990b6a9"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.aDecisionToStickTogether",
-        "curr=a0c00e867666, exp_v=b3014e2cc48f"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.aFollowedLead",
-        "curr=b9af8a35e93e, exp_v=130ac2f7a04e"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.aJailbreak",
-        "curr=cc01b9e87c80, exp_v=824d7fcd7278"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.aMeetingWithThomasDawson",
-        "curr=75982f088fb7, exp_v=6806e3b1cb37"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.aStingingBetrayal",
-        "curr=f2f06f0ecdeb, exp_v=40b53a2e8078"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.anEncounterWithASecretCult",
-        "curr=b2e97e8ceaa5, exp_v=4e773a785e72"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.anIntervention",
-        "curr=936d3e52ecad, exp_v=65c7f36233c0"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.discoveryOfAMysticalRelic",
-        "curr=66c01b3cbbea, exp_v=df5a4d4d8ba6"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.discoveryOfAStrangeIdol",
-        "curr=163511bffd7f, exp_v=bad802257bd5"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.discoveryOfAnUnholyMantle",
-        "curr=07f38d84481f, exp_v=122bfb6f77d1"
-      ],
-      [
-        "theInnsmouthConspiracy.epilogue.memories.theLifecycleOfADeepOne",
-        "curr=a8834ee8eb1c, exp_v=ae47f60b75ae"
-      ],
-      [
-        "theInnsmouthConspiracy.inTooDeep.intro.body",
-        "curr=699bb10fc105, exp_v=7d7646569ced"
-      ],
-      [
-        "theInnsmouthConspiracy.inTooDeep.resolutions.resolution1.body",
-        "curr=75a98c9a3caf, exp_v=8fa64c093619"
-      ],
-      [
-        "theInnsmouthConspiracy.interlude1.part2.body",
-        "curr=2b26b205d99e, exp_v=6401e2be4cdb"
-      ],
-      [
-        "theInnsmouthConspiracy.interlude4.guardianDispatched",
-        "curr=aa43b7fbd69f, exp_v=13a66e90e866"
-      ],
-      [
-        "theInnsmouthConspiracy.intoTheMaelstrom.resolutions.resolution4.body",
-        "curr=d8f0277208eb, exp_v=7eba23c3dc37"
-      ],
-      [
-        "theInnsmouthConspiracy.intoTheMaelstrom.resolutions.resolution7.body",
-        "curr=c5a6574888e8, exp_v=d9a350f3bb27"
-      ],
-      [
-        "theInnsmouthConspiracy.theLairOfDagon.intro1.body",
-        "curr=None, exp_v=9b6ded20f910"
-      ],
-      [
-        "theInnsmouthConspiracy.theLairOfDagon.intro2.body",
-        "curr=408bbc1431fd, exp_v=7bf4932a702c"
-      ],
-      [
-        "theInnsmouthConspiracy.theLairOfDagon.resolutions.noResolution.body",
-        "curr=17cc382b51a8, exp_v=66464c3317fd"
-      ],
-      [
-        "theInnsmouthConspiracy.theLairOfDagon.resolutions.resolution1.body",
-        "curr=96bf2e6cd619, exp_v=4662775b9535"
-      ],
-      [
-        "theInnsmouthConspiracy.theLairOfDagon.resolutions.resolution2.body",
-        "curr=55f620ef796a, exp_v=5c15b0c25166"
-      ],
-      [
-        "theInnsmouthConspiracy.theLairOfDagon.resolutions.resolution3.body",
-        "curr=7cba6305d899, exp_v=7b200b382d96"
-      ],
-      [
-        "theInnsmouthConspiracy.theLairOfDagon.resolutions.resolution4.body",
-        "curr=57e5928dd252, exp_v=d8b1d39832a2"
-      ],
-      [
-        "theInnsmouthConspiracy.thePitOfDespair.intro.body",
-        "curr=e8940cebbb64, exp_v=11a7e5973b66"
-      ],
-      [
-        "theInnsmouthConspiracy.thePitOfDespair.resolutions.noResolution.body",
-        "curr=922461400b93, exp_v=520f46d8dbb0"
-      ],
-      [
-        "theInnsmouthConspiracy.theVanishingOfElinaHarper.interlude.accusationMade",
-        "curr=None, exp_v=e1da9f212c95"
-      ],
-      [
-        "theInnsmouthConspiracy.theVanishingOfElinaHarper.interlude.both",
-        "curr=None, exp_v=da55d739c9ce"
-      ],
-      [
-        "theInnsmouthConspiracy.theVanishingOfElinaHarper.interlude.instructions",
-        "curr=None, exp_v=6d6cd689559f"
-      ],
-      [
-        "theInnsmouthConspiracy.theVanishingOfElinaHarper.interlude.one",
-        "curr=None, exp_v=8de1cb4da89a"
-      ],
-      [
-        "theInnsmouthConspiracy.theVanishingOfElinaHarper.intro1.body",
-        "curr=5153ee64d3f5, exp_v=62c90266e07c"
-      ],
-      [
-        "theInnsmouthConspiracy.theVanishingOfElinaHarper.intro2.body",
-        "curr=94a397d4a899, exp_v=11b993944c4d"
-      ],
-      [
-        "theInnsmouthConspiracy.theVanishingOfElinaHarper.resolutions.noResolution.body",
-        "curr=d410fa2eb363, exp_v=e24f5b548ab9"
-      ],
-      [
-        "theInnsmouthConspiracy.theVanishingOfElinaHarper.resolutions.resolution1.body",
-        "curr=0946cc510de8, exp_v=e9274270ee65"
-      ],
-      [
-        "theInnsmouthConspiracy.theVanishingOfElinaHarper.resolutions.resolution2.body",
-        "curr=4b910f9fb0f7, exp_v=037a6771d78d"
-      ],
-      [
-        "theInnsmouthConspiracy.theVanishingOfElinaHarper.resolutions.resolution4.body",
-        "curr=0e8ebe07f095, exp_v=053a06d688cc"
-      ],
-      [
-        "theInnsmouthConspiracy.theVanishingOfElinaHarper.resolutions.resolution5.body",
-        "curr=a85373309f88, exp_v=5d13dc3b2114"
-      ],
-      [
-        "theInnsmouthConspiracy.theVanishingOfElinaHarper.resolutions.resolution6.body",
-        "curr=70863e99344a, exp_v=851e93b5438c"
-      ],
-      [
-        "theInnsmouthConspiracy.theVanishingOfElinaHarper.resolutions.resolution7.body",
-        "curr=7dd43cfe64ea, exp_v=ceb8f0a7c03f"
-      ]
-    ]
+    "stale_count": 0,
+    "stale_keys": []
   },
   "thePathToCarcosa": {
     "total_keys": 82,
@@ -2743,7 +1617,7 @@
       ],
       [
         "theScarletKeys.deadHeat.resolutions.resolution3.body",
-        "curr=c1c4eb4b5aa3, exp_v=9350982dafff"
+        "curr=7cb01c07715c, exp_v=30de548c893f"
       ],
       [
         "theScarletKeys.deadHeat.resolutions.resolution4.body",
@@ -2887,7 +1761,7 @@
       ],
       [
         "theScarletKeys.epilogue.epilogue3",
-        "curr=b36c81664cb9, exp_v=323cd837b82e"
+        "curr=7d03dae2c77c, exp_v=4eb887ccde1a"
       ],
       [
         "theScarletKeys.epilogue.epilogue4",
@@ -3055,7 +1929,7 @@
       ],
       [
         "theScarletKeys.sanguineShadows.intro.intro4",
-        "curr=1bab8f42f51e, exp_v=4d9fa48fb862"
+        "curr=fe0634324f3f, exp_v=bb0d5801835c"
       ],
       [
         "theScarletKeys.sanguineShadows.resolutions.noResolution.body",

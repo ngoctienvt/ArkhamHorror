@@ -22,7 +22,10 @@ export type NarrationManifest = {
 export type NarrationTrack = { key: string; url: string }
 
 /* The i18n keys a flavor text is built from, in reading order. */
-export function entryKeys(entries: FlavorTextEntry[]): string[] {
+export function entryKeys(
+  entries: FlavorTextEntry[],
+  { includeInvalid = true }: { includeInvalid?: boolean } = {},
+): string[] {
   const out: string[] = []
   const walk = (e: FlavorTextEntry) => {
     switch (e.tag) {
@@ -30,6 +33,9 @@ export function entryKeys(entries: FlavorTextEntry[]): string[] {
         out.push(e.key)
         break
       case 'ModifyEntry':
+        if (!includeInvalid && e.modifiers.includes('InvalidEntry')) break
+        walk(e.entry)
+        break
       case 'FootnoteEntry':
         walk(e.entry)
         break
