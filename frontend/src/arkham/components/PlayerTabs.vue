@@ -171,8 +171,12 @@ function selectTabExtended(i: string) {
   }
 }
 
+/* Scenario-wide readings (destiny, Chaos/Balance/Choice) affect everyone, so they
+ * sit in every investigator's in-play area next to that investigator's own cards. */
 function tarotCardsFor(i: string) {
-  return props.tarotCards.filter(c => c.scope.tag === 'InvestigatorTarot' && c.scope.contents === i)
+  return props.tarotCards.filter(c =>
+    c.scope.tag === 'GlobalTarot' || (c.scope.tag === 'InvestigatorTarot' && c.scope.contents === i)
+  )
 }
 
 function getInvestigatorName(cardTitle: string): string {

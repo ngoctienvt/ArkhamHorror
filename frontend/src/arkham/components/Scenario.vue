@@ -27,7 +27,6 @@ import { weaverEnemies, weaverEnemyIds } from '@/arkham/dream-eaters-scene-model
 import { gridConcealedGroups, positionToGridArea, type ConcealedGroup } from '@/arkham/concealedCards';
 import ConcealedCardView from '@/arkham/components/ConcealedCard.vue';
 import { type Card, cardId, cardImage, referenceCard } from '@/arkham/types/Card';
-import { TarotCard, tarotCardImage } from '@/arkham/types/TarotCard';
 import { TokenType } from '@/arkham/types/Token';
 import { ModifierType, Hollow } from '@/arkham/types/Modifier';
 import { Source } from '@/arkham/types/Source';
@@ -1816,7 +1815,6 @@ const resources = computed(() => props.scenario.tokens[TokenType.Resource])
 const damage = computed(() => props.scenario.tokens[TokenType.Damage])
 const targets = computed(() => props.scenario.tokens[TokenType.Target])
 const hasPool = computed(() => resources.value && resources.value > 0 || damage.value && damage.value > 0)
-const tarotCards = computed(() => props.scenario.tarotCards.filter((c) => c.scope.tag === 'GlobalTarot'))
 const currentDepth = computed(() => props.scenario.counts["CurrentDepth"])
 const civiliansSlain = computed(() => props.scenario.counts["CiviliansSlain"])
 const scraps = computed(() => props.scenario.tokens[TokenType.Scrap])
@@ -2321,16 +2319,6 @@ async function handleZoomScroll(e: WheelEvent) {
 const unusedCanInteract = (u: string) => choices.value.findIndex((c) =>
   c.tag === "GridLabel" && c.gridLabel === u
 )
-const tarotCardAbility = (card: TarotCard) => {
-  return choices.value.findIndex((c) => {
-    if (c.tag === "AbilityLabel") {
-      return c.ability.source.sourceTag === "TarotSource" && c.ability.source.contents.arcana === card.arcana
-    }
-
-    return false
-  })
-}
-
 const victoryDisplay = computed(() => props.scenario.victoryDisplay)
 
 // The finished test's summary, held where the test panel was until confirmed.
@@ -2606,17 +2594,6 @@ async function addChaosToken(face: any){
             :game="game"
             :portrait="true"
           />
-        </div>
-        <div v-if="tarotCards.length > 0" class="tarot-cards">
-          <div
-            v-for="tarotCard in tarotCards"
-            :key="tarotCard.arcana"
-            class="tarot-card-container"
-            :class="{ [tarotCard.facing]: true, 'can-interact': tarotCardAbility(tarotCard) !== -1 }"
-            @click="choose(tarotCardAbility(tarotCard))"
-          >
-            <img :src="imgsrc(`tarot/${tarotCardImage(tarotCard)}`)" :class="tarotCard.facing" class="card tarot-card" />
-          </div>
         </div>
         <div v-if="topEnemyInVoid">
           <EnemyView
@@ -4252,12 +4229,6 @@ async function addChaosToken(face: any){
   }
 }
 
-.tarot-card {
-  width: var(--card-width);
-  aspect-ratio: var(--card-tarot-aspect);
-  margin: 0;
-}
-
 .tarot-card-choices {
   background: v-bind(tarotCardBackground);
   background-position: center;
@@ -4271,47 +4242,6 @@ async function addChaosToken(face: any){
   display: flex;
   gap: 10px;
   padding: 10px;
-}
-
-.tarot-card-container {
-  transition: transform 0.5s ease-in-out;
-  display:flex;
-  position: relative;
-  border-radius: 5px;
-
-  &.Reversed {
-    transform: rotateZ(180deg);
-    &:before {
-      transform-origin: center;
-      animation-fill-mode: forwards;
-      animation: shadow-rotate 0.5s linear;
-      transform: translate(0, -12px);
-    }
-  }
-}
-
-@keyframes shadow-rotate {
-  0% {
-    transform: translate(0, 12px);
-  }
-  25% {
-    transform: translate(6px, 12px);
-  }
-  50% {
-    transform: translate(12px, 0px);
-  }
-  75% {
-    transform: translate(6px, -12px);
-  }
-  100% {
-    transform: translate(0, -12px);
-  }
-}
-
-.tarot-cards {
-  display: flex;
-  gap: 10px;
-  margin-inline: 10px;
 }
 
 /* We lower the margin so things line up a bit better. */
