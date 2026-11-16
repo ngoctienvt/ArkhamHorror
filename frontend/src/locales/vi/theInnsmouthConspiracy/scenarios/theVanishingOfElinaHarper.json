@@ -14,12 +14,12 @@
   },
   "specialRules": [
     {
-      "title": "Finding Agent Harper",
+      "title": "Tìm Kiếm Đặc Vụ Harper",
       "body": "<p class='basic'>Trong màn chơi này, bạn có nhiệm vụ tìm ra kẻ địch [[Suspect]] nào đã bắt cóc Đặc vụ Harper và vị trí [[Hideout]] nào đang giữ cô ấy. Điều này được thực hiện bằng cách khám phá và chi tiêu manh mối để xem và rút các lá bài từ bộ bài Leads.</p><p class='basic'>Each card in the Leads deck represents one of the possible _Suspect_ enemies or one of the possible _Hideout_ locations. Since the correct enemy and location are facedown beneath Finding Agent Harper, none of the cards in the Leads deck can be the correct choice. Therefore, by looking at cards from the Leads deck or by putting them into play, you can narrow down the list of possible enemies and locations by process of elimination. As you eliminate possible enemies and locations, use the list in your Campaign Log to cross off entries and discover the truth.</p><p class='basic'>Khi bạn đã tự tin vào thông tin của mình, hãy sử dụng năng lực [[Objective]] ở Act 1a để tiến lên. Nhưng hãy cẩn thận—bạn chỉ có một khoảng thời gian nhất định để tìm ra sự thật và bạn có thể phải phỏng đoán…</p>"
     }
   ],
   "label": {
-    "shuffleThatCardIntoLeadsDeck": "Shuffle that card into the leads deck"
+    "shuffleThatCardIntoLeadsDeck": "Xào lá bài đó vào chồng bài manh mối (leads deck)"
   },
   "intro1": {
     "title": "Màn II: Sự biến mất của Elina Harper",
@@ -31,25 +31,25 @@
     "body": "<p>Cuối cùng, ông Sargent hỏi bạn đang làm gì ở Innsmouth. Bạn né tránh câu hỏi bằng một câu hỏi của bản thân, hỏi ông ta xem ông ta có thấy ai quông thị trấn khớp với mô tả của Đặc vụ Harper không. Ông ấy ngừng lại, rồi lắc đầu. \"Chưa bao giờ nhìn thấy,\" ông ta lẩm bẩm, từ chối nhìn vào mắt bạn.</p><p>Bạn dành thời gian còn lại trong ngày để tìm hiểu cách bố trí của thị trấn và cố gắng trò chuyện với người dân địa phương một cách vô ích. Càng dành nhiều thời gian ở thị trấn xa lạ, bẩn thỉu này, bạn càng ước mình chưa bao giờ chấp nhận lời đề nghị của Đặc vụ Dawson. Có cái gì đó hôi hám trong không khí ở đây, cái gì đó thối rữa và hôi hám làm bạn khó chịu đến tận xương tủy.</p><p>Tối hôm đó, bạn gặp Đặc vụ Dawson tại quảng trường thị trấn giờ đã vắng vẻ và chia sẻ những gì bạn đã học được. “Hãy nhìn cái này,” ông ấy nói và đưa cho bạn một lá thư nhàu nát, dính mực gửi cho ông ấy. \"Hóa ra Harper có một phòng ở khách sạn cũ kỹ kinh tởm đó. Về cơ bản thì cô ấy vẫn ở đó, nhưng có vẻ như cô ấy đã không có mặt quông đây trong vài ngày. Tôi đột nhập và tìm thấy cái này trong số đồ đạc của cô ấy.\"</p><p>Đánh giá từ bức thư chưa được gửi, có vẻ như đặc vụ Harper biết có thứ gì đó trong thị trấn đang theo dõi hoạt động của cô. Bức thư cho biết, Tôi đang bị theo dõi, Không biết làm sao họ biết, nhưng họ biết. Cứ như thể cả thị trấn đang bận việc gì đó. Tôi không có ai ở đây mà tôi tin tưởng được. Tôi e là tôi sẽ cần nhiều hơn một đặc vụ để giải quyết chuyện này--</p><p>Bức thư bị cắt ngắn giữa chừng. “Chà, giờ cô ấy có nhiều hơn một người đại diện,” Dawson cay đắng nói sau khi bạn đọc xong. “Chỉ có một lý do duy nhất khiến cô ấy không gửi bức thư này. Harper đang gặp nguy hiểm, và có ai đó ở thị trấn tồi tàn này biết cô ấy ở đâu.” Cùng nhau, bạn bắt đầu lập kế hoạch tìm kiếm Đặc vụ Harper. Đầu tiên, thu hẹp vị trí được biết đến cuối cùng của cô ấy. Thứ hai, tìm xem ai biết cô ấy ở trong thị trấn. Sau đó… hãy đến thăm họ.</p>"
   },
   "interlude": {
-    "title": "Scenario Interlude: The Accusation",
-    "instructions": "<p class='basic'>Using the knowledge you’ve gathered, you must make an accusation in an attempt to locate who has kidnapped Elina Harper and where she is hidden. In order to make this accusation, the players must choose one Suspect enemy and one Hideout location from among the options listed on the Finding Agent Harper reference card.</p><p class='basic'>Note the Suspect cannot be an enemy who is currently in play or in the victory display, nor can the Hideout be a location that is currently in play. Use this information to narrow down your choices.</p>",
-    "accusationMade": "Once the accusation has been made, do the following:",
+    "title": "Phần Chuyển Tiếp Kịch Bản: Lời Buộc Tội",
+    "instructions": "<p class='basic'>Sử dụng kiến thức bạn đã thu thập được, bạn phải đưa ra lời buộc tội nhằm xác định ai đã bắt cóc Elina Harper và cô ấy đang bị giấu ở đâu. Để đưa ra lời buộc tội này, người chơi phải chọn một kẻ địch Suspect và một địa điểm Hideout trong số các lựa chọn được liệt kê trên thẻ tham chiếu Finding Agent Harper.</p><p class='basic'>Lưu ý Suspect không thể là một kẻ địch hiện đang ở trong màn chơi hoặc trong khu vực trưng bày thành tích, và Hideout cũng không thể là một địa điểm hiện đang ở trong màn chơi. Hãy sử dụng thông tin này để thu hẹp các lựa chọn của bạn.</p>",
+    "accusationMade": "Sau khi lời buộc tội đã được đưa ra, hãy làm như sau:",
     "reveal": "Lật kẻ địch Suspect và vị trí Hideout đang úp dưới Finding Agent Harper. Trong Campaign Log, dưới “Possible Suspects / Possible Hideouts”, khoanh tròn tên của kẻ địch Suspect và vị trí Hideout đúng.",
-    "neither": "If neither card matches your accusation, the investigators are on the wrong track and must immediately resign.",
-    "one": "If only one of the two cards matches your accusation, the investigators are partially correct and may proceed, but they have angered the citizens of Innsmouth during their careless investigation. Flip over the Finding Agent Harper reference card and spawn the enemy on its other side at the Innsmouth Square.",
-    "both": "If both cards match your accusation, the investigators are correct and may proceed.",
+    "neither": "Nếu không có lá bài nào khớp với lời buộc tội của bạn, các điều tra viên đã đi sai hướng và phải ngay lập tức resign.",
+    "one": "Nếu chỉ có một trong hai lá bài khớp với lời buộc tội của bạn, các điều tra viên đã đúng một phần và có thể tiếp tục, nhưng họ đã khiến người dân Innsmouth nổi giận trong cuộc điều tra bất cẩn của mình. Lật mặt thẻ tham chiếu Finding Agent Harper và spawn kẻ địch ở mặt sau của nó tại Innsmouth Square.",
+    "both": "Nếu cả hai lá bài đều khớp với lời buộc tội của bạn, các điều tra viên đã phán đoán chính xác và có thể tiếp tục.",
     "finalActAndAgenda": "Để thiết lập cho act và agenda cuối cùng, hãy làm như sau:",
     "advanceAct": "Tiến trực tiếp tới act 2a được đặt một bên.",
     "advanceAgenda": "Tiến trực tiếp tới agenda 3a được đặt một bên.",
-    "putHideoutIntoPlay": "Put the Hideout location that was beneath Finding Agent Harper into play. Add 1 {perPlayer} additional clues to that location. Place the set-aside Elina Harper story asset beneath this location to indicate that this is where Elina Harper has been captured.",
+    "putHideoutIntoPlay": "Đưa địa điểm Hideout nằm bên dưới Finding Agent Harper vào màn chơi. Thêm 1 {perPlayer} manh mối bổ sung vào địa điểm đó. Đặt story asset Elina Harper đang đặt sang một bên bên dưới địa điểm này để biểu thị rằng đây là nơi Elina Harper đang bị giam giữ.",
     "spawnKidnapper": "Spawn kẻ địch [[Suspect]] bên dưới lá bài Finding Agent Harper ở vị trí của Elina Harper, bỏ qua khả năng <b>Revelation</b> của nó. Cho phần còn lại của bạn chơi, kẻ địch này được xem là \"kẻ bắt cóc.\"",
     "removeLeadsDeck": "Loại bỏ chồng bài Leads khỏi màn chơi.",
     "readyToProceed": "Bạn đã sẵn sàng để tiến vào act và agenda cuối."
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<p>_If no resolution was reached (each investigator resigned or was defeated)_: The town of Innsmouth has proven more hostile and unwelcoming than you could have ever imagined. At every turn, you are stalked by sordid brutes and disfigured silhouettes: figures that crawl on all fours and watch you from the shadows with bulging, unblinking eyes. Fearing that you have drawn too much attention to your investigation, you retreat to your hotel room only to find it ransacked. Your luggage is ravaged, its contents strewn about. Much of your gear has been stolen. Scrawled on the wall in black paint is a warning:</p><p class=\"about-dead\"><innsmouth>NHỮNG KẺ XÂM NHẬP SẼ GẶP HẬU QUẢ</innsmouth></p>"
+      "title": "Không Có Kết Cuộc",
+      "body": "<p>_Nếu không đạt được kết cuộc nào (mỗi điều tra viên đã resign hoặc bị đánh bại)_: Thị trấn Innsmouth đã chứng tỏ sự thù địch và không hoan nghênh người lạ hơn bạn tưởng tượng rất nhiều. Ở mỗi ngã rẽ, bạn đều bị theo dõi bởi những kẻ côn đồ đê tiện và những bóng hình dị dạng: những hình dáng bò bằng cả tứ chi và dõi theo bạn từ trong bóng tối với đôi mắt lồi to, không bao giờ chớp. Lo sợ rằng mình đã thu hút quá nhiều sự chú ý vào cuộc điều tra, bạn rút lui về phòng khách sạn của mình nhưng chỉ thấy nó đã bị lục tung. Hành lý của bạn bị lục lọi, đồ đạc vương vãi khắp nơi. Phần lớn trang thiết bị của bạn đã bị đánh cắp. Được viết nguệch ngoạc trên tường bằng sơn đen là một lời cảnh báo:</p><p class=\"about-dead\">KẺ XÂM PHẠM SẼ CHẾT ĐUỐI DƯỚI VỰC SÂU</p>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
@@ -69,35 +69,35 @@
     },
     "resolution5": {
       "title": "Giải pháp thứ 5",
-      "body": "<p>_Resolution 5_: Barnabas spits in your face as you attempt to interrogate him. “I ain’t tellin’ you a word, interloper,” he barks, his bulging eyes unblinking as he glowers at you with unbridled hate. “You don’t belong here. All o’ your kind’ll be dead before the week’s end.”</p><p>Agent Harper narrows her eyes at the strange man’s remarks. “What do you mean by that, Marsh? Our kind? What—outsiders?”</p><p>Barnabas scowls, his bulbous lips curling back to reveal sharp, inhuman teeth. “Outsiders. Intruders. You’re a blight on our fair town. But you’ll be purged soon enough.”</p><p>You are taken aback by the severity of the old man’s threat and his simmering hatred, but Harper simply chortles. “You call this place ‘ fair’?” Ignoring her derision, you warn Barnabas that if he doesn’t speak up, he’ll be spending a long time behind bars.</p><p>“Not I,” he remarks. “You’re the one who’ll be locked up, ’n worse. When the Order’s done with you, you’ll be nothin’ but fish food.”</p><p>You and Harper exchange a knowing glance. She pries further: “What Order is this, exactly?”</p>"
+      "body": "<p>_Resolution 5_: Barnabas nhổ vào mặt bạn khi bạn cố thẩm vấn ông ta. “Tao không hé răng nửa lời với mày đâu, đồ kẻ xâm nhập,” ông ta sủa lên, đôi mắt lồi không hề chớp khi trừng trừng nhìn bạn với sự căm thù khôn xiết. “Bọn mày không thuộc về nơi này. Tất cả giống loài của mày sẽ chết trước khi tuần này kết thúc.”</p><p>Đặc vụ Harper nheo mắt trước lời lẽ của người đàn ông kỳ quặc. “Ý ông là sao hả Marsh? Giống loài của chúng tôi? Ý ông là—những người ngoài cuộc?”</p><p>Barnabas cau có, đôi môi phồng rộp cuộn lại để lộ những chiếc răng sắc nhọn, phi nhân tính. “Người ngoài cuộc. Kẻ xâm phạm. Chúng mày là vết nhơ trên thị trấn tươi đẹp của tao. Nhưng chúng mày sẽ sớm bị thanh trừng thôi.”</p><p>Bạn sửng sốt trước mức độ nghiêm trọng trong lời đe dọa và sự thù hận sôi sục của lão già, nhưng Harper chỉ bật cười khúc khích. “Ông gọi nơi này là ‘tươi đẹp’ ư?” Phớt lờ sự chế giễu của cô, bạn cảnh báo Barnabas rằng nếu ông ta không chịu khai ra, ông ta sẽ phải ngồi tù một thời gian dài.</p><p>“Không phải tao,” ông ta nhận xét. “Mày mới là kẻ sẽ bị nhốt, và tệ hơn thế nữa. Khi Hội Kín (the Order) xử lý xong bọn mày, bọn mày sẽ chẳng là gì ngoài thức ăn cho cá.”</p><p>Bạn và Harper trao nhau một ánh nhìn đầy thấu hiểu. Cô gặng hỏi thêm: “Chính xác thì đó là Hội nào?”</p>"
     },
     "resolution6": {
       "title": "Kết quả 6",
-      "body": "<p>_Resolution 6_: “Heh, heh, heh, heh…ye startin’ to see haow rott’n this town’s got, ain’t ye?” Zadok hollers, a crazed look in his wide eyes. He clutches desperately at your arm, not seeming to care about your attempts to bind him. “We’re all in their clutches now, we are! Heh, heh, heh!”</p><p>“What’s this blotto have to laugh about?” Agent Harper mocks. “Hey, Zadok. Stop it with the nonsense and tell us what your game is.”</p><p>Zadok rocks back and forth, his voice growing louder and bolder. “My game? My game?” he roils with manic laughter. “Yeh think I’m to blame, but them fish devils are in our midst, they are! Haven’t ye seen them?” He grins. “Haven’t ye seen them monsters crawlin’ an’ bleatin’ an’ barkin’ an’ hoppin’ araoun’ the black streets? Haven’t ye heard the haowlin’ errey night from the churches an’ the Order o’ Dagon Hall? Don’tcha know what’s doin’ the haowlin’? Eh? Well?” His voice rises to a shriek, then descends into a fit of laughter.</p><p>“No, I haven’t,” Harper replies, her eyes narrow. “Why don’t you tell us all about it?”</p>"
+      "body": "<p>_Resolution 6_: “Hè, hè, hè, hè… các người bắt đầu nhận ra thị trấn này thối nát thế nào rồi chứ, phải không?” Zadok lẩm bẩm, hơi thở nồng nặc mùi rượu rẻ tiền. “Bọn chúng theo dõi từng cử động của các người. Chúng có mắt ở khắp mọi nơi. Trong các bức tường, dưới những con sóng… ở khắp mọi ngóc ngách.”</p><p>Bạn cố gắng trấn tĩnh ông ta, nhưng ông lão cứ liên tục run rẩy, đôi mắt mở to nhìn quanh như thể chờ đợi những con quái vật từ bóng tối nhảy bổ ra bất cứ lúc nào. “Dòng Dagon Bí Truyền… bọn chúng đã lập giao ước. Một giao ước bằng vàng và máu. Đổi lấy sự màu mỡ của biển cả, chúng dâng nộp chính con người của mình.”</p><p>Đặc vụ Harper ghi chép nhanh chóng vào cuốn sổ tay của mình. “Giao ước với ai, Zadok? Chúng dâng nộp người cho ai?”</p><p>Zadok chộp lấy cánh tay bạn, móng tay ông ta bấm sâu vào da thịt bạn. “Lũ Deep One,” ông ta thì thào với vẻ kinh hãi tột độ. “Lũ quái vật từ vực sâu… chúng đang trỗi dậy, và chúng sẽ nuốt chửng tất cả chúng ta.”</p>"
     },
     "resolution7": {
       "title": "Kết cục 7",
-      "body": "<p>_Resolution 7_: Robert refuses to say a word until you get him a cigar. You begrudgingly oblige, hoping that your generosity yields dividends. “I was investigating the docks when he and his cronies nabbed me,” Agent Harper recounts bitterly. You ask who these “cronies” were, and she shrugs. “Not sure. Dockworkers and sailors, I imagine. Whoever hired Mr. Friendly over here must have a lot of influence over the locals.”</p><p>Sau khi đưa cho Robert điếu xì gà mà ông ta yêu cầu, bạn ngạc nhiên khi thấy ông ta tuân thủ hơn một chút, mặc dù không thân thiện hơn mặc dù tên của ông ta là như vậy. “Không sao đâu,” ông lẩm bẩm, thổi ra một làn khói xì gà. \"Tất cả các bạn đều là những người đã chết biết đi. Không có ý xúc phạm nào, thưa cô.\"</p><p>\"Ông đã xúc phạm rồi đấy,\" cô cắn lại. “Có muốn nói cho chúng tôi biết ý ông là gì không?”</p><p>“The Order,” he replies with quiet, unwavering resolve. “They know everything that happens in this town. Probably out lookin’ for me right now. You sure you wanna be here when they find me?” He flashes a sadistic grin.</p><p>Harper không hề nao núng. \"Ừ, thực ra. Tôi nghĩ là có,\" cô trả lời, bẻ khớp ngón tay. \"Bây giờ bắt đầu nói chuyện.\"</p>"
+      "body": "<p>_Resolution 7_: Robert từ chối hé răng nửa lời cho đến khi bạn mang cho ông ta một điếu xì gà. Bạn miễn cưỡng làm theo, hy vọng lòng hào phóng của mình sẽ đem lại kết quả. “Tôi đang điều tra các bến tàu thì ông ta cùng đám tay chân tóm lấy tôi,” Đặc vụ Harper cay đắng kể lại. Bạn hỏi đám “tay chân” này là ai, và cô ấy nhún vai. “Không chắc nữa. Tôi đoán là công nhân bến tàu và thủy thủ. Bất cứ ai đã thuê Quý ngài Thân Thiện ở đây hẳn phải có rất nhiều tầm ảnh hưởng đối với dân địa phương.”</p><p>Sau khi đưa cho Robert điếu xì gà mà ông ta yêu cầu, bạn ngạc nhiên khi thấy ông ta chịu hợp tác hơn một chút, mặc dù chẳng thân thiện hơn là bao bất kể cái tên của mình. “Chẳng quan trọng đâu,” ông ta lẩm bẩm, phả ra một làn khói xì gà nồng nặc. “Tất cả các người đều là những kẻ đã chết biết đi rồi. Không có ý xúc phạm cô đâu nhé, cô gái.”</p><p>“Tôi thấy bị xúc phạm rồi đấy,” cô ấy đáp trả gay gắt. “Có muốn nói cho chúng tôi biết ý ông là gì không?”</p><p>“Dòng Dagon,” ông ta trả lời với sự kiên định trầm lặng, không hề nao núng. “Chúng biết mọi thứ xảy ra ở thị trấn này. Có lẽ lúc này chúng đang lùng sục tìm tôi đấy. Các người có chắc mình muốn ở đây khi chúng tìm ra tôi không?” Ông ta nở một nụ cười tàn nhẫn.</p><p>Harper không hề nao núng. “Có chứ, thực ra là có đấy,” cô ấy trả lời, bẻ khớp ngón tay răng rắc. “Bây giờ hãy bắt đầu nói đi.”</p>"
     }
   },
   "tooltips": {
     "innsmouthSquare": {
-      "resign": "You decide to lay low for a while.",
-      "ability2": "{'{'}fast{'}'} Spend 2 resources: <strong>Move.</strong> Move to a connecting <strong><i>Innsmouth</i></strong> location."
+      "resign": "Bạn quyết định nằm vùng ẩn mình một thời gian.",
+      "ability2": "{'{'}fast{'}'} Chi 2 tài nguyên: <strong>Move.</strong> Di chuyển đến một địa điểm <strong><i>Innsmouth</i></strong> kết nối."
     }
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is the current agenda number.",
+      "skull": "-X. X là số thứ tự agenda hiện tại.",
       "cultist": "-2. Nếu bạn thất bại, đặt 1 doom lên the nearest enemy.",
       "tablet": "-3. Nếu bạn thất bại, chịu 1 horror.",
       "elderThing": "[skull]: -X. X là một nửa số địa điểm đã lật (làm tròn xuống).\r\n[cultist]: -2. Nếu bạn thất bại và địa điểm của bạn bị fully flooded, nhận 1 damage.\r\n[tablet]: -4. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -3 (thành -5 nếu địa điểm của bạn không bị flooded)."
     },
     "hardExpert": {
-      "skull": "-X. X is 1 more than the current agenda number.",
-      "cultist": "-2. Place 1 doom on the nearest enemy (2 doom instead if you failed).",
-      "tablet": "-3. Take 1 horror (1 horror and 1 damage instead if you failed).",
-      "elderThing": "-4. Đặt 1 manh mối của bạn lên địa điểm của bạn (2 clues instead if you failed)."
+      "skull": "-X. X nhiều hơn số thứ tự agenda hiện tại 1 điểm.",
+      "cultist": "-2. Đặt 1 doom lên kẻ địch gần nhất (thay vào đó là 2 doom nếu bạn thất bại).",
+      "tablet": "-3. Chịu 1 horror (thay vào đó là 1 horror và 1 damage nếu bạn thất bại).",
+      "elderThing": "-4. Đặt 1 manh mối của bạn lên địa điểm của bạn (thay vào đó là 2 manh mối nếu bạn thất bại)."
     }
   }
 }

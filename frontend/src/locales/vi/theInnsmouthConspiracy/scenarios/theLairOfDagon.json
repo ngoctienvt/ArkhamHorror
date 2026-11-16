@@ -4,22 +4,22 @@
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Lair of Dagon*, *Agents of Dagon*, *Flooded Caverns*, *Syzygy*, *Dark Cult*, and *Locked Doors*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/lair-of-dagon.png' /><img src='{setImgPath}/agents-of-dagon.png' /><img src='{setImgPath}/flooded-caves.png' /><img src='{setImgPath}/syzygy.png' /><img src='{setImgPath}/dark-cult.png' /><img src='{setImgPath}/locked-doors.png' /></section>",
     "placeKeys": "Đặt mỗi chìa khoá như sau:",
     "faceupKeys": "Đặt các chìa khóa màu đen, xanh lá, xanh biển, tím và đỏ sang một bên, ngửa mặt lên.",
-    "facedownKeys": "Set the white and yellow keys aside, facedown. Shuffle them so you do not know which is which.",
+    "facedownKeys": "Đặt các chìa khóa trắng và vàng sang một bên, úp xuống. Xáo trộn chúng để bạn không biết chìa nào là chìa nào.",
     "placeLocations": "Đặt các vị trí sau vào chơi: Grand Entryway, Foul Corridors, 2 lá bài First Floor Hall, 2 lá bài Second Floor Hall, và 1 lá bài Third Floor Hall.",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Grand Entryway.",
     "setAsideOtherLocations": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
     "setAsideCards": "Đặt các lá bài sau một bên, ngoài khu vực chơi: 2 lá bài treachery Syzygy, 2 lá bài treachery Tidal Alignment, lá bài Y'ha-nthlei Statue, kẻ địch Apostle of Dagon, và kẻ địch Dagon.",
     "checkMemories": "Kiểm tra phần \"Ký ức đã được khôi phục\" trong Nhật ký chiến dịch:",
     "fourOrFewer": "Vì có 4 ký ức trở xuống được ghi lại, hãy thêm 5 token [bless] vào túi hỗn mang.",
-    "fiveToSeven": "…5–7 memories recorded, add 2 {'{'}curse{'}'} tokens to the chaos bag.",
+    "fiveToSeven": "…5–7 ký ức được ghi lại, thêm 2 token {'{'}curse{'}'} vào túi hỗn mang.",
     "eightOrMore": "Vì có từ 8 ký ức trở lên được ghi lại, hãy thêm 5 token [curse] vào túi hỗn mang.",
     "jailbreak": "Kiểm tra mục “Memories Recovered” trong Campaign Log. Nếu _một vụ vượt ngục_ được liệt kê dưới “Memories Recovered”, tìm trong bộ sưu tập kẻ địch _Suspect_ được khoanh tròn dưới “Possible Suspects” và để nó sang một bên, ngoài cuộc chơi.",
     "checkSecretCult": "Kiểm tra phần \"Ký ức đã được khôi phục\" trong Nhật ký chiến dịch",
     "theInitiationV1": "Nếu _cuộc chạm trán với một giáo phái bí mật_ được liệt kê dưới “Memories Recovered”, khi dựng agenda deck, dùng Agenda 1a—“The Initiation (v. I)” và loại bỏ Agenda 1a—“The Initiation (v. II)” khỏi game.",
-    "theInitiationV2": "Otherwise, when constructing the agenda deck, use Agenda 1a—“The Initiation (v. II)” and remove Agenda 1a—“The Initiation (v. I)” from the game.",
+    "theInitiationV2": "Nếu không, khi lập chồng bài agenda, sử dụng Agenda 1a—“Lễ Khởi Đầu (bản II)” và loại bỏ Agenda 1a—“Lễ Khởi Đầu (bản I)” khỏi trò chơi.",
     "checkStickTogether": "Kiểm tra phần \"Ký ức đã được khôi phục\" trong Nhật ký chiến dịch",
     "whatLurksBelowV1": "Nếu _quyết định ở lại cùng nhau_ được liệt kê dưới “Memories Recovered”, tìm trong bộ sưu tập Thomas Dawson và đưa anh vào chơi dưới quyền kiểm soát của một điều tra viên bất kỳ. Khi dựng agenda deck, dùng Agenda 2a—“What Lurks Below (v. I)” và loại bỏ Agenda 2a—“What Lurks Below (v. II)” khỏi game.",
-    "whatLurksBelowV2": "Otherwise, set Thomas Dawson aside, out of play. When constructing the agenda deck, use Agenda 2a—“What Lurks Below (v. II)” and remove Agenda 2a—“What Lurks Below (v. I)” from the game.",
+    "whatLurksBelowV2": "Nếu không, đặt Thomas Dawson sang một bên, ngoài màn chơi. Khi lập chồng bài agenda, sử dụng Agenda 2a—“Thứ Rình Rập Bên Dưới (bản II)” và loại bỏ Agenda 2a—“Thứ Rình Rập Bên Dưới (bản I)” khỏi trò chơi.",
     "floodTokens": "Thêm token lũ lụt vào kho chứa token."
   },
   "specialRules": [
@@ -29,13 +29,13 @@
     },
     {
       "title": "Chìa khóa",
-      "body": "<div class='red bordered'><p class='basic'>During this scenario, keys represent the following:</p><ul><li>Màu đỏ: Một huy hiệu được khắc một hình ảnh có hình một sự hy sinh vĩ đại.</li><li>Màu xanh biển: Một cuộn giấy mô tả chi tiết một số hoạt động và bí mật của Dòng.</li><li>Màu xanh lá: Một huy hiệu có hình mắt cá đang mở rộng.</li><li>Màu tím: Một huy hiệu được khắc một vòng tròn các từ ngữ nằm trong một bảng chữ cái mà bạn không thể hiểu nổi.</li><li>Màu đen: Một huy hiệu được khắc một biểu tượng huyền bí.</li><li>Màu trắng / Màu vàng: Các huy hiệu có nét vẽ mô tả sự thẳng hàng của các thiên thể. Chìa khóa trắng biểu thị mặt trăng chồng lên mặt trời. Chìa khóa màu vàng biểu thị mặt trời chồng lên mặt trăng.</li></ul></div>"
+      "body": "<div class='red bordered'><p class='basic'>Trong màn chơi này, các chìa khóa đại diện cho những điều sau:</p><ul><li>Màu đỏ: Một huy hiệu được khắc một hình ảnh có hình một sự hy sinh vĩ đại.</li><li>Màu xanh biển: Một cuộn giấy mô tả chi tiết một số hoạt động và bí mật của Dòng.</li><li>Màu xanh lá: Một huy hiệu có hình mắt cá đang mở rộng.</li><li>Màu tím: Một huy hiệu được khắc một vòng tròn các từ ngữ nằm trong một bảng chữ cái mà bạn không thể hiểu nổi.</li><li>Màu đen: Một huy hiệu được khắc một biểu tượng huyền bí.</li><li>Màu trắng / Màu vàng: Các huy hiệu có nét vẽ mô tả sự thẳng hàng của các thiên thể. Chìa khóa trắng biểu thị mặt trăng chồng lên mặt trời. Chìa khóa màu vàng biểu thị mặt trời chồng lên mặt trăng.</li></ul></div>"
     }
   ],
   "label": {
-    "discardTwoCards": "Discard 2 cards from your hand",
-    "discardAsset": "Discard an asset you control",
-    "takeControlOfThomasDawson": "Choose investigator to take control of Thomas Dawson",
+    "discardTwoCards": "Bỏ 2 lá bài khỏi tay bạn",
+    "discardAsset": "Bỏ 1 asset bạn kiểm soát",
+    "takeControlOfThomasDawson": "Chọn điều tra viên nắm quyền kiểm soát Thomas Dawson",
     "tellOceirosNothing": "Không nói với Oceiros bất cứ điều gì.",
     "lieToOceiros": "Nói dối Oceiros.",
     "tellOceirosEverything": "Nói cho Oceiros mọi thứ."
@@ -62,12 +62,12 @@
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không Có Kết Cuộc",
       "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Nơi này nguy hiểm hơn bạn tưởng. Bạn vấp ngã khi chạy trốn qua những hành lang tối tăm, ngập nước, lùi bước nhanh nhất có thể để đến lối vào. Tim bạn đập thình thịch trong lồng ngực khi cuối cùng bạn cũng nhìn thấy lối ra. Bạn thở hổn hển khi lao qua cánh cửa để đến nơi an toàn—</p><p>—Only you are not safe. Standing at the bottom of the steps is an angry throng of citizens, far too many for you to fight your way through. “There! Get ‘em!” a wrinkled woman at the head of the mob shouts. You are surrounded and grabbed within moments. You struggle and fight for your life, but it’s no use. The last thing you remember is being dragged back through the halls of the Order to some unknown fate…</p>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<p>_Resolution 1_: You’re somewhere else now, lying on your stomach on cold, damp stone. Your arms are held tight behind your back. You have no idea how you got here. As consciousness returns, your vision comes into focus. You crane your neck up to view your surroundings, but it’s too dark to see anything inside your stone cell.</p><p>“I’ll ask you one last time. Who sent you here?” a voice asks. It is deep and husky, like the croaking of a frog.</p><p>You hear the familiar, cool baritone of Agent Dawson reply: “Your breath smells awful. Ever heard of brushing your teeth?” Despite the sarcasm dripping from his words, his voice wavers ever so slightly.</p><p>“Your mockery only masks the fear that hides within,” the voice replies. “Very well. If you are of no use to us, you will be the first to be sacrificed.”</p><p>Your vision continues to adjust. You can just barely make out Dawson’s silhouette on the other side of the cell. He is kneeling before a metal hatch in the stone floor. An elderly robed figure presses a curved knife against Dawson’s throat. Someone lifts the hatch, and Dawson’s eyes go wide. He gives you one last despairing look, shakes his head slowly and deliberately, and quietly slides something across the stone floor. Then the hooded figure pushes him in. In the scuffle and the low light, nobody notices the car key that skitters to a halt directly next to you.</p><p>You grab the key and stuff it into your pocket just before you are shoved forward. Two more sets of cold, clammy hands grab your shoulders, and the hooded figure slides his knife up to your neck. All you can see of his face are his wide, unblinking eyes.</p><p>“Oceiros, these ones were found in Dagon’s lair as well,” another voice explains to the elderly figure in the robes. “We believe they were the ones snooping around Devil Reef.”</p><p>The man with the knife to your throat nods. “Your turn,” he declares. “Tell us why you have come and perhaps we will let you go. Who sent you? What have you seen?”</p>"
+      "body": "<p>_Resolution 1_: Giờ đây bạn đang ở một nơi khác, nằm sấp trên nền đá lạnh lẽo và ẩm ướt. Hai tay bạn bị giữ chặt ra sau lưng. Bạn không hề biết làm thế nào mình đến được đây. Khi ý thức dần hồi phục, thị lực của bạn bắt đầu rõ nét trở lại. Bạn ngẩng cổ lên để quan sát xung quanh, nhưng trong phòng giam bằng đá quá tối để có thể nhìn thấy bất cứ điều gì.</p><p>“Ta hỏi ngươi lần cuối cùng. Ai đã phái ngươi đến đây?” một giọng nói vang lên. Nó trầm đục và khàn đặc, tựa như tiếng ếch nhái kêu.</p><p>Bạn nghe thấy giọng nam trung trầm tĩnh, quen thuộc của Đặc vụ Dawson đáp lại: “Hơi thở của ông hôi kinh khủng. Đã từng nghe nói đến việc đánh răng bao giờ chưa?” Bất chấp sự mỉa mai ngập tràn trong từng câu chữ, giọng anh vẫn hơi run rẩy.</p><p>“Sự chế nhạo của ngươi chỉ che giấu nỗi sợ hãi bên trong mà thôi,” giọng nói kia đáp lại. “Được thôi. Nếu ngươi không còn giá trị gì với bọn ta, ngươi sẽ là kẻ đầu tiên bị đem ra hiến tế.”</p><p>Tầm nhìn của bạn tiếp tục điều chỉnh. Bạn chỉ có thể lờ mờ nhận ra bóng hình của Dawson ở phía bên kia phòng giam. Anh đang quỳ trước một cửa sập kim loại trên sàn đá. Một nhân vật mặc áo choàng lớn tuổi đang dí một con dao cong vào cổ họng Dawson. Ai đó nhấc cánh cửa sập lên, và mắt Dawson mở to. Anh trao cho bạn một ánh nhìn tuyệt vọng cuối cùng, lắc đầu chậm rãi và dứt khoát, rồi lặng lẽ trượt một thứ gì đó qua sàn đá. Sau đó, nhân vật trùm đầu đẩy anh xuống dưới. Trong lúc hỗn loạn và dưới ánh sáng mờ ảo, không ai nhận ra chiếc chìa khóa xe trượt đến và dừng lại ngay sát cạnh bạn.</p><p>Bạn chộp lấy chiếc chìa khóa và nhét vội vào túi ngay trước khi bạn bị đẩy về phía trước. Thêm hai đôi bàn tay lạnh ngắt và nhớp nháp nắm lấy vai bạn, và nhân vật trùm đầu trượt con dao lên cổ bạn. Tất cả những gì bạn có thể nhìn thấy trên gương mặt hắn là đôi mắt mở to, không hề chớp.</p><p>“Thưa Oceiros, những kẻ này cũng bị phát hiện trong sào huyệt của Dagon,” một giọng nói khác giải thích với nhân vật mặc áo choàng lớn tuổi. “Bọn tôi tin rằng chúng chính là những kẻ đã lén lút rình mò quanh Rạn san hô Quỷ (Devil Reef).”</p><p>Gã đàn ông dí dao vào cổ bạn gật đầu. “Đến lượt ngươi,” hắn tuyên bố. “Hãy nói cho bọn ta biết tại sao ngươi lại đến đây và có lẽ bọn ta sẽ tha mạng cho ngươi. Ai đã phái ngươi đến? Ngươi đã nhìn thấy những gì?”</p>"
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
@@ -84,44 +84,44 @@
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-1 for each key on this card.",
-      "cultist": "0. Reveal an additional chaos token. If you reveal 1 or more {'{'}curse{'}'} tokens during this test, you automatically fail.",
+      "skull": "-1 cho mỗi chìa khóa trên lá bài này.",
+      "cultist": "0. Rút thêm một token hỗn mang. Nếu bạn rút được 1 token {'{'}curse{'}'} trở lên trong bài kiểm tra này, bạn tự động thất bại.",
       "tablet": "-3. Nếu bạn thất bại, place each key you control on your location.",
       "elderThing": "-4. Nếu bạn thất bại, add 1 {'{'}curse{'}'} token to the chaos bag."
     },
     "hardExpert": {
-      "skull": "-2 for each key on this card.",
-      "cultist": "-2. Reveal an additional chaos token. If you reveal 1 or more {'{'}curse{'}'} tokens during this test, you automatically fail.",
+      "skull": "-2 cho mỗi chìa khóa trên lá bài này.",
+      "cultist": "-2. Rút thêm một token hỗn mang. Nếu bạn rút được 1 token {'{'}curse{'}'} trở lên trong bài kiểm tra này, bạn tự động thất bại.",
       "tablet": "-3. Place each key you control on your location and chịu 1 damage.",
-      "elderThing": "-4. Add 2 {'{'}curse{'}'} tokens to the chaos bag."
+      "elderThing": "-4. Thêm 2 token {'{'}curse{'}'} vào túi hỗn mang."
     }
   },
   "remembered": {
-    "unlockedTheEntranceToTheCaves": "Unlocked the entrance to the caves",
-    "unlockedTheThirdFloor": "Unlocked the third floor",
-    "unlockedTheFinalDepths": "Unlocked the final depths"
+    "unlockedTheEntranceToTheCaves": "Đã mở khóa lối vào các hang động",
+    "unlockedTheThirdFloor": "Đã mở khóa tầng ba",
+    "unlockedTheFinalDepths": "Đã mở khóa những tầng sâu cuối cùng"
   },
   "hallOfLoyalty": {
     "label": {
-      "addBlessTokens": "Add 4 {'{'}bless{'}'} tokens",
-      "addBlessTokensPartial": "Add 4 (actual {actual}) {'{'}bless{'}'} tokens"
+      "addBlessTokens": "Thêm 4 token {'{'}bless{'}'}",
+      "addBlessTokensPartial": "Thêm 4 (thực tế {actual}) token {'{'}bless{'}'}"
     }
   },
   "lairOfDagon": {
     "label": {
-      "doNotSpendKey": "Do not spend key",
-      "spendKey": "Spend {key}"
+      "doNotSpendKey": "Không dùng chìa khóa",
+      "spendKey": "Dùng chìa khóa {key}"
     }
   },
   "whatLurksBelow": {
     "label": {
-      "doNotTakeKey": "Do not take a key",
-      "takeKey": "Take {key} key"
+      "doNotTakeKey": "Không lấy chìa khóa",
+      "takeKey": "Lấy chìa khóa {key}"
     }
   },
   "tooltips": {
     "grandEntryway": {
-      "resign": "You've had enough of this place."
+      "resign": "Bạn đã chịu quá đủ nơi này rồi."
     }
   }
 }

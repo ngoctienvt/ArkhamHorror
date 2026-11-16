@@ -6,12 +6,12 @@
     "lastStand": "<i>\"Chúng ta cần phải tử thủ và đánh đuổi hắn bằng hỏa lực áp đảo.\"</i>",
     "anotherWay": "Bạn chỉ có thể chọn tùy chọn này nếu có từ 5 [[Artifacts]] trở lên được đánh dấu/liệt kê và không bị gạch bỏ dưới mục \"Artifacts Earned\" trong Nhật ký Chiến dịch của bạn.",
     "theDoomOfArkham2": "<p>_The Doom of Arkham 2_: \"Tôi thích suy nghĩ của bạn,\" Thanh tra Legrasse nói khi ông nạp đạn vào súng với một tiếng lách cách đã tai. Cùng nhau, các bạn lập kế hoạch để chống lại mối đe dọa cổ xưa. Ruby đề nghị vài người trong số các bạn lên các mái nhà, trong khi Legrasse gọi điện cho một vài mối liên hệ ở sở cảnh sát Arkham. Nếu sát cánh cùng nhau, các bạn có thể thu hút cơn thịnh nộ của Cthulhu khỏi Arkham. \"Đây là ý tưởng tồi tệ nhất mà tôi từng nghe, nhưng tôi không nghĩ chúng ta có lựa chọn nào khác,\" Ruby nói. Bạn thấy một tia gì đó—có phải là sự sợ hãi không?—trong mắt cô ấy. Bạn không có lựa chọn nào khác ngoài việc chiến đấu.</p>",
-    "recordStoodTogether": "In your Campaign Log, record _the investigators stood together_.",
+    "recordStoodTogether": "Trong Nhật ký Chiến dịch của bạn, ghi lại _các điều tra viên đã sát cánh cùng nhau_.",
     "alliesIntoPlay": "Tìm kiếm trong các chồng bài encounter *Expedition* và *The Doom of Arkham*, deck của mỗi điều tra viên, và tất cả các khu vực in-play và out-of-play để tìm các story asset sau: John Raymond Legrasse, Ruby Standish, và Andy Van Nortwick. Đặt mỗi asset này vào chơi dưới quyền kiểm soát của bất kỳ điều tra viên nào. Mỗi asset này không chiếm ally slot trong scenario này.",
     "theDoomOfArkham3": "<p>_The Doom of Arkham 3_: Andy vẫy gọi tất cả các bạn vào một quán ăn bỏ hoang khi mực nước tiếp tục dâng cao. \"Đây không phải là lĩnh vực chuyên môn của tôi,\" anh nói, đặt một xấp giấy rời lên bàn. \"Nhưng tôi đã dịch các ký tự từ R'lyeh, và tôi nghĩ chúng ta có thể ngăn chặn điều này bằng, ừm... chà, một nghi thức.\" Ruby gạt phắt những lời phản đối của Thanh tra Legrasse khi Andy phác thảo một \"nghi thức hoàn trả\" mà anh phát hiện ra trong các cung điện cổ xưa của R'lyeh. Bằng cách sử dụng các mảnh vỡ của thành phố cổ R'lyeh, các bạn có thể phong ấn kẻ cổ xưa đó lại.</p>",
     "theDoomOfArkham3Continued": "<p>\"Các ký tự mà tôi dịch dường như ngụ ý rằng Cthulhu và, ờ, những đứa con của hắn bị ràng buộc với chính R'lyeh—\" anh trải ra một tấm bản đồ Arkham. \"Nếu chúng ta đặt những cổ vật này quanh thành phố như thế này, tôi có thể thực hiện nghi thức và trục xuất hắn. Tuy nhiên, tôi sẽ cần tất cả các bạn thu hút sự chú ý của hắn, khiến hắn không rời mắt khỏi các bạn, trong khi tôi chuẩn bị.\" Andy giơ lên một trong những cổ vật mà bạn đã thu hồi từ Randall, lật nó qua lại trong tay. Nó phát ra một thứ ánh sáng phi tự nhiên.</p>",
     "theDoomOfArkham3Ruby": "<p>\"Tôi sẽ đến sở cảnh sát Arkham,\" Thanh tra Legrasse nói. \"Tôi có một vài mối liên hệ ở đó. Chúng ta sẽ có thể đưa một số sĩ quan ra đường để giúp đỡ những người sống sót.\" Ruby, người vẫn im lặng kể từ khi Andy phác thảo kế hoạch, khoanh tay lại. \"Vậy anh muốn chúng tôi chọc giận cái thứ theo đúng nghĩa đen là đang phá hủy thành phố để anh có thể lầm bầm vài từ và giấu vài di vật.\" Cô rít một hơi thuốc lá. \"Thì có chuyện gì tồi tệ xảy ra được cơ chứ?\"</p>",
-    "recordAlliesHaveAPlan": "In your Campaign Log, record _your allies have a plan_.",
+    "recordAlliesHaveAPlan": "Trong Nhật ký Chiến dịch của bạn, ghi lại _các đồng minh của bạn có một kế hoạch_.",
     "alliesSetAside": "Tìm kiếm trong các chồng bài encounter *Expedition* và *The Doom of Arkham*, deck của mỗi điều tra viên, và tất cả các khu vực in-play và out-of-play để tìm các story asset sau: John Raymond Legrasse, Ruby Standish, và Andy Van Nortwick. Để chúng sang một bên, out of play.",
     "addToken": "Thêm 1 token {elderThing} vào chaos bag trong phần còn lại của chiến dịch.",
     "proceedToSetup": "Tiếp tục đến _Setup_",
@@ -22,7 +22,7 @@
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Doom of Arkham Part II*, *Domination*, *Elder Mist*, *Flood*, *Star Spawn*, *Agents of Cthulhu*, and *The Midnight Masks*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-doom-of-arkham-part-ii.png' /><img src='{setImgPath}/domination.png' /><img src='{setImgPath}/elder-mist.png' /><img src='{setImgPath}/flood.png' /><img src='{setImgPath}/star-spawn.png' /><img src='{setImgPath}/agents-of-cthulhu.png' /><img src='{setImgPath}/midnight-masks.png' /></section>",
-    "midnightMasksLocations": "When gathering the *The Midnight Masks* encounter set, only gather the location cards. Do not gather any other cards from this set.",
+    "midnightMasksLocations": "Khi thu thập bộ bài encounter *The Midnight Masks*, chỉ thu thập các lá bài địa điểm. Không thu thập bất kỳ lá bài nào khác từ bộ bài này.",
     "placeLocations": "Đặt mỗi địa điểm vào chơi theo sơ đồ sắp xếp địa điểm.",
     "arkhamLocations": "Tập hợp mỗi địa điểm từ chồng bài *The Midnight Masks* cùng với Eastern Rooftops và Western Rooftops. Đặt ngẫu nhiên một trong hai địa điểm Downtown và một trong hai địa điểm Southside vào chơi và loại bỏ các phiên bản khác của những địa điểm đó khỏi trò chơi. Đặt Northside, Easttown, St. Mary's Hospital, và Miskatonic University vào chơi.",
     "rivertownRuined": "Đặt Rivertown *(Ruined)* từ chồng bài encounter *The Doom of Arkham Part II* vào chơi. Loại bỏ phiên bản khác của Rivertown khỏi trò chơi.",
@@ -33,10 +33,10 @@
     "placeBoard": "Tìm bảng punchboard hai mặt đi kèm trong hộp này và đặt nó phía trên chồng bài act và agenda, ngửa mặt Cthulhu lên.",
     "placeFacets": "Đặt mỗi bản của ba kẻ địch Cthulhu (Hoary Wings, Fierce Visage, và Wicked Claw) lên Cthulhu Board, để ngửa mặt không [[Enraged]], sao cho chúng tạo thành một bức tranh hoàn chỉnh về Cthulhu.",
     "buildCthulhuDeck": "Xào 18 lá bài Cthulhu để tạo thành chồng bài Cthulhu (Xem <b>The Cthulhu Deck</b> bên dưới). Đặt chồng bài này cạnh Cthulhu Board.",
-    "checkCampaignLogActAgenda": "Check your Campaign Log to build the act and agenda deck:",
+    "checkCampaignLogActAgenda": "Kiểm tra Nhật ký Chiến dịch của bạn để xây dựng chồng bài act và agenda:",
     "fightBack": "Tạo agenda deck bằng agenda 1a—\"The Doom of Arkham\" và act deck bằng act 1a—\"Fight Back!\" Loại bỏ các act và agenda khác khỏi trò chơi.",
     "banishHim": "Tạo agenda deck bằng agenda 1a-\"The Doom of Arkham\" và act deck bằng act 1a-\"Banish Him!\" Đặt special agenda — \"The Final Seal\" sang một bên, out of play. Loại bỏ các act và agenda khác khỏi trò chơi.",
-    "checkCampaignLog": "Check your Campaign Log.",
+    "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch của bạn.",
     "artifacts": "Tập hợp tất cả các artifact đã thu thập được mà không bị gạch bỏ dưới mục \"Artifacts Earned.\" Đưa mỗi lá bài đó vào chơi dưới quyền kiểm soát của một điều tra viên, chia đều nhất có thể.",
     "floodedNeighborhoods": "Thêm các flood token vào token pool và tăng flood level của mỗi địa điểm được liệt kê dưới mục \"Flooded Neighborhoods.\"",
     "starSpawnAside": "Đặt encounter set *Star Spawn* sang một bên, out of play.",
@@ -51,7 +51,7 @@
     },
     "cthulhuDeck": {
       "title": "Chồng bài Cthulhu",
-      "body": "<p class='basic'>Trong quá trình setup của scenario này, một chồng bài thứ hai với mặt lưng khác được tạo ra: Cthulhu deck. Chồng bài này là một chồng bài riêng biệt chỉ bao gồm các lá bài \"action\". Cthulhu deck không phải là một encounter deck và các lá bài action không phải là treacheries.\\r Sau khi di chuyển và tấn công như bình thường trong enemy phase, Cthulhu thực hiện các hành động bổ sung thông qua các lá bài action từ Cthulhu deck. Vào cuối enemy phase, hiệu ứng forced của agenda yêu cầu các điều tra viên rút lá bài trên cùng của Cthulhu deck. Khi rút bài từ Cthulhu deck, hãy giải quyết từng hiệu ứng, lần lượt, từ trên xuống dưới. Sau khi giải quyết một lá bài action, nó được discard vào Cthulhu discard pile. Nếu Cthulhu deck trống, ngay lập tức xào lại Cthulhu discard pile vào Cthulhu deck.</p>"
+      "body": "<p class='basic'>Trong quá trình thiết lập màn chơi này, một chồng bài thứ hai có mặt lưng khác được tạo ra: chồng bài Cthulhu. Chồng bài này là một chồng bài riêng biệt chỉ bao gồm các lá bài \"hành động\". Chồng bài Cthulhu không phải là chồng bài encounter và các lá bài hành động không phải là treachery.</p><p class='basic'>Sau khi di chuyển và tấn công như bình thường trong giai đoạn Enemy, Cthulhu thực hiện các hành động bổ sung thông qua các lá bài hành động từ chồng bài Cthulhu. Vào cuối giai đoạn Enemy, hiệu ứng Forced của agenda yêu cầu các điều tra viên rút lá bài trên cùng của chồng bài Cthulhu. Khi rút các lá bài từ chồng bài Cthulhu, giải quyết từng hiệu ứng, lần lượt từng hiệu ứng một, từ trên xuống dưới. Sau khi giải quyết một lá bài hành động, nó bị bỏ vào chồng bài bỏ Cthulhu. Nếu chồng bài Cthulhu hết bài, ngay lập tức xào lại chồng bài bỏ Cthulhu vào chồng bài Cthulhu.</p>"
     },
     "cthulhusRage": {
       "title": "Cơn thịnh nộ của Cthulhu",
@@ -59,30 +59,30 @@
     }
   },
   "label": {
-    "chooseAllyInvestigator": "Choose an investigator to take control of {name}.",
-    "chooseArtifactInvestigator": "Choose an investigator to control {name}.",
-    "chooseAlly": "Choose a set-aside _Ally_ story asset to take control of.",
-    "noAlly": "Do not take control of an _Ally_ story asset.",
-    "chooseInvestigatorToTest": "Choose an investigator to test",
-    "increaseFloodLevel": "Increase the flood level of Cthulhu's location",
-    "dreadsightGroupChoice": "The investigators must decide, as a group",
-    "cthulhuAttacks": "Cthulhu <i>(Wicked Claw)</i> attacks each investigator at its location",
-    "chooseEnemyForDoom": "Choose an enemy on the Cthulhu Board with no doom on it",
-    "chooseSkillForTest": "Choose a skill to test",
-    "chooseCthulhuEnemyToReturn": "Choose a [[Cthulhu]] enemy to return to the Cthulhu Board, [[Enraged]] side faceup",
-    "chooseLocationToFlood": "Choose a location to increase the flood level of",
-    "chooseLocationToRuin": "Choose the fully flooded location Cthulhu moves to",
-    "cluesToPlace": "How many of your clues do you want to place on this location?"
+    "chooseAllyInvestigator": "Chọn một điều tra viên để nhận quyền kiểm soát {name}.",
+    "chooseArtifactInvestigator": "Chọn một điều tra viên để kiểm soát {name}.",
+    "chooseAlly": "Chọn một story asset _Ally_ được đặt sang một bên để nhận quyền kiểm soát.",
+    "noAlly": "Không nhận quyền kiểm soát story asset _Ally_.",
+    "chooseInvestigatorToTest": "Chọn một điều tra viên để kiểm tra",
+    "increaseFloodLevel": "Tăng mức độ ngập của địa điểm có Cthulhu",
+    "dreadsightGroupChoice": "Các điều tra viên phải quyết định, dưới dạng một nhóm",
+    "cthulhuAttacks": "Cthulhu <i>(Wicked Claw)</i> tấn công mỗi điều tra viên tại địa điểm của nó",
+    "chooseEnemyForDoom": "Chọn một kẻ địch trên Bảng Cthulhu không có doom nào trên đó",
+    "chooseSkillForTest": "Chọn một kỹ năng để kiểm tra",
+    "chooseCthulhuEnemyToReturn": "Chọn một kẻ địch [[Cthulhu]] để đưa trở lại Bảng Cthulhu, với mặt [[Enraged]] ngửa lên",
+    "chooseLocationToFlood": "Chọn một địa điểm để tăng mức độ ngập",
+    "chooseLocationToRuin": "Chọn địa điểm ngập hoàn toàn mà Cthulhu di chuyển đến",
+    "cluesToPlace": "Bạn muốn đặt bao nhiêu manh mối của mình lên địa điểm này?"
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is Cthulhu's Rage.",
+      "skull": "-X. X là Rage của Cthulhu.",
       "cultist": "[skull]: -X. X là Cthulhu's Rage.\r\n[cultist]: -3. Nếu bạn thất bại và địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -3. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -1. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của Cthulhu deck. (Tối đa rút một lá mỗi round.)",
       "tablet": "[skull]: -X. X là Cthulhu's Rage.\r\n[cultist]: -3. Nếu bạn thất bại và địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -3. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -1. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của Cthulhu deck. (Tối đa rút một lá mỗi round.)",
       "elderThing": "[skull]: -X. X là Cthulhu's Rage.\r\n[cultist]: -3. Nếu bạn thất bại và địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -3. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -1. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của Cthulhu deck. (Tối đa rút một lá mỗi round.)"
     },
     "hardExpert": {
-      "skull": "-X. X is 2 more than Cthulhu's Rage.",
+      "skull": "-X. X bằng Rage của Cthulhu cộng thêm 2.",
       "cultist": "-5. If your location is flooded, chịu 1 damage.",
       "tablet": "[skull]: -X. X nhiều hơn Cthulhu's Rage 2.\r\n[cultist]: -5. Nếu địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -5. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -3. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của chồng bài Cthulhu. (Tối đa rút một lá mỗi round.)",
       "elderThing": "[skull]: -X. X nhiều hơn Cthulhu's Rage 2.\r\n[cultist]: -5. Nếu địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -5. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -3. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của chồng bài Cthulhu. (Tối đa rút một lá mỗi round.)"
@@ -90,13 +90,13 @@
   },
   "resolutions": {
     "xp": {
-      "bonus": "for dispelling an ancient evil"
+      "bonus": "vì đã xua đuổi một tà thần cổ xưa"
     },
     "label": {
-      "removeNoWeakness": "Do not remove a random basic weakness"
+      "removeNoWeakness": "Không loại bỏ một điểm yếu cơ bản ngẫu nhiên"
     },
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không có Resolution",
       "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Bạn chật vật đứng dậy khi mặt đất rung chuyển bởi một cơn địa chấn khác. Cthulhu hùng mạnh nhìn xuống bạn với năm con mắt đỏ vô hồn. Bạn đã từng mơ thấy khoảnh khắc này. Thân hình đồ sộ của hắn che khuất những vì sao trên cao, tỏa sáng với một vầng hào quang kỳ dị. Hơi thở thối rữa của hắn phả vào bạn, khuấy động mặt nước. Trong một khoảnh khắc, mọi tiếng ồn ào mờ dần khi bạn bắt gặp ánh nhìn của cổ thần. Bạn cảm nhận được hắn trong tâm trí mình. Không có sự tức giận hay thịnh nộ, chỉ có sự thờ ơ lạnh lẽo.</p><p>Đây không phải là sự trừng phạt, không phải là sự phán xét, không phải là sự hủy diệt. Bạn và giống loài của bạn không gì khác hơn là một sự phiền toái. Những xúc tu dày đặc, đầy vảy mọc ra từ khuôn mặt của Cthulhu trườn qua mặt nước, tìm kiếm bạn, tìm kiếm những thứ mà bạn và giống loài của bạn đã lấy từ hắn. Bạn bất lực không thể chống cự. Tại sao phải chống cự chứ? Số mệnh của bạn và số mệnh của tất cả giống loài thảm hại của bạn đã được viết trên những vì sao. Sự diệt vong đã đến với Arkham.</p><ul><li>In your Campaign Log, record _Cthulhu annihilated the city of Arkham_.</li><li>Các điều tra viên, cùng với tất cả mọi người khác ở Arkham, đều <b>bị giết.</b></li><li>Các điều tra viên thất bại.</li><li>Proceed to _Epilogue_.</li></ul>"
     },
     "resolution1": {
@@ -113,6 +113,6 @@
     }
   },
   "errata": {
-    "theFinalSeal": "The first sentence on the back of this agenda should read: “If this agenda advanced by reaching its doom threshold, each investigator is defeated. Otherwise…”"
+    "theFinalSeal": "Câu đầu tiên ở mặt sau của agenda này nên được đọc là: “Nếu agenda này advance do đạt tới ngưỡng doom của nó, mỗi điều tra viên bị đánh bại. Nếu không…”"
   }
 }

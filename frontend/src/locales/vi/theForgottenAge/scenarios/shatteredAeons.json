@@ -1,68 +1,68 @@
 {
   "heading": "Màn VIII",
   "label": {
-    "standaloneIchtacaSetAgainst": "Ichtaca is set against you. Add 3 {'{'}tablet{'}'} tokens to the chaos bag.",
-    "standaloneAlejandroSetAgainst": "Alejandro is set against you. Add 3 {'{'}cultist{'}'} tokens to the chaos bag.",
-    "standaloneBothSetAgainst": "Ichtaca is set against you. Alejandro is set against you. Add 2 {'{'}elderThing{'}'} tokens to the chaos bag. Choose this option for the ultimate challenge.",
+    "standaloneIchtacaSetAgainst": "Ichtaca chống lại bạn. Thêm 3 token {'{'}tablet{'}'} vào túi hỗn mang.",
+    "standaloneAlejandroSetAgainst": "Alejandro chống lại bạn. Thêm 3 token {'{'}cultist{'}'} vào túi hỗn mang.",
+    "standaloneBothSetAgainst": "Ichtaca chống lại bạn. Alejandro chống lại bạn. Thêm 2 token {'{'}elderThing{'}'} vào túi hỗn mang. Hãy chọn phương án này nếu muốn thử thách tối thượng.",
     "yigsMercy": {
-      "refused": "Ichtaca refuses your plea",
-      "reject": "I could never turn my back on humanity",
-      "accept": "I accept"
+      "refused": "Ichtaca từ chối lời khẩn cầu của bạn",
+      "reject": "Tôi không bao giờ có thể quay lưng lại với nhân loại",
+      "accept": "Tôi đồng ý"
     },
     "anotherWay": {
-      "reject": "I could never turn my back on humanity",
-      "accept": "I accept"
+      "reject": "Tôi không bao giờ có thể quay lưng lại với nhân loại",
+      "accept": "Tôi đồng ý"
     },
     "unknowablePast": {
-      "reveal": "Reveal 4 chaos tokens. For each {'{'}skull{'}'}, {'{'}cultist{'}'}, {'{'}tablet{'}'}, {'{'}elderThing{'}'}, or {'{'}autoFail{'}'} symbol revealed, take 1 damage and 1 horror.",
-      "discard": "Choose and discard 1 card from your hand and shuffle Unknowable Past into the exploration deck. You cannot choose this option if Unknowable Past was drawn from the exploration deck."
+      "reveal": "Tiết lộ 4 token hỗn mang. Với mỗi biểu tượng {'{'}skull{'}'}, {'{'}cultist{'}'}, {'{'}tablet{'}'}, {'{'}elderThing{'}'}, hoặc {'{'}autoFail{'}'} được tiết lộ, chịu 1 sát thương và 1 tổn thương tinh thần.",
+      "discard": "Chọn và bỏ 1 lá bài từ tay bạn và xáo trộn Unknowable Past vào chồng bài khám phá. Bạn không thể chọn phương án này nếu Unknowable Past được rút từ chồng bài khám phá."
     },
-    "checkSupplies": "Check supplies"
+    "checkSupplies": "Kiểm tra vật tư"
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-2 (-4 instead if the Relic of Ages is at your location).",
+      "skull": "-2 (-4 thay vào đó nếu Relic of Ages đang ở địa điểm của bạn).",
       "cultist": "-2. If you do not succeed by at least 1, đặt 1 doom lên the nearest _Cultist_ enemy.",
-      "tablet": "-2. If you are poisoned, this test automatically fails instead.",
-      "elderThing": "-2. Nếu bạn thất bại, shuffle the topmost _Hex_ treachery in the encounter discard pile into the exploration deck."
+      "tablet": "-2. Nếu bạn bị nhiễm độc, bài kiểm tra này tự động thất bại thay vào đó.",
+      "elderThing": "-2. Nếu bạn thất bại, xáo trộn lá bài treachery _Hex_ trên cùng trong chồng bài encounter bỏ vào chồng bài khám phá."
     },
     "hardExpert": {
-      "skull": "-3 (-5 instead if the Relic of Ages is at your location).",
+      "skull": "-3 (-5 thay vào đó nếu Relic of Ages đang ở địa điểm của bạn).",
       "cultist": "-3. If you do not succeed by at least 1, đặt 1 doom lên each _Cultist_ enemy.",
-      "tablet": "-3. If you are poisoned, this test automatically fails instead. If you are not poisoned and you fail, put a set-aside Poisoned weakness into play in your threat area.",
-      "elderThing": "-3. Shuffle the topmost _Hex_ treachery in the encounter discard pile into the exploration deck."
+      "tablet": "-3. Nếu bạn bị nhiễm độc, bài kiểm tra này tự động thất bại thay vào đó. Nếu bạn không bị nhiễm độc và bạn thất bại, hãy đưa một điểm yếu Poisoned đang đặt sang một bên vào màn chơi trong threat area của bạn.",
+      "elderThing": "-3. Xáo trộn lá bài treachery _Hex_ trên cùng trong chồng bài encounter bỏ vào chồng bài khám phá."
     }
   },
   "intro": {
     "title": "Màn VIII: Shattered Aeons",
-    "theBraziersAreLit": "Check Campaign Log. *If the braziers are lit*, proceed to _Intro 1_.",
-    "theBraziersRemainUnlit": "*If the braziers remain unlit*, skip to _Intro 2_.",
+    "theBraziersAreLit": "Kiểm tra Nhật ký Chiến dịch. *Nếu những lò than đang cháy*, tiến hành _Intro 1_.",
+    "theBraziersRemainUnlit": "*Nếu những lò than vẫn chưa được thắp sáng*, bỏ qua và đọc _Intro 2_.",
     "intro1": "<p>_Intro 1_: Ngọn lửa màu xanh bạc đã chỉ dẫn bạn vượt qua những lối đi này là dấu vết hy vọng duy nhất mà bạn còn lại. Từng cái một, các lò than dẫn bạn về phía trước. Ai đó hoặc cái gì đó đã đặt những thiết bị này ở đây. Công nghệ không giống như những gì bạn đã thấy trong các hang động của K'n-yan, hoặc trong tàn tích Eztli, nơi cổ vật lần đầu tiên được tìm thấy. Tuy nhiên, có vẻ như bất cứ ai mạo hiểm đi sâu vào bên dưới lớp vỏ Trái đất này đều phải quay đầu bỏ chạy, lò than cuối cùng đã bị đổ và vỡ nát, và bạn không còn thấy chúng ở phía trước nữa. May mắn thay, bạn không cần phải di chuyển trong bóng tối quá lâu. Trong vòng vài phút, bạn bắt gặp một cánh cửa lớn bằng đá: chắc chắn là lối vào Nexus.</p><p class='basic right'>Skip to _Intro 3_.</p>",
-    "intro2": "<p>_Intro 2_: Vì bạn không có ánh sáng dẫn đường, bạn đã dùng mọi thời gian bạn tỉnh táo với một phần cơ thể áp vào tường hang, sử dụng các hòn đá lạnh để định hướng mà không bị lạc đường. Khi bạn di chuyển, ngón tay của bạn tìm thấy những đường rãnh ấm áp, bằng phẳng dọc theo bức tường: cùng một công nghệ không hoạt động tồn tại trong tàn tích Eztli. Bạn rõ ràng không phải là người đầu tiên bước vào nơi vực thẳm này. Tuy nhiên, bất cứ ai đến đây trước bạn chắc chắn đã bỏ trốn trước khi công việc của họ hoàn thành, vì các đường rãnh không phát sáng để dẫn đường cho bạn hoặc trừng mắt giận dữ khi bạn đến gần. Nhiều giờ trôi qua khi bạn đi dần dần trong bóng tối, cho đến khi cuối cùng bạn bắt gặp một cánh cửa bằng đá khổng lồ: chắc chắn đó là lối vào Nexus.</p><p class='basic right'>Each investigator begins this scenario with 2 fewer cards in his or her opening hand. Proceed to Intro 3.</p>",
+    "intro2": "<p>_Intro 2_: Vì bạn không có ánh sáng dẫn đường, bạn đã dùng mọi thời gian bạn tỉnh táo với một phần cơ thể áp vào tường hang, sử dụng các hòn đá lạnh để định hướng mà không bị lạc đường. Khi bạn di chuyển, ngón tay của bạn tìm thấy những đường rãnh ấm áp, bằng phẳng dọc theo bức tường: cùng một công nghệ không hoạt động tồn tại trong tàn tích Eztli. Bạn rõ ràng không phải là người đầu tiên bước vào nơi vực thẳm này. Tuy nhiên, bất cứ ai đến đây trước bạn chắc chắn đã bỏ trốn trước khi công việc của họ hoàn thành, vì các đường rãnh không phát sáng để dẫn đường cho bạn hoặc trừng mắt giận dữ khi bạn đến gần. Nhiều giờ trôi qua khi bạn đi dần dần trong bóng tối, cho đến khi cuối cùng bạn bắt gặp một cánh cửa bằng đá khổng lồ: chắc chắn đó là lối vào Nexus.</p><p class='basic right'>Mỗi điều tra viên bắt đầu màn chơi này với ít hơn 2 lá bài trên tay ban đầu. Tiến hành Intro 3.</p>",
     "intro3": {
       "body": "Bàn tay của bạn lần theo những đường khắc trên cánh cửa. Một dòng chữ. Một lời cảnh báo quay trở lại, vì mở lối đi này là mời gọi sự diệt vong. Trời quá tối để nhận ra ngôn ngữ, nhưng bạn biết đó không phải là ngôn ngữ được nhân loại dùng trong thời đại ngày nay. Bạn không biết làm thế nào bạn có thể hiểu được chữ khắc. Có lẽ là chút ký ức cuối cùng còn sót lại từ lúc bạn ở Pnakotus, thành phố mất tích của người Yithian. Hoặc có lẽ bạn thực sự điên rồi, tìm kiếm ý nghĩa từ những vết lõm của tự nhiên trên bức tường đá. Dù gì thì cũng đã gần một tuần kể từ khi bạn nhìn thấy ánh sáng tự nhiên.",
-      "foundTheMissingRelic": "*If the investigators found the missing relic*, proceed to _Intro 4_.",
-      "theRelicIsMissing": "*If the relic is missing*, skip to _Intro 5_."
+      "foundTheMissingRelic": "*Nếu các điều tra viên đã tìm thấy cổ vật bị mất*, tiến hành _Intro 4_.",
+      "theRelicIsMissing": "*Nếu cổ vật bị mất*, bỏ qua và đọc _Intro 5_."
     },
     "intro4": "<p>_Intro 4_: Cánh cửa bằng đá được đóng kín khi bạn đến, nhưng ngay khi bạn đến gần, cổ vật bắt đầu rung chuyển và kêu vo vo rất to. Các rãnh dọc theo cánh cửa nhấp nháy với ánh sáng lung linh, và đột nhiên cánh cửa tự động mở ra. Bạn nắm chặt cổ vật và bước vào.</p><p class='basic right'>Skip to _Setup_.</p>",
     "intro5": "<p>_Intro 5_: Cánh cửa đá đã mở sẵn khi bạn đến. Các rãnh dọc cửa được thắp sáng với ánh sáng lung linh. The Brotherhood hẳn đã ở đây rồi. Bạn đã đến kịp thời gần như là trong phút chót.</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>"
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Shattered Aeons*, *Pnakotic Brotherhood*, *Temporal Flux*, and *Ancient Evils*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/shattered-aeons.png' /><img src='{setImgPath}/pnakotic-brotherhood.png' /><img src='{setImgPath}/temporal-flux.png' /><img src='{setImgPath}/ancient-evils.png' /></section>",
-    "gatherSetsCultist": "If there are more {'{'}cultist{'}'} tokens in the chaos bag than {'{'}tablet{'}'} tokens, also gather the Dark Cult encounter set, indicated by this icon:<section class='encounter-sets'><img src='{setImgPath}/dark-cult.png' /></section>",
-    "gatherSetsTablet": "If there are more {'{'}tablet{'}'} tokens in the chaos bag than {'{'}cultist{'}'} tokens, also gather the Agents of Yig encounter set, indicated by this icon:<section class='encounter-sets'><img src='{setImgPath}/agents-of-yig.png' /></section>",
-    "gatherSetsEqual": "If there is an equal number of {'{'}cultist{'}'} and {'{'}tablet{'}'} tokens in the chaos bag, also gather both the Dark Cult and Agents of Yig encounter sets, indicated by these icons:<section class='encounter-sets'><img src='{setImgPath}/dark-cult.png' /><img src='{setImgPath}/agents-of-yig.png' /></section>",
+    "gatherSetsCultist": "Nếu có nhiều token {'{'}cultist{'}'} trong túi hỗn mang hơn token {'{'}tablet{'}'}, hãy tập hợp thêm encounter set Dark Cult, được biểu thị bằng biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/dark-cult.png' /></section>",
+    "gatherSetsTablet": "Nếu có nhiều token {'{'}tablet{'}'} trong túi hỗn mang hơn token {'{'}cultist{'}'}, hãy tập hợp thêm encounter set Agents of Yig, được biểu thị bằng biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/agents-of-yig.png' /></section>",
+    "gatherSetsEqual": "Nếu số lượng token {'{'}cultist{'}'} và {'{'}tablet{'}'} trong túi hỗn mang bằng nhau, hãy tập hợp cả hai encounter set Dark Cult và Agents of Yig, được biểu thị bằng những biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/dark-cult.png' /><img src='{setImgPath}/agents-of-yig.png' /></section>",
     "placeLocations": "Đặt vị trí Nexus of N’kai vào chơi. Mỗi điều tra viên bắt đầu chơi tại Nexus of N’kai.",
-    "setAsideEnemies": "Set the 2 enemy cards depicted here aside, out of play: Ichtaca (*Scion of Yig*) and Alejandro Vela (*Or, Is He?*).",
+    "setAsideEnemies": "Đặt 2 lá bài kẻ địch được mô tả ở đây sang một bên, ngoài màn chơi: Ichtaca (*Scion of Yig*) và Alejandro Vela (*Or, Is He?*).",
     "setAsideEnemiesNote": "<div class='columns' style='overflow: none;padding-bottom: 40px;'><div style='flex-basis: 20%;'>*Lưu ý: Những lá bài này có hai mặt và có câu chuyện ở mặt bên kia. Để có trải nghiệm tốt nhất, đừng nhìn vào mặt bên kia trừ khi có hiệu ứng hướng dẫn bạn làm như vậy.*</div><div style='flex:1; margin-top: 30px;' class='fan'><img src='{setImgPath}/../cards/04325.avif' /><img src='{setImgPath}/../cards/04326.avif' /></div></div>",
     "setAside": "Đặt các lá bài sau một bên, ngoài khu vực chơi: Formless Spawn, Relic of Ages (Unleash the Timestream), A Pocket in Time, Act 4a—“Paradise Lost”, Act 4a—“Timelock”, và 6 vị trí một mặt [[Shattered]].",
     "explorationDeck": "Tạo chồng bài khám phá. Điều này được thực hiện bằng cách lấy 3 vị trí một mặt còn lại và xào chúng vào với nhau, cùng với 1 bản sao của mỗi lá bài encounter sau: Wracked by Time, Between Worlds, và Ancient Evils.",
     "yigsFury": "Kiểm tra Nhật ký Chiến dịch. Với mỗi 10 kiểm đếm dưới phần \"Cơn giận dữ của Yig\", đặt lá bài trên đầu trong chồng bài của trưởng nhóm vào khu vực trưng bày thành tích, úp xuống. Cho phần còn lại của chiến dịch, xem mỗi lá bài này như thể nó có Vengeance 1.",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to Shattered Aeons*, *Temporal Hunters*, and *Cult of Pnakotus*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-shattered-aeons.png' /><img src='{setImgPath}/temporal-hunters.png' /><img src='{setImgPath}/cult-of-pnakotus.png' /></section>*Temporal Hunters* replaces *Temporal Flux* and *Cult of Pnakotus* replaces *Dark Cult*. Remove the replaced sets from the game.",
-      "explorationDeck": "When building the exploration deck, use only the 4 single-sided _Otherworld_ locations. Do not include any of the other encounter cards listed in the original setup instructions.",
-      "setAside": "Also set the new _Shattered_ locations aside, out of play.",
-      "additionalRule": "For the duration of this scenario, the following additional rule applies: _Forced_ – After a successful exploration ends: Shuffle the top card of the encounter deck into the exploration deck."
+      "explorationDeck": "Khi lập exploration deck, chỉ sử dụng 4 địa điểm _Otherworld_ 1 mặt. Không đưa vào bất kỳ lá bài encounter nào khác được liệt kê trong hướng dẫn chuẩn bị ban đầu.",
+      "setAside": "Đồng thời đặt các địa điểm _Shattered_ mới sang một bên, ngoài màn chơi.",
+      "additionalRule": "Trong suốt thời gian diễn ra màn chơi này, luật bổ sung sau sẽ được áp dụng: _Forced_ – Sau khi một lần khám phá thành công kết thúc: Xào lá bài trên cùng của chồng bài encounter vào exploration deck."
     }
   },
   "specialRules": [
@@ -73,19 +73,19 @@
   ],
   "storyCards": {
     "title": "Lá bài Cốt truyện",
-    "body": "Story cards are a new cardtype that appears in this Mythos Pack. These cards serve as an avenue for additional narrative and typically appear as the reverse side of another scenario card. When you are instructed to resolve a story card, simply read its story text and resolve its game text, if any."
+    "body": "Lá bài Story là một loại bài mới xuất hiện trong Mythos Pack này. Những lá bài này đóng vai trò là một hướng kể chuyện bổ sung và thường xuất hiện ở mặt sau của một lá bài kịch bản khác. Khi bạn được hướng dẫn xử lý một lá bài story, chỉ cần đọc phần văn bản cốt truyện và thực hiện nội dung trò chơi của nó, nếu có."
   },
   "resolutions": {
     "xp": {
       "resolution1": "Mỗi điều tra viên nhận được 5 điểm kinh nghiệm thưởng, vì họ đã sửa chữa dòng thời gian bị phá vỡ và cứu Trái đất khỏi thảm họa."
     },
     "noResolution": {
-      "title": "No Resolution",
-      "body": "_If no resolution was reached (each investigator resigned or was defeated)_: Read _Resolution 4_."
+      "title": "Không Có Kết Cuộc",
+      "body": "_Nếu không đạt được kết cuộc nào (mỗi điều tra viên đã resign hoặc bị đánh bại)_: Đọc _Resolution 4_."
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<p>_Resolution 1_:</p><p class='anke'><right><fancy>Thứ Năm, ngày 17 tháng 12 năm 1925</fancy></right></p><p>Thật khó để tôi truyền đạt những suy nghĩ nguyên vẹn của mình về những sự kiện xảy ra trong mùa hè năm 1925. Tất nhiên, tôi đã kể toàn bộ câu chuyện của mình cho Harlan - người mà tôi cho là người duy nhất sẵn sàng làm chứng cho câu chuyện của tôi - nhưng tôi chưa ngồi viết ra giấy cho đến bây giờ. Có lẽ là do tôi thà rằng những sự kiện này chỉ là sản phẩm của trí tưởng tượng của tôi.</p><p>Thực ra, tôi không biết làm thế nào mà chúng tôi có thể sống sót thoát ra khỏi các hang động bên dưới khu rừng. Chỉ đơn giản đến được nơi vực thẳm đã là một thử thách kinh khủng. Ký ức của tôi về chuyến trở về của chúng tôi rất lung tung và lộn xộn. Chúng tôi mò mẫm trong bóng tối trong khoảng thời gian dường như đã lâu. Chúng tôi hết thức ăn, hết nhu yếu phẩm, hết hy vọng—nhưng bằng cách nào đó, chúng tôi đã tìm ra lối thoát.</p><p>Phần thưởng của chúng tôi cho việc ngăn chặn tai họa là sự khinh miệt và chế giễu. Không có tờ báo hay trường đại học uy tín nào công bố những phát hiện của chúng tôi, và tất nhiên chúng tôi không có bằng chứng nào về chuyến thám hiểm của mình ngoại trừ những vết sẹo và các cơn ác mộng của chúng tôi. Tôi ước tôi có thể nói rằng trí nhớ của tôi về những sự kiện này đã phai nhạt theo từng ngày, nhưng tôi sẽ không bao giờ quên thành phố xa lạ mà chúng tôi đã khám phá trong cơ thể hình nón của mình, những sinh vật rắn đã truy đuổi chúng tôi trong vùng đất Yoth đầy ánh sáng đỏ, những sinh vật ghê tởm không hình dáng sống sâu bên dưới trái đất…</p><p>Có lẽ đó là lý do tại sao tôi sợ viết ra những phát hiện của chúng tôi—bởi vì những ký ức này sẽ kết tinh và khắc sâu trong tâm trí tôi, khiến tôi vĩnh viễn phải chịu đựng một cuộc sống kinh hoàng và mệt mỏi. Tuy nhiên, thế giới cần biết những gì chúng tôi đã thấy. Những gì chúng tôi đã làm.</p><ul><li>In your Campaign Log, record that *the investigators mended the tear in the fabric of time*.</li><li>Each investigator suffers 2 physical trauma and 2 mental trauma, as he or she never fully recovers from the expedition into N’kai.</li><li>Mỗi vị trí được gắn vào Relic of Ages với Victory X được thêm vào khu vực trưng bày thành tích.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Các điều tra viên thành công!</li></ul>"
+      "body": "<p>_Resolution 1_:</p><p class='anke'>Thứ Năm, ngày 17 tháng 12 năm 1925</p><p>Thật khó để tôi truyền đạt những suy nghĩ nguyên vẹn của mình về những sự kiện xảy ra trong mùa hè năm 1925. Tất nhiên, tôi đã kể toàn bộ câu chuyện của mình cho Harlan - người mà tôi cho là người duy nhất sẵn sàng làm chứng cho câu chuyện của tôi - nhưng tôi chưa ngồi viết ra giấy cho đến bây giờ. Có lẽ là do tôi thà rằng những sự kiện này chỉ là sản phẩm của trí tưởng tượng của tôi.</p><p>Thực ra, tôi không biết làm thế nào mà chúng tôi có thể sống sót thoát ra khỏi các hang động bên dưới khu rừng. Chỉ đơn giản đến được nơi vực thẳm đã là một thử thách kinh khủng. Ký ức của tôi về chuyến trở về của chúng tôi rất lung tung và lộn xộn. Chúng tôi mò mẫm trong bóng tối trong khoảng thời gian dường như đã lâu. Chúng tôi hết thức ăn, hết nhu yếu phẩm, hết hy vọng—nhưng bằng cách nào đó, chúng tôi đã tìm ra lối thoát.</p><p>Phần thưởng của chúng tôi cho việc ngăn chặn tai họa là sự khinh miệt và chế giễu. Không có tờ báo hay trường đại học uy tín nào công bố những phát hiện của chúng tôi, và tất nhiên chúng tôi không có bằng chứng nào về chuyến thám hiểm của mình ngoại trừ những vết sẹo và các cơn ác mộng của chúng tôi. Tôi ước tôi có thể nói rằng trí nhớ của tôi về những sự kiện này đã phai nhạt theo từng ngày, nhưng tôi sẽ không bao giờ quên thành phố xa lạ mà chúng tôi đã khám phá trong cơ thể hình nón của mình, những sinh vật rắn đã truy đuổi chúng tôi trong vùng đất Yoth đầy ánh sáng đỏ, những sinh vật ghê tởm không hình dáng sống sâu bên dưới trái đất…</p><p>Có lẽ đó là lý do tại sao tôi sợ viết ra những phát hiện của chúng tôi—bởi vì những ký ức này sẽ kết tinh và khắc sâu trong tâm trí tôi, khiến tôi vĩnh viễn phải chịu đựng một cuộc sống kinh hoàng và mệt mỏi. Tuy nhiên, thế giới cần biết những gì chúng tôi đã thấy. Những gì chúng tôi đã làm.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã vá lại vết rách trên tấm vải thời gian*.</li><li>Mỗi điều tra viên chịu 2 sang chấn thể chất và 2 sang chấn tinh thần, vì họ không bao giờ hồi phục hoàn toàn sau chuyến thám hiểm vào N’kai.</li><li>Mỗi địa điểm gắn vào Cổ vật Thời đại (Relic of Ages) có Victory X được thêm vào khu vực trưng bày thành tích.</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng với giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích. Mỗi điều tra viên nhận thêm 5 điểm kinh nghiệm thưởng, vì họ đã hàn gắn lại dòng thời gian vỡ vụn và cứu Trái Đất khỏi thảm họa.</li><li>Các điều tra viên chiến thắng chiến dịch!</li></ul>"
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",

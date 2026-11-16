@@ -2,40 +2,40 @@
   "heading": "Màn VI",
   "tokens": {
     "easyStandard": {
-      "skull": "-1 (-3 instead if you have 5 or more cards in your hand).",
+      "skull": "-1 (thay vào đó là -3 nếu bạn có từ 5 lá bài trở lên trên tay).",
       "cultist": "-2. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.",
-      "tablet": "-3. Nếu bạn thất bại, discard 1 random card from your hand.",
+      "tablet": "-3. Nếu bạn thất bại, bỏ 1 lá bài ngẫu nhiên khỏi tay bạn.",
       "elderThing": "@:theForgottenAge.theCityOfArchives.tokens.easyStandard.cultist"
     },
     "hardExpert": {
-      "skull": "-2 (if you have 5 or more cards in your hand, you automatically fail instead).",
+      "skull": "-2 (thay vào đó, nếu bạn có từ 5 lá bài trở lên trên tay, bạn tự động thất bại).",
       "cultist": "-2. Đặt 1 manh mối của bạn lên địa điểm của bạn.",
-      "tablet": "-3. For each point you fail by, discard 1 random card from your hand.",
+      "tablet": "-3. Với mỗi điểm bạn thất bại, bỏ 1 lá bài ngẫu nhiên khỏi tay bạn.",
       "elderThing": "@:theForgottenAge.theCityOfArchives.tokens.hardExpert.cultist"
     }
   },
   "xp": {
-    "perfected": "Gains insight into the secrets of the Earth.",
-    "successful": "Gains insight into the secrets of the Earth.",
-    "backfired": "Gains insight into the secrets of the Earth."
+    "perfected": "Hiểu thấu những bí mật của Trái Đất.",
+    "successful": "Hiểu thấu những bí mật của Trái Đất.",
+    "backfired": "Hiểu thấu những bí mật của Trái Đất."
   },
   "label": {
-    "cardsToDiscard": "Cards to discard"
+    "cardsToDiscard": "Những lá bài cần bỏ"
   },
   "tooltips": {
     "cyclopeanVaults": {
-      "discard": "Discard each non-weakness card in your hand.",
-      "remember": "If you have no cards in your hand: Remember that you \"read about Earth.\""
+      "discard": "Bỏ mỗi lá bài không phải điểm yếu trên tay bạn.",
+      "remember": "Nếu bạn không có lá bài nào trên tay: Ghi nhớ rằng bạn đã \"đọc về Trái Đất.\""
     }
   },
   "remembered": {
-    "foundTheProcess": "You found the process.",
-    "dissectedAnOrgan": "You dissected an organ.",
-    "interviewedASubject": "You interviewed a subject.",
-    "realizedWhatYearItIs": "You realized what year it is.",
-    "activatedTheDevice": "You activated the device.",
-    "readAboutEarth": "You read about the Earth.",
-    "sawAFamiliarSpecimen": "You saw a familiar specimen."
+    "foundTheProcess": "Bạn đã tìm ra quy trình.",
+    "dissectedAnOrgan": "Bạn đã mổ xẻ một nội tạng.",
+    "interviewedASubject": "Bạn đã phỏng vấn một đối tượng.",
+    "realizedWhatYearItIs": "Bạn đã nhận ra bây giờ là năm nào.",
+    "activatedTheDevice": "Bạn đã kích hoạt thiết bị.",
+    "readAboutEarth": "Bạn đã đọc về Trái Đất.",
+    "sawAFamiliarSpecimen": "Bạn đã nhìn thấy một mẫu vật quen thuộc."
   },
   "intro": {
     "label": {
@@ -60,10 +60,10 @@
     "placeLocations": "Đặt 3 vị trí Halls of Pnakotus vào chơi. Đặt mỗi vị trí còn lại một bên, ngoài khu vực chơi.",
     "setAside": "Đặt The Custodian sang một bên, ngoài khu vực chơi.",
     "returnTo": {
-      "gatherSets": "Also gather all cards from the *Return to The City of Archives* encounter set. It is indicated by the following icon:<section class='encounter-sets'><img src='{setImgPath}/return-to-city-of-archives.png' /></section>",
-      "placeLocations": "Also put Halls of Pnakotus (*Southern Corridors*) into play.",
-      "setAside": "Also set Cyclopean Vaults and Alien Conservatory aside, out of play. (These locations should be put into play during act 1b, when the remainder of the set-aside locations are put into play.)",
-      "actDeck": "Remove Act 2a—*Restricted Access* from the game and replace it with the new Act 2a—*Unrestricted Access*."
+      "gatherSets": "Đồng thời tập hợp tất cả các lá bài từ encounter set *Return to The City of Archives*. Nó được biểu thị bằng biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-city-of-archives.png' /></section>",
+      "placeLocations": "Đồng thời đưa Halls of Pnakotus (*Southern Corridors*) vào màn chơi.",
+      "setAside": "Đồng thời đặt Cyclopean Vaults và Alien Conservatory sang một bên, ngoài màn chơi. (Các địa điểm này sẽ được đưa vào màn chơi trong act 1b, khi phần còn lại của các địa điểm đặt sang một bên được đưa vào màn chơi.)",
+      "actDeck": "Loại bỏ Act 2a—*Restricted Access* khỏi trò chơi và thay thế bằng Act 2a—*Unrestricted Access* mới."
     }
   },
   "specialRules": [
@@ -74,24 +74,24 @@
   ],
   "bodyOfAYithian": {
     "title": "Cơ thể của sinh vật Yithian",
-    "body": "<p class='basic'>Trong quá trình chuẩn bị cho màn chơi này, mỗi điều tra viên được hướng dẫn thay thế lá bài điều tra viên của họ bằng một trong các lá bài điều tra viên Body of a Yithian được cung cấp trong Mythos Pack này.</p><ul><li>Mỗi bộ bài của điều tra viên vẫn giữ nguyên, nhưng trong suốt màn chơi này, họ phải sử dụng lá bài điều tra viên Body of a Yithian, và do đó không thể sử dụng bất kỳ năng lực điều tra viên nào của họ. Mỗi điều tra viên vẫn sử dụng lá bài điều tra viên nhỏ, để phân biệt ai là ai.<ul><li>Each investigator should still use their investigator mini-card so they can tell who is who.</li></ul></li><li>Bất cứ sang chấn nào bình thường được đặt vào điều tra viên của bạn sẽ được chuyển dời vào lá bài điều tra viên Body of a Yithian của bạn.</li><li>Bất cứ lá bài nào được đính kèm hoặc đặt bên dưới lá bài điều tra viên của bạn được đính kèm hoặc đặt bên dưới lá bài Body of a Yithian của bạn.</li><li>Trong suốt màn chơi này, lá bài Body of a Yithian của bạn có cùng tên với lá bài điều tra viên cũ của bạn. <i>Ví dụ: Nếu bạn đang chơi Wendy Adams, xem lá bài Body of a Yithian như thể nó là “Wendy Adams” trong suốt màn chơi này.</i></li><li>Lá bài Body of a Yithian có biểu tượng encounter The City of Archives, và do đó không thể được sử dụng trong bất kỳ màn chơi nào khác, ngoại trừ màn chơi The City of Archives trừ khi được ghi rõ.</li></ul>"
+    "body": "<p class='basic'>Trong quá trình chuẩn bị cho màn chơi này, mỗi điều tra viên được hướng dẫn thay thế lá bài điều tra viên của họ bằng một trong các lá bài điều tra viên Body of a Yithian được cung cấp trong Mythos Pack này.</p><ul><li>Mỗi bộ bài của điều tra viên vẫn giữ nguyên, nhưng trong suốt màn chơi này, họ phải sử dụng lá bài điều tra viên Body of a Yithian, và do đó không thể sử dụng bất kỳ năng lực điều tra viên nào của họ.<ul><li>Mỗi điều tra viên vẫn nên sử dụng lá bài mini điều tra viên của mình để có thể phân biệt ai với ai.</li></ul></li><li>Bất cứ sang chấn nào bình thường được đặt vào điều tra viên của bạn sẽ được chuyển dời vào lá bài điều tra viên Body of a Yithian của bạn.</li><li>Bất cứ lá bài nào được đính kèm hoặc đặt bên dưới lá bài điều tra viên của bạn sẽ được đính kèm hoặc đặt bên dưới lá bài Body of a Yithian của bạn.</li><li>Trong suốt màn chơi này, lá bài Body of a Yithian của bạn có cùng tên với lá bài điều tra viên cũ của bạn. *Ví dụ: Nếu bạn đang chơi Wendy Adams, xem lá bài Body of a Yithian như thể nó có tên là “Wendy Adams” trong suốt màn chơi này.*</li><li>Lá bài Body of a Yithian mang biểu tượng encounter set The City of Archives, và do đó không thể được sử dụng trong bất kỳ màn chơi nào khác ngoài The City of Archives trừ khi có ghi chú khác.</li></ul>"
   },
   "resolutions": {
     "xp": {
-      "bonus": "Gained insight into the secrets of the Earth"
+      "bonus": "Hiểu thấu những bí mật của Trái Đất"
     },
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<p>_If no resolution was reached (each investigator was defeated):_ “Alejandro, what are you—?” You suddenly cry out. A nurse stands over you, peering into your eyes with a small light. You push the nurse away and rise to your feet, suddenly puzzled and disoriented. Despite the nurse’s protests, you wobble feebly out of the room. You are in a hospital, its white halls smelling faintly of disinfectant and other chemicals. Just moments prior, hadn’t you been exploring some kind of underground cavern?… You cannot recall.</p><p>“Excuse me? Come back, you must rest!” The nurse calls out to you, gripping your forearm and pulling you back to your cot. She examines you closely while you recover from the shock of being transported so far in so short a time. “Who is Alejandro?” she asks, and you struggle to recall. The name doesn’t ring a bell.</p><p>You ask the nurse how you came to be here, wondering why she isn’t surprised at your sudden appearance. “Why, you admitted yourself to St. Mary’s just last night. Do you not remember?” You have no memory of this, and you are starting to grow concerned. “You were acting a little strangely, if I may be so bold. And you spoke in a strange fashion, almost as if English weren’t your first language. But now I see that you probably just drank a little bit too much.” She notices your questioning expression and smiles. “Don’t worry. We get that kind of thing quite often these days, now that all the bars and pubs are on the up-and-up again.”</p><p>You examine your face in the mirror. You are tired and older than you remember. Something important lies on the very edge of your memory, fuzzy and blurred. It takes about a minute before the significance of the nurse’s last statement catches up to you. Turning back toward the nurse, you ask what year it is, terrified of the answer.</p><p>“Why, 1934 of course. My, you must have had a heck of a night!” She chuckles.</p><ul><li>In your Campaign Log, record that *the investigators had their memories expunged*.</li><li>Mỗi điều tra viên bị khiến <b>điên loạn</b>.</li><li>Các điều tra viên thất bại.</li></ul>"
+      "title": "Không Có Kết Cuộc",
+      "body": "<p>_Nếu không đạt được kết cuộc nào (mỗi điều tra viên bị đánh bại):_ “Alejandro, anh đang làm gì—?” Bạn đột ngột hét lên. Một y tá đứng bên cạnh bạn, đang soi một ánh đèn nhỏ vào mắt bạn. Bạn đẩy người y tá ra và gượng đứng dậy, đột nhiên cảm thấy bối rối và mất phương hướng. Bất chấp sự can ngăn của y tá, bạn loạng choạng bước ra khỏi phòng một cách yếu ớt. Bạn đang ở trong một bệnh viện, những hành lang màu trắng thoang thoảng mùi thuốc khử trùng và các hóa chất khác. Chỉ mới vài khoảnh khắc trước, chẳng phải bạn vẫn đang khám phá một hang động ngầm nào đó sao?… Bạn không thể nhớ lại được.</p><p>“Xin lỗi? Hãy quay lại đi, bạn cần phải nghỉ ngơi!” Người y tá gọi với theo bạn, nắm lấy cẳng tay bạn và kéo bạn trở lại giường bệnh. Cô ấy xem xét bạn kỹ lưỡng trong khi bạn dần hồi phục sau cú sốc khi bị dịch chuyển xa đến vậy trong một khoảng thời gian ngắn. “Alejandro là ai?” cô ấy hỏi, và bạn cố gắng nhớ lại. Cái tên này không gợi lên bất kỳ ký ức nào.</p><p>Bạn hỏi y tá làm sao bạn lại ở đây, tự hỏi tại sao cô ấy không hề ngạc nhiên trước sự xuất hiện đột ngột của bạn. “Kìa, chính bạn đã tự nhập viện St. Mary vào tối hôm qua mà. Bạn không nhớ sao?” Bạn không hề có chút ký ức nào về việc này, và bạn bắt đầu cảm thấy lo lắng. “Nếu tôi mạn phép được nói, trông bạn có vẻ hơi kỳ lạ. Và bạn nói bằng một giọng kỳ quặc, gần như thể tiếng Anh không phải là tiếng mẹ đẻ của bạn. Nhưng giờ tôi thấy có lẽ bạn chỉ uống hơi quá chén thôi.” Cô ấy nhận thấy vẻ mặt đầy thắc mắc của bạn và mỉm cười. “Đừng lo. Dạo này chúng tôi gặp chuyện như thế này khá thường xuyên, nhất là khi tất cả các quán bar và quán rượu đang dần phục hồi trở lại.”</p><p>Bạn nhìn khuôn mặt mình trong gương. Bạn trông mệt mỏi và già hơn so với ký ức của chính mình. Một điều gì đó quan trọng nằm ngay bên bờ vực ký ức của bạn, mờ mịt và nhạt nhòa. Phải mất chừng một phút trước khi bạn kịp hiểu ra ý nghĩa câu nói vừa rồi của người y tá. Quay lại phía y tá, bạn run rẩy hỏi bây giờ là năm nào, kinh hãi trước câu trả lời sắp tới.</p><p>“Trời, năm 1934 chứ năm nào nữa. Chà, chắc hẳn bạn đã trải qua một đêm dữ dội lắm!” Cô ấy cười khúc khích.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã bị tẩy xóa ký ức*.</li><li>Mỗi điều tra viên bị *điên loạn*.</li><li>Các điều tra viên thất bại chiến dịch.</li></ul>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
       "body": "<p>Bạn thức dậy trên bề mặt đá lạnh của hang động, tâm trí bạn choáng váng sau chuyến hành trình xuyên thời gian và không gian.</p>",
-      "tasks": "Check the number of tasks on act 2b that were completed during this scenario.",
-      "tasks6": "If all 6 tasks were completed, record in your Campaign Log that *the process was perfected*. Each investigator earns 4 bonus experience as they gain insight into the secrets of the Earth.",
-      "tasks5": "If 5 tasks were completed, record in your Campaign Log that *the process was successful*. Each investigator earns 2 bonus experience as they gain insight into the secrets of the Earth.",
-      "tasks4": "If 4 tasks were completed, record in your Campaign Log that *the process backfired*. Each investigator earns 1 bonus experience as they gain insight into the secrets of the Earth.",
-      "tasks3": "If 3 tasks were completed, record in your Campaign Log that *the process backfired spectacularly*.",
+      "tasks": "Kiểm tra số nhiệm vụ trên act 2b đã được hoàn thành trong màn chơi này.",
+      "tasks6": "Nếu cả 6 nhiệm vụ đều được hoàn thành, ghi vào Nhật ký Chiến dịch của bạn rằng *quy trình đã được hoàn thiện*. Mỗi điều tra viên nhận thêm 4 kinh nghiệm thưởng khi họ hiểu thấu những bí mật của Trái Đất.",
+      "tasks5": "Nếu 5 nhiệm vụ được hoàn thành, ghi vào Nhật ký Chiến dịch của bạn rằng *quy trình đã thành công*. Mỗi điều tra viên nhận thêm 2 kinh nghiệm thưởng khi họ hiểu thấu những bí mật của Trái Đất.",
+      "tasks4": "Nếu 4 nhiệm vụ được hoàn thành, ghi vào Nhật ký Chiến dịch của bạn rằng *quy trình đã phản tác dụng*. Mỗi điều tra viên nhận thêm 1 kinh nghiệm thưởng khi họ hiểu thấu những bí mật của Trái Đất.",
+      "tasks3": "Nếu 3 nhiệm vụ được hoàn thành, ghi vào Nhật ký Chiến dịch của bạn rằng *quy trình đã phản tác dụng ngoạn mục*.",
       "xp": "Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory của các lá bài trong vùng trưng bày thành tích."
     }
   }

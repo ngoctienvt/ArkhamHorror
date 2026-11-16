@@ -1,73 +1,73 @@
 {
   "label": {
-    "lookAtExplorationDeck": "Look at the top cards of the exploration deck",
-    "lookAtEncounterDeck": "Look at the top cards of the encounter deck",
+    "lookAtExplorationDeck": "Xem các lá bài trên cùng của chồng bài exploration",
+    "lookAtEncounterDeck": "Xem các lá bài trên cùng của chồng bài encounter",
     "farid": {
-      "resourcesToSpend": "Amount of resources to spend"
+      "resourcesToSpend": "Số lượng tài nguyên muốn chi"
     },
     "nadiaNimr": {
-      "horrorToTake": "Amount of horror to take"
+      "horrorToTake": "Số lượng horror muốn nhận"
     },
     "nassor": {
-      "addStrength": "Add 1 strength to the abyss",
-      "extraDamage": "Nassor deals +{count} damage and +{count} horror for this attack"
+      "addStrength": "Thêm 1 strength vào abyss",
+      "extraDamage": "Nassor gây thêm +{count} sát thương và +{count} horror cho đòn tấn công này"
     },
     "theBlackWind": {
-      "addStrength": "Add 1 strength to the abyss and add The Black Wind to the victory display.",
-      "discard": "Discard The Black Wind and draw the top card of the encounter deck to replace it. You get -1 to all skills for the remainder of this round."
+      "addStrength": "Thêm 1 strength vào abyss và thêm The Black Wind vào khu vực trưng bày thành tích.",
+      "discard": "Loại bỏ The Black Wind và rút lá bài trên cùng của chồng bài encounter để thay thế nó. Bạn nhận -1 cho tất cả các kỹ năng trong phần còn lại của vòng này."
     },
     "fateOfTheDreamers": {
-      "removeStrength": "Remove 2 strength from the abyss.",
-      "addStrength": "Add 2 strength to the abyss."
+      "removeStrength": "Loại bỏ 2 strength khỏi abyss.",
+      "addStrength": "Thêm 2 strength vào abyss."
     },
     "prisonersOfConquest": {
-      "freeTheCreatures": "Test {agility} (4) to free the creatures.",
-      "slayTheCreatures": "Test {combat} (4) to slay the creatures."
+      "freeTheCreatures": "Kiểm tra {agility} (4) để giải thoát các sinh vật.",
+      "slayTheCreatures": "Kiểm tra {combat} (4) để tiêu diệt các sinh vật."
     },
     "ruinsOfSarkomand": {
-      "speakToTheDenizens": "Test {intellect} (3) to speak to the almost-humanoid creatures that dwell in these ruins.",
-      "blockTheTrapdoor": "Test {combat} (3) to block the trapdoor."
+      "speakToTheDenizens": "Kiểm tra {intellect} (3) để nói chuyện với những sinh vật gần giống hình người cư ngụ trong tàn tích này.",
+      "blockTheTrapdoor": "Kiểm tra {combat} (3) để chặn cửa sập lại."
     },
     "effigyOfNodens": {
-      "entreatForAid": "Test {willpower} (2) to entreat the entity depicted in this statue for aid.",
-      "overthrowTheStatue": "Test {combat} (2) to overthrow the statue."
+      "entreatForAid": "Kiểm tra {willpower} (2) để khẩn cầu sự trợ giúp từ thực thể được khắc họa trong bức tượng này.",
+      "overthrowTheStatue": "Kiểm tra {combat} (2) để lật đổ bức tượng."
     },
     "usurpTheNight": {
       "proceed": "Chuyển tới Resolution 3.",
-      "flipBack": "Flip this card back to its enemy side",
-      "acceptMercy": "Accept Xzharah's mercy and immediately resign",
+      "flipBack": "Lật lá bài này trở lại mặt kẻ địch",
+      "acceptMercy": "Chấp nhận lòng nhân từ của Xzharah và lập tức đầu hàng",
       "refuse": "Từ chối."
     },
     "theHourOfJudgment": {
-      "destroyNeith": "Destroy Neith once and for all. By choosing this option, you believe those still under the curse of eternal slumber will be freed.",
-      "spareNeith": "Spare Neith and listen to what she has to say. By choosing this option, you believe you can learn more about the one Neith refers to as Xzharah."
+      "destroyNeith": "Tiêu diệt Neith một lần và mãi mãi. Bằng cách chọn phương án này, bạn tin rằng những người vẫn đang chịu lời nguyền giấc ngủ vĩnh hằng sẽ được giải thoát.",
+      "spareNeith": "Tha mạng cho Neith và lắng nghe những gì bà ta nói. Bằng cách chọn phương án này, bạn tin rằng mình có thể tìm hiểu thêm về kẻ mà Neith gọi là Xzharah."
     },
     "defeatingXzharah": {
       "proceed": "Chuyển tới Resolution 2.",
-      "flipBack": "Flip this act back to its \"a\" side"
+      "flipBack": "Lật lá bài act này trở lại mặt \"a\""
     }
   },
   "intoTheGate": {
-    "ankh": "<p>*Your Ankh amulet glows with a blinding light, causing Xzharah to recoil. \"So, Neith has abandoned us!\" Xzharah hisses.*</p>"
+    "ankh": "<p>*Chiếc bùa hộ mệnh Ankh của bạn phát sáng với ánh hào quang chói lòa, khiến Xzharah phải lùi lại. \"Vậy ra, Neith đã ruồng bỏ chúng ta!\" Xzharah rít lên.*</p>"
   },
-  "removeStrengthFromTheAbyss": "Remove 1 strength from the abyss.",
+  "removeStrengthFromTheAbyss": "Loại bỏ 1 strength khỏi abyss.",
   "theTranslatorsEvidence": {
-    "benefit": "<p>*You bring the tablet to Dr. El Masri, and she translates it to the best of her ability. \"When the Choice is made, He shall be empowered by a thousand sacrifices from the sacred land.\" She blinks a few times, trying to process what it means. \"How many coma patients are there right now?\" she asks, wide-eyed.*</p>"
+    "benefit": "<p>*Bạn mang phiến đá đến cho Tiến sĩ El Masri, và cô dịch nó bằng hết khả năng của mình. \"Khi Sự Lựa Chọn được đưa ra, Ngài sẽ được tiếp thêm sức mạnh bởi một ngàn vật hiến tế từ vùng đất thiêng.\" Cô chớp mắt vài lần, cố gắng hiểu ý nghĩa của nó. \"Hiện tại có bao nhiêu bệnh nhân đang hôn mê vậy?\" cô hỏi với đôi mắt mở to.*</p>"
   },
   "theSupplicantsEvidence": {
-    "benefit": "<p>*You manage to corner Dr. Moore as he tries to escape the city on foot. \"Very clever,\" he admits. \"But you're already out of time. Lock me up, it doesn't matter. The dreamers will be sacrificed, and our Chosen will lead us to a new age.\" But after several hours, he is begging to be let out of the city. \"Please, the reaper is coming! Neith is coming for us all. We'll all be sacrificed, don't you understand? You and me both! All of us need to flee the city while we still can!\"*</p>"
+    "benefit": "<p>*Bạn xoay sở dồn được Tiến sĩ Moore vào chân tường khi ông ta đang cố gắng trốn khỏi thành phố bằng đường bộ. \"Rất thông minh,\" ông ta thừa nhận. \"Nhưng các người đã hết thời gian rồi. Nhốt tôi lại đi, chẳng quan trọng đâu. Những kẻ mộng mơ sẽ bị hiến tế, và Người Được Chọn của chúng tôi sẽ dẫn dắt chúng tôi sang một thời đại mới.\" Nhưng sau vài giờ, ông ta lại van nài được thả ra khỏi thành phố. \"Làm ơn, thần chết đang đến! Neith đang đến tìm tất cả chúng ta. Tất cả chúng ta sẽ bị hiến tế, các người không hiểu sao? Cả các người lẫn tôi! Tất cả chúng ta phải trốn khỏi thành phố khi còn có thể!\"*</p>"
   },
   "thePriestesssEvidence": {
-    "benefit": "<p>*Using the key Nadia gave you, you enter the marked residence. To your surprise, there is nobody inside - only the faint stench of rot and aged leather. The basement of the residence is littered with old books, records kept by the Brotherhood and its many agents. They will take some time to peruse, but a lead is a lead.*</p>"
+    "benefit": "<p>*Sử dụng chiếc chìa khóa Nadia đưa cho, bạn bước vào căn nhà đã được đánh dấu. Thật ngạc nhiên, không có ai bên trong - chỉ có mùi thối rữa thoang thoảng và mùi da thuộc cũ kỹ. Tầng hầm của căn nhà ngổn ngang những cuốn sách cũ, những ghi chép được lưu giữ bởi Huynh đệ hội và nhiều đặc vụ của họ. Sẽ mất một chút thời gian để xem xét kỹ lưỡng, nhưng manh mối vẫn là manh mối.*</p>"
   },
   "theSalesmansEvidence": {
-    "benefit": "<p>*Farid grins wide as he scoops golden idols into his rucksack. You press him for information before he gets too excited. \"Look, they promised me wealth beyond my wildest dreams. Even I have my price, you know?\" He throws up his hands, resigned. \"Let me show you my records. I've done a lot of 'business' in the last few months. That'll point you in the right direction.\"*</p>"
+    "benefit": "<p>*Farid cười toe toét khi vơ vét những bức tượng vàng vào ba lô của mình. Bạn gặng hỏi thông tin trước khi anh ta trở nên quá phấn khích. \"Nghe này, họ hứa cho tôi sự giàu sang vượt ngoài sức tưởng tượng. Ngay cả tôi cũng có cái giá của mình, anh biết đấy?\" Anh ta giơ hai tay lên, chịu thua. \"Để tôi cho anh xem sổ sách của tôi. Tôi đã làm rất nhiều 'thương vụ' trong vài tháng qua. Điều đó sẽ chỉ cho anh đi đúng hướng.\"*</p>"
   },
   "theAssassinsEvidence": {
-    "benefit": "<p>*Despite his mortal wounds, the assassin grins wickedly. \"The Day is coming,\" he says between a fit of coughs. \"You think killing me will stop it? Fools! The Beast will devour you all!\" He cackles with his final breath, then falls silent.*</p><p>*You are quick to search his belongings before any bystanders spot the body. Among the many strange curios on his person, you find a small leather-bound journal with a cryptic inscription:*</p><p class='center'><span class='wolgast' style='line-height:1em;'>*Our tribute soaks the abyssal blade<br>A thousand souls never to wake<br>With this our Chosen shall arise<br>And the day is ever nigh!*</span></p>"
+    "benefit": "<p>*Bất chấp những vết thương chí mạng, tên sát thủ cười nham hiểm. \"Ngày Đó đang đến,\" hắn nói giữa những cơn ho sặc sụa. \"Các người nghĩ giết ta sẽ ngăn chặn được nó sao? Lũ ngu ngốc! Con Quái Thú sẽ nuốt chửng tất cả các người!\" Hắn cười khằng khặc trút hơi thở cuối cùng, rồi im bặt.*</p><p>*Bạn nhanh chóng lục soát đồ đạc của hắn trước khi bất kỳ người qua đường nào phát hiện ra cái xác. Giữa vô số món đồ kỳ lạ trên người hắn, bạn tìm thấy một cuốn nhật ký nhỏ bọc da với dòng chữ khắc đầy bí ẩn:*</p><p class='center'><span class='wolgast' style='line-height:1em;'>*Vật phẩm cống nạp thấm đẫm lưỡi kiếm vực sâu<br>Ngàn linh hồn vĩnh viễn không tỉnh giấc<br>Nhờ đó Người Được Chọn của ta sẽ trỗi dậy<br>Và ngày ấy đã cận kề trước mắt!*</span></p>"
   },
   "theProfessorsEvidence": {
-    "benefit": "<p>*You set the trinket down on the professor's desk. He puts on his monocle and examines it carefully. \"Intriguing!\" he exclaims. \"This could only have come from a particular tomb in the royal crypts. Most scholars don't believe it exists.\" He rises to his feet and shakes your hand. \"Give me some time to study this further. Perhaps if we both make it out of this alive, I can resubmit my thesis,\" he says with a morbid chuckle.*</p>"
+    "benefit": "<p>*Bạn đặt món đồ trang sức nhỏ xuống bàn làm việc của giáo sư. Ông đeo kính một tròng vào và cẩn thận kiểm tra nó. \"Thật kỳ thú!\" ông thốt lên. \"Thứ này chỉ có thể đến từ một ngôi mộ đặc biệt trong hầm mộ hoàng gia. Hầu hết các học giả đều không tin nó tồn tại.\" Ông đứng dậy và bắt tay bạn. \"Hãy cho tôi một chút thời gian để nghiên cứu thêm. Có lẽ nếu cả hai chúng ta đều sống sót qua chuyện này, tôi có thể nộp lại luận án của mình,\" ông nói với một tiếng cười khúc khích u ám.*</p>"
   },
   "rules": {
     "storyCards": {
@@ -75,7 +75,7 @@
       "body": "<p class='basic'>Các lá bài cốt truyện (story cards) là một kiểu bài mới trong màn chơi này. Những lá bài này đóng vai trò như một cách để bổ sung các câu chuyện và thường xuất hiện ở mặt còn lại của một lá bài màn chơi khác. Khi bạn được hướng dẫn xử lý một lá bài cốt truyện, hãy đọc nội dung cốt truyện của nó và giải quyết hiệu ứng của nó, nếu có. (Lưu ý: Khi một vị trí hoặc một kẻ địch bị lật sang mặt cốt truyện của nó ở mặt còn lại, vị trí hoặc kẻ địch đó vẫn được xem là đang được chơi trong khi lá bài cốt truyện được xử lý.)</p>"
     },
     "strengthOfTheAbyss": {
-      "title": "Strength of the Abyss",
+      "title": "Sức mạnh của Vực thẳm",
       "body": "<p class='basic'>Trong scenario này, các tài nguyên trên lá bài scenario reference đại diện cho sức mạnh hiện tại của vực thẳm. Khi bạn được hướng dẫn thêm sức mạnh vào vực thẳm hoặc loại bỏ sức mạnh khỏi vực thẳm, hãy điều chỉnh số lượng tài nguyên token trên lá bài scenario reference cho phù hợp. Bản thân sức mạnh của vực thẳm không có hiệu ứng trò chơi nội tại, mặc dù một số hiệu ứng của lá bài encounter có thể mạnh lên hoặc thay đổi tùy thuộc vào sức mạnh hiện tại của vực thẳm. Hãy cẩn thận—khi vực thẳm mạnh lên, các thế lực chống lại bạn cũng vậy. Nếu nó trở nên quá mạnh, bạn chắc chắn sẽ thất bại với tư cách là Guardians of the Abyss.</p>"
     },
     "takenByTheAbyss": {

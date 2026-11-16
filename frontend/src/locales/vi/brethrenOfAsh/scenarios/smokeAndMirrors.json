@@ -1,14 +1,14 @@
 {
   "keywordsAndConcepts": {
-    "title": "New Keywords and Concepts",
+    "title": "Từ khóa và Khái niệm mới",
     "entries": [
       {
-        "title": "The Codex",
-        "body": "<p>Some cards have the codex symbol on them. During a scenario, some card effects and abilities may direct players to read a specific codex entry. While playing, keep the campaign guide on hand for easy reference. Certain locations, characters, and enemies have codex entries. To read a codex entry, pay all costs and/or resolve all effects associated with its triggering ability, then read the corresponding entry for the current scenario in the campaign guide and resolve its text.</p><ul><li>Each codex entry cannot be resolved more than once per scenario unless otherwise stated.</li><li>Khi giải quyết một mục codex, người chơi đã kích hoạt mục đó sẽ giải quyết tất cả các hiệu ứng (giải quyết một test, gây damage, trả tài nguyên, v.v.). Nếu không rõ ai đã kích hoạt mục codex, điều tra viên chính sẽ giải quyết mục đó.</li><li>Các mục codex được kích hoạt thông qua một loại action cụ thể (như <b>Fight</b>, <b>Evade</b>, <b>Parley</b>, v.v.) được coi là loại action đó trong suốt quá trình giải quyết mục codex đó.</li><li>Trong khi giải quyết một mục codex, người chơi chỉ đọc phần mà họ đáp ứng các yêu cầu. Nếu họ không đáp ứng các yêu cầu để giải quyết phần đầu tiên của một mục codex, hãy bỏ qua và chuyển sang phần tiếp theo.</li><li>If a card effect directs players to resolve a codex entry that does not exist for the scenario being played, that effect fails.</li><li>Sau khi giải quyết một mục codex và thực hiện bất kỳ thay đổi nào đối với trò chơi và/hoặc trong Nhật ký Chiến dịch, tiếp tục chơi.</li></ul>"
+        "title": "Codex",
+        "body": "<p>Một số lá bài có biểu tượng codex trên đó. Trong một màn chơi, một số hiệu ứng và khả năng của lá bài có thể hướng dẫn người chơi đọc một mục codex cụ thể. Khi chơi, hãy để sẵn hướng dẫn chiến dịch trong tầm tay để tiện tra cứu. Một số địa điểm, nhân vật và kẻ địch nhất định có các mục codex. Để đọc một mục codex, hãy trả toàn bộ chi phí và/hoặc giải quyết tất cả hiệu ứng liên quan đến khả năng kích hoạt của nó, sau đó đọc mục tương ứng cho màn chơi hiện tại trong hướng dẫn chiến dịch và giải quyết nội dung của nó.</p><ul><li>Mỗi mục codex không thể được giải quyết nhiều hơn một lần trong mỗi màn chơi trừ khi có quy định khác.</li><li>Khi giải quyết một mục codex, người chơi đã kích hoạt mục đó sẽ giải quyết tất cả các hiệu ứng (giải quyết một kiểm tra kỹ năng, gây sát thương, trả tài nguyên, v.v.). Nếu không rõ ai đã kích hoạt mục codex, điều tra viên chính sẽ giải quyết mục đó.</li><li>Các mục codex được kích hoạt thông qua một loại hành động cụ thể (như Fight, Evade, Parley, v.v.) được coi là loại hành động đó trong suốt quá trình giải quyết mục codex đó.</li><li>Trong khi giải quyết một mục codex, người chơi chỉ đọc phần mà họ đáp ứng đủ các yêu cầu. Nếu họ không đáp ứng các yêu cầu để giải quyết phần đầu tiên của một mục codex, hãy bỏ qua và chuyển sang phần tiếp theo.</li><li>Nếu một hiệu ứng lá bài hướng dẫn người chơi giải quyết một mục codex không tồn tại trong màn chơi đang diễn ra, hiệu ứng đó sẽ thất bại.</li><li>Sau khi giải quyết một mục codex và thực hiện bất kỳ thay đổi nào đối với màn chơi và/hoặc trong nhật ký chiến dịch, hãy tiếp tục chơi.</li></ul>"
       },
       {
         "title": "Cảnh Giác",
-        "body": "<p>Alert là một keyword khả năng.\r\nMỗi khi một điều tra viên thất bại trong một skill test khi cố gắng evade một kẻ địch đang ready có keyword alert, sau khi áp dụng tất cả các kết quả cho skill test đó, kẻ địch đó thực hiện một đòn tấn công vào điều tra viên đang evade. Một kẻ địch không bị exhaust sau khi thực hiện một đòn tấn công alert.</p><ul><li>Đòn tấn công này xảy ra bất kể kẻ địch đó có đang engaged với điều tra viên đang evade hay không.</li></ul>"
+        "body": "<p>Alert là một khả năng từ khóa. Mỗi khi một điều tra viên thất bại trong một kiểm tra kỹ năng khi cố gắng evade một kẻ địch đang ready có từ khóa alert, sau khi áp dụng tất cả các kết quả cho kiểm tra kỹ năng đó, kẻ địch đó sẽ thực hiện một đòn tấn công vào điều tra viên đang evade. Một kẻ địch không bị exhaust sau khi thực hiện một đòn tấn công alert.</p><ul><li>Đòn tấn công này xảy ra bất kể kẻ địch đó có đang engaged với điều tra viên đang evade hay không.</li></ul>"
       },
       {
         "title": "Aloof",
@@ -22,23 +22,23 @@
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is the total number of _Elite_ enemies in the victory display and under the act.",
-      "cultist": "-1. If this is a test targeting an _Elite_ enemy, reveal another token.",
+      "skull": "-X. X là tổng số kẻ địch _Elite_ trong khu vực trưng bày thành tích và dưới act.",
+      "cultist": "-1. Nếu đây là một kiểm tra nhắm vào kẻ địch _Elite_, tiết lộ thêm một token khác.",
       "tablet": "[skull]: -X. X là Cthulhu's Rage.\r\n[cultist]: -3. Nếu bạn thất bại và địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -3. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -1. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của Cthulhu deck. (Tối đa rút một lá mỗi round.)",
-      "elderThing": "-1 for each clue you control."
+      "elderThing": "-1 với mỗi manh mối bạn kiểm soát."
     },
     "hardExpert": {
-      "skull": "-X. X is 2 more than the total number of _Elite_ enemies in the victory display and under the act.",
-      "cultist": "-3. If this is a test targeting an _Elite_ enemy, reveal another token.",
+      "skull": "-X. X bằng tổng số kẻ địch _Elite_ trong khu vực trưng bày thành tích và dưới act cộng thêm 2.",
+      "cultist": "-3. Nếu đây là một kiểm tra nhắm vào kẻ địch _Elite_, tiết lộ thêm một token khác.",
       "tablet": "[skull]: -X. X là một nửa số địa điểm đã lật (làm tròn xuống).\r\n[cultist]: -2. Nếu bạn thất bại và địa điểm của bạn bị fully flooded, nhận 1 damage.\r\n[tablet]: -4. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -3 (thành -5 nếu địa điểm của bạn không bị flooded).",
-      "elderThing": "-2 for each clue you control."
+      "elderThing": "-2 với mỗi manh mối bạn kiểm soát."
     }
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: <section class='encounter-sets grid'><div><img src='{setImgPath}/smoke-and-mirrors.png' /><span>Smoke and Mirrors</span></div><div><img src='{setImgPath}/arcane-lock.png' /><span>Arkane Lock</span></div><div><img src='{setImgPath}/arkham.png' /><span>Arkham</span></div><div><img src='{setImgPath}/bad-weather.png' /><span>Bad Weather</span></div><div><img src='{setImgPath}/dead-ends.png' /><span>Dead Ends</span></div><div><img src='{setImgPath}/flying-terrors.png' /><span>Flying Terrors</span></div><div><img src='{setImgPath}/gangs-of-arkham.png' /><span>Gangs of Arkham</span></div><div><img src='{setImgPath}/people-of-arkham.png' /><span>People of Arkham</span></div><div><img src='{setImgPath}/whippoorwills2026.png' /><span>Whippoorwills</span></div></section>",
     "placeLocations": "Chọn ngẫu nhiên một trong hai vị trí Downtown và một trong hai vị trí Uptown rồi đưa chúng vào chơi. Loại bỏ các phiên bản Downtown và Uptown còn lại khỏi game. Đưa các vị trí Northside, Easttown, Merchant District, Waterfront District, Southside và French Hill vào chơi. Mỗi điều tra viên bắt đầu ở Miskatonic University.",
     "setOutOfPlay": "Tập hợp tất cả các lá bài trong bộ encounter <b>People of Arkham</b>. Chọn ngẫu nhiên một lá và đặt sang một bên, ngoài cuộc chơi, mà không được nhìn. Xào các lá bài còn lại trong bộ đó cùng với kẻ địch Servant of Flame, sau đó đặt 1 lá úp mặt xuống dưới mỗi vị trí Northside, Downtown, Southside, French Hill, Uptown, và Waterfront District.",
-    "checkCampaignLog": "Check your campaign log.",
+    "checkCampaignLog": "Kiểm tra nhật ký chiến dịch của bạn.",
     "miskatonicUniversityBurned": "Đặt Miskatonic University <i>(In Flames)</i> vào chơi và loại bỏ bản sao còn lại của Miskatonic University khỏi trò chơi.",
     "savedMiskatonicUniversity": "*Nếu các điều tra viên đã cứu Miskatonic University*, đưa Miskatonic University (*Quiet Campus*) vào chơi và loại bỏ bản sao Miskatonic University còn lại khỏi game. Đặt 1 doom lên agenda.",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Miskatonic University.",
@@ -54,7 +54,7 @@
   },
   "tooltips": {
     "arkhamAlive": {
-      "resign": "_Resign_. You return to compare notes with Dr. Armitage on your friend's whereabouts."
+      "resign": "_Resign_. Bạn quay lại đối chiếu ghi chép với Tiến sĩ Armitage về tung tích của người bạn của bạn."
     },
     "emergentEvils": {
       "resign": "@:brethrenOfAsh.smokeAndMirrors.tooltips.arkhamAlive.resign"
@@ -62,12 +62,12 @@
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không có Resolution",
       "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Trên chuyến taxi đến Velma's Diner, bạn suy ngẫm về tất cả những gì mình đã biết được. Thật không may, cuộc tìm kiếm của bạn mang lại nhiều manh mối nhưng lại có rất ít kết quả chắc chắn. Bạn chỉ có thể hy vọng Dr. Armitage có kết quả khả quan hơn.</p>",
       "harbingerOfElokoss": "Lật kẻ địch thuộc bộ encounter _People of Arkham_ đã được để sang một bên từ đầu game. Đây là danh tính thật của kẻ địch Servant of Flame, một sứ giả của Elokoss. Trong Campaign Log, ghi lại *{name} là sứ giả của Elokoss*.",
       "drawnCard": "Tập hợp mọi kẻ địch _Elite_ đang trong cuộc chơi và/hoặc nằm dưới một vị trí khi kịch bản kết thúc, xáo úp chúng cùng với sứ giả của Elokoss, rồi rút ngẫu nhiên một lá. {name} đã được rút. Nếu kẻ địch được rút…",
       "isHarbinger": "…là sứ giả của Elokoss, ghi lại *các điều tra viên đã phát hiện ra nơi ẩn náu của giáo phái* trong Campaign Log.",
-      "otherwise": "…is any other enemy, record *the investigators failed in their search* in your campaign log.",
+      "otherwise": "…là bất kỳ kẻ địch nào khác, ghi nhận *các điều tra viên đã thất bại trong cuộc tìm kiếm* vào nhật ký chiến dịch của bạn.",
       "servantOfFlame": "Nếu kẻ địch Servant of Flame nằm trong victory display, ghi lại *các điều tra viên đã giết Servant of Flame* trong Campaign Log.",
       "victory": "Mỗi điều tra viên nhận kinh nghiệm bằng giá trị _victory X_ của mỗi lá bài trong victory display, cộng thêm 1 kinh nghiệm thưởng cho mỗi kẻ địch nằm dưới act khi kịch bản kết thúc.",
       "proceed": "Nếu kẻ địch Servant of Flame nằm dưới act khi kịch bản kết thúc, chuyển sang _Resolution 2_. Nếu không, tiếp tục đến _Scenario III: Queen of Ash_."
@@ -78,20 +78,20 @@
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
-      "body": "<p>_Resolution 2_: Trên đường đến gặp Dr. Armitage, bạn yêu cầu chiếc taxi ghé qua nơi an toàn mà bạn giam giữ kẻ thù đang bất tỉnh của mình. Mùi khói chào đón bạn khi bạn bước vào, và sàn nhà đen kịt bồ hóng. Bất chấp những nỗ lực hết sức của bạn, kẻ ghoulish đó đã trốn thoát. Chiếc còng tay bạn dùng để trói servant đã bị đập nát—không phải bị nung chảy hay bị can thiệp bằng cách nào khác—cho thấy rằng hắn đã có người giúp đỡ trong cuộc tẩu thoát.</p><ul><li>In your campaign log, record *the Servant of Flame escaped*.</li><li.Each investigator earns 1 bonus experience.</li><li>Proceed to _Scenario III: Queen of Ash_.</li></ul>"
+      "body": "<p>_Resolution 2_: Trên đường đến gặp Tiến sĩ Armitage, bạn yêu cầu taxi ghé qua địa điểm an toàn nơi bạn giam giữ kẻ thù đang bất tỉnh của mình. Mùi khói nồng nặc bốc lên khi bạn bước vào, và sàn nhà đen kịt bồ hóng. Bất chấp những nỗ lực hết sức của bạn, kẻ quỷ quyệt đó đã trốn thoát. Chiếc còng tay bạn dùng để khóa người hầu cận đã bị đập nát—không phải bị nung chảy hay can thiệp theo cách nào khác—cho thấy hắn đã có kẻ tiếp tay tẩu thoát.</p><ul><li>Trong nhật ký chiến dịch, ghi lại rằng *Servant of Flame đã trốn thoát*.</li><li>Mỗi điều tra viên nhận thêm 1 kinh nghiệm.</li><li>Chuyển đến _Kịch bản III: Queen of Ash_.</li></ul>"
     },
     "xp": {
-      "resolution2": "for capturing the Servant of Flame",
-      "bonus": "for each enemy beneath the act"
+      "resolution2": "vì đã bắt giữ Servant of Flame",
+      "bonus": "với mỗi kẻ địch dưới act"
     }
   },
   "label": {
-    "r2": "The Servant of Flame was beneath the act (→ Resolution 2)",
-    "r3": "The Servant of Flame escaped (→ Resolution 3)"
+    "r2": "Servant of Flame ở dưới act (→ Resolution 2)",
+    "r3": "Servant of Flame đã trốn thoát (→ Resolution 3)"
   },
   "xp": {
-    "resolution2": "for capturing the Servant of Flame",
-    "bonus": "for each enemy beneath the act"
+    "resolution2": "vì đã bắt giữ Servant of Flame",
+    "bonus": "với mỗi kẻ địch dưới act"
   },
   "codex": {
     "label": {
@@ -125,7 +125,7 @@
     },
     "margaretLiu": {
       "title": "{'{'}codex{'}'} Codex 6: Margaret Liu",
-      "body": "<p>Margaret Liu, một trong những ca sĩ phòng trà nổi tiếng nhất thị trấn, đang hoàn toàn đắm chìm vào màn biểu diễn của mình. Bạn có thể phải sáng tạo một chút để thu hút sự chú ý của cô ấy.</p><p class='basic right'>Nhìn lá bài trên cùng của chồng bài encounter. Bạn có thể discard nó.</p><p class='basic right'>Đặt 1 tài nguyên <i>(từ token pool)</i> lên Margaret Liu, như một lead.</p>",
+      "body": "<p>Margaret Liu, một trong những ca sĩ phòng trà nổi tiếng nhất thị trấn, đang hoàn toàn đắm chìm vào màn biểu diễn của mình. Bạn có thể phải sáng tạo một chút để thu hút sự chú ý của cô ấy.</p><p class='basic right'>Nhìn lá bài trên cùng của chồng bài encounter. Bạn có thể bỏ nó.</p><p class='basic right'>Đặt 1 tài nguyên (*từ kho token*) lên Margaret Liu, như một lead. Nếu có 1 {'{'}perPlayer{'}'} lead trên cô ấy, tiếp tục đọc. Nếu không, bất kỳ điều tra viên nào cũng có thể kích hoạt codex này một lần nữa.</p>",
       "success": "@:brethrenOfAsh.smokeAndMirrors.codex.margaretLiu.body <hr><p>Những nỗ lực của bạn để thu hút sự chú ý của cô Liu đã mang lại hiệu quả ngoài mong đợi, và chẳng mấy chốc bạn đã ở trong hậu trường với toàn bộ sự chú ý của cô ấy. \"Tôi phải nói rằng tôi rất ấn tượng với màn trình diễn, ừm, nho nhỏ của bạn,\" cô nói. \"Nhưng thực sự thì bạn đến đây làm gì?\" Nụ cười vô tư của nữ ca sĩ phòng trà biến mất khi nhắc đến \"Brethren of Ash.\"</p><p>\"Tôi không biết họ là ai và tôi cũng không quan tâm,\" cô nói. \"Một tuần trước, trên đường về nhà, tôi bị hai gã đàn ông chặn lại, chúng mặc—và tôi phải nhấn mạnh điều này—những bộ áo choàng xấu xí nhất mà bạn từng thấy. Chúng có biểu tượng kỳ lạ nhất trên mũ trùm đầu,\" cô nói, rồi nguệch ngoạc một ký hiệu thô kệch lên một tờ khăn giấy. Nó trông giống một bàn tay có con mắt ở giữa. Bạn hỏi cô ấy chuyện gì xảy ra tiếp theo, và cô ấy hất đầu về phía gã hộ pháp ở cửa.</p><p>\"Antonio đã dọa chúng chạy mất. Tôi không gặp lại chúng kể từ đó.\"</p><p class='basic right'>Bạn đã thẩm vấn thành công nghi phạm này.</p><p class='basic right'>Đặt Margaret Liu bên dưới act.</p>"
     },
     "servantOfFlame": {

@@ -1,41 +1,41 @@
 {
   "heading": "Màn III",
   "ui": {
-    "ichtacasDestination": "Ichtaca's Destination",
-    "ichtacasPrey": "Ichtaca's Prey"
+    "ichtacasDestination": "Điểm Đến Của Ichtaca",
+    "ichtacasPrey": "Con Mồi Của Ichtaca"
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is the highest number of doom on a _Cultist_ enemy.",
+      "skull": "-X. X là lượng doom cao nhất trên một kẻ địch _Cultist_.",
       "cultist": "-2. If you do not succeed by at least 1, chịu 1 damage.",
       "tablet": "-2. If you do not succeed by at least 1, đặt 1 doom lên the nearest _Cultist_ enemy.",
       "elderThing": "-2. Nếu bạn thất bại, lose 1 of your clues."
     },
     "hardExpert": {
-      "skull": "-X. X is the total number of doom in play.",
-      "cultist": "-2. If you do not succeed by at least 2, take 1 direct damage.",
+      "skull": "-X. X là tổng lượng doom trong màn chơi.",
+      "cultist": "-2. Nếu bạn không thành công với mức chênh lệch ít nhất là 2, chịu 1 sát thương trực tiếp.",
       "tablet": "-2. If you do not succeed by at least 2, đặt 1 doom lên each _Cultist_ enemy.",
       "elderThing": "-3. Nếu bạn thất bại, lose 1 of your clues."
     }
   },
   "xp": {
-    "bonus": "Gains insight into the schemes of the Brotherhood.",
-    "forgingYourOwnPath": "Forging Your Own Path"
+    "bonus": "Hiểu thấu những mưu đồ của Huynh Đệ Hội.",
+    "forgingYourOwnPath": "Tự Mở Lối Đi Riêng"
   },
   "remembered": {
-    "youListenedToIchtacasTale": "You listened to Ichtaca's tale.",
+    "youListenedToIchtacasTale": "Bạn đã lắng nghe câu chuyện của Ichtaca.",
     "youFoughtWithIchtaca": "\"Bạn đã chiến đấu với Ichtaca\"",
     "ichtacaLeftWithoutYou": "Ichtaca đã rời đi mà không có bạn.",
-    "ichtacasDestination": "Ichtaca's destination: {name}.",
-    "ichtacasPrey": "Ichtaca's Prey: {name}."
+    "ichtacasDestination": "Điểm đến của Ichtaca: {name}.",
+    "ichtacasPrey": "Con mồi của Ichtaca: {name}."
   },
   "label": {
     "vedaWhitsley": {
-      "exploration": "Look at the top card of the exploration deck",
-      "encounter": "Look at the top card of the encounter deck",
-      "damage": "Deal 1 damage to Veda Whitsley to discard it",
-      "horror": "Deal 1 horror to Veda Whitsley to discard it",
-      "putBack": "Put it back"
+      "exploration": "Nhìn lá bài trên cùng của exploration deck",
+      "encounter": "Nhìn lá bài trên cùng của chồng bài encounter",
+      "damage": "Gây 1 damage lên Veda Whitsley để bỏ lá bài đó",
+      "horror": "Gây 1 horror lên Veda Whitsley để bỏ lá bài đó",
+      "putBack": "Đặt lại"
     }
   },
   "intro": {
@@ -47,17 +47,17 @@
       "listen": "“Có lẽ sau cùng thì tôi nên lắng nghe chúng…”",
       "skipToIntro4": "<i>\"Tôi sẽ không đi đâu cả cho đến khi cô nói cho tôi biết chuyện gì đang xảy ra.\"</i>",
       "proceedToIntro4": "<i>\"Tôi sẽ không đi đâu cả cho đến khi cô nói cho tôi biết chuyện gì đang xảy ra.\"</i>",
-      "skipToIntro5": "“Have it your way.” - Skip to _Intro 5_."
+      "skipToIntro5": "“Tùy ý cô.” - Bỏ qua và đọc _Intro 5_."
     },
     "intro1": "<p>_Intro 1_: Đêm trôi qua với Ichtaca nghỉ ngơi trong phòng khách của bạn. Bạn không ngủ được trong thời gian còn lại của buổi đêm, suy nghĩ của bạn trôi dạt giữa sự lo lắng và hoài nghi. Câu chuyện của cô ấy thật phi lý, nhưng dù sao thì bạn cũng cảm thấy buộc phải tin vào điều đó. Bạn đã biết rằng cổ vật từ tàn tích Eztli có một số mục đích sâu xa hơn kể từ lần đầu tiên bạn nhìn thấy nó. Khi bạn bước ra khỏi phòng ngủ vào sáng hôm sau, vị khách không mời của bạn đang ngồi trên bàn ăn trong phòng ăn của bạn, khoanh tay trước ngực. Đôi mắt sắc bén của cô ấy theo dõi từng cử động của bạn như một con chim đang quan sát con mồi. Không có lời đùa giỡn qua lại. Ichtaca sốt ruột hỏi, \"Cổ vật bây giờ ở đâu? Cậu đã mang nó đi đâu?\" Bạn giải thích rằng nó là an toàn, trong tay người phù hợp. Cô lắc đầu, các khớp ngón tay trắng bệch vì thất vọng. \"Tôi đảm bảo với cậu là không phải thế.\"</p>",
     "proceedToIntro2": "Kiểm tra Campaign Log. *Nếu các điều tra viên đã giao việc giữ cổ vật cho Alejandro*, hoặc *nếu Alejandro đã thu hồi Relic of Ages*: Tiếp tục đến _Intro 2_.",
     "skipToIntro3": "các điều tra viên giao việc canh giữ cổ vật cho Harlan Earnstone.",
-    "intro2": "<p>_Intro 2_: Tạm gác lại vô vàn thắc mắc trong đầu, bạn nhấc máy gọi tới văn phòng của Harlan ở trường đại học. Mặt trời khi ấy mới vừa lấp ló nơi đường chân trời, nhưng bạn biết tỏng tính ông xưa nay vẫn luôn là người dậy sớm. Sau vài hồi chuông ngắn, nhân viên tổng đài chuyển máy cho bạn. Giọng Harlan vọng lại qua ống nghe, run rẩy và khô khốc.</p><p>Ông ngắt lời bạn ngay khi bạn vừa mở miệng hỏi về cổ vật. “Đừng!” ông gắt lên. “Chúng đang nghe lén đấy. Chúng biết tôi đang giữ nó ở đây. Chúng đã bắt Alejandro rồi.” Bạn ra sức trấn an để gặng hỏi xem ý ông là gì, nhưng ông vội vã cắt ngang cuộc trò chuyện. “Tôi phải đi đây. Chúng đến rồi!—” Đầu dây bên kia chỉ còn lại tiếng tút tút kéo dài vô hồn.</p><p>Quả nhiên, gọi cho Alejandro thì không ai bắt máy, và những đồng sự khác của ông cũng chẳng ai nhìn thấy bóng dáng ông đâu từ ngày hôm qua. “Giờ thì tin tôi rồi chứ?” Ichtaca cất tiếng, đứng dậy thu dọn đồ đạc. “Chúng ta đã phí phạm quá nhiều thời gian rồi. Hãy tìm cho ra cổ vật và quay lại gặp tôi ở đây vào tối nay. <i>Đừng</i> có bám theo tôi đấy.”</p><ul><li>Điều tra viên chính phải quyết định (chọn một):<ul><li>“You’re not going anywhere until you tell me what is going on.” Skip to _Intro 4_.</li><li>“Have it your way.” Skip to _Intro 5_.</li></ul></li></ul>",
-    "intro3": "<p>_Intro 3_: Tạm gác lại vô vàn thắc mắc trong đầu, bạn nhấc máy gọi tới văn phòng của Harlan ở trường đại học. Mặt trời khi ấy mới vừa lấp ló nơi đường chân trời, nhưng bạn biết tỏng tính ông xưa nay vẫn luôn là người dậy sớm. Sau vài hồi chuông ngắn, nhân viên tổng đài chuyển máy cho bạn. Giọng Harlan vọng lại qua ống nghe, run rẩy và khô khốc.\nÔng ngắt lời bạn ngay khi bạn vừa mở miệng hỏi về cổ vật. “Đừng!” ông gắt lên. “Chúng đang nghe lén đấy. Chúng biết tôi đang giữ nó ở đây. Chúng đã bắt Alejandro rồi.” Bạn ra sức trấn an để gặng hỏi xem ý ông là gì, nhưng ông vội vã cắt ngang cuộc trò chuyện. “Tôi phải đi đây. Chúng đến rồi!—” Đầu dây bên kia chỉ còn lại tiếng tút tút kéo dài vô hồn.\nQuả nhiên, gọi cho Alejandro thì không ai bắt máy, và những đồng sự khác của ông cũng chẳng ai nhìn thấy bóng dáng ông đâu từ ngày hôm qua. “Giờ thì tin tôi rồi chứ?” Ichtaca cất tiếng, đứng dậy thu dọn đồ đạc. “Chúng ta đã phí phạm quá nhiều thời gian rồi. Hãy tìm cho ra cổ vật và quay lại gặp tôi ở đây vào tối nay. <i>Đừng</i> có bám theo tôi đấy.”</p><p>Quả nhiên, gọi cho Alejandro thì không ai bắt máy, và những đồng sự khác của ông cũng chẳng ai nhìn thấy bóng dáng ông đâu từ ngày hôm qua. “Giờ thì tin tôi rồi chứ?” Ichtaca cất tiếng, đứng dậy thu dọn đồ đạc. “Chúng ta đã phí phạm quá nhiều thời gian rồi. Hãy tìm cho ra cổ vật và quay lại gặp tôi ở đây vào tối nay. <i>Đừng</i> có bám theo tôi đấy.”</p><ul><li>Điều tra viên chính phải quyết định (chọn một):<ul><li>“You’re not going anywhere until you tell me what is going on.” Proceed to _Intro 4_.</li><li>“Have it your way.” Skip to _Intro 5_.</li></ul></li></ul>",
+    "intro2": "<p>_Intro 2_: Tạm gác lại vô vàn câu hỏi trong đầu vào lúc này, bạn gọi cho người liên lạc của mình tại Bảo tàng Đại học Miskatonic. Dù còn sớm, Tiến sĩ Horowitz hẳn đã có mặt tại văn phòng để chuẩn bị cho một ngày dài phía trước. Nhân viên tổng đài nối máy cho bạn sau một thoáng chờ đợi. Elli cất lời chào cộc lốc khác thường, giọng cô run rẩy và bất an. Ngay khi bạn hỏi về cổ vật, cô ấy cười khẩy. “Lại cả bạn nữa à! Ông Walsted gần như đang đập phá cửa văn phòng của tôi, còn hai phóng viên thì đã quấy rầy tôi suốt cả buổi sáng!”</p><p>Bạn hỏi cô ấy có chuyện gì xảy ra, và cô ấy thở dài một hơi. “Cổ vật đã biến mất,” cô giải thích. “Không một nhân viên bảo vệ nào biết chuyện gì đã xảy ra. Mới một phút trước nó còn ở trong tủ trưng bày; phút tiếp theo nó đã biến mất. Và trước khi bạn hỏi, tôi nói luôn, ông Vela cũng chẳng thấy đâu cả.” Đột nhiên cô ấy hét lên với ai đó, “Làm ơn đợi một chút! Tôi đang bận điện thoại!” Cô vội vã xin lỗi bạn rồi cúp máy ngay sau đó.</p><p>Quả nhiên, Alejandro không nhấc máy, và không một đồng sự nào khác của ông ấy nhìn thấy ông ấy kể từ hôm qua. “Giờ thì tin tôi rồi chứ?” Ichtaca hỏi, đứng dậy và thu dọn đồ đạc của mình. “Chúng ta đã lãng phí quá nhiều thời gian rồi. Hãy tìm cổ vật và quay lại gặp tôi ở đây vào tối nay. Đừng có đi theo tôi.”</p><ul><li>Điều tra viên chính phải quyết định (chọn một):<ul><li>“Cô sẽ không đi đâu cả cho đến khi cô nói cho tôi biết chuyện gì đang xảy ra.” Bỏ qua và đọc _Intro 4_.</li><li>“Tùy ý cô.” Bỏ qua và đọc _Intro 5_.</li></ul></li></ul>",
+    "intro3": "<p>_Intro 3_: Tạm gác lại vô vàn thắc mắc trong đầu, bạn nhấc máy gọi tới văn phòng của Harlan ở trường đại học. Mặt trời khi ấy mới vừa lấp ló nơi đường chân trời, nhưng bạn biết tỏng tính ông xưa nay vẫn luôn là người dậy sớm. Sau vài hồi chuông ngắn, nhân viên tổng đài chuyển máy cho bạn. Giọng Harlan vọng lại qua ống nghe, run rẩy và khô khốc. Ông ngắt lời bạn ngay khi bạn vừa mở miệng hỏi về cổ vật. “Đừng!” ông gắt lên. “Chúng đang nghe lén đấy. Chúng biết tôi đang giữ nó ở đây. Chúng đã bắt Alejandro rồi.” Bạn ra sức trấn an để gặng hỏi xem ý ông là gì, nhưng ông vội vã cắt ngang cuộc trò chuyện. “Tôi phải đi đây. Chúng đến rồi!—” Đầu dây bên kia chỉ còn lại tiếng tút tút kéo dài vô hồn.</p><p>Quả nhiên, gọi cho Alejandro thì không ai bắt máy, và những đồng sự khác của ông cũng chẳng ai nhìn thấy bóng dáng ông đâu từ ngày hôm qua. “Giờ thì tin tôi rồi chứ?” Ichtaca cất tiếng, đứng dậy thu dọn đồ đạc. “Chúng ta đã phí phạm quá nhiều thời gian rồi. Hãy tìm cho ra cổ vật và quay lại gặp tôi ở đây vào tối nay. Đừng có bám theo tôi đấy.”</p><ul><li>Điều tra viên chính phải quyết định (chọn một):<ul><li>“Cô sẽ không đi đâu cả cho đến khi nói cho tôi biết chuyện gì đang xảy ra.” Tiến tới _Intro 4_.</li><li>“Tùy ý cô.” Chuyển sang _Intro 5_.</li></ul></li></ul>",
     "intro4": "<p>_Intro 4_: Ichtaca nghiến răng và dừng lại. Bạn mong đợi cô ấy sẽ từ chối và bỏ đi mà không trả lời câu hỏi của bạn, nhưng thật bất ngờ, cô ấy lại bớt khó chịu lại. Theo Ichtaca, dân làng của cô đã dành nhiều thời gian để bảo vệ cổ vật khỏi những kẻ xấu xa sẽ sử dụng nó cho các mục đích bất chính. Cô ấy nói một cách khó hiểu, về những điều bí ẩn và các câu chuyện phóng đại nửa vời, mặc dù cô ấy từ chối giải thích dân làng của mình đến từ đâu và làm thế nào họ có thể ẩn nấp trong suốt thời gian dài. Khi nhấn mạnh về cổ vật, tất cả những gì cô ấy nói là nó kiểm soát dòng chảy của thời gian, và dòng chảy đó không nên bị xáo trộn.</p><p>Cô giải thích, “Nó phải trở về đúng vị trí của nó.” Ánh mắt của cô ấy trở nên nghiêm túc. \"Cậu hiểu chứ? Nó không thể rơi vào tay kẻ xấu. Nếu cậu giúp tôi khôi phục nó, tôi sẽ hỗ trợ lại cậu. Chỉ cần hứa với tôi là cậu sẽ không sử dụng nó ”.</p><ul><li>Ghi nhớ rằng “bạn đã lắng nghe câu chuyện của Ichtaca.”</li><li>Thêm 1 token [cultist] vào túi hỗn mang cho phần còn lại của chiến dịch.</li><li>Skip to _Setup_.</li></ul>",
     "intro5": "<p>_Intro 5_: Ichtaca căng cây cung được trang trí công phu của mình với tốc độ đáng sợ và đóng sầm cửa của bạn khi cô ấy đi ra ngoài.</p><ul><li>Ghi nhớ rằng “Ichtaca đã rời đi mà không có bạn.”</li><li>các điều tra viên giao việc canh giữ cổ vật cho Harlan Earnstone.</li></ul>",
-    "intro6": "<p>_Intro 6_: Khi Ichtaca đã rời đi, bạn cân nhắc kỹ lời nói của cô ấy và nhớ lại những sự kiện đã dẫn đến thời điểm này. Bạn không tin tưởng Alejandro với cổ vật của người Eztli, và bạn để Ichtaca rời đi mà không hỏi cô ấy thêm. Hay là bạn chỉ là đang bị hoang tưởng?…</p><ul><li>Các điều tra viên phải quyết định <i>(chọn một)</i>:<ul><li>*“We should be wary of them.”* Remove all {'{'}cultist{'}'} and {'{'}tablet{'}'} tokens from the chaos bag and replace them with 1 {'{'}elderThing{'}'} token. In your Campaign Log, record that *you are forging your own path*. For the remainder of the campaign, each investigator cannot include Alejandro Vela or Ichtaca in their deck. Anytime an investigator would be given the option to include either of them, each investigator earns 2 experience instead. Proceed to _Setup_.</li><li>*“Maybe I should listen to them after all…”* Proceed to _Setup_.</li></ul></li></ul>",
-    "intro7": "<p>_Intro 7_: As if you didn’t already have several other pressing concerns, this morning’s article in the Arkham Advertiser piques your interest: “Chaos in French Hill!” The article goes on to describe several strange happenings sighted around the estate of one Marshall Hastings in French Hill, an old and storied neighborhood of Arkham. According to the article’s source—who goes unnamed—the mansion has become a tangled mess of overgrowth and serpents. The article reports that a recent expedition returned with several strange artifacts in tow, meant to be displayed in the Hastings manor. You wonder if this has anything to do with your expedition to find the Eztli. Even if these events are unrelated, your investigation might connect you with others who can assist you in turn.</p>"
+    "intro6": "<p>_Intro 6_: Khi Ichtaca đã rời đi, bạn cân nhắc kỹ lời nói của cô ấy và nhớ lại những sự kiện đã dẫn đến thời điểm này. Bạn không tin tưởng Alejandro với cổ vật Eztli, và bạn để Ichtaca rời đi mà không tra hỏi cô ấy. Liệu có phải bạn chỉ đang hoang tưởng?…</p><ul><li>Các điều tra viên phải quyết định (chọn một):<ul><li>*“Chúng ta nên cảnh giác với họ.”* Loại bỏ tất cả token {'{'}cultist{'}'} và {'{'}tablet{'}'} khỏi túi hỗn mang và thay thế chúng bằng 1 token {'{'}elderThing{'}'}. Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *bạn đang tự mở lối đi riêng*. Trong phần còn lại của chiến dịch, mỗi điều tra viên không được đưa Alejandro Vela hoặc Ichtaca vào bộ bài của mình. Bất cứ khi nào một điều tra viên được trao lựa chọn đưa một trong hai người họ vào bộ bài, mỗi điều tra viên nhận thêm 2 kinh nghiệm thay thế. Tiến hành _Setup_.</li><li>*“Có lẽ dù sao thì mình cũng nên lắng nghe họ…”* Tiến hành _Setup_.</li></ul></li></ul>",
+    "intro7": "<p>_Intro 7_: Như thể bạn chưa có đủ những mối bận tâm cấp bách khác, bài báo sáng nay trên tờ Arkham Advertiser lại thu hút sự chú ý của bạn: “Hỗn loạn ở French Hill!” Bài báo tiếp tục mô tả một số sự việc kỳ lạ được chứng kiến xung quanh dinh thự của một người tên Marshall Hastings ở French Hill, một khu phố cổ kính và đầy truyền thuyết của Arkham. Theo nguồn tin của bài báo—người giấu tên—dinh thự đã trở thành một đống hỗn độn chằng chịt cây cối um tùm và rắn rết. Bài báo đưa tin rằng một đoàn thám hiểm gần đây đã trở về mang theo một vài cổ vật kỳ lạ, dự định được trưng bày trong dinh thự Hastings. Bạn tự hỏi liệu điều này có liên quan gì đến chuyến thám hiểm tìm kiếm người Eztli của bạn hay không. Ngay cả khi những sự kiện này không liên quan, cuộc điều tra của bạn có thể giúp bạn kết nối với những người khác có thể hỗ trợ bạn sau này.</p>"
   },
   "standalone": {
     "label": {
@@ -67,9 +67,9 @@
   },
   "setup": {
     "label": {
-      "chooseActDeck4": "- This encounter set contains a fourth \"g/h\" act deck. Adjust the contents of the \"g/h\" act deck as follows. The investigators must decide (choose one):",
-      "findSource": "Find the source named in the *Advertiser*'s story",
-      "findRoot": "Find the root of the problem"
+      "chooseActDeck4": "- Encounter set này chứa một chồng bài act “g/h” thứ tư. Điều chỉnh nội dung của chồng bài này như sau:",
+      "findSource": "Tìm nguồn tin được nêu trong bài báo của tờ *Advertiser*",
+      "findRoot": "Tìm căn nguyên của vấn đề"
     },
     "gatherSets": "Tập hợp tất cả lá bài từ các bộ encounter sau: *Threads of Fate*, *Pnakotic Brotherhood*, *The Midnight Masks*, *Locked Doors*, *Nightgaunts* và *Dark Cult*. Các bộ này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/threads-of-fate.png' /><img src='{setImgPath}/pnakotic-brotherhood.png' /><img src='{setImgPath}/midnight-masks.png' /><img src='{setImgPath}/locked-doors.png' /><img src='{setImgPath}/nightgaunts.png' /><img src='{setImgPath}/dark-cult.png' /></section>Khi tập hợp bộ encounter *The Midnight Masks*, chỉ lấy 5 lá treachery (2x False Lead và 3x Hunting Shadow) cùng các vị trí sau: Northside, Downtown (*First Bank of Arkham*), Easttown, Miskatonic University và Rivertown. Không lấy các vị trí còn lại hay các lá act, agenda và scenario reference của bộ đó.",
     "beforeDrawingOpeningHands": "Trước khi rút bài trên tay đầu game, hãy tìm kiếm Alejandro Vela và Relic of Ages trong bộ sưu tập và bộ bài của mỗi người chơi, rồi đặt chúng sang một bên, ngoài khu vực chơi.",
@@ -78,8 +78,8 @@
     "actDecks": "Điều chỉnh nội dung của mỗi chồng bài act, như được ghi chú dưới phần _Three Acts, Three Threads_ .",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to Threads of Fate* and *Cult of Pnakotus*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-threads-of-fate.png' /><img src='{setImgPath}/cult-of-pnakotus.png' /></section>*Cult of Pnakotus* replaces *Dark Cult*. Remove the replaced set from the game.",
-      "setAside": "Also set the Veda Whitsley story asset aside, out of play.",
-      "actDecks": "This encounter set contains a fourth “g/h” act deck. The investigators must decide (choose one): if you wish to find the source named in the *Advertiser*’s story, remove Search for the Meaning, both copies of The Overgrown Estate, and 1 of the 2 copies of Seeking Trouble at random from the “g/h” deck; if you wish to find the root of the problem, remove Search for the Source, both copies of Seeking Trouble, and 1 of the 2 copies of The Overgrown Estate at random."
+      "setAside": "Đồng thời đặt story asset Veda Whitsley sang một bên, ngoài màn chơi.",
+      "actDecks": "Encounter set này chứa một chồng bài act “g/h” thứ tư. Các điều tra viên phải quyết định đi theo manh mối nào để điều chỉnh nội dung của chồng bài này:"
     }
   },
   "threeActsThreeThreads": {
@@ -92,41 +92,41 @@
     },
     "adjustCD": {
       "label": {
-        "goToThePolice": "Go to the police to inform them of Alejandro's disappearance",
-        "lookOnYourOwn": "Look for Alejandro on your own"
+        "goToThePolice": "Đến đồn cảnh sát để thông báo cho họ về sự mất tích của Alejandro",
+        "lookOnYourOwn": "Tự mình tìm kiếm Alejandro"
       },
       "body": "Các điều tra viên phải chọn một trong các phương án sau và điều chỉnh nội dung của chồng bài “c/d” tương ứng theo đó:",
       "option1": "Nếu bạn muốn đến gặp cảnh sát để báo về sự biến mất của Alejandro, loại bỏ các lá act sau khỏi chồng “c/d”: Search for Alejandro, cả hai bản Friends in High Places, và ngẫu nhiên một trong hai bản At the Station.",
-      "option2": "If you wish to look for Alejandro on your own, remove the following act cards from the “c/d” deck, instead: Missing Persons, both copies of At the Station, and one of the two copies of Friends in High Places, at random."
+      "option2": "Nếu bạn muốn tự mình tìm kiếm Alejandro, thay vào đó hãy loại bỏ các lá bài act sau khỏi chồng bài “c/d”: Search for Alejandro, cả 2 bản sao của At the Station, và ngẫu nhiên 1 trong 2 bản sao của Friends in High Places."
     },
     "adjustEF": {
       "body": "Điều chỉnh nội dung của chồng bài “e/f” như sau:",
-      "option1": "If “you listened to Ichtaca’s tale,” remove the following act cards from the “e/f ” deck: Trial of the Huntress, both copies of The Cave of Darkness, and one of the two copies of Strange Relics, at random.",
-      "option2": "If “Ichtaca left without you,” remove the following act cards from the “e/f ” deck, instead: The Guardian’s Inquiry, both copies of Strange Relics, and one of the two copies of The Cave of Darkness, at random."
+      "option1": "Nếu “bạn đã lắng nghe câu chuyện của Ichtaca,” hãy loại bỏ các lá bài act sau khỏi chồng bài “e/f ”: Trial of the Huntress, cả 2 bản sao của The Cave of Darkness, và ngẫu nhiên 1 trong 2 bản sao của Strange Relics.",
+      "option2": "Nếu “Ichtaca rời đi mà không có bạn,” thay vào đó hãy loại bỏ các lá bài act sau khỏi chồng bài “e/f ”: The Guardian’s Inquiry, cả 2 bản sao của Strange Relics, và ngẫu nhiên 1 trong 2 bản sao của The Cave of Darkness."
     }
   },
   "resolutions": {
     "xp": {
       "forgingYourOwnPath": "Bạn đang tạo ra con đường của riêng mình.",
-      "bonus": "Completed acts during this scenario"
+      "bonus": "Đã hoàn thành các act trong màn chơi này"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
       "body": "<p>_Resolution 1_: Bạn trở lại nhà của mình và kiểm tra tình hình. Cuộc điều tra của bạn khắp thành phố đã phát hiện ra sự tồn tại của một phe phái bí mật trong Arkham. Theo những gì bạn có thể nói, họ tự gọi mình là Brotherhood và dường như họ biết nhiều hơn về cổ vật của người Eztli và chuyến thám hiểm trước đây của Alejandro hơn cả bạn. Cách làm việc của họ bí mật và lén lút, và động cơ của họ vẫn chưa biết được. Tuy nhiên, một thông tin quan trọng đã được đưa ra ánh sáng.</p><p>Ichtaca xác nhận, “Họ tìm kiếm một nơi được gọi là Nexus of N’kai.” Bản đồ vùng Trung Mỹ nằm trên bàn trước mặt bạn, được đánh dấu bằng đường mòn của chuyến thám hiểm trước. \"Tôi đã nghe nói về nơi này, nhưng vị trí chính xác của nó thì tôi không biết.\" Một lần nữa, người hướng dẫn bí ẩn của bạn dường như biết nhiều hơn những gì cô ấy chia sẻ.</p><p>Không có manh mối nào khác để đi theo, bạn không còn lựa chọn nào khác. Một lần nữa bạn phải tiến vào vào lãnh thổ chưa được khám phá để tìm kiếm câu trả lời… nhưng liệu lần này có ai trở về được không?</p>",
-      "checkCompletedActs": "Check which acts were completed during this scenario.",
+      "checkCompletedActs": "Kiểm tra những act nào đã được hoàn thành trong màn chơi này.",
       "act3b": "Một điều tra viên bất kỳ phải chọn đưa nó vào bộ bài của mình. Lá bài này không được tính vào kích thước bộ bài của người điều tra đó. Trong phần còn lại của chiến dịch, bất cứ khi nào người sở hữu Relic of Ages rời khỏi chiến dịch vì bất kỳ lý do gì, hãy chọn một điều tra viên khác và thêm nó vào bộ bài của điều tra viên đó.",
-      "abActDeckStillInPlay": "If the “a/b” act deck is still in play, record in your Campaign Log that *the relic is missing*. If the Relic of Ages is part of an investigator’s deck, remove it from that investigator’s deck for the remainder of the campaign.",
+      "abActDeckStillInPlay": "Nếu chồng bài act “a/b” vẫn còn trong màn chơi, ghi vào Nhật ký Chiến dịch của bạn rằng *cổ vật bị mất*. Nếu Cổ vật Thời đại (Relic of Ages) là một phần trong bộ bài của một điều tra viên, hãy loại bỏ nó khỏi bộ bài của điều tra viên đó trong phần còn lại của chiến dịch.",
       "act3d": "Nếu act 3d đã hoàn thành, ghi lại trong Campaign Log rằng *các điều tra viên đã giải cứu Alejandro*. Nếu Alejandro Vela chưa nằm trong bộ bài của điều tra viên nào, bất kỳ một điều tra viên nào cũng có thể chọn đưa ông vào bộ bài của mình. Lá này không tính vào kích thước bộ bài của điều tra viên đó.",
-      "cdActDeckStillInPlay": "If the “c/d” act deck is still in play, record in your Campaign Log that *Alejandro is missing*. If Alejandro Vela is part of an investigator’s deck, remove it from that investigator’s deck for the remainder of the campaign.",
+      "cdActDeckStillInPlay": "Nếu chồng bài act “c/d” vẫn còn trong màn chơi, ghi vào Nhật ký Chiến dịch của bạn rằng *Alejandro mất tích*. Nếu Alejandro Vela là một phần trong bộ bài của một điều tra viên, hãy loại bỏ nó khỏi bộ bài của điều tra viên đó trong phần còn lại của chiến dịch.",
       "act3f": "Một điều tra viên bất kỳ có thể chọn thêm Ichtaca <i>(The Forgotten Guardian)</i> vào bộ bài của mình. Lá bài này không tính vào kích thước bộ bài của điều tra viên đó.",
-      "efActDeckStillInPlay": "If the “e/f ” act deck is still in play, record in your Campaign Log that *Ichtaca is in the dark*. Do not add Ichtaca (*The Forgotten Guardian*) to any investigator’s deck.",
+      "efActDeckStillInPlay": "Nếu chồng bài act “e/f ” vẫn còn trong màn chơi, ghi vào Nhật ký Chiến dịch của bạn rằng *Ichtaca bị bỏ lại trong bóng tối*. Không thêm Ichtaca (*The Forgotten Guardian*) vào bộ bài của bất kỳ điều tra viên nào.",
       "expeditionJournal": "Trưởng nhóm nhận lá bài Expedition Journal và có thể thêm nó vào chồng bài của mình. Lá bài này không tính vào giới hạn bộ bài của điều tra viên đó.",
       "xp": "Mỗi điều tra viên nhận kinh nghiệm bằng giá trị Victory X của mỗi lá bài trong victory display. Mỗi điều tra viên nhận thêm 1 kinh nghiệm cho mỗi lá act 1 đã hoàn thành trong scenario này, khi bạn thấu hiểu thêm các âm mưu của Brotherhood.",
       "returnToXp": "Mỗi điều tra viên nhận kinh nghiệm bằng giá trị Victory X của mỗi lá bài trong victory display. <s>Mỗi điều tra viên nhận thêm 1 kinh nghiệm cho mỗi lá act 1 đã hoàn thành trong scenario này, khi bạn thấu hiểu thêm các âm mưu của Brotherhood.</s>",
-      "resupply": "Proceed to _Resupply Point_.",
-      "act3g": "If act 3g was completed, record in your Campaign Log that the investigators recruited the help of another expedition. Any one investigator may choose to include the Veda Whitsley story asset in their deck. This card does not count toward that investigator’s deck size.",
+      "resupply": "Tiến hành _Điểm Tiếp Tế_ (_Resupply Point_).",
+      "act3g": "Nếu act 3g đã được hoàn thành, ghi vào Nhật ký Chiến dịch của bạn rằng các điều tra viên đã tuyển mộ sự trợ giúp từ một đoàn thám hiểm khác. Một điều tra viên bất kỳ có thể chọn đưa story asset Veda Whitsley vào bộ bài của mình. Lá bài này không tính vào giới hạn bộ bài của điều tra viên đó.",
       "additionalXp": "Mỗi điều tra viên nhận thêm 1 kinh nghiệm cho mỗi lá act 2 và act 3 đã hoàn thành trong scenario này, khi bạn thấu hiểu thêm các âm mưu của Brotherhood. _Kinh nghiệm bổ sung có được nhờ hoàn thành các lá act trong scenario này (kể cả các lá act 1) không thể dùng để mua bài. Thay vào đó, nó phải được dùng để loại bỏ poison hoặc chữa trauma, hoặc được quy đổi thành điểm tiếp tế, như nêu bên dưới_. Kinh nghiệm khác có được vẫn có thể dùng để mua bài và/hoặc cho các mục đích khác này như bình thường.",
-      "outline": "During the Resupply Point at the end of this scenario, there is no longer a limit on how much experience may be spent to remove trauma. Additionally, each investigator may convert up to 10 of their experience to supply points, at a rate of 1 supply point for every 2 experience converted."
+      "outline": "Tại Điểm Tiếp Tế (Resupply Point) vào cuối màn chơi này, không còn giới hạn về lượng kinh nghiệm có thể chi ra để xóa bỏ sang chấn. Ngoài ra, mỗi điều tra viên có thể quy đổi tối đa 10 điểm kinh nghiệm của mình thành các điểm tiếp tế, với tỷ lệ 1 điểm tiếp tế cho mỗi 2 kinh nghiệm được quy đổi."
     }
   }
 }

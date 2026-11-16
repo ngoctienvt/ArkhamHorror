@@ -11,14 +11,14 @@
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Doom of Arkham Part I*, *Deep Ones*, *Domination*, *Dreams*, *Star Spawn*, *Agents of Cthulhu*, and *The Midnight Masks*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-doom-of-arkham-part-i.png' /><img src='{setImgPath}/tdc_deep-ones.png' /><img src='{setImgPath}/domination.png' /><img src='{setImgPath}/dreams.png' /><img src='{setImgPath}/star-spawn.png' /><img src='{setImgPath}/agents-of-cthulhu.png' /><img src='{setImgPath}/midnight-masks.png' /></section>",
-    "midnightMasksCards": "When gathering the *The Midnight Masks* encounter set, only gather the location and treachery cards. Do not gather the acts or agendas from this set.",
-    "placeLocations": "Find each location in the *The Midnight Masks* encounter set and put them into play as follows:",
+    "midnightMasksCards": "Khi thu thập bộ bài encounter *The Midnight Masks*, chỉ thu thập các lá bài địa điểm và treachery. Không thu thập các lá act hoặc agenda từ bộ bài này.",
+    "placeLocations": "Tìm từng địa điểm trong bộ bài encounter *The Midnight Masks* và đưa chúng vào màn chơi như sau:",
     "randomVersions": "Đưa một trong hai địa điểm Downtown và một trong hai địa điểm Southside vào chơi một cách ngẫu nhiên và loại bỏ các phiên bản khác của những địa điểm đó khỏi trò chơi. Đưa Northside, Easttown, Rivertown, St. Mary's Hospital, và Miskatonic University vào chơi theo sơ đồ sắp xếp địa điểm ở bên phải.",
     "setAsideLocations": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
     "startAtRivertown": "Mỗi điều tra viên bắt đầu chơi tại Rivertown.",
     "cardsBeneathLocations": "Xào địa điểm Tillinghast Esoterica một mặt cùng với từng lá treachery từ bộ bài encounter *The Midnight Masks* và đặt một trong số chúng dưới mỗi địa điểm ngoại trừ Rivertown.",
     "starSpawn": "Xào các kẻ địch từ bộ bài encounter *Star Spawn* và loại bỏ ngẫu nhiên hai lá khỏi trò chơi. (Thay vào đó loại bỏ ba lá nếu chơi ở chế độ Dễ.)",
-    "setCardsAside": "Gather all earned artifacts along with the Horror in Clay story asset and set them aside, out of play.",
+    "setCardsAside": "Thu thập tất cả các cổ vật (artifact) đã nhận được cùng với story asset Horror in Clay và đặt chúng sang một bên, ngoài màn chơi.",
     "legrasse": "Chọn một điều tra viên để thêm story asset John Raymond Legrasse vào bộ bài của họ. Lá bài này không tính vào kích cỡ bộ bài của họ.",
     "legrasseInPlay": "Đưa story asset John Raymond Legrasse vào chơi dưới quyền kiểm soát của điều tra viên đó. Ông ấy không chiếm ally slot trong Phần I hoặc Phần II của màn chơi này.",
     "doomOnAgenda": "Đặt doom lên agenda bằng với số lượng điều tra viên.",
@@ -27,16 +27,16 @@
   },
   "rules": {
     "partsOfTheDoomOfArkham": {
-      "title": "Part I and Part II in The Doom of Arkham",
+      "title": "Phần I và Phần II trong The Doom of Arkham",
       "body": "<p class='basic'>Màn chơi này được chia thành hai phần. Người chơi có thể chọn chơi từng phần một (với một khoảng nghỉ giữa mỗi phần), hoặc họ có thể chơi cả hai phần cùng lúc như một phiên chơi dài hơn. Mỗi phần là một ván chơi riêng với setup và resolution riêng.</p><p class='basic'><b>Các điều tra viên có thể nâng cấp bộ bài của họ giữa Phần I và Phần II.</b></p>"
     }
   },
   "label": {
-    "chooseLegrasseInvestigator": "Choose an investigator to add John Raymond Legrasse to their deck."
+    "chooseLegrasseInvestigator": "Chọn một điều tra viên để thêm John Raymond Legrasse vào bộ bài của họ."
   },
   "tooltips": {
     "theComingStorm": {
-      "resign": "{action}: <b>Resign.</b> You give up your search."
+      "resign": "{action}: <b>Resign.</b> Bạn từ bỏ cuộc tìm kiếm của mình."
     }
   },
   "tokens": {
@@ -55,19 +55,19 @@
   },
   "resolutions": {
     "xp": {
-      "bonus": "for confronting Randall Tillinghast"
+      "bonus": "vì đã đối đầu với Randall Tillinghast"
     },
     "label": {
       "readyToFight": "*\"Chúng tôi đã sẵn sàng chiến đấu.\"*",
       "needMoreTime": "*\"Chúng tôi cần thêm thời gian.\"*"
     },
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<p>_If each investigator resigned or was defeated_: Một nhóm ba người dân địa phương kinh hãi lao xuống phố ngang qua bạn, theo sau là một spawn of Cthulhu nặng nề. Máu bạn lạnh toát. Không có nơi nào an toàn để bạn chạy trốn. Bạn lang thang trên những con phố ngập nước, tìm kiếm dấu vết của Ruby, Andy, hoặc Inspector Legrasse.</p><ul><li>Mỗi điều tra viên tìm trong bộ sưu tập một basic weakness [[Injury]] hoặc [[Madness]] ngẫu nhiên và thêm nó vào bộ bài của họ. Lá bài này không tính vào kích cỡ bộ bài của điều tra viên đó.</li><li>Tiến tới <b>Resolution 1</b>.</li></ul>"
+      "title": "Không có Resolution",
+      "body": "<p>_Nếu mỗi điều tra viên đều resign hoặc bị đánh bại_: Một nhóm ba người dân địa phương kinh hãi lao xuống phố qua chỗ bạn, theo sau là một con spawn của Cthulhu đang lảo đảo bước tới. Máu bạn như đông cứng lại. Không có nơi nào an toàn để bạn chạy trốn. Bạn lang thang trên những con phố ngập nước, tìm kiếm bất kỳ dấu hiệu nào của Ruby, Andy hoặc Thanh tra Legrasse.</p><ul><li>Mỗi điều tra viên tìm trong bộ sưu tập một điểm yếu cơ bản _Injury_ hoặc _Madness_ ngẫu nhiên và thêm nó vào bộ bài của mình. Lá bài này không tính vào giới hạn bộ bài của điều tra viên đó.</li><li>Chuyển sang _Resolution 1_.</li></ul>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<p>_Resolution 1_: Một tiếng gầm đầy bất an làm rung chuyển cả nền móng của Arkham. Đứng cạnh những người đồng hành, bạn ngước lên và thấy hình dáng khổng lồ, quen thuộc của Cthulhu đang lù lù bước ra khỏi Miskatonic River. Chỉ với một cử động, Ancient One giẫm nát toàn bộ một khu phố của Rivertown dưới chân. Tiếng gỗ nứt gãy và kính vỡ vụn tràn ngập không trung, theo sau là hàng loạt tiếng la hét.</p><p>Andy, Ruby, và Inspector trao nhau một cái nhìn nghiêm trọng khi những nỗi sợ hãi tồi tệ nhất của bạn đã được xác nhận. \"Chúng ta phải làm gì đó\" Andy hét lên giữa tiếng ồn ào.</p><ul><li>Update your Campaign Log. Under “Artifacts Earned”:<ul><li>Cross out the name of each _Artifact_ asset that was not under any investigator’s control when the scenario ended.</li><li>If the Horror in Clay was under the control of an investigator when the scenario ended, record “Horror in Clay” under “Artifacts Earned.”</li></ul></li><li>Trong Nhật ký Chiến dịch, ghi lại \"Flooded Neighborhoods:\" cùng với danh sách từng địa điểm bị ngập lụt</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Các điều tra viên phải quyết định <i>(chọn một)</i>:<ul><li>“We’re ready to fight.” Proceed to _Resolution 2_ if you wish to continue playing immediately.</li><li>Bạn muốn nghỉ ngơi và tiếp tục vào lần chơi tới.</li></ul></li></ul>"
+      "body": "<p>_Resolution 1_: Một tiếng gầm đầy bất an làm rung chuyển cả nền móng của Arkham. Đứng cạnh những người bạn đồng hành của mình, bạn nhìn lên để thấy hình bóng khổng lồ, quen thuộc của Cthulhu đang lừng lững bước ra từ sông Miskatonic. Chỉ với một cử động duy nhất, cổ thần đã dẫm nát toàn bộ một khu của Rivertown dưới chân. Tiếng gỗ nứt vỡ và kính vỡ tràn ngập không khí, theo sau là một loạt tiếng la hét xé lòng.</p><p>Andy, Ruby và viên Thanh tra chia sẻ một cái nhìn ảm đạm khi nỗi sợ hãi tồi tệ nhất của bạn đã được xác nhận. “Chúng ta phải làm gì đó!” Andy hét lên át cả tiếng ồn ào.</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn. Dưới mục “Artifacts Earned”:<ul><li>Gạch bỏ tên của mỗi asset _Artifact_ không nằm dưới sự kiểm soát của bất kỳ điều tra viên nào khi màn chơi kết thúc.</li><li>Nếu Horror in Clay nằm dưới sự kiểm soát của một điều tra viên khi màn chơi kết thúc, hãy ghi “Horror in Clay” dưới mục “Artifacts Earned.”</li></ul></li><li>Trong Nhật ký Chiến dịch của bạn, ghi lại “Flooded Neighborhoods:” cùng với danh sách từng địa điểm bị flooded.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.</li><li>Các điều tra viên phải quyết định (chọn một):<ul><li>“Chúng ta đã sẵn sàng chiến đấu.” Chuyển sang _Resolution 2_ nếu bạn muốn tiếp tục chơi ngay lập tức.</li><li>“Chúng ta cần thêm thời gian.” Bỏ qua đến _Resolution 3_ nếu bạn muốn nghỉ ngơi và tiếp tục vào lần chơi tiếp theo.</li></ul></li></ul>"
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",

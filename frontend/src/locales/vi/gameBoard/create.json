@@ -19,7 +19,7 @@
   "betaWarning": "Tính năng này đã sẵn sàng để thử nghiệm nhưng có thể gặp lỗi thường xuyên trong ván chơi.",
   "betaWarningScenario": "Màn chơi này đã sẵn sàng để thử nghiệm nhưng có thể gặp lỗi thường xuyên trong ván chơi.",
   "normal": "Bình thường",
-  "returnTo": "Return to...",
+  "returnTo": "Trở lại...",
   "fullCampaign": "Toàn bộ Chiến dịch",
   "bothScenarios": "Cả hai màn chơi (Chiến dịch)",
   "scenarios": "Màn chơi",
@@ -28,10 +28,10 @@
   "campaignType": "Loại Chiến dịch",
   "pickScenario": "Chọn Màn chơi",
   "difficulty": "Độ khó",
-  "Easy": "Easy",
-  "Standard": "Standard",
-  "Hard": "Hard",
-  "Expert": "Expert",
+  "Easy": "Dễ",
+  "Standard": "Cơ bản",
+  "Hard": "Khó",
+  "Expert": "Chuyên gia",
   "includeTarotReadings": "Bao gồm Bói bài Tarot",
   "allowSpectators": "Cho phép Khán giả theo dõi",
   "allowSpectatorsDescription": "Hiển thị trò chơi này trên trang chủ để bất kỳ ai cũng có thể theo dõi. Khán giả nhìn thấy bàn chơi nhưng không thể thực hiện bất kỳ hành động nào. Lựa chọn này được quyết định ngay bây giờ và không thể thay đổi sau khi trò chơi đã bắt đầu.",
@@ -73,17 +73,17 @@
   "presetCustom": "Tùy chỉnh",
   "preset": {
     "chapter1": {
-      "name": "Chapter 1",
+      "name": "Chương 1",
       "description": "Khuyến nghị cho các chiến dịch Chapter 1."
     },
     "chapter2": {
-      "name": "Chapter 2",
+      "name": "Chương 2",
       "description": "Khuyến nghị cho các chiến dịch Chapter 2."
     }
   },
-  "chapter1Heading": "Chapter 1",
-  "chapter2Heading": "Chapter 2",
-  "homebrewHeading": "Homebrew",
+  "chapter1Heading": "Chương 1",
+  "chapter2Heading": "Chương 2",
+  "homebrewHeading": "Tự tạo (Homebrew)",
   "designedBy": "thiết kế bởi {name}",
   "sideStoriesHeading": "Ngoại truyện",
   "challengeScenariosHeading": "Màn chơi thử thách",
@@ -100,7 +100,7 @@
     },
     "UseSwarmPlaceholders": {
       "title": "Sử dụng Thẻ giữ chỗ cho Swarm",
-      "description": "Thay vì sử dụng các lá bài từ bộ bài của lead investigator làm thẻ giữ chỗ cho swarm, tạo các lá bài giữ chỗ không thuộc về bộ bài của bất kỳ điều tra viên nào."
+      "description": "Thay vì sử dụng các lá bài từ bộ bài của điều tra viên chính làm thẻ giữ chỗ cho swarm, tạo các lá bài giữ chỗ không thuộc về bộ bài của bất kỳ điều tra viên nào."
     }
   },
   "narrative": {
@@ -115,5 +115,5 @@
   },
   "deckRequirements": "Yêu cầu Bộ bài",
   "blobElseTitle": "The Blob That Ate Everything ELSE!",
-  "returnToName": "Return to {name}"
+  "returnToName": "Trở lại {name}"
 }

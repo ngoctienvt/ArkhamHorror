@@ -1,25 +1,25 @@
 {
   "tokens": {
     "easyStandard": {
-      "skull": "-2 (-4 instead if you are at a _Bayou_ location).",
-      "cultist": "-2. If the Rougarou is in your location, reveal another token.",
-      "tablet": "Rút thêm một token khác. Nếu bạn thất bại, until the end of the round, you cannot move.",
-      "elderThing": "-4. If the Rougarou is at your location, it attacks you."
+      "skull": "-2 (thay vào đó là -4 nếu bạn đang ở một địa điểm _Bayou_).",
+      "cultist": "-2. Nếu Rougarou đang ở địa điểm của bạn, tiết lộ thêm một token khác.",
+      "tablet": "Tiết lộ thêm một token khác. Nếu bạn thất bại, cho đến hết vòng chơi, bạn không thể di chuyển.",
+      "elderThing": "-4. Nếu Rougarou đang ở địa điểm của bạn, nó sẽ tấn công bạn."
     },
     "hardExpert": {
-      "skull": "-3 (-6 instead if you are at a _Bayou_ location).",
-      "cultist": "-3. If the Rougarou is in your location, reveal another token.",
-      "tablet": "Rút thêm một token khác. Nếu bạn thất bại, until the end of the round, you cannot move.",
-      "elderThing": "-4. If the Rougarou is at your location or a connecting location, it attacks you."
+      "skull": "-3 (thay vào đó là -6 nếu bạn đang ở một địa điểm _Bayou_).",
+      "cultist": "-3. Nếu Rougarou đang ở địa điểm của bạn, tiết lộ thêm một token khác.",
+      "tablet": "Tiết lộ thêm một token khác. Nếu bạn thất bại, cho đến hết vòng chơi, bạn không thể di chuyển.",
+      "elderThing": "-4. Nếu Rougarou đang ở địa điểm của bạn hoặc một địa điểm kết nối, nó sẽ tấn công bạn."
     }
   },
   "remembered": {
-    "foundAnAncientBindingStone": "Found an ancient binding stone",
-    "foundAStrangeDoll": "Found a strange doll"
+    "foundAnAncientBindingStone": "Đã tìm thấy một phiến đá phong ấn cổ xưa",
+    "foundAStrangeDoll": "Đã tìm thấy một búp bê kỳ lạ"
   },
   "intro": {
-    "title": "Terror Grips New Orleans!",
-    "body": "<p>Minnie Klein, your contact at the Arkham Advertiser, has slipped you a draft of the article over a cup of coffee at Velma's Diner. It would have gone to print had Doyle Jeffries, the lead editor, not scoffed at the concept. \"I believe his exact words were, 'I ain't printing the ravings of some Voodoo lunatic and passing it off as news,'\" she explained. From the sly grin spreading across her face, you could tell she smelled a story.</p><p>The headline was sensationalist. Three killings, in nine days was enough to spook a town, sure. But you doubt all of New Orleans is gripped by terror, or even knows about the killings. Still, something piqued your interest. \"Lady Esprit,\" the Voodoo priestess from the article, claimed that a malign curse had taken root in the bayou.</p><p>\"There's something to this, isn't there? I know that look,\" Minnie said. You weren't sure. If Lady Esprit was right, this \"roux-ga-roux\" wouldn't stop killing at three, that's for sure. But curses? Wolf-people? How could such things be real? Only one way to find out. You put on your coat and head for the Northside Station...</p>"
+    "title": "Kinh Hoàng Bao Trùm New Orleans!",
+    "body": "<p>Minnie Klein, người liên lạc của bạn tại tòa soạn Arkham Advertiser, đã lén đưa cho bạn một bản thảo bài viết bên tách cà phê tại Quán ăn Velma. Lẽ ra bài báo đã được in nếu Doyle Jeffries, tổng biên tập, không chế giễu ý tưởng này. \"Tôi tin lời chính xác của ông ta là: 'Tôi sẽ không in những lời mê sảng của một kẻ điên Voodoo nào đó rồi coi đó là tin tức đâu,'\" cô giải thích. Từ nụ cười tinh quái nở trên môi cô, bạn có thể nhận ra cô đã đánh hơi thấy một câu chuyện giật gân.</p><p>Tiêu đề bài viết mang tính giật gân. Ba vụ giết người trong chín ngày đủ để làm cả một thị trấn khiếp sợ, chắc chắn rồi. Nhưng bạn nghi ngờ việc cả New Orleans đang bị nỗi kinh hoàng bao trùm, hay thậm chí biết về những vụ giết người này. Tuy vậy, có điều gì đó đã khơi gợi sự tò mò của bạn. \"Lady Esprit,\" nữ tư tế Voodoo được nhắc đến trong bài viết, khẳng định rằng một lời nguyền tà ác đã bén rễ tại vùng đầm lầy bayou.</p><p>\"Có điều gì uẩn khúc ở đây đúng không? Tôi nhìn nét mặt là biết ngay,\" Minnie nói. Bạn không chắc lắm. Nếu Lady Esprit nói đúng, thì con \"roux-ga-roux\" này sẽ không dừng lại ở ba mạng người đâu, điều đó là chắc chắn. Nhưng những lời nguyền? Người sói? Làm sao những điều như vậy có thể có thật? Chỉ có một cách để tìm hiểu. Bạn khoác áo măng tô vào và hướng về phía Ga Northside...</p>"
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Curse of the Rougarou* and *The Bayou*. These sets are indicated by the following icons, respectively: <section class='encounter-sets'><img src='{setImgPath}/curse-of-the-rougarou.png' /><img src='{setImgPath}/the-bayou.png' /></section>",
@@ -29,8 +29,8 @@
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<p class='basic'>_If no resolution was reached (each investigator resigned or was defeated)_: Go to _Resolution 1_.</p>"
+      "title": "Không Có Kết Cục",
+      "body": "<p class='basic'>_Nếu không đạt được kết cục nào (mỗi điều tra viên đều đầu hàng hoặc bị đánh bại)_: Chuyển đến _Kết Cục 1_.</p>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
@@ -48,7 +48,7 @@
   "huntingTheRougarou": {
     "label": {
       "resolution3": "Kết thúc thứ ba",
-      "flipBack": "Flip back to a side"
+      "flipBack": "Lật lại mặt a"
     }
   }
 }

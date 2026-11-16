@@ -1,7 +1,7 @@
 {
   "title": "Lịch sử",
   "round": "Vòng",
-  "phase": "Phase",
+  "phase": "Giai đoạn",
   "turn": "Lượt",
   "empty": "Chưa có gì được ghi lại cho phạm vi này.",
   "section": {
@@ -14,7 +14,7 @@
     "dealtDamageTo": "Gây tổn thương thể chất cho",
     "locationsInvestigated": "Địa điểm đã điều tra",
     "cluesDiscovered": "Clue đã discover",
-    "skillTests": "Skill test"
+    "skillTests": "Kiểm tra kỹ năng"
   },
   "field": {
     "actionsCompleted": "Action đã hoàn thành",
@@ -39,7 +39,7 @@
     "failedBy": "Thất bại (thiếu {n})"
   },
   "enemy": {
-    "health": "Health: {n}",
+    "health": "Máu: {n}",
     "defeated": "Bị đánh bại"
   },
   "clues": {

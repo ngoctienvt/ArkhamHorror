@@ -9,15 +9,15 @@
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-1 (-3 instead if you are at a _Graveyard_ location).",
+      "skull": "-1 (-3 thay vào đó nếu bạn đang ở một địa điểm _Graveyard_).",
       "cultist": "Rút thêm một token khác. If you fail and The Unnamable is in play, it attacks you (regardless of its current location).",
-      "tablet": "+2. The black cat causes a distraction. If this test is successful, choose and evade an enemy at any location with a fight value of X or lower, where X is the amount you succeeded by.",
+      "tablet": "+2. Con mèo đen gây ra sự phân tâm. Nếu bài kiểm tra này thành công, chọn và evade một kẻ địch tại bất kỳ địa điểm nào có giá trị chiến đấu từ X trở xuống, trong đó X là mức bạn thành công vượt qua.",
       "elderThing": "-2. Nếu bạn thất bại, you must either đặt 1 manh mối của bạn lên địa điểm của bạn or chịu 1 damage."
     },
     "hardExpert": {
-      "skull": "-2 (-4 instead if you are at a _Graveyard_ location).",
+      "skull": "-2 (-4 thay vào đó nếu bạn đang ở một địa điểm _Graveyard_).",
       "cultist": "Rút thêm một token khác. If you fail and The Unnamable is in play, it attacks you (regardless of its current location).",
-      "tablet": "+1. The black cat causes a distraction. If this test is successful, choose and evade an enemy at any location with a fight value of X or lower, where X is the amount you succeeded by.",
+      "tablet": "+1. Con mèo đen gây ra sự phân tâm. Nếu bài kiểm tra này thành công, chọn và evade một kẻ địch tại bất kỳ địa điểm nào có giá trị chiến đấu từ X trở xuống, trong đó X là mức bạn thành công vượt qua.",
       "elderThing": "-3. Nếu bạn thất bại, you must either đặt 1 manh mối của bạn lên địa điểm của bạn or chịu 1 damage."
     }
   },
@@ -39,8 +39,8 @@
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<p class='basic'>_If no resolution was reached because each investigator was defeated:_ Proceed to _Resolution 2_.</p>"
+      "title": "Không có Resolution",
+      "body": "<p class='basic'>_Nếu không đạt được resolution nào do mỗi điều tra viên đều bị đánh bại:_ Chuyển sang _Resolution 2_.</p>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
@@ -56,19 +56,19 @@
     },
     "resolution4": {
       "title": "Kết thúc thứ 4",
-      "body": "<p>Trong đống đổ nát, bạn phát hiện ra nó: thứ gì đó lấp lánh trong vòng xoáy của không khí và bụi bẩn lạnh như băng, thứ gì đó đang gọi bạn, thì thầm tên bạn. Bạn hầu như không nghe thấy tiếng Randolph hét lên khi con quái vật quái dị không thể mô tả đâm sầm vào anh ta. Bất chấp mọi khó khăn, bạn bằng cách nào đó đã đến được đống đổ nát từng là căn gác của ngôi nhà không tên. Bây giờ bạn nhận ra tia sáng khó nắm bắt đó là gì: sự phản chiếu bóng bẩy của một chiếc chìa khóa bạc phát sáng. \"Sử dụng nó!\" Randolph hét lên giữa những tiếng kêu đau đớn. Con vật ghê tởm leo lên trên cơ thể anh ta. “Hãy sử dụng nó ngay bây giờ, trong khi cậu có thể-”</p><p>Thứ đó cắt ngang tiếng kêu của Randolph khi nó bao lấy cơ thể anh ta. Bạn nắm chặt chiếc chìa khóa trong tay và rùng mình khi chứng kiến hàng nghìn hình thù kinh dị nuốt chửng Randolph. Bạn nghĩ về những người bạn đồng hành của mình, bị mắc kẹt ở đâu đó trong một giấc mơ nguy hiểm xa nhà, và ánh sáng của chiếc chìa khóa ngày càng mạnh, nuốt chửng bạn hoàn toàn như sinh vật đã nuốt chửng Randolph. Mọi thứ trở nên trắng xóa.</p><p>Khi bạn thức dậy, bạn nằm trên một bệ đá bằng phẳng nhìn ra một cầu thang dốc và thẳng dẫn xuống những vực sâu không xác định. Đằng sau bạn, cầu thang uốn lượn lên thành một ngọn tháp bằng đá vươn lên trong màn sương mờ ảo. Ở cả hai hướng, toàn bộ hang động được thắp sáng lờ mờ bằng chất phát lân quang màu xám. Bạn tìm kiếm Silver Key, nhưng nó đã biến mất. Không có dấu hiệu của Randolph Carter.</p><p>Rõ ràng là bạn không còn ở trong thế giới thực nữa. Có lẽ chiếc chìa khóa đã vận chuyển cơ thể vật lý của bạn vào Vùng đất giấc mơ, như Randolph tuyên bố là có thể. Nhưng nơi này không giống như những khu rừng huyền bí, những ngôi làng thời trung cổ quyến rũ và những quan cảnh hùng vĩ mà Virgil Gray đã viết trong những câu chuyện của mình. Không, khác rất xa là khác: vực thẳm lạnh lẽo, ảm đạm này ăn mòn hy vọng của bạn và thay vào đó là cảm giác sợ hãi trống rỗng, vô nghĩa. Bạn nhìn lên một lần nữa bậc thang vô tận đằng sau bạn. Có vẻ như bây giờ bạn không còn lựa chọn nào khác ngoài việc tiếp tục, tiến sâu hơn vào địa vực hoang vắng và đầy nguy hiểm này.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại <i>Randolph đã không sống sót sau khi hạ xuống</i>. Nếu bộ bài của 1 điều tra viên có chứa andolph Carter <i>(Chained to the Waking World)</i> (<i>The DreamEaters</i> card #79), loại bỏ anh ấy khỏi chồng bài đó cho phần còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Nếu bạn đang chơi The Web of Dreams dưới dạng chiến dịch gồm bốn phần:</li><li>If you are playing The Dream-Quest and The Web of Dreams as an interconnected eight-part campaign…<ul><li>…and you have not yet played _Scenario 2–A: The Search for Kadath_, proceed to that scenario.</li><li>…and you have already played _Scenario 2–A: The Search for Kadath_, proceed instead to _Interlude II: The Oneironauts_.</li></ul></li></ul>"
+      "body": "<p>_Resolution 4:_ Trong đống đổ nát, bạn phát hiện ra nó: thứ gì đó lấp lánh trong vòng xoáy của không khí và bụi băng giá, thứ gì đó đang gọi bạn, thì thầm tên bạn. Bạn hầu như không nghe thấy tiếng Randolph hét lên khi con quái vật không thể diễn tả được lao vào anh ta. Bất chấp mọi khó khăn, bằng cách nào đó bạn đã đến được đống đổ nát từng là gác xép của ngôi nhà vô danh. Bây giờ bạn nhận ra ánh sáng lấp lánh khó nắm bắt đó là gì: hình ảnh phản chiếu bóng loáng của một chiếc chìa khóa bạc sáng chói. “Dùng nó đi!” Randolph hét lên giữa những tiếng kêu đau đớn. Sinh vật ghê tởm trèo lên người anh ta. “Dùng nó ngay đi, khi cậu có—”</p><p>Thứ đó cắt ngang tiếng kêu của Randolph khi nó bao lấy cơ thể anh ta. Bạn nắm chặt chiếc chìa khóa trong tay và rùng mình khi chứng kiến hàng nghìn hình thù kinh dị nuốt chửng Randolph. Bạn nghĩ về những người bạn đồng hành của mình, bị mắc kẹt ở đâu đó trong một giấc mơ nguy hiểm xa nhà, và ánh sáng của chiếc chìa khóa ngày càng mạnh, nuốt chửng bạn hoàn toàn như sinh vật đã nuốt chửng Randolph. Mọi thứ trở nên trắng xóa.</p><p>Khi bạn thức dậy, bạn nằm trên một bệ đá bằng phẳng nhìn ra một cầu thang dốc và thẳng dẫn xuống những vực sâu không xác định. Đằng sau bạn, cầu thang uốn lượn lên thành một ngọn tháp bằng đá vươn lên trong màn sương mờ ảo. Ở cả hai hướng, toàn bộ hang động được thắp sáng lờ mờ bằng chất phát lân quang màu xám. Bạn tìm kiếm Silver Key, nhưng nó đã biến mất. Không có dấu hiệu của Randolph Carter.</p><p>Rõ ràng là bạn không còn ở trong thế giới thực nữa. Có lẽ chiếc chìa khóa đã vận chuyển cơ thể vật lý của bạn vào Vùng đất giấc mơ, như Randolph tuyên bố là có thể. Nhưng nơi này không giống như những khu rừng huyền bí, những ngôi làng thời trung cổ quyến rũ và những quan cảnh hùng vĩ mà Virgil Gray đã viết trong những câu chuyện của mình. Không, khác rất xa là khác: vực thẳm lạnh lẽo, ảm đạm này ăn mòn hy vọng của bạn và thay vào đó là cảm giác sợ hãi trống rỗng, vô nghĩa. Bạn nhìn lên một lần nữa bậc thang vô tận đằng sau bạn. Có vẻ như bây giờ bạn không còn lựa chọn nào khác ngoài việc tiếp tục, tiến sâu hơn vào địa vực hoang vắng và đầy nguy hiểm này.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại *Randolph đã không sống sót sau khi hạ xuống*. Nếu bộ bài của một điều tra viên có chứa Randolph Carter *(Chained to the Waking World)* (Lá bài *The Dream-Eaters* #79), loại bỏ anh ấy khỏi bộ bài đó cho phần còn lại của chiến dịch.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.</li><li>Nếu bạn đang chơi The Web of Dreams dưới dạng chiến dịch 4 phần, chuyển sang _Scenario 3–B: Point of No Return_.</li><li>Nếu bạn đang chơi The Dream-Quest và The Web of Dreams dưới dạng một chiến dịch kết hợp gồm tám phần…<ul><li>…và bạn chưa chơi _Scenario 2–A: The Search for Kadath_, chuyển sang kịch bản đó.</li><li>…và bạn đã chơi _Scenario 2–A: The Search for Kadath_, chuyển sang _Interlude II: The Oneironauts_.</li></ul></li></ul>"
     }
   },
   "remembered": {
-    "recoveredAStrangeKey": "Recovered a strange key",
-    "studiedADesecratedPortrait": "Studied a Desecrated Portrait",
-    "noticedTheMissingBones": "Noticed the Missing Bones",
-    "foundACrackedMirror": "Found a Cracked Mirror"
+    "recoveredAStrangeKey": "Đã thu hồi được một chiếc chìa khóa kỳ lạ",
+    "studiedADesecratedPortrait": "Đã nghiên cứu một bức chân dung bị báng bổ",
+    "noticedTheMissingBones": "Đã nhận thấy những mẩu xương mất tích",
+    "foundACrackedMirror": "Đã tìm thấy một chiếc gương nứt"
   },
   "tooltips": {
     "frontPorchEntryway": {
-      "revealUpstairs": "Reveal the Upstairs Hallway",
-      "placeUnmarkedTomb": "Put the set-aside Unmarked Tomb location into play."
+      "revealUpstairs": "Lật mở Upstairs Hallway",
+      "placeUnmarkedTomb": "Đưa địa điểm Unmarked Tomb được đặt sang một bên vào màn chơi."
     }
   }
 }

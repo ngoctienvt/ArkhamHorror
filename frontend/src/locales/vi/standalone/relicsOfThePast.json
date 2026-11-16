@@ -1,12 +1,12 @@
 {
   "specialRules": [
     {
-      "title": "Challenge Scenario",
-      "body": "<p class='basic'>Challenge scenarios are special print-and-play scenarios that utilize existing products in the Arkham Horror: The Card Game collection, along with additional print-and-play cards, to create new content. These scenarios are designed with certain prerequisites in mind, in order to craft a challenging puzzle-like experience.</p><p class='basic'><i>Relics of the Past</i> centers around the investigator Monterey Jack, and therefore has the following prerequisite: Monterey Jack must be chosen as one of the investigators when playing this scenario.</p>"
+      "title": "Màn Chơi Thử Thách",
+      "body": "<p class='basic'>Các màn chơi thử thách là những màn chơi print-and-play đặc biệt sử dụng các sản phẩm hiện có trong bộ sưu tập Arkham Horror: The Card Game, cùng với các lá bài print-and-play bổ sung, để tạo ra nội dung mới. Những màn chơi này được thiết kế dựa trên một số điều kiện tiên quyết nhất định nhằm tạo ra trải nghiệm thử thách giống như giải đố.</p><p class='basic'><i>Di Tích Của Quá Khứ</i> xoay quanh điều tra viên Monterey Jack, và do đó có điều kiện tiên quyết sau: Monterey Jack phải được chọn làm một trong các điều tra viên khi chơi màn này.</p>"
     },
     {
       "title": "Explore",
-      "body": "<p class='basic'>Một số ability trong scenario này được nhận diện bằng chỉ định hành động <b>Explore</b>. Những ability như vậy thường được sử dụng để tìm các địa điểm mới để đưa vào bàn chơi, và được khởi xướng bằng hành động “activate”.</p><ul><li>When resolving <b>Explore</b> abilities found in this challenge scenario, follow all of the rules as outlined on page 3 of <i>The Forgotten Age</i> campaign guide, with the following exceptions:</li><li>Nếu một kẻ địch được rút từ exploration deck, nó sẽ được giải quyết như bình thường. Nếu nó bị discard, hãy đặt nó vào encounter discard pile như bình thường. Điều này được coi là một lần khám phá “không thành công”.</li><li>Nếu một story asset được rút từ exploration deck, hãy giải quyết hiệu ứng revelation của nó. Điều này được coi là một lần khám phá “thành công”.</li></ul>"
+      "body": "<p class='basic'>Một số khả năng trong màn chơi này được nhận diện bằng chỉ định hành động <b>Explore</b>. Các khả năng này thường được dùng để tìm các địa điểm mới để đưa vào màn chơi, và được bắt đầu bằng hành động \"activate\".</p><ul><li>Khi xử lý các khả năng <b>Explore</b> trong màn chơi thử thách này, hãy tuân theo toàn bộ các quy tắc được nêu ở trang 3 của sách hướng dẫn chiến dịch <i>The Forgotten Age</i>, với các ngoại lệ sau:</li><li>Nếu một kẻ địch được rút từ chồng bài thám hiểm, kẻ địch đó sẽ được xử lý như bình thường. Nếu nó bị bỏ, hãy đặt nó vào chồng bài encounter bỏ như bình thường. Điều này được coi là một lần thám hiểm \"không thành công\".</li><li>Nếu một story asset được rút từ chồng bài thám hiểm, hãy xử lý hiệu ứng revelation của nó. Điều này được coi là một lần thám hiểm \"thành công\".</li></ul>"
     },
     {
       "title": "Vật Tư Dự Trữ",
@@ -15,20 +15,20 @@
   ],
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is the number of locations with 1 or more doom on them.",
-      "cultist": "-1. If you are poisoned, reveal another token.",
+      "skull": "-X. X là số lượng địa điểm có từ 1 doom trở lên trên đó.",
+      "cultist": "-1. Nếu bạn bị nhiễm độc, tiết lộ thêm 1 token khác.",
       "tablet": "-3. Nếu bạn thất bại, đặt 1 doom lên your location.",
       "elderThing": "-3. Nếu bạn thất bại, the nearest ready unengaged _Serpent_ enemy moves once toward your location."
     },
     "hardExpert": {
-      "skull": "-X. X is 1 more than the number of locations with 1 or more doom on them.",
-      "cultist": "-2. If you are poisoned, reveal another token.",
-      "tablet": "-4. Place 1 doom on your location.",
-      "elderThing": "-5. After this test resolves, the nearest ready unengaged _Serpent_ enemy moves once toward your location."
+      "skull": "-X. X lớn hơn 1 so với số lượng địa điểm có từ 1 doom trở lên trên đó.",
+      "cultist": "-2. Nếu bạn bị nhiễm độc, tiết lộ thêm 1 token khác.",
+      "tablet": "-4. Đặt 1 doom lên địa điểm của bạn.",
+      "elderThing": "-5. Sau khi bài kiểm tra này giải quyết, kẻ địch _Serpent_ ready chưa engage gần nhất di chuyển 1 lần về phía địa điểm của bạn."
     }
   },
   "intro": {
-    "title": "Challenge Scenario: Relics of the Past",
+    "title": "Màn Chơi Thử Thách: Di Tích Của Quá Khứ",
     "body": "<p>*Để hiểu rõ hơn về tương lai của chúng ta, trước tiên chúng ta phải hiểu về quá khứ. Không mất nhiều thời gian để những báo cáo về chuyến thám hiểm thất bại của Miskatonic University tới những khu rừng rậm ở Mexico lọt vào tai bạn. Những câu chuyện về các kim tự tháp bậc thang, tộc người rắn thần thoại và các cổ vật dị thường ở những nơi trước đây được cho là không có người ở đã khơi dậy sự hứng thú của bạn. Bạn không mất nhiều thời gian để thu dọn hành lý và lên kế hoạch tự mình đến đó để điều tra. Chuyến thám hiểm của Miskatonic University đã tiến vào khu di tích nhưng gặp khó khăn trong việc tạo ra bất kỳ bước tiến nào. Tim bạn đập thình thịch khi bắt đầu nghĩ đến những kho báu bị lãng quên nào khác vẫn chưa được khám phá ở trung tâm của lăng mộ.*</p>",
     "supplies": {
       "title": "Vật Tư Dự Trữ",
@@ -37,40 +37,40 @@
   },
   "label": {
     "supplies": {
-      "question": "Choose a supply to bring for the expedition",
+      "question": "Chọn một vật tư mang theo cho chuyến thám hiểm",
       "chalk": "_Chalk:_ *Dùng để viết lên các bề mặt đá.*",
       "compass": "_Compass:_ *Có thể giúp bạn xác định phương hướng.*",
       "journal": "_Journal:_ *Để ghi chép lại các sự kiện của chuyến thám hiểm.*",
       "satchel": "_Satchel:_ *Một nơi an toàn để cất giữ bất cứ thứ gì bạn tìm thấy trong hầm mộ.*",
       "torches": "_Torches:_ *Có thể thắp sáng các khu vực tối tăm, hoặc châm lửa các giá cắm đuốc.*"
     },
-    "placeDoomOnYourLocation": "Place 1 doom on your location",
-    "nearestEnemyAttacksYou": "The nearest enemy attacks you",
+    "placeDoomOnYourLocation": "Đặt 1 doom lên địa điểm của bạn",
+    "nearestEnemyAttacksYou": "Kẻ địch gần nhất tấn công bạn",
     "vengeantPast": {
-      "question": "{name}: choose one",
-      "dealDamage": "Deal 1 damage to that asset's controller",
-      "dealHorror": "Deal 1 horror to that asset's controller",
-      "shuffleAsset": "Shuffle that asset into the exploration deck"
+      "question": "{name}: chọn một",
+      "dealDamage": "Gây 1 sát thương cho người kiểm soát asset đó",
+      "dealHorror": "Gây 1 tổn thương tinh thần cho người kiểm soát asset đó",
+      "shuffleAsset": "Xáo trộn asset đó vào chồng bài thám hiểm"
     },
     "innerChamber": {
-      "doNotDrawAnother": "Do not draw an additional card"
+      "doNotDrawAnother": "Không rút thêm lá bài nào"
     },
     "ancientHall": {
-      "question": "Any investigator at Ancient Hall may spend 3 resources to cancel this effect",
-      "doNotCancel": "Shuffle the top card of the encounter deck into the exploration deck"
+      "question": "Bất kỳ điều tra viên nào tại Ancient Hall đều có thể chi 3 tài nguyên để hủy hiệu ứng này",
+      "doNotCancel": "Xáo trộn lá bài trên cùng của chồng bài encounter vào chồng bài thám hiểm"
     },
     "swap": {
       "question": "Monterey Jack có thể nâng cấp Trusty Bullwhip lên phiên bản advanced, hoặc hạ cấp phiên bản advanced của Buried Secrets xuống phiên bản gốc.",
       "questionMust": "Monterey Jack phải nâng cấp Buried Secrets lên phiên bản advanced, hoặc hạ cấp phiên bản advanced của Trusty Bullwhip về phiên bản gốc.",
       "upgradeTrustyBullwhip": "Monterey Jack có thể nâng cấp Trusty Bullwhip lên phiên bản advanced, hoặc hạ cấp phiên bản advanced của Buried Secrets xuống phiên bản gốc.",
-      "downgradeBuriedSecrets": "Downgrade Buried Secrets to its original version",
-      "upgradeBuriedSecrets": "Upgrade Buried Secrets to its advanced version",
-      "downgradeTrustyBullwhip": "Downgrade Trusty Bullwhip to its original version",
-      "doNotSwap": "Do not swap"
+      "downgradeBuriedSecrets": "Hạ cấp Buried Secrets về phiên bản gốc",
+      "upgradeBuriedSecrets": "Nâng cấp Buried Secrets lên phiên bản nâng cao",
+      "downgradeTrustyBullwhip": "Hạ cấp Trusty Bullwhip về phiên bản gốc",
+      "doNotSwap": "Không hoán đổi"
     }
   },
   "supplies": {
-    "question": "Choose a supply to bring for the expedition",
+    "question": "Chọn một vật tư mang theo cho chuyến thám hiểm",
     "chalk": "_Chalk:_ *Dùng để viết lên các bề mặt đá.*",
     "compass": "_Compass:_ *Có thể giúp bạn xác định phương hướng.*",
     "journal": "_Journal:_ *Để ghi chép lại các sự kiện của chuyến thám hiểm.*",
@@ -79,15 +79,15 @@
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả lá bài từ các bộ encounter sau: *Relics of the Past*, *The Doom of Eztli*, *Agents of Yig*, *Deadly Traps*, *Forgotten Ruins*, *Poison*, *Serpents*, *Yig's Venom*, *Chilling Cold*, *Locked Doors* và *Midnight Masks*. Các bộ này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/rop.png' /><img src='{setImgPath}/the-doom-of-eztli.png' /><img src='{setImgPath}/agents-of-yig.png' /><img src='{setImgPath}/deadly-traps.png' /><img src='{setImgPath}/forgotten-ruins.png' /><img src='{setImgPath}/poison.png' /><img src='{setImgPath}/serpents.png' /><img src='{setImgPath}/yigs-venom.png' /><img src='{setImgPath}/chilling-cold.png' /><img src='{setImgPath}/locked-doors.png' /><img src='{setImgPath}/midnight-masks.png' /></section>Khi tập hợp bộ encounter *The Midnight Masks*, chỉ lấy 5 lá treachery (2x False Lead và 3x Hunting Shadow). Không lấy các lá vị trí, act, agenda và scenario reference của bộ đó.",
-    "removeCards": "Remove the original scenario reference card, acts, and agendas from *The Doom of Eztli* encounter set from the game. Use the new scenario reference card, acts, and agendas provided in the *Relics of the Past* encounter set. Additionally, remove the following cards from *The Doom of Eztli* encounter set from the game: the Relic of Ages asset, the Harbinger of Valusia enemy, and the Secret Passage, Ancient Hall, and Chamber of Time locations.",
+    "removeCards": "Loại bỏ thẻ tham chiếu màn chơi, các act và các agenda gốc từ bộ encounter *Sự Diệt Vong Của Eztli* khỏi ván chơi. Sử dụng thẻ tham chiếu màn chơi, act và agenda mới được cung cấp trong bộ encounter *Di Tích Của Quá Khứ*. Ngoài ra, loại bỏ các lá bài sau từ bộ encounter *Sự Diệt Vong Của Eztli* khỏi ván chơi: asset Relic of Ages, kẻ địch Harbinger of Valusia, cùng các địa điểm Secret Passage, Ancient Hall, và Chamber of Time.",
     "explorationDeck": "Xây dựng exploration deck. Việc này được thực hiện bằng cách lấy 5 địa điểm một mặt và xào chúng cùng với các lá bài sau: một bản sao cho mỗi treachery Deep Dark và Final Mistake, cùng 3 bản sao của Pit Viper.",
-    "setAside": "Set the following cards aside, out of play: the Vengeant Past treachery, the Inner Chamber location, the three Brood of Yig enemies, and each of the four _*Ancient*_ story assets.",
+    "setAside": "Đặt các lá bài sau sang một bên, ngoài màn chơi: treachery Vengeant Past, địa điểm Inner Chamber, 3 kẻ địch Brood of Yig, và mỗi asset trong số 4 story asset _*Ancient*_.",
     "placeEntryway": "Đặt vị trí Entryway vào chơi. Mỗi điều viên bắt đầu chơi tại vị trí Entryway.",
     "poisoned": "Đặt mỗi điểm yếu Poisonsed đang không ở trong chồng bài của một điều tra sang một bên."
   },
   "resolutions": {
     "xp": {
-      "journal": "The investigator with the journal resigned"
+      "journal": "Điều tra viên giữ cuốn nhật ký đã rút lui"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",

@@ -1,17 +1,17 @@
 {
   "intro": {
-    "title": "The Grand Vault",
-    "checkCampaignLog": "Check your Campaign Log.",
-    "headedWest": "If the expedition headed west, proceed to _The Grand Vault 1_.",
-    "headedEast": "If the expedition headed east, skip to _The Grand Vault 2_.",
+    "title": "Đại Hầm Ngầm",
+    "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch của bạn.",
+    "headedWest": "Nếu đoàn thám hiểm đi về phía tây, chuyển sang _The Grand Vault 1_.",
+    "headedEast": "Nếu đoàn thám hiểm đi về phía đông, bỏ qua đến _The Grand Vault 2_.",
     "grandVault1": "Bạn nghe thấy tiếng chuyển động ầm ĩ vang vọng của những cỗ máy khổng lồ từ rất lâu trước khi nhìn thấy chúng. Sau khi thoát khỏi những đường hầm ngột ngạt, bạn đứng trên một vách đá nhìn xuống một khoảng không gian hang động rộng lớn. Nó rộng đến mức bạn không thể nhìn thấy bờ bên kia. Một chuỗi các căn phòng thông nhau được bố trí như một mê cung, rung lên với âm thanh của những cấu trúc ngoài hành tinh. Giữa tiếng ồn ào đó là âm thanh của dòng nước chảy ở tít bên dưới.",
     "grandVault2": "Bạn nghe thấy tiếng chuyển động ầm ĩ vang vọng của những cỗ máy khổng lồ từ rất lâu trước khi nhìn thấy chúng. Bạn chạm đến đáy của cầu thang xoắn ốc và đứng trên một vách đá nhìn xuống một khoảng không gian hang động rộng lớn. Nó rộng đến mức bạn không thể nhìn thấy bờ bên kia. Một chuỗi các căn phòng thông nhau được bố trí như một mê cung, rung lên với âm thanh của những cấu trúc ngoài hành tinh. Giữa tiếng ồn ào đó là âm thanh của dòng nước chảy ở tít bên dưới.",
-    "grandVault3": "_The Grand Vault 3_: This is the pulsing core of R’lyeh. Colossal sluices channel floodwater from the city above, filling and draining vaults like the chambers of a heart. This seems to be some source of power, and the reason for the city’s steady rise. After discussing with the expedition, you resolve to explore the massive complex before moving on. If ever there was a place to find one of those elusive artifacts, it would be here.",
-    "resolveToeTheLine": "If any investigator has the Toe the Line Task, they resolve their respective story on the next page.",
+    "grandVault3": "_The Grand Vault 3_: Đây là lõi phát xung của R’lyeh. Những cống dẫn khổng lồ chuyển nước ngập từ thành phố bên trên, làm đầy và thoát nước các hầm chứa như những ngăn của một trái tim. Đây dường như là một nguồn năng lượng, và là lý do cho sự trỗi dậy không ngừng của thành phố. Sau khi thảo luận với đoàn thám hiểm, bạn quyết định khám phá khu phức hợp đồ sộ này trước khi tiếp tục. Nếu có một nơi nào để tìm thấy một trong những cổ vật khó nắm bắt đó, thì chính là ở đây.",
+    "resolveToeTheLine": "Nếu có bất kỳ điều tra viên nào có Nhiệm vụ Toe the Line, họ sẽ giải quyết câu chuyện tương ứng của mình ở trang tiếp theo.",
     "proceedToSetup": "Tiếp tục đến _Setup_",
     "toeTheLine": {
-      "title": "Task: Toe the Line",
-      "instructions": "_Read only if you have the “Toe the Line” Task:_",
+      "title": "Nhiệm vụ: Toe the Line",
+      "instructions": "_Chỉ đọc nếu bạn có Nhiệm vụ “Toe the Line”:_",
       "body": "Đoàn thám hiểm dựng trại trước khi đi xuống hầm ngầm bên dưới. Trong một bữa ăn nhạt nhẽo nhưng chắc bụng, một trong những thành viên đoàn thám hiểm tiết lộ rằng họ từng có qua lại với người chủ cũ của bạn. \"Khoan đã, bạn là người mà mọi người hay nhắc đến sao?\" người đó khịt mũi. \"Tin tôi đi, từ những gì tôi nghe được, bạn không muốn quay lại công việc cũ đâu. Sếp cũ của bạn vẫn mang bạn ra làm trò đùa. Ngay cả khi Tillinghast có thể giúp bạn có được công việc đó, thì ở đó cũng chẳng ai tôn trọng bạn. Bạn đang đối mặt với một cuộc đời làm công việc chân tay thôi, anh bạn ạ.\" Bạn kết thúc bữa ăn trong im lặng khi suy ngẫm về những lời của người đó. Các đồng nghiệp cũ có thể không tôn trọng bạn, nhưng với các mối quan hệ của Tillinghast, bạn có thể khiến họ phải sợ hãi. Một vài khoản hối lộ, những lời đe dọa đúng lúc— thậm chí là một cuộc gọi từ giới xã hội đen — có thể bắt họ phải biết điều. Việc này không hoàn toàn quang minh chính đại, nhưng nếu bạn đi đúng nước cờ, bạn có thể lật đổ người chủ cũ của mình. Bạn có phần còn lại của chuyến thám hiểm để lên kế hoạch hành động khi trở về Arkham.",
       "reflection": "Đoàn thám hiểm dựng trại trước khi đi xuống hầm ngầm bên dưới. Trong một bữa ăn nhạt nhẽo nhưng chắc bụng, một trong những thành viên đoàn thám hiểm tiết lộ rằng họ từng có qua lại với người chủ cũ của bạn. \"Khoan đã, bạn là người mà mọi người hay nhắc đến sao?\" người đó khịt mũi. \"Tin tôi đi, từ những gì tôi nghe được, bạn không muốn quay lại công việc cũ đâu. Sếp cũ của bạn vẫn mang bạn ra làm trò đùa. Ngay cả khi Tillinghast có thể giúp bạn có được công việc đó, thì ở đó cũng chẳng ai tôn trọng bạn. Bạn đang đối mặt với một cuộc đời làm công việc chân tay thôi, anh bạn ạ.\" Bạn kết thúc bữa ăn trong im lặng khi suy ngẫm về những lời của người đó. Các đồng nghiệp cũ có thể không tôn trọng bạn, nhưng với các mối quan hệ của Tillinghast, bạn có thể khiến họ phải sợ hãi. Một vài khoản hối lộ, những lời đe dọa đúng lúc— thậm chí là một cuộc gọi từ giới xã hội đen — có thể bắt họ phải biết điều. Việc này không hoàn toàn quang minh chính đại, nhưng nếu bạn đi đúng nước cờ, bạn có thể lật đổ người chủ cũ của mình. Bạn có phần còn lại của chuyến thám hiểm để lên kế hoạch hành động khi trở về Arkham.",
       "choose": "Bạn phải quyết định (chọn một):",
@@ -32,11 +32,11 @@
     "removeOtherworldlyMechanisms": "Loại bỏ ngẫu nhiên một bản sao của Otherworldly Mechanisms khỏi trò chơi (Otherworldly Mechanisms nằm ở mặt đã lật của một số vị trí Vault Chamber).",
     "placeVaultChambers": "Xào các bản sao còn lại của Vault Chamber với nhau và đặt chúng vào chơi theo sơ đồ sắp xếp vị trí.",
     "beginAtTheGreatStair": "Mỗi điều tra viên bắt đầu tại Great Stair.",
-    "checkCampaignLog": "Check your Campaign Log.",
+    "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch của bạn.",
     "powerWasDiverted": "Đặt 1 tài nguyên lên vị trí Vault Chamber ở dưới cùng bên trái. Vị trí này đã được \"kích hoạt\".",
     "otherwise": "Đặt 1 tài nguyên lên các vị trí Vault Chamber ở dưới cùng bên trái, dưới cùng bên phải, và trên cùng bên phải. Các vị trí này đã được \"kích hoạt\".",
     "starSpawn": "Xào các kẻ địch từ bộ encounter *Star Spawn* và loại bỏ ngẫu nhiên 2 lá khỏi trò chơi. Đặt phần còn lại sang một bên, out of play.",
-    "setCardsAside": "Set the following cards aside, out of play: Each copy of the double-sided Ancient Vault treachery, each copy of the Vault Attendant enemy, the Tidal Tablet story asset, and _The Inescapable_ encounter set.",
+    "setCardsAside": "Đặt các lá bài sau sang một bên, ngoài màn chơi: Từng bản sao của lá bài treachery hai mặt Ancient Vault, từng bản sao của kẻ địch Vault Attendant, story asset Tidal Tablet, và bộ bài encounter *The Inescapable*.",
     "chooseExpeditionAsset": "Theo thứ tự người chơi, mỗi người chơi có thể chọn 1 asset [[Artifact]] đã giành được hoặc 1 asset [[Item]] từ tập bài encounter <i>Expedition</i> để bắt đầu in play dưới quyền kiểm soát của họ.",
     "addFloodTokens": "Thêm token lũ lụt vào kho chứa token.",
     "floodBottomRow": "Tăng flood level của ba địa điểm Vault Chamber ở hàng dưới cùng.",
@@ -49,63 +49,63 @@
     "node": "Một nút bấm nhỏ màu đỏ nhấp nháy bên dưới nó, như thể đang cầu xin bạn nhấn vào.",
     "choose": "Bạn phải quyết định (chọn một):",
     "pushTheButton": "Trong Campaign Log, ghi lại <i>thánh địa bên trong đã được mở niêm phong</i>.",
-    "leaveItAlone": "Leave it alone. Each investigator earns 1 bonus experience. Continue playing.",
+    "leaveItAlone": "Để yên nó. Mỗi điều tra viên nhận 1 kinh nghiệm cho mỗi cụm 2 tài nguyên trên lá bài này.",
     "label": {
       "pushTheButton": "*Nhấn nút.*",
       "leaveItAlone": "*Để nó yên.*"
     },
     "xp": {
-      "leaveItAlone": "for leaving the button alone"
+      "leaveItAlone": "vì đã không bấm vào nút đó"
     }
   },
   "label": {
     "deadlyMechanisms": {
-      "deactivate": "Deactivate the nearest activated Vault location.",
-      "drawAttendant": "Draw 1 of the set-aside Vault Attendant enemies.",
-      "move": "Move to an adjacent location (flooded if able)."
+      "deactivate": "Hủy kích hoạt địa điểm Vault đã kích hoạt gần nhất",
+      "drawAttendant": "Rút 1 kẻ địch Vault Attendant được đặt sang một bên",
+      "move": "Di chuyển đến một địa điểm liền kề (bị flooded nếu có thể)"
     },
-    "chooseExpeditionAssetQuestion": "Choose an earned Artifact asset, or an Item asset from the Expedition encounter set, to begin in play under your control.",
-    "noExpeditionAsset": "Do not take an Artifact or Expedition asset.",
-    "deactivateYourLocation": "Deactivate your location.",
+    "chooseExpeditionAssetQuestion": "Chọn một asset Artifact đã nhận được, hoặc một asset Item từ bộ bài encounter Expedition, để bắt đầu trong màn chơi dưới sự kiểm soát của bạn.",
+    "noExpeditionAsset": "Không lấy asset Artifact hoặc Expedition nào.",
+    "deactivateYourLocation": "Hủy kích hoạt địa điểm của bạn.",
     "ancientVault": {
-      "takeDamageAndHorror": "Take a combined total of damage and/or horror"
+      "takeDamageAndHorror": "Chịu tổng lượng sát thương và/hoặc tổn thương tinh thần kết hợp bằng với chỉ số hiệu chỉnh âm của bài kiểm tra này"
     }
   },
   "tokens": {
     "easyStandard": {
-      "skull": "[skull]: -X. X là một nửa số lượng vị trí đã kích hoạt (làm tròn xuống).\r\n[cultist]: -3. Nếu bạn thất bại, bạn phải vô hiệu hóa vị trí của mình hoặc nhận 1 damage hoặc 1 horror.\r\n[tablet]: -2 (thay vào đó là -3 nếu vị trí của bạn bị ngập một phần; thay vào đó là -4 nếu vị trí của bạn bị ngập hoàn toàn).\r\n[elder_thing]: -4. Nếu bạn thất bại, tìm trong encounter discard pile một bản sao của treachery Still Behind You và thêm nó vào victory display.",
-      "cultist": "[skull]: -X. X là một nửa số lượng vị trí đã kích hoạt (làm tròn xuống).\r\n[cultist]: -3. Nếu bạn thất bại, bạn phải vô hiệu hóa vị trí của mình hoặc nhận 1 damage hoặc 1 horror.\r\n[tablet]: -2 (thay vào đó là -3 nếu vị trí của bạn bị ngập một phần; thay vào đó là -4 nếu vị trí của bạn bị ngập hoàn toàn).\r\n[elder_thing]: -4. Nếu bạn thất bại, tìm trong encounter discard pile một bản sao của treachery Still Behind You và thêm nó vào victory display.",
-      "tablet": "[skull]: -X. X là một nửa số lượng vị trí đã kích hoạt (làm tròn xuống).\r\n[cultist]: -3. Nếu bạn thất bại, bạn phải vô hiệu hóa vị trí của mình hoặc nhận 1 damage hoặc 1 horror.\r\n[tablet]: -2 (thay vào đó là -3 nếu vị trí của bạn bị ngập một phần; thay vào đó là -4 nếu vị trí của bạn bị ngập hoàn toàn).\r\n[elder_thing]: -4. Nếu bạn thất bại, tìm trong encounter discard pile một bản sao của treachery Still Behind You và thêm nó vào victory display.",
-      "elderThing": "[skull]: -X. X là một nửa số lượng vị trí đã kích hoạt (làm tròn xuống).\r\n[cultist]: -3. Nếu bạn thất bại, bạn phải vô hiệu hóa vị trí của mình hoặc nhận 1 damage hoặc 1 horror.\r\n[tablet]: -2 (thay vào đó là -3 nếu vị trí của bạn bị ngập một phần; thay vào đó là -4 nếu vị trí của bạn bị ngập hoàn toàn).\r\n[elder_thing]: -4. Nếu bạn thất bại, tìm trong encounter discard pile một bản sao của treachery Still Behind You và thêm nó vào victory display."
+      "skull": "-X. X là một nửa số địa điểm đã kích hoạt (làm tròn xuống).",
+      "cultist": "-3. Nếu bạn thất bại, bạn phải hủy kích hoạt địa điểm của mình hoặc nhận 1 sát thương hoặc 1 tổn thương tinh thần.",
+      "tablet": "-2 (-3 thay vào đó nếu địa điểm của bạn bị ngập một phần; -4 thay vào đó nếu địa điểm của bạn bị ngập hoàn toàn).",
+      "elderThing": "-4. Nếu bạn thất bại, tìm trong chồng bài encounter bỏ một bản sao của treachery Still Behind You và thêm nó vào khu vực trưng bày thành tích."
     },
     "hardExpert": {
-      "skull": "-X. X is the number of activated locations.",
-      "cultist": "[skull]: -X. X là số lượng vị trí đã kích hoạt.\r\n[cultist]: -4. Sau khi skill test này resolve, bạn phải vô hiệu hóa vị trí của mình hoặc nhận 1 damage và 1 horror.\r\n[tablet]: -3 (thay vào đó là -4 nếu vị trí của bạn bị ngập một phần; thay vào đó là -5 nếu vị trí của bạn bị ngập hoàn toàn).\r\n[elder_thing]: -5. Nếu bạn thất bại, tìm trong encounter discard pile một bản sao của treachery Still Behind You và rút nó.",
-      "tablet": "[skull]: -X. X là số lượng vị trí đã kích hoạt.\r\n[cultist]: -4. Sau khi skill test này resolve, bạn phải vô hiệu hóa vị trí của mình hoặc nhận 1 damage và 1 horror.\r\n[tablet]: -3 (thay vào đó là -4 nếu vị trí của bạn bị ngập một phần; thay vào đó là -5 nếu vị trí của bạn bị ngập hoàn toàn).\r\n[elder_thing]: -5. Nếu bạn thất bại, tìm trong encounter discard pile một bản sao của treachery Still Behind You và rút nó.",
-      "elderThing": "[skull]: -X. X là số lượng vị trí đã kích hoạt.\r\n[cultist]: -4. Sau khi skill test này resolve, bạn phải vô hiệu hóa vị trí của mình hoặc nhận 1 damage và 1 horror.\r\n[tablet]: -3 (thay vào đó là -4 nếu vị trí của bạn bị ngập một phần; thay vào đó là -5 nếu vị trí của bạn bị ngập hoàn toàn).\r\n[elder_thing]: -5. Nếu bạn thất bại, tìm trong encounter discard pile một bản sao của treachery Still Behind You và rút nó."
+      "skull": "-X. X là số địa điểm đã kích hoạt.",
+      "cultist": "-4. Sau khi bài kiểm tra này kết thúc, bạn phải hủy kích hoạt địa điểm của mình hoặc nhận 1 sát thương và 1 tổn thương tinh thần.",
+      "tablet": "-3 (-4 thay vào đó nếu địa điểm của bạn bị ngập một phần; -5 thay vào đó nếu địa điểm của bạn bị ngập hoàn toàn).",
+      "elderThing": "-5. Nếu bạn thất bại, tìm trong chồng bài encounter bỏ một bản sao của treachery Still Behind You và rút nó."
     }
   },
   "tooltips": {
     "theGreatStair": {
-      "resign": "You venture into darkness, leaving the churning machinery behind."
+      "resign": "Bạn mạo hiểm tiến vào bóng tối, để lại hang động sụp đổ phía sau."
     }
   },
   "resolutions": {
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<p>_Resolution 1_: Các thành viên đoàn thám hiểm trải qua buổi tối chia sẻ những câu chuyện và kể chuyện cười. Dù bầu không khí của thành phố khá ảm đạm, tinh thần mọi người dường như vẫn lên cao. Bạn chia sẻ những phát hiện của mình với Ruby và những người bạn đồng hành của cô ấy trong khi Andy cố gắng nấu món hầm. Cô ấy mô tả lộ trình khó khăn của họ đến hầm ngục, và khuyên bạn nên đi theo con đường hướng lên khoảng sân cổ đại phía trên, thay vì con đường cô ấy đã đi qua những nhà máy tĩnh lặng.</p><p>\"Dù sao thì tôi cũng khá chắc là nhà máy đã sụp đổ sau lưng chúng tôi rồi,\" Ruby nói. \"Nếu bạn đi theo con đường qua khoảng sân, tôi khuyên bạn nên tránh xa những 'người hành hương' đó. Cả thành phố đang nhung nhúc bọn họ. Tôi đã thấy cả một đám đông lê bước về phía ngôi đền khổng lồ phía trên. Họ nói với tôi rằng họ đã trốn thoát khỏi một cái tổ ngầm nào đó. Một số người trong bọn họ dường như đã mắc một cơn sốt khá nặng, vì vậy tôi khuyên bạn nên giữ khoảng cách.\"</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn.<ul><li>Cross out “The Grand Vault” on the R’lyeh map.</li><li>Đánh dấu vào ô bên cạnh \"Tidal Tablet\" dưới mục \"Artifacts Earned.\"</li></ul></li><li>If any investigator has the Good Money Task, have them resolve their respective story on this page.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Proceed to _Court of the Ancients_.</li></ul>"
+      "body": "<p>_Resolution 1_: Các thành viên đoàn thám hiểm trải qua buổi tối chia sẻ những câu chuyện và kể chuyện cười. Dù bầu không khí của thành phố khá ảm đạm, tinh thần mọi người dường như vẫn lên cao. Bạn chia sẻ những phát hiện của mình với Ruby và những người bạn đồng hành của cô ấy trong khi Andy cố gắng nấu món hầm. Cô ấy mô tả lộ trình khó khăn của họ đến căn hầm, và khuyên bạn nên đi theo con đường qua triều đình cổ đại phía trên, thay vì lộ trình cô ấy đã đi qua các nhà máy im lìm.</p><p>“Tôi khá chắc rằng nhà máy đã sụp đổ sau lưng chúng tôi,” Ruby nói. “Nếu bạn đi theo con đường qua triều đình, tôi khuyên bạn nên tránh xa những ‘tín đồ’ đó. Toàn bộ thành phố đang bò lúc nhúc những kẻ đó. Tôi đã thấy cả một đám đông lê bước về phía ngôi đền khổng lồ trên cao. Họ nói với tôi rằng họ đã trốn thoát khỏi một tổ ngầm nào đó. Một số người trong số họ dường như bị một cơn sốt khá khó chịu, vì vậy tôi khuyên bạn nên giữ khoảng cách.”</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn.<ul><li>Gạch bỏ “The Grand Vault” trên bản đồ R’lyeh.</li><li>Nếu Tidal Tablet nằm dưới sự kiểm soát của một điều tra viên khi màn chơi kết thúc, hãy đánh dấu vào ô bên cạnh “Tidal Tablet” dưới mục “Artifacts Earned.”</li></ul></li><li>Nếu có bất kỳ điều tra viên nào có Nhiệm vụ Good Money, hãy yêu cầu họ giải quyết câu chuyện tương ứng của mình trên trang này.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.</li><li>Chuyển sang _Court of the Ancients_.</li></ul>"
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
-      "body": "<p>_Resolution 2_: Các thành viên đoàn thám hiểm trải qua buổi tối chia sẻ những câu chuyện và kể chuyện cười. Dù bầu không khí của thành phố khá ảm đạm, tinh thần mọi người dường như vẫn lên cao. Trong khi Ruby chơi poker với những thành viên đoàn thám hiểm bốc đồng hơn, bạn chia sẻ những phát hiện của mình với Andy. Đổi lại, anh ấy kể về chuyến đi của họ xuống bức tường chìm phía tây và qua những nền móng cổ đại của thành phố.</p><p>\"Một vụ lở đá đã khiến chúng tôi mắc kẹt trong một hầm mộ cổ đại nào đó. Có những hài cốt ướp xác của một số sinh vật ghê rợn—không giống bất cứ thứ gì tôi từng thấy trước đây. Ngoài chuyện đó ra, mọi thứ khá yên bình,\" Andy nói, đưa cho bạn một bát món hầm nhạt nhẽo. \"À, nhưng thực ra, vài ngày trước, chúng tôi đã tình cờ gặp một người ốm thập tử nhất sinh. Họ từ chối đi cùng chúng tôi. Nói rằng họ là một kiểu 'người hành hương' nào đó và họ đến đây để tôn thờ vị thần của thành phố cổ đại này. Một thứ gì đó tên là Cthulhu.\"</p><p>Cái tên \"Cthulhu\" vang vọng trong tai bạn. Bạn đã nghe thấy nó hết lần này đến lần khác trong những giấc mơ của mình. Sau bữa ăn, bạn thấy mình đang lẩm nhẩm cái tên đó khi chìm vào giấc ngủ.</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn.<ul><li>Cross out “The Grand Vault” on the R’lyeh map.</li><li>Đánh dấu vào ô bên cạnh \"Tidal Tablet\" dưới mục \"Artifacts Earned.\"</li></ul></li><li>If any investigator has the Good Money Task, have them resolve their respective story on this page.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Proceed to _The Apiary_.</li></ul>"
+      "body": "<p>_Resolution 2_: Các thành viên đoàn thám hiểm trải qua buổi tối chia sẻ những câu chuyện và kể chuyện cười. Dù bầu không khí của thành phố khá ảm đạm, tinh thần mọi người dường như vẫn lên cao. Trong khi Ruby chơi poker với những thành viên đoàn thám hiểm bốc đồng hơn, bạn chia sẻ những phát hiện của mình với Andy. Đổi lại, anh ấy kể về chuyến đi của họ xuống bức tường chìm phía tây và qua những nền móng cổ đại của thành phố.</p><p>“Một vụ lở đá đã khiến chúng tôi mắc kẹt trong một hầm mộ cổ đại nào đó. Có những hài cốt ướp xác của một số sinh vật ghê rợn — không giống bất cứ thứ gì tôi từng thấy trước đây. Ngoài chuyện đó ra, mọi thứ khá yên bình,” Andy nói, đưa cho bạn một bát món hầm nhạt nhẽo. “À, nhưng thực ra, vài ngày trước, chúng tôi đã tình cờ gặp một người ốm thập tử nhất sinh. Họ từ chối đi cùng chúng tôi. Nói rằng họ là một kiểu 'người hành hương' nào đó và họ đến đây để tôn thờ vị thần của thành phố cổ đại này. Một thứ gì đó tên là Cthulhu.”</p><p>Cái tên “Cthulhu” vang vọng trong tai bạn. Bạn đã nghe thấy nó hết lần này đến lần khác trong những giấc mơ của mình. Sau bữa ăn, bạn thấy mình đang lẩm nhẩm cái tên đó khi chìm vào giấc ngủ.</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn.<ul><li>Gạch bỏ “The Grand Vault” trên bản đồ R’lyeh.</li><li>Nếu Tidal Tablet nằm dưới sự kiểm soát của một điều tra viên khi màn chơi kết thúc, hãy đánh dấu vào ô bên cạnh “Tidal Tablet” dưới mục “Artifacts Earned.”</li></ul></li><li>Nếu có bất kỳ điều tra viên nào có Nhiệm vụ Good Money, hãy yêu cầu họ giải quyết câu chuyện tương ứng của mình trên trang này.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.</li><li>Chuyển sang _The Apiary_.</li></ul>"
     },
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Bạn được cứu khỏi dòng nước cuộn trào trong tình trạng bầm dập và đầy thương tích, nhưng may mắn thay vẫn còn sống. Sau khi trở lại vách đá cao chót vót nơi bạn bắt đầu, bạn ngạc nhiên và vui mừng khi thấy Ruby và Andy đang trò chuyện bên bữa ăn bằng lương khô. Thay vì kết thúc sớm cuộc hội ngộ, bạn quyết định dựng trại. Cùng nhau, các bạn trải qua buổi tối kể chuyện cười và chia sẻ những câu chuyện. Trước khi chia tay, Ruby và Andy chia sẻ những phát hiện của họ và tổng hợp một bản đồ thô sơ của thành phố cổ.</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn.<ul><li>Cross out “The Grand Vault” on the R’lyeh map.</li><li>Đánh dấu vào ô bên cạnh \"Tidal Tablet\" dưới mục \"Artifacts Earned.\"</li></ul></li><li>If any investigator has the Good Money Task, have them resolve their respective story on this page.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Check your Campaign Log.<ul><li>If the expedition headed west, proceed to _Court of the Ancients_.</li><li>If the expedition headed east, proceed to _The Apiary_.</li></ul></li></ul>"
+      "title": "Không có Resolution",
+      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều resign trong act 1 hoặc bị đánh bại)_: Bạn được cứu khỏi dòng nước cuộn trào trong tình trạng bầm dập và đầy thương tích, nhưng may mắn thay vẫn còn sống. Sau khi trở lại vách đá cao chót vót nơi bạn bắt đầu, bạn ngạc nhiên và vui mừng khi thấy Ruby và Andy đang trò chuyện bên bữa ăn bằng lương khô. Thay vì kết thúc sớm cuộc hội ngộ, bạn quyết định dựng trại. Cùng nhau, các bạn trải qua buổi tối kể chuyện cười và chia sẻ những câu chuyện. Trước khi chia tay, Ruby và Andy chia sẻ những phát hiện của họ và tổng hợp một bản đồ thô sơ của thành phố cổ.</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn.<ul><li>Gạch bỏ “The Grand Vault” trên bản đồ R’lyeh.</li><li>Nếu Tidal Tablet nằm dưới sự kiểm soát của một điều tra viên khi màn chơi kết thúc, hãy đánh dấu vào ô bên cạnh “Tidal Tablet” dưới mục “Artifacts Earned.”</li></ul></li><li>Nếu có bất kỳ điều tra viên nào có Nhiệm vụ Good Money, hãy yêu cầu họ giải quyết câu chuyện tương ứng của mình trên trang này.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.</li><li>Kiểm tra Nhật ký Chiến dịch của bạn.<ul><li>Nếu đoàn thám hiểm đi về phía tây, chuyển sang _Court of the Ancients_.</li><li>Nếu đoàn thám hiểm đi về phía đông, chuyển sang _The Apiary_.</li></ul></li></ul>"
     },
     "goodMoney": {
-      "title": "Task: Good Money",
-      "instructions": "_Read only if you have the “Good Money” Task:_",
+      "title": "Nhiệm vụ: Good Money",
+      "instructions": "_Chỉ đọc nếu bạn có Nhiệm vụ “Good Money”:_",
       "body": "Bạn nằm thao thức trong bóng tối suốt vài giờ, suy ngẫm về cuộc trò chuyện vừa qua của bạn ở Arkham. Carl Sanford, người đứng đầu Silver Twilight Lodge, nói với bạn rằng ông ta có một thỏa thuận dành cho bạn. Một thỏa thuận tốt hơn bất cứ thứ gì Tillinghast có thể mang lại cho bạn. Tất cả những gì bạn phải làm là trình bày những phát hiện của mình cho ông ta thay vì Randall. Nếu bạn lén giữ lại thêm vài di vật, có thể cuỗm vài ghi chép và bức ảnh về thành phố cổ, ông ta hứa sẽ trả gấp đôi những gì Tillinghast sẽ trả, thậm chí có thể nhiều hơn.",
       "reflection": "Bạn không muốn dính líu đến bất kỳ mối hận thù vặt vãnh nào đang diễn ra giữa hai ông già. Chắc chắn có rủi ro khi chơi cả hai phe. Dù vậy, bạn không có cảm giác rằng Sanford đang cho bạn quyền lựa chọn. Nếu bạn tính toán khôn khéo, bạn có thể thu tiền từ cả Sanford và Tillinghast và rời đi với phần thưởng gấp ba. Dù bạn làm gì, bạn cũng cần phải quyết tâm đi đến cùng.",
       "choose": "Bạn phải quyết định (chọn một):",

@@ -24,8 +24,9 @@
   "skippingPrompt": "Bạn có chắc chắn muốn bỏ qua nâng cấp bộ bài này không?",
   "unspendableXp": "XP không thể tiêu",
   "xp": "{total} XP",
-  "victoryDisplay": "Victory Display",
+  "victoryDisplay": "Khu vực trưng bày thành tích",
   "tally": {
     "vengeance": "Vengeance"
-  }
+  },
+  "spentXp": "XP đã dùng"
 }

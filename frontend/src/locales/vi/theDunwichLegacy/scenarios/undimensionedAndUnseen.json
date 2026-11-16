@@ -1,29 +1,29 @@
 {
   "heading": "Màn V",
   "label": {
-    "chooseInvestigatorToPlaceClue": "Choose an investigator to place a clue",
-    "cluesToSpend": "Number of clues to spend",
-    "doNotRemoveCluesFail": "Do not remove clues from Brood of Yog-Sothoth and fail skill test",
-    "doNotRemoveCluesTreatAsMinusFour": "Do not remove clues from Brood of Yog-Sothoth and treat as -4",
-    "spawnSetAsideBrood": "Spawn a set aside Brood of Yog-Sothoth at a random location"
+    "chooseInvestigatorToPlaceClue": "Chọn một điều tra viên để đặt một manh mối",
+    "cluesToSpend": "Số lượng manh mối cần chi",
+    "doNotRemoveCluesFail": "Không loại bỏ manh mối khỏi Brood of Yog-Sothoth và thất bại bài kiểm tra kỹ năng",
+    "doNotRemoveCluesTreatAsMinusFour": "Không loại bỏ manh mối khỏi Brood of Yog-Sothoth và coi như -4",
+    "spawnSetAsideBrood": "Spawn một Brood of Yog-Sothoth đã để riêng tại một địa điểm ngẫu nhiên"
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-1 for each Brood of Yog-Sothoth in play.",
+      "skull": "-1 cho mỗi Brood of Yog-Sothoth trong màn chơi.",
       "cultist": "Rút thêm một token khác. If you fail this test, chịu 1 horror.",
-      "tablet": "0. You must either remove all clue tokens from a Brood of Yog-Sothoth in play, or this token's modifier is -4 instead.",
-      "elderThing": "-3. If this token is revealed during an attack or evasion attempt against a Brood of Yog-Sothoth, it immediately attacks you."
+      "tablet": "0. Bạn phải loại bỏ tất cả token manh mối khỏi một Brood of Yog-Sothoth trong màn chơi, hoặc chỉ số điều chỉnh của token này là -4 thay thế.",
+      "elderThing": "-3. Nếu token này được rút ra trong một nỗ lực tấn công hoặc evade nhắm vào một Brood of Yog-Sothoth, nó sẽ tấn công bạn ngay lập tức."
     },
     "hardExpert": {
-      "skull": "-2 for each Brood of Yog-Sothoth in play.",
+      "skull": "-2 cho mỗi Brood of Yog-Sothoth trong màn chơi.",
       "cultist": "Rút thêm một token khác. If you fail this test, chịu 1 horror and 1 damage.",
-      "tablet": "0. You must either remove all clue tokens from a Brood of Yog-Sothoth in play, or this test automatically fails.",
-      "elderThing": "-5. If this token is revealed during an attack or evasion attempt against a Brood of Yog-Sothoth, it immediately attacks you."
+      "tablet": "0. Bạn phải loại bỏ tất cả token manh mối khỏi một Brood of Yog-Sothoth trong màn chơi, hoặc bài kiểm tra này tự động thất bại.",
+      "elderThing": "-5. Nếu token này được rút ra trong một nỗ lực tấn công hoặc evade nhắm vào một Brood of Yog-Sothoth, nó sẽ tấn công bạn ngay lập tức."
     }
   },
   "tooltips": {
     "dunwichVillage": {
-      "resign": "You hide from the creatures."
+      "resign": "Bạn ẩn nấp khỏi những sinh vật này."
     }
   },
   "intro": {
@@ -40,7 +40,7 @@
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: Undimensioned and Unseen, Whippoorwills, Beast-thralls, Dunwich, and Striking Fear. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/undimensioned-and-unseen.png' /><img src='{setImgPath}/whippoorwills.png' /><img src='{setImgPath}/beast-thralls.png' /><img src='{setImgPath}/dunwich.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
     "placeLocations": "Đặt ngẫu nhiên 1 trong 2 phiên bản của các vị trí sau đây vào màn chơi: Dunwich Village, Cold Spring Glen, Blasted Heath, Ten‐Acre Meadow, Devil’s Hop Yard, và Whateley Ruins. Loại bỏ các phiên bản còn lại của chúng khỏi màn chơi. Mỗi điều tra viên bắt đầu màn chơi tại vị trí Dunwich Village.",
     "sacrificedToYogSothoth": {
-      "instructions": "Check the number of names recorded under “Sacrificed to Yog‑Sothoth” in your Campaign Log.",
+      "instructions": "Kiểm tra số lượng cái tên được ghi lại dưới mục “Hiến tế cho Yog‑Sothoth” trong Nhật ký Chiến dịch của bạn.",
       "fourOrMore": "Đặt 2 bản sao của Brood of Yog‐Sothoth sang một bên, ngoài màn chơi. Loại bỏ 3 bản sao còn lại của Brood of Yog‐Sothoth hoàn toàn khỏi màn chơi.",
       "exactlyThree": "Đặt 1 bản sao của Brood of Yog‐Sothoth vào chơi tại vị trí Cold Spring Glen, và đặt 2 bản sao của Brood of Yog‐Sothoth sang một bên, ngoài màn chơi. Loại bỏ 2 bản sao còn lại của Brood of Yog‐Sothoth hoàn toàn khỏi màn chơi.",
       "exactlyTwo": "Đặt 1 bản sao của Brood of Yog‐Sothoth vào chơi tại vị trí Cold Spring Glen, và đặt 3 bản sao của Brood of Yog‐Sothoth sang một bên, ngoài màn chơi. Loại bỏ bản sao còn lại của Brood of Yog‐Sothoth hoàn toàn khỏi màn chơi.",
@@ -51,8 +51,8 @@
     "randomBasicWeakness": "Mỗi điều tra viên tìm ngẫu nhiên trong bộ sưu tập một điểm yếu [[Madness]], [[Injury]], hoặc [[Pact]] cơ bản và thêm nó vào bộ bài của mình cho phần còn lại của chiến dịch.",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to Undimensioned and Unseen* and *Erratic Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-undimensioned-and-unseen.png' /><img src='{setImgPath}/erratic-fear.png' /></section>*Erratic Fear* replaces *Striking Fear*. Remove the replaced set from the game.",
-      "broodOfYogSothoth": "Remove 4 copies of Brood of Yog-Sothoth from the original scenario and replace them with the 4 new versions of Brood of Yog-Sothoth from the *Return to Undimensioned and Unseen* encounter set.",
-      "additionalRule": "For the duration of this scenario, the following additional rule applies: if a Brood of Yog-Sothoth would be put into play, it is chosen at random from among the set-aside versions of Brood of Yog-Sothoth."
+      "broodOfYogSothoth": "Loại bỏ 4 bản sao Brood of Yog-Sothoth từ kịch bản gốc và thay thế bằng 4 phiên bản Brood of Yog-Sothoth mới từ bộ encounter *Return to Undimensioned and Unseen*.",
+      "additionalRule": "Trong suốt thời gian diễn ra màn chơi này, quy tắc bổ sung sau đây được áp dụng: nếu một Brood of Yog-Sothoth được đặt vào chơi, nó được chọn ngẫu nhiên trong số các phiên bản Brood of Yog-Sothoth đã để riêng."
     }
   },
   "choosingARandomLocation": {
@@ -67,8 +67,8 @@
   ],
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<div class='resolution'><p class='basic'>_If no resolution was reached (each investigator resigned or was defeated)_: Go to _Resolution 1_."
+      "title": "Không có Resolution",
+      "body": "<div class='resolution'><p class='basic'>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Chuyển tới _Resolution 1_."
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",

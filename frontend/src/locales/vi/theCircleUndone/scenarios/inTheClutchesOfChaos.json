@@ -12,35 +12,35 @@
   ],
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is the total amount of doom and breaches on your location.",
+      "skull": "-X. X là tổng số doom và breach tại địa điểm của bạn.",
       "cultist": "Rút thêm một token khác. If there are fewer than 3 breaches on your location, place 1 breach on your location.",
-      "tablet": "-2. For each point you fail by, remove 1 breach from the current act.",
+      "tablet": "-2. Với mỗi điểm bạn thất bại, loại bỏ 1 breach khỏi act hiện tại.",
       "elderThing": "-3. Nếu bạn thất bại, place 1 breach on a random location."
     },
     "hardExpert": {
-      "skull": "-X. X is 1 higher than the total amount of doom and breaches on your location.",
+      "skull": "-X. X lớn hơn 1 so với tổng số doom và breach tại địa điểm của bạn.",
       "cultist": "Rút thêm một token khác. If there are fewer than 3 breaches on your location, place 1 breach on your location.",
-      "tablet": "-3. For each point you fail by, remove 1 breach from the current act.",
+      "tablet": "-3. Với mỗi điểm bạn thất bại, loại bỏ 1 breach khỏi act hiện tại.",
       "elderThing": "-4. Nếu bạn thất bại, place 1 breach on a random location."
     }
   },
   "tooltips": {
     "southChurch": {
-      "resign": "You hide through the night."
+      "resign": "Bạn ẩn nấp suốt đêm."
     }
   },
   "label": {
     "toilAndTrouble": {
-      "power": "Resolve the revelation ability on the topmost Power treachery in the encounter discard pile",
-      "incursion": "Resolve an incursion at your location"
+      "power": "Giải quyết khả năng revelation trên lá bài treachery Power trên cùng trong chồng bài encounter bỏ",
+      "incursion": "Giải quyết một đợt incursion tại địa điểm của bạn"
     },
-    "breachesToRemove": "Breaches to remove",
+    "breachesToRemove": "Số breach cần loại bỏ",
     "merchantDistrict": {
-      "choose": "Pay for additional breaches",
-      "removeSupply": "Remove 1 supply",
-      "removeCharge": "Remove 1 charge",
-      "removeAmmo": "Remove 1 ammo",
-      "removeSecret": "Remove 1 secret"
+      "choose": "Chi trả cho các breach bổ sung",
+      "removeSupply": "Loại bỏ 1 supply",
+      "removeCharge": "Loại bỏ 1 charge",
+      "removeAmmo": "Loại bỏ 1 ammo",
+      "removeSecret": "Loại bỏ 1 secret"
     }
   },
   "standalone": {
@@ -60,7 +60,7 @@
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *In the Clutches of Chaos*, *Agents of Azathoth*, and *Nightgaunts*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/in-the-clutches-of-chaos.png' /><img src='{setImgPath}/agents-of-azathoth.png' /><img src='{setImgPath}/nightgaunts.png' /></section>",
     "placeLocations": "Chọn ngẫu nhiên một trong hai vị trí Rivertown, một trong hai vị trí Merchant District, một trong hai vị trí French Hill, một trong hai vị trí Uptown, một trong hai vị trí Southside và một trong hai vị trí South Church và đặt chúng vào chơi. Loại bỏ các phiên bản khác của Rivertown, Merchant District, French Hill, Uptown, Southside và South Church khỏi màn chơi. Mỗi điều tra viên bắt đầu chơi ở Southside.",
     "anetteMasonIsPossessedByEvil": {
-      "checkCampaignLog": "Check Campaign Log. *If Anette Mason is possessed by evil*, perform the following:",
+      "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch. *Nếu Anette Mason bị quỷ dữ ám*, thực hiện các bước sau:",
       "gatherSets": "Gather all cards from the following additional encounter sets: *Music of the Damned*, *Anette’s Coven*, *City of Sins*, and *Witchcraft*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/music-of-the-damned.png' /><img src='{setImgPath}/anettes-coven.png' /><img src='{setImgPath}/city-of-sins.png' /><img src='{setImgPath}/witchcraft.png' /></section>",
       "actDeck": "Khi xây dựng chồng bài act, sử dụng Act 1a—“Dark Knowledge (v. I)” và Act 2a—“Beyond the Grave.”",
       "placeLocations": "Đặt Hangman’s Hill *(Where It All Ends)* và Silver Twilight Lodge *(Shrouded in Mystery)* vào chơi."
@@ -74,13 +74,13 @@
     "setAside": "Đặt kẻ địch Piper of Azathoth sang một bên, ngoài khu vực chơi.",
     "breaches": {
       "instructions": "Chọn 2 vị trí ngẫu nhiên khác nhau. Đặt 1 lỗ thủng vào mỗi vị trí đó <i>(xem Lỗ thủng và Xâm nhập)</i>.",
-      "twoPlayers": "If there are 2 investigators in the game, perform this step twice.",
-      "threePlayers": "If there are 3 investigators in the game, perform this step three times.",
-      "fourPlayers": "If there are 4 investigators in the game, perform this step three times, choosing 3 different random locations each time, instead of 2."
+      "twoPlayers": "Nếu có 2 điều tra viên trong trò chơi, thực hiện bước này hai lần.",
+      "threePlayers": "Nếu có 3 điều tra viên trong trò chơi, thực hiện bước này ba lần.",
+      "fourPlayers": "Nếu có 4 điều tra viên trong trò chơi, thực hiện bước này ba lần, chọn 3 địa điểm ngẫu nhiên khác nhau mỗi lần, thay vì 2."
     },
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to In the Clutches of Chaos*, *City of the Damned*, and *Hexcraft*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-in-the-clutches-of-chaos.png' /><img src='{setImgPath}/city-of-the-damned.png' /><img src='{setImgPath}/hexcraft.png' /></section>*City of the Damned* replaces *City of Sins* and *Hexcraft* replaces *Witchcraft*. Remove the replaced sets from the game.",
-      "placeLocations": "Choose at random one of the three copies of each of the following locations: French Hill, Rivertown, Southside, Uptown, South Church, and Merchant District. Remove the chosen locations from the game and use the rest throughout setup, as normal."
+      "placeLocations": "Chọn ngẫu nhiên một trong ba bản sao của mỗi địa điểm sau: French Hill, Rivertown, Southside, Uptown, South Church, và Merchant District. Loại bỏ các địa điểm đã chọn khỏi trò chơi và sử dụng các địa điểm còn lại trong suốt quá trình thiết lập, như bình thường."
     }
   },
   "choosingARandomLocation": {
@@ -100,7 +100,7 @@
       "assumedControl": "*“Ông không xứng đáng để dẫn dắt chúng tôi.”*"
     },
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không Có Kết Cuộc",
       "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Kiểm tra Nhật ký Chiến dịch.</p><ul><li>*If Anette Mason is possessed by evil*, proceed to _Resolution 3_.</li><li>Carl Sanford sở hữu những bí mật của vũ trụ.</li></ul>"
     },
     "resolution1": {

@@ -8,53 +8,53 @@
   ],
   "tokens": {
     "easyStandard": {
-      "skull": "-1 (-3 instead if your location is haunted).",
-      "tablet": "-2. If you fail and this is an attack or evasion attempt, resolve each haunted ability on your location.",
-      "elderThing": "-2. If there is a _Spectral_ enemy at your location, chịu 1 damage."
+      "skull": "-1 (-3 thay vào đó nếu địa điểm của bạn có haunted).",
+      "tablet": "-2. Nếu bạn thất bại và đây là một nỗ lực tấn công hoặc evade, kích hoạt từng khả năng haunted trên địa điểm của bạn.",
+      "elderThing": "-2. Nếu có một kẻ địch _Spectral_ tại địa điểm của bạn, chịu 1 sát thương."
     },
     "hardExpert": {
-      "skull": "-2 (-4 instead if your location is haunted).",
-      "tablet": "-3. If this is an attack or evasion attempt, resolve each haunted ability on your location.",
-      "elderThing": "-4. If there is a _Spectral_ enemy at your location, chịu 1 damage and 1 horror."
+      "skull": "-2 (-4 thay vào đó nếu địa điểm của bạn có haunted).",
+      "tablet": "-3. Nếu đây là một nỗ lực tấn công hoặc evade, kích hoạt từng khả năng haunted trên địa điểm của bạn.",
+      "elderThing": "-4. Nếu có một kẻ địch _Spectral_ tại địa điểm của bạn, chịu 1 sát thương và 1 kinh hoàng."
     }
   },
   "label": {
     "wineCellarSpectral": {
-      "removeDoom": "Remove 1 doom from a Silver Twilight enemy in play",
-      "placeDoom": "Place 1 doom on a Silver Twilight enemy in play"
+      "removeDoom": "Loại bỏ 1 doom khỏi một kẻ địch Silver Twilight trong màn chơi",
+      "placeDoom": "Đặt 1 doom lên một kẻ địch Silver Twilight trong màn chơi"
     },
     "trophyRoom": {
-      "spendResources": "Spend 2 resources to gain 1 clue (from the token pool)."
+      "spendResources": "Tiêu 2 tài nguyên để nhận 1 manh mối (từ token pool)."
     },
     "senatorNathanielRhodesAdeptPolitician": {
-      "take": "Take control of 1 of his clues",
-      "flip": "Flip 1 doom on him to its clue side"
+      "take": "Kiểm soát 1 manh mối của ông ta",
+      "flip": "Lật 1 doom trên người ông ta sang mặt manh mối"
     }
   },
   "tooltips": {
     "wineCellarSpectral": {
-      "haunted": "_Haunted_ - You must either place 1 doom on a _Silver Twilight_ enemy in play, or take 1 direct horror."
+      "haunted": "_Haunted_ - Bạn phải đặt 1 doom lên một kẻ địch _Silver Twilight_ trong màn chơi, hoặc chịu 1 kinh hoàng trực tiếp."
     },
     "entryHall": {
-      "resign": "\"I guess there is nothing to those disappearances after all.\""
+      "resign": "\"Tôi đoán rốt cuộc chẳng có gì liên quan đến những vụ mất tích đó cả.\""
     },
     "entryHallSpectral": {
-      "resign": "You tear through the front doors of the manor, escaping the spectral realm and leaving the remainder of the survivors to their fate."
+      "resign": "Bạn lao qua cánh cửa trước của dinh thự, trốn thoát khỏi cõi quang phổ và phó mặc những người sống sót còn lại cho số phận của họ."
     },
     "trophyRoomSpectral": {
-      "haunted": "Lose 2 resources. For each resource you cannot lose from this effect, take 1 horror."
+      "haunted": "Mất 2 tài nguyên. Với mỗi tài nguyên bạn không thể mất từ hiệu ứng này, chịu 1 kinh hoàng."
     },
     "billiardsRoomSpectral": {
-      "haunted": "You must either discard an asset you control or take 1 damage."
+      "haunted": "Bạn phải bỏ một asset bạn kiểm soát hoặc chịu 1 sát thương."
     },
     "masterBedroomSpectral": {
-      "haunted": "Place 1 of your clues on Master Bedroom."
+      "haunted": "Đặt 1 manh mối của bạn lên Phòng Ngủ Chính."
     },
     "balconySpectral": {
-      "haunted": "Each of your cards with health takes 1 direct damage."
+      "haunted": "Mỗi lá bài có máu của bạn chịu 1 tổn thương thể chất trực tiếp."
     },
     "officeSpectral": {
-      "haunted": "Choose and discard a card from your hand."
+      "haunted": "Chọn và bỏ 1 lá bài trên tay bạn."
     }
   },
   "intro": {
@@ -66,28 +66,28 @@
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *At Death’s Doorstep*, *Silver Twilight Lodge*, *Spectral Predators*, *Trapped Spirits*, *Inexorable Fate*, and *Chilling Cold*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/at-deaths-doorstep.png' /><img src='{setImgPath}/silver-twilight-lodge.png' /><img src='{setImgPath}/spectral-predators.png' /><img src='{setImgPath}/trapped-spirits.png' /><img src='{setImgPath}/inexorable-fate.png' /><img src='{setImgPath}/chilling-cold.png' /></section>",
-    "setSetsAside": "Set the *Realm of Death* and *The Watcher* encounter sets aside, out of play. These sets are indicated by the following icons:<section class='encounter-sets'><img src='{setImgPath}/realm-of-death.png' /><img src='{setImgPath}/the-watcher.png' /></section>",
+    "setSetsAside": "Đặt các bộ encounter *Realm of Death* và *The Watcher* sang một bên, ngoài màn chơi. Các bộ này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/realm-of-death.png' /><img src='{setImgPath}/the-watcher.png' /></section>",
     "setLocationsAside": "Đặt 7 vị trí [[Spectral]] sang một bên, ngoài khu vực chơi.",
     "setJosefAside": "Đặt kẻ địch Josef Meiger sang một bên, ngoài khu vực chơi.",
     "josefNote": "*Lưu ý: Lá bài này có hai mặt và có thẻ câu chuyện ở mặt còn lại. Để có trải nghiệm tốt nhất, đừng nhìn sang mặt còn lại trừ khi có một hiệu ứng hướng dẫn bạn làm như vậy.*",
     "placeLocations": "Đặt mỗi vị trí không phải [[Spectral]] vào chơi (Entry Hall, Victorian Halls, Trophy Room, Billiards Room, Master Bedroom, Balcony, và Office). Mỗi điều tra viên bắt đầu chơi tại vị trí Entry Hall.",
     "checkCampaignLog": "Kiểm tra phần \"Người Mất Tích\" trong Nhật ký Chiến dịch:",
-    "gavriellaNotCrossedOff": "Place 6 clues on the Entry Hall if Gavriella Mizrah’s profile is not crossed off.",
-    "jeromeNotCrossedOff": "Place 6 clues on the Office if Jerome Davids’s profile is not crossed off.",
-    "valentinoNotCrossedOff": "Place 6 clues on the Billiards Room if Valentino Rivas’s profile is not crossed off.",
-    "pennyNotCrossedOff": "Place 6 clues on the Balcony if Penny White’s profile is not crossed off.",
+    "gavriellaNotCrossedOff": "Đặt 6 manh mối lên Sảnh Vào nếu hồ sơ của Gavriella Mizrah chưa bị gạch bỏ.",
+    "jeromeNotCrossedOff": "Đặt 6 manh mối lên Văn Phòng nếu hồ sơ của Jerome Davids chưa bị gạch bỏ.",
+    "valentinoNotCrossedOff": "Đặt 6 manh mối lên Phòng Bi-a nếu hồ sơ của Valentino Rivas chưa bị gạch bỏ.",
+    "pennyNotCrossedOff": "Đặt 6 manh mối lên Ban Công nếu hồ sơ của Penny White chưa bị gạch bỏ.",
     "piecesOfEvidence": "Đồng đều nhất có thể, hãy loại bỏ tổng số manh mối từ các vị trí trên bằng với số *mẩu bằng chứng đã bị bỏ lại* trong Nhật ký Chiến dịch của bạn.",
-    "theMortalRealm": "<section class='note-green'><h1>The Mortal Realm</h1><p>_Note_: This scenario’s setup only uses the seven locations without the _Spectral_ trait. Each of the _Spectral_ locations should be set aside.</p></div>",
+    "theMortalRealm": "<section class='note-green'><h1>Cõi Trần</h1><p>_Lưu ý_: Thiết lập màn chơi này chỉ sử dụng bảy địa điểm không có trait _Spectral_. Mỗi địa điểm có trait _Spectral_ nên được đặt sang một bên.</p></div>",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to At Death’s Doorstep*, *Bloodthirsty Spirits*, *Unspeakable Fate*, *Chilling Mists*, and *Unstable Realm*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-at-deaths-doorstep.png' /><img src='{setImgPath}/bloodthirsty-spirits.png' /><img src='{setImgPath}/unspeakable-fate.png' /><img src='{setImgPath}/chilling-mists.png' /><img src='{setImgPath}/unstable-realm.png' /></section>*Bloodthirsty Spirits* replaces *Trapped Spirits*, *Unspeakable Fate* replaces *Inexorable Fate*, *Chilling Mists* replaces *Chilling Cold*, and *Unstable Realm* replaces *Realm of Death*. Remove the replaced sets from the game.",
-      "setSetsAside": "Set the *Unstable Realm* encounter set aside, out of play, instead of the *Realm of Death* encounter set. Likewise, when act 1b instructs the players to shuffle the *Realm of Death* encounter set into the encounter deck, shuffle in the *Unstable Realm* encounter set instead.",
-      "placeLocations": "Also put the Senator Nathaniel Rhodes enemy into play in the Entry Hall with 1 clue per investigator on him, and put the Wine Cellar location into play.",
-      "setLocationsAside": "Also set the _Spectral_ version of the Wine Cellar aside, out of play.",
-      "additionalRule": "For the duration of this scenario, the following additional rule applies: while resolving The Watcher’s Grasp treachery, The Spectral Watcher does not exhaust after it attacks."
+      "setSetsAside": "Đặt bộ encounter *Unstable Realm* sang một bên, ngoài màn chơi, thay vì bộ encounter *Realm of Death*. Tương tự, khi act 1b hướng dẫn người chơi xáo bộ encounter *Realm of Death* vào chồng bài encounter, hãy xáo bộ encounter *Unstable Realm* vào thay thế.",
+      "placeLocations": "Đồng thời đưa kẻ địch Senator Nathaniel Rhodes vào màn chơi tại Sảnh Vào với 1 manh mối trên hắn cho mỗi điều tra viên, và đưa địa điểm Hầm Rượu vào màn chơi.",
+      "setLocationsAside": "Đồng thời đặt phiên bản _Spectral_ của Hầm Rượu sang một bên, ngoài màn chơi.",
+      "additionalRule": "Trong suốt màn chơi này, áp dụng luật bổ sung sau: khi giải quyết lá treachery The Watcher’s Grasp, The Spectral Watcher không exhaust sau khi tấn công."
     }
   },
   "interlude1": {
-    "title": "Interlude I: A Record of Those Lost",
+    "title": "Interlude I: Bản Ghi Chép Về Những Người Mất Tích",
     "instructions": "<p class='basic'>Kiểm tra mục “Missing Persons” trong Campaign Log của bạn. Theo thứ tự, đọc các phần bên dưới cho từng nhân vật mà hồ sơ chưa bị gạch bỏ.</p>",
     "gavriella": "<p class='basic'>If Gavriella Mizrah’s profile is not crossed off and there are no clues on the Entry Hall, read the following:</p><p>Sảnh vào trang viên được trang trí rất đẹp, nhưng bạn thấy thật kỳ lạ khi lan can bằng gỗ của cầu thang lớn gần đây đã được sửa chữa một cách vội vã từ vẻ ngoài của nó. Trong khi không ai nhìn thấy, bạn đi theo lan can cầu thang cho đến khi bạn phát hiện ra thứ mình đang tìm kiếm: vài mảnh gỗ vụn, có lẽ bị đạn bắn vỡ tung tóe. Bạn leo lên cầu thang một lần nữa và đặt mình vào vị trí mà một người cần phải đứng để bắn một phát súng như vậy. Sau một lúc quan sát, ánh sáng yếu ớt gần một trong những cây dương xỉ trang trí trên tầng hai đập vào mắt bạn. Ở đó, bạn tìm thấy bằng chứng: một vỏ đạn từ khẩu súng lục .45. Một khẩu súng thực sự đã được bắn ở sảnh vào của trang viên - nhưng nếu điều đó là sự thật, làm sao không ai nghe thấy tiếng súng?</p><p class='basic'>Under “Missing Persons,” next to Gavriella Mizrah’s profile, record *the investigators are on Gavriella’s trail*.</p>",
     "jerome": "<p class='basic'>If Jerome Davids’s profile is not crossed off and there are no clues on the Office, read the following:</p><p>Văn phòng cá nhân của Josef Meiger khá ngăn nắp đối với một người có thư ký riêng vừa mất tích. Có lẽ ông ta chỉ là một người khó tính… hoặc có lẽ ông ta đang tiêu hủy bằng chứng về những gì sai trái. Bạn không tìm thấy gì đáng chú ý trong bất kỳ tài liệu nào của Josef, nhưng sau khi xem xét kỹ, bạn nhận ra có một nơi bạn chưa kiểm tra: thùng rác. Tại đây bạn có được manh mối. Gần dưới cùng là một cuốn nhật ký bỏ túi nhỏ của Jerome Davids, có lẽ đã bị nhân viên dọn vệ sinh ném bất cẩn vào đó. Bạn lật đến trang cuối cùng. Ở đó, Jerome đã ghi lại một danh sách tên, có lẽ được chép lại từ tài liệu của Josef. Bạn chưa biết nó có ý nghĩa gì, nhưng nó phải rất quan trọng.</p><p class='basic'>Under “Missing Persons,” next to Jerome Davids’s profile, record *the investigators are on Jerome’s trail*.</p>",
@@ -96,7 +96,7 @@
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không Có Kết Cuộc",
       "body": "<p class='basic'>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị hạ gục) và khi kịch bản kết thúc đang ở act 1_: Chuyển sang _Resolution 2_.</p><p class='basic'>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị hạ gục) và khi kịch bản kết thúc đang ở act 2_: Chuyển sang _Resolution 3_.</p><p class='basic'>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị hạ gục) và khi kịch bản kết thúc đang ở act 3_: Chuyển sang _Resolution 1_.</p>"
     },
     "resolution1": {
@@ -109,7 +109,7 @@
     },
     "resolution3": {
       "title": "Kết thúc thứ ba",
-      "body": "<p>_Resolution 3_: Bạn bỏ chạy về phía sảnh vào của trang viên, nhưng bức tường sương mù vẫn cản đường bạn. Nổi lên từ màn sương là một số khuôn mặt và cánh tay ma quái, đang quằn quại và la hét trong đau khổ. Bạn quay lại và đối mặt với nét mặt trống rỗng của Watcher đội mũ trùm đầu. Trước khi bạn thậm chí nhận ra số mệnh của mình, cơ thể bồng bềnh của sinh vật này đang xoáy và sà trong không khí như thể được tạo thành từ chính sương mù. Sinh vật tái tạo trước bạn, và bàn tay cháy đen của nó nắm chặt cổ họng bạn, giữ bạn trên cao với sức mạnh khủng khiếp. Bạn đá và cắm móng vào bàn tay sinh vật, vùng vẫy với sự hung dữ của một con vật bị dồn vào đường cùng, nhưng không có ích gì. Điều cuối cùng bạn nhìn thấy là ánh sáng chói đỏ của đôi mắt của nó đi sâu vào tâm trí bạn.</p><ul><li>các điều tra viên không được trông thấy hoặc nghe đến một lần nào nữa.</li><li>Each investigator who resigned earns experience equal to the Victory X value of each card in the victory display.</li><li>Mỗi người chơi có điều tra viên bị giết phải chọn một điều tra viên mới từ kho điều tra viên sẵn có.</li><li>Skip _Interlude II: The Price of Progress_, and proceed directly to _Scenario III: The Secret Name_.</li></ul></div>"
+      "body": "<p>_Resolution 3_: Bạn bỏ chạy về phía sảnh vào của trang viên, nhưng bức tường sương mù ma quái vẫn cản đường bạn. Nổi lên từ màn sương là những khuôn mặt và cánh tay ma quái, đang quằn quại và la hét trong đau đớn. Bạn quay lại và đối mặt với nét mặt trống rỗng của Watcher đội mũ trùm đầu. Trước khi bạn kịp nhận ra số phận nghiệt ngã của mình, cơ thể bồng bềnh của sinh vật này đã xoáy lượn trong không trung như thể được tạo thành từ chính làn sương. Sinh vật tái hiện ngay trước mặt bạn, và bàn tay cháy đen của nó bóp nghẹt cổ họng bạn, giữ bạn trên cao với sức mạnh khủng khiếp. Bạn đạp chân và cắm móng vào bàn tay sinh vật, vùng vẫy với sự hung dữ của một con vật bị dồn vào đường cùng, nhưng vô ích. Điều cuối cùng bạn nhìn thấy là ánh đỏ rực từ đôi mắt của nó xoáy sâu vào tâm trí bạn.</p><ul><li>Trong Nhật ký Chiến dịch, ghi nhận *các điều tra viên không còn được trông thấy hay nghe tin tức gì nữa*.</li><li>Mỗi điều tra viên đã từ bỏ nhận được điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.</li><li>Mỗi điều tra viên chưa từ bỏ bị _giết_. Nếu không còn đủ điều tra viên trong nhóm điều tra viên sẵn có để tiếp tục chiến dịch, chiến dịch kết thúc và người chơi thua cuộc. Mỗi người chơi có điều tra viên bị giết phải chọn một điều tra viên mới từ nhóm điều tra viên sẵn có.</li><li>Bỏ qua _Interlude II: The Price of Progress_, và chuyển thẳng tới _Scenario III: The Secret Name_.</li></ul></div>"
     }
   }
 }

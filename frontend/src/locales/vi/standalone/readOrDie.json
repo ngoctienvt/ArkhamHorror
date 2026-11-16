@@ -1,26 +1,26 @@
 {
   "specialRules": [
     {
-      "title": "Challenge Scenario",
-      "body": "<p class='basic'>Challenge scenarios are special print-and-play scenarios that utilize existing products in the Arkham Horror: The Card Game collection, along with additional print-and-play cards, to create new content. The Read or Die challenge scenario centers around the investigator Daisy Walker, and therefore has the following prerequisites:</p><ul><li>Daisy Walker must be chosen as one of the investigators when playing this scenario.</li><li>Bộ bài của Daisy Walker phải bao gồm ít nhất 4 asset [[Tome]]. Các weakness [[Tome]] không được tính vào tổng số này.</li></ul>"
+      "title": "Màn Chơi Thử Thách",
+      "body": "<p class='basic'>Màn chơi thử thách (challenge scenarios) là các màn chơi đặc biệt dạng in-và-chơi (print-and-play) sử dụng các sản phẩm hiện có trong bộ sưu tập Arkham Horror: The Card Game, cùng với các lá bài in-và-chơi bổ sung, để tạo ra nội dung mới. Màn chơi thử thách Read or Die tập trung xoay quanh điều tra viên Daisy Walker, và do đó có các điều kiện tiên quyết sau:</p><ul><li>Daisy Walker phải được chọn là một trong các điều tra viên khi chơi màn chơi này.</li><li>Bộ bài của Daisy Walker phải bao gồm ít nhất 4 asset _Tome_. Các điểm yếu _Tome_ không được tính vào tổng số này.</li></ul>"
     }
   ],
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is the number of _Tome_ assets Daisy Walker controls.",
-      "cultist": "Rút thêm một token khác. Nếu bạn thất bại, discard the top 2 cards of your deck.",
-      "tablet": "-2. If this is an attack or evasion attempt against Namer of the Dead and you do not succeed by at least 2, it attacks you.",
+      "skull": "-X. X là số lượng asset _Tome_ mà Daisy Walker kiểm soát.",
+      "cultist": "Tiết lộ thêm một token khác. Nếu bạn thất bại, loại bỏ 2 lá bài trên cùng của bộ bài bạn.",
+      "tablet": "-2. Nếu đây là một nỗ lực tấn công hoặc evade nhắm vào Namer of the Dead và bạn không thành công từ 2 điểm trở lên, nó sẽ tấn công bạn.",
       "elderThing": "-3. Nếu bạn thất bại, Daisy Walker takes 1 horror."
     },
     "hardExpert": {
-      "skull": "-X. X is 1 more than the number of _Tome_ assets Daisy Walker controls.",
-      "cultist": "Rút thêm một token khác. Nếu bạn thất bại, discard the top 3 cards of your deck.",
-      "tablet": "-3. If this is an attack or evasion attempt against Namer of the Dead and you do not succeed by at least 3, it attacks you.",
+      "skull": "-X. X bằng số lượng asset _Tome_ mà Daisy Walker kiểm soát cộng thêm 1.",
+      "cultist": "Tiết lộ thêm một token khác. Nếu bạn thất bại, loại bỏ 3 lá bài trên cùng của bộ bài bạn.",
+      "tablet": "-3. Nếu đây là một nỗ lực tấn công hoặc evade nhắm vào Namer of the Dead và bạn không thành công từ 3 điểm trở lên, nó sẽ tấn công bạn.",
       "elderThing": "-5. Nếu bạn thất bại, Daisy Walker takes 1 horror."
     }
   },
   "intro": {
-    "title": "Challenge Scenario: Read or Die",
+    "title": "Màn Chơi Thử Thách: Đọc Hay Chết",
     "body": "<p>Bạn đã dành trọn cuộc đời mình để đọc sách. Khi còn nhỏ, đó chỉ là sự thích thú đơn thuần với những câu chuyện vô hại. Những câu chuyện rùng rợn, chắc chắn rồi, nhưng dẫu sao vẫn vô hại. Sự say mê của bạn với sự kinh dị và rùng rợn đã mang lại cho bạn biệt danh “Spooks” giữa bạn bè và bạn cùng lớp. Nhưng khi bạn lớn lên, sự say mê này cũng lớn theo, cho đến khi nó gần như trở thành nỗi ám ảnh. Khẩu vị kinh dị của bạn đã tiến hóa từ bí ẩn và hư cấu sang một thứ gì đó hơn thế nữa. Một thứ gì đó thật.\\r</p><p>Khi bạn khám phá ra bản dịch The Necronomicon của John Dee, bạn biết mình cuối cùng đã tìm thấy nỗi kinh hoàng thực sự mà bạn vẫn luôn thầm khao khát. Giá như bạn biết được điều gì đang chờ đợi mình một khi bạn đọc cuốn sách đáng sợ đó. Bạn hẳn đã khóa nó lại trong bộ sưu tập hạn chế của Henry Armitage tại Orne Library và không bao giờ mở nó ra nữa.\\r</p><p>Hoặc ít nhất bạn thích nghĩ như vậy. Nhưng ngay cả bạn cũng không thể nghi ngờ sức hấp dẫn của Kitab al-Azif. Cuốn sách của Người chết. Đó là lý do tại sao, khi Dr. Armitage triệu tập bạn đến Orne Library, nỗi sợ hãi trong xương tủy bạn đã dự đoán chính xác những gì đã xảy ra.\\r</p><p>“Tôi không hiểu làm thế nào điều này có thể xảy ra,” Dr. Armitage nói khi ông khảo sát sự tàn phá. Toàn bộ bộ sưu tập hạn chế đang trong tình trạng lộn xộn tơi tả. The Necronomicon nằm mở trên một chiếc bàn gần đó, những chiếc móc kim loại của nó bị phá vỡ. Bạn lướt những ngón tay của mình dọc theo những trang sách giống như da thuộc của nó. Đôi mắt bạn lướt qua những dòng chữ trong một điệu nhảy quen thuộc:\\r</p><p><center>“Chúng bước đi vô hình và hôi hám ở những nơi hoang vắng, nơi những Lời nói đã được thốt lên và những Nghi thức đã được gào thét qua các Mùa của chúng. Gió lầm bầm với giọng nói của Chúng, và trái đất lẩm bẩm với ý thức của Chúng.”</center>\\r</p><p>Cổ họng bạn nghẹn lại khi bạn nhận ra điều gì hẳn đã xảy ra. Một thứ gì đó đã được giải phóng, và bạn là người duy nhất có thể tìm ra cách để ngăn chặn nó…</p>"
   },
   "investigatorSetup": {
@@ -29,7 +29,7 @@
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Read or Die*, *Extracurricular Activity*, *Sorcery*, *The Beyond*, *Bishop's Thralls*, *Whippoorwills*, *Ancient Evils*, *Locked Doors*, *Agents of Yog-Sothoth*, and *Armitage's Fate*. Each of these sets except for Read or Die can be found in The Dunwich Legacy Deluxe Expansion. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/extracurricular-activity.png' /><img src='{setImgPath}/sorcery.png' /><img src='{setImgPath}/the-beyond.png' /><img src='{setImgPath}/bishops-thralls.png' /><img src='{setImgPath}/whippoorwills.png' /><img src='{setImgPath}/ancient-evils.png' /><img src='{setImgPath}/locked-doors.png' /><img src='{setImgPath}/agents-of-yog.png' /><img src='{setImgPath}/armitages-fate.png' /></section>",
-    "newCards": "Remove the original scenario reference card, act deck, and agenda deck from the *Extracurricular Activity* encounter set from the game. Use the new scenario reference card, agenda card, and act card provided in the downloadable *Read or Die* encounter set.",
+    "newCards": "Loại bỏ thẻ tham chiếu màn chơi gốc, chồng bài act và chồng bài agenda từ bộ encounter *Extracurricular Activity* khỏi trò chơi. Sử dụng thẻ tham chiếu màn chơi mới, lá bài agenda mới và lá bài act mới được cung cấp trong bộ encounter *Read or Die* có thể tải về.",
     "removeCards": "Loại bỏ vị trí Faculty Offices *(The Hour is Late)*, vị trí Alchemy Labs, story asset Alchemical Concoction, kẻ địch The Experiment, và story asset Professor Warren Rice khỏi trò chơi. Những lá bài này không được sử dụng trong challenge scenario này.",
     "placeLocations": "Đặt từng vị trí còn lại vào chơi: Miskatonic Quad, Orne Library, Humanities Building, Student Union, Science Building, Administration Building, Dormitories, và Faculty Offices *(The Night is Still Young)*.",
     "daisyWalker": "Daisy Walker bắt đầu chơi tại Orne Library.",
@@ -42,39 +42,39 @@
   },
   "tooltips": {
     "speedReading": {
-      "takeTome": "{'{'}fast{'}'} If you are Daisy Walker, investigators at your location spend 1{'{'}perPlayer{'}'} clues: Shuffle 1 facedown player card beneath this location into your deck."
+      "takeTome": "{'{'}fast{'}'} Nếu bạn là Daisy Walker, các điều tra viên tại địa điểm của bạn chi 1{'{'}perPlayer{'}'} manh mối: Xào 1 lá bài người chơi úp mặt bên dưới địa điểm này vào bộ bài của bạn."
     },
     "mortalInquiry": {
-      "moveJazz": "{'{'}action{'}'}: Move to a _Miskatonic_ location up to 3 connections away."
+      "moveJazz": "{'{'}action{'}'}: Di chuyển đến một địa điểm _Miskatonic_ cách tối đa 3 kết nối."
     },
     "namerOfTheDead": {
-      "parley": "{'{'}action{'}'} If you are Daisy Walker and you control at least 4 non-weakness _Tome_ assets: _Parley._ Test {'{'}willpower{'}'} (18). This test gets -2 difficulty for each _Tome_ asset you control. If you succeed, advance the act."
+      "parley": "{'{'}action{'}'} Nếu bạn là Daisy Walker và bạn kiểm soát ít nhất 4 asset _Tome_ không phải điểm yếu: _Parley._ Kiểm tra {'{'}willpower{'}'} (18). Bài kiểm tra này nhận -2 độ khó cho mỗi asset _Tome_ bạn kiểm soát. Nếu bạn thành công, chuyển tiếp act."
     }
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<div class='resolution'><p>_If no resolution was reached because each investigator was defeated:_ Proceed to _Resolution 2_.</p></div>"
+      "title": "Không Có Kết Cục",
+      "body": "<div class='resolution'><p>_Nếu không đạt được kết cục nào do mỗi điều tra viên đều bị đánh bại:_ Chuyển đến _Kết Cục 2_.</p></div>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<div class='resolution'><p>_Resolution 1_: Khi bạn tỉnh dậy, sàn thư viện là một mớ hỗn độn với giấy tờ vương vãi và những cuốn sách bị xé rách. Cuốn The Necronomicon nằm ngay trước mặt bạn, chiếc móc khóa kim loại của nó đã niêm phong nó lại một lần nữa. Hy vọng rằng, bất cứ thực thể nào đã được giải phóng đều đã được cất giữ an toàn bên trong. Nhưng bạn không thể mạo hiểm để cuốn ma đạo thư ở lại đây—nó quá nguy hiểm để bị bỏ lại một mình. Bạn nhét cuốn sách vào túi xách của mình, biết rằng chỉ có bạn mới có thể giữ nó an toàn…hoặc giữ cho những người khác an toàn khỏi nó.</p><ul><li>Daisy Walker nhận kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display, hoặc bằng số lượng asset [[Tome]] mà cô ấy đang in play vào cuối ván chơi, tùy xem giá trị nào cao hơn.</li><li>Each other investigator only earns experience equal to the combined Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Daisy Walker có thể nâng cấp Daisy’s Tote Bag lên phiên bản advanced, hoặc hạ cấp phiên bản advanced của The Necronomicon <i>(John Dee Translation)</i> xuống phiên bản gốc.</li></ul></div>"
+      "body": "<div class='resolution'><p>_Kết Cục 1_: Khi bạn tỉnh dậy, sàn thư viện là một đống lộn xộn những giấy tờ vương vãi và sách rách nát. Cuốn The Necronomicon nằm ngay trước mặt bạn, chiếc móc kim loại của nó đã khóa kín nó lại một lần nữa. Hy vọng rằng, bất cứ thực thể nào vừa được giải phóng đều đã được giam giữ an toàn bên trong. Nhưng bạn không thể mạo hiểm để cuốn ma đạo thư ở lại đây—nó quá nguy hiểm để bị bỏ lại một mình. Bạn nhét cuốn sách vào túi xách của mình, biết rằng chỉ có bạn mới có thể giữ cho nó an toàn…hoặc giữ cho những người khác an toàn khỏi nó.</p><ul><li>Daisy Walker nhận kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích, hoặc bằng số lượng asset _Tome_ cô có trong màn chơi khi kết thúc trò chơi, tùy theo giá trị nào cao hơn.</li><li>Mỗi điều tra viên khác chỉ nhận kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Daisy Walker có thể nâng cấp Daisy's Tote Bag lên phiên bản nâng cao, hoặc hạ cấp phiên bản nâng cao của The Necronomicon (*John Dee Translation*) về phiên bản gốc.</li></ul></div>"
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
-      "body": "<div class='resolution'><p>_Resolution 2_: Bạn nhét cuốn sách trở lại vào túi xách của mình. Bạn chỉ có thể hy vọng rằng thực thể đã được giải phóng sẽ không gây thêm tổn hại nào nữa…</p><ul><li>Daisy Walker nhận kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display, hoặc bằng số lượng asset [[Tome]] mà cô ấy đang in play vào cuối ván chơi, tùy xem giá trị nào cao hơn.</li><li>Each other investigator only earns experience equal to the combined Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Daisy Walker phải nâng cấp The Necronomicon <i>(John Dee Translation)</i> lên phiên bản advanced, hoặc hạ cấp phiên bản advanced của Daisy’s Tote Bag xuống phiên bản gốc</li></ul></div>"
+      "body": "<div class='resolution'><p>_Kết Cục 2_: Bạn nhét cuốn sách trở lại vào túi xách của mình. Bạn chỉ có thể hy vọng rằng thực thể vừa được giải phóng sẽ không gây thêm tai họa nào nữa…</p><ul><li>Daisy Walker nhận kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích, hoặc bằng số lượng asset _Tome_ cô có trong màn chơi khi kết thúc trò chơi, tùy theo giá trị nào cao hơn.</li><li>Mỗi điều tra viên khác chỉ nhận kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Daisy Walker phải nâng cấp The Necronomicon (*John Dee Translation*) lên phiên bản nâng cao, hoặc hạ cấp phiên bản nâng cao của Daisy's Tote Bag về phiên bản gốc.</li></ul></div>"
     },
     "xp": {
-      "tomes": "Tome assets Daisy Walker had in play at the end of the game"
+      "tomes": "Số asset Tome mà Daisy Walker có trong màn chơi khi kết thúc trò chơi"
     },
     "label": {
-      "maySwapSignatureCards": "Daisy Walker may either upgrade Daisy's Tote Bag to its advanced version, or downgrade the advanced version of The Necronomicon to its original version",
-      "mustSwapSignatureCards": "Daisy Walker must either upgrade The Necronomicon to its advanced version, or downgrade the advanced version of Daisy's Tote Bag to its original version",
-      "upgradeDaisysToteBag": "Upgrade Daisy's Tote Bag to its advanced version",
-      "downgradeTheNecronomicon": "Downgrade The Necronomicon to its original version",
-      "upgradeTheNecronomicon": "Upgrade The Necronomicon to its advanced version",
-      "downgradeDaisysToteBag": "Downgrade Daisy's Tote Bag to its original version",
-      "doNotSwap": "Do not swap"
+      "maySwapSignatureCards": "Daisy Walker có thể nâng cấp Daisy's Tote Bag lên phiên bản nâng cao, hoặc hạ cấp phiên bản nâng cao của The Necronomicon về phiên bản gốc",
+      "mustSwapSignatureCards": "Daisy Walker phải nâng cấp The Necronomicon lên phiên bản nâng cao, hoặc hạ cấp phiên bản nâng cao của Daisy's Tote Bag về phiên bản gốc",
+      "upgradeDaisysToteBag": "Nâng cấp Daisy's Tote Bag lên phiên bản nâng cao",
+      "downgradeTheNecronomicon": "Hạ cấp The Necronomicon về phiên bản gốc",
+      "upgradeTheNecronomicon": "Nâng cấp The Necronomicon lên phiên bản nâng cao",
+      "downgradeDaisysToteBag": "Hạ cấp Daisy's Tote Bag về phiên bản gốc",
+      "doNotSwap": "Không thay đổi"
     }
   }
 }

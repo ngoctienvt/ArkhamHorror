@@ -22,7 +22,7 @@
   "label": {
     "elderThing": "Coi hệ số của token này là -{count}.",
     "silenceSpeaks": {
-      "concealed": "Tìm trong encounter deck và discard pile một kẻ địch có từ khóa concealed và rút nó (giải quyết từ khóa concealed của nó). Xào lại encounter deck.",
+      "concealed": "Tìm kiếm trong chồng bài encounter và chồng bài encounter bỏ một kẻ địch có từ khóa concealed và rút nó (giải quyết từ khóa concealed của nó). Xáo chồng bài encounter.",
       "hollowed": "Tiết lộ lá bài trên cùng của chồng bài mỗi điều tra viên. Mỗi điều tra viên rút từng weakness mà họ vừa tiết lộ theo cách này. Để riêng từng lá bài vừa tiết lộ khác ra ngoài cuộc chơi, dưới dạng một hollow."
     },
     "miramarYachtClub": {

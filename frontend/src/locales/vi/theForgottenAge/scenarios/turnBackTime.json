@@ -2,16 +2,16 @@
   "heading": "Màn IX",
   "tokens": {
     "easyStandard": {
-      "skull": "-X . X is the number of locations with doom on them.",
+      "skull": "-X. X là số địa điểm có doom trên đó.",
       "elderThing": "-4. Nếu bạn thất bại, đặt 1 doom lên your location."
     },
     "hardExpert": {
-      "skull": "-X . X is the total amount of doom on locations.",
-      "elderThing": "-6. Place 1 doom on your location."
+      "skull": "-X. X là tổng lượng doom trên các địa điểm.",
+      "elderThing": "-6. Đặt 1 doom lên địa điểm của bạn."
     }
   },
   "intro": {
-    "title": "Secret Scenario IX: Turn Back Time",
+    "title": "Màn Chơi Bí Mật IX: Quay Ngược Thời Gian",
     "forcedToWaitForSupplies": "Kiểm tra Campaign Log. *Nếu các điều tra viên buộc phải chờ thêm vật tư*, đọc _Intro 1_.",
     "clearedAPathToTheEztliRuins": "các điều tra viên đã mở một con đường dẫn đến các tàn tích Eztli.",
     "intro1": "<p>_Intro 1:_</p><p>Bạn đang đứng trước ngôi đền chính của người Eztli, mồ hôi tuôn rơi trên da do không khí nóng bức, ẩm ướt của rừng rậm. Choáng váng, bạn quan sát xung quanh. José và Maria đứng cạnh bạn, há hốc miệng kinh ngạc trước kiến trúc tinh xảo của ngôi đền. Ba lô của họ phồng to với những vật tư bổ sung mà họ có được từ các mối liên hệ của Alejandro ở Mexico City. Chính Alejandro đang đứng ở phía sau nhóm, mỉm cười.</p><p>Ý thức của bạn bị kéo giật lùi về quá khứ xa đến mức tâm trí bạn đau nhức vì lực tác động đó. Cơ thể bạn run rẩy, và bạn phải cố gắng để không gục ngã vì kiệt sức. Mặc dù bạn đã thay đổi số mệnh, nhiệm vụ thực sự của bạn vẫn còn ở phía trước. Khi phần còn lại của đoàn thám hiểm dựng trại và chuẩn bị khám phá khu di tích, bạn lẻn đi để hoàn thành mục đích của mình, bỏ lại Alejandro và phần còn lại của nhóm ở phía sau. Họ sẽ không hiểu đâu. Họ chưa thấy những gì bạn đã thấy.</p><p class='basic right'>Trong Sổ tay Chiến dịch của bạn, gạch bỏ tất cả các mục sau ba mục đầu tiên.</p><p class='basic right'>Các mục bị gạch bỏ đã bị hoàn tác bởi hành động của bạn.</p><p class='basic right'>Tiếp tục đến <b>Setup</b></p>",
@@ -29,16 +29,16 @@
     "poisoned": "Đặt mỗi điểm yếu Poisonsed đang không ở trong chồng bài của một điều tra sang một bên.",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to Turn Back Time*, *Return to The Doom of Eztli*, *Venomous Hate*, and *Temporal Hunters*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-turn-back-time.png' /><img src='{setImgPath}/return-to-the-doom-of-eztli.png' /><img src='{setImgPath}/venomous-hate.png' /><img src='{setImgPath}/temporal-hunters.png' /></section>*Venomous Hate* replaces *Yig’s Venom* and *Temporal Hunters* replaces *Temporal Flux*. Remove the replaced sets from the game.",
-      "replaceLocations": "Before setup, remove the original Burial Pit, Underground Ruins, and Secret Passage locations from the game, and replace the original Entryway, Ancient Hall, Grand Chamber, and Chamber of Time locations with the new versions from this encounter set.",
-      "harbinger": "Before setup, replace the original Harbinger of Valusia enemy with the new Harbinger of Valusia (*The Sleeper Returns*).",
-      "setAside": "Also gather the 3 Pit Viper cards from the *Serpents* encounter set and set them aside, out of play.",
-      "explorationDeck": "When building the exploration deck, use only Sealed Passage, Mosaic Chamber, Tomb of the Ancients, Throne Room, Snake Pit, Ancient Hall, and Grand Chamber. Do not include any of the other encounter cards listed in the original setup instructions.",
-      "additionalRule": "For the duration of this scenario, the following additional rule applies: _Forced_ – After a successful exploration ends: Shuffle the top card of the encounter deck into the exploration deck."
+      "replaceLocations": "Trước khi chuẩn bị, loại bỏ các địa điểm Burial Pit, Underground Ruins và Secret Passage ban đầu khỏi trò chơi, đồng thời thay thế các địa điểm Entryway, Ancient Hall, Grand Chamber và Chamber of Time ban đầu bằng các phiên bản mới từ encounter set này.",
+      "harbinger": "Trước khi chuẩn bị, thay thế kẻ địch Harbinger of Valusia ban đầu bằng Harbinger of Valusia mới (*The Sleeper Returns*).",
+      "setAside": "Đồng thời tập hợp 3 lá bài Pit Viper từ encounter set *Serpents* và đặt chúng sang một bên, ngoài màn chơi.",
+      "explorationDeck": "Khi lập exploration deck, chỉ sử dụng Sealed Passage, Mosaic Chamber, Tomb of the Ancients, Throne Room, Snake Pit, Ancient Hall và Grand Chamber. Không đưa vào bất kỳ lá bài encounter nào khác được liệt kê trong hướng dẫn chuẩn bị ban đầu.",
+      "additionalRule": "Trong suốt thời gian diễn ra màn chơi này, luật bổ sung sau sẽ được áp dụng: _Forced_ – Sau khi một lần khám phá thành công kết thúc: Xào lá bài trên cùng của chồng bài encounter vào exploration deck."
     }
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không Có Kết Cuộc",
       "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Với thất bại của bạn, nghịch lý của những dòng thời gian xung đột đã đuổi kịp bạn. Bất chấp tất cả những gì bạn đã làm, những sự kiện của tương lai không thể bị đảo ngược. Bạn sẽ luôn tìm thấy di vật. Bạn sẽ luôn thất bại trong việc bảo vệ nó. Và Nexus sẽ luôn sụp đổ.</p><p>Reality as you know it will never be the same, but perhaps this is not the end of the world. After all, time is just one dimension: a dimension humanity barely understands. We experience time, but we cannot see it. We can measure it, but we cannot alter it. So what if the fourth dimension has split into hundreds of thousands of planes of existence? Our feeble human minds cannot comprehend the outcome, but the universe still survives, its ever-expanding boundaries no longer limited by the confines of time.<ul><li>In your Campaign Log, record that *the fabric of time is unwoven.*</li><li>Mỗi điều tra viên bị khiến <b>điên loạn</b>.</li><li>Các điều tra viên thất bại.</li></ul>"
     },
     "resolution1": {

@@ -1,19 +1,19 @@
 {
   "heading": "Màn I-B",
   "remembered": {
-    "hadADrink": "{name} had a drink",
-    "cheated": "{name} cheated"
+    "hadADrink": "{name} đã uống một ly",
+    "cheated": "{name} đã gian lận"
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-2. You may spend 2 resources to treat this token as a 0, instead.",
-      "cultist": "-3. If you succeed, gain 3 resources.",
-      "tablet": "-2. Nếu bạn thất bại, discard 3 tài nguyên."
+      "skull": "-2. Bạn có thể chi 2 tài nguyên để coi token này là 0 thay thế.",
+      "cultist": "-3. Nếu bạn thành công, nhận 3 tài nguyên.",
+      "tablet": "-2. Nếu bạn thất bại, bỏ 3 tài nguyên."
     },
     "hardExpert": {
-      "skull": "-3. You may spend 3 resources to treat this token as a 0, instead.",
-      "cultist": "-3. Nếu bạn thất bại, discard 3 tài nguyên.",
-      "tablet": "-2. Discard 3 resources."
+      "skull": "-3. Bạn có thể chi 3 tài nguyên để coi token này là 0 thay thế.",
+      "cultist": "-3. Nếu bạn thất bại, bỏ 3 tài nguyên.",
+      "tablet": "-2. Bỏ 3 tài nguyên."
     }
   },
   "intro": {
@@ -22,24 +22,24 @@
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The House Always Wins*, *Bad Luck*, *Naomi’s Crew*, *Rats*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-house-always-wins.png' /><img src='{setImgPath}/bad-luck.png' /><img src='{setImgPath}/naomis-crew.png' /><img src='{setImgPath}/rats.png' /></section>",
-    "setAsideEncounterSets": "Set the *Hideous Abominations* and *Striking Fear* encounter sets aside, out of play. These sets are indicated by the following icons:<section class='encounter-sets'><img src='{setImgPath}/hideous-abominations.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
+    "setAsideEncounterSets": "Đặt các bộ encounter *Hideous Abominations* và *Striking Fear* sang một bên, ngoài màn chơi. Những bộ này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/hideous-abominations.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
     "placeLocations": "Đặt các lá bài vị trí Clover Club Lounge, Clover Club Bar, Clover Club Cardroom, và La Bella Luna vào bàn chơi. Mỗi điều tra viên bắt đầu màn chơi tại nhà hàng La Bella Luna.",
     "placeCloverClubPitBoss": "Đặt lá bài Clover Club Pit Boss vào màn chơi tại vị trí Clover Club Lounge.",
     "setAside": "Đặt những lá bài sau đây sang một bên, ngoài bàn chơi: Darkened Hall, Peter Clover, Dr. Francis Morgan, và các bản sao của Back Hall Doorway.",
     "note": "<p class='basic'>_Chú ý:_ Khi bắt đầu màn chơi này, agenda 1a cấp cho mỗi kẻ địch [[Criminal]] từ khóa Aloof (xa lánh) giúp ngăn chặn những kẻ địch đó tự động đeo bám bạn. Tại một số thời điểm, những kẻ địch đó có thể mất từ khóa Aloof. Hãy nhớ rằng những kẻ địch không còn từ khóa Aloof sẽ tự động đeo bám các điều tra viên có mặt tại vị trí của nó, như bình thường.</p>",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to The House Always Wins* and *Erratic Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-house-always-wins.png' /><img src='{setImgPath}/erratic-fear.png' /></section>*Erratic Fear* replaces *Striking Fear*. Remove the replaced set from the game.",
-      "placeLocations": "Put the Clover Club Bar, Clover Club Cardroom, and La Bella Luna locations into play. Then choose one of the two Clover Club Lounge locations at random, put it into play, and remove the other version of Clover Club Lounge from the game. Each investigator begins play in La Bella Luna.",
-      "setAside": "Also set the Clover Club Stage aside, out of play."
+      "placeLocations": "Đặt các địa điểm Clover Club Bar, Clover Club Cardroom, và La Bella Luna vào chơi. Sau đó chọn ngẫu nhiên một trong hai địa điểm Clover Club Lounge, đặt nó vào chơi, và loại bỏ phiên bản Clover Club Lounge còn lại khỏi trò chơi. Mỗi điều tra viên bắt đầu chơi tại La Bella Luna.",
+      "setAside": "Đồng thời đặt Clover Club Stage sang một bên, ngoài màn chơi."
     }
   },
   "resolutions": {
     "xp": {
-      "resolution1": "Reflects on the night’s events.",
-      "resolution4": "Reflects on the night’s events."
+      "resolution1": "Ngẫm nghĩ về những sự kiện trong đêm.",
+      "resolution4": "Ngẫm nghĩ về những sự kiện trong đêm."
     },
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không có Resolution",
       "body": "<div class='resolution'><p class='basic'>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui trước Act 3 hoặc bị hạ gục)_: Bạn chỉ vừa kịp thoát khỏi câu lạc bộ còn sống. Chuyển sang _Resolution 1._</p></div>"
     },
     "resolution1": {
@@ -61,26 +61,26 @@
   },
   "label": {
     "skull": {
-      "spend": "Spend 1 resource to treat this token as a 0, instead. | Spend {count} resources to treat this token as a 0, instead.",
-      "doNotSpend": "Do not spend resources"
+      "spend": "Chi 1 tài nguyên để coi token này là 0 thay thế. | Chi {count} tài nguyên để coi token này là 0 thay thế.",
+      "doNotSpend": "Không chi tài nguyên"
     },
-    "cheated": "Remember that you have \"cheated.\"",
+    "cheated": "Ghi nhớ rằng bạn đã \"gian lận\".",
     "raiseTheStakes": {
-      "place": "Put Raise the Stakes into play in your threat area"
+      "place": "Đặt Raise the Stakes vào chơi trong vùng đe dọa của bạn"
     }
   },
   "tooltips": {
     "laBellaLuna": {
-      "resign": "This was a bust"
+      "resign": "Chuyến này hỏng bét rồi"
     },
     "backAlley": {
-      "resign": "We can get out this way!"
+      "resign": "Chúng ta có thể thoát ra bằng lối này!"
     }
   },
   "returnToCloverClubLounge": {
     "label": {
-      "putIntoPlay": "Put it into play",
-      "doNotPutIntoPlay": "Do not put it into play"
+      "putIntoPlay": "Đặt nó vào chơi",
+      "doNotPutIntoPlay": "Không đặt nó vào chơi"
     }
   }
 }

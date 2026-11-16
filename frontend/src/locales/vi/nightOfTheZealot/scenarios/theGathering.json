@@ -6,30 +6,30 @@
     "setOutOfPlay": "Đặt lá bài Ghoul Priest và Lita Chantler ra một bên, ngoài khu vực chơi.",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to The Gathering* and *Ghouls of Umôrdhoth*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-gathering.png' /><img src='{setImgPath}/ghouls-of-umrdhoth.png' /></section>*Ghouls of Umôrdhoth* replaces *Ghouls*. Remove the replaced set from the game.",
-      "mysteriousGateway": "When constructing the act deck, use Act 1a—*Mysterious Gateway*. Remove Act 1a—*Trapped* from the game.",
-      "placeLocations": "Put the Study *(Aberrant Gateway)* location into play, along with the new Guest Hall, Bedroom, and Bathroom locations. Mỗi điều tra viên bắt đầu chơi tại Study *(Aberrant Gateway)*. Remove the original Study and the Hallway locations from the game, and set each other location aside, out of play.",
-      "atticAndCellar": "Choose one of the two Attic locations and one of the two Cellar locations at random and set them aside, out of play. Remove the other versions of Attic and Cellar from the game."
+      "mysteriousGateway": "Khi xây dựng chồng bài act, sử dụng Act 1a—*Mysterious Gateway*. Loại bỏ Act 1a—*Trapped* khỏi trò chơi.",
+      "placeLocations": "Đưa địa điểm Study *(Aberrant Gateway)* vào trong màn chơi, cùng với các địa điểm mới Guest Hall, Bedroom, và Bathroom. Mỗi điều tra viên bắt đầu chơi tại Study *(Aberrant Gateway)*. Loại bỏ các địa điểm Study và Hallway gốc khỏi trò chơi, và đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
+      "atticAndCellar": "Chọn ngẫu nhiên một trong hai địa điểm Attic và một trong hai địa điểm Cellar rồi đặt chúng sang một bên, ngoài màn chơi. Loại bỏ các phiên bản Attic và Cellar còn lại khỏi trò chơi."
     }
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is the number of _Ghoul_ enemies at your location.",
+      "skull": "-X. X là số lượng kẻ địch _Ghoul_ tại địa điểm của bạn.",
       "cultist": "-1. Nếu bạn thất bại, chịu 1 horror.",
-      "tablet": "-2. If there is a _Ghoul_ enemy at your location, chịu 1 damage."
+      "tablet": "-2. Nếu có kẻ địch _Ghoul_ tại địa điểm của bạn, nhận 1 sát thương."
     },
     "hardExpert": {
-      "skull": "-2. Nếu bạn thất bại, after this skill test, search the encounter deck and discard pile for a _Ghoul_ enemy, and draw it. Shuffle the encounter deck.",
+      "skull": "-2. Nếu bạn thất bại, sau bài kiểm tra kỹ năng này, tìm kiếm trong chồng bài encounter và chồng bài bỏ một kẻ địch _Ghoul_, rồi rút nó. Xáo trộn chồng bài encounter.",
       "cultist": "Rút thêm một token khác. Nếu bạn thất bại, chịu 2 horror.",
-      "tablet": "-4. If there is a _Ghoul_ enemy at your location, chịu 1 damage and 1 horror."
+      "tablet": "-4. Nếu có kẻ địch _Ghoul_ tại địa điểm của bạn, nhận 1 sát thương và 1 kinh hoàng."
     }
   },
   "intro": {
-    "title": "Part I: The Gathering",
+    "title": "Phần I: Cuộc Tụ Họp",
     "body": "<p>Bạn và cộng sự của mình đang điều tra những sự kiện kì lạ xảy ra tại quê hương của bạn, thành phố Arkham. Trong vài tuần qua, một số người dân thị trấn đã mất tích một cách bí ẩn. Gần đây, xác của họ được tìm thấy ở trong rừng, bị cắn xé man rợ và ăn hết 1 nửa. Cảnh sát và báo chí đều cho rằng các con thú hoang dã là thủ phạm gây ra mọi việc, nhưng bạn tin rằng còn có điều gì khác đang diễn ra. Cả nhóm tụ họp tại nhà của trưởng nhóm để thảo luận về những sự kiện kỳ lạ này."
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không Có Kết Cuộc",
       "body": "<div class='resolution'><p>Bạn vừa kịp thoát khỏi nhà cùng với mạng sống của mình. Người phụ nữ ở phòng khách cũng theo chân bạn ra cửa chính, đóng sầm cánh cửa lại. \"Mấy đứa ngu, tụi bay thấy mình đã làm gì chưa?\" Bà ta đẩy một chiếc ghế ra trước cánh cửa và đặt nó ở dưới tay nắm cửa. \"Chúng ta phải thoát khỏi nơi đây. Đi theo ta và ta sẽ nói cho các người những gì ta biết. Chúng ta đang là những người duy nhất có thể ngăn chặn hiểm họa đang ẩn núp khắp thành phố này\". Bạn không còn sức để mà tranh luận. Bạn gật đầu và đi theo người phụ nữ đang chạy từ cổng chính ra con đường đầy mưa gió, về phía Rivertown.</p><ul><li>In your Campaign Log, record that *your house is still standing*.</li><li>In your Campaign Log, record that *the Ghoul Priest is still alive*.</li><li>Trưởng nhóm nhận được lá bài Lita Chantler và có thể thêm nó vào bộ bài của mình. Lá bài này không tính vào giới hạn bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
     },
     "resolution1": {
@@ -38,26 +38,26 @@
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
-      "body": "<div class='resolution'><p>Bạn từ chối làm theo lời của người phụ nữ quá khích kia và đuổi bà ta ra khỏi nhà mình vì sợ bà ta sẽ tự tiện phóng hỏa. Bà ta lớn tiếng, \"Mấy đứa ngu! Tụi mày đang tự đào hố chôn mình đấy\". \"Tụi mày không hiểu được những hiểm họa đang ẩn núp ở bên dưới đâu… mối hiểm họa mà tất cả chúng ta đều đang ở trong nó!\" Vẫn còn bị chấn động bởi sự kiện tối nay, bạn quyết định lắng nghe thử lời người phụ nữ này. Có lẽ bà ta có thể làm sáng tỏ những sự kiện kỳ lạ này… nhưng có vẻ bà ta không tin tưởng bạn cho lắm.</p><ul><li>In your Campaign Log, record that *your house is still standing*.</li><li>The lead investigator earns 1 experience, as they refuse to let the night’s events destroy their life.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
+      "body": "<div class='resolution'><p>_Resolution 2:_ Bạn từ chối làm theo lời của người phụ nữ quá khích kia và đuổi bà ta ra khỏi nhà mình vì sợ bà ta sẽ tự tiện phóng hỏa. “Mấy đứa ngu! Tụi mày đang tự đào hố chôn mình đấy!” bà ta cảnh báo. “Tụi mày không hiểu được những hiểm họa đang ẩn núp ở bên dưới đâu… mối hiểm họa mà tất cả chúng ta đều đang phải đối mặt!” Vẫn còn bàng hoàng bởi những sự kiện đêm nay, bạn quyết định lắng nghe lời người phụ nữ này. Có lẽ bà ta có thể làm sáng tỏ những sự kiện kỳ lạ này… nhưng có vẻ bà ta không tin tưởng bạn cho lắm.</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại rằng *ngôi nhà của bạn vẫn còn nguyên vẹn*.</li><li>Điều tra viên trưởng nhận 1 điểm kinh nghiệm, vì họ không để những sự kiện đêm nay phá hủy cuộc đời mình.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích (hãy nhớ thêm các địa điểm đủ điều kiện vào khu vực trưng bày thành tích). Mỗi điều tra viên nhận thêm 2 điểm kinh nghiệm thưởng khi họ hiểu thêm về thế giới ẩn giấu của Mythos.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li></ul></div>"
     },
     "resolution3": {
       "title": "Kết thúc thứ ba",
-      "body": "<div class='resolution'><p>Bạn chạy ra ngoài hành lang để tìm cách thoát ra khỏi căn nhà, nhưng tấm rào chắn nóng như thiêu đốt vẫn chặn đường của bạn. Bạn bị kẹt lại cùng với đám quái vật khát máu xâm nhập ngôi nhà của mình, và không còn chỗ nào để chạy trốn.</p><ul><li>In your Campaign Log, record that *Lita was forced to find others to help her cause*.</li><li>In your Campaign Log, record that *your house is still standing*.</li><li>In your Campaign Log, record that *the Ghoul Priest is still alive*.</li><li>Điều tra viên chưa Resign (từ bỏ) <b>bị giết</b>. Nếu không đủ điều tra viên để tiếp tục chiến dịch, chiến dịch kết thúc và tất cả người chơi bị thua. Nếu không thì tiếp tục sang màn tiếp theo. (Mỗi người chơi có điều tra viên bị giết phải chọn một điều tra viên mới từ kho điều tra viên sẵn có. Xem trang 13 của cuốn Rules Reference để biết toàn bộ luật về điều tra viên bị giết.)</li><li>If the lead investigator was _killed_, choose an investigator to earn the Lita Chantler card. That investigator may include this card in their deck. It does not count toward that investigator’s deck size.</li></ul></div>"
+      "body": "<div class='resolution'><p>_Resolution 3:_ Bạn chạy ra hành lang để tìm cách thoát khỏi căn nhà, nhưng bức rào chắn nóng như thiêu đốt vẫn chặn đường bạn. Bị mắc kẹt, bầy sinh vật hung dữ tràn vào ngôi nhà của bạn đang áp sát, và bạn không còn đường nào để chạy trốn.</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại rằng *Lita buộc phải tìm người khác để giúp đỡ*.</li><li>Trong Nhật ký Chiến dịch, ghi lại rằng *ngôi nhà của bạn vẫn còn nguyên vẹn*.</li><li>Trong Nhật ký Chiến dịch, ghi lại rằng *Ghoul Priest vẫn còn sống*.</li><li>Mỗi điều tra viên chưa resign bị _giết_. Nếu không còn đủ điều tra viên để tiếp tục chiến dịch, chiến dịch kết thúc và các người chơi thua cuộc. Nếu không, advance sang màn tiếp theo. (Mỗi người chơi có điều tra viên bị giết phải chọn một điều tra viên mới từ kho điều tra viên sẵn có. Tham khảo trang 13 của Rules Reference để biết toàn bộ luật về điều tra viên bị giết.)</li><li>Nếu điều tra viên trưởng bị _giết_, hãy chọn một điều tra viên nhận lá bài Lita Chantler. Điều tra viên đó có thể thêm lá bài này vào bộ bài của họ. Nó không tính vào giới hạn bộ bài của điều tra viên đó.</li></ul></div>"
     },
     "xp": {
       "resolution2": "Trưởng nhóm được 1 một kinh nghiệm, vì cả nhóm đã không để sự kiện tối nay phá hủy cuộc sống của mình.",
-      "bonus": "Gains insight into the hidden world of the Mythos"
+      "bonus": "Hiểu thêm về thế giới ẩn giấu của Mythos"
     }
   },
   "label": {
-    "r1": "It was never much of a home. Burn it down! (→ _R1_)",
-    "r2": "This \"hell-pit\" is my home! No way we are burning it! (→ _R2_)",
+    "r1": "Nơi này chưa từng là một tổ ấm thực sự. Đốt rụi nó đi! (→ _R1_)",
+    "r2": "\"Cái hố địa ngục\" này là nhà của tôi! Không đời nào chúng tôi lại đốt nó! (→ _R2_)",
     "whatsGoingOn": {
-      "horror": "The lead investigator takes 2 horror",
-      "discard": "Each investigator discards 1 card at random from their hand"
+      "horror": "Điều tra viên trưởng nhận 2 kinh hoàng",
+      "discard": "Mỗi điều tra viên bỏ 1 lá bài ngẫu nhiên khỏi tay họ"
     },
     "parlor": {
-      "resign": "\"This is too much for me!\" You run out the front door, fleeing in panic."
+      "resign": "\"Quá sức chịu đựng của tôi rồi!\" Bạn lao ra cửa trước, bỏ chạy trong hoảng loạn."
     }
   }
 }

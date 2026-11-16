@@ -1,140 +1,140 @@
 {
   "tokens": {
     "easyStandard": {
-      "skull": "-2. If you fail and there is a _Monster_ enemy at your location, that enemy attacks you.",
-      "cultist": "-1. If there is a _Syndicate_ enemy at your location, reveal another token.",
-      "tablet": "-2 (-4 instead if you are at an _Otherworld_ location).",
+      "skull": "-2. Nếu bạn thất bại và có một kẻ địch _Monster_ tại địa điểm của bạn, kẻ địch đó tấn công bạn.",
+      "cultist": "-1. Nếu có một kẻ địch _Syndicate_ tại địa điểm của bạn, tiết lộ thêm 1 token khác.",
+      "tablet": "-2 (-4 thay vào đó nếu bạn đang ở một địa điểm _Otherworld_).",
       "elderThing": "-4. Nếu bạn thất bại, deal 1 horror to a _Witness_ asset in play."
     },
     "hardExpert": {
-      "skull": "-3. After this test resolves, if there is a _Monster_ enemy at your location, that enemy attacks you.",
-      "cultist": "-2. If there is a _Syndicate_ enemy at your location, reveal another token.",
-      "tablet": "-3 (-5 instead if you are at an _Otherworld_ location).",
-      "elderThing": "-5. Nếu bạn thất bại, choose an _Ally_ or _Witness_ asset. Something abducts that asset."
+      "skull": "-3. Sau khi bài kiểm tra này giải quyết, nếu có một kẻ địch _Monster_ tại địa điểm của bạn, kẻ địch đó tấn công bạn.",
+      "cultist": "-2. Nếu có một kẻ địch _Syndicate_ tại địa điểm của bạn, tiết lộ thêm 1 token khác.",
+      "tablet": "-3 (-5 thay vào đó nếu bạn đang ở một địa điểm _Otherworld_).",
+      "elderThing": "-5. Nếu bạn thất bại, chọn một asset _Ally_ hoặc _Witness_. Thứ gì đó bắt cóc asset đó."
     }
   },
   "remembered": {
-    "theInvestigatorsFoundRecordOfMatildesBribe": "The investigators found record of Matilde's bribe",
-    "theInvestigatorsFoundSomethingStrangeInTheFuneralHomeBasement": "The investigators found something strange in the funeral home basement",
-    "theInvestigatorsGlimpsedAnotherWorld": "The investigators glimpsed another world",
-    "albrechtIsTheCulprit": "Albrecht is the culprit",
-    "linaOpenedTheDoor": "Lina opened the door",
-    "eugeneIsNotWhatHeSeems": "Eugene is not what he seems"
+    "theInvestigatorsFoundRecordOfMatildesBribe": "Các điều tra viên tìm thấy hồ sơ về khoản hối lộ của Matilde",
+    "theInvestigatorsFoundSomethingStrangeInTheFuneralHomeBasement": "Các điều tra viên tìm thấy điều kỳ lạ trong tầng hầm của nhà tang lễ",
+    "theInvestigatorsGlimpsedAnotherWorld": "Các điều tra viên thoáng nhìn thấy một thế giới khác",
+    "albrechtIsTheCulprit": "Albrecht là thủ phạm",
+    "linaOpenedTheDoor": "Lina đã mở cánh cửa",
+    "eugeneIsNotWhatHeSeems": "Eugene không giống như vẻ ngoài"
   },
   "intro": {
-    "title": "Traces to Nowhere",
-    "body": "<p>Ever since their arrival in Arkham, the Husserl family has been the center of one scandal or another, with each member of the family intent on making waves. Josephine Husserl, matriarch of the family, threw swanky parties for the real movers and shakers of the city. While she entertained guests from all walks of life, her husband Elias would hold secret meetings with mob bosses, local politicians, and even members of the police force. The Husserls had money to invest, and they saw Arkham as rife with opportunity.</p><p>Each of Elias and Josephine's children ran afoul of other influential people in Arkham, however. Whether it was Albrecht gambling his family's wealth away, Elias Jr. forging bad deals, Lina's paintings failing to garner any interest in high society, or Adele struggling and failing to distance herself from them all, the rumors about the Husserls swirled through the streets.</p><p>Surprisingly, however, the Arkham Advertiser only ever commented on the more positive parts of their public image—stretching every meager humanitarian effort as far as they could to make a story.</p><p>But the controversy came to a head when Elias Husserl Sr. went missing one evening. He had been on his way to a private meeting in French Hill, and he never returned. Frustrated by the lack of initiative from the police force, Josephine hired private detective Aziza Steer, who wasted no time in digging into Elias's many contacts. After a couple of weeks with little progress, Aziza reached out to you for assistance in the investigation.</p><p>But once you arrived, Aziza was nowhere to be found. Now, alone in her office, it is up to you to discover what happened to Aziza and Elias Sr.</p>"
+    "title": "Dấu Vết Vào Hư Vô",
+    "body": "<p>Kể từ khi đặt chân đến Arkham, gia đình Husserl đã là tâm điểm của hết vụ tai tiếng này đến vụ bê bối khác, khi mỗi thành viên trong gia đình đều muốn tạo nên những đợt sóng gió. Josephine Husserl, người mẹ quyền lực của gia đình, thường tổ chức những bữa tiệc xa hoa dành cho những nhân vật thực sự có tầm ảnh hưởng của thành phố. Trong khi bà tiếp đãi những vị khách từ mọi tầng lớp xã hội, người chồng Elias của bà lại tổ chức các cuộc gặp bí mật với các trùm xã hội đen, các chính trị gia địa phương, và thậm chí cả các thành viên của lực lượng cảnh sát. Nhà Husserl có tiền để đầu tư, và họ nhìn thấy Arkham đầy ắp cơ hội.</p><p>Tuy nhiên, mỗi người con của Elias và Josephine đều gây thù chuốc oán với những người có tầm ảnh hưởng khác ở Arkham. Dù là Albrecht đánh bạc nướng sạch của cải gia đình, Elias Jr. ngấm ngầm làm những thương vụ mờ ám, những bức tranh của Lina không thể thu hút chút hứng thú nào từ giới thượng lưu, hay Adele chật vật và thất bại trong việc tách mình ra khỏi tất cả những chuyện đó, thì những tin đồn về nhà Husserl vẫn lan truyền khắp các con phố.</p><p>Thế nhưng thật đáng ngạc nhiên, tờ Arkham Advertiser chỉ luôn đưa tin về những mặt tích cực hơn trong hình ảnh công chúng của họ—thổi phồng mọi nỗ lực nhân đạo nhỏ nhặt hết mức có thể để thêu dệt nên một câu chuyện.</p><p>Nhưng tranh cãi đã lên đến đỉnh điểm khi Elias Husserl Sr. mất tích vào một buổi tối nọ. Ông đang trên đường đến một cuộc gặp riêng ở French Hill, và ông không bao giờ trở về nữa. Thất vọng trước sự thiếu tích cực từ lực lượng cảnh sát, Josephine đã thuê thám tử tư Aziza Steer, người đã không lãng phí thời gian để đào sâu vào vô số mối quan hệ của Elias. Sau vài tuần với rất ít tiến triển, Aziza đã liên hệ với bạn để nhờ hỗ trợ trong cuộc điều tra.</p><p>Nhưng khi bạn vừa đến nơi, Aziza lại chẳng thấy đâu. Giờ đây, chỉ còn một mình trong văn phòng của cô ấy, việc tìm ra chuyện gì đã xảy ra với Aziza và Elias Sr. phụ thuộc hoàn toàn vào bạn.</p>"
   },
   "setup": {
     "gatherSets": "Gather all cards from the _Traces to Nowhere_ and _Dimensional Madness_ encounter sets. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets grid'><div><img src='{setImgPath}/traces-to-nowhere.png' /><span>Traces to Nowhere</span></div><div><img src='{setImgPath}/dimensional-madness.png' /><span>Dimensional Madness</span></div></section>",
-    "placeLocations": "Put the following locations into play: Steer's Office, Merchant District, French Hill, South Church, and Historical Society.",
-    "beginPlay": "Each investigator begins play at Steer's Office.",
-    "spawnEnforcer": "Spawn 1 of the Hired Enforcer enemies at Merchant District.",
-    "abductAziza": "Find the Aziza Steer (*Has a Bone to Pick*) story asset and place her facedown beneath the scenario reference card. Aziza Steer has been abducted!",
-    "setOutOfPlay": "Set the following cards aside, out of play:",
-    "suspects": "The 6 _Suspect_ story assets.",
-    "culprits": "The Crooked Cops enemy and all 3 _Culprit_ enemies.",
-    "actAgenda": "Agenda 4a—\"Into the Pit\" and all 3 copies of act 4a.",
-    "locations": "The Arkham Advertiser, Train Station, and Tick-Tock Club locations, as well as both copies of the Duterte Funeral Home location and both copies of the Meiger Estate location.",
-    "witnesses": "The 4 _Witness_ story assets (Adele Husserl, Josephine Husserl, Charles Tamm, and Gladys Washington).",
-    "dimensionalMadness": "The _Dimensional Madness_ encounter set.",
-    "leadsDeck": "Create the Leads deck by shuffling the 4 set-aside _Witness_ story assets along with the top 2 cards of the encounter deck (top 3 cards instead if there are 3 or 4 investigators in the game).",
-    "leadsDeckNote": "The Leads deck is a special deck of scenario cards. When an investigator is instructed to draw a card from the Leads deck, they resolve it as if it were drawn from the encounter deck.",
-    "leadsDeckPlacement": "Place the Leads deck next to the scenario reference card.",
+    "placeLocations": "Đưa các địa điểm sau vào màn chơi: Steer's Office, Merchant District, French Hill, và Husserl Mansion.",
+    "beginPlay": "Mỗi điều tra viên bắt đầu màn chơi tại Steer's Office.",
+    "spawnEnforcer": "Spawn 1 kẻ địch Hired Enforcer tại Merchant District.",
+    "abductAziza": "Tìm story asset Aziza Steer (*Has a Bone to Pick*) và đặt cô ấy úp mặt bên dưới agenda 1a (thứ gì đó bắt cóc asset đó).",
+    "setOutOfPlay": "Đặt các lá bài sau sang một bên, ngoài màn chơi:",
+    "suspects": "6 story asset _Suspect_.",
+    "culprits": "Kẻ địch Crooked Cops và toàn bộ 3 kẻ địch _Culprit_.",
+    "actAgenda": "Agenda 4a—\"Into the Pit\" và toàn bộ 3 bản sao của act 4a.",
+    "locations": "Các địa điểm Arkham Advertiser, Train Station, và Tick-Tock Club, cũng như cả 2 bản sao của địa điểm Bone Pit.",
+    "witnesses": "4 story asset _Witness_ (Adele Husserl, Josephine Husserl, Charles Tamm, và Gladys Washington).",
+    "dimensionalMadness": "Bộ encounter _Dimensional Madness_.",
+    "leadsDeck": "Tạo chồng bài Leads bằng cách xáo trộn 4 story asset _Witness_ được đặt sang một bên cùng với 6 story asset _Suspect_ được đặt sang một bên lại với nhau. Thao tác này tạo ra một chồng bài úp gồm 10 lá bài.",
+    "leadsDeckNote": "Chồng bài Leads là một chồng bài đặc biệt gồm các lá bài màn chơi. Khi một điều tra viên được hướng dẫn “giải quyết một lead,” điều tra viên đó rút lá bài trên cùng của chồng bài Leads và tra cứu mục codex của nó (xem “Codex” ở trang 3).",
+    "leadsDeckPlacement": "Đặt chồng bài Leads cạnh thẻ tham chiếu màn chơi.",
     "begin": "Bây giờ bạn đã sẵn sàng để bắt đầu.",
-    "note": "<p class='basic'>*Note*: The Abductor enemy in the _Dimensional Madness_ encounter set is a double-sided card. For the best experience, do not look at the reverse side of Abductor until explicitly instructed to do so.</p>"
+    "note": "<p class='basic'>*Lưu ý*: Kẻ địch Abductor trong bộ encounter _Dimensional Madness_ không sử dụng mặt sau lá bài encounter tiêu chuẩn, mà thay vào đó sử dụng mặt sau lá bài người chơi. Hãy cẩn thận khi giải quyết các hiệu ứng tương tác với lá bài này để không vô tình làm lộ hoặc xáo trộn các lá bài trong chồng bài encounter hoặc chồng bài người chơi.</p>"
   },
   "codex": {
     "josephineHusserl": {
       "title": "Codex A: Josephine Husserl",
-      "body": "<p>Josephine turns her steely glare on you. Her thin lips and furrowed brow tell you she's not excited to see you. She offers a forced smile to those around her as she gently pulls you aside. “Whoever is behind this,” she says just above a whisper, “they know my family. It has to be either a close business associate of Elias's, or one of my own children.” When you look on her with surprise, she offers a slight shrug of one shoulder. “Heaven forbid,” she adds nonchalantly.</p><p>You ask whether there's anyone in particular you should look into. “My daughter, Lina,” Josephine says. “She's been to the church a lot lately. Probably guilty about something.” She sips her drink. “And Albrecht. He can't keep himself away from the cards, and he's been seeing some reporter at least once a week.”</p><p class='basic right'>Search the chaos bag for a {'{'}cultist{'}'} token and seal it on the scenario reference card. Add Josephine Husserl to the victory display.</p>"
+      "body": "<p>Josephine hướng ánh nhìn lạnh lùng như thép về phía bạn. Đôi môi mỏng và hàng lông mày nhíu lại cho thấy bà ta chẳng hề hào hứng khi thấy bạn. Bà ta nở một nụ cười gượng gạo với những người xung quanh khi khẽ kéo bạn sang một bên. “Bất kể ai đứng sau vụ này,” bà ta nói chỉ vừa đủ nghe, “họ đều biết rõ gia đình tôi. Đó chắc chắn là một đối tác làm ăn thân cận của Elias, hoặc là một trong những đứa con của chính tôi.” Khi thấy bạn nhìn bà ta với vẻ ngạc nhiên, bà khẽ nhún một bên vai. “Chúa cấm điều đó,” bà bồi thêm một cách thản nhiên.</p><p>Bạn hỏi xem liệu có ai cụ thể mà bạn nên để mắt tới hay không. “Con gái tôi, Lina,” Josephine nói. “Dạo gần đây nó đến nhà thờ rất nhiều. Chắc hẳn là đang cảm thấy có lỗi về điều gì đó.” Bà nhấp một ngụm đồ uống. “Và Albrecht nữa. Nó không thể dứt mình ra khỏi những lá bài đỏ đen, và nó gặp gỡ một gã phóng viên nào đó ít nhất mỗi tuần một lần.”</p><p class='basic right'>Tìm trong túi hỗn mang một token {'{'}cultist{'}'} và seal nó lên thẻ tham chiếu màn chơi. Thêm Josephine Husserl vào khu vực trưng bày thành tích.</p>"
     },
     "adeleHusserl": {
       "title": "Codex B: Adele Husserl",
-      "body": "<p>Adele sighs in exasperation at your questions. “Look, you're wasting your time,” she says. “I've done much to cut my family's influence out of my life. Other than a few hundred dollars—which Albrecht insisted I take—everything I have, I earned.” She shakes her head helplessly. “He said I deserved it for staying out of the papers.”</p><p>You ask whether she's had contact with anyone else, and she nods. “Junior,” she says. “I spoke to him at Velma's a couple of nights ago. He seemed anxious about something. Nervous. He said he was going to leave town, and asked if I would go with. I told him no. Now that I'm on my own, I've made friends here in Arkham. People I can actually rely on. I don't want to start all over again. Besides, I don't trust his assistant, Mr. Peel.”</p><p class='basic right'>Search the chaos bag for a {'{'}tablet{'}'} token and seal it on the scenario reference card. Add Adele Husserl to the victory display.</p>"
+      "body": "<p>Adele thở dài bực bội trước những câu hỏi của bạn. “Nghe này, các người đang lãng phí thời gian đấy,” cô nói. “Tôi đã làm rất nhiều điều để cắt đứt ảnh hưởng của gia đình khỏi cuộc sống của mình. Ngoại trừ vài trăm đô la—mà Albrecht nài nỉ tôi nhận—mọi thứ tôi có đều do chính tôi làm ra.” Cô bất lực lắc đầu. “Anh ấy nói tôi xứng đáng được nhận vì đã không xuất hiện trên các mặt báo.”</p><p>Bạn hỏi liệu cô có liên lạc với ai khác không, và cô gật đầu. “Em trai tôi, Junior,” cô nói. “Tôi đã nói chuyện với nó ở quán Velma cách đây vài đêm. Nó có vẻ lo lắng về điều gì đó. Rất bồn chồn. Nó nói nó sắp rời khỏi thị trấn, và hỏi tôi có muốn đi cùng không. Tôi bảo không. Giờ tôi đã tự lập, tôi có những người bạn ở Arkham này. Những người tôi thực sự có thể dựa vào. Tôi không muốn phải bắt đầu lại từ đầu. Hơn nữa, tôi không tin gã trợ lý của nó, ông Peel.”</p><p class='basic right'>Tìm trong túi hỗn mang một token {'{'}tablet{'}'} và seal nó lên thẻ tham chiếu màn chơi. Thêm Adele Husserl vào khu vực trưng bày thành tích.</p>"
     },
     "gladysWashington": {
       "title": "Codex C: Gladys Washington",
-      "body": "<p>“You're taking over for Aziza?” Gladys asks you. “I'm glad. The Husserls aren't all bad.”</p><p>You ask her whom she means, and after a beat she says “I used to be close with Lina. She's a painter. And her art is very… unique. She's held exhibitions up in the Merchant District, trying to sell some pieces. But she's not had much success, and I can tell it eats away at her.” You ask if there's anyone else. “Maybe keep an eye on Junior? Lina has said he wants to leave town. I'm no detective, but given all that's happened, it seems like suspicious timing to me.”</p><p>You thank Gladys for the information and go to leave, but she raises a hand to stop you. “Something strange happened the other day. I came in to work in the morning, and the front door was broken. Like it was forced open from the inside.” She shrugs. “Nobody here but me and the deceased,” she says. “But the basement has been smelling stranger than normal. Would you mind taking a look, if you get the chance?”</p><p class='basic right'>Search the chaos bag for a {'{'}skull{'}'} token and seal it on the scenario reference card. Add Gladys Washington to the victory display.</p>"
+      "body": "<p>“Bạn tiếp quản công việc của Aziza à?” Gladys hỏi bạn. “Tôi mừng đấy. Người nhà Husserl không phải ai cũng xấu đâu.”</p><p>Bạn hỏi cô ấy đang nói về ai, và sau một thoáng ngập ngừng, cô nói: “Tôi từng rất thân với Lina. Cô ấy là một họa sĩ. Và tranh của cô ấy rất… độc đáo. Cô ấy từng tổ chức triển lãm ở Merchant District, cố gắng bán vài tác phẩm. Nhưng không thành công lắm, và tôi biết điều đó gặm nhấm tâm can cô ấy.” Bạn hỏi xem còn ai khác không. “Có lẽ nên để mắt tới Junior? Lina từng nói nó muốn rời khỏi thị trấn. Tôi không phải thám tử, nhưng xét tới mọi chuyện đã xảy ra, thời điểm này có vẻ đáng ngờ đấy.”</p><p>Bạn cảm ơn Gladys vì thông tin và chuẩn bị rời đi, nhưng cô giơ tay giữ bạn lại. “Hôm nọ có chuyện lạ lắm xảy ra. Sáng tôi đến làm việc thì thấy cửa trước bị phá hỏng. Như thể bị cậy tung từ bên trong ra vậy.” Cô nhún vai. “Ở đây chẳng có ai ngoài tôi và những người đã khuất,” cô nói. “Nhưng dưới tầng hầm dạo này có mùi lạ hơn bình thường. Bạn có phiền xuống xem thử nếu có dịp không?”</p><p class='basic right'>Tìm trong túi hỗn mang một token {'{'}skull{'}'} và seal nó lên thẻ tham chiếu màn chơi. Thêm Gladys Washington vào khu vực trưng bày thành tích.</p>"
     },
     "charlesTamm": {
       "title": "Codex D: Charles Tamm",
       "first": {
-        "body": "<p class='basic'>If this is the first time this codex has been triggered during this game, proceed to _Charles Tamm 1_.</p><p class='basic'>Otherwise, skip to _Charles Tamm 2_.</p><p>_Charles Tamm 1_: When you return to the office, a man in a crisp suit is seated with his feet up on the desk. You demand to know who he is.</p><p>“Charles Tamm,” he says. “Mrs. Husserl has paid me to keep an eye on you.” He shrugs as he reaches into his pocket, producing and unwrapping a stick of chewing gum. He pops it into his mouth. “Of course, I could be convinced to turn in early tonight.”</p><p class='basic right'>Proceed to _Charles Tamm 2_.</p>"
+        "body": "<p class='basic'>Nếu đây là lần đầu tiên codex này được kích hoạt trong ván chơi này, hãy tiến hành _Charles Tamm 1_.</p><p class='basic'>Nếu không, chuyển sang _Charles Tamm 2_.</p><p>_Charles Tamm 1_: Khi bạn trở lại văn phòng, một người đàn ông mặc bộ vest bảnh bao đang ngồi gác chân lên bàn làm việc. Bạn gặng hỏi xem ông ta là ai.</p><p>“Charles Tamm,” ông ta nói. “Bà Husserl đã trả tiền để tôi để mắt tới các người.” Ông ta nhún vai rồi thò tay vào túi, lấy ra một phong kẹo cao su và bóc vỏ. Ông ta nhét vào miệng nhai tóp tép. “Tất nhiên, tôi hoàn toàn có thể bị thuyết phục để về nghỉ sớm tối nay.”</p><p class='basic right'>Tiến hành _Charles Tamm 2_.</p>"
       },
       "second": {
-        "body": "<p class='basic'>If this is the first time this codex has been triggered during this game, proceed to _Charles Tamm 1_.</p><p class='basic'>Otherwise, skip to _Charles Tamm 2_.</p><p>_Charles Tamm 2_: “Well? Do we have a deal?”</p><p class='basic right'>Any investigator at Charles Tamm's location may spend 4 resources to add him to the victory display. Otherwise, any investigator may trigger this codex again.</p>"
+        "body": "<p class='basic'>Nếu đây là lần đầu tiên codex này được kích hoạt trong ván chơi này, hãy tiến hành _Charles Tamm 1_.</p><p class='basic'>Nếu không, chuyển sang _Charles Tamm 2_.</p><p>_Charles Tamm 2_: “Sao nào? Chúng ta có thỏa thuận không?”</p><p class='basic right'>Một điều tra viên tại Steer's Office có thể chi 4 tài nguyên: Thêm Charles Tamm vào khu vực trưng bày thành tích. Nếu không, xáo trộn Charles Tamm vào lại chồng bài Leads.</p>"
       }
     },
     "albrechtHusserl": {
       "title": "Codex E: Albrecht Husserl",
-      "body": "<p class='basic'>_If the investigators “found record of Matilde's bribe,” continue reading. Otherwise, Albrecht refuses to give a straight answer. Any investigator may trigger this codex again._</p><p>You confront Albrecht about all the bribes he's been paying to the Arkham Police Force, as well as to the Arkham Advertiser. He raises his hands defensively, a desperate look in his eyes. “It was never supposed to go this far,” he says. “But when you have half a dozen mobsters breathing down your neck—not to mention your own father—you have to do something! And now it looks like I'll have to clean this up, too.”</p><p>He reaches into his coat pocket, producing a sealed glass jar. Floating inside is a fluorescent pink jellyfish-like creature. You rush to stop him, knocking the jar from his grasp to shatter on the floor.</p><p class='basic'>Remember that “Albrecht is the culprit.”</p><p class='basic right'>Skip to _Interlude: The Culprit_.</p>"
+      "body": "<p class='basic'>_Nếu các điều tra viên “tìm thấy hồ sơ về khoản hối lộ của Matilde,” hãy tiếp tục đọc. Nếu không, Albrecht từ chối đưa ra câu trả lời thẳng thắn. Bất kỳ điều tra viên nào cũng có thể kích hoạt lại codex này._</p><p>Bạn chất vấn Albrecht về tất cả các khoản hối lộ mà anh ta đã chi cho Lực lượng Cảnh sát Arkham, cũng như cho tờ Arkham Advertiser. Anh ta giơ hai tay lên phòng thủ, ánh mắt lộ vẻ tuyệt vọng. “Chuyện chưa từng dự tính sẽ đi xa đến mức này,” anh ta nói. “Nhưng khi bạn có nửa tá tên côn đồ phà hơi thở vào gáy mình—chưa kể đến chính bố ruột của bạn—bạn buộc phải làm điều gì đó! Và giờ có vẻ như tôi cũng sẽ phải tự dọn dẹp mớ hỗn độn này.”</p><p>Anh ta thò tay vào túi áo khoác, lấy ra một chiếc lọ thủy tinh đậy kín. Trôi nổi bên trong là một sinh vật giống như sứa màu hồng huỳnh quang. Bạn lao tới ngăn anh ta lại, hất văng chiếc lọ khỏi tay anh ta vỡ tan tành trên sàn nhà.</p><p class='basic'>Ghi nhớ rằng “Albrecht là thủ phạm.”</p><p class='basic right'>Chuyển sang _Chuyển tiếp: Thủ Phạm_.</p>"
     },
     "matildeCorrea": {
       "title": "Codex F: Matilde Correa",
-      "body": "<p>You toss the stuffed envelope to Matilde. She catches it awkwardly, but she doesn't even have to open it to know what it contains. “I needed the money!” she says. “And Albrecht was paying. Don't act like you wouldn't have taken the deal too!”</p><p>You ask about the creature you read about, the jellyfish. “I don't know what it is,” she says. “All I know is that Albrecht collects it from some mysterious people. He needs it to make people disappear.”</p><p>You tell Matilde to find work in another town before you head out to confront Albrecht Husserl.</p><p class='basic right'>Add Matilde Correa to the victory display.</p>"
+      "body": "<p>Bạn ném phong bì dày cộp cho Matilde. Bà ta bắt lấy một cách vụng về, nhưng thậm chí chẳng cần mở ra cũng biết bên trong chứa gì. “Tôi cần tiền!” bà ta nói. “Và Albrecht đã trả tiền. Đừng làm như thể các người sẽ không nhận thỏa thuận đó vậy!”</p><p>Bạn hỏi về sinh vật mà bạn đã đọc được, con sứa. “Tôi không biết nó là thứ gì,” bà ta nói. “Tất cả những gì tôi biết là Albrecht thu thập nó từ một số kẻ bí ẩn. Anh ta cần nó để khiến mọi người biến mất.”</p><p>Bạn bảo Matilde hãy tìm việc ở một thị trấn khác trước khi bạn lên đường đối đầu với Albrecht Husserl.</p><p class='basic right'>Thêm Matilde Correa vào khu vực trưng bày thành tích.</p>"
     },
     "vicarYang": {
       "title": "Codex G: Vicar Yang",
       "first": {
-        "body": "<p class='basic'>If this is the first time this codex has been triggered this game, proceed to _Vicar Yang 1_.</p><p class='basic'>Otherwise, skip to _Vicar Yang 2_.</p><p>_Vicar Yang 1_: The vicar is welcoming when you first arrive, but his demeanor changes to one of melancholic regret when you mention why you're there. “I have met with Lina. The woman is plagued by terrible nightmares. But I can't discuss the things she's told me. She trusts me to respect her privacy.”</p><p class='basic right'>Proceed to _Vicar Yang 2_.</p>"
+        "body": "<p class='basic'>Nếu đây là lần đầu tiên codex này được kích hoạt trong ván chơi này, hãy tiến hành _Vicar Yang 1_.</p><p class='basic'>Nếu không, chuyển sang _Vicar Yang 2_.</p><p>_Vicar Yang 1_: Vị mục sư tỏ ra niềm nở khi bạn mới đến, nhưng thái độ của ông chuyển sang nỗi tiếc nuối u uất khi bạn đề cập lý do bạn có mặt ở đó. “Tôi đã gặp Lina. Người phụ nữ ấy bị giày vò bởi những cơn ác mộng kinh hoàng. Nhưng tôi không thể bàn luận về những điều cô ấy đã kể với tôi. Cô ấy tin tưởng tôi sẽ tôn trọng sự riêng tư của cô ấy.”</p><p class='basic right'>Tiến hành _Vicar Yang 2_.</p>"
       },
       "second": {
-        "body": "<p class='basic'>If this is the first time this codex has been triggered this game, proceed to _Vicar Yang 1_.</p><p class='basic'>Otherwise, skip to _Vicar Yang 2_.</p><p>_Vicar Yang 2_: The vicar will need some convincing.</p><p class='basic right'>Choose an investigator at Vicar Yang's location to test {'{'}intellect{'}'} (3). If they succeed, he suggests that you visit the old manor in French Hill. Put the set-aside Meiger Estate (*Under New Ownership*) location into play, and add Vicar Yang to the victory display. Otherwise, any investigator may trigger this codex again.</p>"
+        "body": "<p class='basic'>Nếu đây là lần đầu tiên codex này được kích hoạt trong ván chơi này, hãy tiến hành _Vicar Yang 1_.</p><p class='basic'>Nếu không, chuyển sang _Vicar Yang 2_.</p><p>_Vicar Yang 2_: Vị mục sư sẽ cần một chút thuyết phục.</p><p class='basic right'>Chọn một điều tra viên tại địa điểm của Vicar Yang để kiểm tra {'{'}intellect{'}'} (3). Nếu thành công, ông ấy gợi ý bạn nên đến thăm trang viên cũ ở French Hill. Đưa địa điểm Meiger Estate (*Under New Ownership*) được đặt sang một bên vào màn chơi, và thêm Vicar Yang vào khu vực trưng bày thành tích. Nếu không, bất kỳ điều tra viên nào cũng có thể kích hoạt lại codex này.</p>"
       }
     },
     "linaHusserl": {
       "title": "Codex H: Lina Husserl",
-      "body": "<p class='basic'>_If the investigators “glimpsed another world,” continue reading. Otherwise, Lina refuses to give a straight answer. Any investigator may trigger this codex again._</p><p>Tired of Lina giving you the run-around, you finally reveal what you witnessed at the Meiger Estate. Her brown eyes lock with yours in an intense glare. “It was open?” she asks, a hint of desperation in her voice. “The door from my dreams? Was it open?!”</p><p>Before you can protest, she rushes past you. You follow her. As you cross town towards the Meiger Estate, she confesses how she had seen the door in her nightmares. She saw it so vividly and so frequently that she had to paint it. But after she had painted the door, something came through. It took her father. It took Aziza. And she wants to stop it before it can take anyone else. But before you can make it back to the estate, it seems that something has found you.</p><p class='basic'>Remember that “Lina opened the door.”</p><p class='basic right'>Skip to _Interlude: The Culprit_.</p>"
+      "body": "<p class='basic'>_Nếu các điều tra viên “thoáng nhìn thấy một thế giới khác,” hãy tiếp tục đọc. Nếu không, Lina từ chối đưa ra câu trả lời thẳng thắn. Bất kỳ điều tra viên nào cũng có thể kích hoạt lại codex này._</p><p>Quá mệt mỏi vì bị Lina dẫn dắt vòng vo, cuối cùng bạn tiết lộ những gì mình đã chứng kiến tại Meiger Estate. Đôi mắt nâu của cô khóa chặt vào bạn trong cái nhìn trừng trừng dữ dội. “Nó đã mở ư?” cô hỏi, một thoáng tuyệt vọng trong giọng nói. “Cánh cửa trong giấc mơ của tôi? Nó đã mở rồi sao?!”</p><p>Trước khi bạn kịp phản đối, cô đã lao qua bạn. Bạn đuổi theo cô. Khi bạn băng qua thị trấn về phía Meiger Estate, cô thú nhận việc mình đã nhìn thấy cánh cửa trong những cơn ác mộng ra sao. Cô nhìn thấy nó sống động và thường xuyên đến mức cô buộc phải vẽ nó ra. Nhưng sau khi cô vẽ xong cánh cửa, thứ gì đó đã đi qua. Nó đã bắt đi bố cô. Nó đã bắt đi Aziza. Và cô muốn ngăn chặn nó trước khi nó có thể bắt đi bất kỳ ai khác. Nhưng trước khi bạn kịp quay trở lại trang viên, có vẻ như thứ gì đó đã tìm thấy bạn.</p><p class='basic'>Ghi nhớ rằng “Lina đã mở cánh cửa.”</p><p class='basic right'>Chuyển sang _Chuyển tiếp: Thủ Phạm_.</p>"
     },
     "eliasHusserlJr": {
       "title": "Codex I: Elias Husserl Jr.",
-      "body": "<p>“Look, I know why you're here,” Elias says. “But I'm not involved in any of that!” Before you can reply, the sound of someone approaching draws your attention. A tall man with a thin mustache and an exhausted look in his eye silently considers you for a moment. “Oh, Eugene,” Elias says, seeing the man. “I'm glad you're here. Tell these people to leave me alone, will you?”</p><p>Mr. Peel ignores Junior's command. “You're not going anywhere, Elias,” he says. “It's time for you to make good on your deal.” A group of tough-looking goons with arcane symbols tattooed on their arms gather, ready to attack. These are no mere gangsters, but cultists in disguise! You tell Junior to get out of there.</p><p class='basic right'>Put the set-aside Eugene Peel story asset into play at Elias Husserl Jr.'s location.</p><p class='basic right'>Search the encounter deck and discard pile for 1 {'{'}perPlayer{'}'} _Syndicate_ enemies and spawn them at Elias Husserl Jr.'s location.</p><p class='basic right'>Add Elias Husserl Jr. to the victory display.</p>"
+      "body": "<p>“Nghe này, tôi biết tại sao các người ở đây,” Elias nói. “Nhưng tôi không dính dáng gì đến chuyện đó cả!” Trước khi bạn kịp trả lời, âm thanh của ai đó đang tiến lại gần thu hút sự chú ý của bạn. Một người đàn ông cao lớn với hàng ria mép mỏng và ánh mắt mệt mỏi lặng lẽ quan sát bạn trong giây lát. “Ồ, Eugene,” Elias nói khi nhìn thấy người đàn ông. “Tôi mừng vì anh ở đây. Hãy bảo những người này để tôi yên đi, được chứ?”</p><p>Ông Peel phớt lờ mệnh lệnh của Junior. “Cậu sẽ chẳng đi đâu cả, Elias,” ông nói. “Đã đến lúc cậu phải thực hiện thỏa thuận của mình rồi.” Một nhóm côn đồ trông bặm trợn với những biểu tượng huyền bí xăm trên cánh tay tụ tập lại, sẵn sàng tấn công. Đây không chỉ là những tên xã hội đen đơn thuần, mà là những kẻ tà giáo cải trang! Bạn bảo Junior mau biến khỏi đó.</p><p class='basic right'>Đưa story asset Eugene Peel được đặt sang một bên vào màn chơi tại địa điểm của Elias Husserl Jr..</p><p class='basic right'>Tìm kiếm trong chồng bài encounter và chồng bài bỏ 1 {'{'}perPlayer{'}'} kẻ địch _Syndicate_ và spawn chúng tại địa điểm của Elias Husserl Jr..</p><p class='basic right'>Thêm Elias Husserl Jr. vào khu vực trưng bày thành tích.</p>"
     },
     "eugenePeel": {
       "title": "Codex J: Eugene Peel",
-      "body": "<p>After you rough up Peel's cultists, you grab him by the collar and toss him into some nearby trash cans. He sprawls onto the platform floorboards, covered in refuse.</p><p>“You're meddling in a deal you don't understand,” Mr. Peel says. “Junior wanted money from me and my brothers, and we wanted influence in the city of Arkham. But when his father refused to honor the deal Junior made, we had him removed. We did the same to that other investigator, and we'll do it to you, too!”</p><p>He reaches into his pocket, producing a small glass jar with a strange, jellyfish-like creature inside. “Time to answer all of your questions!” he says, tossing the glass jar onto the ground at your feet, where it shatters, the tentacled creature spilling out onto the floor of the train platform.</p><p class='basic'>Remember that “Eugene is not what he seems.”</p><p class='basic right'>Skip to _Interlude: The Culprit_.</p>"
+      "body": "<p>Sau khi bạn dạy cho những tên tà giáo của Peel một bài học, bạn túm lấy cổ áo hắn và quẳng hắn vào mấy thùng rác gần đó. Hắn nằm xoài ra trên sàn ván của sân ga, bê bết rác rưởi.</p><p>“Các người đang can thiệp vào một thỏa thuận mà các người không hiểu đâu,” ông Peel nói. “Junior muốn tiền từ tôi và những người anh em của tôi, còn chúng tôi muốn có tầm ảnh hưởng tại thành phố Arkham. Nhưng khi bố hắn từ chối tôn trọng thỏa thuận mà Junior đã đưa ra, chúng tôi đã thủ tiêu ông ta. Chúng tôi cũng đã làm điều tương tự với cô thám tử kia, và chúng tôi cũng sẽ làm thế với các người!”</p><p>Hắn thò tay vào túi, lấy ra một chiếc lọ thủy tinh nhỏ với một sinh vật kỳ lạ giống như sứa bên trong. “Đến lúc trả lời tất cả các câu hỏi của các người rồi đấy!” hắn nói, ném mạnh chiếc lọ thủy tinh xuống đất dưới chân bạn, chiếc lọ vỡ tan tành, sinh vật đầy xúc tua trào ra trên sàn sân ga.</p><p class='basic'>Ghi nhớ rằng “Eugene không giống như vẻ ngoài.”</p><p class='basic right'>Chuyển sang _Chuyển tiếp: Thủ Phạm_.</p>"
     }
   },
   "interlude": {
     "theCulprit1": {
-      "title": "The Culprit",
-      "body": "<p>The world around you suddenly opens up, your senses overwhelmed by a sudden flash of purple light and the sharp smell of ozone. You feel cold, clawed hands reach through the very air and grasp you, pulling you into the light. Your vision swirls, your head swims, and the next thing you know you're plummeting through the air of an alien world. You land in a pool of thick gray ooze, human bones shifting and sinking all around you. Before you can think, you are struggling, swimming, trying to keep from descending below the surface of the strange ichor that clings to your clothes.</p><ul><li>Put each set-aside _Otherworld_ location into play.</li><li>Each investigator moves directly to Bone Pit.</li><li>Flip Abductor to its Dimensional Shambler side and move it to Bone Pit (or spawn it at Bone Pit, if it is set-aside).</li><li>Add the set-aside agenda 4a—“Into the Pit” to the agenda deck. Advance directly to agenda 4a (do not resolve any other agendas).</li></ul>"
+      "title": "Thủ Phạm",
+      "body": "<p>Thế giới xung quanh bạn đột ngột mở toang ra, các giác quan của bạn bị choáng ngợp bởi ánh chớp màu tím lóe lên bất ngờ cùng mùi ozone nồng nặc. Bạn cảm thấy những bàn tay có vuốt sắc lạnh lẽo vươn ra từ chính khoảng không và tóm lấy bạn, lôi bạn vào luồng sáng. Tầm nhìn của bạn quay cuồng, đầu óc bạn chao đảo, và điều tiếp theo bạn nhận thức được là mình đang rơi tự do qua bầu không khí của một thế giới xa lạ. Bạn rơi xuống một vũng bùn xám đặc quánh, những khúc xương người chuyển động và chìm dần xung quanh bạn. Trước khi kịp suy nghĩ, bạn đã phải vùng vẫy, bơi lội, cố gắng không để bị chìm xuống dưới bề mặt của thứ dịch nhầy kỳ lạ đang bám chặt vào quần áo của bạn.</p><ul><li>Đưa từng địa điểm _Otherworld_ được đặt sang một bên vào màn chơi.</li><li>Mỗi điều tra viên di chuyển thẳng đến Bone Pit.</li><li>Lật Abductor sang mặt Dimensional Shambler và di chuyển nó đến Bone Pit (hoặc spawn nó tại Bone Pit, nếu nó đang được đặt sang một bên).</li><li>Thêm agenda 4a—“Into the Pit” được đặt sang một bên vào chồng bài agenda. Advance thẳng sang agenda 4a (không giải quyết bất kỳ agenda nào khác).</li></ul>"
     },
     "theCulprit2": {
-      "title": "The Culprit",
-      "body": "<p>Squirming in the ooze beside you is the form of Albrecht Husserl. “What?!” he exclaims, slowly sinking into the ooze-filled pit of bones. “It wasn't supposed to take me! This is all your fault!” He grasps the side of the pit and climbs out. Reaching into his coat again, he draws a gun. He levels the barrel at you as he stands on the edge of the pit, but the unearthly screech of a great monster draws his attention.</p><p>You've come too far to let Albrecht die here in this hellish place. You need to get him back to Arkham, to face real justice for his crimes.</p><ul><li>Remove the Albrecht Husserl story asset from the game.</li><li>Spawn the set-aside Albrecht Husserl enemy at Bone Pit.</li><li>Something abducts each _Suspect_ story asset in play at an _Arkham_ location, and each card in the Leads deck.</li><li>Gather all abducted cards and shuffle them together. Attach 1 {'{'}perPlayer{'}'} of these cards, at random, to Dimensional Shambler. Place the remaining cards facedown beneath Bone Pit.<ul><li>*Note*: Cards attached to Dimensional Shambler are no longer considered to be abducted.</li></ul></li><li>Add the set-aside act 4a—“Albrecht's Gamble” to the act deck. Advance directly to act 4a (do not resolve act 3b).</li><li>Tiếp tục chơi.</li></ul>"
+      "title": "Thủ Phạm",
+      "body": "<p>Đang ngọ nguậy trong chất bùn nhầy bên cạnh bạn là hình bóng của Albrecht Husserl. “Cái gì?!” anh ta gào lên với bạn khi anh ta trèo lên khỏi hố. “Các người đã làm gì thế này? Đưa tôi về ngay!”</p><p>Nhưng những lời phàn nàn của anh ta bị cắt ngang bởi một tiếng gầm gừ ghê rợn vang lên từ trên vách đá cao. Một con quái vật khổng lồ với những chi dài ngoằng ngoẵng và làn da nhầy nhụa đang từ từ bò xuống, đôi mắt đói khát khóa chặt vào hai người. Bạn không thể để Albrecht chết ở nơi đây. Bạn cần đưa anh ta trở lại Arkham để đối mặt với công lý.</p><ul><li>Loại bỏ story asset Albrecht Husserl khỏi ván chơi.</li><li>Spawn kẻ địch Albrecht Husserl được đặt sang một bên tại Bone Pit.</li><li>Thứ gì đó bắt cóc mỗi story asset _Suspect_ đang trong màn chơi tại một địa điểm _Arkham_, và mỗi lá bài trong chồng bài Leads.</li><li>Thu thập tất cả các lá bài bị bắt cóc và xáo trộn chúng lại với nhau. Gắn ngẫu nhiên 1 {'{'}perPlayer{'}'} trong số các lá bài này vào Dimensional Shambler. Đặt các lá bài còn lại úp mặt bên dưới Bone Pit.<ul><li>*Lưu ý*: Các lá bài được gắn vào Dimensional Shambler không còn được coi là bị bắt cóc nữa.</li></ul></li><li>Thêm act 4a—“Albrecht's Greed” được đặt sang một bên vào chồng bài act. Advance trực tiếp sang act 4a (không giải quyết act 3b).</li><li>Tiếp tục chơi.</li></ul>"
     },
     "theCulprit3": {
-      "title": "The Culprit",
-      "body": "<p>Squirming in the ooze beside you is the form of Lina Husserl. She grasps the side of the pit and climbs out, spitting ichor onto the ground as she catches her breath. She looks down at you with an expression of fear and bewilderment, when slowly an alien form draws up behind her. The hulking, spiked silhouette of the creature looms over Lina as she turns to face it. “I've seen you before,” she says. “You're here because of me. You're here for me!”</p><p>You've come too far to let Lina die here in this hellish place. You need to get her back to Arkham and put an end to that monster plaguing her nightmares.</p><ul><li>Remove the Lina Husserl story asset from the game.</li><li>Spawn the set-aside Lina Husserl enemy at Bone Pit.</li><li>Something abducts each _Suspect_ story asset in play at an _Arkham_ location, and each card in the Leads deck.</li><li>Gather all abducted cards and shuffle them together. Attach 1 {'{'}perPlayer{'}'} of these cards, at random, to Dimensional Shambler. Place the remaining cards facedown beneath Bone Pit.<ul><li>*Note*: Cards attached to Dimensional Shambler are no longer considered to be abducted.</li></ul></li><li>Add the set-aside act 4a—“Lina's Nightmare” to the act deck. Advance directly to act 4a (do not resolve act 3b).</li><li>Tiếp tục chơi.</li></ul>"
+      "title": "Thủ Phạm",
+      "body": "<p>Đang ngọ nguậy trong chất bùn nhầy bên cạnh bạn là hình bóng của Lina Husserl. Cô bám lấy gờ đá và run rẩy đứng dậy, đôi mắt mở to trong nỗi kinh hoàng thuần khiết. “Nó… nó có thật,” cô thở hổn hển, chỉ tay về phía một bóng đen đang trồi lên từ vực sâu. “Con quái vật trong những bức tranh của tôi… nó đã ở đây!”</p><p>Một sinh vật ghê tởm với vô số giác hút và chiếc miệng đầy răng nhọn ngoi lên khỏi làn sương độc hại. Bạn cần đưa cô ấy trở lại Arkham và chấm dứt nỗi kinh hoàng đang ám ảnh những cơn ác mộng của cô ấy.</p><ul><li>Loại bỏ story asset Lina Husserl khỏi ván chơi.</li><li>Spawn kẻ địch Lina Husserl được đặt sang một bên tại Bone Pit.</li><li>Thứ gì đó bắt cóc mỗi story asset _Suspect_ đang trong màn chơi tại một địa điểm _Arkham_, và mỗi lá bài trong chồng bài Leads.</li><li>Thu thập tất cả các lá bài bị bắt cóc và xáo trộn chúng lại với nhau. Gắn ngẫu nhiên 1 {'{'}perPlayer{'}'} trong số các lá bài này vào Dimensional Shambler. Đặt các lá bài còn lại úp mặt bên dưới Bone Pit.<ul><li>*Lưu ý*: Các lá bài được gắn vào Dimensional Shambler không còn được coi là bị bắt cóc nữa.</li></ul></li><li>Thêm act 4a—“Lina's Nightmare” được đặt sang một bên vào chồng bài act. Advance trực tiếp sang act 4a (không giải quyết act 3b).</li><li>Tiếp tục chơi.</li></ul>"
     },
     "theCulprit4": {
-      "title": "The Culprit",
-      "body": "<p>Squirming in the ooze beside you is the form of Eugene Peel. “You insolent fool!” he shouts at you as he moves toward the side of the pit. Grasping the ledge, he climbs out. “Your meddling stops here,” he says, and reaches beneath his coat to draw a wicked-looking dagger. “Prepare to meet your fate, so far from—”</p><p>His threats are stopped short as a great monster leaps into view, landing to perch on a nearby rock. It snarls at Eugene, baring rows of sharp teeth. He looks on with horror as the creature slowly stalks down from its perch. But you've come too far to let Eugene die here in this hellish place. You need to get him back to Arkham, to face real justice for his crimes.</p><ul><li>Remove the Eugene Peel story asset from the game.</li><li>Spawn the set-aside Eugene Peel enemy at Bone Pit.</li><li>Something abducts each _Suspect_ story asset in play at an _Arkham_ location, and each card in the Leads deck.</li><li>Gather all abducted cards and shuffle them together. Attach 1 {'{'}perPlayer{'}'} of these cards, at random, to Dimensional Shambler. Place the remaining cards facedown beneath Bone Pit.<ul><li>*Note*: Cards attached to Dimensional Shambler are no longer considered to be abducted.</li></ul></li><li>Add the set-aside act 4a—“Mr. Peel's Scheme” to the act deck. Advance directly to act 4a (do not resolve act 3b).</li><li>Tiếp tục chơi.</li></ul>"
+      "title": "Thủ Phạm",
+      "body": "<p>Đang ngọ nguậy trong chất bùn nhầy bên cạnh bạn là hình bóng của Eugene Peel. “Lũ ngu xuẩn xấc xược!” hắn hét vào mặt bạn khi leo lên gờ hố. “Sự can thiệp của các ngươi dừng lại ở đây,” hắn nói, và thò tay vào trong áo khoác rút ra một con dao găm trông đầy vẻ tà ác. “Chuẩn bị đối mặt với số phận của các ngươi đi, ở một nơi cách xa—”</p><p>Những lời đe dọa của hắn đột ngột dừng bặt khi một con quái vật to lớn nhảy bổ vào tầm mắt, đậu trên một mỏm đá gần đó. Nó gầm gừ với Eugene, nhe ra những hàng răng sắc nhọn. Hắn kinh hoàng nhìn con sinh vật từ từ trườn xuống từ chỗ đậu của nó. Nhưng bạn đã đi quá xa để mặc Eugene chết ở nơi địa ngục này. Bạn cần đưa hắn trở lại Arkham để đối mặt với công lý thực sự cho những tội ác của hắn.</p><ul><li>Loại bỏ story asset Eugene Peel khỏi ván chơi.</li><li>Spawn kẻ địch Eugene Peel được đặt sang một bên tại Bone Pit.</li><li>Thứ gì đó bắt cóc mỗi story asset _Suspect_ đang trong màn chơi tại một địa điểm _Arkham_, và mỗi lá bài trong chồng bài Leads.</li><li>Thu thập tất cả các lá bài bị bắt cóc và xáo trộn chúng lại với nhau. Gắn ngẫu nhiên 1 {'{'}perPlayer{'}'} trong số các lá bài này vào Dimensional Shambler. Đặt các lá bài còn lại úp mặt bên dưới Bone Pit.<ul><li>*Lưu ý*: Các lá bài được gắn vào Dimensional Shambler không còn được coi là bị bắt cóc nữa.</li></ul></li><li>Thêm act 4a—“Mr. Peel's Scheme” được đặt sang một bên vào chồng bài act. Advance trực tiếp sang act 4a (không giải quyết act 3b).</li><li>Tiếp tục chơi.</li></ul>"
     }
   },
   "resolutions": {
     "xp": {
       "bonus": {
-        "storyAssets": "Story assets in the victory display"
+        "storyAssets": "Story assets trong khu vực trưng bày thành tích"
       }
     },
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không có Kết cục",
       "body": "<p>The strength of the many threats arrayed against the Husserl family prove too much for you. Despite your best efforts, you succumb to the will of the Dimensional Shambler as you are dragged into the bone pit of the otherworld.</p><ul><li>In your campaign log, record *the investigators failed to solve the case*.</li><li>Các điều tra viên thất bại.</li></ul>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<p>_Resolution 1_: It took every ounce of strength you could muster, but you were able to convince Lina Husserl to face her deepest fears and defeat the monster of her nightmares. You don't know how her paintings reached across the veil between worlds to call the Shambler to Arkham, but you suggest she maybe stop painting the things she sees in her dreams.</p><ul><li>In your campaign log, record *the investigators saved Lina Husserl*.</li></ul>"
+      "body": "<p>_Resolution 1_: Cần đến từng chút sức lực mà bạn có thể gom góp được, nhưng bạn đã thuyết phục được Lina Husserl đối mặt với nỗi sợ hãi sâu thẳm nhất của mình và đánh bại con quái vật trong những cơn ác mộng của cô. Bạn không biết làm thế nào mà những bức tranh của cô ấy có thể vươn qua bức màn ngăn cách giữa các thế giới để triệu hồi Shambler đến Arkham, nhưng bạn khuyên cô có lẽ nên ngừng vẽ những thứ cô nhìn thấy trong giấc mơ của mình.</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại rằng *các điều tra viên đã cứu Lina Husserl*.</li></ul>"
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
-      "body": "<p>_Resolution 2_: Despite being just one man, Eugene Peel was a leader among his peers in the occult. With him removed, the cult has gone quiet.</p><ul><li>In your campaign log, record *the investigators stopped Eugene Peel*.</li><li>Skip to _Resolution 5_.</li></ul>"
+      "body": "<p>_Resolution 2_: Mặc dù chỉ là một người bình thường, Eugene Peel là một kẻ cầm đầu trong số những kẻ theo tà giáo huyền bí. Với việc hắn bị loại bỏ, giáo phái đã im ắng trở lại.</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại rằng *các điều tra viên đã ngăn chặn Eugene Peel*.</li><li>Chuyển sang _Resolution 5_.</li></ul>"
     },
     "resolution3": {
       "title": "Kết thúc thứ ba",
-      "body": "<p>_Resolution 3_: You return to Arkham with Albrecht Husserl in tow, and are quick to hand him over to the authorities. You can only hope that the Husserl family doesn't have the entire Arkham Police Force in their pocket.</p><ul><li>In your campaign log, record *the investigators stopped Albrecht Husserl*.</li><li>Skip to _Resolution 5_.</li></ul>"
+      "body": "<p>_Resolution 3_: Bạn trở lại Arkham cùng với việc bắt giữ Albrecht Husserl, và nhanh chóng giao hắn cho chính quyền. Bạn chỉ có thể hy vọng rằng gia đình Husserl không thao túng toàn bộ Lực lượng Cảnh sát Arkham trong lòng bàn tay họ.</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại rằng *các điều tra viên đã ngăn chặn Albrecht Husserl*.</li><li>Chuyển sang _Resolution 5_.</li></ul>"
     },
     "resolution4": {
       "title": "Kết thúc thứ 4",
@@ -142,62 +142,62 @@
     },
     "resolution5": {
       "title": "Giải pháp thứ 5",
-      "body": "<p>_Resolution 5_: You weren't able to locate and recover Elias, but the progress you did make seems to have satisfied the city. Arkham is quick to recover, the city seemingly eager to forget all of the business of the investigation of the Husserl family. Josephine steps into the position of power and authority left vacant by her missing husband, and the leadership of the Husserl family continues to thrive in the city, albeit with a bit more caution.</p><ul><li>If the Aziza Steer story asset was under an investigator's control when the scenario ended, the investigators have earned the Aziza Steer (*Hardboiled*) campaign reward card.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>For each story asset in the victory display when the scenario ended, choose an investigator to earn 1 bonus experience.</li><li>_Experience_: {xp}</li></ul></li><li>If you are playing in Campaign Mode, reset your campaign chaos bag.</li></ul>"
+      "body": "<p>_Resolution 5_: Bạn đã không thể định vị và giải cứu Elias, nhưng những tiến triển mà bạn đạt được dường như đã làm hài lòng thành phố. Arkham nhanh chóng hồi phục, thành phố dường như háo hức muốn quên đi toàn bộ vụ điều tra gia đình Husserl. Josephine bước vào vị trí quyền lực và uy quyền bị bỏ trống bởi người chồng mất tích của bà, và quyền lãnh đạo của gia đình Husserl tiếp tục phát triển mạnh mẽ trong thành phố, dù có thận trọng hơn một chút.</p><ul><li>Nếu story asset Aziza Steer đang dưới quyền kiểm soát của một điều tra viên khi màn chơi kết thúc, các điều tra viên nhận được lá bài phần thưởng chiến dịch Aziza Steer (*Hardboiled*).</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.<ul><li>Với mỗi story asset trong khu vực trưng bày thành tích khi màn chơi kết thúc, hãy chọn một điều tra viên để nhận thêm 1 điểm kinh nghiệm thưởng.</li><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Nếu bạn đang chơi ở Chế độ Chiến dịch, hãy đặt lại túi hỗn mang chiến dịch của bạn.</li></ul>"
     }
   },
   "label": {
     "cab": {
-      "resources": "Spend 4 resources to hire a cab",
-      "actionAndResources": "Spend 1 action and 2 resources to hire a cab"
+      "resources": "Chi 4 tài nguyên để thuê một chiếc taxi",
+      "actionAndResources": "Chi 1 hành động và 2 tài nguyên để thuê một chiếc taxi"
     },
     "witness": {
-      "keepClue": "Do not spend a clue",
-      "spendClue": "Spend 1 clue to reduce the difficulty of this test by 3"
+      "keepClue": "Không chi trả manh mối",
+      "spendClue": "Chi 1 manh mối để giảm độ khó của bài kiểm tra này đi 3"
     },
     "culprit": {
-      "spendClues": "Spend {count} clues, reducing the difficulty by {count}"
+      "spendClues": "Chi {count} manh mối, giảm độ khó đi {count}"
     },
     "blackjack": {
-      "decline": "Do not play blackjack",
-      "play": "Spend 2 resources to play blackjack",
-      "hit": "Reveal another token",
-      "stand": "Stop revealing (your hand is {count})",
-      "countAs": "Count the {'{'}elderSign{'}'} as {count}"
+      "decline": "Không chơi blackjack",
+      "play": "Chi 2 tài nguyên để chơi blackjack",
+      "hit": "Tiết lộ thêm một token khác",
+      "stand": "Dừng tiết lộ (bài của bạn là {count})",
+      "countAs": "Tính {'{'}elderSign{'}'} là {count}"
     },
     "bonePit": {
-      "stop": "Spend no more clues",
-      "spendAnother": "Spend 1 more clue to save another card"
+      "stop": "Không chi thêm manh mối nữa",
+      "spendAnother": "Chi thêm 1 manh mối để cứu một lá bài khác"
     },
     "thePortal": {
-      "noAdditionalRescue": "Do not spend 2 clues",
-      "rescueAdditional": "Spend 2 clues to rescue an additional card"
+      "noAdditionalRescue": "Không chi 2 manh mối",
+      "rescueAdditional": "Chi 2 manh mối để cứu thêm một lá bài"
     },
     "hungryVoid": {
-      "takeDamageAndHorror": "Take 1 damage and 1 horror",
+      "takeDamageAndHorror": "Chịu 1 sát thương và 1 tổn thương tinh thần",
       "placeDoom": "Đặt 1 doom lên agenda hiện tại."
     },
     "overYourShoulder": {
-      "abductAlly": "Something abducts an _Ally_ asset at your location",
-      "takeHorror": "Take 1 direct horror"
+      "abductAlly": "Thứ gì đó bắt cóc một asset _Ally_ tại địa điểm của bạn",
+      "takeHorror": "Chịu 1 tổn thương tinh thần trực tiếp"
     },
     "disappearingEvidence": {
-      "discard": "Discard 1 lá bài ngẫu nhiên từ trên tay bạn.",
-      "allyHorror": "An _Ally_ asset at your location takes 1 horror"
+      "discard": "Bỏ 1 lá bài ngẫu nhiên từ trên tay bạn",
+      "allyHorror": "Một asset _Ally_ tại địa điểm của bạn chịu 1 tổn thương tinh thần"
     },
     "lockedOut": {
-      "loseAction": "Lose 1 action",
-      "allyDamage": "An _Ally_ asset at your location takes 1 damage"
+      "loseAction": "Mất 1 hành động",
+      "allyDamage": "Một asset _Ally_ tại địa điểm của bạn chịu 1 sát thương"
     },
     "ambushingShadow": {
-      "loseClue": "Lose 1 clue",
-      "discardCard": "Discard 1 lá bài ngẫu nhiên từ trên tay bạn."
+      "loseClue": "Mất 1 manh mối",
+      "discardCard": "Bỏ 1 lá bài ngẫu nhiên từ trên tay bạn"
     },
     "aethrealBlight": {
-      "discardAsset": "Discard an asset you control",
-      "removeFromGame": "Remove the top 2 cards of your deck from the game"
+      "discardAsset": "Bỏ một asset bạn kiểm soát",
+      "removeFromGame": "Loại bỏ 2 lá bài trên cùng của chồng bài của bạn khỏi ván chơi"
     },
     "charlesTamm": {
-      "payOff": "Spend 4 resources to add Charles Tamm to the victory display",
+      "payOff": "Chi 4 tài nguyên để thêm Charles Tamm vào khu vực trưng bày thành tích",
       "continue": "Tiếp tục"
     }
   }

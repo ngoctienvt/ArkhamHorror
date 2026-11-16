@@ -4,67 +4,67 @@
     "easyStandard": {
       "skull": "-X. X là số lượng doom cao nhất trên một kẻ địch trong màn chơi.",
       "cultist": "-2. Nếu bạn thất bại, đặt 1 doom lên the nearest enemy.",
-      "tablet": "-2. Nếu bạn thất bại, discard a random card from your hand.",
-      "elderThing": "-2. If you fail and there is an enemy at your location, chịu 1 horror."
+      "tablet": "-2. Nếu bạn thất bại, bỏ ngẫu nhiên 1 lá bài trên tay bạn.",
+      "elderThing": "-2. Nếu bạn thất bại và có một kẻ địch tại địa điểm của bạn, nhận 1 kinh hoàng."
     },
     "hardExpert": {
       "skull": "-X. X là tổng số lượng doom trên các kẻ địch trong màn chơi.",
-      "cultist": "-4. Place 1 doom on the nearest enemy.",
-      "tablet": "-4. Discard a random card from your hand.",
-      "elderThing": "-4. If there is an enemy at your location, chịu 1 horror."
+      "cultist": "-4. Đặt 1 doom lên kẻ địch gần nhất.",
+      "tablet": "-4. Bỏ ngẫu nhiên 1 lá bài trên tay bạn.",
+      "elderThing": "-4. Nếu có một kẻ địch tại địa điểm của bạn, nhận 1 kinh hoàng."
     }
   },
   "xp": {
-    "resolution4": "Gains insight into the machinations of The King in Yellow."
+    "resolution4": "Hiểu sâu hơn về mưu đồ của Vị Vua Áo Vàng."
   },
   "intro": {
     "title": "Màn III: Âm Vang từ Quá Khứ",
     "body": "<p>Đầu bạn đau nhói khi lái xe qua những con đường đầy mưa ở thị trấn Arkham để đến điểm đến tiếp theo. Mối đe dọa về Kẻ Lạ hiện lên trong tâm trí bạn, và bạn thấy mình thường xuyên liếc nhìn vào gương chiếu hậu, mong đợi nhìn thấy hình ảnh vô cảm trên chiếc mặt nạ của hắn đang ám ảnh bạn. Dù vậy, bạn chẳng thấy gì ngoài màn đêm mù sương, không sao và con đường vắng vẻ phía sau.</p><p>Suy nghĩ của bạn một lần nữa lại lang thang, như cách chúng vận hành trong vài giờ qua, về vở kịch Vị Vua Áo Vàng và về thành phố Carcosa và những cư dân của nó. Thông điệp ẩn chứa bên trong vở kịch kinh khủng đó, ý nghĩa bên trong sự điên rồ của nó là gì? Một chi tiết đơn lẻ đi sâu vào đầu suy nghĩ của bạn, một chi tiết được thể hiện rõ ràng qua các cuộc thảo luận mà bạn tình cờ nghe được tại dinh thự của cô Dumaine — rằng buổi biểu diễn tối nay của vở kịch Vị Vua Áo Vàng không phải là lần đầu tiên thị trấn Arkham được xem một vở kịch xấu xa. Đã có ít nhất một buổi biểu diễn khác, đạo diễn bởi cùng một người: Nigel Engram.</p><p>Có một nơi ở thị trấn Arkham thường lưu giữ các hồ sơ về các sự kiện quan trọng xảy ra trong thành phố: trang viên của Hiệp hội Lịch sử ở Southside. Nếu có bất kỳ ghi chép nào về buổi trình diễn vở kịch Vị Vua Áo Vàng trước đó, thì Hiệp hội Lịch sử có thể nắm giữ chúng. Có lẽ ở đó bạn sẽ tìm thấy câu trả lời cho những câu hỏi luôn nung nấu trong đầu.</p>",
-    "proceedToSebastiensInformation": "<div class='right'>Proceed to _Sebastien’s Information_.</div>",
-    "otherwise": "<div class='right'>Otherwise, skip to _Setup_.</div>",
-    "sebastiensInformation": "<p>_Sebastien’s Information_: Bạn nhớ lại những gì Sebastien đã nói với bạn trong bữa tiệc tối. Vở kịch Vị Vua Áo Vàng đã đến thị trấn Arkham vài thập kỷ trước, rất lâu trước khi Ward Theatre được xây dựng. Theo anh ấy, không có gì ngạc nhiên khi ít người nhớ đến — trên thực tế, một phần mục đích của họ tối nay là đưa vở kịch Vị Vua Áo Vàng đến với nhiều khán giả hơn. Hiệp hội Lịch sử (The Historical Society) có thể đã lưu giữ các hồ sơ liên quan đến quá trình sản xuất trước đó, đặc biệt nếu nó có các buổi sự kiện tương tự như những gì đã xảy ra tối nay. Có lẽ bạn có thể tìm thấy một số mẩu báo hoặc các bài báo khác mô tả những gì đã xảy ra trong quá khứ.</p><ul><li>After you put Entry Hall into play during setup, place 1 {'{'}perPlayer{'}'} clues on it.</li></ul><div class='right'>Proceed to _Setup_.</div>"
+    "proceedToSebastiensInformation": "<div class='right'>Tiếp tục đến _Thông tin của Sebastien_.</div>",
+    "otherwise": "<div class='right'>Nếu không, chuyển đến _Thiết lập_.</div>",
+    "sebastiensInformation": "<p>_Sebastien’s Information_: Bạn nhớ lại những gì Sebastien đã nói với bạn trong bữa tiệc tối. Vở kịch Vị Vua Áo Vàng đã đến thị trấn Arkham vài thập kỷ trước, rất lâu trước khi Ward Theatre được xây dựng. Theo anh ấy, không có gì ngạc nhiên khi ít người nhớ đến — trên thực tế, một phần mục đích của họ tối nay là đưa vở kịch Vị Vua Áo Vàng đến với nhiều khán giả hơn. Hiệp hội Lịch sử (The Historical Society) có thể đã lưu giữ các hồ sơ liên quan đến quá trình sản xuất trước đó, đặc biệt nếu nó có các buổi sự kiện tương tự như những gì đã xảy ra tối nay. Có lẽ bạn có thể tìm thấy một số mẩu báo hoặc các bài báo khác mô tả những gì đã xảy ra trong quá khứ.</p><ul><li>Sau khi đưa Entry Hall vào màn chơi trong bước thiết lập, đặt 1 {'{'}perPlayer{'}'} manh mối lên đó.</li></ul><div class='right'>Tiếp tục đến _Thiết lập_.</div>"
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả lá bài từ các bộ encounter sau: *Echoes of the Past*, *Cult of the Yellow Sign*, *Delusions*, *The Midnight Masks*, *Locked Doors* và *Dark Cult*. Các bộ này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/echoes-of-the-past.png' /><img src='{setImgPath}/cult-of-the-yellow-sign.png' /><img src='{setImgPath}/delusions.png' /><img src='{setImgPath}/midnight-masks.png' /><img src='{setImgPath}/locked-doors.png' /><img src='{setImgPath}/dark-cult.png' /></section>Khi tập hợp bộ encounter *The Midnight Masks*, chỉ lấy 5 lá treachery (2x False Lead và 3x Hunting Shadow). Không lấy các lá vị trí, act, agenda hay scenario reference của bộ đó.",
     "chooseLocations": "Chọn ngẫu nhiên 1 vị trí [[Ground Floor]] Historical Society, 1 vị trí [[Second Floor]] Historical Society, và 1 vị trí [[Third Floor]] Historical Society. Loại bỏ những vị trí này khỏi màn chơi, mà không nhìn vào mặt để lộ của nó.",
-    "placeLocations": "Put the following locations into play: Entry Hall, both copies of Quiet Halls, and the remaining 6 Historical Society locations. (see below for suggested location placement.) Mỗi điều tra viên bắt đầu chơi tại Entry Hall.",
+    "placeLocations": "Đưa các địa điểm sau vào màn chơi: Entry Hall, cả hai bản sao của Quiet Halls, và 6 địa điểm Historical Society còn lại. (Xem bên dưới để biết vị trí địa điểm gợi ý.) Mỗi điều tra viên bắt đầu màn chơi tại Entry Hall.",
     "setAside": "Đặt những lá bài sau một bên, ngoài khu vực chơi: Hidden Library, Possessed Oathspeaker, Mr. Peabody, The Tattered Cloak, và Clasp of Black Onyx.",
     "changes": {
       "instructions": "Dựa vào số lượng người chơi trong màn chơi:",
-      "exactly1": "If there is exactly 1 player in the game, no changes are made.",
+      "exactly1": "Nếu có chính xác 1 người chơi trong ván chơi, không có thay đổi nào.",
       "exactly2": "Tìm kiếm trong các bộ bài encounter đã tập hợp để tìm 1 bản sao của Seeker of Carcosa. Spawn nó tại vị trí [[Third Floor]] Historical Society.",
       "exactly3": "Tìm kiếm trong các bộ bài encounter đã tập hợp để tìm 2 bản sao của Seeker of Carcosa. Spawn nó tại mỗi vị trí [[Third Floor]] Historical Society khác nhau.",
       "exactly4": "Tìm kiếm trong các bộ bài encounter đã tập hợp để tìm 3 bản sao của Seeker of Carcosa. Spawn nó tại mỗi vị trí [[Second Floor]] và [[Third Floor]] Historical Society khác nhau."
     },
     "fledTheDinnerParty": "Bạn đến Hiệp hội Lịch sử với dư dả thời gian; mỗi điều tra viên có thể có thêm 1 hành động trong lượt đầu tiên của họ trong màn chơi này.",
-    "fledDinnerPartyAdditionalAction": "Fleeing the dinner party",
+    "fledDinnerPartyAdditionalAction": "Chạy trốn khỏi bữa tiệc tối",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to Echoes of the Past* and *Maddening Delusions*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-echoes-of-the-past.png' /><img src='{setImgPath}/maddening-delusions.png' /></section>*Maddening Delusions* replaces *Delusions*. Remove the replaced set from the game.",
-      "chooseLocations": "Randomly choose one _Basement_ Historical Society location and remove it from the game, without looking at its revealed side.",
-      "placeLocations": "When putting locations into play, put all 3 copies of Quiet Halls into play along with the remaining 8 Historical Society locations. (The 3 _Basement_ locations should be placed to form a bottom row below the 3 _Ground Floor_ locations.)",
-      "setAside": "Also set both Keeper of the Oath enemies aside, out of play.",
-      "additionalRule": "For the duration of this scenario, the following additional rule applies: _Forced_ – After the investigators advance to act 2 or act 3: Spawn a set-aside Keeper of the Oath in any empty Historical Society location."
+      "chooseLocations": "Chọn ngẫu nhiên một địa điểm Historical Society _Basement_ và loại bỏ nó khỏi trò chơi mà không nhìn vào mặt đã lật của nó.",
+      "placeLocations": "Khi đưa các địa điểm vào màn chơi, đưa tất cả 3 bản sao của Quiet Halls vào màn chơi cùng với 8 địa điểm Historical Society còn lại. (3 địa điểm _Basement_ nên được đặt để tạo thành một hàng dưới cùng bên dưới 3 địa điểm _Ground Floor_.)",
+      "setAside": "Đồng thời đặt các lá bài encounter sau sang một bên, ngoài màn chơi: Possessed Oathspeaker, cả hai bản sao của Seeker of Carcosa, và cả hai bản sao của Words of Power.",
+      "additionalRule": "Trong suốt thời gian của màn chơi này, quy tắc bổ sung sau được áp dụng: _Forced_ – Khi một lá bài có từ 1 doom trở lên chuẩn bị bị đặt vào chồng bài encounter bỏ: Thay vào đó, đặt lá bài đó bên dưới chồng bài act."
     }
   },
   "resolutions": {
     "xp": {
-      "bonus": "Gains insight into the machinations of The King in Yellow"
+      "bonus": "Hiểu sâu hơn về mưu đồ của Vị Vua Áo Vàng."
     },
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<div class='resolution'>_If no resolution was reached (each investigator resigned or was defeated)_: You barely escape the building with your body and mind intact, and flee to safety. Read _Resolution 4_.</div>"
+      "title": "Không Có Resolution",
+      "body": "<div class='resolution'>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Bạn hầu như chỉ vừa đủ thoát khỏi tòa nhà khi thể xác và tâm trí vẫn còn nguyên vẹn, và chạy trốn đến nơi an toàn. Đọc _Resolution 4_.</div>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<div class='resolution'><p>_Resolution 1_: Không thể là trùng hợp khi liên quan đến vở kịch The King in Yellow. Bạn chắc chắn rằng vật thể bạn đã tìm thấy rất quan trọng. Bạn quyết định mang theo nó trước khi tiếp tục tiến hành điều tra. Hồ sơ cuối cùng bạn tìm thấy liên quan đến việc sản xuất tác phẩm đầu tiên của vở kịch Vị Vua Áo Vàng là bản đánh giá sức khỏe tâm thần của một người là Daniel Chesterfield, một diễn viên đã đánh mất trí tuệ của mình sau buổi trình diễn cuối cùng. Có vẻ như anh ấy đã được đưa vào nhà thương điên sau khi quá trình sản xuất tác phẩm kết thúc. Có lẽ anh ấy vẫn còn ở đó…</p><ul><li>Trong Nhật ký Chiến dịch của bạn, hãy ghi lại rằng <i> bạn đã lấy cái móc mã não </i>. Đánh dấu một <b>Conviction</b> trong Nhật ký Chiến dịch của bạn. Trong phần còn lại của chiến dịch, một điều tra viên phải thêm lá bài điểm yếu Clasp of Black Onyx vào bộ bài của họ. Lá bài này không tính vào kích thước bộ bài của điều tra viên đó.</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>VIP Đã Bị Giết</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 2 token [cultist] vào túi hỗn mang.</li></ul></div>"
+      "body": "<div class='resolution'><p>_Resolution 1_: Chiếc móc cài được làm bằng đá mã não mịn, với hình chạm khắc một biểu tượng kỳ lạ mà bạn không nhận ra. Nhìn vào nó khiến bạn cảm thấy kỳ lạ, như thể biểu tượng đang mở rộng trong tầm mắt của bạn, kéo bạn vào trung tâm của nó. Bạn rời mắt khỏi biểu tượng và nhét chiếc móc cài vào túi, cảm thấy bị thôi thúc mạnh mẽ phải giữ nó an toàn. Hồ sơ cuối cùng bạn tìm thấy liên quan đến quá trình sản xuất vở kịch Vị Vua Áo Vàng đầu tiên là một bản đánh giá sức khỏe tâm thần của Daniel Chesterfield, một nhân viên hậu đài đã mất trí sau đêm diễn cuối cùng. Có vẻ như anh ta đã bị đưa vào nhà thương điên sau khi việc dàn dựng kết thúc. Có lẽ anh ta vẫn còn ở đó…</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *bạn đã lấy chiếc móc cài bằng đá mã não*. Một điều tra viên phải thêm The Onyx Clasp vào bộ bài của mình. Lá bài này không tính vào giới hạn kích thước bộ bài của điều tra viên đó. Đánh dấu một _Conviction_ trong Nhật ký Chiến dịch của bạn.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Nếu Sebastien Moreau (*Cuồng Loạn Man Dại*) ở trong khu vực trưng bày thành tích, ghi tên ông ta vào Nhật ký Chiến dịch của bạn, dưới mục “VIP Đã Bị Giết”.</li><li>Loại bỏ tất cả token {'{'}cultist{'}'}, {'{'}tablet{'}'}, và {'{'}elderThing{'}'} khỏi túi hỗn mang. Sau đó, thêm 2 token {'{'}cultist{'}'} vào túi hỗn mang.</li></ul></div>"
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
-      "body": "<div class='resolution'><p>_Resolution 2_: Cuộc điều tra này có thể khiến bất kỳ ai cũng trở nên hoang tưởng. Việc gán một số ý nghĩa lớn hơn cho mọi thứ bạn tìm thấy có thể là một kế hoạch nguy hiểm. Bạn chắc chắn rằng cái móc cài này chả có ý nghĩa gì, thậm chí nó có thể chỉ là đồ dùng sân khấu từ vở kịch gốc. Bạn bỏ nó lại và tiếp tục cuộc điều tra của mình. Hồ sơ cuối cùng bạn tìm thấy liên quan đến việc sản xuất tác phẩm đầu tiên của vở kịch Vị Vua Áo Vàng là bản đánh giá sức khỏe tâm thần của một người là Daniel Chesterfield, một diễn viên đã đánh mất trí tuệ của mình sau buổi trình diễn cuối cùng. Có vẻ như anh ấy đã được đưa vào nhà thương điên sau khi quá trình sản xuất tác phẩm kết thúc. Có lẽ anh ấy vẫn còn ở đó…</p><ul><li>Trong Campaign Log của bạn, hãy ghi lại rằng <i>bạn đã bỏ lại cái móc mã não</i>. Đánh dấu một <b>Doubt</b> trong Campaign Log của bạn.</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>VIP Đã Bị Giết</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 2 token [tablet] vào túi hỗn mang.</li></ul></div>"
+      "body": "<div class='resolution'><p>_Resolution 2_: Cuộc điều tra này có thể khiến bất kỳ ai cũng trở nên hoang tưởng. Việc gán một ý nghĩa lớn lao hơn cho mọi thứ bạn tìm thấy có thể là một cạm bẫy nguy hiểm. Bạn chắc chắn rằng chiếc móc cài này chẳng có ý nghĩa gì, thậm chí nó có thể chỉ là một đạo cụ sân khấu từ vở kịch gốc. Bạn bỏ nó lại và tiếp tục cuộc điều tra của mình. Hồ sơ cuối cùng bạn tìm thấy liên quan đến quá trình sản xuất vở kịch Vị Vua Áo Vàng đầu tiên là bản đánh giá sức khỏe tâm thần của Daniel Chesterfield, một nhân viên hậu đài đã mất trí sau đêm diễn cuối cùng. Có vẻ như anh ta đã bị đưa vào nhà thương điên sau khi việc dàn dựng kết thúc. Có lẽ anh ta vẫn còn ở đó…</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *bạn đã bỏ lại chiếc móc cài bằng đá mã não*. Đánh dấu một _Doubt_ trong Nhật ký Chiến dịch của bạn.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Nếu Sebastien Moreau (*Cuồng Loạn Man Dại*) ở trong khu vực trưng bày thành tích, ghi tên ông ta vào Nhật ký Chiến dịch của bạn, dưới mục “VIP Đã Bị Giết”.</li><li>Loại bỏ tất cả token {'{'}cultist{'}'}, {'{'}tablet{'}'}, và {'{'}elderThing{'}'} khỏi túi hỗn mang. Sau đó, thêm 2 token {'{'}tablet{'}'} vào túi hỗn mang.</li></ul></div>"
     },
     "resolution3": {
       "title": "Kết thúc thứ ba",
-      "body": "<div class='resolution'><p>_Resolution 3_: Bóng người gục xuống đất, cơ thể cong vênh, tan chảy quằn quại trong đau đớn. Nó thở khò khè và kêu lên, ánh sáng màu vàng phát ra từ bên trong miệng và sau mắt nó. Nó nói với một giọng nói lập cập, “Daniel. Hãy tìm kiếm Daniel… Daniel Chesterfield, diễn viên sân khấu, anh ấy nhớ!” Sâu bên trong lời nói của người đàn ông, có một giọng nói khác đằng sau đó, thì thầm yếu ớt bằng một ngôn ngữ du dương. “Hãy tìm anh ấy… Anh ấy cũng đã nói ra lời thề… Lời thề đã hủy diệt tất cả chúng ta…!” Với những lời cuối cùng đó, da thịt người đàn ông tan ra, và ông ấy ngã khuỵu xuống sàn.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, hãy ghi lại rằng <i>bạn đã tiêu diệt người tuyên thệ</i> . Bất kỳ một điều tra viên nào cũng có thể chọn thêm lá bài The Tattered Cloak vào bộ bài của họ. Lá bài này không tính vào kích thước bộ bài của điều tra viên đó.</li><li>Each investigator earns experience equal to the Victory X value of each card in the victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>VIP Đã Bị Giết</li><li>Loại bỏ tất cả token [cultist], [tablet], và [elder_thing] khỏi túi hỗn mang. Sau đó, thêm 2 token [tablet] vào túi hỗn mang.</li></ul></div>"
+      "body": "<div class='resolution'><p>_Resolution 3_: Bóng người gục xuống đất, cơ thể vặn vẹo, tan chảy quằn quại trong đau đớn. Nó thở khò khè và kêu lên, ánh sáng màu vàng phát ra từ bên trong miệng và sau hốc mắt nó. Nó nói bằng giọng the thé nứt nẻ, “Daniel. Hãy tìm Daniel… Daniel Chesterfield, người làm hậu đài, anh ta nhớ!” Sâu bên trong lời nói của người đàn ông, có một giọng nói khác ẩn phía sau, thì thầm yếu ớt bằng một thứ ngôn ngữ du dương. “Hãy tìm anh ta… Anh ta cũng đã thốt ra lời thề… Lời thề đã định đoạt số phận của tất cả chúng ta…!” Cùng với những lời trăn trối đó, da thịt người đàn ông tan rữa khỏi xương cốt, và hắn đổ sụp xuống sàn.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *bạn đã tiêu diệt người tuyên thệ*. Bất kỳ một điều tra viên nào cũng có thể chọn thêm Chiếc Áo Choàng Rách Rưới vào bộ bài của họ. Lá bài này không tính vào giới hạn kích thước bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Nếu Sebastien Moreau (*Cuồng Loạn Man Dại*) ở trong khu vực trưng bày thành tích, ghi tên ông ta vào Nhật ký Chiến dịch của bạn, dưới mục “VIP Đã Bị Giết”.</li><li>Loại bỏ tất cả token {'{'}cultist{'}'}, {'{'}tablet{'}'}, và {'{'}elderThing{'}'} khỏi túi hỗn mang. Sau đó, thêm 2 token {'{'}tablet{'}'} vào túi hỗn mang.</li></ul></div>"
     },
     "resolution4": {
       "title": "Kết thúc thứ 4",
@@ -73,14 +73,14 @@
   },
   "label": {
     "theOath": {
-      "r1": "This is an important discovery! We should take it. (-> R1)",
-      "r2": "It's just a silly trinket, and it would be wrong to steal from the Historical Society. Leave it behind (-> R2)"
+      "r1": "Đây là một khám phá quan trọng! Chúng ta nên lấy nó. (-> R1)",
+      "r2": "Nó chỉ là một món đồ chơi ngớ ngẩn, và lấy trộm từ Hiệp hội Lịch sử là sai trái. Bỏ nó lại (-> R2)"
     },
     "ledAstray": {
-      "placeClue": "Place 1 of your clues on a Cultist enemy"
+      "placeClue": "Đặt 1 manh mối của bạn lên một kẻ địch Cultist"
     },
     "historicalSocietyReadingRoom": {
-      "investigate": "Take 1 doom from an enemy as a clue"
+      "investigate": "Lấy 1 doom từ một kẻ địch làm manh mối"
     }
   },
   "tooltips": {
@@ -88,7 +88,7 @@
       "resign": "[cultist]"
     },
     "historicalSocietyReadingRoom": {
-      "investigate": "{'{'}action{'}'}: _Investigate_. If you succeed, instead of discovering clues, choose an enemy with doom on it. Take 1 of that enemy's doom, flip it to its clue side, and place it on your investigator. (Group limit once per round)."
+      "investigate": "{'{'}action{'}'}: _Investigate_. Nếu bạn thành công, thay vì tìm ra manh mối, hãy chọn một kẻ địch có doom trên đó. Lấy 1 doom của kẻ địch đó, lật sang mặt manh mối, và đặt nó lên điều tra viên của bạn. (Giới hạn nhóm một lần mỗi vòng)."
     }
   }
 }

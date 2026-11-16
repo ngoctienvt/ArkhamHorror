@@ -12,7 +12,7 @@
     "theSurveyNotesWereRecovered": "Ghi chép khảo sát đã được tìm lại"
   },
   "interlude": {
-    "title": "Scenario Interlude: Fate of the Vale",
+    "title": "Chuyển tiếp Màn chơi: Định Mệnh Của Thung Lũng Vale",
     "label": {
       "letsEndThis": "Kết thúc chuyện này thôi.",
       "saveTheVale": "Cứu lấy Vale!",
@@ -39,13 +39,13 @@
     "easyStandard": {
       "skull": "-X. X bằng số act hiện tại cộng 1.",
       "cultist": "-4. Nếu bạn thất bại, bỏ ngẫu nhiên 1 lá bài từ tay bạn.",
-      "tablet": "-5. Bạn có thể đặt 1 doom lên lá bài investigator của mình để thay vào đó coi chỉ số của token này là 0.",
+      "tablet": "-5. Bạn có thể đặt 1 doom lên lá bài điều tra viên của mình để thay vào đó coi chỉ số điều chỉnh của token này là 0.",
       "elderThing": "-2. Nếu đây là một nỗ lực fight hoặc evade nhắm vào Cosmic Emissary, lật thêm một token khác."
     },
     "hardExpert": {
       "skull": "-X. X bằng số kẻ địch _Colour_ đang in play.",
       "cultist": "-6. Bỏ ngẫu nhiên 1 lá bài từ tay bạn.",
-      "tablet": "-8. Bạn có thể đặt 1 doom lên lá bài investigator của mình để thay vào đó coi chỉ số của token này là -3.",
+      "tablet": "-8. Bạn có thể đặt 1 doom lên lá bài điều tra viên của mình để thay vào đó coi chỉ số điều chỉnh của token này là -3.",
       "elderThing": "-5. Nếu đây là một nỗ lực fight hoặc evade nhắm vào Cosmic Emissary, thay vào đó bạn tự động thất bại."
     }
   },
@@ -60,8 +60,8 @@
   "label": {
     "spendCluesToAutomaticallySucceed": "Tiêu clue để tự động thành công",
     "tablet": {
-      "easyStandard": "Đặt 1 doom lên lá investigator của bạn để thay vào đó coi chỉ số của token này là 0",
-      "hardExpert": "Đặt 1 doom lên lá investigator của bạn để thay vào đó coi chỉ số của token này là -3"
+      "easyStandard": "Đặt 1 doom lên lá bài điều tra viên của bạn để thay vào đó coi chỉ số điều chỉnh của token này là 0",
+      "hardExpert": "Đặt 1 doom lên lá bài điều tra viên của bạn để thay vào đó coi chỉ số điều chỉnh của token này là -3"
     },
     "euphoria": {
       "placeAssetOnAbyss": "Đặt một non-story asset do bạn kiểm soát lên trên The Abyss"
@@ -98,7 +98,7 @@
   "setup": {
     "gatherSets": "Tập hợp tất cả lá bài từ các chồng bài encounter sau: *The Final Day*, *Fate of the Vale*, *Day of the Feast*, *Agents of the Colour*, *Fire!*, *Horrors in the Rock*, *Refractions*, *Residents*, *Transfiguration* và *The Vale*. Các chồng bài này được đánh dấu bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-final-day.png' /><img src='{setImgPath}/fate-of-the-vale.png' /><img src='{setImgPath}/day-of-the-feast.png' /><img src='{setImgPath}/agents-of-the-colour.png' /><img src='{setImgPath}/fire.png' /><img src='{setImgPath}/horrors-in-the-rock.png' /><img src='{setImgPath}/refractions.png' /><img src='{setImgPath}/residents.png' /><img src='{setImgPath}/transfiguration.png' /><img src='{setImgPath}/the-vale.png' /></section>",
     "nightThree": "Đưa lá bài Time Marker _Night Three_ vào khu vực chơi. Bạn không đơn độc.",
-    "shatteredSelf": "Thay thế lá bài investigator của mỗi người chơi bằng một lá bài investigator Shattered Self *(xem* _Shattered Self_ *bên dưới)*. Loại bỏ các lá bài Shattered Self còn lại khỏi trò chơi.",
+    "shatteredSelf": "Thay thế lá bài điều tra viên của mỗi người chơi bằng một lá bài điều tra viên Shattered Self (*xem* _Shattered Self_). Loại bỏ các lá bài Shattered Self còn lại khỏi trò chơi.",
     "mirrorNests": "Tập hợp tất cả các địa điểm từ encounter set *Fate of the Vale* cùng với tất cả các bản sao của kẻ địch Cosmic Emissary hai mặt.",
     "shuffleMirrorNests": "Xào 4 địa điểm Mirror Nest sao cho bạn không biết cái nào là cái nào và đặt chúng vào chơi, chưa lật, cùng với các kẻ địch Cosmic Emissary theo sơ đồ bố trí. Mỗi kẻ địch Cosmic Emissary bắt đầu chơi với mặt _Colour_ ngửa lên.",
     "connections": "Lưu ý rằng mỗi địa điểm Mirror Nest được kết nối với địa điểm theo chiều kim đồng hồ và ngược chiều kim đồng hồ so với nó.",
@@ -115,7 +115,7 @@
     "body": "<h3>The Abyss</h3><p class='basic'>Lá bài The Abyss hai mặt luôn che phần trên cùng của The Abyss, và không bao giờ bị xào vào. Nếu 1 hoặc nhiều lá bài được đặt lên trên cùng của The Abyss, chúng được đặt ngay bên dưới lá bài The Abyss, lên trên tất cả các lá bài khác trong The Abyss. Nếu 1 hoặc nhiều lá bài được xào vào The Abyss, hãy lấy lá bài The Abyss ra, xào các lá bài đó vào The Abyss, sau đó đặt lá bài The Abyss trở lại lên trên cùng.</p><p class='basic'>Mỗi khi một điều tra viên đáng lẽ phải rút 1 hoặc nhiều lá bài từ encounter deck *(ví dụ: trong mythos phase, hoặc qua một hiệu ứng bài)*, thay vào đó họ lật các lá bài từ dưới cùng của The Abyss cho đến khi lật được một lá bài có mặt lưng của encounter card, và rút lá bài đó. Các lá bài được lật còn lại sẽ được xào và đặt trở lại lên trên cùng của The Abyss *(bên dưới lá bài The Abyss)*.</p><ul><li>Bất cứ khi nào một lá bài được rút từ The Abyss, hãy tham khảo lá bài story The Abyss hai mặt để xác định cách giải quyết lá bài đó.</li><li>_Các hiệu ứng từ player card và weakness cho phép nhìn, tìm kiếm, thêm bài vào, hoặc loại bỏ bài từ encounter deck không thể tương tác với The Abyss và đều sẽ thất bại._</li><li>_Khi một encounter card đáng lẽ bị loại bỏ trong kịch bản này, nó luôn được đặt lên trên cùng của The Abyss._</li></ul>"
   },
   "cosmicEmissary": {
-    "title": "The Cosmic Emissary",
+    "title": "Sứ Giả Vũ Trụ",
     "body": "<h3>The Cosmic Emissary</h3><p class='basic'>The Cosmic Emissary được tạo thành từ nhiều kẻ địch Cosmic Emissary.</p><ul><li>Mỗi kẻ địch Cosmic Emissary vào chơi \"theo đội hình\" như trong sơ đồ bố trí.</li><li>Mỗi kẻ địch Cosmic Emissary phải luôn ở trong đội hình trừ khi có hướng dẫn khác. Nếu Cosmic Emissary phá vỡ đội hình, mỗi kẻ địch sẽ di chuyển độc lập với nhau.</li><li>Mỗi kẻ địch Cosmic Emissary có thể bị tấn công và lẩn tránh riêng biệt. (Trừ khi chúng có giá trị health, không thể gây damage cho những kẻ địch này.)</li><li>Trong khi ở trong đội hình, mỗi kẻ địch Cosmic Emissary được coi là đang ở tại Mirror Nest mà lá bài của nó tiếp giáp vật lý.</li></ul>",
     "prompt": {
       "title": "Cosmic Emissary nhìn chằm chằm lại",
@@ -125,8 +125,8 @@
     }
   },
   "shatteredSelf": {
-    "title": "Shattered Self",
-    "body": "<h3>Shattered Self</h3><p class='basic'>Trong quá trình chuẩn bị cho scenario này, mỗi điều tra viên được hướng dẫn thay thế lá bài điều tra viên của họ bằng một lá bài điều tra viên Shattered Self có trong bộ encounter *Fate of the Vale*.</p><ul><li>Deck của mỗi điều tra viên giữ nguyên. Trong một phần của scenario này, các điều tra viên phải dùng lá investigator Shattered Self và không thể dùng bất kỳ khả năng nào của điều tra viên của mình. Mỗi điều tra viên vẫn nên dùng mini-card investigator của mình để phân biệt ai là ai. Mọi hiệu ứng trên lá investigator của bạn yêu cầu bắt đầu chơi với một asset cụ thể sẽ được giải quyết trước khi đổi lá investigator của bạn sang lá investigator Shattered Self.</li><li>Bất kỳ trauma nào bình thường sẽ được đặt lên điều tra viên của bạn đều được chuyển sang lá bài điều tra viên Shattered Self của bạn.</li><li>Bất kỳ lá bài nào được đính kèm hoặc đặt bên dưới lá bài điều tra viên của bạn đều được đính kèm hoặc đặt bên dưới lá bài Shattered Self của bạn.</li><li>Bất kỳ hiệu ứng bài nào đề cập đến lá bài điều tra viên \"thật\" của bạn đều đề cập đến lá bài điều tra viên gốc của bạn chứ không phải lá bài Shattered Self của bạn.</li><li>Lá bài Shattered Self của bạn có cùng tên lá bài với lá bài điều tra viên \"thật\" của bạn *(ví dụ: Nếu bạn đang chơi Kōhaku Narukami, hãy coi lá bài Shattered Self như thể tên của nó là \"Kōhaku Narukami\".)*</li><li>Nếu Shattered Self của bạn bị đánh bại trong scenario này, bạn bị _driven insane_.</li></ul>"
+    "title": "Bản Ngã Vụn Vỡ",
+    "body": "<h3>Shattered Self</h3><p class='basic'>Trong quá trình chuẩn bị cho kịch bản này, mỗi điều tra viên được hướng dẫn thay thế lá bài điều tra viên của họ bằng một lá bài điều tra viên Shattered Self có trong bộ bài encounter *Fate of the Vale*.</p><ul><li>Chồng bài của mỗi điều tra viên giữ nguyên. Trong một phần của kịch bản này, các điều tra viên phải dùng lá bài điều tra viên Shattered Self và không thể dùng bất kỳ khả năng nào của điều tra viên của mình. Mỗi điều tra viên vẫn nên dùng mini-card điều tra viên của mình để phân biệt ai là ai. Mọi hiệu ứng trên lá bài điều tra viên của bạn yêu cầu bắt đầu chơi với một asset cụ thể sẽ được giải quyết trước khi đổi lá bài điều tra viên của bạn sang lá bài điều tra viên Shattered Self.</li><li>Bất kỳ sang chấn nào bình thường sẽ được đặt lên điều tra viên của bạn đều được chuyển sang lá bài điều tra viên Shattered Self của bạn.</li><li>Bất kỳ lá bài nào được đính kèm hoặc đặt bên dưới lá bài điều tra viên của bạn đều được đính kèm hoặc đặt bên dưới lá bài Shattered Self của bạn.</li><li>Bất kỳ hiệu ứng lá bài nào đề cập đến lá bài điều tra viên \"thật\" của bạn đều đề cập đến lá bài điều tra viên gốc của bạn chứ không phải lá bài Shattered Self của bạn.</li><li>Lá bài Shattered Self của bạn có cùng tên lá bài với lá bài điều tra viên \"thật\" của bạn. (*ví dụ: Nếu bạn đang chơi Kōhaku Narukami, hãy coi lá bài Shattered Self như thể tên của nó là “Kōhaku Narukami.”*)</li><li>Nếu Shattered Self của bạn bị đánh bại trong kịch bản này, bạn bị _phát điên_.</li></ul>"
   },
   "resolutions": {
     "xp": {
@@ -209,7 +209,7 @@
     "judithPark": {
       "title": "[codex] Codex 7: Judith Park",
       "act2": "<h3>@:theFeastOfHemlockVale.fateOfTheVale.codex.judithPark.title </h3><p>_If it is Act 2:_</p><p>Judith bắn vào hư không phát sáng, rồi hạ súng trường xuống và nhìn chằm chằm vào những vòng xoáy ánh sáng và màu sắc. \"Thứ quái quỷ gì thế này?\"</p><p class='basic right'>Chọn một kẻ địch ở bất kỳ địa điểm nào và tự động evade nó. Một điều tra viên có thể kích hoạt codex này một lần nữa trong một act khác.</p>",
-      "act3": "<p>_Otherwise:_</p><p>“Nếu chúng ta sống sót ra khỏi đây, bạn phải mời tôi một ly. Có một quán rượu lậu ở Boston pha loại rượu ngon nhất.” Cô ấy nhìn thẳng vào mắt bạn. “Và không, tôi không chấp nhận lời từ chối đâu.”</p><p class='basic right'>Tìm trong deck, trên tay, và discard pile của bạn một lá bài _Weapon_ và play nó, bỏ qua mọi cost.</p>"
+      "act3": "<p>_Otherwise:_</p><p>“Nếu chúng ta sống sót ra khỏi đây, bạn phải mời tôi một ly. Có một quán rượu lậu ở Boston pha loại rượu ngon nhất.” Cô ấy nhìn thẳng vào mắt bạn. “Và không, tôi không chấp nhận lời từ chối đâu.”</p><p class='basic right'>Tìm trong chồng bài, trên tay và chồng bài bỏ của bạn một lá bài Weapon và chơi nó, bỏ qua mọi chi phí.</p>"
     },
     "theoPeters": {
       "title": "[codex] Codex 8: Theo Peters",

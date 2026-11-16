@@ -12,7 +12,7 @@
     "day2": "Nếu đang là _Day 2_, chuyển đến _Intro 2_.",
     "day3": "Nếu đang là _Day 3_, chuyển đến _Intro 3_.",
     "intro1": {
-      "title": "Intro 1",
+      "title": "Dẫn nhập 1",
       "body": "<p>_Intro 1_: Bạn bước ra khỏi xe tải của Theo cùng với Leah Atwood và nhìn lên điểm cao nhất của Hemlock Isle. Con đường hẹp quanh co nhường chỗ cho lớp tro mềm như cát bao phủ vùng hoang dã. Những tảng đá đen trên đỉnh đồi trông như những chiếc răng lởm chởm. Một sự im lặng đáng sợ bao trùm mọi thứ khi bạn đi lên đồi cùng với đầu bếp của The Vale. “Có lý do khiến người ta không sống ở đây nữa. Hãy cẩn thận khi ở trên này. Tôi không biết thứ gì sống trong các hang động, và tôi cũng không có ý định tìm hiểu,” cô ấy nói. Như để đáp lại, một cơn gió mạnh thổi tung những đám mây tro trắng.</p><p class='basic right'>Chuyển đến _Intro 5_.</p>"
     },
     "intro2": {
@@ -75,7 +75,7 @@
     "drRosaMarquez": {
       "title": "{'{'}codex{'}'} Codex Θ: Dr. Rosa Marquez",
       "act1": "<h3>@:theFeastOfHemlockVale.theSilentHeath.codex.drRosaMarquez.title </h3><p>_If it is Act 1:_</p><p>Tiến sĩ Marquez giơ một mảnh kính tròn lên trước ánh sáng. Đó là mặt cắt ngang của một cái cây hóa thạch, chằng chịt những hoa văn mỏng manh như tơ. Vị giáo sư bỏ mẫu vật vào túi. “Vườn táo không bị hóa thạch: chính cấu trúc của gỗ đã thay đổi. Mặt cắt này là của hàng tá những cái cây khác nhau, mỗi cái có lịch sử và vòng tuổi riêng. Tất cả đều đã kết tinh.”</p><p class='basic right'>Rút 3 lá bài. Một điều tra viên có thể kích hoạt codex này một lần nữa trong một act khác.</p>",
-      "act2": "<h3>@:theFeastOfHemlockVale.theSilentHeath.codex.drRosaMarquez.title </h3><p>_If it is Act 2:_</p><p>Vị giáo sư nâng một chiếc hàm dưới khô quắt có kích thước bằng cẳng tay của bà. “Những sinh vật này có cả đặc điểm của mối, ong bắp cày và các đặc điểm khác từ một số loài côn trùng. Nó nằm ngoài lĩnh vực của tôi—Tiến sĩ Christopher sẽ phát điên nếu ông ấy nhìn thấy thứ này—nhưng tôi đã tìm ra một số phát hiện thú vị trong các đường hầm. Nhìn này.”</p><p class='basic right'>Chọn một vị trí đang trong cuộc chơi. Lật ngửa tất cả các lá bài bên dưới vị trí đã chọn. Discard mỗi lá treachery được lật và đặt phần còn lại trở lại theo bất kỳ thứ tự nào.</p>"
+      "act2": "<h3>@:theFeastOfHemlockVale.theSilentHeath.codex.drRosaMarquez.title </h3><p>_Nếu đang là Act 2:_</p><p>Vị giáo sư nâng một chiếc hàm dưới khô quắt có kích thước bằng cẳng tay của bà. “Những sinh vật này có cả đặc điểm của mối, ong bắp cày và các đặc điểm khác từ một số loài côn trùng. Nó nằm ngoài lĩnh vực của tôi—Tiến sĩ Christopher sẽ phát điên nếu ông ấy nhìn thấy thứ này—nhưng tôi đã tìm ra một số phát hiện thú vị trong các đường hầm. Nhìn này.”</p><p class='basic right'>Chọn một địa điểm trong màn chơi. Lật mở tất cả các lá bài bên dưới địa điểm đã chọn. Bỏ mỗi lá treachery được lật mở và đặt phần còn lại trở lại theo bất kỳ thứ tự nào.</p>"
     },
     "larvalTunnel": {
       "title": "{'{'}codex{'}'} Codex Ψ: Larval Tunnel",

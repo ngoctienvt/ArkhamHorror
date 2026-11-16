@@ -1,6 +1,6 @@
 {
   "intro": {
-    "title": "The Labyrinths of Lunacy",
+    "title": "Mê Cung Điên Loạn",
     "chooseGroup": "<p class='basic'>Khi chơi dưới dạng một mini-campaign, hãy chơi ba game liên tiếp — một game cho mỗi nhóm — theo thứ tự bạn chọn. Không giống như một campaign bình thường, các luật sau được áp dụng:</p><ul class='level-2'><li>Khi xây dựng bộ bài cho màn chơi <i>The Labyrinths of Lunacy</i>, sử dụng luật chơi trong chế độ standalone ở trang 19 của cuốn Rules Reference. Bạn không nhất thiết phải bắt đầu với 0 kinh nghiệm.</li><li>Người chơi có thể hoán đổi điều tra viên và/hoặc bộ bài giữa mỗi màn chơi, để đại diện cho các nhóm điều tra viên khác nhau đã bị mắc kẹt bên trong Mê Cung.</li> <li>Không được nhận hay dùng kinh nghiệm giữa các màn chơi trong campaign này.</li> <li>Không có Nhật ký Chiến dịch cho campaign này. Trong campaign này, điều tra viên không nhận sang chấn, và điều tra viên bị <b>giết</b> hoặc trở nên <b>điên loạn</b> có thể được sử dụng ở màn chơi khác.</li></ul><p class='basic'>Which group is trapped in this part of the labyrinth?</p>",
     "chooseGroupSingle": "<p class='basic'>Khi chơi dưới dạng một màn chơi độc lập, bạn có thể chơi ở Nhóm A, B hoặc C. Sử dụng hướng dẫn chuẩn bị màn chơi cho nhóm được chọn để chuẩn bị màn chơi.</p><p class='basic'>Which group is trapped in this part of the labyrinth?</p>",
     "groupA": "<p>Bạn tỉnh dậy và nhận thấy rằng mình đang ở một nơi xa lạ, không có ký ức về việc mình đã đến đây bằng cách nào. Cơ bắp của bạn yếu ớt và không cử động như ý muốn. Tầm nhìn thì mờ đi. Chỉ việc nhấc chân dậy cũng đòi hỏi một nỗ lực rất lớn. Đôi chân của bạn run run và hầu như không thể nâng đỡ trọng lượng cơ thể.</p><p>Bạn tỉnh dậy và nhận thấy rằng mình đang ở một nơi xa lạ, không có ký ức về việc mình đã đến đây bằng cách nào. Cơ bắp của bạn yếu ớt và không cử động như ý muốn. Tầm nhìn thì mờ đi. Chỉ việc nhấc chân dậy cũng đòi hỏi một nỗ lực rất lớn. Đôi chân của bạn run run và hầu như không thể nâng đỡ trọng lượng cơ thể.\nLần đầu tiên kể từ khi tỉnh dậy, bạn xem xét không gian xung quanh mình. Bạn đã bị nhốt kín trong một căn phòng không có cửa sổ, chứa đầy các ống bằng đồng. Tiếng khẽ rít của các luồng gió thoát ra bao bọc xung quanh bạn. Bạn trở thành một tù nhân ở nơi này và không có cách nào để thoát ra. Có một tờ giấy nằm trên mặt đất gần đó. Nó viết:\n<fancy>Xin chào.</fancy>\n<fancy>Tôi đã tập hợp bạn ở đây để tiến hành một thí nghiệm. Hãy xem đây là một bài kiểm tra về ý chí của con người. Bạn sẽ sống sót. Hoặc bạn sẽ chết.</fancy><fancy> Bạn không đơn độc. Hai nhóm khác chia sẻ chung số phận với bạn. Bạn sẽ mạo hiểm tính mạng của mình để hỗ trợ họ chứ? Hay bạn sẽ tìm thấy tự do đằng sau xác chết của họ?</fancy>\n<fancy>Tôi sẽ cho phép bạn trốn thoát, nếu bạn chứng tỏ được ý chí mạnh mẽ và sự lanh lợi. Nếu không, nỗi đau và thống khổ của bạn sẽ như một lời nhắc nhở rằng nhân loại không phải là người thừa hưởng Trái đất.</fancy></p>",
@@ -10,21 +10,21 @@
   },
   "label": {
     "decayDiagram": {
-      "cluesToFlip": "Clues to flip"
+      "cluesToFlip": "Manh mối cần lật"
     },
-    "satisfyDoomThreshold": "Add doom to the current agenda until its doom threshold is satisfied.",
+    "satisfyDoomThreshold": "Thêm doom vào agenda hiện tại cho đến khi đạt ngưỡng doom của nó.",
     "groupA": "Nhóm A",
     "groupB": "Nhóm B",
     "groupC": "Nhóm C"
   },
   "remembered": {
-    "pulledTheLeftLever": "{name} pulled the left lever",
-    "pulledTheMiddleLever": "{name} pulled the middle lever",
-    "pulledTheRightLever": "{name} pulled the right lever",
-    "beenInjected": "{name} has been injected"
+    "pulledTheLeftLever": "{name} đã kéo cần gạt bên trái",
+    "pulledTheMiddleLever": "{name} đã kéo cần gạt ở giữa",
+    "pulledTheRightLever": "{name} đã kéo cần gạt bên phải",
+    "beenInjected": "{name} đã bị tiêm"
   },
   "setup": {
-    "gatherSets": "Gather all cards from <i>The Labyrinths of Lunacy</i> encounter set. This set is indicated by this icon:<section class='encounter-sets'><img src='{setImgPath}/in-the-labyrinths-of-lunacy.png'></section>",
+    "gatherSets": "Thu thập toàn bộ các lá bài từ encounter set <i>The Labyrinths of Lunacy</i>. Bộ bài này được biểu thị bằng biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/in-the-labyrinths-of-lunacy.png'></section>",
     "singleGroup": "Vì bạn đang chơi ở <i>Chế độ Single Group</i>, tập hợp tất cả lá bài từ bộ encounter <i>Single Group</i>, được biểu thị bằng biểu tượng này:<section class='encounter-sets'><img src='{setImgPath}/single-group.png'></section> Loại bỏ tất cả lá bài của bộ encounter <i>Epic Multiplayer</i> khỏi game.",
     "actDeckGroupA": "Xây dựng bộ bài Act chỉ bằng các phiên bản Nhóm A của Act 1 và 2. Loại bỏ các phiên bản Act khác khỏi màn chơi.",
     "actDeckGroupB": "Xây dựng bộ bài Act chỉ bằng các phiên bản Nhóm B của Act 1 và 2. Loại bỏ các phiên bản Act khác khỏi màn chơi.",
@@ -36,82 +36,82 @@
     "keyOfMysteries": "Bởi vì bạn đang chơi chế độ <i>Single Group</i>, đặt lá bài Key of Mysteries được để một bên hồi đầu vào chơi tại vị trí Chamber of Secrets.",
     "hiddenChamberOfSecrets": "Bởi vì bạn đang chơi chế độ <i>Single Group</i>, ngẫu nhiên chọn 1 trong 3 lá bài Chamber of Secrets và đặt nó bên dưới lá bài scenario reference, mà không nhìn vào mặt để lộ của nó.",
     "eixodolonsNote": "Trưởng nhóm có quyền kiểm soát Eixodolon’s Note.",
-    "addTokens": "Add 2 of this group's chaos tokens to the chaos bag (Group A: Elder Thing, Group B: Tablet, Group C: Cultist)."
+    "addTokens": "Thêm 2 token hỗn mang của nhóm này vào túi hỗn mang (Nhóm A: Elder Thing, Nhóm B: Tablet, Nhóm C: Cultist)"
   },
   "skull": {
-    "takeDamage": "Take 1 damage",
+    "takeDamage": "Chịu 1 sát thương",
     "takeHorror": "Nhận 1 horror."
   },
   "chamberOfSorrows": {
-    "takeClue": "Take control of 1 clue on an investigator in either Chamber of Sorrows or Chamber of Rain (or from that location if you are the only investigator in the game)."
+    "takeClue": "Lấy quyền kiểm soát 1 manh mối trên một điều tra viên ở Chamber of Sorrows hoặc Chamber of Regret"
   },
   "chamberOfRegret": {
     "label": {
-      "whichLever": "You pull one of the 3 levers (choose one): left, middle, or right. As soon as you do, the gate slams shut behind you. You cannot leave the Chamber of Regret for the remainder of the current act.",
-      "left": "Pull the left lever",
-      "middle": "Pull the middle lever",
-      "right": "Pull the right lever"
+      "whichLever": "Bạn kéo một trong 3 chiếc cần gạt (chọn một): bên trái, ở giữa, hoặc bên phải. Ngay khi bạn làm vậy, bạn bất tỉnh, ngã gục xuống sàn.",
+      "left": "Kéo cần gạt bên trái",
+      "middle": "Kéo cần gạt ở giữa",
+      "right": "Kéo cần gạt bên phải"
     }
   },
   "labyrinthineHalls": {
-    "chooseDrawCards": "You find an old lockbox in a pile of refuse, and decide to leave something behind. Choose an investigator to draw 2 cards.",
-    "chooseGainResources": "You find the corpse of someone you think you once knew, and wish you could have saved them. Choose an investigator to gain 4 resources.",
-    "chooseAdditionalActions": "You peer through an overgrown mirror and see an unfamiliar reflection. Choose an investigator to take 2 additional actions during their next turn.",
-    "additionalActions": "Labyrinthine Halls"
+    "chooseDrawCards": "Bạn tìm thấy một chiếc hộp khóa cũ trong đống rác rưởi, và quyết định để lại thứ gì đó cho người khác tìm thấy: Rút 3 lá bài và chọn 2 lá bài từ trên tay bạn để commit vào bài kiểm tra này.",
+    "chooseGainResources": "Bạn tìm thấy thi thể của một người mà bạn nghĩ mình từng quen biết, và ước gì mình đã có thể cứu được họ. Chọn một điều tra viên nhận 4 tài nguyên.",
+    "chooseAdditionalActions": "Bạn nhìn qua một tấm gương bám đầy rêu phong và thấy một hình bóng phản chiếu xa lạ. Chọn một điều tra viên thực hiện thêm 2 hành động trong lượt tiếp theo của họ.",
+    "additionalActions": "Hành Lang Mê Cung"
   },
   "torturedVictim": {
     "label": {
-      "discardRandomCard": "Discard a random card from your hand",
-      "takeAttack": "Tortured Victim makes an immediate attack against you"
+      "discardRandomCard": "Bỏ 1 lá bài ngẫu nhiên từ trên tay bạn",
+      "takeAttack": "Tortured Victim thực hiện một đòn tấn công ngay lập tức nhắm vào bạn"
     }
   },
   "unnaturalWeariness": {
-    "loseResources": "Lose 3 resources",
-    "loseAction": "Lose 1 action",
-    "discardRandomCard": "Discard a random card from your hand"
+    "loseResources": "Mất 3 tài nguyên",
+    "loseAction": "Mất 1 hành động",
+    "discardRandomCard": "Bỏ 1 lá bài ngẫu nhiên từ trên tay bạn"
   },
   "act2Setup": {
     "title": "Chuẩn bị Act 2",
     "shuffleEncounterDeck": "Xào mỗi lá bài Faceless Abductor để một bên hồi đầu và chồng bài encounter bỏ vào chồng bài encounter.",
     "labyrinthineHalls": "Đặt 3 vị trí Labyrinthine Halls để một bên hồi đầu vào màn chơi.",
     "chamberOfDecay": "Đặt vị trí Chamber of Decay để một bên hồi đầu vào màn chơi.",
-    "chambersOfRotAndPoison": "Put the set-aside Chamber of Rot and Chamber of Poison into play.",
+    "chambersOfRotAndPoison": "Đưa Chamber of Rot và Chamber of Poison được đặt sang một bên vào màn chơi.",
     "chamberOfHunger": "Đặt vị trí Chamber of Hunger để một bên hồi đầu vào màn chơi",
     "eixodolonsPet": "Đặt lá bài Eixodolon’s Pet để một bên hồi đầu vào màn chơi, gần vị trí Chamber of Hunger, nhưng không ở một vị trí cụ thể. Trong khi không ở một vị trí cụ thể, lá bài này được xem là \"bị khóa\".",
-    "removeDoom": "Remove all doom from play and proceed to act 2a and agenda 2a."
+    "removeDoom": "Loại bỏ toàn bộ doom trong màn chơi và tiến hành act 2a cùng agenda 2a."
   },
   "act3Setup": {
     "title": "Chuẩn bị Act 3",
     "abandonedWarehouse": "Đặt vị trí Abandoned Warehouse để một bên hồi đầu vào màn chơi.",
     "moveInvestigators": "Tách rời tất cả kẻ địch đang đeo bám và di chuyển mỗi điều tra viên còn sống đến vị trí Abandoned Warehouse.",
     "eixodolon": "Đặt kẻ địch Eixodolon để một bên hồi đầu vào chơi tại vị trí Abandoned Warehouse.",
-    "removeDoom": "Remove all doom from play and proceed to act 3a and agenda 3a."
+    "removeDoom": "Loại bỏ toàn bộ doom trong màn chơi và tiến hành act 3a cùng agenda 3a."
   },
   "theLevers": {
-    "title": "Which Lever?",
-    "match": "<p>The investigator who pulled the lever examines the Chamber of Secrets underneath the scenario reference card. It matches! The gate ascends, and the door in the Chamber of Night opens. Resolve <b>Act 2 Setup</b>.</p>",
-    "noMatch": "<p>The investigator who pulled the lever examines the Chamber of Secrets underneath the scenario reference card. It does not match. Rows of razor-sharp blades emerge from the walls of the chamber, dissecting you with horrifying precision. You are killed. Resolve <b>Act 2 Setup</b>.</p>",
-    "noLever": "<p><i>Time is up. You rush to the levers, but you are too late. Rows of razor-sharp blades emerge from the walls of the chamber, dissecting you with horrifying precision.</i></p><p>The investigator nearest to the Chamber of Regret is killed. <i>(In the event of a tie, the investigators decide.)</i> Resolve <b>Act 2 Setup</b>.</p>"
+    "title": "Cần Gạt Nào?",
+    "match": "<p>Điều tra viên đã kéo cần gạt kiểm tra Chamber of Secrets bên dưới lá bài tham khảo màn chơi. Trùng khớp! Cánh cổng nâng lên, và cánh cửa trong Chamber of Night mở ra. Giải quyết <b>Act 2 Setup</b>.</p>",
+    "noMatch": "<p>Điều tra viên đã kéo cần gạt kiểm tra Chamber of Secrets bên dưới lá bài tham khảo màn chơi. Không trùng khớp. Từng hàng lưỡi dao sắc bén như dao cạo nhô ra từ các bức tường của căn phòng, xẻ thịt bạn với độ chính xác rợn người. Bạn bị giết chết. Giải quyết <b>Act 2 Setup</b>.</p>",
+    "noLever": "<p><i>Hết giờ. Bạn vội vã lao về phía các cần gạt, nhưng đã quá muộn. Từng hàng lưỡi dao sắc bén như dao cạo nhô ra từ các bức tường của căn phòng, xẻ thịt bạn với độ chính xác rợn người.</i></p><p>Điều tra viên ở gần Chamber of Regret nhất bị giết chết. <i>(Nếu hòa, các điều tra viên quyết định.)</i> Giải quyết <b>Act 2 Setup</b>.</p>"
   },
   "seepingDeath": {
-    "title": "The Pit of Poison",
-    "injected": "<p>You have \"been injected\"—the sludge is disgusting but harmless. Resolve <b>Act 3 Setup</b>.</p>",
-    "notInjected": "<p>You have not \"been injected\"—the poison seeps through your skin, devouring your organs from inside. You are killed. Resolve <b>Act 3 Setup</b>.</p>",
-    "noValve": "<p><i>The floors and walls of the entire labyrinth shift and turn, and you lose your balance. Sliding along the floor as gravity twists, you are knocked into the poisonous pit.</i></p><p>Move each investigator to the Chamber of Poison. Each investigator in this group who has not \"been injected\" is killed. Resolve <b>Act 3 Setup</b>.</p>"
+    "title": "Hố Độc Dược",
+    "injected": "<p>Bạn \"đã bị tiêm\"—chất bùn nhầy thật kinh tởm nhưng vô hại. Giải quyết <b>Thiết Lập Màn III (Act III Setup)</b>.</p>",
+    "notInjected": "<p>Bạn chưa từng \"bị tiêm\"—chất độc ngấm qua da thịt bạn, hủy hoại các cơ quan nội tạng của bạn từ bên trong. Bạn bị giết chết. Giải quyết <b>Act 3 Setup</b>.</p>",
+    "noValve": "<p><i>Sàn và tường của toàn bộ mê cung dịch chuyển và xoay chuyển, và bạn mất thăng bằng. Trượt dọc theo sàn khi trọng lực bị bẻ cong, bạn bị hất văng vào cái hố chứa đầy chất độc.</i></p><p>Di chuyển mỗi điều tra viên đến Chamber of Poison. Mỗi điều tra viên trong nhóm này chưa từng \"bị tiêm\" đều bị giết chết. Giải quyết <b>Act 3 Setup</b>.</p>"
   },
   "thePet": {
-    "title": "Endless Hunger",
-    "victory": "<p><i>You breathe a sigh of relief as the creature crumples lifelessly to the ground.</i></p><p>Resolve <b>Act 3 Setup</b>.</p>",
-    "breaksFree": "<p><i>The creature smashes through the glass of its terrarium and lashes out hungrily at anyone nearby.</i></p><p>Move Eixodolon's Pet to Chamber of Hunger. It attacks each investigator in the Chamber of Hunger, in player order. Resolve <b>Act 3 Setup</b>.</p>"
+    "title": "Cơn Đói Bất Tận",
+    "victory": "<p><i>Bạn thở phào nhẹ nhõm khi sinh vật đó đổ sụp xuống đất không còn sự sống.</i></p><p>Giải quyết <b>Act 3 Setup</b>.</p>",
+    "breaksFree": "<p><i>Sinh vật phá tan lồng kính của bể nuôi và lao vào tấn công bất kỳ ai ở gần trong cơn đói cồn cào.</i></p><p>Di chuyển Eixodolon's Pet đến Chamber of Hunger. Nó tấn công mỗi điều tra viên tại Chamber of Hunger, theo thứ tự lượt chơi. Giải quyết <b>Act 3 Setup</b>.</p>"
   },
   "resolutions": {
     "label": {
-      "endScenario": "End the scenario here",
-      "playAnotherGroup": "Continue the mini-campaign as another group"
+      "endScenario": "Kết thúc màn chơi tại đây",
+      "playAnotherGroup": "Tiếp tục chiến dịch ngắn với tư cách một nhóm khác"
     },
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<p>_If no resolution was reached (each investigator was defeated)_: Go to _Resolution 1_.</p>"
+      "title": "Không có Kết cục",
+      "body": "<p>_Nếu không đạt được kết cục nào (mỗi điều tra viên đều bị đánh bại)_: Tiến đến _Resolution 2_.</p>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
@@ -135,13 +135,13 @@
       "skull": "-1. Rút thêm một token khác.",
       "cultist": "[skull]: -X. X là Cthulhu's Rage.\r\n[cultist]: -3. Nếu bạn thất bại và địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -3. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -1. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của Cthulhu deck. (Tối đa rút một lá mỗi round.)",
       "tablet": "-4. Nếu bạn thất bại, lose 2 tài nguyên.",
-      "elderThing": "-4. Nếu bạn thất bại, discard a random card from your hand."
+      "elderThing": "-4. Nếu bạn thất bại, bỏ 1 lá bài ngẫu nhiên từ trên tay bạn."
     },
     "hardExpert": {
       "skull": "-1. Rút thêm một token khác. Nếu bạn thất bại, you must either chịu 1 damage or 1 horror.",
       "cultist": "-3. Đặt 1 manh mối của bạn lên địa điểm của bạn.",
-      "tablet": "-4. Lose 2 resources.",
-      "elderThing": "-4. Discard a random card from your hand."
+      "tablet": "-4. Mất 2 tài nguyên.",
+      "elderThing": "-4. Bỏ 1 lá bài ngẫu nhiên từ trên tay bạn."
     }
   }
 }

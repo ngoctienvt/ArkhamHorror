@@ -16,17 +16,17 @@
     "chooseDrivers": "Chọn người lái. Một điều tra viên trên mỗi phương tiện di chuyển phải được chỉ định là người điều khiển phương tiện đó.",
     "driverNote": "Mỗi phương tiện luôn phải có người điều khiển và có ít nhất một điều tra viên trên nó. Nếu người lái rời khỏi phương tiện di chuyển hoặc bị loại bỏ thì chọn một điều tra viên khác trên phương tiện đó làm người điều khiển mới.",
     "playerCount": "Dựa vào số lượng người chơi trong màn chơi:",
-    "onePlayer": "If there is exactly 1 player in the game, no changes are made.",
-    "twoOrThreePlayers": "If there are 2–3 players in the game, search the gathered encounter sets for 1 random _Vehicle_ enemy. Spawn that enemy at the rearmost location.",
-    "fourPlayers": "If there are exactly 4 players in the game, search the gathered encounter sets for 2 random _Vehicle_ enemies. Spawn each of those enemies at the rearmost location.",
+    "onePlayer": "Nếu có chính xác 1 người chơi trong trò chơi, không có thay đổi nào.",
+    "twoOrThreePlayers": "Nếu có 2–3 người chơi trong trò chơi, tìm trong các encounter set đã thu thập 1 kẻ địch _Vehicle_ ngẫu nhiên. Spawn kẻ địch đó tại địa điểm ở phía sau cùng.",
+    "fourPlayers": "Nếu có chính xác 4 người chơi trong trò chơi, tìm trong các encounter set đã thu thập 2 kẻ địch _Vehicle_ ngẫu nhiên. Spawn mỗi kẻ địch đó tại địa điểm ở phía sau cùng.",
     "checkCampaignLog": "Kiểm tra nhật ký chiến dịch. Tùy thuộc vào các trường hợp sau đây mà sử dụng một phiên bản khác của agenda 1 trong màn chơi này. Loại bỏ các phiên bản khác của agenda 1 khỏi màn chơi.",
-    "theChaseIsOnV2": "If _the Terror of Devil Reef is dead_, use Agenda 1a—The Chase is On! (v. II).",
+    "theChaseIsOnV2": "Nếu *Hiểm họa Rạn San Hô Quỷ đã chết*, sử dụng Agenda 1a—Cuộc Rượt Đuổi Bắt Đầu! (bản II).",
     "theChaseIsOnV1": "Nếu không, hãy sử dụng Agenda 1a—The Chase is On! (v.I)."
   },
   "specialRules": [
     {
       "title": "Phương tiện di chuyển",
-      "body": "<p class='basic'>Một tài sản có từ khoá vehicle đại diện cho phương tiện di chuyển mà người chơi có thể đi vào hoặc rời khỏi. Một tài sản có từ khoá này được gọi là một phương tiện di chuyển, và tuân theo các luật sau:</p><ul><li>While an investigator’s mini-card is placed overlapping a vehicle, that investigator is in that vehicle. While an investigator’s mini-card is placed overlapping their location, that investigator is instead not in a vehicle (even if they are at the same location as a vehicle).<ul><li>As a {'{'}action{'}'} ability, an investigator may enter or leave a vehicle at their location. Move that investigator’s mini-card onto the vehicle or off of the vehicle and onto their location to indicate their new position. Each investigator may perform this ability only once each round.</li><li>Một điều tra viên đang ở trên phương riện di chuyển cũng có mặt tại vị trí của phương tiện di chuyển đó.</li><li>Khi điều tra viên ở trên phương tiện di chuyển, điều tra viên đó không thể di chuyển độc lập với phương tiện đó.</li></ul></li><li>Các phương tiện thường có một hoặc nhiều khả năng cho phép chúng di chuyển đến một địa điểm được kết nối. Khi một phương tiện di chuyển đi từ địa điểm này đến địa điểm khác, tất cả các điều tra viên trên nó cũng di chuyển theo.</li><li>Các phương tiện di chuyển không làm thay đổi chuyển động của kẻ địch hoặc sự đeo bám của kẻ địch dưới bất kỳ hình thức nào trừ khi có ghi chú khác.</li></ul>"
+      "body": "<p class='basic'>Một asset có từ khóa vehicle đại diện cho một phương tiện mà các điều tra viên có thể bước vào hoặc rời khỏi. Một asset có từ khóa này được gọi là một vehicle (phương tiện), và tuân theo các luật sau:</p><ul><li>Khi thẻ thu nhỏ (mini-card) của một điều tra viên được đặt đè lên một vehicle, điều tra viên đó đang ở trong vehicle đó. Khi thẻ thu nhỏ của một điều tra viên được đặt đè lên địa điểm của họ, điều tra viên đó không ở trong vehicle (ngay cả khi họ đang ở cùng địa điểm với một vehicle).<ul><li>Như một năng lực {'{'}action{'}'}, một điều tra viên có thể bước vào hoặc rời khỏi một vehicle tại địa điểm của họ. Di chuyển thẻ thu nhỏ của điều tra viên đó lên trên vehicle hoặc ra khỏi vehicle và đặt lên địa điểm của họ để chỉ vị trí mới của mình. Mỗi điều tra viên chỉ có thể thực hiện năng lực này một lần mỗi vòng.</li><li>Một điều tra viên ở trong một vehicle cũng đồng thời ở tại địa điểm của vehicle đó.</li><li>Khi một điều tra viên ở trong một vehicle, điều tra viên đó không thể di chuyển độc lập khỏi vehicle.</li></ul></li><li>Các vehicle thường có một hoặc nhiều năng lực cho phép chúng di chuyển đến một địa điểm kết nối. Khi một vehicle di chuyển từ địa điểm này sang địa điểm khác, tất cả các điều tra viên trong vehicle cũng di chuyển cùng với vehicle.</li><li>Vehicle không làm thay đổi chuyển động của kẻ địch hay việc kẻ địch engage theo bất kỳ cách nào trừ khi có ghi chú khác.</li></ul>"
     },
     {
       "title": "Đang chạy / Ngừng chạy",
@@ -38,9 +38,9 @@
     }
   ],
   "label": {
-    "discardAsset": "Discard an asset you control",
-    "whichVehicle": "Which vehicle will you start in?",
-    "whereWillEnemySpawn": "Where will the enemy spawn?"
+    "discardAsset": "Bỏ 1 asset bạn kiểm soát",
+    "whichVehicle": "Bạn sẽ bắt đầu trong phương tiện nào?",
+    "whereWillEnemySpawn": "Kẻ địch sẽ spawn ở đâu?"
   },
   "intro": {
     "title": "Màn V: Nỗi kinh hoàng ở Vòng Tua Cao",
@@ -48,7 +48,7 @@
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không Có Kết Cuộc",
       "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Chuyến lái xe đến Falcon Point của bạn không phải là một chuyến đi thú vị. Giữa những tín đồ theo đuôi bạn và những sinh vật sống bên trong khu rừng nằm ngoài thị trấn Innsmouth, phương tiện di chuyển của bạn luôn bị quấy rối ở mọi ngã rẽ. Không có cách nào để trốn thoát mà không hề hấn gì, bạn buộc phải bỏ phương tiện di chuyển của mình và lẻn đi bộ qua khu rừng. Khi bạn nhìn thấy ngọn hải đăng xa xa, bình minh đã tô điểm bầu trời bầu trời bằng ánh sáng màu cam. \"Cuối cùng cũng đến,\" Đặc vụ Harper rên rỉ. Không còn thời gian để nghỉ ngơi, bạn tiếp tục chuyến đi đến ngọn hải đăng Falcon Point, kiệt sức nhưng đầy quyết tâm.</p>"
     },
     "resolution1": {
@@ -58,30 +58,30 @@
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-1 (-3 instead if there are 6 or fewer locations remaining in the Road deck).",
-      "cultist": "-1. For each point you fail by, an investigator in your vehicle places 1 of their clues on your location.",
-      "tablet": "-2. For each point you fail by, an investigator in your vehicle loses 1 resource.",
+      "skull": "-1 (thay vào đó là -3 nếu còn từ 6 địa điểm trở xuống trong chồng bài Road).",
+      "cultist": "-1. Với mỗi điểm bạn thất bại, một điều tra viên trên phương tiện của bạn đặt 1 manh mối của họ lên địa điểm của bạn.",
+      "tablet": "-2. Với mỗi điểm bạn thất bại, một điều tra viên trên phương tiện của bạn mất 1 tài nguyên.",
       "elderThing": "-4. Nếu bạn thất bại, resolve the hunter keyword on each enemy in play."
     },
     "hardExpert": {
-      "skull": "-2 (-4 instead if there are 6 or fewer locations remaining in the Road deck).",
-      "cultist": "-2. For each point you fail by, an investigator in your vehicle places 1 of their clues on your location.",
-      "tablet": "-3. For each point you fail by, an investigator in your vehicle loses 1 resource.",
-      "elderThing": "-4. Resolve the hunter keyword on each enemy in play."
+      "skull": "-2 (thay vào đó là -4 nếu còn từ 6 địa điểm trở xuống trong chồng bài Road).",
+      "cultist": "-2. Với mỗi điểm bạn thất bại, một điều tra viên trên phương tiện của bạn đặt 1 manh mối của họ lên địa điểm của bạn.",
+      "tablet": "-3. Với mỗi điểm bạn thất bại, một điều tra viên trên phương tiện của bạn mất 1 tài nguyên.",
+      "elderThing": "-4. Kích hoạt từ khóa hunter trên mỗi kẻ địch trong màn chơi."
     }
   },
   "tooltips": {
     "elinaHarpersCarRunning": {
-      "drawAndMoveRoad": "If you are this vehicle's driver: Draw the top card of the encounter deck. Then, move this vehicle to a connecting _Road_ location. (Max once per round.)",
-      "stopCar": "If you are this vehicle's driver: You stop the car. Flip this vehicle over.",
-      "drive": "If you are this vehicle's driver: Draw the top card of the encounter deck. Then, move this vehicle to a connecting _Road_ location. (Max once per round.)",
-      "stop": "If you are this vehicle's driver: You stop the car. Flip this vehicle over."
+      "drawAndMoveRoad": "Nếu bạn là người lái phương tiện này: Rút lá bài trên cùng của chồng bài encounter. Sau đó, di chuyển phương tiện này đến một địa điểm _Road_ kết nối. (Tối đa một lần mỗi vòng.)",
+      "stopCar": "Nếu bạn là người lái phương tiện này: Bạn dừng xe lại. Lật mặt phương tiện này.",
+      "drive": "Nếu bạn là người lái phương tiện này: Rút lá bài trên cùng của chồng bài encounter. Sau đó, di chuyển phương tiện này đến một địa điểm _Road_ kết nối. (Tối đa một lần mỗi vòng.)",
+      "stop": "Nếu bạn là người lái phương tiện này: Bạn dừng xe lại. Lật mặt phương tiện này."
     },
     "thomasDawsonsCarRunning": {
-      "drawAndMoveRoad": "If you are this vehicle's driver: Draw the top card of the encounter deck. Then, move this vehicle to a connecting _Road_ location. (Max once per round.)",
-      "stopCar": "If you are this vehicle's driver: You stop the car. Flip this vehicle over.",
-      "drive": "If you are this vehicle's driver: Draw the top card of the encounter deck. Then, move this vehicle to a connecting _Road_ location. (Max once per round.)",
-      "stop": "If you are this vehicle's driver: You stop the car. Flip this vehicle over."
+      "drawAndMoveRoad": "Nếu bạn là người lái phương tiện này: Rút lá bài trên cùng của chồng bài encounter. Sau đó, di chuyển phương tiện này đến một địa điểm _Road_ kết nối. (Tối đa một lần mỗi vòng.)",
+      "stopCar": "Nếu bạn là người lái phương tiện này: Bạn dừng xe lại. Lật mặt phương tiện này.",
+      "drive": "Nếu bạn là người lái phương tiện này: Rút lá bài trên cùng của chồng bài encounter. Sau đó, di chuyển phương tiện này đến một địa điểm _Road_ kết nối. (Tối đa một lần mỗi vòng.)",
+      "stop": "Nếu bạn là người lái phương tiện này: Bạn dừng xe lại. Lật mặt phương tiện này."
     }
   }
 }

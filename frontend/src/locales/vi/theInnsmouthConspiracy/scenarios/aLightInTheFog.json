@@ -17,13 +17,13 @@
     "headdressOfYhaNthlei": "Tìm trong bộ sưu tập lá bàiHeaddress of Y'ha-nthlei và đặt nó sang một bên, ngoài khu vực chơi.",
     "checkCampaignLogDoom": "Kiểm tra Nhật ký Chiến dịch.",
     "afterSunrise": "Nếu <i>các điều tra viên đến Falcon Point sau khi mặt trời mọc</i>:",
-    "tideHasGrownStronger": "If _the tide has grown stronger_, place 1 doom on agenda 1.",
+    "tideHasGrownStronger": "Nếu *thủy triều đã dâng mạnh hơn*, đặt 1 doom lên agenda 1.",
     "floodTokens": "Thêm token lũ lụt vào kho chứa token."
   },
   "specialRules": [
     {
       "title": "Chìa khóa",
-      "body": "<div class='red bordered'><p class='basic'>During this scenario, keys represent the following:</p><ul><li>Đỏ: Một chiếc chìa khóa mạ vàng làm bằng san hô và được bao phủ bởi những chữ rune phát sáng kỳ lạ. Từ \"Y'ha-nthlei\" được khắc trên tay cầm.</li><li>Xanh biển: Một chiếc chìa khóa được chạm khắc hình mắt cá căng đầy.</li><li>Màu xanh lá cây: Một cục đá Peridot thô có kích thước bằng nắm tay, rung và phát một thứ ánh sáng không tự nhiên.</li><li>Vàng: Một vòng sắt nặng chứa đầy chìa khóa phòng giam.</li><li>Tím: Ấu trùng đã chết của một con cá dị dạng.</li><li>Đen: Bản đồ độ sâu bên dưới Rạn San Hô Quỷ.</li><li>Trắng: Kính viễn vọng bỏ túi.</li></ul></div>"
+      "body": "<div class='red bordered'><p class='basic'>Trong màn chơi này, các chìa khóa đại diện cho những điều sau:</p><ul><li>Đỏ: Một chiếc chìa khóa mạ vàng làm bằng san hô và được bao phủ bởi những chữ rune phát sáng kỳ lạ. Từ \"Y'ha-nthlei\" được khắc trên tay cầm.</li><li>Xanh biển: Một chiếc chìa khóa được chạm khắc hình mắt cá căng đầy.</li><li>Xanh lá: Một cụm đá peridot thô cỡ nắm tay, rung động và phát ra ánh sáng phi tự nhiên.</li><li>Vàng: Một vòng sắt nặng xâu đầy những chiếc chìa khóa phòng giam.</li><li>Tím: Ấu trùng đã chết của một con cá dị dạng.</li><li>Đen: Bản đồ về các tầng sâu bên dưới Rạn San Hô Quỷ (Devil Reef).</li><li>Trắng: Một chiếc kính viễn vọng bỏ túi.</li></ul></div>"
     }
   ],
   "intro": {
@@ -32,7 +32,7 @@
   },
   "flashback12": {
     "title": "Hồi tưởng XII",
-    "body": "<div class='blue'><h1>Flashback XII</h1><p>You peer up at Falcon Point lighthouse, but from much farther below. You are aboard Mr. Moore’s fishing vessel, during your voyage to Devil Reef several weeks earlier. The ship sways back and forth as angry waves thrash against its hull. “’Fraid it’s gon’ be a bit rocky,” the ship captain shouts over the crashing of the tumultuous sea. “Weather’s been awful wild of late. Strange tides an’ stranger winds.”</p><p>Nhưng bạn vẫn nhìn chằm chằm ngọn hải đăng đáng ngại, đèn hiệu của nó là đèn dẫn đường, dấu hiệu cảnh báo, hoặc cả hai. Tò mò về những điều mà ông ấy có lẽ biết, bạn hỏi ông Moore về ngọn hải đăng. \"Ngọn hải đăng cũ đó à? Đã ở đó lâu hơn cả thị trấn Innsmouth. Gia đình Marsh đã duy trì nó hoạt động từ khi tôi biết tới. Oceiros hiện là người trông giữ. Anh bạn kỳ lạ, Oceiros đó. Người ta nói nơi duy nhất trong thị trấn mà anh ta ghé thăm là sảnh đường của Dòng Dagon của New Church Green.\" Ông ấy lắc đầu.</p><p>You wonder if there are more secrets inside that lighthouse than meets the eye. Mr. Moore seems to note your curiosity. “I’ve heard them Marshes’ve carved out caverns beneath the lighthouse goin’ all the way down to sea level an’ beyond,” he claims. “Dunno if that’s true, but sometimes when I’m out ta sea I’ve seen groups of ‘em up by the cliffside, all wavin’ an’ kneelin’ like they’re prayin’ or something. Never really paid it much mind, but...” his voice grows quieter. “Jus’ thought you oughta know.”</p><p>Bạn gật đầu và cảm ơn ông ấy. Nếu những gì ông ấy nói là đúng thì có lẽ bạn nên ghé thăm ngọn hải đăng này. Bạn ghi nhớ để nghiên cứu thêm về Falcon Point một khi quay trở lại thị trấn.</p><p>Khi tâm trí bạn quay trở lại hiện tại, bạn nhớ lại công việc bạn đã làm sau chuyến thám hiểm tới Rạn San Hô Quỷ và thông tin bạn tìm thấy trên mạng lưới đường hầm rộng lớn bên dưới ngọn hải đăng…</p><hr /><p class='basic'>In your Campaign Log, under “Memories Recovered,” record *a conversation with Mr. Moore.*</p><p class='basic'>Chọn và loại bỏ một trong các token hỗn mang sau khỏi túi hỗn mang trong phần còn lại của chiến dịch ([cultist], [tablet] hoặc [elder_thing])</p><p class='basic'>The lead investigator gains 1 {'{'}perPlayer{'}'} clues from the token pool.</p></div>"
+    "body": "<div class='blue'><h1>Flashback XII</h1><p>Bạn ngước nhìn lên ngọn hải đăng Falcon Point, nhưng từ vị trí thấp hơn nhiều phía dưới. Bạn đang ở trên tàu đánh cá của ông Moore, trong chuyến hành trình tới Rạn San Hô Quỷ (Devil Reef) vài tuần trước đó. Con tàu lắc lư qua lại khi những con sóng giận dữ đánh vào thân tàu. “E rằng sẽ hơi chao đảo đấy,” thuyền trưởng hét lên giữa tiếng sóng biển gầm vang dữ dội. “Thời tiết dạo này thất thường ghê lắm. Thủy triều lạ và những cơn gió còn kỳ lạ hơn.”</p><p>Nhưng bạn vẫn nhìn chằm chằm vào ngọn hải đăng đáng ngại, đèn hiệu của nó là đèn dẫn đường, dấu hiệu cảnh báo, hoặc cả hai. Tò mò về những điều mà ông ấy có lẽ biết, bạn hỏi ông Moore về ngọn hải đăng. “Ngọn hải đăng cũ đó à? Đã ở đó lâu hơn cả thị trấn Innsmouth. Gia đình Marsh đã duy trì nó hoạt động từ khi tôi biết tới. Oceiros hiện là người trông giữ. Anh bạn kỳ lạ, Oceiros đó. Người ta nói nơi duy nhất trong thị trấn mà anh ta ghé thăm là sảnh đường của Dòng Dagon ở New Church Green.” Ông ấy lắc đầu.</p><p>Bạn tự hỏi liệu có nhiều bí mật bên trong ngọn hải đăng hơn những gì nhìn thấy được hay không. Ông Moore dường như nhận thấy sự tò mò của bạn. “Tôi nghe nói nhà Marsh đã đục các hang động bên dưới ngọn hải đăng kéo dài xuống tận mực nước biển và xa hơn nữa,” ông khẳng định. “Không biết có thật không, nhưng đôi khi ra khơi, tôi thấy từng nhóm người của họ ở trên vách đá, vẫy tay và quỳ lạy như thể họ đang cầu nguyện hay làm gì đó. Chưa bao giờ để tâm lắm, nhưng...” giọng ông trầm xuống. “Chỉ nghĩ bạn nên biết.”</p><p>Bạn gật đầu và cảm ơn ông ấy. Nếu những gì ông ấy nói là đúng thì có lẽ bạn nên ghé thăm ngọn hải đăng này. Bạn ghi nhớ để nghiên cứu thêm về Falcon Point một khi quay trở lại thị trấn.</p><p>Khi tâm trí bạn quay trở lại hiện tại, bạn nhớ lại công việc bạn đã làm sau chuyến thám hiểm tới Rạn San Hô Quỷ và thông tin bạn tìm thấy trên mạng lưới đường hầm rộng lớn bên dưới ngọn hải đăng…</p><hr /><p class='basic'>Trong Nhật ký Chiến dịch của bạn, dưới mục “Hồi phục Ký ức”, ghi lại rằng *cuộc trò chuyện với ông Moore.*</p><p class='basic'>Chọn và loại bỏ một trong các token hỗn mang sau khỏi túi hỗn mang trong phần còn lại của chiến dịch ({'{'}cultist{'}'}, {'{'}tablet{'}'}, hoặc {'{'}elderThing{'}'}).</p><p class='basic'>Điều tra viên trưởng nhận 1 {'{'}perPlayer{'}'} manh mối từ kho token.</p></div>"
   },
   "flashback13": {
     "title": "Hồi tưởng XIII",
@@ -58,35 +58,35 @@
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-1. If your location is flooded, reveal an additional chaos token.",
+      "skull": "-1. Nếu địa điểm của bạn bị ngập lụt, hãy rút thêm một token hỗn mang.",
       "cultist": "-2. Nếu bạn thất bại, after this test ends, increase the flood level of your location.",
       "tablet": "-3. If you fail this test and your location is flooded, chịu 1 damage.",
-      "elderThing": "-4. Nếu bạn thất bại, move the nearest ready unengaged enemy once toward your location. It loses aloof during this movement."
+      "elderThing": "-4. Nếu bạn thất bại, di chuyển kẻ địch ready, unengaged gần nhất 1 lần về phía địa điểm của bạn. Nó mất aloof trong lần di chuyển này."
     },
     "hardExpert": {
-      "skull": "-2. If your location is flooded, reveal an additional chaos token.",
-      "cultist": "-2. Nếu bạn thất bại, after this test ends, increase the flood level of your location (if you cannot, chịu 1 horror instead).",
+      "skull": "-2. Nếu địa điểm của bạn bị ngập lụt, hãy rút thêm một token hỗn mang.",
+      "cultist": "-2. Nếu bạn thất bại, sau khi bài kiểm tra này kết thúc, tăng mức độ ngập lụt tại địa điểm của bạn (nếu không thể, chịu 1 horror thay thế).",
       "tablet": "-3. If you fail this test and your location is flooded, chịu 2 damage.",
-      "elderThing": "-4. Move the nearest unengaged enemy once toward your location. It loses aloof during this movement."
+      "elderThing": "-4. Di chuyển kẻ địch unengaged gần nhất 1 lần về phía địa điểm của bạn. Nó mất aloof trong lần di chuyển này."
     }
   },
   "pumpRoom": {
     "label": {
-      "decreaseFlood": "Choose location to decrease flood level",
-      "increaseFlood": "Choose location to increase flood level"
+      "decreaseFlood": "Chọn địa điểm để giảm mức độ ngập lụt",
+      "increaseFlood": "Chọn địa điểm để tăng mức độ ngập lụt"
     }
   },
   "tooltips": {
     "theMoonRoom": {
-      "resign": "You don one of the the empty diving suits and dive into the reflecting pool"
+      "resign": "Bạn mặc một trong những bộ đồ lặn trống và lặn xuống hồ phản chiếu"
     },
     "falconPointGatehouse": {
-      "resign": "You head back into the woods, leaving the lighthouse and its mysteries behind."
+      "resign": "Bạn quay trở lại khu rừng, bỏ lại ngọn hải đăng và những bí ẩn của nó phía sau."
     }
   },
   "worshippersOfTheDeep": {
     "label": {
-      "moveBelow": "Move to the location directly below their location"
+      "moveBelow": "Di chuyển đến địa điểm ngay bên dưới địa điểm của họ"
     }
   }
 }

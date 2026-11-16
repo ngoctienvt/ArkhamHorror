@@ -3,58 +3,58 @@
   "specialRules": [
     {
       "title": "Tinh thần ở trong Địa hạt Carcosa",
-      "body": "<p class='basic'>Trong địa hạt bóp méo và điên cuồng của thành phố Carcosa, trở nên điên loạn là điều không thể tránh khỏi. Nhưng ngay cả khi tâm trí của bạn bị rạn nứt và tan vỡ, cuộc điều tra của bạn vẫn chưa kết thúc ở đây. Trong màn chơi này, các điều tra viên không bị hạ gục khi họ có nhiều chấn thương tinh thần hơn tinh thần của họ. Các điều tra viên có thể tiếp tục nhận thêm chấn thương tinh thần ngay cả khi nó vượt quá tinh thần của họ. Trong khi điều tra viên có nhiều chấn thương tinh thần hơn tinh thần của mình, thì giá trị “tinh thần còn lại” (remaining sanity) của họ được coi là 0.</p>"
+      "body": "<p class='basic'>Trong địa hạt bóp méo và điên cuồng của thành phố Carcosa, trở nên điên loạn là điều không thể tránh khỏi. Nhưng ngay cả khi tâm trí của bạn bị rạn nứt và tan vỡ, cuộc điều tra của bạn vẫn chưa kết thúc ở đây. Trong màn chơi này, các điều tra viên không bị hạ gục khi họ có nhiều sang chấn tinh thần hơn tinh thần của họ. Các điều tra viên có thể tiếp tục nhận thêm sang chấn tinh thần ngay cả khi nó vượt quá tinh thần của họ. Trong khi điều tra viên có nhiều sang chấn tinh thần hơn tinh thần của mình, thì giá trị “tinh thần còn lại” (remaining sanity) của họ được coi là 0.</p>"
     }
   ],
   "tokens": {
     "easyStandard": {
-      "skull": "-2 (-4 instead if you have no sanity remaining).",
+      "skull": "-2 (thay vào đó là -4 nếu bạn không còn điểm tỉnh táo nào).",
       "cultist": "Rút thêm một token khác. Nếu bạn thất bại, chịu 1 horror.",
-      "tablet": "-3. If you fail and Hastur is in play, place 1 clue on your location (from the token bank).",
-      "elderThing": "-3. If this token is revealed during an attack or evasion attempt against a _Monster_ or _Ancient One_ enemy, lose 1 action."
+      "tablet": "-3. Nếu bạn thất bại và Hastur đang trong màn chơi, đặt 1 manh mối lên địa điểm của bạn (từ ngân hàng token).",
+      "elderThing": "-3. Nếu token này được rút trong một lần tấn công hoặc né tránh nhắm vào kẻ địch _Monster_ hoặc _Ancient One_, mất 1 hành động."
     },
     "hardExpert": {
       "skull": "-X. X là số lượng horror trên người bạn.",
       "cultist": "Rút thêm một token khác. Nếu bạn thất bại, chịu 2 horror.",
-      "tablet": "-5. If you fail and Hastur is in play, place 1 clue on your location (from the token bank).",
-      "elderThing": "-5. If this token is revealed during an attack or evasion attempt against a _Monster_ or _Ancient One_ enemy, lose 1 action."
+      "tablet": "-5. Nếu bạn thất bại và Hastur đang trong màn chơi, đặt 1 manh mối lên địa điểm của bạn (từ ngân hàng token).",
+      "elderThing": "-5. Nếu token này được rút trong một lần tấn công hoặc né tránh nhắm vào kẻ địch _Monster_ hoặc _Ancient One_, mất 1 hành động."
     }
   },
   "label": {
     "madnessCoils": {
-      "takeHorror": "This can't be real. This can't be real. This can't be real. Each investigator takes 2 horror. Advance to agenda 2a.",
-      "faint": "The investigators faint and awaken some time later. Advance to agenda 2a and place 1 doom on it."
+      "takeHorror": "Chuyện này không thể là thật. Chuyện này không thể là thật. Chuyện này không thể là thật. Mỗi điều tra viên chịu 2 kinh hoàng. Advance sang agenda 2a.",
+      "faint": "Các điều tra viên ngất đi và tỉnh lại một lúc sau đó. Advance sang agenda 2a và đặt 1 doom lên nó."
     },
-    "useV2": "Use Search For the Stranger (v. II)",
-    "useV3": "Use Search For the Stranger (v. III)",
+    "useV2": "Sử dụng Tìm Kiếm Kẻ Lạ (bản II)",
+    "useV3": "Sử dụng Tìm Kiếm Kẻ Lạ (bản III)",
     "theFall": {
-      "cannot": "You cannot bring yourself to do what must be done.",
-      "push": "Realizing what you must do, you step forward and push her."
+      "cannot": "Bạn không thể tự ép mình làm điều phải làm.",
+      "push": "Nhận ra điều mình phải làm, bạn bước tới và đẩy cô ấy."
     },
     "aMomentsRest": {
-      "chooseEnemy": "Choose an enemy in play. Exhaust that enemy and disengage it from all investigators"
+      "chooseEnemy": "Chọn một kẻ địch trong màn chơi. Exhaust kẻ địch đó và disengage nó khỏi tất cả các điều tra viên"
     }
   },
   "remembered": {
-    "knowTheSecret": "You know the secret."
+    "knowTheSecret": "Bạn biết bí mật."
   },
   "intro": {
     "title": "Màn VIII: Carcosa Huyền Ảo",
     "readIntro1": "bạn đã mở con đường phía dưới.",
-    "readIntro2": "*If you opened the path above*, skip to _Intro 2_.",
+    "readIntro2": "*Nếu bạn đã mở con đường phía trên*, chuyển đến _Intro 2_.",
     "intro1": "<p>_Intro 1_: Bạn bơi đến mép nước và ném mình vào bờ đá, thở hổn hển. Bạn nằm đó một lúc, hoàn toàn kiệt sức. Mọi lớp cơ trên cơ thể bạn đều đau nhức. Trước mặt chỗ bạn nằm là một vùng đồng bằng hoang vắng. Ở phía xa, những ngọn tháp kỳ lạ của một thành phố cong vênh nhô lên trong mây. phía sau bạn, bề mặt tối của hồ nước nơi bạn thoát ra phản chiếu ánh sáng chói chang của hai mặt trời. Khi bạn nhìn lại vào vực sâu âm u, bạn không thấy dấu hiệu nào của nhà nguyện nơi bạn đã thực hiện cú nhảy, hoặc của Mont Saint-Michel, hoặc thậm chí của Trái Đất. Đây là Carcosa - địa hạt điên cuồng trong các vì sao, nơi Hastur tối cao ngự trị.</p><p class='basic right'>Skip to _Setup_.</p>",
     "intro2": "<p>_Intro 2_: Bạn đáp xuống một mảnh đá thủy tinh núi lửa (obsidian) đen uốn lượn tạo thành một tòa tháp hình chóp đen. Bạn ho ra máu và cảm thấy ruột gan đau nhói, như thể bị gãy xương sườn. Trước mặt chỗ bạn nằm là một thành phố xa lạ, cong vênh. Những con đường ngoằn ngoèo và kiến ​​trúc dị thường của nó trông không giống trật tự hay cấu trúc nào cả. Đằng xa, một hồ nước âm u phản chiếu ánh nắng chói chang của hai mặt trời. Khi bạn nhìn lên, tu viện Mont Saint-Michel lấp ló ngay dưới những đám mây, lộn ngược. Đây là thành phố Carcosa - địa hạt điên loạn trong các vì sao, nơi Hastur tối cao ngự trị.</p><p class='basic right'>Proceed to _Setup_.</p>"
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Dim Carcosa*, *Delusions*, *Cult of the Yellow Sign*, *Inhabitants of Carcosa*, *Agents of Hastur*, and *Striking Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/dim-carcosa.png' /><img src='{setImgPath}/delusions.png' /><img src='{setImgPath}/cult-of-the-yellow-sign.png' /><img src='{setImgPath}/inhabitants-of-carcosa.png' /><img src='{setImgPath}/agents-of-hastur.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
     "act2": {
-      "instructions": "Check Campaign Log. Depending on the following circumstances, a different version of Act 2 should be used in this scenario. Each other version of Act 2 is removed from the game.",
+      "instructions": "Kiểm tra Nhật ký Chiến dịch. Tùy thuộc vào các trường hợp sau, một phiên bản Act 2 khác nhau sẽ được sử dụng trong màn chơi này. Mỗi phiên bản Act 2 còn lại sẽ bị loại bỏ khỏi trò chơi.",
       "v1": "Sự nghi ngờ",
       "v2": "Nếu bạn có tổng cộng 6 hoặc nhiều hơn Doubt và Conviction, và bạn có nhiều _Doubt_ hơn _Conviction_, dùng Act 2—Search For the Stranger (v. II)",
       "v3": "Nếu bạn có tổng cộng 6 hoặc nhiều hơn Doubt và Conviction, và bạn có nhiều _Conviction_ hơn _Doubt_, dùng Act 2—Search For the Stranger (v. III)",
       "choose": "Nếu bạn có tổng cộng 6 hoặc nhiều hơn _Doubt_ và _Conviction_, và _Doubt_ bằng đúng _Conviction_, bạn có thể chọn dùng Act 2—Search For the Stranger (v. II) hoặc Act 2—Search For the Stranger (v. III)"
     },
-    "chooseLocations": "Randomly put 1 copy of Bleak Plains, 1 copy of Dim Streets, 1 copy of Ruins of Carcosa, and 1 copy of Depths of Demhe into play. (See next page for suggested location placement.) Set each other copy of Bleak Plains, Dim Streets, Ruins of Carcosa and Depths of Demhe aside, out of play.",
+    "chooseLocations": "Đưa ngẫu nhiên 1 bản sao của Bleak Plains, 1 bản sao của Dim Streets, 1 bản sao của Ruins of Carcosa, và 1 bản sao của Depths of Demhe vào màn chơi. (Xem trang tiếp theo để biết vị trí gợi ý.) Đặt mỗi bản sao còn lại của Bleak Plains, Dim Streets, Ruins of Carcosa và Depths of Demhe sang một bên, ngoài màn chơi.",
     "placeLocations": {
       "instructions": "Đặt Shores of Hali, Dark Spires, và Palace of the King vào khu vực chơi.",
       "startAtShoresOfHali": "Kiểm tra Campaign Log. *Nếu bạn đã mở con đường bên dưới*, mỗi điều tra viên bắt đầu ở Shores of Hali.",
@@ -66,15 +66,15 @@
       "instructions": "Đuổi theo Kẻ lạ",
       "twoOrFewer": "Thêm 3 doom vào agenda 1a.",
       "threeToFive": "Thêm 2 doom vào agenda 1a.",
-      "sixToEight": "If there are between 6-8 tally marks, add 1 doom to agenda 1a.",
-      "nineOrMore": "If there are 9 or more tally marks, no change is made."
+      "sixToEight": "Nếu có từ 6-8 dấu kiểm đếm, thêm 1 doom vào agenda 1a.",
+      "nineOrMore": "Nếu có từ 9 dấu kiểm đếm trở lên, không có thay đổi nào."
     },
-    "takeHorror": "Mỗi điều tra viên nhận chấn thương tinh thần trực tiếp tương ứng nửa số tinh thần của mình, làm tròn xuống (*không thể bị ngăn chặn*). Chấn thương tinh thần này không thể làm bạn bị hạ gục (xem phần \"Tinh thần ở trong Địa hạt Carcosa\" bên dưới).",
+    "takeHorror": "Mỗi điều tra viên nhận sang chấn tinh thần trực tiếp tương ứng nửa số tinh thần của mình, làm tròn xuống (*không thể bị ngăn chặn*). Sang chấn tinh thần này không thể làm bạn bị hạ gục (xem phần \"Tinh thần ở trong Địa hạt Carcosa\" bên dưới).",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to Dim Carcosa*, *Maddening Delusions*, *Hastur’s Envoys*, and *Neurotic Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-dim-carcosa.png' /><img src='{setImgPath}/maddening-delusions.png' /><img src='{setImgPath}/hasturs-envoys.png' /><img src='{setImgPath}/neurotic-fear.png' /></section>*Maddening Delusions* replaces *Delusions*, *Hastur’s Envoys* replaces *Agents of Hastur*, and *Neurotic Fear* replaces *Striking Fear*. Remove the replaced sets from the game.",
       "placeLocations": "Loại bỏ vị trí Palace of the King gốc khỏi game và thay bằng Palace of the King mới (*Hastur’s Domain*). Tiếp tục phần chuẩn bị vị trí như bình thường.",
-      "setAside": "Also set the following new locations aside, out of play: Recesses of Your Own Mind, The Throne Room, and Stage of the Ward Theatre.",
-      "additionalRule": "For the duration of this scenario, the following additional rule applies: Hastur’s health cannot be reduced to less than 2 per investigator unless any investigator _knows the secret_."
+      "setAside": "Đồng thời đặt các địa điểm mới sau sang một bên, ngoài màn chơi: Recesses of Your Own Mind, The Throne Room, và Stage of the Ward Theatre.",
+      "additionalRule": "Trong suốt thời gian của màn chơi này, quy tắc bổ sung sau được áp dụng: Máu của Hastur không thể bị giảm xuống dưới 2 cho mỗi điều tra viên trừ khi có bất kỳ điều tra viên nào _biết bí mật_."
     }
   },
   "resolutions": {
@@ -83,8 +83,8 @@
       "truth": "Mỗi điều tra viên nhận thêm 5 điểm kinh nghiệm thưởng, do họ đã khám phá được sự thật đằng sau vở kịch <u>Vị Vua Áo Vàng</u>."
     },
     "noResolution": {
-      "title": "No Resolution",
-      "body": "_If no resolution was reached (each investigator was defeated)_: Check Campaign Log.",
+      "title": "Không Có Resolution",
+      "body": "_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Kiểm tra Nhật ký Chiến dịch.",
       "goToResolution4": "Sự nghi ngờ",
       "goToResolution5": "Sự nghi ngờ"
     },
@@ -102,11 +102,11 @@
     },
     "resolution4": {
       "title": "Kết thúc thứ 4",
-      "body": "<div class='resolution'><p>_Resolution 4_: Khi bạn thức dậy, bạn đang ngồi trong điện với lối kiến trúc gothic của tu viện Mont Saint-Michel. Không có mưa trút xuống tấm kính của các cửa sổ phía trên, và bạn không nghe thấy sấm sét, cũng không có tiếng rít kinh hoàng có cánh trên đầu. Bằng cách nào đó, bạn đã thoát khỏi sự diệt vong chắc chắn của hòn đảo. Bạn rón rén đến cửa tu viện và mở nó ra với vẻ run sợ. Một ánh sáng chói lóa đôi mắt bạn, và bạn nhấc tay lên để chặn ánh sáng chói lóa của hai mặt trời. Bạn đứng nhìn ra hồ Hali. Các ngôi sao đen treo trên bầu trời phía trên bạn. Xa hơn nữa, phía trên những làn mây sóng bồng bềnh vỗ, những ngọn tháp của thành phố Carcosa nhô lên đằng sau ánh trăng đang tiêu tan.</p><ul><li>Bạn đã gặp phải một số mạng tồi tệ, phải không?</li><li>địa hạt của thành phố Carcosa hợp nhất với thế giới chúng ta, và Hastur cai trị cả hai.</li><li>Each investigator is driven _insane_.</li><li>The investigators lose the campaign.</li></ul></div>"
+      "body": "<div class='resolution'><p>_Resolution 4_: Khi bạn thức giấc, bạn đang ngồi trong gian hợp xướng gothic của tu viện Mont Saint-Michel. Không còn hạt mưa nào đập vào kính cửa sổ phía trên, và bạn không nghe thấy tiếng sấm sét nào, cũng không còn tiếng rít của những nỗi kinh hoàng có cánh trên đầu. Bằng cách nào đó, bạn đã thoát khỏi số phận diệt vong chắc chắn của hòn đảo. Bạn rón rén bước đến cửa tu viện và mở nó ra với nỗi lo sợ thắt lòng. Một luồng ánh sáng chói lòa thiêu đốt mắt bạn, và bạn giơ tay lên để che đi ánh lóa của hai mặt trời. Bạn đứng nhìn ra Hồ Hali. Những ngôi sao đen treo lơ lửng trên bầu trời phía trên. Phía xa xăm, vượt qua hàng dặm sóng mây cuồn cuộn, những tòa tháp của Carcosa vươn lên phía sau vầng trăng vỡ vụn.</p><ul><li>Bạn đã gặp phải một số phận khủng khiếp, phải không?</li><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *địa hạt của Carcosa đã hợp nhất với thế giới của chúng ta, và Hastur cai trị cả hai*.</li><li>Mỗi điều tra viên trở nên _phát điên_ (insane).</li><li>Các điều tra viên thua chiến dịch.</li></ul></div>"
     },
     "resolution5": {
       "title": "Giải pháp thứ 5",
-      "body": "<div class='resolution'><p>_Resolution 5_: Thế giới bên ngoài sẽ không bao giờ biết bạn đã cố gắng cứu họ đến dường nào. Họ đối xử với bạn bằng sự thương hại, khinh bỉ và coi thường, nhưng bạn biết sự thật. Họ cam chịu số phận ghê tởm của họ, nhưng bạn vẫn cố gắng ngày này qua ngày khác để mang lại cho họ thông điệp của bạn. Bạn phải cảnh báo họ về vở kịch Vị Vua Áo Vàng, về Hastur và về thành phố Carcosa. Họ nói, “Lại một kẻ mất trí, nhưng họ không thể hiểu được những gì bạn đã trải qua trong nỗ lực cứu họ. Bạn cảnh báo họ rằng ông ta sẽ đến để giết họ, nhưng họ không bao giờ tin bạn. Bạn viết về Aldebaran và những ngôi sao đen trên tường phòng giam của bạn, nhưng những dòng chữ trở nên mờ nhạt dần theo năm tháng. Lời cảnh báo của bạn không bao giờ được chú ý đến.</p><ul><li>Ngươi không thật sự nghĩ rằng mình có thể trốn thoát, phải không?</li><li>Hastur bắt giữ được bạn trong tầm tay của hắn.</li><li>Each investigator is driven _insane_.</li><li>The investigators lose the campaign.</li></ul></div>"
+      "body": "<div class='resolution'><p>_Resolution 5_: Thế giới bên ngoài sẽ không bao giờ biết bạn đã cố gắng cứu họ đến dường nào. Họ đối xử với bạn bằng sự thương hại, khinh bỉ và coi thường, nhưng bạn biết sự thật. Họ cam chịu số phận ghê tởm của họ, nhưng bạn vẫn cố gắng ngày này qua ngày khác để mang lại cho họ thông điệp của bạn. Bạn phải cảnh báo họ về vở kịch Vị Vua Áo Vàng, về Hastur và về Carcosa. “Lại một linh hồn lạc lối khác,” họ nói, nhưng họ không thể nào hiểu được những gì bạn đã trải qua trong nỗ lực cứu lấy họ. Bạn cảnh báo họ rằng hắn ta đang đến để bắt lấy họ, nhưng họ không bao giờ tin bạn. Bạn viết về Aldebaran và những ngôi sao đen trên tường phòng giam của mình, nhưng những dòng chữ trở nên mờ nhạt dần theo năm tháng. Lời cảnh báo của bạn không bao giờ được đoái hoài đến.</p><ul><li>Bạn không thực sự nghĩ rằng mình có thể trốn thoát, phải không?</li><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *bạn đã nằm trong nanh vuốt của Hastur* (*Hastur has you in his grasp*).</li><li>Mỗi điều tra viên trở nên _phát điên_ (insane).</li><li>Các điều tra viên thua chiến dịch.</li></ul></div>"
     }
   }
 }

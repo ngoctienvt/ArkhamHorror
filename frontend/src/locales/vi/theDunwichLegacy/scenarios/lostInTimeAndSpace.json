@@ -2,16 +2,16 @@
   "heading": "Màn VII",
   "tokens": {
     "easyStandard": {
-      "skull": "-1 for each _Extradimensional_ location in play (max -5).",
-      "cultist": "Rút thêm một token khác. Nếu bạn thất bại, after this skill test, discard cards from the top of the encounter deck until a location is discarded. Put that location into play and move there.",
-      "tablet": "-3. If Yog-Sothoth is in play, it attacks you after this skill test.",
-      "elderThing": "-X. X là chỉ số shroud của địa điểm bạn đang ở. If you fail and your location is _Extradimensional_, discard it."
+      "skull": "-1 cho mỗi địa điểm _Extradimensional_ trong màn chơi (tối đa -5).",
+      "cultist": "Rút thêm một token khác. Nếu bạn thất bại, sau bài kiểm tra kỹ năng này, bỏ các lá bài từ đỉnh chồng bài encounter cho đến khi một địa điểm bị bỏ. Đặt địa điểm đó vào chơi và di chuyển tới đó.",
+      "tablet": "-3. Nếu Yog-Sothoth đang ở trong màn chơi, nó sẽ tấn công bạn sau bài kiểm tra kỹ năng này.",
+      "elderThing": "-X. X là chỉ số shroud của địa điểm bạn đang ở. Nếu bạn thất bại và địa điểm của bạn là _Extradimensional_, hãy bỏ nó."
     },
     "hardExpert": {
-      "skull": "-1 for each _Extradimensional_ location in play.",
-      "cultist": "Rút thêm một token khác. After this skill test, discard cards from the top of the encounter deck until a location is discarded. Put that location into play and move there.",
-      "tablet": "-5. If Yog-Sothoth is in play, it attacks you after this skill test.",
-      "elderThing": "-X. X is twice the shroud value of your location. If you fail and your location is _Extradimensional_, discard it."
+      "skull": "-1 cho mỗi địa điểm _Extradimensional_ trong màn chơi.",
+      "cultist": "Rút thêm một token khác. Sau bài kiểm tra kỹ năng này, bỏ các lá bài từ đỉnh chồng bài encounter cho đến khi một địa điểm bị bỏ. Đặt địa điểm đó vào chơi và di chuyển tới đó.",
+      "tablet": "-5. Nếu Yog-Sothoth đang ở trong màn chơi, nó sẽ tấn công bạn sau bài kiểm tra kỹ năng này.",
+      "elderThing": "-X. X gấp đôi chỉ số shroud của địa điểm bạn đang ở. Nếu bạn thất bại và địa điểm của bạn là _Extradimensional_, hãy bỏ nó."
     }
   },
   "intro": {
@@ -24,9 +24,9 @@
     "setAside": "Đặt các lá bài sau sang một bên, ngoài màn chơi: The Edge of the Universe, Tear Through Time, và Yog‐Sothoth.",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to Lost in Time and Space*, *Beyond the Threshold*, and *Yog-Sothoth’s Emissaries*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-lost-in-time-and-space.png' /><img src='{setImgPath}/beyond-the-threshold.png' /><img src='{setImgPath}/yog-sothoths-emissaries.png' /></section>*Beyond the Threshold* replaces *The Beyond* and *Yog-Sothoth’s Emissaries* replaces *Agents of Yog-Sothoth*. Remove the replaced sets from the game.",
-      "placeLocations": "Also put the single-sided Realms Beyond location into play and spawn Yog-Sothoth there.",
-      "setAside": "Also set Seth Bishop (*Thrall of Yog-Sothoth*) aside, out of play.",
-      "actAndAgenda": "Replace Agenda 3a—*Breaking Through* with the new Agenda 3a—*Breaking Through (v. II)*. Check Campaign Log: if *the ritual was completed*, also replace Act 2a—*Into the Beyond* with the new Act 2a—*Into the Beyond (v. II)*."
+      "placeLocations": "Đồng thời đặt địa điểm một mặt Realms Beyond vào chơi và spawn Yog-Sothoth tại đó.",
+      "setAside": "Đồng thời đặt Seth Bishop (*Thrall of Yog-Sothoth*) sang một bên, ngoài màn chơi.",
+      "actAndAgenda": "Thay thế Agenda 3a—*Breaking Through* bằng Agenda 3a—*Breaking Through (v. II)* mới. Kiểm tra Nhật ký Chiến dịch: nếu *nghi lễ đã hoàn tất*, cũng thay thế Act 2a—*Into the Beyond* bằng Act 2a—*Into the Beyond (v. II)* mới."
     }
   },
   "locationsInTheEncounterDeck": {
@@ -40,10 +40,10 @@
     }
   ],
   "resolutions": {
-    "defeated": "<div class='resolution'><p class='basic'>_Before resolving any other resolution, if at least 1 investigator was defeated_: The defeated investigators read _Investigator Defeat_ first.</p><p>_Investigator Defeat_: Where did you come from? Why are you here? Are you dreaming, or is this place real? Now that you think about it, haven’t you been here before? Or perhaps you’ve been here all along. Now you remember. This is your real home. The path you now walk is but one ledge, with many more below. You only have to fall and you will be where you belong. One more step…</p><ul><li>Mỗi điều tra viên bị hạ gục bị <b>giết chết</b>.</li><li>If another resolution was reached, the other investigators read that resolution.</li><li>If no resolution was reached (each investigator was defeated) and the investigators were at Act 4 when the scenario ended, go to _Resolution 2_.</li><li>If no resolution was reached (each investigator was defeated) and the investigators were at Act 1, 2, or 3 when the scenario ended, go to _Resolution 4_.</li></ul></div>",
+    "defeated": "<div class='resolution'><p class='basic'>_Trước khi giải quyết bất kỳ resolution nào khác, nếu có ít nhất 1 điều tra viên bị đánh bại_: Các điều tra viên bị đánh bại đọc _Investigator Defeat_ trước.</p><p>_Investigator Defeat_: Bạn đến từ đâu? Tại sao bạn lại ở đây? Bạn đang mơ, hay nơi này là thật? Giờ nghĩ lại, chẳng phải bạn đã từng ở đây trước đây sao? Hay có lẽ bạn đã ở đây suốt bấy lâu nay. Bây giờ bạn nhớ ra rồi. Đây mới là ngôi nhà thực sự của bạn. Con đường bạn đang bước đi chỉ là một gờ đá, với muôn vàn gờ đá khác bên dưới. Bạn chỉ cần ngã xuống và bạn sẽ đến nơi mình thuộc về. Thêm một bước nữa thôi…</p><ul><li>Mỗi điều tra viên bị đánh bại bị _giết_.</li><li>Nếu đạt được một resolution khác, các điều tra viên còn lại đọc resolution đó.</li><li>Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại) và các điều tra viên đang ở Act 4 khi kịch bản kết thúc, chuyển tới _Resolution 2_.</li><li>Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại) và các điều tra viên đang ở Act 1, 2, hoặc 3 khi kịch bản kết thúc, chuyển tới _Resolution 4_.</li></ul></div>",
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<div class='resolution'><p>_Resolution 1_: Nằm ngửa trên bãi cỏ ướt, bạn thấy mình đang nhìn một cách đầy khao khát lên bầu trời đêm. Bằng cách nào đó, bạn lại đang ở trên đỉnh đồi Sentinel, không thể nhớ chính xác bằng cách nào bạn về lại đây. Bạn bị mê hoặc bởi bầu trời đêm. Từng giây trở thành phút, và từng phút trở thành giờ. Cuối cùng, bạn được tìm thấy và đỡ dậy bởi một nhóm dân làng Dunwich. Họ hỏi bạn, sợ hãi nhưng cũng tò mò, \"Chuyện gì đã xảy ra thế? Cậu đang làm gì ở đây?\" Bạn dường như không thể tìm thấy từ thích hợp để mô tả các sự kiện xảy ra bên ngoài cánh cổng… nếu chúng thực sự từng xảy ra. Dường như không có bất kỳ dấu vết nào của Seth Bishop, của những sinh vật bạn đã chiến đấu trước đó, hoặc của cánh cổng thế giới khác đầy huyền ảo. Nhưng mỗi khi bạn ngủ, bạn lại mơ - và khi bạn mơ, tất cả lại ùa về.</p><ul><li>In your Campaign Log, record that *the investigators closed the tear in reality*.</li><li>Mỗi điều tra viên nhận 2 sang chấn tinh thần và 2 chấn thương thể chất, bởi vì họ sẽ không bao giờ hoàn toàn hồi phục sau khoảng thời gian ở bên ngoài thực tại.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Các điều tra viên thành công!</li></ul></div>"
+      "body": "<div class='resolution'><p>_Resolution 1_: Nằm ngửa trên bãi cỏ ướt, bạn thấy mình đang nhìn một cách đầy khao khát lên bầu trời đêm. Bằng cách nào đó, bạn lại đang ở trên đỉnh đồi Sentinel, không thể nhớ chính xác bằng cách nào bạn về lại đây. Bạn bị mê hoặc bởi bầu trời đêm. Từng giây trở thành phút, và từng phút trở thành giờ. Cuối cùng, bạn được tìm thấy và đỡ dậy bởi một nhóm dân làng Dunwich. Họ hỏi bạn, sợ hãi nhưng cũng tò mò, \"Chuyện gì đã xảy ra thế? Cậu đang làm gì ở đây?\" Bạn dường như không thể tìm thấy từ thích hợp để mô tả các sự kiện xảy ra bên ngoài cánh cổng… nếu chúng thực sự từng xảy ra. Dường như không có bất kỳ dấu vết nào của Seth Bishop, của những sinh vật bạn đã chiến đấu trước đó, hoặc của cánh cổng thế giới khác đầy huyền ảo. Nhưng mỗi khi bạn ngủ, bạn lại mơ - và khi bạn mơ, tất cả lại ùa về.</p><ul><li>In your Campaign Log, record that *the investigators closed the tear in reality*.</li><li>Mỗi điều tra viên nhận 2 sang chấn tinh thần và 2 sang chấn thể chất, bởi vì họ sẽ không bao giờ hoàn toàn hồi phục sau khoảng thời gian ở bên ngoài thực tại.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Các điều tra viên thành công!</li></ul></div>"
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
@@ -58,42 +58,42 @@
       "body": "<div class='resolution'><p>_Resolution 4_: Các phù thủy đến từ làng Dunwich, tìm kiếm sức mạnh bí ẩn nằm ngoài địa hạt này, đã hoàn thành điều mà Wilbur và Old Whateley không thể. Thông qua việc hiến tế máu và những thí nghiệm không sao diễn tả được, sức mạnh hắc ám mà các phù thủy tìm kiếm giờ đã nằm trong tầm tay của họ. Tuy nhiên, họ sẽ không bao giờ có cơ hội thực sự sử dụng sức mạnh này. Khi cầu khẩn tổ tiên của Wilbur để được kiến thức, họ đã kéo sinh vật ra khỏi chiều không gian bậc cao của nó. Yog-Sothoth xuất hiện từ khe hở phía trên Đồi Sentinel, xóa mờ bầu trời và bao trùm thế giới. Bây giờ nó đã đến Trái đất, và nó sẽ cai trị nơi mà nhân loại từng là chủ nhân.</p><ul><li>Yog-Sothoth đã xé bỏ rào cản giữa các thế giới và trở thành một với tất cả thực tại.</li><li>Mỗi điều tra viên còn sống trở nên <b>điên loạn</b>.</li><li>Các điều tra viên thất bại.</li></ul></div>"
     },
     "xp": {
-      "bonus": "Saved the world from being torn apart"
+      "bonus": "Cứu thế giới khỏi bị xé toạc"
     }
   },
   "tooltips": {
     "tearThroughTime": {
-      "resign": "You find a new path and hope that it leads back to safety."
+      "resign": "Bạn tìm thấy một con đường mới và hy vọng nó sẽ dẫn trở lại nơi an toàn."
     }
   },
   "label": {
-    "yogSothoth": "Discard the top {cards} cards and take {horror} horror",
+    "yogSothoth": "Bỏ {cards} lá bài trên cùng và nhận {horror} horror",
     "tearThroughSpace": {
-      "placeDoom": "Place 1 doom on Tear through Space",
-      "discard": "Discard Tear through Space"
+      "placeDoom": "Đặt 1 doom lên Tear through Space",
+      "discard": "Bỏ Tear through Space"
     },
     "endlessBridge": {
-      "placeDoom": "Place 1 doom on Endless Bridge",
-      "discard": "Discard Endless Bridge"
+      "placeDoom": "Đặt 1 doom lên Endless Bridge",
+      "discard": "Bỏ Endless Bridge"
     },
     "sethBishop": {
-      "move": "Move to Another Dimension after this attack",
-      "damage": "Seth Bishop deals +2 damage for this attack"
+      "move": "Di chuyển tới Another Dimension sau đòn tấn công này",
+      "damage": "Seth Bishop gây thêm +2 sát thương cho đòn tấn công này"
     },
     "indecipherableStairs": {
-      "discard": "Discard Indecipherable Stairs"
+      "discard": "Bỏ Indecipherable Stairs"
     },
     "toweringLuminosity": {
-      "doom": "Place 1 doom on Towering Luminosity",
-      "flipClue": "Flip 1 clue on Towering Luminosity to its doom side",
-      "discard": "Discard Towering Luminosity"
+      "doom": "Đặt 1 doom lên Towering Luminosity",
+      "flipClue": "Lật 1 manh mối trên Towering Luminosity sang mặt doom của nó",
+      "discard": "Bỏ Towering Luminosity"
     },
     "unstableVortex": {
-      "chooseTearThroughSpace": "Choose tear through space to discard",
-      "shuffle": "Shuffle Unstable Vortex into the encounter deck"
+      "chooseTearThroughSpace": "Chọn Tear through Space để bỏ",
+      "shuffle": "Xào Unstable Vortex vào chồng bài encounter"
     },
     "dimensionalDoorway": {
-      "shuffle": "Shuffle Dimensional Doorway into the encounter deck"
+      "shuffle": "Xào Dimensional Doorway vào chồng bài encounter"
     }
   }
 }

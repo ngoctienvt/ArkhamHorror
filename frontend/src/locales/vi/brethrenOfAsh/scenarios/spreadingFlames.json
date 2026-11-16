@@ -4,7 +4,7 @@
     "entries": [
       {
         "title": "Doomed",
-        "body": "<p>Doomed là một khả năng keyword.\r\nKhi một kẻ địch có keyword Doomed bị đánh bại (bởi một điều tra viên hoặc một hiệu ứng scenario), đặt 1 doom lên agenda hiện tại. Hiệu ứng này có thể khiến agenda hiện tại advance.</p><ul><li>Một hiệu ứng \"discard\" một kẻ địch không được coi là defeat kẻ địch đó và không kích hoạt keyword Doomed.</li></ul>"
+        "body": "<p>Doomed là một khả năng từ khóa. Khi một kẻ địch có từ khóa doomed bị đánh bại (bởi một điều tra viên hoặc một hiệu ứng kịch bản), hãy đặt 1 doom lên agenda hiện tại. Hiệu ứng này có thể khiến agenda hiện tại advance.</p><ul><li>Một hiệu ứng “bỏ” một kẻ địch không được coi là đánh bại kẻ địch đó và không kích hoạt từ khóa doomed.</li></ul>"
       },
       {
         "title": "Hunter",
@@ -30,27 +30,27 @@
   },
   "tokens": {
     "hardExpert": {
-      "skull": "-X. X is the current act number + 1.",
+      "skull": "-X. X là số thứ tự act hiện tại + 1.",
       "tablet": "-2. Rút thêm một token khác. Nếu bạn thất bại, chịu 1 damage.",
-      "elderThing": "-4. Nếu bạn thất bại, if able, draw the top card of the encounter discard pile with the title Fire!."
+      "elderThing": "-4. Nếu bạn thất bại, nếu có thể, hãy rút lá bài trên cùng có tiêu đề Fire! trong chồng bài encounter bỏ."
     },
     "easyStandard": {
-      "skull": "-X. X is the current act number.",
+      "skull": "-X. X là số thứ tự act hiện tại.",
       "tablet": "-1. Rút thêm một token khác. Nếu bạn thất bại, chịu 1 damage.",
-      "elderThing": "-3. If you fail by 2 or more, if able, draw the top card of the encounter discard pile with the title Fire!."
+      "elderThing": "-3. Nếu bạn thất bại từ 2 điểm trở lên, nếu có thể, hãy rút lá bài trên cùng có tiêu đề Fire! trong chồng bài encounter bỏ."
     }
   },
   "label": {
     "searchingForDrArmitage": {
-      "drawFromDiscard": "Only search discard",
-      "drawFromBoth": "Search encounter deck and discard"
+      "drawFromDiscard": "Chỉ tìm trong chồng bài bỏ",
+      "drawFromBoth": "Tìm trong chồng bài encounter và chồng bài bỏ"
     }
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: <section class='encounter-sets grid'><div><img src='{setImgPath}/spreading-flames.png' /><span>Spreading Flames</span></div><div><img src='{setImgPath}/ashen-pilgrims.png' /><span>Ashen Pilgrims</span></div><div><img src='{setImgPath}/bystanders.png' /><span>Bystanders</span></div><div><img src='{setImgPath}/cosmic-evils.png' /><span>Cosmic Evils</span></div><div><img src='{setImgPath}/eldritch-lore.png' /><span>Eldritch Lore</span></div><div><img src='{setImgPath}/fire.png' /><span>Fire!</span></div><div><img src='{setImgPath}/hallucinations.png' /><span>Hallucinations</span></div><div><img src='{setImgPath}/mad-science.png' /><span>Mad Science</span></div><div><img src='{setImgPath}/miskatonic-university.png' /><span>Miskatonic University</span></div></section>",
     "placeLocations": "Đưa lá bài địa điểm Your Friend's Room vào khu vực chơi. Để riêng các địa điểm khác sang một bên, out of play.",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Your Friend's Room.",
-    "setOutOfPlay": "Set all 5 copies of the Fire! treachery, the Dr. Henry Armitage story asset, and the Servant of Flame enemy aside, out of play."
+    "setOutOfPlay": "Đặt cả 5 bản sao của treachery Fire!, story asset Dr. Henry Armitage, và kẻ địch Servant of Flame sang một bên, ngoài màn chơi."
   },
   "intro": {
     "title": "Kịch bản I: Spreading Flames",
@@ -58,11 +58,11 @@
   },
   "resolutions": {
     "label": {
-      "r2": "Stay and fight the fire! (→ Resolution 2)",
-      "r3": "There's no time. We have to go. (→ Resolution 3)"
+      "r2": "Ở lại và dập tắt đám cháy! (→ Resolution 2)",
+      "r3": "Không còn thời gian nữa. Chúng ta phải đi thôi. (→ Resolution 3)"
     },
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không có Resolution",
       "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Bạn tỉnh dậy ở rìa khuôn viên trường, đôi mắt cay xè vì khói, và lặng người sững sờ nhìn Miskatonic University bốc cháy. Những tàn lửa nhảy múa trên bầu trời phía trên đám cháy lớn như những vì sao rực lửa. Quá kiệt sức để giúp đỡ, bạn nhìn một nhóm sinh viên vật lộn trong vô vọng để ngăn chặn ngọn lửa. Đầu tiên là đài quan sát, sau đó là ký túc xá, và cuối cùng là tòa nhà khoa học bị ngọn lửa thiêu rụi. Giữa sự hỗn loạn, bạn tìm thấy Dr. Henry Armitage đang đứng dưới một gốc cây bạch dương, nhìn Orne Library bốc cháy. Ngọn lửa liếm sạch bộ khung của tòa nhà tráng lệ, để lại một đống đổ nát trơ trọi. Vị thủ thư trưởng rõ ràng đang bị sốc. Khuôn mặt ông tái mét khi bạn giải thích những tình tiết kỳ lạ xoay quanh sự biến mất của người bạn mình. Kẻ thù rực lửa kia là ai? Và những kẻ trùm đầu tuần tra quanh khuôn viên trường muốn gì?</p><ul><li>In your campaign log, record that <b>Miskatonic University burned</b>.</li><li>Mỗi điều tra viên chịu 1 mental trauma, vì họ bị dằn vặt bởi cảm giác tội lỗi khi để trường đại học bị thiêu rụi.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul>"
     },
     "resolution1": {
@@ -78,8 +78,8 @@
       "body": "<p>_Resolution 3_: Bạn bỏ chạy khỏi khuôn viên trường cùng Dr. Armitage, phó mặc ngôi trường cho số phận. Tiếng còi hụ lấn át mọi âm thanh khác khi bạn đi theo vị thủ thư trưởng đến căn hộ của ông.</p><ul><li>In your campaign log, record that *Miskatonic University burned*.</li><li>Mỗi điều tra viên chịu 1 mental trauma, vì họ bị dằn vặt bởi cảm giác tội lỗi khi để trường đại học bị thiêu rụi.</li><li>Proceed to _Scenario II: Smoke and Mirrors_.</li></ul>"
     },
     "xp": {
-      "resolution2": "for fighting the fires",
-      "bonus": "as they reflect on the events of the night"
+      "resolution2": "vì đã dập lửa",
+      "bonus": "khi họ suy ngẫm về những sự kiện trong đêm"
     }
   }
 }

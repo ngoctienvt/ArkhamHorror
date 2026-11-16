@@ -2,77 +2,77 @@
   "heading": "Màn IV",
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is 1 higher than the number of copies of Unfinished Business in the victory display.",
-      "cultist": "-3. Until the end of the round, each Heretic enemy in play gets +1 fight and +1 evade.",
+      "skull": "-X. X lớn hơn 1 so với số bản sao của Unfinished Business trong khu vực trưng bày thành tích.",
+      "cultist": "-3. Cho đến cuối vòng chơi, mỗi kẻ địch Heretic trong màn chơi nhận +1 fight và +1 evade.",
       "tablet": "-3. Nếu bạn thất bại, trigger the forced ability on a copy of Unfinished Business in yout threat area as if it were the end of the round.",
-      "elderThing": "-2. If you fail and this is an attack or evasion attempt, resolve each haunted ability on your location."
+      "elderThing": "-2. Nếu bạn thất bại và đây là một nỗ lực tấn công hoặc evade, giải quyết mỗi khả năng haunted tại địa điểm của bạn."
     },
     "hardExpert": {
       "skull": "-X. X is the number of copies of Unfinished Business in the victory display. Rút thêm một token khác.",
-      "cultist": "-4. Until the end of the round, each Heretic enemy in play gets +1 fight and +1 evade.",
+      "cultist": "-4. Cho đến cuối vòng chơi, mỗi kẻ địch Heretic trong màn chơi nhận +1 fight và +1 evade.",
       "tablet": "-4. Nếu bạn thất bại, trigger the forced ability on a copy of Unfinished Business in your threat area as if it were the end of the round.",
-      "elderThing": "-2. If this is an attack or evasion attempt, resolve each haunted ability on your location."
+      "elderThing": "-2. Nếu đây là một nỗ lực tấn công hoặc evade, giải quyết mỗi khả năng haunted tại địa điểm của bạn."
     }
   },
   "messages": {
-    "understandTheTragicLyrics": "\"You understand the tragic lyrics behind the witch's song\"",
-    "banished": "{card} is \"banished\""
+    "understandTheTragicLyrics": "\"Bạn thấu hiểu lời bài hát bi thảm đằng sau khúc ca của phù thủy\"",
+    "banished": "{card} bị \"trục xuất\""
   },
   "tooltips": {
     "hangmansBrook": {
-      "resign": "\"Who's bright idea was this, anyway?\""
+      "resign": "\"Rốt cuộc là ý tưởng sáng suốt của ai thế này?\""
     },
     "hangmansBrookSpectral": {
       "resign": "@:theCircleUndone.theWagesOfSin.tooltips.hangmansBrook.resign",
-      "haunted": "Take 1 damage. Until the end of the round, the above resign ability cannot be triggered."
+      "haunted": "Chịu 1 sát thương. Cho đến cuối vòng chơi, khả năng resign ở trên không thể kích hoạt."
     },
     "returnToHangmansBrookSpectral": {
       "resign": "@:theCircleUndone.theWagesOfSin.tooltips.hangmansBrook.resign",
-      "haunted": "Place 1 clue from the supply on Hangman's Brook."
+      "haunted": "Đặt 1 manh mối từ kho cung cấp lên Hangman's Brook."
     },
     "hauntedFieldsSpectral": {
-      "haunted": "Move the nearest Spectral enemy once toward Haunted Fields."
+      "haunted": "Di chuyển kẻ địch Spectral gần nhất 1 lần về phía Haunted Fields."
     },
     "abandonedChapelSpectral": {
-      "haunted": "Until the end of the round, you get -1 to each skill."
+      "haunted": "Cho đến cuối vòng chơi, bạn nhận -1 cho mỗi chỉ số kỹ năng."
     },
     "theGallowsSpectral_169": {
-      "haunted": "Discard the top 3 cards of the standard encounter deck. If a Witch enemy is discarded by this effect, draw it."
+      "haunted": "Bỏ 3 lá bài trên cùng của chồng bài encounter tiêu chuẩn. Nếu một kẻ địch Witch bị bỏ bởi hiệu ứng này, hãy rút nó."
     },
     "theGallowsSpectral_170": {
-      "haunted": "Discard the top 3 cards of the standard encounter deck. If a Geist enemy is discarded by this effect, draw it."
+      "haunted": "Bỏ 3 lá bài trên cùng của chồng bài encounter tiêu chuẩn. Nếu một kẻ địch Geist bị bỏ bởi hiệu ứng này, hãy rút nó."
     },
     "hereticsGravesSpectral_171": {
-      "haunted": "Reduce your base {'{'}willpower{'}'} to 1 until the end of your next turn."
+      "haunted": "Giảm chỉ số {'{'}willpower{'}'} cơ bản của bạn xuống 1 cho đến cuối lượt tiếp theo của bạn."
     },
     "hereticsGraves_172": {
-      "haunted": "Heal 1 damage from each Heretic and each Witch enemy in play."
+      "haunted": "Hồi 1 máu cho mỗi kẻ địch Heretic và mỗi kẻ địch Witch trong màn chơi."
     },
     "chapelCryptSpectral_173": {
-      "haunted": "Spawn the top card of your deck facedown, engaged with you. Treat that card as a Reanimated Dead enemy with 1 fight, 1 health, 1 evade, 1 damage, and the Monster trait."
+      "haunted": "Spawn lá bài trên cùng của chồng bài của bạn úp mặt, engage với bạn. Xem lá bài đó như một kẻ địch Reanimated Dead với 1 fight, 1 máu, 1 evade, 1 damage, và có trait Monster."
     },
     "chapelCryptSpectral_174": {
-      "haunted": "Find the topmost Hex treachery in the standard encounter discard pile and put it into play in your threat area."
+      "haunted": "Tìm lá treachery Hex trên cùng trong chồng bài encounter bỏ tiêu chuẩn và đưa nó vào màn chơi trong khu vực nguy hiểm của bạn."
     },
     "chapelCryptSpectral_175": {
-      "haunted": "Discard a random card from beneath Chapel Attic."
+      "haunted": "Bỏ 1 lá bài ngẫu nhiên từ bên dưới Chapel Attic."
     },
     "chapelAtticSpectral_176": {
-      "haunted": " Discard a random card from your hand (2 cards instead of you have 5 or more cards in hand)."
+      "haunted": "Chịu 1 horror. Cho đến cuối lượt tiếp theo của bạn, bạn không thể chơi bài."
     }
   },
   "label": {
     "ominousPortents": {
-      "spectral": "Draw the top card of the spectral encounter deck. That card gains peril, and its effects cannot be canceled.",
-      "test": "Test {'{'}willpower{'}'} (3). If you fail take 2 horror."
+      "spectral": "Rút lá bài trên cùng của chồng bài encounter Spectral. Lá bài đó nhận peril, và hiệu ứng của nó không thể bị hủy bỏ.",
+      "test": "Kiểm tra {'{'}willpower{'}'} (3). Nếu thất bại, chịu 2 horror."
     },
     "baneOfTheLiving": {
-      "unfinishedBusiness": "Choose an Unfinished Business card in play, flip it to its Heretic side, and place damage on it equal to half its health.",
-      "geist": "Discard cards from the top of the spectral encounter deck until a Geist enemy is discarded. Spawn that enemy engaged with you."
+      "unfinishedBusiness": "Chọn một lá bài Unfinished Business trong màn chơi, lật sang mặt Heretic của nó, và đặt sát thương lên nó bằng một nửa lượng máu của nó.",
+      "geist": "Bỏ các lá bài từ trên cùng của chồng bài encounter Spectral cho đến khi một kẻ địch Geist bị bỏ. Spawn kẻ địch đó engage với bạn."
     },
     "witchweed": {
-      "surge": "Give Witchweed surge to place it in the standard encounter discard pile.",
-      "otherwise": "Place it in the spectral encounter discard pile."
+      "surge": "Cho Witchweed hiệu ứng surge để đặt nó vào chồng bài encounter bỏ tiêu chuẩn.",
+      "otherwise": "Đặt nó vào chồng bài encounter Spectral bỏ."
     }
   },
   "intro": {
@@ -81,7 +81,7 @@
   },
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *The Wages of Sin*, *Anette’s Coven*, *City of Sins*, *Inexorable Fate*, *Realm of Death*, *Trapped Spirits*, and *Witchcraft*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-wages-of-sin.png' /><img src='{setImgPath}/anettes-coven.png' /><img src='{setImgPath}/city-of-sins.png' /><img src='{setImgPath}/inexorable-fate.png' /><img src='{setImgPath}/realm-of-death.png' /><img src='{setImgPath}/trapped-spirits.png' /><img src='{setImgPath}/witchcraft.png' /></section>",
-    "theWatcherSet": "Set *The Watcher* encounter set aside, out of play. This encounter set is indicated by the following icon:<section class='encounter-sets'><img src='{setImgPath}/the-watcher.png' /></section>",
+    "theWatcherSet": "Đặt bộ encounter *The Watcher* sang một bên, ngoài màn chơi. Bộ encounter này được biểu thị bằng biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/the-watcher.png' /></section>",
     "placeLocations": "Chọn ngẫu nhiên một trong hai vị trí The Gallows, một trong hai vị trí Heretics ’Graves, một trong hai vị trí Chapel Attic và một trong hai vị trí Chapel Crypt, và đưa chúng vào chơi. Loại bỏ các phiên bản khác của The Gallows, Heretics' Graves, Chapel Attic và Chapel Crypt khỏi màn chơi. Sau đó, đặt Haunted Fields, Abandoned và Hangman’s Brook vào chơi.",
     "spectral": "Những địa điểm này có mặt để lộ ở cả 2 mặt. Một mặt có trait [[Spectral]], và mặt còn lại thì không. Khi đặt những địa điểm này vào chơi, sử dụng mặt không có trait [[Spectral]].",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại vị trí Hangman’s Brook.",
@@ -92,11 +92,11 @@
     "standardDeck": "Xào mỗi lá bài không có trait [[Spectral]] còn lại thành chồng bài encounter tiêu chuẩn.",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to The Wages of Sin*, *City of the Damned*, *Unspeakable Fate*, *Unstable Realm*, *Bloodthirsty Spirits*, and *Hexcraft*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-wages-of-sin.png' /><img src='{setImgPath}/city-of-the-damned.png' /><img src='{setImgPath}/unspeakable-fate.png' /><img src='{setImgPath}/unstable-realm.png' /><img src='{setImgPath}/bloodthirsty-spirits.png' /><img src='{setImgPath}/hexcraft.png' /></section>*City of the Damned* replaces *City of Sins*, *Unspeakable Fate* replaces *Inexorable Fate*, *Unstable Realm* replaces *Realm of Death*, *Bloodthirsty Spirits* replaces *Trapped Spirits*, and *Hexcraft* replaces *Witchcraft*. Remove the replaced sets from the game.",
-      "setAside": "Also set the Erynn MacAoidh story asset aside, out of play.",
-      "actDeck": "Check Campaign Log. If *Erynn wants to meet*: When building the act deck, use the new Act 1a—*In Pursuit of Answers* instead of the original act 1, and include both versions of act 2. When advancing to act 2a, put both act cards into play; the text on both cards is active.",
-      "placeLocations": "Randomly choose one of the two Hangman’s Brook locations to use during this scenario’s setup. Remove the other version from the game.",
-      "heretics": "When randomly choosing 4 Heretic enemies to set aside, shuffle the 2 new Heretic enemies in with the original 6, for a total of 8 possibilities.",
-      "additionalRule": "For the duration of this scenario, the following additional rule applies: while resolving The Watcher’s Grasp treachery, The Spectral Watcher does not exhaust after it attacks."
+      "setAside": "Đồng thời đặt story asset Erynn MacAoidh sang một bên, ngoài màn chơi.",
+      "actDeck": "Kiểm tra Nhật ký Chiến dịch. Nếu *Erynn muốn gặp mặt*: Khi xây dựng chồng bài act, sử dụng Act 1a—*In Pursuit of Answers* mới thay vì act 1 ban đầu, và bao gồm cả hai phiên bản của act 2. Khi advance sang act 2a, đưa cả hai lá bài act vào màn chơi; văn bản trên cả hai lá bài đều có hiệu lực.",
+      "placeLocations": "Chọn ngẫu nhiên một trong hai địa điểm Hangman’s Brook để sử dụng trong quá trình thiết lập màn chơi này. Loại bỏ phiên bản còn lại khỏi trò chơi.",
+      "heretics": "Khi chọn ngẫu nhiên 4 kẻ địch Heretic để đặt sang một bên, hãy xáo 2 kẻ địch Heretic mới vào cùng 6 kẻ địch ban đầu, tạo thành tổng cộng 8 khả năng.",
+      "additionalRule": "Trong suốt màn chơi này, áp dụng luật bổ sung sau: khi giải quyết lá treachery The Watcher’s Grasp, The Spectral Watcher không exhaust sau khi tấn công."
     }
   },
   "specialRules": [
@@ -111,7 +111,7 @@
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không Có Kết Cuộc",
       "body": "<p class='basic'>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Tiến tới <b>Resolution 1</b>.</p><p class='basic'>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Chuyển tới <b>Resolution 2</b>.</p>"
     },
     "resolution1": {
@@ -124,7 +124,7 @@
     },
     "resolution3": {
       "title": "Kết thúc thứ ba",
-      "body": "<p>_Resolution 3_: As you depart Hangman’s Hill, the unnatural mist lingers behind—a reminder that you chose information and power over the safety of the city. The last thing you see as you cross the brook is the blood streaking down the bark of the trees flanking the bridge. The sight is repulsive, and yet…perhaps there is information to be gathered here, as well. Hoping you’ve done the right thing, you study the strange carvings for a moment before continuing to your next destination.</p><ul><li>In your Campaign Log, record *1 heretic was unleashed unto Arkham*.</li><li>In your Campaign Log, under “Mementos Discovered,” record *Bloody Tree Carvings*.</li><li>In your Campaign Log, record *Erynn joined the investigators*. Any one investigator may choose to add the Erynn MacAoidh story asset to their deck. This card does not count toward that investigator’s deck size.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li></ul>"
+      "body": "<p>_Resolution 3_: Khi bạn rời khỏi Hangman’s Hill, làn sương mù phi tự nhiên vẫn vương vấn phía sau—như một lời nhắc nhở rằng bạn đã chọn thông tin và quyền năng thay vì sự an toàn của thành phố. Điều cuối cùng bạn nhìn thấy khi băng qua con suối là những vệt máu chảy dài trên vỏ cây ở hai bên cầu. Cảnh tượng thật ghê tởm, vậy mà… có lẽ cũng có thể thu thập được thông tin ở đây. Hy vọng rằng mình đã làm điều đúng đắn, bạn nghiên cứu những hình chạm khắc kỳ lạ trong giây lát trước khi tiếp tục đến điểm đến tiếp theo.</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại *1 dị giáo đồ đã được thả vào Arkham*.</li><li>Trong Nhật ký Chiến dịch, tại mục “Vật Kỷ Niệm Được Phát Hiện”, ghi lại *Hình Khắc Trên Cây Nhuốm Máu*.</li><li>Trong Nhật ký Chiến dịch, ghi lại *Erynn đã gia nhập nhóm điều tra viên*. Bất kỳ một điều tra viên nào cũng có thể chọn thêm story asset Erynn MacAoidh vào chồng bài của mình. Lá bài này không tính vào giới hạn kích thước chồng bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận được điểm kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.</li></ul>"
     }
   }
 }

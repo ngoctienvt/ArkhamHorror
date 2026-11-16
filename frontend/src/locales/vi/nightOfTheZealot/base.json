@@ -1,25 +1,25 @@
 {
   "prologue": "<h1>The Ghouls Hunger...</h1><p>Thứ 6, ngày 18 tháng 9, năm 1925. Thành phố Arkham, bang Massachusetts. Thời tiết nắng nóng bất thường kéo dài nay cũng chuẩn bị kết thúc. Đã bắt đầu có dấu hiệu của mùa thu nhưng cái nóng vẫn kéo dài không ngừng. Mọi người trở nên dễ nóng nảy và trong mấy tuần gần nhất đã có không ít báo cáo về nhiều vụ ẩu đả xảy ra giữa người dân thị trấn chỉ vì chút hiểu nhầm nhỏ nhặt.</p> <p>Và mới đây là một cuộc gọi từ ông James Hankerson thông báo rằng ông phát hiện một thi thể bị phanh thây trong chuồng trại nhà mình.</p> <p>Đổ trách nhiệm cho thời tiết thì quá dễ dàng. Có điều gì đó đang không ổn ở thị trấn này, và không có nhiều điều mà một tiên tri già cỗi như ta có thể ngăn chặn nó. Thuật bói toán của ta cho thấy có một nhóm điều tra nhỏ sẽ sớm để ý đến những sự kiện kỳ lạ này và làm cho mọi thứ trở lại bình thường. Ta sẽ theo dõi tiến trình làm việc của họ… nhưng không trông chờ mấy vào việc này.</p>",
   "key": {
-    "ghoulPriestIsStillAlive": "Ghoul Priest is still alive",
+    "ghoulPriestIsStillAlive": "Ghoul Priest vẫn còn sống",
     "yourHouseIsStillStanding": "Nhà của bạn vẫn còn.",
     "yourHouseHasBurnedToTheGround": "Nhà của bạn đã bị đốt cháy thành tro tàn.",
     "litaWasForcedToFindOthersToHelpHerCause": "Lita buộc phải tìm người khác để giúp đỡ.",
     "cultistsWeInterrogated": "Tín Đồ Đã Bị Thẩm Vấn",
     "cultistsWhoGotAway": "Tín Đồ Đã Bỏ Trốn",
     "itIsPastMidnight": "Đã quá nửa đêm.",
-    "arkhamSuccumbedToUmordhothsTerribleVengeance": "Arkham succumbed to Umordhoth's terrible vengeance",
-    "theRitualToSummonUmordhothWasBroken": "The ritual to summon Umordhoth was broken",
-    "theInvestigatorsRepelledUmordoth": "The investigators repelled Umordoth",
-    "theInvestigatorsSacrificedLitaChantlerToUmordhoth": "The investigators sacrificed Lita Chantler to Umordhoth"
+    "arkhamSuccumbedToUmordhothsTerribleVengeance": "Arkham đã khuất phục trước sự báo thù khủng khiếp của Umôrdhoth",
+    "theRitualToSummonUmordhothWasBroken": "Nghi thức triệu hồi Umôrdhoth đã bị phá vỡ",
+    "theInvestigatorsRepelledUmordoth": "Các điều tra viên đã đẩy lùi Umôrdhoth",
+    "theInvestigatorsSacrificedLitaChantlerToUmordhoth": "Các điều tra viên đã hiến tế Lita Chantler cho Umôrdhoth"
   },
   "label": {
     "offerOfPower": {
-      "drawAndPlaceDoom": "Draw 2 cards and place 2 doom on agenda"
+      "drawAndPlaceDoom": "Rút 2 lá bài và đặt 2 doom lên agenda"
     },
     "discipleOfTheDevourer": {
-      "doom": "Place 1 doom on Disciple of the Devourer",
-      "clue": "Place one of your clues on it's location"
+      "doom": "Đặt 1 doom lên Disciple of the Devourer",
+      "clue": "Đặt 1 manh mối của bạn lên địa điểm của nó"
     }
   }
 }

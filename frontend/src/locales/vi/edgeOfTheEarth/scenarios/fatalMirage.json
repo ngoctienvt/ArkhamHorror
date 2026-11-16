@@ -3,20 +3,20 @@
   "specialRules": [
     {
       "title": "Mirage (Ảo Ảnh)",
-      "body": "<p class='basic'>Từ khóa Mirage (Ảo Ảnh) biểu thị các địa điểm là hiện thân của ký ức của bạn và đồng đội. Những địa điểm này không có mặt chưa lộ và do đó vào trò chơi với mặt hiển lộ. Thay vì mặt chưa lộ, các địa điểm này có lá bài câu chuyện ở mặt sau. Những lá bài câu chuyện này cho phép điều tra viên đi sâu hơn vào ảo ảnh kỳ lạ và mở khóa ký ức mới dưới dạng địa điểm hoặc lá bài gặp gỡ. Con số trong từ khóa Mirage biểu thị số manh mối cần để lật nó, trong khi tiêu đề lá bài trong ngoặc đơn chỉ ra ký ức nào có thể xuất hiện.</p><ul><li>As a {'{'}action{'}'} ability, investigators at a mirage location may spend the indicated number of clues, as a group, to flip it over and resolve the story card on its other side.</li><li>Khi một địa điểm có từ khóa Mirage (Ảo Ảnh) vào màn chơi <i>(bao gồm trong lúc chuẩn bị)</i>, với mỗi lá bài được chỉ ra bởi từ khóa Mirage đã ở trong màn chơi hoặc khu vực trưng bày thành tích, giảm giá trị manh mối của địa điểm đó theo giá trị Mirage của nó.<ul><li>*Note: This is less likely to occur the first time you play Fatal Mirage, but is much more likely during subsequent playthroughs.*</li><li>*For example: Prison of Memories has a clue value of 3 {'{'}perPlayer{'}'} and has the following text: “Mirage 1 {'{'}perPlayer{'}'} (Base Camp, Deck of the Theodosia, University Halls).” When Prison of Memories enters play, the investigators check which of the three cards indicated by its mirage keyword are already in play or in the victory display. Both University Halls and Deck of the Theodosia are already in play, but Base Camp is still set aside. Therefore, the clue value of Prison of Memories is reduced by 2 {'{'}perPlayer{'}'}, meaning only 1 {'{'}perPlayer{'}'} clues are placed on it when it enters play.*</li></ul></li><li>Một địa điểm được coi là \"xóa sạch ảo ảnh\" nếu mọi lá bài được chỉ ra bởi từ khóa Mirage (Ảo Ảnh) của nó đã ở trong màn chơi hoặc khu vực trưng bày thành tích. Địa điểm đã xóa sạch ảo ảnh không thể lật lại lần nữa.</li></ul>"
+      "body": "<p class='basic'>Từ khóa Mirage (Ảo Ảnh) biểu thị các địa điểm là hiện thân của ký ức của bạn và đồng đội. Những địa điểm này không có mặt chưa lộ và do đó vào màn chơi với mặt hiển lộ. Thay vì mặt chưa lộ, các địa điểm này có lá bài câu chuyện ở mặt sau. Những lá bài câu chuyện này cho phép điều tra viên đi sâu hơn vào ảo ảnh kỳ lạ và mở khóa ký ức mới dưới dạng địa điểm hoặc lá bài encounter. Con số trong từ khóa Mirage biểu thị số manh mối cần để lật nó, trong khi tiêu đề lá bài trong ngoặc đơn chỉ ra ký ức nào có thể xuất hiện.</p><ul><li>Dưới dạng một khả năng {'{'}action{'}'}, các điều tra viên tại một địa điểm ảo ảnh có thể tiêu số lượng manh mối được chỉ định, theo nhóm, để lật nó lại và giải quyết lá bài câu chuyện ở mặt bên kia.</li><li>Khi một địa điểm có từ khóa Mirage vào màn chơi (bao gồm trong lúc chuẩn bị), với mỗi lá bài được chỉ ra bởi từ khóa Mirage của nó đã ở trong màn chơi hoặc trong khu vực trưng bày thành tích, giảm giá trị manh mối của địa điểm đó theo giá trị Mirage của nó.<ul><li>*Lưu ý: Điều này ít có khả năng xảy ra trong lần đầu tiên bạn chơi Ảo Ảnh Chết Người, nhưng sẽ khả dĩ hơn nhiều trong những lần chơi sau.*</li><li>*Ví dụ: Nhà Tù Ký Ức có giá trị manh mối là 3 {'{'}perPlayer{'}'} và có đoạn văn bản sau: “Mirage 1 {'{'}perPlayer{'}'} (Trại Căn Cứ, Boong Tàu Theodosia, Hội Trường Đại Học).” Khi Nhà Tù Ký Ức vào màn chơi, các điều tra viên kiểm tra xem lá nào trong ba lá bài được chỉ ra bởi từ khóa Mirage của nó đã ở trong màn chơi hoặc trong khu vực trưng bày thành tích. Cả Hội Trường Đại Học và Boong Tàu Theodosia đều đã ở trong màn chơi, nhưng Trại Căn Cứ vẫn đang được đặt sang một bên. Do đó, giá trị manh mối của Nhà Tù Ký Ức giảm đi 2 {'{'}perPlayer{'}'}, nghĩa là chỉ có 1 {'{'}perPlayer{'}'} manh mối được đặt lên đó khi nó vào màn chơi.*</li></ul></li><li>Một địa điểm được coi là “xóa sạch ảo ảnh” nếu mọi lá bài được chỉ ra bởi từ khóa Mirage của nó đã ở trong màn chơi hoặc trong khu vực trưng bày thành tích. Địa điểm đã xóa sạch ảo ảnh không thể bị lật lại lần nữa.</li></ul>"
     }
   ],
   "tooltips": {
     "mirage": "Mirage (Ảo Ảnh)"
   },
   "label": {
-    "chooseAgenda": "The investigators may choose which agenda to use (the higher the agenda number, the less time the investigators will have).",
-    "keepPlaying": "Keep playing",
-    "moveToPrisonOfMemories": "Move to the Prison of Memories",
-    "shuffleTekeliliIntoYourDeck": "Shuffle the top card of the Tekeli-li deck into your deck without looking at it.",
+    "chooseAgenda": "Các điều tra viên có thể chọn agenda nào để sử dụng (số thứ tự agenda càng cao, các điều tra viên càng có ít thời gian).",
+    "keepPlaying": "Tiếp tục chơi",
+    "moveToPrisonOfMemories": "Di chuyển đến Nhà Tù Ký Ức",
+    "shuffleTekeliliIntoYourDeck": "Xáo lá bài trên cùng của chồng bài Tekeli-li vào bộ bài của bạn mà không nhìn vào nó.",
     "averyClaypoolAntarcticGuideResolute": {
-      "revealANewChaosToken": "Reveal a new chaos token",
-      "spend1Supply": "Spend 1 Supply"
+      "revealANewChaosToken": "Rút một token hỗn mang mới",
+      "spend1Supply": "Tiêu 1 supply"
     }
   },
   "intro1": {
@@ -36,15 +36,15 @@
     "victory": "Trong phần \"Fatal Mirage\" (Ảo Ảnh Chết Người) của Nhật ký Chiến dịch, dưới mục \"Memories Banished\" (Ký Ức Bị Xóa), ghi lại mỗi lá bài câu chuyện trong khu vực trưng bày thành tích. Mỗi điều tra viên nhận kinh nghiệm bằng giá trị Victory X (Chiến Thắng X) của mỗi lá bài được ghi lại theo cách này. *(Không nhận điểm kinh nghiệm cho các lá bài đã được ghi trong mục này)*.",
     "memoriesDiscovered": "Trong phần \"Fatal Mirage\" (Ảo Ảnh Chết Người) của Nhật ký Chiến dịch, dưới mục \"Memories Discovered\" (Ký Ức Đã Được Khám Phá), ghi lại mỗi địa điểm không phải [[Otherworld]] đang trong màn chơi.",
     "crossOutMemoriesDiscovered": "Gạch bỏ mỗi địa điểm được ghi trong \"Memories Discovered\" (Ký Ức Đã Được Khám Phá) mà lá bài câu chuyện tương ứng cũng được ghi trong \"Memories Banished\" (Ký Ức Bị Xóa).",
-    "nonStoryVictory": "If there are any other non-story cards in the victory display worth Victory X, each investigator earns experience equal to that amount.",
-    "partnerDamage": "Trong phần \"Expedition Team\" (Đội Thám hiểm) của Nhật ký Chiến dịch, ghi lại số lượng chấn thương thể chất và tinh thần trên mỗi lá bài tài sản đồng đội trong màn chơi.",
-    "proceed": "Proceed to the next scenario of the campaign, in numerical order, as follows:",
-    "proceedToTheForbiddenPeaks": "If the last scenario you played before this one was Ice and Death, proceed to _Scenario II: To the Forbidden Peaks_.",
-    "proceedToCityOfTheElderThings": "If the last scenario you played before this one was To the Forbidden Peaks, proceed to _Scenario III: City of the Elder Things_.",
-    "proceedToTheHeartOfMadness": "If the last scenario you played before this one was City of the Elder Things, proceed to _Scenario IV: The Heart of Madness_.",
-    "noResolutionTitle": "No Resolution",
+    "nonStoryVictory": "Nếu có bất kỳ lá bài nào khác không phải lá bài câu chuyện trong khu vực trưng bày thành tích có giá trị Victory X, mỗi điều tra viên nhận số điểm kinh nghiệm tương ứng với lượng đó.",
+    "partnerDamage": "Trong phần \"Expedition Team\" (Đội Thám hiểm) của Nhật ký Chiến dịch, ghi lại số lượng sang chấn thể chất và tinh thần trên mỗi lá bài tài sản đồng đội trong màn chơi.",
+    "proceed": "Tiến hành đến kịch bản tiếp theo của chiến dịch, theo thứ tự số, như sau:",
+    "proceedToTheForbiddenPeaks": "Nếu kịch bản cuối cùng bạn chơi trước kịch bản này là Băng Giá Và Tử Thần, tiến hành đến _Kịch bản II: Tiến Đến Đỉnh Núi Cấm_.",
+    "proceedToCityOfTheElderThings": "Nếu kịch bản cuối cùng bạn chơi trước kịch bản này là Tiến Đến Đỉnh Núi Cấm, tiến hành đến _Kịch bản III: Thành Phố Của Cổ Tộc_.",
+    "proceedToTheHeartOfMadness": "Nếu kịch bản cuối cùng bạn chơi trước kịch bản này là Thành Phố Của Cổ Tộc, tiến hành đến _Kịch bản IV: Trái Tim Điên Loạn_.",
+    "noResolutionTitle": "Không có Kết cục",
     "title": "Kết thúc thứ nhất",
-    "noResolution": "<p>_If no resolution was reached (each investigator was defeated)_: You stumble wearily to your feet. A dream? Your grip your temples, your mind aching. It feels as though a pneumatic drill has been taken to the inside of your skull. If this is what sleep is to be in this hellish place, you want no part of it.</p>",
+    "noResolution": "<p>_Nếu không đạt được kết cục nào (mỗi điều tra viên đều bị đánh bại)_: Bạn mệt mỏi gượng đứng dậy. Một giấc mơ ư? Bạn ôm chặt thái dương, đầu óc đau buốt như búa bổ. Cảm giác như thể có một chiếc máy khoan khí nén đang khoan thẳng vào bên trong hộp sọ bạn. Nếu giấc ngủ ở nơi địa ngục này là như thế này, bạn chẳng thèm muốn chút nào nữa.</p>",
     "resolution1": "<p>_Resolution 1_: Bạn ngã nhào qua cánh cửa, rơi xuống tấm đệm ngủ, vùng vẫy trong đống chăn ấm rối bời. Không có cánh cửa nào đóng lại sau lưng bạn. Có phải bạn chỉ tưởng tượng ra tất cả? Hay nó đều là thật?</p>"
   },
   "dyerWasKilledInThePlaneCrash": "<p>_If William Dyer was killed in the plane crash:_</p><p>Giáo sư Dyer đã chết. Không thể nào là ông ấy được. Vậy mà…</p><p>Bạn thấy ông ấy đi qua đi lại trong một hình ảnh phản chiếu, lẩm bẩm một mình. “Nó phải bị ngăn lại. Họ không thể làm điều này.” Ông ấy dừng lại, như đang trò chuyện với ai đó mà bạn không nghe thấy. “Tôi không quan tâm. Nó phải chấm dứt ngay lập tức!” Tội nghiệp Dyer. Bạn nhớ lại việc ông ấy đã cố cảnh báo cậu. Vậy mà giờ bạn vẫn ở đây.</p><p>Ảo ảnh biến mất nhanh như cách nó xuất hiện. Nơi quái quỷ gì thế này? Và sao những sự kiện mà bạn không hề biết lại hiện ra trước mắt bạn thế này?</p>",
@@ -58,16 +58,16 @@
   "kenslerWasKilledInThePlaneCrash": "<p>_If Dr. Amy Kensler was killed in the plane crash:_</p><p>Tiến sĩ Kensler đã chết. Không thể nào là cô ấy được. Vậy mà…</p><p>Giáo sư viết trong một cuốn sổ bìa da nhỏ, văn phòng mờ ảo dưới ánh nến. Bạn tự hỏi cô ấy đang vẽ sơ đồ giải phẫu nào, nhưng trước khi bạn kịp nhìn, cô ấy xé trang giấy ra, vò nát và ném vào thùng rác với một tiếng thở dài.</p><p>Ảo ảnh biến mất nhanh như cách nó xuất hiện. Nơi quái quỷ gì thế này? Và sao những sự kiện mà bạn không hề biết lại hiện ra trước mắt bạn thế này?</p>",
   "tokens": {
     "easyStandard": {
-      "skull": "–X. X is the number of story cards in the victory display.",
+      "skull": "-X. X là cấp độ của địa điểm của bạn.",
       "cultist": "–2. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.",
-      "tablet": "–3. Nếu bạn thất bại, you must either move to the Prison of Memories, or shuffle the top card of the Tekeli-li deck into your deck without looking at it.",
-      "elderthing": "–4. If you fail, place 1 doom on an _Eidolon_ enemy in play."
+      "tablet": "-3. Nếu bạn thất bại, mất quyền kiểm soát một asset _Expedition_ và đặt nó tại địa điểm của bạn.",
+      "elderthing": "–4. Nếu bạn thất bại, đặt 1 doom lên một kẻ địch _Eidolon_ trong màn chơi."
     },
     "hardExpert": {
-      "skull": "–X. X is the current agenda number plus the number of story cards in the victory display.",
+      "skull": "-X. X là 2 cộng với cấp độ của địa điểm của bạn.",
       "cultist": "–2. If you do not succeed by at least 2, đặt 1 manh mối của bạn lên địa điểm của bạn.",
-      "tablet": "–4. Nếu bạn thất bại, you must either move to the Prison of Memories, or shuffle the top card of the Tekeli-li deck into your deck without looking at it. (If you fail by 2 or more, do both instead.)",
-      "elderthing": "–5. If you fail, place 1 doom on an _Eidolon_ enemy in play."
+      "tablet": "-4. Nếu bạn thất bại, mất quyền kiểm soát một asset _Expedition_ và đặt nó tại địa điểm của bạn.",
+      "elderthing": "–5. Nếu bạn thất bại, đặt 1 doom lên một kẻ địch _Eidolon_ trong màn chơi."
     }
   },
   "setup": {
@@ -78,11 +78,11 @@
       "placeLocations": "Đặt địa điểm Prison of Memories (Nhà Tù Ký Ức) vào màn chơi, mặt hiển lộ.",
       "startAt": "Mỗi điều tra viên bắt đầu trò chơi tại Prison of Memories (Nhà Tù Ký Ức).",
       "setOtherLocationsAside": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
-      "setOutOfPlay": "Set each of the following cards aside, out of play: the nine “Memory of…” enemies, and the nine _Resolute_ story assets."
+      "setOutOfPlay": "Đặt mỗi lá bài sau sang một bên, ngoài màn chơi: chín kẻ địch “Ký Ức Về…” và chín story asset _Resolute_."
     },
     "repeat": {
-      "buildAgendaDeck": "Build the agenda deck using only agenda 2 if this is the second time you are playing _Fatal Mirage_, or agenda 3 if this is the third time. Remove the remaining agendas from the game.",
-      "buildActDeck": "Build the act deck using only act 2 if this is the second time you are playing _Fatal Mirage_, or act 3 if this is the third time. Remove the remaining acts from the game.",
+      "buildAgendaDeck": "Xây dựng chồng bài agenda chỉ sử dụng agenda 2 nếu đây là lần thứ hai bạn chơi _Ảo Ảnh Chết Người_, hoặc agenda 3 nếu đây là lần thứ ba. Loại bỏ các agenda còn lại khỏi trò chơi.",
+      "buildActDeck": "Xây dựng chồng bài act chỉ sử dụng act 2 nếu đây là lần thứ hai bạn chơi _Ảo Ảnh Chết Người_, hoặc act 3 nếu đây là lần thứ ba. Loại bỏ các act còn lại khỏi trò chơi.",
       "memoriesBanished": "Tìm mỗi lá bài câu chuyện được liệt kê trong mục \"Memories Banished\" (Ký Ức Bị Xóa) trong Nhật ký Chiến dịch của bạn. Đặt mỗi lá bài này vào khu vực trưng bày thành tích.",
       "setRemainingMemoriesAside": "Đặt mỗi kẻ địch \"Memory of…\" (Ký Ức về…) còn lại sang một bên, ngoài màn chơi.",
       "memoriesDiscovered": "Tìm mỗi địa điểm được liệt kê trong mục \"Memories Discovered\" (Ký Ức Đã Được Khám Phá) trong Nhật ký Chiến dịch của bạn. Đặt mỗi địa điểm này vào trò chơi, mặt hiển lộ ngửa, cùng với Prison of Memories (Nhà Tù Ký Ức) *(nhớ điều chỉnh giá trị manh mối của mỗi địa điểm theo từ khóa Mirage (Ảo Ảnh), như mô tả dưới đây)*",
@@ -91,19 +91,19 @@
       "setResoluteAside": "Đặt sang một bên mỗi lá bài tài sản câu chuyện [[Resolute]] (Kiên Định) trong số chín lá chưa được nhận từ lần chơi trước của Fatal Mirage (Ảo Ảnh Chết Người)."
     },
     "checkDifficulty": "Kiểm tra cấp độ khó.",
-    "hard": "If you are playing on Hard difficulty, add 1 doom to the agenda.",
-    "expert": "If you are playing on Expert difficulty, add 2 doom to the agenda.",
+    "hard": "Nếu bạn đang chơi ở độ khó Hard, thêm 1 doom vào agenda 1a.",
+    "expert": "Nếu bạn đang chơi ở độ khó Expert, thêm 2 doom vào agenda 1a.",
     "tekelili": "Xáo trộn tất cả các lá bài điểm yếu Tekeli-li! chưa nằm trong bộ bài của điều tra viên để tạo thành chồng bài Tekeli-li. Đặt chồng bài này gần chồng bài agenda."
   },
   "deckOfTheTheodosia": {
     "label": {
-      "addShroud": "Give it +2 shroud for this investigation",
-      "spendAdditionalAction": "Spend 1 additional action"
+      "addShroud": "Tăng cho nó +2 shroud trong lần điều tra này",
+      "spendAdditionalAction": "Tiêu thêm 1 hành động"
     }
   },
   "drKenslersOffice": {
     "label": {
-      "removeSecret": "Remove 1 secret from an asset you control"
+      "removeSecret": "Loại bỏ 1 secret từ một asset bạn kiểm soát"
     }
   }
 }

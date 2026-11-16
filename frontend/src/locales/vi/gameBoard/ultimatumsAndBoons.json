@@ -1,8 +1,8 @@
 {
-  "title": "Boons & Ultimatums",
-  "boons": "Boons",
-  "ultimatums": "Ultimatums",
-  "refractions": "Refractions",
+  "title": "Phước Lành & Tối Hậu Thư",
+  "boons": "Phước Lành",
+  "ultimatums": "Tối Hậu Thư",
+  "refractions": "Khúc Xạ",
   "selectedCount": "Đã chọn {count}",
   "noneSelected": "Chưa chọn cái nào",
   "settingsToggleTitle": "Bật Ultimatums & Boons",
@@ -18,196 +18,196 @@
   },
   "entries": {
     "BoonOfTheAncients": {
-      "name": "Boon of the Ancients",
-      "text": "Campaign Mode only. Each investigator begins the campaign with 5 additional experience."
+      "name": "Phước Lành Cổ Xưa",
+      "text": "Chỉ dành cho Campaign Mode. Mỗi điều tra viên bắt đầu chiến dịch với thêm 5 kinh nghiệm."
     },
     "BoonOfAthena": {
-      "name": "Boon of Athena",
-      "text": "The first time each game you draw the autofail token, you may cancel that token, return it to the chaos bag, and draw another in its place."
+      "name": "Phước Lành Athena",
+      "text": "Lần đầu tiên mỗi ván chơi bạn rút phải token tự động thất bại (autofail), bạn có thể hủy bỏ token đó, trả nó về túi hỗn mang và rút một token khác thay thế."
     },
     "BoonOfDestiny": {
-      "name": "Boon of Destiny",
-      "text": "Before drawing your opening hand, you may search your deck for 1 copy of a card and add it to your hand (this does not change the number of cards in your opening hand)."
+      "name": "Phước Lành Định Mệnh",
+      "text": "Trước khi rút bài khởi đầu (opening hand), bạn có thể tìm trong bộ bài của mình 1 bản sao của một lá bài và thêm nó vào tay (điều này không làm thay đổi số lượng lá bài trong opening hand của bạn)."
     },
     "BoonOfHades": {
-      "name": "Boon of Hades",
-      "text": "Each investigator begins the game with 2 additional resources in their resource pool."
+      "name": "Phước Lành Hades",
+      "text": "Mỗi điều tra viên bắt đầu ván chơi với thêm 2 tài nguyên trong kho tài nguyên của mình."
     },
     "BoonOfHermes": {
-      "name": "Boon of Hermes",
-      "text": "Each investigator may take an additional action during their turn, which may only be used to move."
+      "name": "Phước Lành Hermes",
+      "text": "Mỗi điều tra viên có thể thực hiện thêm một hành động trong lượt của mình, hành động này chỉ có thể dùng để di chuyển."
     },
     "BoonOfThoth": {
-      "name": "Boon of Thoth",
-      "text": "Each investigator begins the game with 1 additional card in their opening hand."
+      "name": "Phước Lành Thoth",
+      "text": "Mỗi điều tra viên bắt đầu ván chơi với thêm 1 lá bài trong bài khởi đầu (opening hand) của mình."
     },
     "BoonOfOsiris": {
-      "name": "Boon of Osiris",
-      "text": "The first time each investigator would be defeated in a scenario, after suffering trauma, heal all damage and horror from that investigator. That investigator cannot be damaged until the beginning of their next turn."
+      "name": "Phước Lành Osiris",
+      "text": "Lần đầu tiên mỗi điều tra viên bị đánh bại trong một màn chơi, sau khi chịu sang chấn, hồi phục toàn bộ sát thương và kinh hoàng khỏi điều tra viên đó. Điều tra viên đó không thể bị sát thương cho đến khi bắt đầu lượt tiếp theo của họ."
     },
     "BoonOfTheMorrigan": {
-      "name": "Boon of the Morrígan",
-      "text": "When a player would add a random basic weakness to their deck during deckbuilding, they instead draw three random basic weaknesses, return one of their choice to the collection, and select one at random from the remaining two. The selected weakness is added to their deck."
+      "name": "Phước Lành Morrígan",
+      "text": "Khi một người chơi thêm một basic weakness ngẫu nhiên vào bộ bài của mình trong lúc xây dựng bộ bài, thay vào đó họ rút ba basic weakness ngẫu nhiên, trả một lá tùy chọn về bộ sưu tập và chọn ngẫu nhiên một trong hai lá còn lại. Điểm yếu được chọn sẽ được thêm vào bộ bài của họ."
     },
     "BoonOfPersephone": {
-      "name": "Boon of Persephone",
-      "text": "Campaign Mode only. If an investigator is defeated, they gain 3 additional experience."
+      "name": "Phước Lành Persephone",
+      "text": "Chỉ dành cho Campaign Mode. Nếu một điều tra viên bị đánh bại, họ nhận thêm 3 kinh nghiệm."
     },
     "BoonOfTheExplorer": {
-      "name": "Boon of the Explorer",
-      "text": "Each investigator may take an additional action during their turn, which may only be used to Explore."
+      "name": "Phước Lành Nhà Thám Hiểm",
+      "text": "Mỗi điều tra viên có thể thực hiện thêm một hành động trong lượt của mình, hành động này chỉ có thể dùng để Khám phá (Explore)."
     },
     "BoonOfTheChild": {
-      "name": "Boon of the Child",
-      "text": "Once per round, an investigator may play the topmost event in their discard pile as if it were in their hand. If they do, after that event resolves, they must place it on the bottom of their deck."
+      "name": "Phước Lành Đứa Trẻ",
+      "text": "Mỗi vòng một lần, một điều tra viên có thể chơi lá bài event trên cùng trong chồng bài bỏ của mình như thể nó đang ở trên tay. Nếu họ làm vậy, sau khi event đó được giải quyết, họ phải đặt nó xuống dưới cùng bộ bài của mình."
     },
     "UltimatumOfAgony": {
-      "name": "Ultimatum of Agony",
-      "text": "When assigning damage or horror, investigators must assign as much damage or horror as possible to a single card before any excess may be assigned to a different card."
+      "name": "Tối Hậu Thư Đau Đớn",
+      "text": "Khi gán sát thương hoặc kinh hoàng, các điều tra viên phải gán càng nhiều sát thương hoặc kinh hoàng càng tốt vào một lá bài duy nhất trước khi lượng dư thừa có thể được gán cho một lá bài khác."
     },
     "UltimatumOfBrokenPromises": {
-      "name": "Ultimatum of Broken Promises",
-      "text": "Remove the Elder Sign token from the chaos bag during setup of a campaign or standalone scenario."
+      "name": "Tối Hậu Thư Lời Hứa Tan Vỡ",
+      "text": "Loại bỏ token Elder Sign khỏi túi hỗn mang trong quá trình chuẩn bị chiến dịch hoặc màn chơi độc lập (standalone)."
     },
     "UltimatumOfTheBrokenVeil": {
-      "name": "Ultimatum of the Broken Veil",
-      "text": "Anytime 1 or more weakness cards are discarded from the top of an investigator's deck, shuffle those cards back into that investigator's deck."
+      "name": "Tối Hậu Thư Tấm Màn Rách",
+      "text": "Bất cứ khi nào 1 hoặc nhiều lá bài điểm yếu bị bỏ từ trên cùng bộ bài của một điều tra viên, hãy xào những lá bài đó trở lại vào bộ bài của điều tra viên đó."
     },
     "UltimatumOfChaos": {
-      "name": "Ultimatum of Chaos",
-      "text": "Each investigator's starting deck of non-signature, non-weakness cards must be selected at random from among all eligible options in that player's collection. (Honor rule — not enforced by the app.)"
+      "name": "Tối Hậu Thư Hỗn Loạn",
+      "text": "Bộ bài khởi đầu của mỗi điều tra viên gồm các lá bài không phải signature và không phải điểm yếu phải được chọn ngẫu nhiên trong số tất cả các lựa chọn hợp lệ trong bộ sưu tập của người chơi đó. (Quy tắc tự nguyện — ứng dụng không bắt buộc.)"
     },
     "UltimatumOfDisaster": {
-      "name": "Ultimatum of Disaster",
-      "text": "Each investigator's deckbuilding requirements gain \"1 additional random basic weakness.\""
+      "name": "Tối Hậu Thư Thảm Họa",
+      "text": "Yêu cầu xây dựng bộ bài của mỗi điều tra viên nhận thêm “1 basic weakness ngẫu nhiên bổ sung”."
     },
     "UltimatumOfDread": {
-      "name": "Ultimatum of Dread",
-      "text": "Do not skip the mythos phase during the first round of each game."
+      "name": "Tối Hậu Thư Kinh Hãi",
+      "text": "Không bỏ qua giai đoạn Mythos trong vòng đầu tiên của mỗi ván chơi."
     },
     "UltimatumOfFailure": {
-      "name": "Ultimatum of Failure",
-      "text": "Add an additional autofail token to the chaos bag during setup of a campaign (or standalone scenario)."
+      "name": "Tối Hậu Thư Thất Bại",
+      "text": "Thêm một token tự động thất bại (autofail) bổ sung vào túi hỗn mang trong quá trình chuẩn bị chiến dịch (hoặc màn chơi standalone)."
     },
     "UltimatumOfFinality": {
-      "name": "Ultimatum of Finality",
-      "text": "Campaign Mode only. If an investigator is defeated by damage, they are killed. If an investigator is defeated by horror, they are driven insane."
+      "name": "Tối Hậu Thư Chung Cuộc",
+      "text": "Chỉ dành cho Campaign Mode. Nếu một điều tra viên bị đánh bại bởi sát thương, họ bị giết. Nếu một điều tra viên bị đánh bại bởi kinh hoàng, họ bị phát điên."
     },
     "UltimatumOfForbiddenKnowledge": {
-      "name": "Ultimatum of Forbidden Knowledge",
-      "text": "Each investigator begins the game with 1 fewer card in their opening hand."
+      "name": "Tối Hậu Thư Tri Thức Cấm",
+      "text": "Mỗi điều tra viên bắt đầu ván chơi với ít hơn 1 lá bài trong bài khởi đầu (opening hand) của mình."
     },
     "UltimatumOfHardship": {
-      "name": "Ultimatum of Hardship",
-      "text": "Each investigator begins the game with 2 fewer resources in their resource pool."
+      "name": "Tối Hậu Thư Gian Truân",
+      "text": "Mỗi điều tra viên bắt đầu ván chơi với ít hơn 2 tài nguyên trong kho tài nguyên của mình."
     },
     "UltimatumOfTheHighlander": {
-      "name": "Ultimatum of the Highlander",
-      "text": "Each investigator's deck can only include 1 copy of each non-weakness card, by title (unless multiple copies of that card are required by that investigator's deckbuilding requirements)."
+      "name": "Tối Hậu Thư Highlander",
+      "text": "Bộ bài của mỗi điều tra viên chỉ có thể bao gồm 1 bản sao của mỗi lá bài không phải điểm yếu, theo tên (trừ khi yêu cầu xây dựng bộ bài của điều tra viên đó đòi hỏi nhiều bản sao của lá bài đó)."
     },
     "UltimatumOfInduction": {
-      "name": "Ultimatum of Induction",
-      "text": "Campaign Mode only. Investigator decks can only contain level 0 cards. Investigators cannot earn or spend experience."
+      "name": "Tối Hậu Thư Nhập Môn",
+      "text": "Chỉ dành cho Campaign Mode. Bộ bài của điều tra viên chỉ có thể chứa các lá bài cấp độ 0. Các điều tra viên không thể nhận hoặc tiêu điểm kinh nghiệm."
     },
     "UltimatumOfOrthodoxy": {
-      "name": "Ultimatum of Orthodoxy",
-      "text": "Play the game using the Taboo List."
+      "name": "Tối Hậu Thư Chính Thống",
+      "text": "Chơi ván chơi bằng cách sử dụng Danh sách Taboo."
     },
     "UltimatumOfTheScream": {
-      "name": "Ultimatum of The Scream",
-      "text": "Campaign Mode only. When a unique non-story and non-weakness ally asset you control is defeated, remove it from the game. You cannot play that card for the rest of the campaign. After the scenario ends, remove that ally and all copies of it from each player's deck."
+      "name": "Tối Hậu Thư Tiếng Thét",
+      "text": "Chỉ dành cho Campaign Mode. Khi một asset đồng minh độc nhất, không phải cốt truyện và không phải điểm yếu mà bạn kiểm soát bị đánh bại, hãy loại bỏ nó khỏi trò chơi. Bạn không thể chơi lá bài đó trong suốt phần còn lại của chiến dịch. Sau khi màn chơi kết thúc, hãy loại bỏ đồng minh đó và mọi bản sao của nó khỏi bộ bài của mỗi người chơi."
     },
     "UltimatumOfSurvival": {
-      "name": "Ultimatum of Survival",
-      "text": "Campaign Mode only. If an investigator is killed or driven insane, their player is eliminated from the campaign and cannot continue playing as a new investigator."
+      "name": "Tối Hậu Thư Sinh Tồn",
+      "text": "Chỉ dành cho Campaign Mode. Nếu một điều tra viên bị giết hoặc phát điên, người chơi của họ sẽ bị loại khỏi chiến dịch và không thể tiếp tục chơi với tư cách là một điều tra viên mới."
     },
     "UltimatumOfUltimatums": {
-      "name": "Ultimatum of Ultimatums",
-      "text": "Campaign Mode only. Before each game in the campaign, choose 1 ultimatum/boon at random and begin the game with that boon or ultimatum active. (This does not apply to ultimatums or boons that affect deckbuilding or chaos bag construction.)"
+      "name": "Tối Hậu Thư Của Các Tối Hậu Thư",
+      "text": "Chỉ dành cho Campaign Mode. Trước mỗi ván chơi trong chiến dịch, hãy chọn ngẫu nhiên 1 ultimatum/boon và bắt đầu ván chơi với boon hoặc ultimatum đó được kích hoạt. (Điều này không áp dụng cho các ultimatum hoặc boon ảnh hưởng đến việc xây dựng bộ bài hoặc tạo lập túi hỗn mang.)"
     },
     "UltimatumOfExile": {
-      "name": "Ultimatum of Exile",
-      "text": "Treat each card with \"exile\" in its text box as if it also had \"Campaign Mode only.\""
+      "name": "Tối Hậu Thư Lưu Đày",
+      "text": "Coi mỗi lá bài có từ \"exile\" trong khung văn bản của nó như thể nó cũng có \"Chỉ dành cho Campaign Mode\"."
     },
     "UltimatumOfTheSpiral": {
-      "name": "Ultimatum of the Spiral",
-      "text": "Campaign Mode only. After an investigator is defeated, add 1 random basic weakness to their deck."
+      "name": "Tối Hậu Thư Vòng Xoáy",
+      "text": "Chỉ dành cho Campaign Mode. Sau khi một điều tra viên bị đánh bại, thêm 1 basic weakness ngẫu nhiên vào bộ bài của họ."
     },
     "UltimatumOfMalevolence": {
-      "name": "Ultimatum of Malevolence",
-      "text": "Easy or Standard difficulty only. While playing, use the \"Hard/Expert\" side of the scenario's reference card."
+      "name": "Tối Hậu Thư Hiểm Ác",
+      "text": "Chỉ dành cho độ khó Dễ hoặc Cơ bản. Khi chơi, sử dụng mặt \"Hard/Expert\" của lá bài tham chiếu kịch bản (scenario reference card)."
     },
     "UltimatumOfVenom": {
-      "name": "Ultimatum of Venom",
-      "text": "The Forgotten Age. Each copy of Poisoned gains “Forced – When the game ends, if you have not been eliminated: Suffer 1 physical trauma.”"
+      "name": "Tối Hậu Thư Nọc Độc",
+      "text": "The Forgotten Age. Mỗi bản sao của Poisoned nhận được “Forced – Khi trò chơi kết thúc, nếu bạn chưa bị loại: Chịu 1 sang chấn thể chất.”"
     },
     "UltimatumOfAmbuscade": {
-      "name": "Ultimatum of Ambuscade",
-      "text": "The Forgotten Age. After each successful exploration, the performing investigator reveals the top card of the encounter deck. If the revealed card is an enemy, they draw it. Otherwise, they discard it."
+      "name": "Tối Hậu Thư Phục Kích",
+      "text": "The Forgotten Age. Sau mỗi lần khám phá thành công, điều tra viên thực hiện lật lá bài trên cùng của chồng bài encounter. Nếu lá bài được lật là một kẻ địch, họ rút nó. Nếu không, họ bỏ nó vào chồng bài bỏ."
     },
     "UltimatumOfAnnoyance": {
-      "name": "Ultimatum of Annoyance",
-      "text": "Edge of the Earth. When the campaign begins, shuffle 3 random cards from the Tekeli-li encounter set into each investigator's deck."
+      "name": "Tối Hậu Thư Phiền Toái",
+      "text": "Edge of the Earth. Khi chiến dịch bắt đầu, xào 3 lá bài ngẫu nhiên từ tập bài encounter Tekeli-li vào bộ bài của mỗi điều tra viên."
     },
     "BoonOfAtonement": {
-      "name": "Boon of Atonement",
-      "text": "Shades of Suffering (The Scarlet Keys). Each agenda gets +1 doom threshold."
+      "name": "Phước Lành Chuộc Tội",
+      "text": "Shades of Suffering (The Scarlet Keys). Mỗi agenda nhận thêm +1 ngưỡng doom."
     },
     "BoonOfBliss": {
-      "name": "Boon of Bliss",
-      "text": "Fate of the Vale (The Feast of Hemlock Vale). Each agenda gets +2 doom threshold."
+      "name": "Phước Lành Phúc Lạc",
+      "text": "Fate of the Vale (The Feast of Hemlock Vale). Mỗi agenda nhận thêm +2 ngưỡng doom."
     },
     "UltimatumOfTheUnspeakableName": {
-      "name": "Ultimatum of the Unspeakable Name",
-      "text": "The Path to Carcosa. If you heeded Daniel's warning is recorded in your Campaign Log, each time you speak the name of HASTUR aloud during setup or play of a scenario, in addition to taking 1 horror, suffer 1 mental trauma."
+      "name": "Tối Hậu Thư Cái Tên Không Thể Thốt Ra",
+      "text": "The Path to Carcosa. Nếu mục *you heeded Daniel's warning* được ghi trong Nhật ký Chiến dịch của bạn, mỗi khi bạn nói to tên HASTUR trong quá trình chuẩn bị hoặc chơi một màn chơi, ngoài việc nhận 1 kinh hoàng, hãy chịu 1 sang chấn tinh thần."
     },
     "UltimatumOfTheBrassCrown": {
-      "name": "Ultimatum of the Brass Crown",
-      "text": "The Path to Carcosa. If you heeded Daniel's warning is recorded in your Campaign Log, at the beginning of each scenario, take 1 horror for each time you spoke, wrote, or typed the name of HASTUR since the end of the previous scenario."
+      "name": "Tối Hậu Thư Vương Miện Đồng",
+      "text": "The Path to Carcosa. Nếu mục *you heeded Daniel's warning* được ghi trong Nhật ký Chiến dịch của bạn, khi bắt đầu mỗi màn chơi, chịu 1 kinh hoàng cho mỗi lần bạn nói, viết hoặc gõ tên HASTUR kể từ khi kết thúc màn chơi trước."
     },
     "UltimatumOfTheFaultyCarburetor": {
-      "name": "Ultimatum of the Faulty Carburetor",
-      "text": "Horror in High Gear (The Innsmouth Conspiracy). During scenario setup, if you are playing with exactly 2 investigators, each investigator must choose to board the same vehicle."
+      "name": "Tối Hậu Thư Bộ Chế Hòa Khí Hỏng",
+      "text": "Horror in High Gear (The Innsmouth Conspiracy). Trong quá trình chuẩn bị màn chơi, nếu bạn đang chơi với chính xác 2 điều tra viên, mỗi điều tra viên phải chọn lên cùng một phương tiện."
     },
     "UltimatumOfTheSleeper": {
-      "name": "Ultimatum of the Sleeper",
-      "text": "The Doom of Arkham Pt II (The Drowned City). The health value of each Cthulhu enemy's Enraged side now reads “X per investigator.”"
+      "name": "Tối Hậu Thư Kẻ Ngủ Say",
+      "text": "The Doom of Arkham Pt II (The Drowned City). Giá trị máu ở mặt Enraged của mỗi kẻ địch Cthulhu giờ đây có nội dung “X mỗi điều tra viên.”"
     },
     "UltimatumOfInvisibility": {
-      "name": "Ultimatum of Invisibility",
-      "text": "Undimensioned and Unseen (The Dunwich Legacy). Each Brood of Yog-Sothoth gains the Elite trait and is immune to all player card effects except for the effects of Esoteric Formula."
+      "name": "Tối Hậu Thư Vô Hình",
+      "text": "Undimensioned and Unseen (The Dunwich Legacy). Mỗi Brood of Yog-Sothoth nhận trait Elite và miễn nhiễm với mọi hiệu ứng lá bài người chơi ngoại trừ các hiệu ứng của Esoteric Formula."
     },
     "UltimatumOfTheMan": {
-      "name": "Ultimatum of The Man",
-      "text": "The Pallid Mask (The Path to Carcosa). For the purposes of Corpse Dweller's spawn ability, The Man in the Pallid Mask does not count as a Humanoid enemy. While it is Act 2, The Man in the Pallid Mask cannot leave the Tomb of Shadows."
+      "name": "Tối Hậu Thư Người Đàn Ông",
+      "text": "The Pallid Mask (The Path to Carcosa). Đối với khả năng spawn của Corpse Dweller, The Man in the Pallid Mask không được tính là kẻ địch Humanoid. Khi đang ở Act 2, The Man in the Pallid Mask không thể rời khỏi Tomb of Shadows."
     },
     "UltimatumOfSpoilage": {
-      "name": "Ultimatum of Spoilage",
-      "text": "The Drowned City. Investigators cannot trigger abilities on or assign damage to Artifact assets. If an Item asset from the Expedition encounter set is ever defeated or discarded, it cannot be chosen during setup for the remainder of the campaign."
+      "name": "Tối Hậu Thư Hư Hỏng",
+      "text": "The Drowned City. Các điều tra viên không thể kích hoạt các khả năng trên các asset Artifact hoặc gán sát thương cho chúng. Nếu một asset Item từ tập bài encounter Expedition bị đánh bại hoặc bị bỏ vào chồng bài bỏ, nó không thể được chọn trong quá trình chuẩn bị cho phần còn lại của chiến dịch."
     },
     "UltimatumOfDeath": {
-      "name": "Ultimatum of Death",
-      "text": "The Pallid Mask (The Path to Carcosa). After setup, immediately advance Agenda 1a to Specter of Death and spawn it at your starting location, exhausted. Agenda 2a gains +6 doom threshold. Specter of Death gains: “Forced – When Specter of Death is defeated: Instead of adding it to the victory display, heal all damage from it and exhaust it. It does not ready during the next upkeep phase.”"
+      "name": "Tối Hậu Thư Cái Chết",
+      "text": "The Pallid Mask (The Path to Carcosa). Sau khi chuẩn bị, ngay lập tức advance Agenda 1a sang Specter of Death và spawn nó tại địa điểm bắt đầu của bạn, ở trạng thái exhausted. Agenda 2a nhận thêm +6 ngưỡng doom. Specter of Death nhận được: “Forced – Khi Specter of Death bị đánh bại: Thay vì thêm nó vào khu vực trưng bày thành tích, hồi phục toàn bộ sát thương khỏi nó và exhaust nó. Nó không ready trong giai đoạn Upkeep tiếp theo.”"
     },
     "BoonOfTheDreamer": {
-      "name": "Boon of The Dreamer",
-      "text": "Where the Gods Dwell (The Dream-Eaters). After advancing to Act 5, advance to agenda 3a and remove all doom from it. This agenda gets +2 doom threshold."
+      "name": "Phước Lành Kẻ Mộng Mơ",
+      "text": "Where the Gods Dwell (The Dream-Eaters). Sau khi advance sang Act 5, hãy advance sang agenda 3a và gỡ bỏ toàn bộ doom khỏi nó. Agenda này nhận thêm +2 ngưỡng doom."
     },
     "UltimatumOfMultiplication": {
-      "name": "Ultimatum of Multiplication",
-      "text": "Undimensioned and Unseen (The Dunwich Legacy). Instead of the standard setup instructions, begin the game with all five Brood of Yog-Sothoth cards in play: one in each of the five locations besides Dunwich Village. During this scenario, whenever an effect would cause you to spawn a set-aside Brood of Yog-Sothoth, you must instead place one doom on the current agenda."
+      "name": "Tối Hậu Thư Nhân Bản",
+      "text": "Undimensioned and Unseen (The Dunwich Legacy). Thay vì các hướng dẫn chuẩn bị tiêu chuẩn, bắt đầu ván chơi với tất cả năm lá bài Brood of Yog-Sothoth trong màn chơi: mỗi lá ở một trong năm địa điểm ngoài Dunwich Village. Trong màn chơi này, bất cứ khi nào một hiệu ứng yêu cầu bạn spawn một lá Brood of Yog-Sothoth đã đặt sang một bên, thay vào đó bạn phải đặt một doom lên agenda hiện tại."
     },
     "UltimatumOfTheDrowned": {
-      "name": "Ultimatum of the Drowned",
-      "text": "Into the Maelstrom (The Innsmouth Conspiracy). Each agenda gets –1 doom threshold. The Forced effect on Dagon's and Hydra's (Awakened and Enraged) sides instead reads: “Forced – After it is evaded or dealt damage: Do the same to a copy of its Brood in play, as well. Ready it.”"
+      "name": "Tối Hậu Thư Kẻ Chết Đuối",
+      "text": "Into the Maelstrom (The Innsmouth Conspiracy). Mỗi agenda bị –1 ngưỡng doom. Hiệu ứng Forced ở mặt Awakened và Enraged của Dagon và Hydra thay vào đó có nội dung: “Forced – Sau khi nó bị evade hoặc bị gây sát thương: Làm tương tự với một bản sao Brood của nó trong màn chơi. Ready nó.”"
     },
     "BoonOfTheMiners": {
-      "name": "Boon of The Miners",
-      "text": "Fate of the Vale (The Feast of Hemlock Vale). Fate of the Vale (v.III)'s first ability now reads “{'{'}action{'}'} Spend X clues: Place X resources on your location, as kindling…” and its second ability instead reads “{'{'}fast{'}'} If your location has 1 {'{'}perPlayer{'}'} kindling on it, remove all kindling from it: Draw 1 set-aside Fire! treachery. (Group limit once per location.)”"
+      "name": "Phước Lành Thợ Mỏ",
+      "text": "Fate of the Vale (The Feast of Hemlock Vale). Khả năng đầu tiên của Fate of the Vale (v.III) giờ có nội dung “{'{'}action{'}'} Tiêu X manh mối: Đặt X tài nguyên lên địa điểm của bạn, như mồi lửa…” và khả năng thứ hai thay vào đó có nội dung “{'{'}fast{'}'} Nếu địa điểm của bạn có 1 {'{'}perPlayer{'}'} mồi lửa trên đó, gỡ bỏ tất cả mồi lửa khỏi nó: Rút 1 lá treachery Fire! đã đặt sang một bên. (Giới hạn cả nhóm một lần mỗi địa điểm.)”"
     },
     "BoonOfTheDance": {
-      "name": "Boon of The Dance",
-      "text": "The Feast of Hemlock Vale. When choosing residents to share a dance with during Prelude: The Second Evening, players may check the Relationship Level requirements of a codex entry before resolving it."
+      "name": "Phước Lành Điệu Nhảy",
+      "text": "The Feast of Hemlock Vale. Khi chọn các cư dân để khiêu vũ cùng trong Mở đầu: Buổi Tối Thứ Hai (Prelude: The Second Evening), người chơi có thể kiểm tra yêu cầu Cấp độ Mối quan hệ của một mục codex trước khi giải quyết nó."
     }
   },
   "morrigan": {

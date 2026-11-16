@@ -1,30 +1,30 @@
 {
   "specialRules": [
     {
-      "title": "Searching for Dad",
-      "body": "<p class='basic'>In this scenario, Wendy is searching Innsmouth for any sign of her father. The Leads deck contains each of the 6 _Suspect_ enemies and the 6 _Hideout_ locations. As _Suspect_ and _Hideout_ cards leave play, Wendy must draw new leads from the Leads deck. The objective is to empty the Leads deck before agenda 2b is reached. The fewer cards that remain in the Leads deck, the better.</p>"
+      "title": "Tìm Kiếm Cha",
+      "body": "<p class='basic'>Trong màn chơi này, Wendy đang tìm kiếm bất kỳ dấu vết nào của cha cô tại Innsmouth. Chồng bài Leads chứa 6 kẻ địch _Suspect_ và 6 địa điểm _Hideout_. Khi các lá bài _Suspect_ và _Hideout_ rời khỏi màn chơi, Wendy phải rút các manh mối mới từ chồng bài Leads. Mục tiêu là làm cạn chồng bài Leads trước khi đạt đến agenda 2b. Càng ít lá bài còn lại trong chồng bài Leads thì càng tốt.</p>"
     },
     {
-      "title": "Mysterious Photo",
-      "body": "<p class='basic'>_Suspect_ and _Hideout_ cards cannot be added to the victory display except by using the double-sided Mysterious Photo story asset under Wendy's control. Its front side lets Wendy parley with _Suspect_ enemies and add clueless _Suspects_ at her location to the victory display by spending clues as a group. Its back side does the same for _Hideout_ locations via investigation. Each card added to the victory display this way improves the experience gained at the end of the scenario.</p>"
+      "title": "Bức Ảnh Bí Ẩn",
+      "body": "<p class='basic'>Các lá bài _Suspect_ và _Hideout_ không thể được thêm vào khu vực trưng bày thành tích ngoại trừ việc sử dụng story asset hai mặt Mysterious Photo dưới quyền kiểm soát của Wendy. Mặt trước của nó cho phép Wendy parley với các kẻ địch _Suspect_ và thêm các _Suspect_ không còn manh mối tại địa điểm của cô vào khu vực trưng bày thành tích bằng cách chi manh mối theo nhóm. Mặt sau của nó thực hiện điều tương tự cho các địa điểm _Hideout_ thông qua điều tra. Mỗi lá bài được thêm vào khu vực trưng bày thành tích theo cách này sẽ làm tăng lượng kinh nghiệm nhận được vào cuối màn chơi.</p>"
     }
   ],
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is half the number of _Suspect_ and _Hideout_ cards in the victory display (rounded up).",
-      "cultist": "-2. (-4 instead if you are parleying with a _Suspect_ enemy or investigating a _Hideout_ location).",
-      "tablet": "-3. If you succeed, look at the top card of the Leads deck. You may choose to shuffle the Leads deck.",
-      "elderThing": "-1. Nếu bạn thất bại, shuffle the top card of the encounter deck into the Leads deck."
+      "skull": "-X. X bằng một nửa số lượng lá bài _Suspect_ và _Hideout_ trong khu vực trưng bày thành tích (làm tròn lên).",
+      "cultist": "-2 (thay vào đó là -4 nếu bạn đang parley với một kẻ địch _Suspect_ hoặc đang điều tra một địa điểm _Hideout_).",
+      "tablet": "-3. Nếu bạn thành công, xem lá bài trên cùng của chồng bài Leads. Bạn có thể chọn xáo trộn chồng bài Leads.",
+      "elderThing": "-1. Nếu bạn thất bại, xáo trộn lá bài trên cùng của chồng bài encounter vào chồng bài Leads."
     },
     "hardExpert": {
-      "skull": "-X. X is the number of _Suspect_ and _Hideout_ cards in the victory display.",
-      "cultist": "-3. (-5 instead if you are parleying with a _Suspect_ enemy or investigating a _Hideout_ location).",
-      "tablet": "-4. If you succeed, look at the top card of the Leads deck. You may choose to shuffle the Leads deck.",
-      "elderThing": "-2. Nếu bạn thất bại, shuffle the top card of the encounter deck into the Leads deck."
+      "skull": "-X. X là số lá bài _Suspect_ và _Hideout_ trong khu vực trưng bày thành tích.",
+      "cultist": "-3. (-5 thay vào đó nếu bạn đang parley với một kẻ địch _Suspect_ hoặc điều tra một địa điểm _Hideout_).",
+      "tablet": "-4. Nếu bạn thành công, xem lá bài trên cùng của chồng bài Leads. Bạn có thể chọn xáo trộn chồng bài Leads.",
+      "elderThing": "-2. Nếu bạn thất bại, xáo trộn lá bài trên cùng của chồng bài encounter vào chồng bài Leads."
     }
   },
   "intro": {
-    "title": "Challenge Scenario: Red Tide Rising",
+    "title": "Màn Chơi Thử Thách: Thủy Triều Đỏ Dâng Cao",
     "body": "<p>Người ta không quan tâm đến những kẻ bị bỏ lại phía sau. Đó là điều đầu tiên bạn học được trên đường phố, sau khi rời khỏi trại trẻ mồ côi. Bạn đã phải tự lo cho bản thân, làm bất cứ điều gì có thể để sống qua ngày. Cho đến nay, chỉ với trí thông minh của mình và chiếc bùa hộ mệnh mà Mẹ để lại trước khi họ đưa bà đi, bạn đã xoay xở để sống sót. Thỉnh thoảng, ai đó sẽ tỏ lòng thương cảm và ném một hai đồng xu vào cốc của bạn. Một buổi sáng tuyệt vời nọ, một quý cô tốt bụng rời khỏi Velma's đã cho bạn phần xúc xích và trứng thừa của cô ấy. Nhưng phần lớn thời gian, bạn chỉ có thể dựa vào chính mình. Những đứa trẻ bụi đời khác có thể cùng chung cảnh ngộ với bạn, nhưng bạn sẽ ngần ngại khi gọi bất kỳ ai trong số chúng là bạn bè, ngoại trừ có lẽ là James, và điều đó cũng hơi khiên cưỡng. Không—cơn đói, sự cô đơn, nỗi buồn chán và sự hoài nghi mới là những người bạn tốt nhất và duy nhất của bạn. Và bất chấp tất cả những điều đó, bằng cách nào đó nó vẫn tốt hơn là ở trại trẻ mồ côi.\\r</p><p>Rồi ngày định mệnh cũng đến. Nó bắt đầu như bao ngày khác, với việc bạn và James rảo bước qua Rivertown, “thu thập” bất cứ thứ gì bạn có thể bán cho Oliver Thomas. Phần còn lại chắc chắn sẽ thuộc về băng đảng của Marvin—một đám trẻ bụi đời tụ tập lại để bắt nạt những đứa khác—nhưng có một món đồ lặt vặt trong số những thứ bạn kiếm được khiến bạn chú ý: một bức ảnh. Không phải một bức ảnh bình thường, mà là ảnh của cha bạn.\\r</p><p>Không thể nhầm lẫn được. Không có chút nghi ngờ nào trong tâm trí bạn. Trong bức ảnh, cha bạn đứng trước một tòa nhà mà bạn không nhận ra. Tấm biển phía sau ông ấy dường như được viết bằng một ngôn ngữ khác, nên có lẽ là ở một nơi nào đó rất, rất xa. Không có cách nào để biết bức ảnh được chụp gần đây hay không. Nó đã sờn, bẩn và bị xước ở vài chỗ. Bạn lật nó lại và ở đó, được viết nguệch ngoạc bằng nét chữ quen thuộc, bạn đọc được: “Chẳng bao lâu nữa Red Tide sẽ dâng lên. Hãy giữ an toàn nhé, cô con gái bé bỏng của cha.”\\r</p><p>Bạn nài nỉ James nói cho bạn biết bức ảnh từ đâu ra, và cậu ta khẳng định một người đàn ông mặc áo khoác len dài và đội chiếc mũ quả dưa màu nâu sẫm đã thả nó vào cốc của bạn vào lúc nào đó trước khi bạn đụng độ băng đảng của Marvin. Bạn lập tức lên đường, hỏi thăm xung quanh để tìm người đàn ông đội mũ quả dưa. Manh mối duy nhất của bạn là ông ta đã nhảy lên một chiếc xe buýt gần Easttown. Chiếc xe buýt tồi tàn, không có biển hiệu chạy đến thị trấn cảng Innsmouth. Bạn gom góp nhiều đồng xu nhất có thể và lên chuyến xe buýt duy nhất đến bến cảng cũ kỹ, bị bỏ rơi đó. Nếu cha vẫn còn ở ngoài kia, bạn phải tìm ông ấy. Bạn phải làm vậy!</p>"
   },
   "setup": {
@@ -33,26 +33,26 @@
     "scenarioReference": "Loại bỏ lá bài scenario reference của bộ encounter *The Vanishing of Elina Harper* khỏi trò chơi. Sử dụng lá bài scenario reference mới được cung cấp trong bộ encounter *Red Tide Rising*.",
     "actAgendaDeck": "Loại bỏ tất cả các lá bài act và agenda của bộ encounter *The Vanishing of Elina Harper* khỏi trò chơi. Xây dựng chồng bài act và agenda chỉ sử dụng các lá bài act và agenda mới được cung cấp trong bộ encounter *Red Tide Rising*.",
     "placeLocations": "Đưa các địa điểm sau vào chơi: Innsmouth Square, Marsh Refinery, Innsmouth Harbour, Fish Street Bridge, First National Grocery, Gilman House, và The Little Bookshop.",
-    "leadsDeck": "Prepare the Leads deck: find the 6 unique enemies with the _Suspect_ trait and the 6 single-sided locations with the _Hideout_ trait, and shuffle these 12 cards together to form the Leads deck. Place it near the scenario reference card.",
+    "leadsDeck": "Chuẩn bị chồng bài Leads: tìm 6 kẻ địch độc bản có trait _Suspect_ và 6 địa điểm một mặt có trait _Hideout_, rồi xáo trộn 12 lá bài này lại với nhau để tạo thành chồng bài Leads. Đặt nó gần thẻ tham chiếu màn chơi.",
     "drawLead": "Rút lá trên cùng của chồng bài Leads, giải quyết khả năng revelation của nó. Nếu là vị trí, Wendy Adams bắt đầu ở vị trí đó. Nếu là kẻ địch, Wendy Adams bắt đầu ở vị trí của kẻ địch đó. Mỗi điều tra viên khác bắt đầu ở Innsmouth Square.",
     "setAsideMonsters": "Để riêng mỗi kẻ địch [[Monster]] sau ra ngoài cuộc chơi: Winged One và cả hai bản sao của Hunting Nightgaunt.",
-    "setAsideAngryMob": "Set Angry Mob aside, out of play.",
-    "adjustments": "Depending on the number of investigators (treat the number of investigators as 1 higher if playing Hard difficulty, and 2 higher if playing Expert): 2 investigators, begin with 1 doom on agenda 1; 3 investigators, begin with 2 doom on agenda 1; 4 investigators, shuffle 1 random set-aside _Monster_ enemy into the Leads deck.",
+    "setAsideAngryMob": "Đặt Đám Đông Giận Dữ sang một bên, ngoài màn chơi.",
+    "adjustments": "Tùy thuộc vào số lượng điều tra viên (tính số lượng điều tra viên nhiều hơn 1 nếu chơi độ khó Khó, và nhiều hơn 2 nếu chơi Chuyên gia): 2 điều tra viên, bắt đầu với 1 doom trên agenda 1; 3 điều tra viên, bắt đầu với 2 doom trên agenda 1; 4 điều tra viên, xáo trộn 1 kẻ địch _Monster_ ngẫu nhiên được đặt sang một bên vào chồng bài Leads.",
     "removeStoryAssets": "Loại bỏ các story asset Thomas Dawson và Elina Harper khỏi trò chơi.",
     "mysteriousPhoto": "Đưa asset story hai mặt Mysterious Photo vào chơi, dưới sự kiểm soát của Wendy Adams. Wendy Adams có thể chọn mặt nào của nó vào chơi. Mysterious Photo không thể rời cuộc chơi trừ khi Wendy Adams bị loại.",
     "shuffleRemainder": "Xáo trộn các lá bài encounter còn lại để tạo thành chồng bài encounter."
   },
   "label": {
-    "mysteriousPhotoSuspects": "Mysterious Photo enters play with its _Suspect_ side faceup",
-    "mysteriousPhotoHideouts": "Mysterious Photo enters play with its _Hideout_ side faceup",
-    "flipMysteriousPhoto": "Flip Mysterious Photo over",
-    "shuffleLeadsDeck": "Shuffle the Leads deck",
-    "doNotShuffleLeadsDeck": "Do not shuffle the Leads deck"
+    "mysteriousPhotoSuspects": "Mysterious Photo vào màn chơi với mặt _Suspect_ ngửa",
+    "mysteriousPhotoHideouts": "Mysterious Photo vào màn chơi với mặt _Hideout_ ngửa",
+    "flipMysteriousPhoto": "Lật mặt Mysterious Photo",
+    "shuffleLeadsDeck": "Xáo trộn chồng bài Leads",
+    "doNotShuffleLeadsDeck": "Không xáo trộn chồng bài Leads"
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
-      "body": "<p>If no resolution was reached because each investigator resigned: Proceed to _Resolution 1_.</p><p>If no resolution was reached because each investigator was defeated: Proceed to _Resolution 2_.</p>"
+      "title": "Không có Kết cục",
+      "body": "<p>Nếu không đạt được kết cục nào vì mỗi điều tra viên đều rút lui: Tiến hành _Resolution 1_.</p><p>Nếu không đạt được kết cục nào vì mỗi điều tra viên đều bị đánh bại: Tiến hành _Resolution 2_.</p>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
@@ -63,15 +63,15 @@
       "body": "<p>Bạn đợi những kẻ truy đuổi khuất sau góc phố trước khi lén lút quay lại trạm xe buýt và lên chuyến xe tiếp theo đến Arkham. Bạn tức giận vò nhàu mép bức ảnh của Bố. Một giọt nước mắt lăn dài trên má bạn. Bạn vẫn không có manh mối thực sự nào. Người đàn ông đội mũ quả dưa và mặc áo khoác dạ sáng hôm đó là ai? Bạn đã dính líu vào chuyện gì thế này? Nhưng, khi liếc nhìn bức ảnh một lần nữa, một tia hy vọng vẫn đọng lại trong tâm trí bạn: Bố vẫn còn sống. Chắc chắn là vậy.</p><ul><li>Bỏ qua giá trị Victory X của mỗi lá bài [[Suspect]] và [[Hideout]] trong victory display. Thay vào đó…</li><li>Wendy Adams phải nâng cấp Abandoned and Alone lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Wendy’s Amulet về phiên bản gốc của nó.</li></ul>"
     },
     "xp": {
-      "wendy": "Victory display (1 experience for each card beyond the 3rd)",
-      "other": "Victory display (1 experience for each card beyond the 5th)"
+      "wendy": "Khu vực trưng bày thành tích (1 kinh nghiệm cho mỗi lá bài vượt quá lá thứ 3)",
+      "other": "Khu vực trưng bày thành tích (1 kinh nghiệm cho mỗi lá bài vượt quá lá thứ 5)"
     },
     "label": {
-      "upgradeWendysAmulet": "Upgrade Wendy's Amulet to its advanced version",
+      "upgradeWendysAmulet": "Nâng cấp Wendy's Amulet lên phiên bản nâng cao",
       "downgradeWendysAmulet": "Wendy Adams phải nâng cấp Abandoned and Alone lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Wendy’s Amulet về phiên bản gốc của nó.",
       "upgradeAbandonedAndAlone": "Wendy Adams phải nâng cấp Abandoned and Alone lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Wendy’s Amulet về phiên bản gốc của nó.",
       "downgradeAbandonedAndAlone": "Cô ấy có thể nâng cấp Wendy’s Amulet lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của Abandoned and Alone về phiên bản gốc của nó.",
-      "doNotSwap": "Do not swap any cards"
+      "doNotSwap": "Không hoán đổi bất kỳ lá bài nào"
     }
   }
 }

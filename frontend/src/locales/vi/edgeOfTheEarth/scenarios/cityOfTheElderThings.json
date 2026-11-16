@@ -7,16 +7,16 @@
     }
   ],
   "label": {
-    "placeKey": "Place {key} key",
-    "moveKey": "Move {key} key",
-    "v1": "Proceed to _Setup (v. I)_",
-    "v2": "Proceed to _Setup (v. II)_",
-    "v3": "Proceed to _Setup (v. III)_"
+    "placeKey": "Đặt chìa khóa {key}",
+    "moveKey": "Di chuyển chìa khóa {key}",
+    "v1": "Tiến hành đến _Thiết lập (bản I)_",
+    "v2": "Tiến hành đến _Thiết lập (bản II)_",
+    "v3": "Tiến hành đến _Thiết lập (bản III)_"
   },
   "tooltips": {
     "cityLandscape": {
-      "look": "During your turn, spend 1 clue: Look at the revealed side of a City Landscape in your column or row. (Limit once per round.)",
-      "move": "During your turn, spend 3 clues: Move to any location in your column or row. (Limit once per round.)"
+      "look": "Trong lượt của bạn, tiêu 1 manh mối: Nhìn vào mặt hiển lộ của một địa điểm City Landscape trong cột hoặc hàng của bạn. (Giới hạn 1 lần mỗi vòng.)",
+      "move": "Trong lượt của bạn, tiêu 3 manh mối: Di chuyển đến bất kỳ địa điểm nào trong cột hoặc hàng của bạn. (Giới hạn 1 lần mỗi vòng.)"
     }
   },
   "intro": {
@@ -25,7 +25,7 @@
   },
   "sinha": {
     "alive": "<p>Nếu Tiến sĩ Mala Sinha còn sống:</p><p>\"Hãy nhớ, luôn giữ kín người. Nơi chúng ta đang đến, gió có thể làm đóng băng da cậu gần như ngay lập tức. Và giữ nước đầy đủ,\" Tiến sĩ Sinha nhắc bạn. \"Không khí ở đây khô hơn cậu nghĩ.\" Những người còn lại trong nhóm gật đầu hiểu ý. Không ai trong số bạn đi xa đến vậy chỉ để chết vì hạ thân nhiệt… nhưng điều đó gần như cũng dễ xảy ra như chết vì bất cứ thứ gì khác ở cái nơi đáng nguyền rủa này.</p>",
-    "otherwise": "<p>_Otherwise:_</p><p>Bạn đã được cảnh báo nhiều lần về những nguy hiểm của môi trường Nam Cực, nhưng không có Tiến sĩ Sinha, bạn rơi vào thế bất lợi khi đối mặt với thời tiết khắc nghiệt. Dù cô ấy không giỏi giao tiếp, cô ấy bù đắp bằng chuyên môn. Mong muốn có thể cứu được cô ấy, bạn nghiến răng lê bước tiếp, quan sát đồng đội để phát hiện bất kỳ dấu hiệu nào của hạ thân nhiệt.</p><p class='basic'>Each investigator adds a Frostbitten weakness to their deck. It does not count toward that investigator’s deck size."
+    "otherwise": "<p>_Trường hợp khác:_</p><p>Bạn đã được cảnh báo nhiều lần về những nguy hiểm của môi trường Nam Cực, nhưng không có Tiến sĩ Sinha, bạn rơi vào thế bất lợi khi đối mặt với thời tiết khắc nghiệt. Dù cô ấy không giỏi giao tiếp, cô ấy bù đắp bằng chuyên môn. Mong muốn có thể cứu được cô ấy, bạn nghiến răng lê bước tiếp, quan sát đồng đội để phát hiện bất kỳ dấu hiệu nào của hạ thân nhiệt.</p><p class='basic'>Mỗi điều tra viên thêm 1 điểm yếu Frostbitten vào bộ bài của mình. Nó không tính vào giới hạn kích thước bộ bài của điều tra viên đó."
   },
   "descend": "Khi bạn xuống từ các đỉnh núi bao quanh thành phố, lén lút vượt qua tường thành, những triền dốc dần nhường chỗ cho các chân đồi thoai thoải, rải rác những công trình bằng đá đen nguyên thủy. Có lẽ là tháp canh hoặc tiền đồn, nối liền các bức tường tự nhiên bên ngoài thành phố với vùng ngoại ô. \"Chúng ta nên khám phá một trong những tháp canh đó,\" một thành viên trong đội đề xuất, chỉ tay vào công trình gần nhất. Bạn gật đầu đồng ý. Báo cáo của Dyer đã ghi nhận vô số thông tin được khắc trên tường của nhiều công trình trong thành phố, xét cho cùng—có lẽ bạn sẽ tình cờ tìm thấy một bản đồ hay sơ đồ của thành phố để hỗ trợ cuộc thám hiểm.",
   "scoutedTheCityOutskirts": {
@@ -42,9 +42,9 @@
   },
   "entrance": "<p>Lối vào rộng mở của công trình đá obsidian chào đón bạn như cái hàm của một con thú săn mồi hung dữ. Khi mắt bạn quen dần với bóng tối, sự tò mò nhường chỗ cho nỗi sợ hãi sâu thẳm. Đại sảnh sắc nhọn, góc cạnh của công trình là hiện trường của một vụ thảm sát kinh hoàng. Xác của Elder Things bị xé nát nằm rải rác trên sàn—những đống thịt xám xịt dai như da và nội tạng biến dạng dính nhơm nhớp, phủ đầy chất lỏng xanh đậm đặc. Bạn choáng váng trước mùi tử thi kinh khủng. Những kẻ chết này không phải cổ xưa. Vụ tàn sát này chắc chắn vừa xảy ra gần đây.</p><p>\"Thứ gì có thể làm nên chuyện này?\" Một người trong nhóm phá vỡ sự im lặng nặng nề. Những bức bích họa trên tường thu hút sự chú ý của bạn, mô tả loài Elder Things mà bạn đã biết, đang giao chiến với một kẻ thù cổ xưa, đáng sợ—không, không chỉ một. Rất nhiều. Nhóm của bạn không dám nán lại lâu trong lò mổ này. Che mũi để chặn mùi hôi thối kinh khủng, bạn rời đi.</p>",
   "trail": "<p>Dòng máu xanh nhợt nhạt dẫn ra ngoài, nhỏ giọt xuống một con đường mượt mà như được tạc từ sườn núi bởi một chất axit. Ở hướng ngược lại, dãy núi tiếp tục chạy dọc theo rìa thành phố. Xa xa, bạn vừa đủ thấy một khu vực tối tăm, nửa chìm của thành phố, cách bố trí các công trình hoàn toàn xa lạ với bạn, dù đã nghiên cứu kỹ ghi chú của Dyer. Cuối cùng, ở trung tâm thành phố, một kim tự tháp khổng lồ và nhiều đền thờ nổi bật nằm rải rác, vươn cao kỳ diệu bất chấp sự tàn phá của bao thời đại.</p>",
-  "group1": "<h3>Group 1</h3>",
-  "group2": "<h3>Group 2</h3>",
-  "group3": "<h3>Group 3</h3>",
+  "group1": "<h3>Nhóm 1</h3>",
+  "group2": "<h3>Nhóm 2</h3>",
+  "group3": "<h3>Nhóm 3</h3>",
   "votes": "Đội thám hiểm bỏ phiếu chọn hướng đi. So sánh ba nhóm sau để xem nhóm nào còn nhiều thành viên sống sót nhất.",
   "vote": {
     "kensler": "Tiến sĩ Amy Kensler",
@@ -59,7 +59,7 @@
     "group1": "Nếu cột bên trái (Nhóm Một) có nhiều thành viên còn sống nhất, nhóm bỏ phiếu mạo hiểm tiến vào trung tâm thành phố, nơi có những công trình vĩ đại nhất. Mỗi đồng đội từ nhóm này được chọn để đồng hành cùng một điều tra viên sẽ vào chơi với thêm một lần sử dụng. Tiếp tục đến _Setup (v. I)_.",
     "group2": "Nếu cột giữa (Nhóm Hai) có nhiều thành viên còn sống nhất, nhóm bỏ phiếu đi dọc sống núi, hướng đến vùng đất mà Dyer và Danforth chưa từng khám phá. Mỗi đồng đội từ nhóm này được chọn để đồng hành cùng một điều tra viên sẽ vào chơi với thêm một lần sử dụng. Tiếp tục đến _Setup (v. II)_.",
     "group3": "Nếu cột bên phải (Nhóm Ba) có nhiều thành viên còn sống nhất, nhóm bỏ phiếu lần theo dấu vết của những sinh vật đã tàn sát các Elder Thing. Mỗi đồng đội từ nhóm này được chọn để đồng hành cùng một điều tra viên sẽ vào chơi với thêm một lần sử dụng. Tiếp tục đến _Setup (v. III)_.",
-    "tied": "If two or more columns are tied for the most, the lead investigator casts the tiebreaking vote and may decide between the tied options. (*Resolve the above bullet as if that chosen group had the most team members still alive.*)"
+    "tied": "Nếu hai hoặc nhiều cột hòa nhau về số lượng nhiều nhất, điều tra viên trưởng sẽ bỏ phiếu quyết định phá vỡ thế hòa và có thể chọn giữa các phương án hòa điểm. (*Giải quyết dấu đầu dòng ở trên như thể nhóm được chọn đó có nhiều thành viên còn sống nhất.*)"
   },
   "interlude": {
     "instructions": "Tìm tất cả thành viên đội thám hiểm còn sống (bao gồm cả những người hiện đang được điều tra viên kiểm soát) không có dấu kiểm bên cạnh tên trong phần \"Expedition Team\" (Đội Thám hiểm) của Nhật ký Chiến dịch, và chọn ngẫu nhiên một người trong số họ.",
@@ -69,36 +69,36 @@
   },
   "resolutions": {
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không có Kết cục",
       "body": "<div class='resolution'><p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Bị thương và kiệt sức, bạn trú ẩn trong sự an toàn tương đối của một trong những công trình cao chót vót của thành phố. Hy vọng duy nhất của bạn là tìm nơi trú ẩn trong thành phố xa lạ này và mong rằng sự hiện diện của bạn không bị chú ý bởi những cư dân vẫn lảng vảng trên đường phố và các sảnh cổ xưa của nó.</p><ul><li>Chuyển tới <b>Resolution 2</b>.</li></ul></div>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<div class='resolution'><p>_Resolution 1_: Một sự tĩnh lặng kỳ lạ, không thuộc về thế gian chào đón bạn khi nhóm tiến sâu vào lối đi bí mật. Bạn kỳ vọng sẽ đối mặt với âm thanh và sự cuồng nộ, nhưng sự im lặng rợn người này gần như tồi tệ hơn. Không một lời nào được thốt ra khi bạn lặng lẽ tiến sâu hơn vào đường hầm bí mật, ghi nhận sự mượt mà kỳ lạ của các bức tường, những dấu khắc kỳ quái dọc sàn, tiếng tí tách, tí tách, tí tách của nước vang vọng từ xa.</p><p>Suốt nhiều giờ, bạn tiếp tục bước vào bóng tối sâu thẳm, tự vấn phán đoán của mình với mỗi bước chân. Loại người nào lại tự nguyện bước vào hàm của nỗi kinh hoàng như vậy? Bạn đã mạo hiểm danh tiếng khi tham gia cuộc thám hiểm này ngay từ đầu. Rồi bạn mạo hiểm mạng sống khi không quay đầu ngay khi mọi thứ trở nên nguy kịch. Giờ đây, bạn mạo hiểm cả sự tỉnh táo để khai quật những bí mật mà con người không bao giờ nên biết.</p><p>Đây là lòng dũng cảm? Hay là sai lầm cuối cùng của một đám kẻ ngốc, quá cố chấp để thấy rằng cái chết của họ nằm ở cuối con đường này? Không quan trọng. Bạn đã đi quá xa để quay lại. Dù thế nào đi nữa, bạn sẽ tìm được câu trả lời mình kiếm tìm. Câu hỏi duy nhất là liệu bạn có sống sót để kể cho thế giới về những gì bạn phát hiện hay không.</p><ul><li>In your Campaign Log, record *the team found the hidden tunnel.*</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Trong phần \"Expedition Team\" (Đội Thám hiểm) của Nhật ký Chiến dịch, ghi lại số lượng chấn thương thể chất và tinh thần trên mỗi lá bài tài sản đồng đội trong màn chơi.</li><li>Proceed to _Interlude III: Final Night._</li></ul></div>"
+      "body": "<div class='resolution'><p>_Resolution 1_: Một sự tĩnh lặng kỳ lạ, không thuộc về thế gian chào đón bạn khi nhóm tiến sâu vào lối đi bí mật. Bạn kỳ vọng sẽ đối mặt với âm thanh và sự cuồng nộ, nhưng sự im lặng rợn người này gần như tồi tệ hơn. Không một lời nào được thốt ra khi bạn lặng lẽ tiến sâu hơn vào đường hầm bí mật, ghi nhận sự mượt mà kỳ lạ của các bức tường, những dấu khắc kỳ quái dọc sàn, tiếng tí tách, tí tách, tí tách của nước vang vọng từ xa.</p><p>Suốt nhiều giờ, bạn tiếp tục bước vào bóng tối sâu thẳm, tự vấn phán đoán của mình với mỗi bước chân. Loại người nào lại tự nguyện bước vào hàm của nỗi kinh hoàng như vậy? Bạn đã mạo hiểm danh tiếng khi tham gia cuộc thám hiểm này ngay từ đầu. Rồi bạn mạo hiểm mạng sống khi không quay đầu ngay khi mọi thứ trở nên nguy kịch. Giờ đây, bạn mạo hiểm cả sự tỉnh táo để khai quật những bí mật mà con người không bao giờ nên biết.</p><p>Đây là lòng dũng cảm? Hay là sai lầm cuối cùng của một đám kẻ ngốc, quá cố chấp để thấy rằng cái chết của họ nằm ở cuối con đường này? Không quan trọng. Bạn đã đi quá xa để quay lại. Dù thế nào đi nữa, bạn sẽ tìm được câu trả lời mình kiếm tìm. Câu hỏi duy nhất là liệu bạn có sống sót để kể cho thế giới về những gì bạn phát hiện hay không.</p><ul><li>In your Campaign Log, record *the team found the hidden tunnel.*</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Trong phần \"Expedition Team\" (Đội Thám hiểm) của Nhật ký Chiến dịch, ghi lại số lượng sang chấn thể chất và tinh thần trên mỗi lá bài tài sản đồng đội trong màn chơi.</li><li>Proceed to _Interlude III: Final Night._</li></ul></div>"
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
-      "body": "<div class='resolution'><p>_Resolution 2_: Nhiều giờ trôi qua. Bạn không dám mạo hiểm ra ngoài, nhưng bạn khám phá từng ngóc ngách của nơi trú ẩn, hy vọng tìm thấy thứ gì đó khiến nỗ lực này đáng giá. Thứ bạn tìm thấy lại càng khó tin hơn. Ở tầng dưới băng giá của công trình, một căn phòng thiêng liêng chứa đựng một hồ sương mù xoáy tròn rực rỡ như kính vạn hoa. Làn sương xám cuộn xoáy bốc lên từ bề mặt, những hình dạng quen thuộc và ảo giác kỳ lạ hiện ra rồi tan biến bên trong.</p><p>Như thể cảm nhận được sự đến gần của bạn, hồ sương ngừng xoáy và tự nâng lên, gần như chào đón. Rồi nó kết tụ thành một khối sáng lấp lánh đa sắc, bò dọc sàn nhà, dừng lại khi bạn dừng, tiếp tục khi bạn theo sau. Nó vẫy gọi bạn đến gần, dẫn dắt bạn. Bạn liếc nhìn nhau đầy lo ngại. Nó đang cố cho bạn thấy điều gì sao? Đưa bạn đến đâu đó? Và nếu vậy… liệu có thực sự khôn ngoan khi đi theo?</p><p>Cuối cùng, bạn đạt được sự đồng thuận. Chẳng ích gì khi chần chừ ở đây, khi thời tiết ngày càng xấu đi từng phút. Bạn quyết định theo sau một cách thận trọng, hy vọng nó sẽ dẫn bạn đến câu trả lời. Suốt nhiều giờ, bạn tiếp tục bước vào bóng tối sâu thẳm, tự vấn phán đoán của mình với mỗi bước chân. Công trình cổ xưa nhường chỗ cho các đường hầm băng giá, tường mượt mà và trơn bóng với chất dịch đen, sàn phủ đầy những dấu khắc kỳ lạ từ nguồn gốc không thể biết. Cuối cùng, khối sương mù thấm ngược vào tường và biến mất, để lại bạn một mình với nghi ngờ, nỗi sợ, và đường hầm dài bất tận xuyên qua trái tim băng giá của Nam Cực, dẫn vào những chiều sâu xa hơn nữa…</p><ul><li>In your Campaign Log, record the team was guided to the hidden tunnel.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Trong phần \"Expedition Team\" (Đội Thám hiểm) của Nhật ký Chiến dịch, ghi lại số lượng chấn thương thể chất và tinh thần trên mỗi lá bài tài sản đồng đội trong màn chơi.</li><li>Proceed to _Interlude III: Final Night_.</li></ul></div>"
+      "body": "<div class='resolution'><p>_Resolution 2_: Nhiều giờ trôi qua. Bạn không dám mạo hiểm ra ngoài, nhưng bạn khám phá từng ngóc ngách của nơi trú ẩn, hy vọng tìm thấy thứ gì đó khiến nỗ lực này đáng giá. Thứ bạn tìm thấy lại càng khó tin hơn. Ở tầng dưới băng giá của công trình, một căn phòng thiêng liêng chứa đựng một hồ sương mù xoáy tròn rực rỡ như kính vạn hoa. Làn sương xám cuộn xoáy bốc lên từ bề mặt, những hình dạng quen thuộc và ảo giác kỳ lạ hiện ra rồi tan biến bên trong.</p><p>Như thể cảm nhận được sự đến gần của bạn, hồ sương ngừng xoáy và tự nâng lên, gần như chào đón. Rồi nó kết tụ thành một khối sáng lấp lánh đa sắc, bò dọc sàn nhà, dừng lại khi bạn dừng, tiếp tục khi bạn theo sau. Nó vẫy gọi bạn đến gần, dẫn dắt bạn. Bạn liếc nhìn nhau đầy lo ngại. Nó đang cố cho bạn thấy điều gì sao? Đưa bạn đến đâu đó? Và nếu vậy… liệu có thực sự khôn ngoan khi đi theo?</p><p>Cuối cùng, bạn đạt được sự đồng thuận. Chẳng ích gì khi chần chừ ở đây, khi thời tiết ngày càng xấu đi từng phút. Bạn quyết định theo sau một cách thận trọng, hy vọng nó sẽ dẫn bạn đến câu trả lời. Suốt nhiều giờ, bạn tiếp tục bước vào bóng tối sâu thẳm, tự vấn phán đoán của mình với mỗi bước chân. Công trình cổ xưa nhường chỗ cho các đường hầm băng giá, tường mượt mà và trơn bóng với chất dịch đen, sàn phủ đầy những dấu khắc kỳ lạ từ nguồn gốc không thể biết. Cuối cùng, khối sương mù thấm ngược vào tường và biến mất, để lại bạn một mình với nghi ngờ, nỗi sợ, và đường hầm dài bất tận xuyên qua trái tim băng giá của Nam Cực, dẫn vào những chiều sâu xa hơn nữa…</p><ul><li>In your Campaign Log, record the team was guided to the hidden tunnel.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>Trong phần \"Expedition Team\" (Đội Thám hiểm) của Nhật ký Chiến dịch, ghi lại số lượng sang chấn thể chất và tinh thần trên mỗi lá bài tài sản đồng đội trong màn chơi.</li><li>Proceed to _Interlude III: Final Night_.</li></ul></div>"
     },
     "xp": {
-      "bonus": "Mỗi điều tra viên nhận kinh nghiệm bằng giá trị Victory X của mỗi lá bài trong khu vực chiến thắng. Mỗi điều tra viên cũng nhận thêm 1 kinh nghiệm cho mỗi cặp token hỗn mang đã sử dụng trong màn chơi này."
+      "bonus": "Mỗi điều tra viên nhận kinh nghiệm bằng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích. Mỗi điều tra viên cũng nhận thêm 1 kinh nghiệm cho mỗi cặp token hỗn mang đã sử dụng trong màn chơi này."
     }
   },
   "remembered": {
-    "theTeamStudiedTheHistoryOfTheElderThings": "The team studied the history of the Elder Things.",
-    "theTeamDiscernedTheOriginOfTheShoggoths": "The team discerned the origin of the Shoggoths."
+    "theTeamStudiedTheHistoryOfTheElderThings": "Đội thám hiểm đã nghiên cứu lịch sử của Cổ Tộc.",
+    "theTeamDiscernedTheOriginOfTheShoggoths": "Đội thám hiểm đã nhận ra nguồn gốc của Shoggoth."
   },
   "tokens": {
     "easyStandard": {
-      "skull": "–X. X is the number of keys you control.",
+      "skull": "-X. X là cấp độ của địa điểm của bạn.",
       "cultist": "–2. Nếu bạn thất bại, place a key you control on your location.",
-      "tablet": "–3. If a {'{'}frost{'}'} token was revealed during this test, you automatically fail, instead.",
+      "tablet": "–3. Nếu một token {'{'}frost{'}'} được tiết lộ trong bài kiểm tra này, thay vào đó bạn tự động thất bại.",
       "elderThing": "–4. Nếu bạn thất bại, the nearest enemy moves once toward you. If it is engaged with you, it attacks."
     },
     "hardExpert": {
-      "skull": "–X. X is 2 plus the number of keys you control.",
-      "cultist": "–2. Place a key you control on your location.",
-      "tablet": "–4. If a {'{'}frost{'}'} token was revealed during this test, chịu 1 damage and you automatically fail, instead.",
+      "skull": "-X. X là 2 cộng với cấp độ của địa điểm của bạn.",
+      "cultist": "-1. Di chuyển đến địa điểm ngay bên dưới bạn.",
+      "tablet": "–4. Nếu một token {'{'}frost{'}'} được tiết lộ trong bài kiểm tra này, nhận 1 sát thương và thay vào đó bạn tự động thất bại.",
       "elderThing": "–5. Nếu bạn thất bại, the nearest enemy moves once toward you. If it is engaged with you, it attacks."
     }
   },
@@ -107,7 +107,7 @@
       "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *City of the Elder Things*, *Elder Things*, *Miasma*, *Nameless Horrors*, *Penguins*, *Shoggoths*, *Tekeli-li*, and *Locked Doors*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/city-of-the-elder-things.png' /><img src='{setImgPath}/elder-things.png' /><img src='{setImgPath}/miasma.png' /><img src='{setImgPath}/nameless-horrors.png' /><img src='{setImgPath}/penguins.png' /><img src='{setImgPath}/shoggoths.png' /><img src='{setImgPath}/tekeli-li.png' /><img src='{setImgPath}/locked-doors.png' /></section>",
       "setAside": "Đặt sang một bên bộ encounter *Shoggoths* (Shoggoth).",
       "createActDeck": "Tạo chồng bài act chỉ sử dụng Sprawling City (Thành phố Lan tỏa) (phiên bản I) và Pursuit of the Unknown (Truy đuổi Điều Bí Ẩn) (phiên bản I). Loại bỏ tất cả các lá bài act khác khỏi màn chơi.",
-      "placeLocations": "Shuffle the sixteen City Landscape locations and put them into play, along with the Hidden Tunnel, according to the map.",
+      "placeLocations": "Xáo trộn 16 địa điểm City Landscape và đưa chúng vào màn chơi, cùng với Đường Hầm Bí Ẩn, theo bản đồ.",
       "startAt": "Điều tra viên chính chọn một trong tám địa điểm ngoài cùng. Mỗi điều tra viên bắt đầu màn chơi tại địa điểm được chọn.",
       "adjacency": "Các địa điểm trong màn chơi này được kết nối với mỗi địa điểm liền kề <i>(xem \"Liên kết Địa điểm\" bên dưới)</i>.",
       "keys": "Thu thập hai bản sao của mỗi token sau từ bộ sưu tập (không lấy từ túi hỗn mang): [skull] (đầu lâu), [cultist] (tà giáo), [tablet] (bảng khắc), [elder_thing] (elder thing), 0, -1, -2, và -3. Đặt ngẫu nhiên một trong 16 token này lên mỗi địa điểm City Landscape. Đây là \"chìa khóa.\" <i>(Xem \"Chìa khóa\" bên dưới)</i>",
@@ -118,7 +118,7 @@
       "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *City of the Elder Things*, *Creatures in the Ice*, *Elder Things*, *Nameless Horrors*, *Penguins*, *Silence and Mystery*, *Tekeli-li*, and *Chilling Cold*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/city-of-the-elder-things.png' /><img src='{setImgPath}/creatures-in-the-ice.png' /><img src='{setImgPath}/elder-things.png' /><img src='{setImgPath}/nameless-horrors.png' /><img src='{setImgPath}/penguins.png' /><img src='{setImgPath}/silence-and-mystery.png' /><img src='{setImgPath}/tekeli-li.png' /><img src='{setImgPath}/chilling-cold.png' /></section>",
       "setAside": "Đặt sang một bên bộ encounter *Creatures in the Ice* (Sinh vật trong Băng).",
       "createActDeck": "Tạo chồng bài act chỉ sử dụng Sprawling City (Thành phố Lan tỏa) (phiên bản II) và Pursuit of the Unknown (Truy đuổi Điều Bí Ẩn) (phiên bản II). Loại bỏ tất cả các lá bài act khác khỏi màn chơi.",
-      "placeLocations": "Shuffle the sixteen City Landscape locations and put them into play, along with the Hidden Tunnel, according to the map.",
+      "placeLocations": "Xáo trộn 16 địa điểm City Landscape và đưa chúng vào màn chơi, cùng với Đường Hầm Bí Ẩn, theo bản đồ.",
       "startAt": "Mỗi điều tra viên bắt đầu màn chơi tại địa điểm ở góc dưới bên phải.",
       "adjacency": "Các địa điểm trong màn chơi này được kết nối với mỗi địa điểm liền kề <i>(xem \"Liên kết Địa điểm\" bên dưới)</i>.",
       "keys": "Thu thập hai bản sao của mỗi token sau từ bộ sưu tập (không lấy từ túi hỗn mang): [skull] (đầu lâu), [cultist] (tà giáo), [tablet] (bảng khắc), [elder_thing] (elder thing), 0, -1, -2, và -3. Đặt ngẫu nhiên một trong 16 token này lên mỗi địa điểm City Landscape. Đây là \"chìa khóa.\" <i>(Xem \"Chìa khóa\" bên dưới)</i>",
@@ -129,29 +129,29 @@
       "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *City of the Elder Things*, *Creatures in the Ice*, *Miasma*, *Penguins*, *Shoggoths*, *Tekeli-li*, *Chilling Cold*, and *Locked Doors*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/city-of-the-elder-things.png' /><img src='{setImgPath}/creatures-in-the-ice.png' /><img src='{setImgPath}/miasma.png' /><img src='{setImgPath}/penguins.png' /><img src='{setImgPath}/shoggoths.png' /><img src='{setImgPath}/tekeli-li.png' /><img src='{setImgPath}/chilling-cold.png' /><img src='{setImgPath}/locked-doors.png' /></section>",
       "setAside": "Đặt sang một bên bộ encounter *Shoggoths* (Shoggoth).",
       "createActDeck": "Tạo chồng bài act chỉ sử dụng Sprawling City (Thành phố Lan tỏa) (phiên bản III) và Pursuit of the Unknown (Truy đuổi Điều Bí Ẩn) (phiên bản III). Loại bỏ tất cả các lá bài act khác khỏi màn chơi.",
-      "placeLocations": "Shuffle the sixteen City Landscape locations and put them into play, along with the Hidden Tunnel, according to the map.",
+      "placeLocations": "Xáo trộn 16 địa điểm City Landscape và đưa chúng vào màn chơi, cùng với Đường Hầm Bí Ẩn, theo bản đồ.",
       "startAt": "Mỗi điều tra viên bắt đầu màn chơi tại địa điểm ở góc trên bên trái.",
       "adjacency": "Các địa điểm trong màn chơi này được kết nối với mỗi địa điểm liền kề <i>(xem \"Liên kết Địa điểm\" bên dưới)</i>.",
       "keys": "Thu thập hai bản sao của mỗi token sau từ bộ sưu tập (không lấy từ túi hỗn mang): [skull] (đầu lâu), [cultist] (tà giáo), [tablet] (bảng khắc), [elder_thing] (elder thing), 0, -1, -2, và -3. Đặt ngẫu nhiên một trong 16 token này lên mỗi địa điểm City Landscape. Đây là \"chìa khóa.\" <i>(Xem \"Chìa khóa\" bên dưới)</i>",
       "removals": "Loại bỏ kẻ địch Terror of the Stars (Nỗi Kinh hoàng từ Các Vì sao) và cả ba bản sao của kẻ địch Reawakened Elder Thing (Elder Thing Tái Hồi Sinh) khỏi màn chơi."
     },
-    "removeUnearnedWeaknesses": "Remove from the game each copy of the Frostbitten and Possessed weaknesses that was not earned during the introduction.",
+    "removeUnearnedWeaknesses": "Loại bỏ khỏi trò chơi mỗi bản sao điểm yếu Bỏng Lạnh và Chiếm Hữu không bị nhận trong phần giới thiệu.",
     "checkDifficulty": "Kiểm tra cấp độ khó.",
-    "hard": "If you are playing on Hard difficulty, add 1 doom to agenda 1a.",
-    "expert": "If you are playing on Expert difficulty, add 2 doom to agenda 1a.",
+    "hard": "Nếu bạn đang chơi ở độ khó Hard, thêm 1 doom vào agenda 1a.",
+    "expert": "Nếu bạn đang chơi ở độ khó Expert, thêm 2 doom vào agenda 1a.",
     "tekelili": "Xáo trộn tất cả các lá bài điểm yếu Tekeli-li! chưa nằm trong bộ bài của điều tra viên để tạo thành chồng bài Tekeli-li. Đặt chồng bài này gần chồng bài agenda."
   },
   "hiddenTunnelEntranceToTheDepths": {
     "label": {
-      "spendSkullKey": "Spend Skull Key",
-      "doNotSpendSkullKey": "Do not Spend Skull Key"
+      "spendSkullKey": "Tiêu chìa khóa Skull",
+      "doNotSpendSkullKey": "Không tiêu chìa khóa Skull"
     }
   },
   "pursuitOfTheUnknown": {
     "label": {
-      "doNotTakeHealing": "Do not take healing",
-      "healAll": "Heal 1 damage, 1 horror, and 1 trauma",
-      "healPhysicalTrauma": "Chữa 1 chấn thương thể chất",
+      "doNotTakeHealing": "Không nhận hồi phục",
+      "healAll": "Hồi 1 sát thương, 1 sợ hãi và 1 sang chấn",
+      "healPhysicalTrauma": "Chữa 1 sang chấn thể chất",
       "healMentalTrauma": "Chữa 1 sang chấn tinh thần"
     }
   }

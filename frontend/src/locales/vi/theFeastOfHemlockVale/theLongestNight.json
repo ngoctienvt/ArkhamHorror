@@ -14,7 +14,7 @@
     },
     {
       "title": "Chồng bài Kẻ thù",
-      "body": "<p class='basic'>Trong quá trình setup của scenario này, một bộ bài thứ hai với mặt sau encounter khác được tạo ra: Enemy deck. Bộ bài này là một bộ bài riêng biệt chỉ gồm toàn kẻ địch, và đại diện cho bầy thú điên cuồng không ngừng nghỉ đang nhắm đến những người bị bắt giữ. Trong mythos phase, hiệu ứng forced của agenda yêu cầu mỗi điều tra viên rút lá bài trên cùng của Enemy deck. Enemy deck có discard pile riêng và miễn nhiễm với các hiệu ứng bài người chơi. Các kẻ địch không phải weakness trong scenario này được discard vào Enemy discard pile. Nếu Enemy deck cạn kiệt, xào Enemy discard pile vào lại Enemy deck.</p>"
+      "body": "<p class='basic'>Trong quá trình thiết lập kịch bản này, một chồng bài thứ hai với mặt sau encounter khác được tạo ra: chồng bài Kẻ địch. Chồng bài này là một chồng bài riêng biệt chỉ gồm toàn kẻ địch, đại diện cho đàn thú cuồng loạn không ngừng nghỉ đang lao tới tìm những người bị giam giữ. Trong giai đoạn Mythos, hiệu ứng Bắt buộc của agenda yêu cầu mỗi điều tra viên rút lá bài trên cùng của chồng bài Kẻ địch. Chồng bài Kẻ địch có chồng bài bỏ riêng và miễn nhiễm với các hiệu ứng lá bài người chơi. Các kẻ địch không phải điểm yếu trong kịch bản này được bỏ vào chồng bài bỏ Kẻ địch. Nếu chồng bài Kẻ địch cạn bài, xáo chồng bài bỏ Kẻ địch vào lại chồng bài Kẻ địch.</p>"
     }
   ],
   "tokens": {
@@ -143,7 +143,7 @@
   },
   "enemyDeckRules": {
     "title": "Chồng bài Kẻ thù",
-    "body": "<h3>Chồng bài Kẻ thù</h3><p class='basic'>Trong quá trình setup của scenario này, một bộ bài thứ hai với mặt sau encounter khác được tạo ra: Enemy deck. Bộ bài này là một bộ bài riêng biệt chỉ gồm toàn kẻ địch, và đại diện cho bầy thú điên cuồng không ngừng nghỉ đang nhắm đến những người bị bắt giữ. Trong mythos phase, hiệu ứng forced của agenda yêu cầu mỗi điều tra viên rút lá bài trên cùng của Enemy deck. Enemy deck có discard pile riêng và miễn nhiễm với các hiệu ứng bài người chơi. Các kẻ địch không phải weakness trong scenario này được discard vào Enemy discard pile. Nếu Enemy deck cạn kiệt, xào Enemy discard pile vào lại Enemy deck.</p>"
+    "body": "<h3>Chồng bài Kẻ địch</h3><p class='basic'>Trong quá trình thiết lập kịch bản này, một chồng bài thứ hai với mặt sau encounter khác được tạo ra: chồng bài Kẻ địch. Chồng bài này là một chồng bài riêng biệt chỉ gồm toàn kẻ địch, đại diện cho đàn thú cuồng loạn không ngừng nghỉ đang lao tới tìm những người bị giam giữ. Trong giai đoạn Mythos, hiệu ứng Bắt buộc của agenda yêu cầu mỗi điều tra viên rút lá bài trên cùng của chồng bài Kẻ địch. Chồng bài Kẻ địch có chồng bài bỏ riêng và miễn nhiễm với các hiệu ứng lá bài người chơi. Các kẻ địch không phải điểm yếu trong kịch bản này được bỏ vào chồng bài bỏ Kẻ địch. Nếu chồng bài Kẻ địch cạn bài, xáo chồng bài bỏ Kẻ địch vào lại chồng bài Kẻ địch.</p>"
   },
   "resolutions": {
     "investigatorDefeat": {

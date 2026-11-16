@@ -2,16 +2,16 @@
   "heading": "Màn III",
   "tokens": {
     "easyStandard": {
-      "skull": "-X. X is the current Agenda #.",
-      "cultist": "-1. If you fail and it is your turn, lose all remaining actions and end your turn immediately.",
-      "tablet": "-2. Add 1 doom token to the nearest Cultist enemy.",
-      "elderThing": "-3. Nếu bạn thất bại, choose and discard a card from your hand."
+      "skull": "-X. X là số thứ tự của Agenda hiện tại.",
+      "cultist": "-1. Nếu bạn thất bại và đang trong lượt của bạn, mất tất cả các hành động còn lại và kết thúc lượt của bạn ngay lập tức.",
+      "tablet": "-2. Thêm 1 token doom lên kẻ địch Cultist gần nhất.",
+      "elderThing": "-3. Nếu bạn thất bại, chọn và bỏ 1 lá bài trên tay bạn."
     },
     "hardExpert": {
-      "skull": "-X. X is 1 more than the current Agenda #.",
+      "skull": "-X. X bằng số thứ tự của Agenda hiện tại cộng thêm 1.",
       "cultist": "Rút thêm một token khác. If you fail and it is your turn, lose all remaining actions and end your turn immediately.",
-      "tablet": "-4. Add 1 doom token to each Cultist enemy in play.",
-      "elderThing": "-3. Nếu bạn thất bại, choose and discard a card from your hand for each point you failed by."
+      "tablet": "-4. Thêm 1 token doom lên mỗi kẻ địch Cultist trong màn chơi.",
+      "elderThing": "-3. Nếu bạn thất bại, với mỗi điểm bạn thất bại, chọn và bỏ 1 lá bài trên tay bạn."
     }
   },
   "intro": {
@@ -23,12 +23,12 @@
     "placeLocations": "Đặt ngẫu nhiên 1 trong 3 vị trí Engine Car vào màn chơi. Loại bỏ các phiên bản khác của Engine Car khỏi màn chơi. Sau đó, đặt ngẫu nhiên 6 trong 8 vị trí Train Car vào màn chơi, theo một đường thẳng nằm bên trái Engine Car. Loại bỏ 2 vị trí Train Car còn lại khỏi màn chơi.",
     "revealTrainCar": "Để lộ vị trí Train Car ngoài cùng bên trái. Mỗi điều tra viên bắt đầu màn chơi tại vị trí này. (Nếu vị trí đó có hiệu ứng \"forced\" được kích hoạt khi di chuyển vào vị trí thì bỏ qua nó.)",
     "setAside": "Đặt 4 bản sao của Across Space and Time một bên, ngoài vùng chơi.",
-    "adjustChaosBag": "Based on your difficulty level, add the following chaos token(s) to the chaos bag, for the remainder of the campaign:<div class='columns'><ul><li>_Easy_: -2</li><li>_Standard_: -3</li></ul><ul><li>_Hard_: -4</li><li>_Expert_: -5</li></ul></div>",
+    "adjustChaosBag": "Dựa trên mức độ khó của bạn, thêm (các) token hỗn mang sau vào túi hỗn mang, trong phần còn lại của chiến dịch:<div class='columns'><ul><li>_Easy_: -2</li><li>_Standard_: -3</li></ul><ul><li>_Hard_: -4</li><li>_Expert_: -5</li></ul></div>",
     "returnTo": {
       "gatherSets": "Also gather all cards from the following encounter sets: *Return to The Essex County Express*, *Beyond the Threshold*, *Erratic Fear*, and *Resurgent Evils*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/return-to-the-essex-county-express.png' /><img src='{setImgPath}/beyond-the-threshold.png' /><img src='{setImgPath}/erratic-fear.png' /><img src='{setImgPath}/resurgent-evils.png' /></section>*Beyond the Threshold* replaces *The Beyond*, *Erratic Fear* replaces *Striking Fear*, and *Resurgent Evils* replaces *Ancient Evils*. Remove the replaced sets from the game.",
-      "agendaDeck": "Remove Agenda 1a—*A Tear in Reality* from the game and replace it with the new Agenda 0a—*Where There’s Smoke* and the new Agenda 1a—*A Tear in Reality (v. II)*. When you construct the agenda deck, agenda 0a should be on top.",
-      "placeLocations": "When choosing 6 Train Car locations to put into play at random, include the 2 new Train Car locations from this encounter set, for a total of 10 possible cards. When choosing an Engine Car location to put into play at random, include the new Engine Car location, for a total of 4 possible cards.",
-      "setAside": "Also set the Engineer story asset aside, out of play."
+      "agendaDeck": "Loại bỏ Agenda 1a—*A Tear in Reality* khỏi trò chơi và thay thế bằng Agenda 0a—*Where There’s Smoke* mới và Agenda 1a—*A Tear in Reality (v. II)* mới. Khi bạn xây dựng chồng bài agenda, agenda 0a phải ở trên cùng.",
+      "placeLocations": "Khi chọn ngẫu nhiên 6 địa điểm Toa Tàu để đặt vào chơi, hãy bao gồm 2 địa điểm Toa Tàu mới từ bộ encounter này, tổng cộng có 10 lá bài khả dĩ. Khi chọn ngẫu nhiên một địa điểm Toa Đầu Máy để đặt vào chơi, hãy bao gồm địa điểm Toa Đầu Máy mới, tổng cộng có 4 lá bài khả dĩ.",
+      "setAside": "Đồng thời đặt story asset Kỹ Sư sang một bên, ngoài màn chơi."
     }
   },
   "moving": {
@@ -42,10 +42,10 @@
     }
   ],
   "xp": {
-    "bonus": "Granted insight into the cosmos"
+    "bonus": "Được ban cho sự hiểu biết về vũ trụ"
   },
   "resolutions": {
-    "defeat": "<div class='resolution'><p class='basic'>_Before resolving any other resolution, if at least 1 investigator was defeated_: The defeated investigators read _Investigator Defeat_ first.</p><p>_Điều Tra Viên Bị Đánh Bại_: Trải nghiệm của bạn bên ngoài cánh cổng vừa đáng sợ vừa không thể nhớ lại một cách rõ ràng. Một cảnh tượng thôi miên đầy ánh sáng, cảm giác như một thế giới khác và hình học bị biến đổi nhảy múa ở rìa tâm trí của bạn. Một giọng nói kỳ lạ từ bên ngoài vang lên trong tai bạn, ý nghĩa của nó là một bí ẩn. Khi tỉnh dậy, bạn thấy mình đang ở trong rừng, cách con sông Miskatonic vài dặm. Các toa tàu bị phá hủy nằm quanh bạn. Chúng bị nhàu nát như thể bị va chạm mạnh; chúng cũng bị mục nát như thể rỉ sét nhiều năm. Không có dấu hiệu của những hành khách khác.</p><ul><li>Mỗi điều tra viên bị hạ gục nhận một điểm yếu Across Space and Time và phải thêm 1 bản sao của điểm yếu vào bộ bài của mình. Lá bài không tính vào giới hạn bộ bài của điều tra viên.</li><li>Mỗi điều tra viên bị hạ gục sẽ nhận thêm 1 điểm kinh nghiệm nhờ trải nghiệm vượt qua cánh cổng giúp họ có cái nhìn sâu sắc hơn về vũ trụ.</li><li>Lá bài The Necronomicon <i>(Olaus Wormius Translation)</i> phải bị loại bỏ khỏi bộ bài của điều tra viên.</li><li>If an investigator with the Dr. Henry Armitage card, the Professor Warren Rice card, or the Dr. Francis Morgan card in their deck was defeated, in your Campaign Log, record that the character in question *was kidnapped*. The associated card must be removed from that investigator’s deck.</li><li>If no resolution was reached (each investigator was defeated): Go to _Resolution 2_.</li></ul></div>",
+    "defeat": "<div class='resolution'><p class='basic'>_Trước khi giải quyết bất kỳ resolution nào khác, nếu có ít nhất 1 điều tra viên bị đánh bại_: Các điều tra viên bị đánh bại đọc _Investigator Defeat_ trước.</p><p>_Investigator Defeat_: Trải nghiệm của bạn ở bên kia cánh cổng vừa đáng sợ vừa không thể nhớ lại một cách rõ ràng. Một màn trình diễn thôi miên của ánh sáng, những cảm giác siêu nhiên và những cấu trúc hình học biến đổi nhảy múa ở những rìa rách nát của tâm trí bạn. Một giọng nói kỳ quái từ cõi xa xôi vang vọng bên tai bạn, ý nghĩa của nó là một bí ẩn. Khi tỉnh dậy, bạn thấy mình đang ở trong rừng, cách sông Miskatonic vài dặm. Những toa tàu bị phá hủy vây quanh bạn. Chúng bị bẹp rúm như thể sau một cú va chạm dữ dội; chúng cũng mục nát như thể hàng năm trời rỉ sét và dơ bẩn đã tàn phá chúng. Không có dấu vết nào của những hành khách khác.</p><ul><li>Mỗi điều tra viên bị đánh bại nhận điểm yếu Across Space and Time và phải thêm 1 bản sao của nó vào deck của mình. Lá bài này không tính vào deck size của điều tra viên đó.</li><li>Mỗi điều tra viên bị đánh bại nhận 1 điểm kinh nghiệm thưởng khi trải nghiệm ở bên kia cánh cổng mang lại cho họ sự hiểu biết về vũ trụ.</li><li>Nếu một điều tra viên có The Necronomicon (*Olaus Wormius Translation*) trong deck của mình bị đánh bại, trong Nhật ký Chiến dịch, ghi lại rằng the Necronomicon đã bị đánh cắp. Lá bài The Necronomicon (*Olaus Wormius Translation*) phải bị loại bỏ khỏi deck của điều tra viên đó.</li><li>Nếu một điều tra viên có lá bài Tiến sĩ Henry Armitage, lá bài Giáo sư Warren Rice, hoặc lá bài Tiến sĩ Francis Morgan trong deck của mình bị đánh bại, trong Nhật ký Chiến dịch, ghi lại rằng nhân vật được đề cập *đã bị bắt cóc*. Lá bài liên quan phải bị loại bỏ khỏi deck của điều tra viên đó.</li><li>Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại): Chuyển tới _Resolution 2_.</li></ul></div>",
     "resolution1": {
       "title": "Kết thúc thứ nhất",
       "body": "<div class='resolution'><p>_Resolution 1_: Bạn thở phào nhẹ nhõm khi cánh cổng phía sau con tàu tự đóng sập lại một cách an toàn. Số ít hành khách sống sót sau thử thách dường như không thể hiểu chuyện gì vừa xảy ra. Một hành khách đề cập đến “một cái ống nổ ở toa sau,” và điều đó nhanh chóng trở thành lời giải thích cho những người vô tội và thiếu hiểu biết, những người không thể hoặc không chọn tìm hiểu sâu hơn về bí ẩn. Mặt khác, bạn thì biết rõ… mặc dù trong nhận thức muộn màng của mình, bạn ước mình không phải biết.</p><ul><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></div>"
@@ -56,7 +56,7 @@
     }
   },
   "label": {
-    "dodge": "Test {'{'}agility{'}'} (3) to attempt to dodge the creature. If you fail, you leap too far and barely grip the side of the train, hanging on for dear life. Although you manage to pull yourself up, the experience is terrifying. You suffer 1 mental trauma.",
-    "endure": "Test {'{'}combat{'}'} (3) to attempt to endure the creature's extreme heat. If you fail, the creature flies through you and the heat burns you. You suffer 1 physical trauma."
+    "dodge": "Kiểm tra {'{'}agility{'}'} (3) để cố gắng né tránh sinh vật này. Nếu bạn thất bại, bạn nhảy quá xa và chỉ kịp bám vào thành tàu trong gang tấc, cố gắng bám lấy sự sống. Dù bạn kéo được người lên, trải nghiệm này vẫn thật kinh hãi. Bạn chịu 1 sang chấn tinh thần.",
+    "endure": "Kiểm tra {'{'}combat{'}'} (3) để cố gắng chịu đựng sức nóng khủng khiếp của sinh vật này. Nếu bạn thất bại, sinh vật này bay xuyên qua bạn và sức nóng thiêu đốt bạn. Bạn chịu 1 sang chấn thể chất."
   }
 }

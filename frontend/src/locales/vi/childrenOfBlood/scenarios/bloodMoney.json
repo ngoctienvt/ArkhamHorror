@@ -56,7 +56,7 @@
     },
     "partyGuestCultist": {
       "title": "Codex {'{'}cultist{'}'}: Khách Dự Tiệc",
-      "body": "<p>Khi bạn tiếp cận vị khách, họ nhìn trừng trừng vào bạn với một ánh mắt chết chóc. Trước khi bạn kịp cất lời hỏi có chuyện gì, một con dao găm được chế tác từ một chiếc nanh quá khổ lóe sáng trên tay họ khi được rút ra từ túi áo khoác. “Ta biết các ngươi đang toan tính điều gì!” chúng hét lên. “Bọn ta sẽ không để các ngươi ngăn chặn những gì đã bắt đầu đâu!”</p><p class='basic right'>Discard kẻ địch này và spawn 1 kẻ địch Cultist ngẫu nhiên đã để riêng engaged với bạn. Seal token này lên kẻ địch đó (nếu Priscilla Thomas đang in play, hãy seal token này lên cô ấy thay vào đó).</p>"
+      "body": "<p>Khi bạn tiếp cận vị khách, họ nhìn trừng trừng vào bạn với một ánh mắt chết chóc. Trước khi bạn kịp cất lời hỏi có chuyện gì, một con dao găm được chế tác từ một chiếc nanh quá khổ lóe sáng trên tay họ khi được rút ra từ túi áo khoác. “Ta biết các ngươi đang toan tính điều gì!” chúng hét lên. “Bọn ta sẽ không để các ngươi ngăn chặn những gì đã bắt đầu đâu!”</p><p class='basic right'>Bỏ kẻ địch này và spawn 1 kẻ địch Cultist ngẫu nhiên được đặt sang một bên engage với bạn. Seal token này lên kẻ địch đó (nếu Priscilla Thomas đang trong màn chơi, seal token này lên cô ấy).</p>"
     },
     "partyGuestTablet": {
       "title": "Codex {'{'}tablet{'}'}: Khách Dự Tiệc",

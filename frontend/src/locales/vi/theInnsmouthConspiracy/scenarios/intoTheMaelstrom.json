@@ -2,13 +2,13 @@
   "heading": "Màn VIII",
   "setup": {
     "gatherSets": "Tập hợp tất cả các lá bài từ các encounter set sau: *Into the Maelstrom*, *Agents of Hydra*, *Creatures of the Deep*, *Flooded Caverns*, *Shattered Memories*, *Syzygy*, and *Ancient Evils*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/into-the-maelstrom.png' /><img src='{setImgPath}/agents-of-hydra.png' /><img src='{setImgPath}/undersea-creatures.png' /><img src='{setImgPath}/flooded-caves.png' /><img src='{setImgPath}/shattered-memories.png' /><img src='{setImgPath}/syzygy.png' /><img src='{setImgPath}/ancient-evils.png' /></section>",
-    "placeKeys": "Check Campaign Log. Place each of the following keys (blue, red, green, and yellow) as follows:",
-    "blueKey": "If _the investigators possess the key to Y’ha-nthlei_, choose an investigator to take control of the blue key. Otherwise, set it aside, facedown.",
-    "redKey": "If _the investigators possess a map of Y’ha-nthlei_, choose an investigator to take control of the red key. Otherwise, set it aside, facedown.",
-    "greenKey": "If _the guardian of Y’ha-nthlei is dispatched_, choose an investigator to take control of the green key. Otherwise, set it aside, facedown.",
+    "placeKeys": "Kiểm tra Nhật ký Chiến dịch. Đặt từng chìa khóa sau (xanh biển, đỏ, xanh lá và vàng) như sau:",
+    "blueKey": "Nếu *các điều tra viên sở hữu chìa khóa dẫn tới Y’ha-nthlei*, chọn một điều tra viên nắm quyền kiểm soát chìa khóa xanh biển. Nếu không, đặt nó sang một bên, úp xuống.",
+    "redKey": "Nếu *các điều tra viên sở hữu bản đồ Y’ha-nthlei*, chọn một điều tra viên nắm quyền kiểm soát chìa khóa đỏ. Nếu không, đặt nó sang một bên, úp xuống.",
+    "greenKey": "Nếu *người giám hộ của Y’ha-nthlei đã bị hạ gục*, chọn một điều tra viên nắm quyền kiểm soát chìa khóa xanh lá. Nếu không, đặt nó sang một bên, úp xuống.",
     "yellowKey": "Nếu _cổng vào Y’ha-nthlei công nhận bạn là người trông coi hợp pháp của nó_, chọn một điều tra viên nắm quyền kiểm soát chìa khóa vàng. Nếu không, để nó sang một bên, úp mặt.",
-    "fewerThanFour": "If there are fewer than 4 set-aside keys, shuffle the purple, white, and black keys facedown. Then, one at a time, set each of these keys aside until there are no more than 4 set-aside keys. Remove each remaining key in excess of the set-aside keys from the game. The removed keys will not be used in this scenario.",
-    "shuffleKeys": "Shuffle each set-aside key so you do not know which is which.",
+    "fewerThanFour": "Nếu có ít hơn 4 chìa khóa được đặt sang một bên, hãy xào úp các chìa khóa tím, trắng và đen. Sau đó, lần lượt từng chiếc một, đặt từng chìa khóa này sang một bên cho đến khi có không quá 4 chìa khóa được đặt sang một bên. Loại bỏ từng chìa khóa còn lại thừa ra khỏi trò chơi. Các chìa khóa bị loại bỏ sẽ không được sử dụng trong màn chơi này.",
+    "shuffleKeys": "Xáo trộn từng chìa khóa đặt sang một bên để bạn không biết chìa nào là chìa nào.",
     "placeLocations": "Đặt Gateway vào Y’ha-nthlei vào chơi. *(Nó bắt đầu với việc bị ngập một phần.)* Đưa từng vị trí trong 8 vị trí Tidal Tunnel vào chơi xung quanh nó.",
     "startAt": "Mỗi điều tra viên bắt đầu chơi tại Gateway to Y'ha-nthlei.",
     "setAsideOtherLocations": "Đặt tất cả các địa điểm khác sang một bên, ngoài màn chơi.",
@@ -22,31 +22,31 @@
   "specialRules": [
     {
       "title": "Chìa khóa",
-      "body": "<div class='red bordered'><p class='basic'>During this scenario, keys represent the following:</p><ul><li>Màu đỏ: Thông tin liên quan đến con đường từ thế giới khác đến Y'ha-nthlei và những bí mật ẩn chứa bên trong.</li><li>Màu xanh biển: Chìa khóa cho phép đi qua cổng vào Y'ha-nthlei và các ngưỡng cửa khác của nó.</li><li>Màu xanh lá: Một chiếc cúp chứng tỏ sự xứng đáng của một người được vào Y'ha-nthlei và giao tiếp với các vị thần của nó.</li><li>Màu vàng: Huy hiệu biểu thị lòng trung thành của một người với Y'ha-nthlei và các vị thần của nó.</li><li>Màu tím: Chìa khóa vàng lấp lánh để mở các hầm vực sâu.</li><li>Màu đen: Chìa khóa bằng đá hắc thạch dùng để kích hoạt các loại bẫy trong thành phố vực sâu.</li><li>Màu trắng: Chìa khóa bằng san hô, một trong nhiều loại dùng để định hướng độ sâu của Y'ha-nthlei.</li></ul></div>"
+      "body": "<div class='red bordered'><p class='basic'>Trong màn chơi này, các chìa khóa đại diện cho những điều sau:</p><ul><li>Màu đỏ: Thông tin liên quan đến con đường từ thế giới khác đến Y'ha-nthlei và những bí mật ẩn chứa bên trong.</li><li>Màu xanh biển: Chìa khóa cho phép đi qua cánh cổng vào Y'ha-nthlei và các ngưỡng cửa khác của nó.</li><li>Màu xanh lá: Một chiến lợi phẩm chứng minh sự xứng đáng để bước vào Y'ha-nthlei và tương thông với các vị thần nơi đây.</li><li>Màu vàng: Huy hiệu biểu thị lòng trung thành với Y'ha-nthlei và các vị thần nơi đây.</li><li>Màu tím: Chiếc chìa khóa bằng vàng lấp lánh dùng để mở các hầm ngục dưới vực sâu.</li><li>Màu đen: Chiếc chìa khóa bằng đá obsidian dùng để kích hoạt nhiều cạm bẫy trong thành phố vực sâu.</li><li>Màu trắng: Chiếc chìa khóa bằng san hô, một trong nhiều chiếc dùng để điều hướng các tầng sâu của Y'ha-nthlei.</li></ul></div>"
     }
   ],
   "hydrasBrood": {
     "label": {
-      "placeDoomOnHydra": "Place 1 doom on Hydra",
-      "hydraAttacksYou": "Hydra attacks you"
+      "placeDoomOnHydra": "Đặt 1 doom lên Hydra",
+      "hydraAttacksYou": "Hydra tấn công bạn"
     }
   },
   "dagonsBrood": {
     "label": {
-      "placeDoomOnDagon": "Place 1 doom on Dagon",
-      "dagonAttacksYou": "Dagon attacks you"
+      "placeDoomOnDagon": "Đặt 1 doom lên Dagon",
+      "dagonAttacksYou": "Dagon tấn công bạn"
     }
   },
   "dagonDeepInSlumber": {
     "label": {
       "exhaustDagon": "Exhaust Dagon",
-      "removeDoomFromDagon": "Remove 1 doom from Dagon"
+      "removeDoomFromDagon": "Loại bỏ 1 doom khỏi Dagon"
     }
   },
   "hydraDeepInSlumber": {
     "label": {
       "exhaustHydra": "Exhaust Hydra",
-      "removeDoomFromHydra": "Remove 1 doom from Hydra"
+      "removeDoomFromHydra": "Loại bỏ 1 doom khỏi Hydra"
     }
   },
   "intro": {
@@ -63,10 +63,10 @@
   },
   "resolutions": {
     "xp": {
-      "bonus": "Bonus"
+      "bonus": "Thưởng"
     },
     "noResolution": {
-      "title": "No Resolution",
+      "title": "Không Có Kết Cuộc",
       "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại)_: Tiếng niệm kinh của Deep Ones tăng lên đến đỉnh điểm. Những bức tường kỳ lạ của Y'ha-nthlei vặn vẹo trước mắt bạn, giống như những lá phổi đang cố gắng thở một cách tuyệt vọng. Không khí trở nên loãng. Nước thấm qua các bức tường. Không gì có thể ngăn cản được sức hút của thủy triều lúc này. Không gì có thể ngăn được cơn đại hồng thủy. Một tiếng gầm chiến thắng vang lên khắp thành phố, và những công dân của vùng đất sâu trỗi dậy để đáp lại tiếng kêu trong niềm hân hoan của họ. Bạn suy sụp vì kiệt sức và cam chịu. Phần của bạn bây giờ đã kết thúc. Một phần của nhân loại sẽ sớm theo sau.</p>"
     },
     "resolution1": {
@@ -83,7 +83,7 @@
     },
     "resolution4": {
       "title": "Kết thúc thứ 4",
-      "body": "<p>_Resolution 4_: Agent Harper is the first to speak. “We did it. I can’t believe we did it.” You nod. Not only were you able to stop the Deep Ones, but you helped Harper accomplish her mission as well. She digs through her belongings for a bright orange firearm with a large barrel, loads a flare into it, and launches the bright light into the sky with a victorious smirk. “They’ll be coming for us any minute now. I’m sure you’ll be rewarded handsomely for your help. So long as you agree to speak to nobody about any of this, of course,” she says. You nod. It’s not like anyone would believe you, anyway.</p>"
+      "body": "<p>_Resolution 4_: Đặc vụ Harper là người đầu tiên lên tiếng. “Chúng ta đã làm được. Tôi không thể tin là chúng ta đã làm được.” Bạn gật đầu. Bạn không chỉ ngăn chặn được giống loài Deep One, mà còn giúp Harper hoàn thành nhiệm vụ của cô ấy. Cô ấy lục lọi trong hành lý của mình lấy ra một khẩu súng màu cam sáng với nòng súng lớn, nạp một viên pháo sáng vào đó, rồi bắn luồng sáng rực rỡ lên bầu trời với một nụ cười đắc thắng. “Họ sẽ đến đón chúng ta bất cứ lúc nào. Tôi chắc chắn các bạn sẽ được khen thưởng hậu hĩnh vì sự giúp đỡ này. Miễn là các bạn đồng ý không nói với ai về bất kỳ điều gì trong số này, tất nhiên rồi,” cô ấy nói. Bạn gật đầu. Dù sao thì cũng chẳng có ai tin bạn đâu.</p>"
     },
     "resolution5": {
       "title": "Giải pháp thứ 5",
@@ -104,13 +104,13 @@
   },
   "tokens": {
     "easyStandard": {
-      "skull": "-1 (-3 instead if there are 4 or more unflooded _Y'ha-nthlei_ locations in play).",
+      "skull": "-1 (thay vào đó là -3 nếu có từ 4 địa điểm _Y'ha-nthlei_ chưa bị ngập lụt trở lên trong màn chơi).",
       "cultist": "-3. Nếu bạn thất bại, đặt 1 doom lên the current agenda (this may cause the current agenda to advance).",
       "tablet": "-4. Nếu bạn thất bại, you must either increase the flood level of your location or chịu 1 damage.",
       "elderThing": "-5. If you fail and there is a key on your location, chịu 1 horror."
     },
     "hardExpert": {
-      "skull": "-2 (-4 instead if there are 4 or more unflooded _Y'ha-nthlei_ locations in play).",
+      "skull": "-2 (thay vào đó là -4 nếu có từ 4 địa điểm _Y'ha-nthlei_ chưa bị ngập lụt trở lên trong màn chơi).",
       "cultist": "-4. Nếu bạn thất bại, đặt 1 doom lên the current agenda (this may cause the current agenda to advance).",
       "tablet": "-5. Nếu bạn thất bại, you must either increase the flood level of your location or chịu 1 damage.",
       "elderThing": "-6. If you fail and there is a key on your location, chịu 1 horror."
@@ -118,20 +118,20 @@
   },
   "treacherousDepths": {
     "label": {
-      "increaseFloodLevel": "Increase the flood level of your current location",
-      "discardAssetsToShroud": "Discard assets from your play area with a total resource cost of at least X, where X is your location's shroud value."
+      "increaseFloodLevel": "Tăng mức độ ngập lụt tại địa điểm hiện tại của bạn",
+      "discardAssetsToShroud": "Bỏ các asset khỏi play area của bạn với tổng chi phí tài nguyên ít nhất là X, trong đó X là giá trị shroud của địa điểm của bạn."
     }
   },
   "conspiracyOfDeepOnes": {
     "label": {
-      "placeDoomCanAdvance": "Place 1 doom on the current agenda (this effect may cause the current agenda to advance)",
-      "ancientOneAttacks": "The nearest _Ancient One_ enemy in play attacks you"
+      "placeDoomCanAdvance": "Đặt 1 doom lên agenda hiện tại (hiệu ứng này có thể khiến agenda hiện tại advance)",
+      "ancientOneAttacks": "Kẻ địch _Ancient One_ gần nhất trong màn chơi tấn công bạn"
     }
   },
   "cityOfTheDeep": {
     "label": {
       "continuePlaying": "Tiếp tục chơi.",
-      "proceedToR1": "Proceed immediately to (→R1)"
+      "proceedToR1": "Tiến hành ngay lập tức tới (→R1)"
     }
   },
   "label": {

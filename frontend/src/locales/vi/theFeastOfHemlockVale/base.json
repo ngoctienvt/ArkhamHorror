@@ -60,18 +60,18 @@
   },
   "campaignLog": {
     "residents": {
-      "relationshipLevel": "Relationship Level",
+      "relationshipLevel": "Cấp Độ Quan Hệ",
       "notes": "Ghi chú"
     },
     "areasSurveyed": {
-      "refHeader": "Ref #"
+      "refHeader": "Tham chiếu #"
     },
     "dayTime": {
       "title": "Ngày / Giờ"
     },
     "map": {
       "title": "Bản đồ",
-      "body": "<div class='hemlock-vale-map'><img alt='Map of Hemlock Isle' src='{setImgPath}/../extra/the-feast-of-hemlock-vale/map.jpg' /></div>"
+      "body": "<div class='hemlock-vale-map'><img alt='Bản đồ Đảo Hemlock' src='{setImgPath}/../extra/the-feast-of-hemlock-vale/map.jpg' /></div>"
     }
   },
   "label": {
@@ -161,23 +161,23 @@
         "body": "<h3>@:theFeastOfHemlockVale.prelude1.codex.theoPeters.title </h3><p>“Cố lên, cố lên,” Theo nói với người công nhân, áp một miếng vải lạnh lên trán cô ấy. Sau một tiếng cười đau đớn khác, cô ấy ngất đi. Bạn hỏi Theo chuyện gì đã xảy ra. “Nó giống như say nắng, chỉ khác là ờ—bạn kiểu như tự làm mình hưng phấn quá mức, và sau đó thì, ừm.” Anh ấy thở dài. “Tôi thực sự không biết nó là gì. Đôi khi, người ta chỉ bị ốm thôi.”</p><p>Vài người dân địa phương khiêng người công nhân đi đến một cái lán gần đó. Sau vài câu tán gẫu, bạn hỏi Theo về bất kỳ khu vực nào tốt để khảo sát động vật hoang dã địa phương trên Hemlock Isle. Anh ấy cười rạng rỡ. “Tôi và các chị em gái đã nhìn thấy con sam lớn nhất trên Akwan Shoreline. Tôi không biết nó có còn ở đó không, nhưng tôi thề là nó to bằng một chiếc xe lôi. Tôi có chút việc gia đình ở Akwan nếu bạn muốn đi cùng hôm nay.”</p><p class='basic right'>Bạn có thể ngay lập tức di chuyển đến bất kỳ địa điểm nào.</p><p class='basic right'>Tăng Relationship Level của Theo Peters.</p>"
       },
       "boardingHouse": {
-        "title": "{'{'}codex{'}'} Codex 9: Boarding House",
+        "title": "{'{'}codex{'}'} Codex 9: Nhà Trọ",
         "body": "<h3>@:theFeastOfHemlockVale.prelude1.codex.boardingHouse.title </h3><p>Những vòng hoa nở rộ treo trên mọi mái hiên của Boarding House. Một mùi thơm ngon lành thoang thoảng bay ra từ cửa trước: bánh nhân thịt và bia đang ủ. Người chủ tự giới thiệu mình là Ms. Olmstead và đề nghị cho bạn thuê một phòng. “Tôi luôn để mắt đến những chuyện xảy ra quanh thị trấn. Nếu bạn muốn biết người dân ở Vale làm gì, tôi rất sẵn lòng giúp đỡ.” Khi bạn hỏi về bia, bà ấy xua tay gạt đi. “Đừng bận tâm báo cáo tôi với những người ủng hộ lệnh cấm. Chúng tôi giữ luật lệ riêng của mình trên Hemlock Isle,” bà ấy nói với bạn, rồi liếc nhìn ra hiên nhà. “Đó là, trừ khi có ai đó đạt được ý đồ của họ.”</p><p>Bạn nhìn ra hiên nhà và thấy một người có vóc dáng tuyệt đẹp với làn da màu nâu sẫm. Người đó mặc một chiếc váy hợp thời trang với chiếc áo choàng Vale màu trắng vàng khoác hờ hững trên vai trong khi đang thêu một họa tiết hoa trên khung tròn. Bertie rụt rè hỏi người đó, giơ lên vài bức ảnh và bản phác thảo về mẫu vật đã thu hút bạn đến đây.</p><p class='basic right'>Bạn có thể rút 1 card hoặc nhận 1 tài nguyên.</p><p class='basic right'>Tìm trong chồng bài encounter *Residents* đã để riêng lá River Hawthorne và đặt lá bài đó vào chơi tại Boarding House, với mặt asset ngửa lên.</p>"
       },
       "theCrossroads": {
-        "title": "{'{'}codex{'}'} Codex 10: The Crossroads",
+        "title": "{'{'}codex{'}'} Codex 10: Ngã Tư",
         "body": "<h3>@:theFeastOfHemlockVale.prelude1.codex.theCrossroads.title </h3><p>Hàng chục công nhân hối hả quanh gốc một cái cây lớn ở trung tâm Crossroads. Nhiều khuôn mặt trên cây liếc nhìn bạn với vô số biểu cảm: một số đang cười, số khác nhăn nhó trong đau buồn, hoặc kinh hoàng. Mỗi biểu cảm đều được phóng đại một cách kỳ cục. Khi bạn hỏi một trong những thợ mộc gần đó về cái cây, người đó dừng lại để cân nhắc lời nói của mình. “Cái cây này là hình nhân. Một sự mô phỏng của—chà, có lẽ tốt nhất là coi nó như một linh hồn thiêng liêng. Chính linh hồn đó sống trong mỗi chúng ta.”</p><p>Người quản đốc nói với bạn rằng họ sẽ phải làm việc xuyên đêm để đề phòng cơn mưa ngày mai. Khi bạn nhìn họ làm việc, một người thợ mộc vấp ngã. Theo chạy đến từ xe tải của anh và đỡ cô ấy dậy trong khi cô ấy ôm lấy mắt và cười một cách điên dại.</p><p class='basic right'>Bạn có thể rút 1 card hoặc nhận 1 tài nguyên.</p><p class='basic right'>Tìm trong chồng bài encounter *Residents* đã để riêng lá Theo Peters và đặt anh ấy vào chơi tại The Crossroads, với mặt asset ngửa lên.</p>"
       },
       "hemlockChapel": {
-        "title": "{'{'}codex{'}'} Codex 11: Hemlock Chapel",
+        "title": "{'{'}codex{'}'} Codex 11: Nhà Nguyện Hemlock",
         "body": "<h3>@:theFeastOfHemlockVale.prelude1.codex.hemlockChapel.title </h3><p>Nhà nguyện nhỏ trên đỉnh ngọn đồi phía bắc của Vale mang một bầu không khí tĩnh lặng, trang nghiêm. Những nụ hoa nhỏ được ghép theo một cách khiến người ta có cảm giác như chính những tấm ván đang nở hoa. Trong khi bạn chiêm ngưỡng hiện tượng kỳ lạ này, hai người phụ nữ trong chiếc áo choàng màu trắng vàng tiến lại gần. Bạn hỏi họ thêm về nhà nguyện và đức tin của họ, và họ dẫn bạn vào trong. Một tấm thảm chần cách điệu ở phía sau khắc họa một sinh vật thần thoại méo mó, nhiều tay với vô số con mắt và đôi cánh. “Chúng tôi đã xây dựng nhà nguyện này khoảng hai mươi năm trước, nhưng nó không được sử dụng nhiều cho đến thời kỳ phục hưng của chúng tôi. Mother Rachel luôn gọi chúng tôi là ‘Những Đứa Con Của Các Vì Sao.’ Tôi cho rằng đây là một ngôi sao như vậy.”</p><p>Hai người phụ nữ im bặt khi Mother Rachel bước vào nhà nguyện.</p><p class='basic right'>Bạn có thể rút 1 card hoặc nhận 1 tài nguyên.</p><p class='basic right'>Tìm trong chồng bài encounter *Residents* đã để riêng lá Mother Rachel và đặt bà ấy vào chơi tại Hemlock Chapel, với mặt asset ngửa lên.</p>"
       },
       "theOldMill": {
-        "title": "{'{'}codex{'}'} Codex 12: The Old Mill",
+        "title": "{'{'}codex{'}'} Codex 12: Cối Xay Cũ",
         "body": "<h3>@:theFeastOfHemlockVale.prelude1.codex.theOldMill.title </h3><p>Dr. Marquez tựa chênh vênh vào cây gậy của mình khi bà lấy mẫu các loài hoa dại khác nhau quanh cối xay. “Hãy nhìn xem.” Vị giáo sư đưa ra một mẫu vật trông giống như sự pha trộn của hoa violet rực rỡ, hoa trillium và hoa lupine, được ghép lại ở cuống. “Nó giống với bông hoa kỳ lạ đã thúc đẩy cuộc khảo sát này. Đơn trục với hàng chục biểu hiện khác nhau. Nhưng không có dấu vết của việc cấy ghép. Nó mọc tự nhiên.” Bạn hỏi làm sao điều này có thể xảy ra, và vị giáo sư cười toe toét. “Điều đó là không thể. Đó chính xác là lý do tại sao cuộc khảo sát này sẽ làm nên sự nghiệp của tôi.”</p><p>Khi bạn để Dr. Marquez tiếp tục công việc thu thập mẫu vật của bà, bạn bắt gặp một người phụ nữ khỏe mạnh, vạm vỡ mặc quần yếm đang làm việc trên cánh đồng.</p><p class='basic right'>Bạn có thể rút 1 card hoặc nhận 1 tài nguyên.</p><p class='basic right'>Tìm trong chồng bài encounter *Residents* đã để riêng lá Leah Atwood và đặt cô ấy vào chơi tại The Old Mill, với mặt asset ngửa lên.</p>"
       },
       "theAtwoodHouse": {
-        "title": "{'{'}codex{'}'} Codex 13: The Atwood House",
+        "title": "{'{'}codex{'}'} Codex 13: Nhà Atwood",
         "body": "<h3>@:theFeastOfHemlockVale.prelude1.codex.theAtwoodHouse.title </h3><p>Trang viên cũ theo phong cách Empire trông khá đẹp từ xa, nhưng lại có vẻ phai màu và sờn cũ khi bạn đến gần. Một bà lão với làn da nâu sạm và nước da tái nhợt ngồi trên xe lăn ở lối vào. Đôi tay bà run rẩy khi bà bật ra một tiếng ho yếu ớt. “Đến lúc rồi, Sylvia,” một người đàn ông lớn tuổi bước ra từ ngôi nhà và giật mình khi nhìn thấy bạn. “Ồ, đã có khách rồi sao! Bạn có thể gọi tôi là Brother David, và đây là Sister Sylvia. Tôi là chồng của Mother Rachel. Chúng tôi rất vui vì bạn đã đến đây.” Khi ông ấy đẩy Sylvia vào trong, bạn nghe thấy tiếng cành cây xào xạc quanh hông nhà.</p><p class='basic right'>Bạn có thể rút 1 card hoặc nhận 1 tài nguyên.</p><p class='basic right'>Tìm trong chồng bài encounter *Residents* đã để riêng lá Simeon Atwood và đặt anh ấy vào chơi tại The Atwood House, với mặt asset ngửa lên.</p>"
       },
       "tadsGeneralStore": {
@@ -185,11 +185,11 @@
         "body": "<h3>@:theFeastOfHemlockVale.prelude1.codex.tadsGeneralStore.title </h3><p>Cửa hàng bách hóa mộc mạc này cũng kiêm luôn vai trò của một hiệu thuốc. Một người đàn ông trung niên hói đầu với hai cánh tay quấn băng gạc đứng sau quầy và tự giới thiệu mình là Tad. “Chúng tôi rất vui khi có khách đến thăm Vale. Tôi biết Mother Rachel đang phát điên vì phấn khích khi thấy những gương mặt mới. Và điều đó cũng tốt cho việc kinh doanh nữa. Hôm nay tôi sẽ giảm giá cho người mới đến nếu các bạn mua bất cứ thứ gì. Không cần phải nói, nhưng tất cả các bạn đều được mời đến bữa ăn cộng đồng tối nay.”</p><p class='basic right'>Bạn có thể tiêu 1 tài nguyên để tìm trong deck của mình một lá bài _Item_ và chơi nó, bỏ qua cost của nó. Bất kỳ điều tra viên nào chưa thực hiện hiệu ứng này có thể kích hoạt codex này lần nữa.</p><p class='basic right'>Tìm trong chồng bài encounter *Residents* đã để riêng lá Judith Park và đặt cô ấy vào chơi tại Tad’s General Store, với mặt asset ngửa lên.</p>"
       },
       "valeSchoolhouse": {
-        "title": "{'{'}codex{'}'} Codex 15: Vale Schoolhouse",
+        "title": "{'{'}codex{'}'} Codex 15: Trường Làng Vale",
         "body": "<h3>@:theFeastOfHemlockVale.prelude1.codex.valeSchoolhouse.title </h3><p>Chiếc chuông trên đỉnh trường học vang lên ba tiếng khi bạn đến gần, triệu tập những đứa trẻ đeo mặt nạ động vật. Một cô bé tóc đỏ đeo mặt nạ thỏ vấp ngã trên đường vào, và bạn đỡ cô bé dậy. Vị giáo viên gầy gò, nghiêm khắc mời bạn vào trong và chỉ tay về phía hai giá sách kê sát bức tường phía sau: thư viện cộng đồng nghèo nàn của Vale. Một người đàn ông trung niên oai vệ với làn da nâu sẫm và bộ râu xám đang xem xét giá sách còn lại trong khi bạn nhìn vào những gì thư viện cung cấp: một vài cuốn Tales from Nevermore cũ nát, một cuốn sổ tay sinh tồn, và một xấp công thức nấu ăn cũ viết tay.</p><p>“Nhưng Edie đâu rồi ạ?” một trong những đứa trẻ hỏi giáo viên. Cô ấy trả lời bằng một giọng ngân nga: “Mother Rachel nói với cô rằng Edie đã tìm thấy nơi thuộc về mình và chúng ta không nên lo lắng cho con bé. Bây giờ chúng ta nói gì nào?”</p><p>“Mother Rachel biết rõ nhất,” cả lớp đồng thanh nói.</p><p class='basic right'>Bạn có thể rút 1 card hoặc nhận 1 tài nguyên.</p><p class='basic right'>Tìm trong chồng bài encounter *Residents* đã để riêng lá William Hemlock và đặt ông ấy vào chơi tại Vale Schoolhouse, với mặt asset ngửa lên.</p>"
       },
       "theCommons": {
-        "title": "{'{'}codex{'}'} Codex 16: The Commons",
+        "title": "{'{'}codex{'}'} Codex 16: Hội Trường Cộng Đồng",
         "body": "<h3>@:theFeastOfHemlockVale.prelude1.codex.theCommons.title </h3><p>“Chào mừng đến với Vale!” Một người phụ nữ trẻ với mái tóc bob chào đón bạn khi bạn bước qua cánh cửa đôi của nhà kho. “Đã lâu lắm rồi chúng tôi mới có khách. Một điều bạn cần biết về Vale là chúng tôi làm hầu hết mọi thứ ở The Commons. Tôi biết Sister Leah đang lên kế hoạch cho một buổi khiêu vũ cộng đồng vào tối mai.”</p><p>“Này! Gideon. Không hút thuốc trong nhà!” người phụ nữ quát một ông lão mặc chiếc áo khoác thủy thủ dài màu xanh ở góc phòng. Ông ta đứng dậy và đi khập khiễng ra ngoài, càu nhàu. Bạn nhận ra bảng ghim trên bức tường phía sau được ghim đầy những bức vẽ của trẻ em về các loài cây và chim chóc có thêm răng, mắt và tay chân. Người phụ nữ cắt ngang sự tập trung của bạn. “Nếu bạn muốn gọi cho ai đó ở đất liền hoặc, bạn biết đấy, gửi một món quà cho một người đặc biệt trong làng, tôi là người bạn cần tìm. Cứ gọi tôi là Martha Jean.”</p><p class='basic right'>Tìm trong 9 lá bài trên cùng của deck của bạn một lá bài _Ally_ và thêm nó vào tay *(xào lại deck của bạn)*.</p><p class='basic right'>Tìm trong chồng bài encounter *Residents* đã để riêng lá Gideon Mizrah và đặt ông ta vào chơi tại The Commons, với mặt asset ngửa lên.</p>"
       }
     },
@@ -198,7 +198,7 @@
         "survey": "*“Chúng tôi đến đây để khảo sát cho Đại học Miskatonic.”*",
         "feast": "*“Chúng tôi đến đây vì Lễ hội.”* "
       },
-      "title": "Prelude: Welcome to Hemlock Vale!",
+      "title": "Màn dạo đầu: Chào mừng đến Hemlock Vale!",
       "intro1": "<p>_Intro 1_: <span class='wolgast'>Tháng 6 năm 1926</span></p><p class='indented'>Khảo sát Miskatonic, tháng 6 năm 1926. Các thành viên Marquez, Musgrave, và những người khác.</p><p class='indented'>Sau ba lần đánh giá riêng biệt bởi hội đồng và ủy ban tài trợ của Đại học Miskatonic, chúng tôi đã đến Hemlock Isle. Tài xế của chúng tôi đã đưa chúng tôi qua một cây cầu đất tự nhiên mà họ gọi là “con đường đắp” — chỉ có thể đi qua khi thủy triều xuống — đến một làng chài nhỏ tên là Akwan. Bertie đã cho người dân địa phương xem một vài bản phác thảo và ảnh chụp của loài hoa kiềm, nhưng người dân địa phương không quan tâm đến nó. Hoặc có thể là không quan tâm đến anh ta. Bertie thì quá đỗi hớn hở.</p><p class='indented'>Cuộc khảo sát bao gồm tôi, trợ lý của tôi là Bertie Musgrave, và một số người quen của Tiến sĩ Armitage. Ông ấy khăng khăng yêu cầu họ đi cùng tôi như một phần của các điều khoản tài trợ. Tôi chỉ hy vọng họ không cản trở. Hòn đảo là tài sản tư nhân và đã cấm du khách trong một thời gian — cho đến tận bây giờ. Người dân địa phương đang quảng cáo một loại lễ hội nào đó trên khắp New England, thậm chí xa về phía nam tới tận Boston và Arkham.</p><p class='indented'>Không có chỗ trọ ở Akwan, và theo những lời đồn đại ở địa phương, cắm trại trên đảo là một việc mạo hiểm. Người dân địa phương không phản hồi khi tôi gặng hỏi thêm, nhưng ít nhất tôi cũng có thể kiếm được một tấm bản đồ của hòn đảo cũng như một số vật tư cơ bản. Chúng tôi gần như đã cam chịu việc dựng lều ở phía tây Akwan, nhưng rồi chúng tôi gặp một chàng trai trẻ tên là Theo, người đã đề nghị cho chúng tôi chỗ trọ ở một ngôi làng tên là ‘Hemlock Vale’.</p><p class='right'><span class='wolgast'>Tiến sĩ Rosa Marquez</span></p><p>“Nhưng thật sự, tôi nghĩ các bạn sẽ thích nơi này,” Theo hét lên từ cửa sổ xe tải. Tiến sĩ Marquez — khỏe khoắn và rám nắng ở tuổi 40 — gấp cuốn nhật ký khảo sát của mình lại và nhìn lên bầu trời. “Tôi không biết ai lại không yêu Hemlock Isle,” Theo nói tiếp. “Và tôi không biết tại sao chúng tôi không mời mọi người đến sớm hơn! Tôi đoán các bạn đến đây vì Lễ hội.”</p><p>“Lễ hội này có phải là một loại truyền thống địa phương không?” Bertie nói với giọng Anh gãy gọn. Cơn gió làm tung mái tóc dày của người đàn ông tròn trịa khi anh ta háo hức rướn người về phía trước.</p><p>“Đây là lần đầu tiên đấy! Mọi người ở Vale đã dốc hết sức để mọi người cảm thấy được chào đón. Chúng tôi chỉ là quá hào hứng khi có du khách!” Chàng trai trẻ cười khi chiếc xe tải của bạn lên đến đỉnh đồi. Hemlock Isle trải dài ra mọi hướng.</p><p>Về phía nam, những hồ nước đen lấp lánh điểm xuyết một đầm lầy chằng chịt kéo dài đến tận bờ biển. Lên phía bắc, những ngọn đồi đỉnh trắng tụ tập quanh những tảng đá vỏ chai nhô ra, trông giống như một chiếc xương sống lộ thiên. Vượt qua một cụm đồi, khu rừng rậm rạp phía tây mọc lên sườn đồi đầy đá, bị chia đôi bởi một con sông rộng. Và xa hơn nữa về phía bắc, qua những ngọn đồi trắng, là một bờ biển đầy đá hoang vắng ở rìa vùng nước Đại Tây Dương màu xám đen.</p><p>Con đường đưa bạn qua vùng đất nông nghiệp tươi tốt vào một ngôi làng nép mình trong những ngọn đồi. Những lẵng hoa sặc sỡ và những dải ruy băng rực rỡ treo trên mái nhà và cọc hàng rào. Một cầu vồng lăng kính lấp lánh trên bầu trời không một gợn mây, mang lại cho khung cảnh một bầu không khí bình dị. Khi chiếc xe tải dừng lại ở ngã tư, người dân địa phương và trẻ em trong những chiếc áo choàng màu vàng trắng và mặt nạ động vật bằng gỗ tụ tập quanh bạn, cười toe toét.</p><p>“Willkommen!” Một người phụ nữ bệ vệ với mái tóc màu xám thép và chiếc áo choàng màu vàng trắng rẽ qua đám đông. “Chào mừng đến với Hemlock Vale. Tôi là Mother Rachel, và đây là người dân của tôi. Điều gì mang các bạn đến đây?”</p><p class='basic'>Các điều tra viên phải quyết định *(chọn một)*:</p><ul><li>*\"Chúng tôi đến đây theo một cuộc khảo sát của Miskatonic University.\"* Tiếp tục đến _Intro 2_.</li><li>*\"Chúng tôi đến đây vì Feast.\"* Chuyển đến _Intro 3_.</li></ul>",
       "intro2": "<p>_Intro 2_: Bạn giới thiệu tên của mình và các thành viên trong đoàn khảo sát, cùng với sự hậu thuẫn từ Đại học Miskatonic. Tiến sĩ Marquez tì nặng lên cây gậy của mình khi chìa một tay ra để bắt tay.</p><ul><li>Thêm 1 token {'{'}tablet{'}'} vào chaos bag trong suốt phần còn lại của chiến dịch.</li><li>Tiếp tục đến _Intro 4_.</li></ul>",
       "intro3": "<p>_Intro 3_: Bà mỉm cười nhân từ. “Và chúng tôi rất vui mừng được đón tiếp các bạn. Thức ăn và nơi ở của chúng tôi là của các bạn. Lễ hội sẽ diễn ra trong ba ngày nữa; chúng tôi chỉ yêu cầu các bạn mở rộng trái tim và tâm trí để trải nghiệm lối sống của chúng tôi.” Tiến sĩ Marquez ném cho bạn một cái nhìn sắc lẹm khi cô ấy rướn người về phía trước trên cây gậy của mình. “Thực ra, chúng tôi đến đây để khảo sát cho Đại học Miskatonic.”</p><ul><li>Thêm 1 token {'{'}elderThing{'}'} vào chaos bag trong phần còn lại của chiến dịch.</li><li>Chuyển đến _Intro 4_.</li></ul>",
@@ -217,7 +217,7 @@
     "resolutions": {
       "resolution1": {
         "title": "Kết thúc thứ nhất",
-        "body": "<p>_Resolution 1_: Bạn gặp lại Dr. Marquez và Bertie tại Crossroads. Sau khi mỗi người chia sẻ một vài manh mối khả thi cho cuộc khảo sát, vị giáo sư trải bản đồ Hemlock Isle ra. “Tôi không ngờ ngôi làng lại sùng đạo đến vậy,” Dr. Marquez nói. Bertie sáng mắt lên đáp lời. “Họ gần như đang sống trong một lý tưởng siêu việt nào đó. Dù tôi không biết thực sự họ tin vào điều gì, nhưng họ có vẻ khá thân thiện.”</p><p>“Thân thiện cũng là một cách gọi,” Dr. Marquez mỉm cười cay đắng. “Chúng ta có trọn vẹn ba ngày trước khi hòn đảo tràn ngập du khách. Tôi ghét du khách.”</p><p>“Nghe có vẻ hơi ác ý nhỉ, nhất là khi đang có lễ hội!” Bertie đánh bạo nói. Dr. Marquez nhìn anh ta với ánh mắt sắc lẹm. “Ý tôi là họ sẽ phá vỡ môi trường sống tự nhiên ở đây, nên thời gian của chúng ta có hạn. Chúng ta có thể chia nhau ra để bao quát được nhiều khu vực hơn, hoặc đi cùng nhau. Theo đã tình nguyện lái xe đưa chúng ta đi bất cứ đâu cần thiết, và thậm chí còn nói chúng ta có thể lấy xe tải của anh ấy vào ban đêm—mặc dù chúng ta không được nói cho Mother Rachel biết. Với những câu chuyện về động vật hoang dã chết người, tôi đã thuê Judith đi cùng tôi đến Eastwick Bog. Bất cứ ai trong các vị đều có thể tham gia cùng. Chỉ cần quay lại trước lúc mặt trời lặn.”</p><p>“Tôi dự định đi dạo đến Western Woods,” Bertie nói. “Một mình, nếu mọi người không phiền. Nếu những mô tả của Ms. Olmstead là đáng tin, thì nơi đó hẳn sẽ tuyệt đẹp.” Bạn cân nhắc các lựa chọn của mình.</p><ul><li>Chuẩn bị cho cuộc khảo sát đầu tiên của bạn.<ul><li>Chọn 1 asset trong khu vực chơi của bạn để giữ lại cho scenario tiếp theo. Đó phải là một asset bình thường không bắt đầu in play. Discard mọi asset và attachment khác trong khu vực chơi của bạn, ngoại trừ những lá bắt đầu in play mỗi game.</li><li>Discard cho đến khi số bài trên tay bằng với kích thước opening hand của bạn. Xào discard pile của bạn vào deck. *(Hand hiện tại của bạn là opening hand cho scenario tiếp theo; bạn sẽ không rút một opening hand mới hoặc thực hiện mulligan.)*</li><li>Bỏ bớt tài nguyên cho đến khi bằng với số tài nguyên khởi đầu của bạn.</li></ul></li><li>Việc khám phá Isle được cho là nguy hiểm. Thêm 1 token {'{'}autoFail{'}'} vào chaos bag trong phần còn lại của campaign.</li><li>Khi setup scenario tiếp theo, bỏ qua các bước 1-8 của phần ‘Setting Up the Game’ trên trang 27 của Rules Reference.</li></ul><p class='basic'>Các điều tra viên phải chọn nơi để khảo sát hôm nay! Bạn sẽ có cơ hội khảo sát nhiều khu vực trong suốt campaign.</p><ul><li>Ở phía bắc, North Point Mine bị bỏ hoang nằm trống rỗng và bị những sinh vật hoang dã kỳ lạ tràn ngập. Để đối mặt hiểm nguy của _Written in Rock_, hãy lật đến trang 10.</li><li>Ở phía nam, Hemlock House cũ được đồn là nơi trú ngụ của một loài gây hại kỳ lạ. Để điều tra _Hemlock House_, hãy lật đến trang 14.</li><li>Pearl Ridge tan hoang ở phía tây bắc bị phủ một lớp tro trắng dai dẳng. Để khám phá _The Silent Heath_, hãy lật đến trang 19.</li><li>Phía đông bắc là Akwan: một khu định cư nhỏ dần của người Abenaki và thủy thủ trên bờ biển hoang vắng. Để cứu _The Lost Sister_, hãy lật đến trang 23.</li><li>Dr. Marquez tin rằng Eastwick Bog ở phía đông nam có thể là nguồn gốc của mẫu vật đã dẫn bạn đến đây. Để khám phá _The Thing in the Depths_, hãy lật đến trang 27.</li></ul>"
+        "body": "<p>_Resolution 1_: Bạn gặp lại Dr. Marquez và Bertie tại Ngã Tư. Sau khi mỗi người chia sẻ một vài manh mối khả thi cho cuộc khảo sát, vị giáo sư trải bản đồ Hemlock Isle ra. “Tôi không ngờ ngôi làng lại sùng đạo đến vậy,” Dr. Marquez nói. Bertie sáng mắt lên đáp lời. “Họ gần như đang sống trong một lý tưởng siêu việt nào đó. Dù tôi không biết thực sự họ tin vào điều gì, nhưng họ có vẻ khá thân thiện.”</p><p>“Thân thiện cũng là một cách gọi,” Dr. Marquez mỉm cười cay đắng. “Chúng ta có trọn vẹn ba ngày trước khi hòn đảo tràn ngập du khách. Tôi ghét du khách.”</p><p>“Nghe có vẻ hơi ác ý nhỉ, nhất là khi đang có lễ hội!” Bertie đánh bạo nói. Dr. Marquez nhìn anh ta với ánh mắt sắc lẹm. “Ý tôi là họ sẽ phá vỡ môi trường sống tự nhiên ở đây, nên thời gian của chúng ta có hạn. Chúng ta có thể chia nhau ra để bao quát được nhiều khu vực hơn, hoặc đi cùng nhau. Theo đã tình nguyện lái xe đưa chúng ta đi bất cứ đâu cần thiết, và thậm chí còn nói chúng ta có thể lấy xe tải của anh ấy vào ban đêm—mặc dù chúng ta không được nói cho Mother Rachel biết. Với những câu chuyện về động vật hoang dã chết người, tôi đã thuê Judith đi cùng tôi đến Eastwick Bog. Bất cứ ai trong các vị đều có thể tham gia cùng. Chỉ cần quay lại trước lúc mặt trời lặn.”</p><p>“Tôi dự định đi dạo đến Western Woods,” Bertie nói. “Một mình, nếu mọi người không phiền. Nếu những mô tả của Ms. Olmstead là đáng tin, thì nơi đó hẳn sẽ tuyệt đẹp.” Bạn cân nhắc các lựa chọn của mình.</p><ul><li>Chuẩn bị cho cuộc khảo sát đầu tiên của bạn.<ul><li>Chọn 1 asset trong khu vực chơi của bạn để giữ lại cho kịch bản tiếp theo. Đó phải là một asset bình thường không bắt đầu trong màn chơi. Bỏ mọi asset và lá đính kèm khác trong khu vực chơi của bạn, ngoại trừ những lá bắt đầu mỗi ván chơi trong màn chơi.</li><li>Bỏ bớt bài cho đến khi bằng với kích thước bài khởi đầu trên tay của bạn. Xào chồng bài bỏ của bạn vào deck. *(Bài trên tay hiện tại của bạn là bài khởi đầu trên tay cho kịch bản tiếp theo; bạn sẽ không rút bài khởi đầu mới hoặc thực hiện mulligan.)*</li><li>Bỏ bớt tài nguyên cho đến khi bằng với số tài nguyên khởi đầu của bạn.</li></ul></li><li>Việc khám phá hòn đảo này được cho là nguy hiểm. Thêm 1 token {'{'}autoFail{'}'} vào túi hỗn mang trong phần còn lại của chiến dịch.</li><li>Khi thiết lập kịch bản tiếp theo, bỏ qua các bước 1-8 của phần ‘Setting Up the Game’ trên trang 27 của Rules Reference.</li></ul><p class='basic'>Các điều tra viên phải chọn nơi để khảo sát hôm nay! Bạn sẽ có cơ hội khảo sát nhiều khu vực trong suốt chiến dịch.</p><ul><li>Ở phía bắc, North Point Mine bị bỏ hoang nằm trống rỗng và bị những sinh vật hoang dã kỳ lạ tràn ngập. Để đương đầu với những nguy hiểm của _Written in Rock_, hãy lật đến trang 10.</li><li>Ở phía nam, Hemlock House cũ được đồn là nơi trú ngụ của một loài phá hoại kỳ lạ. Để điều tra _Hemlock House_, hãy lật đến trang 14.</li><li>Pearl Ridge tan hoang ở phía tây bắc bị phủ một lớp tro trắng dai dẳng. Để khám phá _The Silent Heath_, hãy lật đến trang 19.</li><li>Phía đông bắc là Akwan: một khu định cư nhỏ dần của người Abenaki và thủy thủ trên bờ biển hoang vắng. Để cứu _The Lost Sister_, hãy lật đến trang 23.</li><li>Dr. Marquez tin rằng Eastwick Bog ở phía đông nam có thể là nguồn gốc của mẫu vật đã dẫn bạn đến đây. Để khám phá _The Thing in the Depths_, hãy lật đến trang 27.</li></ul>"
       }
     },
     "playingPreludes": {
@@ -285,19 +285,19 @@
           "simeon": "\"Simeon chắc đang trốn ngoài cánh đồng.\"",
           "gideon": "\"Gideon chắc đang ở The Commons như mọi khi.\""
         },
-        "title": "{'{'}codex{'}'} Codex 9: Boarding House",
+        "title": "{'{'}codex{'}'} Codex 9: Nhà Trọ",
         "body": "<h3>@:theFeastOfHemlockVale.prelude2.codex.boardingHouse.title </h3><p>Cô Olmstead rất sẵn lòng trả lời các câu hỏi của bạn khi cô dọn ra những chiếc đĩa chất đầy trái cây mọng nước và thịt nướng xèo xèo. \"Đừng quên đến buổi khiêu vũ tối nay nhé. Mọi người đều sẽ ở đó,\" cô mỉm cười. Miệng bạn ứa nước bọt trước mùi thơm của thức ăn, nhưng bạn cũng ngửi thấy một mùi hăng hắc lẩn khuất.</p><p class='basic right'>Chọn một trong các lựa chọn bên dưới để giải quyết. Các điều tra viên tại Boarding House có thể cùng nhau tiêu bất kỳ số lượng action nào để chọn thêm số lượng lựa chọn tương ứng. Một điều tra viên có thể kích hoạt codex này lần nữa.</p><ul><li>*\"Leah đáng lẽ phải chuẩn bị Bữa Tiệc ở The Crossroads. Nếu cô ấy ở đó, tôi biết cô ấy sẽ rất cảm kích sự giúp đỡ của bạn.\"* Một điều tra viên tại Boarding House có thể ngay lập tức di chuyển đến The Crossroads.</li><li>*\"Simeon có lẽ đang trốn ngoài đồng.\"* Tìm trong tập encounter *Residents* đã để riêng lá Simeon Atwood và đưa anh ta vào khu vực chơi tại The Old Mill, ngửa mặt asset lên.</li><li>*\"Gideon có lẽ đang ở The Commons như mọi khi.\"* Tìm trong tập encounter *Residents* đã để riêng lá Gideon Mizrah và đưa anh ta vào khu vực chơi tại The Commons, ngửa mặt asset lên.</li></ul>"
       },
       "theCrossroads": {
-        "title": "{'{'}codex{'}'} Codex 10: The Crossroads",
+        "title": "{'{'}codex{'}'} Codex 10: Ngã Tư",
         "body": "<h3>@:theFeastOfHemlockVale.prelude2.codex.theCrossroads.title </h3><p>Leah hét bảo một đội công nhân lấy bạt che hình nộm lại khi trời đổ mưa. Hàng chục chiếc gương nhỏ kêu leng keng như chuông gió khi các đồ trang trí lễ hội được che chắn khỏi cơn mưa. Trong một chiếc lều lớn màu trắng, Leah ngước nhìn lên khi bạn đến gần. “Ah, đến đúng lúc lắm. Mang những thứ này qua chỗ Tad càng sớm càng tốt nhé. Cảm ơn nhiều.” Cô ấy hất đầu về phía một chiếc hộp chất đầy những nông cụ cũ kỹ.</p><p class='basic right'>Rút 1 lá bài. Ghi nhớ rằng bạn đang “chạy việc vặt”.</p>"
       },
       "hemlockChapel": {
-        "title": "{'{'}codex{'}'} Codex 11: Hemlock Chapel",
+        "title": "{'{'}codex{'}'} Codex 11: Nhà Nguyện Hemlock",
         "body": "<h3>@:theFeastOfHemlockVale.prelude2.codex.hemlockChapel.title </h3><p>Lối vào Hemlock Chapel chật ních những giáo dân trong áo choàng trắng-vàng, nên bạn vòng ra phía sau. Khi mở cánh cửa sau, bạn nghe thấy một cuộc trò chuyện thì thầm. Bạn để cửa hé mở và lắng nghe. Một giọng nói nhẹ nhàng vang lên: “Mọi việc sẽ được thực hiện như Người đã dặn, thưa Mẹ. Nhưng con đang tự hỏi chính xác tại sao Người lại cần chúng con—”</p><p>“Việc của con không phải là thắc mắc, hay lên tiếng, mà là tuân lệnh.” Giọng nói nghiêm khắc của Mother Rachel sắc như dao cắt. “Bây giờ con phải tham gia cùng các anh em của mình, và ta phải tham gia đoàn rước. Cứ làm như ta đã yêu cầu.”</p><p class='basic right'>Tìm trong chồng bài encounter *Residents* đã để riêng lá Mother Rachel và đặt bà ấy vào chơi tại Hemlock Chapel, với mặt asset ngửa lên.</p>"
       },
       "theOldMill": {
-        "title": "{'{'}codex{'}'} Codex 12: The Old Mill",
+        "title": "{'{'}codex{'}'} Codex 12: Cối Xay Cũ",
         "body": "<h3>@:theFeastOfHemlockVale.prelude2.codex.theOldMill.title </h3><p>The Old Mill im lặng đến rợn người khi bạn sục sạo quanh khu vực cỏ mọc um tùm. Khi sấm rền trên đầu, một con châu chấu chân dài bay lướt qua không trung. Bạn nhận thấy con côn trùng này có đôi cánh đen dị dạng.</p><p class='basic right'>Rút 3 lá bài.</p>"
       },
       "theAtwoodHouse": {
@@ -306,7 +306,7 @@
           "river": "*River nói có lý.”*",
           "fight": "*Cứ để họ tự giải quyết.*"
         },
-        "title": "{'{'}codex{'}'} Codex 13: The Atwood House",
+        "title": "{'{'}codex{'}'} Codex 13: Nhà Atwood",
         "body": "<h3>@:theFeastOfHemlockVale.prelude2.codex.theAtwoodHouse.title </h3><p>Bạn nghe thấy William và River đang cãi nhau. “Đây là tất cả những gì chúng ta còn lại. Chúng ta không thể quay lưng lại với quá khứ của mình. Di sản của chúng ta,” William khăng khăng. River ngắt lời với một cái nhìn gay gắt. “Di sản của Hemlock đã chết rồi. Và tôi biết vài người mua ở Harlem sẵn sàng biến hòn đảo sũng nước này thành một thiên đường.”</p><p class='basic'>Bạn phải quyết định *(chọn một)*:</p><ul><li>\"William nói có lý.\" (Bạn chỉ có thể chọn lựa chọn này nếu Relationship Level của William Hemlock từ 2 trở lên.) Tìm trong chồng bài encounter *Residents* đang để riêng William Hemlock và đưa ông vào chơi tại The Atwood House, với mặt asset ngửa lên.</li><li>\"River nói có lý.\" (Bạn chỉ có thể chọn lựa chọn này nếu Relationship Level của River Hawthorne từ 2 trở lên.) Tìm trong chồng bài encounter *Residents* đang để riêng River Hawthorne và đưa họ vào chơi tại The Atwood House, với mặt asset ngửa lên.</li><li>Cứ để họ tự giải quyết với nhau. Đọc tiếp.</li></ul>",
         "body2": "@:theFeastOfHemlockVale.prelude2.codex.theAtwoodHouse.body <p>Khi cả hai đang ném vào nhau những lời công kích cá nhân thậm tệ, một tiếng sấm rền vang khiến cả hai im bặt. William cau mày khi nhìn thấy bạn; River cũng quay lại và nhăn mặt. Một sự im lặng khó chịu bao trùm, và bạn nhận ra mình vừa nghe lén một cuộc trò chuyện rất nhạy cảm.</p><p class='basic right'>Giảm Relationship Level của cả William Hemlock và River Hawthorne.</p>"
       },
@@ -320,21 +320,21 @@
         "otherwise": "<p>_Otherwise_:</p><p>“Quý khách mua gì?” người chủ tiệm cười lớn. “Ít ra thì, Tad thường hay nói vậy.” Khi bạn hỏi ông ta Tad đang ở đâu, ông ta trở nên im lặng.</p><p class='basic right'>Bạn có thể tiêu 3 tài nguyên để tìm trong deck của mình một asset _Item_ và play nó, bỏ qua cost của nó. Một điều tra viên có thể kích hoạt codex này một lần nữa nếu họ đang “running an errand.”</p>"
       },
       "valeSchoolhouse": {
-        "title": "{'{'}codex{'}'} Codex 15: Vale Schoolhouse",
+        "title": "{'{'}codex{'}'} Codex 15: Trường Làng Vale",
         "body": "<h3>@:theFeastOfHemlockVale.prelude2.codex.valeSchoolhouse.title </h3><p>“Đó là thư viện, không phải hiệu sách!” Một giáo viên tóc đỏ giận dữ quát. Theo bước ra khỏi trường học và nở một nụ cười ngốc nghếch ngay khi anh bị đám học sinh lao vào ôm chầm lấy.</p><p class='basic right'>Tìm trong tập bài encounter *Residents* đã để riêng lá Theo Peters và đưa anh ta vào chơi tại Vale Schoolhouse, với mặt asset ngửa lên.</p>"
       },
       "theCommons": {
-        "title": "{'{'}codex{'}'} Codex 16: The Commons",
-        "body": "<h3>@:theFeastOfHemlockVale.prelude2.codex.theCommons.title </h3><p>“Muốn gửi quà cho một người đặc biệt nào đó không?” Martha Jean vẫy tay chỉ vào một chồng hộp quà đan lát gọn gàng được buộc bằng những dải ruy băng đầy màu sắc. “Bất cứ thứ gì bạn muốn gửi vào đất liền e là sẽ phải đợi đến sáng mai. Người đưa thư lại bị mắc kẹt rồi.”</p><p class='basic right'>Một điều tra viên có thể tìm trong deck, discard pile hoặc tay của họ một story asset _Item_ và loại bỏ vĩnh viễn nó khỏi deck. Nếu làm vậy, kiểm tra Nhật ký Chiến dịch và chọn một cư dân có Relationship Level từ 2 trở xuống. Tăng Relationship Level của cư dân được chọn. Mỗi điều tra viên nhận 1 điểm kinh nghiệm thưởng.</p>"
+        "title": "{'{'}codex{'}'} Codex 16: Hội Trường Cộng Đồng",
+        "body": "<h3>@:theFeastOfHemlockVale.prelude2.codex.theCommons.title </h3><p>“Muốn gửi quà cho một người đặc biệt nào đó không?” Martha Jean vẫy tay chỉ vào một chồng hộp quà đan lát gọn gàng được buộc bằng những dải ruy băng đầy màu sắc. “Bất cứ thứ gì bạn muốn gửi vào đất liền e là sẽ phải đợi đến sáng mai. Người đưa thư lại bị mắc kẹt rồi.”</p><p class='basic right'>Một điều tra viên có thể tìm trong deck, chồng bài bỏ hoặc tay của họ một story asset _Item_ và loại bỏ vĩnh viễn nó khỏi deck. Nếu làm vậy, kiểm tra Nhật ký Chiến dịch và chọn một cư dân có Cấp Độ Quan Hệ từ 2 trở xuống. Tăng Cấp Độ Quan Hệ của cư dân được chọn. Mỗi điều tra viên nhận 1 điểm kinh nghiệm thưởng.</p>"
       },
       "theCurse": {
-        "title": "{'{'}codex{'}'} Codex 17: The Curse",
-        "body": "<h3>@:theFeastOfHemlockVale.prelude2.codex.theCurse.title </h3><p>Khi bạn tựa vào chồng gương, bạn nhìn xuống và thấy hình ảnh phản chiếu của chính mình đang nhìn lại. Các đường nét trên khuôn mặt bạn bị kéo căng và có phần khác lạ: bạn trông hốc hác và kiệt sức. Khi bạn đứng lên, lớp da xám xịt, bong tróc rơi ra từ cẳng tay bạn.</p><p class='basic right'>Nếu chưa có trong deck của bạn, tìm trong chồng bài encounter *Day of Rain* đang để riêng lá weakness Hemlock Curse và thêm nó vào deck của bạn. Nó không được tính vào kích thước deck. Nếu không, trong lúc setup của scenario tiếp theo, tìm trong deck và discard pile của bạn lá weakness Hemlock Curse và thêm nó vào bài khởi đầu trên tay.</p><p class='basic right'>Bạn *(và chỉ bạn)* nhận 2 bonus experience.</p>"
+        "title": "{'{'}codex{'}'} Codex 17: Lời Nguyền",
+        "body": "<h3>@:theFeastOfHemlockVale.prelude2.codex.theCurse.title </h3><p>Khi bạn tựa vào chồng gương, bạn nhìn xuống và thấy hình ảnh phản chiếu của chính mình đang nhìn lại. Các đường nét trên khuôn mặt bạn bị kéo căng và có phần khác lạ: bạn trông hốc hác và kiệt sức. Khi bạn đứng lên, lớp da xám xịt, bong tróc rơi ra từ cẳng tay bạn.</p><p class='basic right'>Nếu chưa có trong deck của bạn, tìm trong bộ encounter *Day of Rain* đang để riêng điểm yếu Lời Nguyền Độc Cần và thêm nó vào deck của bạn. Nó không được tính vào deck size của bạn. Nếu không, trong khi thiết lập kịch bản tiếp theo, tìm trong deck và chồng bài bỏ của bạn điểm yếu Lời Nguyền Độc Cần và thêm nó vào bài khởi đầu trên tay của bạn.</p><p class='basic right'>Bạn *(và chỉ bạn)* nhận 2 điểm kinh nghiệm thưởng.</p>"
       },
       "xp": {
         "motherRachel": "Mother Rachel",
-        "tadsGeneralStore": "Tad's General Store",
-        "theCommons": "The Commons",
+        "tadsGeneralStore": "Tạp Hóa Tad",
+        "theCommons": "Hội Trường Cộng Đồng",
         "theCurse": "Lời nguyền",
         "judithPark": "Judith Park",
         "gideonMizrah": "Gideon Mizrah",
@@ -385,7 +385,7 @@
       },
       "resolution3": {
         "title": "Kết thúc thứ ba",
-        "body": "<p>_Resolution 3_: Dr. Marquez tự rót cho mình một tách cà phê đậm. “Tôi sẽ tận dụng cơn mưa mát mẻ này và đi lên Pearl Ridge. Đi cùng tôi nếu bạn muốn,” cô cắn một miếng trứng và nhăn mũi. “Có vị kim loại sao?” Cô kín đáo nhổ miếng trứng vào một chiếc khăn tay khi Ms. Olmstead bước ra từ nhà bếp với một chồng bánh kếp và phục vụ vài vị khách đang đói.</p><ul><li>Không ghi lại giá trị Victory X của mỗi lá bài trong victory display. Mỗi điều tra viên nhận các bonus experience được thưởng trong prelude này. Ghi lại từng bonus experience nhận được dưới mục “Unspent Experience” trong Nhật ký Chiến dịch, _nhưng không được tiêu bất kỳ điểm nào cho đến khi kết thúc scenario tiếp theo._</li><li>Chuẩn bị cho cuộc khảo sát tiếp theo của bạn.<ul><li>Chọn 1 asset trong khu vực chơi của bạn để giữ lại cho scenario tiếp theo. Đó phải là một asset bình thường không bắt đầu in play. Discard mọi asset và attachment khác trong khu vực chơi của bạn, ngoại trừ những lá bắt đầu in play mỗi game.</li><li>Discard cho đến khi số bài trên tay bằng với kích thước opening hand của bạn. Xào discard pile của bạn vào deck. *(Hand hiện tại của bạn là opening hand cho scenario tiếp theo; bạn sẽ không rút một opening hand mới hoặc thực hiện mulligan.)*</li><li>Bỏ bớt tài nguyên cho đến khi bằng với số tài nguyên khởi đầu của bạn.</li></ul></li><li>Khi setup scenario tiếp theo, bỏ qua các bước 1-8 của phần ‘Setting Up the Game’ trên trang 27 của Rules Reference.</li></ul><p class='basic'>Kiểm tra phần “Areas Surveyed” trong Nhật ký Chiến dịch của bạn và chọn một scenario chưa được đánh dấu.</p><ul><li>Để đối mặt với North Point Mine đang mục nát trong Written in Rock, hãy lật đến trang 10.</li><li>Để điều tra Hemlock House bị bỏ hoang từ lâu, hãy lật đến trang 14.</li><li>Để khám phá Pearl Ridge yên ắng đến rợn người trong The Silent Heath, hãy lật đến trang 19.</li><li>Để khám phá Akwan Shoreline ở phía bắc trong The Lost Sister, hãy lật đến trang 23.</li><li>Để khảo sát Eastwick Bog và liều gặp The Thing in the Depths, hãy lật đến trang 27.</li></ul>"
+        "body": "<p>_Resolution 3_: Tiến sĩ Marquez tự rót cho mình một tách cà phê đậm. “Tôi sẽ tận dụng cơn mưa mát mẻ này và đi lên Pearl Ridge. Đi cùng tôi nếu bạn muốn,” cô cắn một miếng trứng và nhăn mũi. “Có vị kim loại sao?” Cô kín đáo nhổ miếng trứng vào một chiếc khăn tay khi Cô Olmstead bước ra từ nhà bếp với một chồng bánh kếp và phục vụ vài vị khách đang đói.</p><ul><li>Không ghi lại giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích. Mỗi điều tra viên nhận điểm kinh nghiệm thưởng được trao trong màn dạo đầu này. Ghi lại từng điểm kinh nghiệm thưởng nhận được dưới mục “Unspent Experience” trong Nhật ký Chiến dịch của bạn, _nhưng không được tiêu bất kỳ điểm nào cho đến khi kết thúc kịch bản tiếp theo_.</li><li>Chuẩn bị cho cuộc khảo sát tiếp theo của bạn.<ul><li>Chọn 1 asset trong khu vực chơi của bạn để giữ lại cho kịch bản tiếp theo. Đó phải là một asset thông thường không bắt đầu trong màn chơi. Bỏ mọi asset và attachment khác trong khu vực chơi của bạn, ngoại trừ những lá bắt đầu mỗi ván chơi trong màn chơi.</li><li>Bỏ bớt bài cho đến khi số bài trên tay bằng với kích thước tay bài khởi đầu của bạn. Xáo chồng bài bỏ của bạn vào chồng bài của bạn. (*Bài trên tay hiện tại của bạn là tay bài khởi đầu cho kịch bản tiếp theo; bạn sẽ không rút một tay bài khởi đầu mới hoặc mulligan.*)</li><li>Bỏ bớt tài nguyên cho đến khi bằng với số tài nguyên khởi đầu của bạn.</li></ul></li><li>Khi thiết lập kịch bản tiếp theo, bỏ qua các bước 1-8 của phần ‘Setting Up the Game’ trên trang 27 của Rules Reference.</li></ul><p class='basic'>Kiểm tra phần “Khu vực đã khảo sát” trong Nhật ký Chiến dịch của bạn và chọn một kịch bản chưa được đánh dấu.</p><ul><li>Để dũng cảm tiến vào North Point Mine đang mục nát trong Written in Rock, hãy lật đến trang 10.</li><li>Để điều tra Hemlock House bị bỏ hoang từ lâu, hãy lật đến trang 14.</li><li>Để khám phá Pearl Ridge yên ắng đến rợn người trong The Silent Heath, hãy lật đến trang 19.</li><li>Để khám phá Akwan Shoreline ở phía bắc trong The Lost Sister, hãy lật đến trang 23.</li><li>Để khảo sát Eastwick Bog và liều gặp The Thing in the Depths, hãy lật đến trang 27.</li></ul>"
       }
     }
   },
@@ -472,7 +472,7 @@
         "proceedTo2": "Nếu *Judith đã sát cánh bên bạn*, và/hoặc *The Thing in the Depths đã bị đánh bại*, và/hoặc Judith Park có Relationship Level từ 4 trở lên, tiếp tục đến _Judith 2_.",
         "skipTo3": "Nếu không, chuyển đến _Judith 3_.",
         "judith2": "<h3>@:theFeastOfHemlockVale.prelude3.codex.judithPark.title </h3><p>_Judith 2:_ Bạn hét lên bảo nữ vệ sĩ dừng lại. Cô ấy hạ súng xuống khi đám mây cuồn cuộn chập chờn như một ảo ảnh. “Theo tôi!” Judith vẫy gọi bạn.</p><p class='basic right'>Giành quyền điều khiển Judith Park.</p><p class='basic right'>Trong Judith Park’s Notes, ghi lại *bạn đã hỗ trợ Judith*.</p><p class='basic right'>Tăng Cấp độ Quan hệ của Judith Park. Mỗi điều tra viên nhận 1 kinh nghiệm thưởng.</p>",
-        "judith3": "<h3>@:theFeastOfHemlockVale.prelude3.codex.judithPark.title </h3><p>_Judith 3:_ Người vệ sĩ bắn mù quáng vào đám mây. Những tiếng hét báo động vang lên khắp Crossroads khi du khách lao đi tìm chỗ nấp. Đám mây cuồn cuộn chập chờn như một ảo ảnh. \"Mẹ kiếp—\" Judith thốt lên, sững sờ.</p><p class='basic right'>Discard 1 lá bài ngẫu nhiên từ trên tay bạn.</p><p class='basic right'>Tăng Cấp độ Quan hệ của Judith Park. Mỗi điều tra viên nhận 1 kinh nghiệm thưởng.</p>"
+        "judith3": "<h3>@:theFeastOfHemlockVale.prelude3.codex.judithPark.title </h3><p>_Judith 3:_ Người vệ sĩ bắn mù quáng vào đám mây. Những tiếng hét báo động vang lên khắp Crossroads khi du khách lao đi tìm chỗ nấp. Đám mây cuồn cuộn chập chờn như một ảo ảnh. “Mẹ kiếp—” Judith thốt lên, sững sờ.</p><p class='basic right'>Bỏ 1 lá bài ngẫu nhiên từ trên tay bạn.</p><p class='basic right'>Tăng Relationship Level của Judith Park. Mỗi điều tra viên nhận 1 điểm kinh nghiệm thưởng.</p>"
       },
       "theoPeters": {
         "title": "[codex] Codex 8: Theo Peters",
@@ -480,7 +480,7 @@
         "otherwise": "<h3>@:theFeastOfHemlockVale.prelude3.codex.theoPeters.title </h3><p>_Otherwise:_</p><p>\"Tôi sẽ lấy cho ông chiếc mặt nạ chó đó ngay, ông Sanders!\" Theo hét lên. \"Bạn có phiền giao thứ này đến Commons giúp tôi không?\" Cậu đưa cho bạn một gói hàng. \"Nó dành cho anh em họ của tôi ở Portland.\"</p><p class='basic right'>Hãy nhớ rằng \"bạn đang giao một gói hàng.\"</p>"
       },
       "boardingHouse": {
-        "title": "{'{'}codex{'}'} Codex 9: Boarding House",
+        "title": "{'{'}codex{'}'} Codex 9: Nhà Trọ",
         "label": {
           "william": "\"Tôi nghĩ William có việc gì đó phải làm ở Old Mill.\"",
           "theo": "\"Hôm nay Theo lẽ ra phải trông Tad's Store.\"",
@@ -489,21 +489,21 @@
         "body": "<h3>@:theFeastOfHemlockVale.prelude3.codex.boardingHouse.title </h3><p>Bà Olmstead không thể nhịn cười khi bạn hỏi bà về các lễ hội và những ai đang làm việc quanh Vale.</p><p class='basic'>Chọn một trong các lựa chọn bên dưới để giải quyết. Các điều tra viên tại Boarding House có thể cùng nhau tiêu bất kỳ số lượng action nào để chọn thêm số lượng lựa chọn tương ứng. Một điều tra viên có thể kích hoạt codex này lần nữa.</p><ul><li>*“Tôi nghĩ William có việc gì đó ở The Old Mill.”* Tìm trong chồng bài encounter Residents đã để riêng lá William Hemlock và đặt anh ta vào chơi tại The Old Mill, mặt asset ngửa lên.</li><li>*“Đáng lẽ hôm nay Theo phải quản lý Tad’s Store.”* Tìm trong chồng bài encounter Residents đã để riêng lá Theo Peters và đặt anh ta vào chơi tại Tad’s General Store, mặt asset ngửa lên.</li><li>*“Tôi nghĩ tôi đã thấy River đang chơi nhạc cùng vài người bạn của họ ở đây trong phòng làm việc.”* Tìm trong chồng bài encounter Residents đã để riêng lá River Hawthorne và đặt họ vào chơi tại Boarding House, mặt asset ngửa lên.</li></ul>"
       },
       "theCrossroads": {
-        "title": "{'{'}codex{'}'} Codex 10: The Crossroads",
+        "title": "{'{'}codex{'}'} Codex 10: Ngã Tư",
         "planUnderway": "<h3>@:theFeastOfHemlockVale.prelude3.codex.theCrossroads.title </h3><p>_Kiểm tra Simeon Atwood’s Notes. *Nếu The plan is underway*:_</p><p>The Crossroads rộn rã các hoạt động. Bạn cẩn thận nhét một vài quả pháo hoa vào lớp vữa của một hàng rào đầy hoa.</p><p class='basic right'>Kiểm tra {'{'}combat{'}'} hoặc {'{'}agility{'}'} (3) để giấu pháo hoa. Nếu bạn thành công, đánh 1 dấu tally bên cạnh \"Kế hoạch đang được tiến hành.\" (*Gợi ý: Bạn cần giấu 1 {'{'}perPlayer{'}'} pháo hoa để giúp Simeon.*) Nếu bạn thất bại, một điều tra viên có thể kích hoạt lại codex này.</p>",
         "otherwise": "<h3>@:theFeastOfHemlockVale.prelude3.codex.theCrossroads.title </h3><p>_Otherwise:_</p><p>The Crossroads rộn rã các hoạt động. Mother Rachel theo dõi mọi việc diễn ra khi những dải ruy băng đầy màu sắc được treo lên hình nộm cao chót vót.</p><p class='basic right'>Bạn có thể rút 1 card hoặc nhận 1 tài nguyên.</p>"
       },
       "hemlockChapel": {
-        "title": "{'{'}codex{'}'} Codex 11: Hemlock Chapel",
+        "title": "{'{'}codex{'}'} Codex 11: Nhà Nguyện Hemlock",
         "planUnderway": "<h3>@:theFeastOfHemlockVale.prelude3.codex.hemlockChapel.title </h3><p>_Kiểm tra Simeon Atwood’s Notes. *Nếu The plan is underway*:_</p><p>Khi một dạng nghi lễ đám cưới diễn ra trong một khu rừng nhỏ gần đó, bạn cố gắng bí mật giấu một chùm pháo hoa dưới mái hiên nhà nguyện.</p><p class='basic right'>Nếu anh ta chưa ở trên bàn chơi, tìm trong chồng bài encounter *Residents* đã để riêng lá Gideon Mizrah và đặt anh ta vào chơi tại Hemlock Chapel, mặt asset ngửa lên.</p><p class='basic right'>Kiểm tra {'{'}agility{'}'} (2) để giấu pháo hoa. Nếu bạn thành công, đánh 1 dấu tally bên cạnh \"Kế hoạch đang được tiến hành.\" (*Gợi ý: Bạn cần giấu 1 {'{'}perPlayer{'}'} pháo hoa để giúp Simeon.*) Nếu bạn thất bại, một điều tra viên có thể kích hoạt lại codex này.</p>",
         "otherwise": "<h3>@:theFeastOfHemlockVale.prelude3.codex.hemlockChapel.title </h3><p>_Otherwise:_</p><p>Một đám đông đang đứng xem một kiểu nghi lễ đám cưới trước nhà nguyện. Cặp đôi mỉm cười và bắt đầu khiêu vũ.</p><p class='basic right'>Tìm trong tập encounter *Residents* đã để riêng lá Gideon Mizrah và đưa anh ta vào chơi tại Hemlock Chapel, ngửa mặt asset.</p>"
       },
       "theAtwoodHouse": {
-        "title": "{'{'}codex{'}'} Codex 13: The Atwood House",
+        "title": "{'{'}codex{'}'} Codex 13: Nhà Atwood",
         "body": "<h3>@:theFeastOfHemlockVale.prelude3.codex.theAtwoodHouse.title </h3><p>Mặt tiền ảm đạm của The Atwood House nổi bật như một vết loét xấu xí giữa biển hoa và vòng hoa rực rỡ.</p><p class='basic right'>Tìm trong tập encounter *Residents* đã để riêng lá Leah Atwood và đưa cô ta vào chơi tại The Atwood House, ngửa mặt asset.</p>"
       },
       "tadsGeneralStore": {
-        "title": "{'{'}codex{'}'} Codex 14: Tad’s General Store",
+        "title": "{'{'}codex{'}'} Codex 14: Tạp Hóa Tad",
         "label": {
           "item": "Tiêu 5 tài nguyên để tìm trong deck của bạn một lá Item và chơi nó, bỏ qua chi phí của nó."
         },
@@ -511,14 +511,14 @@
         "otherwise": "<h3>@:theFeastOfHemlockVale.prelude3.codex.tadsGeneralStore.title </h3><p>_Otherwise:_</p><p>Cửa hàng bách hóa đông nghịt khách, họ mua những vòng hoa và những tấm chăn sặc sỡ trong khi các công nhân đi lại tấp nập.</p><p class='basic right'>Bạn có thể tiêu 5 tài nguyên để tìm trong deck của bạn một lá bài _Item_ và chơi nó, bỏ qua cost của nó. Bất kỳ điều tra viên nào khác cũng có thể kích hoạt lại codex này.</p>"
       },
       "valeSchoolhouse": {
-        "title": "{'{'}codex{'}'} Codex 15: Vale Schoolhouse",
+        "title": "{'{'}codex{'}'} Codex 15: Trường Làng Vale",
         "planUnderway": "<h3>@:theFeastOfHemlockVale.prelude3.codex.valeSchoolhouse.title </h3><p>_Kiểm tra Simeon Atwood’s Notes. *Nếu The plan is underway*:_</p><p>Ngôi trường vắng tanh. Bạn tìm thấy một cái thùng rỗng lớn phía sau nhà vệ sinh ngoài trời và cố gắng đặt pháo hoa vào đó.</p><p class='basic right'>Kiểm tra {'{'}combat{'}'} hoặc {'{'}agility{'}'} (3) để giấu pháo hoa. Nếu bạn thành công, đánh 1 dấu tally bên cạnh \"Kế hoạch đang được tiến hành.\" (*Gợi ý: Bạn cần giấu 1 {'{'}perPlayer{'}'} pháo hoa để giúp Simeon.*) Nếu bạn thất bại, một điều tra viên có thể kích hoạt lại codex này.</p>",
         "otherwise": "<h3>@:theFeastOfHemlockVale.prelude3.codex.valeSchoolhouse.title </h3><p>_Otherwise:_</p><p>Ngôi trường hôm nay trống không. Vài bức tranh vẽ tay trên tường mô tả hàng tá sinh vật rực rỡ, nhiều màu sắc.</p><p class='basic right'>Bạn có thể rút 1 card hoặc nhận 1 tài nguyên.</p>"
       },
       "theCommons": {
-        "title": "{'{'}codex{'}'} Codex 16: The Commons",
+        "title": "{'{'}codex{'}'} Codex 16: Hội Trường Cộng Đồng",
         "delivering": "<h3>@:theFeastOfHemlockVale.prelude3.codex.theCommons.title </h3><p>_If “you are delivering a package”:_</p><p>Bạn trao gói hàng qua quầy cho Martha Jean, người đang nhìn bạn với một nụ cười thật lâu. Một tách trà nằm vỡ vụn trên sàn nhà gần đó.</p><p class='basic right'>Tăng Relationship Level của Theo Peters. Mỗi điều tra viên nhận 1 kinh nghiệm thưởng.</p>",
-        "regardless": "<p>_Regardless:_</p><p>“Có quà cho một người đặc biệt à?” Martha Jean lè nhè, nhìn chằm chằm. “Sao tối qua bạn không mời tôi nhảy? Tôi sẽ đồng ý đấy.”</p><p class='basic right'>Một điều tra viên có thể loại bỏ 1 story asset Item đã nhận được khỏi deck, discard pile hoặc tay của họ. Nếu làm vậy, chọn một cư dân có Relationship Level từ 2 trở xuống. Tăng Relationship Level của cư dân đó. Mỗi điều tra viên nhận 1 điểm kinh nghiệm thưởng.</p>"
+        "regardless": "<p>_Regardless:_</p><p>“Có quà cho một người đặc biệt à?” Martha Jean lè nhè, nhìn chằm chằm. “Sao tối qua bạn không mời tôi nhảy? Tôi sẽ đồng ý đấy.”</p><p class='basic right'>Một điều tra viên có thể loại bỏ 1 story asset Item đã nhận được khỏi chồng bài, chồng bài bỏ hoặc trên tay của họ. Nếu làm vậy, chọn một cư dân có Relationship Level từ 2 trở xuống. Tăng Relationship Level của cư dân đó. Mỗi điều tra viên nhận 1 điểm kinh nghiệm thưởng.</p>"
       },
       "xp": {
         "motherRachel": "Mother Rachel",
@@ -528,13 +528,13 @@
         "gideonMizrah": "Gideon Mizrah",
         "judithPark": "Judith Park",
         "theoPeters": "Theo Peters",
-        "theCommons": "The Commons"
+        "theCommons": "Hội Trường Cộng Đồng"
       }
     },
     "resolutions": {
       "noResolution": {
         "title": "Không có Resolution",
-        "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại):_ Một vòng người dân làng đeo mặt nạ thú kéo bạn đứng dậy. Khi đứng lên, bạn không kìm được mà nhe răng cười khi một niềm hạnh phúc êm dịu tràn ngập khắp người. Một người phụ nữ đeo mặt nạ hươu dìu bạn trở về Boarding House để hội ngộ với đoàn khảo sát.</p><ul><li>Đặt 1 doom lên lá bài investigator của điều tra viên trưởng.</li><li>Chuyển đến _Resolution 2_.</li></ul>"
+        "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đều bị đánh bại):_ Một vòng người dân làng đeo mặt nạ thú kéo bạn đứng dậy. Khi đứng lên, bạn không kìm được mà nhe răng cười khi một niềm hạnh phúc êm dịu tràn ngập khắp người. Một người phụ nữ đeo mặt nạ hươu dìu bạn trở về Boarding House để hội ngộ với đoàn khảo sát.</p><ul><li>Đặt 1 doom lên lá bài điều tra viên của điều tra viên trưởng.</li><li>Chuyển đến _Resolution 2_.</li></ul>"
       },
       "resolution1": {
         "title": "Kết thúc thứ nhất",
@@ -542,7 +542,7 @@
       },
       "resolution2": {
         "title": "Kết thúc thứ hai",
-        "body": "<p>_Resolution 2:_ Tiến sĩ Marquez trông hoàn toàn kiệt sức khi cô nhấc chiếc ba lô của mình lên thùng sau chiếc xe tải màu xanh của Theo. “Hôm nay là ngày cuối cùng,” cô nói. “Hãy tận dụng tối đa ngày hôm nay nhé.”</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn. Trong Ghi chú của Simeon Atwood, nếu có ít nhất 1 {'{'}perPlayer{'}'} dấu tally bên cạnh *Kế hoạch đang được tiến hành*: Trong Nhật ký Chiến dịch của bạn (*không phải* trong Ghi chú của Simeon Atwood), ghi lại *Vale đầy pháo hoa*.</li><li>Mỗi điều tra viên nhận được bonus experience được thưởng trong prelude này. Ghi lại mỗi bonus experience nhận được dưới mục “Unspent Experience” trong Nhật ký Chiến dịch của bạn, _nhưng không được tiêu bất kỳ điểm nào cho đến khi kết thúc scenario tiếp theo._</li><li>Chuẩn bị cho cuộc khảo sát cuối cùng của bạn.<ul><li>Chọn 1 asset trong khu vực chơi của bạn để giữ lại cho scenario tiếp theo. Đó phải là một asset bình thường không bắt đầu in play. Discard mọi asset và attachment khác trong khu vực chơi của bạn, ngoại trừ những lá bắt đầu in play mỗi game.</li><li>Discard cho đến khi số bài trên tay bằng với kích thước opening hand của bạn. Xào discard pile của bạn vào deck. *(Hand hiện tại của bạn là opening hand cho scenario tiếp theo; bạn sẽ không rút một opening hand mới hoặc thực hiện mulligan.)*</li><li>Bỏ bớt tài nguyên cho đến khi bằng với số tài nguyên khởi đầu của bạn.</li></ul></li><li>Khi setup scenario tiếp theo, bỏ qua các bước 1-8 của 'Setting Up the Game' ở trang 27 của Rules Reference. Kiểm tra mục \"Areas Surveyed\" trong Nhật ký Chiến dịch của bạn và chọn một scenario chưa được đánh dấu.</li></ul>"
+        "body": "<p>_Resolution 2:_ Tiến sĩ Marquez trông hoàn toàn kiệt sức khi cô nhấc chiếc ba lô của mình lên thùng sau chiếc xe tải màu xanh của Theo. “Hôm nay là ngày cuối cùng,” cô nói. “Hãy tận dụng tối đa ngày hôm nay nhé.”</p><ul><li>Cập nhật Nhật ký Chiến dịch của bạn. Trong Ghi chú của Simeon Atwood, nếu có ít nhất 1 {'{'}perPlayer{'}'} dấu tally bên cạnh <i>Kế hoạch đang được tiến hành</i>: Trong Nhật ký Chiến dịch của bạn (*không phải* trong Ghi chú của Simeon Atwood), ghi lại <i>Vale đầy pháo hoa</i>.</li><li>Mỗi điều tra viên nhận được điểm kinh nghiệm thưởng trong màn dạo đầu này. Ghi lại mỗi điểm kinh nghiệm thưởng nhận được dưới mục “Unspent Experience” trong Nhật ký Chiến dịch của bạn, _nhưng không được tiêu bất kỳ điểm nào cho đến khi kết thúc kịch bản tiếp theo_.</li><li>Chuẩn bị cho cuộc khảo sát cuối cùng của bạn.<ul><li>Chọn 1 asset trong khu vực chơi của bạn để giữ lại cho kịch bản tiếp theo. Đó phải là một asset thông thường không bắt đầu trong màn chơi. Bỏ mọi asset và attachment khác trong khu vực chơi của bạn, ngoại trừ những lá bắt đầu mỗi ván chơi trong màn chơi.</li><li>Bỏ bớt bài cho đến khi số bài trên tay bằng với kích thước tay bài khởi đầu của bạn. Xáo chồng bài bỏ của bạn vào chồng bài của bạn. (*Bài trên tay hiện tại của bạn là tay bài khởi đầu cho kịch bản tiếp theo; bạn sẽ không rút một tay bài khởi đầu mới hoặc mulligan.*)</li><li>Bỏ bớt tài nguyên cho đến khi bằng với số tài nguyên khởi đầu của bạn.</li></ul></li><li>Khi thiết lập kịch bản tiếp theo, bỏ qua các bước 1-8 của ‘Setting Up the Game’ ở trang 27 của Rules Reference. Kiểm tra mục “Khu vực đã khảo sát” trong Nhật ký Chiến dịch của bạn và chọn một kịch bản chưa được đánh dấu.</li></ul>"
       }
     },
     "label": {
@@ -756,7 +756,7 @@
     "bertieWasRescued": "Bertie đã được giải cứu.",
     "bertieWasLostInTheWoods": "Bertie đã bị lạc trong rừng.",
     "theBearWasWounded": "con gấu đã bị thương.",
-    "finishedTheirMeal": "Finished Their Meal",
+    "finishedTheirMeal": "Đã dùng xong bữa ăn",
     "madamePearlsDiaryWasRecovered": "Nhật ký của Madame Pearl đã được tìm thấy.",
     "theInvestigatorsLaidThePearlFamilyToRest": "các điều tra viên đã cho Pearl Family yên nghỉ.",
     "elizabethPetersWasSaved": "Elizabeth Peters đã được cứu.",
@@ -938,7 +938,37 @@
     "theValeWasSaved": "the Vale đã được cứu.",
     "theValeBurned": "the Vale đã bị thiêu rụi.",
     "theInvestigatorsBarelySurvivedTheFeastOfHemlockVale": "các điều tra viên chật vật mới sống sót qua Feast of Hemlock Vale.",
-    "helenSacrificedThemselvesForTheInvestigators": "Helen đã hy sinh bản thân vì các điều tra viên"
+    "helenSacrificedThemselvesForTheInvestigators": "Helen đã hy sinh bản thân vì các điều tra viên",
+    "areasSurveyed": {
+      "northPointMine": {
+        "name": "Mỏ North Point",
+        "scenarioName": "Khắc Vào Đá"
+      },
+      "hemlockHarbor": {
+        "name": "Cảng Hemlock",
+        "scenarioName": "Dinh Thự Hemlock"
+      },
+      "pearlRidge": {
+        "name": "Rặng Pearl",
+        "scenarioName": "Vùng Đất Hoang Im Lặng"
+      },
+      "akwanShoreline": {
+        "name": "Bờ Biển Akwan",
+        "scenarioName": "Người Chị Thất Lạc"
+      },
+      "eastwickBog": {
+        "name": "Đầm Lầy Eastwick",
+        "scenarioName": "Sinh Vật Nơi Đáy Sâu"
+      },
+      "westernWoods": {
+        "name": "Rừng Phía Tây",
+        "scenarioName": "Thung Lũng Xoắn Vặn"
+      },
+      "southernFields": {
+        "name": "Cánh Đồng Phía Nam",
+        "scenarioName": "Đêm Dài Nhất"
+      }
+    }
   },
   "prelude4": {
     "intro": {
@@ -1014,7 +1044,7 @@
         "gideonMizrah": "Gideon Mizrah",
         "judithPark": "Judith Park",
         "theoPeters": "Theo Peters",
-        "theAtwoodHouse": "The Atwood House"
+        "theAtwoodHouse": "Nhà Atwood"
       },
       "motherRachel": {
         "title": "{'{'}codex{'}'} Codex 1: Mother Rachel",
@@ -1069,23 +1099,23 @@
         "otherwise": "<p>Bạn tìm thấy Theo đang mặc chiếc áo choàng màu trắng-vàng của anh ấy sau cửa hàng tạp hóa, cười toe toét. “Tôi chưa bao giờ nghĩ mọi thứ có thể tốt hơn, nhưng tôi đã nhầm!” anh ấy thốt lên, sau đó rút ra một cuốn The Lost World mới của Doyle. “Tôi thấy một vị khách đang đọc cuốn này và họ cứ thế tặng nó cho tôi! Miễn phí!” Chàng thanh niên không ngừng cười khi gãi một mảng da đỏ trên cổ.</p><p class='basic right'>Nhận quyền điều khiển Theo Peters.</p>"
       },
       "boardingHouse": {
-        "title": "{'{'}codex{'}'} Codex 9: Boarding House",
+        "title": "{'{'}codex{'}'} Codex 9: Nhà Trọ",
         "body": "<h3>@:theFeastOfHemlockVale.prelude4.codex.boardingHouse.title </h3><p>Chiếc bàn dài trong Boarding House phủ đầy những khúc xương dính mỡ và vỏ trái cây bị khoét rỗng. Một hộp sọ có gạc—không hẳn là của hươu—nằm ở giữa bàn, được trang trí bằng những bông hoa dại rực rỡ.</p><p class='basic'>Rút 3 lá bài hoặc nhận 3 tài nguyên.</p>"
       },
       "theCrossroads": {
-        "title": "{'{'}codex{'}'} Codex 10: The Crossroads",
+        "title": "{'{'}codex{'}'} Codex 10: Ngã Tư",
         "body": "<h3>@:theFeastOfHemlockVale.prelude4.codex.theCrossroads.title </h3><p>“Hãy tham gia điệu nhảy!” Một người trẩy hội phấn khích nắm lấy tay bạn để nhảy múa quanh một đống lửa. Những chiếc bàn gần đó chất đầy thức ăn ôi thiu, những miếng thịt biến dạng, và những trái cây màu xám, bám đầy bột. Những người trẩy hội chất thức ăn thành đống trên đĩa của họ và xúc lấy xúc để vào miệng, dường như không hề hay biết.</p><p class='basic'>Chọn bất kỳ kẻ địch nào đang trong cuộc chơi. Disengage kẻ địch đã chọn khỏi tất cả điều tra viên, di chuyển nó đến The Crossroads, và exhaust nó.</p>"
       },
       "hemlockChapel": {
-        "title": "{'{'}codex{'}'} Codex 11: Hemlock Chapel",
+        "title": "{'{'}codex{'}'} Codex 11: Nhà Nguyện Hemlock",
         "body": "<h3>@:theFeastOfHemlockVale.prelude4.codex.hemlockChapel.title </h3><p>Một cặp đôi trong trang phục cưới rực rỡ ôm nhau trước nhà nguyện trong khi vài người trẩy hội nhảy múa thành vòng tròn quanh họ. Khi bạn đến gần, bạn thấy họ bị trói bằng dải ruy băng đỏ thắt chặt ở eo và đang cười khúc khích không ngừng.</p><p class='basic'>Rút 1 lá bài hoặc nhận 1 tài nguyên.</p>"
       },
       "theOldMill": {
-        "title": "{'{'}codex{'}'} Codex 12: The Old Mill",
+        "title": "{'{'}codex{'}'} Codex 12: Cối Xay Cũ",
         "body": "<h3>@:theFeastOfHemlockVale.prelude4.codex.theOldMill.title </h3><p>Những cánh quạt của cối xay gió bị bao phủ hoàn toàn bởi dây leo chằng chịt và những bông hoa mọc um tùm. Có thứ gì đó sột soạt trong bụi rậm.</p><p class='basic'>Chọn một kẻ địch _Resident_ tại vị trí này hoặc một vị trí kết nối và kiểm tra kỹ năng bất kỳ (2). Nếu thành công, tự động evade kẻ địch đã chọn.</p>"
       },
       "theAtwoodHouse": {
-        "title": "{'{'}codex{'}'} Codex 13: The Atwood House",
+        "title": "{'{'}codex{'}'} Codex 13: Nhà Atwood",
         "header": "<h3>@:theFeastOfHemlockVale.prelude4.codex.theAtwoodHouse.title </h3>",
         "label": {
           "william": "William Hemlock",
@@ -1101,15 +1131,15 @@
         "letFight": "Cứ để họ tự giải quyết với nhau. Nếu William is resolved hoặc River is reclaiming their legacy được ghi lại trong Ghi chú của William Hemlock hoặc River Hawthorne, hãy ghi nhớ \"nhà Hemlock đang tự giải quyết với nhau\". Bạn có thể kích hoạt lại codex này."
       },
       "tadsGeneralStore": {
-        "title": "{'{'}codex{'}'} Codex 14: Tad’s General Store",
+        "title": "{'{'}codex{'}'} Codex 14: Tạp Hóa Tad",
         "body": "<h3>@:theFeastOfHemlockVale.prelude4.codex.tadsGeneralStore.title </h3><p>Bạn đến cửa hàng bách hóa và thấy nó đã bị khóa. Một nhóm ba du khách đứng phía trước hòa vào một đoàn người trẩy hội đang hướng đến Crossroads. Một người trong số họ cười nhạo bạn trong cơn say trước khi vấp ngã. Người đó tiếp tục cười ngay cả khi bạn đỡ dậy.</p><p class='basic right'>Nhận 3 tài nguyên.</p>"
       },
       "valeSchoolhouse": {
-        "title": "{'{'}codex{'}'} Codex 15: Vale Schoolhouse",
+        "title": "{'{'}codex{'}'} Codex 15: Trường Làng Vale",
         "body": "<h3>@:theFeastOfHemlockVale.prelude4.codex.valeSchoolhouse.title </h3><p>Ngôi trường im ắng đến chết chóc. Một vòng lửa trại bập bùng từ Crossroads ở đằng xa, và tiếng nhạc tuyệt mỹ tràn ngập không gian buổi tối. Vài đứa trẻ đeo mặt nạ thú lặng lẽ hé nhìn bạn từ trong bóng tối.</p><p class='basic'>Chọn một kẻ địch _Resident_ tại vị trí này và kiểm tra kỹ năng bất kỳ (2). Nếu thành công, tự động evade kẻ địch đã chọn.</p>"
       },
       "theCommons": {
-        "title": "{'{'}codex{'}'} Codex 16: The Commons",
+        "title": "{'{'}codex{'}'} Codex 16: Hội Trường Cộng Đồng",
         "body": "<h3>@:theFeastOfHemlockVale.prelude4.codex.theCommons.title </h3><p>“Tôi không biết tại sao bạn lại muốn gửi bất cứ thứ gì đi đâu,” Martha Jean rướn người qua quầy. Đôi mắt cô ta mở to, và một vệt nước dãi mỏng chảy dài xuống cằm. Cô ta áp mặt xuống mặt quầy bằng gỗ và ngước nhìn bạn. “Xin lỗi, nhưng tôi chuẩn bị đến Feast đây. Bạn có thấy người đưa thư không? Tôi đã không thấy ông ấy trong nhiều ngày rồi...” Người phụ nữ trẻ cười lớn khi cào vào một mảng da xám xịt đang bong tróc trên cẳng tay.</p><p class='basic'>Bạn có thể ngay lập tức di chuyển đến bất kỳ vị trí nào khác. Nếu làm vậy, bạn có thể thực hiện thêm một action trong lượt này.</p>"
       },
       "drRosaMarquez": {
@@ -1118,7 +1148,7 @@
       },
       "bertieMusgrave": {
         "title": "{'{'}codex{'}'} Codex Ω: Bertie Musgrave",
-        "body": "<h3>@:theFeastOfHemlockVale.prelude4.codex.bertieMusgrave.title </h3><p>“Tại sao bạn không tin Mother Rachel?” Bertie thở hổn hển. Việc nhảy múa và tiệc tùng vẫn tiếp tục xung quanh, không hề suy giảm. Mọi người dường như chìm đắm trong một cõi mộng mị riêng, không màng đến nỗi đau của chàng trai trẻ. Bạn cảm thấy một cảm giác hối hận nhói lòng khi ôm lấy anh ta. Bertie vươn tay về phía hình nộm, lấp lánh với nhiều ánh đèn. “Tôi có thể thấy nó đang đến. Bạn có cảm nhận được không? Đang tuôn trào từ dưới mặt đất...” Mắt Bertie trợn ngược lên, một nụ cười rạng rỡ trên khuôn mặt.</p><p class='basic right'>Chọn và discard 3 lá bài từ trên tay bạn.</p><p class='basic right'>Trong Nhật ký Chiến dịch của bạn, ghi lại *Bertie đã thiệt mạng*.</p>"
+        "body": "<h3>@:theFeastOfHemlockVale.prelude4.codex.bertieMusgrave.title </h3><p>“Tại sao bạn không tin Mother Rachel?” Bertie thở hổn hển. Việc nhảy múa và tiệc tùng vẫn tiếp tục xung quanh, không hề suy giảm. Mọi người dường như chìm đắm trong một cõi mộng mị riêng, không màng đến nỗi đau của chàng trai trẻ. Bạn cảm thấy một cảm giác hối hận nhói lòng khi ôm lấy anh ta. Bertie vươn tay về phía hình nộm, lấp lánh với nhiều ánh đèn. “Tôi có thể thấy nó đang đến. Bạn có cảm nhận được không? Đang tuôn trào từ dưới mặt đất...” Mắt Bertie trợn ngược lên, một nụ cười rạng rỡ trên khuôn mặt.</p><p class='basic right'>Chọn và bỏ 3 lá bài từ trên tay bạn.</p><p class='basic right'>Trong Nhật ký Chiến dịch của bạn, ghi lại <i>Bertie đã thiệt mạng</i>.</p>"
       }
     }
   },
@@ -1126,8 +1156,8 @@
     "title": "Phần kết",
     "body": "<p class='basic'>Kiểm tra Nhật ký Chiến dịch của bạn. Nếu vẫn còn điều tra viên sống sót, bạn có thể đọc bất kỳ mục codex nào trong epilogue mà bạn đáp ứng yêu cầu.</p>",
     "label": {
-      "atwoods": "Codex 2 & 3: The Atwoods",
-      "hemlocks": "Codex 4 & 5: The Hemlocks",
+      "atwoods": "Codex 2 & 3: Nhà Atwood",
+      "hemlocks": "Codex 4 & 5: Nhà Hemlock",
       "judith": "Codex 7: Judith Park",
       "theo": "Codex 8: Theo Peters",
       "continue": "Tiếp tục đến epilogue"
