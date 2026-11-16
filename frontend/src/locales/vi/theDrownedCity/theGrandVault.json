@@ -33,8 +33,8 @@
     "placeVaultChambers": "Xào các bản sao còn lại của Vault Chamber với nhau và đặt chúng vào chơi theo sơ đồ sắp xếp vị trí.",
     "beginAtTheGreatStair": "Mỗi điều tra viên bắt đầu tại Great Stair.",
     "checkCampaignLog": "Check your Campaign Log.",
-    "powerWasDiverted": "Đặt 1 resource lên vị trí Vault Chamber ở dưới cùng bên trái. Vị trí này đã được \"kích hoạt\".",
-    "otherwise": "Đặt 1 resource lên các vị trí Vault Chamber ở dưới cùng bên trái, dưới cùng bên phải, và trên cùng bên phải. Các vị trí này đã được \"kích hoạt\".",
+    "powerWasDiverted": "Đặt 1 tài nguyên lên vị trí Vault Chamber ở dưới cùng bên trái. Vị trí này đã được \"kích hoạt\".",
+    "otherwise": "Đặt 1 tài nguyên lên các vị trí Vault Chamber ở dưới cùng bên trái, dưới cùng bên phải, và trên cùng bên phải. Các vị trí này đã được \"kích hoạt\".",
     "starSpawn": "Xào các kẻ địch từ bộ encounter *Star Spawn* và loại bỏ ngẫu nhiên 2 lá khỏi trò chơi. Đặt phần còn lại sang một bên, out of play.",
     "setCardsAside": "Set the following cards aside, out of play: Each copy of the double-sided Ancient Vault treachery, each copy of the Vault Attendant enemy, the Tidal Tablet story asset, and _The Inescapable_ encounter set.",
     "chooseExpeditionAsset": "Theo thứ tự người chơi, mỗi người chơi có thể chọn 1 asset [[Artifact]] đã giành được hoặc 1 asset [[Item]] từ tập bài encounter <i>Expedition</i> để bắt đầu in play dưới quyền kiểm soát của họ.",
@@ -109,8 +109,8 @@
       "body": "Bạn nằm thao thức trong bóng tối suốt vài giờ, suy ngẫm về cuộc trò chuyện vừa qua của bạn ở Arkham. Carl Sanford, người đứng đầu Silver Twilight Lodge, nói với bạn rằng ông ta có một thỏa thuận dành cho bạn. Một thỏa thuận tốt hơn bất cứ thứ gì Tillinghast có thể mang lại cho bạn. Tất cả những gì bạn phải làm là trình bày những phát hiện của mình cho ông ta thay vì Randall. Nếu bạn lén giữ lại thêm vài di vật, có thể cuỗm vài ghi chép và bức ảnh về thành phố cổ, ông ta hứa sẽ trả gấp đôi những gì Tillinghast sẽ trả, thậm chí có thể nhiều hơn.",
       "reflection": "Bạn không muốn dính líu đến bất kỳ mối hận thù vặt vãnh nào đang diễn ra giữa hai ông già. Chắc chắn có rủi ro khi chơi cả hai phe. Dù vậy, bạn không có cảm giác rằng Sanford đang cho bạn quyền lựa chọn. Nếu bạn tính toán khôn khéo, bạn có thể thu tiền từ cả Sanford và Tillinghast và rời đi với phần thưởng gấp ba. Dù bạn làm gì, bạn cũng cần phải quyết tâm đi đến cùng.",
       "choose": "Bạn phải quyết định (chọn một):",
-      "playItSafe": "Xóa 1 tiến trình dưới mục \"Good Money\" trong Nhật ký Chiến dịch của bạn. Trong scenario tiếp theo, bạn bắt đầu trò chơi với thêm 3 resource.",
-      "playBothSides": "Đánh dấu 2 tiến trình dưới mục \"Good Money\" trong Nhật ký Chiến dịch của bạn. Trong scenario tiếp theo, bạn không thể nhận resource trong upkeep phase."
+      "playItSafe": "Xóa 1 tiến trình dưới mục \"Good Money\" trong Nhật ký Chiến dịch của bạn. Trong scenario tiếp theo, bạn bắt đầu trò chơi với thêm 3 tài nguyên.",
+      "playBothSides": "Đánh dấu 2 tiến trình dưới mục \"Good Money\" trong Nhật ký Chiến dịch của bạn. Trong scenario tiếp theo, bạn không thể nhận tài nguyên trong upkeep phase."
     },
     "label": {
       "goodMoney": {

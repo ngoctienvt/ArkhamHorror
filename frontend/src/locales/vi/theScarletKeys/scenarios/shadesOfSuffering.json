@@ -60,9 +60,9 @@
     "tzuSanNiang": "Spawn kẻ địch Tzu San Niang với mặt (*The Lady with the Red Parasol*) ngửa lên in the shadows và đính kèm The Shade Reaper vào cô ta, với mặt _Unstable_ ngửa lên. Giải quyết keyword concealed của cô ta, đặt các concealed mini-card của cô ta tại từng địa điểm khác ngoài địa điểm bắt đầu.",
     "time": "Kiểm tra xem đã có bao nhiêu _time_ trôi qua trong Nhật ký Chiến dịch.",
     "elevenOrFewerTime": "Nếu từ 11 _time_ trở xuống đã trôi qua, không có thay đổi nào được thực hiện.",
-    "betweenTwelveAndEighteenTime": "Nếu 12-18 _time_ đã trôi qua, đặt 3 resource lên The Shade Reaper, dưới dạng charge.",
-    "betweenNineteenAndTwentySixTime": "Nếu 19-26 _time_ đã trôi qua, đặt 6 resource lên The Shade Reaper, dưới dạng charge.",
-    "twentySevenOrMoreTime": "Nếu từ 27 _time_ trở lên đã trôi qua, đặt 9 resource lên The Shade Reaper, dưới dạng charge. Đặt 1 doom lên agenda."
+    "betweenTwelveAndEighteenTime": "Nếu 12-18 _time_ đã trôi qua, đặt 3 tài nguyên lên The Shade Reaper, dưới dạng charge.",
+    "betweenNineteenAndTwentySixTime": "Nếu 19-26 _time_ đã trôi qua, đặt 6 tài nguyên lên The Shade Reaper, dưới dạng charge.",
+    "twentySevenOrMoreTime": "Nếu từ 27 _time_ trở lên đã trôi qua, đặt 9 tài nguyên lên The Shade Reaper, dưới dạng charge. Đặt 1 doom lên agenda."
   },
   "theBomoh": {
     "title": "The Bomoh",

@@ -25,8 +25,8 @@
       "instructions": "_Read only if you have the “Prove Your Worth” Task:_",
       "body": "Không ai khác trong chuyến thám hiểm này đánh giá cao tài năng của bạn. Làm sao họ có thể chứ? Nhiệm vụ của bạn là giúp đỡ, để cho họ thấy tại sao bạn lại là sự lựa chọn hoàn hảo cho chuyến thám hiểm chết tiệt này. Không ai yêu cầu bạn, nhưng đây có thể là thời điểm hoàn hảo để chứng tỏ giá trị của bạn.",
       "choose": "Bạn phải quyết định (chọn một):",
-      "ropesAreWrong": "Không cần bàn bạc với họ, hãy chọn một điều tra viên để giúp đỡ (không phải chính bạn, nếu có thể). Ghi nhớ \"[tên điều tra viên của bạn] helped with the ropes\" (cũng như tên của điều tra viên được chọn). Mỗi điều tra viên bắt đầu scenario tiếp theo với ít hơn 2 resource khởi điểm.",
-      "trustTheirHandiwork": "Mỗi điều tra viên bắt đầu scenario tiếp theo với thêm 1 resource khởi điểm."
+      "ropesAreWrong": "Không cần bàn bạc với họ, hãy chọn một điều tra viên để giúp đỡ (không phải chính bạn, nếu có thể). Ghi nhớ \"[tên điều tra viên của bạn] helped with the ropes\" (cũng như tên của điều tra viên được chọn). Mỗi điều tra viên bắt đầu scenario tiếp theo với ít hơn 2 tài nguyên khởi điểm.",
+      "trustTheirHandiwork": "Mỗi điều tra viên bắt đầu scenario tiếp theo với thêm 1 tài nguyên khởi điểm."
     },
     "xp": {
       "dreamsOfDestruction": "for drowning out the whispers"
@@ -57,7 +57,7 @@
       "beginAtRlyehStreets": "Mỗi điều tra viên bắt đầu chơi tại R'lyeh Streets.",
       "windsStoryCard": "Tìm lá bài story hai mặt Eastern Winds/Western Winds và đặt nó vào chơi, ngửa mặt Eastern Winds.",
       "buildActAgendaDeck": "Xây dựng các chồng bài act và agenda sử dụng agenda 1a—\"Encroaching Storms,\" act 1a-\"Scouring the Spires,\" act 2a-\"Deadly Skies,\" và act 3a—\"Return to the Shoreline.\" Loại bỏ các act và agenda còn lại khỏi trò chơi.",
-      "stormIntensity": "Đặt 1 resource lên lá bài scenario reference dưới Storm Intensity.",
+      "stormIntensity": "Đặt 1 tài nguyên lên lá bài scenario reference dưới Storm Intensity.",
       "starSpawn": "Xào các kẻ địch từ bộ encounter *Star Spawn* và loại bỏ ngẫu nhiên 2 kẻ địch khỏi trò chơi.",
       "setCardsAside": "Set the double-sided Sky Relic{'{'}runeF{'}'} story asset, Eroded Frieze{'{'}runeE{'}'} treachery, and the Obsidian Claw story asset aside, out of play.",
       "checkCampaignLogInescapable": "Kiểm tra Campaign Log của bạn. *Nếu sinh vật đã bị đánh bại*, loại bỏ bộ encounter *The Inescapable* khỏi game. Nếu không, cho kẻ địch The Inescapable xuất hiện (spawn) ở vị trí xa nhất so với mọi điều tra viên, trong trạng thái exhausted.",
@@ -78,7 +78,7 @@
       "beginAtRlyehStreets": "Mỗi điều tra viên bắt đầu chơi tại R'lyeh Streets.",
       "windsStoryCard": "Tìm lá bài story hai mặt Eastern Winds/Western Winds và đặt nó vào chơi, ngửa mặt Western Winds.",
       "buildActAgendaDeck": "Xây dựng các chồng bài act và agenda sử dụng agenda 1a-\"Otherworldly Storms,\" act 1a—\"Searching the Spires,\" và act 2a—\"To The Ancient Dome!\" Loại bỏ các act và agenda còn lại khỏi trò chơi.",
-      "stormIntensity": "Đặt 1 resource lên lá bài scenario reference dưới Storm Intensity.",
+      "stormIntensity": "Đặt 1 tài nguyên lên lá bài scenario reference dưới Storm Intensity.",
       "starSpawn": "Xào các kẻ địch từ bộ encounter *Star Spawn* và loại bỏ ngẫu nhiên 3 kẻ địch khỏi trò chơi.",
       "setCardsAside": "Set the double-sided Sky Relic{'{'}runeF{'}'} story asset, Eroded Frieze{'{'}runeE{'}'} treachery, and the Obsidian Claw story asset aside, out of play, along with *The Inescapable* encounter set.",
       "removeStarVampire": "Tìm trong bộ encounter *Obsidian Canyons* một bản sao của kẻ địch Star Vampire và loại bỏ nó khỏi trò chơi.",
@@ -98,7 +98,7 @@
     },
     "stormIntensity": {
       "title": "Storm Intensity",
-      "body": "<p class='basic'>Trong suốt scenario này, số lượng resource dưới \"Storm Intensity\" trên lá bài scenario reference biểu thị sức mạnh của những cơn bão dị giới của R'lyeh. Storm Intensity càng cao, thời tiết càng nguy hiểm. Bản thân Storm Intensity không có hiệu ứng trò chơi tự thân nào; tuy nhiên, một số hiệu ứng scenario có thể thay đổi hoặc trở nên mạnh hơn tùy thuộc vào mức độ Storm Intensity hiện tại.</p>"
+      "body": "<p class='basic'>Trong suốt scenario này, số lượng tài nguyên dưới \"Storm Intensity\" trên lá bài scenario reference biểu thị sức mạnh của những cơn bão dị giới của R'lyeh. Storm Intensity càng cao, thời tiết càng nguy hiểm. Bản thân Storm Intensity không có hiệu ứng trò chơi tự thân nào; tuy nhiên, một số hiệu ứng scenario có thể thay đổi hoặc trở nên mạnh hơn tùy thuộc vào mức độ Storm Intensity hiện tại.</p>"
     },
     "locationAdjacency": {
       "title": "Location Adjacency in this Scenario",

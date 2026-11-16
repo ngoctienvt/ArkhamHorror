@@ -273,7 +273,7 @@
     },
     "darkRitual": {
       "discardDarkRitual": "Discard Dark Ritual",
-      "spend1Resource": "Tiêu 1 resource"
+      "spend1Resource": "Tiêu 1 tài nguyên"
     },
     "davidRenfield": {
       "doNotPlaceDoomOnDavidRenfield": "Không đặt doom lên David Renfield",
@@ -302,7 +302,7 @@
     },
     "denyExistence5": {
       "drawInstead": "Draw that many cards instead of discarding",
-      "gainResourcesInstead": "Nhận 1 resource instead | Gain {count} resources instead",
+      "gainResourcesInstead": "Nhận 1 tài nguyên instead | Gain {count} tài nguyên instead",
       "gainActionsInstead": "Gain 1 action instead | Gain {count} actions instead",
       "healDamageInstead": "Hồi phục 1 damage instead | Heal {count} damage instead",
       "healHorrorInstead": "Hồi phục 1 horror instead | Heal {count} horror instead"
@@ -444,7 +444,7 @@
       "moveToEnemy": "Move to enemy location"
     },
     "fatherMateo": {
-      "drawAndGain": "Rút 1 lá bài and gain 1 resource"
+      "drawAndGain": "Rút 1 lá bài and gain 1 tài nguyên"
     },
     "fey": {
       "return": "Return Fey to hand"
@@ -723,7 +723,7 @@
       "healHorror": "Hồi phục 1 horror from Lt. Wilson Stewart",
       "plus1SkillValue": "Bạn nhận +1 giá trị kỹ năng for your next skill test",
       "drawCard": "Rút 1 lá bài",
-      "gainResource": "Nhận 1 resource"
+      "gainResource": "Nhận 1 tài nguyên"
     },
     "luckyCharm": {
       "move1Damage": "Move 1 damage",
@@ -903,7 +903,7 @@
       "heal1Horror": "Heal 1 Horror"
     },
     "pocketknife": {
-      "exhaustPocketknifeGain1Resource": "Exhaust Pocketknife: Nhận 1 resource"
+      "exhaustPocketknifeGain1Resource": "Exhaust Pocketknife: Nhận 1 tài nguyên"
     },
     "polishedCane": {
       "doNotEvade": "Do not evade",
@@ -955,7 +955,7 @@
     },
     "protectiveIncantation1": {
       "discardProtectiveIncantation": "Discard Protective Incantation",
-      "spend1Resource": "Tiêu 1 resource"
+      "spend1Resource": "Tiêu 1 tài nguyên"
     },
     "prudenceDouglas": {
       "doneDiscarding": "Done discarding"
@@ -1152,7 +1152,7 @@
     },
     "stringOfCurses": {
       "evadeAndPlaceDoom": "Automatically evade that enemy and place 1 doom on it. It cannot take damage for the remainder of the round. Khám phá 1 manh mối tại địa điểm của bạn.",
-      "defeatForResources": "If that enemy has 1 or more doom on it, defeat it. Nhận 1 resource for each doom that was on it."
+      "defeatForResources": "If that enemy has 1 or more doom on it, defeat it. Nhận 1 tài nguyên for each doom that was on it."
     },
     "strokeOfLuck": {
       "exile": "Exile Stroke of Luck to automatically succeed",
@@ -1311,7 +1311,7 @@
     "underworldMarket2": {
       "chooseMarketDeck": "Set aside 10 _Illicit_ cards from your deck to form your market deck.",
       "placeTheRestOnTheBottomInAnyOrder": "Place the rest on the bottom, in any order",
-      "spend1ResourceToDraw1OfThem": "Tiêu 1 resource to draw 1 of them"
+      "spend1ResourceToDraw1OfThem": "Tiêu 1 tài nguyên to draw 1 of them"
     },
     "unrelenting1": {
       "doneSealingTokens": "Done sealing tokens"
@@ -1370,12 +1370,12 @@
       "fastExhaustAgency2": "{'{'}fast{'}'} Exhaust Agency Backup and deal 1 horror to it: Khám phá 1 manh mối tại địa điểm của bạn."
     },
     "arcaneStudies": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}intellect{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}intellect{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này."
     },
     "arcaneStudies2": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}intellect{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}intellect{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này."
     },
     "beguile": {
       "moveAttachedEnemy": "Di chuyển kẻ địch đính kèm đến một địa điểm kết nối đã lật mở",
@@ -1391,10 +1391,10 @@
       "fastAdd1Doom2": "{'{'}fast{'}'} Add 1 doom to Blood Pact: You get +3 {'{'}willpower{'}'} cho skill test này. (Limit once per test.)"
     },
     "combatTraining1": {
-      "spendForCombat": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này.",
-      "spendForAgility": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này."
+      "spendForCombat": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này.",
+      "spendForAgility": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này."
     },
     "cosmicFlame": {
       "spendChargeForDamage": "Spend 1 charge to deal +1 damage"
@@ -1416,12 +1416,12 @@
       "twoConnections": "{'{'}reaction{'}'} When you play Decoy, increase its cost by 2: Change \"at your location\" to \"at a location up to 2 connections away.\""
     },
     "digDeep": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này."
     },
     "digDeep2": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này."
     },
     "elinaHarpersCarRunning": {
       "ifYouAre": "If you are this vehicle's driver: Draw the top card of the encounter deck. Then, move this vehicle to a connecting _Road_ location. (Max once per round.)",
@@ -1435,31 +1435,31 @@
       "alternativeHypothesis": "You may resolve its forced effect, choosing a criteria you have not chosen this round. Then, ready it."
     },
     "endurance": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này. (+2 {'{'}agility{'}'} instead if this is an attack or evasion).",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này. (+2 {'{'}combat{'}'} instead if this is an attack or evasion)."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này. (+2 {'{'}agility{'}'} instead if this is an attack or evasion).",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này. (+2 {'{'}combat{'}'} instead if this is an attack or evasion)."
     },
     "endurance3": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này. (+2 {'{'}agility{'}'} instead if this is an attack or evasion).",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này. (+2 {'{'}combat{'}'} instead if this is an attack or evasion)."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này. (+2 {'{'}agility{'}'} instead if this is an attack or evasion).",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này. (+2 {'{'}combat{'}'} instead if this is an attack or evasion)."
     },
     "hardKnocks": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này."
     },
     "hardKnocks2": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này."
     },
     "hatchet1": {
       "takeControlOfHatchet": "Take control of Hatchet"
     },
     "higherEducation": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}intellect{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}intellect{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này."
     },
     "higherEducation3": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +2 {'{'}intellect{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +2 {'{'}willpower{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +2 {'{'}intellect{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +2 {'{'}willpower{'}'} cho skill test này."
     },
     "holySpear5": {
       "fightWithReleaseBless": "{'{'}action{'}'}: _Fight_. You get +2 {'{'}willpower{'}'} and deal +1 damage for this attack. When you initiate this ability, you may release a {'{'}bless{'}'} token sealed on Holy Spear.",
@@ -1468,34 +1468,34 @@
       "actionYouGet2": "{'{'}action{'}'}: _Fight_. You get +2 {'{'}willpower{'}'} and deal +1 damage for this attack. When you initiate this ability, you may release a {'{'}bless{'}'} token sealed on Holy Spear."
     },
     "hyperawareness": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}intellect{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}intellect{'}'} cho skill test này."
     },
     "hyperawareness2": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}intellect{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}intellect{'}'} cho skill test này."
     },
     "joeyTheRatVigil3": {
-      "spendForItem": "Tiêu 1 resource: Choose an _Item_ asset from your hand and play it (paying its cost).",
-      "discardForResources": "Discard an _Item_ asset from play: Nhận 2 resources.",
-      "discardAnAsset": "Discard an _Item_ asset from play: Nhận 2 resources.",
-      "spend": "Tiêu 1 resource: Choose an _Item_ asset from your hand and play it (paying its cost)."
+      "spendForItem": "Tiêu 1 tài nguyên: Choose an _Item_ asset from your hand and play it (paying its cost).",
+      "discardForResources": "Discard an _Item_ asset from play: Nhận 2 tài nguyên.",
+      "discardAnAsset": "Discard an _Item_ asset from play: Nhận 2 tài nguyên.",
+      "spend": "Tiêu 1 tài nguyên: Choose an _Item_ asset from your hand and play it (paying its cost)."
     },
     "keenEye": {
-      "fastSpend2Resources": "{'{'}fast{'}'} Tiêu 2 resources: You get +1 {'{'}combat{'}'} until the end of the phase",
-      "fastSpend2Resources2": "{'{'}fast{'}'} Tiêu 2 resources: You get +1 {'{'}intellect{'}'} until the end of the phase"
+      "fastSpend2Resources": "{'{'}fast{'}'} Tiêu 2 tài nguyên: You get +1 {'{'}combat{'}'} until the end of the phase",
+      "fastSpend2Resources2": "{'{'}fast{'}'} Tiêu 2 tài nguyên: You get +1 {'{'}intellect{'}'} until the end of the phase"
     },
     "keenEye3": {
-      "fastSpend2Resources": "{'{'}fast{'}'} Tiêu 2 resources: You get +1 {'{'}combat{'}'} until the end of the phase.",
-      "fastSpend2Resources2": "{'{'}fast{'}'} Tiêu 2 resources: You get +1 {'{'}intellect{'}'} until the end of the phase."
+      "fastSpend2Resources": "{'{'}fast{'}'} Tiêu 2 tài nguyên: You get +1 {'{'}combat{'}'} until the end of the phase.",
+      "fastSpend2Resources2": "{'{'}fast{'}'} Tiêu 2 tài nguyên: You get +1 {'{'}intellect{'}'} until the end of the phase."
     },
     "levelheaded": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này. (+2 {'{'}agility{'}'} instead if this test is on a scenario card).",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này. (+2 {'{'}willpower{'}'} instead if this test is on a scenario card)."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này. (+2 {'{'}agility{'}'} instead if this test is on a scenario card).",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này. (+2 {'{'}willpower{'}'} instead if this test is on a scenario card)."
     },
     "levelheaded3": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này. (+2 {'{'}agility{'}'} instead if this test is on a scenario card).",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này. (+2 {'{'}willpower{'}'} instead if this test is on a scenario card)."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này. (+2 {'{'}agility{'}'} instead if this test is on a scenario card).",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này. (+2 {'{'}willpower{'}'} instead if this test is on a scenario card)."
     },
     "livreDeibon": {
       "fastExhaustLivre": "{'{'}fast{'}'} Exhaust Livre d'Eibon: Commit the top card of your deck to an eligible skill test performed by an investigator at your location.",
@@ -1506,13 +1506,13 @@
     },
     "madameLabranche": {
       "fastIfYou": "{'{'}fast{'}'} If you have no cards in your hand, exhaust Madame Labranche: Rút 1 lá bài.",
-      "fastIfYou2": "{'{'}fast{'}'} If you have no resources, exhaust Madame Labranche: Nhận 1 resource."
+      "fastIfYou2": "{'{'}fast{'}'} If you have no tài nguyên, exhaust Madame Labranche: Nhận 1 tài nguyên."
     },
     "moxie1": {
-      "spendForWillpower": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này.",
-      "spendForAgility": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này."
+      "spendForWillpower": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này.",
+      "spendForAgility": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này."
     },
     "obsidianClaw": {
       "move": "{'{'}fast{'}'} During your turn, exhaust this card and choose a location up to 2 connections away: Move to the chosen location.",
@@ -1530,19 +1530,19 @@
       "youNockAnotherArrow": "You nock another arrow"
     },
     "physicalTraining": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này."
     },
     "physicalTraining2": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này."
     },
     "pitchfork": {
       "takeControlOfPitchfork": "Take control of Pitchfork"
     },
     "plucky1": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}intellect{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}intellect{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này."
     },
     "quickdrawHolster4": {
       "fastChooseA": "{'{'}fast{'}'}: Choose a _Firearm_ asset taking up only 1 hand slot in your play area. Attach it to Quickdraw Holster, or switch it with the attached asset. The attached asset takes up no hand slots. (Limit 1 attached asset.)",
@@ -1561,18 +1561,18 @@
       "search": "Search your bonded cards for Uncanny Growth and add it to you hand."
     },
     "scientificTheory1": {
-      "spendForIntellect": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}intellect{'}'} cho skill test này.",
-      "spendForCombat": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này.",
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}intellect{'}'} cho skill test này."
+      "spendForIntellect": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}intellect{'}'} cho skill test này.",
+      "spendForCombat": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này.",
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}intellect{'}'} cho skill test này."
     },
     "scrapper": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này."
     },
     "scrapper3": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này."
     },
     "secondSight": {
       "spendChargeForClue": "Spend 1 charge to discover 1 additional clue"
@@ -1582,19 +1582,19 @@
       "doNotSpendCharge": "Do not spend charge"
     },
     "sharpRhetoric": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}intellect{'}'} cho skill test này. (+2 {'{'}intellect{'}'} instead if this is an investigation or parley).",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này. (+2 {'{'}willpower{'}'} instead if this is an investigation or parley)."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}intellect{'}'} cho skill test này. (+2 {'{'}intellect{'}'} instead if this is an investigation or parley).",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này. (+2 {'{'}willpower{'}'} instead if this is an investigation or parley)."
     },
     "shortcut": {
       "ability": "{'{'}fast{'}'} Exhaust Shortcut: _Move_ (to a connecting location). Any investigator at this location may trigger this ability."
     },
     "silverTongue": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này. (+2 {'{'}agility{'}'} instead if this is an evasion or parley).",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}intellect{'}'} cho skill test này. (+2 {'{'}intellect{'}'} instead if this is an evasion or parley)."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này. (+2 {'{'}agility{'}'} instead if this is an evasion or parley).",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}intellect{'}'} cho skill test này. (+2 {'{'}intellect{'}'} instead if this is an evasion or parley)."
     },
     "silverTongue3": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}agility{'}'} cho skill test này. (+2 {'{'}agility{'}'} instead if this is an evasion or parley).",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}intellect{'}'} cho skill test này. (+2 {'{'}intellect{'}'} instead if this is an evasion or parley)."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}agility{'}'} cho skill test này. (+2 {'{'}agility{'}'} instead if this is an evasion or parley).",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}intellect{'}'} cho skill test này. (+2 {'{'}intellect{'}'} instead if this is an evasion or parley)."
     },
     "smallRadio": {
       "partner": "{name}"
@@ -1604,27 +1604,27 @@
       "doNotEngage": "Không engage kẻ địch"
     },
     "spiritualIntuition": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này. (+2 {'{'}combat{'}'} instead if this test is on a _Spell_ or _Ritual_ card).",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này. (+2 {'{'}willpower{'}'} instead if this test is on a a _Spell_ or _Ritual_ card)."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này. (+2 {'{'}combat{'}'} instead if this test is on a _Spell_ or _Ritual_ card).",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này. (+2 {'{'}willpower{'}'} instead if this test is on a a _Spell_ or _Ritual_ card)."
     },
     "spiritualIntuition3": {
-      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}combat{'}'} cho skill test này. (+2 {'{'}combat{'}'} instead if this test is on a _Spell_ or _Ritual_ card).",
-      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 resource: You get +1 {'{'}willpower{'}'} cho skill test này. (+2 {'{'}willpower{'}'} instead if this test is on a _Spell_ or _Ritual_ card)."
+      "fastSpend1Resource": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}combat{'}'} cho skill test này. (+2 {'{'}combat{'}'} instead if this test is on a _Spell_ or _Ritual_ card).",
+      "fastSpend1Resource2": "{'{'}fast{'}'} Tiêu 1 tài nguyên: You get +1 {'{'}willpower{'}'} cho skill test này. (+2 {'{'}willpower{'}'} instead if this test is on a _Spell_ or _Ritual_ card)."
     },
     "stouthearted": {
       "doneMovingDamageHorror": "Xong di chuyển damage/horror"
     },
     "streetwise": {
-      "fastSpend2Resources": "{'{'}fast{'}'} Tiêu 2 resources: You get +2 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend2Resources2": "{'{'}fast{'}'} Tiêu 2 resources: You get +2 {'{'}intellect{'}'} cho skill test này."
+      "fastSpend2Resources": "{'{'}fast{'}'} Tiêu 2 tài nguyên: You get +2 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend2Resources2": "{'{'}fast{'}'} Tiêu 2 tài nguyên: You get +2 {'{'}intellect{'}'} cho skill test này."
     },
     "streetwise3": {
-      "fastSpend2Resources": "{'{'}fast{'}'} Tiêu 2 resources: You get +3 {'{'}agility{'}'} cho skill test này.",
-      "fastSpend2Resources2": "{'{'}fast{'}'} Tiêu 2 resources: You get +3 {'{'}intellect{'}'} cho skill test này."
+      "fastSpend2Resources": "{'{'}fast{'}'} Tiêu 2 tài nguyên: You get +3 {'{'}agility{'}'} cho skill test này.",
+      "fastSpend2Resources2": "{'{'}fast{'}'} Tiêu 2 tài nguyên: You get +3 {'{'}intellect{'}'} cho skill test này."
     },
     "theKeyOfSolomonSecretsOfTheUnknown4": {
       "ifThereAre": "If there are more {'{'}bless{'}'} than {'{'}curse{'}'} tokens in the chaos bag, remove 1 {'{'}bless{'}'} token from the chaos bag and exhaust The Key of Solomon: Heal up to 2 damage and/or horror from an investigator or _Ally_ asset at your location.",
-      "ifThereAre2": " If there are more {'{'}curse{'}'} than {'{'}bless{'}'} tokens in the chaos bag, remove 1 {'{'}curse{'}'} token from the chaos bag and exhaust The Key of Solomon: Nhận 2 resources."
+      "ifThereAre2": " If there are more {'{'}curse{'}'} than {'{'}bless{'}'} tokens in the chaos bag, remove 1 {'{'}curse{'}'} token from the chaos bag and exhaust The Key of Solomon: Nhận 2 tài nguyên."
     },
     "theNecronomiconPetrusDeDaciaTranslation5": {
       "fastSpend1Secret": "{'{'}fast{'}'} Tiêu 1 secret: Bạn nhận +2 giá trị kỹ năng cho skill test này.",

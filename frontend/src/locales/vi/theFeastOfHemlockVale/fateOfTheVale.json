@@ -51,9 +51,9 @@
   },
   "tooltips": {
     "fateOfTheValeV3": {
-      "placeKindling": "{'{'}action{'}'} Tiêu X {'{'}perPlayer{'}'} clue: Đặt X resource lên địa điểm của bạn, như kindling (bạn có thể tiêu 5 tài nguyên hoặc bỏ một asset _Item_ bạn kiểm soát để đặt thêm 1 kindling).",
+      "placeKindling": "{'{'}action{'}'} Tiêu X {'{'}perPlayer{'}'} clue: Đặt X tài nguyên lên địa điểm của bạn, như kindling (bạn có thể tiêu 5 tài nguyên hoặc bỏ một asset _Item_ bạn kiểm soát để đặt thêm 1 kindling).",
       "drawFire": "{'{'}action{'}'} Nếu địa điểm của bạn có kindling bằng hoặc lớn hơn giá trị shroud của nó, loại bỏ toàn bộ kindling khỏi nó: Rút 1 lá treachery Fire! đang để riêng. (Giới hạn nhóm một lần mỗi địa điểm.)",
-      "placeKindlingMiners": "{'{'}action{'}'} Tiêu X clue: Đặt X resource lên địa điểm của bạn, như kindling (bạn có thể tiêu 5 tài nguyên hoặc bỏ một asset _Item_ bạn kiểm soát để đặt thêm 1 kindling).",
+      "placeKindlingMiners": "{'{'}action{'}'} Tiêu X clue: Đặt X tài nguyên lên địa điểm của bạn, như kindling (bạn có thể tiêu 5 tài nguyên hoặc bỏ một asset _Item_ bạn kiểm soát để đặt thêm 1 kindling).",
       "drawFireMiners": "{'{'}fast{'}'} Nếu địa điểm của bạn có 1 {'{'}perPlayer{'}'} kindling, loại bỏ toàn bộ kindling khỏi nó: Rút 1 lá treachery Fire! đang để riêng. (Giới hạn nhóm một lần mỗi địa điểm.)"
     }
   },

@@ -50,7 +50,7 @@
     "actAgendaDecks": "Build the act and agenda decks using only the new act and agenda cards provided in the *Bad Blood* encounter set.",
     "removeStoryAssets": "Loại bỏ story asset Ichtaca *(The Forgotten Guardian)* và story asset Expedition Journal khỏi trò chơi.",
     "placeElspeth": "Place the Elspeth Baudin enemy into play at the Curiositie Shoppe.",
-    "placeMemories": "Đặt 1 resource lên mỗi địa điểm đang trong cuộc chơi, như một “ký ức”."
+    "placeMemories": "Đặt 1 tài nguyên lên mỗi địa điểm đang trong cuộc chơi, như một “ký ức”."
   },
   "agendas": {
     "outForBlood": {

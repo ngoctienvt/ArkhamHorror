@@ -8,11 +8,11 @@
     "easyStandard": {
       "skull": "-2. You may spend 2 resources to treat this token as a 0, instead.",
       "cultist": "-3. If you succeed, gain 3 resources.",
-      "tablet": "-2. Nếu bạn thất bại, discard 3 resources."
+      "tablet": "-2. Nếu bạn thất bại, discard 3 tài nguyên."
     },
     "hardExpert": {
       "skull": "-3. You may spend 3 resources to treat this token as a 0, instead.",
-      "cultist": "-3. Nếu bạn thất bại, discard 3 resources.",
+      "cultist": "-3. Nếu bạn thất bại, discard 3 tài nguyên.",
       "tablet": "-2. Discard 3 resources."
     }
   },

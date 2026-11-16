@@ -97,7 +97,7 @@
       "gatherSets": "Gather the *Forgotten Island* encounter set. This encounter set is indicated by the following icon:<section class='encounter-sets'><img src='{setImgPath}/forgotten-island.png' /></section>",
       "set": "Discard mỗi kẻ địch khỏi cuộc chơi. Di chuyển mỗi điều tra viên đến Jungle Set và đặt mỗi vị trí [[Set]] khác sang một bên, out of play, discard tất cả token và lá bài tại các vị trí đó.",
       "locations": "Đặt mỗi vị trí từ chồng bài encounter *Forgotten Island* vào chơi.",
-      "seals": "Đặt 4 resource lên Ruins of the Serpent King làm các seal. Đặt story asset Staff of the Serpent đã để riêng vào chơi tại Ruins of the Serpent King.",
+      "seals": "Đặt 4 tài nguyên lên Ruins of the Serpent King làm các seal. Đặt story asset Staff of the Serpent đã để riêng vào chơi tại Ruins of the Serpent King.",
       "allosaurus": "Spawn kẻ địch Allosaurus hai mặt tại Jungle River, với mặt *(Indomitable Predator)* ngửa lên.",
       "acts": "Thêm act 2a—The Forgotten Island và act 3a—Destroy the Source vào chồng bài act hiện tại.",
       "shuffleRemaining": "Xào mỗi lá bài còn lại trong chồng bài encounter *Forgotten Island* vào chồng bài encounter, cùng với encounter discard pile.",

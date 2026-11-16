@@ -6,7 +6,7 @@
   "rules": {
     "civilians": {
       "title": "Civilians",
-      "body": "<p class='basic'>Trong scenario này, các resource trên các vị trí đại diện cho những thường dân vô tội của Marrakesh, những người đang gặp nguy hiểm nghiêm trọng.</p><ul><li>Đối với việc di chuyển và tấn công của kẻ địch, kẻ địch coi các civilian như thể họ là các điều tra viên. (Kẻ địch không engage với civilian, nhưng có thể tấn công civilian tại vị trí của họ như thể họ đã engage.) Nếu một civilian bị tấn công, họ tự động bị slain.</li><li>Các civilian vẫn hiện diện tại một vị trí khi nó được reveal.</li><li>Khi một civilian bị slain, đặt nó lên lá bài scenario reference, để theo dõi xem có bao nhiêu civilian đã bị slain.</li></ul>"
+      "body": "<p class='basic'>Trong scenario này, các tài nguyên trên các vị trí đại diện cho những thường dân vô tội của Marrakesh, những người đang gặp nguy hiểm nghiêm trọng.</p><ul><li>Đối với việc di chuyển và tấn công của kẻ địch, kẻ địch coi các civilian như thể họ là các điều tra viên. (Kẻ địch không engage với civilian, nhưng có thể tấn công civilian tại vị trí của họ như thể họ đã engage.) Nếu một civilian bị tấn công, họ tự động bị slain.</li><li>Các civilian vẫn hiện diện tại một vị trí khi nó được reveal.</li><li>Khi một civilian bị slain, đặt nó lên lá bài scenario reference, để theo dõi xem có bao nhiêu civilian đã bị slain.</li></ul>"
     },
     "choosingARandomLocation": {
       "title": "Lựa Chọn một Vị Trí Ngẫu Nhiên",
@@ -79,7 +79,7 @@
     "gatherSets": "Tập hợp tất cả các lá bài từ các bộ bài encounter sau: *Dead Heat*, *Scarlet Sorcery*, *Spreading Corruption*, *Ghouls*, và *Striking Fear*. Các bộ bài này được biểu thị bằng các biểu tượng sau:<section class='encounter-sets'><img src='{setImgPath}/dead-heat.png' /><img src='{setImgPath}/scarlet-sorcery.png' /><img src='{setImgPath}/spreading-corruption.png' /><img src='{setImgPath}/ghouls.png' /><img src='{setImgPath}/striking-fear.png' /></section>",
     "placeLocations": "Đặt tất cả 5 địa điểm _Marrakesh_ vào chơi, chỉ sử dụng các phiên bản không phải _Abandoned_ của chúng. Để riêng phiên bản _Abandoned_ của mỗi địa điểm.",
     "beginPlay": "Mỗi điều tra viên bắt đầu chơi tại Marrakesh Railway Station.",
-    "civilians": "Đối với mỗi địa điểm đang trong trò chơi, đặt số resource lên đó bằng số lượng điều tra viên cộng thêm một, dưới dạng civilians (*xem “Civilians,” bên dưới*). Sau đó, kiểm tra Nhật ký Chiến dịch:",
+    "civilians": "Đối với mỗi địa điểm đang trong trò chơi, đặt số tài nguyên lên đó bằng số lượng điều tra viên cộng thêm một, dưới dạng civilians (*xem “Civilians,” bên dưới*). Sau đó, kiểm tra Nhật ký Chiến dịch:",
     "tenOrFewerTime": "Nếu có từ 10 _time_ trở xuống đã trôi qua, không có thay đổi nào được thực hiện.",
     "elevenToSeventeenTime": "Nếu 11–17 _time_ đã trôi qua, chọn 1 {'{'}perPlayer{'}'} civilian đồng đều nhất có thể giữa tất cả các địa điểm đang trong trò chơi. Những civilian đó bị slain.",
     "eighteentoTwentyFourTime": "Nếu 18–24 _time_ đã trôi qua, chọn 2 {'{'}perPlayer{'}'} civilian đồng đều nhất có thể giữa tất cả các địa điểm đang trong trò chơi. Những civilian đó bị slain.",

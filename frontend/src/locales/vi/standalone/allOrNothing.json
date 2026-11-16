@@ -3,7 +3,7 @@
     "easyStandard": {
       "skull": "-1 for each clue you have.",
       "cultist": "-2 (-4 instead if you have 10 or more resources).",
-      "tablet": "-2. Nếu bạn thất bại, lose 3 resources.",
+      "tablet": "-2. Nếu bạn thất bại, lose 3 tài nguyên.",
       "elderThing": "-3. Nếu bạn thất bại, \"Skids\" O'Toole takes 1 horror."
     },
     "hardExpert": {
@@ -49,13 +49,13 @@
       "body": "Tim đập thình thịch và sự phấn khích tuôn trào trong huyết quản, bạn không biết điều gì mang lại cho mình cảm giác hưng phấn hơn: thắng tiền từ băng O’Bannion hay trốn thoát khỏi chúng. Đêm nay là minh chứng cho điều bạn luôn nghĩ: “Skids” O’Toole luôn chiến thắng…",
       "victory": "Mỗi điều tra viên nhận kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.",
       "experience": "_Experience_: {xp}",
-      "resourcesChoice": "Nếu số lượng resource trên Act 2a là (chọn một)…",
-      "resources10": "“Skids” O’Toole bắt đầu scenario tiếp theo với 1 resource bổ sung.",
-      "resources20": "“Skids” O’Toole bắt đầu scenario tiếp theo với 2 resource bổ sung.",
-      "resources30": "“Skids” O’Toole bắt đầu scenario tiếp theo với 3 resource bổ sung.",
-      "resources40": "“Skids” O’Toole nhận 1 experience thưởng và bắt đầu scenario tiếp theo với 4 resource bổ sung.",
-      "resources50": "“Skids” O’Toole nhận 2 experience thưởng và bắt đầu scenario tiếp theo với 5 resource bổ sung.",
-      "resources60": "“Skids” O’Toole nhận 3 experience thưởng và bắt đầu scenario tiếp theo với 6 resource bổ sung.",
+      "resourcesChoice": "Nếu số lượng tài nguyên trên Act 2a là (chọn một)…",
+      "resources10": "“Skids” O’Toole bắt đầu scenario tiếp theo với 1 tài nguyên bổ sung.",
+      "resources20": "“Skids” O’Toole bắt đầu scenario tiếp theo với 2 tài nguyên bổ sung.",
+      "resources30": "“Skids” O’Toole bắt đầu scenario tiếp theo với 3 tài nguyên bổ sung.",
+      "resources40": "“Skids” O’Toole nhận 1 experience thưởng và bắt đầu scenario tiếp theo với 4 tài nguyên bổ sung.",
+      "resources50": "“Skids” O’Toole nhận 2 experience thưởng và bắt đầu scenario tiếp theo với 5 tài nguyên bổ sung.",
+      "resources60": "“Skids” O’Toole nhận 3 experience thưởng và bắt đầu scenario tiếp theo với 6 tài nguyên bổ sung.",
       "skidsMaySwap": "“Skids” O’Toole có thể nâng cấp On the Lam lên phiên bản nâng cao, hoặc hạ cấp phiên bản nâng cao của Hospital Debts về phiên bản gốc."
     },
     "resolution2": {

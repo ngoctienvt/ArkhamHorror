@@ -5,13 +5,13 @@
       "skull": "–1 (-3 nếu bạn đang ở tại một địa điểm có Key Locus).",
       "cultist": "–3. Nếu bạn thất bại, chọn nhận 1 damage và 1 horror, hoặc đặt 1 doom lên Key Locus hoặc địa điểm _Locus Site_ gần nhất.",
       "tablet": "–2. Nếu đây là một đòn tấn công nhắm vào kẻ địch có từ khóa patrol, sau đòn tấn công này, nó disengage và giải quyết từ khóa patrol của nó.",
-      "elderThing": "-2. Với mỗi điểm bạn thất bại, mất 1 resource (tối đa 3)."
+      "elderThing": "-2. Với mỗi điểm bạn thất bại, mất 1 tài nguyên (tối đa 3)."
     },
     "hardExpert": {
       "skull": "–2 (-4 nếu bạn đang ở tại một địa điểm có Key Locus).",
       "cultist": "–5. Nếu bạn thất bại, chọn nhận 1 damage và 1 horror, hoặc đặt 1 doom lên Key Locus hoặc địa điểm _Locus Site_ gần nhất.",
       "tablet": "–2. Nếu đây là một đòn tấn công nhắm vào kẻ địch có từ khóa patrol, sau đòn tấn công này, nó tấn công bạn, disengage, và giải quyết từ khóa patrol của nó.",
-      "elderThing": "-3. Với mỗi điểm bạn thất bại, mất 1 resource."
+      "elderThing": "-3. Với mỗi điểm bạn thất bại, mất 1 tài nguyên."
     }
   },
   "tooltips": {
@@ -19,16 +19,16 @@
       "investigate": "{'{'}action{'}'}: Investigate. Nếu bạn thành công, thay vì khám phá clue, rút 3 lá bài. Bạn có thể giảm độ khó của phép thử này đi 2. Nếu bạn làm vậy, rút ít đi 1 lá bài nếu bạn thành công. (Giới hạn nhóm một lần mỗi vòng.)"
     },
     "theBourse": {
-      "investigate": "{'{'}action{'}'}: Investigate. Nếu bạn thành công, thay vì khám phá clue, nhận 4 resource. Bạn có thể giảm độ khó của phép thử này đi 2. Nếu bạn làm vậy, nhận ít đi 2 resource nếu bạn thành công. (Giới hạn nhóm một lần mỗi vòng.)"
+      "investigate": "{'{'}action{'}'}: Investigate. Nếu bạn thành công, thay vì khám phá clue, nhận 4 tài nguyên. Bạn có thể giảm độ khó của phép thử này đi 2. Nếu bạn làm vậy, nhận ít đi 2 tài nguyên nếu bạn thành công. (Giới hạn nhóm một lần mỗi vòng.)"
     },
     "theClaretKnight": {
-      "to": "{'{'}fast{'}'} Exhaust The Claret Knight: Di chuyển tối đa 3 resource từ bể tài nguyên của bạn sang The Claret Knight.",
-      "from": "{'{'}fast{'}'} Exhaust The Claret Knight: Di chuyển tối đa 3 resource từ The Claret Knight sang bể tài nguyên của bạn, hoặc sang một asset bạn kiểm soát dưới dạng charge, ammo, supply, hoặc secret."
+      "to": "{'{'}fast{'}'} Exhaust The Claret Knight: Di chuyển tối đa 3 tài nguyên từ bể tài nguyên của bạn sang The Claret Knight.",
+      "from": "{'{'}fast{'}'} Exhaust The Claret Knight: Di chuyển tối đa 3 tài nguyên từ The Claret Knight sang bể tài nguyên của bạn, hoặc sang một asset bạn kiểm soát dưới dạng charge, ammo, supply, hoặc secret."
     }
   },
   "label": {
     "theClaretKnight": {
-      "resources": "Di chuyển tối đa 3 resource"
+      "resources": "Di chuyển tối đa 3 tài nguyên"
     },
     "zanEtElSettat": {
       "increaseFight": "Tăng chỉ số chiến đấu của kẻ địch đó thêm 2 cho đòn tấn công này."
@@ -41,11 +41,11 @@
       "investigate": "Rút bài"
     },
     "theBourse": {
-      "reduceDifficulty": "Giảm độ khó đi 2 và nhận ít đi 2 resource",
+      "reduceDifficulty": "Giảm độ khó đi 2 và nhận ít đi 2 tài nguyên",
       "doNotReduce": "Không giảm",
       "pay": "Trả 1{'{'}perPlayer{'}'} clue",
       "doNotPay": "Không trả",
-      "investigate": "Nhận resource"
+      "investigate": "Nhận tài nguyên"
     }
   },
   "intro": {

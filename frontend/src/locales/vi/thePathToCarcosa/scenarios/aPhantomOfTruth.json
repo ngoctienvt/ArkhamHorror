@@ -5,13 +5,13 @@
       "skull": "-X. X là số lượng doom trong màn chơi (tối đa 5).",
       "cultist": "-2. Nếu bạn thất bại, move each unengaged _Byakhee_ in play once toward the nearest investigator.",
       "tablet": "-3. Cancel the effects and icons of each skill card committed to this test.",
-      "elderThing": "-2. Nếu bạn thất bại, lose 1 resource for each point you failed by."
+      "elderThing": "-2. Nếu bạn thất bại, lose 1 tài nguyên for each point you failed by."
     },
     "hardExpert": {
       "skull": "-X. X là số lượng doom trong màn chơi.",
       "cultist": "-2. Move each unengaged _Byakhee_ in play once toward the nearest investigator.",
       "tablet": "-4. Cancel the effects and icons of each skill card committed to this test.",
-      "elderThing": "-3. Nếu bạn thất bại, lose 1 resource for each point you failed by."
+      "elderThing": "-3. Nếu bạn thất bại, lose 1 tài nguyên for each point you failed by."
     }
   },
   "label": {

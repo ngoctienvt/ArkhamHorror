@@ -50,8 +50,8 @@
     "setAside": "Tìm lá bài Tomb of Shadows và Blocked Passage (mỗi lá là mặt để lộ của một vị trí Catacombs). Đặt chúng một bên, ngoài khu vực chơi.",
     "start": {
       "instructions": "Kiểm tra Nhật ký Chiến dịch.",
-      "awoke": "*Nếu bạn tỉnh dậy bên trong hầm mộ*: Đưa một vị trí Catacombs ngẫu nhiên (khác Tomb of Shadows hoặc Blocked Passage đang để sang một bên) vào chơi, mặt Catacombs ngửa lên. Trong phần còn lại của scenario, vị trí đó được gọi là “vị trí bắt đầu”. Đặt một token resource lên vị trí này để đánh dấu đó là vị trí bắt đầu. _Chưa đặt các điều tra viên ở đây_.",
-      "entered": "*Nếu bạn tự mình bước vào hầm mộ*: Tìm The Gate to Hell (đó là mặt đã lật của một vị trí Catacombs). Đưa The Gate to Hell vào chơi, mặt Catacombs ngửa lên. Trong phần còn lại của scenario, The Gate to Hell được gọi là “vị trí bắt đầu”. Đặt một token resource lên The Gate to Hell để đánh dấu đó là vị trí bắt đầu. _Chưa đặt các điều tra viên ở đây_."
+      "awoke": "*Nếu bạn tỉnh dậy bên trong hầm mộ*: Đưa một vị trí Catacombs ngẫu nhiên (khác Tomb of Shadows hoặc Blocked Passage đang để sang một bên) vào chơi, mặt Catacombs ngửa lên. Trong phần còn lại của scenario, vị trí đó được gọi là “vị trí bắt đầu”. Đặt một token tài nguyên lên vị trí này để đánh dấu đó là vị trí bắt đầu. _Chưa đặt các điều tra viên ở đây_.",
+      "entered": "*Nếu bạn tự mình bước vào hầm mộ*: Tìm The Gate to Hell (đó là mặt đã lật của một vị trí Catacombs). Đưa The Gate to Hell vào chơi, mặt Catacombs ngửa lên. Trong phần còn lại của scenario, The Gate to Hell được gọi là “vị trí bắt đầu”. Đặt một token tài nguyên lên The Gate to Hell để đánh dấu đó là vị trí bắt đầu. _Chưa đặt các điều tra viên ở đây_."
     },
     "catacombs": {
       "instructions": "Đặt tất cả các vị trí khác một bên tạo thành \"Chồng bài Catacombs.\" (Chồng bài Hầm mộ). Để làm điều này, thực hiện điều sau:",

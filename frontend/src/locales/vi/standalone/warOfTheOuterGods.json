@@ -2,7 +2,7 @@
   "tokens": {
     "easyStandard": {
       "skull": "-1 for each clue you have.",
-      "cultist": "-3. Nếu bạn thất bại, place 1 resource on the nearest _Mutated_ enemy, as a mutation.",
+      "cultist": "-3. Nếu bạn thất bại, place 1 tài nguyên on the nearest _Mutated_ enemy, as a mutation.",
       "tablet": "-3. Nếu bạn thất bại, draw the top _Hex_ card in the encounter discard pile.",
       "elderThing": "-4. Nếu bạn thất bại, place one card committed to this test facedown underneath an _Insect_ enemy, as a swarm card."
     },

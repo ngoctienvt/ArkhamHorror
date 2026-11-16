@@ -2,7 +2,7 @@
   "specialRules": [
     {
       "title": "Darkness Level",
-      "body": "<p class='basic'>Xuyên suốt kịch bản này, số lượng resource dưới “Darkness Level” trên lá bài scenario reference biểu thị giai đoạn hiện tại của màn đêm. Khi thời gian trôi qua, các resource được thêm vào darkness level hiện tại, và cuộc chơi tiếp tục cho đến khi các điều tra viên đạt đến một darkness level nhất định, hoặc bị tiêu diệt. Khu rừng càng tối, những cạm bẫy của nó càng chết chóc. Darkness level hiện tại tự nó không có hiệu ứng game; tuy nhiên, một số hiệu ứng của lá bài encounter có thể thay đổi hoặc trở nên mạnh hơn tùy thuộc vào darkness level hiện tại.</p>"
+      "body": "<p class='basic'>Xuyên suốt kịch bản này, số lượng tài nguyên dưới “Darkness Level” trên lá bài scenario reference biểu thị giai đoạn hiện tại của màn đêm. Khi thời gian trôi qua, các tài nguyên được thêm vào darkness level hiện tại, và cuộc chơi tiếp tục cho đến khi các điều tra viên đạt đến một darkness level nhất định, hoặc bị tiêu diệt. Khu rừng càng tối, những cạm bẫy của nó càng chết chóc. Darkness level hiện tại tự nó không có hiệu ứng game; tuy nhiên, một số hiệu ứng của lá bài encounter có thể thay đổi hoặc trở nên mạnh hơn tùy thuộc vào darkness level hiện tại.</p>"
     },
     {
       "title": "Sự liền kề của các địa điểm trong The Twisted Hollow",
@@ -66,7 +66,7 @@
     "bertieMusgrave": "Để riêng Bertie Musgrave, out of play.",
     "rest": "Loại bỏ phần còn lại của tập bài encounter *Residents* khỏi trò chơi.",
     "backToTheVale": "Để riêng agenda đặc biệt: Back to the Vale!",
-    "darknessLevel": "Đặt 1 tài nguyên lên lá bài scenario reference, dưới “Darkness Level.” Trong phần còn lại của kịch bản, số lượng resource dưới “Darkness Level” biểu thị sự trôi qua của thời gian."
+    "darknessLevel": "Đặt 1 tài nguyên lên lá bài scenario reference, dưới “Darkness Level.” Trong phần còn lại của kịch bản, số lượng tài nguyên dưới “Darkness Level” biểu thị sự trôi qua của thời gian."
   },
   "codex": {
     "judithPark": {

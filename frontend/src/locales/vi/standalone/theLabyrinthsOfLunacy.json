@@ -134,7 +134,7 @@
     "easyStandard": {
       "skull": "-1. Rút thêm một token khác.",
       "cultist": "[skull]: -X. X là Cthulhu's Rage.\r\n[cultist]: -3. Nếu bạn thất bại và địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -3. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -1. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của Cthulhu deck. (Tối đa rút một lá mỗi round.)",
-      "tablet": "-4. Nếu bạn thất bại, lose 2 resources.",
+      "tablet": "-4. Nếu bạn thất bại, lose 2 tài nguyên.",
       "elderThing": "-4. Nếu bạn thất bại, discard a random card from your hand."
     },
     "hardExpert": {

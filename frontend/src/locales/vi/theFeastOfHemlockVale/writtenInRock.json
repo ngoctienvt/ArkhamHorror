@@ -62,7 +62,7 @@
   },
   "tooltips": {
     "theUndergroundMaze": {
-      "slide": "{'{'}action{'}'} Tiêu 1 {'{'}perPlayer{'}'} resource: Trượt một địa điểm đã lật vào ô trống liền kề. (Giới hạn nhóm một lần mỗi vòng.)",
+      "slide": "{'{'}action{'}'} Tiêu 1 {'{'}perPlayer{'}'} tài nguyên: Trượt một địa điểm đã lật vào ô trống liền kề. (Giới hạn nhóm một lần mỗi vòng.)",
       "prismaticShard": "{'{'}action{'}'} Nếu story asset Prismatic Shard đang ở địa điểm của bạn: Nhận quyền kiểm soát nó."
     }
   },

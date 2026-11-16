@@ -73,7 +73,7 @@
         "body": "<p>_If Cornelia Akely is the harbinger of Elokoss:_</p><p>Cornelia bàng hoàng nhìn chằm chằm vào đôi bàn tay đẫm máu của mình. “Tôi cứ tưởng tất cả chỉ là một cơn ác mộng,” cô nói khi bạn đỡ cô đứng dậy. Cô nhìn bạn một lượt và nhíu mày. “Bạn bị thương rồi. Tôi có thể giúp.”</p><p class='basic right'>Mỗi điều tra viên hồi 3 damage.</p>"
       },
       "naomiOBannion": {
-        "body": "<p>_If Naomi O’Bannion is the harbinger of Elokoss:_</p><p>“Đây là loại tiệc tùng gì vậy?” Naomi gầm lên, rồi nhìn bạn với ánh mắt sát khí. “Và các người là ai cơ chứ?” Bạn cố gắng hết sức để giải thích tình hình khi đỡ cô ấy đứng dậy.</p><p class='basic right'>Mỗi điều tra viên nhận 5 resource.</p>"
+        "body": "<p>_If Naomi O’Bannion is the harbinger of Elokoss:_</p><p>“Đây là loại tiệc tùng gì vậy?” Naomi gầm lên, rồi nhìn bạn với ánh mắt sát khí. “Và các người là ai cơ chứ?” Bạn cố gắng hết sức để giải thích tình hình khi đỡ cô ấy đứng dậy.</p><p class='basic right'>Mỗi điều tra viên nhận 5 tài nguyên.</p>"
       },
       "sgtEarlMonroe": {
         "body": "<p>_If Sgt. Earl Munroe is the harbinger of Elokoss:_</p><p>The officer’s face is frozen in a look of terror as you take off the mask. “Where am I?” he asks, almost childlike. “And what did I do?” he looks at his blood-splattered clothing in horror.</p><p class='basic right'>Mỗi điều tra viên có thể tìm trong deck của mình một asset [[Weapon]] và play nó, bỏ qua mọi cost.</p>"
