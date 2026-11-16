@@ -79,6 +79,12 @@ watch(
   { immediate: true },
 )
 const actionTotal = (i: Investigator) => Math.max(actionTotals.value[i.id] ?? 3, actionsLeft(i))
+/* Pips run regular actions first, then the unspent additional actions, then the spent ones. Additional
+ * actions get their own colour so they never read as one of the turn's regular (gold) actions. */
+const pipClass = (i: Investigator, n: number) => ({
+  extra: n > i.remainingActions && n <= actionsLeft(i),
+  none: n > actionsLeft(i),
+})
 const { isMobile } = IsMobile();
 const store = useDbCardStore()
 const sceneMode = computed(() => useSettings().locationView !== 'cards')
@@ -551,7 +557,7 @@ watch(
         <span v-else>{{ getInvestigatorName(investigator.name.title) }}</span>
         <span v-if="sceneMode" class="tab-meta" :title="$t('locationMap.skillsAndActions')">
           <b v-for="key in SKILL_KEYS" :key="key" class="sk" :title="key"><img :src="imgsrc(`icons/skills/${key}.png`)" alt="" />{{ skillLabel(investigator, key) }}</b>
-          <span class="pips" :aria-label="$t('locationMap.actionsLeft', { count: actionsLeft(investigator) })"><i v-for="n in actionTotal(investigator)" :key="n" class="pip" :class="{ none: n > actionsLeft(investigator) }"></i></span>
+          <span class="pips" :aria-label="$t('locationMap.actionsLeft', { count: actionsLeft(investigator) })"><i v-for="n in actionTotal(investigator)" :key="n" class="pip" :class="pipClass(investigator, n)"></i></span>
           <!-- Resources and clues held, kept in the always-visible tab: the panel under the card scrolls out of view. -->
           <span class="tok" :title="$t('locationMap.resources')"><GameIcon type="resource" /><b>{{ investigator.tokens[TokenType.Resource] || 0 }}</b></span>
           <span class="tok" :title="$t('locationMap.clues')"><GameIcon type="clue" /><b>{{ investigator.tokens[TokenType.Clue] || 0 }}</b></span>
@@ -641,6 +647,7 @@ watch(
 .tab-meta .tok :deep(.game-icon) { width: 16px; height: 16px; }
 .tab-meta .pips { display: inline-flex !important; gap: 2px; margin-left: 5px; padding: 0 !important; }
 .pip { display: block; width: 9px; height: 9px; border-radius: 50%; background: #ffe9a0; box-shadow: 0 0 4px #ffe9a0aa; }
+.pip.extra { background: #7fd4ff; box-shadow: 0 0 4px #7fd4ffaa; }
 .pip.none { background: #55534c; box-shadow: none; }
 .team-overlay { display: flex; flex: 0 1 auto; flex-direction: column; gap: 6px; padding: 2px; pointer-events: auto; }
 @media (max-width: 800px) { .team-overlay { flex-direction: row; flex-wrap: wrap; align-items: flex-start; } }

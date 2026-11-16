@@ -11,6 +11,7 @@ import SealedTokensSection from '@/arkham/components/debug/SealedTokensSection.v
 import * as Arkham from '@/arkham/types/Enemy'
 import { useEscape } from '@/composable/escape'
 import { useCardStore } from '@/stores/cards'
+import { keywordChanges, joinKeywords } from '@/arkham/cardKeywordChanges'
 
 const props = defineProps<{
   game: Game
@@ -31,20 +32,10 @@ const isTrueForm = computed(() => {
   return cardCode === 'cxnyarlathotep'
 })
 
-function mapMaybe<T, U>(arr: T[], fn: (item: T) => U | null | undefined): U[] {
-  return arr.reduce((acc: U[], item: T) => {
-    const result = fn(item);
-    if (result !== null && result !== undefined) {
-      acc.push(result);
-    }
-    return acc;
-  }, []);
-}
-
-const addedKeywords = computed(() => {
-  const {modifiers} = props.enemy
-  return mapMaybe(modifiers, modifier => modifier.type.tag === "AddKeyword" ? modifier.type.contents : null).join(". ")
-})
+/* Keywords other cards gave or took away, shown in the hover text (red / struck through). */
+const keywordDelta = computed(() => keywordChanges(props.enemy.modifiers))
+const addedKeywords = computed(() => joinKeywords(keywordDelta.value.gained))
+const lostKeywords = computed(() => joinKeywords(keywordDelta.value.lost))
 
 const gainedVictory = computed(() => {
   const {modifiers} = props.enemy
@@ -163,6 +154,7 @@ const createModifier = (target: {tag: string, contents: string}, modifier: {tag:
               :data-horror="enemy.sanityDamage"
               :data-victory="gainedVictory"
               :data-keywords="addedKeywords"
+              :data-lost-keywords="lostKeywords"
             />
             <img v-else :src="image" class="enemy card-no-overlay"
             />

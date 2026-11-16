@@ -16,6 +16,7 @@ import { cardArt, cardImage, customInvestigatorUsesCardPortrait, portraitImage, 
 import * as Arkham from '@/arkham/types/Investigator'
 import type { AbilityLabel, AbilityMessage, Message } from '@/arkham/types/Message'
 import { MessageType } from '@/arkham/types/Message'
+import { shouldPulseEndTurn } from '@/arkham/endTurnAttention'
 import { cardId, toCardContents } from '@/arkham/types/Card'
 import SealedChaosTokens from '@/arkham/components/SealedChaosTokens.vue';
 import CardDebugWindow from '@/arkham/components/debug/CardDebugWindow.vue';
@@ -32,6 +33,7 @@ import { TokenType } from '@/arkham/types/Token';
 import Draw from '@/arkham/components/Draw.vue';
 import { IsMobile } from '@/arkham/isMobile';
 import { formatStat } from '@/arkham/statModel';
+import { keywordChanges, joinKeywords } from '@/arkham/cardKeywordChanges';
 const { t } = useI18n();
 
 export interface Props {
@@ -332,9 +334,19 @@ watch(() => choices.value, () => {
 })
 
 const modifiers = computed(() => props.investigator.modifiers)
+/* Keywords other cards gave or took away, shown in the hover text (red / struck through). */
+const keywordDelta = computed(() => keywordChanges(modifiers.value))
 
 const blockedActions = computed(() => modifiers.value?.reduce((total, modifier) =>
   total + (modifier.type.tag === 'CannotSpendLastActions' ? Math.max(0, modifier.type.contents) : 0), 0) ?? 0)
+
+// The turn is never ended automatically; the button blinks instead once no
+// action can be spent or End Turn is the only thing left to choose.
+const pulseEndTurn = computed(() => shouldPulseEndTurn(
+  endTurnAction.value !== -1,
+  props.investigator.remainingActions - blockedActions.value,
+  props.choices,
+))
 
 const blockedActionSources = computed(() => modifiers.value?.flatMap(modifier =>
   modifier.type.tag === 'CannotSpendLastActions'
@@ -591,6 +603,8 @@ const spadeInjury = computed(() => {
             class="card card--sideways"
             :src="image"
             :data-fx-fallback="`investigator-${investigator.id}`"
+            :data-keywords="joinKeywords(keywordDelta.gained)"
+            :data-lost-keywords="joinKeywords(keywordDelta.lost)"
             @click="clicked"
           />
           <div v-if="sceneMode" class="scene-health-sanity">
@@ -683,7 +697,7 @@ const spadeInjury = computed(() => {
               />
             <!-- Kept in both views: on the map view the action panel also lists End Turn, but that panel can be closed or hidden, and the turn must stay endable. -->
             <button
-            :class="{ active: endTurnAction !== -1 && investigator.remainingActions <= blockedActions }"
+            :class="{ active: pulseEndTurn, 'end-turn-pulse': pulseEndTurn }"
             :disabled="endTurnAction == -1"
             :data-game-actionable="endTurnAction !== -1 || undefined"
             @click="$emit('choose', endTurnAction)"
@@ -1380,6 +1394,20 @@ button.active {
   border-radius: 2px;
   border-style: solid;
   color: white;
+}
+
+/* Nothing left to do: the End Turn button blinks until the player presses it. */
+button.end-turn-pulse {
+  animation: end-turn-pulse 1.1s ease-in-out infinite;
+}
+
+@keyframes end-turn-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 transparent; filter: brightness(1); }
+  50% { box-shadow: 0 0 10px 3px var(--select); filter: brightness(1.35); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button.end-turn-pulse { animation: none; box-shadow: 0 0 8px 2px var(--select); }
 }
 
 i.spade {

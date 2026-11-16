@@ -38,6 +38,7 @@ import { useSettings } from '@/stores/settings';
 import { isManifestedSpiritAsset } from '@/arkham/spiritVisuals';
 import { useDbCardStore } from '@/stores/dbCards'
 import { useCardStore } from '@/stores/cards'
+import { keywordChanges, joinKeywords } from '@/arkham/cardKeywordChanges'
 
 const props = withDefaults(defineProps<{
   game: Game
@@ -49,6 +50,9 @@ const props = withDefaults(defineProps<{
   // A target label on this asset means discarding it to free that slot
   discardToMakeRoom?: boolean
 }>(), { atLocation: false, pending: false, discardToMakeRoom: false })
+
+/* Keywords other cards gave or took away, shown in the hover text (red / struck through). */
+const keywordDelta = computed(() => keywordChanges(props.asset.modifiers))
 
 // Where a revealed asset lands when the revelation overlay hands it over.
 const cardFlightStyle = useCardFlight(() => props.asset.cardId)
@@ -496,6 +500,8 @@ function startDrag(event: DragEvent) {
             @click="clicked"
             :data-customizations="JSON.stringify(asset.customizations)"
             :data-chained="asset.chained || undefined"
+            :data-keywords="joinKeywords(keywordDelta.gained)"
+            :data-lost-keywords="joinKeywords(keywordDelta.lost)"
           />
           <span v-if="showDiscardMark" class="discard-mark" aria-hidden="true" @click="clicked">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">

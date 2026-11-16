@@ -13,6 +13,7 @@ import {
 import { cardImg, formatContent, imgsrc, isLocalized, toCamelCase } from '@/arkham/helpers'
 import { useUnwatermarked, warmCards } from '@/arkham/unwatermark'
 import { replaceText } from '@/arkham/cardTextFormat'
+import { splitKeywords } from '@/arkham/cardKeywordChanges'
 import { originalArt } from '@/arkham/artVariants'
 import { hasEngineCardDef } from '@/arkham/customCards'
 import { BugAntIcon } from '@heroicons/vue/20/solid'
@@ -709,6 +710,7 @@ const healthTrend = ds('healthTrend')
 const evadeTrend = ds('evadeTrend')
 const victory = ds('victory')
 const keywords = ds('keywords')
+const lostKeywords = ds('lostKeywords')
 const playingCardOverlay = ds('pc')
 const swarm = dsMap('swarm', v => v === 'true')
 
@@ -1460,6 +1462,7 @@ watchEffect(() => {
       :factionCode="dbCardFactionCode"
       :traits="dbCardTraits"
       :keywords="keywords"
+      :lostKeywords="lostKeywords"
       :text="dbCardText"
       :flavor="dbCardFlavor"
       :flavorFirst="dbCardFlavorFirst"
@@ -1473,7 +1476,10 @@ watchEffect(() => {
     <span class="evade" :class="evadeTrend && `stat--${evadeTrend}`" v-if="evade">{{ evade }}</span>
     <span class="victory" v-if="victory">{{ $t('gameUi.victory', { victory }) }}</span>
     <!-- Keywords gained from modifiers. The text panel lists them itself when it is shown. -->
-    <span class="keywords" v-if="keywords && !dbCardData">{{ keywords }}.</span>
+    <span class="keywords" v-if="(keywords || lostKeywords) && !dbCardData">
+      <template v-for="k in splitKeywords(keywords)" :key="`gained-${k}`"><span class="keyword-gained">{{ k }}.</span>{{ ' ' }}</template>
+      <template v-for="k in splitKeywords(lostKeywords)" :key="`lost-${k}`"><span class="keyword-lost">{{ k }}.</span>{{ ' ' }}</template>
+    </span>
     <PoolItem class="depth" v-if="depth" type="resource" :amount="depth" />
 
     <div class="spent-keys" v-if="spentKeys.length > 0">
@@ -1590,6 +1596,16 @@ watchEffect(() => {
   left:50%;
   font-weight: 900;
   font-size: 0.8em;
+}
+
+.keywords .keyword-gained {
+  color: #b3261e;
+}
+
+.keywords .keyword-lost {
+  color: #b3261e;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
 }
 
 .keywords {

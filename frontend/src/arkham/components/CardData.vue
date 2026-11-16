@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { onBeforeUnmount, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, ref, watch } from 'vue'
+import { splitKeywords, strikeLostKeywords } from '@/arkham/cardKeywordChanges'
 
 export interface Props {
   name?: string | null
@@ -9,6 +10,8 @@ export interface Props {
   traits?: string | null
   /** Keywords the card gained from modifiers (e.g. "Retaliate. Hunter"), kept as the standard English names. */
   keywords?: string | null
+  /** Keywords modifiers took away, same format; struck through in red where the text prints them. */
+  lostKeywords?: string | null
   text?: string | null
   flavor?: string | null
   /** Show the flavor above the rules text, where acts and agendas print it. */
@@ -17,7 +20,14 @@ export interface Props {
   upsideDown?: boolean
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
+
+/* Gained keywords join the text in red; lost ones are struck through in red where the text prints
+ * them, or listed struck through with the gained ones when it does not. */
+const gainedList = computed(() => splitKeywords(props.keywords))
+const struck = computed(() => strikeLostKeywords(props.text ?? '', splitKeywords(props.lostKeywords)))
+const shownText = computed(() => struck.value.html)
+const unprintedLost = computed(() => struck.value.unmatched)
 
 /* The flavor fades out only when the window is too short for it and it was actually cut. */
 const flavorEl = ref<HTMLElement | null>(null)
@@ -53,12 +63,15 @@ onBeforeUnmount(() => observer?.disconnect())
           <p v-if="factionName">{{ factionName }}</p>
         </div>
       </div>
-      <p v-if="keywords" class="card-keywords">{{ keywords }}.</p>
+      <p v-if="gainedList.length || unprintedLost.length" class="card-keywords">
+        <template v-for="k in gainedList" :key="`gained-${k}`"><span class="keyword-gained">{{ k }}.</span>{{ ' ' }}</template>
+        <template v-for="k in unprintedLost" :key="`lost-${k}`"><span class="keyword-lost">{{ k }}.</span>{{ ' ' }}</template>
+      </p>
       <div v-if="flavor && flavorFirst" ref="flavorEl" class="card-flavor card-flavor--first" :class="{ clipped: flavorClipped }">
         <p v-html="flavor"></p>
       </div>
-      <div v-if="text" class="card-text">
-        <p v-html="text"></p>
+      <div v-if="shownText" class="card-text">
+        <p v-html="shownText"></p>
       </div>
       <div v-if="flavor && !flavorFirst" ref="flavorEl" class="card-flavor" :class="{ clipped: flavorClipped }">
         <p v-html="flavor"></p>
@@ -170,6 +183,19 @@ onBeforeUnmount(() => observer?.disconnect())
   margin: 0;
   font-weight: bold;
   color: #1f1810;
+}
+
+/* Keywords changed by other cards: gained in red, lost struck through in red. The lost marker is
+ * injected into the v-html text too, so it needs :deep there. */
+.card-data-body .keyword-gained {
+  color: #b3261e;
+}
+
+.card-data-body :deep(.keyword-lost) {
+  color: #b3261e;
+  text-decoration: line-through;
+  text-decoration-color: #b3261e;
+  text-decoration-thickness: 2px;
 }
 
 .card-data-body .card-text {

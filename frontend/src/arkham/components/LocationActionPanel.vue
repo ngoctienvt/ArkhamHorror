@@ -10,6 +10,7 @@ import { useCardNames } from '@/arkham/composables/useCardNames'
 import { useAbilityCardText, type AbilitySection } from '@/arkham/composables/useAbilityCardText'
 import { sourceEntityId, kindOf, type AbilityKind, type EntityChoice } from '@/arkham/locationChoices'
 import { ownInvestigator } from '@/arkham/ownInvestigator'
+import { shouldPulseEndTurn } from '@/arkham/endTurnAttention'
 import { abilityActions } from '@/arkham/locationInfoModel'
 import { entityImage, basicActionImage, investigatorImage } from '@/arkham/actionPreviewImage'
 import { imgsrc } from '@/arkham/helpers'
@@ -165,6 +166,8 @@ const sections = computed(() => {
 })
 /* End turn is not one action among the others: it sits pinned at the panel's foot with the actions left. */
 const endTurn = computed(() => sections.value.find((s) => s.key === 'basic')?.rows.find((r) => r.variant === 'end') ?? null)
+/* The turn is never ended automatically; End Turn blinks instead once no action is left or it is the only choice. */
+const pulseEndTurn = computed(() => shouldPulseEndTurn(endTurn.value !== null, me.value?.remainingActions ?? 1, choices.value))
 const listed = computed(() => sections.value
   .map((s) => ({ ...s, rows: s.rows.filter((r) => r.variant !== 'end') }))
   .filter((s) => s.rows.length > 0))
@@ -197,7 +200,7 @@ const listed = computed(() => sections.value
          base.css pins every <footer> to the bottom of the viewport for the site footer. -->
     <div class="foot">
       <span v-if="me" class="actions-left">{{ t('locationMap.actionsLeft', { count: me.remainingActions }) }}</span>
-      <button type="button" class="end-turn" :disabled="!endTurn" :data-game-actionable="endTurn ? true : undefined" @click="endTurn && emit('choose', endTurn.index)">{{ endTurn?.label ?? t('locationMap.endTurn') }}</button>
+      <button type="button" class="end-turn" :class="{ 'end-turn--pulse': pulseEndTurn }" :disabled="!endTurn" :data-game-actionable="endTurn ? true : undefined" @click="endTurn && emit('choose', endTurn.index)">{{ endTurn?.label ?? t('locationMap.endTurn') }}</button>
     </div>
   </aside>
 </template>
@@ -222,6 +225,12 @@ h4 { margin: 0 0 2px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14
 .end-turn { flex: none; padding: 7px 14px; border-radius: var(--radius, 6px); border: 1px solid #e0915a99; background: #3a241666; color: #ffd9b8; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: background 0.15s, border-color 0.15s; }
 .end-turn:disabled { opacity: 0.45; cursor: not-allowed; }
 .end-turn:hover:not(:disabled) { background: #3a2416; border-color: #e0915a; }
+.end-turn--pulse:not(:disabled) { animation: end-turn-pulse 1.1s ease-in-out infinite; border-color: #e0915a; }
+@keyframes end-turn-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 transparent; background: #3a241666; }
+  50% { box-shadow: 0 0 12px 3px #e0915acc; background: #5a3418; }
+}
+@media (prefers-reduced-motion: reduce) { .end-turn--pulse:not(:disabled) { animation: none; box-shadow: 0 0 10px 2px #e0915acc; } }
 .end-turn:focus-visible { outline: var(--focus-ring, 2px solid #ffe9a0); outline-offset: 2px; }
 /* Group headings take their section's colour: red only for enemies, brass for cards in play. */
 h5 { margin: 4px 0 0; font-size: 0.72rem; color: var(--text-flavor, #cdd4c2); font-weight: 600; }

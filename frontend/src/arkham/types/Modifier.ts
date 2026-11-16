@@ -39,6 +39,7 @@ export type ModifierType
   = ActionSkillModifier
   | { tag: 'CannotSpendLastActions', contents: number }
   | AddKeyword
+  | RemoveKeyword
   | AddSkillValue
   | AnySkillValue
   | BaseSkill
@@ -252,6 +253,11 @@ export type ActionCostSetToModifier = {
 
 export type AddKeyword = {
   tag: "AddKeyword"
+  contents: string
+}
+
+export type RemoveKeyword = {
+  tag: "RemoveKeyword"
   contents: string
 }
 
@@ -523,6 +529,11 @@ const modifierTypeDecoder = JsonDecoder.oneOf<ModifierType>([
       tag: JsonDecoder.literal('AddKeyword'),
       contents: JsonDecoder.object({ tag: JsonDecoder.string() }, "Keyword").map(s => s.tag)
     }, 'AddKeyword'),
+  JsonDecoder.object<RemoveKeyword>(
+    {
+      tag: JsonDecoder.literal('RemoveKeyword'),
+      contents: JsonDecoder.object({ tag: JsonDecoder.string() }, "Keyword").map(s => s.tag)
+    }, 'RemoveKeyword'),
   JsonDecoder.object<ActionSkillModifier>(
     {
       tag: JsonDecoder.literal('ActionSkillModifier'),

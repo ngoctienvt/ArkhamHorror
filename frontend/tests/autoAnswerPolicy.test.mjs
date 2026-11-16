@@ -46,10 +46,15 @@ test('leaves a real decision to the player', () => {
   assert.equal(decideAutoAnswer(chooseOne(), [{ tag: 'AbilityLabel' }, { tag: 'SkipTriggersButton' }]), null)
 })
 
-test('closes a player window when only end turn or done is left', () => {
+test('closes a player window when only done is left', () => {
   const win = chooseOne({ isPlayerWindow: true })
-  assert.deepEqual(decideAutoAnswer(win, [{ tag: 'EndTurnButton' }]), { index: 0, reason: 'closeWindow' })
   assert.deepEqual(decideAutoAnswer(win, [{ tag: 'InvalidLabel' }, { tag: 'Done' }]), { index: 1, reason: 'closeWindow' })
+})
+
+test('never ends the turn for the player, even with nothing else to do', () => {
+  const win = chooseOne({ isPlayerWindow: true })
+  assert.equal(decideAutoAnswer(win, [{ tag: 'EndTurnButton' }]), null)
+  assert.equal(decideAutoAnswer(win, [{ tag: 'InvalidLabel' }, { tag: 'EndTurnButton' }]), null)
 })
 
 test('keeps a player window open while anything can still be played', () => {

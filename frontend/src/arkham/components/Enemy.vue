@@ -36,6 +36,7 @@ import { type Card as ArkhamCard, toCardContents } from '@/arkham/types/Card';
 import { isUnvaluedCalculation } from '@/arkham/types/Calculation'
 import { enemyStat, type EnemyStatKey } from '@/arkham/enemyStats'
 import { useCardStore } from '@/stores/cards'
+import { keywordChanges, joinKeywords } from '@/arkham/cardKeywordChanges'
 
 const props = withDefaults(defineProps<{
   game: Game
@@ -350,20 +351,10 @@ const gainedVictory = computed(() => {
   , 0)
 })
 
-function mapMaybe<T, U>(arr: T[], fn: (item: T) => U | null | undefined): U[] {
-  return arr.reduce((acc: U[], item: T) => {
-    const result = fn(item);
-    if (result !== null && result !== undefined) {
-      acc.push(result);
-    }
-    return acc;
-  }, []);
-}
-
-const addedKeywords = computed(() => {
-  const {modifiers} = props.enemy
-  return mapMaybe(modifiers, modifier => modifier.type.tag === "AddKeyword" ? modifier.type.contents : null).join(". ")
-})
+/* Keywords other cards gave or took away, shown in the hover text (red / struck through). */
+const keywordDelta = computed(() => keywordChanges(props.enemy.modifiers))
+const addedKeywords = computed(() => joinKeywords(keywordDelta.value.gained))
+const lostKeywords = computed(() => joinKeywords(keywordDelta.value.lost))
 
 const choose = (index: number) => emits('choose', index)
 
@@ -465,6 +456,7 @@ function onDrop(event: DragEvent) {
               :data-horror="enemy.sanityDamage"
               :data-victory="gainedVictory"
               :data-keywords="addedKeywords"
+              :data-lost-keywords="lostKeywords"
               :data-swarm="isSwarm"
               @click="clicked"
             />

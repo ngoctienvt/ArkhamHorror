@@ -21,7 +21,9 @@ export type AutoAnswerReason =
   | 'assignDamage'
 
 // The only thing left in a player window that does nothing but close it.
-const PLAYER_WINDOW_CLOSERS = new Set(['EndTurnButton', 'Done'])
+// "End turn" is deliberately absent: ending a turn is always the player's call,
+// even when nothing else is left to do.
+const PLAYER_WINDOW_CLOSERS = new Set(['Done'])
 
 export type AutoAnswer = { index: number; reason: AutoAnswerReason }
 
@@ -128,8 +130,8 @@ export function decideAutoAnswer(
 
   const { choice, index } = valid[0]
   // A player window is the player's turn or a chance to play something fast.
-  // Once nothing but "end turn" / "done" is left, there is nothing to play or
-  // do, so the window closes itself; any other lone choice stays the player's.
+  // Once nothing but "done" is left, there is nothing to play or do, so the
+  // window closes itself; a lone "end turn" or any other choice stays the player's.
   if (inner.isPlayerWindow) {
     return PLAYER_WINDOW_CLOSERS.has(choice.tag) ? { index, reason: 'closeWindow' } : null
   }
