@@ -5,6 +5,7 @@ import { circleUndoneStoryArtFor } from '@/arkham/circleUndoneStoryArt'
 import { dreamEatersStoryArtFor } from '@/arkham/dreamEatersStoryArt'
 import { dunwichStoryArtFor } from '@/arkham/dunwichStoryArt'
 import { forgottenAgeStoryArtFor } from '@/arkham/forgottenAgeStoryArt'
+import { homebrewStoryArtFor } from '@/arkham/homebrewStoryArt'
 import { innsmouthStoryArtFor } from '@/arkham/innsmouthStoryArt'
 import { lateCampaignStoryArtFor } from '@/arkham/lateCampaignStoryArt'
 import { nightOfTheZealotStoryArtFor } from '@/arkham/nightOfTheZealotStoryArt'
@@ -32,6 +33,7 @@ const storyArt = import.meta.glob<string>([
   '../../assets/children-of-blood-story/*.webp',
   '../../assets/night-of-the-zealot-story/*.webp',
   '../../assets/standalone-story/*.webp',
+  '../../assets/homebrew-story/*.webp',
 ], {
   eager: true,
   import: 'default',
@@ -46,6 +48,7 @@ const artLookup = [
   ['night-of-the-zealot-story', nightOfTheZealotStoryArtFor],
   ['dream-eaters-story', (_campaignId: string | undefined, entries: FlavorTextEntry[]) => dreamEatersStoryArtFor(entries)],
   ['standalone-story', (_campaignId: string | undefined, entries: FlavorTextEntry[]) => standaloneStoryArtFor(entries)],
+  ['homebrew-story', (_campaignId: string | undefined, entries: FlavorTextEntry[]) => homebrewStoryArtFor(entries)],
 ] as const
 
 const failedImages = ref(new Set<string>())

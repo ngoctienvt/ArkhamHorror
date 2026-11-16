@@ -2,6 +2,25 @@
 
 Phạm vi gồm campaign chính thức, bản Return to, standalone và nội dung cộng đồng hiện có trong repo. The Innsmouth Conspiracy và bản Return to do người dùng phụ trách.
 
+## Đợt nối tiếp ngày 16/11/2026
+
+Đã tích hợp thêm 374 ảnh WebP 1536 × 1024, nâng tổng hai đợt lên 534 ảnh mới. Các đoạn trong cùng khung đọc dùng chung ảnh. Các lựa chọn hoặc kết cục dẫn đến khoảnh khắc khác dùng ảnh riêng.
+
+| Nội dung | Ảnh đợt nối tiếp |
+| --- | ---: |
+| Standalone chính thức | 62 |
+| Congress of the Keys | 35 |
+| Edge of the Earth, The Scarlet Keys, The Feast of Hemlock Vale và The Drowned City | 27 |
+| Chín standalone cộng đồng có lời kể | 42 |
+| Ages Unwound | 35 |
+| Dark Matter | 49 |
+| Circus Ex Mortis | 59 |
+| Night of Vespers | 65 |
+
+Các nhánh đã tích hợp nằm trong [bảng ảnh chính thức](prompts.md) và [bảng ảnh cộng đồng](homebrew-prompts.md). Night of Vespers đã có ảnh cho intro, interlude và epilogue hiện có. Backend của bộ này chưa triển khai resolution theo scenario. Consternation on the Constellation hiện chỉ có màn thiết lập và gameplay.
+
+Đã đối chiếu 391 ảnh trong hai bảng của đợt nối tiếp, gồm 17 ảnh đã tích hợp ở đợt đầu. Tất cả giải mã được đúng định dạng và kích thước. 40 bài kiểm thử ảnh truyện trong phạm vi và `npm run tc` đều qua. Vite đóng gói thành công trong thư mục kiểm tra với tài nguyên `src/assets`. Các nhánh để mở thử trong ván gồm Bad Blood Resolution 2, Congress of the Keys khi Thorne phát biểu, The Drowned City với Task Do No Harm và kết thúc Thousand to One.
+
 ## Bàn giao ngày 16/11/2026
 
 Đã tích hợp 160 ảnh WebP 1536 × 1024. Đợt tạo ảnh dùng ImageGen tích hợp. Danh sách bên dưới phản ánh những ảnh đã gắn vào khung đọc, còn [prompt và trạng thái theo nhánh](prompts.md) ghi các bố cục đã chuẩn bị.
@@ -15,7 +34,7 @@ Phạm vi gồm campaign chính thức, bản Return to, standalone và nội du
 | Bad Blood, By the Book, Fortune and Folly, The Midwinter Gala | 13 | Đã có một phần. Xem mục còn lại bên dưới. |
 | The Scarlet Keys | 1 | Đã thêm lời bênh vực của Claret Knight trong Congress of the Keys. |
 
-### Còn lại
+### Danh sách còn thiếu khi đợt đầu tạm dừng
 
 - **Bad Blood** · Dựng lại Resolution 2. Ảnh đầu đảo người đang nắm áo và người bị kéo dậy.
 - **By the Book** · Resolution 1 và 2.
@@ -25,7 +44,7 @@ Phạm vi gồm campaign chính thức, bản Return to, standalone và nội du
 - **Campaign đã có ảnh nhưng còn nhánh thiếu** · Lời mở Edge of the Earth và The Scarlet Keys, các lượt phát biểu riêng trong Congress of the Keys và Investigator Defeat, một số nhánh Prelude của The Feast of Hemlock Vale, phần mở và các Task kể chuyện của The Drowned City. Các đoạn cùng khung đọc với một đoạn đã có ảnh dùng ảnh của chính khung đó. Tách riêng các đoạn Task và các lượt bỏ phiếu do handler hiển thị độc lập.
 - **Nội dung cộng đồng** · Các campaign và standalone trong bảng rà soát bên dưới còn thiếu ảnh. Với Consternation on the Constellation, locale và handler hiện tại chỉ có thiết lập và gameplay. Những gói chỉ có locale EN hiển thị lời kể tiếng Anh qua fallback của ứng dụng.
 
-ImageGen trả HTTP 429 do hết hạn mức. Thời điểm mở lại mà dịch vụ báo là khoảng 19:42 ngày 16/11/2026 giờ Việt Nam. Các mục chờ ảnh chưa có mapping vào khung đọc.
+ImageGen trả HTTP 429 trong đợt đầu. Dịch vụ báo mở lại lúc khoảng 19:42 ngày 16/11/2026 giờ Việt Nam. Các mục trên đã được xử lý trong đợt nối tiếp.
 
 ## Cách đối chiếu
 

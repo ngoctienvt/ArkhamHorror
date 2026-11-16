@@ -61,3 +61,16 @@ test('Excelsior shares the knock at room 225 and distinguishes flight from defea
   assert.equal(art('resolutions.noResolution.body'), 'excelsior-collapsed-on-carpet')
   assert.equal(art('resolutions.noResolutionResigned.body'), 'excelsior-police-knock')
 })
+
+test('the challenge scenarios have distinct introductions and resolutions', () => {
+  const scenarios = [
+    'allOrNothing', 'badBlood', 'byTheBook', 'readOrDie', 'redTideRising',
+    'laidToRest', 'relicsOfThePast', 'enthrallingEncore',
+  ]
+  for (const scenario of scenarios) {
+    const passages = ['intro.body', 'resolutions.resolution1.body', 'resolutions.resolution2.body']
+    const images = passages.map((key) => standaloneStoryArtFor([entry(`standalone.${scenario}.${key}`)]))
+    assert.ok(images.every(Boolean), scenario)
+    assert.equal(new Set(images).size, passages.length, scenario)
+  }
+})
