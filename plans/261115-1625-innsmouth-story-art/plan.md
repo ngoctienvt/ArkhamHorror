@@ -21,23 +21,48 @@ Story illustrations for *The Innsmouth Conspiracy* (Campaign ID `07`), covering 
 
 ## Generation Status
 
-Generated **13 / 68** illustrations (1536×1024 WebP) before hitting `gemini-3.1-flash-image` quota limit (`429 RESOURCE_EXHAUSTED`, resets in ~5h):
+Generated **38 / 68** illustrations (1536×1024 WebP) before hitting `gemini-3.1-flash-image` quota limit (`429 RESOURCE_EXHAUSTED`, resets in ~4h58m):
 
 - `pit-awakening.webp` (`thePitOfDespair.intro.body`)
 - `pit-rescued-shore.webp` (`thePitOfDespair.resolutions.noResolution.body`, `thePitOfDespair.resolutions.resolution1.body`)
+- `interlude1-harper-questioning.webp` (`interlude1.part1.body`)
+- `interlude1-dawson-memory.webp` (`interlude1.aMeetingWithThomasDawson.body`)
+- `interlude1-amnesia-briefing.webp` (`interlude1.noMemoriesRecovered.body`)
+- `interlude1-devil-reef-memory.webp` (`interlude1.aBattleWithAHorrifyingDevil.body`)
+- `interlude1-dawson-pledge.webp` (`interlude1.aDecisionToStickTogether.body`)
 - `vanishing-arrival-station.webp` (`theVanishingOfElinaHarper.intro1.body`)
 - `vanishing-joe-sargent.webp` (`theVanishingOfElinaHarper.townInfo`) — *Note: minor typo `"INN'S MOUTH"` on bus side; optional edit later*
+- `vanishing-harper-letter.webp` (`theVanishingOfElinaHarper.intro2.body`)
+- `vanishing-hotel-ransacked.webp` (`theVanishingOfElinaHarper.resolutions.noResolution.body`)
+- `vanishing-suspect-othera.webp` (`theVanishingOfElinaHarper.resolutions.resolution3.body`)
 - `vanishing-suspect-joyce.webp` (`theVanishingOfElinaHarper.resolutions.resolution4.body`)
 - `vanishing-suspect-barnabas.webp` (`theVanishingOfElinaHarper.resolutions.resolution5.body`)
+- `vanishing-suspect-zadok.webp` (`theVanishingOfElinaHarper.resolutions.resolution6.body`)
+- `interlude2-beach-waking.webp` (`interlude2.theSyzygy1.body`)
+- `interlude2-harper-wounds.webp` (`interlude2.theSyzygy2.body`)
 - `intoodeep-overlook.webp` (`inTooDeep.intro.body`)
+- `devilreef-mr-moore.webp` (`devilReef.intro1.body`)
+- `devilreef-dawson-shotgun.webp` (`devilReef.intro2.body`)
 - `interlude3-oceiros-vision.webp` (`interlude3.beneathTheWaves1.body`)
+- `interlude3-road-sunset.webp` (`interlude3.beneathTheWaves2`)
+- `highgear-car-chase.webp` (`horrorInHighGear.intro.body`)
+- `highgear-abandoned-dawn.webp` (`horrorInHighGear.resolutions.noResolution.body`)
+- `highgear-pullover-fog.webp` (`horrorInHighGear.resolutions.resolution1.body`)
 - `fog-lighthouse-cliffs.webp` (`aLightInTheFog.intro.body`)
 - `fog-collapse-shore.webp` (`aLightInTheFog.resolutions.resolution1.body`)
+- `lair-cult-revelation.webp` (`theLairOfDagon.intro2.body`, `theLairOfDagon.intro3.body`)
 - `lair-angry-mob.webp` (`theLairOfDagon.resolutions.noResolution.body`)
+- `lair-dawson-sacrifice.webp` (`theLairOfDagon.resolutions.resolution1.body`)
+- `lair-defiant-silence.webp` (`theLairOfDagon.resolutions.resolution2.body`)
+- `interlude4-reef-trophy.webp` (`interlude4.guardianDispatched`)
 - `maelstrom-surface-rock.webp` (`intoTheMaelstrom.resolutions.resolution1.body`)
 - `maelstrom-calm-sky.webp` (`intoTheMaelstrom.resolutions.resolution2.body`)
+- `maelstrom-ominous-sky.webp` (`intoTheMaelstrom.resolutions.resolution3.body`)
+- `maelstrom-flare-victory.webp` (`intoTheMaelstrom.resolutions.resolution4.body`)
+- `maelstrom-harper-missing.webp` (`intoTheMaelstrom.resolutions.resolution5.body`) — *Note: generated 2 investigators instead of 1 solitary investigator; regenerate/edit when quota allows*
+- `maelstrom-flare-grim.webp` (`intoTheMaelstrom.resolutions.resolution6.body`)
 
-## Remaining Illustrations to Generate (55)
+## Remaining Illustrations to Generate (30)
 
 Common style prompt:
 > Atmospheric 1920s period production still, lightly painted realistic cinematic illustration with sharp deep focus, clear silhouettes, rich textures, deep shadows, and strong local contrast, readable at 280 px width. Clear air, no image blur, no blooming highlights, no text (unless explicitly requested), no borders, no graphic overlays, no icons, no card templates.

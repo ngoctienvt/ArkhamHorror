@@ -930,6 +930,7 @@ const useCardPicker = computed(() => cardLabels.value.every(({ choice }) => !cho
     <template v-if="wizardFlavorText">
       <div class="intro-text">
         <div class="intro-text-body">
+          <StoryIllustration :campaign-id="game.campaign?.id" :entries="wizardFlavorText.body" />
           <FormattedEntry
             v-for="(paragraph, index) in wizardFlavorText.body"
             :key="index"
