@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "route": "codex-cli",
+  "requestedModel": "codex-image_gen",
+  "options": {
+    "tool": "image_gen"
+  },
+  "promptSha256": "d7bc1ee71f19088a67e6ef7dca449e3e509dc4d643d17e6e2caff61652250a07",
+  "references": [
+    {
+      "sha256": "bd981702e2194487b13b9cb96a0caf261cdef23575c1d35eb9650b0e5a0dfba7",
+      "bytes": 355880
+    },
+    {
+      "sha256": "2dc12f4b599dff8d4d321b0676d387821ff1996bc7ec3fb3e0f2b2e1d0cdae15",
+      "bytes": 405334
+    },
+    {
+      "sha256": "b5a2bbd66fe017e76e3a2c1ce73a2383775cefcbff5cf2f9c171ccb3cdb1ef2b",
+      "bytes": 514287
+    },
+    {
+      "sha256": "854f584851ced95caca42c11e8974bdae79ad031a32cee1ae113a94854646d45",
+      "bytes": 551325
+    },
+    {
+      "sha256": "bbc30749b115a5ab630a2519bd3c1a5e28b9631e1d50ccdab3690e9acdbe4f9f",
+      "bytes": 340263
+    },
+    {
+      "sha256": "ddfd0f4fed4be63408f50dc5c5ccadf59fb23ad27bfb1ea4255387ff62471df8",
+      "bytes": 324822
+    }
+  ],
+  "fingerprint": "f58cb81b3f5c7287216dfd640d960b75cd2937d9963e946d64c11755a7937e7b",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "2026-10-06",
+    "items": [],
+    "basis": "subscription quota call: no per-call USD price; counted by call caps"
+  },
+  "consent": {
+    "provider": "openai",
+    "model": "codex-image_gen",
+    "calls": 1,
+    "estimateUsd": 0.0,
+    "route": "codex-cli",
+    "quota": true,
+    "account": "the user's own Codex sign-in (ChatGPT)",
+    "note": "uses the subscription quota of that sign-in, never API credit"
+  },
+  "artSource": "host_image",
+  "execution": "execute",
+  "status": "failed",
+  "outputDir": "../../art-src/the-dream-eaters/gen/waking-nightmare-v1",
+  "receipt": {
+    "startedAt": "2026-11-12T17:17:54.073Z",
+    "submittedAt": "2026-11-12T17:17:54.098Z",
+    "completedAt": "2026-11-12T17:18:23.067Z",
+    "wallMs": 28994,
+    "providerMs": 28953,
+    "attempt": 2,
+    "purpose": "route_media image",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "TOOL_UNAVAILABLE"
+  },
+  "ledger": {
+    "projectDir": "../..",
+    "reservationId": "a5bdf65948664f9787498ee0326e34c0",
+    "status": "failed"
+  },
+  "cliRun": {
+    "tool": "codex",
+    "runId": "6e79cce825fb495da2a441164e015008",
+    "cwd": "<tmp>/forge-cli-6e79cce825fb-dd72642e",
+    "startedAt": "2026-11-12T17:17:54.073Z",
+    "version": "0.147.0",
+    "versionText": "codex-cli 0.147.0",
+    "recipe": "codex-exec-imagegen/1",
+    "home": "CODEX_HOME",
+    "verifiedBefore": false,
+    "threadId": "01a1d0c4-20eb-72f2-bdfd-93847e1503db"
+  },
+  "error": {
+    "code": "TOOL_UNAVAILABLE",
+    "message": "the CLI does not offer its native image tool to this sign-in"
+  },
+  "errorType": "CliMediaError"
+}

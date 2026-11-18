@@ -8,6 +8,7 @@ import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
 import { replaceText } from '@/arkham/cardTextFormat'
 import { iconClasses } from '@/arkham/icons'
 import { LINE_KIND, type AbilityKind } from '@/arkham/locationChoices'
+import { offeredLineIndexes } from '@/arkham/location-panel-mode'
 import { useCardNames } from '@/arkham/composables/useCardNames'
 import { attachmentsOf, effectLabel } from '@/arkham/attachments'
 import { cardImage } from '@/arkham/cardImages'
@@ -19,7 +20,12 @@ import SceneGlyph from '@/arkham/components/SceneGlyph.vue'
  * action. Its face-up traits, numbers, every printed line tagged by kind (forced, action, reaction, fast,
  * objective, or always-on), the flavour, and what lies on it (treacheries first: those are what bite).
  * Display only; nothing here sends a choice. */
-const props = defineProps<{ game: Game; playerId: string; location: Location; info: MapLocationInfo }>()
+const props = defineProps<{
+  game: Game; playerId: string; location: Location; info: MapLocationInfo
+  /** Kinds of this location's abilities the action list under this block offers as buttons with the same
+   * printed text: those lines are left out here, so nothing is read twice. */
+  offeredKinds?: readonly string[]
+}>()
 
 const { t } = useI18n()
 const nameOf = useCardNames()
@@ -28,13 +34,17 @@ type LineKind = AbilityKind | 'constant'
 const lines = computed(() => {
   const text = props.info.face.text
   if (!text) return []
-  return text.split(/\n|<br\s*\/?>/i).map((l) => l.trim()).filter(Boolean).map((line) => {
+  const all = text.split(/\n|<br\s*\/?>/i).map((l) => l.trim()).filter(Boolean).map((line) => {
     const kind: LineKind = LINE_KIND.find(([re]) => re.test(line))?.[1] ?? 'constant'
     // The kind badge already carries the action / fast / reaction icon, so drop the leading one from the text.
     const html = replaceText(line).replace(/^\s*(<b>)?\s*<span class="[\w-]+-icon"><\/span>\s*(<\/b>)?\s*:?\s*/, '')
     return { kind, html }
   })
+  const onOffer = offeredLineIndexes(all.map((l) => l.kind), props.offeredKinds ?? [])
+  return all.filter((_, index) => !onOffer.has(index))
 })
+// Whether the card prints anything at all, even when every line is on offer in the list below.
+const hasPrintedText = computed(() => !!props.info.face.text?.trim())
 const flavorHtml = computed(() => props.info.face.flavor ? replaceText(props.info.face.flavor) : null)
 
 // Each attached card is a row: art thumbnail (hover shows the full card), name, and what it does here.
@@ -68,7 +78,7 @@ const iconOf = (kind: LineKind) => (kind === 'action' || kind === 'fast' || kind
         <span class="body" v-html="l.html" />
       </li>
     </ul>
-    <p v-else-if="info.face.known" class="none">{{ t('locationMap.about.noText') }}</p>
+    <p v-else-if="info.face.known && !hasPrintedText" class="none">{{ t('locationMap.about.noText') }}</p>
 
     <p v-if="flavorHtml" class="flavor" v-html="flavorHtml"></p>
 
@@ -98,7 +108,7 @@ const iconOf = (kind: LineKind) => (kind === 'action' || kind === 'fast' || kind
 .stats .doom b { color: var(--doom, #e0a595); }
 .lines { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; }
 .line { display: flex; flex-direction: column; gap: 2px; padding: 5px 8px; border-left: 3px solid #75836b; background: #ffffff08; border-radius: 0 4px 4px 0; }
-.badge { display: inline-flex; gap: 4px; align-items: center; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #c6d6b4; }
+.badge { display: inline-flex; gap: 4px; align-items: center; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #c6d6b4; }
 .line.forced { border-color: #d0654f; background: #d0654f14; }
 .line.forced .badge { color: #f0a090; }
 .line.action { border-color: #e6c584; }

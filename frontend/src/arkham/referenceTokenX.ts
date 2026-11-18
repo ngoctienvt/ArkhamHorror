@@ -9,6 +9,15 @@
  * Import-free on purpose so the tests can load it without the Vue toolchain; `referenceTokenXContext.ts`
  * builds the context from a game. */
 
+const TOKEN_PREFIX = /^((?:\[(?:skull|cultist|tablet|elder_thing|auto_fail|elder_sign)\][ \t]*)+):?\s*(.*)$/
+
+/** Read all the symbols that share a printed effect, without consuming symbols in its text. */
+export function parseReferenceTokenLine(line: string): { tokens: string[]; effect: string } | null {
+  const match = TOKEN_PREFIX.exec(line.trim())
+  if (!match) return null
+  return { tokens: Array.from(match[1].matchAll(/\[([a-z_]+)\]/g), ([, token]) => token), effect: match[2] }
+}
+
 /** One card or entity, reduced to what the sentences ask about. */
 export type XThing = {
   name?: string

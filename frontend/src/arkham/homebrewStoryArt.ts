@@ -2,6 +2,13 @@ import { entryKeys } from './narration'
 import type { FlavorTextEntry } from './types/FlavorText'
 
 export const homebrewStoryArtByPassage: Readonly<Record<string, string>> = {
+  'darkMatter.theSearchForFragment.trace1': 'addon-darkmatter-the-search-for-fragment-trace1',
+  'darkMatter.theSearchForFragment.trace3': 'addon-darkmatter-the-search-for-fragment-trace3',
+  'circusExMortis.theFutureAndThePast.thea': 'addon-circusexmortis-the-future-and-the-past-thea',
+  'circusExMortis.theFutureAndThePast.escape': 'addon-circusexmortis-the-future-and-the-past-escape',
+  'circusExMortis.writtenInStone.role': 'addon-circusexmortis-written-in-stone-role',
+  'nightOfVespers.twoMessages.telegram1': 'addon-nightofvespers-two-messages-telegram1',
+  'nightOfVespers.twoMessages.cavalier2': 'addon-nightofvespers-two-messages-cavalier2',
   'againstTheWendigo.scenario.prologue.body': 'wendigo-expedition-notebook',
   'againstTheWendigo.scenario.resolutions.noResolution.body': 'wendigo-back-at-fort',
   'againstTheWendigo.scenario.resolutions.resolution1.body': 'wendigo-reverts-to-man',

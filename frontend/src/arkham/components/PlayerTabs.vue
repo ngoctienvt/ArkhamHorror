@@ -560,11 +560,11 @@ watch(
         <span v-if="isMobile">{{ getInvestigatorName(investigator.name.title).split(' ')[0] }}</span>
         <span v-else>{{ getInvestigatorName(investigator.name.title) }}</span>
         <span v-if="sceneMode" class="tab-meta" :title="$t('locationMap.skillsAndActions')">
-          <b v-for="key in SKILL_KEYS" :key="key" class="sk" :title="key"><img :src="imgsrc(`icons/skills/${key}.png`)" alt="" />{{ skillLabel(investigator, key) }}</b>
+          <b v-for="key in SKILL_KEYS" :key="key" class="sk" :title="key">{{ skillLabel(investigator, key) }}<img :src="imgsrc(`icons/skills/${key}.png`)" alt="" /></b>
           <span class="pips" :aria-label="$t('locationMap.actionsLeft', { count: actionsLeft(investigator) })"><i v-for="n in actionTotal(investigator)" :key="n" class="pip" :class="pipClass(investigator, n)"></i></span>
           <!-- Resources and clues held, kept in the always-visible tab: the panel under the card scrolls out of view. -->
-          <span class="tok" :title="$t('locationMap.resources')"><GameIcon type="resource" /><b>{{ investigator.tokens[TokenType.Resource] || 0 }}</b></span>
-          <span class="tok" :title="$t('locationMap.clues')"><GameIcon type="clue" /><b>{{ investigator.tokens[TokenType.Clue] || 0 }}</b></span>
+          <span class="tok" :title="$t('locationMap.resources')"><b>{{ investigator.tokens[TokenType.Resource] || 0 }}</b><GameIcon type="resource" /></span>
+          <span class="tok" :title="$t('locationMap.clues')"><b>{{ investigator.tokens[TokenType.Clue] || 0 }}</b><GameIcon type="clue" /></span>
         </span>
         <button
           v-if="solo"
@@ -645,9 +645,9 @@ watch(
 <style scoped>
 .tab-meta { display: inline-flex; align-items: center; gap: 3px; padding: 0 8px 0 0; }
 /* Each skill as its painted icon with the value beside it: [icon]4. */
-.tab-meta .sk { display: inline-flex; align-items: center; gap: 1px; margin-right: 3px; font: 700 0.8rem/1 system-ui, sans-serif; color: #fff; text-shadow: 0 1px 2px #000; }
+.tab-meta .sk { display: inline-flex; align-items: center; gap: 2px; margin-right: 4px; font: 700 0.8rem/1 system-ui, sans-serif; color: #fff; text-shadow: 0 1px 2px #000; }
 .tab-meta .sk img { width: 18px; height: 18px; display: block; }
-.tab-meta .tok { display: inline-flex; align-items: center; gap: 2px; margin-left: 6px; padding: 0 6px 0 2px; border-radius: 999px; background: #0007; font: 700 0.75rem/1.2 system-ui, sans-serif; color: #fff4df; }
+.tab-meta .tok { display: inline-flex; align-items: center; gap: 2px; margin-left: 6px; padding: 0 2px 0 6px; border-radius: 999px; background: #0007; font: 700 0.75rem/1.2 system-ui, sans-serif; color: #fff4df; }
 .tab-meta .tok :deep(.game-icon) { width: 16px; height: 16px; }
 .tab-meta .pips { display: inline-flex !important; gap: 2px; margin-left: 5px; padding: 0 !important; }
 .pip { display: block; width: 9px; height: 9px; border-radius: 50%; background: #ffe9a0; box-shadow: 0 0 4px #ffe9a0aa; }

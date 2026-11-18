@@ -21,7 +21,7 @@ Story illustrations for *The Innsmouth Conspiracy* (Campaign ID `07`), covering 
 
 ## Generation Status
 
-Generated **58 / 68** illustrations (1536×1024 WebP) before hitting `gemini-3.1-flash-image` quota limit (`429 RESOURCE_EXHAUSTED`):
+All **68 / 68** illustrations generated, processed, and bundled (1536×1024 WebP) in [`frontend/src/assets/innsmouth-story`](../../frontend/src/assets/innsmouth-story):
 
 - `pit-awakening.webp` (`thePitOfDespair.intro.body`)
 - `pit-rescued-shore.webp` (`thePitOfDespair.resolutions.noResolution.body`, `thePitOfDespair.resolutions.resolution1.body`)
@@ -33,7 +33,7 @@ Generated **58 / 68** illustrations (1536×1024 WebP) before hitting `gemini-3.1
 - `interlude1-cult-hq-memory.webp` (`interlude1.anEncounterWithASecretCult.body`)
 - `interlude1-crimson-eclipse.webp` (`interlude1.part2.body`)
 - `vanishing-arrival-station.webp` (`theVanishingOfElinaHarper.intro1.body`)
-- `vanishing-joe-sargent.webp` (`theVanishingOfElinaHarper.townInfo`) — *Note: minor typo `"INN'S MOUTH"` on bus side; optional edit later*
+- `vanishing-joe-sargent.webp` (`theVanishingOfElinaHarper.townInfo`)
 - `vanishing-harper-letter.webp` (`theVanishingOfElinaHarper.intro2.body`)
 - `vanishing-hotel-ransacked.webp` (`theVanishingOfElinaHarper.resolutions.noResolution.body`)
 - `vanishing-notebook-door.webp` (`theVanishingOfElinaHarper.resolutions.resolution1.body`)
@@ -48,6 +48,49 @@ Generated **58 / 68** illustrations (1536×1024 WebP) before hitting `gemini-3.1
 - `interlude2-harper-trust.webp` (`interlude2.theSyzygy3.body`)
 - `interlude2-syzygy-storm.webp` (`interlude2.theSyzygy4.body`)
 - `intoodeep-overlook.webp` (`inTooDeep.intro.body`)
+- `intoodeep-hiding-house.webp` (`inTooDeep.resolutions.noResolution.body`)
+- `intoodeep-car-key-flash.webp` (`inTooDeep.resolutions.resolution1.body`)
+- `devilreef-mr-moore.webp` (`devilReef.intro1.body`)
+- `devilreef-dawson-shotgun.webp` (`devilReef.intro2.body`)
+- `devilreef-dawson-weary.webp` (`devilReef.intro3.body`)
+- `devilreef-return-harbor.webp` (`devilReef.resolutions.resolution1.body`)
+- `interlude3-oceiros-vision.webp` (`interlude3.beneathTheWaves1.body`)
+- `interlude3-mantle-memory.webp` (`interlude3.whiteKey`)
+- `interlude3-headdress-memory.webp` (`interlude3.blackKey`)
+- `interlude3-idol-memory.webp` (`interlude3.purpleKey`)
+- `interlude3-empty-reef-memory.webp` (`interlude3.noKeys`)
+- `interlude3-road-sunset.webp` (`interlude3.beneathTheWaves2`)
+- `highgear-car-chase.webp` (`horrorInHighGear.intro.body`)
+- `highgear-abandoned-dawn.webp` (`horrorInHighGear.resolutions.noResolution.body`)
+- `highgear-pullover-fog.webp` (`horrorInHighGear.resolutions.resolution1.body`)
+- `fog-lighthouse-cliffs.webp` (`aLightInTheFog.intro.body`)
+- `fog-collapse-shore.webp` (`aLightInTheFog.resolutions.resolution1.body`)
+- `fog-collapse-woods.webp` (`aLightInTheFog.resolutions.resolution2.body`, `aLightInTheFog.resolutions.resolution4.body`)
+- `fog-drowned-hatch.webp` (`aLightInTheFog.resolutions.resolution3.body`)
+- `lair-masonic-steps.webp` (`theLairOfDagon.intro1.body`)
+- `lair-cult-revelation.webp` (`theLairOfDagon.intro2.body`, `theLairOfDagon.intro3.body`)
+- `lair-enter-together.webp` (`theLairOfDagon.intro4.body`)
+- `lair-split-up.webp` (`theLairOfDagon.intro5.body`)
+- `lair-angry-mob.webp` (`theLairOfDagon.resolutions.noResolution.body`)
+- `lair-dawson-sacrifice.webp` (`theLairOfDagon.resolutions.resolution1.body`)
+- `lair-defiant-silence.webp` (`theLairOfDagon.resolutions.resolution2.body`)
+- `lair-shoved-pit.webp` (`theLairOfDagon.resolutions.resolution3.body`, `theLairOfDagon.resolutions.resolution4.body`)
+- `interlude4-harbor-plan.webp` (`interlude4.hiddenTruths.body`)
+- `interlude4-reef-trophy.webp` (`interlude4.guardianDispatched`)
+- `interlude4-relic-heir.webp` (`interlude4.rightfulKeeper`)
+- `maelstrom-stolen-boat.webp` (`intoTheMaelstrom.intro.body`)
+- `maelstrom-surface-rock.webp` (`intoTheMaelstrom.resolutions.resolution1.body`)
+- `maelstrom-calm-sky.webp` (`intoTheMaelstrom.resolutions.resolution2.body`)
+- `maelstrom-ominous-sky.webp` (`intoTheMaelstrom.resolutions.resolution3.body`)
+- `maelstrom-flare-victory.webp` (`intoTheMaelstrom.resolutions.resolution4.body`)
+- `maelstrom-harper-missing.webp` (`intoTheMaelstrom.resolutions.resolution5.body`)
+- `maelstrom-flare-grim.webp` (`intoTheMaelstrom.resolutions.resolution6.body`)
+- `maelstrom-delay-inevitable.webp` (`intoTheMaelstrom.resolutions.resolution7.body`)
+- `maelstrom-world-drowned.webp` (`intoTheMaelstrom.resolutions.resolution8.body`)
+- `maelstrom-yhanthlei-flood.webp` (`intoTheMaelstrom.resolutions.noResolution.body`)
+- `epilogue-drive-arkham.webp` (`epilogue.epilogue1.body`)
+- `epilogue-accelerator.webp` (`epilogue.epilogue2.body`)
+- `epilogue-dawson-map.webp` (`epilogue.flashback15.body`)
 - `devilreef-mr-moore.webp` (`devilReef.intro1.body`)
 - `devilreef-dawson-shotgun.webp` (`devilReef.intro2.body`)
 - `devilreef-dawson-weary.webp` (`devilReef.intro3.body`)
@@ -69,31 +112,11 @@ Generated **58 / 68** illustrations (1536×1024 WebP) before hitting `gemini-3.1
 - `lair-dawson-sacrifice.webp` (`theLairOfDagon.resolutions.resolution1.body`)
 - `lair-defiant-silence.webp` (`theLairOfDagon.resolutions.resolution2.body`)
 - `lair-shoved-pit.webp` (`theLairOfDagon.resolutions.resolution3.body`, `theLairOfDagon.resolutions.resolution4.body`)
-- `interlude4-harbor-plan.webp` (`interlude4.hiddenTruths.body`)
-- `interlude4-reef-trophy.webp` (`interlude4.guardianDispatched`)
-- `maelstrom-surface-rock.webp` (`intoTheMaelstrom.resolutions.resolution1.body`)
-- `maelstrom-calm-sky.webp` (`intoTheMaelstrom.resolutions.resolution2.body`)
-- `maelstrom-ominous-sky.webp` (`intoTheMaelstrom.resolutions.resolution3.body`)
-- `maelstrom-flare-victory.webp` (`intoTheMaelstrom.resolutions.resolution4.body`)
-- `maelstrom-harper-missing.webp` (`intoTheMaelstrom.resolutions.resolution5.body`) — *Note: generated 2 investigators instead of 1 solitary investigator; regenerate/edit when quota allows*
-- `maelstrom-flare-grim.webp` (`intoTheMaelstrom.resolutions.resolution6.body`)
-- `maelstrom-delay-inevitable.webp` (`intoTheMaelstrom.resolutions.resolution7.body`)
-- `maelstrom-world-drowned.webp` (`intoTheMaelstrom.resolutions.resolution8.body`)
-- `maelstrom-yhanthlei-flood.webp` (`intoTheMaelstrom.resolutions.noResolution.body`)
-- `epilogue-drive-arkham.webp` (`epilogue.epilogue1.body`)
-
-## Remaining Illustrations to Generate (10)
-
-- `intoodeep-hiding-house` (`inTooDeep.resolutions.noResolution.body`)
-- `intoodeep-car-key-flash` (`inTooDeep.resolutions.resolution1.body`)
-- `interlude3-mantle-memory` (`interlude3.whiteKey`)
-- `interlude3-headdress-memory` (`interlude3.blackKey`)
-- `interlude3-empty-reef-memory` (`interlude3.noKeys`)
-- `lair-split-up` (`theLairOfDagon.intro5.body`)
-- `interlude4-relic-heir` (`interlude4.rightfulKeeper`)
-- `maelstrom-stolen-boat` (`intoTheMaelstrom.intro.body`)
-- `epilogue-accelerator` (`epilogue.epilogue2.body`)
-- `epilogue-dawson-map` (`epilogue.flashback15.body`)
+## Verification
+All 68 story illustrations verified:
+- `node --test frontend/tests/innsmouthStoryArt.test.mjs`: 5/5 tests passed.
+- `npx vue-tsc --noEmit`: 0 errors.
+- WebP 1536×1024 landscape, zero missing assets across all scenarios and interludes.
 
 Common style prompt:
 > Atmospheric 1920s period production still, lightly painted realistic cinematic illustration with sharp deep focus, clear silhouettes, rich textures, deep shadows, and strong local contrast, readable at 280 px width. Clear air, no image blur, no blooming highlights, no text (unless explicitly requested), no borders, no graphic overlays, no icons, no card templates.

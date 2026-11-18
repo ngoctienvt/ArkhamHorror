@@ -1,9 +1,13 @@
 import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
 import test from 'node:test'
 import { fileURLToPath, URL } from 'node:url'
 
 import { createServer } from 'vite'
+import { createPinia } from 'pinia'
+import { createSSRApp, h } from 'vue'
 import { createI18n } from 'vue-i18n'
+import { renderToString } from 'vue/server-renderer'
 
 /* Icons are written into locale JSON as `{elderThing}`, but that is also
 vue-i18n's syntax for a named interpolation — with no such parameter supplied it
@@ -34,6 +38,43 @@ async function loadModules(t) {
 function translator(messages) {
   return createI18n({ legacy: false, locale: 'en', warnHtmlMessage: false, messages: { en: messages } }).global.t
 }
+
+test('Spreading Flames setup renders all nine encounter icons from the configured asset host', async (t) => {
+  const previousStorage = globalThis.localStorage
+  globalThis.localStorage = { getItem: (key) => key === 'language' ? 'vi' : null }
+  t.after(() => { globalThis.localStorage = previousStorage })
+
+  const server = await createServer({
+    root: fileURLToPath(new URL('..', import.meta.url)),
+    appType: 'custom',
+    logLevel: 'silent',
+    server: { middlewareMode: true, hmr: false },
+  })
+  t.after(() => server.close())
+  const [{ default: FormattedEntry }, { useSiteSettingsStore }] = await Promise.all([
+    server.ssrLoadModule('/src/arkham/components/FormattedEntry.vue'),
+    server.ssrLoadModule('/src/stores/site_settings.ts'),
+  ])
+  const { setup: { gatherSets } } = JSON.parse(readFileSync(
+    new URL('../src/locales/vi/brethrenOfAsh/scenarios/spreadingFlames.json', import.meta.url), 'utf8',
+  ))
+  const filenames = [
+    'spreading-flames', 'ashen-pilgrims', 'bystanders', 'cosmic-evils', 'eldritch-lore',
+    'fire', 'hallucinations', 'mad-science', 'miskatonic-university',
+  ]
+
+  for (const assetHost of ['https://assets.arkhamhorror.app', '']) {
+    const pinia = createPinia()
+    const app = createSSRApp(() => h(FormattedEntry, {
+      entry: { tag: 'I18nEntry', key: 'gatherSets', variables: {} },
+    }))
+    app.use(pinia).use(createI18n({ legacy: false, locale: 'vi', warnHtmlMessage: false, messages: { vi: { gatherSets } } }))
+    useSiteSettingsStore(pinia).assetHost = assetHost
+    const rendered = await renderToString(app)
+    const urls = [...rendered.matchAll(/<img src='([^']+)'/g)].map((match) => match[1])
+    assert.deepEqual(urls, filenames.map((name) => `${assetHost}/img/arkham/encounter-sets/${name}.png`))
+  }
+})
 
 test('a plain icon placeholder survives translation and renders', async (t) => {
   const { escapeIconPlaceholders, formatContent } = await loadModules(t)

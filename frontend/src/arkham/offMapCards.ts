@@ -28,6 +28,7 @@ export interface OffMapGroup {
 type Placed = { placement?: { tag: string; contents?: unknown } | null }
 
 type LocationLike = {
+  cardCode?: string
   label?: string
   placement?: { tag: string } | null
   connectedLocations?: readonly string[]
@@ -43,7 +44,13 @@ export function isolatedLocationIds(locations: Record<string, LocationLike> | un
   const placed = Object.entries(locations ?? {}).filter(([, l]) => l.placement == null || l.placement.tag === 'AttachedToLocation')
   const reached = new Set(placed.flatMap(([, l]) => l.connectedLocations ?? []))
   return placed
-    .filter(([id, l]) => l.label && l.label !== 'cosmos' && !cells.has(l.label) && !(l.connectedLocations?.length) && !reached.has(id))
+    .filter(([id, l]) => {
+      if (!l.label || l.connectedLocations?.length || reached.has(id)) return false
+      // These five duplicate cards are a resource arrangement, explicitly not physical places.
+      const arrangement = l.cardCode?.replace(/^c/, '').startsWith(':the-strange-case-of-dr-jekyll-and-mr-hyde:')
+        && /^arrangement[1-5]$/.test(l.label)
+      return arrangement || (l.label !== 'cosmos' && !cells.has(l.label))
+    })
     .map(([id]) => id)
 }
 

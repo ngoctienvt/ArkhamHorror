@@ -1,10 +1,10 @@
 # Illustration coverage
 
-The tables record the intro and resolution illustrations available in the game. Each row links an illustration to the localized narrative passages that use it. [Runtime map](../../frontend/src/arkham/lateCampaignStoryArt.ts).
+The tables record the intro, interlude, and resolution illustrations available in the game. Each row links an illustration to the localized narrative passages that use it. [Runtime map](../../frontend/src/arkham/lateCampaignStoryArt.ts).
 
 | Campaign | Images integrated | Passages mapped |
 | --- | ---: | ---: |
-| Edge of the Earth | 39 | 44 |
+| Edge of the Earth | 76 | 114 |
 | The Scarlet Keys | 90 | 100 |
 | The Feast of Hemlock Vale | 97 | 101 |
 | The Drowned City | 53 | 56 |
@@ -52,6 +52,17 @@ The tables record the intro and resolution illustrations available in the game. 
 | heart-of-madness-study-seals | `theHeartOfMadness.part1.part1Intro.body` | Integrated |
 | heart-madness-kensler-murals | `theHeartOfMadness.part2.intro2.body` | Integrated |
 | heart-madness-murals-alone | `theHeartOfMadness.part2.intro3.body` | Integrated |
+| edge-testimony-warning | `prologue.body` | Integrated |
+| restful-night-council | `interlude1.restfulNight1.body` | Integrated |
+| restful-night-sleepless | `interlude1.restfulNight2.body`, `interlude2.endlessNight2.body` | Integrated |
+| endless-night-silent-camp | `interlude2.endlessNight1.body` | Integrated |
+| final-night-underground-camp | `interlude3.finalNight1.body`, `interlude3.finalNight2.body` | Integrated |
+| fatal-mirage-door-reappears | `interlude2.endlessNight3.body`, `interlude3.finalNight3.body` | Integrated |
+| fatal-mirage-hall-dissolves | `interlude1.restfulNight3.body`, `interlude2.endlessNight4.body`, `interlude3.finalNight4.body` | Integrated |
+
+The expedition visits cover 58 localized entries across the three interludes. Each companion has a visit and a memorial illustration. Distinct scenes include Kensler dissecting an Elder Thing specimen, Kensler sharing the tome, Claypool spotting the shadow in the ice, and Ellsworth scouting the forked passage. A secondary paragraph in the same reading uses the illustration from that reading.
+
+The nine Fatal Mirage Memory story faces (`08575b`–`08583b`) have separate illustrations alongside their printed cards. The spotlight reveals them after the flip. [Story-face mapping](../../frontend/src/arkham/storyCardRead.ts).
 
 ## The Scarlet Keys
 

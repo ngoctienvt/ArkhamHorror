@@ -6,8 +6,15 @@ import ts from 'typescript'
 // narration.ts imports types only, so it loads here without the Vue toolchain.
 const source = readFileSync(new URL('../src/arkham/narration.ts', import.meta.url), 'utf8')
 const js = ts.transpile(source, { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 })
-const { entryKeys, storyKeysInPlay, narrationTracks, defaultNarrationLanguage, readNarrationLanguage } =
-  await import('data:text/javascript;base64,' + Buffer.from(js).toString('base64'))
+const {
+  entryKeys,
+  storyKeysInPlay,
+  narrationTracks,
+  defaultNarrationLanguage,
+  readNarrationLanguage,
+  cardNarrationKeys,
+  cardNarrationTrack,
+} = await import('data:text/javascript;base64,' + Buffer.from(js).toString('base64'))
 
 const i18n = (key) => ({ tag: 'I18nEntry', key, variables: {} })
 const read = (...body) => ({ tag: 'Read', flavorText: { title: null, body }, readChoices: { contents: [] }, readCards: null })
@@ -57,4 +64,20 @@ test('every manifest entry has its mp3 on disk', () => {
       assert.ok(existsSync(new URL(`${lang}/${key}.mp3`, root)), `${lang}/${key}.mp3 missing`)
     }
   }
+})
+
+test('cardNarrationKeys resolves front and back variations with or without c prefix', () => {
+  assert.deepEqual(cardNarrationKeys('c01108', 'a'), ['cards.01108', 'cards.01108a', 'cards.01108.a'])
+  assert.deepEqual(cardNarrationKeys('01108', 'b'), ['cards.01108b', 'cards.01108.b', 'cards.01108'])
+  assert.deepEqual(cardNarrationKeys('03047a', 'b'), ['cards.03047b', 'cards.03047.b', 'cards.03047a.b'])
+  assert.deepEqual(cardNarrationKeys('03076b', null), ['cards.03076b', 'cards.03076ba', 'cards.03076bb', 'cards.03076b.a', 'cards.03076b.b'])
+})
+
+test('cardNarrationTrack returns track when key matches manifest', () => {
+  const manifest = { version: 1, languages: { vi: { 'cards.01108': 'h1', 'cards.01108b': 'h2' } } }
+  const trackFront = cardNarrationTrack('01108', 'a', manifest, 'vi', '/n')
+  assert.deepEqual(trackFront, { key: 'cards.01108', url: '/n/vi/cards.01108.mp3?v=h1' })
+  const trackBack = cardNarrationTrack('c01108', 'b', manifest, 'vi', '/n')
+  assert.deepEqual(trackBack, { key: 'cards.01108b', url: '/n/vi/cards.01108b.mp3?v=h2' })
+  assert.equal(cardNarrationTrack('99999', 'a', manifest, 'vi', '/n'), null)
 })

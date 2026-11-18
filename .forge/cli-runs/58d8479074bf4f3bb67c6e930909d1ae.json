@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "route": "codex-cli",
+  "requestedModel": "codex-image_gen",
+  "options": {
+    "tool": "image_gen"
+  },
+  "promptSha256": "dfa78c4ceca4bc424ebe7a8e4fed00a0b09d3b2509312e62efc0892d496ca9d1",
+  "fingerprint": "fa7051eed06639ed915329f84dbd3a448d88fe3368cdc27fe4e3ddcd30c512f1",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "2026-10-06",
+    "items": [],
+    "basis": "subscription quota call: no per-call USD price; counted by call caps"
+  },
+  "consent": {
+    "provider": "openai",
+    "model": "codex-image_gen",
+    "calls": 1,
+    "estimateUsd": 0.0,
+    "route": "codex-cli",
+    "quota": true,
+    "account": "the user's own Codex sign-in (ChatGPT)",
+    "note": "uses the subscription quota of that sign-in, never API credit"
+  },
+  "artSource": "host_image",
+  "execution": "execute",
+  "status": "submit_unknown",
+  "outputDir": "../../art-src/the-innsmouth-conspiracy/gen/pit-of-despair-caverns-v1",
+  "receipt": {
+    "startedAt": "2026-11-13T05:07:56.972Z",
+    "submittedAt": "2026-11-13T05:07:56.980Z",
+    "completedAt": "2026-11-13T05:07:57.046Z",
+    "wallMs": 74,
+    "providerMs": 47,
+    "attempt": 1,
+    "purpose": "route_media image",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "PROVIDER_ERROR"
+  },
+  "ledger": {
+    "projectDir": "../..",
+    "reservationId": "505446836fa047e099e54465c3133cc6",
+    "status": "unknown"
+  },
+  "cliRun": {
+    "tool": "codex",
+    "runId": "58d8479074bf4f3bb67c6e930909d1ae",
+    "cwd": "<tmp>/forge-cli-58d8479074bf-e7f1d719",
+    "startedAt": "2026-11-13T05:07:56.972Z",
+    "version": "0.147.0",
+    "versionText": "codex-cli 0.147.0",
+    "recipe": "codex-exec-imagegen/1",
+    "home": "CODEX_HOME",
+    "verifiedBefore": false
+  },
+  "error": {
+    "code": "PROVIDER_ERROR",
+    "message": "the Codex CLI exited with an error (WARNING: failed to clean up stale arg0 temp dirs: Access is denied. (os error 5) WARNING: proceeding, even though we could not create PATH aliases: Access is de)"
+  },
+  "errorType": "CliMediaError"
+}

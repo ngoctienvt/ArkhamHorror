@@ -30,43 +30,43 @@ TRANSLATIONS_CARCOSA_ACTS_AGENDAS = {
         "flavor": "Bạn tự véo mình xem có phải đang mơ hay không, và quả nhiên, da thịt nhói đau ửng đỏ. Bạn hít vài hơi thật sâu và cố gắng suy nghĩ thấu đáo. Dù điều gì đang diễn ra, bạn phải khám phá nhà hát để tìm ra sự thật của vấn đề.",
         "back_name": "Cú Cúi Chào Cuối Cùng",
         "back_text": "Chọn ngẫu nhiên một trong các địa điểm để riêng. Đưa địa điểm đó vào màn chơi, và spawn kẻ địch The Man in the Pallid Mask đang để riêng tại địa điểm đó <i>(thay vì địa điểm spawn thông thường của hắn)</i>.\nAdvance sang một trong 3 bản sao của act 2a, chọn ngẫu nhiên. Loại bỏ 2 bản sao act 2a còn lại khỏi trò chơi mà không nhìn vào chúng.",
-        "back_flavor": "Một bóng đen lướt qua bức tường bên cạnh bạn, và tim bạn như muốn nhảy ra khỏi lồng ngực. Bạn quay lại, một bóng người vừa thoáng vụt khỏi tầm mắt. Hoặc là tâm trí bạn đang giở trò, hoặc là có ai đó khác trong nhà hát.\nBạn bám theo hướng bóng đen, rẽ qua một góc gần đó. Ở cuối hành lang, hắn ta đứng đợi bạn: một người đàn ông trong bộ vest đen lịch lãm, khuôn mặt che khuất bởi chiếc mặt nạ tái nhợt. Dù trang phục đã thay đổi, bạn lập tức nhận ra hắn là diễn viên đóng vai Kẻ Xa Lạ (Stranger) - một trong những nhân vật của <u>The King in Yellow</u>. Hắn quay người biến mất qua khung cửa mở, như muốn thách thức bạn đuổi theo.",
+        "back_flavor": "Một bóng đen lướt qua bức tường bên cạnh bạn, và tim bạn như muốn nhảy ra khỏi lồng ngực. Bạn quay lại, một bóng người vừa thoáng vụt khỏi tầm mắt. Hoặc là tâm trí bạn đang giở trò, hoặc là có ai đó khác trong nhà hát.\nBạn bám theo hướng bóng đen, rẽ qua một góc gần đó. Ở cuối hành lang, hắn ta đứng đợi bạn: một người đàn ông trong bộ vest đen lịch lãm, khuôn mặt che khuất bởi chiếc mặt nạ tái nhợt. Dù trang phục đã thay đổi, bạn lập tức nhận ra hắn là diễn viên đóng vai Kẻ Lạ - một trong những nhân vật của <u>The King in Yellow</u>. Hắn quay người biến mất qua khung cửa mở, như muốn thách thức bạn đuổi theo.",
     },
     # 03047a
     "03047a": {
-        "name": "Kẻ Xa Lạ",
+        "name": "Kẻ Lạ",
         "text": "<b>Objective</b> - Khi The Man in the Pallid Mask chuẩn bị bị discard khỏi màn chơi, advance.",
-        "flavor": "Kẻ Xa Lạ bí ẩn từ <u>The King in Yellow</u> có thể biết điều gì đó về những chuyện đã xảy ra trong giờ giải lao. Bạn phải tìm và đối chất với hắn nếu muốn khám phá ra sự thật.",
+        "flavor": "Kẻ Lạ bí ẩn từ <u>The King in Yellow</u> có thể biết điều gì đó về những chuyện đã xảy ra trong giờ giải lao. Bạn phải tìm và đối chất với hắn nếu muốn khám phá ra sự thật.",
         "back_name": "Thành Phố Rực Lửa",
         "back_text": "Thay vì discard The Man in the Pallid Mask, di chuyển hắn đến Lobby.\nThêm 2 token [cultist] vào túi hỗn mang.\nĐặt 1 horror lên Theatre. Cho đến cuối màn chơi, horror trên các địa điểm tượng trưng cho ngọn lửa lan tràn, và mỗi địa điểm có horror nhận: \"<b>Forced</b> - Sau khi bạn đi vào địa điểm này hoặc kết thúc lượt của bạn tại địa điểm này: Kiểm tra [agility] (3). Nếu thất bại, nhận 1 sát thương. (Giới hạn một lần mỗi vòng.)\"\nGiữ thẻ bài này cạnh chồng bài act để nhắc nhở, và advance sang act 3a.",
-        "back_flavor": "Khi đối mặt với Kẻ Xa Lạ, bạn có cảm giác hắn đang nở nụ cười giễu cợt dưới chiếc mặt nạ tái nhợt vô cảm. \"Mọi người đâu hết rồi?\" bạn hỏi, nhưng hắn không đáp. \"Chuyện quái gì đang xảy ra thế này?\" Hắn vẫn giữ im lặng và lùi bước khi bạn tiến lại gần, cho đến khi lưng hắn chạm vào góc phòng. Bạn cảm nhận hơi nóng dữ dội phía sau lưng, và khi ngoảnh lại, bạn thấy ngọn lửa đang gầm rú bao trùm khắp khán phòng. Bạn quay lại nhìn Kẻ Xa Lạ, nhưng hắn đã biến mất tăm.",
+        "back_flavor": "Khi đối mặt với Kẻ Lạ, bạn có cảm giác hắn đang nở nụ cười giễu cợt dưới chiếc mặt nạ tái nhợt vô cảm. \"Mọi người đâu hết rồi?\" bạn hỏi, nhưng hắn không đáp. \"Chuyện quái gì đang xảy ra thế này?\" Hắn vẫn giữ im lặng và lùi bước khi bạn tiến lại gần, cho đến khi lưng hắn chạm vào góc phòng. Bạn cảm nhận hơi nóng dữ dội phía sau lưng, và khi ngoảnh lại, bạn thấy ngọn lửa đang gầm rú bao trùm khắp khán phòng. Bạn quay lại nhìn Kẻ Lạ, nhưng hắn đã biến mất tăm.",
     },
     # 03047b
     "03047b": {
-        "name": "Kẻ Xa Lạ",
+        "name": "Kẻ Lạ",
         "text": "<b>Objective</b> - Khi The Man in the Pallid Mask chuẩn bị bị discard khỏi màn chơi, advance.",
-        "flavor": "Kẻ Xa Lạ bí ẩn từ <u>The King in Yellow</u> có thể biết điều gì đó về những chuyện đã xảy ra trong giờ giải lao. Bạn phải tìm và đối chất với hắn nếu muốn khám phá ra sự thật.",
+        "flavor": "Kẻ Lạ bí ẩn từ <u>The King in Yellow</u> có thể biết điều gì đó về những chuyện đã xảy ra trong giờ giải lao. Bạn phải tìm và đối chất với hắn nếu muốn khám phá ra sự thật.",
         "back_name": "Con Đường Thuộc Về Ta",
         "back_text": "Thay vì discard The Man in the Pallid Mask, di chuyển hắn đến Lobby.\nThêm 2 token [tablet] vào túi hỗn mang.\nĐặt 1 horror lên địa điểm mà The Man in the Pallid Mask vừa bị di chuyển khỏi đó. Cho đến cuối màn chơi, horror trên các địa điểm tượng trưng cho chất dịch nhầy lan tràn, và mỗi địa điểm có horror nhận: \"<b>Forced</b> - Sau khi bạn rời khỏi địa điểm này: Kiểm tra [agility] (4). Nếu thất bại, nhận 1 horror và 1 sát thương.\"\nGiữ thẻ bài này cạnh chồng bài act để nhắc nhở, và advance sang act 3a.",
-        "back_flavor": "Khi đối mặt với Kẻ Xa Lạ, bạn có cảm giác hắn đang nở nụ cười giễu cợt dưới chiếc mặt nạ tái nhợt vô cảm. \"Mọi người đâu hết rồi?\" bạn hỏi, nhưng hắn không đáp. \"Chuyện quái gì đang xảy ra thế này?\" Hắn vẫn giữ im lặng và lùi bước khi bạn tiến lại gần, cho đến khi lưng hắn chạm vào góc phòng. Không thể giải thích nổi, hắn tiếp tục lùi sâu hơn nữa, và cơ thể hắn hòa tan thẳng vào bức tường phía sau. Phun trào ra từ chính nơi hắn vừa đứng là một khối dịch nhầy quánh đặc đang không ngừng phình to.",
+        "back_flavor": "Khi đối mặt với Kẻ Lạ, bạn có cảm giác hắn đang nở nụ cười giễu cợt dưới chiếc mặt nạ tái nhợt vô cảm. \"Mọi người đâu hết rồi?\" bạn hỏi, nhưng hắn không đáp. \"Chuyện quái gì đang xảy ra thế này?\" Hắn vẫn giữ im lặng và lùi bước khi bạn tiến lại gần, cho đến khi lưng hắn chạm vào góc phòng. Không thể giải thích nổi, hắn tiếp tục lùi sâu hơn nữa, và cơ thể hắn hòa tan thẳng vào bức tường phía sau. Phun trào ra từ chính nơi hắn vừa đứng là một khối dịch nhầy quánh đặc đang không ngừng phình to.",
     },
     # 03047c
     "03047c": {
-        "name": "Kẻ Xa Lạ",
+        "name": "Kẻ Lạ",
         "text": "<b>Objective</b> - Khi The Man in the Pallid Mask chuẩn bị bị discard khỏi màn chơi, advance.",
-        "flavor": "Kẻ Xa Lạ bí ẩn từ <u>The King in Yellow</u> có thể biết điều gì đó về những chuyện đã xảy ra trong giờ giải lao. Bạn phải tìm và đối chất với hắn nếu muốn khám phá ra sự thật.",
+        "flavor": "Kẻ Lạ bí ẩn từ <u>The King in Yellow</u> có thể biết điều gì đó về những chuyện đã xảy ra trong giờ giải lao. Bạn phải tìm và đối chất với hắn nếu muốn khám phá ra sự thật.",
         "back_name": "Bờ Hồ Hali",
         "back_text": "Thay vì discard The Man in the Pallid Mask, di chuyển hắn đến Lobby.\nThêm 2 token [elder_thing] vào túi hỗn mang.\nĐặt 1 horror lên mỗi địa điểm [[Private]]. Cho đến cuối màn chơi, horror trên các địa điểm tượng trưng cho dòng nước ngập, và mỗi địa điểm có horror nhận: \"<b>Forced</b> - Khi bạn chuẩn bị rời khỏi địa điểm này: Kiểm tra [agility] (2). Nếu thất bại, nhận 1 sát thương và hủy bỏ hiệu ứng của hành động di chuyển đó. (Giới hạn một lần mỗi vòng.)\"\nGiữ thẻ bài này cạnh chồng bài act để nhắc nhở, và advance sang act 3a.",
-        "back_flavor": "Khi đối mặt với Kẻ Xa Lạ, bạn có cảm giác hắn đang nở nụ cười giễu cợt dưới chiếc mặt nạ tái nhợt vô cảm. \"Mọi người đâu hết rồi?\" bạn hỏi, nhưng hắn không đáp. \"Chuyện quái gì đang xảy ra thế này?\" Hắn vẫn giữ im lặng và lùi bước khi bạn tiến lại gần, cho đến khi lưng hắn chạm vào góc phòng. Bạn bàng hoàng quay ngoắt lại khi các ô cửa sổ vỡ vụn, và một trận đại hồng thủy nước mặn buốt giá tràn ngập căn phòng. Bạn quay phắt lại tìm Kẻ Xa Lạ, nhưng hắn đã biến mất tăm.",
+        "back_flavor": "Khi đối mặt với Kẻ Lạ, bạn có cảm giác hắn đang nở nụ cười giễu cợt dưới chiếc mặt nạ tái nhợt vô cảm. \"Mọi người đâu hết rồi?\" bạn hỏi, nhưng hắn không đáp. \"Chuyện quái gì đang xảy ra thế này?\" Hắn vẫn giữ im lặng và lùi bước khi bạn tiến lại gần, cho đến khi lưng hắn chạm vào góc phòng. Bạn bàng hoàng quay ngoắt lại khi các ô cửa sổ vỡ vụn, và một trận đại hồng thủy nước mặn buốt giá tràn ngập căn phòng. Bạn quay phắt lại tìm Kẻ Lạ, nhưng hắn đã biến mất tăm.",
     },
     # 03048
     "03048": {
         "name": "Hạ Màn",
         "text": "Khi The Man in the Pallid Mask không ở trong màn chơi, Lobby nhận: \"[action]: <b>Resign.</b>\"\n<b>Forced</b> - Vào cuối vòng chơi: Đặt 1 horror lên mỗi địa điểm chưa có horror mà được kết nối với một địa điểm có horror.\n<b>Objective</b> - Nếu mỗi điều tra viên chưa bị đánh bại đã resign, advance.",
-        "flavor": "Kẻ Xa Lạ hẳn phải biết đường thoát. Bạn phải bám theo hắn!",
+        "flavor": "Kẻ Lạ hẳn phải biết đường thoát. Bạn phải bám theo hắn!",
         "back_name": "Thoát Khỏi Nhà Hát",
         "back_text": "Các điều tra viên phải quyết định (chọn một):\n- Chúng ta phải báo cảnh sát về những gì đang xảy ra! <b>(→R1)</b>\n- Cảnh sát sẽ chẳng tin đâu. Chúng ta phải tự mình làm sáng tỏ bí ẩn này. <b>(→R2)</b>",
-        "back_flavor": "Kẻ Xa Lạ khẽ cúi đầu chào khi bước qua lối vào chính của sảnh, mở ra một cánh cửa kính vốn không hề hiện diện ở đó khoảnh khắc trước. Một mớ âm thanh hỗn loạn chói tai bất thình lình bùng nổ quanh bạn, và bạn lo sợ rằng tòa nhà chỉ còn vài giây ngắn ngủi trước khi sụp đổ hoàn toàn. Bạn cắm đầu tháo chạy, tông mạnh qua cánh cửa trước và bỏ lại nhà hát hoang tàn sau lưng.\nCách đó vài dãy nhà, bạn dừng lại nghỉ chân giây lát và ngẫm nghĩ về những gì mình vừa chứng kiến...",
+        "back_flavor": "Kẻ Lạ khẽ cúi đầu chào khi bước qua lối vào chính của sảnh, mở ra một cánh cửa kính vốn không hề hiện diện ở đó khoảnh khắc trước. Một mớ âm thanh hỗn loạn chói tai bất thình lình bùng nổ quanh bạn, và bạn lo sợ rằng tòa nhà chỉ còn vài giây ngắn ngủi trước khi sụp đổ hoàn toàn. Bạn cắm đầu tháo chạy, tông mạnh qua cánh cửa trước và bỏ lại nhà hát hoang tàn sau lưng.\nCách đó vài dãy nhà, bạn dừng lại nghỉ chân giây lát và ngẫm nghĩ về những gì mình vừa chứng kiến...",
     },
     # 03062
     "03062": {
@@ -147,7 +147,7 @@ TRANSLATIONS_CARCOSA_ACTS_AGENDAS = {
         "flavor": "\"Tòa nhà này rất cổ kính, và chứa đầy đủ mọi kiểu lối đi bí mật,\" Mr. Peabody giải thích. \"Có lẽ một trong số chúng sẽ dẫn tới thư viện mà bạn đang tìm kiếm đấy.\"",
         "back_name": "Chiếc Khóa Cài",
         "back_text": "Các điều tra viên phải quyết định (chọn một):\n- Đây là một phát hiện quan trọng! Chúng ta nên mang nó theo bên mình. <b>(→R1)</b>.\n- Nó chỉ là món đồ trang sức ngớ ngẩn thôi, và ăn trộm của Hội Lịch Sử là sai trái. Hãy để nó lại. <b>(→R2)</b>",
-        "back_flavor": "Khi nghiên cứu thư viện ẩn giấu, bạn tìm thấy một vài mẩu thông tin đáng chú ý. Cũng giống như buổi diễn gần đây, buổi công diễn trước đó của <i>The King in Yellow</i> đã đến Arkham từ hải ngoại, và được biểu diễn bởi một đoàn kịch Pháp. Bạn không nhận ra bất kỳ cái tên nào của các thành viên trong dàn diễn viên, và dĩ nhiên người diễn viên đóng vai Kẻ Xa Lạ (Stranger) là ẩn danh. Tuy nhiên, dường như có một thành viên của Hội Lịch Sử đã làm sẵn một phần việc cho bạn; có vài mẩu báo cũ được gom lại cùng với thông tin về vở kịch. Các dòng tít bao gồm: Nhà Hát Cedar Đóng Cửa Do Hỏa Hoạn, Các Chuyên Gia Hoang Mang Trước Những Trận Lũ Bất Thường, và những điều tương tự. Ẩn giấu giữa những thông tin này, bạn cũng tìm thấy một vật thể kỳ lạ - Một chiếc khóa cài bằng đá mã não mang dòng chữ khắc xa lạ.",
+        "back_flavor": "Khi nghiên cứu thư viện ẩn giấu, bạn tìm thấy một vài mẩu thông tin đáng chú ý. Cũng giống như buổi diễn gần đây, buổi công diễn trước đó của <i>The King in Yellow</i> đã đến Arkham từ hải ngoại, và được biểu diễn bởi một đoàn kịch Pháp. Bạn không nhận ra bất kỳ cái tên nào của các thành viên trong dàn diễn viên, và dĩ nhiên người diễn viên đóng vai Kẻ Lạ là ẩn danh. Tuy nhiên, dường như có một thành viên của Hội Lịch Sử đã làm sẵn một phần việc cho bạn; có vài mẩu báo cũ được gom lại cùng với thông tin về vở kịch. Các dòng tít bao gồm: Nhà Hát Cedar Đóng Cửa Do Hỏa Hoạn, Các Chuyên Gia Hoang Mang Trước Những Trận Lũ Bất Thường, và những điều tương tự. Ẩn giấu giữa những thông tin này, bạn cũng tìm thấy một vật thể kỳ lạ - Một chiếc khóa cài bằng đá mã não mang dòng chữ khắc xa lạ.",
     },
     # 03160
     "03160": {
@@ -174,7 +174,7 @@ TRANSLATIONS_CARCOSA_ACTS_AGENDAS = {
         "flavor": "Chạy trốn đi.\nChạy trốn khi bạn vẫn còn có thể.",
         "back_name": "Mặt Nạ, Mặt Nạ, Mặt Nạ",
         "back_text": "Mỗi điều tra viên chưa resign bị đánh bại. <i>(Nếu có bất kỳ điều tra viên nào đã resign, những điều tra viên đó có thể lập tức advance sang act 4b.)</i>",
-        "back_flavor": "Những bức tường khép chặt lại. Tầm nhìn của bạn nhòe đi. Tiếng rít the thé đập liên hồi vào màng nhĩ bạn. Bạn bị tóm chặt và không thể chống cự. Bạn kêu cứu nhưng chẳng một ai đến cứu giúp bạn.\nBạn tìm kiếm một lối thoát thân, nhưng thay vào đó, bạn chỉ thấy chiếc mặt nạ tái nhợt của Kẻ Xa Lạ đang nhìn trừng trừng vào bạn. Quanh mọi khúc quanh, đằng sau mọi cánh cửa, nhìn chằm chằm vào bạn qua mọi khung cửa sổ. Chiếc mặt nạ đó… Chiếc mặt nạ chết tiệt đó…\n\n\nHay là… Có lẽ chính bạn mới là người đang đeo chiếc mặt nạ đó…?",
+        "back_flavor": "Những bức tường khép chặt lại. Tầm nhìn của bạn nhòe đi. Tiếng rít the thé đập liên hồi vào màng nhĩ bạn. Bạn bị tóm chặt và không thể chống cự. Bạn kêu cứu nhưng chẳng một ai đến cứu giúp bạn.\nBạn tìm kiếm một lối thoát thân, nhưng thay vào đó, bạn chỉ thấy chiếc mặt nạ tái nhợt của Kẻ Lạ đang nhìn trừng trừng vào bạn. Quanh mọi khúc quanh, đằng sau mọi cánh cửa, nhìn chằm chằm vào bạn qua mọi khung cửa sổ. Chiếc mặt nạ đó… Chiếc mặt nạ chết tiệt đó…\n\n\nHay là… Có lẽ chính bạn mới là người đang đeo chiếc mặt nạ đó…?",
     },
     # 03163
     "03163": {
@@ -306,10 +306,10 @@ TRANSLATIONS_CARCOSA_ACTS_AGENDAS = {
     "03243": {
         "name": "Xuyên Qua Hầm Mộ",
         "text": "<b>Objective</b> - Tìm kiếm The Man in the Pallid Mask. Hắn đang ở đâu đó trong Hầm Mộ. (Không advance cho đến khi bạn được chỉ dẫn.)",
-        "flavor": "Ở cuối đường hầm dài cạnh bạn, Kẻ Xa Lạ bước qua màn đêm, chiếc mặt nạ tái nhợt của hắn lấp lánh dưới ánh nến. \"Đợi đã!\" bạn gọi lớn. Hắn liếc nhìn về phía bạn trước khi biến mất vào bóng tối. Một lần nữa, bạn buộc phải lần theo dấu vết của hắn để tìm kiếm câu trả lời…",
-        "back_name": "Bóng Ma Của Kẻ Xa Lạ",
+        "flavor": "Ở cuối đường hầm dài cạnh bạn, Kẻ Lạ bước qua màn đêm, chiếc mặt nạ tái nhợt của hắn lấp lánh dưới ánh nến. \"Đợi đã!\" bạn gọi lớn. Hắn liếc nhìn về phía bạn trước khi biến mất vào bóng tối. Một lần nữa, bạn buộc phải lần theo dấu vết của hắn để tìm kiếm câu trả lời…",
+        "back_name": "Bóng Ma Của Kẻ Lạ",
         "back_text": "Spawn thẻ bài điểm yếu The Man in the Pallid Mask đang để riêng tại Tomb of Shadows <i>(thay vì địa điểm spawn thông thường của hắn)</i>.\nKiểm tra Campaign Log. Nếu Ishimaru Haruko không nằm trong danh sách \"VIPs Slain,\" tìm kiếm Ishimaru Haruko <i>(Just Skin and Bones)</i> trong bộ sưu tập và spawn ả tại địa điểm bắt đầu.",
-        "back_flavor": "Những hàng đầu lâu va lập cập hàm răng không ngừng nghỉ khi bạn bước qua một cổng vòm đá hẹp, đi vào một căn phòng tròn được soi sáng bởi ánh lửa. Ở trung tâm lăng mộ, Kẻ Xa Lạ đang đứng đó, nhìn đăm đăm vào ngọn lửa bập bùng. Dọc theo bức tường, những chiếc bóng nhảy múa và vặn xoắn theo từng đợt bập bùng của ngọn lửa. Kẻ Xa Lạ quay lại đối mặt với bạn, và bóng của chính hắn loang rộng khắp bức tường. Nơi đáng lẽ là hai cánh tay của chiếc bóng, những hình thù xúc tu trồi ra, bao bọc những bức tường trong màn đêm. Hắn giơ hai tay về phía bức tường, như thể đang cố gắng chỉ cho bạn thấy điều gì đó.",
+        "back_flavor": "Những hàng đầu lâu va lập cập hàm răng không ngừng nghỉ khi bạn bước qua một cổng vòm đá hẹp, đi vào một căn phòng tròn được soi sáng bởi ánh lửa. Ở trung tâm lăng mộ, Kẻ Lạ đang đứng đó, nhìn đăm đăm vào ngọn lửa bập bùng. Dọc theo bức tường, những chiếc bóng nhảy múa và vặn xoắn theo từng đợt bập bùng của ngọn lửa. Kẻ Lạ quay lại đối mặt với bạn, và bóng của chính hắn loang rộng khắp bức tường. Nơi đáng lẽ là hai cánh tay của chiếc bóng, những hình thù xúc tu trồi ra, bao bọc những bức tường trong màn đêm. Hắn giơ hai tay về phía bức tường, như thể đang cố gắng chỉ cho bạn thấy điều gì đó.",
     },
     # 03244
     "03244": {
@@ -317,26 +317,26 @@ TRANSLATIONS_CARCOSA_ACTS_AGENDAS = {
         "text": "<b>Objective</b> - <i>\"Hãy nói cho chúng tôi biết làm thế nào để ngăn con đường mở ra!\"</i> Nếu The Man in the Pallid Mask bị đánh bại, advance.\n<b>Objective</b> - <i>\"Hắn đang cố cho chúng ta thấy điều gì?\"</i> Các điều tra viên tại Tomb of Shadows có thể cùng nhau chi trả số lượng manh mối cần thiết để advance.",
         "flavor": "Những chiếc bóng in trên bức tường xương cốt chuyển dịch thành hình dạng của nhiều nhân vật, diễn lại một màn nhại lại rùng rợn của vở kịch <u>The King in Yellow</u>.",
         "back_name": "Phía Sau Mặt Nạ",
-        "back_text": "<b>Nếu The Man in the Pallid Mask bị đánh bại:</b>\n<blockquote>Kẻ Xa Lạ khuỵu một đầu gối xuống, rõ ràng đã bị thương. Các khớp ngón tay bạn trắng bệch vì giận dữ, và bạn hét lớn: \"Chúng tao biết về Carcosa và Hastur rồi. Bây giờ hãy nói cho chúng tao biết làm thế nào để ngăn chặn sự điên rồ này!\" Kẻ Xa Lạ cắm những ngón tay vào sàn đá lạnh lẽo, và hầm mộ rung chuyển dữ dội…</blockquote>\nGhi dấu hai <b>Conviction</b> vào Campaign Log của bạn.\nLoại bỏ The Man in the Pallid Mask khỏi trò chơi.\nAdvance sang Act 3a - The Way Out.\n<hr><b>Nếu bạn đã chi trả manh mối để advance:</b>\n<blockquote>Nhận thấy Kẻ Xa Lạ không gây ra mối nguy hiểm tức thời nào cho bạn, bạn xem xét môi trường xung quanh và những chiếc bóng kỳ lạ lại xoay chuyển và biến dạng một lần nữa, để lộ ra một sơ đồ kỳ dị…</blockquote>\nGhi dấu hai <b>Doubt</b> vào Campaign Log của bạn.\nLoại bỏ The Man in the Pallid Mask khỏi trò chơi.\nAdvance sang Act 3a - Leading the Way.",
+        "back_text": "<b>Nếu The Man in the Pallid Mask bị đánh bại:</b>\n<blockquote>Kẻ Lạ khuỵu một đầu gối xuống, rõ ràng đã bị thương. Các khớp ngón tay bạn trắng bệch vì giận dữ, và bạn hét lớn: \"Chúng tao biết về Carcosa và Hastur rồi. Bây giờ hãy nói cho chúng tao biết làm thế nào để ngăn chặn sự điên rồ này!\" Kẻ Lạ cắm những ngón tay vào sàn đá lạnh lẽo, và hầm mộ rung chuyển dữ dội…</blockquote>\nGhi dấu hai <b>Conviction</b> vào Campaign Log của bạn.\nLoại bỏ The Man in the Pallid Mask khỏi trò chơi.\nAdvance sang Act 3a - The Way Out.\n<hr><b>Nếu bạn đã chi trả manh mối để advance:</b>\n<blockquote>Nhận thấy Kẻ Lạ không gây ra mối nguy hiểm tức thời nào cho bạn, bạn xem xét môi trường xung quanh và những chiếc bóng kỳ lạ lại xoay chuyển và biến dạng một lần nữa, để lộ ra một sơ đồ kỳ dị…</blockquote>\nGhi dấu hai <b>Doubt</b> vào Campaign Log của bạn.\nLoại bỏ The Man in the Pallid Mask khỏi trò chơi.\nAdvance sang Act 3a - Leading the Way.",
         "back_flavor": "",
     },
     # 03245
     "03245": {
         "name": "Lối Ra Ngoài",
         "text": "<b>Forced</b> - Vào cuối vòng chơi, nếu The Gate to Hell đang trong màn chơi: Discard địa điểm ở xa The Gate to Hell nhất. Di chuyển mỗi điều tra viên và kẻ địch tại địa điểm đó sang một địa điểm kết nối và gây 2 sát thương lên mỗi người/kẻ địch đó.\n<b>Objective</b> - Nếu mỗi điều tra viên chưa bị đánh bại đang ở The Gate to Hell, advance.",
-        "flavor": "Xương cốt rơi lạo xạo xuống sàn, rung lắc rơi ra do những đợt chấn động và sụp đổ của hang động quanh bạn. Kẻ Xa Lạ chộp lấy một chiếc đầu lâu từ trong đống lửa ở giữa căn phòng rồi bỏ chạy.",
+        "flavor": "Xương cốt rơi lạo xạo xuống sàn, rung lắc rơi ra do những đợt chấn động và sụp đổ của hang động quanh bạn. Kẻ Lạ chộp lấy một chiếc đầu lâu từ trong đống lửa ở giữa căn phòng rồi bỏ chạy.",
         "back_name": "Hầm Mộ Sụp Đổ",
         "back_text": "<b>(→R1)</b>",
-        "back_flavor": "Hầm mộ ầm ầm rung chuyển và sụp đổ phía sau lưng khi bạn tìm đường tẩu thoát. Bạn có thể lần theo bóng của Kẻ Xa Lạ, bám sát từng bước chân của hắn để tìm đường xuyên qua những lối đi như mê cung. Bạn bước qua ngưỡng cửa ra vào của hầm mộ, một làn sóng gạch đá vụn và mảnh xương vụn ào ạt ập theo sau lưng. Tiếng gầm rú đinh tai nhức óc của đống đổ nát sụp xuống sau lưng bạn, và bạn quay lại thấy lối vào đã bị chặn đứng bởi một bức tường xương và đá mới hình thành. Ngay khi chuẩn bị rời đi, một chiếc đầu lâu bị cháy xém một phần mang sơ đồ kỳ lạ lăn lông lốc rồi dừng lại dưới chân bạn. Chẳng thấy bóng dáng Kẻ Xa Lạ ở đâu nữa.",
+        "back_flavor": "Hầm mộ ầm ầm rung chuyển và sụp đổ phía sau lưng khi bạn tìm đường tẩu thoát. Bạn có thể lần theo bóng của Kẻ Lạ, bám sát từng bước chân của hắn để tìm đường xuyên qua những lối đi như mê cung. Bạn bước qua ngưỡng cửa ra vào của hầm mộ, một làn sóng gạch đá vụn và mảnh xương vụn ào ạt ập theo sau lưng. Tiếng gầm rú đinh tai nhức óc của đống đổ nát sụp xuống sau lưng bạn, và bạn quay lại thấy lối vào đã bị chặn đứng bởi một bức tường xương và đá mới hình thành. Ngay khi chuẩn bị rời đi, một chiếc đầu lâu bị cháy xém một phần mang sơ đồ kỳ lạ lăn lông lốc rồi dừng lại dưới chân bạn. Chẳng thấy bóng dáng Kẻ Lạ ở đâu nữa.",
     },
     # 03246
     "03246": {
         "name": "Dẫn Lối",
         "text": "Bỏ qua khả năng <b>Forced</b> trên Blocked Passage.\n<b>Objective</b> - Nếu mỗi điều tra viên chưa bị đánh bại đang ở Blocked Passage, advance.",
-        "flavor": "Những chiếc bóng dọc theo các bức tường của lăng mộ bắt đầu kết tụ lại. Những ký hiệu cổ ngữ kỳ lạ xoắn lại thành hình ảnh một tòa nhà có ngọn tháp cao, đỉnh tháp vươn thẳng lên trần nhà. Sau đó, Kẻ Xa Lạ vẫy tay ra hiệu cho bạn đi theo, rồi biến mất qua vòm đá sau lưng bạn.",
+        "flavor": "Những chiếc bóng dọc theo các bức tường của lăng mộ bắt đầu kết tụ lại. Những ký hiệu cổ ngữ kỳ lạ xoắn lại thành hình ảnh một tòa nhà có ngọn tháp cao, đỉnh tháp vươn thẳng lên trần nhà. Sau đó, Kẻ Lạ vẫy tay ra hiệu cho bạn đi theo, rồi biến mất qua vòm đá sau lưng bạn.",
         "back_name": "Lối Thoát Bí Mật",
         "back_text": "<b>(→R2)</b>",
-        "back_flavor": "Lần theo sự dẫn đường của Kẻ Xa Lạ, bạn đi theo một lộ trình quanh co xuyên qua những lối đi ngầm dưới lòng đất. Cuối cùng, bạn đối mặt với một ngõ cụt - một đường hầm bị chặn bởi một bức tường xương vụn và gạch đá dày đặc không tưởng. Kẻ Xa Lạ đứng gần đó, tay cầm chiếc đầu lâu cháy xém một phần mà hắn đã lấy ra từ đống lửa trong Tomb of Shadows. \"Giờ thì sao?\" bạn bối rối hỏi. Hắn giơ cao chiếc đầu lâu lên, và mặt sàn bắt đầu sụp xuống một cái hố sâu tăm tối rỗng tuếch bên dưới. Xương và đá vụn từ bức tường rơi tọt vào hố sâu, và nó ngày một phình to hơn sau từng khoảnh khắc. Kẻ Xa Lạ cúi chào, rồi ngả người rơi ngửa xuống hố sâu trước khi bạn kịp tóm lấy hắn. \"Đợi đã!\" bạn gọi lớn, nhưng đã quá muộn. Với cái hố sâu đang ngày một lớn dần và đe dọa nuốt chửng toàn bộ hầm mộ, bạn không còn lựa chọn nào khác ngoài việc nhảy theo hắn.",
+        "back_flavor": "Lần theo sự dẫn đường của Kẻ Lạ, bạn đi theo một lộ trình quanh co xuyên qua những lối đi ngầm dưới lòng đất. Cuối cùng, bạn đối mặt với một ngõ cụt - một đường hầm bị chặn bởi một bức tường xương vụn và gạch đá dày đặc không tưởng. Kẻ Lạ đứng gần đó, tay cầm chiếc đầu lâu cháy xém một phần mà hắn đã lấy ra từ đống lửa trong Tomb of Shadows. \"Giờ thì sao?\" bạn bối rối hỏi. Hắn giơ cao chiếc đầu lâu lên, và mặt sàn bắt đầu sụp xuống một cái hố sâu tăm tối rỗng tuếch bên dưới. Xương và đá vụn từ bức tường rơi tọt vào hố sâu, và nó ngày một phình to hơn sau từng khoảnh khắc. Kẻ Lạ cúi chào, rồi ngả người rơi ngửa xuống hố sâu trước khi bạn kịp tóm lấy hắn. \"Đợi đã!\" bạn gọi lớn, nhưng đã quá muộn. Với cái hố sâu đang ngày một lớn dần và đe dọa nuốt chửng toàn bộ hầm mộ, bạn không còn lựa chọn nào khác ngoài việc nhảy theo hắn.",
     },
     # 03275
     "03275": {
@@ -462,31 +462,31 @@ TRANSLATIONS_CARCOSA_ACTS_AGENDAS = {
         "flavor": "Bạn đã khai mở con đường tới Carcosa nhằm ngăn chặn những kẻ muốn giải thoát Hastur khỏi nhà tù giam giữ hắn giữa các vì sao. Chỉ có bạn mới có thể chấm dứt sự điên rồ này!",
         "back_name": "Cú Cúi Chào Cuối Cùng...?",
         "back_text": "Spawn kẻ địch The Man in the Pallid Mask đang để riêng tại Palace of the King.",
-        "back_flavor": "Một bóng đen lướt qua bức tường bên cạnh bạn, và tim bạn như muốn nhảy ra khỏi lồng ngực. Bạn quay lại, một bóng người vừa thoáng vụt khỏi tầm mắt. Hoặc là tâm trí bạn đang giở trò, hoặc là có ai đó khác trong nhà hát.\nBạn bám theo hướng bóng đen, rẽ qua một góc gần đó. Ở cuối hành lang, hắn ta đứng đợi bạn: người đàn ông đeo Chiếc Mặt Nạ Tái Nhợt, Kẻ Xa Lạ mà bạn đã bám theo từng bước chân suốt bao nhiêu tuần qua. Bạn chợt nhớ ra rằng mình đã từng đến nơi này trước đây.\nNhà hát tan biến quanh bạn. Ánh chói lòa gay gắt của hai vầng thái dương rọi thẳng vào mắt bạn từ trên cao. \"Bây giờ ngươi đã nhớ ra chưa?\" hắn hỏi. Hắn quay người và biến mất vào hư không, như thể thách thức bạn đuổi theo.",
+        "back_flavor": "Một bóng đen lướt qua bức tường bên cạnh bạn, và tim bạn như muốn nhảy ra khỏi lồng ngực. Bạn quay lại, một bóng người vừa thoáng vụt khỏi tầm mắt. Hoặc là tâm trí bạn đang giở trò, hoặc là có ai đó khác trong nhà hát.\nBạn bám theo hướng bóng đen, rẽ qua một góc gần đó. Ở cuối hành lang, hắn ta đứng đợi bạn: người đàn ông đeo Chiếc Mặt Nạ Tái Nhợt, Kẻ Lạ mà bạn đã bám theo từng bước chân suốt bao nhiêu tuần qua. Bạn chợt nhớ ra rằng mình đã từng đến nơi này trước đây.\nNhà hát tan biến quanh bạn. Ánh chói lòa gay gắt của hai vầng thái dương rọi thẳng vào mắt bạn từ trên cao. \"Bây giờ ngươi đã nhớ ra chưa?\" hắn hỏi. Hắn quay người và biến mất vào hư không, như thể thách thức bạn đuổi theo.",
     },
     # 03321a
     "03321a": {
-        "name": "Tìm Kiếm Kẻ Xa Lạ (v.I)",
+        "name": "Tìm Kiếm Kẻ Lạ (v.I)",
         "text": "Mỗi điều tra viên không thể khám phá manh mối.\nThe Man in the Pallid Mask không thể bị đánh bại.\n<b>Objective</b> - Trong khi điều tra viên trưởng đang ở địa điểm của The Man in the Pallid Mask, người đó có thể chi trả [action] [action] [action] để advance.",
-        "flavor": "Đã đến lúc cuối cùng phải đối chất với Kẻ Xa Lạ và vạch trần sự thật về danh tính của hắn, một lần và mãi mãi.",
+        "flavor": "Đã đến lúc cuối cùng phải đối chất với Kẻ Lạ và vạch trần sự thật về danh tính của hắn, một lần và mãi mãi.",
         "back_name": "",
         "back_text": "",
         "back_flavor": "",
     },
     # 03322a
     "03322a": {
-        "name": "Tìm Kiếm Kẻ Xa Lạ (v.II)",
+        "name": "Tìm Kiếm Kẻ Lạ (v.II)",
         "text": "Mỗi điều tra viên không thể khám phá manh mối.\nThe Man in the Pallid Mask không thể bị đánh bại ngoại trừ bởi khả năng [action] của hắn.\n<b>Objective</b> - Khi The Man in the Pallid Mask chuẩn bị bị đánh bại bởi khả năng [action] của hắn, advance.",
-        "flavor": "Đã đến lúc cuối cùng phải đối chất với Kẻ Xa Lạ và vạch trần sự thật về danh tính của hắn, một lần và mãi mãi.",
+        "flavor": "Đã đến lúc cuối cùng phải đối chất với Kẻ Lạ và vạch trần sự thật về danh tính của hắn, một lần và mãi mãi.",
         "back_name": "Hình Dung Trong Trí Tưởng Tượng",
         "back_text": "Đưa kẻ địch Hastur <i>(The King in Yellow)</i> đang để riêng vào màn chơi cạnh chồng bài act. Trong phần còn lại của màn chơi, Hastur được coi là đang ở trong màn chơi nhưng không ở bất kỳ địa điểm nào. Loại bỏ The Man in the Pallid Mask khỏi trò chơi.",
         "back_flavor": "",
     },
     # 03323a
     "03323a": {
-        "name": "Tìm Kiếm Kẻ Xa Lạ (v.III)",
+        "name": "Tìm Kiếm Kẻ Lạ (v.III)",
         "text": "Mỗi điều tra viên không thể khám phá manh mối.\nThe Man in the Pallid Mask không thể bị đánh bại ngoại trừ bởi sát thương.\n<b>Objective</b> - Khi The Man in the Pallid Mask chuẩn bị bị đánh bại bởi sát thương, advance.",
-        "flavor": "Đã đến lúc cuối cùng phải đối chất với Kẻ Xa Lạ và vạch trần sự thật về danh tính của hắn, một lần và mãi mãi.",
+        "flavor": "Đã đến lúc cuối cùng phải đối chất với Kẻ Lạ và vạch trần sự thật về danh tính của hắn, một lần và mãi mãi.",
         "back_name": "Lớp Cải Trang Bị Cởi Bỏ",
         "back_text": "Spawn kẻ địch Hastur <i>(Lord of Carcosa)</i> đang để riêng tại địa điểm của The Man in the Pallid Mask. Loại bỏ The Man in the Pallid Mask khỏi trò chơi.",
         "back_flavor": "",
@@ -502,30 +502,30 @@ TRANSLATIONS_CARCOSA_ACTS_AGENDAS = {
     },
     # 52015
     "52015": {
-        "name": "Kẻ Xa Lạ",
+        "name": "Kẻ Lạ",
         "text": "<b>Objective</b> - Khi The Man in the Pallid Mask chuẩn bị bị discard khỏi màn chơi, advance.",
-        "flavor": "Kẻ Xa Lạ bí ẩn từ The King in Yellow có thể biết điều gì đó về những chuyện đã xảy ra trong giờ giải lao. Bạn phải tìm và đối chất với hắn nếu muốn khám phá ra sự thật.",
+        "flavor": "Kẻ Lạ bí ẩn từ The King in Yellow có thể biết điều gì đó về những chuyện đã xảy ra trong giờ giải lao. Bạn phải tìm và đối chất với hắn nếu muốn khám phá ra sự thật.",
         "back_name": "Màn Sương Alaran",
         "back_text": "Thay vì discard The Man in the Pallid Mask, di chuyển hắn đến Lobby.\nThêm 1 token [cultist] và 1 token [tablet] vào túi hỗn mang.\nĐặt 1 horror lên Backstage. Cho đến cuối màn chơi, horror trên các địa điểm tượng trưng cho làn sương mù len lỏi, và mỗi địa điểm có horror nhận: \"<b>Forced</b> - Khi bạn chuẩn bị rời khỏi địa điểm này: Kiểm tra [willpower] (3). Nếu thất bại, bạn phải hoặc hủy bỏ hiệu ứng của hành động di chuyển đó, hoặc mất toàn bộ hành động còn lại và kết thúc lượt của bạn sau khi hoàn thành các hiệu ứng của hành động di chuyển đó.\"\nGiữ thẻ bài này cạnh chồng bài act để nhắc nhở, và advance sang act 3a.",
-        "back_flavor": "Khi đối mặt với Kẻ Xa Lạ, bạn có cảm giác hắn đang mỉm cười dưới chiếc mặt nạ tái nhợt vô cảm. \"Mọi người đâu hết rồi?\" bạn hỏi, nhưng hắn không đáp. \"Chuyện quái gì đang xảy ra thế này?\" Hắn vẫn giữ im lặng và lùi bước khi bạn tiến lại gần, cho đến khi lưng hắn chạm vào góc phòng. Đột nhiên, cơ thể hắn tan biến thành một luồng xoáy sương mù màu bạc, ập mạnh vào người bạn và đánh ngã bạn xuống sàn trước khi xoáy vụt qua bạn và lan tỏa vào không trung.",
+        "back_flavor": "Khi đối mặt với Kẻ Lạ, bạn có cảm giác hắn đang mỉm cười dưới chiếc mặt nạ tái nhợt vô cảm. \"Mọi người đâu hết rồi?\" bạn hỏi, nhưng hắn không đáp. \"Chuyện quái gì đang xảy ra thế này?\" Hắn vẫn giữ im lặng và lùi bước khi bạn tiến lại gần, cho đến khi lưng hắn chạm vào góc phòng. Đột nhiên, cơ thể hắn tan biến thành một luồng xoáy sương mù màu bạc, ập mạnh vào người bạn và đánh ngã bạn xuống sàn trước khi xoáy vụt qua bạn và lan tỏa vào không trung.",
     },
     # 52016
     "52016": {
-        "name": "Kẻ Xa Lạ",
+        "name": "Kẻ Lạ",
         "text": "<b>Objective</b> - Khi The Man in the Pallid Mask chuẩn bị bị discard khỏi màn chơi, advance.",
-        "flavor": "Kẻ Xa Lạ bí ẩn từ The King in Yellow có thể biết điều gì đó về những chuyện đã xảy ra trong giờ giải lao. Bạn phải tìm và đối chất với hắn nếu muốn khám phá ra sự thật.",
+        "flavor": "Kẻ Lạ bí ẩn từ The King in Yellow có thể biết điều gì đó về những chuyện đã xảy ra trong giờ giải lao. Bạn phải tìm và đối chất với hắn nếu muốn khám phá ra sự thật.",
         "back_name": "Bên Dưới Thành Phố",
         "back_text": "Thay vì discard The Man in the Pallid Mask, di chuyển hắn đến Lobby.\nThêm 1 token [cultist] và 1 token [elder_thing] vào túi hỗn mang.\nĐặt 1 horror lên Balcony. Cho đến cuối màn chơi, horror trên các địa điểm tượng trưng cho dây leo chằng chịt quấn quanh, và mỗi địa điểm có horror nhận: \"<b>Forced</b> - Sau khi bạn rời khỏi địa điểm này: Kiểm tra [willpower] (4). Nếu thất bại, discard một asset [[Item]] hoặc [[Ally]] bạn kiểm soát (nếu không thể, nhận 2 sát thương thay thế).\"\nGiữ thẻ bài này cạnh chồng bài act để nhắc nhở, và advance sang act 3a.",
-        "back_flavor": "Khi đối mặt với Kẻ Xa Lạ, bạn có cảm giác hắn đang mỉm cười dưới chiếc mặt nạ tái nhợt vô cảm. \"Mọi người đâu hết rồi?\" bạn hỏi, nhưng hắn không đáp. \"Chuyện quái gì đang xảy ra thế này?\" Hắn vẫn giữ im lặng và lùi bước khi bạn tiến lại gần, cho đến khi lưng hắn chạm vào góc phòng. Mặt đất rung chuyển, và bạn nghe thấy một tiếng sụp đổ ầm ầm từ phía trên khi dây leo, rễ cây và cỏ cây mọc tràn lan từ thế giới khác xé toạc trần phòng. Bạn quay lại nhìn Kẻ Xa Lạ, nhưng hắn đã biến mất tăm.",
+        "back_flavor": "Khi đối mặt với Kẻ Lạ, bạn có cảm giác hắn đang mỉm cười dưới chiếc mặt nạ tái nhợt vô cảm. \"Mọi người đâu hết rồi?\" bạn hỏi, nhưng hắn không đáp. \"Chuyện quái gì đang xảy ra thế này?\" Hắn vẫn giữ im lặng và lùi bước khi bạn tiến lại gần, cho đến khi lưng hắn chạm vào góc phòng. Mặt đất rung chuyển, và bạn nghe thấy một tiếng sụp đổ ầm ầm từ phía trên khi dây leo, rễ cây và cỏ cây mọc tràn lan từ thế giới khác xé toạc trần phòng. Bạn quay lại nhìn Kẻ Lạ, nhưng hắn đã biến mất tăm.",
     },
     # 52017
     "52017": {
-        "name": "Kẻ Xa Lạ",
+        "name": "Kẻ Lạ",
         "text": "<b>Objective</b> - Khi The Man in the Pallid Mask chuẩn bị bị discard khỏi màn chơi, advance.",
-        "flavor": "Kẻ Xa Lạ bí ẩn từ The King in Yellow có thể biết điều gì đó về những chuyện đã xảy ra trong giờ giải lao. Bạn phải tìm và đối chất với hắn nếu muốn khám phá ra sự thật.",
+        "flavor": "Kẻ Lạ bí ẩn từ The King in Yellow có thể biết điều gì đó về những chuyện đã xảy ra trong giờ giải lao. Bạn phải tìm và đối chất với hắn nếu muốn khám phá ra sự thật.",
         "back_name": "Đây Là Lời Hồi Đáp Của Ta",
-        "back_text": "Thay vì discard The Man in the Pallid Mask, di chuyển hắn đến Lobby.\nThêm 1 token [tablet] và 1 token [elder_thing] vào túi hỗn mang.\nĐặt 1 horror lên Lobby. Cho đến cuối màn chơi, horror trên các địa điểm tượng trưng cho tiếng rít chói tai kinh hoàng của Kẻ Xa Lạ, và mỗi địa điểm có horror nhận: \"<b>Forced</b> - Sau khi bạn đi vào địa điểm này hoặc kết thúc lượt của bạn tại địa điểm này: Kiểm tra [willpower] (2). Nếu thất bại, nhận 1 horror. (Giới hạn một lần mỗi vòng.)\"\nGiữ thẻ bài này cạnh chồng bài act để nhắc nhở, và advance sang act 3a.",
-        "back_flavor": "Khi đối mặt với Kẻ Xa Lạ, bạn có cảm giác hắn đang mỉm cười dưới chiếc mặt nạ tái nhợt vô cảm. \"Mọi người đâu hết rồi?\" bạn hỏi, nhưng hắn không đáp. \"Chuyện quái gì đang xảy ra thế này?\" Hắn vẫn giữ im lặng và lùi bước khi bạn tiến lại gần, cho đến khi lưng hắn chạm vào góc phòng. Rồi hắn há to miệng và phát ra âm thanh kinh hoàng nhất mà bạn từng nghe thấy trong đời. Như thể tiếng vo ve của hàng trăm con châu chấu và tiếng rít ken két của kim loại rỉ sét đang che giấu một tiếng thét đau đớn và quằn quại còn khủng khiếp hơn bên trong. Đến khi bạn kịp hoàn hồn, Kẻ Xa Lạ đã biến mất tăm.",
+        "back_text": "Thay vì discard The Man in the Pallid Mask, di chuyển hắn đến Lobby.\nThêm 1 token [tablet] và 1 token [elder_thing] vào túi hỗn mang.\nĐặt 1 horror lên Lobby. Cho đến cuối màn chơi, horror trên các địa điểm tượng trưng cho tiếng rít chói tai kinh hoàng của Kẻ Lạ, và mỗi địa điểm có horror nhận: \"<b>Forced</b> - Sau khi bạn đi vào địa điểm này hoặc kết thúc lượt của bạn tại địa điểm này: Kiểm tra [willpower] (2). Nếu thất bại, nhận 1 horror. (Giới hạn một lần mỗi vòng.)\"\nGiữ thẻ bài này cạnh chồng bài act để nhắc nhở, và advance sang act 3a.",
+        "back_flavor": "Khi đối mặt với Kẻ Lạ, bạn có cảm giác hắn đang mỉm cười dưới chiếc mặt nạ tái nhợt vô cảm. \"Mọi người đâu hết rồi?\" bạn hỏi, nhưng hắn không đáp. \"Chuyện quái gì đang xảy ra thế này?\" Hắn vẫn giữ im lặng và lùi bước khi bạn tiến lại gần, cho đến khi lưng hắn chạm vào góc phòng. Rồi hắn há to miệng và phát ra âm thanh kinh hoàng nhất mà bạn từng nghe thấy trong đời. Như thể tiếng vo ve của hàng trăm con châu chấu và tiếng rít ken két của kim loại rỉ sét đang che giấu một tiếng thét đau đớn và quằn quại còn khủng khiếp hơn bên trong. Đến khi bạn kịp hoàn hồn, Kẻ Lạ đã biến mất tăm.",
     },
     # 52022
     "52022": {

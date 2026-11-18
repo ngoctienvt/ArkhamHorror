@@ -1,0 +1,9 @@
+Confirmed: Guardians 2 IDs and challenge 8 IDs have no panorama selector.
+Confirmed: 08648b retains img/scenes/the-edge-of-the-earth/the-heart-of-madness-part-2.webp in supplied late-board snapshot.
+Confirmed: 72001 retains img/scenes/side-stories/film-fatale.webp in supplied late-board snapshot.
+Confirmed: 07274 retains img/scenes/the-innsmouth-conspiracy/the-lair-of-dagon.webp in supplied late-board snapshot.
+Confirmed: 11553 retains img/scenes/the-drowned-city/the-apiary.webp in supplied late-board snapshot.
+Confirmed: Unstuck revealed landmarks ignore a swap of the underlying slot coordinates.
+Confirmed: Labyrinthine Halls 70025/70027 have no landmark coordinates.
+Verified: 175 inventory rows, 49 homebrew IDs, 26 without panorama, 7 backend shells; source and Markdown links exist.
+Scope: source-level and pure selector probes only; no live-game or browser verification.

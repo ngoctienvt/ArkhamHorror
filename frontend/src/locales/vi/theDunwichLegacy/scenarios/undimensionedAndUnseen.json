@@ -68,15 +68,15 @@
   "resolutions": {
     "noResolution": {
       "title": "Không có Resolution",
-      "body": "<div class='resolution'><p class='basic'>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Chuyển tới _Resolution 1_."
+      "body": "<div class='resolution'><p class='basic'>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Chuyển tới _Kết thúc 1_."
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<div class='resolution'><p>_Resolution 1_: Bạn đã làm tất cả những gì có thể để ngăn chặn những con quái vật nổi loạn, nhưng có nhiều con hơn bạn tưởng và bạn đã không thể tiêu diệt tất cả. Kiệt sức và kinh sợ, bạn rút về nhà của Zebulon và hy vọng sống sót qua đêm.</p><ul><li>Trong Nhật ký Chiến dịch, ghi rằng <i>X brood đã trốn thoát vào vùng hoang dã</i>. X là tổng số Brood of Yog‐Sothoth vẫn đang trong play hoặc được để riêng.</li><li>Nếu bộ bài của một điều tra viên có lá bài Powder of Ibn-Ghazi, loại bỏ nó khỏi bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
+      "body": "<div class='resolution'><p>_Kết thúc 1_: Bạn đã làm tất cả những gì có thể để ngăn chặn những con quái vật nổi loạn, nhưng có nhiều con hơn bạn tưởng và bạn đã không thể tiêu diệt tất cả. Kiệt sức và kinh sợ, bạn rút về nhà của Zebulon và hy vọng sống sót qua đêm.</p><ul><li>Trong Nhật ký Chiến dịch, ghi rằng <i>X brood đã trốn thoát vào vùng hoang dã</i>. X là tổng số Brood of Yog‐Sothoth vẫn đang trong play hoặc được để riêng.</li><li>Nếu bộ bài của một điều tra viên có lá bài Powder of Ibn-Ghazi, loại bỏ nó khỏi bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong khu vực trưng bày thành tích.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li></ul></div>"
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
-      "body": "<div class='resolution'><p>_Resolution 2_: Sau khi tiêu diệt những gì có vẻ là con cuối cùng trong số những con quái vật nổi loạn, bạn rút về nhà của Zebulon, kiệt sức và lo lắng về điều mình vừa trải qua.</p><ul><li>In your Campaign Log, record that *no brood escaped into the wild*.</li><li>Nếu bộ bài của một điều tra viên có lá bài Powder of Ibn-Ghazi, loại bỏ nó khỏi bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li></ul></div>"
+      "body": "<div class='resolution'><p>_Kết thúc 2_: Sau khi tiêu diệt những gì có vẻ là con cuối cùng trong số những con quái vật nổi loạn, bạn rút về nhà của Zebulon, kiệt sức và lo lắng về điều mình vừa trải qua.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *không có con brood nào trốn thoát vào tự nhiên*.</li><li>Nếu bộ bài của một điều tra viên có lá bài Powder of Ibn-Ghazi, loại bỏ nó khỏi bộ bài của điều tra viên đó.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong khu vực trưng bày thành tích.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li></ul></div>"
     }
   }
 }

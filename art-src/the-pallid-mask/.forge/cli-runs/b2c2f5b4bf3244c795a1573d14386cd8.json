@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "route": "codex-cli",
+  "requestedModel": "codex-image_gen",
+  "options": {
+    "tool": "image_gen"
+  },
+  "promptSha256": "32fb89b5a38512839991ba5bb1ad672d16bc26543311b4b878f2da0210b98f7a",
+  "references": [
+    {
+      "sha256": "0cf0e8cbb9f94cf058666c5e043c3e0efb280415068fa1fb4d17f585b580e9b5",
+      "bytes": 667243
+    }
+  ],
+  "fingerprint": "37a7fbbaa1a6c408c981cb6644c31686c0b1bd3f371b79d23269d7eb7522655f",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "2026-10-06",
+    "items": [],
+    "basis": "subscription quota call: no per-call USD price; counted by call caps"
+  },
+  "consent": {
+    "provider": "openai",
+    "model": "codex-image_gen",
+    "calls": 1,
+    "estimateUsd": 0.0,
+    "route": "codex-cli",
+    "quota": true,
+    "account": "the user's own Codex sign-in (ChatGPT)",
+    "note": "uses the subscription quota of that sign-in, never API credit"
+  },
+  "artSource": "host_image",
+  "execution": "execute",
+  "status": "submit_unknown",
+  "outputDir": "../../gen/03247-v1",
+  "receipt": {
+    "startedAt": "2026-11-13T09:08:18.708Z",
+    "submittedAt": "2026-11-13T09:08:18.718Z",
+    "completedAt": "2026-11-13T09:08:18.778Z",
+    "wallMs": 70,
+    "providerMs": 47,
+    "attempt": 1,
+    "purpose": "route_media image",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "PROVIDER_ERROR"
+  },
+  "ledger": {
+    "projectDir": "../..",
+    "reservationId": "b1f259c610aa47e392c64bfcde6a6377",
+    "status": "unknown"
+  },
+  "cliRun": {
+    "tool": "codex",
+    "runId": "b2c2f5b4bf3244c795a1573d14386cd8",
+    "cwd": "<tmp>/forge-cli-b2c2f5b4bf32-989033da",
+    "startedAt": "2026-11-13T09:08:18.708Z",
+    "version": "0.147.0",
+    "versionText": "codex-cli 0.147.0",
+    "recipe": "codex-exec-imagegen/1",
+    "home": "CODEX_HOME",
+    "verifiedBefore": false
+  },
+  "error": {
+    "code": "PROVIDER_ERROR",
+    "message": "the Codex CLI exited with an error (Error: Unknown feature flag: sleep_tool)"
+  },
+  "errorType": "CliMediaError"
+}

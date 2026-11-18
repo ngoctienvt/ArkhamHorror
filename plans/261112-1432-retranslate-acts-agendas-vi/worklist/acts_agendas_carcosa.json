@@ -102,7 +102,7 @@
       "back_flavor": "As you face off with the Stranger, you get the sense that he is grinning beneath his pale, faceless mask. \"Where is everyone?\" you ask, but he does not respond. \"What is going on?\" He remains silent and steps back as you approach, until his back is against the corner of the room. You feel intense heat behind you, and you turn to see flames roaring throughout the auditorium. You turn back to the Stranger, but he is gone."
     },
     "vi_current": {
-      "name": "Kẻ Xa Lạ",
+      "name": "Kẻ Lạ",
       "text": "<b>Objective</b> — Nếu The Man in the Pallid Mask bị đánh bại, advance.",
       "flavor": "Người đàn ông mang mặt nạ tái nhợt dường như nắm giữ chìa khóa thoát khỏi nhà hát này. Bạn phải đuổi kịp và khống chế hắn!",
       "back_name": "Lối Thoát Hiểm",
@@ -135,7 +135,7 @@
       "back_flavor": "As you face off with the Stranger, you get the sense that he is grinning beneath his pale, faceless mask. \"Where is everyone?\" you ask, but he does not respond. \"What is going on?\" He remains silent and steps back as you approach, until his back is against the corner of the room. Inexplicably, he continues to back away, and his body melds into the wall behind him. Erupting from where he stood is a growing mass of viscous ooze."
     },
     "vi_current": {
-      "name": "Kẻ Xa Lạ",
+      "name": "Kẻ Lạ",
       "text": "<b>Objective</b> — Nếu The Man in the Pallid Mask bị đánh bại, advance.",
       "flavor": "Người đàn ông mang mặt nạ tái nhợt lướt đi thoăn thoắt qua các hành lang ngập khói. Bạn phải chặn đứng hắn!",
       "back_name": "Lối Thoát Hiểm",
@@ -168,7 +168,7 @@
       "back_flavor": "As you face off with the Stranger, you get the sense that he is grinning beneath his pale, faceless mask. \"Where is everyone?\" you ask, but he does not respond. \"What is going on?\" He remains silent and steps back as you approach, until his back is against the corner of the room. You spin in shock as the windows shatter, and a deluge of cold salt water floods the room. You turn back to the Stranger, but he is gone."
     },
     "vi_current": {
-      "name": "Kẻ Xa Lạ",
+      "name": "Kẻ Lạ",
       "text": "<b>Objective</b> — Nếu The Man in the Pallid Mask bị đánh bại, advance.",
       "flavor": "Gã mang mặt nạ đứng sừng sững cuối hành lang, dõi theo bạn bằng ánh nhìn lạnh ngắt qua hai hốc mắt trống rỗng.",
       "back_name": "Lối Thoát Hiểm",
@@ -1398,7 +1398,7 @@
       "name": "Cơn Điên Cuộn Xoáy",
       "text": "Hastur không thể bị đánh bại.\n<b>Forced</b> - Nếu có ít nhất 3 [per_investigator] damage trên Hastur: Advance agenda này.",
       "flavor": "Bạn đang đứng giữa Carcosa mờ ảo — thành phố của những tòa tháp nhọn hoắt và những tàn tích rêu phong soi bóng xuống hồ Hali. Mặt nước không một gợn sóng, phẳng lặng tựa gương soi.",
-      "back_name": "Kẻ Xa Lạ Tại Carcosa",
+      "back_name": "Kẻ Lạ Tại Carcosa",
       "back_text": "Spawn kẻ địch The Man in the Pallid Mask tại Shores of Hali.",
       "back_flavor": "Gã mang mặt nạ tái nhợt đứng đợi bạn bên bờ hồ, tà áo choàng vàng phất phơ trong làn gió vô hình."
     }
@@ -1510,8 +1510,8 @@
       "flavor": "It is time to finally confront the Stranger and learn the truth about his identity, once and for all."
     },
     "vi_current": {
-      "name": "Tìm Kiếm Kẻ Xa Lạ (v. I)",
-      "text": "<b>Objective</b> — Đối mặt với Kẻ Xa Lạ tại cung điện để vạch trần bộ mặt thật của hắn.",
+      "name": "Tìm Kiếm Kẻ Lạ (v. I)",
+      "text": "<b>Objective</b> — Đối mặt với Kẻ Lạ tại cung điện để vạch trần bộ mặt thật của hắn.",
       "flavor": "Bạn bước vào sảnh cung điện, nơi bóng hình quen thuộc đang đứng đợi.",
       "back_name": "Bộ Mặt Thật",
       "back_text": "Advance sang Act 3 — \"The King in Tatters\".",
@@ -1542,8 +1542,8 @@
       "back_text": "Put the set-aside Hastur <i>(The King in Yellow)</i> enemy into play next to the act deck. For the remainder of the scenario, Hastur is considered to be in play but is not at any location. Remove The Man in the Pallid Mask from the game."
     },
     "vi_current": {
-      "name": "Tìm Kiếm Kẻ Xa Lạ (v. II)",
-      "text": "<b>Objective</b> — Đối mặt với Kẻ Xa Lạ tại cung điện để vạch trần bộ mặt thật của hắn.",
+      "name": "Tìm Kiếm Kẻ Lạ (v. II)",
+      "text": "<b>Objective</b> — Đối mặt với Kẻ Lạ tại cung điện để vạch trần bộ mặt thật của hắn.",
       "flavor": "Bạn bước vào sảnh cung điện, nơi bóng hình quen thuộc đang đứng đợi.",
       "back_name": "Bộ Mặt Thật",
       "back_text": "Advance sang Act 3 — \"The King in Tatters\".",
@@ -1573,8 +1573,8 @@
       "back_text": "Spawn the set-aside Hastur <i>(Lord of Carcosa)</i>enemy at The Man in the Pallid Mask's location. Remove The Man in the Pallid Mask from the game."
     },
     "vi_current": {
-      "name": "Tìm Kiếm Kẻ Xa Lạ (v. III)",
-      "text": "<b>Objective</b> — Đối mặt với Kẻ Xa Lạ tại cung điện để vạch trần bộ mặt thật của hắn.",
+      "name": "Tìm Kiếm Kẻ Lạ (v. III)",
+      "text": "<b>Objective</b> — Đối mặt với Kẻ Lạ tại cung điện để vạch trần bộ mặt thật của hắn.",
       "flavor": "Bạn bước vào sảnh cung điện, nơi bóng hình quen thuộc đang đứng đợi.",
       "back_name": "Bộ Mặt Thật",
       "back_text": "Advance sang Act 3 — \"The King in Tatters\".",
@@ -1635,7 +1635,7 @@
       "back_flavor": "As you face off with the Stranger, you get the sense that he is grinning beneath his pale, faceless mask. \"Where is everyone?\" you ask, but he does not respond. \"What is going on?\" He remains silent and steps back as you approach, until his back is against the corner of the room. Suddenly, his body dissolves into a vortex of silvery mist, which slams into your body and knocks you to the floor before whirling past you and spreading into the air."
     },
     "vi_current": {
-      "name": "Kẻ Xa Lạ",
+      "name": "Kẻ Lạ",
       "text": "<b>Objective</b> — Nếu The Man in the Pallid Mask bị đánh bại, advance.",
       "flavor": "Bóng đen mang mặt nạ tái nhợt lẩn khuất giữa các phòng phục trang.",
       "back_name": "Lối Thoát Hiểm",
@@ -1668,7 +1668,7 @@
       "back_flavor": "As you face off with the Stranger, you get the sense that he is grinning beneath his pale, faceless mask. \"Where is everyone?\" you ask, but he does not respond. \"What is going on?\" He remains silent and steps back as you approach, until his back is against the corner of the room. The ground shakes, and you hear an uproarious collapse from above as vines, tree roots, and alien overgrowth tear into the ceiling of the room. You turn ack to the Stranger, but he is gone."
     },
     "vi_current": {
-      "name": "Kẻ Xa Lạ",
+      "name": "Kẻ Lạ",
       "text": "<b>Objective</b> — Nếu The Man in the Pallid Mask bị đánh bại, advance.",
       "flavor": "Bóng đen mang mặt nạ tái nhợt thoắt ẩn thoắt hiện trên các khán đài cao.",
       "back_name": "Lối Thoát Hiểm",
@@ -1701,7 +1701,7 @@
       "back_flavor": "As you face off with the Stranger, you get the sense that he is grinning beneath his pale, faceless mask. \"Where is everyone?\" you ask, but he does not respond. \"What is going on?\" He remains silent and steps back as you approach, until his back is against the corner of the room. Then he opens his mouth and out emerges the most horrifying sound you have ever heard. It is as if the buzzing of a hundred locusts and the grating of rusted metal hide an even more terrible scream of pain and agony within. By the time you recover, the Stranger is gone."
     },
     "vi_current": {
-      "name": "Kẻ Xa Lạ",
+      "name": "Kẻ Lạ",
       "text": "<b>Objective</b> — Nếu The Man in the Pallid Mask bị đánh bại, advance.",
       "flavor": "Bóng đen mang mặt nạ tái nhợt đứng đợi bạn nơi cánh gà sân khấu.",
       "back_name": "Lối Thoát Hiểm",

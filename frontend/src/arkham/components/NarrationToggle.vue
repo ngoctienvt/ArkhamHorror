@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useNarrationControls } from '@/arkham/composables/useNarration'
+import NarrationSpeakerIcon from '@/arkham/components/NarrationSpeakerIcon.vue'
 
 /* Replay / stop for the spoken story narration, pinned to the corner of the
  * story panel it sits in (the parent must be position: relative). */
@@ -21,27 +22,32 @@ const label = computed(() =>
     :title="label"
     :aria-label="label"
     @click="playing ? stop() : replay()"
-  >{{ playing ? '■' : '🔊' }}</button>
+  ><NarrationSpeakerIcon :playing="playing" /></button>
 </template>
 
 <style scoped>
+/* Solid dark-ink disc with a gold rim and a light icon, so it reads clearly over the
+ * parchment and the corner ornament it sits on. */
 .narration-toggle {
   position: absolute;
   top: 6px;
   right: 8px;
   z-index: 2;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   padding: 0;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 2px solid #c9a24a;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.75);
-  color: #222;
-  font-size: 15px;
-  line-height: 1;
+  background: #2b2014;
+  color: #f6eedb;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
-.narration-toggle:hover { background: #fff; }
+.narration-toggle:hover { background: #4a3820; transform: scale(1.08); }
 /* The browser refused autoplay: draw the eye to the button that starts it. */
 .narration-toggle.blocked { animation: narration-pulse 1.2s ease-in-out infinite; }
 

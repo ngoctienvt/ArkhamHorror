@@ -1,5 +1,9 @@
 import type { Point } from './locationGraph'
+import type { Act } from './types/Act'
+import type { Agenda } from './types/Agenda'
+import type { Location } from './types/Location'
 import type { LogContents, LogKey } from './types/Log'
+import type { Treachery } from './types/Treachery'
 import { dreamEatersAnchors, dreamEatersArt } from './scene-anchors-the-dream-eaters'
 
 const boards = new Map([
@@ -175,6 +179,7 @@ const boards = new Map([
   ['86001', 'side-stories/war-of-the-outer-gods'],
   ['87001', 'side-stories/machinations-through-time'],
   ['88001', 'side-stories/fortune-and-folly'],
+  ['88001b', 'side-stories/fortune-and-folly'],
   ['70001', 'side-stories/the-labyrinths-of-lunacy'],
   ['71001', 'side-stories/the-midwinter-gala'],
   ['72001', 'side-stories/film-fatale'],
@@ -339,18 +344,18 @@ const villageAnchors: Record<string, Point> = {
   '05142': [40, 52], // Strange Geometry / Decrepit Doors
 
   // The Circle Undone — Scenario 4: The Wages of Sin
-  '05166': [40, 82], // Hangman's Brook
-  '54037': [40, 82], // Hangman's Brook (Return to)
-  '05167': [50, 42], // Haunted Fields
-  '05168': [78, 46], // Abandoned Chapel
-  '05169': [58, 16], // The Gallows
-  '05170': [58, 16], // The Gallows
-  '05171': [26, 45], // Heretics' Graves
-  '05172': [26, 45], // Heretics' Graves
-  '05173': [88, 60], // Chapel Crypt
-  '05174': [88, 60], // Chapel Crypt
-  '05175': [76, 26], // Chapel Attic
-  '05176': [76, 26], // Chapel Attic
+  '05166': [38, 78], // Hangman's Brook
+  '54037': [38, 78], // Hangman's Brook (Return to)
+  '05167': [54, 50], // Haunted Fields
+  '05168': [73, 60], // Abandoned Chapel
+  '05169': [57, 22], // The Gallows
+  '05170': [57, 22], // The Gallows
+  '05171': [25, 55], // Heretics' Graves
+  '05172': [25, 55], // Heretics' Graves
+  '05173': [86, 83], // Chapel Crypt
+  '05174': [86, 83], // Chapel Crypt
+  '05175': [84, 40], // Chapel Attic
+  '05176': [84, 40], // Chapel Attic
 
   // The Circle Undone — Scenario 5: For the Greater Good
   '05204': [10, 20], // Lodge Gates
@@ -379,38 +384,38 @@ const villageAnchors: Record<string, Point> = {
   '05257': [68, 75], // The Geist-Trap
 
   // The Innsmouth Conspiracy — Scenario 2: The Vanishing of Elina Harper
-  '07065': [47, 52], // Innsmouth Square
-  '07068': [67, 52], // Fish Street Bridge
-  '07066': [85, 50], // Innsmouth Harbour
-  '07067': [35, 40], // First National Grocery
-  '07064': [34, 76], // Gilman House
-  '07070': [30, 22], // Esoteric Order of Dagon
-  '07063': [48, 18], // Marsh Refinery
-  '07075': [68, 20], // New Church Green
-  '07074': [10, 80], // Innsmouth Jail
-  '07071': [12, 54], // Sawbone Alley
-  '07072': [54, 72], // Shoreward Slums
-  '07069': [20, 36], // The Little Bookshop
-  '07073': [80, 28], // The House on Water Street
+  '07065': [47, 54], // Innsmouth Square
+  '07068': [64, 51], // Fish Street Bridge
+  '07066': [86, 62], // Innsmouth Harbour
+  '07067': [35, 49], // First National Grocery
+  '07064': [40, 86], // Gilman House
+  '07070': [34, 33], // Esoteric Order of Dagon
+  '07063': [55, 28], // Marsh Refinery
+  '07075': [65, 32], // New Church Green
+  '07074': [10, 87], // Innsmouth Jail
+  '07071': [10, 63], // Sawbone Alley
+  '07072': [58, 77], // Shoreward Slums
+  '07069': [41, 46], // The Little Bookshop
+  '07073': [75, 37], // The House on Water Street
 
   // The Innsmouth Conspiracy — Scenario 3: In Too Deep
   // The scenario reads east/west from the grid (Skull counts locations east in your row, Cultist pushes you
   // east), so each row runs west to east left to right: Sawbone Alley, Gilman House, Innsmouth Jail, ...
-  '07129': [23, 22], // Esoteric Order of Dagon
+  '07129': [24, 26], // Esoteric Order of Dagon
   '07130': [7, 87], // Sawbone Alley
   '07131': [53, 83], // Shoreward Slums
-  '07132': [74, 27], // The House on Water Street
+  '07132': [75, 34], // The House on Water Street
   '07133': [26, 86], // Innsmouth Jail
-  '07134': [36, 20], // New Church Green
-  '07135': [18, 43], // The Little Bookshop
-  '07136': [60, 53], // Fish Street Bridge
-  '07137': [33, 40], // First National Grocery
-  '07138': [83, 46], // Innsmouth Harbour
-  '07139': [42, 51], // Innsmouth Square
+  '07134': [36, 26], // New Church Green
+  '07135': [19, 50], // The Little Bookshop
+  '07136': [60, 50], // Fish Street Bridge
+  '07137': [33, 47], // First National Grocery
+  '07138': [83, 48], // Innsmouth Harbour
+  '07139': [42, 54], // Innsmouth Square
   '07140': [14, 71], // Gilman House
-  '07141': [51, 15], // Marsh Refinery
-  '07142': [8, 34], // Railroad Station
-  '07143': [84, 78], // Desolate Coastline
+  '07141': [50, 24], // Marsh Refinery
+  '07142': [8, 46], // Railroad Station
+  '07143': [83, 85], // Desolate Coastline
 
   // The Innsmouth Conspiracy — Scenarios 1, 4, 5, 6 and 8 (the Pit of Despair, Devil Reef, Horror in High Gear,
   // A Light in the Fog, Into the Maelstrom) place locations during play: each stands on a sprite of its own
@@ -514,14 +519,12 @@ const villageAnchors: Record<string, Point> = {
   '08686': [50, 96], // Hidden Tunnel: A Way Out
 
   // Brethren of Ash — Scenario 1: Spreading Flames
-  '12116': [50, 52], // Miskatonic Quad
-  '12118': [52, 22], // Orne Library
-  '12120': [52, 22], // Orne Library (Alt)
-  '12117': [24, 42], // Dormitories
-  '12113': [16, 74], // Your Friend's Room
-  '12119': [80, 48], // Warren Observatory
-  '12114': [50, 80], // Science Hall
-  '12115': [50, 80], // Science Hall (Alt)
+  '12113': [14, 65], // Your Friend's Room, inside the dormitory cutaway
+  '12116': [55, 47], // Miskatonic Quad
+  '12117': [29, 42], // Dormitories
+  '12118': [52, 81], // Science Hall — leave room for standees below the plate
+  '12119': [79, 47], // Warren Observatory
+  '12120': [57, 27], // Orne Library
 
   // Brethren of Ash — Scenario 2: Smoke and Mirrors
   '12149': [18, 22], // Northside
@@ -537,66 +540,7 @@ const villageAnchors: Record<string, Point> = {
   '12153': [50, 80], // Southside
   '12154': [82, 80], // French Hill
 
-  // Children of Blood — Scenario 1: River of Blood
-  '13016': [54, 48], // Erwin Bridge (Dawn)
-  '13017': [54, 48], // Erwin Bridge (Dusk)
-  '13012': [52, 70], // River Docks (Dawn)
-  '13013': [52, 70], // River Docks (Dusk)
-  '13008': [20, 68], // Water Street (Dawn)
-  '13009': [20, 68], // Water Street (Dusk)
-  '13010': [80, 68], // Garrison Street (Dawn)
-  '13011': [80, 68], // Garrison Street (Dusk)
-  '13014': [52, 28], // Main Street (Dawn)
-  '13015': [52, 28], // Main Street (Dusk)
-  '13022': [28, 48], // Back Alley (Dawn)
-  '13023': [28, 48], // Back Alley (Dusk)
-  '13020': [80, 34], // Waterfront Warehouse (Dawn)
-  '13021': [80, 34], // Waterfront Warehouse (Dusk)
-  '13018': [24, 28], // Unvisited Isle (Dawn)
-  '13019': [24, 28], // Unvisited Isle (Dusk)
 
-  // Children of Blood — Scenario 2: New Horizons
-  '13039': [22, 30], // Factory Floor: West (Day)
-  '13044': [22, 30], // Factory Floor: West (Night)
-  '13040': [78, 30], // Factory Floor: East (Day)
-  '13045': [78, 30], // Factory Floor: East (Night)
-  '13042': [50, 20], // Loading Dock (Day)
-  '13047': [50, 20], // Loading Dock (Night)
-  '13041': [36, 26], // Manager's Office (Day)
-  '13046': [36, 26], // Manager's Office (Night)
-  '13043': [64, 26], // Storage (Day)
-  '13048': [64, 26], // Storage (Night)
-  '13049': [35, 52], // Cavern Entrance: Shallow Tunnels
-  '13050': [65, 52], // Cavern Entrance: Darkest Depths
-  '13051': [50, 68], // Descending Tunnel
-  '13054': [20, 80], // Side Chamber: Shallow Tunnels
-  '13057': [80, 80], // Side Chamber: Darkest Depths
-  '13052': [32, 76], // Hidden Laboratory: Shallow Tunnels
-  '13055': [32, 76], // Hidden Laboratory: Darkest Depths
-  '13053': [68, 76], // Locked Chamber: Shallow Tunnels
-  '13056': [68, 76], // Locked Chamber: Darkest Depths
-
-  // Children of Blood — Scenario 3: Blood Money
-  '13076': [50, 52], // Foyer (Boring Party)
-  '13077': [24, 46], // Dining Hall
-  '13078': [78, 46], // Study
-
-  // Side Stories — Traces to Nowhere
-  '73008': [60, 48], // Steer's Office
-  '73009': [46, 52], // Merchant District
-  '73010': [78, 14], // French Hill
-  '73011': [36, 60], // South Church
-  '73012': [74, 51], // Historical Society
-  '73027': [88, 59], // Arkham Advertiser
-  '73028': [20, 31], // Train Station
-  '73029': [17, 82], // Tick Tock Club
-  '73030': [55, 75], // Duterte Funeral Home (After Hours)
-  '73031': [55, 75], // Duterte Funeral Home (Something in the Basement)
-  '73032': [92, 13], // Meiger Estate (Under New Ownership)
-  '73033': [92, 13], // Meiger Estate (Beyond the Black Door)
-  '73050': [46, 88], // The Portal (Otherworld)
-  '73051': [57, 88], // Ethereal Perch (Otherworld)
-  '73052': [68, 84], // Bone Pit (Otherworld)
   // Dark Matter — Scenario 1: The Tatterdemalion (ship cutaway rooms)
   ':dark-matter:025': [35, 28], // Escape Pod Bay
   ':dark-matter:026': [60, 28], // Infirmary
@@ -770,36 +714,130 @@ const villageAnchors: Record<string, Point> = {
   // The Drowned City — Scenario 9: The Doom of Arkham Part I
   '11685': [80, 52], // Tillinghast Esoterica (Ephemeral Shop)
 
-  // The Drowned City — Scenario 10: The Doom of Arkham Part II
-  '11699': [18, 25], // Western Rooftops
-  '11692': [38, 25], // Northside (Ruined)
-  '11693': [62, 25], // Downtown (Ruined)
-  '11700': [82, 25], // Eastern Rooftops
-  '11696': [50, 55], // Rivertown (Ruined)
-  '11695': [28, 80], // Miskatonic University (Ruined)
-  '11697': [50, 82], // St. Mary's Hospital (Ruined)
-  '11698': [72, 80], // Southside (Ruined)
 }
 
 // Boards that reuse cards from another scenario (e.g. the Midnight Masks Arkham districts)
 // but arrange them differently, so the shared anchors would contradict the real connections.
 const boardAnchors: Record<string, Record<string, Point>> = {
+  'children-of-blood/blood-money': {
+    '13076': [49, 82], // Foyer
+    '13077': [69, 81], // Dining Hall
+    '13078': [24, 81], // Study
+    '13079': [57, 34], // Master Bedroom
+    '13080': [90, 81], // Kitchen
+    '13081': [7, 81], // Office
+    '13082': [87, 36], // Balcony
+  },
+  'children-of-blood/river-of-blood': {
+    '13008': [24, 76], // Water Street
+    '13009': [24, 76],
+    '13010': [79, 77], // Garrison Street
+    '13011': [79, 77],
+    '13012': [59, 82], // River Docks
+    '13013': [59, 82],
+    '13014': [49, 31], // Main Street
+    '13015': [49, 31],
+    '13016': [61, 44], // Erwin Bridge
+    '13017': [61, 44],
+    '13018': [19, 30], // Unvisited Isle
+    '13019': [19, 30],
+    '13020': [80, 33], // Waterfront Warehouse
+    '13021': [80, 33],
+    '13022': [13, 71], // Back Alley
+    '13023': [13, 71],
+  },
+  'children-of-blood/new-horizons': {
+    '13039': [23, 20], // West Factory Floor
+    '13040': [77, 21], // East Factory Floor
+    '13041': [29, 41], // Manager's Office
+    '13042': [16, 66], // Loading Dock
+    '13043': [79, 42], // Storage
+    '13044': [23, 20],
+    '13045': [77, 21],
+    '13046': [29, 41],
+    '13047': [16, 66],
+    '13048': [79, 42],
+    '13049': [67, 65], // Shallow Tunnels
+    '13050': [88, 65], // Darkest Depths
+    '13051': [49, 63], // Descending Tunnel
+    '13052': [25, 90], // Hidden Laboratory
+    '13053': [50, 90], // Locked Chamber
+    '13054': [76, 91], // Side Chamber
+    '13055': [25, 90],
+    '13056': [50, 90],
+    '13057': [76, 91],
+    sideChamber1: [15, 76],
+    sideChamber2: [43, 76],
+    sideChamber3: [82, 76],
+  },
+  'side-stories/traces-to-nowhere-otherworld': {
+    '73008': [62, 40], // Steer's Office
+    '73009': [50, 42], // Merchant District
+    '73010': [82, 22], // French Hill
+    '73011': [40, 42], // South Church
+    '73012': [74, 39], // Historical Society
+    '73027': [88, 55], // Arkham Advertiser
+    '73028': [20, 23], // Train Station
+    '73029': [18, 58], // Tick-Tock Club
+    '73030': [55, 55], // Duterte Funeral Home
+    '73031': [55, 55],
+    '73032': [92, 18], // Meiger Estate
+    '73033': [92, 18],
+    '73050': [13, 89], // The Portal
+    '73051': [49, 82], // Ethereal Perch
+    '73052': [87, 83], // Bone Pit
+  },
+  'the-drowned-city/the-doom-of-arkham-part-2': {
+    '11692': [39, 26],
+    '11693': [61, 27],
+    '11694': [87, 41],
+    '11695': [24, 80],
+    '11696': [48, 54],
+    '11697': [51, 86],
+    '11698': [80, 77],
+    '11699': [16, 32],
+    '11700': [80, 28],
+    '01126': [80, 77],
+    '01127': [80, 77],
+    '01128': [51, 86],
+    '01129': [24, 80],
+    '01130': [61, 27],
+    '01131': [61, 27],
+    '01132': [87, 41],
+    '01134': [39, 26],
+    northside: [39, 26],
+    downtown: [61, 27],
+    easttown: [87, 41],
+    miskatonicUniversity: [24, 80],
+    rivertown: [48, 54],
+    stMarysHospital: [51, 86],
+    southside: [80, 77],
+    westernRooftops: [16, 32],
+    easternRooftops: [80, 28],
+  },
   'night-of-the-zealot/devourer-below': {
     mainPath: [51, 45], ritualSite: [50, 83],
     '01149': [51, 45], '01156': [50, 83],
     woods1: [21, 30], woods2: [77, 28], woods3: [25, 69], woods4: [78, 65],
   },
   'the-dunwich-legacy/extracurricular-activity': {
-    '02048': [49, 53], '02049': [22, 34], '02050': [84, 54], '02051': [21, 83],
-    '02052': [48, 86], '02053': [48, 32], '02054': [59, 37], '02055': [59, 37],
-    '02056': [78, 31], '02057': [78, 85], '51013': [11, 51],
+    '02048': [53, 54], // Miskatonic Quad
+    '02049': [19, 88], // Humanities Building
+    '02050': [30, 57], // Orne Library
+    '02051': [53, 36], // Student Union
+    '02052': [61, 22], // Dormitories
+    '02053': [77, 43], // Administration Building
+    '02054': [89, 29], '02055': [89, 29], // Third-floor Faculty Offices
+    '02056': [78, 77], // Science Building
+    '02057': [88, 89], // Basement Alchemy Labs
+    '51013': [22, 18], // Warren Observatory
   },
   'the-dunwich-legacy/blood-on-the-altar': {
     '02201': [50, 57], '51033': [50, 57],
-    '02202': [38, 38], '02203': [38, 38], '51034': [38, 38],
+    '02202': [82, 87], '02203': [82, 87], '51034': [82, 87],
     '02204': [19, 83], '02205': [19, 83], '51035': [19, 83],
     '02206': [74, 62], '02207': [74, 62], '51036': [74, 62],
-    '02208': [18, 58], '02209': [18, 58], '51037': [18, 58],
+    '02208': [25, 64], '02209': [25, 64], '51037': [25, 64],
     '02210': [20, 29], '02211': [20, 29], '51038': [20, 29],
     '02212': [75, 33], '02213': [75, 33], '51039': [75, 33],
   },
@@ -808,8 +846,8 @@ const boardAnchors: Record<string, Record<string, Point>> = {
     '02244': [19, 41], '02245': [19, 41], // Cold Spring Glen
     '02246': [49, 76], '02247': [49, 76], // Ten-Acre Meadow
     '02248': [49, 31], '02249': [49, 31], // Blasted Heath
-    '02250': [80, 43], '02251': [80, 43], // Whateley Ruins
-    '02252': [81, 72], '02253': [81, 72], // Devil's Hop Yard
+    '02250': [84, 80], '02251': [84, 80], // Whateley Ruins
+    '02252': [80, 38], '02253': [80, 38], // Devil's Hop Yard
   },
   'the-dunwich-legacy/where-doom-awaits': {
     baseOfTheHill: [22, 80], ascendingPath: [48, 63], sentinelPeak: [73, 32],
@@ -989,26 +1027,16 @@ const boardAnchors: Record<string, Record<string, Point>> = {
   },
   // The Unspeakable Oath: Arkham Asylum (Courtyard/Garden, Facilities, Subterranean Confinement)
   'the-path-to-carcosa/the-unspeakable-oath': {
-    garden: [38, 25],
-    yard: [62, 25],
-    kitchen: [10, 52],
-    messHall: [32, 52],
-    asylumHallsWesternPatientWing: [52, 52],
-    asylumHallsEasternPatientWing: [69, 52],
-    infirmary: [88, 52],
-    basementHall: [12, 84],
-    patientConfinement1: [35, 84],
-    patientConfinement3: [52, 84],
-    patientConfinement4: [68, 84],
-    patientConfinement2: [84, 84],
-    '03172': [10, 52], // Kitchen
-    '03173': [32, 52], // Mess Hall
-    '03174': [88, 52], // Infirmary
-    '03175': [62, 25], // Yard
-    '03176': [38, 25], // Garden
-    '03177': [12, 84], // Basement Hall
-    '03168': [52, 52], // Western Wing
-    '03169': [69, 52], // Eastern Wing
+    garden: [25, 26], yard: [74, 26],
+    kitchen: [11, 55], messHall: [29, 55],
+    asylumHallsWesternPatientWing: [47, 55], asylumHallsEasternPatientWing: [65, 55],
+    infirmary: [86, 55], basementHall: [51, 88],
+    patientConfinement1: [15, 73], patientConfinement2: [85, 73],
+    patientConfinement3: [15, 93], patientConfinement4: [85, 93],
+    '03172': [11, 55], '03173': [29, 55], '03174': [86, 55],
+    '03175': [74, 26], '03176': [25, 26], '03177': [51, 88],
+    '03168': [47, 55], '03169': [47, 55],
+    '03170': [65, 55], '03171': [65, 55],
   },
   // A Phantom of Truth: 1920s Paris (West-to-East Topology)
   'the-path-to-carcosa/a-phantom-of-truth': {
@@ -1034,36 +1062,24 @@ const boardAnchors: Record<string, Record<string, Point>> = {
     '03216': [68, 16], // Canal Saint-Martin
     '03215': [88, 22], // Père Lachaise Cemetery
     '03208': [42, 88], // Montparnasse
+    '03210': [38, 18], // Montmartre alternate
+    '52041': [42, 88], '52042': [10, 16], '52043': [88, 22],
+    '52044': [68, 16], '52045': [74, 71], '52046': [52, 57],
   },
   // Black Stars Rise: Mont Saint-Michel Fortress & Abbey
   'the-path-to-carcosa/black-stars-rise': {
-    cloister: [28, 16],
-    knightsHall: [20, 25],
-    abbeyChurch: [47, 25],
-    northTower: [60, 22],
-    brokenSteps: [49, 56],
-    outerWall: [82, 46],
-    chapelOfStAubert: [17, 54],
-    chœurGothique: [34, 50],
-    grandRue: [70, 62],
-    abbeyTower: [31, 82],
-    porteDeLAvancée: [76, 84],
-    '03294': [28, 16], // Cloister
-    '03295': [20, 25], // Knights' Hall
-    '03287': [60, 22], // North Tower
-    '03288': [60, 22], // North Tower
-    '03291': [47, 25], // Abbey Church
-    '03285': [82, 46], // Outer Wall
-    '03286': [82, 46], // Outer Wall
-    '03296': [17, 54], // Chapel of St. Aubert
-    '03297': [17, 54], // Chapel of St. Aubert
-    '03290': [49, 56], // Broken Steps
-    '03292': [34, 50], // Chœur Gothique
-    '03293': [34, 50], // Chœur Gothique
-    '03284': [70, 62], // Grand Rue
-    '03298': [31, 82], // Abbey Tower
-    '03299': [31, 82], // Abbey Tower
-    '03283': [76, 84], // Porte de l'Avancée
+    cloister: [31, 25], knightsHall: [23, 39], abbeyChurch: [40, 48],
+    northTower: [88, 32], brokenSteps: [45, 66], outerWall: [85, 57],
+    chapelOfStAubert: [11, 76], chœurGothique: [53, 33],
+    grandRue: [72, 56], abbeyTower: [60, 8], porteDeLAvancée: [80, 90],
+    '03294': [31, 25], '52055': [31, 25],
+    '03295': [23, 39], '52056': [23, 39],
+    '03287': [88, 32], '03288': [88, 32], '03291': [40, 48],
+    '03285': [85, 57], '03286': [85, 57],
+    '03296': [11, 76], '03297': [11, 76],
+    '03289': [45, 66], '03290': [45, 66],
+    '03292': [53, 33], '03293': [53, 33], '03284': [72, 56],
+    '03298': [60, 8], '03299': [60, 8], '03283': [80, 90],
   },
   // One Last Job mirrors the scenario's 3x3 card grid exactly, so the map reads like the table:
   //   .            La Bella Luna   Hibb's Roadhouse
@@ -1106,15 +1122,19 @@ const boardAnchors: Record<string, Record<string, Point>> = {
     '54050': [62, 82], '54051': [75, 58], '54052': [35, 72],
     '54053': [15, 62], '54054': [20, 80], '54055': [48, 52],
   },
-      'side-stories/curse-of-the-rougarou': {
-    '81008': [80, 24], // Garden District (New Orleans)
-    '81018': [20, 26], // Overgrown Cairns (Unhallowed Land)
-    '81016': [50, 48], // Foul Swamp (Bayou)
-    '81010': [50, 48], // Brackish Waters
-    '81007': [20, 26], // Cursed Shores
-    '81013': [50, 48], // Forgotten Marsh
-    '81012': [15, 74], // Faubourg Marigny (Riverside)
-    '81014': [84, 76], // Trapper's Cabin (Wilderness)
+  'side-stories/curse-of-the-rougarou': {
+    '81007': [23, 36], // Cursed Shores
+    '81008': [16, 24], // Garden District
+    '81009': [38, 20], // Broadmoor
+    '81010': [79, 36], // Brackish Waters
+    '81011': [64, 23], // Audubon Park
+    '81012': [87, 25], // Faubourg Marigny
+    '81013': [30, 89], // Forgotten Marsh
+    '81014': [16, 61], // Trapper's Cabin
+    '81015': [37, 63], // Twisted Underbrush
+    '81016': [65, 83], // Foul Swamp
+    '81017': [88, 79], // Ritual Grounds
+    '81018': [86, 59], // Overgrown Cairns
   },
   'side-stories/carnevale-of-horrors': {
     '82008': [51, 23], // 1. San Marco Basilica
@@ -1129,17 +1149,20 @@ const boardAnchors: Record<string, Record<string, Point>> = {
     '82006': [50, 52], // Gondola / Cnidathqua
   },
   'side-stories/fortune-and-folly': {
-    '88010': [32, 65], // Poker Table
-    '88011': [48, 65], // Roulette Wheel
-    '88012': [64, 65], // Baccarat Table
-    '88013': [88, 58], // Slot Machines
-    '88014': [80, 26], // Casino Lounge
-    '88015': [80, 26], // High Rollers Table
-    '88016': [68, 86], // Staff Access Hallway
-    '88018': [68, 86], // Guard Room
-    '88020': [68, 86], // Counting Room
-    '88021': [78, 86], // Vault Door
-    '88022': [92, 86], // Relic Room (Sanctum of Fortune)
+    '88009': [48, 85], // Casino Floor
+    '88010': [35, 64], // Poker Table
+    '88011': [57, 65], // Roulette Wheel
+    '88012': [36, 78], // Baccarat Table
+    '88013': [61, 78], // Slot Machines
+    '88014': [88, 80], // High Roller's Table
+    '88015': [15, 80], // Casino Lounge
+    '88016': [34, 40], // Staff Access Hallway
+    '88017': [23, 28], // Security Office
+    '88018': [9, 28], // Guard Room
+    '88019': [40, 28], // Owner's Office
+    '88020': [54, 28], // Counting Room
+    '88021': [69, 34], // Vault Door
+    '88022': [85, 33], // Relic Room
   },
   'side-stories/machinations-through-time': {
     '87007': [18, 30], // Arkham Gazette (1890s)
@@ -1157,25 +1180,33 @@ const boardAnchors: Record<string, Record<string, Point>> = {
     '87029': [84, 30], // Corrigan Industries (2890s)
   },
   'side-stories/war-of-the-outer-gods': {
-    '86014': [54, 76], // Arkham Crossroads
-    '86015': [66, 42], // Streets of Providence
-    '86016': [66, 42], // Athenaeum of the Empty Sky
-    '86017': [85, 45], // The Arcade
-    '86018': [93, 76], // Streets of Montreal
-    '86019': [93, 76], // Chateau Ramezay
-    '86020': [93, 76], // Shrine of Magh'an Ark'at
-    '86021': [20, 30], // Streets of New York
-    '86022': [29, 65], // The Burning Pit
-    '86023': [8, 70],  // The Penthouse
-    '86024': [72, 10], // Hub Dimension (Eclipse)
+    '86014': [48, 47], // Arkham Crossroads
+    '86015': [75, 86], // Streets of Providence
+    '86016': [87, 74], // Athenaeum
+    '86017': [64, 73], // The Arcade
+    '86018': [17, 25], // Streets of Montréal
+    '86019': [41, 26], // Chateau Ramezay
+    '86020': [66, 22], // Shrine of Magh'an Ark'at
+    '86021': [13, 65], // Streets of New York City
+    '86022': [25, 64], // Burning Pit
+    '86023': [15, 85], // Penthouse
+    '86024': [89, 32], // Hub Dimension
   },
   'side-stories/the-midwinter-gala': {
-    '71007': [50, 72], // Lobby
-    '71008': [22, 74], // Lantern Chamber
-    '71009': [25, 36], // Art Gallery
-    '71010': [78, 74], // Ballroom
-    '71011': [78, 84], // Barroom
-    '71012': [76, 36], // Bedroom / Library
+    '71007': [18, 68], // Lobby
+    '71008': [24, 88], // Lantern Chamber
+    '71009': [42, 68], // Art Gallery
+    '71010': [62, 68], // Ballroom
+    '71011': [83, 68], // Barroom
+    '71012': [23, 33], // Bedroom
+    '71013': [47, 33], // Library
+    '71014': [76, 33], // Parlor
+    groundFloor1: [51, 54],
+    groundFloor2: [71, 54],
+    groundFloor3: [93, 55],
+    secondFloor1: [38, 21],
+    secondFloor2: [64, 21],
+    secondFloor3: [89, 22],
   },
   'side-stories/film-fatale': {
     '72009': [48, 28], // Space Set (Soundstage)
@@ -1248,12 +1279,16 @@ export function museumExhibitArt(cardCode: string, revealed: boolean): string | 
 
 export type HemlockOverview = {
   image: string
+  locationEffect?: { image: string; mask: string }
   fixedPassages: boolean
   village?: boolean
+  layoutArt?: string
   anchors?: Record<string, Point>
   revealRoomAnchors?: boolean
   museumExhibits?: boolean
   spectral?: boolean
+  ruinedDistricts?: { image: string; mask: string }
+  spectralPlaces?: { image: string; mask: string }
   /** Folder of floating-island sprites drawn under each location, for boards with no painted places. */
   islands?: string
   /** Moving weather drawn over the painted background (rain, swell, fog, lightning); the picture stays still. */
@@ -1316,9 +1351,108 @@ const CONGRESS_TOWER = new Set(['09712', '09713', '09714'])
 const towerStands = (cardCodes?: readonly string[]) =>
   !!cardCodes?.some((code) => CONGRESS_TOWER.has(code.replace(/^c/, '').replace(/^(\d{5})[abc]$/, '$1')))
 
+type SpreadingFlamesFire = 'room' | 'dorm' | 'campus' | 'none'
+type SceneAgenda = Pick<Agenda, 'sequence' | 'flipped'>
+
+function sceneAgendaStage(agendas: readonly SceneAgenda[]): number {
+  return Math.max(1, ...agendas.map(({ sequence, flipped }) =>
+    sequence.step + Number(flipped || sequence.side === 'B'),
+  ))
+}
+
+export function spreadingFlamesFire(
+  agendas: readonly SceneAgenda[],
+  locations: readonly Pick<Location, 'id' | 'cardCode' | 'modifiers'>[],
+  treacheries: Record<string, Pick<Treachery, 'cardCode' | 'placement'>>,
+): SpreadingFlamesFire {
+  // The narration changes the campus fire as soon as the agenda turns over.
+  const stage = sceneAgendaStage(agendas)
+  if (stage >= 3) return 'campus'
+  if (stage === 2) return 'dorm'
+
+  // Where There's Smoke can set the bedroom alight while Past Curfew is still face up.
+  const room = locations.find(({ cardCode }) => cardCode.replace(/^c/, '') === '12113')
+  if (!room) return 'none'
+  if (room.modifiers.some(({ type }) => type.tag === 'UIModifier' && type.contents === 'OnFire')) return 'room'
+  const attachedFire = Object.values(treacheries).some(({ cardCode, placement }) =>
+    cardCode.replace(/^c/, '') === '12129' && placement.tag === 'AttachedToLocation' && placement.contents === room.id,
+  )
+  return attachedFire ? 'room' : 'none'
+}
+
+const spreadingFlamesArt = {
+  none: 'brethren-of-ash/spreading-flames',
+  room: 'brethren-of-ash/spreading-flames-burning',
+  dorm: 'brethren-of-ash/spreading-flames-dorm-fire',
+  campus: 'brethren-of-ash/spreading-flames-campus-fire',
+}
+
+export function extracurricularCommotion(
+  acts: readonly Pick<Act, 'sequence'>[],
+  agendas: readonly Pick<Agenda, 'sequence' | 'flipped'>[],
+): boolean {
+  // Both card backs describe a disturbance in the Science Building.
+  return acts.some(({ sequence }) => sequence.number >= 3 || (sequence.number === 2 && sequence.side === 'B'))
+    || agendas.some(({ sequence, flipped }) =>
+      sequence.step >= 3 || (sequence.step === 2 && (flipped || sequence.side === 'B')),
+    )
+}
+
+function phaseArt(
+  art: string, agendas: readonly SceneAgenda[], cardCodes: readonly string[],
+): string {
+  const codes = cardCodes.map((code) => code.replace(/^c/, ''))
+  const stage = sceneAgendaStage(agendas)
+  switch (art) {
+    case 'children-of-blood/river-of-blood': {
+      if (stage === 1 && codes.some((code) => /^130(?:09|11|13|15|17|19|21|23)$/.test(code))) return art
+      return `${art}-${stage === 2 || stage >= 4 ? 'night' : 'day'}`
+    }
+    case 'children-of-blood/new-horizons': {
+      const night = codes.some((code) => /^1304[4-8]$/.test(code))
+      const below = codes.some((code) => /^130(?:49|5[0-7])[ab]?$/.test(code))
+      return art + (below ? '' : '-factory') + (night ? '-night' : '')
+    }
+    case 'children-of-blood/blood-money':
+      return codes.includes('13076b') ? `${art}-bloody-night` : art
+    case 'the-circle-undone/the-wages-of-sin':
+      return stage >= 2 ? `${art}-spectral` : art
+    case 'the-circle-undone/the-secret-name':
+      if (!codes.includes('05133')) return `${art}-house`
+      return codes.some((code) => /^5403[0-3][ab]?$/.test(code)) ? `${art}-return-otherworld` : `${art}-otherworld`
+    case 'the-innsmouth-conspiracy/in-too-deep':
+      return art + (['-early-tide', '', '-midtown-tide', '-high-tide'][Math.min(stage, 4) - 1])
+    default:
+      return art
+  }
+}
+
+// Radii and centers are percentages of the fixed Arkham panorama. Rivertown starts
+// Ruined, so the vortex is already part of the base image.
+const districtMasks: Record<string, readonly [number, number, number, number]> = {
+  '11692': [16, 14, 36, 28], // Northside
+  '11693': [13, 15, 59, 27], // Downtown
+  '11694': [19, 23, 88, 41], // Easttown
+  '11695': [23, 25, 17, 86], // Miskatonic University
+  '11697': [18, 16, 52, 90], // St. Mary's Hospital
+  '11698': [21, 24, 85, 82], // Southside
+}
+
+function arkhamRuinLayer(art: string, codes: readonly string[]): HemlockOverview['ruinedDistricts'] {
+  if (art !== 'the-drowned-city/the-doom-of-arkham-part-2') return
+  const gradients = codes.flatMap((code) => {
+    const district = districtMasks[code.replace(/^c/, '')]
+    if (!district) return []
+    const [width, height, x, y] = district
+    return `radial-gradient(${width}% ${height}% at ${x}% ${y}%, black 62%, transparent)`
+  })
+  if (gradients.length) return { image: `img/scenes/${art}-ruined.webp`, mask: gradients.join(', ') }
+}
+
 export function hemlockOverview(
   id: string, reference: string, layout?: readonly string[] | null, activeLabels?: readonly string[],
   cardCodes?: readonly string[], log?: Pick<LogContents, 'recorded' | 'recordedCounts'> | null,
+  fire: SpreadingFlamesFire = 'none', campusCommotion = false, agendas: readonly SceneAgenda[] = [],
 ): HemlockOverview | undefined {
   const scenario = id.replace(/^c/, '')
   // Some branches of the finale leave the Abyss and rebuild the village board.
@@ -1328,6 +1462,10 @@ export function hemlockOverview(
   let art = dreamArt ?? boards.get(scenario)
   if (isNightVale) art = 'hemlock-vale/vale-night'
   if (isTower) art = 'the-scarlet-keys/congress-otherworld'
+  if (scenario === '12105') art = spreadingFlamesArt[fire]
+  if (scenario === '73001' && cardCodes?.some((code) => /^c?7305[0-2][ab]?$/.test(code))) {
+    art = 'side-stories/traces-to-nowhere-otherworld'
+  }
   if (art === 'night-of-the-zealot/midnight-masks') {
     const burned = ({ tag, contents }: LogKey) =>
       tag === 'NightOfTheZealotKey' && contents === 'YourHouseHasBurnedToTheGround'
@@ -1336,6 +1474,20 @@ export function hemlockOverview(
     }
   }
   if (!art) return undefined
+  const hasCampusCommotion = campusCommotion && art === 'the-dunwich-legacy/extracurricular-activity'
+  let imageArt = hasCampusCommotion ? `${art}-science-commotion` : phaseArt(art, agendas, cardCodes ?? [])
+  if (scenario === '54029' && imageArt === 'the-circle-undone/the-secret-name-otherworld') {
+    imageArt = 'the-circle-undone/the-secret-name-return-otherworld'
+  }
+  const ruinedDistricts = arkhamRuinLayer(art, cardCodes ?? [])
+  // Before Agenda 2 the players can flip individual graveyard locations. Apply
+  // the spectral texture locally while the surrounding physical world remains.
+  const spectralPlaces = art === 'the-circle-undone/the-wages-of-sin' && imageArt === art
+    ? (cardCodes ?? []).flatMap((code) => {
+      const match = code.replace(/^c/, '').match(/^(051(?:6[6-9]|7[0-6])|54037)b$/)
+      const point = match && villageAnchors[match[1]]
+      return point ? [`radial-gradient(18% 23% at ${point[0]}% ${point[1]}%, black 60%, transparent)`] : []
+    }) : []
   const estate = art === 'the-circle-undone/return-to-the-twilight-estate'
   const spectral = estate && (
     ['05043', '54016'].includes(scenario)
@@ -1344,12 +1496,16 @@ export function hemlockOverview(
   const islands = dreamArt?.includes('/endless-stairs/') || dreamArt?.includes('/weaver/')
     ? `img/scenes/${dreamArt.slice(0, dreamArt.lastIndexOf('/'))}` : ISLAND_FOLDERS.get(scenario)
   return {
-    image: `img/scenes/${art}.webp`,
+    image: `img/scenes/${imageArt}.webp`,
+    ...(imageArt !== art ? { layoutArt: art === 'the-circle-undone/the-secret-name' ? imageArt : art } : {}),
+    ...(ruinedDistricts ? { ruinedDistricts } : {}),
+    ...(spectralPlaces.length ? { spectralPlaces: { image: `img/scenes/${art}-spectral.webp`, mask: spectralPlaces.join(', ') } } : {}),
     fixedPassages: false,
     village: true,
     anchors: dreamEatersAnchors[art] ?? boardAnchors[art],
     ...(['the-path-to-carcosa/return-to-curtain-call', 'the-path-to-carcosa/return-to-echoes-of-the-past',
       'the-dunwich-legacy/return-to-the-house-always-wins', 'the-circle-undone/return-to-for-the-greater-good',
+      'side-stories/the-midwinter-gala', 'the-dream-eaters/waking-nightmare', 'children-of-blood/new-horizons',
     ].includes(art) ? { revealRoomAnchors: true } : {}),
     ...(art === 'the-dunwich-legacy/return-to-the-miskatonic-museum' ? { museumExhibits: true } : {}),
     ...(spectral ? { spectral: true } : {}),

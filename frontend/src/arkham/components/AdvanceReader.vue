@@ -6,18 +6,24 @@
 //
 // Two separate sections: the back of the card that was just completed (the part
 // to read aloud), and the card that is now in play.
-import { computed, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { cardImg } from '@/arkham/helpers'
 import { cardArt } from '@/arkham/cardImages'
 import { replaceText } from '@/arkham/cardTextFormat'
 import { useCardInfo } from '@/arkham/composables/useCardNames'
 import type { AdvanceReading } from '@/arkham/advanceReading'
+import { useSettings } from '@/stores/settings'
+import { cardNarrationTrack, type NarrationManifest, type NarrationTrack } from '@/arkham/narration'
+import { loadManifest, NARRATION_ROOT } from '@/arkham/composables/useNarration'
 
 const props = defineProps<{ reading: AdvanceReading; remaining: number }>()
 const emit = defineEmits<{ accept: [] }>()
 
 const { t } = useI18n()
+const settings = useSettings()
+const manifest = ref<NarrationManifest | null>(null)
+void loadManifest().then((m) => (manifest.value = m))
 
 // Sequential: first read the back of the finished card, then move on to what comes next.
 const index = ref(0)
@@ -25,6 +31,7 @@ watch(() => props.reading.key, () => { index.value = 0 })
 const step = computed(() => props.reading.steps[index.value] ?? 'back')
 const isLast = computed(() => index.value >= props.reading.steps.length - 1)
 const onAccept = () => {
+  stopSpeech()
   if (isLast.value) emit('accept')
   else index.value += 1
 }
@@ -85,6 +92,55 @@ watch(step, () => { zoomed.value = false })
 
 const fromImage = computed(() => cardImg(`${cardArt(props.reading.fromCode)}b`))
 const toImage = computed(() => (props.reading.toCode ? cardImg(cardArt(props.reading.toCode)) : ''))
+
+const speaking = ref(false)
+let audio: HTMLAudioElement | null = null
+
+const track = computed<NarrationTrack | null>(() => {
+  if (!manifest.value) return null
+  const code = step.value === 'back' ? props.reading.fromCode : props.reading.toCode
+  if (!code) return null
+  const side = step.value === 'back' ? 'b' : 'a'
+  return cardNarrationTrack(code, side, manifest.value, settings.narrationLanguage, NARRATION_ROOT)
+})
+
+function stopSpeech() {
+  if (audio) {
+    audio.onended = null
+    audio.pause()
+  }
+  audio = null
+  speaking.value = false
+}
+
+function playSpeech() {
+  stopSpeech()
+  if (!track.value?.url) return
+  audio = new Audio(track.value.url)
+  audio.volume = settings.narrationVolume
+  audio.onended = () => { speaking.value = false }
+  speaking.value = true
+  audio.play().catch(() => { speaking.value = false })
+}
+
+function toggleSpeech() {
+  if (speaking.value) {
+    stopSpeech()
+  } else {
+    playSpeech()
+  }
+}
+
+watch(track, (newTrack) => {
+  stopSpeech()
+  if (newTrack && settings.narration) {
+    playSpeech()
+  }
+}, { immediate: true })
+
+onBeforeUnmount(() => {
+  stopSpeech()
+})
 </script>
 
 <template>
@@ -92,7 +148,18 @@ const toImage = computed(() => (props.reading.toCode ? cardImg(cardArt(props.rea
     <div class="advance-reader" role="dialog" aria-modal="true" aria-labelledby="advance-reader-title">
       <div class="advance-reader__sections">
         <section v-if="step === 'back'" class="advance-reader__section">
-          <h2 id="advance-reader-title" class="advance-reader__title">{{ backTitle }}</h2>
+          <div class="advance-reader__title-row">
+            <h2 id="advance-reader-title" class="advance-reader__title">{{ backTitle }}</h2>
+            <button
+              v-if="track"
+              type="button"
+              class="advance-reader__speech-toggle"
+              :class="{ speaking }"
+              :title="speaking ? $t('gameBar.settings.narration.stop') : $t('gameBar.settings.narration.play')"
+              :aria-label="speaking ? $t('gameBar.settings.narration.stop') : $t('gameBar.settings.narration.play')"
+              @click="toggleSpeech"
+            >{{ speaking ? '■' : '🔊' }}</button>
+          </div>
           <div class="advance-reader__row">
             <img class="advance-reader__card no-overlay" :src="fromImage" :alt="backTitle" @mouseenter="zoomed = true" @mouseleave="zoomed = false" />
             <div class="advance-reader__text-block">
@@ -102,7 +169,18 @@ const toImage = computed(() => (props.reading.toCode ? cardImg(cardArt(props.rea
           </div>
         </section>
         <section v-else class="advance-reader__section">
-          <h2 id="advance-reader-title" class="advance-reader__title">{{ nextTitle }}</h2>
+          <div class="advance-reader__title-row">
+            <h2 id="advance-reader-title" class="advance-reader__title">{{ nextTitle }}</h2>
+            <button
+              v-if="track"
+              type="button"
+              class="advance-reader__speech-toggle"
+              :class="{ speaking }"
+              :title="speaking ? $t('gameBar.settings.narration.stop') : $t('gameBar.settings.narration.play')"
+              :aria-label="speaking ? $t('gameBar.settings.narration.stop') : $t('gameBar.settings.narration.play')"
+              @click="toggleSpeech"
+            >{{ speaking ? '■' : '🔊' }}</button>
+          </div>
           <div class="advance-reader__row">
             <img class="advance-reader__card no-overlay" :src="toImage" :alt="nextTitle" @mouseenter="zoomed = true" @mouseleave="zoomed = false" />
             <div class="advance-reader__text-block">
@@ -150,11 +228,49 @@ const toImage = computed(() => (props.reading.toCode ? cardImg(cardArt(props.rea
   line-height: 1.45;
 }
 
+.advance-reader__title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .advance-reader__title {
   margin: 0;
   font-family: Teutonic, var(--ui-serif);
   font-size: 1.8rem;
   color: #f1c97b;
+}
+
+.advance-reader__speech-toggle {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(241, 201, 123, 0.4);
+  background: rgba(0, 0, 0, 0.45);
+  color: #f1c97b;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.advance-reader__speech-toggle:hover {
+  background: rgba(241, 201, 123, 0.25);
+  border-color: #f1c97b;
+  transform: scale(1.08);
+}
+
+.advance-reader__speech-toggle.speaking {
+  background: #f1c97b;
+  color: #1a1612;
+  border-color: #fff;
+  box-shadow: 0 0 10px rgba(241, 201, 123, 0.6);
 }
 
 .advance-reader__sections {

@@ -10,19 +10,23 @@ import { useCardNames } from '@/arkham/composables/useCardNames'
 import { useAbilityCardText, type AbilitySection } from '@/arkham/composables/useAbilityCardText'
 import { sourceEntityId, kindOf, type AbilityKind, type EntityChoice } from '@/arkham/locationChoices'
 import { ownInvestigator } from '@/arkham/ownInvestigator'
+import { computeStat } from '@/arkham/statModel'
+import type { SkillType } from '@/arkham/types/SkillType'
 import { shouldPulseEndTurn } from '@/arkham/endTurnAttention'
 import { abilityActions } from '@/arkham/locationInfoModel'
 import { entityImage, basicActionImage, investigatorImage } from '@/arkham/actionPreviewImage'
 import { imgsrc } from '@/arkham/helpers'
 import { visibleConcealedImage } from '@/arkham/concealedCards'
 import { sceneFallbackTargets, sceneFallbackTokens } from '@/arkham/sceneTargetFallback'
+import { sceneHiddenCardChoices } from '@/arkham/sceneHiddenCardChoices'
 import { cardImage } from '@/arkham/cardImages'
 import { keyToImage } from '@/arkham/keyImage'
 import type { ArkhamKey } from '@/arkham/types/Key'
 import AbilityButton from '@/arkham/components/AbilityButton.vue'
 import AbilityTextRow from '@/arkham/components/AbilityTextRow.vue'
 import LocationAboutBlock from '@/arkham/components/LocationAboutBlock.vue'
-import SceneGlyph from '@/arkham/components/SceneGlyph.vue'
+import LocationInspectSection from '@/arkham/components/LocationInspectSection.vue'
+import { panelModeFor } from '@/arkham/location-panel-mode'
 import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
 
 /* Every action the server offers right now, listed in one panel beside the scene the way the offline demo
@@ -37,10 +41,32 @@ const props = defineProps<{
   /** Drawn as a bottom sheet (tablet held upright): a grab bar on top folds and unfolds it. */
   sheet?: boolean
   expanded?: boolean
+  /** Another location the player clicked to look at: the panel describes it instead of listing the actions
+   * where they stand, until they go back. Null (or the location they stand on) is the usual action list. */
+  inspected?: Location | null
+  inspectedInfo?: MapLocationInfo | null
+  /** Where the inspected location leads. */
+  connections?: { id: string; name: string; revealed: boolean; barriers?: number }[]
+  /** Little height to spare (or docked in the sidebar): only the actions are listed, without the location text. */
+  compact?: boolean
 }>()
-const emit = defineEmits<{ (e: 'choose', index: number): void; (e: 'close'): void; (e: 'toggleSheet'): void }>()
+const emit = defineEmits<{
+  (e: 'choose', index: number): void; (e: 'toggleSheet'): void
+  /** Look at another location (a connection chip). */
+  (e: 'inspect', id: string): void
+  /** Leave the inspected location and list the actions again. */
+  (e: 'back'): void
+}>()
 
 const { t, te } = useI18n()
+const viewing = computed(() => panelModeFor(props.inspected?.id ?? null, props.location?.id ?? null) === 'viewing'
+  && !!props.inspected && !!props.inspectedInfo)
+const shown = computed(() => (viewing.value ? props.inspected : props.location) ?? null)
+/* A choice made from the inspected location is done with it: back to the action list. */
+function chooseInspected(index: number) {
+  emit('choose', index)
+  emit('back')
+}
 const nameOf = useCardNames()
 const choices = useGameChoices(() => props.game, () => props.playerId)
 const me = computed(() => ownInvestigator(props.game, props.playerId))
@@ -154,10 +180,15 @@ const sections = computed(() => {
     rows.targets.push({ index: target.index, group: t(`locationMap.targetKind.${target.kind}`), label: nameOf(target.code),
       contents: null, sourceId: null, kind: null, text: null, image: cardImage(target.art, target.side), variant: null })
   }
+  for (const card of sceneHiddenCardChoices(props.game, choices.value)) {
+    rows.targets.push({ index: card.index, group: t('locationMap.targetKind.card'), label: nameOf(card.cardCode),
+      contents: null, sourceId: null, kind: null, text: null, image: cardImage(card.cardCode), variant: null })
+  }
   for (const token of sceneFallbackTokens(choices.value, mine ?? null)) {
     const investigator = props.game.investigators[token.investigatorId]
     const who = investigator ? nameOf(investigator.cardCode) : token.investigatorId
-    const what = te(`locationMap.tokenChoice.${token.tokenType}`) ? t(`locationMap.tokenChoice.${token.tokenType}`) : token.tokenType
+    const key = `locationMap.tokenChoice.${token.heal ? 'heal.' : ''}${token.tokenType}`
+    const what = te(key) ? t(key) : token.tokenType
     rows.targets.push({ index: token.index, group: who, label: what, contents: null, sourceId: null, kind: null, text: null,
       image: investigator ? cardImage(investigator.cardCode) : null, variant: null })
   }
@@ -168,9 +199,23 @@ const sections = computed(() => {
 const endTurn = computed(() => sections.value.find((s) => s.key === 'basic')?.rows.find((r) => r.variant === 'end') ?? null)
 /* The turn is never ended automatically; End Turn blinks instead once no action is left or it is the only choice. */
 const pulseEndTurn = computed(() => shouldPulseEndTurn(endTurn.value !== null, me.value?.remainingActions ?? 1, choices.value))
+/* The acting investigator's skills with lasting modifiers applied, shown on the basic actions they test. */
+const mySkills = computed<Partial<Record<SkillType, number>> | null>(() => {
+  const i = me.value
+  if (!i) return null
+  const value = (key: 'willpower' | 'intellect' | 'combat' | 'agility') => computeStat(key, i[key], i.modifiers).current
+  return { SkillWillpower: value('willpower'), SkillIntellect: value('intellect'), SkillCombat: value('combat'), SkillAgility: value('agility') }
+})
+/* Actions left drawn as pips (a turn has three, more with extra actions): spent ones stay as hollow rings. */
+const actionPips = computed(() => Math.max(3, me.value?.remainingActions ?? 0))
 const listed = computed(() => sections.value
   .map((s) => ({ ...s, rows: s.rows.filter((r) => r.variant !== 'end') }))
   .filter((s) => s.rows.length > 0))
+/* Abilities of the location you stand on that the list offers with their printed text: the about block
+ * leaves those lines out, so each is read once, as the button that uses it. */
+const offeredHere = computed(() => listed.value.flatMap((s) => s.rows)
+  .filter((r) => r.text && r.kind && r.sourceId === props.location?.id)
+  .map((r) => r.kind as string))
 
 </script>
 
@@ -178,11 +223,26 @@ const listed = computed(() => sections.value
   <aside class="panel" :class="{ sheet, expanded }" :aria-label="t('locationMap.actions')">
     <button v-if="sheet" class="grab" type="button" :aria-expanded="expanded" :aria-label="t('locationMap.sheetHandle')" @click="emit('toggleSheet')"><span aria-hidden="true"></span></button>
     <div class="body">
-    <header>
-      <h3>{{ location ? nameOf(location.cardCode) : t('locationMap.actions') }}</h3>
-      <button class="close" :aria-label="t('locationMap.close')" @click="emit('close')"><SceneGlyph name="close" /></button>
+    <!-- Only when looking at another location: its name and the way back. At your own location the scene
+         already shows where you stand, so the list starts straight with the actions. -->
+    <header v-if="viewing">
+      <button v-if="viewing" class="back" type="button" :title="t('locationMap.backToHere')" :aria-label="t('locationMap.backToHere')" @click="emit('back')"><span aria-hidden="true">←</span></button>
+      <div class="heading">
+        <span v-if="viewing" class="eyebrow">{{ t('locationMap.viewing') }}</span>
+        <h3>{{ shown ? nameOf(shown.cardCode) : t('locationMap.actions') }}</h3>
+      </div>
     </header>
-    <LocationAboutBlock v-if="location && info" :game="game" :playerId="playerId" :location="location" :info="info" />
+    <!-- At your own location: a section title bar, styled like the phase bar of the turn status above. -->
+    <header v-else class="title-bar">{{ t('locationMap.yourActions') }}</header>
+    <!-- Looking at another location: what it is, where it leads and what can be done with it from here. -->
+    <template v-if="viewing && inspected && inspectedInfo">
+      <LocationAboutBlock :game="game" :playerId="playerId" :location="inspected" :info="inspectedInfo" />
+      <LocationInspectSection :game="game" :playerId="playerId" :info="inspectedInfo" :connections="connections ?? []"
+        @choose="chooseInspected" @inspect="emit('inspect', $event)" />
+    </template>
+    <template v-else>
+    <!-- Docked or short on height, the panel is the action list alone; with room it opens on the location's text. -->
+    <LocationAboutBlock v-if="location && info && !compact" :game="game" :playerId="playerId" :location="location" :info="info" :offeredKinds="offeredHere" />
     <p v-if="sections.length === 0" class="empty">{{ t('locationMap.noActions') }}</p>
     <section v-for="s in listed" :key="s.key" class="section" :class="`section--${s.key}`">
       <h4>{{ s.title }}</h4>
@@ -192,14 +252,18 @@ const listed = computed(() => sections.value
         <div v-else-if="r.contents && r.text" class="choice" :data-image="r.image ?? undefined">
           <AbilityTextRow class="text-row" :kind="r.kind" :html="r.text" @choose="emit('choose', r.index)" />
         </div>
-        <AbilityButton v-else-if="r.contents" class="row" :data-image="r.image ?? undefined" :game="game" :ability="r.contents" @choose="emit('choose', r.index)" />
+        <AbilityButton v-else-if="r.contents" class="row" :data-image="r.image ?? undefined" :game="game" :ability="r.contents"
+          :skillValues="s.key === 'basic' ? mySkills : null" @choose="emit('choose', r.index)" />
       </template>
     </section>
+    </template>
     </div>
     <!-- Always present; greyed out while the server is not offering End Turn. A div, not <footer>:
          base.css pins every <footer> to the bottom of the viewport for the site footer. -->
     <div class="foot">
-      <span v-if="me" class="actions-left">{{ t('locationMap.actionsLeft', { count: me.remainingActions }) }}</span>
+      <span v-if="me" class="actions-left" role="img" :aria-label="t('locationMap.actionsLeft', { count: me.remainingActions })" :title="t('locationMap.actionsLeft', { count: me.remainingActions })">
+        <span v-for="n in actionPips" :key="n" class="pip" :class="{ 'pip--spent': n > me.remainingActions }" aria-hidden="true"></span>
+      </span>
       <button type="button" class="end-turn" :class="{ 'end-turn--pulse': pulseEndTurn }" :disabled="!endTurn" :data-game-actionable="endTurn ? true : undefined" @click="endTurn && emit('choose', endTurn.index)">{{ endTurn?.label ?? t('locationMap.endTurn') }}</button>
     </div>
   </aside>
@@ -207,22 +271,39 @@ const listed = computed(() => sections.value
 
 <style scoped>
 .panel { display: flex; flex-direction: column; width: var(--panel-w, 280px); max-height: 100%; overflow: hidden; padding: 0; background: linear-gradient(180deg, var(--surface-1, #142019), var(--surface-0, #0d1611)); border: 1px solid var(--line-strong, #c6a87399); border-radius: var(--radius-lg, 8px); box-shadow: var(--shadow-pop, 0 8px 28px #000a); color: var(--text, #e8e3d0); }
-/* Only the body scrolls; the end-turn footer is a fixed flex child so it can never float over the action rows. */
-.body { display: flex; flex-direction: column; gap: 10px; flex: 1 1 auto; min-height: 0; overflow-y: auto; padding: 0 12px 12px; scrollbar-width: thin; scrollbar-color: var(--line, #c6a87355) transparent; }
-/* The name and close button stay put while the actions scroll under them. */
-header { position: sticky; top: 0; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 0 -12px; padding: 10px 12px 8px; background: var(--surface-1, #142019); border-bottom: 1px solid var(--line, #c6a87340); }
+.panel.action-docked {
+  width: 100%;
+  height: 100%;
+  /* Docked between the status block and the log: the sidebar's own divider lines frame it, no card border. */
+  border: 0;
+  border-block: 1px solid var(--line, #c6a87340);
+  border-radius: 0;
+  box-shadow: none;
+}
+/* Only the body scrolls; the end-turn footer stays in view. */
+.body { display: flex; flex-direction: column; gap: 10px; flex: 1 1 auto; min-height: 0; overflow-y: auto; padding: 10px 12px 12px; scrollbar-width: thin; scrollbar-color: var(--line, #c6a87355) transparent; overscroll-behavior-y: contain; }
+/* The location name stays put while the actions scroll under it. */
+/* Same band style as the phase bar and the mission strip titles: a pure colour pair (emerald for your
+ * own actions), light uppercase caption with a shadow, a lighter rule underneath. */
+header.title-bar { display: block; margin: -10px -12px 0; padding: 7px 12px; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff8ea; text-shadow: 0 1px 2px #000a; background: linear-gradient(180deg, #2f7350, #22553b); border-block: 1px solid #5fb487; box-shadow: inset 0 1px 0 #ffffff26; }
+header { position: sticky; top: -10px; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: -10px -12px 0; padding: 10px 12px 8px; background: var(--surface-1, #142019); border-bottom: 1px solid var(--line, #c6a87340); }
 h3 { margin: 0; min-width: 0; font: 600 1rem/1.2 var(--ui-serif); color: var(--heading, #fff4df); overflow-wrap: anywhere; }
-.close { flex: none; display: grid; place-items: center; background: transparent; border: 1px solid var(--line, #ffffff26); border-radius: var(--radius, 6px); color: var(--text-muted, #c9d0c3); padding: 4px; cursor: pointer; }
-.close:hover { border-color: var(--accent-gold, #d9b878); color: var(--heading, #fff); }
-.section { display: flex; flex-direction: column; gap: 5px; border-top: 1px solid #ffffff14; padding-top: 8px; }
-h4 { margin: 0 0 2px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-gold, #d9b878); }
+.heading { flex: 1; min-width: 0; display: grid; }
+.eyebrow { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--state-target, #f2d27a); }
+.back { flex: none; display: grid; place-items: center; min-width: 26px; min-height: 26px; background: transparent; border: 1px solid var(--line-strong, #c6a873aa); border-radius: var(--radius, 6px); color: var(--heading, #fff4df); font-size: 1rem; line-height: 1; cursor: pointer; }
+.back:hover { border-color: var(--accent-gold, #d9b878); background: var(--surface-2, #283a30); }
+.back:focus-visible, .section { display: flex; flex-direction: column; gap: 6px; padding-top: 4px; }
+.section + .section { border-top: 1px solid #ffffff12; padding-top: 10px; }
+h4 { margin: 0 0 2px; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-gold, #d9b878); }
 /* Basic actions: resource and draw side by side, the rest full width, end turn last and set apart. */
 .section--basic { display: grid; grid-template-columns: 1fr 1fr; }
 .section--basic > * { grid-column: 1 / -1; }
 .section--basic > .row--half { grid-column: auto; text-align: center; justify-content: center; }
 .foot { flex: none; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0; padding: 8px 12px 10px; background: var(--surface-0, #0d1611); border-top: 1px solid var(--line, #c6a87340); }
-.actions-left { flex: 1 1 auto; min-width: 0; font-size: 0.74rem; color: var(--text-muted, #b6bfb0); }
-.end-turn { flex: none; padding: 7px 14px; border-radius: var(--radius, 6px); border: 1px solid #e0915a99; background: #3a241666; color: #ffd9b8; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: background 0.15s, border-color 0.15s; }
+.actions-left { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 5px; }
+.pip { width: 10px; height: 10px; border-radius: 50%; background: var(--accent-gold, #d9b878); box-shadow: 0 0 5px #d9b87866; }
+.pip--spent { background: transparent; box-shadow: inset 0 0 0 1.5px #ffffff38; }
+.end-turn { flex: none; min-height: 34px; padding: 0 16px; border-radius: var(--radius, 6px); border: 1px solid #e0915a99; background: #3a241666; color: #ffd9b8; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: background 0.15s, border-color 0.15s; }
 .end-turn:disabled { opacity: 0.45; cursor: not-allowed; }
 .end-turn:hover:not(:disabled) { background: #3a2416; border-color: #e0915a; }
 .end-turn--pulse:not(:disabled) { animation: end-turn-pulse 1.1s ease-in-out infinite; border-color: #e0915a; }
@@ -237,13 +318,32 @@ h5 { margin: 4px 0 0; font-size: 0.72rem; color: var(--text-flavor, #cdd4c2); fo
 .section--enemies h5 { color: #e0a595; }
 .section--inPlay h5, .section--other h5 { color: var(--accent-gold, #d9b878); }
 .section--targets h5 { color: var(--state-target, #f2d27a); }
-.row, .section :deep(button) { width: 100%; text-align: left; justify-content: flex-start; padding: 7px 10px; font-size: 0.78rem; background: #1b2a22 !important; border: 1px solid #ffffff1f !important; border-radius: 5px; transition: background 0.15s, border-color 0.15s; color: #e5e2d4 !important; cursor: pointer; }
-.row:hover, .section :deep(button:hover:not(:disabled)) { background: #213529 !important; border-color: #e6c584 !important; }
+/* Action rows are the bright, raised layer of the panel: a lit green-slate face with a soft top highlight,
+   white text, so they stand clear of the darker panel and log around them. */
+.panel { --row-face: linear-gradient(180deg, #3a5244, #2c4234); --row-face-hover: linear-gradient(180deg, #46634f, #35503f); }
+.row, .section :deep(button) { width: 100%; min-height: 38px; text-align: left; justify-content: flex-start; align-items: center; padding: 0 10px; font-size: 0.82rem; font-weight: 600; background: var(--row-face) !important; border: 1px solid #c6a87359 !important; border-radius: 6px; box-shadow: inset 0 1px 0 #ffffff1f, 0 1px 2px #0006 !important; transition: background 0.15s, border-color 0.15s, transform 0.1s; color: #fffaf0 !important; cursor: pointer; }
+.row:hover, .section :deep(button:hover:not(:disabled)) { background: var(--row-face-hover) !important; border-color: #e6c584 !important; }
+.row:active, .section :deep(button:active:not(:disabled)) { transform: translateY(1px); }
 .section :deep(button:disabled) { opacity: 0.5; }
-.choice { display: flex; flex-direction: column; background: #1b2a22; border: 1px solid #ffffff1f; border-radius: 5px; cursor: pointer; transition: background 0.15s, border-color 0.15s; }
-.choice:hover { background: #213529; border-color: #e6c584; }
-.choice :deep(button), .choice :deep(button:hover:not(:disabled)) { border: 0 !important; background: transparent !important; }
-.choice .text-row { font-size: 0.78rem; color: #e5e2d4 !important; }
+/* Inside the panel an ability button is one clean row: label on the left, the tested skill on the right.
+   The "basic ability" marker repeats the section heading, so it is dropped. */
+.section :deep(.button-basic-section) { display: none; }
+.section :deep(.button-label) { flex: 1 1 auto; justify-content: flex-start; padding: 0; gap: 6px; }
+.section :deep(button::before) { padding: 0 6px 0 0 !important; margin: 0 !important; opacity: 0.75; font-size: 0.9em; }
+.section :deep(.button-skill-section) { padding: 0 0 0 8px; background: transparent; border: 0; font-size: 0.9rem; color: #fff; text-shadow: 0 1px 2px #0008; }
+/* The tested skill colours the row's left edge and its icon, so Investigate / Fight / Evade read at a glance. */
+.section :deep(button:has(.skill-intellect)) { --skill-tint: var(--intellect, #8a63b8); }
+.section :deep(button:has(.skill-combat)) { --skill-tint: var(--combat, #b34a3c); }
+.section :deep(button:has(.skill-agility)) { --skill-tint: var(--agility, #3c8a4a); }
+.section :deep(button:has(.skill-willpower)) { --skill-tint: var(--willpower, #3c6ab3); }
+/* Skill-tested rows wear their skill: a saturated wash that fades toward the label's right, and a bright left edge. */
+.section :deep(button:has(.button-skill-section :is(.skill-icon, .skill-icon-img))) { background: linear-gradient(90deg, color-mix(in srgb, var(--skill-tint) 70%, #2c4234), color-mix(in srgb, var(--skill-tint) 35%, #2c4234)) !important; border-color: color-mix(in srgb, var(--skill-tint) 60%, #fff) !important; border-left: 4px solid color-mix(in srgb, var(--skill-tint) 55%, #fff) !important; }
+.section :deep(button:has(.button-skill-section :is(.skill-icon, .skill-icon-img)):hover:not(:disabled)) { background: linear-gradient(90deg, color-mix(in srgb, var(--skill-tint) 85%, #3a5244), color-mix(in srgb, var(--skill-tint) 50%, #3a5244)) !important; }
+.section--basic > .row--half { font-weight: 500; }
+.choice { display: flex; flex-direction: column; background: var(--row-face); border: 1px solid #c6a87359; border-radius: 6px; box-shadow: inset 0 1px 0 #ffffff1f, 0 1px 2px #0006; cursor: pointer; transition: background 0.15s, border-color 0.15s; }
+.choice:hover { background: var(--row-face-hover); border-color: #e6c584; }
+.choice :deep(button), .choice :deep(button:hover:not(:disabled)) { border: 0 !important; background: transparent !important; box-shadow: none !important; }
+.choice .text-row { font-size: 0.8rem; color: #fffaf0 !important; }
 .empty { margin: 0; font-size: 0.8rem; color: #98a38f; }
 /* Bottom sheet: full width, folded to a peek until the grab bar is pressed. */
 .panel.sheet { width: auto; max-height: var(--sheet-peek, 30dvh); border-radius: 12px 12px 0 0; padding-top: 4px; transition: max-height 0.2s; }
@@ -251,12 +351,13 @@ h5 { margin: 4px 0 0; font-size: 0.72rem; color: var(--text-flavor, #cdd4c2); fo
 .grab { flex: none; align-self: center; width: 100%; min-height: var(--tap-min, 0px); display: grid; place-items: center; background: transparent; border: 0; cursor: pointer; }
 .grab span { width: 44px; height: 5px; border-radius: 3px; background: #c6a873aa; }
 @media (prefers-reduced-motion: reduce) { .panel.sheet { transition: none; } }
-/* Fingers: rows and the close button reach 44px, with room between them. */
-.location-map[data-input='touch'] .close { min-width: var(--tap-min); min-height: var(--tap-min); font-size: 1.1rem; }
-.location-map[data-input='touch'] .section { gap: var(--tap-gap); }
+/* The panel can be teleported outside the map, so size touch controls from its own input mode. */
+.panel[data-input='touch'] { --tap-min: 44px; --tap-gap: 8px; }
+.panel[data-input='touch'] .back { min-width: var(--tap-min); min-height: var(--tap-min); font-size: 1.1rem; }
+.panel[data-input='touch'] .panel[data-input='touch'] .section { gap: var(--tap-gap); }
 .location-map[data-input='touch'] .row,
-.location-map[data-input='touch'] .section :deep(button) { min-height: var(--tap-min); font-size: 0.9rem; }
-.location-map[data-input='touch'] .choice { min-height: var(--tap-min); }
+.panel[data-input='touch'] .section :deep(button) { min-height: var(--tap-min); font-size: 0.9rem; }
+.panel[data-input='touch'] .choice { min-height: var(--tap-min); }
 .location-map[data-input='touch'] .choice .text-row { font-size: 0.9rem; }
-.location-map[data-input='touch'] .end-turn { min-height: var(--tap-min); }
+.panel[data-input='touch'] .end-turn { min-height: var(--tap-min); }
 </style>

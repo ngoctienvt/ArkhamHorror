@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "route": "codex-cli",
+  "requestedModel": "codex-image_gen",
+  "options": {
+    "tool": "image_gen"
+  },
+  "promptSha256": "c5b3faea0998f76c5f6440fa14375b68c3f826f561abe1bbec4a9eb4606b328c",
+  "references": [
+    {
+      "sha256": "0be6eddccf5b0c756d9e53c0d1aedf1922e0cd4c5475032a02ebd3d6eb88d31c",
+      "bytes": 401632
+    }
+  ],
+  "fingerprint": "843fbe6983cacf1e73654d99ccfa8e11235e766c94b1b8a774a8705291b1609f",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "2026-10-06",
+    "items": [],
+    "basis": "subscription quota call: no per-call USD price; counted by call caps"
+  },
+  "consent": {
+    "provider": "openai",
+    "model": "codex-image_gen",
+    "calls": 1,
+    "estimateUsd": 0.0,
+    "route": "codex-cli",
+    "quota": true,
+    "account": "the user's own Codex sign-in (ChatGPT)",
+    "note": "uses the subscription quota of that sign-in, never API credit"
+  },
+  "artSource": "host_image",
+  "execution": "execute",
+  "status": "submit_unknown",
+  "outputDir": "../../gen/10630-v1",
+  "receipt": {
+    "startedAt": "2026-11-13T14:40:42.463Z",
+    "submittedAt": "2026-11-13T14:40:42.474Z",
+    "completedAt": "2026-11-13T14:40:42.725Z",
+    "wallMs": 262,
+    "providerMs": 235,
+    "attempt": 1,
+    "purpose": "route_media image",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "PROVIDER_ERROR"
+  },
+  "ledger": {
+    "projectDir": "../..",
+    "reservationId": "fac0fd72d67c46819998af0505eea0b7",
+    "status": "unknown"
+  },
+  "cliRun": {
+    "tool": "codex",
+    "runId": "cf0eea927b124df8a44098504a061ca3",
+    "cwd": "<tmp>/forge-cli-cf0eea927b12-8a6a9564",
+    "startedAt": "2026-11-13T14:40:42.463Z",
+    "version": "0.147.0",
+    "versionText": "codex-cli 0.147.0",
+    "recipe": "codex-exec-imagegen/1",
+    "home": "CODEX_HOME",
+    "verifiedBefore": false
+  },
+  "error": {
+    "code": "PROVIDER_ERROR",
+    "message": "the Codex CLI exited with an error (2026-11-13T14:40:42.675606Z WARN codex_state::runtime: failed to open state db at ~\\.codex\\state_5.sqlite: failed to open state DB at ~\\.codex\\state_5.sqlite: e)"
+  },
+  "errorType": "CliMediaError"
+}

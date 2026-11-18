@@ -9,11 +9,12 @@ function moduleUrl(filename, imports = {}) {
   for (const [path, url] of Object.entries(imports)) js = js.replace(`'${path}'`, JSON.stringify(url))
   return 'data:text/javascript;base64,' + Buffer.from(js).toString('base64')
 }
-const { hemlockOverview, hemlockVillagePosition, museumExhibitArt } = await import(moduleUrl('hemlock-overview', {
+const { extracurricularCommotion, hemlockOverview, hemlockVillagePosition, museumExhibitArt, spreadingFlamesFire } = await import(moduleUrl('hemlock-overview', {
   './scene-anchors-the-dream-eaters': moduleUrl('scene-anchors-the-dream-eaters'),
 }))
 const { hiddenSceneArt, revealedScenePositions } = await import(moduleUrl('revealed-scene-positions'))
 const { essexTrainArt, essexTrainPosition, hasLocationArt, hiddenChamberPosition } = await import(moduleUrl('scene-location-art'))
+const { dunwichCarcosaScene } = await import(moduleUrl('scene-dunwich-carcosa'))
 
 test('the seven reveal maps use shipped panoramas and a common hidden image', () => {
   for (const id of ['11517', '11536', '11587', '12168', '10523', ':ages-unwound:062', ':dark-matter:054']) {
@@ -127,7 +128,9 @@ test('Dream-Eaters selects the current board, including Kadath with every region
     for (const key of keys) assert.ok(overview.anchors[key], key)
   }
   const hospital = hemlockOverview('06063', '06063')
-  assert.deepEqual(hemlockVillagePosition('c06075b', hospital.anchors, 'basementDoor2'), [62, 90])
+  assert.equal(hospital.revealRoomAnchors, true)
+  assert.deepEqual(hemlockVillagePosition('c06075b', hospital.anchors, 'basementDoor2'), [63, 58])
+  assert.deepEqual(hemlockVillagePosition('c06075b', hospital.anchors, 'basementDoor2', true), [17, 89])
 })
 
 test('Fate of the Vale changes backdrop only when the game lays out the nighttime village', () => {
@@ -195,6 +198,58 @@ test('Dunwich Legacy scenarios select their overview boards', () => {
   assert.equal(hemlockOverview('c02236', 'c02236')?.image, 'img/scenes/the-dunwich-legacy/undimensioned-and-unseen.webp')
   assert.equal(hemlockOverview('c02274', 'c02274')?.image, 'img/scenes/the-dunwich-legacy/where-doom-awaits.webp')
   assert.equal(hemlockOverview('c02311', 'c02311')?.image, 'img/scenes/the-dunwich-legacy/lost-in-time-and-space.webp')
+})
+
+test('Extracurricular Activity changes art at the Science Building disturbance and keeps location anchors', () => {
+  for (const id of ['c02041', 'c51012']) {
+    const snapshot = (number, actSide, step, agendaSide, flipped = false) => hemlockOverview(
+      id, '02041', null, [], [], null, 'none',
+      extracurricularCommotion(
+        [{ sequence: { number, side: actSide } }],
+        [{ sequence: { step, side: agendaSide }, flipped }],
+      ),
+    )
+    const quiet = snapshot(1, 'A', 1, 'A')
+    assert.deepEqual(snapshot(1, 'B', 1, 'B', true), quiet)
+    assert.deepEqual(snapshot(2, 'A', 2, 'A'), quiet)
+    const commotion = snapshot(2, 'B', 1, 'A')
+    assert.match(commotion.image, /extracurricular-activity-science-commotion\.webp$/)
+    assert.deepEqual(snapshot(3, 'A', 2, 'A'), commotion)
+    assert.deepEqual(snapshot(1, 'A', 2, 'B'), commotion)
+    assert.deepEqual(snapshot(1, 'A', 2, 'A', true), commotion)
+    assert.deepEqual(snapshot(1, 'A', 3, 'A'), commotion)
+    assert.deepEqual(snapshot(2, 'A', 2, 'A'), quiet) // Undo or loading an earlier snapshot.
+    for (const board of [quiet, commotion]) {
+      assert.equal(readFileSync(new URL(`../public/${board.image}`, import.meta.url)).toString('ascii', 8, 12), 'WEBP')
+      assert.deepEqual(board.anchors, {
+        '02048': [53, 54], '02049': [19, 88], '02050': [30, 57], '02051': [53, 36],
+        '02052': [61, 22], '02053': [77, 43], '02054': [89, 29], '02055': [89, 29],
+        '02056': [78, 77], '02057': [88, 89], '51013': [22, 18],
+      })
+    }
+  }
+})
+
+test('Dunwich and Carcosa variants compose with original and Return to boards', () => {
+  const cases = [
+    ['02062', '51015', '02064', 2, 'damaged'],
+    ['02118', '51020', '02119', 1, 'shadows'],
+    ['02159', '51025', '02160', 1, 'maw'],
+    ['02195', '51032', '02196', 1, 'night'],
+    ['02236', '51041', '02238', 2, 'storm'],
+    ['03061', '52021', '03062', 1, 'madness'],
+  ]
+  for (const [original, returned, agendaId, step, suffix] of cases) {
+    const snapshot = {
+      acts: [], locations: [], reminders: [],
+      agendas: [{ id: `c${agendaId}`, sequence: { step, side: 'B' }, flipped: true, deckId: 1 }],
+    }
+    const first = dunwichCarcosaScene(hemlockOverview(`c${original}`, `c${original}`), snapshot)
+    const second = dunwichCarcosaScene(hemlockOverview(`c${returned}`, `c${original}`), snapshot)
+    assert.deepEqual(first, second, returned)
+    assert.match(first.image, new RegExp(`-${suffix}\\.webp$`))
+    assert.equal(readFileSync(new URL(`../public/${first.image}`, import.meta.url)).toString('ascii', 8, 12), 'WEBP')
+  }
 })
 
 test('Return to IDs select the same shipped overview as their base scenarios', () => {
@@ -380,16 +435,16 @@ test('The Path to Carcosa scenarios select their overview boards', () => {
 
   // The Unspeakable Oath: Arkham Asylum cutaway anchors
   const asylum = hemlockOverview('c03159', 'c03159').anchors
-  assert.deepEqual(hemlockVillagePosition('03172', asylum), [10, 52]) // Kitchen
-  assert.deepEqual(hemlockVillagePosition('03173', asylum), [32, 52]) // Mess Hall
-  assert.deepEqual(hemlockVillagePosition('03174', asylum), [88, 52]) // Infirmary
-  assert.deepEqual(hemlockVillagePosition('03175', asylum), [62, 25]) // Yard
-  assert.deepEqual(hemlockVillagePosition('03176', asylum), [38, 25]) // Garden
-  assert.deepEqual(hemlockVillagePosition('03177', asylum), [12, 84]) // Basement Hall
-  assert.deepEqual(hemlockVillagePosition('', asylum, 'patientConfinement1'), [35, 84])
-  assert.deepEqual(hemlockVillagePosition('', asylum, 'patientConfinement3'), [52, 84])
-  assert.deepEqual(hemlockVillagePosition('', asylum, 'patientConfinement4'), [68, 84])
-  assert.deepEqual(hemlockVillagePosition('', asylum, 'patientConfinement2'), [84, 84])
+  assert.deepEqual(hemlockVillagePosition('03172', asylum), [11, 55]) // Kitchen
+  assert.deepEqual(hemlockVillagePosition('03173', asylum), [29, 55]) // Mess Hall
+  assert.deepEqual(hemlockVillagePosition('03174', asylum), [86, 55]) // Infirmary
+  assert.deepEqual(hemlockVillagePosition('03175', asylum), [74, 26]) // Yard
+  assert.deepEqual(hemlockVillagePosition('03176', asylum), [25, 26]) // Garden
+  assert.deepEqual(hemlockVillagePosition('03177', asylum), [51, 88]) // Basement Hall
+  assert.deepEqual(hemlockVillagePosition('', asylum, 'patientConfinement1'), [15, 73])
+  assert.deepEqual(hemlockVillagePosition('', asylum, 'patientConfinement3'), [15, 93])
+  assert.deepEqual(hemlockVillagePosition('', asylum, 'patientConfinement4'), [85, 93])
+  assert.deepEqual(hemlockVillagePosition('', asylum, 'patientConfinement2'), [85, 73])
 
   // A Phantom of Truth: Paris anchors
   const paris = hemlockOverview('c03200', 'c03200').anchors
@@ -406,17 +461,17 @@ test('The Path to Carcosa scenarios select their overview boards', () => {
 
   // Black Stars Rise: Mont Saint-Michel anchors
   const montSaintMichel = hemlockOverview('c03274', 'c03274').anchors
-  assert.deepEqual(hemlockVillagePosition('03294', montSaintMichel), [28, 16]) // Cloister
-  assert.deepEqual(hemlockVillagePosition('03295', montSaintMichel), [20, 25]) // Knights' Hall
-  assert.deepEqual(hemlockVillagePosition('03287', montSaintMichel), [60, 22]) // North Tower
-  assert.deepEqual(hemlockVillagePosition('03291', montSaintMichel), [47, 25]) // Abbey Church
-  assert.deepEqual(hemlockVillagePosition('03285', montSaintMichel), [82, 46]) // Outer Wall
-  assert.deepEqual(hemlockVillagePosition('03296', montSaintMichel), [17, 54]) // Chapel of St. Aubert
-  assert.deepEqual(hemlockVillagePosition('03290', montSaintMichel), [49, 56]) // Broken Steps
-  assert.deepEqual(hemlockVillagePosition('03292', montSaintMichel), [34, 50]) // Chœur Gothique
-  assert.deepEqual(hemlockVillagePosition('03284', montSaintMichel), [70, 62]) // Grand Rue
-  assert.deepEqual(hemlockVillagePosition('03298', montSaintMichel), [31, 82]) // Abbey Tower
-  assert.deepEqual(hemlockVillagePosition('03283', montSaintMichel), [76, 84]) // Porte de l'Avancée
+  assert.deepEqual(hemlockVillagePosition('03294', montSaintMichel), [31, 25]) // Cloister
+  assert.deepEqual(hemlockVillagePosition('03295', montSaintMichel), [23, 39]) // Knights' Hall
+  assert.deepEqual(hemlockVillagePosition('03287', montSaintMichel), [88, 32]) // North Tower
+  assert.deepEqual(hemlockVillagePosition('03291', montSaintMichel), [40, 48]) // Abbey Church
+  assert.deepEqual(hemlockVillagePosition('03285', montSaintMichel), [85, 57]) // Outer Wall
+  assert.deepEqual(hemlockVillagePosition('03296', montSaintMichel), [11, 76]) // Chapel of St. Aubert
+  assert.deepEqual(hemlockVillagePosition('03290', montSaintMichel), [45, 66]) // Broken Steps
+  assert.deepEqual(hemlockVillagePosition('03292', montSaintMichel), [53, 33]) // Chœur Gothique
+  assert.deepEqual(hemlockVillagePosition('03284', montSaintMichel), [72, 56]) // Grand Rue
+  assert.deepEqual(hemlockVillagePosition('03298', montSaintMichel), [60, 8]) // Abbey Tower
+  assert.deepEqual(hemlockVillagePosition('03283', montSaintMichel), [80, 90]) // Porte de l'Avancée
 })
 
 test('Both Curtain Call boards route private rooms from the doorway to their painted room', () => {
@@ -552,7 +607,7 @@ test('The Circle Undone scenarios select their overview boards', () => {
   assert.equal(hemlockOverview('c05043', 'c05043')?.image, 'img/scenes/the-circle-undone/return-to-the-twilight-estate.webp')
   assert.equal(hemlockOverview('c05050', 'c05050')?.image, 'img/scenes/the-circle-undone/the-witching-hour.webp')
   assert.equal(hemlockOverview('c05065', 'c05065')?.image, 'img/scenes/the-circle-undone/return-to-the-twilight-estate.webp')
-  assert.equal(hemlockOverview('c05120', 'c05120')?.image, 'img/scenes/the-circle-undone/the-secret-name.webp')
+  assert.equal(hemlockOverview('c05120', 'c05120')?.image, 'img/scenes/the-circle-undone/the-secret-name-house.webp')
   assert.equal(hemlockOverview('c05161', 'c05161')?.image, 'img/scenes/the-circle-undone/the-wages-of-sin.webp')
   assert.equal(hemlockOverview('c05197', 'c05197')?.image, 'img/scenes/the-circle-undone/return-to-for-the-greater-good.webp')
   assert.equal(hemlockOverview('c05238', 'c05238')?.image, 'img/scenes/the-circle-undone/union-and-disillusion.webp')
@@ -563,7 +618,7 @@ test('The Circle Undone scenarios select their overview boards', () => {
   assert.deepEqual(hemlockVillagePosition('05077'), [30, 22]) // Office (Twilight Estate)
   assert.deepEqual(hemlockVillagePosition('05084'), [30, 22]) // Office Spectral
   assert.deepEqual(hemlockVillagePosition('05055'), [50, 60]) // Witches' Circle
-  assert.deepEqual(hemlockVillagePosition('05169'), [58, 16]) // The Gallows
+  assert.deepEqual(hemlockVillagePosition('05169'), [57, 22]) // The Gallows
   assert.deepEqual(hemlockVillagePosition('05216'), [88, 75]) // Inner Sanctum (Silver Twilight)
   assert.deepEqual(hemlockVillagePosition('05257'), [68, 75]) // The Geist-Trap
   assert.equal(hemlockVillagePosition('05333'), undefined) // Hideous Palace: the Cosmos follows its grid, not painted spots
@@ -578,7 +633,7 @@ test('The Circle Undone scenarios select their overview boards', () => {
 test('The Innsmouth Conspiracy scenarios select their overview boards', () => {
   assert.equal(hemlockOverview('c07041', 'c07041')?.image, 'img/scenes/the-innsmouth-conspiracy/pit-of-despair-caverns.webp')
   assert.equal(hemlockOverview('c07056', 'c07056')?.image, 'img/scenes/the-innsmouth-conspiracy/the-vanishing-of-elina-harper.webp')
-  assert.equal(hemlockOverview('c07123', 'c07123')?.image, 'img/scenes/the-innsmouth-conspiracy/in-too-deep.webp')
+  assert.equal(hemlockOverview('c07123', 'c07123')?.image, 'img/scenes/the-innsmouth-conspiracy/in-too-deep-early-tide.webp')
   assert.equal(hemlockOverview('c07163', 'c07163')?.image, 'img/scenes/the-innsmouth-conspiracy/devil-reef-sea.webp')
   assert.equal(hemlockOverview('c07198', 'c07198')?.image, 'img/scenes/the-innsmouth-conspiracy/horror-in-high-gear-moor.webp')
   assert.equal(hemlockOverview('c07231', 'c07231')?.image, 'img/scenes/the-innsmouth-conspiracy/a-light-in-the-fog-cliffs.webp')
@@ -606,8 +661,8 @@ test('The Innsmouth Conspiracy scenarios select their overview boards', () => {
     assert.equal(hemlockVillagePosition(code), undefined, code)
   }
   // Verify village anchors for key TIC locations
-  assert.deepEqual(hemlockVillagePosition('07065'), [47, 52]) // Innsmouth Square
-  assert.deepEqual(hemlockVillagePosition('07068'), [67, 52]) // Fish Street Bridge
+  assert.deepEqual(hemlockVillagePosition('07065'), [47, 54]) // Innsmouth Square
+  assert.deepEqual(hemlockVillagePosition('07068'), [64, 51]) // Fish Street Bridge
   // Devil Reef follows its growing grid, so its locations have no painted spot.
   assert.equal(hemlockVillagePosition('07168'), undefined) // Churning Waters
   assert.equal(hemlockVillagePosition('07171'), undefined) // Waveworn Island
@@ -644,6 +699,36 @@ test('Edge of the Earth overview maps and location positions', () => {
   assert.deepEqual(hemlockVillagePosition('08686'), [50, 96]) // Hidden Tunnel: A Way Out
 })
 
+test('Spreading Flames follows agenda narration even after the bedroom and Fire! leave play', () => {
+  const room = { id: 'room', cardCode: 'c12113', modifiers: [] }
+  const library = { id: 'library', cardCode: 'c12120', modifiers: [] }
+  const attachedFire = (location) => ({
+    fire: { cardCode: 'c12129', placement: { tag: 'AttachedToLocation', contents: location.id } },
+  })
+  const overview = (step, flipped, locations, treacheries = {}) => hemlockOverview(
+    'c12105', '12105', null, [], locations.map(({ cardCode }) => cardCode), null,
+    spreadingFlamesFire([{ sequence: { step, side: flipped ? 'B' : 'A' }, flipped }], locations, treacheries),
+  )
+  const before = overview(1, false, [room])
+  const burning = overview(1, false, [room], attachedFire(room))
+  const ignition = overview(1, true, [room])
+  const dorm = overview(2, false, [library], attachedFire(library))
+  const escalation = overview(2, true, [library])
+  const campus = overview(3, false, [library])
+  assert.equal(before.image, 'img/scenes/brethren-of-ash/spreading-flames.webp')
+  assert.equal(burning.image, 'img/scenes/brethren-of-ash/spreading-flames-burning.webp')
+  assert.equal(ignition.image, 'img/scenes/brethren-of-ash/spreading-flames-dorm-fire.webp')
+  assert.equal(dorm.image, ignition.image)
+  assert.equal(campus.image, 'img/scenes/brethren-of-ash/spreading-flames-campus-fire.webp')
+  assert.equal(escalation.image, campus.image)
+  assert.equal(overview(1, false, [room], attachedFire(library)).image, before.image)
+  for (const board of [before, burning, dorm, campus]) {
+    assert.equal(readFileSync(new URL(`../public/${board.image}`, import.meta.url)).toString('ascii', 8, 12), 'WEBP')
+    assert.deepEqual(hemlockVillagePosition('c12113', board.anchors), [14, 65])
+    assert.deepEqual(hemlockVillagePosition('c12117', board.anchors), [29, 42])
+  }
+})
+
 test('Chapter 2 overview maps and location positions', () => {
   // Brethren of Ash
   assert.equal(hemlockOverview('12105', '12105')?.image, 'img/scenes/brethren-of-ash/spreading-flames.webp')
@@ -651,26 +736,177 @@ test('Chapter 2 overview maps and location positions', () => {
   assert.equal(hemlockOverview('12168', '12168')?.image, 'img/scenes/brethren-of-ash/queen-of-ash.webp')
 
   // Children of Blood
-  assert.equal(hemlockOverview('13001', '13001')?.image, 'img/scenes/children-of-blood/river-of-blood.webp')
-  assert.equal(hemlockOverview('13031', '13031')?.image, 'img/scenes/children-of-blood/new-horizons.webp')
+  assert.equal(hemlockOverview('13001', '13001')?.image, 'img/scenes/children-of-blood/river-of-blood-day.webp')
+  assert.equal(hemlockOverview('13031', '13031')?.image, 'img/scenes/children-of-blood/new-horizons-factory.webp')
   assert.equal(hemlockOverview('13068', '13068')?.image, 'img/scenes/children-of-blood/blood-money.webp')
 
   // Side Story: Traces to Nowhere
   assert.equal(hemlockOverview('73001', '73001')?.image, 'img/scenes/side-stories/traces-to-nowhere.webp')
 
   // Locations
-  assert.deepEqual(hemlockVillagePosition('12116'), [50, 52]) // Miskatonic Quad
-  assert.deepEqual(hemlockVillagePosition('12113'), [16, 74]) // Your Friend's Room
+  assert.deepEqual(hemlockVillagePosition('12113'), [14, 65]) // Your Friend's Room
+  assert.deepEqual(hemlockVillagePosition('12116'), [55, 47]) // Miskatonic Quad
+  assert.deepEqual(hemlockVillagePosition('12117'), [29, 42]) // Dormitories
+  assert.deepEqual(hemlockVillagePosition('12118'), [52, 81]) // Science Hall
+  assert.deepEqual(hemlockVillagePosition('12119'), [79, 47]) // Warren Observatory
+  assert.deepEqual(hemlockVillagePosition('12120'), [57, 27]) // Orne Library
   assert.deepEqual(hemlockVillagePosition('12149'), [18, 22]) // Northside
   assert.deepEqual(hemlockVillagePosition('12151'), [50, 48]) // Merchant District
-  assert.deepEqual(hemlockVillagePosition('13016'), [54, 48]) // Erwin Bridge
-  assert.deepEqual(hemlockVillagePosition('13012'), [52, 70]) // River Docks
-  assert.deepEqual(hemlockVillagePosition('13039'), [22, 30]) // Factory Floor: West
-  assert.deepEqual(hemlockVillagePosition('13051'), [50, 68]) // Descending Tunnel
-  assert.deepEqual(hemlockVillagePosition('13077'), [24, 46]) // Dining Hall
-  assert.deepEqual(hemlockVillagePosition('73008'), [60, 48]) // Steer's Office
-  assert.deepEqual(hemlockVillagePosition('73028'), [20, 31]) // Train Station
-  assert.deepEqual(hemlockVillagePosition('73027'), [88, 59]) // Arkham Advertiser
+})
+
+test('Traces to Nowhere opens the city cutaway only while an Otherworld location is in play', () => {
+  const snapshot = (codes) => hemlockOverview('c73001', '73001', null, [], codes)
+  const city = ['c73028', 'c73031', 'c73033']
+  for (const codes of [city, [...city, 'c73051'], [...city, 'c73050', 'c73051', 'c73052'], city]) {
+    const board = snapshot(codes)
+    const hasOtherworld = codes.includes('c73051')
+    assert.equal(board.image, `img/scenes/side-stories/traces-to-nowhere${hasOtherworld ? '-otherworld' : ''}.webp`)
+    assert.equal(readFileSync(new URL(`../public/${board.image}`, import.meta.url)).toString('ascii', 8, 12), 'WEBP')
+    for (const code of codes) {
+      const [, y] = hemlockVillagePosition(code, board.anchors)
+      if (hasOtherworld) assert.equal(y >= 65, code.startsWith('c7305'))
+    }
+  }
+})
+
+test('agenda and location snapshots select the matching scenery and retain the same map geometry', () => {
+  function snapshot(id, codes = [], step = 1, flipped = false, side = flipped ? 'B' : 'A') {
+    const board = hemlockOverview(id, id, null, [], codes, null, 'none', false,
+      [{ sequence: { step, side }, flipped }])
+    assert.equal(readFileSync(new URL(`../public/${board.image}`, import.meta.url)).toString('ascii', 8, 12), 'WEBP')
+    return board
+  }
+  const riverCodes = ['c13008', 'c13012', 'c13016']
+  const river = [
+    snapshot('13001', riverCodes, 1), snapshot('13001', riverCodes, 1, true),
+    snapshot('13001', riverCodes, 2), snapshot('13001', riverCodes, 2, false, 'B'),
+    snapshot('13001', riverCodes, 3), snapshot('13001', riverCodes, 3, true),
+    snapshot('13001', riverCodes, 4), snapshot('13001', riverCodes, 1),
+  ]
+  assert.deepEqual(river.map(({ image }) => image.split('-').at(-1)), [
+    'day.webp', 'night.webp', 'night.webp', 'day.webp', 'day.webp', 'night.webp', 'night.webp', 'day.webp',
+  ])
+  assert.equal(snapshot('13001', ['c13009', 'c13013']).image, 'img/scenes/children-of-blood/river-of-blood.webp')
+  assert.match(snapshot('13001', ['c13009', 'c13013'], 2).image, /-night.webp$/)
+  for (const board of river) assert.strictEqual(board.anchors, river[0].anchors)
+
+  const closedDay = snapshot('13031', ['c13039', 'c13040'])
+  const openDay = snapshot('13031', ['c13039', 'c13049'])
+  const closedNight = snapshot('13031', ['c13044', 'c13045'])
+  const openNight = snapshot('13031', ['c13044', 'c13050'])
+  assert.match(closedDay.image, /new-horizons-factory.webp$/)
+  assert.match(openDay.image, /new-horizons.webp$/)
+  assert.match(closedNight.image, /new-horizons-factory-night.webp$/)
+  assert.match(openNight.image, /new-horizons-night.webp$/)
+  for (const board of [closedDay, closedNight, openDay, openNight]) {
+    assert.strictEqual(board.anchors, closedDay.anchors)
+    assert.equal(board.revealRoomAnchors, true)
+    assert.equal(board.layoutArt ?? board.image.slice(11, -5), 'children-of-blood/new-horizons')
+  }
+  assert.match(snapshot('13068', ['c13076b']).image, /-bloody-night.webp$/)
+  assert.match(snapshot('13068', ['c13076']).image, /blood-money.webp$/)
+
+  for (const id of ['05161', 'c54034']) {
+    assert.match(snapshot(id, ['c05167'], 1).image, /the-wages-of-sin.webp$/)
+    assert.equal(snapshot(id, ['c05167'], 1).spectralPlaces, undefined)
+    const mixed = snapshot(id, ['c05167b', 'c05168'], 1)
+    assert.equal(mixed.spectralPlaces.mask.match(/radial-gradient/g).length, 1)
+    assert.match(mixed.spectralPlaces.image, /-spectral.webp$/)
+    assert.match(snapshot(id, ['c05167b'], 1, true).image, /the-wages-of-sin-spectral.webp$/)
+    assert.equal(snapshot(id, ['c05167b'], 2).spectralPlaces, undefined)
+    assert.match(snapshot(id, ['c05167b'], 2).image, /the-wages-of-sin-spectral.webp$/)
+    assert.deepEqual(hemlockVillagePosition('c05175b'), [84, 40])
+    assert.deepEqual(hemlockVillagePosition('c05173b'), [86, 83])
+  }
+  for (const id of ['07123', 'c:return-to-the-innsmouth-conspiracy:028']) {
+    const stages = [snapshot(id), snapshot(id, [], 1, true), snapshot(id, [], 2, true), snapshot(id, [], 3, true)]
+    assert.deepEqual(stages.map(({ image }) => image.split('/').at(-1)), [
+      'in-too-deep-early-tide.webp', 'in-too-deep.webp', 'in-too-deep-midtown-tide.webp', 'in-too-deep-high-tide.webp',
+    ])
+    assert.ok(stages.every(({ layoutArt, image }) =>
+      (layoutArt ?? image.slice(11, -5)) === 'the-innsmouth-conspiracy/in-too-deep'))
+  }
+})
+
+test('Cthulhu ruins only the districts whose replacement locations are present', () => {
+  const snapshot = (codes) => hemlockOverview('11688a', '11688a', null, [], codes)
+  assert.equal(snapshot(['c11696', 'c01134', 'c01130']).ruinedDistricts, undefined)
+  const once = snapshot(['c11696', 'c11694', 'c01134'])
+  assert.match(once.ruinedDistricts.image, /part-2-ruined.webp$/)
+  assert.equal(once.ruinedDistricts.mask.match(/radial-gradient/g).length, 1)
+  assert.match(once.ruinedDistricts.mask, /88% 41%/)
+  const twice = snapshot(['c11694', 'c11697'])
+  assert.equal(twice.ruinedDistricts.mask.match(/radial-gradient/g).length, 2)
+  assert.equal(snapshot(['c11696', 'c01134', 'c01130']).ruinedDistricts, undefined)
+  assert.equal(readFileSync(new URL(`../public/${once.ruinedDistricts.image}`, import.meta.url)).toString('ascii', 8, 12), 'WEBP')
+})
+
+test('The Secret Name replaces the boarding house with the current Otherworld panorama', () => {
+  const board = (id, codes) => hemlockOverview(id, id, null, [], codes)
+  for (const id of ['05120', '54029']) {
+    const house = board(id, ['c05128', 'c05132'])
+    const otherworld = board(id, ['c05133', 'c05142'])
+    assert.match(house.image, /the-secret-name-house.webp$/)
+    assert.equal(otherworld.image, `img/scenes/the-circle-undone/the-secret-name-${id === '54029' ? 'return-' : ''}otherworld.webp`)
+    for (const state of [house, otherworld]) {
+      assert.equal(readFileSync(new URL(`../public/${state.image}`, import.meta.url)).toString('ascii', 8, 12), 'WEBP')
+    }
+    assert.notEqual(house.layoutArt, otherworld.layoutArt)
+  }
+  const locations = [
+    { id: 'room', cardCode: 'c05133', revealed: true },
+    { id: 'door', cardCode: 'c05138', revealed: false },
+    { id: 'a', cardCode: 'c05142', revealed: true },
+    { id: 'b', cardCode: 'c05142', revealed: true },
+    { id: 'city', cardCode: 'c05136', revealed: true },
+  ]
+  const grid = { room: [50, 50], door: [60, 70], a: [95, 40], b: [95, 80], city: [30, 30] }
+  const positions = revealedScenePositions('05120', locations, grid)
+  assert.deepEqual(positions.room, [48, 58])
+  assert.notDeepEqual(positions.a, positions.b)
+  assert.equal(new Set(Object.values(positions).map((p) => p.join(','))).size, locations.length)
+  const reversed = revealedScenePositions('05120', [...locations].reverse(), grid)
+  assert.deepEqual(positions, reversed)
+  const revealed = revealedScenePositions('05120', locations.map((l) =>
+    l.id === 'door' ? { ...l, revealed: true } : l), grid)
+  assert.deepEqual(revealed.door, [33, 92])
+  const extraCodes = ['54030', '54031', '54032', '54033']
+  const extras = extraCodes.map((cardCode) => ({ id: cardCode, cardCode, revealed: true }))
+  const extraGrid = Object.fromEntries(extras.map(({ id }, i) => [id, [i * 20, 90]]))
+  const returnPositions = revealedScenePositions('54029', [...locations, ...extras], { ...grid, ...extraGrid })
+  for (const code of extraCodes) assert.ok(returnPositions[code])
+  assert.equal(new Set(Object.values(returnPositions).map((p) => p.join(','))).size, locations.length + extras.length)
+})
+
+test('repainted scenes cover all coexisting locations with distinct anchors', () => {
+  const scenes = [
+    ['13068', [13076, 13077, 13078, 13079, 13080, 13081, 13082]],
+    ['13001', [13008, 13010, 13012, 13014, 13016, 13018, 13020, 13022]],
+    ['13031', [13039, 13040, 13041, 13042, 13043, 13049, 13051, 13052, 13053, 13054]],
+    ['06063', [6070, 6071, 6072, 6073, 6074, 6075, 6076, 6077]],
+    ['71001', Array.from({ length: 8 }, (_, i) => i + 71007)],
+    ['86001', Array.from({ length: 11 }, (_, i) => i + 86014)],
+    ['81001', Array.from({ length: 12 }, (_, i) => i + 81007)],
+    ['88001b', Array.from({ length: 14 }, (_, i) => i + 88009)],
+    ['11688a', Array.from({ length: 9 }, (_, i) => i + 11692)],
+  ]
+  for (const [id, codes] of scenes) {
+    const board = hemlockOverview(id, id)
+    const points = codes.map((code) => {
+      const key = String(code).padStart(5, '0')
+      assert.ok(board.anchors[key], `${id}: missing ${key}`)
+      return board.anchors[key].join(',')
+    })
+    assert.equal(new Set(points).size, codes.length, `${id}: shared anchor`)
+  }
+  const doom = hemlockOverview('11688a', '11688a').anchors
+  assert.deepEqual(hemlockVillagePosition('01132', doom, 'easttown'), hemlockVillagePosition('11694', doom))
+  const factory = hemlockOverview('13031', '13031')
+  assert.notDeepEqual(hemlockVillagePosition('13052', factory.anchors, 'sideChamber2'),
+    hemlockVillagePosition('13052', factory.anchors, 'sideChamber2', factory.revealRoomAnchors))
+  const gala = hemlockOverview('71001', '71001')
+  assert.notDeepEqual(hemlockVillagePosition('71011', gala.anchors, 'groundFloor1'),
+    hemlockVillagePosition('71011', gala.anchors, 'groundFloor1', gala.revealRoomAnchors))
 })
 
 test('Standalone / Side Stories select their overview boards and location positions', () => {
@@ -678,6 +914,7 @@ test('Standalone / Side Stories select their overview boards and location positi
     { id: '81001', img: 'img/scenes/side-stories/curse-of-the-rougarou.webp' },
     { id: '82001', img: 'img/scenes/side-stories/carnevale-of-horrors.webp' },
     { id: '88001', img: 'img/scenes/side-stories/fortune-and-folly.webp' },
+    { id: '88001b', img: 'img/scenes/side-stories/fortune-and-folly.webp' },
     { id: '87001', img: 'img/scenes/side-stories/machinations-through-time.webp' },
     { id: '86001', img: 'img/scenes/side-stories/war-of-the-outer-gods.webp' },
     { id: '71001', img: 'img/scenes/side-stories/the-midwinter-gala.webp' },
@@ -695,13 +932,13 @@ test('Standalone / Side Stories select their overview boards and location positi
 
   // Anchor checks
   const rougarou = hemlockOverview('81001', 'reference')
-  assert.deepEqual(hemlockVillagePosition('81008', rougarou?.anchors), [80, 24])
+  assert.deepEqual(hemlockVillagePosition('81008', rougarou?.anchors), [16, 24])
 
   const carnevale = hemlockOverview('82001', 'reference')
   assert.deepEqual(hemlockVillagePosition('82011', carnevale?.anchors), [20, 26])
 
   const fortune = hemlockOverview('88001', 'reference')
-  assert.deepEqual(hemlockVillagePosition('88011', fortune?.anchors), [48, 65])
+  assert.deepEqual(hemlockVillagePosition('88011', fortune?.anchors), [57, 65])
 })
 
 test('In Too Deep plates run west to east from left to right in every row', () => {

@@ -43,11 +43,24 @@ const props = defineProps<{
      face before being asked to move on. */
   flip?: boolean
   backImage?: string
+  illustration?: string
 }>()
 
 const emit = defineEmits<{ dismiss: []; choose: [number] }>()
 
 const hasChoices = computed(() => (props.choices?.length ?? 0) > 0)
+const failedIllustration = ref<string>()
+const visibleIllustration = computed(() =>
+  props.illustration === failedIllustration.value ? undefined : props.illustration,
+)
+
+function hideIllustration(event: Event) {
+  const image = event.currentTarget as HTMLImageElement
+  failedIllustration.value = image.getAttribute('src') ?? undefined
+  if (import.meta.env.DEV) {
+    console.debug('[DrawSpotlight] Could not load story illustration', failedIllustration.value)
+  }
+}
 
 /* Above this a draw stops being a reveal and becomes a list: the cards overlap
  * into a fan and the title carries the count. Deliberately not a setting -- the
@@ -102,7 +115,7 @@ onMounted(() => {
     <div class="spotlight__inner">
       <h2 v-if="title" class="spotlight__title">{{ title }}</h2>
 
-      <div class="spotlight__cards" :style="{ '--count': cards.length }">
+      <div class="spotlight__cards" :class="{ 'spotlight__cards--illustrated': visibleIllustration }" :style="{ '--count': cards.length }">
         <div
           v-for="(card, i) in cards"
           :key="cardId(card)"
@@ -121,6 +134,16 @@ onMounted(() => {
                would happily blow up a card back mid-flip. -->
           <img class="card back no-overlay" :src="backFor(card)" />
         </div>
+        <img
+          v-if="visibleIllustration"
+          class="spotlight__illustration"
+          :class="{ 'spotlight__illustration--pending': !settled }"
+          :src="visibleIllustration"
+          width="1536"
+          height="1024"
+          alt=""
+          @error="hideIllustration"
+        />
       </div>
 
       <div v-if="hasChoices" class="spotlight__choices">
@@ -203,6 +226,36 @@ onMounted(() => {
   flex-direction: row;
   justify-content: center;
   width: fit-content;
+}
+
+.spotlight__cards--illustrated {
+  align-items: center;
+  gap: clamp(10px, 3vw, 28px);
+}
+
+.spotlight__illustration {
+  display: block;
+  width: min(40vw, 520px);
+  height: auto;
+  border-radius: 10px;
+}
+
+.spotlight__illustration--pending {
+  visibility: hidden;
+}
+
+@media (orientation: portrait) {
+  .spotlight__cards--illustrated {
+    flex-direction: column;
+  }
+
+  .spotlight__cards--illustrated .spotlight__card {
+    --spotlight-card-width: min(78vw, 33vh);
+  }
+
+  .spotlight__illustration {
+    width: min(82vw, 39vh);
+  }
 }
 
 /* Each card flips up from its own back. The per-card delay is an inline `--i`

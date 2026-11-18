@@ -59,3 +59,13 @@ test('every selectable dream has its own art inside the wizard reading panel', (
   assert.equal(new Set(images).size, images.length)
   assert.match(read('arkham/components/Question.vue'), /<StoryIllustration [^>]*:entries="wizardFlavorText\.body"/)
 })
+
+test('Dream-Eaters illustrates each epilogue and distinguishes the captured group', () => {
+  const images = Array.from({ length: 16 }, (_, index) => dreamEatersStoryArtFor([
+    storyEntry(`flavorText.epilogue${index + 1}.body`),
+  ]))
+  assert.ok(images.every(Boolean))
+  assert.equal(new Set(images).size, images.length)
+  assert.equal(dreamEatersStoryArtFor([storyEntry('flavorText.allCaptured.body')]), 'cat-ship-captured')
+  assert.equal(dreamEatersStoryArtFor([storyEntry('flavorText.atLeastOneNotCaptured.body')]), 'cat-ship')
+})

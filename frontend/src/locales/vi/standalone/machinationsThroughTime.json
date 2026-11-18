@@ -26,14 +26,14 @@
     "easyStandard": {
       "skull": "-X. X bằng số lượng lá bài story trong khu vực trưng bày thành tích cộng thêm 1.",
       "cultist": "-1. Nếu bạn đang ở Tindalos, bạn tự động thất bại.",
-      "tablet": "[skull]: -X. X là 1 cộng với số lượng story card trong victory display.\r\n[cultist]: -1. Nếu bạn đang ở Tindalos, bạn tự động thất bại.\r\n[tablet]: -2. (Thay vào đó là -4 nếu có một asset [[Scientist]] tại vị trí của bạn.)\r\n[elder_thing]: -3. Nếu bạn thất bại, gây 1 damage hoặc 1 horror cho một asset [[Ally]] tại vị trí của bạn.",
-      "elderThing": "[skull]: -X. X là 1 cộng với số lượng story card trong victory display.\r\n[cultist]: -1. Nếu bạn đang ở Tindalos, bạn tự động thất bại.\r\n[tablet]: -2. (Thay vào đó là -4 nếu có một asset [[Scientist]] tại vị trí của bạn.)\r\n[elder_thing]: -3. Nếu bạn thất bại, gây 1 damage hoặc 1 horror cho một asset [[Ally]] tại vị trí của bạn."
+      "tablet": "[skull]: -X. X là 1 cộng với số lượng story card trong khu vực trưng bày thành tích.\r\n[cultist]: -1. Nếu bạn đang ở Tindalos, bạn tự động thất bại.\r\n[tablet]: -2. (Thay vào đó là -4 nếu có một asset [[Scientist]] tại vị trí của bạn.)\r\n[elder_thing]: -3. Nếu bạn thất bại, gây 1 damage hoặc 1 horror cho một asset [[Ally]] tại vị trí của bạn.",
+      "elderThing": "[skull]: -X. X là 1 cộng với số lượng story card trong khu vực trưng bày thành tích.\r\n[cultist]: -1. Nếu bạn đang ở Tindalos, bạn tự động thất bại.\r\n[tablet]: -2. (Thay vào đó là -4 nếu có một asset [[Scientist]] tại vị trí của bạn.)\r\n[elder_thing]: -3. Nếu bạn thất bại, gây 1 damage hoặc 1 horror cho một asset [[Ally]] tại vị trí của bạn."
     },
     "hardExpert": {
       "skull": "-X. X bằng số lượng lá bài story trong khu vực trưng bày thành tích cộng thêm 2.",
       "cultist": "-2. Nếu bạn đang ở Tindalos, bạn tự động thất bại.",
-      "tablet": "[skull]: -X. X là 2 cộng với số lượng story card trong victory display.\r\n[cultist]: -2. Nếu bạn đang ở Tindalos, bạn tự động thất bại.\r\n[tablet]: -3. (Thay vào đó là -6 nếu có một asset [[Scientist]] tại vị trí của bạn.)\r\n[elder_thing]: -4. Nếu bạn thất bại, gây 1 damage hoặc 1 horror cho một asset [[Ally]] tại vị trí của bạn.",
-      "elderThing": "[skull]: -X. X là 2 cộng với số lượng story card trong victory display.\r\n[cultist]: -2. Nếu bạn đang ở Tindalos, bạn tự động thất bại.\r\n[tablet]: -3. (Thay vào đó là -6 nếu có một asset [[Scientist]] tại vị trí của bạn.)\r\n[elder_thing]: -4. Nếu bạn thất bại, gây 1 damage hoặc 1 horror cho một asset [[Ally]] tại vị trí của bạn."
+      "tablet": "[skull]: -X. X là 2 cộng với số lượng story card trong khu vực trưng bày thành tích.\r\n[cultist]: -2. Nếu bạn đang ở Tindalos, bạn tự động thất bại.\r\n[tablet]: -3. (Thay vào đó là -6 nếu có một asset [[Scientist]] tại vị trí của bạn.)\r\n[elder_thing]: -4. Nếu bạn thất bại, gây 1 damage hoặc 1 horror cho một asset [[Ally]] tại vị trí của bạn.",
+      "elderThing": "[skull]: -X. X là 2 cộng với số lượng story card trong khu vực trưng bày thành tích.\r\n[cultist]: -2. Nếu bạn đang ở Tindalos, bạn tự động thất bại.\r\n[tablet]: -3. (Thay vào đó là -6 nếu có một asset [[Scientist]] tại vị trí của bạn.)\r\n[elder_thing]: -4. Nếu bạn thất bại, gây 1 damage hoặc 1 horror cho một asset [[Ally]] tại vị trí của bạn."
     }
   },
   "label": {
@@ -65,7 +65,7 @@
   "resolutions": {
     "noResolution": {
       "title": "Không Có Kết Cục",
-      "body": "<p>Vô số Hounds lao qua các cổng và các góc của không gian, dồn bạn vào chân tường. Hoang mang và kinh hãi, bạn trừng trừng nhìn vào cái chết của chính mình…</p><ul><li>Mỗi điều tra viên còn lại ở tất cả các thời đại đều bị đánh bại và chịu 1 mental trauma.</li><li>If the Edwin Bennet asset is in play in any era, proceed to <b>Resolution 2</b>.</li><li>If the Edwin Bennet enemy is in play in any era, proceed to <b>Resolution 3</b>.</li><li>Otherwise, proceed to <b>Resolution 4</b>.</li></ul>"
+      "body": "<p>Vô số Hounds lao qua các cổng và các góc của không gian, dồn bạn vào chân tường. Hoang mang và kinh hãi, bạn trừng trừng nhìn vào cái chết của chính mình…</p><ul><li>Mỗi điều tra viên còn lại ở tất cả các thời đại đều bị đánh bại và chịu 1 sang chấn tinh thần.</li><li>Nếu asset Edwin Bennet đang trong màn chơi ở bất kỳ thời đại nào, chuyển đến <b>Kết thúc 2</b>.</li><li>Nếu kẻ địch Edwin Bennet đang trong màn chơi ở bất kỳ thời đại nào, chuyển đến <b>Kết thúc 3</b>.</li><li>Nếu không, chuyển đến <b>Kết thúc 4</b>.</li></ul>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
@@ -77,7 +77,7 @@
     },
     "resolution3": {
       "title": "Kết thúc thứ ba",
-      "body": "<p>_Resolution 3_: Tê liệt vì sợ hãi và buồn nôn trước mùi hôi thối của lũ quái thú đang tru lên, bạn ngất xỉu. Khi mở mắt ra lần nữa, bạn thấy mình đang ở trong một bóng tối bệnh hoạn dưới ánh trăng xanh, bị chôn đến tận cổ trong lớp đất hôi thối với tư cách là những cư dân vĩnh viễn của Tindalos. Nhân loại đã phải chịu một tổn thất nặng nề. Thomas Corrigan và Mary Zielinski cũng bị giam cầm trên Tindalos, và những công trình cả đời của họ biến mất cùng với họ. Tệ hơn nữa, kẻ xảo quyệt Edwin Bennet và những âm mưu của hắn đang gợn sóng xuyên qua thời gian mà không bị cản trở. Bạn cảm thấy ghê tởm khi nghĩ đến những gì tên tâm thần đó đang toan tính tiếp theo.</p><ul><li>Mỗi điều tra viên còn sống trở nên <b>điên loạn</b>.</li></ul>"
+      "body": "<p>_Kết thúc 3_: Tê liệt vì sợ hãi và buồn nôn trước mùi hôi thối của lũ quái thú đang tru lên, bạn ngất xỉu. Khi mở mắt ra lần nữa, bạn thấy mình đang ở trong một bóng tối bệnh hoạn dưới ánh trăng xanh, bị chôn đến tận cổ trong lớp đất hôi thối với tư cách là những cư dân vĩnh viễn của Tindalos. Nhân loại đã phải chịu một tổn thất nặng nề. Thomas Corrigan và Mary Zielinski cũng bị giam cầm trên Tindalos, và những công trình cả đời của họ biến mất cùng với họ. Tệ hơn nữa, kẻ xảo quyệt Edwin Bennet và những âm mưu của hắn đang gợn sóng xuyên qua thời gian mà không bị cản trở. Bạn cảm thấy ghê tởm khi nghĩ đến những gì tên tâm thần đó đang toan tính tiếp theo.</p><ul><li>Mỗi điều tra viên còn sống trở nên <b>điên loạn</b>.</li></ul>"
     },
     "resolution4": {
       "title": "Kết thúc thứ 4",

@@ -98,6 +98,39 @@ export function narrationTracks(
   return tracks
 }
 
+export function cardNarrationKeys(code: string, side: 'a' | 'b' | null = null): string[] {
+  const bare = code.replace(/^c(?=\d)/, '')
+  if (side === 'b') {
+    if (bare.endsWith('b')) {
+      return [`cards.${bare}`, `cards.${bare.slice(0, -1)}.b`, `cards.${bare.slice(0, -1)}b`]
+    }
+    if (bare.endsWith('a')) {
+      const base = bare.slice(0, -1)
+      return [`cards.${base}b`, `cards.${base}.b`, `cards.${bare}.b`]
+    }
+    return [`cards.${bare}b`, `cards.${bare}.b`, `cards.${bare}`]
+  }
+  if (side === 'a') {
+    if (bare.endsWith('a')) {
+      return [`cards.${bare}`, `cards.${bare.slice(0, -1)}`, `cards.${bare.slice(0, -1)}.a`, `cards.${bare}.a`]
+    }
+    return [`cards.${bare}`, `cards.${bare}a`, `cards.${bare}.a`]
+  }
+  return [`cards.${bare}`, `cards.${bare}a`, `cards.${bare}b`, `cards.${bare}.a`, `cards.${bare}.b`]
+}
+
+export function cardNarrationTrack(
+  code: string,
+  side: 'a' | 'b' | null,
+  manifest: NarrationManifest | null,
+  language: NarrationLanguage,
+  root = '/audio/narration',
+): NarrationTrack | null {
+  const keys = cardNarrationKeys(code, side)
+  const tracks = narrationTracks(keys, manifest, language, root)
+  return tracks[0] ?? null
+}
+
 /* The narration language to start with: Vietnamese for a Vietnamese browser, else English. */
 export function defaultNarrationLanguage(browserLanguages: readonly string[]): NarrationLanguage {
   return browserLanguages.some((l) => l.toLowerCase().startsWith('vi')) ? 'vi' : 'en'

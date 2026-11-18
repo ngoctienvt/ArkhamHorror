@@ -102,6 +102,15 @@ function isCardInChoices(card: ArkhamCard | CardContents): boolean {
 const hasCardChoice = computed(() => props.cards.some(isCardInChoices))
 const isHighlighted = computed(() => props.highlighted || hasCardChoice.value)
 
+// While a choice targets cards in a discard pile, list only the pickable ones;
+// plain browsing still shows the whole pile. Keeps each card's original index
+// so drag events still point at the right card in `cards`.
+const visibleCards = computed(() => {
+  const all = props.cards.map((card, index) => ({ card, index }))
+  if (!props.isDiscards || !hasCardChoice.value) return all
+  return all.filter(({ card }) => isCardInChoices(card))
+})
+
 /*
  * Every choice the player has left is on a card tucked in here. The board then
  * looks like it has nothing to click -- there is no other anchor for the
@@ -245,7 +254,7 @@ onBeforeUnmount(() => finishDrag())
         <div class="cards-under-popover__header">{{ label }} ({{ count }})</div>
         <div class="cards-under-popover__cards" @dragstart="hidePopoverWhileDragging">
           <div
-            v-for="(card, i) in cards"
+            v-for="{ card, index: i } in visibleCards"
             :key="i"
             class="cards-under-popover__card-wrap"
             :class="{ discard: isDiscards && !isCardInChoices(card), 'cards-under-popover__card-wrap--draggable': draggableCards }"

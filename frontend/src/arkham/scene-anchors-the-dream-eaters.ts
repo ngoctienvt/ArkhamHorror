@@ -4,8 +4,9 @@ const root = 'the-dream-eaters'
 
 export const dreamEatersAnchors: Record<string, Record<string, Point>> = {
   [`${root}/waking-nightmare`]: {
-    '06070': [39, 48], '06071': [14, 55], '06072': [78, 48], '06073': [38, 18], '06074': [54, 72],
-    basementDoor1: [40, 73], basementDoor2: [62, 90], basementDoor3: [82, 73],
+    '06070': [32, 31], '06071': [13, 31], '06072': [86, 32], '06073': [63, 32], '06074': [47, 53],
+    '06075': [17, 89], '06076': [53, 90], '06077': [81, 90],
+    basementDoor1: [25, 58], basementDoor2: [63, 58], basementDoor3: [83, 58],
   },
   [`${root}/beyond-the-gates-steps`]: {
     '06045': [42, 23], '06046': [77, 32], '06047': [51, 44], '06048': [49, 61], '06049': [49, 88],

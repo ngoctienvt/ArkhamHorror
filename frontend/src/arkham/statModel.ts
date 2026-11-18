@@ -1,4 +1,4 @@
-/* The number a stat finally has once every modifier on its holder has been applied, together with the
+/* The number a stat finally has once its displayable modifiers have been applied, together with the
  * list of what changed it. Import-free on purpose so the tests can load it without the Vue toolchain.
  *
  * The engine only prints the base value on the entity; modifiers (a treachery attached to a location,
@@ -84,6 +84,18 @@ export function sourceEntityId(source: SourceLike | undefined): string | null {
 
 const numberOf = (v: unknown): number | null => (typeof v === 'number' && Number.isFinite(v) ? v : null)
 
+const FIRST_TEST_TAROT = new Set(['TheHighPriestessII', 'TheEmpressIII', 'TheEmperorIV', 'TheHierophantV'])
+
+function isTemporaryStatModifier(modifier: ModifierLike): boolean {
+  if (modifier.effect) return true
+  const source = modifier.source
+  if (source?.sourceTag !== 'TarotSource') return false
+  const card = source.contents
+  // These modifiers come directly from the scenario during a test, without an effect ID.
+  return typeof card === 'object' && card !== null && 'arcana' in card
+    && typeof card.arcana === 'string' && FIRST_TEST_TAROT.has(card.arcana)
+}
+
 /** [value, minimum] as the server sends it; the minimum may arrive wrapped or missing. */
 function valueWithMin(contents: unknown): { value: number; min: number | null } | null {
   if (!Array.isArray(contents)) return null
@@ -102,7 +114,8 @@ function trendOf(key: StatKey, printed: number, current: number): Pick<Stat, 'tr
 export function computeStat(key: StatKey, printed: number, modifiers: readonly ModifierLike[] | null | undefined): Stat {
   const spec = SPECS[key]
   const list = (modifiers ?? []).filter((m) =>
-    (!spec.skill || m.type.skillType === spec.skill || m.type.skillType === undefined) && !(spec.lastingOnly && m.effect))
+    (!spec.skill || m.type.skillType === spec.skill || m.type.skillType === undefined)
+    && !(spec.lastingOnly && isTemporaryStatModifier(m)))
   const parts: StatPart[] = []
   let value = printed
   let minimum: number | null = null

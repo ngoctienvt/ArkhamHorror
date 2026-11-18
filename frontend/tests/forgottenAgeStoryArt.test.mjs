@@ -114,8 +114,9 @@ test('the prologue, five interludes, and epilogue cover the campaign prose', () 
 test('each illustration refers to bilingual text and a bundled WebP', () => {
   const assets = new URL('../src/assets/forgotten-age-story/', import.meta.url)
   const artFiles = [...new Set(Object.values(forgottenAgeStoryArtByPassage))].map(name => name + '.webp').sort()
-  assert.deepEqual(readdirSync(assets).sort(), artFiles)
-  for (const file of artFiles) {
+  const cardFaces = ["story-04325b.webp","story-04326b.webp"]
+  assert.deepEqual(readdirSync(assets).sort(), [...artFiles, ...cardFaces].sort())
+  for (const file of [...artFiles, ...cardFaces]) {
     const bytes = readFileSync(new URL(file, assets))
     assert.equal(bytes.toString('ascii', 0, 4), 'RIFF', file)
     assert.equal(bytes.toString('ascii', 8, 12), 'WEBP', file)

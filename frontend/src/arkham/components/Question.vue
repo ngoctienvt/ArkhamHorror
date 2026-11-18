@@ -2071,7 +2071,10 @@ h2 {
 .intro-text {
   position: relative;
   max-height: 60vh;
-  > *:first-child {
+  /* Top gap goes on the first text block. The narration button, when shown, comes first but is
+   * absolutely positioned, so the gap moves to the block right after it instead of padding the button. */
+  > *:first-child:not(.narration-toggle),
+  > .narration-toggle:first-child + * {
     padding-top: 30px;
   }
   > ul, div {

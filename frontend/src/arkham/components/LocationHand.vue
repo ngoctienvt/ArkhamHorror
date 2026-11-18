@@ -28,16 +28,29 @@ const hiddenEnemies = computed(() =>
 const handCount = computed(() => hand.value.length + hiddenTreacheries.value.length + hiddenEnemies.value.length)
 const dock = ref<HTMLElement | null>(null)
 let observer: ResizeObserver | null = null
-// Other overlays keep clear of the hand through this variable.
+/* Other overlays keep clear of the hand through two variables: `--hand-h` is the room the page leaves
+ * under the map for the hand, `--hand-cover` how much of the window the resting cards really cover.
+ * The cards stand taller than the room left for them, so anything pinned to the bottom of the map
+ * (the action panel's End turn) has to stop above `--hand-cover`, not `--hand-h`. */
+const clearHandVars = () => {
+  const root = document.documentElement.style
+  root.removeProperty('--hand-h')
+  root.removeProperty('--hand-cover')
+}
 watch(dock, (el) => {
   observer?.disconnect()
   observer = null
-  const root = document.documentElement.style
-  if (!el) { root.removeProperty('--hand-h'); return }
-  observer = new ResizeObserver(() => root.setProperty('--hand-h', `${Math.round(el.getBoundingClientRect().height - 0.4 * 1.4 * 130)}px`))
+  if (!el) { clearHandVars(); return }
+  observer = new ResizeObserver(() => {
+    const height = el.getBoundingClientRect().height
+    const root = document.documentElement.style
+    // Never negative: on a phone the cards are small and the dock is shorter than the sunk part of a full-size card.
+    root.setProperty('--hand-h', `${Math.max(0, Math.round(height - 0.4 * 1.4 * 130))}px`)
+    root.setProperty('--hand-cover', `${Math.round(height)}px`)
+  })
   observer.observe(el)
 })
-onBeforeUnmount(() => { observer?.disconnect(); document.documentElement.style.removeProperty('--hand-h') })
+onBeforeUnmount(() => { observer?.disconnect(); clearHandVars() })
 
 // No hover on a finger: a tap on a card opens HandCard's enlarged preview with its Play button.
 </script>

@@ -79,7 +79,15 @@ export function sceneFallbackTargets(game: Game, choices: readonly Message[], ma
 }
 
 /** A token on an investigator the game asks to pick (assign damage or horror, spend clues, take resources). */
-export interface FallbackToken { index: number; investigatorId: string; tokenType: string; auxiliary: boolean }
+export interface FallbackToken { index: number; investigatorId: string; tokenType: string; auxiliary: boolean; heal: boolean }
+
+/* The same token label both assigns and heals (Meat Cleaver's "you may heal 1 horror" uses it too), so
+ * what the choice runs decides whether the button reads "assign" or "heal". */
+const HEAL_TAG = /^Heal(Horror|Damage)/
+function healsToken(choice: Message): boolean {
+  const messages = (choice as { messages?: unknown[] }).messages ?? []
+  return messages.some((m) => typeof m === 'object' && m !== null && HEAL_TAG.test(String((m as { tag?: unknown }).tag ?? '')))
+}
 
 /**
  * Token choices on investigators. The card board answers them from the investigator's token row
@@ -95,13 +103,13 @@ export function sceneFallbackTokens(choices: readonly Message[], myInvestigatorI
     if (component?.tag !== 'InvestigatorComponent' || !component.investigatorId || !component.tokenType) return
     const auxiliary = tag === 'AuxiliaryComponentLabel'
     if (!auxiliary && component.tokenType === 'ResourceToken' && component.investigatorId === myInvestigatorId) return
-    result.push({ index, investigatorId: component.investigatorId, tokenType: component.tokenType, auxiliary })
+    result.push({ index, investigatorId: component.investigatorId, tokenType: component.tokenType, auxiliary, heal: healsToken(choice) })
   })
   return result
 }
 
 /** How many choices only the scene's action panel can answer: board targets, investigator tokens, concealed
- * cards and keys. While it is above zero the map keeps the panel open, so closing it never hides the question. */
+ * cards and keys. The map brings the panel into view when one of these prompts starts. */
 export function scenePanelOnlyCount(game: Game, choices: readonly Message[], mapLocationIds: ReadonlySet<string>, myInvestigatorId: string | null, mapEnemyIds?: ReadonlySet<string>): number {
   const concealedOrKey = choices.filter((choice) => {
     const tag = choice.tag as string

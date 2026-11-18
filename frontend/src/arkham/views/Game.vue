@@ -16,8 +16,10 @@ import { useI18n } from 'vue-i18n'
 import { useNarrative } from '@/arkham/composables/useNarrative'
 import { useNarration } from '@/arkham/composables/useNarration'
 import confetti from '@/effects/confetti'
-import { useWebSocket, useResizeObserver } from '@vueuse/core'
+import { useMediaQuery, useWebSocket, useResizeObserver } from '@vueuse/core'
 import { useFitScreen } from '@/arkham/composables/useFitScreen'
+import { sceneActionSidebarKey } from '@/arkham/composables/useScenePanelState'
+import { useDraggableFloatingPanel } from '@/arkham/composables/useDraggableFloatingPanel'
 import { MenuItem } from '@headlessui/vue'
 import {
   AdjustmentsHorizontalIcon,
@@ -150,6 +152,8 @@ import StoryQuestion from '@/arkham/components/StoryQuestion.vue'
 import AchievementToast from '@/arkham/components/AchievementToast.vue'
 import ChaosRevealPopup from '@/arkham/components/ChaosRevealPopup.vue'
 import { lastSeq, revealsAfter, type ChaosReveal } from '@/arkham/chaosRevealLog'
+import { enemyActivityAfter } from '@/arkham/enemyActivityLog'
+import { flagEnemyActivity } from '@/arkham/composables/useEnemyActivity'
 import AdvanceReader from '@/arkham/components/AdvanceReader.vue'
 import { advancesBetween, type AdvanceReading } from '@/arkham/advanceReading'
 import { achievementEntryScope } from '@/arkham/achievements'
@@ -2570,6 +2574,26 @@ const handleKeyPress = (event: KeyboardEvent) => {
 }
 
 // Sidebar
+// The scene map says whose turn it is on its own bar while the log, which normally does, is closed.
+provide('gameLogShown', showSidebar)
+const sidebarIsDrawer = useMediaQuery('(max-width: 800px)')
+const sidebarActionsSlot = ref<HTMLElement | null>(null)
+const sceneSidebarPinned = computed(() => isActualScenarioView.value && !sidebarIsDrawer.value)
+/* On the scene map the log is not part of the sidebar: a gold button on the map bar opens it in a
+ * floating window to read back or undo, so the sidebar holds only the turn status and the actions. */
+const logOpen = ref(false)
+/* The log window can be dragged by its header to wherever suits the player; the spot is remembered. */
+const logPopover = ref<HTMLElement | null>(null)
+const logDrag = useDraggableFloatingPanel(logPopover, 'arkham.logPopoverOffset')
+watch(logOpen, (open) => { if (!open) logDrag.stop() })
+watch(sceneSidebarPinned, (pinned) => { if (!pinned) logOpen.value = false })
+provide(sceneActionSidebarKey, {
+  pinned: sceneSidebarPinned,
+  logOpen,
+  toggleLog: () => { logOpen.value = !logOpen.value },
+  target: computed(() => sceneSidebarPinned.value && showSidebar.value ? sidebarActionsSlot.value : null),
+  open: () => { showSidebar.value = true },
+})
 const toggleSidebar = function () {
   showSidebar.value = !showSidebar.value
   if (!isMobileViewport()) {
@@ -2723,6 +2747,18 @@ watch(gameLog, (entries) => {
     investigator: fresh[fresh.length - 1].investigator,
     faces: fresh.flatMap((reveal) => reveal.faces),
   }
+})
+/* An enemy that moved or attacked lights up on the map for a moment. Like the reveals above, the
+ * first log seen is history and lights nothing. */
+let enemyActivitySeen: number | null = null
+watch(gameLog, (entries) => {
+  if (enemyActivitySeen === null) {
+    if (entries.length > 0) enemyActivitySeen = lastSeq(entries)
+    return
+  }
+  const fresh = enemyActivityAfter(entries, enemyActivitySeen)
+  enemyActivitySeen = Math.max(enemyActivitySeen, lastSeq(entries))
+  flagEnemyActivity(fresh)
 })
 // The summary confirmed (or cleared): the update held behind it reaches the board now.
 watch(() => skillTestSummaryState.summary.value, (summary) => {
@@ -3585,6 +3621,21 @@ onUnmounted(() => {
     >
       <ArrowsPointingOutIcon aria-hidden="true" />
     </button>
+    <button
+      v-if="fitScreen && !showLog && sceneSidebarPinned && settings.locationView !== 'cards'"
+      class="fit-screen-exit fit-screen-sidebar"
+      :title="$t('gameBar.toggleSidebar')"
+      :aria-label="$t('gameBar.toggleSidebar')"
+      :aria-expanded="showSidebar"
+      aria-controls="game-log-sidebar"
+      @click="toggleSidebar"
+    >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="16" rx="2" />
+        <path d="M15 4v16" />
+        <path :d="showSidebar ? 'm8 9 3 3-3 3' : 'm11 9-3 3 3 3'" />
+      </svg>
+    </button>
     <div class="game-bar">
       <!-- The campaign screen. Not a menu and not a panel: it replaces the
            board, so it is drawn as a mode you are in (active while open) and
@@ -4047,7 +4098,34 @@ onUnmounted(() => {
             isActualScenarioView
           "
         >
+          <!-- Whose turn and what step, at the head of the action list. -->
           <GameStatusPanel :game="game" :playerId="playerId" />
+          <div ref="sidebarActionsSlot" class="sidebar-actions" />
+          <!-- Hidden while the scene's action panel is docked here: the log then opens from the map bar. -->
+          <GameLog
+            :entries="gameLog"
+            :can-undo="!spectate"
+            :can-chat="!spectate && !!chatInvestigatorId"
+            :player-id="playerId"
+            @undo="requestUndoToStep"
+            @say="say"
+            @load-older="loadOlderLog"
+          />
+        </div>
+        <div
+          v-if="logOpen && sceneSidebarPinned && isActualScenarioView"
+          ref="logPopover"
+          class="log-popover"
+          :class="{ 'log-popover--dragging': logDrag.dragging.value }"
+          :style="logDrag.style.value"
+          role="dialog"
+          :aria-label="t('locationMap.log')"
+          @keydown.esc.stop="logOpen = false"
+        >
+          <div class="log-popover__head" :title="t('locationMap.dragLog')" @pointerdown="logDrag.onHandleDown" @dblclick="logDrag.reset()">
+            <span>{{ t('locationMap.log') }}</span>
+            <button type="button" class="log-popover__close" :aria-label="t('locationMap.closeLog')" @click="logOpen = false">✕</button>
+          </div>
           <GameLog
             :entries="gameLog"
             :can-undo="!spectate"
@@ -4143,7 +4221,18 @@ onUnmounted(() => {
       />
     </Teleport>
   </div>
+  <!-- Still fetching the game: say so, rather than leaving an empty page for the seconds it takes. -->
+  <div v-else class="game-loading" role="status" aria-live="polite">
+    <span class="game-loading__spinner" aria-hidden="true"></span>{{ $t('locationMap.loadingBoard') }}
+  </div>
 </template>
+
+<style scoped>
+.game-loading { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 60dvh; color: #b6bfb0; font-size: 0.95rem; }
+.game-loading__spinner { width: 18px; height: 18px; border: 2px solid #c6a87355; border-top-color: #d9b878; border-radius: 50%; animation: game-loading-spin 0.9s linear infinite; }
+@keyframes game-loading-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .game-loading__spinner { animation: none; } }
+</style>
 
 <style lang="scss" scoped>
 /* Fetching an archive is a download of every step a game ever took, which can
@@ -4543,8 +4632,123 @@ onUnmounted(() => {
   }
 }
 
-.sidebar--empty-log {
+.sidebar-actions {
+  display: none;
+}
+
+.sidebar--empty-log:not(:has(> .sidebar-actions > *)) {
   pointer-events: none;
+}
+
+.sidebar:has(> .sidebar-actions > *),
+.log-popover {
+  /* The scene's dark-green family: raised for what you act on, recessed for what you read. Gold accents. */
+  --sb-raised: #1a281f;
+  --sb-sunk: #0a100c;
+  --sb-head: #1d2e24;
+  --sb-line: #c6a87340;
+  --sb-gold: #c6a873;
+}
+
+/* Docked actions: the turn status on top, the action list filling the rest; the log lives in its popover. */
+.sidebar:has(> .sidebar-actions > *) {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  background: var(--sb-raised);
+
+  > .game-log { display: none; }
+  > .sidebar-actions {
+    display: block;
+    min-height: 0;
+  }
+
+  /* Two sections, one look: each opens on the same title band (phase / your actions) over the same body. */
+  :deep(.status) { background: var(--sb-raised); border-bottom: 0; padding-bottom: 8px; }
+  /* Same emerald band as "Your actions" below: the sidebar's two sections share one colour, set apart from
+   * the mission strip's crimson / steel-blue / bronze bands. */
+  :deep(.status .bar) { padding: 7px 12px; background: linear-gradient(180deg, #2f7350, #22553b); border-bottom: 1px solid #5fb487; box-shadow: inset 0 1px 0 #ffffff26; }
+  :deep(.status .bar .phase) { color: #fff8ea; text-shadow: 0 1px 2px #000a; }
+  :deep(.status .bar .turn-of) { color: #f3e6c8; text-shadow: 0 1px 2px #000a; }
+  :deep(.panel.action-docked) { background: var(--sb-raised); border: 0; border-radius: 0; }
+  :deep(.panel.action-docked .foot) { background: var(--sb-raised); }
+}
+
+/* The log window opened from the map bar's gold button, floating over the map beside the sidebar. */
+.log-popover {
+  position: fixed;
+  top: 110px;
+  right: calc(min(25vw, 300px) + 12px);
+  z-index: 950; /* above the hand dock (900): it is a dialog the player opened */
+  width: min(360px, calc(100vw - 32px));
+  height: min(560px, calc(100dvh - 140px));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--sb-sunk);
+  border: 1px solid #c6a87399;
+  border-radius: 10px;
+  box-shadow: 0 12px 32px #000c;
+
+  :deep(.game-log) { background: var(--sb-sunk); flex: 1 1 auto; }
+  :deep(.game-log .log-group) { background: #ffffff05; }
+  /* Log bands keep their phase colour as the left edge but only a light wash of it. */
+  :deep(.game-log .log-structure) { background: color-mix(in srgb, var(--tone) 22%, var(--sb-sunk)); color: #ece6d4; }
+  :deep(.game-log .log-structure--scenario) { background: color-mix(in srgb, var(--tone) 45%, var(--sb-sunk)); }
+  :deep(.game-log .log-structure--turn) { --tone: #c6a87366; }
+  :deep(.game-log__compose) { background: var(--sb-head); }
+}
+
+.log-popover__head {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px 6px 14px;
+  /* The same emerald section band as the sidebar's phase and "Your actions" bars. It is also the drag handle. */
+  background: linear-gradient(180deg, #2f7350, #22553b);
+  border-bottom: 1px solid #5fb487;
+  box-shadow: inset 0 1px 0 #ffffff26;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff8ea;
+  text-shadow: 0 1px 2px #000a;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+
+.log-popover--dragging {
+  box-shadow: 0 18px 44px #000e;
+  .log-popover__head { cursor: grabbing; }
+}
+
+.log-popover__close {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #e5e2d4;
+  cursor: pointer;
+
+  &:hover { border-color: var(--sb-gold); }
+  &:focus-visible { outline: 2px solid #ffe9a0; outline-offset: 1px; }
+}
+
+.fit-screen-sidebar {
+  right: 44px;
+}
+
+.fit-screen-sidebar[aria-expanded='true'] {
+  right: calc(44px + min(25vw, 300px));
+}
+
+.fit-screen-exit:has(+ .fit-screen-sidebar[aria-expanded='true']) {
+  right: calc(6px + min(25vw, 300px));
 }
 
 .sidebar-backdrop {

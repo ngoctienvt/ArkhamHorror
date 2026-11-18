@@ -8,7 +8,8 @@ import { cardImage, portraitImage } from '@/arkham/cardImages'
 import { useCardNames } from '@/arkham/composables/useCardNames'
 import { ownInvestigator } from '@/arkham/ownInvestigator'
 import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
-import { museumExhibitArt, type HemlockOverview } from '@/arkham/hemlock-overview'
+import { museumExhibitArt } from '@/arkham/hemlock-overview'
+import type { StageBoard } from '@/arkham/scene-stage-types'
 import { essexTrainArt, hasLocationArt } from '@/arkham/scene-location-art'
 import { islandAspect, islandImage, islandRails, islandSpotImage, islandWaterImage, vehicleSprite } from '@/arkham/scene-island-sprites'
 import { showsSceneLandmark } from '@/arkham/revealed-scene-positions'
@@ -27,6 +28,8 @@ import type { ConcealedCard } from '@/arkham/types/ConcealedCard'
 import { investigatorMovementName } from '@/arkham/investigatorMovement'
 import { arrangeMode, beginDrag, offsetOf } from '@/arkham/composables/useMapDrag'
 import { clipBetweenBoxes, useMapPlateBoxes, type PlateBox } from '@/arkham/composables/useMapPlateBoxes'
+import { badgeSlide, plateShifts, type Box } from '@/arkham/map-plate-collision'
+import { useTouchMode } from '@/arkham/composables/useTouchMode'
 import type { MapViewport } from '@/arkham/composables/useMapViewport'
 import { MAP_ZOOM_ENABLED } from '@/arkham/mapViewport'
 import { CARD_FLIGHT_ATTR, cardFlightStyle, useCardFlightState } from '@/arkham/cardFlight'
@@ -63,7 +66,7 @@ const props = defineProps<{
   roomPlates?: Record<string, RoomPlateSpot> | null
   /** Whether the room plates show the card text and flavour. */
   plateText?: boolean
-  illustratedBoard?: HemlockOverview
+  illustratedBoard?: StageBoard
   dreamPositions?: Record<string, Point>
   /** Horror in High Gear: the road's columns and rows; tiles fill one column and two rows each, side by side. */
   roadGrid?: RoadGrid
@@ -92,8 +95,9 @@ const basePos = (id: string): Point => {
   return at ? spreadPoint(at) : at
 }
 const offsetKey = (id: string) => `${props.game.id}:${id}`
-// Where a plate is drawn: its scenario spot plus any shift the player dragged it by (never in the house cutaway).
-const pos = (id: string): Point => {
+// A plate's spot before plates are pulled apart: its scenario spot plus any shift the player dragged it by
+// (never in the house cutaway).
+const restPos = (id: string): Point => {
   const [x, y] = basePos(id)
   const staggered = essexTrain.value && stageWidth.value > 0 && stageWidth.value <= 650
     && Math.round((x - 22) / 11) % 2 === 0
@@ -101,6 +105,11 @@ const pos = (id: string): Point => {
   if (!canDrag.value) return [x, plateY]
   const [dx, dy] = offsetOf(offsetKey(id))
   return [x + dx, plateY + dy]
+}
+// Where a plate is drawn: its resting spot, moved up or down a little when it would sit on another plate.
+const pos = (id: string): Point => {
+  const [x, y] = restPos(id)
+  return [x, y + (plateShift.value[id] ?? 0)]
 }
 const arrowKey = (key: string) => `${props.game.id}:arrow:${key}`
 // Plates and move buttons can be dragged aside on every full-size board. On a sprite board the whole location moves
@@ -115,7 +124,8 @@ const museumExhibits = computed(() => props.illustratedBoard?.museumExhibits
     return src ? [{ id, src }] : []
   })
   : [])
-const sceneArt = computed(() => props.illustratedBoard?.image.slice('img/scenes/'.length, -'.webp'.length))
+const sceneArt = computed(() => props.illustratedBoard?.layoutArt
+  ?? props.illustratedBoard?.image.slice('img/scenes/'.length, -'.webp'.length))
 const essexTrain = computed(() => sceneArt.value === 'the-dunwich-legacy/essex-county-rails')
 const locationVignettes = computed(() => {
   const art = sceneArt.value
@@ -142,8 +152,11 @@ const spreadPoint = ([x, y]: Point): Point => spreadWeaver.value ? [50 + (x - 50
 const dreamDisplayPositions = computed(() => props.dreamPositions && (spreadWeaver.value
   ? Object.fromEntries(Object.entries(props.dreamPositions).map(([label, point]) => [label, spreadPoint(point)]))
   : props.dreamPositions))
-// A new picture starts whole; a resized frame (rotation) must not keep an offset that now shows an empty border.
-watch(() => props.illustratedBoard?.image, () => props.viewport?.reset())
+// Stage variants using the same camera share the map's zoom and offset.
+watch(() => props.illustratedBoard?.layoutArt
+  ?? sceneArt.value?.replace(/^(brethren-of-ash\/spreading-flames)-(burning|dorm-fire|campus-fire)$/, '$1'),
+  () => props.viewport?.reset())
+// A resized frame (rotation) must not keep an offset that now shows an empty border.
 watch([stageWidth, stageHeight], () => props.viewport?.refit())
 watch(zoomable, (ok) => { if (!ok) props.viewport?.reset() })
 // One finger scrolls the page until the map is zoomed or plates are being arranged; then the map takes the touch.
@@ -170,6 +183,10 @@ const canvasStyle = computed(() => {
  * placement spots are sized to one cell, so neither covers a neighbouring cell and a click lands where it looks. */
 const cosmosCell = computed(() => {
   if (!props.illustratedBoard?.islands || !stageWidth.value || !stageHeight.value) return null
+  if (props.illustratedBoard.tileSize) {
+    return { width: stageWidth.value * props.illustratedBoard.tileSize[0] / 100,
+      height: stageHeight.value * props.illustratedBoard.tileSize[1] / 100 }
+  }
   if (props.roadGrid) {
     // A road tile is as wide as its column and two of the six rows high; neighbours touch, so the road is one strip.
     return { width: stageWidth.value / props.roadGrid.columns, height: (stageHeight.value * 2) / props.roadGrid.rows }
@@ -243,7 +260,11 @@ const nodeStyle = (l: Location): Record<string, string | number | undefined> => 
   return { left: `${x}%`, top: `${y}%`, zIndex: props.cutaway ? Math.round(y) : undefined }
 }
 const islandsFolder = computed(() => props.illustratedBoard?.islands ?? '')
-const aspectOf = (l: Location) => islandAspect(islandsFolder.value, l.cardCode, l.revealed)
+const tileImage = (l: Location) => props.illustratedBoard?.tileImages?.[l.id]
+  ?? islandImage(islandsFolder.value, l.cardCode, l.revealed)
+const tileBack = computed(() => props.illustratedBoard?.tileBack ?? islandSpotImage(islandsFolder.value))
+const aspectOf = (l: Location) => props.illustratedBoard?.tileImages ? 3 / 2
+  : islandAspect(islandsFolder.value, l.cardCode, l.revealed)
 
 /* Horror in High Gear: driving on adds a column on the right and drops the ones behind. The new tiles slide in
  * from the right, the tiles left behind fade out to the left (a ghost of each, since the card is already gone),
@@ -256,7 +277,7 @@ const roadFrame = computed(() => {
   const sprites: Record<string, { src: string; width: number }> = {}
   for (const l of props.locations) {
     points[l.id] = basePos(l.id) // the road's slide ignores a plate drag
-    sprites[l.id] = { src: islandImage(islandsFolder.value, l.cardCode, l.revealed), width: islandWidth(l) }
+    sprites[l.id] = { src: tileImage(l), width: islandWidth(l) }
   }
   return { points, sprites }
 })
@@ -393,6 +414,32 @@ const plateBoxes = useMapPlateBoxes(stage, () => (props.illustratedBoard ? '.pla
   () => props.compact,
 ])
 
+/* On a painted board the anchors are fixed to the picture, so on a small map two name plates can land on
+ * each other. Those are pulled apart vertically (see plateShifts); a plate the player dragged stays where
+ * they put it. Sprite boards and the house cutaway lay their plates out on a grid of their own. */
+const plateShift = computed<Record<string, number>>(() => {
+  if (!props.illustratedBoard || props.illustratedBoard.islands || props.cutaway || props.compact) return {}
+  const dragged = new Set<string>()
+  const boxes: Box[] = props.locations.flatMap((l) => {
+    const box = plateBoxes.value[l.id]
+    if (!box || !basePos(l.id)) return []
+    if (offsetOf(offsetKey(l.id)).some((v) => v !== 0)) dragged.add(l.id)
+    const [x, y] = restPos(l.id)
+    return [{ id: l.id, cx: x + box.dx, cy: y + box.dy, hw: box.hw, hh: box.hh }]
+  })
+  return plateShifts(boxes, { fixed: dragged, maxShift: 20 })
+})
+/** Every plate's box where it is drawn, for keeping link badges off them. */
+const drawnPlateBoxes = computed<Box[]>(() => props.locations.flatMap((l) => {
+  const box = plateBoxes.value[l.id]
+  if (!box || !basePos(l.id)) return []
+  const [x, y] = pos(l.id)
+  return [{ id: l.id, cx: x + box.dx, cy: y + box.dy, hw: box.hw, hh: box.hh }]
+}))
+/** Half the side of a link badge, in pixels (see `.connection-arrow`): 34px with a mouse, a 44px tap target with a finger. */
+const { isTouch } = useTouchMode()
+const badgeHalf = computed(() => (isTouch.value ? 22 : 17))
+
 /* The move button sits on the link it travels along. A link carries one when you stand at one end and the
  * other end offers a move; that move then leaves the destination's plate (see `movesOnLinks`). */
 function linkMove(a: string, b: string): { index: number; to: string } | null {
@@ -467,9 +514,16 @@ const connectionArrows = computed(() => {
     // off it, so it always sits between them and points straight from one to the other. Any sideways part of a
     // drag (or of an offset saved before this rule) is dropped, and it stays within the middle 60% of the line.
     const [dx, dy] = canDrag.value ? offsetOf(arrowKey(key)) : [0, 0]
-    const along = Math.max(-0.3 * length, Math.min(0.3 * length, (dx * w * ux + dy * h * uy) / 100))
-    const ax = x + (along * ux * 100) / w
-    const ay = y + (along * uy * 100) / h
+    const dragged = Math.max(-0.3 * length, Math.min(0.3 * length, (dx * w * ux + dy * h * uy) / 100))
+    // One pixel along the link, in stage percent.
+    const step: [number, number] = [(ux * 100) / w, (uy * 100) / h]
+    // Left where it falls, a badge can land on a third plate the link passes behind (or on an end plate of a
+    // short link); it then slides along its link to the nearest clear spot. One the player placed stays.
+    const auto = dragged !== 0 || passage || cosmosCell.value ? 0 : badgeSlide(
+      { id: key, cx: x, cy: y, hw: (badgeHalf.value * 100) / w, hh: (badgeHalf.value * 100) / h }, step, 0.45 * length, drawnPlateBoxes.value)
+    const along = dragged + auto
+    const ax = x + along * step[0]
+    const ay = y + along * step[1]
     const move = linkMove(a, b)
     // A one-way arrow points the way the passage runs; a two-way one lies along the line.
     const rotation = angle + (direction === 'backward' ? Math.PI : 0)
@@ -559,6 +613,22 @@ function tileClick(l: Location, event: MouseEvent) {
         :style="stageStyle">
       <img v-if="illustratedBoard" :key="illustratedBoard.image" class="board-art" :class="{ spectral: illustratedBoard.spectral }" :src="illustratedBoard.image"
         alt="" @error="hideFailedArt($event, illustratedBoard.image)" />
+      <img v-if="illustratedBoard?.ruinedDistricts" class="board-art"
+        :src="illustratedBoard.ruinedDistricts.image" :style="{ maskImage: illustratedBoard.ruinedDistricts.mask }"
+        aria-hidden="true" alt="" draggable="false" />
+      <img v-if="illustratedBoard?.spectralPlaces" class="board-art"
+        :src="illustratedBoard.spectralPlaces.image" :style="{ maskImage: illustratedBoard.spectralPlaces.mask }"
+        aria-hidden="true" alt="" draggable="false" />
+      <img v-if="illustratedBoard?.locationEffect" class="board-art"
+        :src="illustratedBoard.locationEffect.image" :style="{ maskImage: illustratedBoard.locationEffect.mask }"
+        aria-hidden="true" alt="" draggable="false" />
+      <img v-for="layer in illustratedBoard?.layers ?? []" :key="layer.image + layer.mask" class="board-art"
+        :src="layer.image" :style="{ maskImage: layer.mask, maskSize: '100% 100%', maskRepeat: 'no-repeat' }"
+        aria-hidden="true" alt="" draggable="false" />
+      <img v-for="figure in illustratedBoard?.figures ?? []" :key="figure.id" :src="figure.image"
+          :style="{ position: 'absolute', pointerEvents: 'none', objectFit: 'contain', translate: '-50% -100%', maskImage: figure.mask,
+          left: figure.point[0] + '%', top: figure.point[1] + '%', width: figure.size[0] + '%', height: figure.size[1] + '%' }"
+        aria-hidden="true" alt="" draggable="false" @error="hideFailedArt($event, figure.image)" />
       <template v-if="essexTrain">
         <img v-for="location in locations" :key="`${location.id}:${essexTrainArt(location)}`"
           class="essex-train-car" :src="essexTrainArt(location)" :style="{ left: basePos(location.id)[0] + '%' }"
@@ -625,12 +695,12 @@ function tileClick(l: Location, event: MouseEvent) {
              onto the shore and drains away, twice out of step. Drawn under the island, so only the rim shows. -->
         <template v-if="stormy">
           <template v-for="l in locations" :key="'surf-' + l.id">
-            <img v-for="n in 2" :key="n" class="surf" :class="'surf-' + n" :src="islandImage(illustratedBoard.islands, l.cardCode, l.revealed)"
+            <img v-for="n in 2" :key="n" class="surf" :class="'surf-' + n" :src="tileImage(l)"
               :style="spriteStyle(l)" alt="" aria-hidden="true" draggable="false" />
           </template>
         </template>
         <img v-for="l in locations" :key="'island-' + l.id" class="island" :class="{ targetable: infoOf(l).targetable }"
-          :src="islandImage(illustratedBoard.islands, l.cardCode, l.revealed)"
+          :src="tileImage(l)"
           :style="spriteStyle(l)" :data-stair-tile="islandsFolder === STAIRS_FOLDER ? l.id : undefined"
           :data-road-tile="roadGrid ? l.id : undefined" alt="" aria-hidden="true" draggable="false" />
         <!-- Road tiles that were left behind fade away to the left while the road slides on. -->
@@ -658,7 +728,7 @@ function tileClick(l: Location, event: MouseEvent) {
         <template v-for="l in locations" :key="'flood-' + l.id">
           <div v-if="l.floodLevel && l.floodLevel !== 'Unflooded'" class="flood-mask"
             :style="{ ...spriteStyle(l),
-              '--sprite': `url(${islandImage(illustratedBoard.islands, l.cardCode, l.revealed)})` }"
+              '--sprite': `url(${tileImage(l)})` }"
             aria-hidden="true">
             <div class="wave" :class="l.floodLevel"></div>
             <div class="wave swell" :class="l.floodLevel"></div>
@@ -673,7 +743,7 @@ function tileClick(l: Location, event: MouseEvent) {
       <button v-for="spot in gridSpots" :key="spot.label" class="spot" :class="{ 'cosmos-spot': cosmosCell }"
         :style="cosmosCell
           ? { left: spot.x + '%', top: spot.y + '%', width: cosmosCell.width + 'px', height: cosmosCell.height + 'px',
-            backgroundImage: `url(${islandSpotImage(islandsFolder)})` }
+            backgroundImage: `url(${tileBack})` }
           : { left: spot.x + '%', top: spot.y + '%' }"
         :aria-label="t('locationMap.placeHere')" @click="emit('choose', spot.index)">+</button>
       <LocationConcealedStack v-for="spot in concealedSpots ?? []" :key="'concealed-' + spot.key" class="concealed-spot"

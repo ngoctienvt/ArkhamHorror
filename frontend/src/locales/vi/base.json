@@ -88,7 +88,7 @@
   "Parley": "Đàm phán",
   "Resign": "Đầu hàng (Resign)",
   "Investigate": "Điều tra",
-  "Evade": "Trốn thoát",
+  "Evade": "Né tránh",
   "Explore": "Thám hiểm (Explore)",
   "Fight": "Chiến đấu",
   "Engage": "Giao chiến",
@@ -555,6 +555,11 @@
     "debug": "Gỡ lỗi"
   },
   "locationMap": {
+    "dragLog": "Kéo để di chuyển · nhấp đúp để về chỗ cũ",
+    "yourActions": "Hành động của bạn",
+    "log": "Nhật ký",
+    "closeLog": "Đóng nhật ký",
+    "exhaustedBadge": "Exhausted",
     "showMap": "Xem bản đồ",
     "concealed": "{count} lá bị che giấu",
     "concealedCard": "Lá bị che giấu",
@@ -716,7 +721,7 @@
         "InvestigationPhaseBeginsWindow": "cửa sổ fast đầu giai đoạn điều tra",
         "NextInvestigatorsTurnBeginsStep": "chuyển sang lượt điều tra viên kế tiếp",
         "NextInvestigatorsTurnBeginsWindow": "cửa sổ fast đầu lượt",
-        "InvestigatorTakesActionStep": "điều tra viên đang hành động (tối đa 3 hành động mỗi lượt)",
+        "InvestigatorTakesActionStep": "điều tra viên đang hành động",
         "InvestigatorsTurnEndsStep": "kết thúc lượt điều tra viên",
         "InvestigationPhaseEndsStep": "kết thúc giai đoạn điều tra",
         "EnemyPhaseBeginsStep": "bắt đầu giai đoạn kẻ địch",
@@ -910,7 +915,11 @@
       "HorrorToken": "Gán kinh hoàng",
       "ClueToken": "Manh mối",
       "ResourceToken": "Tài nguyên",
-      "DoomToken": "Doom"
+      "DoomToken": "Doom",
+      "heal": {
+        "DamageToken": "Hồi sát thương",
+        "HorrorToken": "Hồi kinh hoàng"
+      }
     },
     "targetKind": {
       "enemy": "Kẻ địch",
@@ -922,7 +931,8 @@
       "story": "Cốt truyện",
       "scarletKey": "Scarlet Key",
       "investigator": "Điều tra viên",
-      "key": "Chìa khóa"
+      "key": "Chìa khóa",
+      "card": "Lá bài"
     },
     "section": {
       "targets": "Chọn mục tiêu",
@@ -1002,6 +1012,9 @@
       "openBoard": "Mở bàn bài đầy đủ",
       "hint": "Phím tắt: K"
     },
+    "viewing": "Đang xem",
+    "backToHere": "Quay lại hành động tại chỗ đang đứng",
+    "loadingBoard": "Đang tải bàn chơi…",
     "collapseStrip": "Thu gọn thanh nhiệm vụ",
     "expandStrip": "Mở rộng thanh nhiệm vụ",
     "showMore": "Xem thêm",
@@ -2294,6 +2307,7 @@
     "dismiss": "Bỏ qua"
   },
   "gameUi": {
+    "autoPicking": "Tự động chọn",
     "chooseTokensToCancel": "Chọn token để hủy | Chọn các token để hủy",
     "chooseTokensToIgnore": "Chọn token để bỏ qua | Chọn các token để bỏ qua",
     "chooseTokensToResolve": "Chọn token để giải quyết | Chọn các token để giải quyết",

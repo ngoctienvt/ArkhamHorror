@@ -1,0 +1,3623 @@
+[
+  {
+    "file": "the-innsmouth-conspiracy/dagon/entryway.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      8,
+      2,
+      762,
+      510
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/film-cosmos/bastion.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      2,
+      2,
+      766,
+      511
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/film-cosmos/ritual-teetawn.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      5,
+      5,
+      763,
+      508
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/film-cosmos/teetawn.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      4,
+      2,
+      765,
+      510
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-innsmouth-conspiracy/dagon/lair.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      8,
+      0,
+      757,
+      511
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/film-cosmos/ritual-tothis.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      2,
+      2,
+      766,
+      509
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/film-cosmos/asteroid.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      3,
+      4,
+      765,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/film-cosmos/space-set.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      4,
+      1,
+      764,
+      510
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/film-cosmos/tothis.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      6,
+      8,
+      762,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/unstuck/069.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      4,
+      2,
+      764,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/unstuck/073.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      3,
+      17,
+      765,
+      503
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/unstuck/075.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      4,
+      4,
+      767,
+      509
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/unstuck/071.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      2,
+      1,
+      767,
+      511
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/unstuck/077.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      2,
+      2,
+      765,
+      510
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/unstuck/079.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      2,
+      5,
+      765,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/unstuck/081.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      6,
+      4,
+      762,
+      508
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/unstuck/083.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      6,
+      68,
+      767,
+      441
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/unstuck/085.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      8,
+      6,
+      765,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/unstuck/086.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      7,
+      26,
+      761,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/new-brooklyn.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      32,
+      12,
+      735,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/hope.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      11,
+      71,
+      759,
+      468
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/cassilda.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      18,
+      47,
+      751,
+      460
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/yuggoth.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      11,
+      26,
+      757,
+      494
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/earth.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      144,
+      10,
+      622,
+      495
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/martian-ruins.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      5,
+      13,
+      760,
+      506
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/mount-sinai.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      16,
+      46,
+      752,
+      491
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/moonbase.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      3,
+      50,
+      765,
+      481
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/threshold.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      9,
+      5,
+      753,
+      503
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/olympus-telescope.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      5,
+      7,
+      764,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/mars-hidden.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      136,
+      10,
+      627,
+      501
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/asteroid-belt-hidden.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      23,
+      21,
+      754,
+      486
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/pluto-hidden.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      146,
+      14,
+      620,
+      497
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08630.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      34,
+      20,
+      735,
+      498
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08631.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      35,
+      11,
+      734,
+      500
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/starfall/sol.webp",
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox": [
+      97,
+      26,
+      672,
+      487
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08633.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      110,
+      11,
+      659,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08634.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      18,
+      11,
+      739,
+      477
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08632.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      23,
+      37,
+      748,
+      474
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08635.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      50,
+      12,
+      718,
+      501
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08636.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      28,
+      39,
+      737,
+      467
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08638.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      32,
+      21,
+      736,
+      495
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08665.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      52,
+      8,
+      713,
+      490
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08666.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      29,
+      37,
+      727,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08640.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      25,
+      10,
+      743,
+      500
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08639.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      30,
+      21,
+      743,
+      491
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08637.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      23,
+      8,
+      750,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08668.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      23,
+      16,
+      749,
+      497
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08667.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      35,
+      9,
+      731,
+      503
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08649.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      19,
+      25,
+      752,
+      492
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/pylon.webp",
+    "extrema": [
+      0,
+      253
+    ],
+    "bbox": [
+      82,
+      14,
+      681,
+      497
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08650.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      21,
+      12,
+      746,
+      500
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08651.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      18,
+      8,
+      750,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/city-back.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      15,
+      59,
+      750,
+      482
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08653.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      29,
+      20,
+      738,
+      488
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08652.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      21,
+      13,
+      750,
+      487
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/pylon-collapsed.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      34,
+      33,
+      737,
+      479
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/facility-back.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      33,
+      36,
+      734,
+      483
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08654.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      22,
+      10,
+      746,
+      503
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-innsmouth-conspiracy/dagon/doorway.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      102,
+      24,
+      666,
+      488
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08656.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      84,
+      4,
+      682,
+      501
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08655.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      20,
+      35,
+      748,
+      488
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/antarctic/08664.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      18,
+      7,
+      750,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/010.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      13,
+      17,
+      754,
+      497
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/009.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      14,
+      6,
+      755,
+      506
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/012.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      19,
+      20,
+      753,
+      490
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/008.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      48,
+      18,
+      722,
+      491
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/011.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      11,
+      6,
+      759,
+      506
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/013.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      10,
+      5,
+      760,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/016.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      17,
+      5,
+      750,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/018.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      13,
+      16,
+      755,
+      500
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/019.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      21,
+      9,
+      749,
+      503
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/017.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      6,
+      9,
+      761,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/020.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      31,
+      12,
+      738,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/023b.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      24,
+      12,
+      753,
+      503
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/028b.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      15,
+      5,
+      755,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/uncharted-back.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      13,
+      13,
+      760,
+      499
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "against-the-wendigo/mountain-back.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      27,
+      41,
+      742,
+      482
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/labyrinth/secrets.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      78,
+      4,
+      685,
+      511
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/labyrinth/sorrows.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      18,
+      11,
+      749,
+      500
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/labyrinth/regret.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      46,
+      4,
+      723,
+      511
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/labyrinth/rain.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      18,
+      21,
+      749,
+      498
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/labyrinth/hunger.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      18,
+      8,
+      751,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/labyrinth/night.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      27,
+      14,
+      741,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/labyrinth/decay.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      23,
+      21,
+      746,
+      494
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/labyrinth/halls.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      64,
+      9,
+      710,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/labyrinth/rot.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      25,
+      18,
+      743,
+      496
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/labyrinth/poison.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      31,
+      27,
+      737,
+      488
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/labyrinth/back.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      25,
+      13,
+      745,
+      500
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/labyrinth/warehouse.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      15,
+      8,
+      756,
+      500
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/023.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      9,
+      8,
+      759,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/022.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      9,
+      4,
+      756,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/021.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      15,
+      5,
+      759,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/024.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      16,
+      24,
+      757,
+      496
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/025.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      13,
+      8,
+      758,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/026.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      11,
+      8,
+      757,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/027.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      13,
+      6,
+      761,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/029.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      22,
+      11,
+      749,
+      506
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/028.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      6,
+      7,
+      762,
+      503
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/031.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      38,
+      12,
+      731,
+      500
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/032.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      21,
+      22,
+      745,
+      496
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/030.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      17,
+      7,
+      750,
+      498
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/033.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      5,
+      4,
+      764,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/047.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      64,
+      4,
+      703,
+      512
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/034.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      8,
+      5,
+      759,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/048.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      26,
+      7,
+      750,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/052.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      11,
+      5,
+      763,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/forest-back.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      11,
+      4,
+      761,
+      506
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/056.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      13,
+      5,
+      754,
+      501
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/065.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      99,
+      4,
+      670,
+      512
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/161.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      7,
+      8,
+      760,
+      503
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/160.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      15,
+      2,
+      759,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/166.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      11,
+      5,
+      759,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/162.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      6,
+      4,
+      760,
+      506
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/173.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      22,
+      7,
+      755,
+      503
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/170.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      12,
+      10,
+      758,
+      501
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/196.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      11,
+      7,
+      758,
+      506
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/198.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      17,
+      7,
+      755,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/197.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      20,
+      3,
+      750,
+      508
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/199.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      5,
+      6,
+      762,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/200.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      9,
+      3,
+      763,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/204b.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      16,
+      10,
+      752,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/203b.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      18,
+      2,
+      751,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/082.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      5,
+      65,
+      751,
+      451
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/081.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      77,
+      6,
+      687,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/path.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      12,
+      9,
+      755,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/205b.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      14,
+      2,
+      752,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/083.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      19,
+      17,
+      758,
+      488
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/084.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      13,
+      108,
+      751,
+      395
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/206b.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      21,
+      8,
+      749,
+      503
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/118.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      213,
+      1,
+      546,
+      510
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/086.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      30,
+      56,
+      746,
+      458
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/118b.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      13,
+      3,
+      759,
+      508
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/085.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      13,
+      48,
+      728,
+      459
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/087.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      19,
+      26,
+      751,
+      477
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/088.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      34,
+      24,
+      731,
+      487
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/089.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      25,
+      56,
+      751,
+      455
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/090.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      18,
+      86,
+      758,
+      437
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/092.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      18,
+      29,
+      758,
+      489
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/091.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      25,
+      39,
+      749,
+      463
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/093.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      33,
+      23,
+      744,
+      481
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/095.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      4,
+      22,
+      763,
+      476
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/094.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      27,
+      8,
+      752,
+      497
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "circus-ex-mortis/tiles/train-back.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      12,
+      11,
+      762,
+      500
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/electric-rooms/071.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      4,
+      2,
+      761,
+      501
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/electric-rooms/069.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      9,
+      13,
+      760,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/electric-rooms/072.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      12,
+      3,
+      758,
+      499
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/electric-rooms/070.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      7,
+      6,
+      767,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/electric-rooms/073.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      5,
+      2,
+      762,
+      510
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/electric-rooms/075.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      10,
+      5,
+      759,
+      506
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/electric-rooms/074.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      8,
+      2,
+      760,
+      509
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "dark-matter/electric-rooms/back.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      8,
+      4,
+      761,
+      508
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/time-runs-out/189.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      7,
+      6,
+      753,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/time-runs-out/195.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      15,
+      3,
+      753,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/time-runs-out/197.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      16,
+      8,
+      750,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/time-runs-out/191.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      13,
+      7,
+      754,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/time-runs-out/193.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      9,
+      5,
+      754,
+      506
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/time-runs-out/201.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      7,
+      11,
+      760,
+      501
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/time-runs-out/199.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      6,
+      2,
+      763,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/time-runs-out/203.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      10,
+      6,
+      759,
+      508
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/time-runs-out/207.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      14,
+      8,
+      755,
+      503
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/time-runs-out/205.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      16,
+      16,
+      757,
+      500
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/time-runs-out/206.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      2,
+      4,
+      765,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "ages-unwound/time-runs-out/202b.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      5,
+      2,
+      764,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/carnevale/82008.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      9,
+      7,
+      756,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/carnevale/82009.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      4,
+      16,
+      763,
+      497
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/carnevale/82011.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      9,
+      10,
+      759,
+      500
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/carnevale/82010.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      7,
+      4,
+      761,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/carnevale/82012.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      14,
+      10,
+      757,
+      501
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/carnevale/82013.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      16,
+      13,
+      756,
+      500
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/carnevale/82016.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      6,
+      7,
+      761,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/carnevale/82014.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      13,
+      20,
+      751,
+      497
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/carnevale/back.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      6,
+      1,
+      762,
+      506
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/carnevale/82015.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      14,
+      8,
+      754,
+      495
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08558.webp",
+    "extrema": [
+      0,
+      253
+    ],
+    "bbox": [
+      15,
+      15,
+      750,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08557.webp",
+    "extrema": [
+      0,
+      253
+    ],
+    "bbox": [
+      4,
+      11,
+      759,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08559.webp",
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox": [
+      20,
+      28,
+      749,
+      496
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08556.webp",
+    "extrema": [
+      0,
+      253
+    ],
+    "bbox": [
+      13,
+      13,
+      759,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08561.webp",
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox": [
+      10,
+      18,
+      756,
+      501
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08560.webp",
+    "extrema": [
+      0,
+      253
+    ],
+    "bbox": [
+      8,
+      6,
+      760,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08562.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      5,
+      4,
+      763,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08563.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      13,
+      15,
+      757,
+      501
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08564.webp",
+    "extrema": [
+      0,
+      253
+    ],
+    "bbox": [
+      10,
+      1,
+      760,
+      512
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08566.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      11,
+      14,
+      759,
+      501
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08565.webp",
+    "extrema": [
+      0,
+      253
+    ],
+    "bbox": [
+      6,
+      7,
+      760,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08568.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      12,
+      7,
+      743,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08567.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      9,
+      3,
+      754,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08569.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      20,
+      6,
+      757,
+      509
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08570.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      10,
+      4,
+      761,
+      506
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08571.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      28,
+      13,
+      739,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08573.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      7,
+      18,
+      760,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08572.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      12,
+      4,
+      763,
+      508
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/08574.webp",
+    "extrema": [
+      0,
+      254
+    ],
+    "bbox": [
+      12,
+      3,
+      756,
+      510
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-edge-of-the-earth/mirage/back.webp",
+    "extrema": [
+      0,
+      253
+    ],
+    "bbox": [
+      23,
+      19,
+      753,
+      499
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/court/11619.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      9,
+      2,
+      762,
+      510
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/court/11620.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      8,
+      4,
+      759,
+      509
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/court/11622.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      4,
+      9,
+      762,
+      505
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/court/11621.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      12,
+      4,
+      756,
+      503
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/court/11626.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      15,
+      5,
+      754,
+      508
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/court/11624.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      17,
+      2,
+      765,
+      504
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/court/11623.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      7,
+      2,
+      765,
+      503
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/court/back.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      3,
+      3,
+      765,
+      508
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/court/11628.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      12,
+      4,
+      762,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/vault/11593.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      6,
+      2,
+      763,
+      506
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/vault/11594.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      16,
+      16,
+      749,
+      502
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/vault/11595.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      5,
+      3,
+      763,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/vault/11596.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      8,
+      2,
+      760,
+      509
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/vault/11599.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      4,
+      3,
+      759,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/vault/11598.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      7,
+      2,
+      764,
+      512
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/vault/11600.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      12,
+      3,
+      760,
+      508
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/vault/11604.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      6,
+      4,
+      762,
+      506
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/carnevale/gondola-tile.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      30,
+      12,
+      748,
+      480
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-drowned-city/vault/back.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      4,
+      4,
+      763,
+      509
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "side-stories/carnevale/cnidathqua.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      46,
+      2,
+      723,
+      507
+    ],
+    "size": [
+      768,
+      512
+    ]
+  }
+]

@@ -13,7 +13,7 @@
  * 'off': the token appears straight away, as before. */
 export type ChaosDrawStyle = 'bag' | 'reel' | 'off'
 export const CHAOS_DRAW_STYLES: readonly ChaosDrawStyle[] = ['bag', 'reel', 'off']
-export const DEFAULT_CHAOS_DRAW_STYLE: ChaosDrawStyle = 'bag'
+export const DEFAULT_CHAOS_DRAW_STYLE: ChaosDrawStyle = 'reel'
 
 export function isChaosDrawStyle(value: unknown): value is ChaosDrawStyle {
   return CHAOS_DRAW_STYLES.includes(value as ChaosDrawStyle)

@@ -101,6 +101,37 @@ test('an enemy keeps counting effect modifiers, since they really change the ene
   assert.equal(computeStat('fight', 3, [{ ...m('EnemyFight', 1), effect: 'e1' }]).current, 4)
 })
 
+test('first-test tarot modifiers stay off investigator stats while lasting bonuses still count', () => {
+  const firstTests = [
+    ['TheHierophantV', 'willpower', 'SkillWillpower', 'Reversed', -1],
+    ['TheHighPriestessII', 'intellect', 'SkillIntellect', 'Upright', 1],
+    ['TheEmperorIV', 'combat', 'SkillCombat', 'Reversed', -1],
+    ['TheEmpressIII', 'agility', 'SkillAgility', 'Upright', 1],
+  ]
+  for (const [arcana, key, skillType, facing, delta] of firstTests) {
+    const tarot = {
+      type: { tag: 'SkillModifier', skillType, value: delta },
+      source: { sourceTag: 'TarotSource', tag: 'TarotSource', contents: { arcana, facing } },
+    }
+    const unmodified = computeStat(key, 4, [tarot])
+    assert.equal(formatStat(unmodified.current, unmodified.printed), '4', arcana)
+    assert.deepEqual(unmodified.parts, [], arcana)
+
+    const withAsset = computeStat(key, 4, [tarot, skill('SkillModifier', skillType, 1, 'asset')])
+    assert.equal(formatStat(withAsset.current, withAsset.printed), '5(4+1)', arcana)
+    assert.deepEqual(withAsset.parts, [{ sourceId: 'asset', delta: 1, mode: 'add' }])
+  }
+})
+
+test('scenario tarot can still modify lasting health and sanity', () => {
+  const tarot = (arcana, tag) => ({
+    type: { tag, contents: -1 },
+    source: { sourceTag: 'TarotSource', tag: 'TarotSource', contents: { arcana, facing: 'Reversed' } },
+  })
+  assert.equal(computeStat('health', 7, [tarot('DeathXIII', 'HealthModifier')]).current, 6)
+  assert.equal(computeStat('sanity', 7, [tarot('TemperanceXIV', 'SanityModifier')]).current, 6)
+})
+
 test('a modified stat reads as its final value with the printed value and the change beside it', () => {
   assert.equal(formatStat(5, 4), '5(4+1)')
   assert.equal(formatStat(2, 4), '2(4-2)')

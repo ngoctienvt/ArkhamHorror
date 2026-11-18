@@ -663,6 +663,16 @@ const svgHeight = computed(() => (tarot.value ? TAROT_H
   : (sideways.value ? overlayBase.value : Math.round(overlayBase.value / CARD_RATIO))))
 
 const viewH = computed(() => Math.round(VIEW_W / CARD_RATIO))
+
+/* Pools come from investigator figures, whose card is landscape. The picture may sit centred in a portrait
+ * box (letterboxed, before the overlay learns its shape), so place the pools against the picture itself:
+ * on the portrait, in the left part of the card, just under the title bar. */
+const poolsStyle = computed(() => {
+  const w = svgWidth.value
+  const h = sideways.value ? svgHeight.value : Math.round(w * CARD_RATIO)
+  const top = (svgHeight.value - h) / 2
+  return { top: `${Math.round(top + h * 0.24)}px`, left: `${Math.round(w * 0.05)}px`, width: `${Math.round(w * 0.34)}px` }
+})
 const viewBox = computed(() => (sideways.value ? `0 0 ${viewH.value} ${VIEW_W}` : `0 0 ${VIEW_W} ${viewH.value}`))
 
 const groupTransform = computed(() => {
@@ -732,6 +742,11 @@ const checkmarks = computed<Checkmark[] | null>(() => {
 })
 
 const spentKeys = computed<ArkhamKey[]>(() => jsonDs<ArkhamKey[]>('spentKeys'))
+/* Token pools sitting on the hovered card (an investigator figure on the scene map sends its damage, horror,
+ * resources and clues), drawn on the card's art the way they sit on the table. */
+type OverlayPool = { type: string; amount: number }
+const pools = computed<OverlayPool[]>(() => jsonDs<OverlayPool[]>('pools')
+  .filter((p) => typeof p?.type === 'string' && Number.isFinite(Number(p.amount))))
 const overlay = ds('overlay')
 
 const tarot = computed<boolean>(() => !!hoveredElement.value?.classList.contains('tarot-card'))
@@ -1371,6 +1386,10 @@ watchEffect(() => {
 
       <font-awesome-icon v-if="isSpirit && cardImage" :icon="['fas', 'ghost']" class="spirit-icon" />
 
+      <div v-if="cardImage && pools.length" class="overlay-pools" :style="poolsStyle">
+        <PoolItem v-for="p in pools" :key="p.type" :type="p.type" :amount="p.amount" />
+      </div>
+
       <svg
         v-if="additionalCardImage"
         class="card-svg customizations-svg"
@@ -1456,6 +1475,7 @@ watchEffect(() => {
 
     <CardData
       v-if="dbCardData"
+      :code="cardCode"
       :name="dbCardName"
       :typeName="dbCardTypeName"
       :factionName="dbCardFactionName"
@@ -1771,6 +1791,18 @@ watchEffect(() => {
 .reversed, .Reversed { transform: rotateZ(180deg); }
 
 .card-image { position: relative; }
+
+/* Pools over the investigator's portrait (placed by poolsStyle): damage and horror, then resources and clues. */
+.overlay-pools {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 6px 4px;
+  pointer-events: none;
+
+  > :deep(.poolItem) { filter: drop-shadow(0 1px 3px #000c); }
+}
 
 .card-errata {
   width: 300px;

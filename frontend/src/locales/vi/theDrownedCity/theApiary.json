@@ -120,7 +120,7 @@
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<p>_Resolution 1_: Người sống sót cuối cùng bước ra khỏi những đường hầm hôi thối. Sau khi cảm ơn bạn, những người hành hương chỉ cho bạn đường hầm mà họ đã đi từ “trái tim của thành phố.” Khi bạn rời đi, Andy lau sạch chất dịch khỏi ống kính máy ảnh của mình. “Lại thêm một cuộn phim vô dụng. Một bức ảnh thôi cũng có thể làm nên sự nghiệp của tôi. Đáng lẽ tôi nên ném hết đống phim của mình xuống biển trên đường đến đây.”</p>",
+      "body": "<p>_Kết thúc 1_: Người sống sót cuối cùng bước ra khỏi những đường hầm hôi thối. Sau khi cảm ơn bạn, những người hành hương chỉ cho bạn đường hầm mà họ đã đi từ “trái tim của thành phố.” Khi bạn rời đi, Andy lau sạch chất dịch khỏi ống kính máy ảnh của mình. “Lại thêm một cuộn phim vô dụng. Một bức ảnh thôi cũng có thể làm nên sự nghiệp của tôi. Đáng lẽ tôi nên ném hết đống phim của mình xuống biển trên đường đến đây.”</p>",
       "updateCampaignLog": "Cập nhật Nhật ký Chiến dịch của bạn.",
       "crossOutTheApiary": "Gạch bỏ \"The Apiary\" trên bản đồ R'lyeh.",
       "grislyMask": "Nếu Grisly “Mask” nằm dưới quyền kiểm soát của một điều tra viên khi scenario kết thúc, đánh dấu ô bên cạnh Grisly “Mask” dưới mục “Artifacts Earned.”",
@@ -132,7 +132,7 @@
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
-      "body": "<p>_Resolution 2_: Bàng hoàng, bạn bước ra khỏi các đường hầm và tìm thấy tiền sảnh rộng lớn nơi bạn bắt đầu. Nếu có bất kỳ người hành hương nào sống sót, họ đã không nán lại. Sau một khoảng lặng dài, đoàn thám hiểm chuẩn bị tiếp tục lên đường. Andy nheo mắt nhìn một vệt máu trên sàn, lưu ý rằng nếu một người hành hương bị kéo đi, hiện trường sẽ bừa bộn hơn nhiều. Dấu vết của họ có thể dẫn đến “lõi thành phố” như lời Maria nói.</p>",
+      "body": "<p>_Kết thúc 2_: Bàng hoàng, bạn bước ra khỏi các đường hầm và tìm thấy tiền sảnh rộng lớn nơi bạn bắt đầu. Nếu có bất kỳ người hành hương nào sống sót, họ đã không nán lại. Sau một khoảng lặng dài, đoàn thám hiểm chuẩn bị tiếp tục lên đường. Andy nheo mắt nhìn một vệt máu trên sàn, lưu ý rằng nếu một người hành hương bị kéo đi, hiện trường sẽ bừa bộn hơn nhiều. Dấu vết của họ có thể dẫn đến “lõi thành phố” như lời Maria nói.</p>",
       "updateCampaignLog": "Cập nhật Nhật ký Chiến dịch của bạn.",
       "crossOutTheApiary": "Gạch bỏ \"The Apiary\" trên bản đồ R'lyeh.",
       "grislyMask": "Nếu Grisly “Mask” nằm dưới quyền kiểm soát của một điều tra viên khi scenario kết thúc, đánh dấu ô bên cạnh Grisly “Mask” dưới mục “Artifacts Earned.”",
@@ -144,14 +144,14 @@
     },
     "resolution3": {
       "title": "Kết thúc thứ ba",
-      "body": "<p>_Resolution 3_: Đoàn thám hiểm quay trở lại lối vào khu nuôi ong, người phủ đầy máu me. Bạn gãi một vết ngứa dai dẳng sau gáy, hy vọng mình không bị nhiễm bệnh. Những ký ức vỡ vụn từ khoảnh khắc ngắn ngủi khi bạn là một phần của tâm trí bầy đàn tiếp tục xâm chiếm tâm trí bạn. Bạn nghi ngờ rằng mình sẽ không bao giờ cảm thấy giống như trước nữa.</p>",
+      "body": "<p>_Kết thúc 3_: Đoàn thám hiểm quay trở lại lối vào khu nuôi ong, người phủ đầy máu me. Bạn gãi một vết ngứa dai dẳng sau gáy, hy vọng mình không bị nhiễm bệnh. Những ký ức vỡ vụn từ khoảnh khắc ngắn ngủi khi bạn là một phần của tâm trí bầy đàn tiếp tục xâm chiếm tâm trí bạn. Bạn nghi ngờ rằng mình sẽ không bao giờ cảm thấy giống như trước nữa.</p>",
       "updateCampaignLog": "Cập nhật Nhật ký Chiến dịch của bạn.",
       "crossOutTheApiary": "Gạch bỏ \"The Apiary\" trên bản đồ R'lyeh.",
       "grislyMask": "Nếu Grisly “Mask” nằm dưới quyền kiểm soát của một điều tra viên khi scenario kết thúc, đánh dấu ô bên cạnh Grisly “Mask” dưới mục “Artifacts Earned.”",
       "victory": "Mỗi điều tra viên nhận điểm kinh nghiệm bằng tổng giá trị Victory của các lá bài trong vùng trưng bày thành tích.",
       "experience": "_Kinh nghiệm_: {xp}",
       "recordParasitesExterminated": "các điều tra viên đã tiêu diệt những ký sinh trùng ngoài hành tinh.",
-      "proceedToResolution4": "Chuyển sang _Resolution 4_."
+      "proceedToResolution4": "Chuyển sang _Kết thúc 4_."
     },
     "noResolution": {
       "title": "Không có Resolution",
@@ -164,11 +164,11 @@
       "parasiticTransformation": "Mỗi điều tra viên phải tìm trong tập bài encounter *The Apiary* một bản sao của Parasitic Transformation và thêm nó vào bộ bài của họ. Lá bài này không tính vào kích thước bộ bài của họ.",
       "checkCampaignLog": "Kiểm tra Nhật ký Chiến dịch của bạn.",
       "proceedToTheGrandVault": "Nếu đoàn thám hiểm đi về phía tây, chuyển sang _The Grand Vault_.",
-      "proceedToResolution4": "Nếu đoàn thám hiểm đi về phía đông, bỏ qua đến _Resolution 4_."
+      "proceedToResolution4": "Nếu đoàn thám hiểm đi về phía đông, bỏ qua đến _Kết thúc 4_."
     },
     "resolution4": {
       "title": "Kết thúc thứ 4",
-      "body": "<p>_Resolution 4_: Cuối cùng bạn cũng tìm thấy tuyến đường cũ của mình. Hành trình thêm vài ngày nữa đưa bạn đến một cánh cửa tròn lớn có kích thước bằng một hầm ngân hàng. Sau khi lần lượt nhấn vào một vài ký tự ngoài hành tinh, cánh cửa trượt mở ra để lộ một con đường khô ráo uốn lượn dọc theo đáy biển hướng tới một mái vòm phát sáng nhẹ. Một trường năng lượng mỏng manh, lấp lánh giữ lại sức nặng của đại dương. Khi bạn kinh ngạc trước con đường và mái vòm kỳ diệu, một khối đá hắc diện thạch long ra và rơi từ trên cao xuống mái vòm. Thay vì vỡ vụn, mái vòm gợn sóng, mềm dẻo, khi tảng đá rơi xuyên qua với một tiếng va chạm vang như sấm.</p><p>“Điều này là không thể,” Ruby thở hổn hển. “Thứ gì đó trong mái vòm kia đang cung cấp năng lượng cho rào chắn. Trông có vẻ như nó cản nước, nhưng lại để những thứ khác đi qua. Bất kể thứ gì đang làm điều đó cũng có thể là một phát hiện tốt cho Randall.” Cô nhìn lên bức tường dốc đứng dẫn lên mặt nước.</p><ul><li>Các điều tra viên phải quyết định <i>(chọn một)</i>:<ul><li>“We came this far. We’re not leaving any stone unturned.” To explore the seafloor dome, proceed to _The Drowned Quarter_.</li><li>Để leo lên bức tường và quay lại khu trại, hãy đi đến <b>The Western Wall.</b></li></ul></li></ul>"
+      "body": "<p>_Kết thúc 4_: Cuối cùng bạn cũng tìm thấy tuyến đường cũ của mình. Hành trình thêm vài ngày nữa đưa bạn đến một cánh cửa tròn lớn có kích thước bằng một hầm ngân hàng. Sau khi lần lượt nhấn vào một vài ký tự ngoài hành tinh, cánh cửa trượt mở ra để lộ một con đường khô ráo uốn lượn dọc theo đáy biển hướng tới một mái vòm phát sáng nhẹ. Một trường năng lượng mỏng manh, lấp lánh giữ lại sức nặng của đại dương. Khi bạn kinh ngạc trước con đường và mái vòm kỳ diệu, một khối đá hắc diện thạch long ra và rơi từ trên cao xuống mái vòm. Thay vì vỡ vụn, mái vòm gợn sóng, mềm dẻo, khi tảng đá rơi xuyên qua với một tiếng va chạm vang như sấm.</p><p>“Điều này là không thể,” Ruby thở hổn hển. “Thứ gì đó trong mái vòm kia đang cung cấp năng lượng cho rào chắn. Trông có vẻ như nó cản nước, nhưng lại để những thứ khác đi qua. Bất kể thứ gì đang làm điều đó cũng có thể là một phát hiện tốt cho Randall.” Cô nhìn lên bức tường dốc đứng dẫn lên mặt nước.</p><ul><li>Các điều tra viên phải quyết định <i>(chọn một)</i>:<ul><li>“Chúng ta đã đi xa đến mức này rồi. Chúng ta sẽ không bỏ sót bất kỳ manh mối nào.” Để khám phá mái vòm dưới đáy biển, tiếp tục đến _The Drowned Quarter_.</li><li>Để leo lên bức tường và quay lại khu trại, hãy đi đến <b>The Western Wall.</b></li></ul></li></ul>"
     },
     "label": {
       "resolution4": {

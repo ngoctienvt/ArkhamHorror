@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
+import { useMissionStripBalance } from '@/arkham/composables/useMissionStripBalance'
 import { useI18n } from 'vue-i18n'
 import type { Game } from '@/arkham/types/Game'
 import type { Scenario } from '@/arkham/types/Scenario'
@@ -30,6 +31,9 @@ const emit = defineEmits<{ (e: 'choose', index: number): void; (e: 'inspect', lo
 
 const { t } = useI18n()
 const { panels, totalDoom, doomLeft, changes } = useMissionStripPanels(() => props.game, () => props.scenario, () => props.playerId)
+/* Widths follow how much each panel has to show, so all three end at the same height. */
+const stripEl = ref<HTMLElement | null>(null)
+useMissionStripBalance(stripEl)
 
 /* Investigator setup runs before the scenario places its act and agenda: say they are on the way. */
 const awaitingSetup = computed(() => missionAwaitingSetup(props.game))
@@ -82,7 +86,7 @@ function doomState(p: MissionPanel): { level: 'warn' | 'critical'; text: string 
 </script>
 
 <template>
-  <div v-if="panels.length || referenceImage || awaitingSetup" class="mission-strip" :class="{ 'mission-strip--collapsed': collapsed }">
+  <div v-if="panels.length || referenceImage || awaitingSetup" ref="stripEl" class="mission-strip" :class="{ 'mission-strip--collapsed': collapsed }">
     <article v-for="kind in (awaitingSetup ? ['agenda', 'act'] as const : [])" :key="`pending-${kind}`"
       class="pending" :class="`pending--${kind}`" role="status">
       <span class="pending__eyebrow">{{ t(`locationMap.${kind}`) }}</span>
@@ -194,6 +198,12 @@ function doomState(p: MissionPanel): { level: 'warn' | 'critical'; text: string 
   display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch;
   padding: 6px 10px; background: var(--surface-0, #0d1611); border-bottom: 1px solid var(--line, #c6a87340);
 }
+/* Little room for the strip, and it is folded: a row of chips packed to the left (see MissionStripPanel),
+ * so three fit on one line of a mid-width map and wrap to a second only on a narrow one. */
+.location-map[data-strip='tight'] .mission-strip--collapsed { gap: 6px; padding: 4px 8px; }
+/* A phone has no width for three chips and no height to stack them: one row, swiped sideways. */
+.location-map[data-layout='phone'] .mission-strip--collapsed { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+.location-map[data-layout='phone'] .mission-strip--collapsed::-webkit-scrollbar { display: none; }
 
 /* Act / agenda not placed yet: a slim muted card in the panel's place, same top edge colour. */
 .pending {
@@ -203,7 +213,7 @@ function doomState(p: MissionPanel): { level: 'warn' | 'critical'; text: string 
 }
 .pending--agenda { --tone: #d6907f; }
 .pending--act { --tone: #86c0d2; }
-.pending__eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.68rem; font-weight: 600; color: var(--tone); }
+.pending__eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.7rem; font-weight: 600; color: var(--tone); }
 .pending__text { font-size: 0.78rem; font-style: italic; }
 .status-main { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; min-width: 0; }
 .chip { display: inline-flex; align-items: center; gap: 5px; padding: 1px 9px; border-radius: 999px; font-size: 0.7rem; background: #0006; white-space: nowrap; }
@@ -222,7 +232,7 @@ function doomState(p: MissionPanel): { level: 'warn' | 'critical'; text: string 
   pointer-events: none;
 }
 .clue-hover:hover .clue-pop, .clue-hover:focus-visible .clue-pop { opacity: 1; visibility: visible; transform: none; transition: opacity 0.12s, transform 0.12s; }
-.clue-pop__head { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-bottom: 4px; margin-bottom: 2px; border-bottom: 1px solid #ffffff1a; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--clue, #8fd0e4); }
+.clue-pop__head { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-bottom: 4px; margin-bottom: 2px; border-bottom: 1px solid #ffffff1a; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--clue, #8fd0e4); }
 .clue-pop__head b { display: inline-flex; align-items: center; gap: 4px; font-size: 0.8rem; letter-spacing: 0; color: var(--heading, #fff6e4); }
 .clue-pop__head :deep(.game-icon) { width: 13px; height: 13px; }
 .clue-pop__row { display: flex; justify-content: space-between; gap: 12px; white-space: nowrap; }
@@ -244,7 +254,7 @@ function doomState(p: MissionPanel): { level: 'warn' | 'critical'; text: string 
 @keyframes doom-pulse { 50% { box-shadow: 0 0 10px 1px #ff5a4acc; } }
 
 /* Advance: a quiet ghost while the act cannot advance, a glowing green button once it can. */
-.advance { flex: none; padding: 2px 11px; border-radius: 999px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.03em; border: 1px dashed #ffffff33; background: transparent; color: #8f9a93; cursor: not-allowed; transition: background 0.15s, transform 0.1s, box-shadow 0.15s; }
+.advance { flex: none; min-height: 24px; padding: 2px 11px; border-radius: 999px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.03em; border: 1px dashed #ffffff33; background: transparent; color: #8f9a93; cursor: not-allowed; transition: background 0.15s, transform 0.1s, box-shadow 0.15s; }
 .advance--ready { cursor: pointer; border: 1px solid #7ef0a8; background: linear-gradient(180deg, #279a4c, #1b6e35); color: #f4fff7; box-shadow: 0 0 8px #3ddc7a88; animation: advance-pulse 1.5s ease-in-out infinite; }
 .advance--ready:hover { background: linear-gradient(180deg, #2fb359, #218340); transform: translateY(-1px); }
 @keyframes advance-pulse { 50% { box-shadow: 0 0 12px 2px #5fd88acc; } }

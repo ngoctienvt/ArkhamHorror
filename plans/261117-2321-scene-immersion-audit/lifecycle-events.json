@@ -1,0 +1,3749 @@
+[
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/BrethrenOfAsh/SpreadingFlames/EscapeTheDorms.hs",
+    "hits": [
+      {
+        "line": 48,
+        "text": "selectEach (locationIs Locations.yourFriendsRoom) removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/ChildrenOfBlood/BloodMoney/WhereIsWilkes.hs",
+    "hits": [
+      {
+        "line": 56,
+        "text": "replaceLocation foyer =<< genCard Locations.foyerBloodyNight"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/EdgeOfTheEarth/TheHeartOfMadness/CollapseThePylons.hs",
+    "hits": [
+      {
+        "line": 58,
+        "text": "selectEach (not_ $ locationIs Locations.theGateOfYquaa) removeLocation"
+      },
+      {
+        "line": 59,
+        "text": "push $ SetLayout [\"theGateOfYquaa titanicRamp1 titanicRamp2 titanicRamp3 titanicRamp4 hiddenTunnel\"]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/FilmFatale/ACosmicJourney.hs",
+    "hits": [
+      {
+        "line": 54,
+        "text": "selectEach (mapOneOf LocationWithTrait [Cosmos, RitualSite]) removeLocation"
+      },
+      {
+        "line": 57,
+        "text": "push $ SetLayout initialLayout"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/FilmFatale/AndresRequest.hs",
+    "hits": [
+      {
+        "line": 113,
+        "text": "removeLocation other"
+      },
+      {
+        "line": 123,
+        "text": "$ SetLayout"
+      },
+      {
+        "line": 160,
+        "text": "removeLocation other"
+      },
+      {
+        "line": 171,
+        "text": "$ SetLayout"
+      },
+      {
+        "line": 204,
+        "text": "removeLocation other"
+      },
+      {
+        "line": 215,
+        "text": "$ SetLayout"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/FilmFatale/TheAbominableContessa.hs",
+    "hits": [
+      {
+        "line": 58,
+        "text": "selectEach (LocationWithTrait Castle) removeLocation"
+      },
+      {
+        "line": 61,
+        "text": "push $ SetLayout initialLayout"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/FilmFatale/TheForgottenIsland.hs",
+    "hits": [
+      {
+        "line": 70,
+        "text": "selectEach (LocationWithTrait Jungle) removeLocation"
+      },
+      {
+        "line": 73,
+        "text": "push $ SetLayout initialLayout"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/GuardiansOfTheAbyss/TheNightsUsurper/IntoTheGate.hs",
+    "hits": [
+      {
+        "line": 45,
+        "text": "$ SetLayout"
+      },
+      {
+        "line": 53,
+        "text": "selectEach (NotLocation $ locationIs Locations.aDreamBetwixt) removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/NightOfTheZealot/TheGathering/Trapped.hs",
+    "hits": [
+      {
+        "line": 30,
+        "text": "removeLocation study"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheCircleUndone/AtDeathsDoorstep/HiddenAgendas.hs",
+    "hits": [
+      {
+        "line": 35,
+        "text": "replaceLocation entryHall =<< getSetAsideCard Locations.entryHallSpectral"
+      },
+      {
+        "line": 36,
+        "text": "replaceLocation victorianHalls =<< getSetAsideCard Locations.victorianHallsSpectral"
+      },
+      {
+        "line": 39,
+        "text": "replaceLocation balcony =<< getSetAsideCard Locations.balconySpectral"
+      },
+      {
+        "line": 42,
+        "text": "replaceLocation office =<< getSetAsideCard Locations.officeSpectral"
+      },
+      {
+        "line": 45,
+        "text": "replaceLocation billiardsRoom =<< getSetAsideCard Locations.billiardsRoomSpectral"
+      },
+      {
+        "line": 48,
+        "text": "replaceLocation masterBedroom =<< getSetAsideCard Locations.masterBedroomSpectral"
+      },
+      {
+        "line": 51,
+        "text": "replaceLocation trophyRoom =<< getSetAsideCard Locations.trophyRoomSpectral"
+      },
+      {
+        "line": 55,
+        "text": "replaceLocation wineCellar =<< getSetAsideCard Locations.wineCellarSpectral"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheCircleUndone/BeforeTheBlackThrone/InAzathothsDomain.hs",
+    "hits": [
+      {
+        "line": 73,
+        "text": "removeLocation hideousPalace"
+      },
+      {
+        "line": 74,
+        "text": "for_ (cosmosLocations <> emptySpace) removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheCircleUndone/BeforeTheBlackThrone/TheCosmosBeckons.hs",
+    "hits": [
+      {
+        "line": 80,
+        "text": "for_ (cosmicIngress : cosmosLocations <> emptySpace) removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheCircleUndone/TheSecretName/InvestigatingTheWitchHouse.hs",
+    "hits": [
+      {
+        "line": 35,
+        "text": "swapLocation lid keziahsRoom"
+      },
+      {
+        "line": 37,
+        "text": "selectEach (not_ $ LocationWithId lid) removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheDreamEaters/AThousandShapesOfHorror/SearchingTheUnnamable.hs",
+    "hits": [
+      {
+        "line": 39,
+        "text": "pushAll [RemoveLocation location | location <- allLocations, location `notElem` victoryLocations]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheDreamEaters/BeyondTheGatesOfSleep/TheFinalDescent.hs",
+    "hits": [
+      {
+        "line": 64,
+        "text": "<> [RemoveLocation step | step <- steps]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheDreamEaters/WeaverOfTheCosmos/JourneyAcrossTheBridge.hs",
+    "hits": [
+      {
+        "line": 66,
+        "text": "for_ notBottom $ push . RemoveLocation"
+      },
+      {
+        "line": 99,
+        "text": "$ SetLayout"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheDreamEaters/WhereTheGodsDwell/BeyondDreams.hs",
+    "hits": [
+      {
+        "line": 49,
+        "text": "selectEach (not_ $ locationIs Locations.theOnyxCastle) (push . RemoveLocation)"
+      },
+      {
+        "line": 90,
+        "text": "push $ SetLocationLabel tower name"
+      },
+      {
+        "line": 93,
+        "text": "$ SetLayout"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheDrownedCity/TheApiary/UnsettlingSigns.hs",
+    "hits": [
+      {
+        "line": 140,
+        "text": "selectEach (not_ $ mapOneOf locationIs hiveMindRing) removeLocation"
+      },
+      {
+        "line": 193,
+        "text": "push $ ReplaceLocation lid (lookupCard Locations.apiaryEntranceDangerousExit cardId) Swap"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheDrownedCity/TheDrownedQuarter/ReactivateTheCore.hs",
+    "hits": [
+      {
+        "line": 38,
+        "text": "[ restricted a 1 (youExist $ at_ FloodedLocation)"
+      },
+      {
+        "line": 53,
+        "text": "withLocationOf iid decreaseFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheDrownedCity/TheGrandVault/CarefulNavigation.hs",
+    "hits": [
+      {
+        "line": 53,
+        "text": "selectEach CanHaveFloodLevelIncreased (push . IncreaseFloodLevel)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheDrownedCity/TheWesternWall/AscendTheWall.hs",
+    "hits": [
+      {
+        "line": 21,
+        "text": "[ restricted a 1 (youExist $ at_ FloodedLocation)"
+      },
+      {
+        "line": 35,
+        "text": "withLocationOf iid decreaseFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheDrownedCity/TheWesternWall/DescendIntoTheAbyss.hs",
+    "hits": [
+      {
+        "line": 21,
+        "text": "[ restricted a 1 (youExist $ at_ FloodedLocation) $ FastAbility (GroupClueCost (PerPlayer 1) Anywhere)"
+      },
+      {
+        "line": 33,
+        "text": "withLocationOf iid decreaseFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheFeastOfHemlockVale/FateOfTheVale/LostSelf.hs",
+    "hits": [
+      {
+        "line": 102,
+        "text": "push $ SetLayout hemlockValeLayout"
+      },
+      {
+        "line": 115,
+        "text": "selectEach (LocationWithTitle \"Mirror Nest\") removeLocation"
+      },
+      {
+        "line": 116,
+        "text": "selectEach (LocationWithTrait Cave) removeLocation"
+      },
+      {
+        "line": 203,
+        "text": "push $ SetLayout abyssRevealedLayout"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheFeastOfHemlockVale/TheTwistedHollow/WheresBertie.hs",
+    "hits": [
+      {
+        "line": 53,
+        "text": "for_ locations removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheFeastOfHemlockVale/WrittenInRock/DescentIntoTheMines.hs",
+    "hits": [
+      {
+        "line": 36,
+        "text": "selectEach (location_ $ withTrait Cave) removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheFeastOfHemlockVale/WrittenInRock/TheUndergroundMaze.hs",
+    "hits": [
+      {
+        "line": 62,
+        "text": "targets swappable (swapLocations lid)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheForgottenAge/ShatteredAeons/MendTheShatter.hs",
+    "hits": [
+      {
+        "line": 48,
+        "text": "removeLocation lid"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheForgottenAge/ShatteredAeons/ParadiseLost.hs",
+    "hits": [
+      {
+        "line": 47,
+        "text": "removeLocation lid"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheForgottenAge/ShatteredAeons/Timelock.hs",
+    "hits": [
+      {
+        "line": 51,
+        "text": "removeLocation lid"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheForgottenAge/TheBoundaryBeyond/PastAndPresent.hs",
+    "hits": [
+      {
+        "line": 61,
+        "text": "push $ ReplaceLocation lid replacement DefaultReplace"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheForgottenAge/TheDepthsOfYoth/JourneyToTheNexus.hs",
+    "hits": [
+      {
+        "line": 75,
+        "text": "removeLocation lid"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheInnsmouthConspiracy/ALightInTheFog/WorshippersOfTheDeep.hs",
+    "hits": [
+      {
+        "line": 26,
+        "text": "[ restrictedAbility a 1 (exists $ InvestigatorAt FullyFloodedLocation)"
+      },
+      {
+        "line": 38,
+        "text": "selectEach (InvestigatorAt FullyFloodedLocation) \\iid -> do"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheInnsmouthConspiracy/IntoTheMaelstrom/BackIntoTheDepths.hs",
+    "hits": [
+      {
+        "line": 39,
+        "text": "selectEach (not_ $ locationIs Locations.gatewayToYhanthlei) removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheInnsmouthConspiracy/IntoTheMaelstrom/CityOfTheDeepV1.hs",
+    "hits": [
+      {
+        "line": 24,
+        "text": "[ restricted a 1 (exists $ not_ (withTrait Sanctum) <> FloodedLocation)"
+      },
+      {
+        "line": 30,
+        "text": ", onlyOnce $ restricted a 2 (Negate $ exists FloodedLocation) $ Objective $ forced AnyWindow"
+      },
+      {
+        "line": 47,
+        "text": "ls <- select $ FloodedLocation <> not_ (withTrait Sanctum)"
+      },
+      {
+        "line": 48,
+        "text": "chooseTargetM iid ls decreaseThisFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheInnsmouthConspiracy/TheLairOfDagon/TheFirstOath.hs",
+    "hits": [
+      {
+        "line": 52,
+        "text": "selectEach (not_ $ locationIs Locations.grandEntryway) removeLocation"
+      },
+      {
+        "line": 57,
+        "text": "$ SetLayout"
+      },
+      {
+        "line": 76,
+        "text": "selectEach Anywhere increaseThisFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheInnsmouthConspiracy/TheLairOfDagon/TheSecondOath.hs",
+    "hits": [
+      {
+        "line": 52,
+        "text": "setThisFloodLevel lair FullyFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheScarletKeys/CongressOfTheKeys/SecretsAndLiesV1.hs",
+    "hits": [
+      {
+        "line": 55,
+        "text": "selectEach Anywhere removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheScarletKeys/CongressOfTheKeys/SecretsAndLiesV2.hs",
+    "hits": [
+      {
+        "line": 54,
+        "text": "selectEach Anywhere removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheScarletKeys/CongressOfTheKeys/SecretsAndLiesV3.hs",
+    "hits": [
+      {
+        "line": 57,
+        "text": "selectEach Anywhere removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TheScarletKeys/CongressOfTheKeys/ToTheTower.hs",
+    "hits": [
+      {
+        "line": 38,
+        "text": "selectEach (LocationWithPlacement InTheShadows) removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Act/Cards/TracesToNowhere/MoreThanYouBargainedFor.hs",
+    "hits": [
+      {
+        "line": 62,
+        "text": "swapLocation lid =<< genCard Locations.duterteFuneralHomeSomethingInTheBasement"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/EdgeOfTheEarth/TheHeartOfMadness/ThatWhichHasNoName.hs",
+    "hits": [
+      {
+        "line": 54,
+        "text": "selectEach (not_ $ locationIs Locations.theGateOfYquaa) removeLocation"
+      },
+      {
+        "line": 55,
+        "text": "push $ SetLayout [\"theGateOfYquaa titanicRamp1 titanicRamp2 titanicRamp3 titanicRamp4 hiddenTunnel\"]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheDrownedCity/CourtOfTheAncients/FloodedArchives.hs",
+    "hits": [
+      {
+        "line": 1,
+        "text": "module Arkham.Agenda.Cards.TheDrownedCity.CourtOfTheAncients.FloodedArchives (floodedArchives) where"
+      },
+      {
+        "line": 14,
+        "text": "newtype FloodedArchives = FloodedArchives AgendaAttrs"
+      },
+      {
+        "line": 18,
+        "text": "floodedArchives :: AgendaCard FloodedArchives"
+      },
+      {
+        "line": 19,
+        "text": "floodedArchives = agenda (1, A) FloodedArchives Cards.floodedArchives (Static 6)"
+      },
+      {
+        "line": 21,
+        "text": "instance HasAbilities FloodedArchives where"
+      },
+      {
+        "line": 22,
+        "text": "getAbilities (FloodedArchives a) = [strugglesForAir a 1]"
+      },
+      {
+        "line": 24,
+        "text": "instance RunMessage FloodedArchives where"
+      },
+      {
+        "line": 25,
+        "text": "runMessage msg a@(FloodedArchives attrs) = runQueueT $ case msg of"
+      },
+      {
+        "line": 30,
+        "text": "flooded <- select FloodedLocation"
+      },
+      {
+        "line": 31,
+        "text": "for_ flooded decreaseThisFloodLevel"
+      },
+      {
+        "line": 38,
+        "text": "_ -> FloodedArchives <$> liftRunMessage msg attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheDrownedCity/TheDoomOfArkham/TheComingStorm.hs",
+    "hits": [
+      {
+        "line": 23,
+        "text": ", restricted a 2 (exists $ LocationWithInvestigator LeadInvestigator <> CanHaveFloodLevelIncreased)"
+      },
+      {
+        "line": 38,
+        "text": "withLocationOf lead increaseFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheDrownedCity/TheDoomOfArkham/TheDoomOfArkham.hs",
+    "hits": [
+      {
+        "line": 35,
+        "text": ", restricted a 2 (exists $ InvestigatorAt FullyFloodedLocation) $ forced $ RoundEnds #when"
+      },
+      {
+        "line": 41,
+        "text": "withCthulhuLocation increaseFloodLevel"
+      },
+      {
+        "line": 46,
+        "text": "selectEach (InvestigatorAt FullyFloodedLocation) \\iid ->"
+      },
+      {
+        "line": 50,
+        "text": "{- \"Move Cthulhu to the nearest fully flooded location that is not [[Ruined]]"
+      },
+      {
+        "line": 51,
+        "text": "and decrease that location's flood level. Discard each clue and attachment at"
+      },
+      {
+        "line": 59,
+        "text": "let drownable = FullyFloodedLocation <> not_ (LocationWithTrait Ruined)"
+      },
+      {
+        "line": 64,
+        "text": "[ LocationWithId cthulhuLocation <> FullyFloodedLocation"
+      },
+      {
+        "line": 85,
+        "text": "decreaseFloodLevel lid"
+      },
+      {
+        "line": 106,
+        "text": "push $ ReplaceLocation lid card Swap"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheDrownedCity/TheWesternWall/FloodedPaths.hs",
+    "hits": [
+      {
+        "line": 1,
+        "text": "module Arkham.Agenda.Cards.TheDrownedCity.TheWesternWall.FloodedPaths (floodedPaths) where"
+      },
+      {
+        "line": 11,
+        "text": "newtype FloodedPaths = FloodedPaths AgendaAttrs"
+      },
+      {
+        "line": 15,
+        "text": "floodedPaths :: AgendaCard FloodedPaths"
+      },
+      {
+        "line": 16,
+        "text": "floodedPaths = agenda (1, A) FloodedPaths Cards.floodedPaths (Static 13)"
+      },
+      {
+        "line": 18,
+        "text": "instance HasModifiersFor FloodedPaths where"
+      },
+      {
+        "line": 19,
+        "text": "getModifiersFor (FloodedPaths a) = do"
+      },
+      {
+        "line": 32,
+        "text": "instance HasAbilities FloodedPaths where"
+      },
+      {
+        "line": 33,
+        "text": "getAbilities (FloodedPaths a) = [strugglesForAir a 1]"
+      },
+      {
+        "line": 35,
+        "text": "instance RunMessage FloodedPaths where"
+      },
+      {
+        "line": 36,
+        "text": "runMessage msg a@(FloodedPaths attrs) = runQueueT $ case msg of"
+      },
+      {
+        "line": 46,
+        "text": "_ -> FloodedPaths <$> liftRunMessage msg attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheForgottenAge/TheBoundaryBeyond/TheBarrierIsThin.hs",
+    "hits": [
+      {
+        "line": 52,
+        "text": "push $ ReplaceLocation lid replacement DefaultReplace"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheInnsmouthConspiracy/ALightInTheFog/TerrorAtFalconPoint.hs",
+    "hits": [
+      {
+        "line": 26,
+        "text": "could <- floodBottommost 4"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheInnsmouthConspiracy/ALightInTheFog/TheTideRises.hs",
+    "hits": [
+      {
+        "line": 38,
+        "text": "selectEach (LocationWithTrait FalconPoint) removeLocation"
+      },
+      {
+        "line": 40,
+        "text": "floodBottommost_ 4"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheInnsmouthConspiracy/InTooDeep/BarricadedStreets.hs",
+    "hits": [
+      {
+        "line": 27,
+        "text": "getAbilities (BarricadedStreets a) = [mkAbility a 1 $ forced $ TurnEnds #when (You <> at_ FullyFloodedLocation)]"
+      },
+      {
+        "line": 32,
+        "text": "selectEach (LocationWithTrait Coastal) (push . IncreaseFloodLevel)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheInnsmouthConspiracy/InTooDeep/FloodedStreets.hs",
+    "hits": [
+      {
+        "line": 1,
+        "text": "module Arkham.Agenda.Cards.TheInnsmouthConspiracy.InTooDeep.FloodedStreets (FloodedStreets (..), floodedStreets) where"
+      },
+      {
+        "line": 12,
+        "text": "newtype FloodedStreets = FloodedStreets AgendaAttrs"
+      },
+      {
+        "line": 16,
+        "text": "floodedStreets :: AgendaCard FloodedStreets"
+      },
+      {
+        "line": 17,
+        "text": "floodedStreets = agenda (3, A) FloodedStreets Cards.floodedStreets (Static 4)"
+      },
+      {
+        "line": 19,
+        "text": "instance HasModifiersFor FloodedStreets where"
+      },
+      {
+        "line": 20,
+        "text": "getModifiersFor (FloodedStreets a) = do"
+      },
+      {
+        "line": 25,
+        "text": "instance HasAbilities FloodedStreets where"
+      },
+      {
+        "line": 26,
+        "text": "getAbilities (FloodedStreets a) = [mkAbility a 1 $ forced $ TurnEnds #when (You <> at_ FullyFloodedLocation)]"
+      },
+      {
+        "line": 28,
+        "text": "instance RunMessage FloodedStreets where"
+      },
+      {
+        "line": 29,
+        "text": "runMessage msg a@(FloodedStreets attrs) = runQueueT $ case msg of"
+      },
+      {
+        "line": 31,
+        "text": "selectEach Anywhere (push . IncreaseFloodLevel)"
+      },
+      {
+        "line": 39,
+        "text": "_ -> FloodedStreets <$> liftRunMessage msg attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheInnsmouthConspiracy/InTooDeep/RageOfTheDeep.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "getAbilities (RageOfTheDeep a) = [mkAbility a 1 $ forced $ TurnEnds #when (You <> at_ FullyFloodedLocation)]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheInnsmouthConspiracy/InTooDeep/RelentlessTide.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "getAbilities (RelentlessTide a) = [mkAbility a 1 $ forced $ TurnEnds #when (You <> at_ FullyFloodedLocation)]"
+      },
+      {
+        "line": 33,
+        "text": "selectEach (LocationWithTrait Midtown) (push . IncreaseFloodLevel)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheInnsmouthConspiracy/IntoTheMaelstrom/TheFlood.hs",
+    "hits": [
+      {
+        "line": 1,
+        "text": "module Arkham.Agenda.Cards.TheInnsmouthConspiracy.IntoTheMaelstrom.TheFlood (TheFlood (..), theFlood) where"
+      },
+      {
+        "line": 10,
+        "text": "newtype TheFlood = TheFlood AgendaAttrs"
+      },
+      {
+        "line": 14,
+        "text": "theFlood :: AgendaCard TheFlood"
+      },
+      {
+        "line": 15,
+        "text": "theFlood = agenda (3, A) TheFlood Cards.theFlood (Static 10)"
+      },
+      {
+        "line": 17,
+        "text": "instance HasAbilities TheFlood where"
+      },
+      {
+        "line": 18,
+        "text": "getAbilities (TheFlood a) ="
+      },
+      {
+        "line": 27,
+        "text": "instance RunMessage TheFlood where"
+      },
+      {
+        "line": 28,
+        "text": "runMessage msg a@(TheFlood attrs) = runQueueT $ case msg of"
+      },
+      {
+        "line": 39,
+        "text": "_ -> TheFlood <$> liftRunMessage msg attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheInnsmouthConspiracy/ThePitOfDespair/Awakening.hs",
+    "hits": [
+      {
+        "line": 25,
+        "text": "selectEach RevealedLocation $ push . IncreaseFloodLevel"
+      },
+      {
+        "line": 49,
+        "text": "for_ (getFirst $ foldMap unRevealLocation ws) $ push . IncreaseFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Agenda/Cards/TheInnsmouthConspiracy/ThePitOfDespair/TheWaterRises.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "selectEach RevealedLocation $ push . (`SetFloodLevel` FullyFlooded)"
+      },
+      {
+        "line": 55,
+        "text": "for_ (getFirst $ foldMap unRevealLocation ws) $ push . (`SetFloodLevel` FullyFlooded)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/AgesUnwound/Acts/ADimensionOfItsOwn.hs",
+    "hits": [
+      {
+        "line": 34,
+        "text": "selectEach (locationIs Locations.featurelessStreets) removeLocationWithoutVictory"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/AgesUnwound/Acts/GettingYourBearings.hs",
+    "hits": [
+      {
+        "line": 55,
+        "text": "removeLocationWithoutVictory lid"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/AgesUnwound/Acts/OnTheLam.hs",
+    "hits": [
+      {
+        "line": 42,
+        "text": "removeLocationWithoutVictory lid"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/AgesUnwound/Acts/TheBoundary_052.hs",
+    "hits": [
+      {
+        "line": 48,
+        "text": "selectEach (locationIs Locations.rearCorridors) removeLocationWithoutVictory"
+      },
+      {
+        "line": 60,
+        "text": "selectEach (locationIs Locations.frontHallway) removeLocationWithoutVictory"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/AgesUnwound/Agendas/BadTimes.hs",
+    "hits": [
+      {
+        "line": 29,
+        "text": "`ReplaceLocation .. Swap` is exactly that sentence: the location id, its"
+      },
+      {
+        "line": 42,
+        "text": "push $ ReplaceLocation lid replacement Swap"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/AgesUnwound/Scenarios/AWorldTornDown.hs",
+    "hits": [
+      {
+        "line": 53,
+        "text": "* Distinguishing them would mean this scenario pushing @SetLocationLabel@ for"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/AgesUnwound/Scenarios/TimeRunsOut/Helpers.hs",
+    "hits": [
+      {
+        "line": 176,
+        "text": "The location leaves play and becomes a card again. 'removeLocation' would divert"
+      },
+      {
+        "line": 184,
+        "text": "removeLocationWithoutVictory lid"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/AgesUnwound/Scenarios/Unstuck/Helpers.hs",
+    "hits": [
+      {
+        "line": 157,
+        "text": "pushAll [SetLocationLabel l lbl | (l, lbl) <- zip ring' ringLabels]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/AgesUnwound/Scenarios/Unstuck.hs",
+    "hits": [
+      {
+        "line": 109,
+        "text": "for_ (zip ring ringLabels) \\(lid, lbl) -> push $ SetLocationLabel lid lbl"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/CircusExMortis/Acts/ArrivingAt.hs",
+    "hits": [
+      {
+        "line": 34,
+        "text": "push $ ReplaceLocation lid card DefaultReplace"
+      },
+      {
+        "line": 43,
+        "text": "Without it the swap is the card's last appearance -- 'ReplaceLocation'"
+      },
+      {
+        "line": 49,
+        "text": "'RemoveLocation': the car has to stay in place for 'ReplaceLocation' to carry"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/CircusExMortis/Locations/HighThicket.hs",
+    "hits": [
+      {
+        "line": 23,
+        "text": "removeLocationWithoutVictory attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/CircusExMortis/Locations/PrimalForest.hs",
+    "hits": [
+      {
+        "line": 33,
+        "text": "removeLocationWithoutVictory attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/CircusExMortis/Scenarios/RedSunrise.hs",
+    "hits": [
+      {
+        "line": 228,
+        "text": "push $ SetLayout redSunriseLayout"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ConsternationOnTheConstellation/Locations/OpenWater.hs",
+    "hits": [
+      {
+        "line": 10,
+        "text": "{- | The ocean itself, off the ship, so it carries no Deck trait and never floods."
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ConsternationOnTheConstellation/Scenarios/ConsternationOnTheConstellation.hs",
+    "hits": [
+      {
+        "line": 7,
+        "text": "that flood a location always take the lowest ready @Deck@ number first."
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/DarkMatter/Agendas/DarkMatterAgenda.hs",
+    "hits": [
+      {
+        "line": 48,
+        "text": "push $ RemoveLocation lid"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/DarkMatter/Locations/TheCassilda.hs",
+    "hits": [
+      {
+        "line": 51,
+        "text": "push $ SetLocationLabel attrs.id (\"r\" <> host)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/DarkMatter/Locations/TheTatterdemalionLocation.hs",
+    "hits": [
+      {
+        "line": 56,
+        "text": "push $ SetLocationLabel attrs.id (\"l\" <> host)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/DarkMatter/Scenarios/FragmentOfCarcosa.hs",
+    "hits": [
+      {
+        "line": 185,
+        "text": "DoStep 1 (ReplaceLocation lid _ Swap) -> do"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/NightOfVespers/Acts/AFamilyAffair.hs",
+    "hits": [
+      {
+        "line": 54,
+        "text": "removeLocationWithoutVictory lid"
+      },
+      {
+        "line": 76,
+        "text": "selectEach (RevealedLocation <> not_ (LocationWithTitle \"Trattoria del Parche\")) removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/NightOfVespers/Acts/IntoTheFire.hs",
+    "hits": [
+      {
+        "line": 50,
+        "text": "selectEach UnrevealedLocation removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/NightOfVespers/Locations/TrattoriaDelParcheLaBruttaVita.hs",
+    "hits": [
+      {
+        "line": 44,
+        "text": "swapLocation attrs =<< genCard Cards.trattoriaDelParcheLaDolceVita"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/NightOfVespers/Locations/TrattoriaDelParcheLaDolceVita.hs",
+    "hits": [
+      {
+        "line": 40,
+        "text": "swapLocation attrs =<< genCard Cards.trattoriaDelParcheLaBruttaVita"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ReturnToTheInnsmouthConspiracy/Acts/BackIntoTheDepthsV2.hs",
+    "hits": [
+      {
+        "line": 40,
+        "text": "selectEach (not_ $ locationIs Locations.gatewayToYhanthlei) removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ReturnToTheInnsmouthConspiracy/Acts/TheSecondOathV2.hs",
+    "hits": [
+      {
+        "line": 53,
+        "text": "setThisFloodLevel lair FullyFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ReturnToTheInnsmouthConspiracy/Agendas/TerrorAtFalconPointV2.hs",
+    "hits": [
+      {
+        "line": 49,
+        "text": "could <- floodBottommost 4"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ReturnToTheInnsmouthConspiracy/Locations/TidalPool.hs",
+    "hits": [
+      {
+        "line": 46,
+        "text": "(Here <> thisExists a FloodedLocation <> youExist deepOneInvestigator)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ReturnToTheInnsmouthConspiracy/Locations/UndergroundRiver.hs",
+    "hits": [
+      {
+        "line": 22,
+        "text": "{- | \"Forced - When Underground River's flood level would be increased: If possible,"
+      },
+      {
+        "line": 23,
+        "text": "increase the flood level of the nearest location that can have its flood level"
+      },
+      {
+        "line": 26,
+        "text": "A real Forced ability on 'WouldIncreaseFloodLevel', which the engine raises for every"
+      },
+      {
+        "line": 28,
+        "text": "'CannotBeFullyFlooded': that pins the river at its own maximum and"
+      },
+      {
+        "line": 29,
+        "text": "'CanHaveFloodLevelIncreased' then filters it out of the flood effects that pick targets"
+      },
+      {
+        "line": 32,
+        "text": "one whose text is \"can not be fully flooded\".)"
+      },
+      {
+        "line": 36,
+        "text": "extendRevealed1 a $ mkAbility a 1 $ forced $ WouldIncreaseFloodLevel #when (be a)"
+      },
+      {
+        "line": 44,
+        "text": "select $ NearestLocationToLocation attrs.id (CanHaveFloodLevelIncreased <> not_ (be attrs))"
+      },
+      {
+        "line": 49,
+        "text": "chooseTargetM iid nearest increaseThisFloodLevel"
+      },
+      {
+        "line": 54,
+        "text": "when (level == FullyFlooded) cancelTheIncrease"
+      },
+      {
+        "line": 59,
+        "text": "Do (SetFloodLevel lid _) -> lid == attrs.id"
+      },
+      {
+        "line": 63,
+        "text": "wouldBecome :: [Window] -> Maybe FloodLevel"
+      },
+      {
+        "line": 64,
+        "text": "wouldBecome ws = listToMaybe [raisedTo | (windowType -> Window.WouldIncreaseFloodLevel _ _ raisedTo) <- ws]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ReturnToTheInnsmouthConspiracy/Locations/UnderwaterCavern.hs",
+    "hits": [
+      {
+        "line": 24,
+        "text": "as if it were connected to every flooded Cave location.\""
+      },
+      {
+        "line": 29,
+        "text": "is symmetric: a Deep One here may leave for a flooded Cave, and a Deep One at a flooded"
+      },
+      {
+        "line": 34,
+        "text": "let floodedCaves = FloodedLocation <> LocationWithTrait Cave"
+      },
+      {
+        "line": 35,
+        "text": "modifySelect a (InvestigatorAt (be a) <> deepOneInvestigator) [MovesAsIfConnectedTo floodedCaves]"
+      },
+      {
+        "line": 36,
+        "text": "modifySelect a (EnemyAt (be a) <> EnemyWithTrait DeepOne) [MovesAsIfConnectedTo floodedCaves]"
+      },
+      {
+        "line": 37,
+        "text": "modifySelect a (InvestigatorAt floodedCaves <> deepOneInvestigator) [MovesAsIfConnectedTo (be a)]"
+      },
+      {
+        "line": 38,
+        "text": "modifySelect a (EnemyAt floodedCaves <> EnemyWithTrait DeepOne) [MovesAsIfConnectedTo (be a)]"
+      },
+      {
+        "line": 61,
+        "text": "pure $ UnderwaterCavern $ attrs & floodLevelL ?~ FullyFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ReturnToTheInnsmouthConspiracy/Scenarios/ReturnToALightInTheFog.hs",
+    "hits": [
+      {
+        "line": 75,
+        "text": "li \"floodTokens\""
+      },
+      {
+        "line": 79,
+        "text": "the original Flooded Caverns set with its counterpart from the Return to Flooded"
+      },
+      {
+        "line": 85,
+        "text": "gather Sets.ReturnToFloodedCaverns"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ReturnToTheInnsmouthConspiracy/Scenarios/ReturnToDevilReef.hs",
+    "hits": [
+      {
+        "line": 74,
+        "text": "li \"floodTokens\""
+      },
+      {
+        "line": 82,
+        "text": "the original Flooded Caverns set with its counterpart from the Return to Flooded"
+      },
+      {
+        "line": 88,
+        "text": "gather Sets.ReturnToFloodedCaverns"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ReturnToTheInnsmouthConspiracy/Scenarios/ReturnToInTooDeep.hs",
+    "hits": [
+      {
+        "line": 53,
+        "text": "li.nested \"floodTokens\" do"
+      },
+      {
+        "line": 54,
+        "text": "li \"increaseFloodLevel\""
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ReturnToTheInnsmouthConspiracy/Scenarios/ReturnToIntoTheMaelstrom.hs",
+    "hits": [
+      {
+        "line": 71,
+        "text": "officialSetup \"intoTheMaelstrom\" $ li \"floodTokens\""
+      },
+      {
+        "line": 75,
+        "text": "the original Flooded Caverns set with its counterpart from the Return to Flooded"
+      },
+      {
+        "line": 81,
+        "text": "gather Sets.ReturnToFloodedCaverns"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ReturnToTheInnsmouthConspiracy/Scenarios/ReturnToTheLairOfDagon.hs",
+    "hits": [
+      {
+        "line": 79,
+        "text": "li \"floodTokens\""
+      },
+      {
+        "line": 83,
+        "text": "the original Flooded Caverns set with its counterpart from the Return to Flooded"
+      },
+      {
+        "line": 89,
+        "text": "gather Sets.ReturnToFloodedCaverns"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ReturnToTheInnsmouthConspiracy/Scenarios/ReturnToThePitOfDespair.hs",
+    "hits": [
+      {
+        "line": 33,
+        "text": "Return to Flooded Caverns swap is a partial one -- one of each tunnel, not the whole set"
+      },
+      {
+        "line": 63,
+        "text": "officialSetup \"thePitOfDespair\" $ li \"floodTokens\""
+      },
+      {
+        "line": 67,
+        "text": "the original Flooded Caverns set with its counterpart from the Return to Flooded"
+      },
+      {
+        "line": 73,
+        "text": "gather Sets.ReturnToFloodedCaverns"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/TheFallOfTheHouseOfUsher/Acts/FleetingGlimpses.hs",
+    "hits": [
+      {
+        "line": 79,
+        "text": "push $ SetLocationLabel tarn \"theTarn\""
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ThePhantomOfTheOpera/Acts/ChasingGhosts.hs",
+    "hits": [
+      {
+        "line": 62,
+        "text": "push $ SetLayout [\"parisSewers1 parisSewers2 parisSewers3\", \". plus .\"]"
+      },
+      {
+        "line": 73,
+        "text": "selectEach (LocationWithTrait OperaHouse <> RevealedLocation) removeLocation"
+      },
+      {
+        "line": 74,
+        "text": "selectEach (LocationWithTrait OperaHouse <> UnrevealedLocation) removeLocationWithoutVictory"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ThePhantomOfTheOpera/Acts/Masquerade.hs",
+    "hits": [
+      {
+        "line": 78,
+        "text": "selectEach (grandFoyer <> not_ (LocationWithId lid)) removeLocation"
+      },
+      {
+        "line": 81,
+        "text": "push $ SetLayout [\". heart .\", \"grandFoyer . moon\", \". square .\"]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/ThePhantomOfTheOpera/Acts/ThePhantomsDomain.hs",
+    "hits": [
+      {
+        "line": 60,
+        "text": "selectEach (LocationWithTitle \"Paris Sewers\") removeLocation"
+      },
+      {
+        "line": 62,
+        "text": "push $ SetLayout [\"hourglass plus star\"]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Homebrew/TheSymphonyOfErichZann/Acts/ThePossessedConductor.hs",
+    "hits": [
+      {
+        "line": 55,
+        "text": "push $ SetLocationLabel lid (\"backstage\" <> tshow idx)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/BrethrenOfAsh/QueenOfAsh/SewerTunnelsFloodedCrypt.hs",
+    "hits": [
+      {
+        "line": 1,
+        "text": "module Arkham.Location.Cards.BrethrenOfAsh.QueenOfAsh.SewerTunnelsFloodedCrypt (sewerTunnelsFloodedCrypt) where"
+      },
+      {
+        "line": 6,
+        "text": "sewerTunnelsFloodedCrypt,"
+      },
+      {
+        "line": 11,
+        "text": "newtype SewerTunnelsFloodedCrypt = SewerTunnelsFloodedCrypt LocationAttrs"
+      },
+      {
+        "line": 15,
+        "text": "sewerTunnelsFloodedCrypt :: LocationCard SewerTunnelsFloodedCrypt"
+      },
+      {
+        "line": 16,
+        "text": "sewerTunnelsFloodedCrypt = location SewerTunnelsFloodedCrypt Cards.sewerTunnelsFloodedCrypt 4 (PerPlayer 1)"
+      },
+      {
+        "line": 18,
+        "text": "instance HasAbilities SewerTunnelsFloodedCrypt where"
+      },
+      {
+        "line": 19,
+        "text": "getAbilities (SewerTunnelsFloodedCrypt a) ="
+      },
+      {
+        "line": 22,
+        "text": "instance RunMessage SewerTunnelsFloodedCrypt where"
+      },
+      {
+        "line": 23,
+        "text": "runMessage msg l@(SewerTunnelsFloodedCrypt attrs) = runQueueT $ case msg of"
+      },
+      {
+        "line": 27,
+        "text": "_ -> SewerTunnelsFloodedCrypt <$> liftRunMessage msg attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/CarnevaleOfHorrors/FloodedSquare.hs",
+    "hits": [
+      {
+        "line": 1,
+        "text": "module Arkham.Location.Cards.CarnevaleOfHorrors.FloodedSquare ("
+      },
+      {
+        "line": 2,
+        "text": "floodedSquare,"
+      },
+      {
+        "line": 3,
+        "text": "FloodedSquare (..),"
+      },
+      {
+        "line": 18,
+        "text": "newtype FloodedSquare = FloodedSquare LocationAttrs"
+      },
+      {
+        "line": 22,
+        "text": "floodedSquare :: LocationCard FloodedSquare"
+      },
+      {
+        "line": 23,
+        "text": "floodedSquare ="
+      },
+      {
+        "line": 25,
+        "text": "FloodedSquare"
+      },
+      {
+        "line": 26,
+        "text": "Cards.floodedSquare"
+      },
+      {
+        "line": 31,
+        "text": "instance HasAbilities FloodedSquare where"
+      },
+      {
+        "line": 32,
+        "text": "getAbilities (FloodedSquare attrs) ="
+      },
+      {
+        "line": 48,
+        "text": "instance RunMessage FloodedSquare where"
+      },
+      {
+        "line": 49,
+        "text": "runMessage msg l@(FloodedSquare attrs) = case msg of"
+      },
+      {
+        "line": 60,
+        "text": "_ -> FloodedSquare <$> runMessage msg attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/CarnevaleOfHorrors/Gondola.hs",
+    "hits": [
+      {
+        "line": 33,
+        "text": ": [RemoveLocation lid | lid <- locationIds]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/ChildrenOfBlood/NewHorizons/ManagersOfficeDay.hs",
+    "hits": [
+      {
+        "line": 40,
+        "text": "removeLocation attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/ChildrenOfBlood/RiverOfBlood/BackAlleyDawn.hs",
+    "hits": [
+      {
+        "line": 40,
+        "text": "removeLocation attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/ChildrenOfBlood/RiverOfBlood/BackAlleyDusk.hs",
+    "hits": [
+      {
+        "line": 40,
+        "text": "removeLocation attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/ChildrenOfBlood/RiverOfBlood/WaterfrontWarehouseDawn.hs",
+    "hits": [
+      {
+        "line": 40,
+        "text": "removeLocation attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/ChildrenOfBlood/RiverOfBlood/WaterfrontWarehouseDusk.hs",
+    "hits": [
+      {
+        "line": 40,
+        "text": "removeLocation attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/DreamGatePointlessReality.hs",
+    "hits": [
+      {
+        "line": 44,
+        "text": "swapLocation attrs =<< genCard Locations.dreamGateWondrousJourney"
+      },
+      {
+        "line": 54,
+        "text": "removeLocation attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/DreamGateWondrousJourney.hs",
+    "hits": [
+      {
+        "line": 45,
+        "text": "removeLocation attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/FilmFatale/CentralLotQuietOnSet.hs",
+    "hits": [
+      {
+        "line": 35,
+        "text": "push $ ReplaceLocation attrs.id blurred Swap"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/ReturnToTheCircleUndone/ReturnToTheWagesOfSin/ReturnToHangmansBrook.hs",
+    "hits": [
+      {
+        "line": 26,
+        "text": "swapLocation attrs =<< genCard Locations.returnToHangmansBrookSpectral"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/ReturnToTheCircleUndone/ReturnToTheWagesOfSin/ReturnToHangmansBrookSpectral.hs",
+    "hits": [
+      {
+        "line": 33,
+        "text": "swapLocation attrs =<< genCard Locations.returnToHangmansBrook"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/BeforeTheBlackThrone/CosmicIngress.hs",
+    "hits": [
+      {
+        "line": 50,
+        "text": "removeLocation lid"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/BeforeTheBlackThrone/CourtOfTheGreatOldOnes.hs",
+    "hits": [
+      {
+        "line": 46,
+        "text": "removeLocation lid"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/ForTheGreaterGood/LodgeCatacombs.hs",
+    "hits": [
+      {
+        "line": 35,
+        "text": "push $ SetLocationLabel locationId $ \"sanctumDoorway\" <> tshow idx"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/AbandonedChapel.hs",
+    "hits": [
+      {
+        "line": 35,
+        "text": "swapLocation attrs =<< genCard Locations.abandonedChapelSpectral"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/AbandonedChapelSpectral.hs",
+    "hits": [
+      {
+        "line": 41,
+        "text": "swapLocation attrs =<< genCard Locations.abandonedChapel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/ChapelAttic_175.hs",
+    "hits": [
+      {
+        "line": 37,
+        "text": "swapLocation attrs =<< genCard Locations.chapelAtticSpectral_175"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/ChapelAttic_176.hs",
+    "hits": [
+      {
+        "line": 31,
+        "text": "swapLocation attrs =<< genCard Locations.chapelAtticSpectral_176"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/ChapelAtticSpectral_175.hs",
+    "hits": [
+      {
+        "line": 37,
+        "text": "swapLocation attrs =<< genCard Locations.chapelAttic_175"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/ChapelAtticSpectral_176.hs",
+    "hits": [
+      {
+        "line": 42,
+        "text": "swapLocation attrs =<< genCard Locations.chapelAttic_176"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/ChapelCrypt_173.hs",
+    "hits": [
+      {
+        "line": 27,
+        "text": "swapLocation attrs =<< genCard Locations.chapelCryptSpectral_173"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/ChapelCrypt_174.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "swapLocation attrs =<< genCard Locations.chapelCryptSpectral_174"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/ChapelCryptSpectral_173.hs",
+    "hits": [
+      {
+        "line": 36,
+        "text": "swapLocation attrs =<< genCard Locations.chapelCrypt_173"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/ChapelCryptSpectral_174.hs",
+    "hits": [
+      {
+        "line": 37,
+        "text": "swapLocation attrs =<< genCard Locations.chapelCrypt_174"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/HangmansBrook.hs",
+    "hits": [
+      {
+        "line": 26,
+        "text": "swapLocation attrs =<< genCard Locations.hangmansBrookSpectral"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/HangmansBrookSpectral.hs",
+    "hits": [
+      {
+        "line": 37,
+        "text": "swapLocation attrs =<< genCard Locations.hangmansBrook"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/HauntedFields.hs",
+    "hits": [
+      {
+        "line": 27,
+        "text": "swapLocation attrs =<< genCard Locations.hauntedFieldsSpectral"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/HauntedFieldsSpectral.hs",
+    "hits": [
+      {
+        "line": 39,
+        "text": "swapLocation attrs =<< genCard Locations.hauntedFields"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/HereticsGraves_171.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "swapLocation attrs =<< genCard Locations.hereticsGravesSpectral_171"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/HereticsGraves_172.hs",
+    "hits": [
+      {
+        "line": 39,
+        "text": "swapLocation attrs =<< genCard Locations.hereticsGravesSpectral_172"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/HereticsGravesSpectral_171.hs",
+    "hits": [
+      {
+        "line": 36,
+        "text": "swapLocation attrs =<< genCard Locations.hereticsGraves_171"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/HereticsGravesSpectral_172.hs",
+    "hits": [
+      {
+        "line": 35,
+        "text": "swapLocation attrs =<< genCard Locations.hereticsGravesSpectral_172"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/TheGallows_169.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "swapLocation attrs =<< genCard Locations.theGallowsSpectral_169"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/TheGallows_170.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "swapLocation attrs =<< genCard Locations.theGallowsSpectral_170"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/TheGallowsSpectral_169.hs",
+    "hits": [
+      {
+        "line": 38,
+        "text": "swapLocation attrs =<< genCard Locations.theGallows_169"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheCircleUndone/TheWagesOfSin/TheGallowsSpectral_170.hs",
+    "hits": [
+      {
+        "line": 37,
+        "text": "swapLocation attrs =<< genCard Locations.theGallows_170"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/CourtOfTheAncients/EastAntechamber.hs",
+    "hits": [
+      {
+        "line": 23,
+        "text": "(be a <> FloodedLocation)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/CourtOfTheAncients/GreatLiftInactive.hs",
+    "hits": [
+      {
+        "line": 37,
+        "text": "swapLocation attrs =<< genCard Locations.greatLiftActive"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/CourtOfTheAncients/WestAntechamber.hs",
+    "hits": [
+      {
+        "line": 23,
+        "text": "(be a <> FloodedLocation)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/ObsidianCanyons/GlyphOrrery.hs",
+    "hits": [
+      {
+        "line": 37,
+        "text": "When (RemoveLocation lid) | lid == attrs.id -> do"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDoomOfArkham/EasternRooftops.hs",
+    "hits": [
+      {
+        "line": 31,
+        "text": "modifySelf a [CannotBeFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDoomOfArkham/EasttownRuined.hs",
+    "hits": [
+      {
+        "line": 19,
+        "text": "getModifiersFor (EasttownRuined a) = modifySelf a [CannotBeFullyFlooded]"
+      },
+      {
+        "line": 31,
+        "text": "decreaseFloodLevel attrs.id"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDoomOfArkham/MiskatonicUniversityRuined.hs",
+    "hits": [
+      {
+        "line": 20,
+        "text": "getModifiersFor (MiskatonicUniversityRuined a) = modifySelf a [CannotBeFullyFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDoomOfArkham/NorthsideRuined.hs",
+    "hits": [
+      {
+        "line": 20,
+        "text": "getModifiersFor (NorthsideRuined a) = modifySelf a [CannotBeFullyFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDoomOfArkham/RivertownRuined.hs",
+    "hits": [
+      {
+        "line": 18,
+        "text": "drainable a = oneOf [be a, connectedTo (be a)] <> FloodedLocation"
+      },
+      {
+        "line": 35,
+        "text": "chooseTargetM iid candidates decreaseFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDoomOfArkham/StMarysHospitalRuined.hs",
+    "hits": [
+      {
+        "line": 24,
+        "text": "getModifiersFor (StMarysHospitalRuined a) = modifySelf a [CannotBeFullyFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDoomOfArkham/WesternRooftops.hs",
+    "hits": [
+      {
+        "line": 25,
+        "text": "modifySelf a [CannotBeFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDrownedQuarter/AbyssalTrench.hs",
+    "hits": [
+      {
+        "line": 5,
+        "text": "decreaseThisFloodLevel,"
+      },
+      {
+        "line": 6,
+        "text": "increaseThisFloodLevel,"
+      },
+      {
+        "line": 48,
+        "text": "decreaseThisFloodLevel attrs"
+      },
+      {
+        "line": 51,
+        "text": "increaseThisFloodLevel attrs"
+      },
+      {
+        "line": 52,
+        "text": "floodable <- select $ connectedTo (be attrs) <> CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 53,
+        "text": "chooseTargetM iid floodable increaseThisFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDrownedQuarter/AncientGallery.hs",
+    "hits": [
+      {
+        "line": 34,
+        "text": "increaseThisFloodLevel attrs"
+      },
+      {
+        "line": 35,
+        "text": "floodable <- select $ connectedTo (be attrs) <> CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 36,
+        "text": "chooseTargetM iid floodable increaseThisFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDrownedQuarter/BarrierCoreActive.hs",
+    "hits": [
+      {
+        "line": 26,
+        "text": "(not_ $ LocationCount 6 (LocationWithTrait Seafloor <> not_ FloodedLocation))"
+      },
+      {
+        "line": 44,
+        "text": "push $ ReplaceLocation attrs.id inactive Swap"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDrownedQuarter/BarrierCoreInactive.hs",
+    "hits": [
+      {
+        "line": 27,
+        "text": "(LocationCount 6 (RevealedLocation <> LocationWithTrait Seafloor <> not_ FloodedLocation))"
+      },
+      {
+        "line": 34,
+        "text": "<> thisExists a FloodedLocation"
+      },
+      {
+        "line": 35,
+        "text": "<> exists (connectedTo (be a) <> CanHaveFloodLevelIncreased)"
+      },
+      {
+        "line": 46,
+        "text": "push $ DecreaseFloodLevel attrs.id"
+      },
+      {
+        "line": 47,
+        "text": "eligible <- select $ connectedTo (be attrs) <> CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 49,
+        "text": "push $ IncreaseFloodLevel lid"
+      },
+      {
+        "line": 54,
+        "text": "push $ ReplaceLocation attrs.id active Swap"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDrownedQuarter/BlastedRuinsCrumblingEdifices.hs",
+    "hits": [
+      {
+        "line": 26,
+        "text": "$ restricted a 2 (exists $ orConnected NotForMovement a <> FloodedLocation)"
+      },
+      {
+        "line": 34,
+        "text": "push $ IncreaseFloodLevel attrs.id"
+      },
+      {
+        "line": 37,
+        "text": "locations <- select $ orConnected NotForMovement attrs <> FloodedLocation"
+      },
+      {
+        "line": 38,
+        "text": "chooseTargetM iid locations \\lid -> push $ DecreaseFloodLevel lid"
+      },
+      {
+        "line": 41,
+        "text": "increaseThisFloodLevel attrs"
+      },
+      {
+        "line": 42,
+        "text": "floodable <- select $ connectedTo (be attrs) <> CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 43,
+        "text": "chooseTargetM iid floodable increaseThisFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDrownedQuarter/BlastedRuinsSunkenCircle.hs",
+    "hits": [
+      {
+        "line": 26,
+        "text": "$ restricted a 2 (exists $ orConnected NotForMovement a <> FloodedLocation)"
+      },
+      {
+        "line": 34,
+        "text": "push $ IncreaseFloodLevel attrs.id"
+      },
+      {
+        "line": 37,
+        "text": "locations <- select $ orConnected NotForMovement attrs <> FloodedLocation"
+      },
+      {
+        "line": 38,
+        "text": "chooseTargetM iid locations \\lid -> push $ DecreaseFloodLevel lid"
+      },
+      {
+        "line": 41,
+        "text": "increaseThisFloodLevel attrs"
+      },
+      {
+        "line": 42,
+        "text": "floodable <- select $ connectedTo (be attrs) <> CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 43,
+        "text": "chooseTargetM iid floodable increaseThisFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDrownedQuarter/CoralReefFeedingGrounds.hs",
+    "hits": [
+      {
+        "line": 44,
+        "text": "increaseThisFloodLevel attrs"
+      },
+      {
+        "line": 45,
+        "text": "floodable <- select $ connectedTo (be attrs) <> CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 46,
+        "text": "chooseTargetM iid floodable increaseThisFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDrownedQuarter/CoralReefStatuaryGarden.hs",
+    "hits": [
+      {
+        "line": 35,
+        "text": "increaseThisFloodLevel attrs"
+      },
+      {
+        "line": 36,
+        "text": "floodable <- select $ connectedTo (be attrs) <> CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 37,
+        "text": "chooseTargetM iid floodable increaseThisFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDrownedQuarter/DrownedAcropolisCollapsedRuins.hs",
+    "hits": [
+      {
+        "line": 5,
+        "text": "decreaseThisFloodLevel,"
+      },
+      {
+        "line": 6,
+        "text": "increaseThisFloodLevel,"
+      },
+      {
+        "line": 29,
+        "text": "$ restricted a 2 (Here <> thisExists a CanHaveFloodLevelIncreased) actionAbility"
+      },
+      {
+        "line": 36,
+        "text": "adjacent <- select $ connectedTo (be attrs) <> CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 38,
+        "text": "targets adjacent increaseThisFloodLevel"
+      },
+      {
+        "line": 42,
+        "text": "increaseThisFloodLevel attrs"
+      },
+      {
+        "line": 43,
+        "text": "floodedLocations <- select FloodedLocation"
+      },
+      {
+        "line": 44,
+        "text": "chooseOneM iid $ targets floodedLocations decreaseThisFloodLevel"
+      },
+      {
+        "line": 47,
+        "text": "increaseThisFloodLevel attrs"
+      },
+      {
+        "line": 48,
+        "text": "floodable <- select $ connectedTo (be attrs) <> CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 49,
+        "text": "chooseTargetM iid floodable increaseThisFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheDrownedQuarter/DrownedAcropolisEphemeralRuins.hs",
+    "hits": [
+      {
+        "line": 5,
+        "text": "decreaseThisFloodLevel,"
+      },
+      {
+        "line": 6,
+        "text": "increaseThisFloodLevel,"
+      },
+      {
+        "line": 35,
+        "text": "increaseThisFloodLevel attrs"
+      },
+      {
+        "line": 36,
+        "text": "floodable <- select $ connectedTo (be attrs) <> CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 37,
+        "text": "chooseTargetM iid floodable increaseThisFloodLevel"
+      },
+      {
+        "line": 40,
+        "text": "canFlood <- matches attrs.id CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 42,
+        "text": "labeledValidate canFlood \"increaseFloodLevelOfYourLocation\" $ increaseThisFloodLevel attrs"
+      },
+      {
+        "line": 46,
+        "text": "increaseThisFloodLevel attrs"
+      },
+      {
+        "line": 47,
+        "text": "flooded <- select FloodedLocation"
+      },
+      {
+        "line": 48,
+        "text": "chooseTargetM iid flooded decreaseThisFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheGrandVault/ChamberOfTheTabletUnsealed.hs",
+    "hits": [
+      {
+        "line": 22,
+        "text": "modifySelf a [CannotBeFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheGrandVault/CoreOfTheVaultHeartOfTheMachine.hs",
+    "hits": [
+      {
+        "line": 31,
+        "text": "modifySelf a [CannotBeFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheGrandVault/MovingPlatformObservationStation.hs",
+    "hits": [
+      {
+        "line": 25,
+        "text": "modifySelf a [CannotBeFlooded]"
+      },
+      {
+        "line": 49,
+        "text": "chooseTargetM iid adjacentVault $ swapLocations attrs.id"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheGrandVault/ShroudedCistern.hs",
+    "hits": [
+      {
+        "line": 32,
+        "text": "DecreaseFloodLevel lid | lid == attrs.id -> pure l"
+      },
+      {
+        "line": 34,
+        "text": "increaseThisFloodLevel attrs"
+      },
+      {
+        "line": 38,
+        "text": "locations <- select $ LocationWithTrait Vault <> CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 39,
+        "text": "chooseTargetM iid locations \\lid -> increaseThisFloodLevel lid"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheGrandVault/TheGreatStair.hs",
+    "hits": [
+      {
+        "line": 17,
+        "text": "getModifiersFor (TheGreatStair a) = modifySelf a [CannotBeFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheWesternWall/DrownedShanty.hs",
+    "hits": [
+      {
+        "line": 24,
+        "text": "modifySelfWhen a deepOneMoving [ConnectedToWhen (be a) FullyFloodedLocation]"
+      },
+      {
+        "line": 25,
+        "text": "modifySelectWhen a deepOneMoving FullyFloodedLocation [ConnectedToWhen FullyFloodedLocation (be a)]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheWesternWall/ShatteredRuins.hs",
+    "hits": [
+      {
+        "line": 22,
+        "text": "$ restricted a 1 (Here <> thisExists a (not_ FloodedLocation)) actionAbility"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheWesternWall/TreacherousPathDeadlyPass.hs",
+    "hits": [
+      {
+        "line": 35,
+        "text": "increaseThisFloodLevelOrElse attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheWesternWall/TreacherousPathErodedShelf.hs",
+    "hits": [
+      {
+        "line": 35,
+        "text": "push $ IncreaseFloodLevel attrs.id"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheDrownedCity/TheWesternWall/TreacherousPathPrecariousClimb.hs",
+    "hits": [
+      {
+        "line": 37,
+        "text": "push $ IncreaseFloodLevel attrs.id"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/AbandonedShack.hs",
+    "hits": [
+      {
+        "line": 33,
+        "text": "swapLocation attrs =<< genCard Locations.openWater10597b"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/CoveredBridge.hs",
+    "hits": [
+      {
+        "line": 30,
+        "text": "swapLocation attrs =<< genCard Locations.openWater10599b"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/FetidPool.hs",
+    "hits": [
+      {
+        "line": 29,
+        "text": "swapLocation attrs =<< genCard Locations.openWater10595b"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/FloodedPath.hs",
+    "hits": [
+      {
+        "line": 1,
+        "text": "module Arkham.Location.Cards.TheFeastOfHemlockVale.TheThingInTheDepths.FloodedPath (floodedPath) where"
+      },
+      {
+        "line": 15,
+        "text": "newtype FloodedPath = FloodedPath LocationAttrs"
+      },
+      {
+        "line": 19,
+        "text": "floodedPath :: LocationCard FloodedPath"
+      },
+      {
+        "line": 20,
+        "text": "floodedPath = locationWith FloodedPath Cards.floodedPath 1 (Static 0) connectsToAdjacent"
+      },
+      {
+        "line": 22,
+        "text": "instance HasAbilities FloodedPath where"
+      },
+      {
+        "line": 23,
+        "text": "getAbilities (FloodedPath a) ="
+      },
+      {
+        "line": 26,
+        "text": "instance RunMessage FloodedPath where"
+      },
+      {
+        "line": 27,
+        "text": "runMessage msg l@(FloodedPath attrs) = runQueueT $ case msg of"
+      },
+      {
+        "line": 29,
+        "text": "swapLocation attrs =<< genCard Locations.openWater10596b"
+      },
+      {
+        "line": 36,
+        "text": "_ -> FloodedPath <$> liftRunMessage msg attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/MuddyFen.hs",
+    "hits": [
+      {
+        "line": 22,
+        "text": "swapLocation attrs =<< genCard Locations.openWater10593b"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/OpenWater10593b.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "swapLocation attrs =<< genCard Locations.muddyFen"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/OpenWater10594b.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "swapLocation attrs =<< genCard Locations.tangledThicket"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/OpenWater10595b.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "swapLocation attrs =<< genCard Locations.fetidPool"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/OpenWater10596b.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "swapLocation attrs =<< genCard Locations.floodedPath"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/OpenWater10597b.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "swapLocation attrs =<< genCard Locations.abandonedShack"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/OpenWater10598b.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "swapLocation attrs =<< genCard Locations.rottenDock"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/OpenWater10599b.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "swapLocation attrs =<< genCard Locations.coveredBridge"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/RottenDock.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "swapLocation attrs =<< genCard Locations.openWater10598b"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/TheThingInTheDepths/TangledThicket.hs",
+    "hits": [
+      {
+        "line": 28,
+        "text": "swapLocation attrs =<< genCard Locations.openWater10594b"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/WrittenInRock/ControlStation.hs",
+    "hits": [
+      {
+        "line": 46,
+        "text": "chooseTargetM iid locations (swapLocations lid)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/WrittenInRock/LeftTurnA.hs",
+    "hits": [
+      {
+        "line": 36,
+        "text": "chooseTargetM iid locations (swapLocations lid)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheFeastOfHemlockVale/WrittenInRock/RightTurnA.hs",
+    "hits": [
+      {
+        "line": 36,
+        "text": "chooseTargetM iid locations (swapLocations lid)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheForgottenAge/ShatteredAeons/Atlantis.hs",
+    "hits": [
+      {
+        "line": 30,
+        "text": "when (n >= 3) $ removeLocation attrs.id"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheForgottenAge/ShatteredAeons/BetweenWorlds.hs",
+    "hits": [
+      {
+        "line": 33,
+        "text": "removeLocation attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/ALightInTheFog/DeepOneNursery.hs",
+    "hits": [
+      {
+        "line": 26,
+        "text": ", restricted a 2 (thisExists a (not_ FullyFloodedLocation))"
+      },
+      {
+        "line": 37,
+        "text": "increaseThisFloodLevelTo attrs PartiallyFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/ALightInTheFog/FalconPointCliffside.hs",
+    "hits": [
+      {
+        "line": 21,
+        "text": "getModifiersFor (FalconPointCliffside attrs) = modifySelf attrs [CannotBeFullyFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/ALightInTheFog/FalconPointGatehouse.hs",
+    "hits": [
+      {
+        "line": 22,
+        "text": "getModifiersFor (FalconPointGatehouse attrs) = modifySelf attrs [CannotBeFullyFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/ALightInTheFog/HoldingCells.hs",
+    "hits": [
+      {
+        "line": 23,
+        "text": "modifySelf a [CannotBeEnteredBy AnyEnemy, CannotBeFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/ALightInTheFog/LanternRoom.hs",
+    "hits": [
+      {
+        "line": 20,
+        "text": "getModifiersFor (LanternRoom attrs) = modifySelf attrs [CannotBeFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/ALightInTheFog/LighthouseKeepersCottage.hs",
+    "hits": [
+      {
+        "line": 24,
+        "text": "getModifiersFor (LighthouseKeepersCottage attrs) = modifySelf attrs [CannotBeFullyFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/ALightInTheFog/LighthouseStairwell.hs",
+    "hits": [
+      {
+        "line": 21,
+        "text": "getModifiersFor (LighthouseStairwell attrs) = modifySelf attrs [CannotBeFullyFlooded]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/ALightInTheFog/PumpRoom.hs",
+    "hits": [
+      {
+        "line": 30,
+        "text": "floodedLocations <- select FloodedLocation"
+      },
+      {
+        "line": 32,
+        "text": "questionLabeled \"decreaseFlood\""
+      },
+      {
+        "line": 33,
+        "text": "targets floodedLocations \\lid -> do"
+      },
+      {
+        "line": 34,
+        "text": "decreaseThisFloodLevel lid"
+      },
+      {
+        "line": 35,
+        "text": "floodable <- select $ CanHaveFloodLevelIncreased <> not_ (be lid)"
+      },
+      {
+        "line": 37,
+        "text": "questionLabeled \"increaseFlood\""
+      },
+      {
+        "line": 39,
+        "text": "targets (deleteFirst lid floodable) increaseThisFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/ALightInTheFog/SunkenArchives.hs",
+    "hits": [
+      {
+        "line": 25,
+        "text": "modifySelect a Anyone [CannotDiscoverCluesAt $ be a <> FloodedLocation]"
+      },
+      {
+        "line": 31,
+        "text": "increaseThisFloodLevelTo attrs FullyFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/ALightInTheFog/TheMoonRoom.hs",
+    "hits": [
+      {
+        "line": 29,
+        "text": "`withCriteria` (Here <> thisExists a (not_ FloodedLocation))"
+      },
+      {
+        "line": 31,
+        "text": ", restricted a 2 (thisExists a (not_ FullyFloodedLocation))"
+      },
+      {
+        "line": 39,
+        "text": "increaseThisFloodLevelTo attrs PartiallyFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/DevilReef/BlackReef.hs",
+    "hits": [
+      {
+        "line": 30,
+        "text": "increaseThisFloodLevel attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/DevilReef/CyclopeanRuins_176a.hs",
+    "hits": [
+      {
+        "line": 41,
+        "text": "setThisFloodLevel attrs FullyFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/DevilReef/CyclopeanRuins_176b.hs",
+    "hits": [
+      {
+        "line": 41,
+        "text": "setThisFloodLevel attrs FullyFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/DevilReef/DeepOneGrotto_175a.hs",
+    "hits": [
+      {
+        "line": 44,
+        "text": "increaseThisFloodLevel attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/DevilReef/DeepOneGrotto_175b.hs",
+    "hits": [
+      {
+        "line": 44,
+        "text": "increaseThisFloodLevel attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/DevilReef/SaltMarshes.hs",
+    "hits": [
+      {
+        "line": 50,
+        "text": "increaseThisFloodLevel attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/DevilReef/WavewornIsland.hs",
+    "hits": [
+      {
+        "line": 36,
+        "text": "increaseThisFloodLevel attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/FloodedCaverns/TidalPool.hs",
+    "hits": [
+      {
+        "line": 1,
+        "text": "module Arkham.Location.Cards.TheInnsmouthConspiracy.FloodedCaverns.TidalPool (tidalPool) where"
+      },
+      {
+        "line": 29,
+        "text": "case locationFloodLevel attrs of"
+      },
+      {
+        "line": 30,
+        "text": "Just FullyFlooded -> modifySelf attrs [ShroudModifier 2]"
+      },
+      {
+        "line": 31,
+        "text": "Just PartiallyFlooded -> modifySelf attrs [ShroudModifier 1]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/FloodedCaverns/UndergroundRiver.hs",
+    "hits": [
+      {
+        "line": 1,
+        "text": "module Arkham.Location.Cards.TheInnsmouthConspiracy.FloodedCaverns.UndergroundRiver (undergroundRiver) where"
+      },
+      {
+        "line": 20,
+        "text": "getModifiersFor (UndergroundRiver a) = whenRevealed a $ modifySelf a [CannotBeFullyFlooded]"
+      },
+      {
+        "line": 29,
+        "text": "increaseThisFloodLevelTo attrs PartiallyFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/FloodedCaverns/UnderwaterCavern.hs",
+    "hits": [
+      {
+        "line": 1,
+        "text": "module Arkham.Location.Cards.TheInnsmouthConspiracy.FloodedCaverns.UnderwaterCavern (underwaterCavern, UnderwaterCavern (..)) where"
+      },
+      {
+        "line": 27,
+        "text": "(Here <> exists (not_ (be attrs) <> FloodedLocation <> LocationWithTrait Cave))"
+      },
+      {
+        "line": 35,
+        "text": "ls <- select $ not_ (be attrs) <> FloodedLocation <> LocationWithTrait Cave"
+      },
+      {
+        "line": 39,
+        "text": "pure $ UnderwaterCavern $ attrs & floodLevelL ?~ FullyFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/InTooDeep/RailroadStation.hs",
+    "hits": [
+      {
+        "line": 21,
+        "text": "[ skillTestAbility $ mkAbility attrs 1 $ forced $ Enters #after You (be attrs <> FloodedLocation)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/IntoTheMaelstrom/DarkAbyss.hs",
+    "hits": [
+      {
+        "line": 27,
+        "text": ", restricted a 2 (exists $ orConnected NotForMovement a <> CanHaveFloodLevelIncreased)"
+      },
+      {
+        "line": 43,
+        "text": "setThisFloodLevel attrs FullyFlooded"
+      },
+      {
+        "line": 44,
+        "text": "selectEach (connectedTo (be attrs)) increaseThisFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/IntoTheMaelstrom/GatewayToYhanthlei.hs",
+    "hits": [
+      {
+        "line": 16,
+        "text": ". (floodLevelL ?~ PartiallyFlooded)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/IntoTheMaelstrom/OnyxGuardians.hs",
+    "hits": [
+      {
+        "line": 22,
+        "text": ". (floodLevelL ?~ FullyFlooded)"
+      },
+      {
+        "line": 49,
+        "text": "setThisFloodLevel attrs Unflooded"
+      },
+      {
+        "line": 50,
+        "text": "gameModifier (attrs.ability 1) attrs CannotBeFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/IntoTheMaelstrom/StatuesInTheDeep.hs",
+    "hits": [
+      {
+        "line": 21,
+        "text": ". (floodLevelL ?~ FullyFlooded)"
+      },
+      {
+        "line": 41,
+        "text": "setThisFloodLevel attrs Unflooded"
+      },
+      {
+        "line": 42,
+        "text": "gameModifier (attrs.ability 1) attrs CannotBeFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/IntoTheMaelstrom/SubmergedTemple.hs",
+    "hits": [
+      {
+        "line": 21,
+        "text": ". (floodLevelL ?~ FullyFlooded)"
+      },
+      {
+        "line": 40,
+        "text": "setThisFloodLevel attrs Unflooded"
+      },
+      {
+        "line": 41,
+        "text": "gameModifier (attrs.ability 1) attrs CannotBeFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/IntoTheMaelstrom/SunkenHalls.hs",
+    "hits": [
+      {
+        "line": 19,
+        "text": ". (floodLevelL ?~ PartiallyFlooded)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/IntoTheMaelstrom/SyzygyChamber.hs",
+    "hits": [
+      {
+        "line": 21,
+        "text": ". (floodLevelL ?~ FullyFlooded)"
+      },
+      {
+        "line": 34,
+        "text": "$ FloodLevelIncreased #after Anywhere"
+      },
+      {
+        "line": 41,
+        "text": "setThisFloodLevel attrs Unflooded"
+      },
+      {
+        "line": 42,
+        "text": "gameModifier (attrs.ability 1) attrs CannotBeFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/IntoTheMaelstrom/UnderseaCorridors.hs",
+    "hits": [
+      {
+        "line": 22,
+        "text": ". (floodLevelL ?~ PartiallyFlooded)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/IntoTheMaelstrom/VaultOfRiches.hs",
+    "hits": [
+      {
+        "line": 21,
+        "text": ". (floodLevelL ?~ PartiallyFlooded)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/TheLairOfDagon/HallOfTheDeep.hs",
+    "hits": [
+      {
+        "line": 32,
+        "text": "increaseThisFloodLevel attrs"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheInnsmouthConspiracy/ThePitOfDespair/SealedExit.hs",
+    "hits": [
+      {
+        "line": 37,
+        "text": "pure $ SealedExit $ attrs & floodLevelL ?~ FullyFlooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheScarletKeys/BeyondTheBeyond/WealdOfEffigiesA.hs",
+    "hits": [
+      {
+        "line": 79,
+        "text": "scenarioSpecific \"swapLocations\" (x, y)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheScarletKeys/BeyondTheBeyond/WealdOfEffigiesB.hs",
+    "hits": [
+      {
+        "line": 83,
+        "text": "scenarioSpecific \"swapLocations\" (x, y)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheScarletKeys/DeadHeat/BahiaPalaceGardens.hs",
+    "hits": [
+      {
+        "line": 36,
+        "text": "swapLocation attrs =<< fetchCard Cards.bahiaPalaceGardensAbandoned"
+      },
+      {
+        "line": 47,
+        "text": "swapLocation attrs =<< fetchCard Cards.bahiaPalaceGardensAbandoned"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheScarletKeys/DeadHeat/JemaaElFnaaSquare.hs",
+    "hits": [
+      {
+        "line": 43,
+        "text": "swapLocation attrs =<< fetchCard Cards.jemaaElFnaaSquareAbandoned"
+      },
+      {
+        "line": 54,
+        "text": "swapLocation attrs =<< fetchCard Cards.jemaaElFnaaSquareAbandoned"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheScarletKeys/DeadHeat/MarrakeshRailwayStation.hs",
+    "hits": [
+      {
+        "line": 35,
+        "text": "swapLocation attrs =<< fetchCard Cards.marrakeshRailwayStationAbandoned"
+      },
+      {
+        "line": 42,
+        "text": "swapLocation attrs =<< fetchCard Cards.marrakeshRailwayStationAbandoned"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheScarletKeys/DeadHeat/SaadiansTombs.hs",
+    "hits": [
+      {
+        "line": 39,
+        "text": "swapLocation attrs =<< fetchCard Cards.saadiansTombsAbandoned"
+      },
+      {
+        "line": 45,
+        "text": "swapLocation attrs =<< fetchCard Cards.saadiansTombsAbandoned"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Location/Cards/TheScarletKeys/DeadHeat/Tanneries.hs",
+    "hits": [
+      {
+        "line": 36,
+        "text": "swapLocation attrs =<< fetchCard Cards.tanneriesAbandoned"
+      },
+      {
+        "line": 47,
+        "text": "swapLocation attrs =<< fetchCard Cards.tanneriesAbandoned"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/BrethrenOfAsh/QueenOfAsh.hs",
+    "hits": [
+      {
+        "line": 150,
+        "text": ", Locations.sewerTunnelsFloodedCrypt"
+      },
+      {
+        "line": 263,
+        "text": "record InvestigatorsFloodedTheBrethrenOfAshsSummoningRitual"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/CarnevaleOfHorrors.hs",
+    "hits": [
+      {
+        "line": 87,
+        "text": "li \"removeLocation\""
+      },
+      {
+        "line": 108,
+        "text": ", Locations.floodedSquare"
+      },
+      {
+        "line": 117,
+        "text": "push $ SetLocationLabel location label"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/CurseOfTheRougarou.hs",
+    "hits": [
+      {
+        "line": 93,
+        "text": "push $ SetLocationLabel start bayouLabel"
+      },
+      {
+        "line": 97,
+        "text": "push $ SetLocationLabel locationId label"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheCircleUndone/BeforeTheBlackThrone.hs",
+    "hits": [
+      {
+        "line": 173,
+        "text": "setLayout $ cosmosToGrid cosmos"
+      },
+      {
+        "line": 209,
+        "text": "Success cosmos -> pure $ BeforeTheBlackThrone $ attrs & metaL .~ meta & locationLayoutL .~ cosmosToGrid cosmos"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheDreamEaters/BeyondTheGatesOfSleep.hs",
+    "hits": [
+      {
+        "line": 329,
+        "text": "pushAll $ map RemoveLocation duplicates <> [msg]"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheDreamEaters/TheSearchForKadath.hs",
+    "hits": [
+      {
+        "line": 296,
+        "text": "li \"removeLocations\""
+      },
+      {
+        "line": 311,
+        "text": "for_ locations removeLocation"
+      },
+      {
+        "line": 329,
+        "text": "for_ locations removeLocation"
+      },
+      {
+        "line": 346,
+        "text": "for_ locations removeLocation"
+      },
+      {
+        "line": 359,
+        "text": "for_ locations removeLocation"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheDrownedCity/CourtOfTheAncients.hs",
+    "hits": [
+      {
+        "line": 138,
+        "text": "li.nested \"eastAddFloodTokens\" do"
+      },
+      {
+        "line": 139,
+        "text": "li \"eastFloodLevelsOneAndTwo\""
+      },
+      {
+        "line": 140,
+        "text": "li \"eastFullyFloodLevelOne\""
+      },
+      {
+        "line": 164,
+        "text": "[ if headedWest then Agendas.ruinedArchives else Agendas.floodedArchives"
+      },
+      {
+        "line": 228,
+        "text": "traverse_ increaseFloodLevel $ levelOne <> drop 3 archiveIds"
+      },
+      {
+        "line": 229,
+        "text": "traverse_ increaseFloodLevel levelOne"
+      },
+      {
+        "line": 245,
+        "text": "whenAny (locationWithInvestigator iid <> FloodedLocation) $ drawAnotherChaosToken iid"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheDrownedCity/ObsidianCanyons.hs",
+    "hits": [
+      {
+        "line": 157,
+        "text": "li \"removeLocations\""
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheDrownedCity/TheDoomOfArkhamPartI.hs",
+    "hits": [
+      {
+        "line": 98,
+        "text": "li \"floodTokens\""
+      },
+      {
+        "line": 195,
+        "text": "whenAny (locationWithInvestigator iid <> FloodedLocation) $ drawAnotherChaosToken iid"
+      },
+      {
+        "line": 235,
+        "text": "flooded <- traverse (fieldMap LocationCard toCardCode) =<< select FloodedLocation"
+      },
+      {
+        "line": 236,
+        "text": "unless (null flooded) $ recordSetInsert FloodedNeighborhoods flooded"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheDrownedCity/TheDoomOfArkhamPartII.hs",
+    "hits": [
+      {
+        "line": 137,
+        "text": "li \"floodedNeighborhoods\""
+      },
+      {
+        "line": 150,
+        "text": "gather Set.Flood"
+      },
+      {
+        "line": 206,
+        "text": "floodedTitles <- map (nameTitle . toName) . mapMaybe lookupCardDef <$> getFloodedNeighborhoods"
+      },
+      {
+        "line": 207,
+        "text": "for_ floodedTitles \\title -> selectEach (LocationWithTitle title) increaseFloodLevel"
+      },
+      {
+        "line": 280,
+        "text": "whenM ((/= Unflooded) <$> getFloodLevelFor iid) $ assignDamage iid Cultist 1"
+      },
+      {
+        "line": 287,
+        "text": "whenM ((/= Unflooded) <$> getFloodLevelFor iid) $ assignDamage iid Cultist 1"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheDrownedCity/TheDrownedQuarter.hs",
+    "hits": [
+      {
+        "line": 46,
+        "text": "flooded <- selectAny $ FloodedLocation <> locationWithInvestigator iid"
+      },
+      {
+        "line": 48,
+        "text": "$ if flooded then toChaosTokenValue attrs ElderThing 3 4 else toChaosTokenValue attrs ElderThing 5 6"
+      },
+      {
+        "line": 128,
+        "text": "li.nested \"addFloodTokens\" do"
+      },
+      {
+        "line": 138,
+        "text": "gather Set.Flood"
+      },
+      {
+        "line": 190,
+        "text": "questionLabeled \"chooseFloodedSeaFloor\""
+      },
+      {
+        "line": 191,
+        "text": "targets seaFloorIds increaseFloodLevel"
+      },
+      {
+        "line": 207,
+        "text": "whenM ((/= Unflooded) <$> getFloodLevelFor iid) $ assignDamage iid Cultist 1"
+      },
+      {
+        "line": 215,
+        "text": "whenM ((== FullyFlooded) <$> getFloodLevelFor iid) $ assignDamage iid Cultist 1"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheDrownedCity/TheGrandVault.hs",
+    "hits": [
+      {
+        "line": 49,
+        "text": "getFloodLevelFor iid <&> \\case"
+      },
+      {
+        "line": 50,
+        "text": "Unflooded -> 0"
+      },
+      {
+        "line": 51,
+        "text": "PartiallyFlooded -> 1"
+      },
+      {
+        "line": 52,
+        "text": "FullyFlooded -> 2"
+      },
+      {
+        "line": 133,
+        "text": "li.nested \"addFloodTokens\" $ li \"floodBottomRow\""
+      },
+      {
+        "line": 139,
+        "text": "gather Set.Flood"
+      },
+      {
+        "line": 211,
+        "text": "for_ (mapMaybe chamberAt vaultBottomRow) increaseFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheDrownedCity/TheWesternWall.hs",
+    "hits": [
+      {
+        "line": 93,
+        "text": "floodLevel <- getFloodLevelFor iid"
+      },
+      {
+        "line": 95,
+        "text": "$ if floodLevel == FullyFlooded"
+      },
+      {
+        "line": 169,
+        "text": "li.nested \"addFloodTokens\" do"
+      },
+      {
+        "line": 170,
+        "text": "scope version $ li \"floodLevels\""
+      },
+      {
+        "line": 171,
+        "text": "scope version $ li \"fullyFloodLevels\""
+      },
+      {
+        "line": 180,
+        "text": "gather Set.Flood"
+      },
+      {
+        "line": 188,
+        "text": "setAgendaDeck [Agendas.floodedPaths]"
+      },
+      {
+        "line": 255,
+        "text": "let (flooded, fullyFlooded) ="
+      },
+      {
+        "line": 266,
+        "text": "traverse_ (push . IncreaseFloodLevel) flooded"
+      },
+      {
+        "line": 267,
+        "text": "traverse_ (push . IncreaseFloodLevel) fullyFlooded"
+      },
+      {
+        "line": 286,
+        "text": "whenM ((== FullyFlooded) <$> getFloodLevelFor iid) $ assignDamage iid Cultist 1"
+      },
+      {
+        "line": 289,
+        "text": "withLocationOf iid $ push . IncreaseFloodLevel"
+      },
+      {
+        "line": 292,
+        "text": "whenM ((== FullyFlooded) <$> getFloodLevelFor iid) $ assignDamage iid Cultist 1"
+      },
+      {
+        "line": 295,
+        "text": "withLocationOf iid $ push . IncreaseFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheFeastOfHemlockVale/FateOfTheVale.hs",
+    "hits": [
+      {
+        "line": 375,
+        "text": "setLayout cosmicEmissaryLayout"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheFeastOfHemlockVale/TheTwistedHollow.hs",
+    "hits": [
+      {
+        "line": 146,
+        "text": "li.nested \"removeLocations\" do"
+      },
+      {
+        "line": 360,
+        "text": "for_ emptyWoods (removeLocation . fst)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheFeastOfHemlockVale/WrittenInRock.hs",
+    "hits": [
+      {
+        "line": 354,
+        "text": "chooseTargetM iid locations (swapLocations lid)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheForgottenAge/HeartOfTheElders.hs",
+    "hits": [
+      {
+        "line": 348,
+        "text": "setLayout part2Locations"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheForgottenAge/TheBoundaryBeyond.hs",
+    "hits": [
+      {
+        "line": 250,
+        "text": "RemoveLocation lid -> do"
+      },
+      {
+        "line": 269,
+        "text": "push $ ReplaceLocation lid card Swap"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheForgottenAge/TheDoomOfEztli.hs",
+    "hits": [
+      {
+        "line": 116,
+        "text": "li.returnTo \"replaceLocations\""
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheForgottenAge/TurnBackTime.hs",
+    "hits": [
+      {
+        "line": 76,
+        "text": "li.returnTo \"replaceLocations\""
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheInnsmouthConspiracy/ALightInTheFog.hs",
+    "hits": [
+      {
+        "line": 99,
+        "text": "gather Set.FloodedCaverns"
+      },
+      {
+        "line": 183,
+        "text": "li \"floodTokens\""
+      },
+      {
+        "line": 189,
+        "text": "whenAny (locationWithInvestigator iid <> FloodedLocation) do"
+      },
+      {
+        "line": 203,
+        "text": "Tablet -> whenAny (locationWithInvestigator iid <> FloodedLocation) do"
+      },
+      {
+        "line": 216,
+        "text": "increaseThisFloodLevelOrElse lid $ when (isHardExpert attrs) $ assignHorror iid Cultist 1"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheInnsmouthConspiracy/DevilReef.hs",
+    "hits": [
+      {
+        "line": 76,
+        "text": "gather Set.FloodedCaverns"
+      },
+      {
+        "line": 96,
+        "text": "push $ SetFloodLevel churningWaters FullyFlooded"
+      },
+      {
+        "line": 168,
+        "text": "li \"floodTokens\""
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheInnsmouthConspiracy/InTooDeep.hs",
+    "hits": [
+      {
+        "line": 126,
+        "text": ", Agendas.floodedStreets"
+      },
+      {
+        "line": 207,
+        "text": "for_ [theHouseOnWaterStreet, innsmouthHarbour, desolateCoastline] (push . IncreaseFloodLevel)"
+      },
+      {
+        "line": 250,
+        "text": "li.nested \"floodTokens\" do"
+      },
+      {
+        "line": 251,
+        "text": "li \"increaseFloodLevel\""
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheInnsmouthConspiracy/IntoTheMaelstrom.hs",
+    "hits": [
+      {
+        "line": 51,
+        "text": "n <- selectCount $ not_ FloodedLocation <> withTrait Yhanthlei"
+      },
+      {
+        "line": 75,
+        "text": "gather Set.FloodedCaverns"
+      },
+      {
+        "line": 80,
+        "text": "setAgendaDeck [Agendas.underTheSurface, Agendas.celestialAlignment, Agendas.theFlood]"
+      },
+      {
+        "line": 184,
+        "text": "li \"floodTokens\""
+      },
+      {
+        "line": 197,
+        "text": "canIncrease <- lid <=~> CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 200,
+        "text": "labeledI \"increaseFloodLevelOfYourLocation\" $ increaseThisFloodLevel lid"
+      },
+      {
+        "line": 246,
+        "text": "record TheFloodHasBegun"
+      },
+      {
+        "line": 273,
+        "text": "record TheDeepOnesHaveFloodedTheEarth"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheInnsmouthConspiracy/TheLairOfDagon.hs",
+    "hits": [
+      {
+        "line": 73,
+        "text": "gather Set.FloodedCaverns"
+      },
+      {
+        "line": 196,
+        "text": "li \"floodTokens\""
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheInnsmouthConspiracy/ThePitOfDespair.hs",
+    "hits": [
+      {
+        "line": 42,
+        "text": "floodLevel <-"
+      },
+      {
+        "line": 43,
+        "text": "maybe (pure Unflooded) (fieldWithDefault Unflooded LocationFloodLevel) =<< getLocationOf iid"
+      },
+      {
+        "line": 44,
+        "text": "pure $ case floodLevel of"
+      },
+      {
+        "line": 45,
+        "text": "FullyFlooded -> toChaosTokenValue attrs Skull 3 4"
+      },
+      {
+        "line": 46,
+        "text": "PartiallyFlooded -> toChaosTokenValue attrs Skull 2 3"
+      },
+      {
+        "line": 61,
+        "text": "gather Set.FloodedCaverns"
+      },
+      {
+        "line": 117,
+        "text": "li \"floodTokens\""
+      },
+      {
+        "line": 124,
+        "text": "whenAny (locationWithInvestigator iid <> FloodedLocation) $ assignDamage iid Cultist 1"
+      },
+      {
+        "line": 138,
+        "text": "Cultist -> whenAny (locationWithInvestigator iid <> FloodedLocation) do"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheLabyrinthsOfLunacy.hs",
+    "hits": [
+      {
+        "line": 138,
+        "text": "setLayout"
+      },
+      {
+        "line": 154,
+        "text": "setLayout"
+      },
+      {
+        "line": 175,
+        "text": "setLayout"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheScarletKeys/CongressOfTheKeys.hs",
+    "hits": [
+      {
+        "line": 844,
+        "text": "ScenarioSpecific \"swapLocations\" v -> do"
+      },
+      {
+        "line": 848,
+        "text": "swapLocation loc ="
+      },
+      {
+        "line": 853,
+        "text": "let left = swapLocation <$> meta.locationsInShadows.left"
+      },
+      {
+        "line": 854,
+        "text": "let middle = swapLocation <$> meta.locationsInShadows.middle"
+      },
+      {
+        "line": 855,
+        "text": "let right = swapLocation <$> meta.locationsInShadows.right"
+      },
+      {
+        "line": 985,
+        "text": "RemoveLocation lid -> do"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenario/Scenarios/TheScarletKeys/WithoutATrace.hs",
+    "hits": [
+      {
+        "line": 286,
+        "text": "ScenarioSpecific \"swapLocations\" v -> do"
+      },
+      {
+        "line": 290,
+        "text": "swapLocation loc ="
+      },
+      {
+        "line": 295,
+        "text": "let left = swapLocation <$> meta.locationsInShadows.left"
+      },
+      {
+        "line": 296,
+        "text": "let middle = swapLocation <$> meta.locationsInShadows.middle"
+      },
+      {
+        "line": 297,
+        "text": "let right = swapLocation <$> meta.locationsInShadows.right"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenarios/EdgeOfTheEarth/FatalMirage/Helpers.hs",
+    "hits": [
+      {
+        "line": 111,
+        "text": "removeLocation loc"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenarios/TheCircleUndone/BeforeTheBlackThrone/Helpers.hs",
+    "hits": [
+      {
+        "line": 184,
+        "text": ", SetLocationLabel lid (cosmicLabel pos)"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenarios/TheDrownedCity/ObsidianCanyons/Helpers.hs",
+    "hits": [
+      {
+        "line": 170,
+        "text": "for_ toDeck removeLocation"
+      },
+      {
+        "line": 243,
+        "text": "for_ toDeck removeLocation"
+      },
+      {
+        "line": 398,
+        "text": "for_ leaving removeLocationWithoutVictory"
+      },
+      {
+        "line": 468,
+        "text": "usual leave-play path rather than through 'removeLocation'."
+      },
+      {
+        "line": 548,
+        "text": "removeLocation sky"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenarios/TheDrownedCity/TheDoomOfArkhamPartII/Helpers.hs",
+    "hits": [
+      {
+        "line": 170,
+        "text": "let lMatcher = CanHaveFloodLevelIncreased"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenarios/TheFeastOfHemlockVale/WrittenInRock/Helpers.hs",
+    "hits": [
+      {
+        "line": 38,
+        "text": "swapLocations :: ReverseQueue m => LocationId -> LocationId -> m ()"
+      },
+      {
+        "line": 39,
+        "text": "swapLocations lid1 lid2 = do"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenarios/TheInnsmouthConspiracy/ALightInTheFog/Helpers.hs",
+    "hits": [
+      {
+        "line": 27,
+        "text": "floodBottommost_ :: ReverseQueue m => Int -> m ()"
+      },
+      {
+        "line": 28,
+        "text": "floodBottommost_ = void . floodBottommost"
+      },
+      {
+        "line": 30,
+        "text": "floodBottommost :: ReverseQueue m => Int -> m Bool"
+      },
+      {
+        "line": 31,
+        "text": "floodBottommost n' = do"
+      },
+      {
+        "line": 32,
+        "text": "x <- selectCount CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 41,
+        "text": "ls <- select $ LocationInRow row <> CanHaveFloodLevelIncreased"
+      },
+      {
+        "line": 45,
+        "text": "chooseNM lead n $ targets ls increaseThisFloodLevel"
+      },
+      {
+        "line": 47,
+        "text": "for_ ls increaseThisFloodLevel"
+      }
+    ]
+  },
+  {
+    "path": "backend/arkham-api/library/Arkham/Scenarios/TheInnsmouthConspiracy/HorrorInHighGear/Helpers.hs",
+    "hits": [
+      {
+        "line": 20,
+        "text": "Message (PlacedLocationDirection, SetLayout, SetLocationLabel, SpendClues),"
+      },
+      {
+        "line": 64,
+        "text": "push $ SetLocationLabel location (prefix <> singleton c)"
+      },
+      {
+        "line": 88,
+        "text": "push $ SetLayout layout'"
+      },
+      {
+        "line": 125,
+        "text": "push . SetLayout =<< go mStopAt =<< getLayout"
+      },
+      {
+        "line": 140,
+        "text": "selectEach (mapOneOf (LocationWithLabel . Label) xs) removeLocation"
+      }
+    ]
+  }
+]

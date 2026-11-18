@@ -129,8 +129,9 @@ test('each mapped passage exists in English and Vietnamese', () => {
 test('all mapped illustrations have a WebP file', () => {
   const assets = new URL('../src/assets/circle-undone-story/', import.meta.url)
   const names = [...new Set(Object.values(circleUndoneStoryArtByPassage))].map(name => name + '.webp').sort()
-  assert.deepEqual(readdirSync(assets).sort(), names)
-  for (const name of names) {
+  const cardFaces = ["story-05085b.webp"]
+  assert.deepEqual(readdirSync(assets).sort(), [...names, ...cardFaces].sort())
+  for (const name of [...names, ...cardFaces]) {
     const bytes = readFileSync(new URL(name, assets))
     assert.equal(bytes.toString('ascii', 0, 4), 'RIFF', name)
     assert.equal(bytes.toString('ascii', 8, 12), 'WEBP', name)

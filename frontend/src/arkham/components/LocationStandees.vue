@@ -5,7 +5,7 @@ import { useGameChoices } from '@/arkham/composables/useGameChoices'
 import { choicesFor } from '@/arkham/locationChoices'
 import AbilityButton from '@/arkham/components/AbilityButton.vue'
 import GameIcon from '@/arkham/components/GameIcon.vue'
-import FigureVitalsHud, { type Meter } from '@/arkham/components/FigureVitalsHud.vue'
+import FigureVitalsHud, { type Meter, type Stock } from '@/arkham/components/FigureVitalsHud.vue'
 import { useI18n } from 'vue-i18n'
 import { assignIndex, isTriggerWindow } from '@/arkham/triggerWindow'
 import type { Game } from '@/arkham/types/Game'
@@ -23,6 +23,7 @@ import { useDbCardStore } from '@/stores/dbCards'
 import { investigatorMovementName } from '@/arkham/investigatorMovement'
 import { beginDrag, offsetOf } from '@/arkham/composables/useMapDrag'
 import { CARD_FLIGHT_ATTR, cardFlightStyle, useCardFlightState } from '@/arkham/cardFlight'
+import { useEnemyActivity } from '@/arkham/composables/useEnemyActivity'
 
 /* Everyone standing in a room of the cutaway house, investigators first, each with the numbers shown above
  * their head: health and sanity bars for investigators, health for enemies.
@@ -54,6 +55,8 @@ type Fig = {
   /* The whole card, for the card overlay on hover. */
   cardImage: string
   health: Meter | null; sanity: Meter | null
+  /* Investigators only: resources and clues, counted in the HUD with health and sanity. */
+  stock?: Stock
   /* Tokens other than damage / horror sitting on the figure (clues moved onto an enemy, doom, resources, ...), shown under its bar. */
   tokens?: FigToken[]
   storyAsset?: boolean
@@ -64,6 +67,13 @@ const ICONS: Record<string, FigToken['icon']> = { Clue: 'clue', Doom: 'doom', Re
 const figTokens = (tokens: Record<string, number | undefined>): FigToken[] => Object.entries(tokens)
   .filter(([type, amount]) => type !== TokenType.Damage && type !== TokenType.Horror && (amount ?? 0) > 0)
   .map(([type, amount]) => ({ type, amount: amount ?? 0, icon: ICONS[type] ?? null }))
+/* For the card preview on hover: the investigator's damage, horror, resources and clues as token pools. */
+const poolsOf = (f: Fig) => JSON.stringify([
+  { type: 'health', amount: f.health ? f.health.max - f.health.left : 0 },
+  { type: 'sanity', amount: f.sanity ? f.sanity.max - f.sanity.left : 0 },
+  { type: 'resource', amount: f.stock?.resources ?? 0 },
+  { type: 'clue', amount: f.stock?.clues ?? 0 },
+])
 const tokenLabel = (type: string) => type.replace(/^custom:/, '').replace(/([a-z])([A-Z])/g, '$1 $2')
 /* A room only has space for a few enemy figures; the rest are listed in a "+N" badge instead of vanishing. */
 const MAX_ENEMY_FIGURES = 4
@@ -89,6 +99,7 @@ const figures = computed<Fig[]>(() => {
       id, kind: 'investigator', tone: (i.class ?? 'Neutral').toLowerCase(), name: nameOf(i.cardCode), src, art: cardImage(art), you: id === mine, exhausted: false, note: null,
       moveName: investigatorMovementName(i, l.id), cardId: undefined, cardImage: cardImage(art),
       health: meter(i.health, i.tokens[TokenType.Damage] ?? 0), sanity: meter(i.sanity, i.tokens[TokenType.Horror] ?? 0),
+      stock: { resources: i.tokens[TokenType.Resource] ?? 0, clues: i.tokens[TokenType.Clue] ?? 0 },
     }]
   })
   const monsters = (props.storyAssetsOnly ? [] : props.enemiesAt(l).slice(0, MAX_ENEMY_FIGURES)).flatMap((id): Fig[] => {
@@ -137,6 +148,15 @@ const figures = computed<Fig[]>(() => {
 /* Enemies past the figure limit: named in the badge's tooltip, each clickable from its menu. */
 const extraEnemies = computed(() => props.storyAssetsOnly ? [] : props.enemiesAt(props.location).slice(MAX_ENEMY_FIGURES)
   .flatMap((id) => props.game.enemies[id] ? [{ id, name: nameOf(props.game.enemies[id].cardCode) }] : []))
+/* Whose turn it is: the active investigator's figure pulses in their class colour. An enemy that just
+ * moved pulses orange, one attacking (or that just attacked) pulses red, so the eye follows the action. */
+const enemyActivity = useEnemyActivity()
+const isTurn = (f: Fig) => f.kind === 'investigator' && props.game.phase === 'InvestigationPhase' && props.game.activeInvestigatorId === f.id
+const enemyActing = (f: Fig): 'attack' | 'move' | null => {
+  if (f.kind !== 'enemy') return null
+  if (props.game.enemyAttackTargets.some((a) => a.enemy === f.id)) return 'attack'
+  return enemyActivity.value[f.id] ?? null
+}
 // A figure can be dragged to a spot the player finds easier to follow; it still belongs to this location.
 const figKey = (id: string) => `${props.game.id}:${props.location.id}:${id}`
 const figShift = (id: string) => { const [x, y] = offsetOf(figKey(id)); return x || y ? `${x}px ${y}px` : undefined }
@@ -186,9 +206,9 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
 
 <template>
   <span v-if="figures.length || extraEnemies.length" class="standees" :class="{ 'story-assets-only': storyAssetsOnly }">
-    <span v-for="f in figures" :key="f.id" class="fig" :class="[f.kind, f.tone, { you: f.you, exhausted: f.exhausted, actionable: actionable(f.id) || assignable(f), assign: assignable(f), trigger: triggerWindow && actionable(f.id), open: openMenu === f.id }]"
+    <span v-for="f in figures" :key="f.id" class="fig" :class="[f.kind, f.tone, { you: f.you, exhausted: f.exhausted, actionable: actionable(f.id) || assignable(f), assign: assignable(f), trigger: triggerWindow && actionable(f.id), open: openMenu === f.id, turn: isTurn(f), 'acting-move': enemyActing(f) === 'move', 'acting-attack': enemyActing(f) === 'attack' }]"
       :style="{ viewTransitionName: f.moveName, translate: figShift(f.id) }" @pointerdown="startFigDrag(f.id, $event)" :data-investigator-mini="f.kind === 'investigator' ? f.id : undefined" :data-fx-target="`${f.kind}-${f.id}`"
-      :data-image="openMenu === f.id ? undefined : f.cardImage" @click.stop="clickFig(f)">
+      :data-image="openMenu === f.id ? undefined : f.cardImage" :data-pools="f.stock ? poolsOf(f) : undefined" @click.stop="clickFig(f)">
       <span v-if="assignable(f)" class="assign-bar" data-no-card-overlay @click.stop @pointerdown.stop>
         <button v-if="assignFor(f).damage !== -1" type="button" class="assign-btn damage" :title="t('locationMap.assignDamage')" :aria-label="t('locationMap.assignDamage')" @click="pick(assignFor(f).damage)"><GameIcon type="health" /><b>+1</b></button>
         <button v-if="assignFor(f).horror !== -1" type="button" class="assign-btn horror" :title="t('locationMap.assignHorror')" :aria-label="t('locationMap.assignHorror')" @click="pick(assignFor(f).horror)"><GameIcon type="sanity" /><b>+1</b></button>
@@ -197,13 +217,14 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
         <b class="fig-menu__name">{{ f.name }}</b>
         <AbilityButton v-for="c in optionsFor(f.id)" :key="c.index" :game="game" :ability="c.contents" @choose="pick(c.index)" />
       </span>
-      <FigureVitalsHud v-if="f.health || f.sanity" :health="f.health" :sanity="f.sanity" />
+      <FigureVitalsHud v-if="f.health || f.sanity" :health="f.health" :sanity="f.sanity" :stock="f.stock" />
       <span v-else-if="f.note" class="hud"><span class="meter hp"><GameIcon type="damage" /> {{ f.note }}</span></span>
       <span v-if="f.tokens?.length" class="fig-tokens">
         <span v-for="tk in f.tokens" :key="tk.type" class="fig-token" :title="`${tokenLabel(tk.type)}: ${tk.amount}`">
           <GameIcon v-if="tk.icon" :type="tk.icon" /><template v-else>{{ tokenLabel(tk.type) }}</template> <b>{{ tk.amount }}</b>
         </span>
       </span>
+      <span v-if="f.exhausted" class="exhausted-badge" :title="t('locationMap.exhaustedBadge')" aria-hidden="true">💤 {{ t('locationMap.exhaustedBadge') }}</span>
       <img v-if="f.src" class="figure portrait" :src="f.src" :alt="f.name" draggable="false"
         @error="f.storyAsset && fallbackFromSprite(f.src)"
         :[CARD_FLIGHT_ATTR]="f.cardId" :style="cardFlightStyle(flightState, f.cardId)" />
@@ -247,7 +268,11 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
 }
 .fig.you .figure { filter: drop-shadow(2px 0 0 var(--outline)) drop-shadow(-2px 0 0 var(--outline)) drop-shadow(0 2px 0 var(--outline)) drop-shadow(0 -2px 0 var(--outline)) drop-shadow(0 0 5px #fff8); }
 .fig .crop { border-color: var(--outline); border-width: 3px; }
-.fig.exhausted .figure { opacity: 0.65; rotate: 7deg; }
+/* Exhausted figures read at a glance: drained of colour, tipped over, and tagged with a sleep badge. */
+.fig.exhausted .figure { opacity: 0.8; rotate: 12deg; filter: grayscale(0.9) brightness(0.7) drop-shadow(2px 0 0 #8a8f96) drop-shadow(-2px 0 0 #8a8f96) drop-shadow(0 2px 0 #8a8f96) drop-shadow(0 -2px 0 #8a8f96); }
+.fig.exhausted .crop { filter: grayscale(0.9) brightness(0.7); border-color: #8a8f96; }
+.fig.exhausted.actionable .figure { filter: grayscale(0.9) brightness(0.75) drop-shadow(2px 0 0 #8a8f96) drop-shadow(-2px 0 0 #8a8f96) drop-shadow(0 2px 0 #8a8f96) drop-shadow(0 -2px 0 #8a8f96) drop-shadow(0 0 6px #ffd76a); }
+.exhausted-badge { position: absolute; bottom: 6%; left: 50%; translate: -50% 0; z-index: 2; padding: 1px 6px; background: #1d2330f2; border: 1px solid #9fb4d8; border-radius: 999px; font: 700 10px/1.3 system-ui, sans-serif; color: #dbe6ff; white-space: nowrap; pointer-events: none; text-shadow: none; box-shadow: 0 1px 4px #000a; }
 /* A figure the player can act on gets a pointer and a soft gold halo under its outline. */
 .fig.actionable { cursor: pointer; }
 .fig.actionable .figure { filter: drop-shadow(2px 0 0 var(--outline)) drop-shadow(-2px 0 0 var(--outline)) drop-shadow(0 2px 0 var(--outline)) drop-shadow(0 -2px 0 var(--outline)) drop-shadow(0 0 6px #ffd76a); }
@@ -276,8 +301,27 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
   from { filter: drop-shadow(2px 0 0 #ff7a1a) drop-shadow(-2px 0 0 #ff7a1a) drop-shadow(0 2px 0 #ff7a1a) drop-shadow(0 -2px 0 #ff7a1a) drop-shadow(0 0 6px #ff7a1a); }
   to { filter: drop-shadow(3px 0 0 #fff3c4) drop-shadow(-3px 0 0 #fff3c4) drop-shadow(0 3px 0 #fff3c4) drop-shadow(0 -3px 0 #fff3c4) drop-shadow(0 0 18px #ff7a1a) brightness(1.15); }
 }
+/* The investigator whose turn it is: a slow breathing glow in their class colour. */
+.fig.turn:not(.assign):not(.trigger) .figure, .fig.turn:not(.assign):not(.trigger) .crop { animation: fig-turn-pulse 1.1s ease-in-out infinite alternate; }
+@keyframes fig-turn-pulse {
+  from { filter: drop-shadow(2px 0 0 var(--outline)) drop-shadow(-2px 0 0 var(--outline)) drop-shadow(0 2px 0 var(--outline)) drop-shadow(0 -2px 0 var(--outline)) drop-shadow(0 0 4px var(--outline)); }
+  to { filter: drop-shadow(3px 0 0 #fff8dc) drop-shadow(-3px 0 0 #fff8dc) drop-shadow(0 3px 0 #fff8dc) drop-shadow(0 -3px 0 #fff8dc) drop-shadow(0 0 16px var(--outline)) brightness(1.18); }
+}
+/* An enemy that just moved (orange) or is attacking (red): a quick flash so the eye finds who acted. */
+.fig.acting-move:not(.assign):not(.trigger) .figure, .fig.acting-move:not(.assign):not(.trigger) .crop { animation: fig-move-pulse 0.45s ease-in-out infinite alternate; }
+.fig.acting-attack:not(.assign):not(.trigger) .figure, .fig.acting-attack:not(.assign):not(.trigger) .crop { animation: fig-attack-pulse 0.35s ease-in-out infinite alternate; }
+.fig.acting-attack { z-index: 15; }
+@keyframes fig-move-pulse {
+  from { filter: drop-shadow(2px 0 0 #ff9a3d) drop-shadow(-2px 0 0 #ff9a3d) drop-shadow(0 2px 0 #ff9a3d) drop-shadow(0 -2px 0 #ff9a3d) drop-shadow(0 0 6px #ff9a3d); }
+  to { filter: drop-shadow(3px 0 0 #ffe2b8) drop-shadow(-3px 0 0 #ffe2b8) drop-shadow(0 3px 0 #ffe2b8) drop-shadow(0 -3px 0 #ffe2b8) drop-shadow(0 0 18px #ff9a3d) brightness(1.2); }
+}
+@keyframes fig-attack-pulse {
+  from { filter: drop-shadow(2px 0 0 #ff2a2a) drop-shadow(-2px 0 0 #ff2a2a) drop-shadow(0 2px 0 #ff2a2a) drop-shadow(0 -2px 0 #ff2a2a) drop-shadow(0 0 8px #ff2a2a); }
+  to { filter: drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 0 22px #ff2a2a) brightness(1.3); }
+}
 @media (prefers-reduced-motion: reduce) {
   .fig.assign .figure, .fig.assign .crop, .fig.trigger .figure, .fig.trigger .crop, .assign-btn { animation: none; }
+  .fig.turn .figure, .fig.turn .crop, .fig.acting-move .figure, .fig.acting-move .crop, .fig.acting-attack .figure, .fig.acting-attack .crop { animation: none; }
 }
 .fig-menu {
   position: absolute; bottom: calc(100% + 6px); left: 50%; translate: -50% 0; z-index: 30;
@@ -309,7 +353,7 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
 .fig-token { display: inline-flex; align-items: center; gap: 2px; padding: 1px 5px; background: #111815ef; border: 1px solid #9f8d605c; border-radius: 999px; font: 600 10px/1.2 system-ui, sans-serif; color: #f0d9a8; white-space: nowrap; text-shadow: none; }
 .fig-token b { color: #fff4df; }
 .compact .fig-tokens { display: none; }
-.hud { display: grid; gap: 2px; min-width: 56px; padding: 3px 5px; background: #111815ef; border: 1px solid #9f8d605c; border-radius: 4px; font: 600 10px/1.15 system-ui, sans-serif; white-space: nowrap; text-shadow: none; }
+.hud { display: grid; gap: 2px; min-width: 56px; padding: 3px 5px; background: #111815ef; border: 1px solid #9f8d605c; border-radius: 4px; font: 600 11px/1.15 system-ui, sans-serif; white-space: nowrap; text-shadow: none; }
 .hud .meter { display: flex; align-items: center; gap: 3px; font-variant-numeric: tabular-nums; }
 .hud .meter.hp { color: #ff9b87; }
 .hud .meter.sanity { color: #9fceee; }

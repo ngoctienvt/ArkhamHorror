@@ -1,8 +1,14 @@
 <script lang="ts" setup>
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { splitKeywords, strikeLostKeywords } from '@/arkham/cardKeywordChanges'
+import { useSettings } from '@/stores/settings'
+import { cardNarrationTrack, type NarrationManifest, type NarrationTrack } from '@/arkham/narration'
+import { loadManifest, NARRATION_ROOT } from '@/arkham/composables/useNarration'
+import NarrationSpeakerIcon from '@/arkham/components/NarrationSpeakerIcon.vue'
 
 export interface Props {
+  code?: string | null
+  side?: 'a' | 'b' | null
   name?: string | null
   typeName?: string | null
   factionName?: string | null
@@ -21,6 +27,50 @@ export interface Props {
 }
 
 const props = defineProps<Props>()
+
+const settings = useSettings()
+const manifest = ref<NarrationManifest | null>(null)
+void loadManifest().then((m) => (manifest.value = m))
+
+const speaking = ref(false)
+let audio: HTMLAudioElement | null = null
+
+const track = computed<NarrationTrack | null>(() => {
+  if (!manifest.value || !props.code) return null
+  return cardNarrationTrack(props.code, props.side ?? null, manifest.value, settings.narrationLanguage, NARRATION_ROOT)
+})
+
+function stopSpeech() {
+  if (audio) {
+    audio.onended = null
+    audio.pause()
+  }
+  audio = null
+  speaking.value = false
+}
+
+function playSpeech() {
+  stopSpeech()
+  if (!track.value?.url) return
+  audio = new Audio(track.value.url)
+  audio.volume = settings.narrationVolume
+  audio.onended = () => { speaking.value = false }
+  speaking.value = true
+  audio.play().catch(() => { speaking.value = false })
+}
+
+function toggleSpeech() {
+  if (speaking.value) stopSpeech()
+  else playSpeech()
+}
+
+watch(() => props.code, () => {
+  stopSpeech()
+})
+
+onBeforeUnmount(() => {
+  stopSpeech()
+})
 
 /* Gained keywords join the text in red; lost ones are struck through in red where the text prints
  * them, or listed struck through with the gained ones when it does not. */
@@ -52,6 +102,15 @@ onBeforeUnmount(() => observer?.disconnect())
   >
     <div class="card-data-header">
       <p v-if="name"><b>{{ name }}</b></p>
+      <button
+        v-if="track"
+        type="button"
+        class="card-data-speech-toggle"
+        :class="{ speaking }"
+        :title="speaking ? 'Dừng đọc' : 'Nghe đọc thẻ bài'"
+        :aria-label="speaking ? 'Dừng đọc' : 'Nghe đọc thẻ bài'"
+        @click.stop="toggleSpeech"
+      ><NarrationSpeakerIcon :playing="speaking" /></button>
     </div>
     <div class="card-data-body">
       <div class="card-info" v-if="typeName || traits || factionName">
@@ -135,6 +194,10 @@ onBeforeUnmount(() => observer?.disconnect())
 .card-data.faction-mythos { --panel-color: #6b5233; }
 
 .card-data-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   padding: 8px 12px 6px;
   font: 600 1.18em/1.25 var(--ui-serif, serif);
   color: #1f1810;
@@ -142,6 +205,35 @@ onBeforeUnmount(() => observer?.disconnect())
   background: #dccaa0;
   border-bottom: 1px solid #7a5f3a66;
   border-radius: 7px 7px 0 0;
+}
+
+/* Dark ink disc with a light icon so it stands out on the parchment header. */
+.card-data-speech-toggle {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid #7a5f3a;
+  background: #2b2014;
+  color: #f6eedb;
+  box-shadow: 0 1px 3px #0006;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.card-data-speech-toggle:hover {
+  background: #4a3820;
+  transform: scale(1.08);
+}
+
+.card-data-speech-toggle.speaking {
+  background: var(--select, #e8a838);
+  color: #1f1810;
+  border-color: #1f1810;
 }
 
 .card-data-header p {

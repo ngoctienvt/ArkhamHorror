@@ -17,6 +17,7 @@ import * as Arkham from '@/arkham/types/Investigator'
 import type { AbilityLabel, AbilityMessage, Message } from '@/arkham/types/Message'
 import { MessageType } from '@/arkham/types/Message'
 import { shouldPulseEndTurn } from '@/arkham/endTurnAttention'
+import { sceneActionPanelVisible } from '@/arkham/composables/useScenePanelState'
 import { cardId, toCardContents } from '@/arkham/types/Card'
 import SealedChaosTokens from '@/arkham/components/SealedChaosTokens.vue';
 import CardDebugWindow from '@/arkham/components/debug/CardDebugWindow.vue';
@@ -32,7 +33,7 @@ import PoolItem from '@/arkham/components/PoolItem.vue';
 import { TokenType } from '@/arkham/types/Token';
 import Draw from '@/arkham/components/Draw.vue';
 import { IsMobile } from '@/arkham/isMobile';
-import { formatStat } from '@/arkham/statModel';
+import { computeStat, formatStat } from '@/arkham/statModel';
 import { keywordChanges, joinKeywords } from '@/arkham/cardKeywordChanges';
 const { t } = useI18n();
 
@@ -402,64 +403,13 @@ function isActiveEffectAction(action: { tag?: "EffectAction"; contents: any }) {
   return choice !== -1
 }
 
-const skills = computed(() => {
-  const st = props.game.skillTest
-  const activeSkills = st ? new Set(st.skills) : null
-  const action = st?.action
+const lastingSkillValue = (key: 'willpower' | 'intellect' | 'combat' | 'agility') =>
+  computed(() => computeStat(key, props.investigator[key], props.investigator.modifiers).current)
 
-  const base = {
-    SkillWillpower: props.investigator.willpower,
-    SkillIntellect: props.investigator.intellect,
-    SkillCombat: props.investigator.combat,
-    SkillAgility: props.investigator.agility,
-  }
-
-  const baseOverride: Record<string, number|undefined> = {}
-  const plus: Record<string, number> = {
-    SkillWillpower: 0, SkillIntellect: 0, SkillCombat: 0, SkillAgility: 0
-  }
-  const finalSet: Record<string, number|undefined> = {}
-
-  for (const m of (props.investigator.modifiers ?? [])) {
-    const t = m.type
-    switch (t.tag) {
-      case 'BaseSkillOf':
-        baseOverride[t.skillType] = t.value
-        break
-      case 'BaseSkill':
-        if (activeSkills)
-          for (const k of activeSkills) baseOverride[k] = t.contents
-        break
-      case 'SkillModifier':
-        plus[t.skillType] += t.value
-        break
-      case 'AnySkillValue':
-        if (activeSkills) for (const k of activeSkills) plus[k] += t.contents
-        break
-      case 'ActionSkillModifier':
-        if (t.action === action) plus[t.skillType] += t.value
-        break
-      case 'SetSkillValue':
-        finalSet[t.skillType] = t.value
-        break
-    }
-  }
-
-  const calc = (k:'SkillWillpower'|'SkillIntellect'|'SkillCombat'|'SkillAgility') =>
-    Math.max(0, finalSet[k] ?? ((baseOverride[k] ?? base[k]) + plus[k]))
-
-  return {
-    willpower: calc('SkillWillpower'),
-    intellect: calc('SkillIntellect'),
-    combat: calc('SkillCombat'),
-    agility: calc('SkillAgility'),
-  }
-})
-
-const willpower = computed(() => skills.value.willpower)
-const intellect = computed(() => skills.value.intellect)
-const combat = computed(() => skills.value.combat)
-const agility = computed(() => skills.value.agility)
+const willpower = lastingSkillValue('willpower')
+const intellect = lastingSkillValue('intellect')
+const combat = lastingSkillValue('combat')
+const agility = lastingSkillValue('agility')
 
 const dragging = ref(false)
 const showModifiers = ref(false)
@@ -590,7 +540,10 @@ const spadeInjury = computed(() => {
           <div class="combat"><img class="stat-art" :src="imgsrc('icons/skills/combat.png')" alt="" :title="'combat'" />{{ formatStat(combat, investigator.combat) }}</div>
           <div class="agility"><img class="stat-art" :src="imgsrc('icons/skills/agility.png')" alt="" :title="'agility'" />{{ formatStat(agility, investigator.agility) }}</div>
         </div>
+        <!-- On the scene map the card is not shown: hovering the investigator's figure shows it, and the
+             figure carries damage, horror, resources and clues, its abilities and damage assignment. -->
         <div
+          v-if="!sceneMode"
           class="investigator-image"
           :class="{ 'investigator-image--scene': sceneMode }"
           :data-id="investigator.id"
@@ -638,6 +591,10 @@ const spadeInjury = computed(() => {
               @choose="choose"
             />
           </div>
+        </div>
+        <!-- Chaos tokens sealed on the investigator stay reachable while the card itself is hidden. -->
+        <div v-if="sceneMode && investigator.sealedChaosTokens.length > 0" class="sealed sealed--scene">
+          <SealedChaosTokens :tokens="investigator.sealedChaosTokens" :game="game" :playerId="playerId" @choose="choose" />
         </div>
       </div>
       <div>
@@ -695,8 +652,9 @@ const spadeInjury = computed(() => {
               :game="game"
               @click="$emit('choose', ability.index)"
               />
-            <!-- Kept in both views: on the map view the action panel also lists End Turn, but that panel can be closed or hidden, and the turn must stay endable. -->
+            <!-- On the map view the action panel carries End Turn, so this one is left out while that panel shows; with the panel closed it is back, so the turn stays endable. -->
             <button
+            v-if="!(sceneMode && sceneActionPanelVisible)"
             :class="{ active: pulseEndTurn, 'end-turn-pulse': pulseEndTurn }"
             :disabled="endTurnAction == -1"
             :data-game-actionable="endTurnAction !== -1 || undefined"

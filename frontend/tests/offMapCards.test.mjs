@@ -64,6 +64,19 @@ test('a location on no grid cell and with no connection goes to the reference bo
   assert.deepEqual(groups.find((g) => g.kind === 'reference').locations, ['cells'])
 })
 
+test('Jekyll arrangement stays in the reference group while matching real locations stay on the scene', () => {
+  const code = ':the-strange-case-of-dr-jekyll-and-mr-hyde:008'
+  const locations = {
+    pharmacy: { cardCode: code, label: 'drugstore', placement: null, connectedLocations: [] },
+    formula: { cardCode: code, label: 'arrangement1', placement: null, connectedLocations: [] },
+    unrelated: { cardCode: '01111', label: 'arrangement2', placement: null, connectedLocations: [] },
+  }
+  const layout = ['drugstore .', 'arrangement1 arrangement2']
+  assert.deepEqual(isolatedLocationIds(locations, layout), ['formula'])
+  const groups = offMapGroups({ enemies: {}, investigators: {}, stories: {}, assets: {}, treacheries: {}, locations }, { locationLayout: layout, meta: {} })
+  assert.deepEqual(groups.find((group) => group.kind === 'reference').locations, ['formula'])
+})
+
 test('isolation needs a grid layout and a label: a lone Study or an unlabelled card is not isolated', () => {
   const lone = { study: { label: 'study', placement: null, connectedLocations: [] } }
   assert.deepEqual(isolatedLocationIds(lone, null), [])

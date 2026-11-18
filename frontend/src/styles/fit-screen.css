@@ -39,6 +39,11 @@ html.fit-screen .scenario-body--map > .scenario-cards {
   flex: none;
 }
 
+/* The player area sits between the map and the hand here, so the hand cards never reach up over the map. */
+html.fit-screen .scenario-body--map > .location-map {
+  --hand-overlap: 0px;
+}
+
 html.fit-screen .scenario-body--map .location-map .map-layout {
   flex: 1 1 0;
   min-height: 0;
@@ -70,6 +75,10 @@ html.fit-screen .location-map .mission-strip .mission__body p {
    of the floating exit button below. */
 html.fit-screen .location-map .map-bar {
   padding-right: 44px;
+}
+
+html.fit-screen #game:has(> .fit-screen-sidebar) .location-map .map-bar {
+  padding-right: 80px;
 }
 
 /* The way back: the bar that holds the toggle is hidden, so a small floating control stays. */

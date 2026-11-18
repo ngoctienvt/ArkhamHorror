@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { computed, onBeforeUnmount, ref } from 'vue'
 import { useDebug } from '@/arkham/debug'
 import CardDebugWindow from '@/arkham/components/debug/CardDebugWindow.vue'
 import { Game } from '@/arkham/types/Game'
@@ -13,6 +13,9 @@ import { readTokenBag } from '@/arkham/types/TokenBag'
 import * as Arkham from '@/arkham/types/Story'
 import TokenPool from '@/arkham/components/TokenPool.vue';
 import { TokenType } from '@/arkham/types/Token';
+import { useSettings } from '@/stores/settings'
+import { cardNarrationTrack, type NarrationManifest, type NarrationTrack } from '@/arkham/narration'
+import { loadManifest, NARRATION_ROOT } from '@/arkham/composables/useNarration'
 
 export interface Props {
   game: Game
@@ -114,6 +117,47 @@ const storyTokens = computed(() => {
 
 const hasPool = computed(() => Object.values(storyTokens.value).some((amount) => (amount ?? 0) > 0))
 const sealedChaosTokens = computed(() => props.story.sealedChaosTokens ?? [])
+
+const settings = useSettings()
+const manifest = ref<NarrationManifest | null>(null)
+void loadManifest().then((m) => (manifest.value = m))
+
+const speaking = ref(false)
+let audio: HTMLAudioElement | null = null
+
+const activeArt = computed(() => (props.story.flipped ? props.story.flippedArt : props.story.art))
+const track = computed<NarrationTrack | null>(() => {
+  if (!manifest.value || !activeArt.value) return null
+  return cardNarrationTrack(activeArt.value, null, manifest.value, settings.narrationLanguage, NARRATION_ROOT)
+})
+
+function stopSpeech() {
+  if (audio) {
+    audio.onended = null
+    audio.pause()
+  }
+  audio = null
+  speaking.value = false
+}
+
+function playSpeech() {
+  stopSpeech()
+  if (!track.value?.url) return
+  audio = new Audio(track.value.url)
+  audio.volume = settings.narrationVolume
+  audio.onended = () => { speaking.value = false }
+  speaking.value = true
+  audio.play().catch(() => { speaking.value = false })
+}
+
+function toggleSpeech() {
+  if (speaking.value) stopSpeech()
+  else playSpeech()
+}
+
+onBeforeUnmount(() => {
+  stopSpeech()
+})
 </script>
 
 <template>
@@ -127,6 +171,14 @@ const sealedChaosTokens = computed(() => props.story.sealedChaosTokens ?? [])
           class="card story"
           @click="directAction !== -1 && $emit('choose', directAction)"
         />
+        <button
+          v-if="track"
+          type="button"
+          class="story-speech-toggle"
+          :class="{ speaking }"
+          :title="speaking ? 'Dừng đọc' : 'Nghe đọc cốt truyện'"
+          @click.stop="toggleSpeech"
+        >{{ speaking ? '■' : '🔊' }}</button>
         <div class="pool" v-if="hasPool">
           <TokenPool :tokens="storyTokens" :target="{ tag: 'StoryTarget', contents: story.id }" />
         </div>
@@ -249,5 +301,39 @@ const sealedChaosTokens = computed(() => props.story.sealedChaosTokens ?? [])
   right: 0;
   pointer-events: none;
   z-index: var(--z-index-10);
+}
+
+.story-speech-toggle {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 10;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(241, 201, 123, 0.5);
+  background: rgba(0, 0, 0, 0.7);
+  color: #f1c97b;
+  font-size: 13px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.story-speech-toggle:hover {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: #f1c97b;
+  transform: scale(1.1);
+}
+
+.story-speech-toggle.speaking {
+  background: #f1c97b;
+  color: #1a1612;
+  border-color: #fff;
+  box-shadow: 0 0 8px rgba(241, 201, 123, 0.8);
 }
 </style>

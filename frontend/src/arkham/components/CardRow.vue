@@ -52,6 +52,14 @@ function isCardInChoices(card: ArkhamCard | CardContents): boolean {
   })
 }
 
+// While a choice targets cards in a discard pile, show only the pickable ones;
+// otherwise (plain browsing) show the whole pile.
+const visibleCards = computed(() => {
+  if (!props.isDiscards) return props.cards
+  const pickable = props.cards.filter(isCardInChoices)
+  return pickable.length > 0 ? pickable : props.cards
+})
+
 const emit = defineEmits<{
   choose: [value: number]
   close: []
@@ -78,7 +86,7 @@ function startDrag(event: DragEvent, card: (CardContents | CardT.Card)) {
     </template>
     <div class="card-row-container">
       <div class="card-row-cards">
-        <div v-for="card in cards" :key="CardT.toCardContents(card).id" class="card-row-card" :class="{ discard: isDiscards && !isCardInChoices(card)}">
+        <div v-for="card in visibleCards" :key="CardT.toCardContents(card).id" class="card-row-card" :class="{ discard: isDiscards && !isCardInChoices(card)}">
           <Card 
             :draggable="debug.active"
             @dragstart="startDrag($event, card)"

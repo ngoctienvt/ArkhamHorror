@@ -9,7 +9,7 @@ import { proxyOriginId, sourceKey, type Source } from '@/arkham/types/Source';
 import type { Action } from '@/arkham/types/Action';
 import { actionsToList } from '@/arkham/types/Action';
 import { MessageType } from '@/arkham/types/Message';
-import { replaceIcons, formatContent } from '@/arkham/helpers';
+import { replaceIcons, formatContent, imgsrc } from '@/arkham/helpers';
 import { homebrewActionScope } from '@/arkham/homebrewData';
 import { handleI18n } from '@/arkham/i18n';
 import { useI18n } from 'vue-i18n';
@@ -26,7 +26,10 @@ const props = withDefaults(defineProps<{
  // Boon buttons anchored to a narrow spot (the discard column) drop the boon's
  // name for the boon star; the name still reads from the tooltip.
  iconOnly?: boolean
-}>(), { tooltipIsButtonText: false, showMove: true, hostHasSwarm: false, iconOnly: false })
+ // The acting investigator's current skill values: each tested skill then reads "(4 [icon])" so the
+ // player sees what they will test with before choosing.
+ skillValues?: Partial<Record<SkillType, number>> | null
+}>(), { tooltipIsButtonText: false, showMove: true, hostHasSwarm: false, iconOnly: false, skillValues: null })
 
 const ability = computed<Ability | null>(() => "ability" in props.ability ? props.ability.ability : null)
 
@@ -415,6 +418,15 @@ const abilityString = computed(() => {
   }
 
   const toSkill = (skillType: SkillType) => {
+    const icon = skillIcon(skillType)
+    const value = props.skillValues?.[skillType]
+    if (value === undefined || !icon) return icon
+    // With a value it matches the investigator tab: the coloured skill art, number first.
+    const key = skillType.replace('Skill', '').toLowerCase()
+    return `<span class='skill-value'>(${value}<img class='skill-icon-img skill-${key}' src='${imgsrc(`icons/skills/${key}.png`)}' alt=''>)</span>`
+  }
+
+  const skillIcon = (skillType: SkillType) => {
     switch (skillType) {
       case "SkillAgility":
         return "<i class='skill-icon skill-agility'></i>"
@@ -708,6 +720,21 @@ const classObject = computed(() => {
 
 :deep(.skill-willpower) {
   --skill-icon: "\0041";
+}
+
+:deep(.skill-value) {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+:deep(.skill-icon-img) {
+  width: 1.15em;
+  height: 1.15em;
+  display: block;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.6));
 }
 
 :deep(.skill-icon:before) {

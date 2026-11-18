@@ -19,6 +19,7 @@ export type AutoAnswerReason =
   | 'singleChoice'
   | 'closeWindow'
   | 'assignDamage'
+  | 'rulesDecided'
 
 // The only thing left in a player window that does nothing but close it.
 // "End turn" is deliberately absent: ending a turn is always the player's call,
@@ -29,6 +30,7 @@ export type AutoAnswer = { index: number; reason: AutoAnswerReason }
 
 type ChoiceLike = {
   tag: string
+  label?: string
   target?: { tag: string }
   component?: { tag: string; investigatorId?: string; tokenType?: string }
 }
@@ -69,6 +71,25 @@ const SINGLE_CHOICE_TAGS = new Set([
   'Done',
   'SkipTriggersButton',
 ])
+
+/* Options the rules already pick for the player. The backend offers them as a
+ * choice, but the card text leaves nothing to decide, so they are taken even
+ * with the autopilot switched off.
+ *
+ * Searching for Dr. Armitage (Spreading Flames act 3): copies of Fire! come
+ * out of the face-up encounter discard first; the encounter deck is only
+ * searched (and shuffled) when the discard is short. The backend only offers
+ * "discard only" when the discard holds enough copies, so it is always the
+ * right answer when present. */
+const RULES_DECIDED_LABELS = ['searchingForDrArmitage.drawFromDiscard']
+
+function decideRulesDecided(valid: { choice: ChoiceLike; index: number }[]): AutoAnswer | null {
+  const pick = valid.find(
+    ({ choice }) =>
+      typeof choice.label === 'string' && RULES_DECIDED_LABELS.some((key) => choice.label!.endsWith(key)),
+  )
+  return pick ? { index: pick.index, reason: 'rulesDecided' } : null
+}
 
 // Question shapes that are a plain "pick one of these". Everything else
 // (amounts, decks, story passages, campaign pickers, multi-select) is left alone.
@@ -124,6 +145,8 @@ export function decideAutoAnswer(
   const valid = choices
     .map((choice, index) => ({ choice, index }))
     .filter(({ choice }) => choice.tag !== 'InvalidLabel')
+  const decided = decideRulesDecided(valid)
+  if (decided) return decided
   const assign = decideAssignDamage(label, valid)
   if (assign) return assign
   if (valid.length !== 1) return null
@@ -145,13 +168,18 @@ export function decideAutoAnswer(
 }
 
 /* How long the board holds still before an automatic answer, so the player can
- * see what is about to happen. Test results get the longest beat: the revealed
- * token and the pass/fail are the thing worth reading. */
+ * see what is about to happen. Every automatic answer stays on screen for at
+ * least a second (the picked option is animated meanwhile, see
+ * QuestionChoices); test results get the longest beat: the revealed token and
+ * the pass/fail are the thing worth reading. */
+export const MIN_AUTO_ANSWER_DELAY_MS = 1000
+
 export const AUTO_ANSWER_DELAY_MS: Record<AutoAnswerReason, number> = {
-  encounterDraw: 450,
+  encounterDraw: MIN_AUTO_ANSWER_DELAY_MS,
   applyResults: 1300,
-  startSkillTest: 450,
-  singleChoice: 450,
-  closeWindow: 600,
-  assignDamage: 300,
+  startSkillTest: MIN_AUTO_ANSWER_DELAY_MS,
+  singleChoice: MIN_AUTO_ANSWER_DELAY_MS,
+  closeWindow: MIN_AUTO_ANSWER_DELAY_MS,
+  assignDamage: MIN_AUTO_ANSWER_DELAY_MS,
+  rulesDecided: MIN_AUTO_ANSWER_DELAY_MS,
 }

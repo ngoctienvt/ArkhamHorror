@@ -12,7 +12,7 @@
     },
     {
       "title": "Sự nghi ngờ và Sự tin chắc",
-      "body": "<p class='basic'>Một số giải pháp của câu chuyện và phần chuyển tiếp trong The Path to Carcosa campaign hướng dẫn người chơi \"đánh dấu một <b>Doubt</b>\" hoặc \"đánh dấu một <b>Conviction</b>\" trong Campaign Log. Điều này được thực hiện bằng cách đánh dấu vào một trong các ô kế bên “<b>Doubt</b>” hay “<b>Conviction</b>” trong Campaign Log.</p><p class='basic'>Trong các màn sau của chiến dịch, một số màn chơi có thể bị thay đổi phụ thuộc vào việc liệu các điều tra viên \"có nhiều <b>Doubt</b> hơn <b>Conviction</b>\" hay \"có nhiều <b>Conviction</b> hơn <b>Doubt</b>.\" Các điều tra viên có nhiều <b>Doubt</b> hơn <b>Conviction</b> nếu số ô được đánh dấu bên cạnh <b>Doubt</b> lớn hơn số ô được đánh dấu bên cạnh <b>Conviction</b> (và ngược lại). <b>Doubt</b> và <b>Conviction</b> chia sẻ cho tất cả các điều tra viên, và không phụ thuộc vào một điều tra viên cụ thể nào. <b>Doubt</b> và <b>Conviction</b> không có hiệu ứng trong trò chơi ngoại trừ khi được đề cập cụ thể bởi cuốn Hướng dẫn Chiến dịch hoặc bởi hiệu ứng của một lá bài.</p>"
+      "body": "<p class='basic'>Một số kết thúc của câu chuyện và phần chuyển tiếp trong The Path to Carcosa campaign hướng dẫn người chơi \"đánh dấu một <b>Doubt</b>\" hoặc \"đánh dấu một <b>Conviction</b>\" trong Campaign Log. Điều này được thực hiện bằng cách đánh dấu vào một trong các ô kế bên “<b>Doubt</b>” hay “<b>Conviction</b>” trong Campaign Log.</p><p class='basic'>Trong các màn sau của chiến dịch, một số màn chơi có thể bị thay đổi phụ thuộc vào việc liệu các điều tra viên \"có nhiều <b>Doubt</b> hơn <b>Conviction</b>\" hay \"có nhiều <b>Conviction</b> hơn <b>Doubt</b>.\" Các điều tra viên có nhiều <b>Doubt</b> hơn <b>Conviction</b> nếu số ô được đánh dấu bên cạnh <b>Doubt</b> lớn hơn số ô được đánh dấu bên cạnh <b>Conviction</b> (và ngược lại). <b>Doubt</b> và <b>Conviction</b> chia sẻ cho tất cả các điều tra viên, và không phụ thuộc vào một điều tra viên cụ thể nào. <b>Doubt</b> và <b>Conviction</b> không có hiệu ứng trong trò chơi ngoại trừ khi được đề cập cụ thể bởi cuốn Hướng dẫn Chiến dịch hoặc bởi hiệu ứng của một lá bài.</p>"
     },
     {
       "title": "Lá bài Cốt truyện",
@@ -32,8 +32,8 @@
     "doubt": "Doubt"
   },
   "key": {
-    "theStrangerIsOnToYou": "Kẻ Lạ đi theo bạn.",
-    "chasingTheStranger": "Đuổi theo Kẻ lạ",
+    "theStrangerIsOnToYou": "Kẻ Lạ đang theo dõi bạn.",
+    "chasingTheStranger": "Đuổi theo Kẻ Lạ",
     "youTriedToWarnThePolice": "bạn đã cố gắng cảnh báo cảnh sát.",
     "thePoliceAreSuspiciousOfYou": "cảnh sát nghi ngờ bạn.",
     "youChoseNotToGoToThePolice": "bạn chọn không đến chỗ cảnh sát.",

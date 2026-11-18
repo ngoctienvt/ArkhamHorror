@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import { fileURLToPath } from 'node:url'
+import { readFileSync } from 'node:fs'
 import { createServer } from 'vite'
 
 test('a board story read spotlights its story face and flips from its asset face', async (t) => {
@@ -11,7 +12,7 @@ test('a board story read spotlights its story face and flips from its asset face
     server: { middlewareMode: true, hmr: false },
   })
   t.after(() => server.close())
-  const { storyCardRead } = await server.ssrLoadModule('/src/arkham/storyCardRead.ts')
+  const { storyCardRead, storyCardIllustration } = await server.ssrLoadModule('/src/arkham/storyCardRead.ts')
   const choice = {
     tag: 'TargetLabel',
     target: { tag: 'StoryTarget', contents: 'story' },
@@ -41,4 +42,16 @@ test('a board story read spotlights its story face and flips from its asset face
 
   choice.messages = []
   assert.equal(storyCardRead(game, 'player'), null)
+
+  for (let id = 8575; id <= 8583; id++) {
+    const front = `0${id}`
+    const back = `${front}b`
+    const artwork = storyCardIllustration(back)
+    assert.ok(artwork, back)
+    assert.equal(storyCardIllustration(front), undefined)
+    assert.equal(storyCardIllustration(`c${back}`), artwork)
+    const file = new URL(`../src/assets/edge-of-the-earth-story/${artwork}.webp`, import.meta.url)
+    assert.equal(readFileSync(file).toString('ascii', 8, 12), 'WEBP')
+  }
+  assert.equal(storyCardIllustration('08559b'), undefined)
 })

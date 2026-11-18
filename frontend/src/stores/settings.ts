@@ -71,7 +71,7 @@ const COMBAT_FX_KEY = 'arkhamCombatFx'
 // How fast board animations run: normal, fast, or off. A browser preference.
 const MOTION_SPEED_KEY = 'arkhamMotionSpeed'
 // The beat before a chaos token is shown: the bag shakes, or a reel spins.
-// 'bag' unless the player picked another. A browser preference.
+// 'reel' unless the player picked another. A browser preference.
 const CHAOS_DRAW_STYLE_KEY = 'arkhamChaosDrawStyle'
 // A short banner when the round or phase changes. On unless turned off.
 const PHASE_BANNER_KEY = 'arkhamPhaseBanner'

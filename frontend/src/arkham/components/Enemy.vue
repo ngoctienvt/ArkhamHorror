@@ -430,6 +430,7 @@ function onDrop(event: DragEvent) {
             :style="{ '--ui-rotation': `${uiRotation}deg` }"
           >
             <MissingCardBadge :card-code="enemy.cardCode" />
+            <span v-if="isExhausted" class="exhausted-badge" aria-hidden="true">💤 {{ t('locationMap.exhaustedBadge') }}</span>
             <font-awesome-icon v-if="hasSpiritAura" :icon="['fas', 'ghost']" class="spirit-icon" />
             <span class="important" v-if="important">
               <font-awesome-icon :icon="['fa', 'circle-exclamation']" />
@@ -723,6 +724,25 @@ img.card.source-highlight {
 .card-wrapper.exhausted {
   --exhaust-rotation: 90deg;
   transform: rotate(calc(var(--ui-rotation) + var(--exhaust-rotation))) translateX(-10px);
+}
+
+/* Exhausted enemy cards are greyed out and carry a sleep badge that stays upright despite the 90° turn. */
+.card-wrapper.exhausted .card.enemy { filter: grayscale(0.85) brightness(0.75); }
+.exhausted-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: var(--z-index-3);
+  transform: translate(-50%, -50%) rotate(calc(-1 * var(--exhaust-rotation)));
+  padding: 1px 6px;
+  background: #1d2330f2;
+  border: 1px solid #9fb4d8;
+  border-radius: 999px;
+  font: 700 10px/1.3 system-ui, sans-serif;
+  color: #dbe6ff;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 1px 4px #000a;
 }
 
 .spirit-icon {

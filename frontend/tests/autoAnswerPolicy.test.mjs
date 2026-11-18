@@ -6,7 +6,7 @@ import ts from 'typescript'
 // autoAnswerPolicy.ts is import-free on purpose so it can be loaded here without the Vue toolchain.
 const source = readFileSync(new URL('../src/arkham/autoAnswerPolicy.ts', import.meta.url), 'utf8')
 const js = ts.transpile(source, { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 })
-const { decideAutoAnswer } = await import('data:text/javascript;base64,' + Buffer.from(js).toString('base64'))
+const { decideAutoAnswer, AUTO_ANSWER_DELAY_MS } = await import('data:text/javascript;base64,' + Buffer.from(js).toString('base64'))
 
 const chooseOne = (extra = {}) => ({ tag: 'ChooseOne', ...extra })
 const encounterDeck = { tag: 'TargetLabel', target: { tag: 'EncounterDeckTarget' } }
@@ -123,4 +123,22 @@ test('stops when an asset could soak, another investigator is offered, or the la
   // Healing uses the same labels but has no "Assign" label: a real choice.
   const heal = { tag: 'QuestionWithSource', source: {}, question: chooseOne() }
   assert.equal(decideAutoAnswer(heal, [invToken('DamageToken'), invToken('HorrorToken')]), null)
+})
+
+test('takes Fire! from the encounter discard when Searching for Dr. Armitage offers it', () => {
+  const choices = [
+    label('$brethrenOfAsh.spreadingFlames.label.searchingForDrArmitage.drawFromDiscard'),
+    label('$brethrenOfAsh.spreadingFlames.label.searchingForDrArmitage.drawFromBoth'),
+  ]
+  assert.deepEqual(decideAutoAnswer(chooseOne(), choices), { index: 0, reason: 'rulesDecided' })
+})
+
+test('keeps every automatic answer on screen for at least one second', () => {
+  for (const [reason, ms] of Object.entries(AUTO_ANSWER_DELAY_MS)) {
+    assert.ok(ms >= 1000, `${reason} waits only ${ms}ms`)
+  }
+})
+
+test('leaves a plain two-way label choice to the player', () => {
+  assert.equal(decideAutoAnswer(chooseOne(), [label('Take 1 horror'), label('Take 1 damage')]), null)
 })

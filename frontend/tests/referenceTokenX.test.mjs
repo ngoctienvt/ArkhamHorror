@@ -6,7 +6,7 @@ import ts from 'typescript'
 // referenceTokenX.ts is import-free on purpose so it can be loaded here without the Vue toolchain.
 const source = readFileSync(new URL('../src/arkham/referenceTokenX.ts', import.meta.url), 'utf8')
 const js = ts.transpile(source, { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 })
-const { referenceX, referenceXDetail, parseXDefinition, xDefinitionIn, tokenBadge, autoFailsNow } = await import(
+const { referenceX, referenceXDetail, parseXDefinition, xDefinitionIn, tokenBadge, autoFailsNow, parseReferenceTokenLine } = await import(
   'data:text/javascript;base64,' + Buffer.from(js).toString('base64')
 )
 
@@ -15,6 +15,23 @@ const ctx = (extra = {}) => ({
   enemies: [], locations: [], agendas: [], assets: [], treacheries: [], victoryDisplay: [],
   doomInPlay: 0, agendaNumber: 1, actNumber: 1, you: { horror: 0, damage: 0, hand: 0, clues: 0, keys: 0 },
   investigatorKeys: 0, explorationDeck: null, counters: {}, ...extra,
+})
+
+test('Curtain Call groups Cultist, Tablet and Elder Thing under one modifier and effect', () => {
+  const shared = parseReferenceTokenLine('[cultist] [tablet] [elder_thing]: -4. Nếu địa điểm của bạn có kinh hoàng, chịu 1 kinh hoàng.')
+  assert.deepEqual(shared, {
+    tokens: ['cultist', 'tablet', 'elder_thing'],
+    effect: '-4. Nếu địa điểm của bạn có kinh hoàng, chịu 1 kinh hoàng.',
+  })
+  assert.deepEqual(parseReferenceTokenLine('[skull]: -1'), { tokens: ['skull'], effect: '-1' })
+  assert.equal(parseReferenceTokenLine('Dễ / Tiêu chuẩn'), null)
+})
+
+test('a shared X modifier is read after the token group, leaving tokens in the effect text intact', () => {
+  const shared = parseReferenceTokenLine('[cultist] [tablet]: -X. X is the number of locations with doom on them.')
+  assert.deepEqual(shared.tokens, ['cultist', 'tablet'])
+  assert.equal(referenceX(shared.effect, ctx({ locations: [thing({ doom: 1 }), thing()] })), 1)
+  assert.equal(parseReferenceTokenLine('[tablet] -2. Reveal a [skull] token.').effect, '-2. Reveal a [skull] token.')
 })
 
 test('The Untamed Wilds: vengeance, locations (max 5) and exploration deck (max 5)', () => {

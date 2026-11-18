@@ -7,8 +7,10 @@ import { MessageType, Message } from '@/arkham/types/Message';
 import { formatContent } from '@/arkham/helpers';
 import { handleEmbeddedI18n, parseInput } from '@/arkham/i18n';
 import { costSkill, formatCost } from '@/arkham/cost';
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import type { Game } from '@/arkham/types/Game';
+import { pendingAutoPick } from '@/arkham/composables/useAutopilot';
 
 defineProps<{
   game: Game
@@ -26,6 +28,11 @@ const connectionImage = (connection: string) => {
 }
 
 const { t } = useI18n()
+// The "auto-picking" tag on the option the autopilot is about to take; undefined drops the attribute.
+const autoPick = (idx: number) => (pendingAutoPick.value?.index === idx ? t('gameUi.autoPicking') : undefined)
+const autoPickStyle = computed(() =>
+  pendingAutoPick.value ? { '--auto-pick-ms': `${pendingAutoPick.value.delayMs}ms` } : undefined,
+)
 const label = function(body: string) {
   return formatContent(handleEmbeddedI18n(body, t))
 }
@@ -89,7 +96,7 @@ const drownedCityTaskRecommendation = (body: string) => {
 }
 </script>
 <template>
-  <div class='question-choices'>
+  <div class='question-choices' :style="autoPickStyle">
     <template v-for="[choice, index] in choices" :key="index">
       <template v-if="choice.tag === MessageType.ABILITY_LABEL">
         <div v-if="ghostCardCode(game, choice)" class="ghost-ability">
@@ -97,46 +104,46 @@ const drownedCityTaskRecommendation = (body: string) => {
           <AbilityButton
             :ability="choice"
             :game="game"
-            @click="choose(index)"
+            @click="choose(index)" :data-auto-pick="autoPick(index)"
             />
         </div>
         <AbilityButton
           v-else
           :ability="choice"
           :game="game"
-          @click="choose(index)"
+          @click="choose(index)" :data-auto-pick="autoPick(index)"
           />
       </template>
       <template v-else-if="choice.tag === MessageType.TARGET_LABEL">
-        <button @click="choose(index)">{{ t('continue') }}</button>
+        <button @click="choose(index)" :data-auto-pick="autoPick(index)">{{ t('continue') }}</button>
       </template>
       <button
         v-else-if="choice.tag === MessageType.CONNECTION_LABEL"
         class="connection-choice"
         :aria-label="choice.connection"
-        @click="choose(index)"
+        @click="choose(index)" :data-auto-pick="autoPick(index)"
       >
         <img :src="connectionImage(choice.connection)" alt="" />
       </button>
       <template v-else-if="choice.tag === MessageType.TOOLTIP_LABEL">
-        <button :class="skillLabelClass(choice.label)" @click="choose(index)" v-tooltip="choice.tooltip">{{ t(choice.label) }}</button>
+        <button :class="skillLabelClass(choice.label)" @click="choose(index)" :data-auto-pick="autoPick(index)" v-tooltip="choice.tooltip">{{ t(choice.label) }}</button>
       </template>
       <div v-else-if="choice.tag === MessageType.LABEL" class="message-label">
-        <button v-if="choice.label == 'Choose {skull}'" @click="choose(index)">
+        <button v-if="choice.label == 'Choose {skull}'" @click="choose(index)" :data-auto-pick="autoPick(index)">
           {{ $t('gameUi.choose') }} <i class="iconSkull"></i>
         </button>
-        <button v-else-if="choice.label == 'Choose {cultist}'" @click="choose(index)">
+        <button v-else-if="choice.label == 'Choose {cultist}'" @click="choose(index)" :data-auto-pick="autoPick(index)">
           {{ $t('gameUi.choose') }} <i class="iconCultist"></i>
         </button>
-        <button v-else-if="choice.label == 'Choose {tablet}'" @click="choose(index)">
+        <button v-else-if="choice.label == 'Choose {tablet}'" @click="choose(index)" :data-auto-pick="autoPick(index)">
           {{ $t('gameUi.choose') }} <i class="iconTablet"></i>
         </button>
-        <button v-else-if="choice.label == 'Choose {elderThing}'" @click="choose(index)">
+        <button v-else-if="choice.label == 'Choose {elderThing}'" @click="choose(index)" :data-auto-pick="autoPick(index)">
           {{ $t('gameUi.choose') }} <i class="iconElderThing"></i>
         </button>
         <button
           v-else-if="drownedCityTaskCardCode(choice.label)"
-          @click="choose(index)"
+          @click="choose(index)" :data-auto-pick="autoPick(index)"
           class="task-choice"
         >
           <span class="choice-content">
@@ -148,12 +155,12 @@ const drownedCityTaskRecommendation = (body: string) => {
             ></span>
           </span>
         </button>
-        <button v-else :class="skillLabelClass(choice.label)" @click="choose(index)" v-html="label(choice.label)"></button>
+        <button v-else :class="skillLabelClass(choice.label)" @click="choose(index)" :data-auto-pick="autoPick(index)" v-html="label(choice.label)"></button>
       </div>
       <div v-else-if="choice.tag === MessageType.COST_LABEL" class="message-label">
         <button
           :class="skillCostClass(choice.cost)"
-          @click="choose(index)"
+          @click="choose(index)" :data-auto-pick="autoPick(index)"
           v-html="label(formatCost(choice.cost, t))"
         ></button>
       </div>
@@ -181,13 +188,13 @@ const drownedCityTaskRecommendation = (body: string) => {
         <FormattedEntry v-for="(entry, entryIndex) in choice.flavor.body" :key="entryIndex" :entry="entry" />
       </div>
       <div v-else-if="choice.tag === MessageType.DONE" class="message-label">
-        <button @click="choose(index)" v-html="label(choice.label)"></button>
+        <button @click="choose(index)" :data-auto-pick="autoPick(index)" v-html="label(choice.label)"></button>
       </div>
 
       <a
         v-if="choice.tag === MessageType.SKILL_LABEL"
         class="button"
-        @click="choose(index)"
+        @click="choose(index)" :data-auto-pick="autoPick(index)"
       >
         Use <i :class="`icon${choice.skillType}`"></i>
       </a>
@@ -195,7 +202,7 @@ const drownedCityTaskRecommendation = (body: string) => {
       <a
         v-if="choice.tag === MessageType.SKILL_LABEL_WITH_LABEL"
         class="button"
-        @click="choose(index)"
+        @click="choose(index)" :data-auto-pick="autoPick(index)"
       >
         Use <i :class="`icon${choice.skillType}`"></i>: {{ t(choice.label) }}
       </a>
@@ -204,6 +211,60 @@ const drownedCityTaskRecommendation = (body: string) => {
 </template>
 
 <style scoped>
+/* The option the autopilot is about to take: it glows, a tag names what is
+ * happening, and a bar fills over the pause until the pick lands. */
+[data-auto-pick] {
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #f0c060;
+  outline-offset: 1px;
+  animation: auto-pick-glow 0.5s ease-in-out infinite alternate;
+}
+
+[data-auto-pick]::before {
+  content: attr(data-auto-pick);
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  font-size: 0.55em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1a1200;
+  background: #f0c060;
+  border-radius: 4px;
+  padding: 0 4px;
+  pointer-events: none;
+}
+
+[data-auto-pick]::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #f0c060;
+  transform-origin: left;
+  animation: auto-pick-fill var(--auto-pick-ms, 1000ms) linear forwards;
+  pointer-events: none;
+}
+
+@keyframes auto-pick-glow {
+  from { box-shadow: 0 0 4px 1px rgba(240, 192, 96, 0.4); }
+  to { box-shadow: 0 0 14px 4px rgba(240, 192, 96, 0.9); }
+}
+
+@keyframes auto-pick-fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-auto-pick],
+  [data-auto-pick]::after { animation: none; }
+}
+
 .ghost-ability {
   display: flex;
   flex-direction: column;

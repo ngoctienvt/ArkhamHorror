@@ -1,0 +1,1 @@
+Top-down flat view of a single short piece of narrow-gauge mine track: two steel rails with wooden sleepers running straight from the exact centre of the canvas to the TOP edge, a little worn, slightly rusty, on a fully TRANSPARENT background (or flat pure #FF00FF). No ground, no tile, no shadow, no other object, no text. The track is about 14% of the canvas wide.

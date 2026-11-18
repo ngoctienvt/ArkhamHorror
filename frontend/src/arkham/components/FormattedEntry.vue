@@ -6,6 +6,7 @@ import { cardImage } from '@/arkham/cardImages'
 import { type ComposerTranslation, useI18n } from 'vue-i18n'
 import { tarotArcanaImage } from '@/arkham/types/TarotCard'
 import { chaosTokenImage } from '@/arkham/types/ChaosToken'
+import { useSiteSettingsStore } from '@/stores/site_settings'
 import CodexEntry from '@/arkham/components/CodexEntry.vue'
 import ChaosTokenMorph from '@/arkham/components/ChaosTokenMorph.vue'
 
@@ -79,10 +80,16 @@ function formatEntry(t: ComposerTranslation, entry: FlavorTextEntry, classes: { 
       } else {
         return h('h3', { class: classes, innerHTML: formatContent(t(entry.key)) })
       }
-    // `setImgPath` points at the core encounter-set icons; homebrew campaigns keep
-    // their icons under their own directory (see vite.config.js), so they build the
-    // path from `imgPath` instead: {imgPath}/homebrew/<campaign>/sets/<set>.png
-    case 'I18nEntry': return h('div', { innerHTML: formatContent(t(entry.key, {...entry.variables, imgPath: `${baseUrl}/img/arkham`, setImgPath: `${baseUrl}/img/arkham/encounter-sets` })) })
+    case 'I18nEntry': {
+      // Official set icons use the configured asset host. Homebrew paths use their own directory via imgPath.
+      const { assetHost } = useSiteSettingsStore()
+      const text = t(entry.key, {
+        ...entry.variables,
+        imgPath: `${baseUrl}/img/arkham`,
+        setImgPath: `${assetHost.replace(/\/$/, '')}/img/arkham/encounter-sets`,
+      })
+      return h('div', { innerHTML: formatContent(text) })
+    }
     case 'ModifyEntry': {
       const styles = entryStyles(entry)
       if (styles.codex) {

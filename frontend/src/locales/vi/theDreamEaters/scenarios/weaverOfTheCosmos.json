@@ -48,7 +48,7 @@
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<p>Bạn nắm chặt một sợi tơ, thứ duy nhất giúp bạn không rơi thẳng xuống vực sâu vô tận của khoảng không.</p><ul><li>In your Campaign Log, record *the bridge was destroyed*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Kiểm tra Nhật ký Chiến dịch. Giải quyết tùy chọn trên cùng được áp dụng.<ul><li>*If the investigators found a way out of the Underworld*, skip to _Resolution 3_.</li><li>các điều tra viên bị mắc kẹt trong địa hạt của Atlach-Nacha.</li><li>*If none of the above are true*, skip to _Resolution 5_.</li></ul></li></ul>"
+      "body": "<p>Bạn nắm chặt một sợi tơ, thứ duy nhất giúp bạn không rơi thẳng xuống vực sâu vô tận của khoảng không.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *cây cầu đã bị phá hủy*.</li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong khu vực trưng bày thành tích.</li><li>Kiểm tra Nhật ký Chiến dịch. Giải quyết tùy chọn đầu tiên thỏa mãn:<ul><li>*Nếu các điều tra viên đã tìm được lối thoát khỏi Underworld*, chuyển sang _Kết thúc 3_.</li><li>các điều tra viên bị mắc kẹt trong địa hạt của Atlach-Nacha.</li><li>*Nếu không có điều nào ở trên là đúng*, chuyển sang _Kết thúc 5_.</li></ul></li></ul>"
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",

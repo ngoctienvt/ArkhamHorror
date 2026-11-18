@@ -24,13 +24,13 @@
     "easyStandard": {
       "skull": "-X. X là tổng số kẻ địch _Elite_ trong khu vực trưng bày thành tích và dưới act.",
       "cultist": "-1. Nếu đây là một kiểm tra nhắm vào kẻ địch _Elite_, tiết lộ thêm một token khác.",
-      "tablet": "[skull]: -X. X là Cthulhu's Rage.\r\n[cultist]: -3. Nếu bạn thất bại và địa điểm của bạn bị flooded, nhận 1 damage.\r\n[tablet]: -3. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -1. Lật thêm một token. Nếu bạn thất bại, sau khi bài kiểm tra này resolve, rút lá bài trên cùng của Cthulhu deck. (Tối đa rút một lá mỗi round.)",
+      "tablet": "-3. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.",
       "elderThing": "-1 với mỗi manh mối bạn kiểm soát."
     },
     "hardExpert": {
       "skull": "-X. X bằng tổng số kẻ địch _Elite_ trong khu vực trưng bày thành tích và dưới act cộng thêm 2.",
       "cultist": "-3. Nếu đây là một kiểm tra nhắm vào kẻ địch _Elite_, tiết lộ thêm một token khác.",
-      "tablet": "[skull]: -X. X là một nửa số địa điểm đã lật (làm tròn xuống).\r\n[cultist]: -2. Nếu bạn thất bại và địa điểm của bạn bị fully flooded, nhận 1 damage.\r\n[tablet]: -4. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.\r\n[elder_thing]: -3 (thành -5 nếu địa điểm của bạn không bị flooded).",
+      "tablet": "-4. Nếu bạn thất bại, đặt 1 manh mối của bạn lên địa điểm của bạn.",
       "elderThing": "-2 với mỗi manh mối bạn kiểm soát."
     }
   },
@@ -49,12 +49,12 @@
     "readyToBegin": "Bây giờ bạn đã sẵn sàng để bắt đầu."
   },
   "intro": {
-    "title": "Kịch bản II: Smoke and Mirrors",
-    "body": "<p>Bạn theo Dr. Armitage về lại căn hộ của ông. Một màn khói đen che khuất mặt trăng và những vì sao khi một cơn gió ấm mang theo tro và tàn lửa qua những con phố quen thuộc.</p><p>\"Tôi đã nghi ngờ rằng có điều gì đó mờ ám đang diễn ra. Vài sinh viên đã biến mất trong vài tuần qua,\" vị thủ thư trưởng nói với bạn. \"Tất cả bọn họ đều bắt đầu có những hành vi kỳ lạ sau khi tham dự một 'cuộc họp' kín ngoài khuôn viên trường cách đây không lâu. Họ phàn nàn về những tiếng thì thầm kinh khủng, không ngớt và một vết bầm tím kỳ lạ đột nhiên xuất hiện trên da. Và rồi, họ biến mất.\"</p><p>Lo sợ điều tồi tệ nhất, bạn hỏi ông ấy về người bạn của mình. \"Cậu ấy khăng khăng đòi gặp tôi sớm hơn vào hôm nay,\" ông trả lời. \"Cậu ấy nói với tôi rằng một tổ chức tự xưng là 'Brethren of Ash' đang mời gọi sinh viên và những công dân dễ bị tổn thương đến những buổi tụ tập kỳ lạ này. Bạn của cậu đã liệt kê một số cá nhân đã tham dự, mặc dù không rõ họ là những tân binh tiềm năng hay những tín đồ trung thành. Trước khi rời đi, cậu ấy đã nói về một cuộc họp khác vào tối nay. Một cuộc tụ tập của tất cả các tín đồ. Tôi không biết tại sao, nhưng ý nghĩ về nó khiến tôi tràn ngập một nỗi sợ hãi không thể tả xiết. Và giờ thì bạn của cậu đã biến mất,\" ông nói một cách ủ rũ.</p><p>Bạn quyết định thẩm vấn những người trong danh sách nghi phạm và sau đó hẹn gặp ông tại Velma's Diner ở Easttown trước nửa đêm. Vị thủ thư trưởng gợi ý bạn nên tiếp cận khéo léo thay vì dùng biện pháp mạnh, điều có thể đánh động hội kín này. Tuy nhiên, bạn lo lắng rằng mình sẽ không có lựa chọn nào khác.</p><ul><li>Thêm 2 token [cultist] vào chaos bag cho phần còn lại của campaign.</li></ul><p class='right basic'>Tiếp tục đến <b>Setup</b></p>"
+    "title": "Màn II: Smoke and Mirrors",
+    "body": "<p>Bạn theo Tiến sĩ Armitage về lại căn hộ của ông. Một màn khói đen che khuất mặt trăng và các vì sao khi một cơn gió ấm mang theo tàn tro và tia lửa cuốn qua những con phố quen thuộc.</p><p>\"Tôi đã nghi ngờ rằng có điều gì đó mờ ám đang diễn ra. Vài sinh viên đã biến mất trong những tuần qua,\" vị thủ thư trưởng nói với bạn. \"Tất cả bọn họ đều bắt đầu có những hành vi kỳ lạ sau khi tham dự một 'buổi họp kín' ngoài khuôn viên trường cách đây không lâu. Họ phàn nàn về những tiếng thì thầm kinh khủng, không dứt và một vết bầm tím kỳ lạ đột nhiên xuất hiện trên da. Và rồi, họ biến mất.\"</p><p>Lo sợ điều tồi tệ nhất, bạn hỏi ông ấy về người bạn của mình. \"Cậu ấy khăng khăng đòi gặp tôi sớm hơn vào hôm nay,\" ông trả lời. \"Cậu ấy nói với tôi rằng một tổ chức tự xưng là 'Brethren of Ash' đang lôi kéo sinh viên và những công dân dễ bị tổn thương đến những buổi tụ tập kỳ quái này. Bạn của cậu đã liệt kê một số cá nhân đã tham dự, dù không rõ họ là những thành viên tiềm năng hay những tín đồ cuồng đạo. Trước khi rời đi, cậu ấy đã nói về một cuộc họp khác vào tối nay. Một buổi tụ tập của tất cả các tín đồ. Tôi không biết tại sao, nhưng ý nghĩ về nó khiến tôi tràn ngập một nỗi sợ hãi khôn cùng. Và giờ thì bạn của cậu đã mất tích,\" ông nói vẻ ủ rũ.</p><p>Bạn quyết định thẩm vấn những người trong danh sách nghi phạm và sau đó hẹn gặp ông tại quán ăn Velma's Diner ở Easttown trước nửa đêm. Vị thủ thư trưởng gợi ý bạn nên tiếp cận khéo léo thay vì dùng biện pháp mạnh, điều có thể đánh động hội kín này. Dẫu vậy, bạn lo lắng rằng mình sẽ chẳng còn lựa chọn nào khác.</p><ul><li>Thêm 2 token [cultist] vào chaos bag cho phần còn lại của chiến dịch.</li></ul><p class='right basic'>Tiếp tục đến <b>Setup</b></p>"
   },
   "tooltips": {
     "arkhamAlive": {
-      "resign": "_Resign_. Bạn quay lại đối chiếu ghi chép với Tiến sĩ Armitage về tung tích của người bạn của bạn."
+      "resign": "_Resign_. Bạn quay lại đối chiếu ghi chép với Tiến sĩ Armitage về tung tích của người bạn của mình."
     },
     "emergentEvils": {
       "resign": "@:brethrenOfAsh.smokeAndMirrors.tooltips.arkhamAlive.resign"
@@ -62,41 +62,41 @@
   },
   "resolutions": {
     "noResolution": {
-      "title": "Không có Resolution",
-      "body": "<p>_Nếu không đạt được resolution nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Trên chuyến taxi đến Velma's Diner, bạn suy ngẫm về tất cả những gì mình đã biết được. Thật không may, cuộc tìm kiếm của bạn mang lại nhiều manh mối nhưng lại có rất ít kết quả chắc chắn. Bạn chỉ có thể hy vọng Dr. Armitage có kết quả khả quan hơn.</p>",
-      "harbingerOfElokoss": "Lật kẻ địch thuộc bộ encounter _People of Arkham_ đã được để sang một bên từ đầu game. Đây là danh tính thật của kẻ địch Servant of Flame, một sứ giả của Elokoss. Trong Campaign Log, ghi lại *{name} là sứ giả của Elokoss*.",
-      "drawnCard": "Tập hợp mọi kẻ địch _Elite_ đang trong cuộc chơi và/hoặc nằm dưới một vị trí khi kịch bản kết thúc, xáo úp chúng cùng với sứ giả của Elokoss, rồi rút ngẫu nhiên một lá. {name} đã được rút. Nếu kẻ địch được rút…",
-      "isHarbinger": "…là sứ giả của Elokoss, ghi lại *các điều tra viên đã phát hiện ra nơi ẩn náu của giáo phái* trong Campaign Log.",
-      "otherwise": "…là bất kỳ kẻ địch nào khác, ghi nhận *các điều tra viên đã thất bại trong cuộc tìm kiếm* vào nhật ký chiến dịch của bạn.",
-      "servantOfFlame": "Nếu kẻ địch Servant of Flame nằm trong victory display, ghi lại *các điều tra viên đã giết Servant of Flame* trong Campaign Log.",
-      "victory": "Mỗi điều tra viên nhận kinh nghiệm bằng giá trị _victory X_ của mỗi lá bài trong victory display, cộng thêm 1 kinh nghiệm thưởng cho mỗi kẻ địch nằm dưới act khi kịch bản kết thúc.",
-      "proceed": "Nếu kẻ địch Servant of Flame nằm dưới act khi kịch bản kết thúc, chuyển sang _Resolution 2_. Nếu không, tiếp tục đến _Scenario III: Queen of Ash_."
+      "title": "Không có Kết cuộc",
+      "body": "<p>_Nếu không đạt được kết cuộc nào (mỗi điều tra viên đã rút lui hoặc bị đánh bại)_: Trên chuyến taxi đến quán Velma's Diner, bạn suy ngẫm về tất cả những gì mình đã tìm hiểu được. Thật không may, cuộc tìm kiếm của bạn mang lại nhiều đầu mối nhưng lại có rất ít câu trả lời chắc chắn. Bạn chỉ có thể hy vọng Tiến sĩ Armitage có nhiều may mắn hơn.</p>",
+      "harbingerOfElokoss": "Lật mở kẻ địch thuộc encounter set _People of Arkham_ đã được để riêng từ đầu ván chơi. Đây chính là danh tính thực sự của kẻ địch Servant of Flame, một harbinger của Elokoss. Trong nhật ký chiến dịch, ghi lại rằng *{name} là harbinger của Elokoss*.",
+      "drawnCard": "Tập hợp mọi kẻ địch _Elite_ đang trong màn chơi và/hoặc nằm dưới một địa điểm khi màn chơi kết thúc, xáo úp chúng cùng với harbinger của Elokoss, rồi rút ngẫu nhiên 1 lá. {name} đã được rút. Nếu kẻ địch được rút…",
+      "isHarbinger": "…là harbinger của Elokoss, ghi lại rằng *các điều tra viên đã phát hiện ra tung tích của giáo phái* vào nhật ký chiến dịch.",
+      "otherwise": "…là bất kỳ kẻ địch nào khác, ghi lại rằng *các điều tra viên đã thất bại trong cuộc tìm kiếm* vào nhật ký chiến dịch.",
+      "servantOfFlame": "Nếu kẻ địch Servant of Flame nằm trong khu vực trưng bày thành tích, ghi lại rằng *các điều tra viên đã tiêu diệt Servant of Flame* vào nhật ký chiến dịch.",
+      "victory": "Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị _Victory X_ của mỗi lá bài trong khu vực trưng bày thành tích, cộng thêm 1 kinh nghiệm thưởng cho mỗi kẻ địch nằm dưới act khi màn chơi kết thúc.",
+      "proceed": "Nếu kẻ địch Servant of Flame nằm dưới act khi màn chơi kết thúc, chuyển sang _Kết thúc 2_. Nếu không, tiếp tục đến _Màn III: Queen of Ash_."
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<p>_Resolution 1_: Bạn gọi một chiếc taxi hướng đến Easttown và suy ngẫm về tất cả những gì bạn đã tìm hiểu được. Bất chấp nỗ lực che giấu danh tính thật của hắn, bạn đã vạch trần được thủ phạm thực sự. Bạn chỉ hy vọng thông tin bạn thu thập được là đủ để cứu người bạn mất tích của mình.</p><ul><li>các điều tra viên đã phát hiện ra tung tích của giáo phái.</li><li>Reveal the enemy from the _People of Arkham_ encounter set that was set aside at the beginning of the game. This is the harbinger of Elokoss. In your campaign log, record *{name} is the harbinger of Elokoss*.</li><li>Kiểm tra xem những kẻ địch nào đang ở trong victory display và/hoặc nằm dưới act khi kịch bản kết thúc và cập nhật Nhật ký Chiến dịch của bạn.<ul><li>If the Servant of Flame enemy is in the victory display, record *the investigators killed the Servant of Flame*.</li><li>If there are 6 _Elite_ enemies under the act, record *the investigators scoured Arkham for answers*.</li><li>If there are 6 _Elite_ enemies in the victory display, record *the investigators stirred up trouble*.</li></ul></li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị <b>Victory X</b> của mỗi lá bài trong victory display.</li><li>Nếu kẻ địch Servant of Flame nằm dưới act khi kịch bản kết thúc:</li></ul>"
+      "body": "<p>_Kết thúc 1_: Bạn vẫy một chiếc taxi hướng về Easttown và suy ngẫm về tất cả những gì mình đã tìm hiểu được. Bất chấp nỗ lực che giấu danh tính thật của hắn, bạn đã vạch trần được thủ phạm thực sự. Bạn chỉ hy vọng những thông tin mình thu thập được là đủ để giải cứu người bạn mất tích.</p><ul><li>Trong nhật ký chiến dịch, ghi lại rằng *các điều tra viên đã phát hiện ra tung tích của giáo phái*.</li><li>Lật mở kẻ địch từ encounter set _People of Arkham_ đã được để riêng khi bắt đầu ván chơi. Đây chính là harbinger của Elokoss. Trong nhật ký chiến dịch, ghi lại rằng *{name} là harbinger của Elokoss*.</li><li>Kiểm tra xem những kẻ địch nào đang ở trong khu vực trưng bày thành tích và/hoặc nằm dưới act khi màn chơi kết thúc và cập nhật nhật ký chiến dịch của bạn:<ul><li>Nếu kẻ địch Servant of Flame nằm trong khu vực trưng bày thành tích, ghi lại rằng *các điều tra viên đã tiêu diệt Servant of Flame*.</li><li>Nếu có 6 kẻ địch _Elite_ nằm dưới act, ghi lại rằng *các điều tra viên đã lùng sục Arkham để tìm câu trả lời*.</li><li>Nếu có 6 kẻ địch _Elite_ nằm trong khu vực trưng bày thành tích, ghi lại rằng *các điều tra viên đã gây rắc rối*.</li></ul></li><li>Mỗi điều tra viên nhận kinh nghiệm bằng với giá trị _Victory X_ của mỗi lá bài trong khu vực trưng bày thành tích, cộng thêm 1 kinh nghiệm thưởng cho mỗi kẻ địch nằm dưới act khi màn chơi kết thúc.</li><li>Nếu kẻ địch _Servant of Flame_ nằm dưới act khi màn chơi kết thúc, chuyển sang _Kết thúc 2_. Nếu không, tiếp tục đến _Màn III: Queen of Ash_.</li></ul>"
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
-      "body": "<p>_Resolution 2_: Trên đường đến gặp Tiến sĩ Armitage, bạn yêu cầu taxi ghé qua địa điểm an toàn nơi bạn giam giữ kẻ thù đang bất tỉnh của mình. Mùi khói nồng nặc bốc lên khi bạn bước vào, và sàn nhà đen kịt bồ hóng. Bất chấp những nỗ lực hết sức của bạn, kẻ quỷ quyệt đó đã trốn thoát. Chiếc còng tay bạn dùng để khóa người hầu cận đã bị đập nát—không phải bị nung chảy hay can thiệp theo cách nào khác—cho thấy hắn đã có kẻ tiếp tay tẩu thoát.</p><ul><li>Trong nhật ký chiến dịch, ghi lại rằng *Servant of Flame đã trốn thoát*.</li><li>Mỗi điều tra viên nhận thêm 1 kinh nghiệm.</li><li>Chuyển đến _Kịch bản III: Queen of Ash_.</li></ul>"
+      "body": "<p>_Kết thúc 2_: Trên đường đến gặp Tiến sĩ Armitage, bạn bảo taxi ghé qua địa điểm an toàn nơi bạn giam giữ kẻ tử thù đang bất tỉnh. Mùi khói nồng nặc phả vào mặt bạn khi bước vào, sàn nhà đen kịt bồ hóng. Bất chấp mọi nỗ lực của bạn, bóng hình ma quái kia đã trốn thoát. Chiếc còng tay bạn dùng để khóa tên bề tôi đã bị đập nát—không phải bị nung chảy hay cạy mở thông thường—cho thấy hắn đã có đồng bọn tiếp tay tẩu thoát.</p><ul><li>Trong nhật ký chiến dịch, ghi lại rằng *Servant of Flame đã trốn thoát*.</li><li>Mỗi điều tra viên nhận 1 kinh nghiệm thưởng.</li><li>Tiếp tục đến _Màn III: Queen of Ash_.</li></ul>"
     },
     "xp": {
       "resolution2": "vì đã bắt giữ Servant of Flame",
-      "bonus": "với mỗi kẻ địch dưới act"
+      "bonus": "cho mỗi kẻ địch nằm dưới act"
     }
   },
   "label": {
-    "r2": "Servant of Flame ở dưới act (→ Resolution 2)",
-    "r3": "Servant of Flame đã trốn thoát (→ Resolution 3)"
+    "r2": "Servant of Flame nằm dưới act (→ Kết thúc 2)",
+    "r3": "Servant of Flame đã trốn thoát (→ Kết thúc 3)"
   },
   "xp": {
     "resolution2": "vì đã bắt giữ Servant of Flame",
-    "bonus": "với mỗi kẻ địch dưới act"
+    "bonus": "cho mỗi kẻ địch nằm dưới act"
   },
   "codex": {
     "label": {
-      "addToVictory": "Thêm Servant of Flame vào victory display. Mỗi điều tra viên rút 3 lá bài.",
-      "placeUnderAct": "Đặt Servant of Flame bên dưới act. Mỗi điều tra viên nhận 1 manh mối <i>(từ token pool)</i>."
+      "addToVictory": "Thêm Servant of Flame vào khu vực trưng bày thành tích. Mỗi điều tra viên rút 3 lá bài.",
+      "placeUnderAct": "Đặt Servant of Flame bên dưới act. Mỗi điều tra viên nhận 1 manh mối <i>(từ kho token)</i>."
     },
     "davidRenfield": {
       "title": "{'{'}codex{'}'} Codex 1: David Renfield",
@@ -130,7 +130,7 @@
     },
     "servantOfFlame": {
       "title": "{'{'}codex{'}'} Codex Φ: Servant of Flame",
-      "body": "<p>Kẻ thù của bạn nằm bất tỉnh dưới chân. Ngọn lửa bao bọc hắn đã tắt, dù chiếc áo choàng của hắn lại không hề bị cháy sém một cách kỳ diệu. Mọi nỗ lực tháo mặt nạ của hắn đều vô ích; bạn sẽ cần đợi hắn tỉnh lại nếu muốn biết hắn là ai. Bạn tự hỏi chiếc lưỡi hái vấy máu của hắn đã cướp đi sinh mạng của bao nhiêu nạn nhân. Có lẽ tốt hơn là nên kết liễu hắn ngay tại đây và lúc này, để tránh đổ máu trong tương lai. Không ai khác cần phải biết.</p><p class='basic'>Các điều tra viên phải quyết định <i>(chọn một)</i>:</p><ul><li><i>Chúng ta không thể mạo hiểm để hắn làm hại người khác. Hắn quá nguy hiểm để có thể giữ lại mạng sống.</i></li><li>Đặt Servant of Flame bên dưới act. Mỗi điều tra viên nhận 1 manh mối <i>(từ token pool)</i>.</li></ul>"
+      "body": "<p>Kẻ tử thù của bạn nằm bất động dưới chân. Ngọn lửa từng bao bọc hắn đã lụi tàn, dù chiếc áo choàng kỳ diệu thay lại không hề bị cháy sém. Mọi nỗ lực tháo mặt nạ của hắn đều vô ích; bạn sẽ phải đợi hắn tỉnh lại nếu muốn biết danh tính thực sự của hắn. Bạn tự hỏi chiếc lưỡi hái vấy máu kia đã cướp đi sinh mạng của bao nhiêu nạn nhân. Có lẽ tốt hơn hết là kết liễu hắn ngay tại đây, để tránh đổ máu thêm trong tương lai. Sẽ không ai khác phải biết chuyện này.</p><p class='basic'>Các điều tra viên phải quyết định <i>(chọn một)</i>:</p><ul><li>*Chúng ta không thể mạo hiểm để hắn làm hại người khác. Hắn quá nguy hiểm để được sống.* Thêm Servant of Flame vào khu vực trưng bày thành tích. Mỗi điều tra viên rút 3 lá bài.</li><li>*Giữ hắn lại để thẩm vấn vào đêm nay.* Đặt Servant of Flame bên dưới act. Mỗi điều tra viên nhận 1 manh mối <i>(từ kho token)</i>.</li></ul>"
     }
   }
 }

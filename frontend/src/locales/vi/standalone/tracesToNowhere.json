@@ -122,27 +122,27 @@
     },
     "noResolution": {
       "title": "Không có Kết cục",
-      "body": "<p>The strength of the many threats arrayed against the Husserl family prove too much for you. Despite your best efforts, you succumb to the will of the Dimensional Shambler as you are dragged into the bone pit of the otherworld.</p><ul><li>In your campaign log, record *the investigators failed to solve the case*.</li><li>Các điều tra viên thất bại.</li></ul>"
+      "body": "<p>The strength of the many threats arrayed against the Husserl family prove too much for you. Despite your best efforts, you succumb to the will of the Dimensional Shambler as you are dragged into the bone pit of the otherworld.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *các điều tra viên đã thất bại trong việc phá án*.</li><li>Các điều tra viên thất bại.</li></ul>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",
-      "body": "<p>_Resolution 1_: Cần đến từng chút sức lực mà bạn có thể gom góp được, nhưng bạn đã thuyết phục được Lina Husserl đối mặt với nỗi sợ hãi sâu thẳm nhất của mình và đánh bại con quái vật trong những cơn ác mộng của cô. Bạn không biết làm thế nào mà những bức tranh của cô ấy có thể vươn qua bức màn ngăn cách giữa các thế giới để triệu hồi Shambler đến Arkham, nhưng bạn khuyên cô có lẽ nên ngừng vẽ những thứ cô nhìn thấy trong giấc mơ của mình.</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại rằng *các điều tra viên đã cứu Lina Husserl*.</li></ul>"
+      "body": "<p>_Kết thúc 1_: Cần đến từng chút sức lực mà bạn có thể gom góp được, nhưng bạn đã thuyết phục được Lina Husserl đối mặt với nỗi sợ hãi sâu thẳm nhất của mình và đánh bại con quái vật trong những cơn ác mộng của cô. Bạn không biết làm thế nào mà những bức tranh của cô ấy có thể vươn qua bức màn ngăn cách giữa các thế giới để triệu hồi Shambler đến Arkham, nhưng bạn khuyên cô có lẽ nên ngừng vẽ những thứ cô nhìn thấy trong giấc mơ của mình.</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại rằng *các điều tra viên đã cứu Lina Husserl*.</li></ul>"
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
-      "body": "<p>_Resolution 2_: Mặc dù chỉ là một người bình thường, Eugene Peel là một kẻ cầm đầu trong số những kẻ theo tà giáo huyền bí. Với việc hắn bị loại bỏ, giáo phái đã im ắng trở lại.</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại rằng *các điều tra viên đã ngăn chặn Eugene Peel*.</li><li>Chuyển sang _Resolution 5_.</li></ul>"
+      "body": "<p>_Kết thúc 2_: Mặc dù chỉ là một người bình thường, Eugene Peel là một kẻ cầm đầu trong số những kẻ theo tà giáo huyền bí. Với việc hắn bị loại bỏ, giáo phái đã im ắng trở lại.</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại rằng *các điều tra viên đã ngăn chặn Eugene Peel*.</li><li>Chuyển sang _Kết thúc 5_.</li></ul>"
     },
     "resolution3": {
       "title": "Kết thúc thứ ba",
-      "body": "<p>_Resolution 3_: Bạn trở lại Arkham cùng với việc bắt giữ Albrecht Husserl, và nhanh chóng giao hắn cho chính quyền. Bạn chỉ có thể hy vọng rằng gia đình Husserl không thao túng toàn bộ Lực lượng Cảnh sát Arkham trong lòng bàn tay họ.</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại rằng *các điều tra viên đã ngăn chặn Albrecht Husserl*.</li><li>Chuyển sang _Resolution 5_.</li></ul>"
+      "body": "<p>_Kết thúc 3_: Bạn trở lại Arkham cùng với việc bắt giữ Albrecht Husserl, và nhanh chóng giao hắn cho chính quyền. Bạn chỉ có thể hy vọng rằng gia đình Husserl không thao túng toàn bộ Lực lượng Cảnh sát Arkham trong lòng bàn tay họ.</p><ul><li>Trong Nhật ký Chiến dịch, ghi lại rằng *các điều tra viên đã ngăn chặn Albrecht Husserl*.</li><li>Chuyển sang _Kết thúc 5_.</li></ul>"
     },
     "resolution4": {
       "title": "Kết thúc thứ 4",
-      "body": "<p>_Resolution 4_: Despite your best efforts, you are unable to keep the Dimensional Shambler from claiming its next victim. You escape back to Arkham, where you can only hope that these events are well and truly done.</p><ul><li>In your campaign log, record *the culprit is still at large*.</li><li>Chuyển tới <b>Resolution 5</b>.</li></ul>"
+      "body": "<p>_Kết thúc 4_: Despite your best efforts, you are unable to keep the Dimensional Shambler from claiming its next victim. You escape back to Arkham, where you can only hope that these events are well and truly done.</p><ul><li>Trong Nhật ký Chiến dịch của bạn, ghi lại rằng *thủ phạm vẫn đang nhởn nhơ ngoài vòng pháp luật*.</li><li>Chuyển tới <b>Resolution 5</b>.</li></ul>"
     },
     "resolution5": {
       "title": "Giải pháp thứ 5",
-      "body": "<p>_Resolution 5_: Bạn đã không thể định vị và giải cứu Elias, nhưng những tiến triển mà bạn đạt được dường như đã làm hài lòng thành phố. Arkham nhanh chóng hồi phục, thành phố dường như háo hức muốn quên đi toàn bộ vụ điều tra gia đình Husserl. Josephine bước vào vị trí quyền lực và uy quyền bị bỏ trống bởi người chồng mất tích của bà, và quyền lãnh đạo của gia đình Husserl tiếp tục phát triển mạnh mẽ trong thành phố, dù có thận trọng hơn một chút.</p><ul><li>Nếu story asset Aziza Steer đang dưới quyền kiểm soát của một điều tra viên khi màn chơi kết thúc, các điều tra viên nhận được lá bài phần thưởng chiến dịch Aziza Steer (*Hardboiled*).</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.<ul><li>Với mỗi story asset trong khu vực trưng bày thành tích khi màn chơi kết thúc, hãy chọn một điều tra viên để nhận thêm 1 điểm kinh nghiệm thưởng.</li><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Nếu bạn đang chơi ở Chế độ Chiến dịch, hãy đặt lại túi hỗn mang chiến dịch của bạn.</li></ul>"
+      "body": "<p>_Kết thúc 5_: Bạn đã không thể định vị và giải cứu Elias, nhưng những tiến triển mà bạn đạt được dường như đã làm hài lòng thành phố. Arkham nhanh chóng hồi phục, thành phố dường như háo hức muốn quên đi toàn bộ vụ điều tra gia đình Husserl. Josephine bước vào vị trí quyền lực và uy quyền bị bỏ trống bởi người chồng mất tích của bà, và quyền lãnh đạo của gia đình Husserl tiếp tục phát triển mạnh mẽ trong thành phố, dù có thận trọng hơn một chút.</p><ul><li>Nếu story asset Aziza Steer đang dưới quyền kiểm soát của một điều tra viên khi màn chơi kết thúc, các điều tra viên nhận được lá bài phần thưởng chiến dịch Aziza Steer (*Hardboiled*).</li><li>Mỗi điều tra viên nhận điểm kinh nghiệm bằng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.<ul><li>Với mỗi story asset trong khu vực trưng bày thành tích khi màn chơi kết thúc, hãy chọn một điều tra viên để nhận thêm 1 điểm kinh nghiệm thưởng.</li><li>_Kinh nghiệm_: {xp}</li></ul></li><li>Nếu bạn đang chơi ở Chế độ Chiến dịch, hãy đặt lại túi hỗn mang chiến dịch của bạn.</li></ul>"
     }
   },
   "label": {

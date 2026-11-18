@@ -136,6 +136,8 @@ import type { Game } from '@/arkham/types/Game'
 /* A plate you can walk to gets a green edge, the same colour as its ↔ pill. */
 .plate.movable:not(.here) { --edge: var(--state-move, #8fd19a); }
 .plate.here { --edge: var(--state-here, #ffe9a0); box-shadow: 0 0 0 1px #ffe9a080, 0 0 14px #ffe9a066, 0 2px 10px #000c; }
+/* Not by colour alone: the plate you stand on also carries a mark before its name. */
+.plate.here:not(.compact) .name::before { content: '◆'; margin-right: 4px; font-size: 0.7em; color: var(--state-here, #ffe9a0); vertical-align: 0.15em; }
 .plate.adjacent { --edge: #9fc3a0; }
 .plate.targetable { --edge: var(--state-target, #f2d27a); animation: beckon 1.6s ease-in-out infinite; }
 .plate.exhausted .name { color: #9a968c; }
@@ -146,7 +148,7 @@ import type { Game } from '@/arkham/types/Game'
 .plate > :deep(.chips) { justify-self: start; justify-content: flex-start; max-width: 100%; gap: 6px; padding: 0 6px 4px 0; }
 .plate > :deep(.chips .chip) { width: 22px; height: 22px; }
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
-.main { display: flex; align-items: center; gap: 4px; flex: 1; min-width: 0; min-height: 18px; }
+.main { display: flex; align-items: center; gap: 4px; flex: 1; min-width: 0; min-height: 20px; }
 .main:focus-visible, .go:focus-visible { outline: var(--focus-ring, 2px solid #ffe9a0); outline-offset: 2px; border-radius: 3px; }
 .name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 600 0.8rem/1.15 var(--ui-serif); font-variant: small-caps; letter-spacing: 0.02em; text-shadow: 0 1px 2px #000; }
 .warn { color: #f0a868; }

@@ -18,7 +18,11 @@ import { abilityNeedsGhostModal } from '@/arkham/ghostAbility';
 import { putBackInAnyOrderPicks } from '@/arkham/putBackInAnyOrder';
 import { mulliganQuestion } from '@/arkham/mulligan';
 import { useChoiceContext } from '@/arkham/composables/useChoiceContext';
-import { storyCardRead as findStoryCardRead, storyCardChoiceRead as findStoryCardChoiceRead } from '@/arkham/storyCardRead';
+import {
+  storyCardRead as findStoryCardRead,
+  storyCardChoiceRead as findStoryCardChoiceRead,
+  storyCardIllustration,
+} from '@/arkham/storyCardRead';
 
 export interface Props {
   game: Game
@@ -55,19 +59,40 @@ const cthulhuDeckCardCodes = new Set([
 const investigator = computed(() => Object.values(props.game.investigators).find(i => i.playerId === props.playerId))
 const storyCardRead = computed(() => findStoryCardRead(props.game, props.playerId))
 const storyCardChoiceRead = computed(() => findStoryCardChoiceRead(props.game, props.playerId))
+const storyIllustrations = import.meta.glob<string>([
+  '../../assets/edge-of-the-earth-story/memory-*.webp',
+  '../../assets/*-story/story-*.webp',
+], {
+  eager: true,
+  import: 'default',
+  query: '?url',
+})
+const storyFaceIllustrations = new Map(
+  Object.entries(storyIllustrations).flatMap(([path, url]) => {
+    const face = path.match(/\/story-([^/]+)\.webp$/)?.[1]
+    return face ? [[face, url] as const] : []
+  }),
+)
 
 /* The card on screen, and the buttons under it: either the one-option dismissal
  * that reading a story card is, or the story's own question. */
 const storySpotlight = computed(() => {
   const read = storyCardRead.value
-  if (read)
+  if (read) {
+    const cardCode = toCardContents(read.card).cardCode.replace(/^c/, '')
+    const artwork = storyCardIllustration(cardCode)
+    const illustration = artwork
+      ? storyIllustrations[`../../assets/edge-of-the-earth-story/${artwork}.webp`]
+      : storyFaceIllustrations.get(cardCode)
     return {
       card: read.card,
       index: read.index,
       flip: read.flip,
       backImage: read.backArt ? cardImage(read.backArt) : undefined,
+      illustration,
       choices: [] as { label: string; index: number }[],
     }
+  }
 
   const asking = storyCardChoiceRead.value
   if (asking) {
@@ -75,6 +100,7 @@ const storySpotlight = computed(() => {
       card: asking.card,
       index: asking.choices[0].index,
       flip: asking.flip,
+      illustration: undefined,
       choices: asking.choices.map((choice) => ({ label: label(choice.label), index: choice.index })),
     }
   }
@@ -354,12 +380,14 @@ const title = computed(() => {
        test panel's `#modal` draggable at 100. -->
   <Teleport v-if="storySpotlight" to="body">
   <DrawSpotlight
+    :key="storySpotlight.illustration"
     :game="game"
     :playerId="playerId"
     :cards="[storySpotlight.card]"
     :choices="storySpotlight.choices"
     :flip="storySpotlight.flip"
     :back-image="storySpotlight.backImage"
+    :illustration="storySpotlight.illustration"
     :aria-label="t('Story')"
     :style="{
       '--spotlight-card-width': 'min(420px, 88vw, 55vh)',

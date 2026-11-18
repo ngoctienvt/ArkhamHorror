@@ -425,7 +425,7 @@
     },
     "WhyWontYouStayDead": {
       "name": "TẠI. SAO. NGƯƠI. KHÔNG. CHỊU. CHẾT?!",
-      "text": "Thêm The Inescapable vào victory display ít nhất 20 lần trong một chiến dịch duy nhất."
+      "text": "Thêm The Inescapable vào khu vực trưng bày thành tích ít nhất 20 lần trong một chiến dịch duy nhất."
     },
     "DrownedCityLineInTheSand": {
       "name": "Lằn Ranh Trên Cát",
@@ -495,7 +495,7 @@
     },
     "GiveThemSomethingToTalkAbout": {
       "name": "Cho Họ Thứ Gì Đó Để Bàn Tán",
-      "text": "Trong một round duy nhất, thêm mọi dạng ẩn của Nyarlathotep vào victory display trong Where the Gods Dwell."
+      "text": "Trong một round duy nhất, thêm mọi dạng ẩn của Nyarlathotep vào khu vực trưng bày thành tích trong Where the Gods Dwell."
     },
     "ThisIsntEvenMyFinalForm": {
       "name": "Đây Thậm Chí Chưa Phải Dạng Cuối Của Ta!",
@@ -880,7 +880,7 @@
     },
     "DreamHomeBreakover": {
       "name": "Đột Nhập Nhà Mơ Ước",
-      "text": "Hoàn thành *Hemlock House* với 10 địa điểm trong victory display."
+      "text": "Hoàn thành *Hemlock House* với 10 địa điểm trong khu vực trưng bày thành tích."
     },
     "SettlingTheScore": {
       "name": "Thanh Toán Nợ Nần",
@@ -908,7 +908,7 @@
     },
     "OblivionShmoblivion": {
       "name": "Lãng Quên Hay Không Lãng Quên",
-      "text": "Chiến thắng *Fate of the Vale* với mọi kẻ địch Cosmic Emissary trong victory display."
+      "text": "Chiến thắng *Fate of the Vale* với mọi kẻ địch Cosmic Emissary trong khu vực trưng bày thành tích."
     },
     "HighDive": {
       "name": "Cú Nhảy Từ Trên Cao",
@@ -995,7 +995,7 @@
     },
     "IfYouCantBeatThem": {
       "name": "Nếu Không Thể Đánh Bại Chúng…",
-      "text": "Hoàn thành kịch bản Blood Money với mọi bản sao Suspicious Guest khả dụng trong victory display."
+      "text": "Hoàn thành kịch bản Blood Money với mọi bản sao Suspicious Guest khả dụng trong khu vực trưng bày thành tích."
     },
     "YouGotRedOnYou": {
       "name": "Máu Đỏ Dính Đầy Người Bạn",

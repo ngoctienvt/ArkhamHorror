@@ -114,13 +114,13 @@
     },
     "investigatorDefeat": {
       "title": "Điều tra viên bị hạ gục",
-      "body": "<p class='basic'>Trước khi giải quyết bất kỳ resolution nào khác, nếu có ít nhất một điều tra viên bị đánh bại: Những điều tra viên bị đánh bại đọc phần _Điều tra viên Bị Đánh Bại_ trước.</p><p>_Điều tra viên Bị Đánh Bại:_ Bạn tỉnh dậy và thấy mình bị trói chặt bởi những sợi dây gai dầu dày, nằm trên những tấm gỗ cứng và ẩm ướt. Sàn thuyền lắc lư qua lại đều đặn, và bạn nghe thấy tiếng sóng biển vỗ vào thành tàu. Bạn đang bị giam cầm trên một chiếc thuyền chiến lớn nào đó. Nhưng tại sao?</p><ul><li>Trong Nhật ký Chiến dịch, mỗi điều tra viên bị đánh bại ghi lại *(tên điều tra viên của bạn) đã bị bắt giữ*.</li><li>Nếu bộ bài của một điều tra viên bị đánh bại có chứa Randolph Carter và có ít nhất 1 điều tra viên đã rút lui, hãy trao quyền sở hữu Randolph Carter cho một điều tra viên đã rút lui.</li><li>Tiến hành đến resolution mà các điều tra viên đã đạt được. Nếu không đạt được resolution nào…<ul><li>…và có ít nhất 1 điều tra viên đã rút lui, tiến hành đến _Resolution 1_.</li><li>…và mỗi điều tra viên đều bị đánh bại, bỏ qua đến _Resolution 2_.</li></ul></li></ul>"
+      "body": "<p class='basic'>Trước khi giải quyết bất kỳ resolution nào khác, nếu có ít nhất một điều tra viên bị đánh bại: Những điều tra viên bị đánh bại đọc phần _Điều tra viên Bị Đánh Bại_ trước.</p><p>_Điều tra viên Bị Đánh Bại:_ Bạn tỉnh dậy và thấy mình bị trói chặt bởi những sợi dây gai dầu dày, nằm trên những tấm gỗ cứng và ẩm ướt. Sàn thuyền lắc lư qua lại đều đặn, và bạn nghe thấy tiếng sóng biển vỗ vào thành tàu. Bạn đang bị giam cầm trên một chiếc thuyền chiến lớn nào đó. Nhưng tại sao?</p><ul><li>Trong Nhật ký Chiến dịch, mỗi điều tra viên bị đánh bại ghi lại *(tên điều tra viên của bạn) đã bị bắt giữ*.</li><li>Nếu bộ bài của một điều tra viên bị đánh bại có chứa Randolph Carter và có ít nhất 1 điều tra viên đã rút lui, hãy trao quyền sở hữu Randolph Carter cho một điều tra viên đã rút lui.</li><li>Tiến hành đến resolution mà các điều tra viên đã đạt được. Nếu không đạt được resolution nào…<ul><li>…và có ít nhất 1 điều tra viên đã rút lui, tiến hành đến _Kết thúc 1_.</li><li>…và mỗi điều tra viên đều bị đánh bại, bỏ qua đến _Kết thúc 2_.</li></ul></li></ul>"
     }
   },
   "resolutions": {
     "noResolution": {
       "title": "Không có Resolution",
-      "body": "<p class='basic'>_Nếu không đạt được resolution nào:_</p><ul><li>Nếu có ít nhất 1 điều tra viên đã rút lui, tiến hành đến _Resolution 1_.</li><li>Nếu mỗi điều tra viên đều bị đánh bại, bỏ qua đến _Resolution 2_.</li></ul>"
+      "body": "<p class='basic'>_Nếu không đạt được resolution nào:_</p><ul><li>Nếu có ít nhất 1 điều tra viên đã rút lui, tiến hành đến _Kết thúc 1_.</li><li>Nếu mỗi điều tra viên đều bị đánh bại, bỏ qua đến _Kết thúc 2_.</li></ul>"
     },
     "resolution1": {
       "title": "Kết thúc thứ nhất",

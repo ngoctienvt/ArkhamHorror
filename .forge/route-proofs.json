@@ -1,0 +1,31 @@
+{
+  "schema": "generate2dmedia.route_proofs.v1",
+  "proofs": [
+    {
+      "route": "codex-cli",
+      "tool": "image_gen",
+      "version": "0.167.0-alpha.3.2",
+      "versionText": "codex-cli 0.167.0-alpha.3.2",
+      "recipe": "codex-exec-imagegen/1",
+      "level": "VERIFIED",
+      "verifiedAt": "2026-11-13T05:30:26.190Z",
+      "runId": "28c10f53252948c49c864cf9f8c55b3b",
+      "method": "cli_media.py run: native tool output adopted from the CLI's own run folder with scoped checks",
+      "jobDir": "art-src/the-innsmouth-conspiracy/gen/straight-section-v2",
+      "artifactSha256": "e602a1dda72fe8776feb994d4304077857a05a10c1a22d02117b88daf902839f"
+    },
+    {
+      "route": "codex-cli",
+      "tool": "image_gen",
+      "version": "0.147.0",
+      "versionText": "codex-cli 0.147.0",
+      "recipe": "codex-exec-imagegen/1",
+      "level": "VERIFIED",
+      "verifiedAt": "2026-11-13T11:17:59.908Z",
+      "runId": "726dfb4f35384ae0ac5e28435a9055e5",
+      "method": "cli_media.py run: native tool output adopted from the CLI's own run folder with scoped checks",
+      "jobDir": "art-src/written-in-rock/gen/10514-v2",
+      "artifactSha256": "9cc28d31602b2c54c4b7caaebb19f86eead31790d94b21205026a714deaf2b77"
+    }
+  ]
+}

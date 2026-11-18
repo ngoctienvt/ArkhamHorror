@@ -3,6 +3,26 @@ import type { Point } from './locationGraph'
 type SceneLocation = { id: string; cardCode: string; revealed: boolean; enemyLocation?: boolean }
 type Scene = { hiddenArt: string; landmarks: Record<string, readonly Point[]> }
 
+const secretHouse: Scene['landmarks'] = {
+  '05128': [[57, 85]], '05129': [[23, 87]], '05130': [[20, 50]],
+  '05131': [[49, 49]], '05132': [[79, 49]],
+}
+
+const secretOtherworld: Scene['landmarks'] = {
+  '05133': [[48, 58]], '05134': [[13, 89]], '05135': [[60, 88]],
+  '05136': [[15, 24]], '05137': [[84, 25]], '05138': [[33, 92]],
+  '05139': [[49, 23]], '05140': [[87, 87]], '05141': [[85, 48]],
+  '05142': [[19, 45], [68, 48]],
+}
+
+const secretReturnOtherworld: Scene['landmarks'] = {
+  '05133': [[48, 49]], '05134': [[13, 73]], '05135': [[63, 74]],
+  '05136': [[13, 24]], '05137': [[63, 24]], '05138': [[38, 73]],
+  '05139': [[38, 24]], '05140': [[88, 73]], '05141': [[83, 44]],
+  '05142': [[29, 43], [68, 43]], '54030': [[88, 24]], '54031': [[13, 47]],
+  '54032': [[28, 95]], '54033': [[74, 94]],
+}
+
 const scenes: Record<string, Scene> = {
   '11517': {
     hiddenArt: 'the-drowned-city/western-wall',
@@ -78,7 +98,14 @@ export function revealedScenePositions(
   scenarioId: string, locations: readonly SceneLocation[], grid: Record<string, Point>,
 ): Record<string, Point> | undefined {
   const scenario = scenarioId.replace(/^c/, '')
-  const landmarks = scenes[scenario]?.landmarks
+  const secretName = ['05120', '54029'].includes(scenario)
+  const inOtherworld = locations.some(({ cardCode }) => cardCode.replace(/^c/, '') === '05133')
+  const secretReturn = scenario === '54029' || locations.some(({ cardCode }) => /^c?5403[0-3]/.test(cardCode))
+  let landmarks = scenes[scenario]?.landmarks
+  if (secretName) {
+    landmarks = inOtherworld ? secretOtherworld : secretHouse
+    if (inOtherworld && secretReturn) landmarks = secretReturnOtherworld
+  }
   if (!landmarks) return undefined
 
   const positions = { ...grid }

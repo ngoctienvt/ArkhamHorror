@@ -47,7 +47,7 @@
     "resolution1": {
       "title": "Kết thúc thứ nhất",
       "body": "Tim đập thình thịch và sự phấn khích tuôn trào trong huyết quản, bạn không biết điều gì mang lại cho mình cảm giác hưng phấn hơn: thắng tiền từ băng O’Bannion hay trốn thoát khỏi chúng. Đêm nay là minh chứng cho điều bạn luôn nghĩ: “Skids” O’Toole luôn chiến thắng…",
-      "victory": "Mỗi điều tra viên nhận kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.",
+      "victory": "Mỗi điều tra viên nhận kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.",
       "experience": "_Kinh nghiệm_: {xp}",
       "resourcesChoice": "Nếu số lượng tài nguyên trên Act 2a là (chọn một)…",
       "resources10": "“Skids” O’Toole bắt đầu scenario tiếp theo với 1 tài nguyên bổ sung.",
@@ -60,7 +60,7 @@
     },
     "resolution2": {
       "title": "Kết thúc thứ hai",
-      "body": "<p>Bạn đã không thể tránh khỏi sự chú ý. Chỉ trong vài phút, bạn bị bao vây bởi những tên tay sai nhẫn tâm của băng O’Bannion và bị lôi vào một căn phòng tối. Những gã vũ phu nắm chặt tay và xắn tay áo lên. Bạn nhắm mắt lại và chuẩn bị tinh thần cho bài học khắc nghiệt mà chúng sắp dạy cho bạn: Nữ thần May mắn không có tác dụng gì tại Clover Club.</p><p>Bạn bị vứt lại trong một đống rác bên ngoài lối vào hẻm sau của câu lạc bộ. Xét cho cùng, mọi chuyện đã có thể tồi tệ hơn. Bầm dập và tơi tả, bạn gạch tên Clover Club khỏi danh sách những nơi thường lui tới của mình. Cờ bạc không đáng nếu tiền cược là mạng sống của bạn. Bạn hiểu rõ hơn ai hết rằng, tại Clover Club, nhà cái luôn thắng…</p><ul><li>Mỗi điều tra viên nhận kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong victory display.<ul><li>_Experience_: {xp}</li></ul></li><li>“Skids” O’Toole phải nâng cấp Hospital Debts lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của On the Lam xuống phiên bản gốc của nó.</li></ul>"
+      "body": "<p>Bạn đã không thể tránh khỏi sự chú ý. Chỉ trong vài phút, bạn bị bao vây bởi những tên tay sai nhẫn tâm của băng O’Bannion và bị lôi vào một căn phòng tối. Những gã vũ phu nắm chặt tay và xắn tay áo lên. Bạn nhắm mắt lại và chuẩn bị tinh thần cho bài học khắc nghiệt mà chúng sắp dạy cho bạn: Nữ thần May mắn không có tác dụng gì tại Clover Club.</p><p>Bạn bị vứt lại trong một đống rác bên ngoài lối vào hẻm sau của câu lạc bộ. Xét cho cùng, mọi chuyện đã có thể tồi tệ hơn. Bầm dập và tơi tả, bạn gạch tên Clover Club khỏi danh sách những nơi thường lui tới của mình. Cờ bạc không đáng nếu tiền cược là mạng sống của bạn. Bạn hiểu rõ hơn ai hết rằng, tại Clover Club, nhà cái luôn thắng…</p><ul><li>Mỗi điều tra viên nhận kinh nghiệm bằng tổng giá trị Victory X của mỗi lá bài trong khu vực trưng bày thành tích.<ul><li>_Kinh nghiệm_: {xp}</li></ul></li><li>“Skids” O’Toole phải nâng cấp Hospital Debts lên phiên bản advanced của nó, hoặc hạ cấp phiên bản advanced của On the Lam xuống phiên bản gốc của nó.</li></ul>"
     },
     "xp": {
       "gamblersTake": "Tài nguyên trên Act 2a"

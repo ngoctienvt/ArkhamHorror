@@ -32,6 +32,22 @@ function isResolveStory(message: unknown): boolean {
 
 export type StoryCardRead = { card: ArkhamCard; index: number; flip: boolean; backArt?: string }
 
+const storyFaceIllustrations = new Map([
+  ['08575b', 'memory-ashevak'],
+  ['08576b', 'memory-sinha'],
+  ['08577b', 'memory-takada'],
+  ['08578b', 'memory-cookie'],
+  ['08579b', 'memory-dyer'],
+  ['08580b', 'memory-danforth'],
+  ['08581b', 'memory-claypool'],
+  ['08582b', 'memory-ellsworth'],
+  ['08583b', 'memory-kensler'],
+])
+
+export function storyCardIllustration(cardCode: string): string | undefined {
+  return storyFaceIllustrations.get(cardCode.replace(/^c/, ''))
+}
+
 /* Whether this spotlight is a card turning over rather than a card being read.
  *
  * A two-part story is put aside at `Global` by its first part and resolved again

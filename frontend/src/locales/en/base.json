@@ -532,6 +532,7 @@
     "showCards": "Show Cards"
   },
   "gameUi": {
+    "autoPicking": "Auto-picking",
     "choose": "Choose",
     "chooseTokensToCancel": "Choose token to cancel | Choose tokens to cancel",
     "chooseTokensToIgnore": "Choose token to ignore | Choose tokens to ignore",
@@ -578,6 +579,11 @@
     "debug": "Debug"
   },
   "locationMap": {
+    "dragLog": "Drag to move · double-click to put back",
+    "yourActions": "Your actions",
+    "log": "Game log",
+    "closeLog": "Close the log",
+    "exhaustedBadge": "Exhausted",
     "showMap": "Show map",
     "concealed": "{count} concealed card | {count} concealed cards",
     "concealedCard": "Concealed card",
@@ -714,7 +720,7 @@
         "InvestigationPhaseBeginsWindow": "fast window at the start of the investigation phase",
         "NextInvestigatorsTurnBeginsStep": "moving to the next investigator's turn",
         "NextInvestigatorsTurnBeginsWindow": "fast window at the start of the turn",
-        "InvestigatorTakesActionStep": "an investigator is acting (up to 3 actions per turn)",
+        "InvestigatorTakesActionStep": "an investigator is acting",
         "InvestigatorsTurnEndsStep": "the investigator's turn ends",
         "InvestigationPhaseEndsStep": "investigation phase ends",
         "EnemyPhaseBeginsStep": "enemy phase begins",
@@ -898,11 +904,12 @@
     },
     "tokenChoice": {
       "DamageToken": "Assign damage", "HorrorToken": "Assign horror", "ClueToken": "Clues",
-      "ResourceToken": "Resources", "DoomToken": "Doom"
+      "ResourceToken": "Resources", "DoomToken": "Doom",
+      "heal": { "DamageToken": "Heal damage", "HorrorToken": "Heal horror" }
     },
     "targetKind": {
       "enemy": "Enemy", "location": "Location", "asset": "Asset", "event": "Event", "skill": "Skill",
-      "treachery": "Treachery", "story": "Story", "scarletKey": "Scarlet Key", "investigator": "Investigator", "key": "Key"
+      "treachery": "Treachery", "story": "Story", "scarletKey": "Scarlet Key", "investigator": "Investigator", "key": "Key", "card": "Card"
     },
     "section": {
       "targets": "Choose a target",
@@ -974,6 +981,9 @@
       "openBoard": "Open the full card board",
       "hint": "Shortcut: K"
     },
+    "viewing": "Looking at",
+    "backToHere": "Back to the actions where you stand",
+    "loadingBoard": "Loading the board…",
     "collapseStrip": "Collapse mission bar",
     "expandStrip": "Expand mission bar",
     "showMore": "Show more",

@@ -255,8 +255,16 @@ const triggers = computed<TriggerRow[]>(() => {
  * be picked from the panel instead of the hand row. Each player sees only the
  * cards their own choices offer, so in multiplayer every investigator allowed
  * to help commits from their own panel. */
+/* The engine also opens a second commit window once the tokens are revealed, for
+ * cards that may be committed then (Timely Intervention). The test is already
+ * past step 2 at that point, so the window is recognised by its "done committing"
+ * answer rather than by the step. */
+const isDoneCommittingLabel = (c: Message) =>
+  c.tag === MessageType.LABEL && typeof c.label === 'string' && c.label.endsWith('doneCommitting')
+const inCommitWindow = computed(() =>
+  props.skillTest.step === 'CommitCardsFromHandToSkillTestStep' || choices.value.some(isDoneCommittingLabel))
 const committableCards = computed(() => {
-  if (props.skillTest.step !== 'CommitCardsFromHandToSkillTestStep') return []
+  if (!inCommitWindow.value) return []
   const me = Object.values(props.game.investigators).find((i) => i.playerId === props.playerId)
   if (!me) return []
   const hand = new Map(me.hand.map((card) => [Cards.toCardContents(card).id, Cards.toCardContents(card)]))
