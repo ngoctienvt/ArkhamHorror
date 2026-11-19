@@ -1,10 +1,10 @@
-# Scene immersion — kết quả triển khai 18/11
+# Scene immersion — kết quả triển khai 18–19/11
 
-Trạng thái: đã tích hợp các bộ ảnh hoàn thành; **chưa hoàn tất toàn bộ plan** vì GPT Image hết hạn mức ở hai gói cuối.
+Trạng thái: **hoàn tất triển khai trong phạm vi**. Hai gói cuối từng bị hạn mức đã tạo và tích hợp ngày 19/11; không còn ảnh chờ tạo. Chưa playtest mọi ván backend. Hai lỗi của lượt test ban đầu đã được xử lý ở bước dọn tests theo yêu cầu người dùng: sửa path Windows, đưa completeness tiếng Trung thành tùy chọn; lượt mặc định hiện đạt 609/609.
 
 ## Đã giao
 
-- 297 tài sản GPT Image đã xuất vào `frontend/public/img/scenes/`: 213 sprite có alpha, 84 panorama/nền/biến thể. [Manifest nguồn](../261117-2321-scene-immersion-audit/generated-art.json).
+- 304 tài sản GPT Image đã xuất vào `frontend/public/img/scenes/`: 217 sprite có alpha, 87 panorama/nền/biến thể. [Manifest nguồn](../261117-2321-scene-immersion-audit/generated-art.json).
 - Chuyển cảnh theo location lifecycle: Heart Madness, Film Fatale, Dagon, Apiary, Guardians, Phantom, Carnevale; giữ Alaska khi mở lair.
 - Lưới/phòng đổi vị trí: Antarctic, Fatal Mirage, Court, Grand Vault, Wendigo, Circus, Electric Nightmare, Unstuck và Time Runs Out.
 - Biến thể cục bộ: Boundary, Fragment of Carcosa homebrew, Strange Moons, Usher, Constellation, Queen of Ash, School/A Year to Plan; Zann đã bỏ các nêm tiêu âm khổng lồ trông như chông.
@@ -13,13 +13,19 @@ Trạng thái: đã tích hợp các bộ ảnh hoàn thành; **chưa hoàn tấ
 
 ## Kiểm chứng và giới hạn
 
-73/73 tests stage/off-map/graph đạt, typecheck đạt, production compile đạt. Các test kiểm cả ảnh nền, tile/back, mask layer và figure có file thật. Manifest không có file thiếu; mọi sprite có alpha. Đã duyệt toàn bộ contact sheets và các Chrome fixture chính. [Log tests](../261117-2321-scene-immersion-audit/validation-tests.log), [typecheck](../261117-2321-scene-immersion-audit/validation-typecheck.log), [build](../261117-2321-scene-immersion-audit/validation-build.log).
+78/78 tests stage/off-map/graph đạt; lint phần thay đổi, typecheck và production compile đạt. Các test kiểm cả ảnh nền, tile/back, mask layer và figure có file thật. Manifest không có file thiếu; mọi sprite có alpha. Đã duyệt contact sheets và các Chrome fixture chính, gồm 9 preview cho hai gói cuối. [Log tests](../261117-2321-scene-immersion-audit/validation-tests.log), [typecheck](../261117-2321-scene-immersion-audit/validation-typecheck.log), [lint](../261117-2321-scene-immersion-audit/validation-lint.log), [build](../261117-2321-scene-immersion-audit/validation-build.log).
 
 Review bằng `ak-code-review` không tìm thấy lỗi runtime xác nhận trong selectors/renderer và các backend đã đối chiếu. Chưa mount/playtest toàn bộ Vue game với backend; không chứng nhận chính xác tuyệt đối mọi màn và mọi nhánh. Một số atlas fixture hiển thị mọi hình khả dụng để kiểm khung, không phải setup gameplay hợp lệ. Build vẫn có cảnh báo chunk lớn và eval từ lottie hiện hữu.
 
-## Còn bị chặn
+## Hai gói cuối đã hoàn tất
 
-1. Dead Heat: mới hiệu chỉnh điểm địa danh, chưa tạo được bộ ngày/đêm/dây leo/vườn cháy. Đã khóa diễn biến theo Agenda 1B, Act 3 và nhánh Amaranth 2B.
-2. Fate of the Vale: chưa tạo được sprite Mirror Nest/Abyss và tích hợp các bố cục tương ứng. Nhánh làng đêm hiện có vẫn giữ.
+1. Dead Heat: có bộ ngày/đêm/dây leo và sprite lửa nhỏ trong vườn. Đêm theo Agenda 1B, dây leo theo Act 3; lửa chỉ ở nhánh Amaranth `09537b`. Giữ cùng điểm địa danh, hỗ trợ Undo.
+2. Fate of the Vale: Nest/cave sprites theo ô hiện tại, backs chung, bản sao giữ ID riêng. Abyss một ảnh chiếm vùng 2×2 ô; nhánh về làng chuyển panorama đêm và bỏ bàn cũ.
 
-Hai batch đều nhận HTTP 429 `usage_limit_reached`; đã gỡ code thử nghiệm tham chiếu ảnh chưa có. Không dùng Gemini hay API CLI thay thế. [Nguồn, prompt và bước hoàn tất](../261117-2321-scene-immersion-audit/blocked-art.md), [plan hiện tại](../261117-2321-scene-immersion-audit/implementation.md).
+Không dùng Gemini hay API CLI thay thế. [Nguồn và chi tiết hoàn tất](../261117-2321-scene-immersion-audit/blocked-art.md), [plan hiện tại](../261117-2321-scene-immersion-audit/implementation.md).
+
+## Lỗi kiểm tra ngoài phạm vi còn lại
+
+Full frontend suite chạy đến kết quả **625/627 đạt**. Hai lỗi không nằm trong các module Scene Map vừa sửa: `scenarioLocalization.test.mjs:56` phát hiện text backend hardcoded ở InTheShadowOfEarth, FatalMirage và ThePallidMask; `ultimatumsAndBoonsZh.test.mjs:24` phát hiện catalog tiếng Trung thiếu khóa Ultimatum/Boon. Không sửa campaign/backend của chat khác hoặc làm yếu tests. [Log đầy đủ](../261117-2321-scene-immersion-audit/validation-frontend-tests.log).
+
+Sau đó xác nhận lỗi thứ nhất là dấu phân cách Windows không khớp allowlist có sẵn; đã normalize path, không thêm ngoại lệ. Theo ưu tiên Việt/Anh do người dùng yêu cầu, kiểm tra Trung chuyển thành lượt tùy chọn. Assertions Scene Map/gameplay giữ nguyên. [Kết quả dọn test: 609/609 đạt, 116.2 giây](../261119-0003-test-suite-cleanup/plan.md).

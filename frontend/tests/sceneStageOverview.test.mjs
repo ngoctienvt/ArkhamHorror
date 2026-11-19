@@ -520,6 +520,80 @@ test('Dead Heat keeps each abandoned printing on its original physical landmark'
   assert.equal(stageOverview(base, initial).image, day.image)
 })
 
+test('Dead Heat tracks night from Agenda 1B independently from the Act 3 vines, including undo', () => {
+  const state = snapshot('09520', [location('09526'), location('09530')])
+  const agenda = (step, side, flipped = false) => ({ sequence: { step, side }, flipped })
+  const act = { id: '09525', sequence: { number: 3, side: 'A' } }
+  assert.match(stageOverview(base, { ...state, agendas: [agenda(1, 'A')] }).image, /dead-heat.webp$/)
+  for (const active of [agenda(1, 'B'), agenda(1, 'A', true), agenda(2, 'A')]) {
+    assert.match(stageOverview(base, { ...state, agendas: [active] }).image, /dead-heat-night.webp$/)
+    const late = stageOverview(base, { ...state, agendas: [active], acts: [act] })
+    assert.match(late.image, /dead-heat-night-vines.webp$/)
+    assert.equal(late.layoutArt, 'the-scarlet-keys/dead-heat')
+  }
+  assert.match(stageOverview(base, { ...state, acts: [act] }).image, /dead-heat-vines.webp$/)
+  assert.match(stageOverview(base, state).image, /dead-heat.webp$/)
+})
+
+test('Dead Heat only burns the garden in the revealed Amaranth branch, not the Razin branch', () => {
+  const state = snapshot('09520', [location('09535')], { acts: [{ id: '09525', sequence: { number: 3, side: 'A' } }] })
+  for (const code of ['09537a', '09538']) assert.equal(stageOverview(base, { ...state, enemies: [{ cardCode: code }] }).figures, undefined)
+  const fire = stageOverview(base, { ...state, enemies: [{ cardCode: '09537b' }] }).figures
+  assert.equal(fire.length, 1)
+  assert.match(fire[0].image, /garden-fire.webp$/)
+  assert.ok(fire[0].point[0] > 75 && fire[0].point[1] < 50)
+  assert.equal(stageOverview(base, state).figures, undefined)
+})
+
+const fateLayout = [
+  '. . caveTop1 caveTop2 . .', '. . . mirrorNestTop . .',
+  'caveLeft1 mirrorNestLeft cosmicEmissaryPhantasm cosmicEmissaryAbyss . .',
+  'caveLeft2 . cosmicEmissaryBrilliance cosmicEmissaryMiasma mirrorNestRight caveRight1',
+  '. . mirrorNestBottom . . caveRight2', '. . caveBottom1 caveBottom2 . .',
+]
+
+test('Fate nests share their printed illustration while shuffled copies keep their public slots', () => {
+  const labels = ['mirrorNestTop', 'mirrorNestRight', 'mirrorNestBottom', 'mirrorNestLeft']
+  const nests = labels.map((label, i) => location(String(10666 + i), label))
+  const state = snapshot('10651', nests, { layout: fateLayout })
+  const board = stageOverview(base, state)
+  assert.equal(new Set(Object.values(board.tileImages)).size, 1)
+  assert.match(board.tileImages.mirrorNestTop, /fate\/nest.webp$/)
+  const shuffled = stageOverview(base, { ...state, locations: nests.map((nest, i) => ({ ...nest, cardCode: String(10669 - i) })) })
+  assert.deepEqual(shuffled.tileImages, board.tileImages)
+  const unknown = stageOverview(base, { ...state, locations: nests.map((nest) => ({ ...nest, revealed: false })) })
+  assert.ok(Object.values(unknown.tileImages).every((art) => art.endsWith('/fate/back.webp')))
+})
+
+test('Fate cavern copies stay separate, hide their identities, and the Abyss occupies its repeated central area', async () => {
+  const caves = [location('10716', 'caveTop1'), location('10716', 'caveTop2'), location('10720', 'caveLeft1', false)]
+  const abyss = location('10670', 'theAbyss')
+  const layout = fateLayout.map((row) => row.replace(/cosmicEmissary\w+/g, 'theAbyss'))
+  const state = snapshot('10651', [...caves, abyss], { layout })
+  const board = stageOverview(base, state)
+  assert.equal(Object.keys(board.tileImages).length, 4)
+  assert.equal(board.tileImages.caveTop1, board.tileImages.caveTop2)
+  assert.match(board.tileImages.caveLeft1, /cavern-back.webp$/)
+  assert.deepEqual(board.tileSpans.theAbyss, [2, 2])
+  const { gridPositions } = await import(moduleUrl('locationGraph'))
+  assert.deepEqual(gridPositions(layout).theAbyss, [50, 50])
+  const before = stageOverview(base, snapshot('10651', caves, { layout: fateLayout }))
+  assert.equal(before.tileImages.theAbyss, undefined)
+  assert.equal(before.tileSpans.theAbyss, undefined)
+})
+
+test('Fate returns to the night village and restores nests when the snapshot is undone', async () => {
+  const { hemlockOverview } = await import(moduleUrl('hemlock-overview'))
+  const villageLayout = ['. diamond .', 'moon square heart']
+  const village = hemlockOverview('10651', '10651', villageLayout)
+  const state = snapshot('10651', [location('10666', 'mirrorNestTop')], { layout: fateLayout })
+  assert.ok(stageOverview(base, state).islands)
+  const night = stageOverview(village, snapshot('10651', [], { layout: villageLayout }))
+  assert.match(night.image, /vale-night.webp$/)
+  assert.equal(night.tileImages, undefined)
+  assert.ok(stageOverview(base, state).islands)
+})
+
 test('all room families ship both public artwork and their unknown backs', () => {
   const sets = [
     ['08621', '', 8632, 8641], ['08648a', '', 8649, 8666],

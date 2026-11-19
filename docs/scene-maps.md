@@ -18,6 +18,8 @@ Tính năng **Scene Map (Bản đồ toàn cảnh trực quan)** là một bư�
 - **Hiệu ứng viền sáng (Action Glow)**: Nhân vật đang trong lượt hành động sẽ có viền sáng nổi bật, giúp theo dõi trạng thái bàn chơi trong các ván chơi nhiều người (Multiplayer) dễ dàng.
 
 ### 3. Thao tác tương tác trực tiếp (Direct Interactive Location Plates)
+- Khi game cho phép tiến Act, lựa chọn **Advance Act** và các khả năng của Act cũng xuất hiện trong danh sách **Hành động**, kèm tên lá Act. Bấm tại đây dùng cùng lựa chọn như trên lá bài.
+- Khi Act và Agenda cùng tiến gần nhau, phần đọc đang diễn ra giữ mặt sau và lá kế tiếp liền nhau trước phần đang chờ. Cập nhật phát lại không mở lại cùng một lần tiến.
 - Từng phòng/địa điểm có bảng thông tin (Plate) tích hợp:
   - Hiển thị rõ số **Manh mối (Clues)**, **Độ che giấu (Shroud)**, số lượng **Doom** và kẻ thù hiện diện.
   - Số manh mối còn lại nằm ngay trên mặt token và cập nhật theo ván chơi. Rê chuột lên token để xem số in gốc nếu có.
@@ -98,6 +100,10 @@ City of the Elder Things, các phòng Heart of Madness, Fatal Mirage, Court of t
 Carnevale giữ vòng Venice cho tới khi game gỡ các location cũ và đưa Gondola vào bàn; lúc đó tranh chuyển sang toàn cảnh thuyền. Apiary chỉ thu gọn về Central Chamber ở nhánh Hive Mind, còn Lost Pilgrims giữ hang ban đầu. On Thin Ice giữ toàn vùng Alaska khi mở lair. Các thế giới Film Fatale, vùng ngầm Dagon và các pha Phantom đổi theo tập location đang có, nên tải lại ván hoặc Undo cũng khôi phục cảnh tương ứng.
 
 School của Ages Unwound có ba Classroom và ba Ritual Circle riêng; Again có thể giữ cả ba vòng cùng lúc. Backstage của Erich Zann mở từng nội thất trong mặt cắt nhà hát. Strange Moons thay riêng khu mô phỏng, Boundary Beyond đổi riêng khu thời gian, Usher hủy hoại từng phòng và Constellation thể hiện ngập tại các phòng exhausted. Các biến thể được chọn từ snapshot công khai, không từ lịch sử thao tác trên trình duyệt.
+
+Dead Heat chuyển sang đêm từ Agenda 1B và phủ dây leo trên đường phố từ Act 3. Hai thay đổi độc lập, giữ cùng điểm địa danh. Nhánh Amaranth Corruption Revealed thêm đám cháy nhỏ trong Bahia Palace Gardens; nhánh Razin không tự thêm lửa.
+
+Fate of the Vale đặt Mirror Nest và các hang theo ô hiện tại. Các Nest dùng chung tranh lá, hang trùng mã giữ riêng ID và ảnh úp không lộ loại hang. Khi Abyss thành location, một ảnh Abyss dùng tâm và kích thước vùng 2×2 ô mang cùng nhãn. Nhánh về làng gỡ toàn bộ bàn Nest/hang và chuyển sang toàn cảnh làng ban đêm.
 
 Mỗi Scene Map được thiết kế dựa trên:
 1. **Lưới toạ độ Backend Haskell**: Đối chiếu ma trận `locationLayout` và danh sách kết nối trong `backend/arkham-api/library/Arkham/Scenario/Scenarios/`.

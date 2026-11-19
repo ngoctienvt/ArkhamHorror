@@ -1,0 +1,23 @@
+✔ a card pool export yields its pack name and every card (6603.1734ms)
+✔ a pack carries its own id, so a renamed pack still replaces its set (6163.7396ms)
+✔ a bare card array and a lone card both parse (6638.3873ms)
+✔ an investigator keeps its stats, class and both faces (7006.5179ms)
+✔ a player asset keeps cost, icons and slot (6189.5172ms)
+✔ a weakness lands on the player-side type for its kind (6174.6571ms)
+✔ ability text is never imported -- there is no field for it (6372.4374ms)
+✔ a card code is derived from the arkham.build id, not minted fresh (7140.4638ms)
+✔ a deck names the same cards the import stored (8129.4883ms)
+✔ an official card code is left exactly as it was (6113.6684ms)
+✔ an alternate front is rewritten inside the meta string (6168.1735ms)
+✔ a short arkham.build id matches the code its card was imported under (6210.355ms)
+✔ an undashed 32-character uuid is translated too (6247.1214ms)
+✔ the deck rewrite translates exactly the ids the importer recognises (8757.3551ms)
+✔ portrait cropping leaves cards alone when it cannot run (6215.4321ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 100486.0451

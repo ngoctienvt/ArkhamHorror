@@ -1,6 +1,6 @@
 # Thực hiện nâng cấp Scene Map
 
-Status: in progress — đã tích hợp 297 tài sản; còn hai gói ảnh bị chặn bởi hạn mức GPT Image. Người dùng đã yêu cầu thực hiện toàn bộ backlog ngày 17/11/2026. Checkpoint cuối và [phần bị chặn](blocked-art.md) thay thế trạng thái các checkpoint cũ bên dưới.
+Status: complete — hoàn tất triển khai trong phạm vi ngày 19/11/2026, tổng 304 tài sản. Hai gói từng bị hạn mức đã [hoàn tất](blocked-art.md). Các checkpoint trước là lịch sử. QA chưa bao gồm playtest mọi ván backend. Theo yêu cầu tiếp theo, lỗi đường dẫn Windows đã được sửa và kiểm tra Trung chuyển thành tùy chọn; lượt test mặc định hiện đạt 609/609. Xem [dọn test](../261119-0003-test-suite-cleanup/plan.md).
 
 ## Phạm vi
 
@@ -13,7 +13,7 @@ Status: in progress — đã tích hợp 297 tài sản; còn hai gói ảnh b�
 - [x] Thay bàn: Heart Madness escape, Film Fatale, Dagon, Apiary, Guardians, Phantom.
 - [x] Lưới/hoán vị: City/facility, Unstuck, Wendigo, Circus forests/train, Halls; bổ sung Fatal Mirage, Court và Vault.
 - [x] Trạng thái cục bộ: Boundary, Dark Matter simulation/Carcosa/Starfall, Usher, Queen Ash, core/elevator/pylons. Core hai mặt cùng minh họa; giữ ảnh, dùng trạng thái nước hiện hữu.
-- [ ] Phủ panorama homebrew, challenge và các biến thể môi trường còn thiếu.
+- [x] Phủ panorama homebrew, challenge và các biến thể môi trường; hoàn tất cả Dead Heat và Fate of the Vale ngày 19/11.
 - [x] QA file/alpha/contact sheets, snapshot/Undo, tests/typecheck/build và Chrome preview; chưa playtest đầy đủ trên ván backend.
 
 ## Kiểm chứng
@@ -58,7 +58,7 @@ Các job tạo ảnh có thể bị ngắt bởi steering: kiểm file/manifest 
 
 Ảnh xuất và nguồn: `generated-art.json`. Prompt: `prompt-*.txt`. Tạo lại bản ghim: `node export-previews.mjs`, sau đó `python render-previews.py` (chạy từ repo với đường dẫn đầy đủ tới script).
 
-## Checkpoint cuối 18/11 — trạng thái dùng để tiếp tục
+## Checkpoint cuối 18/11 — lịch sử trước khi hoàn tất
 
 Các job ở checkpoint cũ đã được thu hồi: **297 WebP**, gồm **213 sprite RGBA** và **84 panorama/nền/biến thể**. Tất cả file trong manifest tồn tại; 213 sprite đều có alpha trong suốt. Đã duyệt contact sheets 1–18 sprite và 1–7 panorama; không dùng hai ảnh Zann lỗi prompt trước đây.
 
@@ -75,3 +75,20 @@ Kiểm chứng cuối: **73/73 tests** stage + off-map + graph; typecheck đạt
 Đã xuất **53 fixture boards** trong `previews/scene-browser-preview.html`, chụp thêm 14 Chrome preview và duyệt các nhóm chính (School, world map, Apiary Nest, Fatal Mirage, Court/Vault, Venice/Gondola, Electric backs, train, Dead Heat points). Một số fixture là atlas các bản có thể xuất hiện để kiểm file/khung, không phải ván hợp lệ có tất cả lá cùng lúc. QA này kiểm tranh/mask/ghim, **không phải mount Vue đầy đủ hay playtest mọi ván backend**. `ak-code-review` đã review selectors/renderer và đối chiếu các backend liên quan; không có lỗi runtime xác nhận trong phạm vi review. Các đường dẫn ảnh được kiểm ngay trong mọi invocation test, gồm layers và figures.
 
 Plan còn in progress vì hai gói ảnh nêu trên. Bảy Vespers shell vẫn được bỏ qua theo yêu cầu; không tính chúng vào phần bị chặn. Không tạo dev server, không commit/push, không dừng tiến trình của chat khác.
+
+## Hoàn tất 19/11/2026
+
+Đã tạo và tích hợp 7 tài sản cuối: Dead Heat night/vines/night-vines + garden-fire RGBA; Fate nest/abyss/back RGBA. Tổng manifest **304 file**, gồm **217 sprite** và **87 panorama/nền/biến thể**; không có file thiếu, mọi sprite có alpha. Không dùng Gemini/API CLI. [Chi tiết hai gói cuối và nguồn backend](blocked-art.md).
+
+Dead Heat: đêm từ Agenda 1B, dây leo từ Act 3, hai trục độc lập. Chỉ Amaranth `09537b` thêm lửa tại lối trong Bahia Palace Gardens; không cháy tự động ở nhánh Razin. Camera/điểm neo dùng chung qua các bản. Không lưu trạng thái client nên Undo/reload khôi phục đúng snapshot.
+
+Fate: Nest theo public slot xáo, các bản cùng tranh không gộp ID; cave backs không lộ danh tính. Abyss một ID có tâm và kích thước đúng vùng nhãn lặp 2×2 (`tileSpans`); Canvas dùng cùng cell cho sprite, plate và đường nối. Nhánh làng vẫn dùng panorama đêm hiện hữu, không giữ các sprite bàn cũ.
+
+Kiểm chứng sau tích hợp: **78/78 tests stage/off-map/graph**, lint các module/Canvas liên quan, typecheck và production compile đều đạt. Full frontend suite: **625/627 đạt**, hai lỗi ngoài phạm vi phần đổi Scene Map:
+
+- `scenarioLocalization.test.mjs:56`: các dòng hardcoded backend trong InTheShadowOfEarth (278/286), FatalMirage (285), ThePallidMask (49). Không sửa backend/campaign của chat khác.
+- `ultimatumsAndBoonsZh.test.mjs:24`: catalog tiếng Trung thiếu các khóa Ultimatum/Boon so với tiếng Anh. Không sửa hoặc làm yếu test.
+
+Log hiện tại: `validation-tests.log`, `validation-typecheck.log`, `validation-lint.log`, `validation-build.log`, `validation-frontend-tests.log`. Lượt full suite đầu dưới sandbox không xuất tiến độ đã được dừng và thu hồi đúng cây tiến trình do lượt này tạo; lượt kiểm chứng cuối dùng concurrency 2, timeout 30 giây/test và chạy đến kết quả trên. Không dừng tiến trình của chat khác.
+
+Đã thêm 9 Chrome preview (`browser-complete-53.png` đến `61.png`), xuất tổng 62 fixture boards. Duyệt ảnh cuối, cân lại lửa và kiểm cả Nest/caves úp, Abyss mở, làng đêm; sửa preview dùng kích thước cell/plate để không tạo lỗi crop giả. Review nguồn bổ sung bằng `ak-code-review` không có lỗi correctness xác nhận. Đây là kiểm hình/snapshot và compile, chưa là mount/playtest toàn bộ Vue/backend. Không còn gói ảnh phải thực hiện trong phạm vi; bảy Vespers shell vẫn được bỏ qua theo quyết định người dùng.

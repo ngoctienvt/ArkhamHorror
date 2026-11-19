@@ -209,8 +209,13 @@ const PLATE_ROOM = 34
 const ROAD_OVERLAP = 1.04
 /* On a small map the plate may overlap the sprite's top edge rather than squeeze the picture away. */
 const plateRoom = (cellHeight: number) => Math.min(PLATE_ROOM, cellHeight * (props.dreamPositions && stageWidth.value <= 600 ? 0.47 : 0.35))
-const islandWidth = (l: Location): number => {
+const locationCell = (l: Location) => {
   const cell = cosmosCell.value
+  const span = props.illustratedBoard?.tileSpans?.[l.id]
+  return cell && span ? { width: cell.width * span[0], height: cell.height * span[1] } : cell
+}
+const islandWidth = (l: Location): number => {
+  const cell = locationCell(l)
   if (!cell) return 0
   if (props.roadGrid) return cell.width * ROAD_OVERLAP
   const room = Math.max(0, cell.height - plateRoom(cell.height))
@@ -220,7 +225,7 @@ const islandWidth = (l: Location): number => {
 }
 /** Where a sprite (and its water) is drawn: centred across the cell, its top just under the plate. */
 const spriteStyle = (l: Location): Record<string, string | number> => {
-  const cell = cosmosCell.value
+  const cell = locationCell(l)
   const [x, y] = cellPos(l.id)
   const width = islandWidth(l)
   const centre = cell && !props.roadGrid ? -cell.height / 2 + plateRoom(cell.height) + width / aspectOf(l) / 2 : 0
@@ -232,7 +237,7 @@ const SPRITE_EDGE = 0.8
 /** A sprite's box relative to its cell, in stage percent: on a sprite board links run sprite to sprite, not
  * between the plates (which hang at the top of the cell and can be dragged aside). */
 const spriteBox = (l: Location): PlateBox | undefined => {
-  const cell = cosmosCell.value
+  const cell = locationCell(l)
   if (!cell || !stageWidth.value || !stageHeight.value) return undefined
   const width = islandWidth(l)
   const height = width / aspectOf(l)
@@ -249,7 +254,7 @@ const stormy = computed(() => !!props.illustratedBoard?.weather && !!props.weath
 /** On a sprite board the plate hangs from the top of its cell instead of being centred on it. */
 const nodeStyle = (l: Location): Record<string, string | number | undefined> => {
   const [x, y] = pos(l.id)
-  const cell = cosmosCell.value
+  const cell = locationCell(l)
   if (cell && props.roadGrid) {
     // The plate sits on the top edge of its road tile.
     return { left: `${x}%`, top: `calc(${y}% - ${islandWidth(l) / aspectOf(l) / 2}px)`, translate: '-50% 0' }

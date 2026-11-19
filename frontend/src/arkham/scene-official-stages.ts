@@ -4,6 +4,7 @@ import { tiledScene } from './scene-stage-tiles'
 import { onThinIceScene } from './scene-on-thin-ice'
 import { apiaryScene } from './scene-apiary'
 import { drownedGridScene } from './scene-drowned-grid'
+import { fateOfTheValeScene } from './scene-fate-of-the-vale'
 
 const escape = {
   theGateOfYquaa: [10, 44], titanicRamp1: [23, 56], titanicRamp2: [43, 47],
@@ -13,6 +14,7 @@ const escape = {
 /** Location presence also covers advancing the agenda, saved games and undo. */
 export function officialSceneStage(base: StageBoard | undefined, state: SceneSnapshot): StageBoard | undefined {
   switch (state.id.replace(/^c/, '')) {
+    case '10651': return fateOfTheValeScene(base, state)
     case '09609': return onThinIceScene(state)
     case '11612':
     case '11587': return drownedGridScene(state)

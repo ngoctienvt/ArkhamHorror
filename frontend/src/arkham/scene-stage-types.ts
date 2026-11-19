@@ -24,6 +24,8 @@ export type StageBoard = HemlockOverview & {
   tileImages?: Record<string, string>
   tileBack?: string
   tileSize?: Point
+  /** Width/height in grid cells for a location occupying a repeated layout label. */
+  tileSpans?: Record<string, Point>
   layers?: { image: string; mask: string }[]
   figures?: { id: string; image: string; point: Point; size: Point; mask?: string }[]
 }

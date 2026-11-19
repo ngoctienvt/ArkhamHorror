@@ -3619,5 +3619,73 @@
       768,
       512
     ]
+  },
+  {
+    "file": "hemlock-vale/fate/abyss.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      130,
+      23,
+      653,
+      484
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "the-scarlet-keys/dead-heat-garden-fire.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      154,
+      38,
+      587,
+      458
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "hemlock-vale/fate/back.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      57,
+      9,
+      712,
+      499
+    ],
+    "size": [
+      768,
+      512
+    ]
+  },
+  {
+    "file": "hemlock-vale/fate/nest.webp",
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      121,
+      10,
+      641,
+      500
+    ],
+    "size": [
+      768,
+      512
+    ]
   }
 ]

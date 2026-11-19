@@ -20,7 +20,7 @@ function sewerPositions(state: SceneSnapshot): Record<string, Point> {
 
 export function environmentSceneStage(base: StageBoard | undefined, state: SceneSnapshot): StageBoard | undefined {
   const id = cleanCode(state.id)
-  if (id === '09520') return deadHeatScene()
+  if (id === '09520') return deadHeatScene(state)
   if ((id === '04277' || id === '53059') && base) {
     const depth = state.counts?.CurrentDepth ?? 1
     const art = `the-forgotten-age/the-depths-of-yoth${depth >= 5 ? '' : depth >= 3 ? '-middle' : '-upper'}`

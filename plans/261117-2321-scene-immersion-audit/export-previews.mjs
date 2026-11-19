@@ -13,7 +13,7 @@ function moduleUrl(name) {
 }
 const { stageOverview } = await import(moduleUrl('scene-stage-overview'))
 const { hemlockOverview, hemlockVillagePosition } = await import(moduleUrl('hemlock-overview'))
-const { mapPositions } = await import(moduleUrl('locationGraph'))
+const { mapPositions, compactGridLayout } = await import(moduleUrl('locationGraph'))
 const rows = []
 const add = (id, codes, extra = {}) => {
   const state = { id, layout: [], acts: [], agendas: [], enemies: [], meta: {},
@@ -26,8 +26,11 @@ const add = (id, codes, extra = {}) => {
     const point = board.positions?.[location.id] ?? (!board.islands && hemlockVillagePosition(location.cardCode, board.anchors, location.label))
     if (point) pins.push([location.cardCode, point])
   }
-  const fallback = mapPositions(Object.fromEntries(state.locations.map((l) => [l.id, { connectedLocations: [], investigators: [], enemies: [], ...l }])), state.layout)
-  const tiles = Object.entries(board?.tileImages ?? {}).map(([id, image]) => ({ image, point: board.positions?.[id] ?? fallback[id] }))
+  const layout = board?.islands ? compactGridLayout(state.layout, new Set(state.locations.map((l) => l.label))) : state.layout
+  const fallback = mapPositions(Object.fromEntries(state.locations.map((l) => [l.id, { connectedLocations: [], investigators: [], enemies: [], ...l }])), layout)
+  const columns = Math.max(1, ...layout.map((row) => row.trim().split(/\s+/).length))
+  const cell = board?.tileSize ?? [92 / columns, 92 / Math.max(1, layout.length)]
+  const tiles = Object.entries(board?.tileImages ?? {}).map(([id, image]) => ({ image, point: board.positions?.[id] ?? fallback[id], span: board.tileSpans?.[id] ?? [1, 1], cell }))
   if (board) rows.push({ id: `${id.replaceAll(':', '_')}-${rows.length}`, ...board, pins, tiles })
 }
 for (const [pack, first, last] of [
@@ -85,6 +88,23 @@ add('82001', ['82006b'], { enemies: [{ id: 'cnidathqua', cardCode: '82027', asSe
 for (const revealed of [false, true]) add(':dark-matter:054', [], { layout: ['a b c', 'd e f', '. g .'], locations: Array.from({ length: 7 }, (_, i) => ({ id: String(i), label: 'abcdefg'[i], cardCode: `:dark-matter:${String(69 + i).padStart(3, '0')}`, revealed })) })
 add(':circus-ex-mortis:074', [], { layout: ['a b c d e', 'f g h i j', 'k l m n o'], locations: Array.from({ length: 15 }, (_, i) => ({ id: String(i), label: 'abcdefghijklmno'[i], cardCode: `:circus-ex-mortis:${String(81 + i).padStart(3, '0')}`, revealed: true })) })
 add('09520', ['09526', '09527', '09528', '09529', '09530'])
+const heatLocations = ['09526', '09527', '09528', '09529', '09530']
+const heatNight = [{ sequence: { step: 2, side: 'A' } }]
+const heatVines = [{ id: '09525', sequence: { number: 3, side: 'A' } }]
+add('09520', heatLocations, { agendas: heatNight })
+add('09520', heatLocations, { acts: heatVines })
+add('09520', heatLocations, { agendas: heatNight, acts: heatVines })
+for (const agendas of [[], heatNight]) add('09520', heatLocations, { agendas, acts: heatVines, enemies: [{ cardCode: '09537b' }] })
+const fateLayout = ['. . caveTop1 caveTop2 . .', '. . . mirrorNestTop . .',
+  'caveLeft1 mirrorNestLeft cosmicEmissaryPhantasm cosmicEmissaryAbyss . .',
+  'caveLeft2 . cosmicEmissaryBrilliance cosmicEmissaryMiasma mirrorNestRight caveRight1',
+  '. . mirrorNestBottom . . caveRight2', '. . caveBottom1 caveBottom2 . .']
+const fateNests = ['mirrorNestTop', 'mirrorNestRight', 'mirrorNestBottom', 'mirrorNestLeft'].map((label, i) => ({ id: label, label, cardCode: String(10666 + i), revealed: true }))
+add('10651', [], { layout: fateLayout, locations: fateNests })
+const fateCaves = ['caveTop1', 'caveTop2', 'caveRight1', 'caveRight2', 'caveBottom1', 'caveLeft1'].map((label, i) => ({ id: label, label, cardCode: String(i === 5 ? 10716 : 10716 + i), revealed: true }))
+const fateOpened = fateLayout.map((row) => row.replace(/cosmicEmissary\w+/g, 'theAbyss'))
+for (const revealed of [false, true]) add('10651', [], { layout: fateOpened, locations: [...fateNests, ...fateCaves.map((l) => ({ ...l, revealed })), { id: 'abyss', label: 'theAbyss', cardCode: '10670', revealed: true }] })
+add('10651', [], { layout: ['. diamond .', 'moon square heart'], locations: [] })
 writeFileSync(new URL('preview-boards.json', import.meta.url), JSON.stringify(rows, null, 2))
 mkdirSync(new URL('previews/', import.meta.url), { recursive: true })
 const publicRoot = new URL('../../frontend/public/', import.meta.url).href
@@ -95,7 +115,7 @@ writeFileSync(new URL('previews/scene-browser-preview.html', import.meta.url), `
 <script>const boards=${data};const root=${JSON.stringify(publicRoot)};let index=Number(location.hash.slice(1))||0;
 function render(){const board=boards[index];document.querySelector('#title').textContent=index+' / '+boards.length+' '+board.id;const main=document.querySelector('main');main.replaceChildren();
 for(const layer of [{image:board.image},...(board.layers||[])]){const img=document.createElement('img');img.src=root+layer.image;if(layer.mask)Object.assign(img.style,{maskImage:layer.mask,maskSize:'100% 100%',maskRepeat:'no-repeat'});main.append(img)}
-for(const tile of board.tiles||[]){if(!tile.point)continue;const img=document.createElement('img');img.src=root+tile.image;const size=board.tileSize||[20,22];Object.assign(img.style,{inset:'auto',left:tile.point[0]+'%',top:tile.point[1]+'%',width:size[0]+'%',height:size[1]+'%',objectFit:'contain',transform:'translate(-50%,-50%)'});main.append(img)}
+for(const tile of board.tiles||[]){if(!tile.point)continue;const img=document.createElement('img');img.src=root+tile.image;const cellW=main.clientWidth*tile.cell[0]/100*tile.span[0],cellH=main.clientHeight*tile.cell[1]/100*tile.span[1],plate=Math.min(34,cellH*.35),w=Math.min(cellW,(cellH-plate)*1.5),h=w/1.5,offset=-cellH/2+plate+h/2;Object.assign(img.style,{inset:'auto',left:tile.point[0]+'%',top:'calc('+tile.point[1]+'% + '+offset+'px)',width:w+'px',height:h+'px',objectFit:'contain',transform:'translate(-50%,-50%)'});main.append(img)}
 for(const figure of board.figures||[]){const img=document.createElement('img');img.src=root+figure.image;Object.assign(img.style,{inset:'auto',left:figure.point[0]+'%',top:figure.point[1]+'%',width:figure.size[0]+'%',height:figure.size[1]+'%',objectFit:'contain',transform:'translate(-50%,-100%)',maskImage:figure.mask||'none'});main.append(img)}
 const seen=new Set();for(const [code,[x,y]] of board.pins){if(seen.has(x+','+y))continue;seen.add(x+','+y);const pin=document.createElement('span');pin.className='pin';pin.textContent=code.split(':').pop();Object.assign(pin.style,{left:x+'%',top:y+'%'});main.append(pin)}
 document.body.dataset.scene=board.id;Promise.all([...main.querySelectorAll('img')].map(img=>img.decode().catch(()=>null))).then(()=>{document.body.dataset.failedImages=[...main.querySelectorAll('img')].filter(img=>!img.naturalWidth).length})}
