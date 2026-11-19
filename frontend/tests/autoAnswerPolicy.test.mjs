@@ -11,6 +11,65 @@ const { decideAutoAnswer, AUTO_ANSWER_DELAY_MS } = await import('data:text/javas
 const chooseOne = (extra = {}) => ({ tag: 'ChooseOne', ...extra })
 const encounterDeck = { tag: 'TargetLabel', target: { tag: 'EncounterDeckTarget' } }
 const label = (text) => ({ tag: 'Label', label: text })
+const forced = (type = { tag: 'ForcedAbility' }) => ({ tag: 'AbilityLabel', ability: { type } })
+
+test('identifies mandatory Forced activations separately from optional automation', () => {
+  for (const tag of ['ChooseOne', 'WindowChooseOne', 'ChooseOneAtATime']) {
+    for (const type of [
+      { tag: 'ForcedAbility' },
+      { tag: 'ForcedAbilityWithCost' },
+      { tag: 'Objective', abilityType: { tag: 'ForcedAbility' } },
+      { tag: 'DelayedAbility', abilityType: { tag: 'ForcedAbilityWithCost' } },
+    ]) {
+      assert.deepEqual(decideAutoAnswer({ tag }, [{ tag: 'InvalidLabel' }, forced(type)]), {
+        index: 1, reason: 'forcedAbility',
+      })
+    }
+  }
+})
+
+test('leaves simultaneous Forced ordering and optional reactions to the player', () => {
+  assert.equal(decideAutoAnswer(chooseOne(), [forced(), forced()]), null)
+  assert.equal(decideAutoAnswer(chooseOne(), [forced(), { tag: 'SkipTriggersButton' }]), null)
+  assert.equal(decideAutoAnswer(chooseOne({ isPlayerWindow: true }), [forced()]), null)
+  for (const tag of ['ReactionAbility', 'SilentForcedAbility', 'FastAbility']) {
+    assert.equal(decideAutoAnswer(chooseOne(), [forced({ tag })])?.reason, 'singleChoice')
+  }
+})
+
+test('Forced results still ask for target, consequence, and asset soak decisions', () => {
+  assert.equal(decideAutoAnswer(chooseOne(), [label('Take 1 horror'), label('Discard a card')]), null)
+  assert.equal(decideAutoAnswer(chooseOne(), [
+    { tag: 'TargetLabel', target: { tag: 'EnemyTarget', contents: 'e1' } },
+    { tag: 'TargetLabel', target: { tag: 'EnemyTarget', contents: 'e2' } },
+  ]), null)
+})
+
+test('uses the engine mandatory window for a conditional Forced reaction', () => {
+  const reaction = forced({ tag: 'ReactionAbility' })
+  assert.deepEqual(decideAutoAnswer(chooseOne({ isWindow: true }), [reaction]), { index: 0, reason: 'forcedAbility' })
+  assert.equal(decideAutoAnswer(chooseOne({ isWindow: true }), [reaction, { tag: 'SkipTriggersButton' }]), null)
+})
+
+test('leaves both commit and uncommit to a supporting player, even with only one card', () => {
+  const context = { isCommitWindow: true }
+  // The backend uses the same target label to add the card and then remove it.
+  const card = { tag: 'TargetLabel', target: { tag: 'CardIdTarget', contents: 'card-1' } }
+  for (const choices of [[card], [{ tag: 'InvalidLabel' }, card]]) {
+    assert.equal(decideAutoAnswer(chooseOne(), choices, context), null)
+  }
+})
+
+test('still starts a test with no cards to commit', () => {
+  assert.deepEqual(decideAutoAnswer(chooseOne(), [{ tag: 'StartSkillTestButton' }], { isCommitWindow: true }), {
+    index: 0, reason: 'startSkillTest',
+  })
+})
+
+test('leaves a card offered after token reveal to the player', () => {
+  const card = { tag: 'TargetLabel', target: { tag: 'CardIdTarget' } }
+  assert.equal(decideAutoAnswer(chooseOne(), [card], { isCommitWindow: true }), null)
+})
 
 test('draws from the encounter deck when it is the only place to draw from', () => {
   assert.deepEqual(decideAutoAnswer(chooseOne(), [encounterDeck]), { index: 0, reason: 'encounterDraw' })

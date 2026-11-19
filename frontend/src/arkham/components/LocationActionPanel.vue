@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Game } from '@/arkham/types/Game'
 import type { Location } from '@/arkham/types/Location'
+import type { Act } from '@/arkham/types/Act'
 import { MessageType } from '@/arkham/types/Message'
 import { cardId } from '@/arkham/types/Card'
 import { useGameChoices } from '@/arkham/composables/useGameChoices'
@@ -19,7 +20,7 @@ import { imgsrc } from '@/arkham/helpers'
 import { visibleConcealedImage } from '@/arkham/concealedCards'
 import { sceneFallbackTargets, sceneFallbackTokens } from '@/arkham/sceneTargetFallback'
 import { sceneHiddenCardChoices } from '@/arkham/sceneHiddenCardChoices'
-import { cardImage } from '@/arkham/cardImages'
+import { cardImage, resolvedSideArt } from '@/arkham/cardImages'
 import { keyToImage } from '@/arkham/keyImage'
 import type { ArkhamKey } from '@/arkham/types/Key'
 import AbilityButton from '@/arkham/components/AbilityButton.vue'
@@ -27,11 +28,13 @@ import AbilityTextRow from '@/arkham/components/AbilityTextRow.vue'
 import LocationAboutBlock from '@/arkham/components/LocationAboutBlock.vue'
 import LocationInspectSection from '@/arkham/components/LocationInspectSection.vue'
 import { panelModeFor } from '@/arkham/location-panel-mode'
+import { advancingActId } from '@/arkham/engine-message-actions'
 import type { MapLocationInfo } from '@/arkham/composables/useLocationInfo'
 
 /* Every action the server offers right now, listed in one panel beside the scene the way the offline demo
  * does: basic actions, what the location and scenario offer, enemies and cards in play. Moving, playing
- * cards, and act/agenda abilities are left out: those are taken from the location, the hand, and the strip.
+ * cards, and agenda abilities are left out: those are taken from the location, the hand, and the strip.
+ * Act abilities and offered advances are also listed here so objectives are easy to find.
  * It only arranges the current choices; each row sends the index its choice already had. */
 const props = defineProps<{
   game: Game; playerId: string; location: Location | null; info?: MapLocationInfo | null
@@ -69,6 +72,7 @@ function chooseInspected(index: number) {
 }
 const nameOf = useCardNames()
 const choices = useGameChoices(() => props.game, () => props.playerId)
+const actImage = (act: Act) => cardImage(['B', 'D', 'F', 'H'].includes(act.sequence.side) ? resolvedSideArt(act.id) : act.id)
 const me = computed(() => ownInvestigator(props.game, props.playerId))
 
 // 'targets' first: when the game asks to pick a card the scene cannot show as clickable, that is the question.
@@ -89,6 +93,13 @@ type Row = {
   image: string | null
   /** Layout of a plain basic row: 'half' sits two to a line (resource, draw), 'end' closes the list (end turn). */
   variant: 'half' | 'end' | null
+}
+
+function chooseRow(row: Row) {
+  if (row.sourceId && props.game.acts[row.sourceId]) {
+    console.debug('[Action panel] Act choice selected', { index: row.index, actId: row.sourceId })
+  }
+  emit('choose', row.index)
 }
 
 
@@ -133,6 +144,12 @@ const sections = computed(() => {
         // Picking a concealed card is drawn on the map, but a stack shows only its top card, so every
         // one of them is also listed here.
         const id = choice.target.contents
+        if (typeof id === 'string' && choice.target.tag === 'ActTarget' && props.game.acts[id]
+          && advancingActId(choice.messages) === id) {
+          const act = props.game.acts[id]
+          rows.scenario.push({ index, group: nameOf(act.id), label: t('gameUi.advanceAct'),
+            contents: null, sourceId: id, kind: null, text: null, image: actImage(act), variant: null })
+        }
         if (typeof id === 'string' && props.game.concealed[id]) {
           rows.targets.push({ index, group: t('locationMap.concealedCard'), label: t('locationMap.chooseConcealed', { where: concealedWhere(id) }),
             contents: null, sourceId: null, kind: null, text: null, image: concealedImage(id), variant: null })
@@ -144,9 +161,17 @@ const sections = computed(() => {
         const actions = abilityActions(choice)
         if (actions.includes('Move') || actions.includes('Play')) break
         const sid = sourceEntityId(choice.ability.source)
+        if (sid && props.game.acts[sid]) {
+          const act = props.game.acts[sid]
+          if (choice.ability.index === 999) {
+            rows.scenario.push({ index, group: nameOf(act.id), label: t('gameUi.advanceAct'),
+              contents: choice, sourceId: sid, kind: kindOf(choice), text: null, image: actImage(act), variant: null })
+          } else ability('scenario', index, nameOf(act.id), choice, actImage(act), sid)
+          break
+        }
         if (sid && props.game.concealed[sid]) { ability('enemies', index, t('locationMap.concealedCard'), choice, concealedImage(sid)); break }
-        // Cards in hand are played from the hand; act and agenda abilities from their cards on the strip.
-        if (sid && (handIds.value.has(sid) || props.game.acts[sid] || props.game.agendas[sid])) break
+        // Cards in hand are played from the hand; agenda abilities from their cards on the strip.
+        if (sid && (handIds.value.has(sid) || props.game.agendas[sid])) break
         // Basic actions (Investigate, Draw…) aren't printed on the card, so they get no card-text hint.
         if (choice.ability.basic) ability('basic', index, null, choice, entityImage(props.game, sid) ?? basicActionImage(props.game, me.value, actions))
         else {
@@ -188,7 +213,9 @@ const sections = computed(() => {
     const investigator = props.game.investigators[token.investigatorId]
     const who = investigator ? nameOf(investigator.cardCode) : token.investigatorId
     const key = `locationMap.tokenChoice.${token.heal ? 'heal.' : ''}${token.tokenType}`
-    const what = te(key) ? t(key) : token.tokenType
+    const what = token.heal && token.healAmount !== undefined
+      ? t(`label.${token.tokenType === 'HorrorToken' ? 'healHorror' : 'healDamage'}`, { count: token.healAmount }, token.healAmount)
+      : te(key) ? t(key) : token.tokenType
     rows.targets.push({ index: token.index, group: who, label: what, contents: null, sourceId: null, kind: null, text: null,
       image: investigator ? cardImage(investigator.cardCode) : null, variant: null })
   }
@@ -248,7 +275,7 @@ const offeredHere = computed(() => listed.value.flatMap((s) => s.rows)
       <h4>{{ s.title }}</h4>
       <template v-for="(r, i) in s.rows" :key="r.index">
         <h5 v-if="r.group && r.group !== s.rows[i - 1]?.group">{{ r.group }}</h5>
-        <button v-if="r.label" class="row" :class="r.variant && `row--${r.variant}`" :data-image="r.image ?? undefined" @click="emit('choose', r.index)">{{ r.label }}</button>
+        <button v-if="r.label" class="row" :class="r.variant && `row--${r.variant}`" :data-image="r.image ?? undefined" @click="chooseRow(r)">{{ r.label }}</button>
         <div v-else-if="r.contents && r.text" class="choice" :data-image="r.image ?? undefined">
           <AbilityTextRow class="text-row" :kind="r.kind" :html="r.text" @choose="emit('choose', r.index)" />
         </div>

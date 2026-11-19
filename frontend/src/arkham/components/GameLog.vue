@@ -16,6 +16,7 @@ import { computed, nextTick, ref, watch } from 'vue'
 import GameLogEntry from '@/arkham/components/GameLogEntry.vue'
 import LogGroupBlock from '@/arkham/components/LogGroupBlock.vue'
 import { groupLogEntries, type LogEntry } from '@/arkham/types/GameLog'
+import { forcedEffectLogEntries } from '@/arkham/forced-effect-log'
 
 const props = withDefaults(
   defineProps<{
@@ -64,7 +65,7 @@ const forThisSeat = computed(() =>
 /* Everything loaded, not a fixed window. The server already bounds the opening
    payload to its tail; once a reader has deliberately paged further back, the
    point is to show what they asked for. */
-const visible = computed(() => forThisSeat.value)
+const visible = computed(() => forcedEffectLogEntries(forThisSeat.value))
 
 /* Consecutive entries sharing a group id are drawn as one block. The grouping
    is done here, not on the server: the stored log stays a flat append-only

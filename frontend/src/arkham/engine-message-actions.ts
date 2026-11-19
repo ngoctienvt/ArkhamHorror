@@ -24,6 +24,13 @@ export function findRaw(value: unknown, pred: (o: Raw) => boolean, depth = 10): 
   return null
 }
 
+/** The act an offered answer will advance, including wrapped engine messages. */
+export function advancingActId(messages: unknown): string | null {
+  const message = findRaw(messages, (o) => o.tag === 'AdvanceAct')
+  return message && Array.isArray(message.contents) && typeof message.contents[0] === 'string'
+    ? message.contents[0] : null
+}
+
 /** The entity id behind an undecoded Source/Target (or a bare id string), unwrapping ability/proxy tuples. */
 export function rawEntityId(value: unknown, depth = 6): string | null {
   if (typeof value === 'string') return value

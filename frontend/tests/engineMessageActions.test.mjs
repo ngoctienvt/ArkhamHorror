@@ -1,25 +1,26 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { fileURLToPath, URL } from 'node:url'
-
-import { createServer } from 'vite'
+import { createSsrLoader } from './helpers/ssr-loader.mjs'
 
 /* Unlabelled prompts are explained by reading the engine messages each answer carries. Those messages
 are undecoded backend JSON (Aeson `defaultOptions`: `{tag, contents}` with positional fields as an
 array, nested sub-message wrappers), so nothing type-checks the argument positions. These tests pin
 them for the common actions, using the shapes the backend `Message` constructors encode to. */
-async function load(t, path) {
-  const server = await createServer({
-    root: fileURLToPath(new URL('..', import.meta.url)),
-    appType: 'custom',
-    logLevel: 'silent',
-    server: { middlewareMode: true, hmr: false },
-  })
-  t.after(() => server.close())
-  return server.ssrLoadModule(path)
-}
+const loadModule = createSsrLoader()
+const load = (_t, path) => loadModule(path)
 
 const abilitySource = (id) => ({ tag: 'AbilitySource', contents: [{ tag: 'EnemySource', contents: id }, 1] })
+
+test('recognises an offered act advance without confusing Agenda advancement or token placement', async (t) => {
+  const { advancingActId } = await load(t, '/src/arkham/engine-message-actions.ts')
+  const advance = { tag: 'AdvanceAct', contents: ['act-1', {}, 'AdvancedWithClues'] }
+  assert.equal(advancingActId([advance]), 'act-1')
+  assert.equal(advancingActId([{ tag: 'Do', contents: advance }]), 'act-1')
+  assert.equal(advancingActId([{ tag: 'AdvanceAgendaBy', contents: ['agenda-1', 'AgendaAdvancedWithDoom'] }]), null)
+  assert.equal(advancingActId([{ tag: 'PlaceClues', contents: [{}, { tag: 'ActTarget', contents: 'act-1' }, 1] }]), null)
+  assert.equal(advancingActId([{ tag: 'AdvanceAct', contents: [] }]), null)
+  assert.equal(advancingActId(undefined), null)
+})
 
 test('a forced enemy move names the mover and the card that asked', async (t) => {
   const { firstEngineAction } = await load(t, '/src/arkham/engine-message-actions.ts')

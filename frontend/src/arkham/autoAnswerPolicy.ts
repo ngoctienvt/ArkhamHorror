@@ -20,6 +20,7 @@ export type AutoAnswerReason =
   | 'closeWindow'
   | 'assignDamage'
   | 'rulesDecided'
+  | 'forcedAbility'
 
 // The only thing left in a player window that does nothing but close it.
 // "End turn" is deliberately absent: ending a turn is always the player's call,
@@ -28,8 +29,11 @@ const PLAYER_WINDOW_CLOSERS = new Set(['Done'])
 
 export type AutoAnswer = { index: number; reason: AutoAnswerReason }
 
+type AbilityTypeLike = { tag: string; abilityType?: AbilityTypeLike }
+
 type ChoiceLike = {
   tag: string
+  ability?: { type: AbilityTypeLike }
   label?: string
   target?: { tag: string }
   component?: { tag: string; investigatorId?: string; tokenType?: string }
@@ -38,10 +42,13 @@ type QuestionLike = {
   tag: string
   question?: QuestionLike
   isPlayerWindow?: boolean
+  isWindow?: boolean
   label?: string
 }
 
 export type AutoAnswerContext = {
+  // Helpers may only be offered a card toggle, without a "done" answer.
+  isCommitWindow?: boolean
   /* Cards are face up for the player to look at (a search, a reveal). The lone
    * "done" under them is how the player says they have seen them. */
   hasRevealedCards?: boolean
@@ -152,11 +159,26 @@ export function decideAutoAnswer(
   if (valid.length !== 1) return null
 
   const { choice, index } = valid[0]
+  // A lone card target can alternate between commit and uncommit forever.
+  // It remains optional even when no other answer is offered to this seat.
+  if (context.isCommitWindow && choice.tag === 'TargetLabel') return null
   // A player window is the player's turn or a chance to play something fast.
   // Once nothing but "done" is left, there is nothing to play or do, so the
   // window closes itself; a lone "end turn" or any other choice stays the player's.
   if (inner.isPlayerWindow) {
     return PLAYER_WINDOW_CLOSERS.has(choice.tag) ? { index, reason: 'closeWindow' } : null
+  }
+  // Several Forced effects still require the player to choose their order.
+  // SilentForced AnyWindow abilities are optional uses, so do not include them.
+  if (choice.tag === 'AbilityLabel') {
+    let type = choice.ability?.type
+    while (type && (type.tag === 'Objective' || type.tag === 'DelayedAbility')) type = type.abilityType
+    // The engine also sends conditional Forced reactions in a window with no
+    // skip choice. Its resolved window is authoritative; the decoder unwraps
+    // ForcedWhen, so the inner reaction type alone cannot identify those.
+    if (type?.tag === 'ForcedAbility' || type?.tag === 'ForcedAbilityWithCost' || inner.isWindow || inner.tag === 'WindowChooseOne') {
+      return { index, reason: 'forcedAbility' }
+    }
   }
   if (choice.tag === 'TargetLabel' && choice.target?.tag === 'EncounterDeckTarget') {
     return { index, reason: 'encounterDraw' }
@@ -182,4 +204,5 @@ export const AUTO_ANSWER_DELAY_MS: Record<AutoAnswerReason, number> = {
   closeWindow: MIN_AUTO_ANSWER_DELAY_MS,
   assignDamage: MIN_AUTO_ANSWER_DELAY_MS,
   rulesDecided: MIN_AUTO_ANSWER_DELAY_MS,
+  forcedAbility: MIN_AUTO_ANSWER_DELAY_MS,
 }

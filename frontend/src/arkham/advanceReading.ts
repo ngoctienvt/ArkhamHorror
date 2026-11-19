@@ -92,12 +92,36 @@ export function advancesBetween(
   before: BoardLike | null | undefined,
   after: BoardLike | null | undefined,
   alreadyRead: ReadonlySet<string> = new Set(),
+  activeKind?: AdvanceKind,
 ): AdvanceReading[] {
   if (!before || !after) return []
-  return [
+  const acts = [
     ...flipsOf('act', before.acts, after.acts),
-    ...flipsOf('agenda', before.agendas, after.agendas),
     ...advancesOf('act', before.acts, after.acts, alreadyRead),
+  ]
+  const agendas = [
+    ...flipsOf('agenda', before.agendas, after.agendas),
     ...advancesOf('agenda', before.agendas, after.agendas, alreadyRead),
   ]
+  // The back already in play identifies the sequence being resolved, even
+  // after its reader has closed to let the player resolve its instructions.
+  const finishes = (kind: AdvanceKind, readings: AdvanceReading[], previous: Record<string, Step> | undefined) =>
+    readings.some((r) => r.toCode !== null && previous?.[r.fromCode] && isFlipped(kind, previous[r.fromCode]))
+  const first = activeKind ?? (finishes('agenda', agendas, before.agendas) && !finishes('act', acts, before.acts) ? 'agenda' : 'act')
+  return first === 'agenda' ? [...agendas, ...acts] : [...acts, ...agendas]
+}
+
+/** Keep a late-arriving replacement card with the back currently being read. */
+export function enqueueAdvanceReadings(queue: readonly AdvanceReading[], incoming: readonly AdvanceReading[]): AdvanceReading[] {
+  const result = [...queue]
+  const active = queue[0]
+  for (const reading of incoming) {
+    if (result.some((r) => r.key === reading.key)) continue
+    const continuesActive = active && active.toCode === null && reading.toCode !== null
+      && reading.kind === active.kind && reading.fromCode === active.fromCode
+    const waiting = continuesActive ? result.findIndex((r) => r.kind !== active.kind) : -1
+    if (waiting >= 0) result.splice(waiting, 0, reading)
+    else result.push(reading)
+  }
+  return result
 }

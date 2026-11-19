@@ -918,7 +918,7 @@
       "DoomToken": "Doom",
       "heal": {
         "DamageToken": "Hồi sát thương",
-        "HorrorToken": "Hồi kinh hoàng"
+        "HorrorToken": "Hồi tổn thương tinh thần"
       }
     },
     "targetKind": {

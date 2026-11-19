@@ -37,6 +37,7 @@ export interface AutopilotOptions {
    * overlay the player has to see, spectating, another seat's question. */
   blocked: Readonly<Ref<boolean>>
   hasRevealedCards: Readonly<Ref<boolean>>
+  isCommitWindow: Readonly<Ref<boolean>>
   submit: (index: number) => void
   onCapReached?: () => void
 }
@@ -81,10 +82,11 @@ export function useAutopilot(options: AutopilotOptions): Autopilot {
     if (blocked.value || suspendedAtStep.value !== null) return null
     const answer = decideAutoAnswer(question.value, choices.value, {
       hasRevealedCards: hasRevealedCards.value,
+      isCommitWindow: options.isCommitWindow.value,
     })
     if (!answer) return null
-    // Choices the rules already decide are taken even with the autopilot off.
-    if (!enabled.value && answer.reason !== 'rulesDecided') return null
+    // Mandatory activations do not depend on the optional convenience setting.
+    if (!enabled.value && answer.reason !== 'rulesDecided' && answer.reason !== 'forcedAbility') return null
     return { answer, key: `${step.value ?? -1}:${answer.index}:${choices.value.length}` }
   }
 
@@ -111,11 +113,15 @@ export function useAutopilot(options: AutopilotOptions): Autopilot {
       if (!again || again.key !== decision.key) return
       lastSubmittedKey = again.key
       consecutive += 1
+      console.debug('[Autopilot] Answering question', {
+        step: step.value, index: again.answer.index, reason: again.answer.reason,
+        choiceTag: choices.value[again.answer.index]?.tag,
+      })
       submit(again.answer.index)
     }, delayMs)
   }
 
-  watch([enabled, question, choices, step, blocked, hasRevealedCards, suspendedAtStep], schedule, {
+  watch([enabled, question, choices, step, blocked, hasRevealedCards, options.isCommitWindow, suspendedAtStep], schedule, {
     immediate: true,
   })
 

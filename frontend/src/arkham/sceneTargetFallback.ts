@@ -79,14 +79,25 @@ export function sceneFallbackTargets(game: Game, choices: readonly Message[], ma
 }
 
 /** A token on an investigator the game asks to pick (assign damage or horror, spend clues, take resources). */
-export interface FallbackToken { index: number; investigatorId: string; tokenType: string; auxiliary: boolean; heal: boolean }
+export interface FallbackToken { index: number; investigatorId: string; tokenType: string; auxiliary: boolean; heal: boolean; healAmount?: number }
 
 /* The same token label both assigns and heals (Meat Cleaver's "you may heal 1 horror" uses it too), so
  * what the choice runs decides whether the button reads "assign" or "heal". */
-const HEAL_TAG = /^Heal(Horror|Damage)/
-function healsToken(choice: Message): boolean {
-  const messages = (choice as { messages?: unknown[] }).messages ?? []
-  return messages.some((m) => typeof m === 'object' && m !== null && HEAL_TAG.test(String((m as { tag?: unknown }).tag ?? '')))
+function tokenHealing(value: unknown, tokenType: string, depth = 10): { heal: boolean; healAmount?: number } {
+  if (depth < 0 || value === null || typeof value !== 'object') return { heal: false }
+  if (!Array.isArray(value)) {
+    const message = value as { tag?: string; contents?: unknown }
+    const name = tokenType === 'HorrorToken' ? 'HealHorror' : tokenType === 'DamageToken' ? 'HealDamage' : null
+    if (name && (message.tag === name || message.tag === `${name}_`)) {
+      const amount = Array.isArray(message.contents) ? message.contents[2] : undefined
+      return { heal: true, ...(typeof amount === 'number' ? { healAmount: amount } : {}) }
+    }
+  }
+  for (const child of Object.values(value)) {
+    const healing = tokenHealing(child, tokenType, depth - 1)
+    if (healing.heal) return healing
+  }
+  return { heal: false }
 }
 
 /**
@@ -103,7 +114,8 @@ export function sceneFallbackTokens(choices: readonly Message[], myInvestigatorI
     if (component?.tag !== 'InvestigatorComponent' || !component.investigatorId || !component.tokenType) return
     const auxiliary = tag === 'AuxiliaryComponentLabel'
     if (!auxiliary && component.tokenType === 'ResourceToken' && component.investigatorId === myInvestigatorId) return
-    result.push({ index, investigatorId: component.investigatorId, tokenType: component.tokenType, auxiliary, heal: healsToken(choice) })
+    result.push({ index, investigatorId: component.investigatorId, tokenType: component.tokenType, auxiliary,
+      ...tokenHealing(choice.messages, component.tokenType) })
   })
   return result
 }

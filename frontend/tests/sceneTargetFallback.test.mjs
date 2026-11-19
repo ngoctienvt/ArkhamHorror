@@ -64,6 +64,40 @@ test('a target already drawn as a clickable spider part stays off the fallback p
 const { sceneFallbackTokens, scenePanelOnlyCount } = await import('data:text/javascript;base64,' + Buffer.from(js).toString('base64'))
 const component = (tag, investigatorId, tokenType) => ({ tag, component: { tag: 'InvestigatorComponent', investigatorId, tokenType } })
 
+test('Meat Cleaver healing remains healing through the horror message wrapper', () => {
+  const choices = [
+    { tag: 'Label', label: '$label.doNotHeal', messages: [] },
+    { ...component('ComponentLabel', 'i1', 'HorrorToken'), messages: [
+      { tag: 'HorrorMessage', contents: { tag: 'HealHorror_', contents: [{ tag: 'InvestigatorTarget', contents: 'i1' }, { tag: 'AssetSource', contents: 'cleaver' }, 1] } },
+    ] },
+  ]
+  const [token] = sceneFallbackTokens(choices, 'i1')
+  assert.equal(token.index, 1)
+  assert.equal(token.heal, true)
+  assert.equal(token.healAmount, 1)
+})
+
+test('damage assignment is never described as healing', () => {
+  const [token] = sceneFallbackTokens([{ ...component('ComponentLabel', 'i1', 'HorrorToken'), messages: [
+    { tag: 'InvestigatorMessage', contents: { tag: 'InvestigatorAssignDamage', contents: ['i1', {}, 0, 1] } },
+  ] }], 'i1')
+  assert.equal(token.heal, false)
+})
+
+test('recognises wrapped damage healing and leaves mismatched or malformed messages alone', () => {
+  const heal = { tag: 'DamageMessage', contents: { tag: 'HealDamage_', contents: [{ tag: 'InvestigatorTarget', contents: 'i1' }, {}, 2] } }
+  const choices = [
+    { ...component('AuxiliaryComponentLabel', 'i1', 'DamageToken'), messages: [heal] },
+    { ...component('ComponentLabel', 'i1', 'HorrorToken'), messages: [heal] },
+    { ...component('ComponentLabel', 'i1', 'HorrorToken'), messages: [null, {}, 'HealHorror'] },
+  ]
+  const tokens = sceneFallbackTokens(choices, 'i1')
+  assert.equal(tokens[0].healAmount, 2)
+  assert.equal(tokens[0].heal, true)
+  assert.equal(tokens[1].heal, false)
+  assert.equal(tokens[2].heal, false)
+})
+
 test('lists investigator tokens the hidden token row would answer, but not your own take-a-resource', () => {
   const choices = [
     component('ComponentLabel', 'i1', 'ResourceToken'),          // 0: your basic "gain a resource"

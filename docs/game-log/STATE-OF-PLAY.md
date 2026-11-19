@@ -317,6 +317,21 @@ reaching for a per-action ref again.
 
 ---
 
+## Automatic Forced resolution (2026-11-19)
+
+The frontend automatically activates a lone mandatory Forced ability, including
+conditional reactions offered by the engine in an unskippable window. Multiple
+Forced abilities still ask for ordering. Activation runs even with the optional
+autopilot setting off. Deterministic follow-up steps use the existing autopilot
+policy; targets, consequence choices and asset soak remain player decisions.
+Undo keeps the existing pause. No persistent Forced flag enables unrelated
+steps after the ability finishes.
+
+`GameLog.vue` uses `forced-effect-log.ts` to hide standalone Forced activation
+announcements. Actual consequence entries remain visible; an activation with no
+consequence produces no displayed line. This is a presentation filter: stored
+entries, pagination cursors, undo steps and activity detection remain intact.
+
 ## 10. Working on this
 
 - **Do not run `stack build`.** The user builds. Read GHC errors from

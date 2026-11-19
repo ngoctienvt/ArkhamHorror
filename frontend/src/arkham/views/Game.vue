@@ -155,7 +155,7 @@ import { lastSeq, revealsAfter, type ChaosReveal } from '@/arkham/chaosRevealLog
 import { enemyActivityAfter } from '@/arkham/enemyActivityLog'
 import { flagEnemyActivity } from '@/arkham/composables/useEnemyActivity'
 import AdvanceReader from '@/arkham/components/AdvanceReader.vue'
-import { advancesBetween, type AdvanceReading } from '@/arkham/advanceReading'
+import { advancesBetween, enqueueAdvanceReadings, type AdvanceReading } from '@/arkham/advanceReading'
 import { achievementEntryScope } from '@/arkham/achievements'
 import DrawSpotlight from '@/arkham/components/DrawSpotlight.vue'
 import Draggable from '@/components/Draggable.vue'
@@ -595,17 +595,20 @@ const showTheSilenceModal = ref(false)
    overlay's. */
 const advanceQueue = ref<AdvanceReading[]>([])
 let advanceOwnsLock = false
-let lastAdvanceKey: string | null = null
+const seenAdvanceKeys = new Set<string>()
 /* Cards whose back was already read at the turn-over; their advance only needs the next card. */
 const backsRead = new Set<string>()
 
 function queueAdvances(previous: Arkham.Game | null | undefined, next: Arkham.Game) {
   if (props.spectate) return
-  const fresh = advancesBetween(previous, next, backsRead).filter((a) => a.key !== lastAdvanceKey)
+  const scopedKey = (key: string) => `${next.id}:${next.scenario?.id ?? ''}:${key}`
+  const fresh = advancesBetween(previous, next, backsRead, advanceQueue.value[0]?.kind)
+    .filter((a) => !seenAdvanceKeys.has(scopedKey(a.key)))
   if (fresh.length === 0) return
-  lastAdvanceKey = fresh[fresh.length - 1].key
+  console.debug('[Advance reader] Queued readings', fresh.map(({ key, steps }) => ({ key, steps })))
+  for (const a of fresh) seenAdvanceKeys.add(scopedKey(a.key))
   for (const a of fresh) if (a.toCode === null) backsRead.add(a.fromCode)
-  advanceQueue.value = [...advanceQueue.value, ...fresh]
+  advanceQueue.value = enqueueAdvanceReadings(advanceQueue.value, fresh)
   if (!uiLock.value) {
     uiLock.value = true
     advanceOwnsLock = true
@@ -625,7 +628,7 @@ function acceptAdvance() {
 
 function resetAdvances() {
   advanceQueue.value = []
-  lastAdvanceKey = null
+  seenAdvanceKeys.clear()
   backsRead.clear()
   advanceOwnsLock = false
 }
@@ -2769,6 +2772,10 @@ watch(() => skillTestSummaryState.summary.value, (summary) => {
 })
 const autopilot = useAutopilot({
   enabled: computed(() => settings.autopilot),
+  isCommitWindow: computed(() =>
+    game.value?.skillTest?.step === 'CommitCardsFromHandToSkillTestStep' ||
+    choices.value.some((choice) => choice.tag === 'Label' && choice.label.endsWith('doneCommitting')),
+  ),
   question,
   choices,
   step: computed(() => game.value?.scenarioSteps),

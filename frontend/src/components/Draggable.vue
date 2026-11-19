@@ -15,6 +15,7 @@ const props = withDefaults(defineProps<{
   preservePosition?: boolean
   flush?: boolean
   width?: string
+  bottomInsetVariable?: string
 }>(), { avoidPadding: 8, clickThroughChrome: false })
 
 const id = useId()
@@ -49,6 +50,7 @@ let lastClientX = 0
 let lastClientY = 0
 let dragPointerId: number | null = null
 let resizeObserver: ResizeObserver | null = null
+let insetObserver: MutationObserver | null = null
 const hasBeenDragged = ref(false)
 const isDragging = ref(false)
 
@@ -56,9 +58,18 @@ function clamp(v: number, min: number, max: number) {
   return Math.min(Math.max(v, min), max)
 }
 
+// Fixed docks publish their covered height in pixels; opted-in windows fit
+// above that region both when centered and when dragged.
+function usableHeight() {
+  const inset = props.bottomInsetVariable
+    ? parseFloat(getComputedStyle(document.documentElement).getPropertyValue(props.bottomInsetVariable)) || 0
+    : 0
+  return Math.max(80, window.innerHeight - Math.max(0, inset))
+}
+
 function viewportBounds(el: HTMLElement) {
   const windowWidth = window.innerWidth
-  const windowHeight = window.innerHeight
+  const windowHeight = usableHeight()
   const modalWidth = el.offsetWidth
   const modalHeight = el.offsetHeight
 
@@ -84,7 +95,7 @@ function preferredBounds() {
     if (rect && rect.width > 0 && rect.height > 0) return rect
   }
 
-  return new DOMRect(0, 0, window.innerWidth, window.innerHeight)
+  return new DOMRect(0, 0, window.innerWidth, usableHeight())
 }
 
 function setAnchorToViewportCenter() {
@@ -151,6 +162,10 @@ function placeModal({ resetAnchor = false } = {}) {
   const el = draggable.value
   if (inlineModals.value || !el || isMinimized.value || isDragging.value) return
 
+  if (props.bottomInsetVariable) {
+    el.style.maxHeight = `${usableHeight() - 2 * viewportMargin}px`
+  }
+
   const { maxLeft, maxTop, modalWidth, modalHeight } = viewportBounds(el)
 
   if (props.preservePosition && hasInitialPosition && !resetAnchor) {
@@ -158,10 +173,10 @@ function placeModal({ resetAnchor = false } = {}) {
     // height instead of pushing a taller tab upwards to fit the viewport.
     const headerHeight = el.querySelector(':scope > header')?.getBoundingClientRect().height ?? 40
     const left = clamp(parseFloat(el.style.left), viewportMargin, maxLeft)
-    const top = clamp(parseFloat(el.style.top), viewportMargin, Math.max(viewportMargin, window.innerHeight - headerHeight - viewportMargin))
+    const top = clamp(parseFloat(el.style.top), viewportMargin, Math.max(viewportMargin, usableHeight() - headerHeight - viewportMargin))
     el.style.left = `${left}px`
     el.style.top = `${top}px`
-    el.style.maxHeight = `${Math.max(headerHeight, window.innerHeight - top - viewportMargin)}px`
+    el.style.maxHeight = `${Math.max(headerHeight, usableHeight() - top - viewportMargin)}px`
     return
   }
 
@@ -190,7 +205,7 @@ function placeModal({ resetAnchor = false } = {}) {
   el.style.transform = 'none'
   hasInitialPosition = true
   if (props.preservePosition) {
-    el.style.maxHeight = `${window.innerHeight - nextTop - viewportMargin}px`
+    el.style.maxHeight = `${usableHeight() - nextTop - viewportMargin}px`
   }
 }
 
@@ -331,6 +346,10 @@ onMounted(async () => {
       requestAnimationFrame(() => placeModal())
     })
     resizeObserver.observe(el)
+    if (props.bottomInsetVariable) {
+      insetObserver = new MutationObserver(() => placeModal())
+      insetObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['style'] })
+    }
     window.addEventListener('resize', handleWindowResize)
   }
 })
@@ -353,6 +372,7 @@ onBeforeUnmount(() => {
     el.removeEventListener('pointermove', elementDrag as any)
   }
   resizeObserver?.disconnect()
+  insetObserver?.disconnect()
   window.removeEventListener('resize', handleWindowResize)
   document.body.style.userSelect = ''
   if (raf) {

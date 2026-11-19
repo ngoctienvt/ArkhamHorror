@@ -32,6 +32,7 @@ import { sourceEntityId, kindOf, type AbilityKind } from '@/arkham/locationChoic
 import { useChaosDraw } from '@/arkham/composables/useChaosDraw';
 import { useCardNames } from '@/arkham/composables/useCardNames';
 import { boostOnlySkippedTests } from '@/arkham/boost-window-skipped-tests';
+import { sceneFallbackTokens } from '@/arkham/sceneTargetFallback';
 
 const debug = useDebug()
 const { t } = useI18n()
@@ -183,6 +184,16 @@ const skillBreakdown = computed<{ total: number; parts: BreakdownPart[] } | null
 
 const committedCards = computed(() => props.skillTest.committedCards)
 const choices = computed(() => ArkhamGame.choices(props.game, props.playerId))
+// Token labels normally live on the investigator card. Keep recovery choices
+// beside the test result as well, including Meat Cleaver's optional healing.
+const recoveryChoices = computed(() => sceneFallbackTokens(choices.value, null)
+  .filter((token) => token.heal)
+  .map((token) => ({ ...token,
+    name: cardName(props.game.investigators[token.investigatorId]?.cardCode ?? token.investigatorId),
+    label: token.healAmount !== undefined
+      ? t(`label.${token.tokenType === 'HorrorToken' ? 'healHorror' : 'healDamage'}`, { count: token.healAmount }, token.healAmount)
+      : t(`locationMap.tokenChoice.heal.${token.tokenType}`),
+  })))
 const collectionSearch = computed(() => isCollectionSearch(props.game, props.playerId))
 
 const skipTriggersAction = computed(() => choices.value.findIndex((c) => c.tag === MessageType.SKIP_TRIGGERS_BUTTON))
@@ -292,6 +303,8 @@ function scrollRowSideways(event: WheelEvent) {
 }
 
 async function choose(idx: number) {
+  const recovery = recoveryChoices.value.find((choice) => choice.index === idx)
+  if (recovery) console.debug('[SkillTest] Recovery selected', { index: idx, tokenType: recovery.tokenType, amount: recovery.healAmount })
   emit('choose', idx)
 }
 
@@ -558,6 +571,7 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
 
 <template>
   <Draggable
+    bottom-inset-variable="--hand-cover"
     width="min(680px, calc(100vw - 32px))"
     avoid-selector=".concealed-card--can-interact, .location-cell--can-interact, .location-cell--can-interact .location-wrapper, .location-cell--can-interact .card-frame"
   >
@@ -893,6 +907,8 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
         @click="$emit('choose', skipTriggersAction)"
         class="skip-triggers-button"
       >{{ $t('investigator.skipTriggers') }}</button>
+      <button v-for="recovery in recoveryChoices" :key="recovery.index" class="recovery-choice" type="button"
+        @click="choose(recovery.index)">{{ recovery.label }} — {{ recovery.name }}</button>
       <Question v-if="!collectionSearch" :game="game" :playerId="playerId" @choose="choose" :isSkillTest="true" />
       <button
         class="apply-results"
@@ -946,6 +962,12 @@ const adjustDebugSkillValue = (event: MouseEvent, direction: 1 | -1) => {
   --st-accent: #d9d6cf;
   --st-accent-rgb: 217, 214, 207;
   --st-accent-strong: #4b4b52;
+}
+:global(.draggable:has(.skill-test) > header) { flex-shrink: 0; }
+:global(.draggable:has(.skill-test) > .content) {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 :global(.draggable:has(.skill-test)) {
   --st-panel: #2e2418;
