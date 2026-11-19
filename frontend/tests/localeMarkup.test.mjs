@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict'
 import { readdirSync, readFileSync } from 'node:fs'
+import process from 'node:process'
 import { join, relative, resolve } from 'node:path'
 import test from 'node:test'
 
@@ -12,11 +13,15 @@ function jsonFilesUnder(directory) {
   })
 }
 
+const localeFiles = process.env.ARKHAM_TEST_ALL_LOCALES === '1'
+  ? jsonFilesUnder(localeRoot)
+  : ['en', 'vi'].flatMap((locale) => jsonFilesUnder(join(localeRoot, locale)))
+
 test('locale markup uses complete HTML closing tags', () => {
   const malformedTags = []
   const incompleteClosingTag = /(?<!<)\/(p|div|ul|ol|li|span|b|i|strong|em|blockquote)>/g
 
-  for (const file of jsonFilesUnder(localeRoot)) {
+  for (const file of localeFiles) {
     const contents = readFileSync(file, 'utf8')
     for (const match of contents.matchAll(incompleteClosingTag)) {
       malformedTags.push(`${relative(localeRoot, file)}:${match.index} /${match[1]}>`)
@@ -34,7 +39,7 @@ test('locale message links keep ASCII key paths', () => {
   const localizedLinks = []
   const nonAsciiLinkKey = /@:[A-Za-z0-9_.]*[^\x20-\x7E]/g
 
-  for (const file of jsonFilesUnder(localeRoot)) {
+  for (const file of localeFiles) {
     const contents = readFileSync(file, 'utf8')
     for (const match of contents.matchAll(nonAsciiLinkKey)) {
       localizedLinks.push(`${relative(localeRoot, file)}:${match.index} ${match[0]}`)
@@ -53,7 +58,7 @@ test('locale markup has no stray bullet-glyph artifacts', () => {
   const artifacts = []
   const strandedGlyph = /(?<=\s)Æ(?=\s)/g
 
-  for (const file of jsonFilesUnder(localeRoot)) {
+  for (const file of localeFiles) {
     const contents = readFileSync(file, 'utf8')
     for (const match of contents.matchAll(strandedGlyph)) {
       artifacts.push(`${relative(localeRoot, file)}:${match.index}`)
@@ -70,7 +75,7 @@ test('locale markup opens every list with a list item', () => {
   const strayText = []
   const listOpeningWithText = /<ul>(?!\s*(?:<li|<ul))/g
 
-  for (const file of jsonFilesUnder(localeRoot)) {
+  for (const file of localeFiles) {
     const contents = readFileSync(file, 'utf8')
     for (const match of contents.matchAll(listOpeningWithText)) {
       strayText.push(`${relative(localeRoot, file)}:${match.index}`)

@@ -332,8 +332,16 @@ cd backend/arkham-api && stack test --fast --test-arguments '-m "CardName"'
 
 ```
 cd frontend && npm run tc                   # typecheck
-cd frontend && npm test
+cd frontend && npm test                     # gameplay, scenes, English and Vietnamese
 ```
+
+The default frontend suite excludes Chinese translation-completeness checks. Run
+`npm run test:locales` for the optional locale checks, or `npm run test:all` for
+every test and language. `npm test -- --list` lists the default test files.
+For one file, use `node --test tests/sceneStageOverview.test.mjs` from `frontend`.
+
+SSR tests for pure functions reuse compilation within their file and close the
+Vite server afterwards. Tests that mutate stores or registries keep isolated servers.
 
 ## Homebrew content
 

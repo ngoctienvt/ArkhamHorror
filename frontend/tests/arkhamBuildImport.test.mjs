@@ -1,8 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { fileURLToPath, URL } from 'node:url'
-
-import { createServer } from 'vite'
+import { createSsrLoader } from './helpers/ssr-loader.mjs'
 
 /* Importing an arkham.build card pool and later importing a DECK built on
 arkham.build against those same cards have to agree on one thing: the card
@@ -15,27 +13,9 @@ custom card in it.
 
 That agreement is what these tests pin. The field mapping is checked alongside
 it because the same module owns both. */
-async function load(t) {
-  const server = await createServer({
-    root: fileURLToPath(new URL('..', import.meta.url)),
-    appType: 'custom',
-    logLevel: 'silent',
-    server: { middlewareMode: true, hmr: false },
-  })
-  t.after(() => server.close())
-  return server.ssrLoadModule('/src/arkham/arkhamBuildImport.ts')
-}
-
-async function loadCustomCards(t) {
-  const server = await createServer({
-    root: fileURLToPath(new URL('..', import.meta.url)),
-    appType: 'custom',
-    logLevel: 'silent',
-    server: { middlewareMode: true, hmr: false },
-  })
-  t.after(() => server.close())
-  return server.ssrLoadModule('/src/arkham/customCards.ts')
-}
+const loadModule = createSsrLoader()
+const load = () => loadModule('/src/arkham/arkhamBuildImport.ts')
+const loadCustomCards = () => loadModule('/src/arkham/customCards.ts')
 
 const PACK = 'Return to the Zealot'
 

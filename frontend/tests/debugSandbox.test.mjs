@@ -1,24 +1,14 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { fileURLToPath, URL } from 'node:url'
-
-import { createServer } from 'vite'
+import { createSsrLoader } from './helpers/ssr-loader.mjs'
 
 /* The debug sandbox's calculator decides pass/fail on its own, outside any
 real skill test, so its rules are pinned here against the ones the engine
 uses. The message builders are pinned too: they are hand-written JSON that
 the backend's derived decoders (Arkham.Debug.SkillTest, Arkham.Message.ChaosBag)
 must accept, and nothing else checks that shape. */
-async function load(t) {
-  const server = await createServer({
-    root: fileURLToPath(new URL('..', import.meta.url)),
-    appType: 'custom',
-    logLevel: 'silent',
-    server: { middlewareMode: true, hmr: false },
-  })
-  t.after(() => server.close())
-  return server.ssrLoadModule('/src/arkham/debugSandbox.ts')
-}
+const loadModule = createSsrLoader()
+const load = () => loadModule('/src/arkham/debugSandbox.ts')
 
 const token = (face, value, extra = {}) => ({ face, value, autoFail: false, autoSuccess: false, ...extra })
 

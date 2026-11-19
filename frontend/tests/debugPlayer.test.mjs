@@ -1,24 +1,14 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { fileURLToPath, URL } from 'node:url'
-
-import { createServer } from 'vite'
+import { createSsrLoader } from './helpers/ssr-loader.mjs'
 
 /* The investigator and campaign debug tools send hand-written JSON that the
 backend's derived decoders must accept (Arkham.Message `DrawCards`,
 `DiscardFromHand`, `SufferTrauma`, `HealTrauma`, `ReportXp`, `GainXP`,
 `SpendXP`, `Record`, `RecordCount`, `ForgetRecord`), so the shapes
 are pinned here, along with how custom campaign log entries round-trip. */
-async function load(t) {
-  const server = await createServer({
-    root: fileURLToPath(new URL('..', import.meta.url)),
-    appType: 'custom',
-    logLevel: 'silent',
-    server: { middlewareMode: true, hmr: false },
-  })
-  t.after(() => server.close())
-  return server.ssrLoadModule('/src/arkham/debugPlayer.ts')
-}
+const loadModule = createSsrLoader()
+const load = () => loadModule('/src/arkham/debugPlayer.ts')
 
 test('drawing is a real draw from the investigator deck', async (t) => {
   const { drawCardsMessage } = await load(t)

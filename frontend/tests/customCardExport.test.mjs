@@ -1,24 +1,14 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { fileURLToPath, URL } from 'node:url'
-
-import { createServer } from 'vite'
+import { createSsrLoader } from './helpers/ssr-loader.mjs'
 
 /* Every custom card belongs to a set, so every import has to land in one --
 including a file that predates sets, or a single card pasted on its own. What
 set that is decides whether an import replaces something you already have or
 quietly makes a second copy of it beside the first, so the fallbacks are pinned
 here rather than left to whatever the file happens to carry. */
-async function load(t) {
-  const server = await createServer({
-    root: fileURLToPath(new URL('..', import.meta.url)),
-    appType: 'custom',
-    logLevel: 'silent',
-    server: { middlewareMode: true, hmr: false },
-  })
-  t.after(() => server.close())
-  return server.ssrLoadModule('/src/arkham/customCardLibrary.ts')
-}
+const loadModule = createSsrLoader()
+const load = () => loadModule('/src/arkham/customCardLibrary.ts')
 
 const card = (title, setName) => ({
   def: {

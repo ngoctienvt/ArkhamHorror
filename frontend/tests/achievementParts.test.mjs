@@ -1,8 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { fileURLToPath, URL } from 'node:url'
-
-import { createServer } from 'vite'
+import { createSsrLoader } from './helpers/ssr-loader.mjs'
 
 /* The campaign log's achievements tab shows only the mini-campaign in play. It
 works that out by reading `campaignMode` straight out of `campaign.meta`, which
@@ -12,16 +10,8 @@ renders an empty list instead of failing. These tests are that missing check.
 
 The meta shape asserted here is pinned backend-side by the spec
 "campaignMode meta encoding" in TheDreamEatersSpec. */
-async function loadAchievements(t) {
-  const server = await createServer({
-    root: fileURLToPath(new URL('..', import.meta.url)),
-    appType: 'custom',
-    logLevel: 'silent',
-    server: { middlewareMode: true, hmr: false },
-  })
-  t.after(() => server.close())
-  return server.ssrLoadModule('/src/arkham/achievements.ts')
-}
+const loadModule = createSsrLoader()
+const loadAchievements = () => loadModule('/src/arkham/achievements.ts')
 
 test('a partial campaign maps to the catalog part key it filters on', async (t) => {
   const { activeAchievementPart, achievementCatalog } = await loadAchievements(t)

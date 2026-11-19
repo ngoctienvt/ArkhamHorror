@@ -85,7 +85,7 @@ test('scenario text uses locale keys instead of hardcoded English', () => {
     const source = fs.readFileSync(file, 'utf8')
     for (const pattern of patterns) {
       for (const match of source.matchAll(pattern)) {
-        hardcoded.push(`${path.relative(library, file)}:${lineNumber(source, match.index)}`)
+        hardcoded.push(`${path.relative(library, file).split(path.sep).join('/')}:${lineNumber(source, match.index)}`)
       }
     }
   }

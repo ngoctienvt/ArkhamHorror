@@ -1,0 +1,883 @@
+
+> arkhamhorror@0.1.0 test
+> node ./scripts/run-tests.mjs
+
+[Tests] core: 83 files; locale checks: en, vi
+✔ a partial campaign maps to the catalog part key it filters on (7943.6383ms)
+✔ campaigns sort with Return Tos first, then in release order (0.7198ms)
+✔ the full campaign and unknown shapes show every section (0.1584ms)
+✔ asks before playing a card from hand, with no warning when nothing is engaged (1.5439ms)
+✔ a hand card offered outside the player window is a target, not a play (0.1594ms)
+✔ sees through a labelled player window (0.1826ms)
+✔ another seat's hand card is not this player's play (0.1594ms)
+✔ playing a non-Fast card while engaged with a ready enemy warns about it (0.1676ms)
+✔ Fast cards and Fight events do not provoke (0.1997ms)
+✔ with play confirmation off, a play only asks when it provokes (0.1653ms)
+✔ a provoking basic action warns only while a ready enemy is engaged (0.2459ms)
+✔ fight, evade, resign and parley never provoke (0.2142ms)
+✔ nested actions are flattened (0.2634ms)
+✔ drawing a card and taking a resource provoke (0.1755ms)
+✔ warnings off and plays off asks nothing (0.0999ms)
+✔ unknown card text is treated as provoking (0.0809ms)
+✔ the Ritual Circle ability-matching additional action decodes (9550.0702ms)
+✔ an act moving to the next stage of its deck is an advance (1.3336ms)
+✔ an agenda moving to the next step is an advance (0.2201ms)
+✔ act and agenda advancing in the same update are both reported (0.1521ms)
+✔ nothing changed, no earlier state, or a reload is not an advance (0.1207ms)
+✔ going back (undo) is not an advance (0.1504ms)
+✔ a different scenario (other deck) is not an advance (0.1134ms)
+✔ an agenda turning over is a back-only reading, before the next card exists (0.1353ms)
+✔ an act turning to its back side is a back-only reading (0.1411ms)
+✔ a card already flipped does not flip again (0.1068ms)
+✔ the advance after a read turn-over only shows the next card (0.2001ms)
+✔ finishes reading the new act before an agenda that turns over in the same update (0.1598ms)
+✔ end-of-round updates read act back, new act, agenda back, then new agenda once each (0.1402ms)
+✔ finishes an ongoing agenda before starting an act, rather than always prioritising acts (0.0967ms)
+✔ a continuation arriving later stays with the active reading ahead of waiting readings (0.2094ms)
+✔ the reader already open decides the order when both sequences complete together (0.2002ms)
+✔ a different act does not jump ahead of readings already waiting (0.0936ms)
+✔ the editor covers every Ages Unwound record exactly once (414.8053ms)
+✔ exclusive outcomes clear the alternative and its time before recording the choice (116.7704ms)
+✔ unrecording clears all times; crossing out preserves the chosen time (106.0798ms)
+✔ school entrance and time destination must describe the same route (97.8469ms)
+✔ the reported edited history highlights every conflicting record (110.1315ms)
+✔ Hound and ward outcomes are validated without banning later Backfire (104.3654ms)
+✔ all exclusive groups are checked, including preexisting invalid saves (103.4523ms)
+✔ legacy keys normalize and crossed-out records do not invalidate the active history (94.6888ms)
+✔ the editor compiles through the Vue template compiler (62.1089ms)
+✔ a card pool export yields its pack name and every card (7511.5488ms)
+✔ a pack carries its own id, so a renamed pack still replaces its set (0.2773ms)
+✔ a bare card array and a lone card both parse (0.1826ms)
+✔ an investigator keeps its stats, class and both faces (0.8257ms)
+✔ a player asset keeps cost, icons and slot (0.3535ms)
+✔ a weakness lands on the player-side type for its kind (0.2336ms)
+✔ ability text is never imported -- there is no field for it (0.289ms)
+✔ a card code is derived from the arkham.build id, not minted fresh (0.3331ms)
+✔ a deck names the same cards the import stored (0.6721ms)
+✔ an official card code is left exactly as it was (0.3566ms)
+✔ an alternate front is rewritten inside the meta string (0.238ms)
+✔ a short arkham.build id matches the code its card was imported under (0.1979ms)
+✔ an undashed 32-character uuid is translated too (0.1793ms)
+✔ the deck rewrite translates exactly the ids the importer recognises (0.3145ms)
+✔ portrait cropping leaves cards alone when it cannot run (0.3253ms)
+✔ all revised faces resolve, without changing the other faces (366.7045ms)
+✔ preferences are ordered, fall through, and do not remap selected art (134.7255ms)
+✔ late metadata updates existing reactive image computations (105.0936ms)
+✔ the player preference persists and resolves both cardImage and raw Art paths (9142.8557ms)
+✔ identifies mandatory Forced activations separately from optional automation (1.3832ms)
+✔ leaves simultaneous Forced ordering and optional reactions to the player (0.195ms)
+✔ Forced results still ask for target, consequence, and asset soak decisions (0.2853ms)
+✔ uses the engine mandatory window for a conditional Forced reaction (0.1059ms)
+✔ leaves both commit and uncommit to a supporting player, even with only one card (0.1201ms)
+✔ still starts a test with no cards to commit (0.0683ms)
+✔ leaves a card offered after token reveal to the player (0.0738ms)
+✔ draws from the encounter deck when it is the only place to draw from (0.0625ms)
+✔ applies skill test results when that is the only button (1.1362ms)
+✔ starts the skill test when nothing can be committed (0.2545ms)
+✔ takes the one valid choice and ignores invalid ones (0.1487ms)
+✔ unwraps a labelled question (0.2027ms)
+✔ leaves a real decision to the player (0.1613ms)
+✔ closes a player window when only done is left (0.1113ms)
+✔ never ends the turn for the player, even with nothing else to do (0.118ms)
+✔ keeps a player window open while anything can still be played (0.1257ms)
+✔ never answers story, flavor, or non choose-one questions (0.1241ms)
+✔ waits for the player while revealed cards are on screen (0.1392ms)
+✔ unknown lone choices stop as before (0.1262ms)
+✔ assigns a lone damage token through the source and label wrappers (0.3157ms)
+✔ assigns damage before horror when only the investigator can take either (0.1767ms)
+✔ stops when an asset could soak, another investigator is offered, or the label is not an assignment (0.1883ms)
+✔ takes Fire! from the encounter discard when Searching for Dr. Armitage offers it (0.1021ms)
+✔ keeps every automatic answer on screen for at least one second (0.2168ms)
+✔ leaves a plain two-way label choice to the player (0.172ms)
+✔ a campaign overlay decodes off the campaign payload (339.5922ms)
+✔ base and Return to Carcosa select the same art by story key through flavor wrappers (0.725ms)
+✔ art only changes when the depicted scene changes (0.1815ms)
+✔ different actions in recurring settings select their own illustrations (2.8539ms)
+✔ Curtain Call reuses the Stranger encounter when both endings reach that event (0.2168ms)
+✔ routing instructions do not preview an outcome or displace narrative art (0.1959ms)
+✔ all scenario narrative intros and resolution bodies are illustrated (4.9675ms)
+✔ each mapped passage exists and has a bundled image (6.3283ms)
+✔ the in-game read modal renders the illustration inside its text panel (2.2958ms)
+✔ card picker filters and sorts without changing answer indices (332.2911ms)
+✔ collection searches use a separate modal during and outside skill tests (9421.7216ms)
+✔ compact collection questions decode into indexed card choices and retain source highlighting (8900.5597ms)
+✔ card data filenames support a language-region suffix (0.6994ms)
+✔ card data filenames reject unrelated and unsafe paths (0.1131ms)
+✔ test_keyword_changes_splits_gained_and_lost (1.1065ms)
+✔ test_keyword_changes_dedupes_and_removal_wins (0.1722ms)
+✔ test_keyword_changes_handles_missing_modifiers (0.1463ms)
+✔ test_join_and_split_round_trip (0.3226ms)
+✔ test_strike_marks_printed_keyword_only_in_text (1.0028ms)
+✔ test_strike_ignores_tag_attributes_and_partial_words (0.4565ms)
+✔ only known styles are accepted from storage (0.8762ms)
+✔ the first state and updates outside a skill test draw nothing (0.5539ms)
+✔ tokens new to this update are the ones drawn (0.1978ms)
+✔ the pause grows with extra tokens but is capped (0.1173ms)
+✔ a reel ends on the drawn face, never repeating a face back to back (0.252ms)
+✔ a reel over an empty or one-face bag still lands (0.1741ms)
+✔ sounds that give the result away wait for the reveal (0.1531ms)
+✔ reads who revealed which tokens (1.1047ms)
+✔ ignores reveals already seen (0.1179ms)
+✔ finds a reveal nested under another entry (0.1304ms)
+✔ leaves skill test reveals to the skill test panel (0.0943ms)
+✔ lastSeq is the newest top-level entry (0.1234ms)
+✔ all narrative scenario intros, investigations and endings have artwork (9.7806ms)
+✔ Return to Twilight Estate illustrates each of the four tarot fates (1.0219ms)
+✔ art selects a valid story without revealing failed investigations (0.1342ms)
+✔ the prologue, campaign interludes and epilogues cover the campaign narrative (1.0518ms)
+✔ changed actions select different art, and the two versions share Anette’s possession scene (0.2062ms)
+✔ each mapped passage exists in English and Vietnamese (13.3975ms)
+✔ all mapped illustrations have a WebP file (70.0516ms)
+✔ retains a clear curve despite changes in outward preference (76.9314ms)
+✔ switches when the current curve becomes obstructed (19.493ms)
+✔ scales remembered curves with zoom and forgets removed connections (13.3358ms)
+✔ one-way arrow keeps its lane until another lane avoids more cards (7.4778ms)
+✔ returns a previously curved connection to straight after an obstruction moves (11.0603ms)
+✔ returns a one-way arrow to straight when routing no longer needs a bend (6.0849ms)
+✔ keeps steep-angle crossings straight and separates shallow crossings and shared lanes (19.0931ms)
+✔ an export names the set it came from (9447.4349ms)
+✔ an export of loose cards names no set (0.2573ms)
+✔ an import reads the set the file names (0.3006ms)
+✔ a file from before sets falls back to what its cards claim (0.1982ms)
+✔ a file that names no set anywhere falls back to the file name (0.1948ms)
+✔ a single card pasted on its own still imports (0.1593ms)
+✔ anything without a card code is not a card (0.1753ms)
+✔ unsuffixed runtime codes resolve split-card front translations (540.657ms)
+✔ a record filed under a "b" code wins its own key whatever the file order (368.213ms)
+✔ the alias still describes a double-sided card's back (399.9577ms)
+✔ a Masked Carnevale-Goer never resolves to the enemy it hides (435.583ms)
+✔ the goers are findable by the name the engine gives every one of them (375.7382ms)
+✔ a name more than one card answers to resolves to nothing (352.1726ms)
+✔ homebrew cards resolve from their campaign file (406.493ms)
+✔ a homebrew lookup fetches only its own campaign, on demand (350.5223ms)
+✔ drawing is a real draw from the investigator deck (287.3171ms)
+✔ a random discard takes one card from hand to the discard pile (0.4373ms)
+✔ trauma goes on the right track (0.3147ms)
+✔ gaining XP is reported to the breakdown, spending is its own message (0.249ms)
+✔ a custom entry keeps exactly what was typed (0.2397ms)
+✔ only free-text keys outside the running homebrew campaign are editable (0.2088ms)
+✔ campaign log edits are single steps (0.2735ms)
+✔ a test passes on a tie and reports the margin (301.9213ms)
+✔ ties fail when told to (0.3127ms)
+✔ the modified skill never drops below zero (0.1845ms)
+✔ several tokens add up (0.187ms)
+✔ auto-fail beats auto-success (0.206ms)
+✔ two frost tokens are an automatic failure (0.1887ms)
+✔ an unknown value waits for the player, and an override fills it in (0.2533ms)
+✔ an override replaces an automatic result (0.1867ms)
+✔ reveal and return messages match the backend constructors (0.2555ms)
+✔ a skill test form encodes the DebugSkillTestSpec record (0.2917ms)
+✔ combined, fixed and plain tests encode their own shapes (0.2639ms)
+✔ the form says what is missing before it can start (0.337ms)
+✔ the jump message ends the scenario with an override step after clearing the UI (8101.1438ms)
+✔ Night of the Zealot lists its three scenarios in order (0.5943ms)
+✔ a Return To campaign lists the Return To scenario codes (0.3508ms)
+✔ an unknown campaign has no entries (0.4513ms)
+✔ releasing sends the whole token record (8393.7669ms)
+✔ releasing to the pool unseals, then returns the token to the pool, as one step (0.3215ms)
+✔ sealing names the token by id and the card by target (0.2096ms)
+✔ only pool faces can be released to the pool (0.2082ms)
+✔ the picker groups the bag by face, in bag order (0.2971ms)
+✔ Weaver follows the span centers of the real backend Act 2 layout (2.5359ms)
+✔ Weaver uses live leg placement, falls back when meta is absent and keeps a clockwise body arc (0.4646ms)
+✔ Endless Descent recognizes the wrap and a subsequent shuffle of unrevealed cards (0.3014ms)
+✔ dynamic map faces and hidden backs select the shipped sprites (6.1337ms)
+✔ Atlach-Nacha is one front-facing image; the leg cards are hit areas, not sprites (0.5782ms)
+✔ Dream-Eaters maps English and Vietnamese narrative keys to bundled WebPs (289.5266ms)
+✔ lookup follows the actual story branches through nested entries (0.2987ms)
+✔ every selectable dream has its own art inside the wizard reading panel (2.1323ms)
+✔ Dream-Eaters illustrates each epilogue and distinguishes the captured group (0.2022ms)
+✔ Dunwich scenery follows the actual card back and later state (1.1446ms)
+✔ Black Stars Rise keeps flood and vortex agendas independent (0.5006ms)
+✔ Curtain Call shows only the chosen hazard at locations with horror (4.0218ms)
+✔ every Dunwich and Carcosa state image exists as WebP (15.7591ms)
+✔ Carcosa state changes preserve the base layout and available artwork (4.5114ms)
+✔ both Dunwich campaigns read the same illustration through nested story entries (0.9548ms)
+✔ narrative scenario passages are covered without illustrating routing prompts (7.7142ms)
+✔ the prologue, both interludes, and both epilogues have story art (0.8761ms)
+✔ each illustration has an English and Vietnamese story key and a WebP asset (51.6528ms)
+✔ the same Sentinel Hill finale shares art, with distinct art for alternate outcomes (0.4066ms)
+✔ the story page and both in-game read layouts pass campaign and story entries to the artwork (3.4311ms)
+✔ test_end_turn_pulse_no_actions_left_pulses (0.8292ms)
+✔ test_end_turn_pulse_only_end_turn_offered_pulses (0.1932ms)
+✔ test_end_turn_pulse_other_choices_with_actions_stays_still (0.0873ms)
+✔ test_end_turn_pulse_not_offered_never_pulses (0.0833ms)
+✔ test_enemyActivity_moveAndAttackLines_returnsEnemyIdsOldestFirst (1.2047ms)
+✔ test_enemyActivity_linesAtOrBeforeCursor_areSkipped (0.1654ms)
+✔ test_enemyActivity_nestedAndUnrelatedLines_onlyNestedEnemyLinesCount (0.1764ms)
+✔ recognises an offered act advance without confusing Agenda advancement or token placement (391.6524ms)
+✔ a forced enemy move names the mover and the card that asked (0.6802ms)
+✔ placing doom through the token sub-message reads amount, token and target (1.1713ms)
+✔ investigator damage reads damage and horror separately (0.2879ms)
+✔ a reaction window offering a hand card reads as playing that card, inside an enemy-attack window (0.6299ms)
+✔ bookkeeping messages before the action are skipped; unknown messages yield null (0.2451ms)
+✔ every answer button keeps its engine messages after decoding, not only TargetLabel (7617.3943ms)
+[Autopilot] Answering question {
+  step: 1,
+  index: 0,
+  reason: 'forcedAbility',
+  choiceTag: 'AbilityLabel'
+}
+[Autopilot] Answering question {
+  step: 2,
+  index: 0,
+  reason: 'forcedAbility',
+  choiceTag: 'AbilityLabel'
+}
+[Autopilot] Answering question {
+  step: 1,
+  index: 0,
+  reason: 'forcedAbility',
+  choiceTag: 'AbilityLabel'
+}
+[Autopilot] Answering question {
+  step: 1,
+  index: 0,
+  reason: 'forcedAbility',
+  choiceTag: 'AbilityLabel'
+}
+[Autopilot] Answering question { step: 3, index: 0, reason: 'singleChoice', choiceTag: 'Label' }
+[Autopilot] Answering question {
+  step: 1,
+  index: 0,
+  reason: 'forcedAbility',
+  choiceTag: 'AbilityLabel'
+}
+✔ Forced activates with autopilot off, once per step (9.3319ms)
+✔ Forced waits while a request or overlay blocks answers (1.085ms)
+✔ multiple Forced effects and optional automation still wait with autopilot off (0.8712ms)
+✔ enabled automation resolves Forced consequences and preserves real decisions (1.9516ms)
+✔ a completed Forced does not enable unrelated next-round draws with autopilot off (0.7825ms)
+✔ a Forced activation with no consequence displays nothing (1.0575ms)
+✔ keeps actual consequences and other activations without mutating the source stream (0.4437ms)
+✔ preserves nested consequences and their undo steps when removing activation lines (0.2334ms)
+✔ preserves narrative, chat and mixed entries (0.1481ms)
+✔ the base campaign and Return to share art, including the split Heart of the Elders aliases (1.115ms)
+✔ a marked-inactive Boundary Beyond branch cannot hide or preview the active scene (0.5645ms)
+✔ every scenario intro and resolution with a story is illustrated (8.996ms)
+✔ the prologue, five interludes, and epilogue cover the campaign prose (1.2486ms)
+✔ each illustration refers to bilingual text and a bundled WebP (94.8769ms)
+✔ matching outcomes share an illustration while changes in decisions or consequences get their own (0.2749ms)
+✔ reports damage and horror taken, with the hit staggered after the beat (1.5074ms)
+✔ an exhausting engaged enemy that hurt its investigator lunges first (0.2486ms)
+✔ doom on an agenda and a defeated enemy are reported; unchanged boards are quiet (0.1854ms)
+✔ snapshotOf reads tokens and pending assignments (0.3142ms)
+✔ investigating turns a location clue into a clue flying to the investigator standing there (0.3435ms)
+✔ two investigators gaining clues at the same location is ambiguous and falls back to floaters (0.2352ms)
+✔ mismatched amounts are not paired (0.186ms)
+✔ clues spent with nowhere else to go fly to the only act (0.1698ms)
+✔ a clue lost while the act stays put is not a spend on the act (0.1231ms)
+✔ beats run in order: transfers, then the lunge, then the hit (0.2685ms)
+✔ doom on enemies and locations, and uses spent on assets, are reported (0.1343ms)
+✔ resources given from one investigator to another become a transfer (0.1266ms)
+✔ snapshotOf tracks card zones and cardMoves reports cards that changed zone on the table (0.2412ms)
+✔ a card drawn from the deck is a move from the deck to the hand (0.1416ms)
+✔ the seven reveal maps use shipped panoramas and a common hidden image (7.6076ms)
+✔ hidden locations use provisional points without leaking their card identity (8.0557ms)
+✔ three Abyssal Trenches take three separate painted points once revealed (0.2227ms)
+✔ revealing a trench moves it to its landmark and frees the occupied spot (0.2502ms)
+✔ transformed rooms and alternate card faces retain their painted landmarks (0.1434ms)
+✔ every playable Hemlock Vale board selects a shipped overview (5.7059ms)
+✔ Dream-Eaters selects the current board, including Kadath with every region in its layout (10.9392ms)
+✔ Fate of the Vale changes backdrop only when the game lays out the nighttime village (1.333ms)
+✔ the village anchors cover all eight landmarks on both printed faces (0.2023ms)
+✔ Night of the Zealot scenarios select their overview boards (0.2107ms)
+✔ Midnight Masks reflects the house outcome in the campaign log (1.3808ms)
+✔ Excelsior has anchors for every room and Blob uses the live grid (1.1919ms)
+✔ Dunwich Legacy scenarios select their overview boards (0.1246ms)
+✔ Extracurricular Activity changes art at the Science Building disturbance and keeps location anchors (2.6301ms)
+✔ Dunwich and Carcosa variants compose with original and Return to boards (3.5227ms)
+✔ Return to IDs select the same shipped overview as their base scenarios (20.7281ms)
+✔ Essex train holds its painted slots when the rear cars are removed (3.5884ms)
+✔ Twilight Estate spectral treatment follows the scenario and current locations (0.2559ms)
+✔ Locations added later resolve to distinct scenery and shuffled art uses the live label (0.302ms)
+✔ Return to scenes select their playable IDs and have anchors for the added locations (4.4615ms)
+✔ Echoes basement rooms move from the assigned slot to the correct room on reveal (0.2779ms)
+✔ Museum exhibits use their assigned halls and show art only after reveal (5.8423ms)
+✔ The Scarlet Keys scenarios select their overview boards (0.2035ms)
+✔ The Path to Carcosa scenarios select their overview boards (0.3604ms)
+✔ Both Curtain Call boards route private rooms from the doorway to their painted room (0.928ms)
+✔ Both Echoes boards share the cutaway including the late Hidden Library (0.0964ms)
+✔ Dim Carcosa keeps card variants in the same painted district when replaced (0.165ms)
+✔ The Drowned City scenarios select their overview boards (0.194ms)
+✔ Dark Matter scenarios select their overview boards (0.1824ms)
+✔ Ages Unwound scenarios select their overview boards (0.217ms)
+✔ The Forgotten Age scenarios select their overview boards (0.2433ms)
+✔ The Circle Undone scenarios select their overview boards (0.2828ms)
+✔ The Innsmouth Conspiracy scenarios select their overview boards (0.3938ms)
+✔ Edge of the Earth overview maps and location positions (0.2168ms)
+✔ Spreading Flames follows agenda narration even after the bedroom and Fire! leave play (3.9221ms)
+✔ Chapter 2 overview maps and location positions (0.2878ms)
+✔ Traces to Nowhere opens the city cutaway only while an Otherworld location is in play (3.897ms)
+✔ agenda and location snapshots select the matching scenery and retain the same map geometry (25.0575ms)
+✔ Cthulhu ruins only the districts whose replacement locations are present (1.2991ms)
+✔ The Secret Name replaces the boarding house with the current Otherworld panorama (3.7541ms)
+✔ repainted scenes cover all coexisting locations with distinct anchors (0.3738ms)
+✔ Standalone / Side Stories select their overview boards and location positions (0.1492ms)
+✔ In Too Deep plates run west to east from left to right in every row (0.1058ms)
+✔ Island boards: Before the Black Throne and Devil Reef stand each location on its own sprite (0.0758ms)
+✔ an unscoped homebrew key formats without its campaign scope (10052.1967ms)
+✔ Circus Ex Mortis supplies a panel for its Destinies recorded set (9852.1442ms)
+✔ homebrew art is bundled and resolves against the English and Vietnamese message scopes (247.8814ms)
+✔ Wendigo art distinguishes defeat and victory and skips invalid panels (0.2454ms)
+✔ a card takes its printed number, with its back folded in ArkhamDB-style (1.2037ms)
+✔ markup is reduced to an attribute-free allowlist (0.4709ms)
+✔ several printings of one number are told apart by their backs (7.7309ms)
+✔ duplicate rows of one printing collapse to one record (0.8078ms)
+✔ engine cards arkham.build lacks still get their printed name (0.2767ms)
+✔ a card with a back does not get a second name-only record for its b side (0.2426ms)
+✔ a number arkham.build files under another card keeps the engine name, not the wrong text (0.4184ms)
+✔ a campaign arkham.build does not publish still gets every engine name (1.5044ms)
+✔ the Simplified Chinese importer writes a separate zh-cn locale by default (1.0766ms)
+✔ translation importer options require a value (0.3909ms)
+✔ translated text is merged without replacing gameplay metadata (0.332ms)
+✔ equivalent reprints reuse an existing Simplified Chinese translation (0.1967ms)
+✔ split card sides reuse an unsuffixed translation (0.1538ms)
+✔ a local override replaces the upstream translation for that card only (0.1207ms)
+✔ an override never rides along on a reprint matched by identity (0.1733ms)
+✔ the checked-in zh-cn overrides only touch translated fields (65.5777ms)
+✔ loadOverrides returns an empty map for a locale with no override file (0.3716ms)
+✔ Pit of Despair: own sprites, shared tunnels reached through devil-reef without copying files (1.6016ms)
+✔ Into the Maelstrom: Y'ha-nthlei, sanctum and tunnel backs, and the always-face-up places (0.4289ms)
+✔ A Light in the Fog: lighthouse always up, 07244 flips to the Lighthouse Basement, Holding Cells has its face (0.3786ms)
+✔ Horror in High Gear: faces by code (a/b/c suffix ignored), the road back, Return to tiles and the two cars (0.2419ms)
+✔ a location has its own sprite on a board only when the set drew one for it (0.2547ms)
+✔ every sprite of the four new sets, shared ones included, is a WebP in public/ (52.2642ms)
+✔ High Gear reader: a tile spans two rows of its column, one tile centred between rows 3 and 4 (1.035ms)
+✔ High Gear reader: two and three tiles in a column stack on rows 2-3 / 4-5 and 1-2 / 3-4 / 5-6 (0.2912ms)
+✔ High Gear reader: columns behind the last investigator are gone, the rest keep their order (0.236ms)
+✔ High Gear reader ignores empty columns and has nothing to read in an empty layout (0.2675ms)
+✔ High Gear slides: a new column enters on the right, the rear columns leave, the rest shift left (0.4759ms)
+✔ The Pallid Mask: each Catacombs has its own face, one shared back, Return to extras included (13.9531ms)
+✔ Innsmouth campaign selects story art through flavor wrappers (0.8657ms)
+✔ shared moments reuse illustrations and divergent outcomes stay distinct (0.4045ms)
+✔ all scenario narrative intros and resolution bodies are illustrated (10.5435ms)
+✔ each mapped passage exists in English and Vietnamese locales and has a bundled WebP image (14.678ms)
+✔ the in-game read modal renders the illustration inside its text panel (1.7211ms)
+✔ only the actual location owns an investigator movement transition name (381.553ms)
+✔ Simplified Chinese browser locales select zh-cn (42.6937ms)
+✔ Traditional Chinese browser locales keep the existing zh language (8.3766ms)
+✔ regional non-Chinese locales use their base language (4.4127ms)
+✔ Simplified Chinese uses its own UI messages (4.2654ms)
+✔ bootstrap initializes Vue I18n with the normalized UI locale (1.4769ms)
+✔ language settings switch Vue I18n to the normalized UI locale (1.1999ms)
+✔ the story map serves both languages and every mapped WebP is bundled (478.3962ms)
+✔ lookup follows nested narrative keys and excludes invalid and foreign entries (0.3063ms)
+✔ Edge of the Earth illustrates every main interlude reading and Fatal Mirage branch (0.2855ms)
+✔ expedition visits illustrate the active branch and hide invalid passages (6.2455ms)
+✔ Spreading Flames setup renders all nine encounter icons from the configured asset host (9693.9999ms)
+✔ a plain icon placeholder survives translation and renders (8182.6308ms)
+✔ the hand-escaped spelling renders identically (0.7962ms)
+✔ an icon named by a parameter still renders (0.5821ms)
+✔ homebrew icons and runes are escaped too (0.7257ms)
+✔ real named parameters are not escaped (0.6276ms)
+[intlify] Not found 'destiny.atDeath'sDoorstep' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelIntervened' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelSharedHerDoubts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahIsSearchingForSimeon' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedHerFrustrations' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSawSomethingInTheMine' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahAndSimeonWereReunited' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSearchedThePearlRuins' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSurvived' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonDisappeared' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonHatchedAPlan' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].thePlanIsUnderway' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamTookHeart' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedHisLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamIsResolved' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].theSchemeIsInMotion' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedTheirAmbitions' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverAskedForHelp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverIsReclaimingTheirLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheStoryOfCaptainHemlock' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheTaleOfTheAnnabelleLee' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonFoundHisTreasure' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSavedYourAss' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedAGrudge' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].youBackedJudithUp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoReconciledWithHelen' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoDistractedTheBear' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoRejectedHisFamily' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoIsHavingSecondThoughts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.fateOfTheVale.codex.drRosaMarque.title' key in 'en' locale messages.
+[intlify] Not found 'circusExMortis.destiny.harm'sWay' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].theGroupPerished' key in 'en' locale messages.
+✔ the Doom of Arkham Part II intro names the token it adds (#5597) (689.9946ms)
+✔ a message vue-i18n cannot compile is left alone (0.4249ms)
+[intlify] Not found 'destiny.atDeath'sDoorstep' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'skull' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].northPointMine.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].hemlockHarbor.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].pearlRidge.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].akwanShoreline.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].eastwickBog.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].westernWoods.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.scenarioName' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[areasSurveyed].southernFields.ref' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelIntervened' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelSharedHerDoubts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[motherRachelNotes].motherRachelCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahIsSearchingForSimeon' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSharedHerFrustrations' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSawSomethingInTheMine' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahAndSimeonWereReunited' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSearchedThePearlRuins' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[leahAtwoodNotes].leahCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSurvived' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonDisappeared' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonHatchedAPlan' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].thePlanIsUnderway' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[simeonAtwoodNotes].simeonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamTookHeart' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedHisLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamIsResolved' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[williamHemlockNotes].williamCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].theSchemeIsInMotion' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedTheirAmbitions' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverAskedForHelp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverIsReclaimingTheirLegacy' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[riverHawthorneNotes].riverCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheStoryOfCaptainHemlock' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonToldTheTaleOfTheAnnabelleLee' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonFoundHisTreasure' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[gideonMizrahNotes].gideonCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSavedYourAss' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedAGrudge' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].youBackedJudithUp' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[judithParkNotes].judithCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].name' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoReconciledWithHelen' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoDistractedTheBear' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSharedADance' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoRejectedHisFamily' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoStoodByYou' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoIsHavingSecondThoughts' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoSacrificedThemselvesForTheInvestigators' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.key.[theoPetersNotes].theoCrossedOut' key in 'en' locale messages.
+[intlify] Not found 'theFeastOfHemlockVale.fateOfTheVale.codex.drRosaMarque.title' key in 'en' locale messages.
+[intlify] Not found 'darkMatter.additionalRulesAndClarifications.scan' key in 'en' locale messages.
+[intlify] Not found 'darkMatter.additionalRulesAndClarifications.memories' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupA].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupB].theGroupPerished' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].orderKey' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].title' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].theGroupEscapedTheLabyrinth' key in 'en' locale messages.
+[intlify] Not found 'theLabyrinthsOfLunacy.key.[groupC].theGroupPerished' key in 'en' locale messages.
+✔ icon placeholders render for the selected locale profile (2367.969ms)
+✔ every i18n key the backend references resolves in the en locale (13837.6168ms)
+✔ locale markup uses complete HTML closing tags (150.8555ms)
+✔ locale message links keep ASCII key paths (159.2661ms)
+✔ locale markup has no stray bullet-glyph artifacts (152.8358ms)
+✔ locale markup opens every list with a list item (135.1472ms)
+✔ connection arrows show the actual direction regardless of endpoint order (0.9756ms)
+✔ links are undirected and deduplicated (0.6124ms)
+✔ one-sided connection data still yields a link (0.1326ms)
+✔ links to locations not in play are ignored (0.1415ms)
+✔ shortest path picks the fewest hops (0.2096ms)
+✔ path from a location to itself is that location (0.0737ms)
+✔ disconnected target gives an empty path (0.0824ms)
+✔ unknown endpoints give an empty path (0.0676ms)
+✔ blocked locations are routed around or make target unreachable (0.1321ms)
+✔ roster lists investigators and enemies at a location (0.2408ms)
+✔ the mine entrance uses painted chamber positions even when the grid has extra columns (0.7011ms)
+✔ the mine passage anchor is the same for either direction (0.0801ms)
+✔ grid layout centres each label in its cell, as percentages (0.0881ms)
+✔ grid layout uses the middle of a label spanning several cells (0.0654ms)
+✔ grid layout tolerates ragged rows and extra spaces (0.0844ms)
+✔ auto layout places every location inside the map, neighbours in later columns (0.1956ms)
+✔ auto layout never stacks two locations on one point (0.1345ms)
+✔ auto layout of an empty or single graph is safe (0.0954ms)
+✔ map positions follow the scenario grid by label and fall back to auto layout for the rest (0.2286ms)
+✔ map positions without a grid use auto layout for all (0.0668ms)
+✔ compactGridLayout collapses rows and columns the card board leaves empty (0.2173ms)
+✔ a row of 4 that all connect keeps one link per gap and forms one lane (0.5552ms)
+✔ a column folds the same way (0.239ms)
+✔ a link with no location between its ends stays (0.1603ms)
+✔ the long link stays when the middle location is not joined to both ends (0.0659ms)
+✔ a link that may not fold (one-way, barriers) stays (0.0811ms)
+✔ locations dragged off the line keep their long link (0.0569ms)
+✔ an unrevealed location shows only its unrevealed side (1.6304ms)
+✔ a revealed location shows its revealed side, shroud, clues per player and victory (3.4221ms)
+✔ fixed clue values are not multiplied by the player count (0.4081ms)
+✔ a different unrevealed name is used instead of the revealed one (0.1986ms)
+✔ without a card record only the fallback name shows (0.2223ms)
+✔ shroud modifiers follow the engine order (0.2215ms)
+✔ forced enter effects are spotted, other forced effects are not (0.1179ms)
+✔ move and investigate are read from the ability actions, the rest kept in order (0.3335ms)
+✔ here and adjacent are relative to the viewing investigator (0.1599ms)
+✔ a location ability that moves elsewhere or investigates its own way is not the basic action (0.2634ms)
+✔ per-player shroud is multiplied and an X shroud is flagged (0.1793ms)
+✔ abilityActions reads printed and basic actions alike (0.1181ms)
+✔ the Farmhouse is always up, farms face down on the farm back, fields on the field back (10.4088ms)
+✔ the board is the empty field with the sprite folder and no anchors (1.3437ms)
+✔ zooming never goes below 1 or above the maximum (0.9982ms)
+✔ zooming keeps the point under the pivot where it was (0.2039ms)
+✔ the picture cannot be dragged off its frame (0.5881ms)
+✔ a view that is not zoomed cannot pan at all (0.1089ms)
+✔ zooming back out recentres a picture that was panned to an edge (0.114ms)
+✔ spreading two fingers zooms in and moving them together pans (0.1862ms)
+✔ fingers pinched together zoom out, never below 1 (0.1337ms)
+✔ clamping repairs a viewport left stale by a smaller frame (0.1039ms)
+✔ the stage only gets a transform when zoomed or panned (0.1316ms)
+✔ investigator setup, before the scenario places its decks: awaiting (0.6396ms)
+✔ setup already placed the act and agenda: not awaiting (0.1662ms)
+✔ scenario under way with no act or agenda left (resolving): not awaiting (0.0974ms)
+✔ only one of the two placed: not awaiting (0.0921ms)
+✔ entryKeys walks composite, modified and list entries in reading order (1.1378ms)
+✔ storyKeysInPlay sees any player's Read, unwraps labels and de-duplicates (0.2139ms)
+✔ narrationTracks keeps only rendered keys and falls back to English (0.1847ms)
+✔ narration language defaults from the browser and rejects unknown stored values (0.147ms)
+✔ every manifest entry has its mp3 on disk (292.1834ms)
+✔ cardNarrationKeys resolves front and back variations with or without c prefix (0.433ms)
+✔ cardNarrationTrack returns track when key matches manifest (0.3198ms)
+✔ both campaigns use the actual nested story entry, skipping routing and hidden passages (0.8125ms)
+✔ English and Vietnamese narrative passages have matching keys and a distinct bundled WebP (19.5483ms)
+✔ Obsidian Canyons: faces, shared Summit back, open sky, shared Athenaeum art (0.9021ms)
+✔ The Lost Sister: faces, one shared cave back, Akwan always up (0.1906ms)
+✔ The Twisted Hollow: faces and one shared Western Woods back (0.1411ms)
+✔ every sprite and board file exists and is WebP (22.767ms)
+✔ boards use the empty backgrounds and sprite folders, with no leftover anchors (1.9311ms)
+✔ groups every off-map card by zone, in order (1.8435ms)
+✔ nothing off the map gives no groups (0.2305ms)
+✔ a location on no grid cell and with no connection goes to the reference box (0.4379ms)
+✔ Jekyll arrangement stays in the reference group while matching real locations stay on the scene (0.3025ms)
+✔ isolation needs a grid layout and a label: a lone Study or an unlabelled card is not isolated (0.1928ms)
+✔ put-back panel recognises only the put-back-on-top question (7718.5896ms)
+✔ a target label keeps the messages it will run (8520.7753ms)
+✔ Curtain Call groups Cultist, Tablet and Elder Thing under one modifier and effect (1.3839ms)
+✔ a shared X modifier is read after the token group, leaving tokens in the effect text intact (1.4868ms)
+✔ The Untamed Wilds: vengeance, locations (max 5) and exploration deck (max 5) (2.2888ms)
+✔ wrappers: twice, half rounded up and down, plus, minimum (0.2661ms)
+✔ traits, your location and the victory display (0.4125ms)
+✔ scenario counters are found by name (0.3491ms)
+✔ an unreadable sentence, or a line with no X, gives null (0.2113ms)
+✔ most X sentences on the reference cards are read (60.1647ms)
+✔ a capped X reports the count before the cap (0.2766ms)
+✔ the badge carries the current modifier and how hard it hits (0.3746ms)
+✔ the poison line fails the test only while you are poisoned (0.2455ms)
+✔ Written in Rock: cave and rail backs, single-sided stations, mine cart (0.9691ms)
+✔ The Silent Heath: start locations and lairs always up, caves face down (0.1811ms)
+✔ Without a Trace: Remnants share a back and A/B/C printings share art (0.1678ms)
+✔ Congress of the Keys: Lair and Sanctum share art, sanctuaries and Remnants have their own backs (0.2419ms)
+✔ every sprite and board file exists and is WebP (29.6809ms)
+✔ boards use the empty backgrounds and sprite folders, with no anchors; Congress switches to the Otherworld at the tower (4.105ms)
+✔ Written in Rock: revealed rail tiles carry their printed tracks, the A and B printings differ (0.844ms)
+✔ barrier counts are read from scenario meta whichever way a link is named (335.5592ms)
+✔ scenario text uses locale keys instead of hardcoded English (2564.5361ms)
+✔ lists card choices from zones only the card board draws (1.0809ms)
+✔ leaves out cards the scene already shows (hand) and non-card choices (0.1287ms)
+✔ a token choice that heals is marked as healing, an assignment is not (0.2157ms)
+✔ Blob has a sprite for every location, including ELSE, and a shared hidden face (8.7905ms)
+✔ Cosmos: revealed locations have their own 3:2 sprite, face-down cards stand on the round rock (0.2183ms)
+✔ Devil Reef: each revealed location shows the sprite drawn after its card, face-down cards their back (0.2194ms)
+✔ Return to Devil Reef: Cave Mouth, Shrine to Hydra, the shared tunnel art and the second vessel (0.1825ms)
+✔ Devil Reef water rises over flooded revealed locations, never over the open sea or a card back (0.1144ms)
+✔ every sprite an island set refers to is a WebP file in public/ (14.7463ms)
+✔ the Fishing Vessel is drawn at its location with whoever is inside it (0.865ms)
+✔ the boat turns its bow the way it sails and keeps it on a straight north/south move (0.1031ms)
+✔ a vehicle the server rotates (the Mine Cart) carries its facing in degrees (0.2011ms)
+✔ standees only use assets physically placed at or attached to this location (0.9647ms)
+✔ the map width picks the size class at its thresholds (0.6525ms)
+✔ a width just past a threshold keeps the class it had (0.1259ms)
+✔ a map area under 420px high is short; an unmeasured one is not (0.0854ms)
+✔ the controls ride in the game bar only while its free room fits the core buttons (0.5172ms)
+✔ the panel only switches to viewing for a location other than the one you stand on (0.1111ms)
+✔ printed lines already on offer as buttons are left out of the about block (0.2214ms)
+✔ plates that do not touch are left where they are (0.2939ms)
+✔ overlapping plates are pulled apart, the upper one moving up (0.1809ms)
+✔ a plate at the top edge moves down instead of off the stage (0.1198ms)
+✔ a dragged plate stays put and the same input gives the same shifts (0.2133ms)
+✔ a link badge slides along its link until it is off every plate (0.2316ms)
+✔ generated sprites resolve by exact card code and load from public assets (421.1177ms)
+✔ an unregistered card or back falls through to its own card art (0.1286ms)
+✔ Hunting Nightgaunt and Screeching Byakhee do not share a sprite (0.0999ms)
+✔ Story Asset standees resolve registered campaign faces and reprints (77.5755ms)
+✔ animal and creature Story Assets use their own artwork (0.2683ms)
+✔ Hemlock Vale residents use separate sprites on the asset and enemy faces (0.1967ms)
+✔ Zann keeps shuffled rooms in their public slots and hides private furnishings (3.7135ms)
+✔ Alaska remains visible when the lair opens and restores on undo (10.749ms)
+✔ End of Seasons expands the restaurant and keeps the ballroom fire after the dining-room flip (1.6265ms)
+✔ Yoth tracks current depth through descent and reset for original and Return to (0.601ms)
+✔ police station respects hidden Return to identity and preserves the burned house (0.4416ms)
+✔ Circus backstage basement rooms open from the public location set and undo seals them again (0.6499ms)
+✔ challenge scenes reuse their physical place and recognize Relics replacement codes (0.2186ms)
+✔ Electric Nightmare moves room art with each current grid slot, including switch and undo (0.9026ms)
+✔ Lost Quantum only settles when Quantum Zeno has stabilized all eight Elbrus locations (0.6021ms)
+✔ Ages school starts with Featureless Streets and follows present locations independently of the past act deck (0.5741ms)
+✔ all three temporal Ritual Circles can coexist, while hidden classrooms stay undisclosed (0.5146ms)
+✔ Time Runs Out removes old location art when a card leaves and supports actual Paradox locations (1.4782ms)
+✔ Night of Fire provisional points depend on public badges, not unrevealed identity (0.4246ms)
+✔ A Year to Plan keeps the world and independently opens the London library and Paris realm (1.1663ms)
+✔ Fatal Mirage keeps all nineteen memory illustrations distinct and hides unknown memories (2.4479ms)
+✔ Court archives can share a printed illustration while remaining separate places on different floors (0.907ms)
+✔ Grand Vault platform art follows its id through swaps and duplicate cisterns stay separate (0.6731ms)
+✔ Carnevale follows clockwise public slots and only changes to lagoon after the old ring leaves (2.4922ms)
+✔ War of the Outer Gods keeps all three cult regions and opens Hub only from its public location (0.6424ms)
+✔ Circus ringmaster uses the public enemy entity and disappears when defeated (0.6266ms)
+✔ Circus Dark Youngs keep their public grid corners independently of their defeated siblings (0.7911ms)
+✔ Red Sunrise preserves grouped row order and public Path Forward cells (1.0564ms)
+✔ escape panorama follows location lifecycle through either advancement path and undo (0.8598ms)
+✔ Film Fatale selects each world and restores the studio after its locations leave (0.4759ms)
+✔ tidal cave phase supports original and Return to without retaining lodge anchors (0.4559ms)
+✔ Hive Mind scene requires its Central Chamber, rather than merely Act 2 (0.3588ms)
+✔ hidden dynamic locations use a common back independently of private identity (0.5321ms)
+✔ Unstuck follows clockwise slots after swaps while paired versions share only their art (0.7073ms)
+✔ Antarctic shuffled rooms follow slots and pylons collapse independently from public modifiers (1.1875ms)
+✔ Starfall docks both ship locations at their host and removes destinations with the snapshot (1.2517ms)
+✔ Phantom changes full panorama as the old opera and sewer locations leave play (0.6331ms)
+✔ Boundary Beyond renders independent temporal regions and reverses them on undo (1.0064ms)
+✔ Fragment of Carcosa preserves lander and camera across independently flipped cave rooms (0.9662ms)
+✔ Usher only ruins the flipped room, while Constellation uses exhausted deck rooms as water state (0.8828ms)
+✔ Queen of Ash follows either public advancement path and keeps unknown tunnels out of revealed rooms (1.017ms)
+✔ Strange Moons only replaces the active public simulation inside the same facility (0.6399ms)
+✔ Guardians changes to the Abyss only after its new location set arrives, then restores on undo (0.5052ms)
+✔ Wendigo preserves the river art across copies and unknown mountains share no temple identity (0.7266ms)
+✔ every asset selected by the installed world and cave sets is shipped (1.5158ms)
+✔ Dead Heat keeps each abandoned printing on its original physical landmark (0.4798ms)
+✔ Dead Heat tracks night from Agenda 1B independently from the Act 3 vines, including undo (1.1173ms)
+✔ Dead Heat only burns the garden in the revealed Amaranth branch, not the Razin branch (0.4317ms)
+✔ Fate nests share their printed illustration while shuffled copies keep their public slots (1.1321ms)
+✔ Fate cavern copies stay separate, hide their identities, and the Abyss occupies its repeated central area (1.0497ms)
+✔ Fate returns to the night village and restores nests when the snapshot is undone (48.4994ms)
+✔ all room families ship both public artwork and their unknown backs (11.2017ms)
+✔ rain density grows with the stage, has a ceiling and stops on an empty stage (0.6039ms)
+✔ rain stays sparse so it never distracts from the board: under 150 drops on a 1600×900 map (0.0969ms)
+✔ the whole rain starts on the stage, far drops before near ones (0.3094ms)
+✔ a drop falls down and blows right, and starts again above the top once it leaves the stage (0.5299ms)
+✔ lightning is rare: between 18 and 50 seconds apart (0.098ms)
+✔ keeps board targets the scene cannot click and drops those the scene already offers (1.4543ms)
+✔ a target whose card is gone is left out (0.1ms)
+✔ a target already drawn as a clickable spider part stays off the fallback panel (0.117ms)
+✔ Meat Cleaver healing remains healing through the horror message wrapper (0.2374ms)
+✔ damage assignment is never described as healing (0.1101ms)
+✔ recognises wrapped damage healing and leaves mismatched or malformed messages alone (0.1072ms)
+✔ lists investigator tokens the hidden token row would answer, but not your own take-a-resource (0.1311ms)
+✔ counts every choice only the panel can answer (0.1776ms)
+✔ first state and identical states are silent (1.0376ms)
+✔ movement, damage, horror, clue and draw are detected (0.1739ms)
+✔ enemy damage is a hit, a vanished enemy is a defeat (0.1047ms)
+✔ phase or scenario change is a transition (0.2066ms)
+✔ skill test: token reveal, then success or failure (0.312ms)
+✔ recognises skill boosts by their SkillTestWants matcher (0.8517ms)
+✔ skips the pre-commit window when it offers only skill boosts (0.1682ms)
+✔ stops when anything other than a boost is on offer (0.1168ms)
+✔ never skips the window after committing, or a window with no skip button (0.0828ms)
+✔ test_skillTestSummary_investigateSucceeds_reportsCluesAndMargin (2.3325ms)
+✔ test_skillTestSummary_committedCardLeavesHand_isNotCountedAsDraw (0.2815ms)
+✔ test_skillTestSummary_failedWithSkullHorror_reportsHorrorTaken (0.2654ms)
+✔ test_skillTestSummary_fightKillsEnemy_reportsDefeat (0.271ms)
+✔ test_skillTestSummary_fightWoundsAndEvadeSucceeds_reportsEach (0.2381ms)
+✔ test_skillTestSummary_cancelledOrUnchanged_givesNoSummaryOrNoLines (0.2094ms)
+✔ test_skillTestSummary_backToBackTests_summariseTheLastOneFromItsOwnStart (0.1961ms)
+✔ test_skillTestSummary_forcedResult_usesEngineValue (0.1045ms)
+✔ test_skillTestSummary_logEntries_keepOnlyTheTestsMemberLines (0.2419ms)
+✔ test_skillTestSummary_outcome_dropsPlayByPlayAndRefundsCosts (0.5286ms)
+✔ test_skillTestSummary_failPutsWeaknessInThreatArea_reportsTheCard (0.2687ms)
+✔ test_skillTestSummary_boardHeldForSummary_keepsBoardDropsTestAndQuestion (0.1876ms)
+✔ advances using HTTP state when no websocket update is delivered (1.1472ms)
+✔ a failed refresh retries the read without answering the next question (0.4771ms)
+✔ a lost PUT response checks whether the answer committed before retrying (0.1651ms)
+✔ retries an unsaved answer only while its settings question is still parked (0.1489ms)
+✔ does not resend when the recovery read also fails (0.2539ms)
+✔ standalone art uses localized story keys and bundled landscape WebPs (234.2988ms)
+✔ Rougarou resolves nested entries without a campaign and skips the mechanical redirect (0.2991ms)
+✔ Excelsior shares the knock at room 225 and distinguishes flight from defeat (0.1346ms)
+✔ the challenge scenarios have distinct introductions and resolutions (0.1476ms)
+✔ a stat with no modifiers is its printed value and has no trend (1.2195ms)
+✔ enemy fight and evade add up and name their sources (0.2909ms)
+✔ a lowered enemy stat is good news, and the stat never goes below zero (0.1076ms)
+✔ a minimum on a modifier floors the result (0.1083ms)
+✔ shroud follows the engine order: base, shifts, override (0.2556ms)
+✔ shroud matches the location info model for the same modifiers (0.2702ms)
+✔ investigator skills only take modifiers for their own skill, and raised skills are good news (0.2769ms)
+✔ the source of a modifier is found through wrapper sources (0.1319ms)
+✔ effects are grouped by the card that granted them (0.3572ms)
+✔ a barricade or a locked door blocks entry (0.2931ms)
+✔ investigator stats count lasting asset bonuses but not ones an effect hands out for a turn or an attack (0.1694ms)
+✔ an enemy keeps counting effect modifiers, since they really change the enemy (0.0727ms)
+✔ first-test tarot modifiers stay off investigator stats while lasting bonuses still count (0.2515ms)
+✔ scenario tarot can still modify lasting health and sanity (0.1417ms)
+✔ a modified stat reads as its final value with the printed value and the change beside it (0.1218ms)
+✔ a board story read spotlights its story face and flips from its asset face (10515.4675ms)
+✔ target decoder accepts a BothTarget with two nested targets (640.2879ms)
+✔ thing_in_the_depths_sprites_land_and_open_water_have_own_sprite_face_up_or_down (0.9191ms)
+✔ thing_in_the_depths_sprites_foreign_card_gets_plain_water_patch_not_a_location_sprite (0.1269ms)
+✔ thing_in_the_depths_sprites_every_file_exists_and_is_webp (8.0392ms)
+✔ thing_in_the_depths_board_is_the_empty_swamp_with_sprite_folder_and_no_anchors (0.9754ms)
+▶ custom chaos bag decoding and inspection
+  ✔ new story state survives the decoder, including its debug override (1.4489ms)
+  ✔ legacy infestation state is inspectable before any engine messages (0.2613ms)
+  ✔ legacy predation state is inspectable before any engine messages (0.1396ms)
+  ✔ an exhausted bag remains inspectable (0.0913ms)
+  ✔ unrelated metadata is not mistaken for a bag (0.1197ms)
+  ✔ custom Fury token faces retain their slugs (0.1ms)
+✔ custom chaos bag decoding and inspection (8066.369ms)
+✔ phones are phones whatever the pointer (0.558ms)
+✔ iPad sizes held upright are tablet-portrait (0.1051ms)
+✔ iPad sizes held sideways are tablet-landscape (0.0878ms)
+✔ a mouse-driven window of tablet width keeps the desktop layout (0.0796ms)
+✔ wide touch screens are desktop (0.0751ms)
+✔ touch input needs a coarse pointer and no hover (0.0669ms)
+✔ a lower step count in the same scenario is a rollback (0.608ms)
+✔ the game moving forward or standing still is not a rollback (0.1109ms)
+✔ the first state, another game and a new scenario are not rollbacks (0.0867ms)
+✔ an undone skill test looks like a finished one to the tracker (0.3951ms)
+✔ undoing back into a skill test looks like a fresh token draw (0.5955ms)
+✔ uploaded upgrade deck JSON is applied and submitted (54.7506ms)
+✔ an ArkhamDB export with a numeric id and no url is accepted (14.3078ms)
+✔ an arkham.build export without a url is accepted (10.2186ms)
+✔ an alternate front in meta is used as the deck investigator (5.9097ms)
+✔ an empty alternate front falls back to the investigator code (5.4663ms)
+✔ invalid uploaded upgrade deck JSON is reported (5.5763ms)
+✔ uploaded upgrade deck JSON without investigator code is reported (4.7962ms)
+✔ an error body is not treated as a decklist (4.6467ms)
+✔ written in rock: a label with a cell is drawn (1.2241ms)
+✔ written in rock: a label the layout has no cell for is left off the map (0.2262ms)
+✔ written in rock: no layout yet, or another scenario, draws everything (0.2045ms)
+ℹ tests 609
+ℹ suites 0
+ℹ pass 609
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 116205.1301

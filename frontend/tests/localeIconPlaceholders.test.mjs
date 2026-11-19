@@ -1,9 +1,11 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
+import process from 'node:process'
 import test from 'node:test'
 import { fileURLToPath, URL } from 'node:url'
 
 import { createServer } from 'vite'
+import { createSsrLoader } from './helpers/ssr-loader.mjs'
 import { createPinia } from 'pinia'
 import { createSSRApp, h } from 'vue'
 import { createI18n } from 'vue-i18n'
@@ -19,18 +21,12 @@ saying which token.
 `loadLocaleMessages` now escapes the plain form into vue-i18n's literal form, so
 both spellings survive. These tests pin that both still reach `formatContent`,
 and that real named parameters are left alone. */
-async function loadModules(t) {
-  const server = await createServer({
-    root: fileURLToPath(new URL('..', import.meta.url)),
-    appType: 'custom',
-    logLevel: 'silent',
-    server: { middlewareMode: true, hmr: false },
-  })
-  t.after(() => server.close())
+const loadModule = createSsrLoader()
+async function loadModules() {
   const [messages, helpers, icons] = await Promise.all([
-    server.ssrLoadModule('/src/locales/messages.ts'),
-    server.ssrLoadModule('/src/arkham/helpers.ts'),
-    server.ssrLoadModule('/src/arkham/icons.ts'),
+    loadModule('/src/locales/messages.ts'),
+    loadModule('/src/arkham/helpers.ts'),
+    loadModule('/src/arkham/icons.ts'),
   ])
   return { ...messages, ...helpers, ...icons }
 }
@@ -158,10 +154,10 @@ test('a message vue-i18n cannot compile is left alone', async (t) => {
   assert.equal(escapeIconPlaceholders(withStyle), withStyle)
 })
 
-test('every icon placeholder the locales ship renders as an icon', async (t) => {
+test('icon placeholders render for the selected locale profile', async (t) => {
   const { loadLocaleMessages, supportedLocales, iconPlaceholderPattern, formatContent } = await loadModules(t)
 
-  for (const locale of supportedLocales) {
+  for (const locale of process.env.ARKHAM_TEST_ALL_LOCALES === '1' ? supportedLocales : ['en', 'vi']) {
     const { messages } = await loadLocaleMessages(locale)
     const t9n = translator(messages)
 

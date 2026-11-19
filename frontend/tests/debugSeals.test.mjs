@@ -1,23 +1,13 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { fileURLToPath, URL } from 'node:url'
-
-import { createServer } from 'vite'
+import { createSsrLoader } from './helpers/ssr-loader.mjs'
 
 /* The debug seal/release messages are hand-written JSON the backend's derived
 decoders must accept (Arkham.Message `UnsealChaosToken`, `DebugSealChaosToken`,
 `Run`, Arkham.Message.ChaosBag `ReturnChaosTokensToPool_`), so their shapes are
 pinned here, along with which faces may go back to a token pool. */
-async function load(t) {
-  const server = await createServer({
-    root: fileURLToPath(new URL('..', import.meta.url)),
-    appType: 'custom',
-    logLevel: 'silent',
-    server: { middlewareMode: true, hmr: false },
-  })
-  t.after(() => server.close())
-  return server.ssrLoadModule('/src/arkham/debugSeals.ts')
-}
+const loadModule = createSsrLoader()
+const load = () => loadModule('/src/arkham/debugSeals.ts')
 
 const bless = { id: 'token-1', face: 'BlessToken' }
 

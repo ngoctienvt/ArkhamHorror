@@ -1,24 +1,16 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { fileURLToPath, URL } from 'node:url'
-
-import { createServer } from 'vite'
+import { createSsrLoader } from './helpers/ssr-loader.mjs'
 
 /* The debug scenario jump sends a raw engine message, so nothing type-checks its
 shape against the Haskell constructors. These tests pin the message and the
 jump list (including Return To campaigns, whose scenarios are the base
 campaign's returnTo codes) against the real scenario data. */
-async function load(t) {
-  const server = await createServer({
-    root: fileURLToPath(new URL('..', import.meta.url)),
-    appType: 'custom',
-    logLevel: 'silent',
-    server: { middlewareMode: true, hmr: false },
-  })
-  t.after(() => server.close())
-  const jump = await server.ssrLoadModule('/src/arkham/debugScenarioJump.ts')
-  const scenarios = (await server.ssrLoadModule('/src/arkham/data/scenarios.ts')).default
-  const campaigns = (await server.ssrLoadModule('/src/arkham/data/campaigns.json')).default
+const loadModule = createSsrLoader()
+async function load() {
+  const jump = await loadModule('/src/arkham/debugScenarioJump.ts')
+  const scenarios = (await loadModule('/src/arkham/data/scenarios.ts')).default
+  const campaigns = (await loadModule('/src/arkham/data/campaigns.json')).default
   return { ...jump, scenarios, campaigns }
 }
 
