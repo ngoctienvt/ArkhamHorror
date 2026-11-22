@@ -23,6 +23,10 @@
   "attackOfOpportunityIgnoredBy": "{name}'s attack of opportunity is ignored by {source}",
   "baseValue": "base value",
   "cannotActivateAbility": "{investigator} cannot activate the ability on {source} ({blocker})",
+  "cannotDreamAnotherCard": "{investigator} cannot dream another card (already controlling {count})",
+  "cannotFlipDreamingCardFaceup": "{investigator} cannot flip their dreaming card faceup: a copy of it is already in play. It stays facedown.",
+  "cannotGainResources": "{investigator} cannot gain {count} resource | {investigator} cannot gain {count} resources",
+  "cannotGainResourcesBecause": "{investigator} cannot gain {count} resource ({blocker}) | {investigator} cannot gain {count} resources ({blocker})",
   "cannotTriggerAbility": "{investigator} cannot trigger the {symbol} ability on {source} ({blocker})",
   "chaosTokenCancelled": "{token} is cancelled",
   "chaosTokenCancelledBy": "{token} is cancelled by {source}",
@@ -91,12 +95,29 @@
     "wild": "Wild"
   },
   "isMovedTo": "{investigator} is moved to {location}",
+  "legacy": {
+    "banished": "{card} is \"banished\"",
+    "coin": {
+      "heads": "The coin lands on heads. Treating token as {token}",
+      "tails": "The coin lands on tails. Treating token as {token}"
+    },
+    "devours": "{investigator} devours {card}",
+    "discardDownTo": "{investigator} must discard down to {count} cards",
+    "drew": "{investigator} drew {card}",
+    "forgot": "Forgot:",
+    "interviewed": "Interviewed {name}",
+    "recorded": "Recorded:",
+    "remembered": "Remembered:",
+    "removedAllCopies": "{source} removed all copies of {card} from the game",
+    "reveals": "{investigator} reveals {cards}"
+  },
   "listLast": " and ",
   "listSeparator": ", ",
   "locationRevealed": "{location} is revealed",
   "movesTo": "{investigator} moves to {location}",
   "mustPlaceConcealed": "{investigator} must place {count} concealed card | {investigator} must place {count} concealed cards",
   "mustPlaceMoreConcealed": "{investigator} must place {count} more concealed card | {investigator} must place {count} more concealed cards",
+  "noCardInHandWithDreaming": "{investigator} has no card in hand with dreaming {count}, so nothing is played",
   "noResolution": "No resolution",
   "phase": {
     "mythos": "Mythos",
@@ -164,8 +185,8 @@
   "testOpensVs": "{investigator} is testing {skill} against {target} ({difficulty})",
   "testRevealed": "Revealed {tokens}",
   "token": {
-    "plus1": "+1",
     "0": "0",
+    "plus1": "+1",
     "minus1": "-1",
     "minus2": "-2",
     "minus3": "-3",

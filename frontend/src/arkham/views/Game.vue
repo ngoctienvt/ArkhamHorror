@@ -13,6 +13,7 @@ import { useToast } from '@/toasts'
 import { storeToRefs } from 'pinia'
 import { onBeforeRouteLeave, useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { localizedInvestigatorName } from '@/arkham/investigatorName'
 import { useNarrative } from '@/arkham/composables/useNarrative'
 import { useNarration } from '@/arkham/composables/useNarration'
 import confetti from '@/effects/confetti'
@@ -1312,7 +1313,19 @@ function clearDrawSpotlight() {
   flightPlaceholders.value = []
 }
 
+/* Card pop-up titles: most are i18n tokens, but a few the engine sends as fixed
+ * English words ("Revelation", "Revealed", an act's flip title). */
+const FIXED_CARD_TITLES: Record<string, string> = {
+  Revelation: 'gameUi.cardTitle.revelation',
+  Revealed: 'gameUi.cardTitle.revealed',
+  'A Mistake': 'gameUi.cardTitle.aMistake',
+  'The Bliss': 'gameUi.cardTitle.theBliss',
+  'The Brilliance': 'gameUi.cardTitle.theBrilliance',
+}
+
 const format = (str: string) => {
+  const fixed = FIXED_CARD_TITLES[str]
+  if (fixed) return t(fixed)
   return handleEmbeddedI18n(str, t)
 }
 
@@ -2691,7 +2704,10 @@ const runHoverShortcut = (event: KeyboardEvent): boolean => {
 
 const canUndoScenario = computed(() => {
   if (!game.value) return false
-  return game.value.scenarioSteps > 1
+  // Not a flat 1: a game whose scenario handed off to a second part inside the
+  // same game (Fortune and Folly, Part II) starts that part partway up the
+  // scenarioSteps count. Older games have no boundary and fall back to 1.
+  return game.value.scenarioSteps > (game.value.undoScenarioStep ?? 1)
 })
 
 const canUndoBoundary = (boundary: number | null): boolean => {
@@ -3765,7 +3781,7 @@ onMounted(() => {
       const cards = pool.slice(0, Math.max(1, opts.count ?? 1))
       // Built as the embedded-i18n string the server actually sends, and run
       // through the same `format`, so the demo cannot drift from the real thing.
-      const name = investigator?.name.title ?? 'Someone'
+      const name = investigator ? localizedInvestigatorName(investigator.name.title) : t('gameUi.someone')
       const key = cards.length > 1 ? 'drewCards' : 'drewCard'
       const title = format(`$${key} iname=s:"${name}" count=i:${cards.length}`)
       showDrawSpotlight({ cards, title })
@@ -4314,10 +4330,10 @@ onUnmounted(() => {
       <div v-else class="game-main">
         <div v-if="showTheSilenceModal" class="the-silence-modal-backdrop">
           <div class="the-silence-modal" role="dialog" aria-modal="true" aria-labelledby="the-silence-modal-title">
-            <img class="the-silence-modal__agenda no-overlay" :src="imgsrc('cards/10652.avif')" alt="The Silence" />
+            <img class="the-silence-modal__agenda no-overlay" :src="imgsrc('cards/10652.avif')" :alt="$t('gameUi.theSilence')" />
             <div class="the-silence-modal__body">
-              <h2 id="the-silence-modal-title">The Silence</h2>
-              <p>If you look at the Cosmic Emissary enemy for more than 15 seconds at a time, you are <strong>driven insane</strong>.</p>
+              <h2 id="the-silence-modal-title">{{ $t('gameUi.theSilence') }}</h2>
+              <p>{{ $t('gameUi.theSilenceBody') }} <strong>{{ $t('gameUi.theSilenceInsane') }}</strong></p>
               <div class="the-silence-modal__actions">
                 <button type="button" class="the-silence-modal__confirm" @click="continueUI">{{ $t('ok') }}</button>
               </div>
@@ -4339,7 +4355,7 @@ onUnmounted(() => {
                   :class="{ 'cthulhu-revelation-card': isCthulhuDeckReveal }"
                   :role="isCthulhuDeckReveal ? 'button' : undefined"
                   :tabindex="isCthulhuDeckReveal ? 0 : undefined"
-                  :aria-label="isCthulhuDeckReveal ? `${format(gameCard.title)}. Click to enact.` : undefined"
+                  :aria-label="isCthulhuDeckReveal ? `${format(gameCard.title)}. ${$t('gameUi.clickToEnact')}.` : undefined"
                   @click="isCthulhuDeckReveal && continueUI()"
                   @keydown.enter="isCthulhuDeckReveal && continueUI()"
                   @keydown.space.prevent="isCthulhuDeckReveal && continueUI()"
@@ -4352,7 +4368,7 @@ onUnmounted(() => {
                   />
                   <img v-else :src="imgsrc('backs/back_encounter.jpg')" class="card back" />
                 </div>
-                <span v-if="isCthulhuDeckReveal" class="cthulhu-revelation-hint">Click to enact</span>
+                <span v-if="isCthulhuDeckReveal" class="cthulhu-revelation-hint">{{ $t('gameUi.clickToEnact') }}</span>
                 <button v-else @click="continueUI">{{ $t('ok') }}</button>
               </div>
 

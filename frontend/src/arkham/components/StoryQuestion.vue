@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { computed, inject, type Ref } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { localizedInvestigatorName } from '@/arkham/investigatorName'
 import { handleEmbeddedI18n } from '@/arkham/i18n';
 import type { Game } from '@/arkham/types/Game';
 import { QuestionType, type Question } from '@/arkham/types/Question';
@@ -47,7 +48,7 @@ const viewerInvestigatorName = computed(() => {
   if (!viewOnly.value) return ''
   const targetPlayerId = effectivePlayerId.value
   const inv = Object.values(props.game.investigators).find(i => i.playerId === targetPlayerId)
-  return inv?.name.title ?? ''
+  return inv ? localizedInvestigatorName(inv.name.title) : ''
 })
 
 const choiceInvestigator = computed(() => {
@@ -196,15 +197,14 @@ const isBuildSpiritDeckQuestion = (q: Question): q is Question & { tag: Question
     <div v-if="viewOnly" class="waiting-banner">
       {{ t('waitingForPlayer', { name: viewerInvestigatorName }) }}
     </div>
-    <template v-else>
     <template v-if="question && question.tag === QuestionType.READ">
       <div v-if="choiceInvestigator" class="choice-investigator">
         <img
           v-if="choiceInvestigatorPortrait"
           :src="choiceInvestigatorPortrait"
-          :alt="choiceInvestigator.name.title"
+          :alt="localizedInvestigatorName(choiceInvestigator.name.title)"
         />
-        <span>{{ choiceInvestigator.name.title }}</span>
+        <span>{{ localizedInvestigatorName(choiceInvestigator.name.title) }}</span>
       </div>
       <StoryEntry
         :game="game"
@@ -275,8 +275,8 @@ const isBuildSpiritDeckQuestion = (q: Question): q is Question & { tag: Question
       </div>
     </div>
 
-    <div class="question-label" v-else-if="question && isEmbarkQuestion(question)">
-      <WorldMap :game="game" :playerId="effectivePlayerId" :mapData="question.contents[1]" @choose="choose" :embark="true" />
+    <div class="question-label embark-map" v-else-if="question && isEmbarkQuestion(question)">
+      <WorldMap :game="game" :playerId="effectivePlayerId" :mapData="question.contents[1]" @choose="choose" :embark="true" :viewOnly="viewOnly" />
     </div>
 
     <div class="question-label spirit-deck-question" v-else-if="question && isBuildSpiritDeckQuestion(question)">
@@ -334,10 +334,9 @@ const isBuildSpiritDeckQuestion = (q: Question): q is Question & { tag: Question
       :game="game"
       :playerId="effectivePlayerId"
       :noStory="true"
-      v-else
+      v-else-if="!viewOnly"
       @choose="choose"
     />
-    </template>
   </div>
 </template>
 
@@ -370,6 +369,12 @@ const isBuildSpiritDeckQuestion = (q: Question): q is Question & { tag: Question
 
 .story-question-root.view-only .scenario-tile {
   outline-color: transparent;
+}
+
+/* The map is the one view-only exception: its travel buttons are gated by the
+ * prop instead, and panning/selecting a city is how its information is read. */
+.story-question-root.view-only .embark-map {
+  pointer-events: auto;
 }
 
 .waiting-banner {

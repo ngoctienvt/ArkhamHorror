@@ -1979,7 +1979,7 @@ skillTestResultOption kind label body = do
   msgs <- capture body
   push
     $ SkillTestResultOption
-    $ SkillTestOption {option = Label label msgs, kind, criteria = Nothing}
+    $ SkillTestOption {option = Label label msgs, kind, criteria = Nothing, whenUnmet = Nothing}
 
 skillTestResultOptionEdit
   :: ReverseQueue m
@@ -1989,7 +1989,7 @@ skillTestResultOptionEdit kind f label body = do
   push
     $ SkillTestResultOption
     $ f
-    $ SkillTestOption {option = Label label msgs, kind, criteria = Nothing}
+    $ SkillTestOption {option = Label label msgs, kind, criteria = Nothing, whenUnmet = Nothing}
 
 additionalSkillTestOption :: ReverseQueue m => Text -> QueueT Message m () -> m ()
 additionalSkillTestOption = skillTestResultOptionEdit AdditionalOptionKind id
@@ -2029,6 +2029,29 @@ tokenSkillTestOptionEdit
   :: ReverseQueue m
   => (SkillTestOption -> SkillTestOption) -> ChaosTokenFace -> QueueT Message m () -> m ()
 tokenSkillTestOptionEdit f ctf = skillTestResultOptionEdit AdditionalOptionKind f (toDisplay ctf)
+
+{- | A token option the player is only /offered/ when @c@ holds; when it does
+not, the body resolves anyway, with no prompt.
+
+For an effect that reports its own refusal -- a resource gain, a card draw --
+that is the difference between an option silently missing from the prompt and
+the log saying what stopped it, without making anyone click a choice that cannot
+do anything. Prefer this to 'tokenSkillTestOptionWithCriteria' whenever @c@ is
+the effect's own guard restated; see 'whenUnmet' for why it is still judged per
+offer rather than once at the end of the test.
+-}
+tokenSkillTestOptionOfferedWhen
+  :: ReverseQueue m => Criterion -> ChaosTokenFace -> QueueT Message m () -> m ()
+tokenSkillTestOptionOfferedWhen c ctf body = do
+  msgs <- capture body
+  push
+    $ SkillTestResultOption
+      SkillTestOption
+        { option = Label (toDisplay ctf) msgs
+        , kind = AdditionalOptionKind
+        , criteria = Just c
+        , whenUnmet = Just msgs
+        }
 
 additionalSkillTestOptionEdit
   :: ReverseQueue m => (SkillTestOption -> SkillTestOption) -> Text -> QueueT Message m () -> m ()
@@ -2753,9 +2776,7 @@ discoverAtYourLocation isInvestigate iid s n = do
   discovery <- Msg.discoverAtYourLocation s n
   push
     $ Msg.DiscoverClues iid
-    $ discovery
-      { Msg.discoverAction = if isInvestigate == IsInvestigate then Just #investigate else Nothing
-      }
+    $ discovery {Msg.discoverVia = isInvestigate}
 
 discoverAtYourLocationAndThen
   :: (ReverseQueue m, Sourceable source)
@@ -2772,10 +2793,7 @@ discoverAtYourLocationAndThen isInvestigate iid s n andThenMsgs = do
       discovery <- Msg.discoverAtYourLocation s n
       push
         $ Msg.DiscoverClues iid
-        $ discovery
-          { Msg.discoverThen = msgs
-          , Msg.discoverAction = if isInvestigate == IsInvestigate then Just #investigate else Nothing
-          }
+        $ discovery {Msg.discoverThen = msgs, Msg.discoverVia = isInvestigate}
 
 discoverAtMatchingLocation
   :: (ReverseQueue m, Sourceable source)
@@ -2794,9 +2812,7 @@ discoverAtMatchingLocation isInvestigate iid s mtchr n = do
       [ targetLabel
           location
           [ Msg.DiscoverClues iid
-              $ (Msg.discoverPure did location s n)
-                { Msg.discoverAction = guard (isInvestigate == IsInvestigate) $> #investigate
-                }
+              $ (Msg.discoverPure did location s n) {Msg.discoverVia = isInvestigate}
           ]
       | location <- locations
       ]
@@ -2824,9 +2840,7 @@ discoverAt isInvestigate iid s n lid = do
 
   Msg.pushWhen canDiscover
     $ Msg.DiscoverClues iid
-    $ (Msg.discoverPure did lid s n)
-      { Msg.discoverAction = guard (isInvestigate == IsInvestigate) $> #investigate
-      }
+    $ (Msg.discoverPure did lid s n) {Msg.discoverVia = isInvestigate}
 
 doStep :: ReverseQueue m => Int -> Message -> m ()
 doStep n msg = push $ Msg.DoStep n msg

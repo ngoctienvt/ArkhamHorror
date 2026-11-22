@@ -12,6 +12,7 @@ import { MessageType } from '@/arkham/types/Message';
 import { replaceIcons, formatContent, imgsrc } from '@/arkham/helpers';
 import { homebrewActionScope } from '@/arkham/homebrewData';
 import { handleI18n } from '@/arkham/i18n';
+import { localizeEngineText } from '@/arkham/engineText';
 import { useI18n } from 'vue-i18n';
 import { useCardNames } from '@/arkham/composables/useCardNames';
 import { vehicleEnterExitMove } from '@/arkham/vehicle-enter-exit-ability';
@@ -47,7 +48,7 @@ const attributes = computed(() => {
 const tooltip = computed(() => {
   var body = ability.value && ability.value.tooltip
   if (body) {
-    body = body.startsWith("$") ? handleI18n(body, t) : body
+    body = body.startsWith("$") ? handleI18n(body, t) : localizeEngineText(body)
     const content = replaceIcons(body).replace(/_([^_]*)_/g, '<b>$1</b>')
     return { content, html: true }
   }
@@ -202,7 +203,7 @@ const isEngage = computed(() => isAction("Engage"))
 
 const tformat = (t:string) => t.startsWith("$") ? t.slice(1) : t
 const maybeFormat = function(body: string) {
-  return body.startsWith("$") ? handleI18n(tformat(body), t) : body
+  return body.startsWith("$") ? handleI18n(tformat(body), t) : localizeEngineText(body)
 }
 
 /* A homebrew campaign names its own actions in its own locale scope, so that
@@ -340,7 +341,7 @@ const abilityLabel = computed(() => {
 const abilitySkillSection = computed(() => isButtonText.value ? null : abilityString.value)
 const display = computed(() => !(isAction("Move") && ability.value?.index === 104) || props.showMove)
 const showSwarmHostWarning = computed(() => props.hostHasSwarm && isFight.value)
-const swarmHostWarningTooltip = 'This host cannot be defeated while it has swarm cards attached.'
+const swarmHostWarningTooltip = computed(() => t('gameUi.swarmHostWarning'))
 
 const isZeroedActionAbility = computed(() => {
   if (!ability.value) {

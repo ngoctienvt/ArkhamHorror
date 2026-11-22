@@ -4,6 +4,7 @@ import { type Game } from '@/arkham/types/Game'
 import { NARRATION_LANGUAGES } from '@/arkham/narration'
 import { useDebug } from '@/arkham/debug'
 import { useI18n } from 'vue-i18n';
+import { localizedInvestigatorName } from '@/arkham/investigatorName'
 import { updateGameRaw } from '@/arkham/api'
 import CustomWeaknessPool from '@/arkham/components/CustomWeaknessPool.vue'
 import { gameLocalStorageKey, getGameLocalStorageItem, removeGameLocalStorageItem, setGameLocalStorageItem } from '@/arkham/localStorage'
@@ -295,7 +296,7 @@ onBeforeUnmount(() => {
 <template>
   <div class="settings">
     <div class="settings-header" :style="headerStyle">
-      <h2 class="settings-title">{{$t('gameBar.viewSettingTitle', {investigator: investigator?.name.title ?? ''})}}</h2>
+      <h2 class="settings-title">{{$t('gameBar.viewSettingTitle', {investigator: investigator ? localizedInvestigatorName(investigator.name.title) : ''})}}</h2>
     </div>
 
     <div class="settings-tabs" role="tablist" @keydown="navigateTabs">
@@ -677,13 +678,19 @@ onBeforeUnmount(() => {
         </div>
       </section>
 
+      <!-- Two independent blocks, so this panel stacks sections itself rather
+           than leaning on .settings-body's gap the way the single-section tabs do. -->
       <div
+        class="settings-stack"
         role="tabpanel"
         id="settings-panel-cards"
         aria-labelledby="settings-tab-cards"
         v-show="activeTab === 'cards'"
       >
-        <CustomWeaknessPool v-if="settings.customCardsEnabled" :game="game" :playerId="playerId" />
+        <section class="settings-section" v-if="settings.customCardsEnabled">
+          <h3 class="section-title">{{$t('gameBar.settings.customCardsTitle')}}</h3>
+          <CustomWeaknessPool :game="game" :playerId="playerId" />
+        </section>
         <CardOptionsSettings :game="game" :playerId="playerId" />
       </div>
 
@@ -860,6 +867,25 @@ onBeforeUnmount(() => {
 .settings-section {
   display: flex;
   flex-direction: column;
+}
+
+/* A tab holding more than one section spaces them the way .settings-body
+   spaces the single-section tabs. */
+.settings-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-title {
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  font-family: Teutonic, serif;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--title);
+  border-bottom: 1px solid var(--box-border);
 }
 
 .toggle-list {

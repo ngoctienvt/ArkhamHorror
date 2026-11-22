@@ -20,6 +20,12 @@ import {
   isProhibited,
   prohibitionImageId,
 } from '@/arkham/clueProhibitions'
+import {
+  isResourceProhibited,
+  resourceProhibition,
+  resourceProhibitionImage,
+  resourceProhibitionTitle,
+} from '@/arkham/resourceProhibitions'
 
 const emits = defineEmits<{
   choose: [value: number]
@@ -81,6 +87,19 @@ const clueProhibitions = computed(() => clueProhibition(props.investigator))
 const cluesProhibited = computed(() => isProhibited(clueProhibitions.value))
 const clueProhibitionImage = computed(() => prohibitionImageId(clueProhibitions.value))
 const clueProhibitionText = computed(() => clueProhibitionTitle(clueProhibitions.value, dbCards, t))
+
+/* The same mark over the resource pool, for the same reason: a "gain 3
+ * resources" that quietly pays nothing is unreadable without it. Read off the
+ * investigator's modifiers rather than a server-built list -- see
+ * resourceProhibitions.ts. */
+const resourceProhibitions = computed(() => resourceProhibition(props.investigator))
+const resourcesProhibited = computed(() => isResourceProhibited(resourceProhibitions.value))
+const resourceProhibitionArt = computed(() =>
+  resourceProhibitionImage(resourceProhibitions.value, props.game),
+)
+const resourceProhibitionText = computed(() =>
+  resourceProhibitionTitle(resourceProhibitions.value, props.game, dbCards, t),
+)
 
 const keys = computed(() => props.investigator.keys)
 const seals = computed(() => props.investigator.seals)
@@ -164,12 +183,21 @@ const hiGradId = computed(() => `auxMagentaHi-${iid.value}`)
       >-</button>
     </template>
 
-    <PoolItem
-      type="resource"
-      :amount="resources"
-      :class="{ 'resource--can-take': takeResourceAction !== -1 }"
-      @choose="$emit('choose', takeResourceAction)"
-    />
+    <span class="pool-item-wrap">
+      <PoolItem
+        type="resource"
+        :amount="resources"
+        :class="{ 'resource--can-take': takeResourceAction !== -1 }"
+        @choose="$emit('choose', takeResourceAction)"
+      />
+      <span
+        v-if="resourcesProhibited"
+        class="pool-prohibited-badge"
+        :data-image-id="resourceProhibitionArt"
+        :title="resourceProhibitionText"
+        :aria-label="resourceProhibitionText"
+      ><font-awesome-icon icon="ban" /></span>
+    </span>
 
     <template v-if="debug.active">
       <button
@@ -195,7 +223,7 @@ const hiGradId = computed(() => `auxMagentaHi-${iid.value}`)
       />
       <span
         v-if="cluesProhibited"
-        class="clue-prohibited-badge"
+        class="pool-prohibited-badge"
         :data-image-id="clueProhibitionImage"
         :title="clueProhibitionText"
         :aria-label="clueProhibitionText"
@@ -341,9 +369,9 @@ const hiGradId = computed(() => `auxMagentaHi-${iid.value}`)
 }
 
 /* Sits on the token's corner rather than over it: the count underneath is still
-   worth reading while the ban is up -- you keep the clues, you just cannot use
-   them. */
-.clue-prohibited-badge {
+   worth reading while the ban is up -- you keep what you have, you just cannot
+   gain or use more. Shared by the clue and resource marks. */
+.pool-prohibited-badge {
   position: absolute;
   top: -3px;
   right: -5px;
