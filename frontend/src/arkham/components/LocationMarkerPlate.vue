@@ -36,9 +36,6 @@ const showClues = computed(() => props.size === 'compact'
   ? cluesLeft.value > 0
   : showStats.value && (cluesLeft.value > 0 || (props.info.clues.printed ?? 0) > 0))
 const clueLabel = computed(() => t('locationMap.marker.cluesValue', { n: cluesLeft.value }))
-const clueTitle = computed(() => props.info.clues.printed === null
-  ? clueLabel.value
-  : clueLabel.value + ' · ' + t('locationMap.marker.printed', { n: props.info.clues.printed }))
 
 /* Flood token (The Innsmouth Conspiracy): the model lists it in `extras` as `flood:<level>` when not unflooded. */
 const floodLevel = computed(() => {
@@ -93,17 +90,17 @@ import type { Game } from '@/arkham/types/Game'
            plate is one tidy line instead of a name row over a half-empty stats row. -->
       <ShroudDisc v-if="showStats && info.shroud" :value="info.shroud.x ? 'X' : info.shroud.current"
         :modified="info.shroud.current !== info.shroud.printed"
-        :title="t('locationMap.marker.shroud') + (info.shroud.current !== info.shroud.printed ? ' · ' + t('locationMap.marker.printed', { n: info.shroud.printed }) : '')" />
+        :aria-label="t('locationMap.marker.shroud') + (info.shroud.current !== info.shroud.printed ? ' · ' + t('locationMap.marker.printed', { n: info.shroud.printed }) : '')" />
       <button class="main" type="button" :aria-label="summary" @click.stop="onMain">
         <span class="name">{{ info.face.name }}</span>
         <span v-if="info.onEnter" class="warn" aria-hidden="true">⚠</span>
       </button>
       <PoolItem v-if="showClues" type="clue" :amount="cluesLeft" class="clue-token"
-        :style="{ '--clue-digits': String(cluesLeft).length }" :title="clueTitle" aria-hidden="true" />
+        :style="{ '--clue-digits': String(cluesLeft).length }" aria-hidden="true" />
       <KeyToken v-for="k in keys" :key="keyToId(k)" :keyToken="k" :game="game" :playerId="playerId" class="plate-key"
-        :title="locationExtraLabel(`key:${k.tag}`, t)" @choose="emit('choose', $event)" />
-      <img v-if="floodSrc" :src="floodSrc" class="flood" :alt="floodTitle" :title="floodTitle" />
-      <span v-if="showStats && info.doom" class="chip doom" :title="t('locationMap.doom')"><GameIcon type="doom" />{{ info.doom }}</span>
+        :aria-label="locationExtraLabel(`key:${k.tag}`, t)" @choose="emit('choose', $event)" />
+      <img v-if="floodSrc" :src="floodSrc" class="flood" :alt="floodTitle" />
+      <span v-if="showStats && info.doom" class="chip doom" :aria-label="t('locationMap.doom')"><GameIcon type="doom" />{{ info.doom }}</span>
       <LocationTokenStrip v-if="size !== 'compact' && game && playerId && location" :game="game" :playerId="playerId" :location="location"
         @choose="emit('choose', $event)" />
       <button v-if="size !== 'compact' && info.actions.move && !hideMove" class="go" type="button"

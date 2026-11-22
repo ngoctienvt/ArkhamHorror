@@ -311,7 +311,8 @@ test('Locations added later resolve to distinct scenery and shuffled art uses th
     assert.equal(new Set(points.map(String)).size, codes.length)
   }
   const woods = { id: 'woods', label: 'woods3', cardCode: '01150', revealed: false }
-  assert.ok(hasLocationArt('night-of-the-zealot/devourer-below', woods))
+  assert.equal(hasLocationArt('night-of-the-zealot/devourer-below', woods), false)
+  assert.equal(hasLocationArt('night-of-the-zealot/devourer-below', { ...woods, revealed: true }), false)
   assert.equal(hasLocationArt('night-of-the-zealot/devourer-below', { ...woods, label: 'ritualSite' }), false)
   assert.deepEqual(hiddenChamberPosition([74, 62]), [63, 73])
 })

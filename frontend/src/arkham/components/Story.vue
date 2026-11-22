@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, onBeforeUnmount, ref } from 'vue'
+import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { useDebug } from '@/arkham/debug'
 import CardDebugWindow from '@/arkham/components/debug/CardDebugWindow.vue'
 import { Game } from '@/arkham/types/Game'
@@ -14,7 +14,7 @@ import * as Arkham from '@/arkham/types/Story'
 import TokenPool from '@/arkham/components/TokenPool.vue';
 import { TokenType } from '@/arkham/types/Token';
 import { useSettings } from '@/stores/settings'
-import { cardNarrationTrack, type NarrationManifest, type NarrationTrack } from '@/arkham/narration'
+import { applyNarrationRate, cardNarrationTrack, type NarrationManifest, type NarrationTrack } from '@/arkham/narration'
 import { loadManifest, NARRATION_ROOT } from '@/arkham/composables/useNarration'
 
 export interface Props {
@@ -124,6 +124,8 @@ void loadManifest().then((m) => (manifest.value = m))
 
 const speaking = ref(false)
 let audio: HTMLAudioElement | null = null
+// Speed changes from the reading panel apply to the clip already playing.
+watch(() => settings.narrationRate, (r) => { if (audio) applyNarrationRate(audio, r) })
 
 const activeArt = computed(() => (props.story.flipped ? props.story.flippedArt : props.story.art))
 const track = computed<NarrationTrack | null>(() => {
@@ -145,6 +147,7 @@ function playSpeech() {
   if (!track.value?.url) return
   audio = new Audio(track.value.url)
   audio.volume = settings.narrationVolume
+  applyNarrationRate(audio, settings.narrationRate)
   audio.onended = () => { speaking.value = false }
   speaking.value = true
   audio.play().catch(() => { speaking.value = false })

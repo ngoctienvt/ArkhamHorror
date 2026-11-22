@@ -2,7 +2,7 @@
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { splitKeywords, strikeLostKeywords } from '@/arkham/cardKeywordChanges'
 import { useSettings } from '@/stores/settings'
-import { cardNarrationTrack, type NarrationManifest, type NarrationTrack } from '@/arkham/narration'
+import { applyNarrationRate, cardNarrationTrack, type NarrationManifest, type NarrationTrack } from '@/arkham/narration'
 import { loadManifest, NARRATION_ROOT } from '@/arkham/composables/useNarration'
 import NarrationSpeakerIcon from '@/arkham/components/NarrationSpeakerIcon.vue'
 
@@ -34,6 +34,8 @@ void loadManifest().then((m) => (manifest.value = m))
 
 const speaking = ref(false)
 let audio: HTMLAudioElement | null = null
+// Speed changes from the reading panel apply to the clip already playing.
+watch(() => settings.narrationRate, (r) => { if (audio) applyNarrationRate(audio, r) })
 
 const track = computed<NarrationTrack | null>(() => {
   if (!manifest.value || !props.code) return null
@@ -54,6 +56,7 @@ function playSpeech() {
   if (!track.value?.url) return
   audio = new Audio(track.value.url)
   audio.volume = settings.narrationVolume
+  applyNarrationRate(audio, settings.narrationRate)
   audio.onended = () => { speaking.value = false }
   speaking.value = true
   audio.play().catch(() => { speaking.value = false })

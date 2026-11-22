@@ -191,6 +191,7 @@
   "turn": "{investigator}'s turn",
   "undoToHere": "Undo back to here",
   "undoToHereConfirm": "Undo everything from this point on? The game goes back to just before \"{entry}\".",
+  "undoToHereKeepConfirm": "Undo back to \"{entry}\"?",
   "undoToHereConfirmPlain": "Undo everything from this point on?",
   "usesAbility": "{investigator} uses {source}",
   "mustDiscardDown": " must discard down to {count} cards",

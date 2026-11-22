@@ -535,10 +535,10 @@ const spadeInjury = computed(() => {
     <div class="player-area">
       <div class="player-card" :class="{ 'player-card--scene': sceneMode }">
         <div v-if="!sceneMode" class="stats">
-          <div class="willpower"><img class="stat-art" :src="imgsrc('icons/skills/willpower.png')" alt="" :title="'willpower'" />{{ formatStat(willpower, investigator.willpower) }}</div>
-          <div class="intellect"><img class="stat-art" :src="imgsrc('icons/skills/intellect.png')" alt="" :title="'intellect'" />{{ formatStat(intellect, investigator.intellect) }}</div>
-          <div class="combat"><img class="stat-art" :src="imgsrc('icons/skills/combat.png')" alt="" :title="'combat'" />{{ formatStat(combat, investigator.combat) }}</div>
-          <div class="agility"><img class="stat-art" :src="imgsrc('icons/skills/agility.png')" alt="" :title="'agility'" />{{ formatStat(agility, investigator.agility) }}</div>
+          <div class="willpower"><img class="stat-art" :src="imgsrc('icons/skills/willpower.png')" alt="" />{{ formatStat(willpower, investigator.willpower) }}</div>
+          <div class="intellect"><img class="stat-art" :src="imgsrc('icons/skills/intellect.png')" alt="" />{{ formatStat(intellect, investigator.intellect) }}</div>
+          <div class="combat"><img class="stat-art" :src="imgsrc('icons/skills/combat.png')" alt="" />{{ formatStat(combat, investigator.combat) }}</div>
+          <div class="agility"><img class="stat-art" :src="imgsrc('icons/skills/agility.png')" alt="" />{{ formatStat(agility, investigator.agility) }}</div>
         </div>
         <!-- On the scene map the card is not shown: hovering the investigator's figure shows it, and the
              figure carries damage, horror, resources and clues, its abilities and damage assignment. -->

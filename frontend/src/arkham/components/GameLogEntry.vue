@@ -28,7 +28,7 @@ const props = defineProps<{
 
 const emit = defineEmits<{
   toggle: [path: string, open: boolean]
-  undo: [step: number, label: string]
+  undo: [step: number, label: string, seq: number | null]
 }>()
 
 /* Phase banners reuse the tints from the phase rail in Scenario.vue, so the log
@@ -156,7 +156,7 @@ function entryLabel(entry: LogEntry): string {
 }
 
 function requestUndo() {
-  if (undoStep.value !== null) emit('undo', undoStep.value, entryLabel(props.entry))
+  if (undoStep.value !== null) emit('undo', undoStep.value, entryLabel(props.entry), props.entry.seq)
 }
 </script>
 
@@ -199,7 +199,7 @@ function requestUndo() {
         :is-pinned="isPinned"
         :can-undo="canUndo"
         @toggle="(p, o) => emit('toggle', p, o)"
-        @undo="(st, l) => emit('undo', st, l)"
+        @undo="(st, l, sq) => emit('undo', st, l, sq)"
       />
     </ul>
 
@@ -304,7 +304,7 @@ function requestUndo() {
         :is-pinned="isPinned"
         :can-undo="canUndo"
         @toggle="(p, o) => emit('toggle', p, o)"
-        @undo="(st, l) => emit('undo', st, l)"
+        @undo="(st, l, sq) => emit('undo', st, l, sq)"
       />
     </ul>
   </li>

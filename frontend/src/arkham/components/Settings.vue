@@ -545,6 +545,20 @@ onBeforeUnmount(() => {
         <div class="toggle-list">
           <div class="toggle-row">
             <div class="toggle-text">
+              <div class="toggle-name">{{$t('effectTimeline.settingTitle')}}</div>
+              <div class="toggle-desc">{{$t('effectTimeline.settingDescription')}}</div>
+              <div class="toggle-scope">{{$t('gameBar.settings.scope.you')}}</div>
+            </div>
+            <div class="segmented toggle-control">
+              <input type="radio" id="opt-effect-timeline-on" name="opt-effect-timeline" :checked="settings.effectTimeline" @change="settings.setEffectTimeline(true)" />
+              <label for="opt-effect-timeline-on">{{ $t('On') }}</label>
+              <input type="radio" id="opt-effect-timeline-off" name="opt-effect-timeline" :checked="!settings.effectTimeline" @change="settings.setEffectTimeline(false)" />
+              <label for="opt-effect-timeline-off">{{ $t('Off') }}</label>
+            </div>
+          </div>
+
+          <div class="toggle-row">
+            <div class="toggle-text">
               <div class="toggle-name">{{$t('gameBar.settings.narration.title')}}</div>
               <div class="toggle-desc">{{$t('gameBar.settings.narration.description')}}</div>
               <div class="toggle-scope">{{$t('gameBar.settings.scope.you')}}</div>

@@ -5,7 +5,7 @@ import type { Game } from '@/arkham/types/Game'
 import { investigatorPortrait } from '@/arkham/cardImages'
 import { useDbCardStore } from '@/stores/dbCards'
 import { useSettings } from '@/stores/settings'
-import { narrationTracks, type NarrationManifest } from '@/arkham/narration'
+import { applyNarrationRate, narrationTracks, type NarrationManifest } from '@/arkham/narration'
 import {
   NARRATION_ROOT,
   loadManifest,
@@ -27,6 +27,8 @@ const manifest = ref<NarrationManifest | null>(null)
 const selectedId = ref<string | null>(props.initialId ?? null)
 const speaking = ref(false)
 let audio: HTMLAudioElement | null = null
+// Speed changes from the reading panel apply to the clip already playing.
+watch(() => settings.narrationRate, (r) => { if (audio) applyNarrationRate(audio, r) })
 
 const investigators = computed(() => Object.values(props.game.investigators ?? {}))
 
@@ -94,6 +96,7 @@ function speak(entry: Entry | null) {
   if (!entry?.trackUrl) return
   audio = new Audio(entry.trackUrl)
   audio.volume = settings.narrationVolume
+  applyNarrationRate(audio, settings.narrationRate)
   audio.onended = () => (speaking.value = false)
   speaking.value = true
   audio.play().catch(() => (speaking.value = false))

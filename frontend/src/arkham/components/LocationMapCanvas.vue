@@ -36,13 +36,14 @@ import { CARD_FLIGHT_ATTR, cardFlightStyle, useCardFlightState } from '@/arkham/
 import { barrierKey, barriersBetween, blockedLinks, type BarrierCounts } from '@/arkham/scenarioBarriers'
 import { useDebug } from '@/arkham/debug'
 import BarrierIcon from '@/arkham/components/BarrierIcon.vue'
+import LockedPathBadge from '@/arkham/components/LockedPathBadge.vue'
+import { blockedReason, entryBlocked } from '@/arkham/blockedEntryHint'
 
 export type MapMove = { id: string; name: string; path: string }
 export type GridSpot = { label: string; x: number; y: number; index: number }
 /** Concealed mini-cards lying in a grid position rather than at a location, and where that position is drawn. */
 export type ConcealedSpot = { key: string; x: number; y: number; cards: ConcealedCard[] }
 /** A room's name plate on a picture: its top-left corner and width, in percent of the picture. */
-export type RoomPlateSpot = { x: number; y: number; width: number }
 
 const props = defineProps<{
   game: Game
@@ -60,12 +61,6 @@ const props = defineProps<{
   concealedSpots?: ConcealedSpot[]
   /** What each location's plate shows; built once by the parent from the live game. */
   infoOf: (l: Location) => MapLocationInfo
-  /** Where each location stands on the cutaway picture (percent); when set the map is drawn over that picture. */
-  cutaway?: Record<string, Point> | null
-  /** Where each room's plate goes on the cutaway picture, apart from its figures. */
-  roomPlates?: Record<string, RoomPlateSpot> | null
-  /** Whether the room plates show the card text and flavour. */
-  plateText?: boolean
   illustratedBoard?: StageBoard
   dreamPositions?: Record<string, Point>
   /** Horror in High Gear: the road's columns and rows; tiles fill one column and two rows each, side by side. */
@@ -76,7 +71,7 @@ const props = defineProps<{
   compact?: boolean
   width?: number
   height?: number
-  /** Pinch-zoom and pan of the stage; never on the house cutaway or the compact map. */
+  /** Pinch-zoom and pan of the stage; never on the compact map. */
   viewport?: MapViewport
   /** Barriers standing on links (In Too Deep), keyed by the two sorted location ids. */
   barriers?: BarrierCounts | null
@@ -91,12 +86,12 @@ const emit = defineEmits<{
 const { t } = useI18n()
 const nameOf = useCardNames()
 const basePos = (id: string): Point => {
-  const at = props.cutaway?.[id] ?? props.positions[id]
+  const at = props.positions[id]
   return at ? spreadPoint(at) : at
 }
 const offsetKey = (id: string) => `${props.game.id}:${id}`
 // A plate's spot before plates are pulled apart: its scenario spot plus any shift the player dragged it by
-// (never in the house cutaway).
+// (never on the compact map).
 const restPos = (id: string): Point => {
   const [x, y] = basePos(id)
   const staggered = essexTrain.value && stageWidth.value > 0 && stageWidth.value <= 650
@@ -115,7 +110,7 @@ const arrowKey = (key: string) => `${props.game.id}:arrow:${key}`
 // Plates and move buttons can be dragged aside on every full-size board. On a sprite board the whole location moves
 // with its plate (sprite, water, rails, vehicles, standees and links); the offset is relative to the location's own
 // cell, so the grid can still reflow as cards arrive, slide and leave.
-const canDrag = computed(() => !props.cutaway && !props.compact)
+const canDrag = computed(() => !props.compact)
 /** Where a location's sprite is drawn on a sprite board: its cell plus any shift the player dragged it by. */
 const cellPos = (id: string): Point => pos(id)
 const museumExhibits = computed(() => props.illustratedBoard?.museumExhibits
@@ -137,7 +132,7 @@ const startNodeDrag = (l: Location, event: PointerEvent) => {
 }
 const stage = ref<HTMLElement | null>(null)
 const scroller = ref<HTMLElement | null>(null)
-const zoomable = computed(() => MAP_ZOOM_ENABLED && !props.cutaway && !props.compact && !!props.viewport)
+const zoomable = computed(() => MAP_ZOOM_ENABLED && !props.compact && !!props.viewport)
 let unbindViewport: (() => void) | null = null
 onMounted(() => {
   if (props.viewport && scroller.value && stage.value) {
@@ -161,7 +156,6 @@ watch([stageWidth, stageHeight], () => props.viewport?.refit())
 watch(zoomable, (ok) => { if (!ok) props.viewport?.reset() })
 // One finger scrolls the page until the map is zoomed or plates are being arranged; then the map takes the touch.
 const stageStyle = computed(() => {
-  if (props.cutaway) return { backgroundImage: 'url(img/scenes/night-of-the-zealot/house-cutaway.webp)', backgroundSize: '100% 100%' }
   if (!zoomable.value || !props.viewport) return undefined
   return {
     transform: props.viewport.transform.value,
@@ -262,7 +256,7 @@ const nodeStyle = (l: Location): Record<string, string | number | undefined> => 
   if (cell && props.illustratedBoard?.islands) {
     return { left: `${x}%`, top: `calc(${y}% - ${cell.height / 2}px)`, translate: '-50% 0' }
   }
-  return { left: `${x}%`, top: `${y}%`, zIndex: props.cutaway ? Math.round(y) : undefined }
+  return { left: `${x}%`, top: `${y}%`, }
 }
 const islandsFolder = computed(() => props.illustratedBoard?.islands ?? '')
 const tileImage = (l: Location) => props.illustratedBoard?.tileImages?.[l.id]
@@ -421,9 +415,9 @@ const plateBoxes = useMapPlateBoxes(stage, () => (props.illustratedBoard ? '.pla
 
 /* On a painted board the anchors are fixed to the picture, so on a small map two name plates can land on
  * each other. Those are pulled apart vertically (see plateShifts); a plate the player dragged stays where
- * they put it. Sprite boards and the house cutaway lay their plates out on a grid of their own. */
+ * they put it. Sprite boards lay their plates out on a grid of their own. */
 const plateShift = computed<Record<string, number>>(() => {
-  if (!props.illustratedBoard || props.illustratedBoard.islands || props.cutaway || props.compact) return {}
+  if (!props.illustratedBoard || props.illustratedBoard.islands || props.compact) return {}
   const dragged = new Set<string>()
   const boxes: Box[] = props.locations.flatMap((l) => {
     const box = plateBoxes.value[l.id]
@@ -455,13 +449,23 @@ function linkMove(a: string, b: string): { index: number; to: string } | null {
   return null
 }
 
+/* A link into a place that cannot be entered yet wears a padlock instead of an arrow; hovering it gives the
+ * place's own words on why. The shut end is the one that is blocked (the far one when both are). */
+function linkLock(a: Location, b: Location, move: unknown): { name: string; reason: string | null } | null {
+  if (move) return null
+  const shut = [b, a].find((l) => entryBlocked(l.modifiers) && !props.infoOf(l).here)
+  if (!shut) return null
+  const face = props.infoOf(shut).face
+  return { name: face.name, reason: blockedReason(face.text) }
+}
+
 /* A row whose locations all connect to each other draws one link per gap plus a rail along the row, instead of
  * every pair (whose long links would stack on the short ones and drop their badges onto the middle locations).
  * Only two-way links without barriers fold, and only while the locations really sit in a line. */
 const rowLinks = computed(() => {
   const byId = new Map(props.locations.map((location) => [location.id, location]))
   const at = (id: string): Point | undefined => {
-    if (!props.positions[id] && !props.cutaway?.[id]) return undefined
+    if (!props.positions[id]) return undefined
     return cosmosCell.value ? cellPos(id) : pos(id)
   }
   const foldable = (a: string, b: string) => {
@@ -480,7 +484,7 @@ const drawnLinks = computed(() => {
 })
 /** One rail per row of mutually connected locations, centre to centre (the sprites and plates cover its ends). */
 const laneRails = computed(() => {
-  if (props.cutaway || props.compact) return []
+  if (props.compact) return []
   return rowLinks.value.lanes.map(({ ends: [a, b], members }) => {
     const [x1, y1] = cosmosCell.value ? cellPos(a) : pos(a)
     const [x2, y2] = cosmosCell.value ? cellPos(b) : pos(b)
@@ -489,7 +493,7 @@ const laneRails = computed(() => {
 })
 
 const connectionArrows = computed(() => {
-  if (props.cutaway || props.compact) return []
+  if (props.compact) return []
   const locations = new Map(props.locations.map((location) => [location.id, location]))
   return drawnLinks.value.flatMap(([a, b]) => {
     const from = locations.get(a)
@@ -530,6 +534,7 @@ const connectionArrows = computed(() => {
     const ax = x + along * step[0]
     const ay = y + along * step[1]
     const move = linkMove(a, b)
+    const lock = linkLock(from, to, move)
     // A one-way arrow points the way the passage runs; a two-way one lies along the line.
     const rotation = angle + (direction === 'backward' ? Math.PI : 0)
     const barriers = barriersBetween(props.barriers ?? null, a, b)
@@ -550,7 +555,8 @@ const connectionArrows = computed(() => {
       rotation,
       both: direction === 'both',
       move,
-      label: barrierLabel ? `${linkLabel} · ${barrierLabel}` : linkLabel,
+      lock,
+      label: lock ? [t('locationMap.link.locked', { name: lock.name }), lock.reason].filter(Boolean).join(' — ') : barrierLabel ? `${linkLabel} · ${barrierLabel}` : linkLabel,
     }]
   })
 })
@@ -558,7 +564,7 @@ const connectionArrows = computed(() => {
 /* A barrier must never vanish from the map: a blocked pair whose link badge was not drawn (no link direction,
  * plates that do not clip, ...) still gets a marker halfway between the two locations. */
 const strayBarriers = computed(() => {
-  if (props.cutaway || props.compact) return []
+  if (props.compact) return []
   const drawn = new Set(connectionArrows.value.map((arrow) => barrierKey(...arrow.pair)))
   const byId = new Map(props.locations.map((location) => [location.id, location]))
   return blockedLinks(props.barriers ?? null).flatMap(({ a, b, key, count }) => {
@@ -613,8 +619,8 @@ function tileClick(l: Location, event: MouseEvent) {
 
 <template>
   <div ref="scroller" class="map-scroll" :class="{ compact }">
-    <div class="map-canvas" :class="{ 'has-cutaway': cutaway, 'has-illustrated-board': illustratedBoard, 'has-dream-board': dreamBoard }" :style="canvasStyle">
-      <div ref="stage" class="map-stage" :class="{ cutaway, illustrated: illustratedBoard, descent, village: illustratedBoard?.village, 'essex-train': essexTrain, 'reveal-landmarks': hiddenLocationArt || illustratedBoard?.revealRoomAnchors, 'dream-grid': dreamPositions, 'dream-static': dreamBoard && !dreamPositions }"
+    <div class="map-canvas" :class="{ 'has-illustrated-board': illustratedBoard, 'has-dream-board': dreamBoard }" :style="canvasStyle">
+      <div ref="stage" class="map-stage" :class="{ illustrated: illustratedBoard, descent, village: illustratedBoard?.village, 'essex-train': essexTrain, 'reveal-landmarks': hiddenLocationArt || illustratedBoard?.revealRoomAnchors, 'dream-grid': dreamPositions, 'dream-static': dreamBoard && !dreamPositions }"
         :style="stageStyle">
       <img v-if="illustratedBoard" :key="illustratedBoard.image" class="board-art" :class="{ spectral: illustratedBoard.spectral }" :src="illustratedBoard.image"
         alt="" @error="hideFailedArt($event, illustratedBoard.image)" />
@@ -656,14 +662,14 @@ function tileClick(l: Location, event: MouseEvent) {
           alt="" aria-hidden="true" draggable="false" />
       </template>
       <SceneWeather v-if="stormy" :width="stageWidth" :height="stageHeight" />
-      <svg v-if="!cutaway" class="map-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <svg class="map-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
         <template v-if="!illustratedBoard">
           <line v-for="[a, b] in drawnLinks" :key="a + b"
             :x1="pos(a)[0]" :y1="pos(a)[1]" :x2="pos(b)[0]" :y2="pos(b)[1]" />
         </template>
         <path v-for="rail in laneRails" :key="'lane' + rail.key" class="lane-rail" :d="rail.d" />
         <template v-if="illustratedBoard">
-          <path v-for="arrow in connectionArrows" :key="'guide' + arrow.key" class="connection-guide" :class="{ movable: !!arrow.move, blocked: arrow.barriers > 0 }" :d="arrow.guide" />
+          <path v-for="arrow in connectionArrows" :key="'guide' + arrow.key" class="connection-guide" :class="{ movable: !!arrow.move, blocked: arrow.barriers > 0 || !!arrow.lock }" :d="arrow.guide" />
         </template>
         <circle v-for="m in moves" :key="m.id" class="moving-enemy" r="1.4">
           <title>{{ m.name }}</title>
@@ -675,14 +681,15 @@ function tileClick(l: Location, event: MouseEvent) {
       <!-- A link holding barriers shows a barricade instead of the arrow, with the count in the corner. A link
            you can still travel (ignoring barriers) keeps the green move arrow, and still shows the count. -->
       <button v-for="arrow in connectionArrows" :key="arrow.key" type="button" class="connection-arrow"
-        :class="{ draggable: canDrag, movable: !!arrow.move, 'two-way': arrow.both, blocked: arrow.barriers > 0 }"
+        :class="{ draggable: canDrag, movable: !!arrow.move, 'two-way': arrow.both, blocked: arrow.barriers > 0 || !!arrow.lock, locked: !!arrow.lock }"
         :style="{ left: arrow.x + '%', top: arrow.y + '%' }"
-        :aria-label="arrow.label" :title="arrow.barriers > 0 ? arrow.label : undefined"
-        :tabindex="arrow.move ? 0 : -1" :aria-disabled="!arrow.move || undefined"
+        :aria-label="arrow.label" :title="arrow.barriers > 0 && !arrow.lock ? arrow.label : undefined"
+        :tabindex="arrow.move || arrow.lock ? 0 : -1" :aria-disabled="!arrow.move || undefined"
         :data-game-actionable="arrow.move ? true : undefined"
         @pointerdown="canDrag && beginDrag($event, arrowKey(arrow.key), 'pct', stage)"
         @click.stop="arrowClick(arrow)">
-        <BarrierIcon v-if="arrow.barriers > 0 && !arrow.move" class="barricade" />
+        <LockedPathBadge v-if="arrow.lock" :name="arrow.lock.name" :reason="arrow.lock.reason" />
+        <BarrierIcon v-else-if="arrow.barriers > 0 && !arrow.move" class="barricade" />
         <svg v-else viewBox="0 0 40 16" aria-hidden="true" :style="{ rotate: arrow.rotation + 'rad' }">
           <path d="M4 8h32m-5-5 5 5-5 5" />
           <path v-if="arrow.both" d="m9 3-5 5 5 5" />
@@ -761,10 +768,9 @@ function tileClick(l: Location, event: MouseEvent) {
         }"
         :style="nodeStyle(l)"
         :data-id="l.id" :data-stair-tile="islandsFolder === STAIRS_FOLDER ? l.id : undefined" :data-road-tile="roadGrid ? l.id : undefined"
-        @pointerdown="startNodeDrag(l, $event)" @click.stop="cutaway ? undefined : tileClick(l, $event)">
-        <img v-if="!cutaway && !illustratedBoard" class="art" :src="locationImage(l)" alt="" loading="lazy" />
-        <LocationStandees v-if="cutaway" :game="game" :playerId="playerId" :location="l" :enemiesAt="enemiesAt" :vehicle-ids="vehicleIds" @choose="emit('choose', $event)" />
-        <LocationMarkerPlate v-if="!roomPlates?.[l.id]" :info="infoOf(l)" :size="compact ? 'compact' : 'full'" :game="game" :playerId="playerId" :locationId="l.id"
+        @pointerdown="startNodeDrag(l, $event)" @click.stop="tileClick(l, $event)">
+        <img v-if="!illustratedBoard" class="art" :src="locationImage(l)" alt="" loading="lazy" />
+        <LocationMarkerPlate :info="infoOf(l)" :size="compact ? 'compact' : 'full'" :game="game" :playerId="playerId" :locationId="l.id"
           :hideMove="movesOnLinks.has(l.id)"
           :data-fx-target="`location-${l.id}`"
           :[CARD_FLIGHT_ATTR]="l.cardId" :style="cardFlightStyle(flightState, l.cardId)"
@@ -775,7 +781,7 @@ function tileClick(l: Location, event: MouseEvent) {
         <div v-if="illustratedBoard" class="location-floor">
           <LocationStandees :game="game" :playerId="playerId" :location="onGround(l)" :enemiesAt="enemiesAt" :vehicle-ids="vehicleIds" @choose="emit('choose', $event)" />
         </div>
-        <span v-else-if="!cutaway" class="occupants">
+        <span v-else class="occupants">
           <img v-for="id in onGround(l).investigators" :key="id" class="figure" :class="{ you: id === ownId(), portrait: !compact }"
             :src="portraitImage(game.investigators[id]?.cardCode ?? '')" :alt="investigatorName(id)"
             @error="fallbackFigureArt($event, cardImage(game.investigators[id]?.cardCode ?? ''))"
@@ -785,15 +791,6 @@ function tileClick(l: Location, event: MouseEvent) {
           <LocationStandees story-assets-only :game="game" :playerId="playerId" :location="l" :enemiesAt="enemiesAt" @choose="emit('choose', $event)" />
         </span>
       </div>
-      <template v-for="l in locations" :key="'plate-' + l.id">
-        <div v-if="roomPlates?.[l.id]" class="room-plate" :class="{ selected: l.id === selectedId }" :data-id="l.id"
-          :style="{ left: roomPlates[l.id].x + '%', top: roomPlates[l.id].y + '%', width: roomPlates[l.id].width + '%' }">
-          <LocationMarkerPlate :info="infoOf(l)" size="room" :showText="plateText" :game="game" :playerId="playerId" :locationId="l.id"
-            :data-fx-target="`location-${l.id}`"
-            :[CARD_FLIGHT_ATTR]="l.cardId" :style="cardFlightStyle(flightState, l.cardId)"
-            :data-image="locationImage(l)" :data-card-code="l.cardCode" @inspect="emit('inspect', l, $event)" @choose="emit('choose', $event)" />
-        </div>
-      </template>
       </div>
     </div>
   </div>
@@ -834,18 +831,11 @@ function tileClick(l: Location, event: MouseEvent) {
 @media (prefers-reduced-motion: no-preference) {
   .reveal-landmarks .node:not(:active) { transition: left 300ms ease, top 300ms ease; }
 }
-.has-cutaway { container-type: size; }
 .has-dream-board { container-type: size; }
 .map-stage.dream-grid { inset: auto; left: 50%; top: 50%; translate: -50% -50%; width: min(100cqw, 177.777cqh); aspect-ratio: 16 / 9; }
 @container (max-width: 600px) {
   .map-stage.dream-grid { width: min(100cqw, 133.333cqh); aspect-ratio: 4 / 3; }
 }
-.map-stage.cutaway { inset: auto; left: 50%; top: 50%; translate: -50% -50%; width: min(100cqw, 177.7cqh); aspect-ratio: 1672 / 941; border-radius: 6px; box-shadow: 0 0 40px #000a; }
-/* On the house the room is the picture: the people stand on its floor, its plate sits in a corner of it. */
-.cutaway .node { translate: -50% -100%; width: auto; height: auto; min-height: 0; padding: 0; background: transparent; border: 0; overflow: visible; align-items: center; justify-content: flex-end; gap: 3px; cursor: default; pointer-events: none; }
-.cutaway .node::after { display: none; }
-.room-plate { position: absolute; z-index: 110; }
-.room-plate.selected :deep(.plate) { outline: 2px solid #e6c584; outline-offset: 2px; }
 .map-links { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
 .map-links line { stroke: #b2996399; stroke-width: 1.2; vector-effect: non-scaling-stroke; }
 /* Dark under-stroke first (via drop-shadow) so the pale dashes read on light and dark parts of the painting. */
@@ -863,7 +853,7 @@ function tileClick(l: Location, event: MouseEvent) {
 .node.here { border-color: #afbe89; box-shadow: 0 0 0 2px #9bb98440; }
 .node.selected { outline: 2px solid #e6c584; outline-offset: 2px; }
 .node.targetable { box-shadow: 0 0 10px 2px #f2d27a; }
-.map-stage:not(.cutaway) .node :deep(.plate) { max-width: 100%; }
+.node :deep(.plate) { max-width: 100%; }
 .art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 28%; opacity: 0.75; z-index: 0; }
 .node::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 45%, #07100bc0); z-index: 0; pointer-events: none; }
 .node > :not(.art) { position: relative; z-index: 1; }
@@ -1046,6 +1036,9 @@ function tileClick(l: Location, event: MouseEvent) {
 }
 .connection-arrow.blocked.movable { background: #1d3324e6; border-color: #8fd19a; }
 .connection-arrow .barricade { width: 100%; height: 100%; }
+/* A padlocked link names what opens it only on hover or keyboard focus. */
+.connection-arrow.locked:hover :deep(.locked-path__caption),
+.connection-arrow.locked:focus-visible :deep(.locked-path__caption) { opacity: 1; visibility: visible; }
 .connection-arrow .barrier-count {
   position: absolute;
   top: -7px;
@@ -1090,10 +1083,7 @@ function tileClick(l: Location, event: MouseEvent) {
 .village .node.selected { outline: none; }
 .village .node.selected :deep(.plate) { outline: 2px solid #e6c584; outline-offset: 2px; }
 /* Player-chosen sizes (Settings): location buttons/plates and character figures. */
-.node, .spot, .room-plate { scale: var(--location-scale, 1); }
-.room-plate { transform-origin: 0 0; }
-.cutaway .node { scale: 1; transform-origin: 50% 100%; }
-.cutaway .node :deep(.standees) { scale: var(--figure-scale, 1); transform-origin: 50% 100%; }
+.node, .spot { scale: var(--location-scale, 1); }
 .figure { zoom: var(--figure-scale, 1); }
 /* Fingers: readable health and sanity bars, and a bigger reach for the empty-slot buttons. */
 .location-map[data-input='touch'] .location-floor :deep(.hud) { font-size: 11px; }

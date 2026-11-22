@@ -14,6 +14,9 @@ const {
   readNarrationLanguage,
   cardNarrationKeys,
   cardNarrationTrack,
+  readNarrationRate,
+  stepNarrationRate,
+  formatNarrationRate,
 } = await import('data:text/javascript;base64,' + Buffer.from(js).toString('base64'))
 
 const i18n = (key) => ({ tag: 'I18nEntry', key, variables: {} })
@@ -80,4 +83,26 @@ test('cardNarrationTrack returns track when key matches manifest', () => {
   const trackBack = cardNarrationTrack('c01108', 'b', manifest, 'vi', '/n')
   assert.deepEqual(trackBack, { key: 'cards.01108b', url: '/n/vi/cards.01108b.mp3?v=h2' })
   assert.equal(cardNarrationTrack('99999', 'a', manifest, 'vi', '/n'), null)
+})
+
+test('readNarrationRate parses, clamps and defaults the stored reading speed', () => {
+  assert.equal(readNarrationRate(null), 1)
+  assert.equal(readNarrationRate('abc'), 1)
+  assert.equal(readNarrationRate('1.3'), 1.3)
+  assert.equal(readNarrationRate('0.1'), 0.5)
+  assert.equal(readNarrationRate('5'), 2)
+})
+
+test('stepNarrationRate moves by 0.1 without float drift and stops at the bounds', () => {
+  assert.equal(stepNarrationRate(1, 1), 1.1)
+  assert.equal(stepNarrationRate(1.1, 1), 1.2)
+  assert.equal(stepNarrationRate(0.7, -1), 0.6)
+  assert.equal(stepNarrationRate(2, 1), 2)
+  assert.equal(stepNarrationRate(0.5, -1), 0.5)
+})
+
+test('formatNarrationRate drops trailing zeros', () => {
+  assert.equal(formatNarrationRate(1), '1×')
+  assert.equal(formatNarrationRate(1.2), '1.2×')
+  assert.equal(formatNarrationRate(0.5), '0.5×')
 })

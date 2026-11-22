@@ -60,7 +60,11 @@ type Fig = {
   /* Tokens other than damage / horror sitting on the figure (clues moved onto an enemy, doom, resources, ...), shown under its bar. */
   tokens?: FigToken[]
   storyAsset?: boolean
+  /* Enemies only: the investigator it is engaged with. They stand together in one frame in the investigator's
+   * class colour; if that investigator is not drawn in this row, a small face badge on the enemy says whose it is. */
+  engagedWith?: Engagement | null
 }
+type Engagement = { id: string; name: string; src: string; tone: string; you: boolean }
 type FigToken = { type: string; amount: number; icon: 'clue' | 'doom' | 'resource' | null }
 const ICONS: Record<string, FigToken['icon']> = { Clue: 'clue', Doom: 'doom', Resource: 'resource' }
 /* Damage and horror already show in the health / sanity bar. */
@@ -83,6 +87,15 @@ function fallbackFromSprite(src: string | null) {
   if (!src) return
   failedSprites.value.add(src)
   if (import.meta.env.DEV) console.debug('[Arkham map] Story Asset sprite unavailable', src)
+}
+
+/* An enemy in an investigator's threat area stands in the room with them: name whose it is. */
+function engagementOf(placement: { tag: string; contents?: unknown }, mine: string | undefined): Engagement | null {
+  if (placement.tag !== 'InThreatArea' && placement.tag !== 'FacedownInThreatArea') return null
+  const id = placement.contents as string
+  const i = props.game.investigators[id]
+  if (!i) return null
+  return { id, name: nameOf(i.cardCode), src: portraitImage(i.cardCode), tone: (i.class ?? 'Neutral').toLowerCase(), you: id === mine }
 }
 
 const figures = computed<Fig[]>(() => {
@@ -116,6 +129,7 @@ const figures = computed<Fig[]>(() => {
       cardId: e.placement.tag === 'AtLocation' ? e.cardId : undefined, cardImage: cardImage(art),
       note: max === null ? `${damage} dmg` : null,
       health: max === null ? null : meter(max, damage), sanity: null, tokens: figTokens(e.tokens),
+      engagedWith: engagementOf(e.placement, mine),
     }]
   })
   const assets = sceneLocationAssets(l, props.game.assets).flatMap((a): Fig[] => {
@@ -145,6 +159,19 @@ const figures = computed<Fig[]>(() => {
   })
   return [...people, ...assets, ...monsters]
 })
+/* The row in slots: each investigator with the enemies engaged with them forms one framed group; everyone else stands alone. */
+type Slot = { key: string; figs: Fig[]; engage: { tone: string; you: boolean; name: string } | null }
+const slots = computed<Slot[]>(() => {
+  const all = figures.value
+  const people = new Set(all.filter((f) => f.kind === 'investigator').map((f) => f.id))
+  const engagedTo = (f: Fig) => f.kind === 'enemy' && f.engagedWith && people.has(f.engagedWith.id) ? f.engagedWith.id : null
+  return all.flatMap((f): Slot[] => {
+    if (engagedTo(f)) return []
+    const foes = f.kind === 'investigator' ? all.filter((e) => engagedTo(e) === f.id) : []
+    return [{ key: f.id, figs: [f, ...foes], engage: foes.length ? { tone: f.tone, you: f.you, name: f.name } : null }]
+  })
+})
+const grouped = computed(() => new Set(slots.value.flatMap((s) => s.engage ? s.figs.map((f) => f.id) : [])))
 /* Enemies past the figure limit: named in the badge's tooltip, each clickable from its menu. */
 const extraEnemies = computed(() => props.storyAssetsOnly ? [] : props.enemiesAt(props.location).slice(MAX_ENEMY_FIGURES)
   .flatMap((id) => props.game.enemies[id] ? [{ id, name: nameOf(props.game.enemies[id].cardCode) }] : []))
@@ -160,9 +187,19 @@ const enemyActing = (f: Fig): 'attack' | 'move' | null => {
 // A figure can be dragged to a spot the player finds easier to follow; it still belongs to this location.
 const figKey = (id: string) => `${props.game.id}:${props.location.id}:${id}`
 const figShift = (id: string) => { const [x, y] = offsetOf(figKey(id)); return x || y ? `${x}px ${y}px` : undefined }
+// Kept around its own location (the map node holding plate and figures), so it never wanders into another room.
+const homeOf = (el: HTMLElement) => el.closest<HTMLElement>('.node') ?? el.closest<HTMLElement>('.standees')?.parentElement ?? null
 const startFigDrag = (id: string, event: PointerEvent) => {
+  // A figure in an engagement frame moves with its frame (the frame's own handler takes the drag).
+  if (grouped.value.has(id)) return
   event.stopPropagation()
-  beginDrag(event, figKey(id), 'px', null)
+  beginDrag(event, figKey(id), 'px', null, homeOf(event.currentTarget as HTMLElement))
+}
+const groupKey = (s: Slot) => figKey(`engage:${s.key}`)
+const groupShift = (s: Slot) => { const [x, y] = offsetOf(groupKey(s)); return x || y ? `${x}px ${y}px` : undefined }
+const startGroupDrag = (s: Slot, event: PointerEvent) => {
+  event.stopPropagation()
+  beginDrag(event, groupKey(s), 'px', null, homeOf(event.currentTarget as HTMLElement))
 }
 
 /* Clicking a figure acts on it. When the game asks to pick it (a target), the click picks it. Otherwise the
@@ -206,8 +243,11 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
 
 <template>
   <span v-if="figures.length || extraEnemies.length" class="standees" :class="{ 'story-assets-only': storyAssetsOnly }">
-    <span v-for="f in figures" :key="f.id" class="fig" :class="[f.kind, f.tone, { you: f.you, exhausted: f.exhausted, actionable: actionable(f.id) || assignable(f), assign: assignable(f), trigger: triggerWindow && actionable(f.id), open: openMenu === f.id, turn: isTurn(f), 'acting-move': enemyActing(f) === 'move', 'acting-attack': enemyActing(f) === 'attack' }]"
-      :style="{ viewTransitionName: f.moveName, translate: figShift(f.id) }" @pointerdown="startFigDrag(f.id, $event)" :data-investigator-mini="f.kind === 'investigator' ? f.id : undefined" :data-fx-target="`${f.kind}-${f.id}`"
+    <span v-for="s in slots" :key="s.key" class="slot" :class="s.engage ? ['engage-group', s.engage.tone, { you: s.engage.you }] : null"
+      :style="s.engage ? { translate: groupShift(s) } : undefined" :aria-label="s.engage ? t('locationMap.engagedWith', { name: s.engage.name }) : undefined"
+      @pointerdown="s.engage && startGroupDrag(s, $event)">
+    <span v-for="f in s.figs" :key="f.id" class="fig" :class="[f.kind, f.tone, { you: f.you, exhausted: f.exhausted, actionable: actionable(f.id) || assignable(f), assign: assignable(f), trigger: triggerWindow && actionable(f.id), open: openMenu === f.id, turn: isTurn(f), 'acting-move': enemyActing(f) === 'move', 'acting-attack': enemyActing(f) === 'attack' }]"
+      :style="{ viewTransitionName: f.moveName, translate: grouped.has(f.id) ? undefined : figShift(f.id) }" @pointerdown="startFigDrag(f.id, $event)" :data-investigator-mini="f.kind === 'investigator' ? f.id : undefined" :data-fx-target="`${f.kind}-${f.id}`"
       :data-image="openMenu === f.id ? undefined : f.cardImage" :data-pools="f.stock ? poolsOf(f) : undefined" @click.stop="clickFig(f)">
       <span v-if="assignable(f)" class="assign-bar" data-no-card-overlay @click.stop @pointerdown.stop>
         <button v-if="assignFor(f).damage !== -1" type="button" class="assign-btn damage" :title="t('locationMap.assignDamage')" :aria-label="t('locationMap.assignDamage')" @click="pick(assignFor(f).damage)"><GameIcon type="health" /><b>+1</b></button>
@@ -217,22 +257,28 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
         <b class="fig-menu__name">{{ f.name }}</b>
         <AbilityButton v-for="c in optionsFor(f.id)" :key="c.index" :game="game" :ability="c.contents" @choose="pick(c.index)" />
       </span>
-      <FigureVitalsHud v-if="f.health || f.sanity" :health="f.health" :sanity="f.sanity" :stock="f.stock" />
+      <FigureVitalsHud v-if="f.health || f.sanity" :health="f.health" :sanity="f.sanity" />
       <span v-else-if="f.note" class="hud"><span class="meter hp"><GameIcon type="damage" /> {{ f.note }}</span></span>
       <span v-if="f.tokens?.length" class="fig-tokens">
-        <span v-for="tk in f.tokens" :key="tk.type" class="fig-token" :title="`${tokenLabel(tk.type)}: ${tk.amount}`">
+        <span v-for="tk in f.tokens" :key="tk.type" class="fig-token" :aria-label="`${tokenLabel(tk.type)}: ${tk.amount}`">
           <GameIcon v-if="tk.icon" :type="tk.icon" /><template v-else>{{ tokenLabel(tk.type) }}</template> <b>{{ tk.amount }}</b>
         </span>
       </span>
-      <span v-if="f.exhausted" class="exhausted-badge" :title="t('locationMap.exhaustedBadge')" aria-hidden="true">💤 {{ t('locationMap.exhaustedBadge') }}</span>
+      <span v-if="f.engagedWith && !grouped.has(f.id)" class="engaged-badge" :class="[f.engagedWith.tone, { you: f.engagedWith.you }]"
+        :aria-label="t('locationMap.engagedWith', { name: f.engagedWith.name })">
+        <span class="engaged-badge__chain" aria-hidden="true">⚔</span>
+        <img class="engaged-badge__face" :src="f.engagedWith.src" alt="" draggable="false" />
+      </span>
+      <span v-if="f.exhausted" class="exhausted-badge" aria-hidden="true">💤 {{ t('locationMap.exhaustedBadge') }}</span>
       <img v-if="f.src" class="figure portrait" :src="f.src" :alt="f.name" draggable="false"
         @error="f.storyAsset && fallbackFromSprite(f.src)"
         :[CARD_FLIGHT_ATTR]="f.cardId" :style="cardFlightStyle(flightState, f.cardId)" />
       <span v-else class="crop portrait" :class="{ 'story-asset-crop': f.storyAsset }" role="img" :aria-label="f.name"
         :[CARD_FLIGHT_ATTR]="f.cardId" :style="[{ backgroundImage: `url(${f.art})` }, cardFlightStyle(flightState, f.cardId)]"></span>
     </span>
+    </span>
     <span v-if="extraEnemies.length" class="more-enemies" :class="{ open: openMenu === MORE_MENU, actionable: extraEnemies.some((e) => actionable(e.id)), trigger: triggerWindow && extraEnemies.some((e) => actionable(e.id)) }" data-no-card-overlay
-      :title="extraEnemies.map((e) => e.name).join(', ')" @click.stop="openMenu = openMenu === MORE_MENU ? null : MORE_MENU" @pointerdown.stop>
+      :aria-label="extraEnemies.map((e) => e.name).join(', ')" @click.stop="openMenu = openMenu === MORE_MENU ? null : MORE_MENU" @pointerdown.stop>
       +{{ extraEnemies.length }}
       <span v-if="openMenu === MORE_MENU" class="fig-menu" role="menu" @click.stop>
         <template v-for="e in extraEnemies" :key="e.id">
@@ -272,6 +318,33 @@ onBeforeUnmount(() => window.removeEventListener('click', closeMenu))
 .fig.exhausted .figure { opacity: 0.8; rotate: 12deg; filter: grayscale(0.9) brightness(0.7) drop-shadow(2px 0 0 #8a8f96) drop-shadow(-2px 0 0 #8a8f96) drop-shadow(0 2px 0 #8a8f96) drop-shadow(0 -2px 0 #8a8f96); }
 .fig.exhausted .crop { filter: grayscale(0.9) brightness(0.7); border-color: #8a8f96; }
 .fig.exhausted.actionable .figure { filter: grayscale(0.9) brightness(0.75) drop-shadow(2px 0 0 #8a8f96) drop-shadow(-2px 0 0 #8a8f96) drop-shadow(0 2px 0 #8a8f96) drop-shadow(0 -2px 0 #8a8f96) drop-shadow(0 0 6px #ffd76a); }
+/* A plain slot leaves the row's layout as it was; an engagement frame wraps an investigator and the enemies
+ * engaged with them in one rounded border in the investigator's class colour, and drags as one piece. */
+.slot { display: contents; }
+.slot.engage-group {
+  --tone: var(--neutral, #9aa0a6); display: flex; align-items: flex-end; gap: 6px; position: relative; z-index: 2;
+  padding: 4px 8px 2px; border: 2px solid var(--tone); border-radius: 14px; pointer-events: auto; cursor: grab; touch-action: manipulation;
+  background: radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--tone) 28%, transparent), transparent 70%), #0a080866;
+  box-shadow: 0 0 10px color-mix(in srgb, var(--tone) 70%, transparent), inset 0 0 8px color-mix(in srgb, var(--tone) 35%, transparent);
+}
+.slot.engage-group:has(.fig.open), .slot.engage-group:has(.fig.assign) { z-index: 30; }
+.location-map[data-arrange='true'] .slot.engage-group { touch-action: none; }
+.slot.engage-group.guardian { --tone: var(--guardian, #2f7fd8); }
+.slot.engage-group.seeker { --tone: var(--seeker, #ec8a24); }
+.slot.engage-group.rogue { --tone: var(--rogue, #2fa05a); }
+.slot.engage-group.mystic { --tone: var(--mystic, #8a52c9); }
+.slot.engage-group.survivor { --tone: #c8303c; }
+.slot.engage-group.you { outline: 1px solid #fff6; outline-offset: 1px; }
+/* Engaged enemy: crossed swords and the investigator's face in their class colour, at the figure's feet. */
+.engaged-badge { --tone: var(--neutral, #9aa0a6); position: absolute; bottom: -4px; right: -6px; z-index: 3; display: inline-flex; align-items: center; gap: 2px; padding: 1px 2px 1px 5px; background: #1a0f0ff0; border: 2px solid var(--tone); border-radius: 999px; box-shadow: 0 1px 4px #000c, 0 0 6px var(--tone); pointer-events: none; }
+.engaged-badge.guardian { --tone: var(--guardian, #2f7fd8); }
+.engaged-badge.seeker { --tone: var(--seeker, #ec8a24); }
+.engaged-badge.rogue { --tone: var(--rogue, #2fa05a); }
+.engaged-badge.mystic { --tone: var(--mystic, #8a52c9); }
+.engaged-badge.survivor { --tone: #c8303c; }
+.engaged-badge.you { box-shadow: 0 1px 4px #000c, 0 0 8px #fff9; }
+.engaged-badge__chain { font: 700 11px/1 system-ui, sans-serif; color: #ffb38a; }
+.engaged-badge__face { width: 22px; height: 22px; border-radius: 50%; object-fit: cover; object-position: top; border: 1px solid #0008; }
 .exhausted-badge { position: absolute; bottom: 6%; left: 50%; translate: -50% 0; z-index: 2; padding: 1px 6px; background: #1d2330f2; border: 1px solid #9fb4d8; border-radius: 999px; font: 700 10px/1.3 system-ui, sans-serif; color: #dbe6ff; white-space: nowrap; pointer-events: none; text-shadow: none; box-shadow: 0 1px 4px #000a; }
 /* A figure the player can act on gets a pointer and a soft gold halo under its outline. */
 .fig.actionable { cursor: pointer; }

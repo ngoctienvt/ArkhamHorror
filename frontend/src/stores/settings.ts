@@ -9,6 +9,7 @@ import { isDevBuild } from '@/arkham/displayRules'
 import {
   defaultNarrationLanguage,
   readNarrationLanguage,
+  readNarrationRate,
   type NarrationLanguage,
 } from '@/arkham/narration'
 import {
@@ -26,8 +27,11 @@ import {
 // Spoken story narration (pre-rendered intro/resolution audio). A browser
 // preference, so global: on unless explicitly turned off.
 const NARRATION_KEY = 'arkhamNarration'
+/* Step-by-step replay of what the engine resolved by itself (advances, phases). */
+const EFFECT_TIMELINE_KEY = 'arkhamEffectTimeline'
 const NARRATION_LANGUAGE_KEY = 'arkhamNarrationLanguage'
 const NARRATION_VOLUME_KEY = 'arkhamNarrationVolume'
+const NARRATION_RATE_KEY = 'arkhamNarrationRate'
 // Synthesised horror ambience under a scenario (arkham/horrorAmbience.ts). Also
 // silenced by the global Sounds switch.
 const MUSIC_KEY = 'arkhamHorrorMusic'
@@ -188,6 +192,14 @@ export const useSettings = defineStore("settings", () => {
     ),
   )
   const narrationVolume = ref(readVolume(localStorage.getItem(NARRATION_VOLUME_KEY)))
+  const narrationRate = ref(readNarrationRate(localStorage.getItem(NARRATION_RATE_KEY)))
+
+  // On unless explicitly turned off.
+  const effectTimeline = ref(localStorage.getItem(EFFECT_TIMELINE_KEY) !== 'false')
+  function setEffectTimeline(enabled: boolean) {
+    effectTimeline.value = enabled
+    localStorage.setItem(EFFECT_TIMELINE_KEY, String(enabled))
+  }
 
   function setNarration(enabled: boolean) {
     narration.value = enabled
@@ -202,6 +214,11 @@ export const useSettings = defineStore("settings", () => {
   function setNarrationVolume(volume: number) {
     narrationVolume.value = readVolume(String(volume))
     localStorage.setItem(NARRATION_VOLUME_KEY, String(narrationVolume.value))
+  }
+
+  function setNarrationRate(rate: number) {
+    narrationRate.value = readNarrationRate(String(rate))
+    localStorage.setItem(NARRATION_RATE_KEY, String(narrationRate.value))
   }
 
   // Off unless explicitly turned on (narration/TTS stays on by default).
@@ -465,12 +482,16 @@ export const useSettings = defineStore("settings", () => {
     drawSpotlightOverride,
     setDrawSpotlightGlobal,
     setDrawSpotlightOverride,
+    effectTimeline,
+    setEffectTimeline,
     narration,
     setNarration,
     narrationLanguage,
     setNarrationLanguage,
     narrationVolume,
     setNarrationVolume,
+    narrationRate,
+    setNarrationRate,
     music,
     setMusic,
     musicVolume,

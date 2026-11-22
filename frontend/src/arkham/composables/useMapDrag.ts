@@ -29,7 +29,28 @@ const TOUCH_THRESHOLD = 10
  * ordinary clicks still work; after a real drag the click that follows is swallowed.
  * `unit` says how the stored offset is measured: 'pct' of the stage, or local 'px'.
  */
-export function beginDrag(event: PointerEvent, key: string, unit: 'pct' | 'px', stage: HTMLElement | null) {
+/* How far past its location's box a figure's centre may be dragged (screen px), so it always reads as standing there. */
+const BOUNDS_MARGIN = 28
+
+/** Screen-pixel range the pointer may travel so the dragged element's centre stays inside `bounds` (grown by a margin). */
+export function dragRange(target: DOMRect, bounds: DOMRect, margin = BOUNDS_MARGIN) {
+  const cx = target.left + target.width / 2
+  const cy = target.top + target.height / 2
+  return {
+    minX: Math.min(0, bounds.left - margin - cx), maxX: Math.max(0, bounds.right + margin - cx),
+    minY: Math.min(0, bounds.top - margin - cy), maxY: Math.max(0, bounds.bottom + margin - cy),
+  }
+}
+
+const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v))
+
+/**
+ * Begin a possible drag on pointerdown. Nothing moves until the pointer travels a few pixels, so
+ * ordinary clicks still work; after a real drag the click that follows is swallowed.
+ * `unit` says how the stored offset is measured: 'pct' of the stage, or local 'px'.
+ * `bounds`, when given, keeps the element's centre within that element's box (its location).
+ */
+export function beginDrag(event: PointerEvent, key: string, unit: 'pct' | 'px', stage: HTMLElement | null, bounds: HTMLElement | null = null) {
   if (event.button !== 0 || !event.isPrimary) return
   if (event.pointerType === 'touch' && !arrangeMode.value) return
   const threshold = event.pointerType === 'touch' ? TOUCH_THRESHOLD : THRESHOLD
@@ -40,11 +61,12 @@ export function beginDrag(event: PointerEvent, key: string, unit: 'pct' | 'px', 
   const stageRect = stage?.getBoundingClientRect()
   // Screen pixels per local pixel (the map scales plates and figures by player settings).
   const scale = target.offsetWidth ? target.getBoundingClientRect().width / target.offsetWidth || 1 : 1
+  const range = bounds ? dragRange(target.getBoundingClientRect(), bounds.getBoundingClientRect()) : null
   let dragging = false
 
   const move = (e: PointerEvent) => {
-    const dx = e.clientX - x0
-    const dy = e.clientY - y0
+    const dx = range ? clamp(e.clientX - x0, range.minX, range.maxX) : e.clientX - x0
+    const dy = range ? clamp(e.clientY - y0, range.minY, range.maxY) : e.clientY - y0
     if (!dragging) {
       if (Math.hypot(dx, dy) < threshold) return
       dragging = true

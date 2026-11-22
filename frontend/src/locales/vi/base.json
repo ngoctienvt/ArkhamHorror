@@ -279,6 +279,41 @@
     "takeBack": "Lấy lại {name}"
   },
   "ok": "Đồng ý",
+  "effectTimeline": {
+    "settingTitle": "Hiệu ứng tuần tự",
+    "settingDescription": "Khi trò chơi tự xử lý (act/agenda advance, các phase Mythos, Enemy, Upkeep, kẻ địch tấn công), phát lại từng bước kèm thông báo đang diễn ra điều gì.",
+    "skip": "Bỏ qua",
+    "discardedCards": "{count} lá bị bỏ",
+    "discardedCardsBy": "{count} lá bị bỏ bởi {source}",
+    "kind": {
+      "discardEnemy": "Loại bỏ kẻ địch",
+      "removeCard": "Rời khỏi màn chơi",
+      "placeLocation": "Đặt vị trí vào màn chơi",
+      "revealLocation": "Lật mở vị trí",
+      "moveInvestigator": "Di chuyển điều tra viên",
+      "spawnEnemy": "Kẻ địch xuất hiện",
+      "moveEnemy": "Kẻ địch di chuyển",
+      "putIntoPlay": "Đưa vào màn chơi",
+      "removeLocation": "Loại bỏ vị trí",
+      "changeScene": "Chuyển cảnh",
+      "logged": "Hiệu ứng"
+    },
+    "log": {
+      "attack": "Kẻ địch tấn công",
+      "engage": "Giao chiến",
+      "doom": "Doom",
+      "clues": "Manh mối",
+      "discard": "Bị loại bỏ",
+      "defeat": "Bị đánh bại",
+      "remove": "Bị loại khỏi trò chơi",
+      "move": "Di chuyển",
+      "enemyMove": "Kẻ địch di chuyển",
+      "spawn": "Kẻ địch xuất hiện",
+      "reveal": "Lật mở vị trí",
+      "attach": "Gắn vào",
+      "other": "Hiệu ứng"
+    }
+  },
   "advanceReader": {
     "act": "Act",
     "agenda": "Agenda",
@@ -861,7 +896,8 @@
       "twoWay": "Đường đi 2 chiều",
       "oneWay": "Đường đi 1 chiều (theo hướng mũi tên)",
       "moveTo": "Di chuyển đến {name}",
-      "barriers": "{n} rào cản giữa {a} và {b}"
+      "barriers": "{n} rào cản giữa {a} và {b}",
+      "locked": "Chưa thể vào {name}"
     },
     "legend": {
       "title": "Chú giải",

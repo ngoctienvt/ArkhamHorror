@@ -191,6 +191,7 @@
   "turn": "Lượt của {investigator}",
   "undoToHere": "Hoàn tác về đây",
   "undoToHereConfirm": "Hoàn tác mọi thứ từ thời điểm này trở đi? Trò chơi sẽ quay lại ngay trước \"{entry}\".",
+  "undoToHereKeepConfirm": "Undo lại về \"{entry}\"?",
   "undoToHereConfirmPlain": "Hoàn tác mọi thứ từ thời điểm này trở đi?",
   "usesAbility": "{investigator} dùng {source}",
   "mustDiscardDown": " phải bỏ bớt bài xuống còn {count} lá",

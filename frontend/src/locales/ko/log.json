@@ -178,6 +178,7 @@
   "turn": "{investigator}의 차례",
   "undoToHere": "여기까지 되돌리기",
   "undoToHereConfirm": "이 시점 이후의 모든 것을 되돌릴까요? 게임이 \"{entry}\" 직전으로 돌아갑니다.",
+  "undoToHereKeepConfirm": "\"{entry}\"(으)로 되돌릴까요?",
   "undoToHereConfirmPlain": "이 시점 이후의 모든 것을 되돌릴까요?",
   "usesAbility": "{investigator}: {source} 사용"
 }

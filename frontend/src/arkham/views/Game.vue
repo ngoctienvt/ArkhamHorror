@@ -103,7 +103,7 @@ import {
   choicesTooltipByPlayerKey,
 } from '@/arkham/composables/useGameChoices'
 import { buildGameIndexes, gameIndexesKey } from '@/arkham/composables/useGameIndexes'
-import { Card, asCardCode, cardDecoder, toCardContents } from '@/arkham/types/Card'
+import { Card, type CardContents, asCardCode, cardDecoder, toCardContents } from '@/arkham/types/Card'
 import { isDevBuild } from '@/arkham/displayRules'
 import {
   CARD_FLIGHT_ATTR,
@@ -114,7 +114,18 @@ import {
 } from '@/arkham/cardFlight'
 import { PENDING_DRAWS, pendingDraws, type PendingDraw } from '@/arkham/pendingDraws'
 import { runViewTransition } from '@/arkham/motion/viewTransitionGuard'
+import { beginPageTurn, flySpawnedCard, installWalkingStyle, walkingTransitionNames } from '@/arkham/motion/effectBoardMotion'
 import { clearPendingChoice, markPendingChoice, recentPress, trackChoicePresses } from '@/arkham/motion/pendingChoice'
+import { opensPhaseBatch, orderPhaseBatch } from '@/arkham/motion/phaseAnnouncementBatch'
+import { isDiscardChoice } from '@/arkham/discardChoice'
+import {
+  type DiscardTarget,
+  discardSettled,
+  discardTarget,
+  withCardDiscarded,
+  withInPlayDiscarded,
+} from '@/arkham/pendingDiscard'
+import { undoTargetFor } from '@/arkham/logUndoTarget'
 import { allowsTravel } from '@/arkham/motion/motionTokens'
 import { cardMoves, snapshotOf } from '@/arkham/gameDeltaFx'
 import { customCardDef, isCustomCardCode } from '@/arkham/customCards'
@@ -156,6 +167,17 @@ import { enemyActivityAfter } from '@/arkham/enemyActivityLog'
 import { flagEnemyActivity } from '@/arkham/composables/useEnemyActivity'
 import AdvanceReader from '@/arkham/components/AdvanceReader.vue'
 import { advancesBetween, enqueueAdvanceReadings, type AdvanceReading } from '@/arkham/advanceReading'
+import EffectTimelineBanner from '@/arkham/components/EffectTimelineBanner.vue'
+import PhaseAnnouncement from '@/arkham/components/PhaseAnnouncement.vue'
+import {
+  advanceEffectSteps,
+  effectScopeFor,
+  stagedBoard,
+  type EffectItem,
+  type EffectKind,
+  type EffectScope,
+  type EffectStep,
+} from '@/arkham/advanceEffects'
 import { achievementEntryScope } from '@/arkham/achievements'
 import DrawSpotlight from '@/arkham/components/DrawSpotlight.vue'
 import Draggable from '@/components/Draggable.vue'
@@ -206,6 +228,8 @@ type ServerResult =
   | { tag: 'GameDrewCards'; contents: string }
   | { tag: 'GameUpdate'; contents: string }
   | { tag: 'PhaseChanged'; contents: Phase }
+  /* Client-side: the board a skill test summary held back, replayed after the phases it led into. */
+  | { tag: 'HeldBoardUpdate'; contents: { game: Arkham.Game; locked: boolean } }
   | { tag: 'GameShowDiscard'; contents: string }
   | { tag: 'GameShowUnder'; contents: string }
   | { tag: 'GameUI'; contents: string }
@@ -609,6 +633,9 @@ function queueAdvances(previous: Arkham.Game | null | undefined, next: Arkham.Ga
   for (const a of fresh) seenAdvanceKeys.add(scopedKey(a.key))
   for (const a of fresh) if (a.toCode === null) backsRead.add(a.fromCode)
   advanceQueue.value = enqueueAdvanceReadings(advanceQueue.value, fresh)
+  // The reader is read over the board as it was: what the card does is
+  // replayed step by step once it has been accepted (see advanceEffects.ts).
+  holdBoardForEffects(previous, 'advance')
   if (!uiLock.value) {
     uiLock.value = true
     advanceOwnsLock = true
@@ -623,7 +650,7 @@ function releaseAdvanceLock() {
 
 function acceptAdvance() {
   advanceQueue.value = advanceQueue.value.slice(1)
-  if (advanceQueue.value.length === 0) releaseAdvanceLock()
+  if (advanceQueue.value.length === 0) void finishEffectHold()
 }
 
 function resetAdvances() {
@@ -631,6 +658,205 @@ function resetAdvances() {
   seenAdvanceKeys.clear()
   backsRead.clear()
   advanceOwnsLock = false
+  cancelEffectReplay()
+}
+
+/* ---- Replaying what the engine did, one step at a time --------------------
+ *
+ * The engine resolves an act / agenda back, a whole Mythos or Enemy phase, an
+ * enemy's attack, inside one answer, and the board would show only the end of
+ * it. While a hold is active the board stays as it was and every update parks
+ * in `effectHold.latest`; the replay then walks the intermediate boards from
+ * advanceEffects.ts with an announcement per step, and finally applies the
+ * newest update. The hold shares the advance reader's lock (advanceOwnsLock),
+ * so the question is restored only once the replay is over. */
+type EffectHold = { before: Arkham.Game; scope: EffectScope; latest: { game: Arkham.Game; locked: boolean } | null }
+let effectHold: EffectHold | null = null
+const effectStep = ref<{ step: EffectStep; index: number; total: number } | null>(null)
+let effectRunToken = 0
+let effectSkipAll = false
+let wakeEffect: (() => void) | null = null
+const EFFECT_STEP_MS = 1500
+const EFFECT_LEAVE_MS = 650
+
+function holdBoardForEffects(previous: Arkham.Game | null | undefined, scope: EffectScope) {
+  if (props.spectate || !previous || !settings.effectTimeline) return
+  if (effectHold) {
+    // An act advancing during a phase replay widens what the replay shows.
+    if (scope === 'advance') effectHold.scope = 'advance'
+    return
+  }
+  // The board on screen is what the replay starts from.
+  effectHold = { before: game.value ?? previous, scope, latest: null }
+}
+
+/* An update the game resolved by itself (a phase, an attack) with something
+ * worth announcing: hold it and replay it now. Only when nothing else holds
+ * the table; an overlay up means the player is already looking at something. */
+function replayAutomaticEffects(previous: Arkham.Game | null, next: Arkham.Game) {
+  if (props.spectate || !previous || effectHold || uiLock.value || !settings.effectTimeline) return
+  if (isRollback(previous, next)) return
+  const scope = effectScopeFor(previous, next)
+  if (advanceEffectSteps(previous, next, scope).length === 0) return
+  holdBoardForEffects(previous, scope)
+  uiLock.value = true
+  advanceOwnsLock = true
+  // applyGameUpdate parks `next` right after this returns.
+  setTimeout(() => void finishEffectHold(), 0)
+}
+
+function waitEffect(ms: number) {
+  // A hidden tab's timers are throttled to as little as one a minute: nobody is
+  // watching, so the replay runs straight through instead of holding the game.
+  if (effectSkipAll || document.hidden) return Promise.resolve()
+  return new Promise<void>((resolve) => {
+    const timer = setTimeout(done, scaledMs(ms, settings.motionSpeed))
+    function done() {
+      clearTimeout(timer)
+      wakeEffect = null
+      resolve()
+    }
+    wakeEffect = done
+  })
+}
+
+function skipEffectReplay() {
+  effectSkipAll = true
+  wakeEffect?.()
+}
+
+const FX_PREFIX: Record<string, string> = {
+  enemies: 'enemy', locations: 'location', investigators: 'investigator', assets: 'asset', treacheries: 'treachery',
+}
+
+/* Marks the board elements a step touches; the class wears off by itself. */
+type EffectMark = 'appearing' | 'flip-out' | 'flip-in' | 'arriving' | 'leaving' | 'attacking'
+
+function markEffectTargets(items: EffectItem[], mark: EffectMark, ms: number) {
+  if (!allowsTravel(settings.motionLevel)) return
+  const cls = `effect-fx--${mark}`
+  for (const item of items) {
+    const prefix = FX_PREFIX[item.dict]
+    if (!prefix) continue
+    document.querySelectorAll(`[data-fx-target="${prefix}-${item.id}"]`).forEach((el) => {
+      el.classList.add(cls)
+      setTimeout(() => el.classList.remove(cls), ms)
+    })
+  }
+}
+
+const LEAVING_EFFECTS = new Set<EffectKind>(['discardEnemy', 'removeCard', 'removeLocation'])
+const APPEARING_EFFECTS = new Set<EffectKind>(['placeLocation', 'spawnEnemy', 'putIntoPlay'])
+const FLIP_HALF_MS = 260
+
+const isReveal = (step: EffectStep) => step.kind === 'revealLocation' || step.logKey === 'locationRevealed'
+const isSpawn = (step: EffectStep) =>
+  APPEARING_EFFECTS.has(step.kind) || step.logKey === 'enemySpawned' || step.logKey === 'enemySpawnedAt'
+
+/* What the board does once a step's change is on it: each kind gets its own motion. */
+function animateSettledStep(step: EffectStep) {
+  if (step.logKey === 'enemyAttacks') markEffectTargets(step.items, 'attacking', 1000)
+  else if (isReveal(step)) markEffectTargets(step.items, 'flip-in', 600)
+  else if (isSpawn(step)) markEffectTargets(step.items, 'appearing', 800)
+  else markEffectTargets(step.toLocation ? [...step.items, step.toLocation] : step.items, 'arriving', 1200)
+}
+
+const EFFECT_WALK_MS = 1100
+const EFFECT_SPAWN_MS = 1300
+const MOVE_KEYS = new Set(['enemyMovesTo', 'isMovedTo'])
+const FIGURE_DICTS = new Set(['enemies', 'investigators'])
+
+const isMove = (step: EffectStep) =>
+  step.kind === 'moveEnemy' || step.kind === 'moveInvestigator' || MOVE_KEYS.has(step.logKey ?? '')
+const isEnemySpawn = (step: EffectStep) =>
+  step.kind === 'spawnEnemy' || step.logKey === 'enemySpawned' || step.logKey === 'enemySpawnedAt'
+
+/* Puts a staged board on the table. Moving figures walk there; a spawning
+ * enemy appears without the cross-fade, because its card flight shows it. */
+async function showStagedBoard(board: Arkham.Game, step: EffectStep) {
+  ++applySeq
+  const motion = allowsTravel(settings.motionLevel)
+  const walkers = motion && isMove(step) ? step.items.filter((item) => FIGURE_DICTS.has(item.dict)) : []
+  let removeWalk = () => {}
+  // A new scene turns in like a book page instead of rebuilding the old one.
+  const page = motion && step.kind === 'changeScene' ? beginPageTurn() : null
+  try {
+    await runViewTransition(async () => {
+      clearPendingChoice()
+      game.value = { ...board, question: {} }
+      await nextTick()
+      page?.refresh()
+      if (walkers.length) removeWalk = installWalkingStyle(walkingTransitionNames(walkers), scaledMs(EFFECT_WALK_MS, settings.motionSpeed))
+    }, { animate: motion && !isEnemySpawn(step) })
+  } finally {
+    removeWalk()
+    page?.end()
+  }
+}
+
+/* Each spawned enemy leaps out of its card onto the spot it now occupies. */
+async function flySpawnedEnemies(step: EffectStep) {
+  // A hidden tab never advances the flight's animation, so it would never land.
+  if (!allowsTravel(settings.motionLevel) || effectSkipAll || document.hidden) return
+  const enemies = step.items.filter((item) => item.dict === 'enemies')
+  await Promise.all(enemies.map((item, i) =>
+    new Promise<void>((resolve) => setTimeout(resolve, i * 180))
+      .then(() => flySpawnedCard(item, cardImage(item.cardCode), scaledMs(EFFECT_SPAWN_MS, settings.motionSpeed)))))
+}
+
+async function playEffectSteps(hold: EffectHold, target: Arkham.Game, token: number) {
+  const steps = advanceEffectSteps(hold.before, target, hold.scope)
+  if (steps.length === 0) return
+  for (let i = 0; i < steps.length && !effectSkipAll; i++) {
+    if (token !== effectRunToken) return
+    const step = steps[i]
+    effectStep.value = { step, index: i, total: steps.length }
+    const leaving = LEAVING_EFFECTS.has(step.kind)
+    // Leaving cards fade out, and revealed cards turn edge-on, before the board changes.
+    if (leaving) markEffectTargets(step.items, 'leaving', EFFECT_LEAVE_MS + 100)
+    else if (isReveal(step)) markEffectTargets(step.items, 'flip-out', FLIP_HALF_MS + 200)
+    if (leaving || isReveal(step)) {
+      await waitEffect(leaving ? EFFECT_LEAVE_MS : FLIP_HALF_MS)
+      if (token !== effectRunToken) return
+    }
+    await showStagedBoard(stagedBoard(hold.before, target, steps, i + 1), step)
+    if (token !== effectRunToken) return
+    if (isEnemySpawn(step)) await flySpawnedEnemies(step)
+    if (token !== effectRunToken) return
+    if (!leaving) animateSettledStep(step)
+    await waitEffect(EFFECT_STEP_MS)
+  }
+}
+
+/* The reader is done (or there was none): replay, then let the board catch up. */
+async function finishEffectHold() {
+  const hold = effectHold
+  if (!hold) {
+    releaseAdvanceLock()
+    return
+  }
+  const token = ++effectRunToken
+  effectSkipAll = false
+  const target = hold.latest?.game
+  if (target) await playEffectSteps(hold, target, token)
+  if (token !== effectRunToken) return
+  effectStep.value = null
+  if (advanceQueue.value.length > 0) {
+    // Another act / agenda advanced meanwhile: read it over the board as it is
+    // now, and replay the rest after it.
+    effectHold = { before: game.value ?? hold.before, scope: 'advance', latest: hold.latest }
+    return
+  }
+  effectHold = null
+  if (hold.latest) applyGameUpdate(hold.latest.game, true)
+  releaseAdvanceLock()
+}
+
+function cancelEffectReplay() {
+  effectRunToken++
+  effectHold = null
+  effectStep.value = null
+  wakeEffect?.()
 }
 const playabilityInfo = ref<PlayabilityInfo | null>(null)
 /* Append-only. Replaced wholesale only when a full game payload arrives; the
@@ -691,41 +917,118 @@ const oldQuestion = ref<Record<string, Question> | null>(null)
 const skipAllPending = ref<Set<string>>(new Set())
 const { t, te } = useI18n()
 const phaseNotification = ref<Phase | null>(null)
-const phaseNotificationQueue = ref<Phase[]>([])
-const phaseNotificationPlaying = ref(false)
-const phaseNotificationColor = computed(() => ({
-  MythosPhase: '#7b4b91',
-  InvestigationPhase: '#a87532',
-  EnemyPhase: '#9f2929',
-  UpkeepPhase: '#315b70',
-  CampaignPhase: '#5b5b5b',
-}[phaseNotification.value ?? 'CampaignPhase']))
-
-function showPhaseNotification(phase: Phase) {
-  if (!userStore.currentUser?.phaseTransitionNotifications) return
-
-  // The server sends one PhaseChanged per phase actually entered, so announce
-  // exactly what arrives. Extrapolating forward from it invented phases the
-  // game had not reached, and ran backwards undos through the cycle.
-  if (phaseNotification.value === phase || phaseNotificationQueue.value.includes(phase)) return
-  phaseNotificationQueue.value.push(phase)
-  if (!uiLock.value) void drainPhaseNotificationQueue()
-}
 
 const wait = (ms: number) => new Promise<void>(resolve => setTimeout(resolve, ms))
 
-async function drainPhaseNotificationQueue() {
-  if (phaseNotificationPlaying.value) return
-  phaseNotificationPlaying.value = true
-  try {
-    while (phaseNotificationQueue.value.length > 0) {
-      phaseNotification.value = phaseNotificationQueue.value.shift() ?? null
-      await wait(1300)
-      phaseNotification.value = null
-      await nextTick()
-    }
-  } finally {
-    phaseNotificationPlaying.value = false
+const PHASE_NOTIFICATION_MS = 1300
+
+const phaseNotificationsOn = () => !!userStore.currentUser?.phaseTransitionNotifications
+
+/* A phase announcement holds the UI lock like any other overlay, so the results
+ * queued behind it -- the upkeep draw spotlight, the board update with its new
+ * hand and resources, the FX layer's effects -- play only once it has been read.
+ * While it holds the lock the board is NOT refreshed behind it (unlike a
+ * revelation, #4817): the banner is a thin strip, and a hand that grows under it
+ * reads as the draw happening before the phase. */
+let phaseBannerHoldsLock = false
+let phaseBannerToken = 0
+
+/* Phases entered by the answer that ended a skill test wait behind that test's
+ * summary, like the board they produced: announced over the summary they were
+ * hidden, and read before the result they would announce the change too early. */
+const phasesHeldForSummary: { tag: 'PhaseChanged'; contents: Phase }[] = []
+
+function showPhaseNotification(result: { tag: 'PhaseChanged'; contents: Phase }) {
+  if (!phaseNotificationsOn()) return
+  if (skillTestSummaryState.summary.value) {
+    phasesHeldForSummary.push(result)
+    return
+  }
+  if (uiLock.value) {
+    qPush(result)
+    return
+  }
+  // The server sends one PhaseChanged per phase actually entered, so announce
+  // exactly what arrives. Extrapolating forward from it invented phases the
+  // game had not reached, and ran backwards undos through the cycle.
+  const token = ++phaseBannerToken
+  phaseBannerHoldsLock = true
+  uiLock.value = true
+  phaseNotification.value = result.contents
+  setTimeout(() => {
+    if (token !== phaseBannerToken) return
+    phaseNotification.value = null
+    phaseBannerHoldsLock = false
+    uiLock.value = false
+  }, PHASE_NOTIFICATION_MS)
+}
+
+/* Drops a banner that is showing without letting go of a lock someone else
+ * has since taken (an undo resets the lock itself). */
+function cancelPhaseNotification() {
+  phaseBannerToken++
+  phasesHeldForSummary.length = 0
+  phaseNotification.value = null
+  phaseBannerHoldsLock = false
+}
+
+/* ---- Batching the results of one answer ----------------------------------
+ *
+ * See phaseAnnouncementBatch.ts: the server sends PhaseChanged after the board,
+ * and the upkeep draw before both. A batch opens on the first draw, revelation
+ * or board update, takes everything that arrives with it, and is replayed in
+ * rule order a moment after its board update (time for the trailing
+ * PhaseChanged to arrive). Only while phase announcements are on: with them off
+ * nothing is reordered and nothing waits. */
+const PHASE_BATCH_GRACE_MS = 80
+const PHASE_BATCH_MAX_MS = 4000
+let phaseBatch: any[] | null = null
+let phaseBatchTimer: ReturnType<typeof setTimeout> | null = null
+/* Board updates a banner kept off the board; applied behind the next overlay. */
+const updatesHeldByBanner = new WeakSet<object>()
+
+function armPhaseBatch(ms: number) {
+  if (phaseBatchTimer) clearTimeout(phaseBatchTimer)
+  phaseBatchTimer = setTimeout(flushPhaseBatch, ms)
+}
+
+function holdForPhaseBatch(result: any): boolean {
+  if (phaseBatch) {
+    phaseBatch.push(result)
+    if (result.tag === 'GameUpdate' || result.tag === 'PhaseChanged') armPhaseBatch(PHASE_BATCH_GRACE_MS)
+    return true
+  }
+  if (!phaseNotificationsOn() || !opensPhaseBatch(result)) return false
+  phaseBatch = [result]
+  armPhaseBatch(result.tag === 'GameUpdate' ? PHASE_BATCH_GRACE_MS : PHASE_BATCH_MAX_MS)
+  return true
+}
+
+function flushPhaseBatch() {
+  if (phaseBatchTimer) clearTimeout(phaseBatchTimer)
+  phaseBatchTimer = null
+  const batch = phaseBatch ?? []
+  phaseBatch = null
+  for (const r of orderPhaseBatch(batch)) handleResult(r)
+}
+
+function dropPhaseBatch() {
+  if (phaseBatchTimer) clearTimeout(phaseBatchTimer)
+  phaseBatchTimer = null
+  phaseBatch = null
+}
+
+/* An overlay that is not a banner just took the lock: put the newest board a
+ * banner held back onto the table behind it, as every other overlay gets
+ * (#4817) -- the draw spotlight's card needs its hand slot laid out to land. */
+function applyBoardHeldByBanner() {
+  if (phaseBannerHoldsLock) return
+  for (let i = resultQueue.value.length - 1; i >= qHead; i--) {
+    const r = resultQueue.value[i]
+    if (r?.tag !== 'GameUpdate' || !updatesHeldByBanner.has(r)) continue
+    updatesHeldByBanner.delete(r)
+    scheduleApplyUpdate(r.contents, true)
+    return
   }
 }
 
@@ -747,6 +1050,67 @@ const previewedCardIds = ref<ReadonlySet<string>>(new Set())
  * with its question still on it. */
 const heldPendingDraws = ref<PendingDraw[]>([])
 const flyingCardIds = ref<ReadonlySet<string>>(new Set())
+
+/* A card the player just chose to discard, hidden until the board catches up
+ * (see pendingDiscard.ts). Timed out too: a rejected answer brings no update. */
+const DISCARD_SAFETY_MS = 15000
+const discardingCardIds = ref<ReadonlySet<string>>(new Set())
+let discardAnsweredAt = 0
+let discardSafety: ReturnType<typeof setTimeout> | null = null
+
+function clearDiscarding() {
+  if (discardSafety) clearTimeout(discardSafety)
+  discardSafety = null
+  if (discardingCardIds.value.size > 0) discardingCardIds.value = new Set()
+}
+
+/* The board with the chosen card already in its owner's discard, and the card id
+ * that flies there. An asset or event leaves only its card behind in the pile. */
+function optimisticDiscard(current: Arkham.Game, target: DiscardTarget): { game: Arkham.Game; cardId: string } | null {
+  if (target.zone === 'hand') {
+    const moved = withCardDiscarded(current, target.id, (c: Card) => toCardContents(c).id, toCardContents)
+    return moved ? { game: moved, cardId: target.id } : null
+  }
+  return withInPlayDiscarded(current, target.zone, target.id, (e: { cardId: string; cardCode: string }): CardContents => ({
+    tag: 'CardContents' as const,
+    id: e.cardId,
+    cardCode: e.cardCode,
+    tokens: {} as CardContents['tokens'],
+  }))
+}
+
+/* Moves the chosen card to the discard on the client right away, flying it
+ * there, then keeps any stale board from putting it back in the hand until the
+ * server's own update lands. No update in time means the answer was refused:
+ * refetch, which puts the card back where the server says it is. */
+async function moveDiscardedCard(choice: Message.Message | undefined, questionVersion: number) {
+  const target = choice && isDiscardChoice(choice) ? discardTarget(choice as Parameters<typeof discardTarget>[0]) : null
+  if (!target || !game.value) return
+  const result = optimisticDiscard(game.value, target)
+  if (!result) return
+  const { game: moved, cardId: id } = result
+  clearDiscarding()
+  discardAnsweredAt = questionVersion
+  discardSafety = setTimeout(() => {
+    clearDiscarding()
+    if (game.value && !discardSettled(discardAnsweredAt, game.value.scenarioSteps)) void resyncGame()
+  }, DISCARD_SAFETY_MS)
+  const apply = async () => {
+    game.value = moved
+    discardingCardIds.value = new Set([id])
+    await nextTick()
+  }
+  // Another flight owns the transition names: just move it.
+  const busy = flyingCardIds.value.size > 0 || previewedCardIds.value.size > 0
+  if (!allowsTravel(settings.motionLevel) || busy) {
+    await apply()
+    return
+  }
+  flyingCardIds.value = new Set([id])
+  await nextTick()
+  await runViewTransition(apply)
+  flyingCardIds.value = new Set()
+}
 
 /* Returns whether the overlay actually opened, so a caller holding the lock on
  * its behalf knows to let go again. */
@@ -1446,6 +1810,7 @@ const gameDrewCardsDecoder = JsonDecoder.object<GameDrewCards>(
 // Socket Handling
 const onError = () => {
   processing.value = false
+  clearDiscarding()
   storyAnswerPending.value = false
   if (game.value && oldQuestion.value) {
     setGameQuestion(oldQuestion.value)
@@ -1478,7 +1843,7 @@ const onConnected = () => {
 
 const onMessage = (_ws: WebSocket, event: MessageEvent) => {
   const result = JSON.parse(event.data)
-  handleResult(result)
+  if (!holdForPhaseBatch(result)) handleResult(result)
   oldQuestion.value = null
 }
 
@@ -1593,6 +1958,11 @@ function applyGameUpdate(updatedGame: Arkham.Game, locked: boolean) {
     heldForSummary = { game: updatedGame, locked }
     return
   }
+  // An effect replay owns the board: the newest update waits for its end.
+  if (effectHold) {
+    effectHold.latest = { game: updatedGame, locked }
+    return
+  }
   const previousGame = game.value
   trackSkillTestSummary(previousGame, updatedGame)
   const holding = previousGame !== null && !updatedGame.skillTest && summaryForHold.summary.value !== null
@@ -1612,6 +1982,7 @@ function applyGameUpdate(updatedGame: Arkham.Game, locked: boolean) {
   const apply = async () => {
     if (seq !== applySeq) return
     clearPendingChoice()
+    if (rolledBack || discardSettled(discardAnsweredAt, nextGame.scenarioSteps)) clearDiscarding()
     game.value = nextGame
     heldPendingDraws.value = draws
     storyAnswerPending.value = false
@@ -1659,6 +2030,9 @@ function scheduleApplyUpdate(payload: string, queued: boolean) {
     .decodePromise(payload)
     .then((updatedGame) => {
       queueAdvances(game.value, updatedGame)
+      // Before the lock is sampled: a replay takes it, so this update is queued
+      // and its question comes back once the replay is over.
+      replayAutomaticEffects(game.value, updatedGame)
       const locked = uiLock.value
       if (locked && !queued) qPush({ tag: 'GameUpdate', contents: payload })
       // Behind a revelation: refresh the board but keep the question hidden so the
@@ -2169,41 +2543,54 @@ const handleResult = (result: ServerResult) => {
       return
     }
     case 'PhaseChanged':
-      showPhaseNotification(result.contents as Phase)
+      showPhaseNotification(result)
+      return
+    case 'HeldBoardUpdate':
+      applyGameUpdate(result.contents.game, result.contents.locked)
       return
     case 'GameUpdate': {
       // Flush the latest state onto the board even while a revelation/modal holds
       // the UI lock, so the table behind it reflects the current situation instead
       // of freezing on the pre-revelation state (issue #4817). Keep it queued so
       // the pending question is only restored once every revelation is dismissed.
+      // A phase banner is the exception: see `phaseBannerHoldsLock`.
       gameUpdatesSeen += 1
       const queued = uiLock.value
       if (queued) qPush(result)
+      if (queued && phaseBannerHoldsLock) {
+        updatesHeldByBanner.add(result)
+        return
+      }
       scheduleApplyUpdate(result.contents, queued)
       return
     }
   }
 }
 
-watch(uiLock, async () => {
+watch(uiLock, () => drainQueuedResults())
+
+/* Replays queued results in order; phase banners are among them and take the
+ * lock in turn, so each one is read before what came after it. */
+function drainQueuedResults() {
   if (uiLock.value) return
-  // Drain queued revelation/effect results first. Phase notifications start only
-  // after the last blocking result has finished, so they cannot race the overlay.
   for (;;) {
     const r = qPop()
     if (!r) break
     handleResult(r)
-    if (uiLock.value) break
+    if (uiLock.value) {
+      applyBoardHeldByBanner()
+      break
+    }
   }
-  if (!uiLock.value) void drainPhaseNotificationQueue()
-})
+}
 
 const confirmingUndoScenario = ref(false)
 
 /* "Undo back to here", picked off a log entry. Holds the game step the entry
    was written under plus a flat rendering of it, so the confirmation can name
    what is about to be thrown away. */
-const confirmingUndoStep = ref<{ step: number; label: string } | null>(null)
+/* `keeps`: the target is the decision after the line, not the one before it. */
+const confirmingUndoStep = ref<{ step: number; label: string; keeps: boolean } | null>(null)
 
 /* A menu entry names its shortcut so it follows the active keybinding profile;
  * `shortcut` remains the raw-key escape hatch for keys no profile remaps. */
@@ -2679,6 +3066,8 @@ async function runUndo(call: (gameId: string) => Promise<void>) {
   if (game.value) setGameQuestion({})
   resultQueue.value = []
   qHead = 0
+  dropPhaseBatch()
+  cancelPhaseNotification()
   /* Whatever summary or held update is pending belongs to the history being
    * undone, so it is dropped -- but kept at hand, because a refused undo leaves
    * that history standing and the held update is then still the newest state. */
@@ -2763,12 +3152,20 @@ watch(gameLog, (entries) => {
   enemyActivitySeen = Math.max(enemyActivitySeen, lastSeq(entries))
   flagEnemyActivity(fresh)
 })
-// The summary confirmed (or cleared): the update held behind it reaches the board now.
+// The summary confirmed (or cleared): the update held behind it reaches the board now,
+// after the phases that answer entered have been announced over the board as it was.
 watch(() => skillTestSummaryState.summary.value, (summary) => {
-  if (summary || !heldForSummary) return
-  const { game: held, locked } = heldForSummary
+  if (summary) return
+  const phases = phasesHeldForSummary.splice(0)
+  const held = heldForSummary
   heldForSummary = null
-  applyGameUpdate(held, locked)
+  if (phases.length === 0) {
+    if (held) applyGameUpdate(held.game, held.locked)
+    return
+  }
+  const board = held ? [{ tag: 'HeldBoardUpdate' as const, contents: held }] : []
+  resultQueue.value.splice(qHead, 0, ...phases, ...board)
+  drainQueuedResults()
 })
 const autopilot = useAutopilot({
   enabled: computed(() => settings.autopilot),
@@ -2829,8 +3226,13 @@ async function say(text: string) {
   }
 }
 
-function requestUndoToStep(step: number, label: string) {
-  confirmingUndoStep.value = { step, label }
+/* A line in the middle of an answer's chain lands on the decision after it, so
+   undoing a skill test does not re-ask the damage of the effect before it: see
+   logUndoTarget.ts. */
+function requestUndoToStep(step: number, label: string, seq: number | null = null) {
+  const entry = seq === null ? undefined : gameLog.value.find((e) => e.seq === seq && e.step === step)
+  const target = entry ? undoTargetFor(gameLog.value, entry) ?? step : step
+  confirmingUndoStep.value = { step: target, label, keeps: target !== step }
 }
 
 async function undoToStepConfirmed() {
@@ -3058,6 +3460,7 @@ async function submitChoice(idx: number) {
   if (idx !== -1 && game.value && !props.spectate) {
     oldQuestion.value = game.value.question
     const questionVersion = game.value.scenarioSteps
+    const answered = choices.value[idx]
     if (!shouldPreserveFocusedChaosWindow() && !shouldPreserveFocusedCardChoice()) {
       // A story screen is the whole page. Blanking its question empties the view
       // for the round-trip and the next passage pops in from nothing, so hold the
@@ -3068,6 +3471,7 @@ async function submitChoice(idx: number) {
         setGameQuestion({})
       }
     }
+    void moveDiscardedCard(answered, questionVersion)
     sendAnswer(
       JSON.stringify({
         tag: 'Answer',
@@ -3230,7 +3634,7 @@ provide('processing', processing)
 provide('chooseOrdered', chooseOrdered)
 provide('storyAnswerPending', storyAnswerPending)
 provide('uiLock', uiLock)
-provide(CARD_FLIGHT_STATE, { previewed: previewedCardIds, flying: flyingCardIds })
+provide(CARD_FLIGHT_STATE, { previewed: previewedCardIds, flying: flyingCardIds, discarding: discardingCardIds })
 provide(PENDING_DRAWS, heldPendingDraws)
 provide('skipAllTriggers', skipAllTriggers)
 provide('skipAllAvailable', skipAllAvailable)
@@ -3386,6 +3790,8 @@ onMounted(() => {
 
 onBeforeRouteLeave(() => close())
 onUnmounted(() => {
+  dropPhaseBatch()
+  cancelPhaseNotification()
   finishChaosDraw()
   dismissSkillTestSummary()
   stopTrackingPresses?.()
@@ -3436,17 +3842,7 @@ onUnmounted(() => {
         <button @click="error = null">{{ $t('close') }}</button>
       </div>
     </dialog>
-    <Transition name="phase-notification">
-      <div
-        v-if="phaseNotification"
-        class="phase-notification"
-        :style="{ '--phase-color': phaseNotificationColor }"
-        role="status"
-        aria-live="polite"
-      >
-        <span :key="phaseNotification" class="phase-notification__name">{{ $t(`phaseTransition.${phaseNotification}`) }}</span>
-      </div>
-    </Transition>
+    <PhaseAnnouncement :phase="phaseNotification" />
     <div v-if="showProcessing" class="processing">
       <LottieAnimation
         :animation-data="processingJSON"
@@ -3974,8 +4370,15 @@ onUnmounted(() => {
             </div>
           </div>
         </div>
+        <EffectTimelineBanner
+          v-if="effectStep"
+          :step="effectStep.step"
+          :index="effectStep.index"
+          :total="effectStep.total"
+          @skip="skipEffectReplay"
+        />
         <AdvanceReader
-          v-if="advanceQueue.length > 0"
+          v-if="advanceQueue.length > 0 && !effectStep"
           :reading="advanceQueue[0]"
           :remaining="advanceQueue.length - 1"
           @accept="acceptAdvance"
@@ -4196,7 +4599,7 @@ onUnmounted(() => {
       v-if="confirmingUndoStep"
       :prompt="
         confirmingUndoStep.label
-          ? $t('log.undoToHereConfirm', { entry: confirmingUndoStep.label })
+          ? $t(confirmingUndoStep.keeps ? 'log.undoToHereKeepConfirm' : 'log.undoToHereConfirm', { entry: confirmingUndoStep.label })
           : $t('log.undoToHereConfirmPlain')
       "
       :yes="undoToStepConfirmed"
@@ -5940,51 +6343,6 @@ dialog {
   }
 }
 
-.phase-notification {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  height: clamp(4.5rem, 9vw, 7rem);
-  display: grid;
-  place-items: center;
-  pointer-events: none;
-  overflow: hidden;
-  background: color-mix(in srgb, var(--phase-color) 54%, rgba(8, 11, 13, 0.88));
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.42);
-  animation: phase-notification-bloom 1.2s ease-out both;
-}
-
-.phase-notification__name {
-  color: rgba(242, 232, 207, 0.94);
-  font-family: Teutonic, serif;
-  font-size: clamp(1.8rem, 4vw, 3.8rem);
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  line-height: 1;
-  text-align: center;
-  text-shadow: 0 0 35px color-mix(in srgb, var(--phase-color) 80%, transparent), 0 5px 26px rgba(0, 0, 0, 0.8);
-  animation: phase-notification-title 1.2s ease-out both;
-}
-
-@keyframes phase-notification-bloom {
-  0% { opacity: 0; }
-  14%, 78% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@keyframes phase-notification-title {
-  0% { opacity: 0; transform: translateX(-110%); filter: blur(8px); }
-  22% { opacity: 1; transform: translateX(0); filter: blur(0); }
-  72% { opacity: 1; transform: translateX(0); filter: blur(0); }
-  100% { opacity: 0; transform: translateX(110%); filter: blur(8px); }
-}
-
-.phase-notification-enter-active,
-.phase-notification-leave-active { transition: opacity 0.35s ease; }
-.phase-notification-enter-from,
-.phase-notification-leave-to { opacity: 0; }
 
 .debug-playability-content {
   display: flex;

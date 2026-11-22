@@ -55,7 +55,11 @@
       "vi": "Tiếng Việt",
       "volume": "Âm lượng",
       "play": "Phát thuyết minh",
-      "stop": "Dừng thuyết minh"
+      "stop": "Dừng thuyết minh",
+      "speed": "Tốc độ đọc",
+      "slower": "Đọc chậm lại",
+      "faster": "Đọc nhanh hơn",
+      "resetSpeed": "Về tốc độ bình thường"
     },
     "music": {
       "title": "Nhạc nền kinh dị",

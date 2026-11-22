@@ -33,7 +33,6 @@ export function hiddenChamberPosition([x, y]: Point): Point {
 export function hasLocationArt(art: string, { label, cardCode }: SceneLocation): boolean {
   const code = cardCode.replace(/^c/, '')
   switch (art) {
-    case 'night-of-the-zealot/devourer-below': return /^woods[1-4]$/.test(label)
     case 'the-dunwich-legacy/blood-on-the-altar': return code === '02214'
     case 'the-dunwich-legacy/where-doom-awaits': return /^(diverging|altered)Path\d+$/.test(label)
     case 'the-dunwich-legacy/lost-in-time-and-space': return true

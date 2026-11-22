@@ -139,3 +139,34 @@ export function defaultNarrationLanguage(browserLanguages: readonly string[]): N
 export function readNarrationLanguage(value: string | null, fallback: NarrationLanguage): NarrationLanguage {
   return NARRATION_LANGUAGES.find((l) => l === value) ?? fallback
 }
+
+/* Reading speed of the narration audio (HTMLMediaElement.playbackRate; the
+ * browser keeps the voice's pitch). Stepped by 0.1 between 0.5x and 2x. */
+export const NARRATION_RATE_MIN = 0.5
+export const NARRATION_RATE_MAX = 2
+export const NARRATION_RATE_STEP = 0.1
+
+const clampRate = (n: number): number =>
+  Math.round(Math.min(NARRATION_RATE_MAX, Math.max(NARRATION_RATE_MIN, n)) * 10) / 10
+
+export function readNarrationRate(value: string | null): number {
+  const n = value === null ? NaN : Number(value)
+  return Number.isFinite(n) ? clampRate(n) : 1
+}
+
+/* One step faster (+1) or slower (-1), kept on the 0.1 grid. */
+export function stepNarrationRate(rate: number, direction: 1 | -1): number {
+  return clampRate(rate + direction * NARRATION_RATE_STEP)
+}
+
+/* "1x", "1.2x", "0.5x" for the reading-panel speed label. */
+export function formatNarrationRate(rate: number): string {
+  return `${Number(rate.toFixed(1))}×`
+}
+
+/* Sets the speed on a narration player. defaultPlaybackRate too, since a
+ * (re)load resets playbackRate to it. */
+export function applyNarrationRate(audio: HTMLMediaElement, rate: number): void {
+  audio.defaultPlaybackRate = rate
+  audio.playbackRate = rate
+}

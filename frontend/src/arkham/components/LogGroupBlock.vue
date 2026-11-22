@@ -28,7 +28,7 @@ const props = defineProps<{
 
 const emit = defineEmits<{
   toggle: [path: string, open: boolean]
-  undo: [step: number, label: string]
+  undo: [step: number, label: string, seq: number | null]
 }>()
 
 /* The header sits at the top of the block for its whole life, and the summary
@@ -89,7 +89,7 @@ function bandLabel(): string {
 }
 
 function requestUndo() {
-  if (undoStep.value !== null) emit('undo', undoStep.value, bandLabel())
+  if (undoStep.value !== null) emit('undo', undoStep.value, bandLabel(), band.value?.seq ?? null)
 }
 </script>
 
@@ -124,7 +124,7 @@ function requestUndo() {
           :is-pinned="isPinned"
           :can-undo="false"
           @toggle="(p, o) => emit('toggle', p, o)"
-          @undo="(step, label) => emit('undo', step, label)"
+          @undo="(step, label, seq) => emit('undo', step, label, seq)"
         />
         <GameLogEntry
           v-else

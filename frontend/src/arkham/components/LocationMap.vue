@@ -14,6 +14,10 @@ import {
 import { essexTrainPosition, hiddenChamberPosition } from '@/arkham/scene-location-art'
 import { dunwichCarcosaScene } from '@/arkham/scene-dunwich-carcosa'
 import { stageOverview } from '@/arkham/scene-stage-overview'
+import { gatheringBarrier } from '@/arkham/scene-gathering-barrier'
+import { dunwichProps } from '@/arkham/scene-dunwich-props'
+import { excelsiorProps } from '@/arkham/scene-excelsior-props'
+import { scarletProps } from '@/arkham/scene-scarlet-props'
 import { sceneSharedReference } from '@/arkham/scene-shared-reference'
 import { asCardCode } from '@/arkham/types/Card'
 import { hiddenSceneArt, revealedScenePositions } from '@/arkham/revealed-scene-positions'
@@ -25,7 +29,7 @@ import {
   type LocationGraph, type Point,
 } from '@/arkham/locationGraph'
 import { gridSlotIndex } from '@/arkham/locationChoices'
-import LocationMapCanvas, { type ConcealedSpot, type MapMove, type RoomPlateSpot } from '@/arkham/components/LocationMapCanvas.vue'
+import LocationMapCanvas, { type ConcealedSpot, type MapMove } from '@/arkham/components/LocationMapCanvas.vue'
 import { concealedAt, gridConcealedGroups, positionToGridArea } from '@/arkham/concealedCards'
 import { scenePanelOnlyCount } from '@/arkham/sceneTargetFallback'
 import { sceneHiddenCardChoices } from '@/arkham/sceneHiddenCardChoices'
@@ -69,9 +73,9 @@ const nameOf = useCardNames()
 const settings = useSettings()
 // Finger or mouse, and the size class of the screen; CSS keys off the two data attributes on the root.
 const { input: inputMode, layout: layoutClass, isTouch } = useTouchMode()
-// Pinch-zoom and pan of the map (not the house cutaway); the Arrange button lets a finger drag plates, figures and arrows.
+// Pinch-zoom and pan of the map; the Arrange button lets a finger drag plates, figures and arrows.
 const viewport = useMapViewport()
-const canZoom = computed(() => MAP_ZOOM_ENABLED && isTouch.value && !cutaway.value)
+const canZoom = computed(() => MAP_ZOOM_ENABLED && isTouch.value)
 /* The room the map itself has, measured on its own box: the game log beside it and a narrow mouse-driven
  * window both take width the window size says nothing about. `data-width` / `data-height` on the root let
  * the CSS of every part of the scene map read the same answer. */
@@ -185,6 +189,22 @@ const isStudyOnly = computed(() =>
   locations.value.length === 1 && cardArt(locations.value[0].cardCode) === '01111'
 )
 
+/* The Gathering's house, once more than the study is in play: an illustrated board like every other scene,
+ * painted with the cutaway picture of the house. Each room's plate sits in that room (percent of the picture),
+ * high enough that the people hanging under it stand on the room's floor. Plates drag and links draw as usual. */
+const HOUSE_ROOMS: Record<string, Point> = {
+  '01111': [52, 64],
+  '01112': [56, 42],
+  '01113': [47, 10],
+  '01114': [42, 76],
+  '01115': [84, 44],
+}
+const housePositions = computed<Record<string, Point> | null>(() => {
+  const all = locations.value
+  if (all.length < 2 || !all.every((l) => cardArt(l.cardCode) in HOUSE_ROOMS)) return null
+  return Object.fromEntries(all.map((l) => [l.id, HOUSE_ROOMS[cardArt(l.cardCode)]]))
+})
+
 const isSpreadingFlames = computed(() => props.scenario.id.replace(/^c/, '') === '12105')
 const spreadingFlamesState = computed(() => isSpreadingFlames.value
   ? spreadingFlamesFire(Object.values(props.game.agendas), placedLocations.value, props.game.treacheries) : 'none')
@@ -205,6 +225,12 @@ const illustratedBoard = computed(() => {
   if (isStudyOnly.value) {
     return { image: 'img/scenes/night-of-the-zealot/study.webp', fixedPassages: false, village: true }
   }
+  if (housePositions.value) {
+    return gatheringBarrier(
+      { image: 'img/scenes/night-of-the-zealot/house-cutaway.webp', fixedPassages: false, village: true },
+      props.scenario.id, locations.value,
+    )
+  }
   const shared = sceneSharedReference(props.scenario.id)
   const board = hemlockOverview(
     shared ?? props.scenario.id, shared ?? props.scenario.reference, props.scenario.locationLayout,
@@ -221,12 +247,14 @@ const illustratedBoard = computed(() => {
     locations: locations.value,
     reminders: props.scenario.cardsNextToActDeck.map(asCardCode),
   })
-  return stageOverview(campaignBoard, {
+  const stagedBoard = stageOverview(campaignBoard, {
     id: props.scenario.id, layout: props.scenario.locationLayout,
     locations: locations.value, acts: Object.values(props.game.acts),
     agendas: Object.values(props.game.agendas), enemies: Object.values(props.game.enemies),
     meta: props.scenario.meta, counts: props.scenario.counts, stories: Object.values(props.game.stories),
   })
+  const withZealotAndDunwich = dunwichProps(gatheringBarrier(stagedBoard, props.scenario.id, locations.value), props.scenario.id, locations.value)
+  return scarletProps(excelsiorProps(withZealotAndDunwich, props.scenario.id, locations.value), props.scenario.id, locations.value)
 })
 
 if (import.meta.env.DEV) {
@@ -271,6 +299,7 @@ const positions = computed<Record<string, Point>>(() => {
   if (isStudyOnly.value) {
     return { [locations.value[0].id]: [50, 75] }
   }
+  if (housePositions.value) return housePositions.value
   const fallback = mapPositions(graph.value, layout.value)
   if (roadGrid.value) {
     const road = roadPositions(roadGrid.value)
@@ -367,33 +396,8 @@ const canvasSize = computed(() => {
   return { width: Math.max(cols, 1) * 150, height: Math.max(lines, 2) * 120 }
 })
 
-// The Gathering's house, once more than the study is in play: draw the rooms on the cutaway picture of the house.
-// Each room has a spot for its people (bottom centre, on the floor) and a corner for its name plate
-// (top left, percent of the picture, with a width), so the plate never sits under the figures.
-const HOUSE_ROOMS: Record<string, { figures: Point; plate: RoomPlateSpot }> = {
-  '01111': { figures: [52, 81], plate: { x: 64, y: 66, width: 16 } },
-  '01112': { figures: [62, 61], plate: { x: 36, y: 31, width: 17 } },
-  '01113': { figures: [47, 25], plate: { x: 62, y: 4, width: 16 } },
-  '01114': { figures: [55, 96], plate: { x: 33, y: 67, width: 15 } },
-  '01115': { figures: [84, 63], plate: { x: 74.5, y: 33, width: 18 } },
-}
-const houseRooms = computed(() => {
-  const all = locations.value
-  if (all.length < 2 || !all.every((l) => cardArt(l.cardCode) in HOUSE_ROOMS)) return null
-  return all.map((l) => [l.id, HOUSE_ROOMS[cardArt(l.cardCode)]] as const)
-})
-const cutaway = computed<Record<string, Point> | null>(() =>
-  houseRooms.value ? Object.fromEntries(houseRooms.value.map(([id, room]) => [id, room.figures])) : null)
-const roomPlates = computed<Record<string, RoomPlateSpot> | null>(() =>
-  houseRooms.value ? Object.fromEntries(houseRooms.value.map(([id, room]) => [id, room.plate])) : null)
-const overview = useStorage('arkham-scene-overview', true)
-// Card text and flavour on the room plates: all shown or all folded away, so a small room keeps space for its figures.
-const plateText = useStorage('arkham-room-plate-text', false)
 // Moving weather on boards that have it (Devil Reef's storm); a player can still it.
 const weather = useStorage('arkham-map-weather', true)
-const showOverview = computed(() =>
-  props.view === 'map' || !!illustratedBoard.value || (cutaway.value !== null && overview.value)
-)
 
 const me = computed(() => ownInvestigator(props.game, props.playerId))
 const myLocation = computed(() => me.value?.location ?? null)
@@ -532,8 +536,6 @@ const views: LocationView[] = ['map', 'cards']
             @click="arrangeMode = !arrangeMode">{{ t('locationMap.arrange') }}</button>
           <button v-if="hasTeam" class="view view--tool" :class="{ active: !teamHidden }" :aria-pressed="!teamHidden"
             @click="teamHidden = !teamHidden">{{ t('locationMap.team') }}</button>
-          <button v-if="showOverview && roomPlates" class="view view--tool" :class="{ active: plateText }" :aria-pressed="plateText"
-            @click="plateText = !plateText">{{ plateText ? t('locationMap.marker.collapseAll') : t('locationMap.marker.expandAll') }}</button>
           <button v-if="illustratedBoard?.weather" class="view view--tool" :class="{ active: weather }" :aria-pressed="weather"
             @click="weather = !weather">{{ t('locationMap.weather') }}</button>
           <button v-if="hasMapOffsets(game.id)" class="view view--tool" @click="resetMapOffsets(game.id)">{{ t('locationMap.resetLayout') }}</button>
@@ -562,7 +564,7 @@ const views: LocationView[] = ['map', 'cards']
       @choose="emit('choose', $event)" @inspect="inspect" />
     <div ref="mapLayoutEl" class="map-layout" :class="[view, { 'panel-open': panelOverlay, 'sheet-layout': sheetLayout }]" @click="inspectedId = null">
       <div id="scene-team-slot" class="team-slot" :class="{ 'team-slot--hidden': teamHidden }"></div>
-      <LocationMapCanvas :cutaway="cutaway" :roomPlates="roomPlates" :plateText="plateText" :illustrated-board="illustratedBoard" :game="game" :playerId="playerId" :locations="locations"
+      <LocationMapCanvas :illustrated-board="illustratedBoard" :game="game" :playerId="playerId" :locations="locations"
         :positions="positions" :links="links" :moves="moves" :gridSpots="gridSpots" :selectedId="selected?.id ?? null"
         :enemiesAt="visibleEnemiesAt" :concealedAt="concealedOf" :concealedSpots="concealedSpots" :infoOf="infoOf" :barriers="barriers" :width="canvasSize.width" :height="canvasSize.height" :viewport="viewport" :weather="weather" :weaver="weaver" :dreamPositions="dreamPositions" :roadGrid="roadGrid" :hiddenLocationArt="hiddenLocationArt"
         @inspect="inspect" @choose="emit('choose', $event)" />

@@ -3,6 +3,7 @@ import type { Game } from '@/arkham/types/Game'
 import { useSettings } from '@/stores/settings'
 import { narrativeOf } from '@/arkham/composables/useNarrative'
 import {
+  applyNarrationRate,
   narrationTracks,
   storyKeysInPlay,
   type NarrationManifest,
@@ -82,6 +83,7 @@ export function useNarration(game: Ref<Game | null | undefined>) {
     if (!track) return
     audio = next && next.src.endsWith(track.url) ? next : preload(track)!
     audio.volume = settings.narrationVolume
+    applyNarrationRate(audio, settings.narrationRate)
     // Fetch the following track while this one plays, so there is no gap.
     next = preload(queue[i + 1])
     audio.onended = () => playAt(index + 1)
@@ -118,6 +120,12 @@ export function useNarration(game: Ref<Game | null | undefined>) {
     () => settings.narrationVolume,
     (v) => {
       if (audio) audio.volume = v
+    },
+  )
+  watch(
+    () => settings.narrationRate,
+    (r) => {
+      if (audio) applyNarrationRate(audio, r)
     },
   )
 

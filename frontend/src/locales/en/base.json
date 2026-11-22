@@ -279,6 +279,41 @@
     "takeBack": "Take {name} back"
   },
   "ok": "OK",
+  "effectTimeline": {
+    "settingTitle": "Step-by-step effects",
+    "settingDescription": "When the game resolves things by itself (an act or agenda advancing, the Mythos, Enemy and Upkeep phases, enemy attacks), replay them one at a time with a note saying what is happening.",
+    "skip": "Skip",
+    "discardedCards": "{count} cards discarded",
+    "discardedCardsBy": "{count} cards discarded by {source}",
+    "kind": {
+      "discardEnemy": "Discard enemies",
+      "removeCard": "Leaves play",
+      "placeLocation": "Put location into play",
+      "revealLocation": "Location revealed",
+      "moveInvestigator": "Investigators move",
+      "spawnEnemy": "Enemy spawns",
+      "moveEnemy": "Enemy moves",
+      "putIntoPlay": "Put into play",
+      "removeLocation": "Remove location",
+      "changeScene": "The scene changes",
+      "logged": "Effect"
+    },
+    "log": {
+      "attack": "Enemy attacks",
+      "engage": "Engagement",
+      "doom": "Doom",
+      "clues": "Clues",
+      "discard": "Discarded",
+      "defeat": "Defeated",
+      "remove": "Removed from the game",
+      "move": "Moved",
+      "enemyMove": "Enemy moves",
+      "spawn": "Enemy spawns",
+      "reveal": "Location revealed",
+      "attach": "Attached",
+      "other": "Effect"
+    }
+  },
   "advanceReader": {
     "act": "Act",
     "agenda": "Agenda",
@@ -860,7 +895,8 @@
       "twoWay": "Two-way path",
       "oneWay": "One-way path (follow the arrow)",
       "moveTo": "Move to {name}",
-      "barriers": "1 barrier between {a} and {b} | {n} barriers between {a} and {b}"
+      "barriers": "1 barrier between {a} and {b} | {n} barriers between {a} and {b}",
+      "locked": "Cannot enter {name} yet"
     },
     "legend": {
       "title": "Legend",

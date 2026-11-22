@@ -197,3 +197,38 @@ footer {
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
+
+/* The effect replay's scene change (motion/effectBoardMotion.ts beginPageTurn):
+ * the old scene turns away like a book page from its left edge, darkening as it
+ * goes, and the new scene lightens up underneath it. Everything else that has a
+ * transition name keeps still for this one transition. */
+html.effect-page-turn [style*="view-transition-name"]:not([style*="effect-scene-page"]) {
+  view-transition-name: none !important;
+}
+::view-transition-group(effect-scene-page) {
+  animation-duration: 1600ms;
+}
+::view-transition-image-pair(effect-scene-page) {
+  isolation: auto;
+}
+::view-transition-old(effect-scene-page) {
+  z-index: 2;
+  transform-origin: left center;
+  backface-visibility: hidden;
+  mix-blend-mode: normal;
+  animation: effect-page-turn-away 1600ms cubic-bezier(0.55, 0.05, 0.35, 1) both;
+}
+::view-transition-new(effect-scene-page) {
+  z-index: 1;
+  mix-blend-mode: normal;
+  animation: effect-page-turn-under 1600ms ease-out both;
+}
+@keyframes effect-page-turn-away {
+  0% { transform: perspective(2200px) rotateY(0deg); filter: brightness(1); box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+  45% { filter: brightness(0.8); box-shadow: -30px 0 60px rgba(0, 0, 0, 0.6); }
+  100% { transform: perspective(2200px) rotateY(-96deg); filter: brightness(0.35); box-shadow: -40px 0 80px rgba(0, 0, 0, 0); }
+}
+@keyframes effect-page-turn-under {
+  0% { filter: brightness(0.35); opacity: 1; }
+  100% { filter: brightness(1); opacity: 1; }
+}

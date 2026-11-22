@@ -14,7 +14,8 @@ import { replaceText } from '@/arkham/cardTextFormat'
 import { useCardInfo } from '@/arkham/composables/useCardNames'
 import type { AdvanceReading } from '@/arkham/advanceReading'
 import { useSettings } from '@/stores/settings'
-import { cardNarrationTrack, type NarrationManifest, type NarrationTrack } from '@/arkham/narration'
+import NarrationRateControl from '@/arkham/components/NarrationRateControl.vue'
+import { applyNarrationRate, cardNarrationTrack, type NarrationManifest, type NarrationTrack } from '@/arkham/narration'
 import { loadManifest, NARRATION_ROOT } from '@/arkham/composables/useNarration'
 
 const props = defineProps<{ reading: AdvanceReading; remaining: number }>()
@@ -95,6 +96,8 @@ const toImage = computed(() => (props.reading.toCode ? cardImg(cardArt(props.rea
 
 const speaking = ref(false)
 let audio: HTMLAudioElement | null = null
+// Speed changes from the reading panel apply to the clip already playing.
+watch(() => settings.narrationRate, (r) => { if (audio) applyNarrationRate(audio, r) })
 
 const track = computed<NarrationTrack | null>(() => {
   if (!manifest.value) return null
@@ -118,6 +121,7 @@ function playSpeech() {
   if (!track.value?.url) return
   audio = new Audio(track.value.url)
   audio.volume = settings.narrationVolume
+  applyNarrationRate(audio, settings.narrationRate)
   audio.onended = () => { speaking.value = false }
   speaking.value = true
   audio.play().catch(() => { speaking.value = false })
@@ -150,15 +154,17 @@ onBeforeUnmount(() => {
         <section v-if="step === 'back'" class="advance-reader__section">
           <div class="advance-reader__title-row">
             <h2 id="advance-reader-title" class="advance-reader__title">{{ backTitle }}</h2>
-            <button
-              v-if="track"
-              type="button"
-              class="advance-reader__speech-toggle"
-              :class="{ speaking }"
-              :title="speaking ? $t('gameBar.settings.narration.stop') : $t('gameBar.settings.narration.play')"
-              :aria-label="speaking ? $t('gameBar.settings.narration.stop') : $t('gameBar.settings.narration.play')"
-              @click="toggleSpeech"
-            >{{ speaking ? '■' : '🔊' }}</button>
+            <div v-if="track" class="advance-reader__speech">
+              <NarrationRateControl />
+              <button
+                type="button"
+                class="advance-reader__speech-toggle"
+                :class="{ speaking }"
+                :title="speaking ? $t('gameBar.settings.narration.stop') : $t('gameBar.settings.narration.play')"
+                :aria-label="speaking ? $t('gameBar.settings.narration.stop') : $t('gameBar.settings.narration.play')"
+                @click="toggleSpeech"
+              >{{ speaking ? '■' : '🔊' }}</button>
+            </div>
           </div>
           <div class="advance-reader__row">
             <img class="advance-reader__card no-overlay" :src="fromImage" :alt="backTitle" @mouseenter="zoomed = true" @mouseleave="zoomed = false" />
@@ -171,15 +177,17 @@ onBeforeUnmount(() => {
         <section v-else class="advance-reader__section">
           <div class="advance-reader__title-row">
             <h2 id="advance-reader-title" class="advance-reader__title">{{ nextTitle }}</h2>
-            <button
-              v-if="track"
-              type="button"
-              class="advance-reader__speech-toggle"
-              :class="{ speaking }"
-              :title="speaking ? $t('gameBar.settings.narration.stop') : $t('gameBar.settings.narration.play')"
-              :aria-label="speaking ? $t('gameBar.settings.narration.stop') : $t('gameBar.settings.narration.play')"
-              @click="toggleSpeech"
-            >{{ speaking ? '■' : '🔊' }}</button>
+            <div v-if="track" class="advance-reader__speech">
+              <NarrationRateControl />
+              <button
+                type="button"
+                class="advance-reader__speech-toggle"
+                :class="{ speaking }"
+                :title="speaking ? $t('gameBar.settings.narration.stop') : $t('gameBar.settings.narration.play')"
+                :aria-label="speaking ? $t('gameBar.settings.narration.stop') : $t('gameBar.settings.narration.play')"
+                @click="toggleSpeech"
+              >{{ speaking ? '■' : '🔊' }}</button>
+            </div>
           </div>
           <div class="advance-reader__row">
             <img class="advance-reader__card no-overlay" :src="toImage" :alt="nextTitle" @mouseenter="zoomed = true" @mouseleave="zoomed = false" />
@@ -240,6 +248,13 @@ onBeforeUnmount(() => {
   font-family: Teutonic, var(--ui-serif);
   font-size: 1.8rem;
   color: #f1c97b;
+}
+
+.advance-reader__speech {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .advance-reader__speech-toggle {

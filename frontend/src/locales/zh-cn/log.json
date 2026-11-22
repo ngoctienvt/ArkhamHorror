@@ -188,6 +188,7 @@
   "turn": "{investigator}的回合",
   "undoToHere": "撤销到此处",
   "undoToHereConfirm": "撤销此时点之后的所有操作？游戏将回到“{entry}”之前。",
+  "undoToHereKeepConfirm": "撤销回到“{entry}”？",
   "undoToHereConfirmPlain": "撤销此时点之后的所有操作？",
   "usesAbility": "{investigator}使用了{source}",
   "exiled": "{card}被放逐",

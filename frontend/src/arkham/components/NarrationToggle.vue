@@ -3,9 +3,10 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useNarrationControls } from '@/arkham/composables/useNarration'
 import NarrationSpeakerIcon from '@/arkham/components/NarrationSpeakerIcon.vue'
+import NarrationRateControl from '@/arkham/components/NarrationRateControl.vue'
 
-/* Replay / stop for the spoken story narration, pinned to the corner of the
- * story panel it sits in (the parent must be position: relative). */
+/* Reading speed plus replay / stop for the spoken story narration, pinned to the
+ * corner of the story panel it sits in (the parent must be position: relative). */
 const { t } = useI18n()
 const { playing, blocked, hasTracks, replay, stop } = useNarrationControls()
 const label = computed(() =>
@@ -14,25 +15,32 @@ const label = computed(() =>
 </script>
 
 <template>
-  <button
-    v-if="hasTracks"
-    type="button"
-    class="narration-toggle"
-    :class="{ blocked }"
-    :title="label"
-    :aria-label="label"
-    @click="playing ? stop() : replay()"
-  ><NarrationSpeakerIcon :playing="playing" /></button>
+  <div v-if="hasTracks" class="narration-controls">
+    <NarrationRateControl />
+    <button
+      type="button"
+      class="narration-toggle"
+      :class="{ blocked }"
+      :title="label"
+      :aria-label="label"
+      @click="playing ? stop() : replay()"
+    ><NarrationSpeakerIcon :playing="playing" /></button>
+  </div>
 </template>
 
 <style scoped>
 /* Solid dark-ink disc with a gold rim and a light icon, so it reads clearly over the
  * parchment and the corner ornament it sits on. */
-.narration-toggle {
+.narration-controls {
   position: absolute;
   top: 6px;
   right: 8px;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.narration-toggle {
   width: 34px;
   height: 34px;
   padding: 0;

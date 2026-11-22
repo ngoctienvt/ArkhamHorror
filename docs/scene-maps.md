@@ -65,11 +65,23 @@ Hệ thống Scene Map hiện đã được thiết kế và tích hợp cho h�
 
 The Search for Kadath đổi nền theo vùng đang chơi. Trong A Thousand Shapes of Horror, Endless Descent đổi vị trí các bậc thang theo lá. Weaver of the Cosmos chuyển từ cầu tơ dọc sang vòng tám ô, với thân và chân Atlach-Nacha tương tác được khi có lựa chọn tương ứng.
 
+The Gathering và Return to hiển thị asset rào chắn tại lối vào Parlor khi location còn úp và bị chặn. Asset biến mất khi Parlor được lật hoặc trạng thái chặn được gỡ, và xuất hiện lại khi hoàn tác về trạng thái bị chặn.
+
+The Gathering bản gốc thêm xác treo ở Attic khi location đã được lật; asset được chọn lại từ trạng thái ván khi tải lại hoặc hoàn tác.
+
+Return to The Gathering hiển thị xác treo cho cả hai biến thể Attic, thang cho Attic Return và bồn tắm chứa dịch xanh khi các location tương ứng được lật. The Devourer Below và Return to dùng nền rừng chung cho các địa điểm được chia ngẫu nhiên.
+
 The Midnight Masks đổi sang ảnh nhà cháy rụi khi Campaign Log ghi nhận kết quả đốt nhà ở The Gathering. Murder at the Excelsior Hotel dùng mặt cắt khách sạn với điểm neo cho cả 10 địa điểm. The Blob That Ate Everything dùng ảnh riêng cho từng lá, đặt theo ô thực tế trên lưới Blackwater.
+
+Trong Murder at the Excelsior Hotel, giấy tờ và chìa khóa trên bàn Office chỉ xuất hiện khi location này được lật; hoàn tác hoặc loại location sẽ cập nhật lại cảnh.
+
+Trong Riddles and Rain, đàn quạ xuất hiện trên Tower of London khi location được đưa vào ván, theo flavor ở mặt chưa lật của lá.
 
 Spreading Flames dùng mặt cắt một phòng trong ký túc xá. Trong Agenda 1 mặt A, nền chỉ hiện lửa trong phòng nếu phòng đang cháy. Từ Agenda 1 mặt B, lửa nền bắt đầu trên mái cánh ký túc xá, rồi lan rộng từ cùng điểm khi sang Agenda 2 mặt B hoặc Agenda 3. Các lá *Fire!* vẫn hiển thị tại địa điểm thực tế trong ván. Các ảnh dùng chung điểm neo và góc zoom.
 
 Extracurricular Activity và Return to dùng chung tranh khuôn viên Miskatonic. Faculty Offices nằm ở tầng ba của Administration Building và Alchemy Labs nằm dưới Science Building. Orne Library và Warren Observatory có điểm neo riêng cho hai nhánh chọn ngẫu nhiên của Return to. Từ Act 2B hoặc Agenda 2B, nền chuyển sang cảnh biến động ở khu Khoa học, dùng cùng điểm neo. Nhãn của các địa điểm xuất hiện khi game đưa lá vào bàn.
+
+Khi Alchemy Labs được đưa vào ván, một đèn đốt nhỏ xuất hiện trên bàn thí nghiệm. Where Doom Awaits và Return to thể hiện bức tường ma thuật trên đường lên Sentinel Peak khi location còn úp; tường biến mất khi location được lật.
 
 Trong Dunwich, The House Always Wins thể hiện thiệt hại tại lối vào từ Agenda 2B. The Miskatonic Museum tối dần theo Agenda. The Essex County Express mở rộng khe nứt khi Agenda tiến triển, còn các toa tiếp tục bám vị trí thực tế. Blood on the Altar chuyển sang đêm và đặt Hidden Chamber cạnh địa điểm tìm thấy nó. Undimensioned and Unseen chuyển sang mưa bão từ Agenda 2B. Where Doom Awaits thể hiện cảnh ban đầu, biến dạng và cổng mở theo Agenda và Act.
 

@@ -57,6 +57,8 @@ export const CARD_FLIGHT_PILE_ATTR = 'data-card-flight-pile'
 export type CardFlightState = {
   previewed: Ref<ReadonlySet<string>>
   flying: Ref<ReadonlySet<string>>
+  /* Cards the player just chose to discard (see pendingDiscard.ts). */
+  discarding?: Ref<ReadonlySet<string>>
 }
 
 export const CARD_FLIGHT_STATE = 'cardFlightState'
@@ -97,6 +99,8 @@ export function cardFlightStyle(state: CardFlightState, id: string | undefined) 
   // the board does not reflow under the overlay and so the placeholder can be
   // measured from it.
   if (state.previewed.value.has(id)) return { visibility: 'hidden' as const }
+  // Gone from the hand for good, so its slot closes up rather than staying open.
+  if (state.discarding?.value.has(id)) return { display: 'none' as const }
   return undefined
 }
 

@@ -38,7 +38,7 @@ const props = withDefaults(
 )
 
 const emit = defineEmits<{
-  undo: [step: number, label: string]
+  undo: [step: number, label: string, seq: number | null]
   say: [text: string]
   loadOlder: [beforeSeq: number]
 }>()
@@ -213,7 +213,7 @@ watch(
             :is-pinned="isPinned"
             :can-undo="canUndo"
             @toggle="onToggle"
-            @undo="(step, label) => emit('undo', step, label)"
+            @undo="(step, label, seq) => emit('undo', step, label, seq)"
           />
           <LogGroupBlock
             v-else
@@ -224,7 +224,7 @@ watch(
             :is-pinned="isPinned"
             :can-undo="canUndo"
             @toggle="onToggle"
-            @undo="(step, label) => emit('undo', step, label)"
+            @undo="(step, label, seq) => emit('undo', step, label, seq)"
           />
         </template>
       </ul>
