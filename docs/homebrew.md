@@ -186,6 +186,31 @@ like a base trait: `[NewMoonCircus, Woods]`.
 board symbol — import your traits `hiding (pattern Moon)` so the symbol wins, and
 that trait just stays a symbol.)
 
+**Naming a trait on screen.** Where the UI shows a trait — the modifier panel,
+for one — it looks up `trait.<Name>` and falls back to splitting the name on
+its capitals, matching the engine's `displayTrait`. So `CircusTrain` already
+reads "Circus Train" with no work from you.
+
+Supply a label only when that split is wrong, or to translate. Put a top-level
+`trait` object in a locale file — by convention its own `traits.json`:
+
+```json
+{
+  "trait": {
+    "HouseOfUsher": "House of Usher"
+  }
+}
+```
+
+(The split would give "House Of Usher".)
+
+This one key is **hoisted out of your campaign's message scope** to the global
+`trait.*` namespace, because homebrew traits share one flat universe with the
+base game's and the UI looks them up with no campaign in hand. Two consequences:
+your labels merge *with* the base traits rather than replacing them, and if two
+campaigns label the same trait differently, one silently wins — a test fails on
+that, and on a label naming a trait no `declareHomebrewTraits` call declares.
+
 ### A new action
 
 Dark Matter adds a "Scan" action. Two parts: the action itself, and *when a
@@ -526,6 +551,7 @@ leading colon), discovered the same hands-off way — no registration anywhere:
 | `locales/en/*.json` | your text — `base.json`, `interludes.json`, one file per scenario; merged under the campaign's message scope, with English fallback for other languages |
 | `arkham-build.json` | opts the campaign into importing its printed card text from arkham.build's fan-made content: `{"project": "<project id>"}`, plus `variantBacks` (`{"090": {"Observer Effect": "a"}}`) for a number printed several times whose backs the CardDefs do not name |
 | `cards_en.json` | generated for every campaign by `npm run import-homebrew-cards` (backend and dev server running) — ArkhamDB-shaped records that give the map, panels and card overlay their names. ArkhamDB has no fan-made cards, so without it a card shows its raw code. Names come from the engine (`/api/v1/arkham/homebrew/cards`, plus back sides read off the CardDefs); a campaign with `arkham-build.json` also gets its printed text and flavor, matched by printed position, with any card whose arkham.build name disagrees with the engine's falling back to the engine's. Re-run after adding cards. A `cards_<lang>.json` beside it is used for that language; files load per campaign, on first lookup. |
+| `locales/en/traits.json` | optional trait labels; the one key hoisted OUT of your scope to global `trait.*` (see *A new trait*) |
 | `img/` | art: `cards/`, `boxes/`, `chaos-tokens/`, `icons/`, `encounter-sets/`. Synced to the asset host by `make sync-images`; in dev a Vite middleware serves them straight from this folder, so a local/empty asset host works without syncing. |
 
 The directory name camelCases to the i18n message scope (`circus-ex-mortis` →

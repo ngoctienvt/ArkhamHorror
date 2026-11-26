@@ -29,9 +29,15 @@ export type Location = {
   id: string;
   cardId: string;
   tokens: Tokens;
+  /* The location's own printed shroud GameValue. */
   shroud: number | null;
   /** How the printed shroud is counted: a plain number, per investigator, or X. */
   shroudKind: GameValue['tag'] | null;
+  /* Shroud as the engine will use it, and as the card prints it, both resolved
+   * server-side (LocationMetadata). Null together when the location is
+   * unrevealed or prints no shroud. */
+  modifiedShroud: number | null;
+  printedShroud: number | null;
   revealed: boolean;
   enemyLocation: boolean;
   exhausted: boolean;
@@ -95,6 +101,8 @@ export const locationDecoder = JsonDecoder.object<RawLocation>(
     cardId: JsonDecoder.string(),
     tokens: tokensDecoder,
     shroud: JsonDecoder.nullable(gameValueDecoder),
+    modifiedShroud: JsonDecoder.failover(null, JsonDecoder.nullable(JsonDecoder.number())),
+    printedShroud: JsonDecoder.failover(null, JsonDecoder.nullable(JsonDecoder.number())),
     revealed: JsonDecoder.boolean(),
     investigators: JsonDecoder.array<string>(JsonDecoder.string(), 'InvestigatorId[]'),
     enemies: JsonDecoder.array<string>(JsonDecoder.string(), 'EnemyId[]'),

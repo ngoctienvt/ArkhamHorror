@@ -7,6 +7,8 @@ import type { Ref } from 'vue'
 import Draggable from '@/components/Draggable.vue';
 import CardView from '@/arkham/components/Card.vue';
 import Modifiers from '@/arkham/components/Modifiers.vue';
+import ModifierPip from '@/arkham/components/ModifierPip.vue'
+import { investigatorSkillReadings, presentableModifiers, toWireModifiers, wireModifierRows } from '@/arkham/modifierDisplay'
 import PendingDamageTokens from '@/arkham/components/PendingDamageTokens.vue';
 import { useDebug } from '@/arkham/debug'
 import { ForwardIcon, PaperClipIcon } from '@heroicons/vue/20/solid'
@@ -404,13 +406,49 @@ function isActiveEffectAction(action: { tag?: "EffectAction"; contents: any }) {
   return choice !== -1
 }
 
-const lastingSkillValue = (key: 'willpower' | 'intellect' | 'combat' | 'agility') =>
-  computed(() => computeStat(key, props.investigator[key], props.investigator.modifiers).current)
+/* The engine resolved these; the client must not. `skillValueFor` handles
+ * SkillCannotBeIncreased, AddSkillToOtherSkill, DoubleBaseSkillValue,
+ * CalculatedSkillModifier and the clamping between them, and it is passed the
+ * current test's action so an ActionSkillModifier counts only where it should.
+ * Falls back to `computeStat` when talking to a server/fixture without the fields. */
+const skills = computed(() => {
+  const inv = props.investigator
+  const resolved = {
+    willpower: inv.modifiedWillpower ?? computeStat('willpower', inv.willpower, inv.modifiers).current,
+    intellect: inv.modifiedIntellect ?? computeStat('intellect', inv.intellect, inv.modifiers).current,
+    combat: inv.modifiedCombat ?? computeStat('combat', inv.combat, inv.modifiers).current,
+    agility: inv.modifiedAgility ?? computeStat('agility', inv.agility, inv.modifiers).current,
+  }
+  return {
+    ...resolved,
+    drift: {
+      willpower: resolved.willpower - inv.willpower,
+      intellect: resolved.intellect - inv.intellect,
+      combat: resolved.combat - inv.combat,
+      agility: resolved.agility - inv.agility,
+    },
+  }
+})
 
-const willpower = lastingSkillValue('willpower')
-const intellect = lastingSkillValue('intellect')
-const combat = lastingSkillValue('combat')
-const agility = lastingSkillValue('agility')
+/* A stat whose shown number is not the printed one.
+ *
+ * The tinted bar under the cell is the whole visible signal, and the colour
+ * carries the direction. A superscript "+1" was tried here and could not fit:
+ * the pill is about 32px wide, so the mark collided with the digit and rode
+ * off the rounded edge. The magnitude lives in the tooltip and, with its
+ * source, in the modifier panel on the pip. */
+const skillDrift = computed(() => skills.value.drift)
+const driftClass = (n: number) => (n === 0 ? null : n > 0 ? 'stat--raised' : 'stat--lowered')
+const driftTitle = (skill: 'willpower' | 'intellect' | 'combat' | 'agility') => {
+  const n = skillDrift.value[skill]
+  if (n === 0) return undefined
+  return `${skills.value[skill] - n} \u2192 ${skills.value[skill]}`
+}
+
+const willpower = computed(() => skills.value.willpower)
+const intellect = computed(() => skills.value.intellect)
+const combat = computed(() => skills.value.combat)
+const agility = computed(() => skills.value.agility)
 
 const dragging = ref(false)
 const showModifiers = ref(false)
@@ -464,6 +502,23 @@ const clubInjury = computed(() => {
 const spadeInjury = computed(() => {
   return modifiers.value?.some((m) => m.type.tag === "ScenarioModifier" && m.type.contents === "spadeInjury") ?? false
 })
+
+/* Every modifier on this investigator, for the pip and for the global
+ * magnifier. The debug panel above keeps its own list -- it can switch effects
+ * off, which the player-facing one must not. */
+const modifierWire = computed(() =>
+  toWireModifiers(presentableModifiers(props.investigator.modifiers), props.game)
+)
+const modifierDisplayRows = computed(() => wireModifierRows(modifierWire.value))
+const wireModifiers = computed(() =>
+  modifierWire.value.length ? JSON.stringify(modifierWire.value) : undefined
+)
+
+/* The four skills, printed beside what a test would use. Same shape the enemy
+ * stat line uses, so one renderer draws both. */
+const statRows = computed(() => investigatorSkillReadings(props.investigator))
+const wireStats = computed(() => (statRows.value.length ? JSON.stringify(statRows.value) : undefined))
+
 </script>
 
 <template>
@@ -535,11 +590,21 @@ const spadeInjury = computed(() => {
   <div v-else class="player-container" v-bind="cardDrop">
     <div class="player-area">
       <div class="player-card" :class="{ 'player-card--scene': sceneMode }">
+        <!-- The number shown is already the modified one; the tinted bar under
+             the cell is what says so. See `driftTitle` for why not a mark. -->
         <div v-if="!sceneMode" class="stats">
-          <div class="willpower"><img class="stat-art" :src="imgsrc('icons/skills/willpower.png')" alt="" />{{ formatStat(willpower, investigator.willpower) }}</div>
-          <div class="intellect"><img class="stat-art" :src="imgsrc('icons/skills/intellect.png')" alt="" />{{ formatStat(intellect, investigator.intellect) }}</div>
-          <div class="combat"><img class="stat-art" :src="imgsrc('icons/skills/combat.png')" alt="" />{{ formatStat(combat, investigator.combat) }}</div>
-          <div class="agility"><img class="stat-art" :src="imgsrc('icons/skills/agility.png')" alt="" />{{ formatStat(agility, investigator.agility) }}</div>
+          <div class="willpower" :class="driftClass(skillDrift.willpower)" v-tooltip="driftTitle('willpower')">
+            <img class="stat-art" :src="imgsrc('icons/skills/willpower.png')" alt="" />{{ willpower }}
+          </div>
+          <div class="intellect" :class="driftClass(skillDrift.intellect)" v-tooltip="driftTitle('intellect')">
+            <img class="stat-art" :src="imgsrc('icons/skills/intellect.png')" alt="" />{{ intellect }}
+          </div>
+          <div class="combat" :class="driftClass(skillDrift.combat)" v-tooltip="driftTitle('combat')">
+            <img class="stat-art" :src="imgsrc('icons/skills/combat.png')" alt="" />{{ combat }}
+          </div>
+          <div class="agility" :class="driftClass(skillDrift.agility)" v-tooltip="driftTitle('agility')">
+            <img class="stat-art" :src="imgsrc('icons/skills/agility.png')" alt="" />{{ agility }}
+          </div>
         </div>
         <!-- On the scene map the card is not shown: hovering the investigator's figure shows it, and the
              figure carries damage, horror, resources and clues, its abilities and damage assignment. -->
@@ -559,6 +624,8 @@ const spadeInjury = computed(() => {
             :data-fx-fallback="`investigator-${investigator.id}`"
             :data-keywords="joinKeywords(keywordDelta.gained)"
             :data-lost-keywords="joinKeywords(keywordDelta.lost)"
+            :data-modifiers="wireModifiers"
+            :data-stats="wireStats"
             @click="clicked"
           />
           <div v-if="sceneMode" class="scene-health-sanity">
@@ -578,6 +645,7 @@ const spadeInjury = computed(() => {
             />
           </div>
           <span v-if="isBlanked" class="blanked-badge" :data-image-id="blankedCardCode"><font-awesome-icon icon="ban" /></span>
+          <ModifierPip :rows="modifierDisplayRows" :stats="statRows" />
           <PendingDamageTokens
             v-if="!portrait"
             :game="game"
@@ -1000,6 +1068,19 @@ i.action {
     bottom: 0;
     width: 1px;
     background: rgba(255, 255, 255, 0.22);
+  }
+
+  /* A modified skill colours its DIGIT instead of wearing a bar: the number is
+     the thing you are reading, so the number is what should say it is not the
+     printed one. One gold for both directions -- it is the only hue that
+     clears 3:1 on all four stat pills, and direction is on hover ("4 -> 6")
+     and in the pip's panel. The old teal/amber bar managed 2.40 and 1.99. */
+  .stat--raised,
+  .stat--lowered {
+    color: var(--stat-modified);
+    text-shadow:
+      0 1px 1px rgba(0, 0, 0, 0.9),
+      0 0 3px rgba(0, 0, 0, 0.55);
   }
 
   @media (max-width: 800px) and (orientation: portrait) {

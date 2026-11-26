@@ -12,6 +12,8 @@ import * as ArkhamGame from '@/arkham/types/Game';
 import type { AbilityLabel, AbilityMessage, Message } from '@/arkham/types/Message';
 import TokenPool from '@/arkham/components/TokenPool.vue';
 import AbilityButton from '@/arkham/components/AbilityButton.vue'
+import ModifierPip from '@/arkham/components/ModifierPip.vue'
+import { presentableModifiers, toWireModifiers, wireModifierRows } from '@/arkham/modifierDisplay'
 import AbilitiesMenu from '@/arkham/components/AbilitiesMenu.vue'
 import { IsMobile } from '@/arkham/isMobile'
 import Token from '@/arkham/components/Token.vue';
@@ -134,6 +136,17 @@ const attachedTreacheries = computed(() =>
     .map((tid) => props.game.treacheries[tid])
     .filter((t) => !!t),
 )
+
+/* Every modifier on this treachery, for the corner pip, and the same list in the
+ * compact form the global magnifier reads off `data-modifiers`. */
+const modifierWire = computed(() =>
+  toWireModifiers(presentableModifiers(props.treachery.modifiers), props.game)
+)
+const modifierDisplayRows = computed(() => wireModifierRows(modifierWire.value))
+const wireModifiers = computed(() =>
+  modifierWire.value.length ? JSON.stringify(modifierWire.value) : undefined
+)
+
 </script>
 <template>
   <div
@@ -161,12 +174,14 @@ const attachedTreacheries = computed(() =>
       @click="$emit('choose', ability.index)"
     />
     <div class="treachery-face">
+      <ModifierPip :rows="modifierDisplayRows" />
       <img
         ref="cardFrame"
         :src="image"
         class="card"
         :class="{ 'treachery--can-interact': canHighlight, 'trigger-ready': triggerReady, attached, 'in-hand': isInHand }"
         :data-card-code="treachery.cardCode"
+        :data-modifiers="wireModifiers"
         :draggable="tuckable || undefined"
         @dragstart="startDrag"
         @click="handleCardClick"
